@@ -1,0 +1,25 @@
+{
+  "name": "patternlab-kiva",
+  "version": "0.0.0",
+  "description": "- [Pattern Lab Website](http://patternlab.io/) - [About Pattern Lab](http://patternlab.io/about.html) - [Documentation](http://patternlab.io/docs/index.html) - [Demo](http://demo.patternlab.io/)",
+  "main": "Gruntfile.js",
+  "devDependencies": {
+    "grunt-sass": "~0.18.1",
+    "grunt-shell": "~1.1.2",
+    "grunt": "~0.4.5",
+    "grunt-copy": "~0.1.0",
+    "grunt-contrib-copy": "~0.8.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/kiva/patternlab-kiva.git"
+  },
+  "author": "",
+  "license": "@TODO",
+  "bugs": {
+    "url": "https://github.com/kiva/patternlab-kiva/issues"
+  }
+}

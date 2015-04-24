@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html class="{{ htmlClass }}">
+	<head>
+		<title>{{ title }}</title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width" />
+		
+		<link rel="stylesheet" href="../../css/styles.css?{{ cacheBuster }}" media="all" />
+
+		<!-- Begin Pattern Lab (Required for Pattern Lab to run properly) -->
+		{% pattern-lab-head %}
+		<!-- End Pattern Lab -->
+
+		<script src="../../dep/modernizr/modernizr.js?{{ cacheBuster }}"></script>
+	</head>
+	<body class="{{ bodyClass }}">
+		<!--[if lt IE 8]>
+		<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+		<![endif]-->
+
+
+		<div id="siteWrapper" class="siteWrapper">
+			<div id="mainWrapper" class="mainWrapper">
+				<div id="main" class="main">
