@@ -6,7 +6,12 @@ module.exports = function(grunt) {
 		, copy: {
 			init: {
 				files: [
-					{src: 'core/styleguide', dest: 'public/styleguide'}
+					{
+						cwd: 'core/styleguide'
+						, src: '**/*'
+						, dest: 'public/styleguide'
+						, expand: true
+					}
 				]
 			}
 
