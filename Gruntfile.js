@@ -4,7 +4,13 @@ module.exports = function(grunt) {
 		pkg: grunt.file.readJSON('package.json')
 
 		, copy: {
-			js: {
+			init: {
+				files: [
+					{src: 'core/styleguide', dest: 'public/styleguide'}
+				]
+			}
+
+			, js: {
 				files: [
 					{src: 'bower_components/fastclick/lib/fastclick.js', dest: 'public/dep/fastclick/fastclick.js'}
 					, {src: 'bower_components/foundation/js/foundation.js', dest: 'public/dep/foundation/foundation.js'}
@@ -22,7 +28,7 @@ module.exports = function(grunt) {
 					// @todo - should we also add bourbon?  require('node-bourbon').includePaths
 				]
 					}
-			, dist: {
+			, compile: {
 				options: {
 					sourceMap: false
 				},
@@ -35,7 +41,11 @@ module.exports = function(grunt) {
 
 
 		, shell: {
-			patternlab: {
+			init: {
+				command: "php core/builder.php -g"
+			}
+
+			, compile: {
 				command: "php core/builder.php -gp"
 			}
 		}
@@ -54,5 +64,6 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks('grunt-shell');
 	// @todo add livereload?
 
-	grunt.registerTask('compile', ['sass', 'shell:patternlab', 'copy']);
+	grunt.registerTask('init', ['copy:init', 'shell:init']);
+	grunt.registerTask('compile', ['sass', 'shell:compile', 'copy:js']);
 };
