@@ -89,5 +89,16 @@
 		{ },
 		{ },
 		{ }
-	]
+	],
+	"meter": {
+		"fundraising-meter": {
+			"fundraised-percentage": "80%"
+		}
+	}
+	, "loancard": {
+		"amount-left": "$33.5k left"
+		, "sector": "Transportation"
+		, "country-iso": ""
+		, "country-name": "St Vincent, Grenadines"
+	}
 }

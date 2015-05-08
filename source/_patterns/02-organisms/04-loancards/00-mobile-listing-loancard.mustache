@@ -1,0 +1,17 @@
+<div class="loan-card loan-card--listing">
+    <div class="borrower-img-wrap">
+        <img src="{{img.avatar.src}}" class="borrower-img">
+        <div class="matcher-text">2x</div>
+    </div>
+
+    {{> molecules-fundraising-meter}}
+
+    <div class="borrower-details-wrap">
+        <div class="amount-left">{{loancard.amount-left}}</div>
+        <div class="country">
+            <span class="country-flag f16 ht">{{loancard.country-iso}}</span>
+            <span class="country-name">{{{loancard.country-name}}}</span>
+        </div>
+        <div class="sector">{{loancard.sector}}</div>
+    </div>
+</div>

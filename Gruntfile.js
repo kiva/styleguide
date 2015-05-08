@@ -51,7 +51,7 @@ module.exports = function(grunt) {
 			}
 
 			, compile: {
-				command: "php core/builder.php -gp"
+				command: "php core/builder.php -g"
 			}
 		}
 
