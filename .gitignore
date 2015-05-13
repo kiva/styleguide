@@ -1,4 +1,5 @@
 .DS_Store
+.idea
 public/*
 source/css/*.css
 source/css/*.css.map

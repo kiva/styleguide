@@ -21,6 +21,8 @@ module.exports = function(grunt) {
 					, {src: 'bower_components/foundation/js/foundation.js', dest: 'public/dep/foundation/foundation.js'}
 					, {src: 'bower_components/jquery/dist/jquery.js', dest: 'public/dep/jquery/jquery.js'}
 					, {src: 'bower_components/modernizr/modernizr.js', dest: 'public/dep/modernizr/modernizr.js'}
+                    , {src: 'bower_components/nouislider/distribute/jquery.nouislider.all.js', dest: 'public/dep/nouislider/nouislider.js'}
+                    , {src: 'bower_components/select2/dist/js/select2.full.js', dest: 'public/dep/select2/select2.js'}
 				]
 			}
 		}
@@ -56,6 +58,31 @@ module.exports = function(grunt) {
 		}
 
 
+        , watch: {
+            html: {
+                files: [
+                    'source/_patterns/**/*.mustache'
+                    , 'source/_patterns/**/*.json'
+                    , 'source/_data/*.json'
+                ]
+                , tasks: ['shell:compile', 'copy:js']
+                //, options: {
+                //    spawn: false
+                //    , livereload: true
+                //}
+            }
+
+            , styles: {
+                files: ['source/less/style.less']
+                , tasks: ['sass']
+                //, options: {
+                //    spawn: false
+                //    , livereload: true
+                //}
+            }
+        }
+
+
 		// copy foundation.js into public/js
 		// * install jquery and modernizr via bower
 		// * do we need fitvids?
@@ -65,6 +92,7 @@ module.exports = function(grunt) {
 	});
 
 	grunt.loadNpmTasks('grunt-contrib-copy');
+    grunt.loadNpmTasks('grunt-contrib-watch');
 	grunt.loadNpmTasks('grunt-sass');
 	grunt.loadNpmTasks('grunt-shell');
 	// @todo add livereload?

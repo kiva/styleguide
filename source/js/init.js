@@ -9,7 +9,6 @@
 		//updateAds();
 	});
 
-
 	//Navigation toggle
 	$('.nav-toggle-menu').click(function(e) {
 		e.preventDefault();
@@ -23,4 +22,15 @@
 		$(this).toggleClass('active');
 		$('.header .search-form').toggleClass('active');
 	});
+
+    // NoUiSlider
+    $('.loanRepaymentSlider').noUiSlider({
+        start: [ 10, 30 ],
+        connect: true,
+        range: {
+            'min': -20,
+            'max': 40
+        }
+    });
+
 })(this);
