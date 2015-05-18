@@ -65,7 +65,7 @@ module.exports = function(grunt) {
                     , 'source/_patterns/**/*.json'
                     , 'source/_data/*.json'
                 ]
-                , tasks: ['shell:compile', 'copy:js']
+                , tasks: ['shell:compile']
                 //, options: {
                 //    spawn: false
                 //    , livereload: true
@@ -73,8 +73,8 @@ module.exports = function(grunt) {
             }
 
             , styles: {
-                files: ['source/less/style.less']
-                , tasks: ['sass']
+                files: ['source/css/**/*.scss']
+                , tasks: ['compile']
                 //, options: {
                 //    spawn: false
                 //    , livereload: true
@@ -97,6 +97,6 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks('grunt-shell');
 	// @todo add livereload?
 
-	grunt.registerTask('init', ['copy:init', 'shell:init']);
-	grunt.registerTask('compile', ['sass', 'shell:compile', 'copy:js']);
+	grunt.registerTask('init', ['copy:init', 'copy:js', 'shell:init']);
+	grunt.registerTask('compile', ['sass', 'shell:compile']);
 };

@@ -1,0 +1,15 @@
+.right-off-canvas-menu ul.filters-menu-list li.has-submenu > a:before {
+	content: none;
+}
+
+.right-off-canvas-menu ul.filters-menu-list li.has-submenu > a:after {
+	@include icon-double-arrows($position: right);
+}
+
+.filters-menu-list {
+	.paired-button-group {
+		li {
+			width: 50%
+		}
+	}
+}
