@@ -6,10 +6,24 @@
 	@include icon-double-arrows($position: right);
 }
 
+.right-submenu .back > a:after {
+	content: none;
+}
+
+.right-submenu .back > a:before {
+	@include icon-double-arrows($position: left);
+}
+
 .filters-menu-list {
 	.paired-button-group {
 		li {
 			width: 50%
 		}
 	}
+}
+
+.filter-slider {
+	margin-bottom: 20px;
+	padding-top: 10px;
+	padding-bottom: 10px;
 }

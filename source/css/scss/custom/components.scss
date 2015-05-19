@@ -1,0 +1,98 @@
+// Loan cards - listing
+.loan-card--listing {
+	border: #333 1px solid;
+	width: 150px;
+	height: 184px;
+
+	.amount-left {
+		font-size: 13px;
+	}
+
+	.country-name {
+		font-size: 12px;
+	}
+
+	.sector {
+		font-size: 12px;
+	}
+
+	.borrower-img-wrap {
+		position: relative;
+		width: 100%;
+		height: 60%;
+	}
+
+	.borrower-img {
+		width: 100%;
+		height: 100%;
+	}
+
+	.matcher-text {
+		background-color: rgba(255, 255, 255, .8);
+		font-size: 16px;
+		position: absolute;
+		top: 0;
+		left: 0;
+	}
+
+	.borrower-details-wrap {
+		padding: 0 2px 2px 2px;
+		text-align: right;
+	}
+
+}
+
+
+.loan-card--listing-selected {
+	.borrower-img-wrap {
+		position: relative;
+		width: 100%;
+		height: 30%;
+	}
+
+	.borrower-img {
+		width: 50%
+	}
+
+	.country-flag {
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		margin-top: -14px;
+		margin-left: 3px;
+	}
+
+	.amount-left {
+		position: absolute;
+		left: 50%;
+		bottom: 0;
+		margin-left: 3px;
+	}
+
+	.borrower-details-wrap {
+		text-align: left;
+	}
+
+	.borrower-name {
+		font-size: 13px;
+	}
+
+	.matcher-text {
+		font-size: 12px;
+		position: static;
+	}
+}
+
+
+// fundraising meter
+.fundraising-meter {
+	background-color: #ccc;
+	width: 100%;
+	height: 4px;
+}
+
+.fundraising-meter-fill {
+	background-color: #74b446;
+	width: 100%;
+	height: 100%;
+}

@@ -3,6 +3,18 @@ module.exports = function(grunt) {
 	grunt.initConfig({
 		pkg: grunt.file.readJSON('package.json')
 
+        , concat: {
+            options: {
+                process: function (src, filepath) {
+                    return '/** \n * Source: ' + filepath + ' \n */ \n' + src + '\n\n';
+                }
+            }
+            , vendorCss: {
+                src: ['bower_components/nouislider/distribute/jquery.nouislider.min.css']
+                , dest: 'source/css/scss/vendor.scss'
+            }
+        }
+
 		, copy: {
 			init: {
 				files: [
@@ -64,8 +76,9 @@ module.exports = function(grunt) {
                     'source/_patterns/**/*.mustache'
                     , 'source/_patterns/**/*.json'
                     , 'source/_data/*.json'
+                    , 'source/js/*.js'
                 ]
-                , tasks: ['shell:compile']
+                , tasks: ['shell:compile', 'copy:js']
                 //, options: {
                 //    spawn: false
                 //    , livereload: true
@@ -91,12 +104,15 @@ module.exports = function(grunt) {
 		// * delete source/css (use source/scss instead)
 	});
 
+    // vendor: concat into vendor.scss, then compile into styles.scss
+
+    grunt.loadNpmTasks('grunt-contrib-concat');
 	grunt.loadNpmTasks('grunt-contrib-copy');
     grunt.loadNpmTasks('grunt-contrib-watch');
 	grunt.loadNpmTasks('grunt-sass');
 	grunt.loadNpmTasks('grunt-shell');
 	// @todo add livereload?
 
-	grunt.registerTask('init', ['copy:init', 'copy:js', 'shell:init']);
-	grunt.registerTask('compile', ['sass', 'shell:compile']);
+	grunt.registerTask('init', ['copy:init', 'shell:init']);
+	grunt.registerTask('compile', ['concat:vendorCss', 'sass', 'shell:compile', 'copy:js']);
 };

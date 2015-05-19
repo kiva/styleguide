@@ -1,13 +1,4 @@
-(function(w){
-	var sw = document.body.clientWidth,
-		sh = document.body.clientHeight;
-
-	$(w).resize(function(){ //Update dimensions on resize
-		sw = document.body.clientWidth;
-		sh = document.body.clientHeight;
-		
-		//updateAds();
-	});
+(function(global){
 
 	//Navigation toggle
 	$('.nav-toggle-menu').click(function(e) {
@@ -23,8 +14,11 @@
 		$('.header .search-form').toggleClass('active');
 	});
 
+    // Initialize Foundation
+    $(document).foundation();
+
     // NoUiSlider
-    $('.loanRepaymentSlider').noUiSlider({
+    $('.loan-repayments-slider').noUiSlider({
         start: [ 10, 30 ],
         connect: true,
         range: {

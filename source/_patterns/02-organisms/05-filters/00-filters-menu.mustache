@@ -8,7 +8,9 @@
 
                 <li>
                     <label>Loan Repayments</label>
-                    <div class="loanRepaymentSlider"></div>
+                    <div class="filter-slider">
+                        <div class="loan-repayments-slider"></div>
+                    </div>
                 </li>
 
                 <li>
@@ -19,62 +21,70 @@
                     {{> molecules-filters-paired-buttons}}
                 </li>
 
-                <li class="has-submenu">
+                <li class="loan-use-filters-submenu-wrap has-submenu">
                     <a href="#"><span>Loan Use</span> <span>2 selected</span></a>
-                    <div class="right-submenu">{{> organisms-loan-use-filters}}</div>
+                    {{> organisms-loan-use-filter}}
                 </li>
 
-                <li class="has-submenu">
+                <li class="country-filters-submenu-wrap has-submenu">
                     <a href="#"><span>Country or Region</span> <span>2 selected</span></a>
-                    <div class="right-submenu">{{> organisms-country-filters}}</div>
+                    {{> organisms-country-filter}}
                 </li>
 
                 {{#is_more_visible}}
-                    <li class="attributes-filters-submenu-wrap">
+                    <li class="attributes-filters-submenu-wrap has-submenu">
                         <a href="#"><span>Loan Attributes</span> <span>2 selected</span></a>
-                        <div class="right-submenu">{% include "v1/components/LoanFiltersView/CountryFiltersView.html" %}</div>
+                        {{> organisms-loan-attributes-filter}}
                     </li>
 
                     <li class="tags-filters-submenu-wrap has-submenu">
                         <a href="#"><span>Loan Tags</span> <span>2 selected</span></a>
-                        <div class="right-submenu">{% include "v1/components/LoanFiltersView/CountryFiltersView.html" %}</div>
+                        <div class="right-submenu">@todo</div>
                     </li>
 
                     <li class="status-filters-submenu-wrap has-submenu">
                         <a href="#"><span>Loan Status</span> <span>2 selected</span></a>
-                        <div class="right-submenu">{% include "v1/components/LoanFiltersView/CountryFiltersView.html" %}</div>
+                        {{> organisms-loan-status-filter}}
                     </li>
                 {{/is_more_visible}}
 
                 {{#is_partner_visible}}
                     <li class="partner-filters-submenu-wrap has-submenu">
                         <a href="#"><span>Partner</span> <span>2 selected</span></a>
-                        <div class="right-submenu">{% include "v1/components/LoanFiltersView/CountryFiltersView.html" %}</div>
+                        {{> organisms-partner-filter}}
                     </li>
 
                     <li class="partner-focus-filters-submenu-wrap has-submenu">
                         <a href="#"><span>Partner focus</span> <span>2 selected</span></a>
-                        <div class="right-submenu">{% include "v1/components/LoanFiltersView/CountryFiltersView.html" %}</div>
+                        {{> organisms-partner-focus-filter}}
                     </li>
 
                     <li class="delinquency-filter-submenu-wrap">
-                        <label>Loan Repayments</label>
-                        <div class="loanRepaymentSlider"></div>
+                        <label>Delinquency (%)</label>
+                        <div class="filter-slider">
+                            <div class="loan-repayments-slider"></div>
+                        </div>
                     </li>
 
                     <li class="default-filter-submenu-wrap">
-                        <label>Loan Repayments</label>
-                        <div class="loanRepaymentSlider"></div>
+                        <label>Default (%)</label>
+                        <div class="filter-slider">
+                            <div class="loan-repayments-slider"></div>
+                        </div>
                     </li>
 
                     <li class="cost-filter-submenu-wrap">
-                        <label>Loan Repayments</label>
-                        <div class="loanRepaymentSlider"></div>
+                        <label>Average Cost To Borrowers (%)</label>
+                        <div class="filter-slider">
+                            <div class="loan-repayments-slider"></div>
+                        </div>
                     </li>
 
                     <li class="profit-filter-submenu-wrap">
-                        <label>Loan Repayments</label>
-                        <div class="loanRepaymentSlider"></div>
+                        <label>Partner Profitability (%)</label>
+                        <div class="filter-slider">
+                            <div class="loan-repayments-slider"></div>
+                        </div>
                     </li>
                 {{/is_partner_visible}}
 
