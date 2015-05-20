@@ -5,13 +5,14 @@ module.exports = function(grunt) {
 
         , concat: {
             options: {
-                process: function (src, filepath) {
+                banner: '/**\n * This file was auto-generated in order to merge all vendor css in one scss file.\n */\n\n'
+                , process: function (src, filepath) {
                     return '/** \n * Source: ' + filepath + ' \n */ \n' + src + '\n\n';
                 }
             }
             , vendorCss: {
                 src: ['bower_components/nouislider/distribute/jquery.nouislider.min.css']
-                , dest: 'source/css/scss/vendor.scss'
+                , dest: 'bower_components/_vendor.scss'
             }
         }
 
@@ -86,7 +87,9 @@ module.exports = function(grunt) {
             }
 
             , styles: {
-                files: ['source/css/**/*.scss']
+                files: [
+                    'source/css/**/*.scss'
+                ]
                 , tasks: ['compile']
                 //, options: {
                 //    spawn: false
