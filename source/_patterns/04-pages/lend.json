@@ -1,0 +1,8 @@
+{
+	"image": {
+		"default": "http://placehold.it/320x184"
+		, "medium": "http://placehold.it/160x92"
+	}
+	, "filters-paired-button-1": "button 1"
+	, "filters-paired-button-2": "button 2"
+}

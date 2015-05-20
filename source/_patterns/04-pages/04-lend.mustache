@@ -7,7 +7,9 @@
             <div class="off-canvas-wrap" data-offcanvas>
                 <div class="inner-wrap">
 
-                    <a class="right-off-canvas-toggle" href="#" >Filters</a>
+                    <div class="row">
+                        <a class="right-off-canvas-toggle" href="#" >Filters</a>
+                    </div>
 
                     <aside class="right-off-canvas-menu">
                         <ul class="filters-menu-list off-canvas-list">
@@ -97,7 +99,6 @@
                                 </li>
                             {{/is_partner_visible}}
 
-                            {{! todo - the "link" syntax mentioned here: http://patternlab.io/docs/data-link-variable.html does not seem to work}}
                             <li>
                                 {{#is_more_visible}}
                                     {{^is_partner_visible}}
@@ -116,45 +117,47 @@
 
                     <section class="main-section">
                         <!-- Foundation will set the height of the off-canvas menu to the height of the main-section -->
-                        <div class="placeholderelement" style="height: 1000px">
+                        <div class="placeholderelement">
 
                             <div class="row">
-                                <ul class="loancards-list small-block-grid-2 medium-block-grid-3 large-block-grid-4">
+                                <ul class="loancards-list small-block-grid-2 medium-block-grid-2 large-block-grid-4">
                                     <li>
-                                        {{> organisms-listing-loancard}}
+                                        {{> organisms-loancard-listing}}
                                     </li>
                                     <li>
-                                        {{> organisms-listing-loancard}}
+                                        {{> organisms-loancard-listing}}
                                     </li>
                                     <li>
-                                        {{> organisms-listing-loancard}}
+                                        {{> organisms-loancard-listing}}
                                     </li>
                                     <li>
-                                        {{> organisms-listing-loancard}}
+                                        {{> organisms-loancard-listing}}
+                                    </li>
+                                </ul>
+                                <ul class="categories-list small-block-grid-1 medium-block-grid-1 large-block-grid-2">
+                                    <li>
+                                        {{> organisms-loancard-listing}}
                                     </li>
                                     <li>
-                                        {{> organisms-listing-loancard}}
+                                        {{> organisms-loancard-listing}}
                                     </li>
                                     <li>
-                                        {{> organisms-listing-loancard}}
+                                        {{> organisms-loancard-listing}}
                                     </li>
                                     <li>
-                                        {{> organisms-listing-loancard}}
+                                        {{> organisms-loancard-listing}}
                                     </li>
                                     <li>
-                                        {{> organisms-listing-loancard}}
+                                        {{> organisms-loancard-listing}}
                                     </li>
                                     <li>
-                                        {{> organisms-listing-loancard}}
+                                        {{> organisms-loancard-listing}}
                                     </li>
                                     <li>
-                                        {{> organisms-listing-loancard}}
+                                        {{> organisms-loancard-listing}}
                                     </li>
                                     <li>
-                                        {{> organisms-listing-loancard}}
-                                    </li>
-                                    <li>
-                                        {{> organisms-listing-loancard}}
+                                        {{> organisms-loancard-listing}}
                                     </li>
                                 </ul>
                             </div>
@@ -162,7 +165,7 @@
                         </div>
                     </section>
 
-                    <a class="exit-off-canvas">etstss</a>
+                    <a class="exit-off-canvas"></a>
 
                 </div>
             </div>
