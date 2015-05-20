@@ -1,4 +1,4 @@
-(function(global){
+(function(global, $){
 
 	//Navigation toggle
 	$('.nav-toggle-menu').click(function(e) {
@@ -27,4 +27,4 @@
         }
     });
 
-})(this);
+})(this, jQuery);

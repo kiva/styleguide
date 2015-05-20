@@ -1,8 +1,11 @@
 // Loan cards - listing
+.loancards-list > li {
+	margin-bottom: 20px;
+}
+
 .loan-card--listing {
 	border: #333 1px solid;
-	width: 150px;
-	height: 184px;
+	height: auto;
 
 	.amount-left {
 		font-size: 13px;
@@ -82,6 +85,12 @@
 		position: static;
 	}
 }
+
+//@media #{$small-up} {
+//	.loan-card--listing {
+//		width: 320px;
+//	}
+//}
 
 
 // fundraising meter

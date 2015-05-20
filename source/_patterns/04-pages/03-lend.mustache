@@ -1,387 +1,172 @@
-<div class="off-canvas-wrap" data-offcanvas>
-	<div class="inner-wrap">
-		<nav class="tab-bar">
-			<section class="left-small">
-				<a class="left-off-canvas-toggle menu-icon" ><span></span></a>
-			</section>
+<div id="siteWrapper" class="siteWrapper">
+    <div id="mainWrapper" class="mainWrapper">
+        <div id="main" class="main">
 
-			<section class="middle tab-bar-section">
-				<h1 class="title">Foundation</h1>
-			</section>
+            {{> organisms-header}}
 
-			<section class="right-small">
-				<a class="right-off-canvas-toggle menu-icon" ><span></span></a>
-			</section>
-		</nav>
+            <div class="off-canvas-wrap" data-offcanvas>
+                <div class="inner-wrap">
 
-		<aside class="left-off-canvas-menu">
-			<ul class="off-canvas-list">
-				<li><label>Foundation</label></li>
-				<li class="has-submenu"><a href="#">The Psychohistorians</a>
-					<ul class="left-submenu">
-						<li class="back"><a href="#">Back</a></li>
-						<li><label>Level 1</label></li>
-						<li><a href="#">Link 1</a></li>
-						<li class="has-submenu"><a href="#">Link 2 w/ submenu</a>
-							<ul class="left-submenu">
-								<li class="back"><a href="#">Back</a></li>
-								<li><label>Level 2</label></li>
-								<li><a href="#">...</a></li>
-							</ul>
-						</li>
-						<li><a href="#">...</a></li>
-					</ul>
-				</li>
-				<li><a href="#">The Encyclopedists</a></li>
-				<li><a href="#">The Mayors</a></li>
-				<li><a href="#">The Traders</a></li>
-				<li><a href="#">The Merchant Princes</a></li>
-			</ul>
-		</aside>
+                    <a class="right-off-canvas-toggle" href="#" >Filters</a>
 
-		<aside class="right-off-canvas-menu">
-			<ul class="off-canvas-list">
-				<li><label>Users</label></li>
-				<li><a href="#">Hari Seldon</a></li>
-				<li class="has-submenu"><a href="#">R. Giskard Reventlov</a>
-					<ul class="right-submenu">
-						<li class="back"><a href="#">Back</a></li>
-						<li><label>Level 1</label></li>
-						<li><a href="#">Link 1</a></li>
-						<li class="has-submenu"><a href="#">Link 2 w/ submenu</a>
-							<ul class="right-submenu">
-								<li class="back"><a href="#">Back</a></li>
-								<li><label>Level 2</label></li>
-								<li><a href="#">...</a></li>
-							</ul>
-						</li>
-						<li><a href="#">...</a></li>
-					</ul>
-				</li>
-				<li><a href="#">...</a></li>
-			</ul>
-		</aside>
+                    <aside class="right-off-canvas-menu">
+                        <ul class="filters-menu-list off-canvas-list">
+                            <li>
+                                {{> molecules-filters-paired-buttons}}
+                            </li>
 
-		<section class="main-section">
-			<!-- content goes here -->
-		</section>
+                            <li>
+                                <label>Loan Repayments</label>
+                                <div class="filter-slider">
+                                    <div class="loan-repayments-slider"></div>
+                                </div>
+                            </li>
 
-		<a class="exit-off-canvas"></a>
+                            <li>
+                                {{> molecules-filters-paired-buttons}}
+                            </li>
 
-		<div class="row">
-			<div class="large-12 columns">
-				<h1>Kiva - Foundation prototype</h1>
-			</div>
-		</div>
+                            <li>
+                                {{> molecules-filters-paired-buttons}}
+                            </li>
 
-		<div class="panel callout radius">
-			<h3>This is a callout panel.</h3>
-			<h5 class="subheader">It's a little ostentatious, but useful for important content.</5>
-		</div>
+                            <li class="loan-use-filters-submenu-wrap has-submenu">
+                                <a href="#"><span>Loan Use</span> <span>2 selected</span></a>
+                                {{> organisms-loan-use-filter}}
+                            </li>
 
-		<nav class="top-bar" data-topbar="" role="navigation">
-			<!-- Title -->
-			<ul class="title-area">
-				<li class="name"><h1><a href="#">Sexy Top Bar</a></h1></li>
+                            <li class="country-filters-submenu-wrap has-submenu">
+                                <a href="#"><span>Country or Region</span> <span>2 selected</span></a>
+                                {{> organisms-country-filter}}
+                            </li>
 
-				<!-- Mobile Menu Toggle -->
-				<li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
-			</ul>
+                            {{#is_more_visible}}
+                                <li class="attributes-filters-submenu-wrap has-submenu">
+                                    <a href="#"><span>Loan Attributes</span> <span>2 selected</span></a>
+                                    {{> organisms-loan-attributes-filter}}
+                                </li>
 
-			<!-- Top Bar Section -->
+                                <li class="tags-filters-submenu-wrap has-submenu">
+                                    <a href="#"><span>Loan Tags</span> <span>2 selected</span></a>
+                                    <div class="right-submenu">@todo</div>
+                                </li>
 
-			<section class="top-bar-section">
+                                <li class="status-filters-submenu-wrap has-submenu">
+                                    <a href="#"><span>Loan Status</span> <span>2 selected</span></a>
+                                    {{> organisms-loan-status-filter}}
+                                </li>
+                            {{/is_more_visible}}
 
-				<!-- Top Bar Left Nav Elements -->
-				<ul class="left">
+                            {{#is_partner_visible}}
+                                <li class="partner-filters-submenu-wrap has-submenu">
+                                    <a href="#"><span>Partner</span> <span>2 selected</span></a>
+                                    {{> organisms-partner-filter}}
+                                </li>
 
-					<!-- Search | has-form wrapper -->
-					<li class="has-form">
-						<div class="row collapse">
-							<div class="large-8 small-9 columns">
-								<input type="text" placeholder="Find Stuff">
-							</div>
-							<div class="large-4 small-3 columns">
-								<a href="#" class="alert button expand">Search</a>
-							</div>
-						</div>
-					</li>
-					<li class="has-form">
-						<a class="button">Test</a>
-					</li>
-				</ul>
+                                <li class="partner-focus-filters-submenu-wrap has-submenu">
+                                    <a href="#"><span>Partner focus</span> <span>2 selected</span></a>
+                                    {{> organisms-partner-focus-filter}}
+                                </li>
 
-				<!-- Top Bar Right Nav Elements -->
-				<ul class="right">
-					<!-- Divider -->
-					<li class="divider"></li>
+                                <li class="delinquency-filter-submenu-wrap">
+                                    <label>Delinquency (%)</label>
+                                    <div class="filter-slider">
+                                        <div class="loan-repayments-slider"></div>
+                                    </div>
+                                </li>
 
-					<!-- Dropdown -->
-					<li class="has-dropdown not-click"><a href="#">Item 1</a>
-						<ul class="dropdown"><li class="title back js-generated"><h5><a href="javascript:void(0)">Back</a></h5></li><li class="parent-link hide-for-large-up"><a class="parent-link js-generated" href="#">Item 1</a></li>
-							<li><label>Level One</label></li>
-							<li><a href="#">Sub-item 1</a></li>
-							<li><a href="#">Sub-item 2</a></li>
-							<li class="divider"></li>
-							<li><a href="#">Sub-item 3</a></li>
-							<li class="has-dropdown not-click"><a href="#">Sub-item 4</a>
+                                <li class="default-filter-submenu-wrap">
+                                    <label>Default (%)</label>
+                                    <div class="filter-slider">
+                                        <div class="loan-repayments-slider"></div>
+                                    </div>
+                                </li>
 
-								<!-- Nested Dropdown -->
-								<ul class="dropdown"><li class="title back js-generated"><h5><a href="javascript:void(0)">Back</a></h5></li><li class="parent-link hide-for-large-up"><a class="parent-link js-generated" href="#">Sub-item 4</a></li>
-									<li><label>Level Two</label></li>
-									<li><a href="#">Sub-item 2</a></li>
-									<li><a href="#">Sub-item 3</a></li>
-									<li><a href="#">Sub-item 4</a></li>
-								</ul>
-							</li>
-							<li><a href="#">Sub-item 5</a></li>
-						</ul>
-					</li>
+                                <li class="cost-filter-submenu-wrap">
+                                    <label>Average Cost To Borrowers (%)</label>
+                                    <div class="filter-slider">
+                                        <div class="loan-repayments-slider"></div>
+                                    </div>
+                                </li>
 
-					<li class="divider"></li>
+                                <li class="profit-filter-submenu-wrap">
+                                    <label>Partner Profitability (%)</label>
+                                    <div class="filter-slider">
+                                        <div class="loan-repayments-slider"></div>
+                                    </div>
+                                </li>
+                            {{/is_partner_visible}}
 
-					<!-- Anchor -->
-					<li><a href="#">Generic Button</a></li>
-					<li class="divider"></li>
+                            {{! todo - the "link" syntax mentioned here: http://patternlab.io/docs/data-link-variable.html does not seem to work}}
+                            <li>
+                                {{#is_more_visible}}
+                                    {{^is_partner_visible}}
+                                        <a href="{{link.organisms-filters-menu-partner}}" class="show-more-filters button small secondary">Partner Filters</a>
+                                    {{/is_partner_visible}}
+                                {{/is_more_visible}}
+                                {{^is_more_visible}}
+                                    <a href="{{link.organisms-filters-menu-more}}" class="show-more-filters button small secondary">More Filters</a>
+                                {{/is_more_visible}}
 
-					<!-- Button -->
-					<li class="has-form show-for-large-up">
-						<a href="http://foundation.zurb.com/docs" class="button">Get Lucky</a>
-					</li>
-				</ul>
-			</section></nav>
+                                <a href="#" class="button small secondary">Save this search</a>
+                                <a href="#" class="button small">Apply</a>
+                            </li>
+                        </ul>
+                    </aside>
 
-		<div class="icon-bar five-up">
-			<a class="item">
-				<img src="{kvstatic file=img/icon/sector/w16h16/sector_1.gif}" >
-				<label>Home</label>
-			</a>
-			<a class="item">
-				<img src="{kvstatic file=img/icon/sector/w16h16/sector_3.gif}" >
-				<label>Bookmark</label>
-			</a>
-			<a class="item">
-				<img src="{kvstatic file=img/icon/sector/w16h16/sector_4.gif}" >
-				<label>Info</label>
-			</a>
-			<a class="item">
-				<img src="{kvstatic file=img/icon/sector/w16h16/sector_5.gif}" >
-				<label>Mail</label>
-			</a>
-			<a class="item">
-				<img src="{kvstatic file=img/icon/sector/w16h16/sector_6.gif}" >
-				<label>Like</label>
-			</a>
-		</div>
+                    <section class="main-section">
+                        <!-- Foundation will set the height of the off-canvas menu to the height of the main-section -->
+                        <div class="placeholderelement" style="height: 1000px">
 
-		<div data-magellan-expedition="fixed">
-			<dl class="sub-nav">
-				<dd data-magellan-arrival="build"><a href="#build">Build with HTML</a></dd>
-				<dd data-magellan-arrival="js"><a href="#js">Arrival 2</a></dd>
-			</dl>
-		</div>
+                            <div class="row">
+                                <ul class="loancards-list small-block-grid-2 medium-block-grid-3 large-block-grid-4">
+                                    <li>
+                                        {{> organisms-listing-loancard}}
+                                    </li>
+                                    <li>
+                                        {{> organisms-listing-loancard}}
+                                    </li>
+                                    <li>
+                                        {{> organisms-listing-loancard}}
+                                    </li>
+                                    <li>
+                                        {{> organisms-listing-loancard}}
+                                    </li>
+                                    <li>
+                                        {{> organisms-listing-loancard}}
+                                    </li>
+                                    <li>
+                                        {{> organisms-listing-loancard}}
+                                    </li>
+                                    <li>
+                                        {{> organisms-listing-loancard}}
+                                    </li>
+                                    <li>
+                                        {{> organisms-listing-loancard}}
+                                    </li>
+                                    <li>
+                                        {{> organisms-listing-loancard}}
+                                    </li>
+                                    <li>
+                                        {{> organisms-listing-loancard}}
+                                    </li>
+                                    <li>
+                                        {{> organisms-listing-loancard}}
+                                    </li>
+                                    <li>
+                                        {{> organisms-listing-loancard}}
+                                    </li>
+                                </ul>
+                            </div>
 
-		<div class="row">
-			<div class="large-12 columns">
-				<div class="panel">
-					<h3>We&rsquo;re stoked you want to try Foundation! </h3>
+                        </div>
+                    </section>
 
-					<p>To get going, this file (index.html) includes some basic styles you can modify, play around with, or totally destroy to get going.</p>
-					<p>Once you've exhausted the fun in this document, you should check out:</p>
-					<div class="row">
-						<div class="large-4 medium-4 columns">
-							<p><a href="http://foundation.zurb.com/docs">Foundation Documentation</a><br />Everything you need to know about using the framework.</p>
-						</div>
-						<div class="large-4 medium-4 columns">
-							<p><a href="http://github.com/zurb/foundation">Foundation on Github</a><br />Latest code, issue reports, feature requests and more.</p>
-						</div>
-						<div class="large-4 medium-4 columns">
-							<p><a href="http://twitter.com/foundationzurb">@foundationzurb</a><br />Ping us on Twitter if you have questions. If you build something with this we'd love to see it (and send you a totally boss sticker).</p>
-						</div>
-					</div>
+                    <a class="exit-off-canvas">etstss</a>
 
-					<h3 class="mediaQueryName"></h3>
-
-					<div class="appendInterchangeTest">Test Async Image</div>
-
-					<script>
-						setTimeout(function () {
-							$('.appendInterchangeTest').html('<img data-interchange="[{kvImgUrl id=1661816 size=s100}, (default)], [{kvImgUrl id=1661816 size=s100}, (small)], [{kvImgUrl id=1661816 size=s200}, (medium)], [{kvImgUrl id=1661816 size=s300}, (large)]" >');
-							$('.appendInterchangeTest').foundation('interchange', 'reflow');
-						}, 1000);
-					</script>
-
-					<div class="row collapse">
-						<label>Blah blah</label>
-						<div class="small-9 columns">
-							<input type="search" placeholder="Search for loans" />
-						</div>
-						<div class="small-3 columns">
-							<span class="postfix">Go</span>
-						</div>
-					</div>
-
-					<div class="row collapse">
-						<div class="large-8 small-9 columns">
-							<input type="text" placeholder="Find Stuff">
-						</div>
-						<div class="large-4 small-3 columns">
-							<a href="#" class="alert button postfix">Search</a>
-						</div>
-					</div>
-
-					<div class="row">
-						<div class="large-4 medium-4 columns">
-							<label>Input Label</label>
-							<input type="text" placeholder="large-4.columns">
-						</div>
-						<div class="large-8 medium-8 columns">
-							<div class="row collapse">
-								<label>Input Label</label>
-								<div class="small-3 columns">
-									<span class="prefix">http://kiva.org/lender/</span>
-								</div>
-								<div class="small-9 columns">
-									<input type="text" placeholder="small-9.columns">
-								</div>
-							</div>
-						</div>
-					</div>
-
-					<div class="row">
-						<div class="large-4 medium-4 columns">
-							<img data-interchange="[{kvImgUrl id=1661816 size=s100}, (default)], [{kvImgUrl id=1661816 size=s300}, (small)], [{kvImgUrl id=1661816 size=s200}, (medium)], [{kvImgUrl id=1661816 size=s300}, (large)]" />
-						</div>
-						<div class="large-4 medium-4 columns">
-							<img data-interchange="[{kvImgUrl id=1661816 size=s100}, (default)], [{kvImgUrl id=1661816 size=s300}, (small)], [{kvImgUrl id=1661816 size=s200}, (medium)], [{kvImgUrl id=1661816 size=s300}, (large)]" />
-						</div>
-						<div class="large-4 medium-4 columns">
-							<img data-interchange="[{kvImgUrl id=1661816 size=s100}, (default)], [{kvImgUrl id=1661816 size=s300}, (small)], [{kvImgUrl id=1661816 size=s200}, (medium)], [{kvImgUrl id=1661816 size=s300}, (large)]" />
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-
-		<div class="row">
-			<div class="large-8 medium-8 columns">
-				<h5>Here&rsquo;s your basic grid:</h5>
-				<!-- Grid Example -->
-
-				<div class="row">
-					<div class="large-12 columns">
-						<div class="callout panel">
-							<p><strong>This is a twelve column section in a row.</strong> Each of these includes a div.panel element so you can see where the columns are - it's not required at all for the grid.</p>
-						</div>
-					</div>
-				</div>
-				<div class="row">
-					<div class="large-6 medium-6 columns">
-						<div class="callout panel">
-							<p>Six columns</p>
-						</div>
-					</div>
-					<div class="large-6 medium-6 columns">
-						<div class="callout panel">
-							<p>Six columns</p>
-						</div>
-					</div>
-				</div>
-				<div class="row">
-					<div class="large-4 medium-4 small-4 columns">
-						<div class="callout panel">
-							<p>Four columns</p>
-						</div>
-					</div>
-					<div class="large-4 medium-4 small-4 columns">
-						<div class="callout panel">
-							<p>Four columns</p>
-						</div>
-					</div>
-					<div class="large-4 medium-4 small-4 columns">
-						<div class="callout panel">
-							<p>Four columns</p>
-						</div>
-					</div>
-				</div>
-
-				<hr />
-
-				<h5>We bet you&rsquo;ll need a form somewhere:</h5>
-				<form>
-					<div class="row">
-						<div class="large-12 columns">
-							<label>Input Label</label>
-							<input type="text" placeholder="large-12.columns" />
-						</div>
-					</div>
-					<div class="row">
-						<div class="large-4 medium-4 columns">
-							<label>Input Label</label>
-							<input type="text" placeholder="large-4.columns" />
-						</div>
-						<div class="large-4 medium-4 columns">
-							<label>Input Label</label>
-							<input type="text" placeholder="large-4.columns" />
-						</div>
-						<div class="large-4 medium-4 columns">
-							<div class="row collapse">
-								<label>Input Label</label>
-								<div class="small-9 columns">
-									<input type="text" placeholder="small-9.columns" />
-								</div>
-								<div class="small-3 columns">
-									<span class="postfix">.com</span>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="row">
-						<div class="large-12 columns">
-							<label>Select Box</label>
-							<select>
-								<option value="husker">Husker</option>
-								<option value="starbuck">Starbuck</option>
-								<option value="hotdog">Hot Dog</option>
-								<option value="apollo">Apollo</option>
-							</select>
-						</div>
-					</div>
-					<div class="row">
-						<div class="large-6 medium-6 columns">
-							<label>Choose Your Favorite</label>
-							<input type="radio" name="pokemon" value="Red" id="pokemonRed"><label for="pokemonRed">Radio 1</label>
-							<input type="radio" name="pokemon" value="Blue" id="pokemonBlue"><label for="pokemonBlue">Radio 2</label>
-						</div>
-						<div class="large-6 medium-6 columns">
-							<label>Check these out</label>
-							<input id="checkbox1" type="checkbox"><label for="checkbox1">Checkbox 1</label>
-							<input id="checkbox2" type="checkbox"><label for="checkbox2">Checkbox 2</label>
-						</div>
-					</div>
-					<div class="row">
-						<div class="large-12 columns">
-							<label>Textarea Label</label>
-							<textarea placeholder="small-12.columns"></textarea>
-						</div>
-					</div>
-				</form>
-			</div>
-
-			<div class="large-4 medium-4 columns">
-				<h5>Try one of these buttons:</h5>
-				<p><a href="#" class="small button">Simple Button</a><br/>
-					<a href="#" class="small radius button">Radius Button</a><br/>
-					<a href="#" class="small round button">Round Button</a><br/>
-					<a href="#" class="medium success button">Success Btn</a><br/>
-					<a href="#" class="medium alert button">Alert Btn</a><br/>
-					<a href="#" class="medium secondary button">Secondary Btn</a></p>
-				<div class="panel">
-					<h5>So many components, girl!</h5>
-					<p>A whole kitchen sink of goodies comes with Foundation. Checkout the docs to see them all, along with details on making them your own.</p>
-					<a href="http://foundation.zurb.com/docs/" class="small button">Go to Foundation Docs</a>
-				</div>
-			</div>
-		</div>
-	</div>
+                </div>
+            </div>
+        </div>
+        {{> organisms-footer}}
+    </div>
 </div>
