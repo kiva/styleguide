@@ -3,7 +3,6 @@
 public/*
 source/css/*.css
 source/css/*.css.map
-source/css/scss/vendor.scss
 source/dep
 node_modules
 bower_components
