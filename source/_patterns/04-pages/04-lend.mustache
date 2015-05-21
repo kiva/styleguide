@@ -42,22 +42,20 @@
                                 {{> organisms-country-filter}}
                             </li>
 
-                            {{#is_more_visible}}
-                                <li class="attributes-filters-submenu-wrap has-submenu">
-                                    <a href="#"><span>Loan Attributes</span> <span>2 selected</span></a>
-                                    {{> organisms-loan-attributes-filter}}
-                                </li>
+                            <li class="attributes-filters-submenu-wrap has-submenu" style="display:none;">
+                                <a href="#"><span>Loan Attributes</span> <span>2 selected</span></a>
+                                {{> organisms-loan-attributes-filter}}
+                            </li>
 
-                                <li class="tags-filters-submenu-wrap has-submenu">
-                                    <a href="#"><span>Loan Tags</span> <span>2 selected</span></a>
-                                    <div class="right-submenu">@todo</div>
-                                </li>
+                            <li class="tags-filters-submenu-wrap has-submenu" style="display:none;">
+                                <a href="#"><span>Loan Tags</span> <span>2 selected</span></a>
+                                <div class="right-submenu">@todo</div>
+                            </li>
 
-                                <li class="status-filters-submenu-wrap has-submenu">
-                                    <a href="#"><span>Loan Status</span> <span>2 selected</span></a>
-                                    {{> organisms-loan-status-filter}}
-                                </li>
-                            {{/is_more_visible}}
+                            <li class="status-filters-submenu-wrap has-submenu">
+                                <a href="#"><span>Loan Status</span> <span>2 selected</span></a>
+                                {{> organisms-loan-status-filter}}
+                            </li>
 
                             {{#is_partner_visible}}
                                 <li class="partner-filters-submenu-wrap has-submenu">
