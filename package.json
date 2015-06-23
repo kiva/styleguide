@@ -14,7 +14,7 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "prepublish": "bower install && grunt init && grunt compile"
+    "prepublish": "bower install --config.interactive=false && grunt init && grunt compile"
   },
   "repository": {
     "type": "git",
