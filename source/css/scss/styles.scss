@@ -45,41 +45,41 @@
 
 
 // Foundation overrides
-//@import 'vender/foundation/grid';
-//@import 'vender/foundation/accordion';
-//@import 'vender/foundation/alert-boxes';
-//@import 'vender/foundation/block-grid';
-//@import 'vender/foundation/breadcrumbs';
-//@import 'vender/foundation/button-groups';
-//@import 'vender/foundation/buttons';
-//@import 'vender/foundation/clearing';
-//@import 'vender/foundation/dropdown';
-//@import 'vender/foundation/dropdown-buttons';
-//@import 'vender/foundation/flex-video';
-//@import 'vender/foundation/forms';
-//@import 'vender/foundation/icon-bar';
-//@import 'vender/foundation/inline-lists';
-//@import 'vender/foundation/joyride';
-//@import 'vender/foundation/keystrokes';
-//@import 'vender/foundation/labels';
-//@import 'vender/foundation/magellan';
-//@import 'vender/foundation/orbit';
-//@import 'vender/foundation/pagination';
-//@import 'vender/foundation/panels';
-//@import 'vender/foundation/pricing-tables';
-//@import 'vender/foundation/progress-bars';
-//@import 'vender/foundation/range-slider';
-//@import 'vender/foundation/reveal';
-//@import 'vender/foundation/side-nav';
-//@import 'vender/foundation/split-buttons';
-//@import 'vender/foundation/sub-nav';
-//@import 'vender/foundation/switches';
-//@import 'vender/foundation/tables';
-//@import 'vender/foundation/tabs';
-//@import 'vender/foundation/thumbs';
-//@import 'vender/foundation/tooltips';
-//@import 'vender/foundation/top-bar';
-//@import 'vender/foundation/type';
+//@import 'vendor/foundation/grid';
+//@import 'vendor/foundation/accordion';
+//@import 'vendor/foundation/alert-boxes';
+//@import 'vendor/foundation/block-grid';
+//@import 'vendor/foundation/breadcrumbs';
+//@import 'vendor/foundation/button-groups';
+//@import 'vendor/foundation/buttons';
+//@import 'vendor/foundation/clearing';
+//@import 'vendor/foundation/dropdown';
+//@import 'vendor/foundation/dropdown-buttons';
+//@import 'vendor/foundation/flex-video';
+//@import 'vendor/foundation/forms';
+//@import 'vendor/foundation/icon-bar';
+//@import 'vendor/foundation/inline-lists';
+//@import 'vendor/foundation/joyride';
+//@import 'vendor/foundation/keystrokes';
+//@import 'vendor/foundation/labels';
+//@import 'vendor/foundation/magellan';
+//@import 'vendor/foundation/orbit';
+//@import 'vendor/foundation/pagination';
+//@import 'vendor/foundation/panels';
+//@import 'vendor/foundation/pricing-tables';
+//@import 'vendor/foundation/progress-bars';
+//@import 'vendor/foundation/range-slider';
+//@import 'vendor/foundation/reveal';
+//@import 'vendor/foundation/side-nav';
+//@import 'vendor/foundation/split-buttons';
+//@import 'vendor/foundation/sub-nav';
+//@import 'vendor/foundation/switches';
+//@import 'vendor/foundation/tables';
+//@import 'vendor/foundation/tabs';
+//@import 'vendor/foundation/thumbs';
+//@import 'vendor/foundation/tooltips';
+//@import 'vendor/foundation/top-bar';
+//@import 'vendor/foundation/type';
 @import 'vendor/foundation/offcanvas';
 
 
@@ -88,7 +88,12 @@
 
 
 // Custom vendor overrides
-@import 'vendor/nouislider';
-@import 'custom/components';
+@import 'vendor/nouislider/nouislider';
+
+
+// App specific styling
+@import 'app/fundraising-meter';
+@import 'app/loancards';
+@import 'app/sitefooter';
 
 

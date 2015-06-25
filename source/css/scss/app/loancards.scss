@@ -92,21 +92,3 @@
 		position: static;
 	}
 }
-
-//@media #{$small-up} {
-//	.loan-card--listing {
-//		width: 320px;
-//	}
-//}
-
-
-// fundraising meter
-.fundraising-meter {
-	border: none;
-	height: 4px;
-	padding: 0;
-
-	.meter {
-		background-color: #74b446;
-	}
-}
