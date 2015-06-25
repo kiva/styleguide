@@ -12,6 +12,17 @@ build_patternlab () {
 	php core/builder.php --generate 
 }
 
+x_rsync="rsync -e ssh -avP --delete --exclude .git "
+
+stage_code () {
+	# rsync
+	$x_rsync public/ ${1}@{$2}:/var/www/${3}
+}
+
+enable_vhost () {
+	ssh -T ${1}@${2} "sudo a2ensite styleguide"
+}
+
 exit_handler () {
   exit_code=$?
   set +xe
