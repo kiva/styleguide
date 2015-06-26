@@ -7,8 +7,6 @@
 
 
 build_patternlab () {
-#	#public/ is in .gitignore; make sure it exists first
-#	mkdir -p public
 	npm install
 }
 
@@ -16,13 +14,33 @@ x_rsync="rsync -e ssh -avP --delete --exclude .git "
 
 # stage_code $user $host
 stage_code () {
+	# if $host is localhost, this is a no-op
+	[[ "${1}" == "localhost" ]] && return
+
 	# rsync
+	echo "Staging code onto '${1}'"
+	pushd ${script_dir}
 	${x_rsync} public/ ${1}@{$2}:/var/www/styleguide
+	# copy over bin/styleguide.conf too?
+	popd
 }
 
-# enable_vhost $user $host
+# enable_vhost $user $host $domain
 enable_vhost () {
-	ssh -T ${1}@${2} "sudo a2ensite styleguide"
+	echo "Enabling styleguide vhost on ${3}"
+	pushd ${script_dir}
+	# the better, more 12-factor approach to this would be to use environment variables
+	#  to drive variable substitution into a VirtualHost template
+	# This is the hack version
+	if [[ "${3}" == "styleguide-vm.kiva.org" ]]; then
+		sudo cp -uv styleguide.vm.conf /etc/apache2/sites-available/styleguide
+		sudo a2ensite styleguide && sudo apache2ctl graceful
+	else
+		echo "Enabling styleguide vhost on ${3}"
+		${x_rsync} styleguide.conf ${1}@${2}:/etc/apache2/sites-available/styleguide
+		ssh -T ${1}@${2} "sudo a2ensite styleguide && sudo apache2ctl graceful"
+	fi
+	popd
 }
 
 exit_handler () {

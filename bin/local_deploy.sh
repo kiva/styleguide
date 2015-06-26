@@ -11,15 +11,6 @@ EOF
   exit 1
 }
 
-# defaults
-# cli argument processing
-#while getopts "" opt; do
-#  case ${opt} in
-#    \? ) usage ;;
-#    *  ) usage ;;
-#  esac
-#done
-
 script_dir=$(dirname $0)
 source $script_dir/bamboo_functions.sh
 
@@ -30,15 +21,16 @@ set -xe
 
 # Main
 
-#begin ": patternlab-kiva deployment"
+# Build
+build_patternlab
+
+# Deploy
 
 # Grab any variables from environment, including secrets
 # TODO: these should be coming from the environment.  Until then, this isn't really deployable anywhere
-host="qa-web-01"
-user="devpush"
-base_domain="styleguide.kiva.org"
-
-# all other prep of local working dir should be handled by Build step
+host="localhost"
+user=`whoami`
+base_domain="styleguide-vm.kiva.org"
 
 # Copy code to nodes
 stage_code ${host} ${user}
