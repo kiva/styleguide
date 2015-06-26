@@ -12,7 +12,7 @@ build_patternlab () {
 
 x_rsync="rsync -e ssh -avP --delete --exclude .git "
 
-# stage_code $user $host
+# stage_code $host $user
 stage_code () {
 	# if $host is localhost, this is a no-op
 	[[ "${1}" == "localhost" ]] && return
@@ -20,25 +20,27 @@ stage_code () {
 	# rsync
 	echo "Staging code onto '${1}'"
 	pushd ${script_dir}
-	${x_rsync} public/ ${1}@{$2}:/var/www/styleguide
+	${x_rsync} public/ ${2}@{$1}:/var/www/styleguide.kiva.org/
 	# copy over bin/styleguide.conf too?
 	popd
 }
 
-# enable_vhost $user $host $domain
+# enable_vhost $host $user $domain
 enable_vhost () {
-	echo "Enabling styleguide vhost on ${3}"
 	pushd ${script_dir}
 	# the better, more 12-factor approach to this would be to use environment variables
 	#  to drive variable substitution into a VirtualHost template
 	# This is the hack version
-	if [[ "${3}" == "styleguide-vm.kiva.org" ]]; then
-		sudo cp -uv styleguide.vm.conf /etc/apache2/sites-available/styleguide
+	conf_file="styleguide.conf"
+	[[ "${3}" == "styleguide-vm.kiva.org" ]] && conf_file="styleguide.vm.conf"
+	if [[ "${3}" == "styleguide-vm.kiva.org" || "${2}" == "${HOSTNAME} ]]; then
+		echo "Enabling styleguide vhost on localhost, for ${3}"
+		sudo cp -uv ${conf_file} /etc/apache2/sites-available/styleguide
 		sudo a2ensite styleguide && sudo apache2ctl graceful
 	else
-		echo "Enabling styleguide vhost on ${3}"
-		${x_rsync} styleguide.conf ${1}@${2}:/etc/apache2/sites-available/styleguide
-		ssh -T ${1}@${2} "sudo a2ensite styleguide && sudo apache2ctl graceful"
+		echo "Enabling styleguide vhost on remote host, for ${3}"
+		${x_rsync} ${conf_file} ${2}@${1}:/etc/apache2/sites-available/styleguide
+		ssh -T ${2}@${1} "sudo a2ensite styleguide && sudo apache2ctl graceful"
 	fi
 	popd
 }
