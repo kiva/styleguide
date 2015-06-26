@@ -33,7 +33,7 @@ enable_vhost () {
 	# This is the hack version
 	conf_file="styleguide.conf"
 	[[ "${3}" == "styleguide-vm.kiva.org" ]] && conf_file="styleguide.vm.conf"
-	if [[ "${3}" == "styleguide-vm.kiva.org" || "${2}" == "${HOSTNAME} ]]; then
+	if [[ "${3}" == "styleguide-vm.kiva.org" || "${2}" == "${HOSTNAME}" ]]; then
 		echo "Enabling styleguide vhost on localhost, for ${3}"
 		sudo cp -uv ${conf_file} /etc/apache2/sites-available/styleguide
 		sudo a2ensite styleguide && sudo apache2ctl graceful
