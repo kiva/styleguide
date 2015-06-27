@@ -20,7 +20,7 @@ stage_code () {
 	# rsync
 	echo "Staging code onto '${1}'"
 	pushd ${script_dir}
-	${x_rsync} public/ ${2}@{$1}:/var/www/styleguide.kiva.org/
+	${x_rsync} public/ ${2}@${1}:/var/www/styleguide.kiva.org/
 	# copy over bin/styleguide.conf too?
 	popd
 }
