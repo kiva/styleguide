@@ -8,6 +8,12 @@
         border-right:none;
     }
 
+    .pronus {
+        color: $light-green;
+        text-align: center;
+        line-height: rem-calc(64);
+    }
+
     .right-side {
         float:right;
 
