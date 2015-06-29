@@ -45,6 +45,7 @@ module.exports = function(grunt) {
 			options: {
 				includePaths: [
 					'bower_components/foundation/scss'
+					, 'bower_components'
 					// @todo - should we also add bourbon?  require('node-bourbon').includePaths
 				]
 					}
