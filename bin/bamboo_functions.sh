@@ -23,7 +23,9 @@ stage_code () {
 	docroot="/var/www/styleguide.kiva.org/"
 	if [[ "${1}" == "${HOSTNAME}" ]]; then
 		echo "Staging code over to ${docroot}"
+		pushd ${base_dir}
 		${x_rsync} public/ ${docroot}
+		popd
 		return
 	fi
 
