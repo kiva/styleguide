@@ -39,17 +39,18 @@ enable_vhost () {
 	pushd ${script_dir}
 	# the better, more 12-factor approach to this would be to use environment variables
 	#  to drive variable substitution into a VirtualHost template
+	# Also -- why should this app know that the web server is apache vs nginx vs ??
 	# This is the hack version
 	conf_file="styleguide.conf"
 	[[ "${3}" == "styleguide-vm.kiva.org" ]] && conf_file="styleguide.vm.conf"
-	if [[ "${3}" == "styleguide-vm.kiva.org" || "${1}" == "${HOSTNAME}" ]]; then
+	if [[ "${3}" == "styleguide-vm.kiva.org" ]]; then
 		echo "Enabling styleguide vhost on localhost, for ${3}"
 		sudo cp -uv ${conf_file} /etc/apache2/sites-available/styleguide
 		sudo a2ensite styleguide && sudo apache2ctl graceful
 	else
 		echo "Enabling styleguide vhost on remote host, for ${3}"
-		${x_rsync} ${conf_file} ${2}@${1}:/etc/apache2/sites-available/styleguide
-		ssh -T ${2}@${1} "sudo a2ensite styleguide && sudo apache2ctl graceful"
+#		${x_rsync} ${conf_file} ${2}@${1}:/etc/apache2/sites-available/styleguide
+#		ssh -T ${2}@${1} "sudo a2ensite styleguide && sudo apache2ctl graceful"
 	fi
 	popd
 }
