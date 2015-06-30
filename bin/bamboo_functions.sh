@@ -20,19 +20,16 @@ stage_code () {
 	# if $host is localhost, this is a no-op
 	[[ "${1}" == "localhost" ]] && return
 	# if $host is the same as $HOSTNAME, don't copy via ssh
-	docroot="/var/www/styleguide.kiva.org/"
-	if [[ "${1}" == "${HOSTNAME}" ]]; then
-		echo "Staging code over to ${docroot}"
-		pushd ${base_dir}
-		${x_rsync} public/ ${docroot}
-		popd
-		return
+	remote=""
+	if [[ "${1}" != "${HOSTNAME}" ]]; then
+		remote="${2}@${1}:"
 	fi
 
 	# rsync
-	echo "Staging code onto '${1}'"
+	docroot="/var/www/styleguide.kiva.org/"
+	echo "Staging code over to ${docroot} on '${1}'"
 	pushd ${base_dir}
-	${x_rsync} public/* ${2}@${1}:${docroot}
+	${x_rsync} public/* ${remote}${docroot}
 	# copy over bin/styleguide.conf too?
 	popd
 }
