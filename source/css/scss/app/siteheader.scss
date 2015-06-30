@@ -12,10 +12,11 @@
         border-right:none;
     }
 
-    .pronus {
+    .pronus.columns {
         color: $light-green;
         text-align: center;
         line-height: em-calc(64);
+        width: grid-calc(4, $total-columns);
     }
 
     .right-side.columns {
@@ -79,6 +80,9 @@
 
         .logo-area {
             text-align: left;
+            .header-button {
+                padding: 0 em-calc(64) 0 0;
+            }
         }
 
         .right-side {
