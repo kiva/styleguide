@@ -5,9 +5,12 @@
 # Description:  functions used by the bamboo_*.sh scripts.  Kept here
 #               to make the scripts themselves more simple and more readable.
 
+base_dir=$(dirname ${script_dir})
 
 build_patternlab () {
+	pushd ${base_dir}
 	npm install
+	popd
 }
 
 x_rsync="rsync -e ssh -avP --delete --exclude .git "
@@ -26,7 +29,7 @@ stage_code () {
 
 	# rsync
 	echo "Staging code onto '${1}'"
-	pushd ${script_dir}
+	pushd ${base_dir}
 	${x_rsync} public/ ${2}@${1}:${docroot}
 	# copy over bin/styleguide.conf too?
 	popd
