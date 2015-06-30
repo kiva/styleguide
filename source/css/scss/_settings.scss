@@ -155,9 +155,9 @@ $info-color: $gray;
 // d. Media Query Ranges
 // - - - - - - - - - - - - - - - - - - - - - - - - -
 
-$small-breakpoint:  em-calc(640);
-$medium-breakpoint: em-calc(1024);
-$large-breakpoint:  em-calc(1440);
+$small-breakpoint:  em-calc(760);  // default 640
+$medium-breakpoint: em-calc(988);  // default 1024
+$large-breakpoint:  em-calc(1116); // default 1440
 $xlarge-breakpoint: em-calc(1920);
 
 $small-range:   (0, $small-breakpoint);
