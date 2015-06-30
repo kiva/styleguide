@@ -16,11 +16,18 @@ x_rsync="rsync -e ssh -avP --delete --exclude .git "
 stage_code () {
 	# if $host is localhost, this is a no-op
 	[[ "${1}" == "localhost" ]] && return
+	# if $host is the same as $HOSTNAME, don't copy via ssh
+	docroot="/var/www/styleguide.kiva.org/"
+	if [[ "${1}" == "${HOSTNAME}" ]]; then
+		echo "Staging code over to ${docroot}"
+		${x_rsync} public/ ${docroot}
+		return
+	fi
 
 	# rsync
 	echo "Staging code onto '${1}'"
 	pushd ${script_dir}
-	${x_rsync} public/ ${2}@${1}:/var/www/styleguide.kiva.org/
+	${x_rsync} public/ ${2}@${1}:${docroot}
 	# copy over bin/styleguide.conf too?
 	popd
 }
@@ -33,7 +40,7 @@ enable_vhost () {
 	# This is the hack version
 	conf_file="styleguide.conf"
 	[[ "${3}" == "styleguide-vm.kiva.org" ]] && conf_file="styleguide.vm.conf"
-	if [[ "${3}" == "styleguide-vm.kiva.org" || "${2}" == "${HOSTNAME}" ]]; then
+	if [[ "${3}" == "styleguide-vm.kiva.org" || "${1}" == "${HOSTNAME}" ]]; then
 		echo "Enabling styleguide vhost on localhost, for ${3}"
 		sudo cp -uv ${conf_file} /etc/apache2/sites-available/styleguide
 		sudo a2ensite styleguide && sudo apache2ctl graceful
