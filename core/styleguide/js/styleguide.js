@@ -503,7 +503,7 @@
 	}
 	
 	if (patternName !== "all") {
-		document.getElementById("title").innerHTML = "Pattern Lab - "+patternName;
+		document.getElementById("title").innerHTML = "Kiva Style Guide - "+patternName;
 		history.replaceState({ "pattern": patternName }, null, null);
 	}
 	
