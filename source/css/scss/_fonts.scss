@@ -1,15 +1,27 @@
 /*
  * Temporary Brown font from ufonts.com
  *
- * @todo - replace these **temporary** versions of the Brown font when we have officially-licensed copies
+ * @todo - replace these ** interim ** versions of the Brown font when we have officially-licensed copies
 
  */
 
 @font-face {
     font-family: 'Brown Regular';
-    src: url('../fonts/ufonts.com_brown.eot') format('eot')
-         ,url('../fonts/ufonts.com_brown.woff') format('woff')
-         ,url('../fonts/ufonts.com_brown.ttf') format('truetype');
+    src: url('../fonts/br.eot') format('eot')
+		,url('../fonts/br.woff') format('woff')
+		,url('../fonts/br.ttf') format('ttf')
+		,url('../fonts/br.svg') format('svg');
     font-weight: normal;
     font-style: normal;
 }
+
+@font-face {
+    font-family: 'Brown Bold';
+    src: url('../fonts/bb.eot') format('eot')
+		,url('../fonts/bb.woff') format('woff')
+		,url('../fonts/bb.ttf') format('ttf')
+		,url('../fonts/bb.svg') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
