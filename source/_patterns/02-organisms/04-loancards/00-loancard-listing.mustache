@@ -1,22 +1,31 @@
-<div class="loan-card loan-card--listing">
+<div class="loan-card loan-card-listing">
     <div class="borrower-img-wrap">
-        <img class="borrower-img" data-interchange="[{{image.default}}, (default)], [{{image.medium}}, (medium)]">
-        <div class="matcher-text">2x</div>
+		{{> atoms-borrower-photo-1}}
+
+        <!--<img class="borrower-img" data-interchange="[{{image.default}}, (default)], [{{image.medium}}, (medium)]">-->
+        <!--<div class="matcher-text">2x</div>-->
     </div>
 
-    {{> molecules-fundraising-meter}}
+    <!--{{> molecules-fundraising-meter}}-->
 
     <div class="borrower-details-wrap">
-        <div class="amount-left">{{loancard.amount-left}}</div>
-        <div class="country">
-            <span class="country-flag f16 ht">{{loancard.country-iso}}</span>
-            <span class="country-name">{{{loancard.country-name}}}</span>
-        </div>
-        <div class="sector">{{loancard.sector}}</div>
+		<div class="name-and-country" style="font-size: 120%">
+			<a href="##">Musarat</a>
+			<span class="country-flag f16 ht">{{loancard.country-iso}}</span>
+			<span class="country-name">{{{loancard.country-name}}}</span>
+		</div>
+
+		<p style="line-height: 125%">To purchase rubber bladders, leather covers, threads and needles in large quantities.</p>
+
+        <!--<div class="amount-left">{{loancard.amount-left}}</div>-->
+        <!--<div class="country">-->
+            <!---->
+        <!--</div>-->
+        <!--<div class="sector">{{loancard.sector}}</div>-->
     </div>
 
-    <div class="borrower-details-more">
-        <a href="" class="button">Button 1</a>
-        <a href="" class="button">Button 2</a>
-    </div>
+    <!--<div class="borrower-details-more">-->
+        <!--<a href="" class="button">Button 1</a>-->
+        <!--<a href="" class="button">Button 2</a>-->
+    <!--</div>-->
 </div>
