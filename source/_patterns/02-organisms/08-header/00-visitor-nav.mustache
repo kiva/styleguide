@@ -1,27 +1,65 @@
-<div class="header-nav">
-	<div class="row" role="navigation">
-		<div class="small-3 medium-2 large-2 columns logo-area">
-			{{> 00-atoms/09-header/00-header-button(text: '<img src="/images/logo-white-cropped.png" alt="Kiva" />')}}
-		</div>
-		<div class="small-3 medium-2 large-1 columns">
-			{{> 00-atoms/09-header/00-header-button(text: 'Lend <i class="fa fa-chevron-down"></i>')}}
-		</div>
-		<div class="show-for-medium-up medium-1 large-1 columns">
-			{{> 00-atoms/09-header/00-header-button(text: '<i class="fa fa-search"></i>')}}
-		</div>
-		<div class="small-6 large-3 columns right-side">
-			<div calss="row">
-				<div class="small-6 medium-4 columns">
-					{{> 00-atoms/09-header/00-header-button(text: 'About <i class="fa fa-chevron-down"></i>')}}
-				</div>
-				<div class="show-for-medium-up medium-4 columns">
-					{{> 00-atoms/09-header/00-header-button(text: 'Basket')}}
-				</div>
-				<div class="small-6 medium-4 columns">
-					{{> 00-atoms/09-header/00-header-button(text: 'Login')}}
+<div class="header-nav" role="navigation">
+	<div class="primary-nav">
+		<div class="row">
+			<div class="small-3 medium-2 large-2 columns logo-area">
+				{{> 00-atoms/09-header/00-header-button(text: '<img src="/images/logo-white-cropped.png" alt="Kiva" />')}}
+			</div>
+			<div class="small-3 medium-2 large-1 columns">
+				{{> 00-atoms/09-header/00-header-button(text: 'Lend <i class="fa fa-chevron-down"></i>')}}
+			</div>
+			<div class="show-for-medium-up medium-1 large-1 columns">
+				{{> 00-atoms/09-header/00-header-button(text: '<i class="fa fa-search"></i>')}}
+			</div>
+			<div class="small-6 large-3 columns right-side">
+				<div calss="row">
+					<div class="small-6 medium-4 columns">
+						{{#about-default}}
+							{{> 00-atoms/09-header/00-header-button(text: 'About <i class="fa fa-chevron-down"></i>')}}
+						{{/about-default}}
+						{{#about-inline}}
+							{{> 00-atoms/09-header/00-header-button(text: 'About <i class="fa fa-chevron-down"></i>', active:true)}}
+						{{/about-inline}}
+						{{#about-dropdown}}
+							<a data-dropdown="about-drop" aria-controls="about-drop" aria-expanded="false" class="header-button" href="#">About <i class="fa fa-chevron-down"></i></a>
+						{{/about-dropdown}}
+					</div>
+					<div class="show-for-medium-up medium-4 columns">
+						{{> 00-atoms/09-header/00-header-button(text: 'Basket')}}
+					</div>
+					<div class="small-6 medium-4 columns">
+						{{> 00-atoms/09-header/00-header-button(text: 'Login')}}
+					</div>
 				</div>
 			</div>
+			<div class="show-for-large-up pronus large-4 large-centered columns">Promo Space</div>
 		</div>
-        <div class="show-for-large-up pronus large-4 large-centered columns">Promo Space</div>
 	</div>
+	{{^about-default}}
+	<div class="secondary-nav">
+		{{#about-inline}}
+		<div class="row">
+			<div class="small-12 columns">
+				<ul class="inline-list">
+					<li><a href="#">Overview</a></li>
+					<li><a href="#">How Kiva Works</a></li>
+					<li><a href="#">Where Kiva Works</a></li>
+					<li><a href="#">Impact</a></li>
+					<li><a href="#">Press Center</a></li>
+					<li><a href="#">Due Diligence and Monitoring</a></li>
+				</ul>
+			</div>
+		</div>
+		{{/about-inline}}
+		{{#about-dropdown}}
+            <ul id="about-drop" class="f-dropdown" data-dropdown-content aria-hidden="true" tabindex="-1">
+                <li><a href="#">Overview</a></li>
+                <li><a href="#">How Kiva Works</a></li>
+                <li><a href="#">Where Kiva Works</a></li>
+                <li><a href="#">Impact</a></li>
+                <li><a href="#">Press Center</a></li>
+                <li><a href="#">Due Diligence and Monitoring</a></li>
+            </ul>
+		{{/about-dropdown}}
+	</div>
+	{{/about-default}}
 </div>
