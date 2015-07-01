@@ -5,9 +5,12 @@
 # Description:  functions used by the bamboo_*.sh scripts.  Kept here
 #               to make the scripts themselves more simple and more readable.
 
+base_dir=$(dirname ${script_dir})
 
 build_patternlab () {
+	pushd ${base_dir}
 	npm install
+	popd
 }
 
 x_rsync="rsync -e ssh -avP --delete --exclude .git "
@@ -17,17 +20,16 @@ stage_code () {
 	# if $host is localhost, this is a no-op
 	[[ "${1}" == "localhost" ]] && return
 	# if $host is the same as $HOSTNAME, don't copy via ssh
-	docroot="/var/www/styleguide.kiva.org/"
-	if [[ "${1}" == "${HOSTNAME}" ]]; then
-		echo "Staging code over to ${docroot}"
-		${x_rsync} public/ ${docroot}
-		return
+	remote=""
+	if [[ "${1}" != "${HOSTNAME}" ]]; then
+		remote="${2}@${1}:"
 	fi
 
 	# rsync
-	echo "Staging code onto '${1}'"
-	pushd ${script_dir}
-	${x_rsync} public/ ${2}@${1}:${docroot}
+	docroot="/var/www/styleguide.kiva.org/"
+	echo "Staging code over to ${docroot} on '${1}'"
+	pushd ${base_dir}
+	${x_rsync} public/* ${remote}${docroot}
 	# copy over bin/styleguide.conf too?
 	popd
 }
@@ -37,17 +39,18 @@ enable_vhost () {
 	pushd ${script_dir}
 	# the better, more 12-factor approach to this would be to use environment variables
 	#  to drive variable substitution into a VirtualHost template
+	# Also -- why should this app know that the web server is apache vs nginx vs ??
 	# This is the hack version
 	conf_file="styleguide.conf"
 	[[ "${3}" == "styleguide-vm.kiva.org" ]] && conf_file="styleguide.vm.conf"
-	if [[ "${3}" == "styleguide-vm.kiva.org" || "${1}" == "${HOSTNAME}" ]]; then
+	if [[ "${3}" == "styleguide-vm.kiva.org" ]]; then
 		echo "Enabling styleguide vhost on localhost, for ${3}"
 		sudo cp -uv ${conf_file} /etc/apache2/sites-available/styleguide
 		sudo a2ensite styleguide && sudo apache2ctl graceful
 	else
 		echo "Enabling styleguide vhost on remote host, for ${3}"
-		${x_rsync} ${conf_file} ${2}@${1}:/etc/apache2/sites-available/styleguide
-		ssh -T ${2}@${1} "sudo a2ensite styleguide && sudo apache2ctl graceful"
+#		${x_rsync} ${conf_file} ${2}@${1}:/etc/apache2/sites-available/styleguide
+#		ssh -T ${2}@${1} "sudo a2ensite styleguide && sudo apache2ctl graceful"
 	fi
 	popd
 }
