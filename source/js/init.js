@@ -27,4 +27,11 @@
         }
     });
 
+	//kv-dropdown
+	$('a[data-kv-dropdown]').click(function() {
+		var $this = $(this);
+		$('#'+$this.data('kv-dropdown')).toggleClass('open');
+		$this.attr('aria-expanded', $this.attr('aria-expanded') !== 'true');
+	});
+
 })(this, jQuery);
