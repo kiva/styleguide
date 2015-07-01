@@ -1,30 +1,63 @@
 .header-nav {
-    background-color: $green;
-
-    .columns {
-        padding:0;
-    }
-
-    .row > .columns {
-        border-right: 1px solid $divider-green;
-    }
-    .row > .columns:last-child {
-        border-right:none;
-    }
-
-    .pronus.columns {
-        color: $light-green;
-        text-align: center;
-        line-height: em-calc(64);
-        width: grid-calc(4, $total-columns);
-    }
-
-    .right-side.columns {
-        float:right;
-        border:none;
+    .primary-nav {
+        background-color: $green;
 
         .columns {
-            border-left: 1px solid $divider-green;
+            padding:0;
+        }
+
+        .row > .columns {
+            border-right: 1px solid $divider-green;
+        }
+        .row > .columns:last-child {
+            border-right:none;
+        }
+
+        .pronus.columns {
+            color: $light-green;
+            text-align: center;
+            line-height: em-calc(64);
+            width: grid-calc(4, $total-columns);
+        }
+
+        .right-side.columns {
+            float:right;
+            border:none;
+
+            .columns {
+                border-left: 1px solid $divider-green;
+            }
+        }
+    }
+
+    .secondary-nav {
+        border-bottom: 1px solid $light-gray;
+
+        ul.inline-list {
+            margin: em-calc(8) auto em-calc(4) auto;
+
+            a {
+                color: $charcoal;
+                border-bottom: none;
+                padding-bottom: em-calc(4);
+            }
+
+            a:active {
+                border-bottom: em-calc(4) solid $green;
+                padding-bottom: 0;
+            }
+
+            li {
+                margin-left: em-calc(48);
+            }
+
+            li:first-child {
+                margin-left:0;
+            }
+        }
+
+        ul.f-dropdown {
+            outline:none;
         }
     }
 }
@@ -41,14 +74,28 @@
 
 .header-button:link,
 .header-button:visited,
-.header-button:hover {
+.header-button:hover,
+.header-button:active {
     color: $white;
 }
 
-.header-button:active {
+.header-button.active {
     color: $dark-green;
 }
 
+.header-button.active:after {
+    content: "";
+    width: 0;
+    height: 0;
+    position: absolute;
+    bottom:0;
+    left:0;
+    right:0;
+    margin:auto;
+    border-left: em-calc(8) solid transparent;
+    border-right: em-calc(8) solid transparent;
+    border-bottom: em-calc(8) solid $white;
+}
 
 @media #{$small-only} {
     .header-nav {
@@ -81,7 +128,7 @@
         .logo-area {
             text-align: left;
             .header-button {
-                padding: 0 em-calc(64) 0 0;
+                padding: 0 em-calc(64) 0 em-calc(8);
             }
         }
 
