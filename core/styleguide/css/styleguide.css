@@ -52,12 +52,12 @@
 #patternlab-html, #patternlab-body {
   margin: 0;
   padding: 0;
-  background: #dddddd;
+  background: #ddd;
   -webkit-text-size-adjust: 100%; }
 
 .sg-nav-wrapper {
   overflow: hidden;
-  background: #dddddd; }
+  background: #ddd; }
 
 .is-vishidden {
   position: absolute !important;
@@ -81,8 +81,8 @@
 \*------------------------------------*/
 /* Header */
 .sg-header {
-  background: #222222;
-  color: white;
+  background: #222;
+  color: #fff;
   font-family: "HelveticaNeue", "Helvetica", "Arial", sans-serif;
   text-transform: uppercase;
   position: fixed;
@@ -102,7 +102,7 @@
     border-bottom: 1px solid rgba(255, 255, 255, 0.05); }
   .sg-header a {
     font-size: 70%;
-    color: gray;
+    color: #808080;
     text-decoration: none;
     display: block;
     line-height: 1;
@@ -118,17 +118,30 @@
     -o-transition: color 0.15s ease-out;
     transition: color 0.15s ease-out; }
     .sg-header a:hover, .sg-header a:focus, .sg-header a.active {
-      color: white;
+      color: #fff;
       background: rgba(255, 255, 255, 0.05); }
   .sg-header ol ol ol a {
     padding-left: 2em;
     text-transform: none; }
+  .sg-header .sg-kiva-banner {
+    padding: 4px 11px;
+    background-color: #63a541;
+    text-transform: none;
+    font-size: 0.8rem; }
+    .sg-header .sg-kiva-banner span.credits {
+      float: right; }
+    .sg-header .sg-kiva-banner a {
+      display: inline;
+      font-size: inherit;
+      padding: 0;
+      color: #ffffff;
+      text-decoration: underline; }
 
 /* Navigation */
 .sg-header .sg-nav-toggle {
   display: inline-block;
   padding: 0.9em 1em;
-  border-bottom: 1px solid rgba(0, 0, 0, 0);
+  border-bottom: 1px solid transparent;
   position: relative;
   text-transform: uppercase;
   z-index: 2; }
@@ -178,7 +191,7 @@
     .sg-acc-handle:after {
       float: none; } }
 .sg-acc-handle.active {
-  color: white;
+  color: #fff;
   background: rgba(255, 255, 255, 0.05); }
   .sg-acc-handle.active:after {
     content: ' -'; }
@@ -200,7 +213,7 @@
   -o-transition: max-height 0.1s ease-out;
   transition: max-height 0.1s ease-out; }
   .sg-acc-panel li {
-    background: #222222; }
+    background: #222; }
   .sg-acc-panel.active {
     max-height: 120em;
     overflow: auto; }
@@ -219,7 +232,7 @@
 .sg-controls {
   border: 0;
   position: absolute;
-  top: 0;
+  top: 22px;
   right: 0;
   z-index: 2; }
 
@@ -248,15 +261,15 @@
   transition: all 0.2s ease-out; }
   .sg-control .sg-input:active, .sg-control .sg-input:focus {
     outline: 0;
-    background: #999999;
+    background: #999;
     color: #000; }
 
 .sg-current-size {
   font-size: 70%;
-  color: gray;
+  color: #808080;
   padding: 0.85em 0.7em; }
   .sg-current-size:hover .sg-input {
-    background: #999999;
+    background: #999;
     color: #000; }
   @media all and (min-width: 72em) {
     .sg-current-size {
@@ -469,14 +482,14 @@ span.sg-pattern-state:before {
   font-size: 70%;
   font-weight: normal;
   padding: 1em 0;
-  border-bottom: 1px solid gray; }
+  border-bottom: 1px solid #808080; }
   .sg-pattern-head a {
     display: block;
-    color: gray;
+    color: #808080;
     text-decoration: none;
     cursor: pointer; }
     .sg-pattern-head a:hover {
-      color: #222222; }
+      color: #222; }
 
 .sg-view-container {
   -moz-box-sizing: border-box;
@@ -485,8 +498,8 @@ span.sg-pattern-state:before {
   font-family: "HelveticaNeue", "Helvetica", "Arial", sans-serif;
   line-height: 1.4;
   font-size: 90%;
-  background: #222222;
-  color: gray;
+  background: #222;
+  color: #808080;
   position: fixed;
   top: auto;
   padding: 1em;
@@ -498,7 +511,7 @@ span.sg-pattern-state:before {
   overflow-y: auto;
   overflow-x: hidden; }
   .sg-view-container a {
-    color: #999999; }
+    color: #999; }
   .sg-view-container pre {
     padding: 0 1em; }
   .sg-view-container.anim-ready {
@@ -522,13 +535,13 @@ span.sg-pattern-state:before {
 
 .has-annotation {
   cursor: help !important;
-  box-shadow: 0 0 10px gray; }
+  box-shadow: 0 0 10px #808080; }
   .has-annotation a, .has-annotation input {
     cursor: help !important; }
   .has-annotation:hover {
-    box-shadow: 0 0 10px #222222; }
+    box-shadow: 0 0 10px #222; }
   .has-annotation.active {
-    box-shadow: inset 0 0 20px gray; }
+    box-shadow: inset 0 0 20px #808080; }
 
 .annotation-tip {
   display: block;
@@ -560,8 +573,8 @@ span.sg-pattern-state:before {
 
 .sg-code, .sg-annotations {
   clear: both;
-  background: #dddddd;
-  color: #222222;
+  background: #ddd;
+  color: #222;
   padding: 1em 0.5em;
   margin: 1em 0; }
   .sg-code a, .sg-annotations a {
@@ -579,16 +592,16 @@ span.sg-pattern-state:before {
 .sg-code-contains {
   margin-bottom: 1rem;
   font-size: 85%;
-  color: gray; }
+  color: #808080; }
   .sg-code-contains code {
     padding: 0.2em;
     background: rgba(0, 0, 0, 0.3);
-    color: #999999;
+    color: #999;
     position: relative;
     top: -2px; }
 
 .sg-code-head {
-  color: gray;
+  color: #808080;
   font-size: 1em; }
 
 #sg-code-markup {
@@ -649,7 +662,6 @@ div.clear {
   src: url("../fonts/icomoon.eot?#iefixsrsv7g") format("embedded-opentype"), url("../fonts/icomoon.woff?srsv7g") format("woff"), url("../fonts/icomoon.ttf?srsv7g") format("truetype"), url("../fonts/icomoon.svg?srsv7g#icomoon") format("svg");
   font-weight: normal;
   font-style: normal; }
-
 .sg-icon-search, .sg-icon-cog, .sg-icon-minus, .sg-icon-plus, .sg-icon-menu, .sg-icon-radio-checked, .sg-checkbox.active, .sg-icon-radio-unchecked, .sg-checkbox, .sg-icon-file, .sg-icon-link, .sg-icon-keyboard, .sg-icon-qrcode, .sg-icon-eye, .sg-checkbox {
   font-family: 'icomoon';
   speak: none;
@@ -701,3 +713,5 @@ div.clear {
 
 /******************************************************************/
 /* End Pattern Lab Interface code */
+
+/*# sourceMappingURL=styleguide.css.map */

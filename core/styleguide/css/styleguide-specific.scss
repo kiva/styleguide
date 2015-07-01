@@ -116,6 +116,11 @@ $animate-quick: 0.2s;
 			width: 5em;
 		}
 	}
+
+	li.sg-colorgroup {
+		border: none;
+		border-bottom: 1px solid $sg-tertiary;
+	}
 }
 
 .sg-swatch {
