@@ -380,7 +380,8 @@ span.sg-pattern-state:before {
   text-align: center;
   width: 100%;
   position: fixed;
-  top: 2em;
+  top: 3.5625em;
+  /* Kiva: added 25px to allow for Kiva Style Guide banner at top */
   bottom: 0;
   left: 0;
   right: 0;
@@ -399,8 +400,7 @@ span.sg-pattern-state:before {
   border: 0;
   padding: 0;
   margin: 0;
-  top: 25px;
-  /* Kiva: changed from 0 to allow for Kiva Style Guide banner at top */
+  top: 0;
   bottom: 0;
   left: 0;
   right: 0;
