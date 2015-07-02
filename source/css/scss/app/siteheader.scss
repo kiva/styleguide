@@ -16,11 +16,25 @@
         border-right:none;
     }
 
-    .pronus.columns {
-        color: $light-green;
+    .amount {
+        color: $green;
+        background-color: $white;
+        padding: rem-calc(1) rem-calc(6) 0 rem-calc(4);
+    }
+
+    .promo-space.columns {
+        color: $dark-green;
         text-align: center;
         line-height: rem-calc(64);
         width: grid-calc(4, $total-columns);
+
+        .amount {
+            background-color: $dark-green;
+        }
+
+        .promo {
+            color: $light-green;
+        }
     }
 
     .right-side.columns {
@@ -42,6 +56,14 @@
         &:after {
             display: none;
         }
+    }
+
+    .pronus {
+        font-size: 0.8rem;
+        font-weight: bold;
+        text-align: center;
+        color: $white;
+        background-color: $dark-green;
     }
 }
 

@@ -22,11 +22,23 @@
 				</div>
 			</div>
 		</div>
-		<div class="show-for-large-up pronus large-4 large-centered columns">Promo Space</div>
+		<div class="show-for-large-up large-4 large-centered columns promo-space">
+			{{#bonus}}
+				<span class="amount">$25</span> Bonus Credit <i class="fa fa-chevron-down"></i>
+			{{/bonus}}
+			{{^bonus}}
+				<span class="promo">Promo Space</span>
+			{{/bonus}}
+		</div>
 	</div>
+
 	<ul id="{{about.drop-id}}" class="f-dropdown" data-dropdown-content aria-hidden="true" tabindex="-1">
 		{{#about.links}}
 			<li><a href="{{href}}">{{{label}}}</a></li>
 		{{/about.links}}
 	</ul>
+
+	{{#bonus}}
+		<div class="hide-for-large-up pronus">$25 Bonus Credit</div>
+	{{/bonus}}
 </div>
