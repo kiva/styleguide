@@ -12,16 +12,7 @@
 		<div class="small-6 large-3 columns right-side">
 			<div calss="row">
 				<div class="small-6 medium-4 columns">
-					<a data-kv-dropdown="about-drop" aria-controls="about-drop" aria-expanded="false" class="header-button" href="#">About <i class="fa fa-chevron-down"></i></a>
-					<ul id="about-drop" class="kv-dropdown" aria-hidden="true">
-						<li><a href="#">About Us</a></li>
-						<li><a href="#">Get to know us</a></li>
-						<li><a href="#">How Kiva Works</a></li>
-						<li><a href="#">Where Kiva Works</a></li>
-						<li><a href="#">Impact</a></li>
-						<li><a href="#">Press Center</a></li>
-						<li><a href="#">Due diligence and monitoring</a></li>
-					</ul>
+					<a data-dropdown="{{about.drop-id}}" aria-controls="{{about.drop-id}}" aria-expanded="false" class="header-button" href="#">{{{about.title}}}</a>
 				</div>
 				<div class="show-for-medium-up medium-4 columns">
 					{{> 00-atoms/09-header/00-header-button(text: 'Basket')}}
@@ -33,4 +24,9 @@
 		</div>
 		<div class="show-for-large-up pronus large-4 large-centered columns">Promo Space</div>
 	</div>
+	<ul id="{{about.drop-id}}" class="f-dropdown" data-dropdown-content aria-hidden="true" tabindex="-1">
+		{{#about.links}}
+			<li><a href="{{href}}">{{{label}}}</a></li>
+		{{/about.links}}
+	</ul>
 </div>

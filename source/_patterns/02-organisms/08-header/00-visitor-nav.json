@@ -1,3 +1,15 @@
 {
-  "about-default":true
+  "about": {
+    "title": "About <i class='fa fa-chevron-down'></i>",
+    "drop-id": "about-drop",
+    "links": [
+      { "label": "About Us", "href": "#" },
+      { "label": "Get to know us", "href": "#" },
+      { "label": "How Kiva Works", "href": "#" },
+      { "label": "Where Kiva Works", "href": "#" },
+      { "label": "Impact", "href": "#" },
+      { "label": "Press Center", "href": "#" },
+      { "label": "Due diligence and monitoring", "href": "#" }
+    ]
+  }
 }

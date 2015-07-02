@@ -27,17 +27,4 @@
         }
     });
 
-	//kv-dropdown
-	$('a[data-kv-dropdown]').click(function(e) {
-		e.preventDefault();
-		var $this = $(this);
-		var $dropdown = $('#'+$this.data('kv-dropdown'));
-
-		$this.toggleClass('active');
-		$this.attr('aria-expanded', $this.attr('aria-expanded') !== 'true');
-
-		$dropdown.toggleClass('open');
-		$dropdown.attr('aria-hidden', $this.attr('aria-hidden') !== 'true');
-	});
-
 })(this, jQuery);
