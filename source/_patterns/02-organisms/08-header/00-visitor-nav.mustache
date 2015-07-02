@@ -15,7 +15,7 @@
 					<a data-dropdown="{{about.drop-id}}" aria-controls="{{about.drop-id}}" aria-expanded="false" class="header-button" href="#">{{{about.title}}}</a>
 				</div>
 				<div class="show-for-medium-up medium-4 columns">
-					{{> 00-atoms/09-header/00-header-button(text: 'Basket')}}
+					<a class="header-button" href="#">{{#basket}}<span class="amount">{{basket}}</span>{{/basket}} Basket</a>
 				</div>
 				<div class="small-6 medium-4 columns">
 					{{> 00-atoms/09-header/00-header-button(text: 'Login')}}
@@ -24,7 +24,7 @@
 		</div>
 		<div class="show-for-large-up large-4 large-centered columns promo-space">
 			{{#bonus}}
-				<span class="amount">$25</span> Bonus Credit <i class="fa fa-chevron-down"></i>
+				<a href="#"><span class="amount">$25</span> Bonus Credit <i class="fa fa-chevron-down"></i></a>
 			{{/bonus}}
 			{{^bonus}}
 				<span class="promo">Promo Space</span>
@@ -39,6 +39,10 @@
 	</ul>
 
 	{{#bonus}}
-		<div class="hide-for-large-up pronus">$25 Bonus Credit</div>
+		<div class="hide-for-large-up pronus"><a href="#">$25 Bonus Credit</a></div>
 	{{/bonus}}
 </div>
+
+{{#basket}}
+<div class="show-for-small-only basket-bar"><a href="#">Basket ({{basket}})</a></div>
+{{/basket}}

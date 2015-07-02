@@ -12,5 +12,6 @@
       { "label": "Due diligence and monitoring", "href": "#" }
     ]
   },
-  "bonus": false
+  "bonus": false,
+  "basket": 0
 }
