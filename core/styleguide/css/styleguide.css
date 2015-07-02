@@ -129,7 +129,9 @@
     text-transform: none;
     font-size: 0.8rem; }
     .sg-header .sg-kiva-banner span.credits {
-      float: right; }
+      float: right;
+      font-size: 0.6666667rem;
+      line-height: 1.1rem; }
     .sg-header .sg-kiva-banner a {
       display: inline;
       font-size: inherit;
