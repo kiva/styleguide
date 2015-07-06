@@ -55,7 +55,9 @@ module.exports = function(grunt) {
 				},
 
 				files: {
-					'source/css/styles.css': 'source/css/scss/styles.scss'
+					'source/css/styles.css': 'source/css/scss/styles.scss',
+					'core/styleguide/css/styleguide.css': 'core/styleguide/css/styleguide.scss',
+					'core/styleguide/css/styleguide-specific.css': 'core/styleguide/css/styleguide-specific.scss',
 				}
 			}
 		}

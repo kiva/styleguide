@@ -56,30 +56,35 @@
     overflow: hidden;
     border: 1px solid #ddd;
     padding: 0.3em;
-    margin: 0 0.2em 0.2em 0; }
+    margin: 0 0.2em 0.2em 0;
+    list-style: none; }
     @media all and (min-width: 30em) {
       .sg-colors li {
+        list-style: none;
         float: left;
         width: 5em; } }
   .sg-colors li.sg-colorgroup {
     border: none;
-    border-bottom: 1px solid #ddd; }
+    border-bottom: 1px solid #ddd;
+    float: none;
+    width: 98%; }
 
 .sg-swatch {
   display: block;
   height: 1.5em;
-  width: 50%; }
+  width: 100%; }
   @media all and (max-width: 30em) {
     .sg-swatch {
       float: left;
       margin-right: 0.3em; } }
   @media all and (min-width: 30em) {
     .sg-swatch {
-      width: 100%;
       height: 4em;
       margin-bottom: 0.2em; } }
 
 .sg-label {
-  line-height: 1; }
-
-/*# sourceMappingURL=styleguide-specific.css.map */
+  display: block;
+  clear: both;
+  font-size: 0.777777778rem;
+  line-height: 1rem;
+  margin-top: 0.2222222rem; }

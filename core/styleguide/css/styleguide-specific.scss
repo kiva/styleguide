@@ -110,8 +110,10 @@ $animate-quick: 0.2s;
 		border: 1px solid $sg-tertiary;
 		padding: 0.3em;
 		margin: 0 0.2em 0.2em 0;
+		list-style: none;
 
 		@media all and (min-width: $sg-bp-small-2) {
+			list-style: none;
 			float: left;
 			width: 5em;
 		}
@@ -120,13 +122,15 @@ $animate-quick: 0.2s;
 	li.sg-colorgroup {
 		border: none;
 		border-bottom: 1px solid $sg-tertiary;
+		float: none;
+		width: 98%;
 	}
 }
 
 .sg-swatch {
 	display: block;
 	height: 1.5em;
-	width: 50%;
+	width: 100%;
 	
 	@media all and (max-width: $sg-bp-small-2) {
 		float: left;
@@ -134,7 +138,6 @@ $animate-quick: 0.2s;
 	}
 
 	@media all and (min-width: $sg-bp-small-2) {
-		width: 100%;
 		height: 4em;
 		margin-bottom: 0.2em;
 	}
@@ -142,5 +145,9 @@ $animate-quick: 0.2s;
 }
 
 .sg-label {
-	line-height: 1;
+	display: block;
+	clear: both;
+	font-size: 0.777777778rem;
+	line-height: 1rem;
+	margin-top: 0.2222222rem;
 }
