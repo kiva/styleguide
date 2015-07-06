@@ -1,0 +1,41 @@
+<ul class="secondary-bar show-for-large-up">
+	{{#about}}
+		<li><a href="#">About us</a></li>
+        <li><a href="#">Get to know us</a></li>
+        <li><a href="#">How Kiva works</a></li>
+        <li><a href="#">Where Kiva works</a></li>
+        <li><a href="#" class="active">Impact</a></li>
+        <li><a href="#">Press Center</a></li>
+        <li><a href="#">Due diligence</a></li>
+	{{/about}}
+	{{#my-kiva}}
+		<li>Portfolio</li>
+		<li>My Teams</li>
+		<li>Donations</li>
+		<li>Lender Profile</li>
+		<li>Settings</li>
+		<li>My Campaigns</li>
+		<li>Borrow</li>
+		<li>Trustee Dashboard</li>
+	{{/my-kiva}}
+</ul>
+<ul class="accordion hide-for-large-up" data-accordion>
+	<li class="accordion-navigation">
+		{{#about}}
+		<a href="#secondary-nav-panel">About</a>
+        <div id="secondary-nav-panel" class="content">
+			<ul class="secondary-accordion">
+                <li>
+					<a href="#" class="active">Impact</a>
+				</li>
+                <li><a href="#">About us</a></li>
+                <li><a href="#">Get to know us</a></li>
+                <li><a href="#">How Kiva works</a></li>
+                <li><a href="#">Where Kiva works</a></li>
+                <li><a href="#">Press Center</a></li>
+                <li><a href="#">Due diligence</a></li>
+            </ul>
+		</div>
+		{{/about}}
+	</li>
+</ul>

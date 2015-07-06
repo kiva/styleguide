@@ -112,6 +112,58 @@
     }
 }
 
+ul.secondary-bar {
+    list-style: none;
+    margin:0;
+    display: block;
+    text-align:center;
+    font-size:0.8em;
+    width:100%;
+    background-color: $dark-green;
+
+    li {
+        display: inline-block;
+
+        a {
+            position: relative;
+            display: block;
+            padding: rem-calc(12) rem-calc(16);
+            color: $white;
+
+            &.active {
+                color: $green;
+                font-weight: bold;
+            }
+
+            &.active:before {
+                content: ' ';
+                position: absolute;
+                bottom: rem-calc(10);
+                left: rem-calc(16);
+                right: rem-calc(16);
+                height: rem-calc(2);
+                background-color: $green;
+            }
+        }
+
+        &:first-child a {
+            padding-left:0;
+
+            &.active:before {
+                left: 0;
+            }
+        }
+
+        &:last-child a {
+            padding-right:0;
+
+            &.active:before {
+                right: 0;
+            }
+        }
+    }
+}
+
 @media #{$small-only} {
     .header-nav {
         .columns {
