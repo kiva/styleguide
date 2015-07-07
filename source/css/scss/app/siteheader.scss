@@ -113,16 +113,18 @@
 }
 
 
-ul.secondary-bar {
-    list-style: none;
-    margin:0;
-    display: block;
-    text-align:center;
-    font-size:0.8em;
-    width:100%;
+.secondary-nav-bar {
     background-color: $dark-green;
+    margin-bottom: 0.5rem; // should this go here?
+
+    ul {
+        list-style: none;
+        margin: 0;
+        display: block;
+    }
 
     li {
+        font-size: 0.8em;
         display: inline-block;
 
         a {
@@ -148,25 +150,16 @@ ul.secondary-bar {
         }
 
         &:first-child a {
-            padding-left:0;
+            padding-left: 0;
 
             &.active:before {
                 left: 0;
             }
         }
-
-        &:last-child a {
-            padding-right:0;
-
-            &.active:before {
-                right: 0;
-            }
-        }
     }
 }
 
-
-ul.secondary-accordion {
+.secondary-nav-accordion {
     margin-left: 0;
 
     .accordion-navigation {
@@ -203,6 +196,20 @@ ul.secondary-accordion {
             .open-icon {
                 display: inline;
             }
+        }
+    }
+}
+
+
+ul.tertiary-nav {
+    list-style: none;
+    margin: 0.4rem 0;
+
+    li a {
+        line-height: 2rem;
+
+        &.active {
+            color: $light-gray;
         }
     }
 }

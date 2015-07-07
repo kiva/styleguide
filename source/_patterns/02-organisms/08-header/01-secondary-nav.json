@@ -1,29 +1,27 @@
 {
-  "main-title": "About",
+  "main-title": "Main Title",
+  "page-title": "Page Title",
   "bar-links": [
-    { "title": "About us" },
-    { "title": "Get to know us" },
-    { "title": "How Kiva works" },
-    { "title": "Where Kiva works" },
-    { "title": "Impact", "active": true },
-    { "title": "Press" },
-    { "title": "Due diligence" }
+    { "title": "Link 1" },
+    { "title": "Link 2" },
+    { "title": "Link 3", "active": true },
+    { "title": "Link 4" }
+  ],
+  "has-bar-sub-links": true,
+  "bar-sub-links": [
+    { "sub-title": "Sub-link 1" },
+    { "sub-title": "Sub-link 2", "sub-active": true }
   ],
   "drop-links": [
     {
-      "title": "Impact",
+      "title": "Link 3",
       "sub-links": [
-        { "sub-title": "Labs" },
-        { "sub-title": "Kiva Live" },
-        { "sub-title": "Success Stories", "sub-active": true },
-        { "sub-title": "Social Performance" }
+        { "sub-title": "Sub-link 1" },
+        { "sub-title": "Sub-link 2", "sub-active": true }
       ]
     },
-    { "title": "About us" },
-    { "title": "Get to know us" },
-    { "title": "How Kiva works" },
-    { "title": "Where Kiva works" },
-    { "title": "Press Center" },
-    { "title": "Due diligence" }
+    { "title": "Link 1" },
+    { "title": "Link 2" },
+    { "title": "Link 4" }
   ]
 }
