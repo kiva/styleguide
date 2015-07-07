@@ -112,6 +112,7 @@
     }
 }
 
+
 ul.secondary-bar {
     list-style: none;
     margin:0;
@@ -164,6 +165,83 @@ ul.secondary-bar {
     }
 }
 
+
+ul.secondary-accordion {
+    margin-left: 0;
+
+    .accordion-navigation {
+        $accordion-navigation-bg-color: $dark-green;
+        $accordion-navigation-hover-bg-color: $dark-green;
+        $accordion-navigation-active-bg-color: $dark-green;
+        $accordion-navigation-font-color: $white;
+        $accordion-navigation-font-size: 1rem;
+        @include accordion-navigation;
+
+        & > .content {
+            $accordion-content-padding: 0;
+            @include accordion-content;
+
+            margin:0;
+        }
+
+        .open-icon, .closed-icon {
+            float: right;
+            line-height: inherit;
+        }
+
+        .closed-icon {
+            display: inline;
+        }
+        .open-icon {
+            display: none;
+        }
+
+        &.active {
+            .closed-icon {
+                display: none;
+            }
+            .open-icon {
+                display: inline;
+            }
+        }
+    }
+}
+
+
+ul.dropdown-list {
+    list-style: none;
+
+    li {
+        border-bottom: 1px solid $light-gray;
+
+        a {
+            display: block;
+            padding: 0.5rem 0 0.5rem 1.25rem;
+            color: $charcoal;
+
+            &.active {
+                color: $gray;
+            }
+        }
+    }
+
+    ul {
+        list-style: none;
+        margin-left: 0;
+
+        li {
+            border-top: 1px solid $light-gray;
+            border-bottom: none;
+            background-color: $ghost;
+
+            a {
+                padding-left: 2.25rem;
+            }
+        }
+    }
+}
+
+
 @media #{$small-only} {
     .header-nav {
         .columns {
@@ -179,8 +257,7 @@ ul.secondary-bar {
         }
 
         .f-dropdown {
-            border-left: none;
-            border-right: none;
+            border: none;
 
             // !important to override foundation inline styles applied by js
             left: 0 !important;

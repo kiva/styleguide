@@ -19,23 +19,27 @@
 		<li>Trustee Dashboard</li>
 	{{/my-kiva}}
 </ul>
-<ul class="accordion hide-for-large-up" data-accordion>
+<ul class="secondary-accordion accordion hide-for-large-up" data-accordion>
 	<li class="accordion-navigation">
 		{{#about}}
-		<a href="#secondary-nav-panel">About</a>
-        <div id="secondary-nav-panel" class="content">
-			<ul class="secondary-accordion">
-                <li>
-					<a href="#" class="active">Impact</a>
-				</li>
-                <li><a href="#">About us</a></li>
-                <li><a href="#">Get to know us</a></li>
-                <li><a href="#">How Kiva works</a></li>
-                <li><a href="#">Where Kiva works</a></li>
-                <li><a href="#">Press Center</a></li>
-                <li><a href="#">Due diligence</a></li>
-            </ul>
-		</div>
+		<a href="#secondary-nav-panel">About <i class="fa fa-chevron-down closed-icon"></i><i class="fa fa-chevron-up open-icon"></i></a>
+		<ul id="secondary-nav-panel" class="content dropdown-list">
+			<li>
+				<a href="#" class="active">Impact</a>
+				<ul>
+					<li><a href="#">Labs</a></li>
+					<li><a href="#">Kiva Live</a></li>
+					<li><a href="#">Success Stories</a></li>
+					<li><a href="#">Social Performance</a></li>
+				</ul>
+			</li>
+			<li><a href="#">About us</a></li>
+			<li><a href="#">Get to know us</a></li>
+			<li><a href="#">How Kiva works</a></li>
+			<li><a href="#">Where Kiva works</a></li>
+			<li><a href="#">Press Center</a></li>
+			<li><a href="#">Due diligence</a></li>
+		</ul>
 		{{/about}}
 	</li>
 </ul>
