@@ -12,23 +12,21 @@
 	</div>
 </div>
 
-<ul class="secondary-nav-accordion accordion hide-for-large-up" data-accordion>
-	<li class="accordion-navigation">
-		<a href="#secondary-nav-panel">{{main-title}}<i class="fa fa-chevron-down closed-icon"></i><i class="fa fa-chevron-up open-icon"></i></a>
-		<ul id="secondary-nav-panel" class="content dropdown-list">
-			{{#drop-links}}
-			<li>
-				<a href="#" {{#active}}class="active"{{/active}}>{{title}}</a>
-				<ul>
-					{{#sub-links}}
-					<li><a href="#" {{#sub-active}}class="active"{{/sub-active}}>{{sub-title}}</a></li>
-					{{/sub-links}}
-				</ul>
-			</li>
-			{{/drop-links}}
-		</ul>
-	</li>
-</ul>
+<div class="hide-for-large-up secondary-nav-dropdown">
+	<a data-dropdown="secondary-nav-drop" aria-controls="secondary-nav-drop" aria-expanded="false">{{main-title}}<i class="fa fa-chevron-down closed-icon"></i><i class="fa fa-chevron-up open-icon"></i></a>
+	<ul id="secondary-nav-drop" class="f-dropdown dropdown-list" data-dropdown-content aria-hidden="true" tabindex="-1">
+		{{#drop-links}}
+		<li>
+			<a href="#" {{#active}}class="active"{{/active}}>{{title}}</a>
+			<ul>
+				{{#sub-links}}
+				<li><a href="#" {{#sub-active}}class="active"{{/sub-active}}>{{sub-title}}</a></li>
+				{{/sub-links}}
+			</ul>
+		</li>
+		{{/drop-links}}
+	</ul>
+</div>
 
 <div class="row">
 	{{#has-bar-sub-links}}
