@@ -100,25 +100,7 @@ $font-family-monospace: Consolas, "Liberation Mono", Courier, monospace;
 $font-weight-normal: normal;
 $font-weight-bold: bold;
 
-$white       : #FFFFFF;
-$ghost       : #FAFAFA;
-$snow        : #F9F9F9;
-$vapor       : #F6F6F6;
-$white-smoke : #F5F5F5;
-$silver      : #EFEFEF;
-$smoke       : #EEEEEE;
-$gainsboro   : #DDDDDD;
-$iron        : #CCCCCC;
-$base        : #AAAAAA;
-$aluminum    : #999999;
-$jumbo       : #888888;
-$monsoon     : #777777;
-$steel       : #666666;
-$charcoal    : #555555;
-$tuatara     : #444444;
-$oil         : #333333;
-$jet         : #222222;
-$black       : #000000;
+
 
 @import "palette";
 
@@ -158,21 +140,16 @@ $info-color: $gray;
 // d. Media Query Ranges
 // - - - - - - - - - - - - - - - - - - - - - - - - -
 
-// r/ems are useless in media queries, as browsers will ignore any change to the rem-value and use the default (usually 16px)
-@function mq-rem-calc($value) {
-    @return rem-calc($value, 16);
-}
-
-$small-breakpoint:  mq-rem-calc(760);  // default 640
-$medium-breakpoint: mq-rem-calc(988);  // default 1024
-$large-breakpoint:  mq-rem-calc(1116); // default 1440
-$xlarge-breakpoint: mq-rem-calc(1920);
+$small-breakpoint:  em-calc(760);  // default 640
+$medium-breakpoint: em-calc(988);  // default 1024
+$large-breakpoint:  em-calc(1116); // default 1440
+$xlarge-breakpoint: em-calc(1920);
 
 $small-range:   (0, $small-breakpoint);
-$medium-range:  ($small-breakpoint  + mq-rem-calc(1), $medium-breakpoint);
-$large-range:   ($medium-breakpoint + mq-rem-calc(1), $large-breakpoint);
-$xlarge-range:  ($large-breakpoint  + mq-rem-calc(1), $xlarge-breakpoint);
-$xxlarge-range: ($xlarge-breakpoint + mq-rem-calc(1), mq-rem-calc(99999999));
+$medium-range:  ($small-breakpoint  + em-calc(1), $medium-breakpoint);
+$large-range:   ($medium-breakpoint + em-calc(1), $large-breakpoint);
+$xlarge-range:  ($large-breakpoint  + em-calc(1), $xlarge-breakpoint);
+$xxlarge-range: ($xlarge-breakpoint + em-calc(1), em-calc(99999999));
 
 $screen: "only screen";
 

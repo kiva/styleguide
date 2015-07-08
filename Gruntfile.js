@@ -51,7 +51,7 @@ module.exports = function(grunt) {
 					}
 			, compile: {
 				options: {
-					sourceMap: false
+					sourceMap: true
 				},
 
 				files: {

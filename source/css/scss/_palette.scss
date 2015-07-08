@@ -1,3 +1,25 @@
+// Foundation default named colors
+$white       : #FFFFFF;
+$ghost       : #FAFAFA; // rgb(250, 250, 250)
+$snow        : #F9F9F9;
+$vapor       : #F6F6F6;
+$white-smoke : #F5F5F5;
+$silver      : #EFEFEF;
+$smoke       : #EEEEEE;
+$gainsboro   : #DDDDDD;
+$iron        : #CCCCCC;
+$base        : #AAAAAA;
+$aluminum    : #999999;
+$jumbo       : #888888;
+$monsoon     : #777777;
+$steel       : #666666;
+$charcoal    : #555555;
+$tuatara     : #444444;
+$oil         : #333333;
+$jet         : #222222;
+$black       : #000000;
+
+// Kiva added named colors
 $green: #63a541; // rgb(99, 165, 65)
 $dark-green: #236133; // rgb(35, 97, 51)
 $graphic-green: #488443; // rgb(72, 132, 67)
@@ -8,13 +30,13 @@ $sky-blue: #22a9d8; // rgb(34, 169, 216)
 $faded-blue: #6698a9; // rgb(102, 152, 169)
 $highlight-blue: #0d8ebb; // rgb(13, 142, 187)
 $red: #9C021A; // rgb(156, 2, 26)
-$ghost: #fafafa; // rgb(250, 250, 250)
 $platinum: #efefef; // rgb(239, 239, 239)
 $light-gray: #d8d8d8; // rgb(216, 216, 216)
 $charcoal: #333; // rgb(51, 51, 51)
 $dark-gray: #666; // rgb(102, 102, 102)
 $gray: #999; // rgb(153, 153, 153)
 
+// Kiva functional color names
 $kiva-green: $green;
 $kiva-darkgreen: $dark-green;
 $kiva-accent-green: $light-green;
