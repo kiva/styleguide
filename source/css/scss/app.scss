@@ -1,8 +1,9 @@
 @import "palette";
 @import "settings";
-@import "flags16";
+
 // @todo should we add bourbon?  @import "../../../node_modules/node-bourbon/node_modules/bourbon/app/assets/stylesheets/bourbon";
 @import "normalize";
+@import "flags16";
 
 
 // Foundation components.
@@ -46,41 +47,6 @@
 
 
 // Foundation overrides
-//@import 'vendor/foundation/grid';
-//@import 'vendor/foundation/accordion';
-//@import 'vendor/foundation/alert-boxes';
-//@import 'vendor/foundation/block-grid';
-//@import 'vendor/foundation/breadcrumbs';
-//@import 'vendor/foundation/button-groups';
-//@import 'vendor/foundation/buttons';
-//@import 'vendor/foundation/clearing';
-//@import 'vendor/foundation/dropdown';
-//@import 'vendor/foundation/dropdown-buttons';
-//@import 'vendor/foundation/flex-video';
-//@import 'vendor/foundation/forms';
-//@import 'vendor/foundation/icon-bar';
-//@import 'vendor/foundation/inline-lists';
-//@import 'vendor/foundation/joyride';
-//@import 'vendor/foundation/keystrokes';
-//@import 'vendor/foundation/labels';
-//@import 'vendor/foundation/magellan';
-//@import 'vendor/foundation/orbit';
-//@import 'vendor/foundation/pagination';
-//@import 'vendor/foundation/panels';
-//@import 'vendor/foundation/pricing-tables';
-//@import 'vendor/foundation/progress-bars';
-//@import 'vendor/foundation/range-slider';
-//@import 'vendor/foundation/reveal';
-//@import 'vendor/foundation/side-nav';
-//@import 'vendor/foundation/split-buttons';
-//@import 'vendor/foundation/sub-nav';
-//@import 'vendor/foundation/switches';
-//@import 'vendor/foundation/tables';
-//@import 'vendor/foundation/tabs';
-//@import 'vendor/foundation/thumbs';
-//@import 'vendor/foundation/tooltips';
-//@import 'vendor/foundation/top-bar';
-//@import 'vendor/foundation/type';
 @import 'vendor/foundation/offcanvas';
 
 
