@@ -55,7 +55,9 @@ module.exports = function(grunt) {
 				},
 
 				files: {
-					'source/css/styles.css': 'source/css/scss/styles.scss',
+					// NOTE: source .scss file is "app.css" for consistency with Foundation convention
+					// but output .css file is styles.css to meet PatternLab expectation
+					'source/css/styles.css': 'source/css/scss/app.scss',
 					'core/styleguide/css/styleguide.css': 'core/styleguide/css/styleguide.scss',
 					'core/styleguide/css/styleguide-specific.css': 'core/styleguide/css/styleguide-specific.scss',
 				}
@@ -64,11 +66,12 @@ module.exports = function(grunt) {
 
 
 		, shell: {
-			init: {
-				command: "php core/builder.php -g"
-			}
-
-			, compile: {
+			//init: {
+			//	command: "php core/builder.php -g"
+			//}
+			//
+			//,
+			 compile: {
 				command: "php core/builder.php -g"
 			}
 		}
@@ -119,6 +122,6 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks('grunt-shell');
 	// @todo add livereload?
 
-	grunt.registerTask('init', ['copy:init', 'shell:init']);
+	grunt.registerTask('init', ['copy:init']);
 	grunt.registerTask('compile', ['concat:vendorCss', 'sass', 'shell:compile', 'copy:js']);
 };
