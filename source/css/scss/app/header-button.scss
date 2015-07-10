@@ -1,0 +1,22 @@
+.header-button {
+    display:block;
+    padding:0 rem-calc(16);
+    line-height: rem-calc(64);
+    background-color: $green;
+    white-space: nowrap;
+    text-align: center;
+
+    &:link, &:visited, &:hover, &:active {
+        color: $white;
+    }
+
+    &.open, &[aria-expanded="true"]{
+        color: $dark-green;
+    }
+}
+
+@media #{$small-only} {
+    .header-button {
+        padding:0;
+    }
+}

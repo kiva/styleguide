@@ -76,25 +76,40 @@
 }
 
 
-.header-button {
-    display:block;
-    padding:0 rem-calc(16);
-    font-size: $top-nav-font-size;
-    line-height: rem-calc(64);
-    background-color: $green;
-    white-space: nowrap;
-    text-align: center;
+a.header-button.search-toggle {
+    &[aria-expanded="true"] {
+        border-right: none;
+    }
+}
 
-	@media #{$small-only} {
-        font-size: $top-nav-font-size - $top-nav-font-reduction;
+#search-form {
+    display: table-cell;
+    vertical-align: middle;
+    height: rem-calc(64);
+    padding-right: 0.5rem;
+    border-right: 1px solid $divider-green;
+
+    &[aria-hidden="true"] {
+        display:none;
     }
 
-    &:link, &:visited, &:hover, &:active {
-        color: $white;
+    span {
+        position: absolute;
+        line-height: 100%;
+        top: 50%;
+
+        i {
+            position: absolute;
+            margin-top: -0.5rem;
+            left: 0.4rem;
+        }
     }
 
-    &.open, &[aria-expanded="true"]{
-        color: $dark-green;
+    input {
+        width: 10rem;
+        padding-left: 1.5rem;
+        margin: 0;
+        display: inline-block;
     }
 }
 
@@ -226,42 +241,6 @@ ul.tertiary-nav {
 }
 
 
-ul.dropdown-list {
-    list-style: none;
-
-    li {
-        border-bottom: 1px solid $light-gray;
-
-        a {
-            display: block;
-            padding: 0 0 0 1.5rem;
-            line-height: rem-calc(64);
-            font-size: 1rem;
-            color: $charcoal;
-
-            &.active {
-                color: $gray;
-            }
-        }
-    }
-
-    ul {
-        list-style: none;
-        margin-left: 0;
-
-        li {
-            border-top: 1px solid $light-gray;
-            border-bottom: none;
-            background-color: $ghost;
-
-            a {
-                padding-left: 2.5rem;
-            }
-        }
-    }
-}
-
-
 @media #{$small-only} {
     .header-nav {
         .columns {
@@ -288,14 +267,10 @@ ul.dropdown-list {
             }
         }
     }
-
-    .header-button {
-        padding:0;
-    }
 }
 
 
-@media #{$medium-up} {
+@media #{$large-up} {
     .header-nav {
         .columns {
             padding:0;

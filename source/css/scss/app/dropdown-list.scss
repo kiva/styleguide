@@ -1,0 +1,34 @@
+ul.dropdown-list {
+    list-style: none;
+
+    li {
+        border-bottom: 1px solid $light-gray;
+
+        a {
+            display: block;
+            padding: 0 0 0 1.5rem;
+            line-height: rem-calc(64);
+            font-size: 1rem;
+            color: $charcoal;
+
+            &.active {
+                color: $gray;
+            }
+        }
+    }
+
+    ul {
+        list-style: none;
+        margin-left: 0;
+
+        li {
+            border-top: 1px solid $light-gray;
+            border-bottom: none;
+            background-color: $ghost;
+
+            a {
+                padding-left: 2.5rem;
+            }
+        }
+    }
+}

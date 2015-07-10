@@ -27,4 +27,14 @@
         }
     });
 
+	$('[data-kv-toggle]').click(function(e) {
+		e.preventDefault();
+
+		var $this = $(this);
+		var $target = $('#'+$this.attr('aria-controls'));
+
+		$this.attr('aria-expanded', $this.attr('aria-expanded') === 'false');
+		$target.attr('aria-hidden', $target.attr('aria-hidden') === 'false');
+	});
+
 })(this, jQuery);
