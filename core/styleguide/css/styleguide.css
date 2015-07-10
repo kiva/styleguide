@@ -494,6 +494,15 @@ span.sg-pattern-state:before {
     .sg-pattern-head a:hover {
       color: #222; }
 
+.sg-type-size-head {
+  margin: 0 0 2px 0;
+  font-family: "HelveticaNeue", "Helvetica", "Arial", sans-serif;
+  font-size: 70%;
+  font-weight: normal;
+  color: #999;
+  padding: 0;
+  border-bottom: 1px solid #ccc; }
+
 .sg-view-container {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;

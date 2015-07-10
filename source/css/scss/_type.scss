@@ -1,0 +1,31 @@
+// basic font sizes and line height
+$small-font-size			: rem-calc(12);
+$small-font-height			: rem-calc(20);
+
+$body-font-size				: $rem-base;
+$body-font-height			: $base-line-height;
+
+$top-nav-font-size			: rem-calc(36);
+$top-nav-font-size			: rem-calc(44);
+
+$feature-font-size			: rem-calc(44);
+$feature-font-height		: rem-calc(52);
+
+$section-head-font-size		: $feature-font-size;
+$section-head-font-height	: $feature-font-height;
+
+$headline-font-size			: rem-calc(56);
+$headline-font-height		: rem-calc(64);
+
+$impact-font-size			: $rem-base * 4;
+$impact-font-height			: rem-calc(88);
+
+$huge-headline-font-size	: $rem-base * 6;
+$huge-headline-font-height	: rem-calc();
+
+$statistic-font-size		: rem-calc(48);
+$statistic-font-height		: $rem-base * 3;
+
+$huge-statistic-font-size	: $rem-base * 8;
+$huge-statistic-font-height	: rem-calc(156);
+

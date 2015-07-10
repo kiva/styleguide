@@ -698,6 +698,16 @@ span.sg-pattern-state:before {
 	}
 }
 
+.sg-type-size-head {
+	margin: 0 0 2px 0;
+	font-family: $sg-font;
+	font-size: $sg-font-size-sm;
+	font-weight: normal;
+	color: #999;
+	padding: 0;
+	border-bottom: 1px solid #ccc;
+}
+
 //Annotations and code view container
 .sg-view-container {
 	-moz-box-sizing: border-box;

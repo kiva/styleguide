@@ -124,4 +124,6 @@ module.exports = function(grunt) {
 
 	grunt.registerTask('init', ['copy:init']);
 	grunt.registerTask('compile', ['concat:vendorCss', 'sass', 'shell:compile', 'copy:js']);
+	grunt.registerTask('default', ['concat:vendorCss', 'sass', 'shell:compile', 'copy:js']);
+
 };

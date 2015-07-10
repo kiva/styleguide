@@ -79,10 +79,15 @@
 .header-button {
     display:block;
     padding:0 rem-calc(16);
+    font-size: $top-nav-font-size;
     line-height: rem-calc(64);
     background-color: $green;
     white-space: nowrap;
     text-align: center;
+
+	@media #{$small-only} {
+        font-size: $top-nav-font-size - $top-nav-font-reduction;
+    }
 
     &:link, &:visited, &:hover, &:active {
         color: $white;
