@@ -66,11 +66,6 @@ module.exports = function(grunt) {
 
 
 		, shell: {
-			//init: {
-			//	command: "php core/builder.php -g"
-			//}
-			//
-			//,
 			 compile: {
 				command: "php core/builder.php -g"
 			}
