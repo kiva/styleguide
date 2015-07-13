@@ -8,7 +8,7 @@ $body-font-size					: rem-calc(18);
 $body-line-height				: rem-calc(24);
 
 $top-nav-font-size				: rem-calc(21);
-$top-nav-line-height			: rem-calc(28);
+$top-nav-line-height			: rem-calc(21);
 $top-nav-font-reduction			: rem-calc(3);
 
 $section-head-font-size			: rem-calc(28);
@@ -102,8 +102,8 @@ h2 {
 }
 
 .top-nav {
-	font-size: $top-nav-font-size;
-	line-height: $top-nav-line-height;
+	font-size: $top-nav-font-size - $top-nav-font-reduction;
+	line-height: $top-nav-line-height - $top-nav-font-reduction;
 }
 
 @media #{$medium-up} {
@@ -123,6 +123,12 @@ h2 {
 		line-height: $huge-statistic-line-height;
 		font-weight: $font-weight-bold;
 	}
+
+	.top-nav {
+		font-size: $top-nav-font-size;
+		line-height: $top-nav-line-height ;
+	}
+
 }
 
 
