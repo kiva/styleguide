@@ -2,12 +2,14 @@ $search-form-width: 10.4rem;
 $search-form-height: rem-calc(64);
 $search-form-transition: width 0.5s ease;
 $search-margin: 0.6rem;
+$search-centering-margin: 0.65rem;
 $search-input-width: $search-form-width - $search-margin;
 $search-input-padding: 0.6rem;
 $search-icon-size: $top-nav-font-size;
+$search-small-button-size: 2.5rem;
 
 // annoyingly long selector to override
-.row > .columns > a.header-button.search-toggle {
+.row > .columns > a.header-button#search-toggle {
     border-right: none;
 
     &[aria-expanded="true"] .search-icon {
@@ -42,13 +44,12 @@ $search-icon-size: $top-nav-font-size;
     }
 
     div {
-        display: table-cell;
         position: relative;
         vertical-align: middle;
         height: $search-form-height;
     }
 
-    i {
+    .search-icon {
         position: absolute;
         left: 0.4rem;
         top:50%;
@@ -63,10 +64,18 @@ $search-icon-size: $top-nav-font-size;
         $search-input-padding: 0.6rem;
         width: $search-input-width;
         padding: $search-input-padding $search-input-padding $search-input-padding ($top-nav-font-size * 1.5);
-        margin: 0;
+        margin: $search-centering-margin 0;
         display: inline-block;
         height: auto;
     }
+}
+
+#close-search {
+    float: left;
+    width: $search-small-button-size;
+    line-height: $search-form-height;
+    text-align: center;
+    color: $dark-green;
 }
 
 @media #{$small-only} {
@@ -75,20 +84,14 @@ $search-icon-size: $top-nav-font-size;
     }
 
     #search-form {
-        display: table;
         width: 100%;
 
-        &[aria-hidden="true"] div {
-            display: none;
-        }
-
         input {
-            width: calc(100% - #{$search-margin*2} );
-            margin: 0 $search-margin;
+            width: calc(100% - #{$search-margin + $search-small-button-size} );
         }
 
-        i {
-            left: 0.4rem + $search-margin;
+        .search-icon {
+            left: 0.4rem + $search-small-button-size;
         }
     }
 }

@@ -13,13 +13,14 @@
 		{{/is-visitor}}
 		{{#is-lender}}
             <div class="small-2 large-1 xxlarge-1 columns">
-				<a data-kv-toggle aria-controls="search-form" aria-expanded="false" class="header-button search-toggle" href="#"><i class="fa fa-search search-icon"></i><i class="fa fa-times close-icon"></i></a>
+				<a id="search-toggle" aria-controls="search-form" aria-expanded="false" class="header-button" href="#"><i class="fa fa-search search-icon"></i><i class="fa fa-times close-icon"></i></a>
             </div>
 			<div id="search-container" class="small-12 large-3 xxlarge-3 columns">
 				<form id="search-form" aria-hidden="true">
 					<div>
-						<i class="fa fa-search"></i>
-						<input id="search-box" type="text" placeholder="Search" />
+                        <a id="close-search" aria-controls="search-form" aria-hidden="true" aria-expanded="false" class="show-for-small-only" href="#"><i class="fa fa-times close-icon"></i></a><!-- fight inline spacing
+						--><i class="fa fa-search search-icon"></i><!-- fight inline spacing
+						--><input id="search-box" type="text" placeholder="Search" />
                     </div>
 				</form>
 			</div>
