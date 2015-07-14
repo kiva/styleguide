@@ -1,0 +1,94 @@
+$search-form-width: 10.4rem;
+$search-form-height: rem-calc(64);
+$search-form-transition: width 0.5s ease;
+$search-margin: 0.6rem;
+$search-input-width: $search-form-width - $search-margin;
+$search-input-padding: 0.6rem;
+$search-icon-size: $top-nav-font-size;
+
+// annoyingly long selector to override
+.row > .columns > a.header-button.search-toggle {
+    border-right: none;
+
+    &[aria-expanded="true"] .search-icon {
+        display: none;
+    }
+
+    &[aria-expanded="false"] .close-icon {
+        display: none;
+    }
+}
+
+#search-container {
+    position: static;
+    z-index: 1;
+}
+
+#search-form {
+    display: block;
+    position: absolute;
+    overflow: hidden;
+    width: $search-form-width;
+    border-right: rem-calc(1) solid $divider-green;
+    background-color: $green;
+
+    -webkit-transition: $search-form-transition;
+    -moz-transition: $search-form-transition;
+    -o-transition: $search-form-transition;
+    transition: $search-form-transition;
+
+    &[aria-hidden="true"] {
+        width: 0;
+    }
+
+    div {
+        display: table-cell;
+        position: relative;
+        vertical-align: middle;
+        height: $search-form-height;
+    }
+
+    i {
+        position: absolute;
+        left: 0.4rem;
+        top:50%;
+
+        &:before {
+            position: absolute;
+            top: -$search-icon-size/2;
+        }
+    }
+
+    input {
+        $search-input-padding: 0.6rem;
+        width: $search-input-width;
+        padding: $search-input-padding $search-input-padding $search-input-padding ($top-nav-font-size * 1.5);
+        margin: 0;
+        display: inline-block;
+        height: auto;
+    }
+}
+
+@media #{$small-only} {
+    #search-container {
+        position: absolute;
+    }
+
+    #search-form {
+        display: table;
+        width: 100%;
+
+        &[aria-hidden="true"] div {
+            display: none;
+        }
+
+        input {
+            width: calc(100% - #{$search-margin*2} );
+            margin: 0 $search-margin;
+        }
+
+        i {
+            left: 0.4rem + $search-margin;
+        }
+    }
+}

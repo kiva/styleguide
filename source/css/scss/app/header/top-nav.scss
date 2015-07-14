@@ -1,4 +1,4 @@
-.header-nav {
+.top-nav {
     background-color: $green;
 
     .columns {
@@ -72,69 +72,6 @@
             width: 100%;
             display: block;
         }
-    }
-}
-
-
-.columns a.header-button.search-toggle {
-    border-right: none;
-
-    &[aria-expanded="true"] .search-icon {
-        display: none;
-    }
-
-    &[aria-expanded="false"] .close-icon {
-        display: none;
-    }
-}
-
-#search-form {
-    $width: 11.7rem;
-    $right-margin: 0.5rem;
-    $box-width: $width + $right-margin;
-    $icon-size: 1rem;
-
-    display: block;
-    position: absolute;
-    overflow: hidden;
-    width: $box-width;
-    height: rem-calc(64);
-    line-height: rem-calc(64);
-    border-right: 1px solid $divider-green;
-
-    $transition: width 0.25s ease;
-    -webkit-transition: $transition;
-    -moz-transition: $transition;
-    -o-transition: $transition;
-    transition: $transition;
-
-    &[aria-hidden="true"] {
-        width: 0;
-    }
-
-    div {
-        display: table-cell;
-        position: relative;
-        vertical-align: middle;
-    }
-
-    i {
-        position: absolute;
-        left: 0.4rem;
-        top:50%;
-
-        &:before {
-            position: absolute;
-            top: -$icon-size/2;
-        }
-    }
-
-    input {
-        width: $width;
-        padding: 0.7rem 0.5rem 0.5rem 1.5rem;
-        margin: 0 $right-margin 0 0;
-        display: inline-block;
-        height: auto;
     }
 }
 
@@ -267,7 +204,7 @@ ul.tertiary-nav {
 
 
 @media #{$small-only} {
-    .header-nav {
+    .top-nav {
         .columns {
             padding:0;
         }
@@ -296,7 +233,7 @@ ul.tertiary-nav {
 
 
 @media #{$large-up} {
-    .header-nav {
+    .top-nav {
         .columns {
             padding:0;
             width:auto;
