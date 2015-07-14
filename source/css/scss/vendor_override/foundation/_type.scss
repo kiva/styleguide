@@ -1,0 +1,134 @@
+// Kiva overrides to default Foundation _type.scss
+
+// custom font sizes and line height
+$small-font-size				: rem-calc(14);
+$small-line-height				: rem-calc(20);
+
+$body-font-size					: rem-calc(18);
+$body-line-height				: rem-calc(24);
+
+$top-nav-font-size				: rem-calc(21);
+$top-nav-line-height			: rem-calc(21);
+$top-nav-font-reduction			: rem-calc(3);
+
+$section-head-font-size			: rem-calc(28);
+$section-head-line-height		: rem-calc(36);
+
+$feature-font-size				: $section-head-font-size;
+$feature-line-height			: $section-head-line-height;
+
+$headline-font-size				: rem-calc(56);
+$headline-line-height			: rem-calc(64);
+
+$impact-font-size				: rem-calc(72);
+$impact-line-height				: rem-calc(80);
+$impact-font-reduction			: rem-calc(18);
+
+$huge-headline-font-size		: rem-calc(108);
+$huge-headline-line-height		: rem-calc(108);
+$huge-headline-font-reduction	: rem-calc(27);
+
+$statistic-font-size			: rem-calc(48);
+$statistic-line-height			: rem-calc(56);
+
+$huge-statistic-font-size		: rem-calc(144);
+$huge-statistic-line-height		: rem-calc(156);
+$huge-statistic-font-reduction : rem-calc(36);
+
+$header-font-color: $kiva-text-dark;
+
+// customize headline font sizes
+$h1-font-size: $headline-font-size;
+$h2-font-size: $section-head-font-size;
+
+$paragraph-font-size: $body-font-size;
+$paragraph-line-height: $body-line-height;
+
+.small-text {
+	font-size: $small-font-size;
+	line-height: $small-line-height;
+}
+
+.featured {
+	font-size: $feature-font-size;
+	line-height: $feature-line-height;
+}
+
+.overlay {
+	font-size: $feature-font-size;
+	line-height: $feature-line-height;
+	color: $white;
+	text-shadow: 1px 2px 3px #666;
+	
+}
+
+.impact {
+	font-size: $impact-font-size - $impact-font-reduction;
+	line-height: $impact-line-height - $impact-font-reduction;
+	font-weight: $font-weight-bold;
+}
+
+.statistic {
+	font-size: $statistic-font-size;
+	line-height: $statistic-line-height;
+}
+
+.huge-statistic {
+	font-size: $huge-statistic-font-size - $huge-statistic-font-reduction;
+	line-height: $huge-statistic-line-height - $huge-statistic-font-reduction;
+	font-weight: $font-weight-bold;
+}
+
+p {
+	font-size: $paragraph-font-size;
+	line-height: $paragraph-line-height;
+}
+
+h1 {
+	font-size: $headline-font-size;
+	line-height: $headline-line-height;
+	font-weight: $font-weight-bold;
+}
+
+h1.huge {
+	font-size: $huge-headline-font-size - $huge-headline-font-reduction;
+	line-height: $huge-headline-line-height - $huge-headline-font-reduction;
+}
+
+
+h2 {
+	font-size: $section-head-font-size;
+	line-height: $section-head-line-height;
+}
+
+.top-nav {
+	font-size: $top-nav-font-size - $top-nav-font-reduction;
+	line-height: $top-nav-line-height - $top-nav-font-reduction;
+}
+
+@media #{$medium-up} {
+	.impact {
+		font-size: $impact-font-size;
+		line-height: $impact-line-height;
+		font-weight: $font-weight-bold;
+	}
+
+	h1.huge {
+		font-size: $huge-headline-font-size;
+		line-height: $huge-headline-line-height;
+	}
+
+	.huge-statistic {
+		font-size: $huge-statistic-font-size;
+		line-height: $huge-statistic-line-height;
+		font-weight: $font-weight-bold;
+	}
+
+	.top-nav {
+		font-size: $top-nav-font-size;
+		line-height: $top-nav-line-height ;
+	}
+
+}
+
+

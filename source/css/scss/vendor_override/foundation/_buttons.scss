@@ -1,0 +1,25 @@
+// Kiva overrides to default Foundation _buttons.scss
+
+$button-font-weight: $font-weight-bold;
+
+$button-font-med					: rem-calc(28);
+$button-font-med-reduction			: rem-calc(14);
+
+$button-height-med					: rem-calc(64);
+$button-height-med-reduction		: rem-calc(20);
+
+$button-width-med					: rem-calc(244);
+$button-width-med-reduction			: rem-calc(122);
+
+.button {
+	font-size: $button-font-med - $button-font-med-reduction;
+	height: $button-height-med - $button-height-med-reduction;
+	width: $button-width-med - $button-width-med-reduction;
+
+	@media #{$medium-up} {
+		font-size: $button-font-med;
+		height: $button-height-med;
+		width: $button-width-med;
+	}
+}
+
