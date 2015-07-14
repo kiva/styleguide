@@ -8,18 +8,39 @@ $button-font-med-reduction			: rem-calc(14);
 $button-height-med					: rem-calc(64);
 $button-height-med-reduction		: rem-calc(20);
 
-$button-width-med					: rem-calc(244);
-$button-width-med-reduction			: rem-calc(122);
+$button-width-standard				: rem-calc(244);
+
+$button-height-setting				: rem-calc(32);
+$button-height-setting-reduction	: rem-calc(10);
+$button-font-setting				: rem-calc(16);
+$button-font-setting-reduction		: rem-calc(2);
+$button-setting-text-color			: $charcoal;
+$button-setting-background-color	: $white;
+$button-setting-border-color		: $charcoal;
+
 
 .button {
 	font-size: $button-font-med - $button-font-med-reduction;
 	height: $button-height-med - $button-height-med-reduction;
-	width: $button-width-med - $button-width-med-reduction;
 
 	@media #{$medium-up} {
 		font-size: $button-font-med;
 		height: $button-height-med;
-		width: $button-width-med;
+	}
+}
+
+.button.setting {
+	font-size: $button-font-setting - $button-font-setting-reduction;
+	height: $button-height-setting - $button-height-setting-reduction;
+	color: $button-setting-text-color;
+	background-color: $button-setting-background-color;
+	border-color: $button-setting-border-color;
+	border-width: 1px;
+	border-style: solid;
+
+	@media #{$medium-up} {
+		font-size: $button-font-setting;
+		height:$button-height-setting;
 	}
 }
 

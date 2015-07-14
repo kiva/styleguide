@@ -93,6 +93,7 @@ $include-xl-html-grid-classes: true;
 // We use these to define default font stacks
 $font-family-sans-serif: "Brown Regular", Arial, Helvetica, sans-serif;
 
+// Kiva custom palette is in _palette.scss
 @import "palette";
 // We use these as default colors throughout
 $primary-color: $blue;
@@ -175,162 +176,39 @@ $cursor-text-value: text;
 
 // 01. Accordion
 // - - - - - - - - - - - - - - - - - - - - - - - - -
+// no Kiva customizations
 
-// $include-html-accordion-classes: $include-html-classes;
-
-// $accordion-navigation-padding: rem-calc(16);
-// $accordion-navigation-bg-color: $silver;
-// $accordion-navigation-hover-bg-color: scale-color($accordion-navigation-bg-color, $lightness: -5%);
-// $accordion-navigation-active-bg-color: scale-color($accordion-navigation-bg-color, $lightness: -3%);
-// $accordion-navigation-font-color: $jet;
-// $accordion-navigation-font-size: rem-calc(16);
-// $accordion-navigation-font-family: $body-font-family;
-
-// $accordion-content-padding: ($column-gutter/2);
-// $accordion-content-active-bg-color: $white;
 
 // 02. Alert Boxes
 // - - - - - - - - - - - - - - - - - - - - - - - - -
+// no Kiva customizations
 
-// $include-html-alert-classes: $include-html-classes;
-
-// We use this to control alert padding.
-// $alert-padding-top: rem-calc(14);
-// $alert-padding-default-float: $alert-padding-top;
-// $alert-padding-opposite-direction: $alert-padding-top + rem-calc(10);
-// $alert-padding-bottom: $alert-padding-top;
-
-// We use these to control text style.
-// $alert-font-weight: $font-weight-normal;
-// $alert-font-size: rem-calc(13);
-// $alert-font-color: $white;
-// $alert-font-color-alt: scale-color($secondary-color, $lightness: -66%);
-
-// We use this for close hover effect.
-// $alert-function-factor: -14%;
-
-// We use these to control border styles.
-// $alert-border-style: solid;
-// $alert-border-width: 1px;
-// $alert-border-color: scale-color($primary-color, $lightness: $alert-function-factor);
-// $alert-bottom-margin: rem-calc(20);
-
-// We use these to style the close buttons
-// $alert-close-color: $oil;
-// $alert-close-top: 50%;
-// $alert-close-position: rem-calc(4);
-// $alert-close-font-size: rem-calc(22);
-// $alert-close-opacity: 0.3;
-// $alert-close-opacity-hover: 0.5;
-// $alert-close-padding: 9px 6px 4px;
-// $alert-close-background: inherit;
-
-// We use this to control border radius
-// $alert-radius: $global-radius;
-
-// $alert-transition-speed: 300ms;
-// $alert-transition-ease: ease-out;
 
 // 03. Block Grid
 // - - - - - - - - - - - - - - - - - - - - - - - - -
-
-// $include-html-block-grid-classes: $include-html-classes;
 $include-xl-html-block-grid-classes: true;
 
-// We use this to control the maximum number of block grid elements per row
-// $block-grid-elements: 12;
-// $block-grid-default-spacing: rem-calc(20);
 
-// $align-block-grid-to-grid: false;
-// @if $align-block-grid-to-grid {$block-grid-default-spacing: $column-gutter;}
-
-// Enables media queries for block-grid classes. Set to false if writing semantic HTML.
-// $block-grid-media-queries: true;
 
 // 04. Breadcrumbs
 // - - - - - - - - - - - - - - - - - - - - - - - - -
+// no Kiva modifications
 
-// $include-html-nav-classes: $include-html-classes;
-
-// We use this to set the background color for the breadcrumb container.
-// $crumb-bg: scale-color($secondary-color, $lightness: 55%);
-
-// We use these to set the padding around the breadcrumbs.
-// $crumb-padding: rem-calc(9 14 9);
-// $crumb-side-padding: rem-calc(12);
-
-// We use these to control border styles.
-// $crumb-function-factor: -10%;
-// $crumb-border-size: 1px;
-// $crumb-border-style: solid;
-// $crumb-border-color: scale-color($crumb-bg, $lightness: $crumb-function-factor);
-// $crumb-radius: $global-radius;
-
-// We use these to set various text styles for breadcrumbs.
-// $crumb-font-size: rem-calc(11);
-// $crumb-font-color: $primary-color;
-// $crumb-font-color-current: $oil;
-// $crumb-font-color-unavailable: $aluminum;
-// $crumb-font-transform: uppercase;
-// $crumb-link-decor: underline;
-
-// We use these to control the slash between breadcrumbs
-// $crumb-slash-color: $base;
-// $crumb-slash: "/";
 
 // 05. Buttons
 // - - - - - - - - - - - - - - - - - - - - - - - - -
+// Foundation default typography is customized in vendor_override/foundation/_buttons.scss
 
-// $include-html-button-classes: $include-html-classes;
-
-// We use these to build padding for buttons.
-// $button-tny: rem-calc(10);
-// $button-sml: rem-calc(14);
-// $button-med: rem-calc(16);
-// $button-lrg: rem-calc(18);
-
-// We use this to control the display property.
-// $button-display: inline-block;
-// $button-margin-bottom: rem-calc(20);
-
-// We use these to control button text styles.
-// $button-font-family: $body-font-family;
 // $button-font-color: $white;
-// $button-font-color-alt: $oil;
-// $button-font-tny: rem-calc(11);
-// $button-font-sml: rem-calc(13);
-// $button-font-med: rem-calc(16);
-// $button-font-lrg: rem-calc(20);
-// $button-font-weight: $font-weight-normal;
-// $button-font-align: center;
 
 // We use these to control various hover effects.
-// $button-function-factor: -20%;
+$button-function-factor: 0%;
 
 // We use these to control button border styles.
-// $button-border-width: 0;
-// $button-border-style: solid;
 // $button-bg-color: $primary-color;
 // $button-bg-hover: scale-color($button-bg-color, $lightness: $button-function-factor);
 // $button-border-color: $button-bg-hover;
-// $secondary-button-bg-hover: scale-color($secondary-color, $lightness: $button-function-factor);
-// $secondary-button-border-color: $secondary-button-bg-hover;
-// $success-button-bg-hover: scale-color($success-color, $lightness: $button-function-factor);
-// $success-button-border-color: $success-button-bg-hover;
-// $alert-button-bg-hover: scale-color($alert-color, $lightness: $button-function-factor);
-// $alert-button-border-color: $alert-button-bg-hover;
-// $warning-button-bg-hover: scale-color($warning-color, $lightness: $button-function-factor);
-// $warning-button-border-color: $warning-button-bg-hover;
-// $info-button-bg-hover: scale-color($info-color, $lightness: $button-function-factor);
-// $info-button-border-color: $info-button-bg-hover;
 
-// We use this to set the default radius used throughout the core.
-// $button-radius: $global-radius;
-// $button-round: $global-rounded;
-
-// We use this to set default opacity and cursor for disabled buttons.
-// $button-disabled-opacity: 0.7;
-// $button-disabled-cursor: $cursor-default-value;
 
 // 06. Button Groups
 // - - - - - - - - - - - - - - - - - - - - - - - - -
@@ -343,33 +221,8 @@ $include-xl-html-block-grid-classes: true;
 
 // 07. Clearing
 // - - - - - - - - - - - - - - - - - - - - - - - - -
+// no Kiva modifications
 
-// $include-html-clearing-classes: $include-html-classes;
-
-// We use these to set the background colors for parts of Clearing.
-// $clearing-bg: $oil;
-// $clearing-caption-bg: $clearing-bg;
-// $clearing-carousel-bg: rgba(51,51,51,0.8);
-// $clearing-img-bg: $clearing-bg;
-
-// We use these to style the close button
-// $clearing-close-color: $iron;
-// $clearing-close-size: 30px;
-
-// We use these to style the arrows
-// $clearing-arrow-size: 12px;
-// $clearing-arrow-color: $clearing-close-color;
-
-// We use these to style captions
-// $clearing-caption-font-color: $iron;
-// $clearing-caption-font-size: 0.875em;
-// $clearing-caption-padding: 10px 30px 20px;
-
-// We use these to make the image and carousel height and style
-// $clearing-active-img-height: 85%;
-// $clearing-carousel-height: 120px;
-// $clearing-carousel-thumb-width: 120px;
-// $clearing-carousel-thumb-active-border: 1px solid rgb(255,255,255);
 
 // 08. Dropdown
 // - - - - - - - - - - - - - - - - - - - - - - - - -
@@ -622,7 +475,7 @@ $include-xl-html-block-grid-classes: true;
 
 // 18. Off-canvas
 // - - - - - - - - - - - - - - - - - - - - - - - - -
-// Foundation default off-canvas is customized in vendor/foundation/_offcanvas.scss
+// Foundation default off-canvas is customized in vendor_override/foundation/_offcanvas.scss
 
 
 // 19. Orbit
@@ -917,35 +770,8 @@ $include-xl-html-block-grid-classes: true;
 
 // 28. Sub Nav
 // - - - - - - - - - - - - - - - - - - - - - - - - -
+// not using - no Kiva customizations
 
-// $include-html-nav-classes: $include-html-classes;
-
-// We use these to control margin and padding
-// $sub-nav-list-margin: rem-calc(-4 0 18);
-// $sub-nav-list-padding-top: rem-calc(4);
-
-// We use this to control the definition
-// $sub-nav-font-family: $body-font-family;
-// $sub-nav-font-size: rem-calc(14);
-// $sub-nav-font-color: $aluminum;
-// $sub-nav-font-weight: $font-weight-normal;
-// $sub-nav-text-decoration: none;
-// $sub-nav-padding: rem-calc(3 16);
-// $sub-nav-border-radius: 3px;
-// $sub-nav-font-color-hover: scale-color($sub-nav-font-color, $lightness: -25%);
-
-
-// We use these to control the active item styles
-
-// $sub-nav-active-font-weight: $font-weight-normal;
-// $sub-nav-active-bg: $primary-color;
-// $sub-nav-active-bg-hover: scale-color($sub-nav-active-bg, $lightness: -14%);
-// $sub-nav-active-color: $white;
-// $sub-nav-active-padding: $sub-nav-padding;
-// $sub-nav-active-cursor: default;
-
-// $sub-nav-item-divider: "";
-// $sub-nav-item-divider-margin: rem-calc(12);
 
 // 29. Switch
 // - - - - - - - - - - - - - - - - - - - - - - - - -
@@ -1078,91 +904,8 @@ $include-xl-html-block-grid-classes: true;
 
 // 34. Top Bar
 // - - - - - - - - - - - - - - - - - - - - - - - - -
-
-// $include-html-top-bar-classes: $include-html-classes;
-
-// Background color for the top bar
-// $topbar-bg-color: $oil;
-// $topbar-bg: $topbar-bg-color;
-
-// Height and margin
-// $topbar-height: rem-calc(45);
-// $topbar-margin-bottom: 0;
-
-// Controlling the styles for the title in the top bar
-// $topbar-title-weight: $font-weight-normal;
-// $topbar-title-font-size: rem-calc(17);
-
-// Set the link colors and styles for top-level nav
-// $topbar-link-color: $white;
-// $topbar-link-color-hover: $white;
-// $topbar-link-color-active: $white;
-// $topbar-link-color-active-hover: $white;
-// $topbar-link-weight: $font-weight-normal;
-// $topbar-link-font-size: rem-calc(13);
-// $topbar-link-hover-lightness: -10%; // Darken by 10%
-// $topbar-link-bg: $topbar-bg;
-// $topbar-link-bg-hover: $oil;
-// $topbar-link-bg-color-hover: $charcoal;
-// $topbar-link-bg-active: $primary-color;
-// $topbar-link-bg-active-hover: scale-color($primary-color, $lightness: -14%);
-// $topbar-link-font-family: $body-font-family;
-// $topbar-link-text-transform: none;
-// $topbar-link-padding: ($topbar-height / 3);
-// $topbar-back-link-size: rem-calc(18);
-// $topbar-link-dropdown-padding: rem-calc(20);
-// $topbar-button-font-size: 0.75rem;
-// $topbar-button-top: 7px;
-
-// Style the top bar dropdown elements
-// $topbar-dropdown-bg: $oil;
-// $topbar-dropdown-link-color: $white;
-// $topbar-dropdown-link-color-hover: $topbar-link-color-hover;
-// $topbar-dropdown-link-bg: $oil;
-// $topbar-dropdown-link-bg-hover: $oil;
-// $topbar-dropdown-link-weight: $font-weight-normal;
-// $topbar-dropdown-toggle-size: 5px;
-// $topbar-dropdown-toggle-color: $white;
-// $topbar-dropdown-toggle-alpha: 0.4;
-
-// $topbar-dropdown-label-color: $monsoon;
-// $topbar-dropdown-label-text-transform: uppercase;
-// $topbar-dropdown-label-font-weight: $font-weight-bold;
-// $topbar-dropdown-label-font-size: rem-calc(10);
-// $topbar-dropdown-label-bg: $oil;
-
-// Top menu icon styles
-// $topbar-menu-link-transform: uppercase;
-// $topbar-menu-link-font-size: rem-calc(13);
-// $topbar-menu-link-weight: $font-weight-bold;
-// $topbar-menu-link-color: $white;
-// $topbar-menu-icon-color: $white;
-// $topbar-menu-link-color-toggled: $jumbo;
-// $topbar-menu-icon-color-toggled: $jumbo;
-// $topbar-menu-icon-position: $opposite-direction; // Change to $default-float for a left menu icon
-
-// Transitions and breakpoint styles
-// $topbar-transition-speed: 300ms;
-// Using rem-calc for the below breakpoint causes issues with top bar
-// $topbar-breakpoint: #{lower-bound($medium-range)}; // Change to 9999px for always mobile layout
-// $topbar-media-query: $medium-up;
-
-// Top-bar input styles
-// $topbar-input-height: rem-calc(28);
-
-// Divider Styles
-// $topbar-divider-border-bottom: solid 1px scale-color($topbar-bg-color, $lightness: 13%);
-// $topbar-divider-border-top: solid 1px scale-color($topbar-bg-color, $lightness: -50%);
-
-// Sticky Class
-// $topbar-sticky-class: ".sticky";
-// $topbar-arrows: true; //Set false to remove the triangle icon from the menu item
-// $topbar-dropdown-arrows: true; //Set false to remove the \00bb >> text from dropdown subnavigation li//
+// no Kiva customizations
 
 // 36. Visibility Classes
 // - - - - - - - - - - - - - - - - - - - - - - - - -
-
 $include-html-visibility-classes: $include-html-classes;
-// $include-accessibility-classes: true;
-// $include-table-visibility-classes: true;
-// $include-legacy-visibility-classes: true;
