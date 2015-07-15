@@ -6,8 +6,9 @@ ul.dropdown-list {
 
         a {
             display: block;
-            padding: 0 0 0 1.5rem;
-            line-height: rem-calc(64);
+            padding: 0 1rem;
+            white-space: nowrap;
+            line-height: $header-height-small;
             font-size: 1rem;
             color: $kiva-text-dark;
 
@@ -30,5 +31,11 @@ ul.dropdown-list {
                 padding-left: 2.5rem;
             }
         }
+    }
+}
+
+@media #{$large-up} {
+    ul.dropdown-list li a {
+        line-height: $header-height;
     }
 }

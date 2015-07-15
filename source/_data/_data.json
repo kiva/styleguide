@@ -140,4 +140,15 @@
             { "label": "Due diligence and monitoring", "href": "#" }
         ]
     }
+    , "my-kiva": {
+        "links": [
+          { "label": "Portfolio", "href": "#"},
+          { "label": "My Teams", "href": "#"},
+          { "label": "Donations", "href": "#"},
+          { "label": "Lender Profile", "href": "#"},
+          { "label": "My Campaigns", "href": "#"},
+          { "label": "Settings", "href": "#"},
+          { "label": "Sign Out", "href": "#"}
+        ]
+    }
 }

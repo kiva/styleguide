@@ -20,16 +20,18 @@
 				</div>
 			</div>
 		{{/is-visitor}}
-		{{#is-lender}}
+		{{^is-visitor}}
 			<div class="small-4 xxlarge-2 columns right-side my-kiva-container">
 				<div class="show-for-large-up large-6 columns">
 					<a class="header-button" href="#">{{#basket-count}}<span class="amount">{{basket-count}}</span>{{/basket-count}} Basket</a>
 				</div>
 				<div class="small-12 large-6 columns">
-					<a class="header-button my-kiva" href="#"><span class="amount">{{balance}}</span><img class="profile" src="{{img.avatar.src}}" alt="Profile Picture"></a>
+					<a data-dropdown="my-kiva-dropdown" aria-controls="my-kiva-dropdown" aria-expanded="false" class="header-button my-kiva" href="#">
+						<span class="amount">{{balance}}</span><img class="profile" src="{{img.avatar.src}}" alt="Profile Picture">
+					</a>
 				</div>
 			</div>
-		{{/is-lender}}
+		{{/is-visitor}}
         <div class="show-for-xxlarge-up xxlarge-4 xxlarge-centered columns promo-space">
 			{{#bonus}}
                 <a href="#"><span class="amount">$25</span> Bonus Credit <i class="fa fa-chevron-down"></i></a>
@@ -41,10 +43,18 @@
     </div>
 
 	{{#is-visitor}}
-		<ul id="about-dropdown" class="f-dropdown dropdown-list" data-dropdown-content aria-hidden="true" tabindex="-1">
+		<ul id="about-dropdown" class="f-dropdown dropdown-list" data-dropdown-content aria-hidden="true">
 			{{#about-nav.links}}
 				<li><a href="{{href}}">{{label}}</a></li>
 			{{/about-nav.links}}
+		</ul>
+	{{/is-visitor}}
+
+	{{^is-visitor}}
+		<ul id="my-kiva-dropdown" class="f-dropdown dropdown-list" data-dropdown-content aria-hidden="true">
+			{{#my-kiva.links}}
+				<li><a href="{{href}}">{{label}}</a></li>
+			{{/my-kiva.links}}
 		</ul>
 	{{/is-visitor}}
 
