@@ -6,7 +6,7 @@
  */
 
 @font-face {
-    font-family: 'Brown Regular';
+    font-family: 'Brown';
     src: url('../fonts/br.eot') format('eot')
 		,url('../fonts/br.woff') format('woff')
 		,url('../fonts/br.ttf') format('ttf')
@@ -16,12 +16,13 @@
 }
 
 @font-face {
-    font-family: 'Brown Bold';
+    font-family: 'Brown ';
     src: url('../fonts/bb.eot') format('eot')
 		,url('../fonts/bb.woff') format('woff')
 		,url('../fonts/bb.ttf') format('ttf')
 		,url('../fonts/bb.svg') format('svg');
-    font-weight: normal;
+    font-weight: bold;
     font-style: normal;
-}
+//}
+
 

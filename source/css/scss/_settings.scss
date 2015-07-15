@@ -91,7 +91,8 @@ $include-xl-html-grid-classes: true;
 
 @import "fonts";
 // We use these to define default font stacks
-$font-family-sans-serif: "Brown Regular", Arial, Helvetica, sans-serif;
+//$font-family-sans-serif: "Brown Regular", Arial, Helvetica, sans-serif;
+$font-family-sans-serif: "Brown", Arial, Helvetica, sans-serif;
 
 // Kiva custom palette is in _palette.scss
 @import "palette";
