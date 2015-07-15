@@ -1,7 +1,7 @@
 .header-button {
     display:block;
-    padding:0 rem-calc(16);
-    line-height: rem-calc(64);
+    padding:0;
+    line-height: $header-height-small;
     background-color: $green;
     white-space: nowrap;
     text-align: center;
@@ -13,10 +13,19 @@
     &.open, &[aria-expanded="true"]{
         color: $dark-green;
     }
+
+    img {
+        margin-top: -$header-height-small/16;
+    }
 }
 
-@media #{$small-only} {
+@media #{$large-up} {
     .header-button {
-        padding:0;
+        padding:0 $header-height/4;
+        line-height: $header-height;
+
+        img {
+            margin-top: -$header-height/16;
+        }
     }
 }

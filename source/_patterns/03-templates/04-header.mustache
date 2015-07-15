@@ -21,12 +21,12 @@
 			</div>
 		{{/is-visitor}}
 		{{#is-lender}}
-			<div class="small-4 xxlarge-2 columns right-side">
+			<div class="small-4 xxlarge-2 columns right-side my-kiva-container">
 				<div class="show-for-large-up large-6 columns">
 					<a class="header-button" href="#">{{#basket-count}}<span class="amount">{{basket-count}}</span>{{/basket-count}} Basket</a>
 				</div>
 				<div class="small-12 large-6 columns">
-					<a class="header-button" href="#">Profile</a>
+					<a class="header-button my-kiva" href="#"><span class="amount">{{balance}}</span><img class="profile" src="{{img.avatar.src}}" alt="Profile Picture"></a>
 				</div>
 			</div>
 		{{/is-lender}}

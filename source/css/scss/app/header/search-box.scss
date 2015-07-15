@@ -1,12 +1,19 @@
 $search-form-width: 10.4rem;
-$search-form-height: rem-calc(64);
+$search-form-height: $header-height;
+$search-form-height-small: $header-height-small;
 $search-form-transition: width 0.5s ease;
+
 $search-margin: 0.6rem;
+$search-margin-small: 0.4rem;
 $search-centering-margin: 0.65rem;
-$search-input-width: $search-form-width - $search-margin;
-$search-input-padding: 0.6rem;
+$search-centering-margin-small: 0.32rem;
+$search-button-size-small: 2.5rem;
 $search-icon-size: $top-nav-font-size;
-$search-small-button-size: 2.5rem;
+
+$search-input-width-small: calc(100% - #{$search-margin-small + $search-button-size-small} );
+$search-input-width: $search-form-width - $search-margin;
+$search-input-padding: $search-margin;
+$search-input-padding-small: $search-margin-small;
 
 // annoyingly long selector to override
 .row > .columns > a.header-button#search-toggle {
@@ -21,8 +28,12 @@ $search-small-button-size: 2.5rem;
     }
 }
 
-#search-container {
-    position: static;
+.search-button-container {
+    width: grid-calc(1, 8);
+}
+
+.search-container {
+    position: absolute;
     z-index: 1;
 }
 
@@ -30,7 +41,7 @@ $search-small-button-size: 2.5rem;
     display: block;
     position: absolute;
     overflow: hidden;
-    width: $search-form-width;
+    width: 100%;
     border-right: rem-calc(1) solid $divider-green;
     background-color: $green;
 
@@ -46,12 +57,12 @@ $search-small-button-size: 2.5rem;
     div {
         position: relative;
         vertical-align: middle;
-        height: $search-form-height;
+        height: $search-form-height-small;
     }
 
     .search-icon {
         position: absolute;
-        left: 0.4rem;
+        left: 0.4rem + $search-button-size-small;
         top:50%;
 
         &:before {
@@ -62,9 +73,9 @@ $search-small-button-size: 2.5rem;
 
     input {
         $search-input-padding: 0.6rem;
-        width: $search-input-width;
-        padding: $search-input-padding $search-input-padding $search-input-padding ($top-nav-font-size * 1.5);
-        margin: $search-centering-margin 0;
+        width: $search-input-width-small;
+        padding: $search-input-padding-small $search-input-padding-small $search-input-padding-small ($top-nav-font-size * 1.5);
+        margin: $search-centering-margin-small 0;
         display: inline-block;
         height: auto;
     }
@@ -72,26 +83,36 @@ $search-small-button-size: 2.5rem;
 
 #close-search {
     float: left;
-    width: $search-small-button-size;
-    line-height: $search-form-height;
+    width: $search-button-size-small;
+    line-height: $search-form-height-small;
     text-align: center;
     color: $dark-green;
 }
 
-@media #{$small-only} {
-    #search-container {
-        position: absolute;
+@media #{$large-up} {
+    .search-button-container {
+        width: auto;
+    }
+
+    .search-container {
+        position: static;
     }
 
     #search-form {
-        width: 100%;
+        width: $search-form-width;
+
+        div {
+            height: $search-form-height;
+        }
 
         input {
-            width: calc(100% - #{$search-margin + $search-small-button-size} );
+            width: $search-input-width;
+            margin: $search-centering-margin 0;
+            padding: $search-input-padding $search-input-padding $search-input-padding ($top-nav-font-size * 1.5);
         }
 
         .search-icon {
-            left: 0.4rem + $search-small-button-size;
+            left: 0.4rem;
         }
     }
 }

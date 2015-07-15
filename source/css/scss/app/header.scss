@@ -1,3 +1,6 @@
+$header-height: rem-calc(64);
+$header-height-small: rem-calc(45);
+
 @import 'header/top-nav';
 @import 'header/header-button';
 @import 'header/search-box';
