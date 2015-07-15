@@ -1,5 +1,5 @@
 .top-nav {
-    background-color: $green;
+    background-color: $kiva-green;
 
     .columns {
         padding:0;
@@ -10,14 +10,14 @@
     }
 
     .row > .columns > a {
-        border-right: 1px solid $divider-green;
+        border-right: rem-calc(1) solid $kiva-navdivider-green;
     }
     .row > .columns:last-child > a {
         border-right:none;
     }
 
     .amount {
-        color: $green;
+        color: $kiva-green;
         background-color: $white;
         padding: rem-calc(1) rem-calc(5);
     }
@@ -28,15 +28,15 @@
         width: grid-calc(4, $total-columns);
 
         a {
-            color: $dark-green;
+            color: $kiva-darkgreen;
         }
 
         .amount {
-            background-color: $dark-green;
+            background-color: $kiva-darkgreen;
         }
 
         .promo {
-            color: $light-green;
+            color: $kiva-accent-green;
         }
     }
 
@@ -45,7 +45,7 @@
         border: none;
 
         .columns a {
-            border-left: 1px solid $divider-green;
+            border-left: rem-calc(1) solid $kiva-navdivider-green;
         }
     }
 
@@ -65,7 +65,7 @@
         font-size: 0.8rem;
         font-weight: bold;
         text-align: center;
-        background-color: $dark-green;
+        background-color: $kiva-darkgreen;
 
         a {
             color: $white;
@@ -98,7 +98,7 @@
     text-align: center;
     font-size: 1.8rem;
     font-weight: bold;
-    background-color: $blue;
+    background-color: $kiva-accent-blue;
 
     a {
         color: $white;
@@ -110,7 +110,7 @@
 
 
 .secondary-nav-bar {
-    background-color: $dark-green;
+    background-color: $kiva-darkgreen;
     margin-bottom: 0.5rem; // should this go here?
 
     ul {
@@ -130,7 +130,7 @@
             color: $white;
 
             &.active {
-                color: $green;
+                color: $kiva-green;
                 font-weight: bold;
             }
 
@@ -141,7 +141,7 @@
                 left: rem-calc(16);
                 right: rem-calc(16);
                 height: rem-calc(2);
-                background-color: $green;
+                background-color: $kiva-green;
             }
         }
 
@@ -161,7 +161,7 @@
         width: 100%;
         line-height: rem-calc(64);
         padding: 0 0.5rem;
-        background-color: $dark-green;
+        background-color: $kiva-darkgreen;
         color: $white;
 
         .open-icon, .closed-icon {
@@ -211,7 +211,7 @@ ul.tertiary-nav {
         line-height: 2rem;
 
         &.active {
-            color: $light-gray;
+            color: $kiva-stroke-gray;
         }
     }
 }

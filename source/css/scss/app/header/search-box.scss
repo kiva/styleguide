@@ -42,8 +42,8 @@ $search-input-padding-small: $search-margin-small;
     position: absolute;
     overflow: hidden;
     width: 100%;
-    border-right: rem-calc(1) solid $divider-green;
-    background-color: $green;
+    border-right: rem-calc(1) solid $kiva-navdivider-green;
+    background-color: $kiva-green;
 
     -webkit-transition: $search-form-transition;
     -moz-transition: $search-form-transition;
@@ -86,7 +86,7 @@ $search-input-padding-small: $search-margin-small;
     width: $search-button-size-small;
     line-height: $search-form-height-small;
     text-align: center;
-    color: $dark-green;
+    color: $kiva-darkgreen;
 }
 
 @media #{$large-up} {

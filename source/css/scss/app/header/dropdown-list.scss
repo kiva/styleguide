@@ -2,17 +2,17 @@ ul.dropdown-list {
     list-style: none;
 
     li {
-        border-bottom: 1px solid $light-gray;
+        border-bottom: 1px solid $kiva-stroke-gray;
 
         a {
             display: block;
             padding: 0 0 0 1.5rem;
             line-height: rem-calc(64);
             font-size: 1rem;
-            color: $charcoal;
+            color: $kiva-text-dark;
 
             &.active {
-                color: $gray;
+                color: $kiva-text-light;
             }
         }
     }
@@ -22,7 +22,7 @@ ul.dropdown-list {
         margin-left: 0;
 
         li {
-            border-top: 1px solid $light-gray;
+            border-top: 1px solid $kiva-stroke-gray;
             border-bottom: none;
             background-color: $ghost;
 
