@@ -3,9 +3,16 @@
 // custom font sizes and line height
 $small-font-size				: rem-calc(14);
 $small-line-height				: rem-calc(20);
+$small-font-color				: $kiva-text-dark;
 
 $body-font-size					: rem-calc(18);
 $body-line-height				: rem-calc(24);
+
+$paragraph-font-size			: $body-font-size;
+$paragraph-line-height			: $body-line-height;
+
+$paragraph-aside-font-size		: $small-font-size;
+$paragraph-aside-line-height	: $small-line-height;
 
 $top-nav-font-size				: rem-calc(21);
 $top-nav-line-height			: rem-calc(21);
