@@ -147,7 +147,7 @@
           { "label": "Donations", "href": "#"},
           { "label": "Lender Profile", "href": "#"},
           { "label": "My Campaigns", "href": "#"},
-          { "label": "Settings", "href": "#"},
+          { "label": "Settings", "href": "#", "end-section": true},
           { "label": "Sign Out", "href": "#"}
         ]
     }

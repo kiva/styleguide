@@ -1,14 +1,22 @@
 <div class="top-nav" role="navigation">
-    <div class="row">
-        <div class="small-3 large-2 xxlarge-2 columns logo-area">
-			<a class="header-button" href="#"><img src="/images/logo-white-cropped.png" alt="Kiva" /></a>
+    <div class="row header-row">
+        <div class="show-for-xxlarge-up xxlarge-4 xxlarge-centered columns promo-space">
+			{{#bonus}}
+                <a href="#"><span class="amount">$25</span> Bonus Credit <i class="fa fa-chevron-down"></i></a>
+			{{/bonus}}
+			{{^bonus}}
+                <span class="promo">Promo Space</span>
+			{{/bonus}}
         </div>
-        <div class="small-3 large-2 xxlarge-1 columns">
+        <div class="small-3 large-2 xxlarge-2 columns header-column logo-area">
+			<a class="header-button" href="#"><img data-interchange="[/images/logo-white-cropped.png, (default)], [/images/logo-letter-mark.png, (small-only)]"></a>
+        </div>
+        <div class="small-3 large-2 xxlarge-1 columns header-column">
             <a class="header-button" href="#">Lend <i class="fa fa-chevron-down"></i></a>
         </div>
 		{{> 02-organisms/08-header/01-search-box}}
 		{{#is-visitor}}
-			<div class="small-6 xxlarge-3 columns right-side">
+			<div class="small-6 xxlarge-3 columns header-column right-side">
 				<div class="small-6 large-4 columns">
 					<a data-dropdown="about-dropdown" aria-controls="about-dropdown" aria-expanded="false" class="header-button" href="#">About <i class="fa fa-chevron-down"></i></a>
 				</div>
@@ -21,7 +29,7 @@
 			</div>
 		{{/is-visitor}}
 		{{^is-visitor}}
-			<div class="small-4 xxlarge-2 columns right-side my-kiva-container">
+			<div class="small-3-8ths xxlarge-2 columns header-column right-side">
 				<div class="show-for-large-up large-6 columns">
 					<a class="header-button" href="#">{{#basket-count}}<span class="amount">{{basket-count}}</span>{{/basket-count}} Basket</a>
 				</div>
@@ -32,14 +40,6 @@
 				</div>
 			</div>
 		{{/is-visitor}}
-        <div class="show-for-xxlarge-up xxlarge-4 xxlarge-centered columns promo-space">
-			{{#bonus}}
-                <a href="#"><span class="amount">$25</span> Bonus Credit <i class="fa fa-chevron-down"></i></a>
-			{{/bonus}}
-			{{^bonus}}
-                <span class="promo">Promo Space</span>
-			{{/bonus}}
-        </div>
     </div>
 
 	{{#is-visitor}}
@@ -53,7 +53,7 @@
 	{{^is-visitor}}
 		<ul id="my-kiva-dropdown" class="f-dropdown dropdown-list" data-dropdown-content aria-hidden="true">
 			{{#my-kiva.links}}
-				<li><a href="{{href}}">{{label}}</a></li>
+				<li><a href="{{href}}" {{#end-section}}class="end-section"{{/end-section}}>{{label}}</a></li>
 			{{/my-kiva.links}}
 		</ul>
 	{{/is-visitor}}

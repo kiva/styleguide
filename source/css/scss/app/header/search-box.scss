@@ -16,7 +16,7 @@ $search-input-padding: $search-margin;
 $search-input-padding-small: $search-margin-small;
 
 // annoyingly long selector to override
-.row > .columns > a.header-button#search-toggle {
+a.header-button#search-toggle {
     border-right: none;
 
     &[aria-expanded="true"] .search-icon {
@@ -26,10 +26,6 @@ $search-input-padding-small: $search-margin-small;
     &[aria-expanded="false"] .close-icon {
         display: none;
     }
-}
-
-.search-button-container {
-    width: grid-calc(1, 8);
 }
 
 .search-container {

@@ -9,23 +9,29 @@
         }
     }
 
-    .row > .columns > a {
+    .header-row {
+        position: relative;
+    }
+
+    .header-column > a {
         border-right: rem-calc(1) solid $kiva-navdivider-green;
     }
-    .row > .columns:last-child > a {
+
+    .header-column:last-child > a {
         border-right:none;
     }
 
     .amount {
-        color: $kiva-green;
-        background-color: $white;
-        padding: rem-calc(1) rem-calc(5);
+        color: inherit;
+        background: none;
+        padding: 0;
     }
 
     .promo-space.columns {
+        position: absolute;
         text-align: center;
         line-height: $header-height;
-        width: grid-calc(4, $total-columns);
+        width: 100%;
 
         a {
             color: $kiva-darkgreen;
@@ -75,10 +81,6 @@
     }
 }
 
-
-.my-kiva-container {
-    width: grid-calc(3, 8);
-}
 
 .my-kiva {
 
@@ -219,6 +221,15 @@ ul.tertiary-nav {
 
 @media #{$small-only} {
     .top-nav {
+
+        .small-1-8th {
+            width: grid-calc(1, 8);
+        }
+
+        .small-3-8ths {
+            width: grid-calc(3, 8);
+        }
+
         .columns {
             padding:0;
         }
@@ -249,6 +260,8 @@ ul.tertiary-nav {
 @media #{$large-up} {
     .top-nav {
         .amount {
+            color: $kiva-green;
+            background: $white;
             padding: rem-calc(1) rem-calc(7);
         }
 
@@ -267,10 +280,6 @@ ul.tertiary-nav {
         .right-side {
             width: auto;
         }
-    }
-
-    .my-kiva-container {
-        width: auto;
     }
 
     .my-kiva {
