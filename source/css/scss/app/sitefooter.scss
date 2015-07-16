@@ -3,9 +3,7 @@
 	color: $white;
 	font-size: $small-font-size;
 	line-height: $small-line-height;
-	height: 430px;
 	padding: rem-calc(40) rem-calc(20) rem-calc(20) rem-calc(20);
-	position: relative;
 
 	a {
 		color: $light-green;
@@ -18,14 +16,6 @@
 		font-size: $small-font-size;
 		font-weight: bold;
 		line-height: $small-line-height;
-	}
-
-	.large-footer {
-		height: 100%;
-
-		> .column {
-			height: 100%;
-		}
 	}
 }
 
@@ -42,7 +32,6 @@
 .siteFooter-links {
 	list-style-type: none;
 	margin-left: 0;
-	margin-bottom: 0;
 }
 
 .footer-link-borrow {
@@ -69,10 +58,6 @@
 	margin-bottom: rem-calc(20);
 }
 
-.small-footer .siteFooter-links {
-	margin-left: 0;
-}
-
 .small-footer {
 	.siteFooter-links {
 		border-bottom: white 1px solid;
@@ -94,5 +79,19 @@
 		border-right: $white 3px solid;
 		padding-right: rem-calc(20);
 		margin-right: rem-calc(13);
+	}
+}
+
+.large-footer {
+	height: 420px;
+	position: relative;
+	padding-bottom: rem-calc(40);
+
+	> .column {
+		height: 100%;
+	}
+
+	.siteFooter-links {
+		margin-bottom: 0;
 	}
 }
