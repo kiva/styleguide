@@ -3,7 +3,7 @@
 	color: $white;
 	font-size: $small-font-size;
 	line-height: $small-line-height;
-	padding: rem-calc(40) rem-calc(20) rem-calc(20) rem-calc(20);
+	padding: rem-calc(20);
 
 	a {
 		color: $light-green;
@@ -16,6 +16,7 @@
 		font-size: $small-font-size;
 		font-weight: bold;
 		line-height: $small-line-height;
+		margin-bottom: 0;
 	}
 }
 
@@ -29,21 +30,25 @@
 	margin-bottom: 0;
 }
 
+.siteFooter-statement-group {
+	margin-bottom: 14%;
+}
+
 .siteFooter-links {
 	list-style-type: none;
 	margin-left: 0;
 }
 
 .footer-link-borrow {
-	width: 21%;
+	width: 17%;
 }
 
 .footer-link-about {
-	width: 19%;
+	width: 21%;
 }
 
 .footer-link-help {
-	width: 17%;
+	width: 19%;
 }
 
 .footer-link-careers {
@@ -58,40 +63,66 @@
 	margin-bottom: rem-calc(20);
 }
 
-.small-footer {
-	.siteFooter-links {
-		border-bottom: white 1px solid;
-		list-style-type: none;
-		margin-left: 0;
-		padding-bottom: rem-calc(40);
+@media #{$small-only}, #{$medium-only} {
+	.siteFooter-nav {
+		.siteFooter-links {
+			border-bottom: white 1px solid;
+			list-style-type: none;
+			margin-left: 0;
+			padding-bottom: rem-calc(40);
+			text-align: center;
 
-		> li {
-			float: left;
+			> li {
+				float: left;
+			}
 		}
-	}
 
-	.siteFooter-policy, .siteFooter-legal {
-		text-align: center;
-		margin-bottom: rem-calc(40);
-	}
+		li:first-of-type {
+			text-align: left;
+		}
 
-	.siteFooter-privacy {
-		border-right: $white 3px solid;
-		padding-right: rem-calc(20);
-		margin-right: rem-calc(13);
+		li:last-of-type {
+			text-align: right;
+		}
+
+		.siteFooter-policy, .siteFooter-legal {
+			text-align: center;
+			margin-bottom: rem-calc(40);
+		}
+
+		.siteFooter-privacy {
+			border-right: $white 1px solid;
+			padding-right: rem-calc(20);
+			margin-right: rem-calc(13);
+		}
 	}
 }
 
-.large-footer {
-	height: 420px;
-	position: relative;
-	padding-bottom: rem-calc(40);
+@media #{$medium-only} {
+	.siteFooter-links a {
+		font-size: $body-font-size;
+		line-height: $body-line-height;
+	}
+}
 
-	> .column {
-		height: 100%;
+@media #{$large-up} {
+	.siteFooter-nav {
+		height: 420px;
+		position: relative;
+		padding-bottom: rem-calc(40);
+
+		> .column {
+			height: 100%;
+		}
+
+		.siteFooter-links {
+			margin-bottom: 0;
+		}
 	}
 
-	.siteFooter-links {
-		margin-bottom: 0;
+	.siteFooter-divider {
+		border-right: $white 1px solid;
+		padding-right: 10px;
+		margin-right: 8px;
 	}
 }

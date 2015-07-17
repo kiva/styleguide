@@ -119,7 +119,7 @@ $header-font-color: $kiva-text-dark;
     @return rem-calc($value, 16);
 }
 
-$small-breakpoint:  mq-rem-calc(680);  // Possibly changing to 480. Previously 760. Foundation default 640
+$small-breakpoint:  mq-rem-calc(480);  // Possibly changing to 480. Previously 760. Foundation default 640
 $medium-breakpoint: mq-rem-calc(680);  // Previously 988. Foundation default 1024
 $large-breakpoint:  mq-rem-calc(988);  // Possibly changing to ~760-780. Previously 1116. Foundation default 1440
 $xlarge-breakpoint: mq-rem-calc(988);  // Foundation default 1920
