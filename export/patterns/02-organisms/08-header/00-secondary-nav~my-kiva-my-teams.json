@@ -1,0 +1,21 @@
+{
+  "main-title": "My Kiva",
+  "page-title": "My Teams",
+  "bar-links": [
+    { "title": "Portfolio" },
+    { "title": "My Teams", "active": true },
+    { "title": "Donations" },
+    { "title": "Lender Profile" },
+    { "title": "My Campaigns"},
+    { "title": "Settings" }
+  ],
+  "has-bar-sub-links": false,
+  "drop-links": [
+    { "title": "My Teams", "active": true },
+    { "title": "Portfolio" },
+    { "title": "Donations" },
+    { "title": "Lender Profile" },
+    { "title": "My Campaigns" },
+    { "title": "Settings" }
+  ]
+}

@@ -1,0 +1,116 @@
+<div class="off-canvas-wrap move-left" data-offcanvas>
+    <div class="inner-wrap">
+        <aside class="right-off-canvas-menu">
+            <ul class="filters-menu-list off-canvas-list">
+                <li>
+                    {{> molecules-filters-paired-buttons}}
+                </li>
+
+                <li>
+                    <label>Loan Repayments</label>
+                    <div class="filter-slider">
+                        <div class="loan-repayments-slider"></div>
+                    </div>
+                </li>
+
+                <li>
+                    {{> molecules-filters-paired-buttons}}
+                </li>
+
+                <li>
+                    {{> molecules-filters-paired-buttons}}
+                </li>
+
+                <li class="loan-use-filters-submenu-wrap has-submenu">
+                    <a href="#"><span>Loan Use</span> <span>2 selected</span></a>
+                    {{> organisms-loan-use-filter}}
+                </li>
+
+                <li class="country-filters-submenu-wrap has-submenu">
+                    <a href="#"><span>Country or Region</span> <span>2 selected</span></a>
+                    {{> organisms-country-filter}}
+                </li>
+
+                {{#is_more_visible}}
+                    <li class="attributes-filters-submenu-wrap has-submenu">
+                        <a href="#"><span>Loan Attributes</span> <span>2 selected</span></a>
+                        {{> organisms-loan-attributes-filter}}
+                    </li>
+
+                    <li class="tags-filters-submenu-wrap has-submenu">
+                        <a href="#"><span>Loan Tags</span> <span>2 selected</span></a>
+                        <div class="right-submenu">@todo</div>
+                    </li>
+
+                    <li class="status-filters-submenu-wrap has-submenu">
+                        <a href="#"><span>Loan Status</span> <span>2 selected</span></a>
+                        {{> organisms-loan-status-filter}}
+                    </li>
+                {{/is_more_visible}}
+
+                {{#is_partner_visible}}
+                    <li class="partner-filters-submenu-wrap has-submenu">
+                        <a href="#"><span>Partner</span> <span>2 selected</span></a>
+                        {{> organisms-partner-filter}}
+                    </li>
+
+                    <li class="partner-focus-filters-submenu-wrap has-submenu">
+                        <a href="#"><span>Partner focus</span> <span>2 selected</span></a>
+                        {{> organisms-partner-focus-filter}}
+                    </li>
+
+                    <li class="delinquency-filter-submenu-wrap">
+                        <label>Delinquency (%)</label>
+                        <div class="filter-slider">
+                            <div class="loan-repayments-slider"></div>
+                        </div>
+                    </li>
+
+                    <li class="default-filter-submenu-wrap">
+                        <label>Default (%)</label>
+                        <div class="filter-slider">
+                            <div class="loan-repayments-slider"></div>
+                        </div>
+                    </li>
+
+                    <li class="cost-filter-submenu-wrap">
+                        <label>Average Cost To Borrowers (%)</label>
+                        <div class="filter-slider">
+                            <div class="loan-repayments-slider"></div>
+                        </div>
+                    </li>
+
+                    <li class="profit-filter-submenu-wrap">
+                        <label>Partner Profitability (%)</label>
+                        <div class="filter-slider">
+                            <div class="loan-repayments-slider"></div>
+                        </div>
+                    </li>
+                {{/is_partner_visible}}
+
+                {{! todo - the "link" syntax mentioned here: http://patternlab.io/docs/data-link-variable.html does not seem to work}}
+                <li>
+                    {{#is_more_visible}}
+                        {{^is_partner_visible}}
+                            <a href="{{link.organisms-filters-menu-partner}}" class="show-more-filters button small secondary">Partner Filters</a>
+                        {{/is_partner_visible}}
+                    {{/is_more_visible}}
+                    {{^is_more_visible}}
+                            <a href="{{link.organisms-filters-menu-more}}" class="show-more-filters button small secondary">More Filters</a>
+                    {{/is_more_visible}}
+
+                    <a href="#" class="button small secondary">Save this search</a>
+                    <a href="#" class="button small">Apply</a>
+                </li>
+            </ul>
+        </aside>
+
+        <section class="main-section">
+            <!-- Foundation will set the height of the off-canvas menu to the height of the main-section -->
+            <div class="placeholderelement" style="height: 1000px"></div>
+        </section>
+
+        <a class="exit-off-canvas"></a>
+
+    </div>
+</div>
