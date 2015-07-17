@@ -1,7 +1,11 @@
+// shared vars
 $header-height: rem-calc(64);
 $header-height-small: rem-calc(45);
 
-@import 'header/top-nav';
-@import 'header/header-button';
-@import 'header/search-box';
+// imports - alphabetical for clarity
 @import 'header/dropdown-list';
+@import 'header/header-button';
+@import 'header/my-kiva';
+@import 'header/search-box';
+@import 'header/secondary-nav.scss';
+@import 'header/top-nav';

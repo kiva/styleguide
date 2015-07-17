@@ -1,0 +1,107 @@
+.secondary-nav-bar {
+    background-color: $kiva-darkgreen;
+    margin-bottom: 0.5rem; // should this go here?
+
+    ul {
+        list-style: none;
+        margin: 0;
+        display: block;
+    }
+
+    li {
+        font-size: 0.8em;
+        display: inline-block;
+
+        a {
+            position: relative;
+            display: block;
+            padding: rem-calc(12) rem-calc(16);
+            color: $white;
+            text-decoration: none;
+
+            &.active {
+                color: $kiva-green;
+                font-weight: bold;
+            }
+
+            &.active:before {
+                content: ' ';
+                position: absolute;
+                bottom: rem-calc(10);
+                left: rem-calc(16);
+                right: rem-calc(16);
+                height: rem-calc(2);
+                background-color: $kiva-green;
+            }
+        }
+
+        &:first-child a {
+            padding-left: 0;
+
+            &.active:before {
+                left: 0;
+            }
+        }
+    }
+}
+
+.secondary-nav-dropdown {
+    & > a {
+        display: block;
+        width: 100%;
+        line-height: $header-height-small;
+        padding: 0 0.5rem;
+        background-color: $kiva-darkgreen;
+        color: $white;
+
+        .open-icon, .closed-icon {
+            float: right;
+            line-height: inherit;
+        }
+
+        .closed-icon {
+            display: inline;
+        }
+        .open-icon {
+            display: none;
+        }
+
+        &.active {
+            .closed-icon {
+                display: none;
+            }
+            .open-icon {
+                display: inline;
+            }
+        }
+    }
+
+    ul.f-dropdown {
+        outline: none;
+        max-width: none;
+        margin-top: 0;
+        border: none;
+
+        // !important to override foundation inline styles applied by js
+        left: 0 !important;
+        width: 100% !important;
+
+        &:before, &:after {
+            display: none;
+        }
+    }
+}
+
+
+ul.tertiary-nav {
+    list-style: none;
+    margin: 0.4rem 0;
+
+    li a {
+        line-height: 2rem;
+
+        &.active {
+            color: $kiva-stroke-gray;
+        }
+    }
+}

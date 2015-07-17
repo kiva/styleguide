@@ -16,6 +16,7 @@ ul.dropdown-list {
         line-height: $header-height-small;
         font-size: $body-font-size;
         color: $link-color;
+        text-decoration: none;
         border-bottom: rem-calc(1) solid $divider;
 
         &.active {

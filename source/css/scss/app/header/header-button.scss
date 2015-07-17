@@ -8,6 +8,7 @@
 
     &:link, &:visited, &:hover, &:active {
         color: $white;
+        text-decoration: none;
     }
 
     &.open, &[aria-expanded="true"]{

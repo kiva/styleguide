@@ -1,4 +1,3 @@
-$search-form-width: 10.4rem;
 $search-form-height: $header-height;
 $search-form-height-small: $header-height-small;
 $search-form-transition: width 0.5s ease;
@@ -11,11 +10,10 @@ $search-button-size-small: 2.5rem;
 $search-icon-size: $top-nav-font-size;
 
 $search-input-width-small: calc(100% - #{$search-margin-small + $search-button-size-small} );
-$search-input-width: $search-form-width - $search-margin;
+$search-input-width: calc(100% - #{$search-margin} );
 $search-input-padding: $search-margin;
 $search-input-padding-small: $search-margin-small;
 
-// annoyingly long selector to override
 a.header-button#search-toggle {
     border-right: none;
 
@@ -29,16 +27,16 @@ a.header-button#search-toggle {
 }
 
 .search-container {
+    width: 100%;
+    height: 0;
     position: absolute;
     z-index: 1;
 }
 
 #search-form {
     display: block;
-    position: absolute;
     overflow: hidden;
     width: 100%;
-    border-right: rem-calc(1) solid $kiva-navdivider-green;
     background-color: $kiva-green;
 
     -webkit-transition: $search-form-transition;
@@ -48,12 +46,24 @@ a.header-button#search-toggle {
 
     &[aria-hidden="true"] {
         width: 0;
+
+        div {
+            width: 0;
+        }
     }
 
     div {
+        width: calc(100% + #{rem-calc(1)});
+        overflow: hidden;
         position: relative;
         vertical-align: middle;
         height: $search-form-height-small;
+        border-right: rem-calc(1) solid $kiva-navdivider-green;
+
+        -webkit-transition: $search-form-transition;
+        -moz-transition: $search-form-transition;
+        -o-transition: $search-form-transition;
+        transition: $search-form-transition;
     }
 
     .search-icon {
@@ -95,7 +105,11 @@ a.header-button#search-toggle {
     }
 
     #search-form {
-        width: $search-form-width;
+        width: auto;
+
+        &[aria-hidden="true"] {
+            width: auto;
+        }
 
         div {
             height: $search-form-height;

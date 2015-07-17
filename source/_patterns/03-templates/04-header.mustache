@@ -9,12 +9,12 @@
 			{{/bonus}}
         </div>
         <div class="small-3 large-2 xxlarge-2 columns header-column logo-area">
-			<a class="header-button" href="#"><img data-interchange="[/images/logo-white-cropped.png, (default)], [/images/logo-letter-mark.png, (small-only)]"></a>
+			<a class="header-button" href="#"><img src="/images/logo-white-cropped.png" data-interchange="[/images/logo-white-cropped.png, (default)], [/images/logo-letter-mark.png, (small-only)]"></a>
         </div>
         <div class="small-3 large-2 xxlarge-1 columns header-column">
             <a class="header-button" href="#">Lend <i class="fa fa-chevron-down"></i></a>
         </div>
-		{{> 02-organisms/08-header/01-search-box}}
+		{{> 02-organisms/08-header/01-search-button}}
 		{{#is-visitor}}
 			<div class="small-6 xxlarge-3 columns header-column right-side">
 				<div class="small-6 large-4 columns">
@@ -40,6 +40,7 @@
 				</div>
 			</div>
 		{{/is-visitor}}
+		{{> 02-organisms/08-header/02-search-box}}
     </div>
 
 	{{#is-visitor}}
