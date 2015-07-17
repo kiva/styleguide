@@ -3,6 +3,10 @@ module.exports = function(grunt) {
 	grunt.initConfig({
 		pkg: grunt.file.readJSON('package.json')
 
+		, clean: {
+			export: ['export']
+		}
+
         , concat: {
             options: {
                 banner: '/**\n * This file was auto-generated in order to merge all vendor css in one scss file.\n */\n\n'
@@ -38,6 +42,24 @@ module.exports = function(grunt) {
                     , {src: 'bower_components/select2/dist/js/select2.full.js', dest: 'public/dep/select2/select2.js'}
 				]
 			}
+
+			, export: {
+				files: [
+					{
+						cwd: 'source/_patterns'
+						, src: ['**/*.*', '!00-atoms/**']
+						, dest: 'export/patterns'
+						, expand: true
+					}
+					,{src: 'source/js/init.js', dest: 'export/js/init.js'}
+					, {src: 'bower_components/fastclick/lib/fastclick.js', dest: 'export/js/dep/fastclick/fastclick.js'}
+					, {src: 'bower_components/foundation/js/foundation.js', dest: 'export/js/dep/foundation/foundation.js'}
+					, {src: 'bower_components/jquery/dist/jquery.js', dest: 'export/js/dep/jquery/jquery.js'}
+					, {src: 'bower_components/modernizr/modernizr.js', dest: 'export/js/dep/modernizr/modernizr.js'}
+					, {src: 'bower_components/nouislider/distribute/jquery.nouislider.all.js', dest: 'export/js/dep/nouislider/nouislider.js'}
+					, {src: 'bower_components/select2/dist/js/select2.full.js', dest: 'export/js/dep/select2/select2.js'}
+				]
+			}
 		}
 
 
@@ -48,7 +70,8 @@ module.exports = function(grunt) {
 					, 'bower_components'
 					// @todo - should we also add bourbon?  require('node-bourbon').includePaths
 				]
-					}
+			}
+
 			, compile: {
 				options: {
 					sourceMap: true
@@ -60,6 +83,12 @@ module.exports = function(grunt) {
 					'source/css/styles.css': 'source/css/scss/app.scss',
 					'core/styleguide/css/styleguide.css': 'core/styleguide/css/styleguide.scss',
 					'core/styleguide/css/styleguide-specific.css': 'core/styleguide/css/styleguide-specific.scss',
+				}
+			}
+
+			, export: {
+				files: {
+					'export/styles.css': 'source/css/scss/app.scss'
 				}
 			}
 		}
@@ -110,6 +139,7 @@ module.exports = function(grunt) {
 
     // vendor: concat into vendor.scss, then compile into styles.scss
 
+	grunt.loadNpmTasks('grunt-contrib-clean');
     grunt.loadNpmTasks('grunt-contrib-concat');
 	grunt.loadNpmTasks('grunt-contrib-copy');
     grunt.loadNpmTasks('grunt-contrib-watch');
@@ -119,6 +149,7 @@ module.exports = function(grunt) {
 
 	grunt.registerTask('init', ['copy:init']);
 	grunt.registerTask('compile', ['concat:vendorCss', 'sass', 'shell:compile', 'copy:js']);
-	grunt.registerTask('default', ['concat:vendorCss', 'sass', 'shell:compile', 'copy:js']);
+	grunt.registerTask('export', ['clean:export', 'sass:export', 'copy:export']);
+	grunt.registerTask('default', 'compile');
 
 };
