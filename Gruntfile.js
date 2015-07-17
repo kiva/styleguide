@@ -63,6 +63,21 @@ module.exports = function(grunt) {
 		}
 
 
+		, release: {
+			options: {
+				file: 'bower.json'
+				, additionalFiles: ['package.json']
+				, beforeBump: ['export']
+				, npm: false
+				, npmtag: false
+				, github: {
+					repo: 'kiva/styleguide'
+					, accessTokenVar: 'GITHUB_ACCESS_TOKE'
+				}
+			}
+		}
+
+
 		, sass: {
 			options: {
 				includePaths: [
@@ -145,6 +160,7 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-watch');
 	grunt.loadNpmTasks('grunt-sass');
 	grunt.loadNpmTasks('grunt-shell');
+	grunt.loadNpmTasks('grunt-release');
 	// @todo add livereload?
 
 	grunt.registerTask('init', ['copy:init']);
