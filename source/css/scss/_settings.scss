@@ -177,6 +177,10 @@ $cursor-text-value: text;
 // Foundation default typography is customized in vendor/foundation/_type.scss
 $anchor-text-decoration-hover: underline;
 
+$anchor-text-decoration-hover: underline;
+$anchor-font-color: $kiva-textlink;
+$anchor-font-color-hover:$kiva-textlink-hover;
+
 
 // 01. Accordion
 // - - - - - - - - - - - - - - - - - - - - - - - - -

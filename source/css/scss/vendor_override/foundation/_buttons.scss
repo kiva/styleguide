@@ -1,27 +1,40 @@
 // Kiva overrides to default Foundation _buttons.scss
 
-$button-font-weight: $font-weight-bold;
+$button-function-factor				: 0;
+$button-bg-color					: $kiva-accent-blue;
+$button-bg-hover					: $kiva-textlink-hover;
 
 $button-font-med					: rem-calc(28);
 $button-font-med-reduction			: rem-calc(14);
+$button-font-weight					: $font-weight-bold;
 
 $button-height-med					: rem-calc(64);
 $button-height-med-reduction		: rem-calc(20);
 
 $button-width-standard				: rem-calc(244);
 
-$button-height-setting				: rem-calc(32);
-$button-height-setting-reduction	: rem-calc(10);
-$button-font-setting				: rem-calc(16);
-$button-font-setting-reduction		: rem-calc(2);
-$button-setting-text-color			: $charcoal;
-$button-setting-background-color	: $white;
-$button-setting-border-color		: $charcoal;
+$setting-button-height				: rem-calc(32);
+$setting-button-height-reduction	: rem-calc(6);
+$setting-button-font-size			: rem-calc(16);
+$setting-button-font-size-reduction	: rem-calc(4);
+$setting-button-text-color			: $kiva-text-dark;
+$setting-button-background-color	: $white;
+$setting-button-border-color		: $kiva-text-dark;
 
 
-.button {
+button
+, a.button
+, .button {
 	font-size: $button-font-med - $button-font-med-reduction;
+	font-weight: $font-weight-bold;
 	height: $button-height-med - $button-height-med-reduction;
+	text-decoration: none;
+
+	&:hover
+	, &:active {
+		text-decoration: none;
+		background-color: $kiva-textlink-hover;
+	}
 
 	@media #{$medium-up} {
 		font-size: $button-font-med;
@@ -30,17 +43,26 @@ $button-setting-border-color		: $charcoal;
 }
 
 .button.setting {
-	font-size: $button-font-setting - $button-font-setting-reduction;
-	height: $button-height-setting - $button-height-setting-reduction;
-	color: $button-setting-text-color;
-	background-color: $button-setting-background-color;
-	border-color: $button-setting-border-color;
+	font-size: $setting-button-font-size - $setting-button-font-size-reduction;
+	height: $setting-button-height - $setting-button-height-reduction;
+	color: $setting-button-text-color;
+	background-color: $setting-button-background-color;
+	border-color: $setting-button-border-color;
 	border-width: 1px;
 	border-style: solid;
+	padding-top: rem-calc(4);
+	
+	&:hover
+	, &:active {
+		border-color: $kiva-text-light;
+		color: $kiva-text-light;
+		background-color: $white;
+	}
 
 	@media #{$medium-up} {
-		font-size: $button-font-setting;
-		height:$button-height-setting;
+		font-size: $setting-button-font-size;
+		height:$setting-button-height;
+		padding-top: rem-calc(4);
 	}
 }
 

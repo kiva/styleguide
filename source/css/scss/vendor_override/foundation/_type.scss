@@ -131,6 +131,16 @@ h2 {
 	line-height: $secondary-nav-line-height;
 }
 
+a:visited {
+	color: $kiva-textlink-visited;
+}
+
+small {
+  font-size: $small-font-size;
+  line-height: $small-line-height;
+}
+
+
 @media #{$medium-up} {
 	.impact {
 		font-size: $impact-font-size;
