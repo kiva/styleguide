@@ -63,6 +63,15 @@ module.exports = function(grunt) {
 		}
 
 
+		, gitadd: {
+			export: {
+				files: {
+					src: ['export/']
+				}
+			}
+		}
+
+
 		, release: {
 			options: {
 				file: 'bower.json'
@@ -158,6 +167,7 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-concat');
 	grunt.loadNpmTasks('grunt-contrib-copy');
     grunt.loadNpmTasks('grunt-contrib-watch');
+	grunt.loadNpmTasks('grunt-git');
 	grunt.loadNpmTasks('grunt-sass');
 	grunt.loadNpmTasks('grunt-shell');
 	grunt.loadNpmTasks('grunt-release');
@@ -165,7 +175,7 @@ module.exports = function(grunt) {
 
 	grunt.registerTask('init', ['copy:init']);
 	grunt.registerTask('compile', ['concat:vendorCss', 'sass', 'shell:compile', 'copy:js']);
-	grunt.registerTask('export', ['clean:export', 'sass:export', 'copy:export']);
+	grunt.registerTask('export', ['clean:export', 'sass:export', 'copy:export', 'gitadd:export']);
 	grunt.registerTask('default', 'compile');
 
 };
