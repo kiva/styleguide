@@ -1,6 +1,7 @@
 {
 	"main-title": "My Kiva",
 	"page-title": "Settings",
+	"is-borrower": true,
 	"bar-links": [
 		{"title": "Portfolio"},
 		{"title": "My Teams"},

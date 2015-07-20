@@ -7259,7 +7259,7 @@ ul.tertiary-nav {
     width: 100%;
     display: block; }
 
-@media only screen and (max-width: 30rem) {
+@media only screen and (max-width: 30rem), only screen and (min-width:30.0625rem) and (max-width:42.5rem) {
   .top-nav .small-1-8th {
     width: 12.5%; }
   .top-nav .small-3-8ths {
