@@ -174,7 +174,7 @@ module.exports = function(grunt) {
 	// @todo add livereload?
 
 	grunt.registerTask('init', ['copy:init']);
-	grunt.registerTask('compile', ['concat:vendorCss', 'sass', 'shell:compile', 'copy:js']);
+	grunt.registerTask('compile', ['concat:vendorCss', 'sass:compile', 'shell:compile', 'copy:js']);
 	grunt.registerTask('export', ['clean:export', 'sass:export', 'copy:export', 'gitadd:export']);
 	grunt.registerTask('default', 'compile');
 
