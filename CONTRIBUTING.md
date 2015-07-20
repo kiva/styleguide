@@ -15,8 +15,8 @@
     2. Go to https://github.com/settings/tokens
     3. 'Generate new token' with default permissions
     4. Copy token and assign to env variable GITHUB_ACCESS_TOKE
-        1. On your VM, edit ~/.bash_profile to add line: export GITHUB_ACCESS_TOKE=<token>
-        2. source ~/.bash_profile
+        1. On your VM, edit ~/.bash_profile to add line: `export GITHUB_ACCESS_TOKE=<token>`
+        2. `source ~/.bash_profile`
 8. Verify by seeing your new release at https://github.com/kiva/styleguide/releases
 
 ### In kiva main repo (any branch):
