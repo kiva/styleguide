@@ -63,11 +63,11 @@
 
 	// Throttled resize function
 	$(window).on('resize', Foundation.utils.throttle(function() {
-		if(Foundation.utils.is_small_only()) {
-			$close_search.attr('aria-hidden', false);
+		if(Foundation.utils.is_large_up()) {
+			$close_search.attr('aria-hidden', true);
 		}
 		else {
-			$close_search.attr('aria-hidden', true);
+			$close_search.attr('aria-hidden', false);
 		}
 	}, 200));
 
