@@ -151,4 +151,9 @@
           { "label": "Sign Out", "href": "#"}
         ]
     }
+	, "my-kiva-trustee": {
+		"links": [
+		  { "label": "Trustee Dashboard", "href": "#", "end-section": true}
+		]
+	}
 }

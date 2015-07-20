@@ -7,6 +7,22 @@
 					<a href="#" {{#active}}class="active"{{/active}}>{{title}}</a>
 				</li>
 				{{/bar-links}}
+
+				{{#is-borrower}}
+					{{#bar-links-borrower}}
+						<li>
+							<a href="#" {{#active}}class="active"{{/active}}>{{title}}</a>
+						</li>
+					{{/bar-links-borrower}}
+				{{/is-borrower}}
+
+				{{#is-trustee}}
+					{{#bar-links-trustee}}
+					<li>
+						<a href="#" {{#active}}class="active"{{/active}}>{{title}}</a>
+					</li>
+					{{/bar-links-trustee}}
+				{{/is-trustee}}
 			</ul>
 		</div>
 	</div>
