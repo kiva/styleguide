@@ -1,0 +1,46 @@
+{
+	"main-title": "My Kiva",
+	"page-title": "Settings",
+	"is-borrower": true,
+	"bar-links": [
+		{"title": "Portfolio"},
+		{"title": "My Teams"},
+		{"title": "Donations"},
+		{"title": "Lender Profile"},
+		{"title": "My Campaigns"},
+		{
+			"title": "Settings",
+			"active": true
+		}
+	],
+	"bar-links-borrower": [
+		{"title": "Borrower"}
+	],
+	"bar-links-trustee": [
+		{"title": "Trustee Dashboard"}
+	],
+	"has-bar-sub-links": true,
+	"bar-sub-links": [
+		{"sub-title": "Account"},
+		{"sub-title": "Credit"},
+		{"sub-title": "Email"},
+		{"sub-title": "Saved Searches"}
+	],
+	"drop-links": [
+		{
+			"title": "Settings",
+			"active": true,
+			"sub-links": [
+				{"sub-title": "Account"},
+				{"sub-title": "Credit"},
+				{"sub-title": "Email"},
+				{"sub-title": "Saved Searches"}
+			]
+		},
+		{"title": "Portfolio"},
+		{"title": "My Teams"},
+		{"title": "Donations"},
+		{"title": "Lender Profile"},
+		{"title": "My Campaigns"}
+	]
+}
