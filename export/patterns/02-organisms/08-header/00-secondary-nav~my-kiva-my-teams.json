@@ -12,12 +12,6 @@
 		{"title": "My Campaigns"},
 		{"title": "Settings"}
 	],
-	"bar-links-borrower": [
-		{"title": "Borrower"}
-	],
-	"bar-links-trustee": [
-		{"title": "Trustee Dashboard"}
-	],
 	"has-bar-sub-links": false,
 	"drop-links": [
 		{

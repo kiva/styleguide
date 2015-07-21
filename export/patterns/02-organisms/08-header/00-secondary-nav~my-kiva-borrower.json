@@ -1,7 +1,6 @@
 {
 	"main-title": "My Kiva",
 	"page-title": "Settings",
-	"is-borrower": true,
 	"bar-links": [
 		{"title": "Portfolio"},
 		{"title": "My Teams"},
@@ -11,13 +10,8 @@
 		{
 			"title": "Settings",
 			"active": true
-		}
-	],
-	"bar-links-borrower": [
-		{"title": "Borrower"}
-	],
-	"bar-links-trustee": [
-		{"title": "Trustee Dashboard"}
+		},
+        {"title": "Borrow"}
 	],
 	"has-bar-sub-links": true,
 	"bar-sub-links": [
@@ -41,6 +35,7 @@
 		{"title": "My Teams"},
 		{"title": "Donations"},
 		{"title": "Lender Profile"},
-		{"title": "My Campaigns"}
+		{"title": "My Campaigns"},
+        {"title": "Borrow"}
 	]
 }

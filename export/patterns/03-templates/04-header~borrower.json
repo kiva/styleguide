@@ -1,7 +1,7 @@
 {
     "my-kiva": {
         "links": [
-            { "label": "Trustee Dashboard", "href": "#", "end-section": true},
+            { "label": "Borrow", "href": "#", "end-section": true},
             { "label": "Portfolio", "href": "#"},
             { "label": "My Teams", "href": "#"},
             { "label": "Donations", "href": "#"},

@@ -7158,6 +7158,10 @@ a.header-button#search-toggle {
       padding-left: 0; }
       .secondary-nav-bar li:first-child a.active:before {
         left: 0; }
+    .secondary-nav-bar li:last-child a {
+      padding-right: 0; }
+      .secondary-nav-bar li:last-child a.active:before {
+        right: 0; }
 
 .secondary-nav-dropdown > a {
   display: block;

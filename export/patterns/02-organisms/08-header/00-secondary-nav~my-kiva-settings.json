@@ -12,12 +12,6 @@
 			"active": true
 		}
 	],
-	"bar-links-borrower": [
-		{"title": "Borrower"}
-	],
-	"bar-links-trustee": [
-		{"title": "Trustee Dashboard"}
-	],
 	"has-bar-sub-links": true,
 	"bar-sub-links": [
 		{"sub-title": "Account"},
