@@ -1,3 +1,5 @@
+$link-spacing: rem-calc(16);
+
 .secondary-nav-bar {
     background-color: $kiva-darkgreen;
     margin-bottom: 0.5rem; // should this go here?
@@ -15,7 +17,7 @@
         a {
             position: relative;
             display: block;
-            padding: rem-calc(12) rem-calc(16);
+            padding: rem-calc(12) $link-spacing;
             color: $white;
             text-decoration: none;
 
@@ -28,8 +30,8 @@
                 content: ' ';
                 position: absolute;
                 bottom: rem-calc(10);
-                left: rem-calc(16);
-                right: rem-calc(16);
+                left: $link-spacing;
+                right: $link-spacing;
                 height: rem-calc(2);
                 background-color: $kiva-green;
             }
@@ -40,6 +42,14 @@
 
             &.active:before {
                 left: 0;
+            }
+        }
+
+        &:last-child a {
+            padding-right: 0;
+
+            &.active:before {
+                right: 0;
             }
         }
     }

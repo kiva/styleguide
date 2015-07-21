@@ -1,15 +1,15 @@
 {
-  "my-kiva": {
-    "links": [
-      { "label": "Trustee Dashboard", "href": "#", "end-section": true},
-      { "label": "Portfolio", "href": "#"},
-      { "label": "My Teams", "href": "#"},
-      { "label": "Donations", "href": "#"},
-      { "label": "Lender Profile", "href": "#"},
-      { "label": "My Campaigns", "href": "#"},
-      { "label": "Settings", "href": "#", "end-section": true},
-      { "label": "Sign Out", "href": "#"}
-    ]
-  },
-  "balance": "$23"
+    "my-kiva": {
+        "links": [
+            { "label": "Trustee Dashboard", "href": "#", "end-section": true},
+            { "label": "Portfolio", "href": "#"},
+            { "label": "My Teams", "href": "#"},
+            { "label": "Donations", "href": "#"},
+            { "label": "Lender Profile", "href": "#"},
+            { "label": "My Campaigns", "href": "#"},
+            { "label": "Settings", "href": "#", "end-section": true},
+            { "label": "Sign Out", "href": "#"}
+        ]
+    },
+    "balance": "$23"
 }
