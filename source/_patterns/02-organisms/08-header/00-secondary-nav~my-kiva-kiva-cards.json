@@ -6,17 +6,31 @@
 			"title": "Portfolio",
 			"active": true
 		},
-		{"title": "My Teams"},
-		{"title": "Donations"},
-		{"title": "Lender Profile"},
-		{"title": "My Campaigns"},
-		{"title": "Settings"}
+		{
+			"title": "My Teams"
+		},
+		{
+			"title": "Donations"
+		},
+		{
+			"title": "Lender Profile"
+		},
+		{
+			"title": "My Campaigns"
+		},
+		{
+			"title": "Settings"
+		}
 	],
 	"bar-links-borrower": [
-		{"title": "Borrower"}
+		{
+			"title": "Borrower"
+		}
 	],
 	"bar-links-trustee": [
-		{"title": "Trustee Dashboard"}
+		{
+			"title": "Trustee Dashboard"
+		}
 	],
 	"has-bar-sub-links": true,
 	"bar-sub-links": [
@@ -24,39 +38,95 @@
 			"sub-title": "Kiva Cards",
 			"sub-active": true
 		},
-		{"sub-title": "Loans"},
-		{"sub-title": "Messages"},
-		{"sub-title": "Invite Friends"},
-		{"sub-title": "Transactions"},
-		{"sub-title": "Bonus History"},
-		{"sub-title": "Estimated Repayments"},
-		{"sub-title": "My Lending Collections"},
-		{"sub-title": "Withdraw"},
-		{"sub-title": "Add Credit"}
+		{
+			"sub-title": "Loans"
+		},
+		{
+			"sub-title": "Messages"
+		},
+		{
+			"sub-title": "Invite Friends"
+		},
+		{
+			"sub-title": "Transactions"
+		},
+		{
+			"sub-title": "Bonus History"
+		},
+		{
+			"sub-title": "Estimated Repayments"
+		},
+		{
+			"sub-title": "My Lending Collections"
+		},
+		{
+			"sub-title": "Withdraw"
+		},
+		{
+			"sub-title": "Add Credit"
+		}
 	],
 	"drop-links": [
 		{
 			"title": "Portfolio",
 			"sub-links": [
-				{"sub-title": "Loans"},
+				{
+					"sub-title": "Loans"
+				},
 				{
 					"sub-title": "Kiva Cards",
 					"sub-active": true
 				},
-				{"sub-title": "Messages"},
-				{"sub-title": "Invite Friends"},
-				{"sub-title": "Transactions"},
-				{"sub-title": "Bonus History"},
-				{"sub-title": "Estimated Repayments"},
-				{"sub-title": "My Lending Collections"},
-				{"sub-title": "Withdraw"},
-				{"sub-title": "Add Credit"}
+				{
+					"sub-title": "Messages"
+				},
+				{
+					"sub-title": "Invite Friends"
+				},
+				{
+					"sub-title": "Transactions"
+				},
+				{
+					"sub-title": "Bonus History"
+				},
+				{
+					"sub-title": "Estimated Repayments"
+				},
+				{
+					"sub-title": "My Lending Collections"
+				},
+				{
+					"sub-title": "Withdraw"
+				},
+				{
+					"sub-title": "Add Credit"
+				}
 			]
 		},
-		{"title": "My Teams"},
-		{"title": "Donations"},
-		{"title": "Lender Profile"},
-		{"title": "My Campaigns"},
-		{"title": "Settings"}
+		{
+			"title": "My Teams"
+		},
+		{
+			"title": "Donations"
+		},
+		{
+			"title": "Lender Profile"
+		},
+		{
+			"title": "My Campaigns"
+		},
+		{
+			"title": "Settings"
+		}
+	],
+	"drop-links-borrower": [
+		{
+			"title": "Borrower"
+		}
+	],
+	"drop-links-trustee": [
+		{
+			"title": "Trustee Dashboard"
+		}
 	]
 }

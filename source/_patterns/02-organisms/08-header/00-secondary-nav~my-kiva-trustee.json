@@ -42,5 +42,11 @@
 		{"title": "Donations"},
 		{"title": "Lender Profile"},
 		{"title": "My Campaigns"}
+	],
+	"drop-links-borrower": [
+		{"title": "Borrower"}
+	],
+	"drop-links-trustee": [
+		{"title": "Trustee Dashboard"}
 	]
 }

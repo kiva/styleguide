@@ -41,6 +41,20 @@
 			</ul>
 		</li>
 		{{/drop-links}}
+		{{#is-borrower}}
+			{{#drop-links-borrower}}
+				<li>
+					<a href="#" {{#active}}class="active"{{/active}}>{{title}}</a>
+				</li>
+			{{/drop-links-borrower}}
+		{{/is-borrower}}
+		{{#is-trustee}}
+			{{#drop-links-trustee}}
+				<li>
+					<a href="#" {{#active}}class="active"{{/active}}>{{title}}</a>
+				</li>
+			{{/drop-links-trustee}}
+		{{/is-trustee}}
 	</ul>
 </div>
 
