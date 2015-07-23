@@ -1,5 +1,7 @@
 module.exports = function(grunt) {
 
+	var webpack = require("webpack");
+
 	grunt.initConfig({
 		pkg: grunt.file.readJSON('package.json')
 
@@ -152,6 +154,34 @@ module.exports = function(grunt) {
             }
         }
 
+		, webpack: {
+			options: {
+				context: 'source/js'
+				, entry: {
+					app: './app'
+					, nav: './nav'
+				}
+				, externals: {
+					"jQuery": "jQuery"
+					, "Foundation": "Foundation"
+				}
+				, failOnError: true
+			}
+			, compile: {
+				output: {
+					filename: 'public/js/[name].bundle.js'
+				}
+			}
+			, export: {
+				output: {
+					filename: 'export/js/[name].bundle.js'
+				}
+				, plugins: [
+					new webpack.optimize.UglifyJsPlugin()
+				]
+			}
+		}
+
 
 		// copy foundation.js into public/js
 		// * install jquery and modernizr via bower
@@ -171,11 +201,12 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks('grunt-sass');
 	grunt.loadNpmTasks('grunt-shell');
 	grunt.loadNpmTasks('grunt-release');
+	grunt.loadNpmTasks('grunt-webpack');
 	// @todo add livereload?
 
 	grunt.registerTask('init', ['copy:init']);
-	grunt.registerTask('compile', ['concat:vendorCss', 'sass:compile', 'shell:compile', 'copy:js']);
-	grunt.registerTask('export', ['clean:export', 'sass:export', 'copy:export', 'gitadd:export']);
+	grunt.registerTask('compile', ['concat:vendorCss', 'sass:compile', 'shell:compile', 'copy:js', 'webpack:compile']);
+	grunt.registerTask('export', ['clean:export', 'sass:export', 'webpack:export', 'copy:export', 'gitadd:export']);
 	grunt.registerTask('default', 'compile');
 
 };
