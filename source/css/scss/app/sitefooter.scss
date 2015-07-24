@@ -1,9 +1,16 @@
+$footer-top-bottom-padding: rem-calc(40);
+
 .siteFooter {
+	height: $footer-height - $footer-height-reduction;
 	background-color: $dark-green;
 	color: $white;
 	font-size: $small-font-size;
 	line-height: $small-line-height;
 	padding: rem-calc(20);
+
+	@media #{$large-up} {
+		height: $footer-height;
+	}
 
 	a {
 		color: $light-green;
@@ -107,7 +114,7 @@
 
 @media #{$large-up} {
 	.siteFooter-nav {
-		height: 420px;
+		height: $footer-height - $footer-top-bottom-padding;
 		position: relative;
 		padding-bottom: rem-calc(40);
 

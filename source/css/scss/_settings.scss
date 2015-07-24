@@ -109,7 +109,8 @@ $body-bg: $kiva-bg-lightgray;
 $body-font-color: $kiva-text-dark;
 $header-font-color: $kiva-text-dark;
 
-
+$footer-height: rem-calc(460);
+$footer-height-reduction: rem-calc(179);
 
 // d. Media Query Ranges
 // - - - - - - - - - - - - - - - - - - - - - - - - -

@@ -1,0 +1,32 @@
+* {
+	margin: 0;
+}
+
+html, body {
+	height: 100%;
+}
+
+.pageWrap {
+	min-height: 100%;
+	/* equal to footer height */
+	margin-bottom: -$footer_height + $footer-height-reduction;
+
+	@media #{$large-up} {
+		margin-bottom: -$footer-height;
+	}
+}
+
+.pageWrap:after {
+	content: "";
+	display: block;
+}
+
+.pageWrap:after {
+	height: $footer_height - $footer-height-reduction;
+
+	@media #{$large-up} {
+		height: $footer-height;
+	}
+
+}
+
