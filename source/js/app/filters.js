@@ -1,5 +1,3 @@
-var $ = require('jQuery');
-
 module.exports = function() {
 
 	// NoUiSlider

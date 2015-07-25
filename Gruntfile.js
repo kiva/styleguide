@@ -53,13 +53,6 @@ module.exports = function(grunt) {
 						, dest: 'export/patterns'
 						, expand: true
 					}
-					,{src: 'source/js/init.js', dest: 'export/js/init.js'}
-					, {src: 'bower_components/fastclick/lib/fastclick.js', dest: 'export/js/dep/fastclick/fastclick.js'}
-					, {src: 'bower_components/foundation/js/foundation.js', dest: 'export/js/dep/foundation/foundation.js'}
-					, {src: 'bower_components/jquery/dist/jquery.js', dest: 'export/js/dep/jquery/jquery.js'}
-					, {src: 'bower_components/modernizr/modernizr.js', dest: 'export/js/dep/modernizr/modernizr.js'}
-					, {src: 'bower_components/nouislider/distribute/jquery.nouislider.all.js', dest: 'export/js/dep/nouislider/nouislider.js'}
-					, {src: 'bower_components/select2/dist/js/select2.full.js', dest: 'export/js/dep/select2/select2.js'}
 				]
 			}
 		}
@@ -157,24 +150,58 @@ module.exports = function(grunt) {
 		, webpack: {
 			options: {
 				context: 'source/js'
+				, externals: {
+					jQuery: 'jQuery'
+					, jquery: 'jQuery'
+				}
+				, resolve: {
+					root: 'bower_components'
+					, alias: {
+						Foundation: 'foundation/js/foundation.js'
+						, fastclick: 'fastclick/lib/fastclick.js'
+						, modernizr: 'modernizr/modernizr.js'
+						, nouislider: 'nouislider/distribute/jquery.nouislider.all.js'
+						, select2: 'select2/dist/js/select2.full.js'
+					}
+				}
 				, entry: {
-					app: './app'
+					styleguide: './app'
 					, nav: './nav'
 				}
-				, externals: {
-					"jQuery": "jQuery"
-					, "Foundation": "Foundation"
+				, output: {
+					filename: '[name].bundle.js'
+					, chunkFilename: '[id].bundle.js'
+				}
+				, module: {
+					loaders: [
+						{ test: /modernizr/, loader: 'imports?this=>window!exports?window.Modernizr' }
+						, { test: /foundation/, loader: 'exports?window.Foundation'}
+					]
+				}
+				, plugins: [
+					new webpack.ProvidePlugin({
+						$: 'jquery'
+						, jQuery: 'jquery'
+						, 'window.jQuery': 'jquery'
+					})
+				]
+				, stats: {
+					colors: true
+					, modules: true
+					, reasons: true
 				}
 				, failOnError: true
 			}
+
 			, compile: {
 				output: {
-					filename: 'public/js/[name].bundle.js'
+					path: 'public/js'
 				}
 			}
+
 			, export: {
 				output: {
-					filename: 'export/js/[name].bundle.js'
+					path: 'export/js'
 				}
 				, plugins: [
 					new webpack.optimize.UglifyJsPlugin()

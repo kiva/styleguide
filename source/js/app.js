@@ -1,4 +1,4 @@
-var $ = require('jQuery');
+require('./vendor');
 
 var header = require('./app/header');
 var filters = require('./app/filters');

@@ -4,6 +4,7 @@
   "description": "Based on PatternLab and Foundation - [Pattern Lab Website](http://patternlab.io/) - [About Pattern Lab](http://patternlab.io/about.html) - [Documentation](http://patternlab.io/docs/index.html) - [Demo](http://demo.patternlab.io/)",
   "main": "Gruntfile.js",
   "devDependencies": {
+    "exports-loader": "^0.6.2",
     "grunt": "~0.4.5",
     "grunt-contrib-clean": "^0.6.0",
     "grunt-contrib-concat": "^0.5.1",
@@ -15,6 +16,7 @@
     "grunt-sass": "~0.18.1",
     "grunt-shell": "~1.1.2",
     "grunt-webpack": "^1.0.11",
+    "imports-loader": "^0.6.4",
     "webpack": "^1.10.5",
     "webpack-dev-server": "^1.10.1"
   },

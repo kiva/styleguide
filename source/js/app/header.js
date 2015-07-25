@@ -1,5 +1,4 @@
 var Foundation = require('Foundation');
-var $ = require('jQuery');
 
 module.exports = function() {
 	var $search_toggle = $('#search-toggle');
