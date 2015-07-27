@@ -166,7 +166,6 @@ module.exports = function(grunt) {
 				}
 				, entry: {
 					styleguide: './app'
-					, nav: './nav'
 				}
 				, output: {
 					filename: '[name].bundle.js'
@@ -194,18 +193,34 @@ module.exports = function(grunt) {
 			}
 
 			, compile: {
-				output: {
+				entry: {
+					nav: './nav'
+				}
+				, output: {
 					path: 'public/js'
 				}
 			}
 
-			, export: {
-				output: {
+			, bundle: {
+				entry: {
+					nav: './nav'
+				}
+				, output: {
 					path: 'export/js'
 				}
 				, plugins: [
 					new webpack.optimize.UglifyJsPlugin()
 				]
+			}
+
+			, module: {
+				output: {
+					path: 'export/js'
+					, filename: '[name].js'
+					, chunkFilename: '[id].js'
+					, library: 'Styleguide'
+					, libraryTarget: 'commonjs2'
+				}
 			}
 		}
 
@@ -233,7 +248,7 @@ module.exports = function(grunt) {
 
 	grunt.registerTask('init', ['copy:init']);
 	grunt.registerTask('compile', ['concat:vendorCss', 'sass:compile', 'shell:compile', 'copy:js', 'webpack:compile']);
-	grunt.registerTask('export', ['clean:export', 'sass:export', 'webpack:export', 'copy:export', 'gitadd:export']);
+	grunt.registerTask('export', ['clean:export', 'sass:export', 'webpack:bundle', 'webpack:module', 'copy:export', 'gitadd:export']);
 	grunt.registerTask('default', 'compile');
 
 };
