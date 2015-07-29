@@ -9,7 +9,7 @@ $search-centering-margin-small: 0.32rem;
 $search-button-size-small: 2.5rem;
 $search-icon-size: $top-nav-font-size;
 
-$search-input-width-small: calc(100% - #{$search-margin-small + $search-button-size-small} );
+$search-input-width-small: calc(100% - #{$search-margin-small} );
 $search-input-width: calc(100% - #{$search-margin} );
 $search-input-padding: $search-margin;
 $search-input-padding-small: $search-margin-small;
@@ -66,10 +66,19 @@ a.header-button#search-toggle {
         transition: $search-form-transition;
     }
 
+    span.twitter-typeahead {
+        width: calc(100% - #{$search-button-size-small});
+
+        pre {
+            top: 0;
+        }
+    }
+
     .search-icon {
         position: absolute;
         left: 0.4rem + $search-button-size-small;
         top:50%;
+        z-index: 100;
 
         &:before {
             position: absolute;
@@ -85,6 +94,10 @@ a.header-button#search-toggle {
         display: inline-block;
         height: auto;
     }
+
+    .tt-hint {
+        color: $iron;
+    }
 }
 
 #close-search {
@@ -94,6 +107,28 @@ a.header-button#search-toggle {
     text-align: center;
     color: $kiva-darkgreen;
 }
+
+.top-nav-search-menu {
+    background-color: $white;
+    border: rem-calc(1) solid $iron;
+    padding: $search-margin-small;
+    font-size: rem-calc(14);
+
+    .tt-suggestion {
+        padding-left: 1rem;
+    }
+
+    .tt-cursor {
+        color: $white;
+        background-color: $kiva-accent-blue;
+    }
+
+    .tt-highlight {
+        text-decoration: underline;
+    }
+}
+
+
 
 @media #{$large-up} {
     .search-button-container {
@@ -113,6 +148,11 @@ a.header-button#search-toggle {
 
         div {
             height: $search-form-height;
+        }
+
+        span.twitter-typeahead {
+            position: static !important;
+            width: 100%;
         }
 
         input {

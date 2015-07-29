@@ -162,6 +162,8 @@ module.exports = function(grunt) {
 						, modernizr: 'modernizr/modernizr.js'
 						, nouislider: 'nouislider/distribute/jquery.nouislider.all.js'
 						, select2: 'select2/dist/js/select2.full.js'
+						, typeahead: 'typeahead.js/dist/typeahead.jquery.js'
+						, bloodhound: 'typeahead.js/dist/bloodhound.js'
 					}
 				}
 				, entry: {
@@ -175,6 +177,7 @@ module.exports = function(grunt) {
 					loaders: [
 						{ test: /modernizr/, loader: 'imports?this=>window!exports?window.Modernizr' }
 						, { test: /foundation/, loader: 'exports?window.Foundation'}
+						, { test: /bloodhound/, loader: 'imports?this=>window!exports?window.Bloodhound'}
 					]
 				}
 				, plugins: [
