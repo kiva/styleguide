@@ -15,7 +15,6 @@
 	});
 
 	/* typeahead bootstrap */
-	var issues = ['enhancement', 'bug', 'duplicate', 'invalid', 'wontfix'];
 	var states = ['Alabama', 'Alaska', 'Arizona', 'Arkansas', 'California',
 		'Colorado', 'Connecticut', 'Delaware', 'Florida', 'Georgia', 'Hawaii',
 		'Idaho', 'Illinois', 'Indiana', 'Iowa', 'Kansas', 'Kentucky', 'Louisiana',
@@ -261,12 +260,6 @@
 		{name: 'Zimbabwe', code: 'zw'}
 	];
 
-	var issues_search = new Bloodhound({
-		datumTokenizer: Bloodhound.tokenizers.whitespace,
-		queryTokenizer: Bloodhound.tokenizers.whitespace,
-		local: issues
-	});
-
 	var state_search = new Bloodhound({
 		datumTokenizer: Bloodhound.tokenizers.whitespace,
 		queryTokenizer: Bloodhound.tokenizers.whitespace,
@@ -280,9 +273,18 @@
 	});
 
 	$('#search-box').typeahead({
-			highlight: true
-			, classNames: {
+			highlight: true,
+			classNames: {
 				menu: 'top-nav-search-menu'
+			}
+		},
+		{
+			name: 'keyword',
+			source: function(query, results) {
+				results([query]);
+			},
+			templates: {
+				header: 'Keyword'
 			}
 		},
 		{
@@ -301,13 +303,6 @@
 			source: state_search,
 			templates: {
 				header: 'States'
-			}
-		},
-		{
-			name: 'issues',
-			source: issues_search,
-			templates: {
-				header: 'Issues'
 			}
 		}
 	);
