@@ -1,0 +1,37 @@
+{
+	"show-secondary": true,
+	"main-title": "Main Title",
+	"page-title": "Page Title",
+	"bar-links": [
+		{"title": "Link 1"},
+		{"title": "Link 2"},
+		{
+			"title": "Link 3",
+			"active": true
+		},
+		{"title": "Link 4"}
+	],
+	"has-bar-sub-links": true,
+	"bar-sub-links": [
+		{"sub-title": "Sub-link 1"},
+		{
+			"sub-title": "Sub-link 2",
+			"sub-active": true
+		}
+	],
+	"drop-links": [
+		{
+			"title": "Link 3",
+			"sub-links": [
+				{"sub-title": "Sub-link 1"},
+				{
+					"sub-title": "Sub-link 2",
+					"sub-active": true
+				}
+			]
+		},
+		{"title": "Link 1"},
+		{"title": "Link 2"},
+		{"title": "Link 4"}
+	]
+}

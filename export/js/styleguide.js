@@ -47,8 +47,8 @@ module.exports =
 
 	/* WEBPACK VAR INJECTION */(function($) {__webpack_require__(2);
 
-	var header = __webpack_require__(8);
-	var filters = __webpack_require__(9);
+	var header = __webpack_require__(12);
+	var filters = __webpack_require__(13);
 
 	$(document).foundation();
 
@@ -70,13 +70,4601 @@ module.exports =
 	__webpack_require__(4);
 	__webpack_require__(5);
 
-	__webpack_require__(3);
-
 	__webpack_require__(6);
+
+	__webpack_require__(3);
 	__webpack_require__(7);
+	__webpack_require__(8);
+	__webpack_require__(11);
 
 /***/ },
 /* 3 */
+/***/ function(module, exports, __webpack_require__) {
+
+	/* WEBPACK VAR INJECTION */(function(__webpack_provided_window_dot_jQuery) {/*! noUiSlider - 7.0.10 - 2014-12-27 14:50:46 */
+
+	(function(){
+
+		'use strict';
+
+	var
+	/** @const */ FormatOptions = [
+		'decimals',
+		'thousand',
+		'mark',
+		'prefix',
+		'postfix',
+		'encoder',
+		'decoder',
+		'negativeBefore',
+		'negative',
+		'edit',
+		'undo'
+	];
+
+	// General
+
+		// Reverse a string
+		function strReverse ( a ) {
+			return a.split('').reverse().join('');
+		}
+
+		// Check if a string starts with a specified prefix.
+		function strStartsWith ( input, match ) {
+			return input.substring(0, match.length) === match;
+		}
+
+		// Check is a string ends in a specified postfix.
+		function strEndsWith ( input, match ) {
+			return input.slice(-1 * match.length) === match;
+		}
+
+		// Throw an error if formatting options are incompatible.
+		function throwEqualError( F, a, b ) {
+			if ( (F[a] || F[b]) && (F[a] === F[b]) ) {
+				throw new Error(a);
+			}
+		}
+
+		// Check if a number is finite and not NaN
+		function isValidNumber ( input ) {
+			return typeof input === 'number' && isFinite( input );
+		}
+
+		// Provide rounding-accurate toFixed method.
+		function toFixed ( value, decimals ) {
+			var scale = Math.pow(10, decimals);
+			return ( Math.round(value * scale) / scale).toFixed( decimals );
+		}
+
+
+	// Formatting
+
+		// Accept a number as input, output formatted string.
+		function formatTo ( decimals, thousand, mark, prefix, postfix, encoder, decoder, negativeBefore, negative, edit, undo, input ) {
+
+			var originalInput = input, inputIsNegative, inputPieces, inputBase, inputDecimals = '', output = '';
+
+			// Apply user encoder to the input.
+			// Expected outcome: number.
+			if ( encoder ) {
+				input = encoder(input);
+			}
+
+			// Stop if no valid number was provided, the number is infinite or NaN.
+			if ( !isValidNumber(input) ) {
+				return false;
+			}
+
+			// Rounding away decimals might cause a value of -0
+			// when using very small ranges. Remove those cases.
+			if ( decimals !== false && parseFloat(input.toFixed(decimals)) === 0 ) {
+				input = 0;
+			}
+
+			// Formatting is done on absolute numbers,
+			// decorated by an optional negative symbol.
+			if ( input < 0 ) {
+				inputIsNegative = true;
+				input = Math.abs(input);
+			}
+
+			// Reduce the number of decimals to the specified option.
+			if ( decimals !== false ) {
+				input = toFixed( input, decimals );
+			}
+
+			// Transform the number into a string, so it can be split.
+			input = input.toString();
+
+			// Break the number on the decimal separator.
+			if ( input.indexOf('.') !== -1 ) {
+				inputPieces = input.split('.');
+
+				inputBase = inputPieces[0];
+
+				if ( mark ) {
+					inputDecimals = mark + inputPieces[1];
+				}
+
+			} else {
+
+			// If it isn't split, the entire number will do.
+				inputBase = input;
+			}
+
+			// Group numbers in sets of three.
+			if ( thousand ) {
+				inputBase = strReverse(inputBase).match(/.{1,3}/g);
+				inputBase = strReverse(inputBase.join( strReverse( thousand ) ));
+			}
+
+			// If the number is negative, prefix with negation symbol.
+			if ( inputIsNegative && negativeBefore ) {
+				output += negativeBefore;
+			}
+
+			// Prefix the number
+			if ( prefix ) {
+				output += prefix;
+			}
+
+			// Normal negative option comes after the prefix. Defaults to '-'.
+			if ( inputIsNegative && negative ) {
+				output += negative;
+			}
+
+			// Append the actual number.
+			output += inputBase;
+			output += inputDecimals;
+
+			// Apply the postfix.
+			if ( postfix ) {
+				output += postfix;
+			}
+
+			// Run the output through a user-specified post-formatter.
+			if ( edit ) {
+				output = edit ( output, originalInput );
+			}
+
+			// All done.
+			return output;
+		}
+
+		// Accept a sting as input, output decoded number.
+		function formatFrom ( decimals, thousand, mark, prefix, postfix, encoder, decoder, negativeBefore, negative, edit, undo, input ) {
+
+			var originalInput = input, inputIsNegative, output = '';
+
+			// User defined pre-decoder. Result must be a non empty string.
+			if ( undo ) {
+				input = undo(input);
+			}
+
+			// Test the input. Can't be empty.
+			if ( !input || typeof input !== 'string' ) {
+				return false;
+			}
+
+			// If the string starts with the negativeBefore value: remove it.
+			// Remember is was there, the number is negative.
+			if ( negativeBefore && strStartsWith(input, negativeBefore) ) {
+				input = input.replace(negativeBefore, '');
+				inputIsNegative = true;
+			}
+
+			// Repeat the same procedure for the prefix.
+			if ( prefix && strStartsWith(input, prefix) ) {
+				input = input.replace(prefix, '');
+			}
+
+			// And again for negative.
+			if ( negative && strStartsWith(input, negative) ) {
+				input = input.replace(negative, '');
+				inputIsNegative = true;
+			}
+
+			// Remove the postfix.
+			// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/slice
+			if ( postfix && strEndsWith(input, postfix) ) {
+				input = input.slice(0, -1 * postfix.length);
+			}
+
+			// Remove the thousand grouping.
+			if ( thousand ) {
+				input = input.split(thousand).join('');
+			}
+
+			// Set the decimal separator back to period.
+			if ( mark ) {
+				input = input.replace(mark, '.');
+			}
+
+			// Prepend the negative symbol.
+			if ( inputIsNegative ) {
+				output += '-';
+			}
+
+			// Add the number
+			output += input;
+
+			// Trim all non-numeric characters (allow '.' and '-');
+			output = output.replace(/[^0-9\.\-.]/g, '');
+
+			// The value contains no parse-able number.
+			if ( output === '' ) {
+				return false;
+			}
+
+			// Covert to number.
+			output = Number(output);
+
+			// Run the user-specified post-decoder.
+			if ( decoder ) {
+				output = decoder(output);
+			}
+
+			// Check is the output is valid, otherwise: return false.
+			if ( !isValidNumber(output) ) {
+				return false;
+			}
+
+			return output;
+		}
+
+
+	// Framework
+
+		// Validate formatting options
+		function validate ( inputOptions ) {
+
+			var i, optionName, optionValue,
+				filteredOptions = {};
+
+			for ( i = 0; i < FormatOptions.length; i+=1 ) {
+
+				optionName = FormatOptions[i];
+				optionValue = inputOptions[optionName];
+
+				if ( optionValue === undefined ) {
+
+					// Only default if negativeBefore isn't set.
+					if ( optionName === 'negative' && !filteredOptions.negativeBefore ) {
+						filteredOptions[optionName] = '-';
+					// Don't set a default for mark when 'thousand' is set.
+					} else if ( optionName === 'mark' && filteredOptions.thousand !== '.' ) {
+						filteredOptions[optionName] = '.';
+					} else {
+						filteredOptions[optionName] = false;
+					}
+
+				// Floating points in JS are stable up to 7 decimals.
+				} else if ( optionName === 'decimals' ) {
+					if ( optionValue >= 0 && optionValue < 8 ) {
+						filteredOptions[optionName] = optionValue;
+					} else {
+						throw new Error(optionName);
+					}
+
+				// These options, when provided, must be functions.
+				} else if ( optionName === 'encoder' || optionName === 'decoder' || optionName === 'edit' || optionName === 'undo' ) {
+					if ( typeof optionValue === 'function' ) {
+						filteredOptions[optionName] = optionValue;
+					} else {
+						throw new Error(optionName);
+					}
+
+				// Other options are strings.
+				} else {
+
+					if ( typeof optionValue === 'string' ) {
+						filteredOptions[optionName] = optionValue;
+					} else {
+						throw new Error(optionName);
+					}
+				}
+			}
+
+			// Some values can't be extracted from a
+			// string if certain combinations are present.
+			throwEqualError(filteredOptions, 'mark', 'thousand');
+			throwEqualError(filteredOptions, 'prefix', 'negative');
+			throwEqualError(filteredOptions, 'prefix', 'negativeBefore');
+
+			return filteredOptions;
+		}
+
+		// Pass all options as function arguments
+		function passAll ( options, method, input ) {
+			var i, args = [];
+
+			// Add all options in order of FormatOptions
+			for ( i = 0; i < FormatOptions.length; i+=1 ) {
+				args.push(options[FormatOptions[i]]);
+			}
+
+			// Append the input, then call the method, presenting all
+			// options as arguments.
+			args.push(input);
+			return method.apply('', args);
+		}
+
+		/** @constructor */
+		function wNumb ( options ) {
+
+			if ( !(this instanceof wNumb) ) {
+				return new wNumb ( options );
+			}
+
+			if ( typeof options !== "object" ) {
+				return;
+			}
+
+			options = validate(options);
+
+			// Call 'formatTo' with proper arguments.
+			this.to = function ( input ) {
+				return passAll(options, formatTo, input);
+			};
+
+			// Call 'formatFrom' with proper arguments.
+			this.from = function ( input ) {
+				return passAll(options, formatFrom, input);
+			};
+		}
+
+		/** @export */
+		window.wNumb = wNumb;
+
+	}());
+
+	/*jslint browser: true */
+	/*jslint white: true */
+
+	(function( $ ){
+
+		'use strict';
+
+	// Helpers
+
+		// Test in an object is an instance of jQuery or Zepto.
+		function isInstance ( a ) {
+			return a instanceof $ || ( $.zepto && $.zepto.isZ(a) );
+		}
+
+
+	// Link types
+
+		function fromPrefix ( target, method ) {
+
+			// If target is a string, a new hidden input will be created.
+			if ( typeof target === 'string' && target.indexOf('-inline-') === 0 ) {
+
+				// By default, use the 'html' method.
+				this.method = method || 'html';
+
+				// Use jQuery to create the element
+				this.target = this.el = $( target.replace('-inline-', '') || '<div/>' );
+
+				return true;
+			}
+		}
+
+		function fromString ( target ) {
+
+			// If the string doesn't begin with '-', which is reserved, add a new hidden input.
+			if ( typeof target === 'string' && target.indexOf('-') !== 0 ) {
+
+				this.method = 'val';
+
+				var element = document.createElement('input');
+					element.name = target;
+					element.type = 'hidden';
+				this.target = this.el = $(element);
+
+				return true;
+			}
+		}
+
+		function fromFunction ( target ) {
+
+			// The target can also be a function, which will be called.
+			if ( typeof target === 'function' ) {
+				this.target = false;
+				this.method = target;
+
+				return true;
+			}
+		}
+
+		function fromInstance ( target, method ) {
+
+			if ( isInstance( target ) && !method ) {
+
+			// If a jQuery/Zepto input element is provided, but no method is set,
+			// the element can assume it needs to respond to 'change'...
+				if ( target.is('input, select, textarea') ) {
+
+					// Default to .val if this is an input element.
+					this.method = 'val';
+
+					// Fire the API changehandler when the target changes.
+					this.target = target.on('change.liblink', this.changeHandler);
+
+				} else {
+
+					this.target = target;
+
+					// If no method is set, and we are not auto-binding an input, default to 'html'.
+					this.method = 'html';
+				}
+
+				return true;
+			}
+		}
+
+		function fromInstanceMethod ( target, method ) {
+
+			// The method must exist on the element.
+			if ( isInstance( target ) &&
+				(typeof method === 'function' ||
+					(typeof method === 'string' && target[method]))
+			) {
+				this.method = method;
+				this.target = target;
+
+				return true;
+			}
+		}
+
+	var
+	/** @const */
+		creationFunctions = [fromPrefix, fromString, fromFunction, fromInstance, fromInstanceMethod];
+
+
+	// Link Instance
+
+	/** @constructor */
+		function Link ( target, method, format ) {
+
+			var that = this, valid = false;
+
+			// Forward calls within scope.
+			this.changeHandler = function ( changeEvent ) {
+				var decodedValue = that.formatInstance.from( $(this).val() );
+
+				// If the value is invalid, stop this event, as well as it's propagation.
+				if ( decodedValue === false || isNaN(decodedValue) ) {
+
+					// Reset the value.
+					$(this).val(that.lastSetValue);
+					return false;
+				}
+
+				that.changeHandlerMethod.call( '', changeEvent, decodedValue );
+			};
+
+			// See if this Link needs individual targets based on its usage.
+			// If so, return the element that needs to be copied by the
+			// implementing interface.
+			// Default the element to false.
+			this.el = false;
+
+			// Store the formatter, or use the default.
+			this.formatInstance = format;
+
+			// Try all Link types.
+			/*jslint unparam: true*/
+			$.each(creationFunctions, function(i, fn){
+				valid = fn.call(that, target, method);
+				return !valid;
+			});
+			/*jslint unparam: false*/
+
+			// Nothing matched, throw error.
+			if ( !valid ) {
+				throw new RangeError("(Link) Invalid Link.");
+			}
+		}
+
+		// Provides external items with the object value.
+		Link.prototype.set = function ( value ) {
+
+			// Ignore the value, so only the passed-on arguments remain.
+			var args = Array.prototype.slice.call( arguments ),
+				additionalArgs = args.slice(1);
+
+			// Store some values. The actual, numerical value,
+			// the formatted value and the parameters for use in 'resetValue'.
+			// Slice additionalArgs to break the relation.
+			this.lastSetValue = this.formatInstance.to( value );
+
+			// Prepend the value to the function arguments.
+			additionalArgs.unshift(
+				this.lastSetValue
+			);
+
+			// When target is undefined, the target was a function.
+			// In that case, provided the object as the calling scope.
+			// Branch between writing to a function or an object.
+			( typeof this.method === 'function' ?
+				this.method :
+				this.target[ this.method ] ).apply( this.target, additionalArgs );
+		};
+
+
+	// Developer API
+
+	/** @constructor */
+		function LinkAPI ( origin ) {
+			this.items = [];
+			this.elements = [];
+			this.origin = origin;
+		}
+
+		LinkAPI.prototype.push = function( item, element ) {
+			this.items.push(item);
+
+			// Prevent 'false' elements
+			if ( element ) {
+				this.elements.push(element);
+			}
+		};
+
+		LinkAPI.prototype.reconfirm = function ( flag ) {
+			var i;
+			for ( i = 0; i < this.elements.length; i += 1 ) {
+				this.origin.LinkConfirm(flag, this.elements[i]);
+			}
+		};
+
+		LinkAPI.prototype.remove = function ( flag ) {
+			var i;
+			for ( i = 0; i < this.items.length; i += 1 ) {
+				this.items[i].target.off('.liblink');
+			}
+			for ( i = 0; i < this.elements.length; i += 1 ) {
+				this.elements[i].remove();
+			}
+		};
+
+		LinkAPI.prototype.change = function ( value ) {
+
+			if ( this.origin.LinkIsEmitting ) {
+				return false;
+			}
+
+			this.origin.LinkIsEmitting = true;
+
+			var args = Array.prototype.slice.call( arguments, 1 ), i;
+			args.unshift( value );
+
+			// Write values to serialization Links.
+			// Convert the value to the correct relative representation.
+			for ( i = 0; i < this.items.length; i += 1 ) {
+				this.items[i].set.apply(this.items[i], args);
+			}
+
+			this.origin.LinkIsEmitting = false;
+		};
+
+
+	// jQuery plugin
+
+		function binder ( flag, target, method, format ){
+
+			if ( flag === 0 ) {
+				flag = this.LinkDefaultFlag;
+			}
+
+			// Create a list of API's (if it didn't exist yet);
+			if ( !this.linkAPI ) {
+				this.linkAPI = {};
+			}
+
+			// Add an API point.
+			if ( !this.linkAPI[flag] ) {
+				this.linkAPI[flag] = new LinkAPI(this);
+			}
+
+			var linkInstance = new Link ( target, method, format || this.LinkDefaultFormatter );
+
+			// Default the calling scope to the linked object.
+			if ( !linkInstance.target ) {
+				linkInstance.target = $(this);
+			}
+
+			// If the Link requires creation of a new element,
+			// Pass the element and request confirmation to get the changehandler.
+			// Set the method to be called when a Link changes.
+			linkInstance.changeHandlerMethod = this.LinkConfirm( flag, linkInstance.el );
+
+			// Store the linkInstance in the flagged list.
+			this.linkAPI[flag].push( linkInstance, linkInstance.el );
+
+			// Now that Link have been connected, request an update.
+			this.LinkUpdate( flag );
+		}
+
+		/** @export */
+		$.fn.Link = function( flag ){
+
+			var that = this;
+
+			// Delete all linkAPI
+			if ( flag === false ) {
+
+				return that.each(function(){
+
+					// .Link(false) can be called on elements without Links.
+					// When that happens, the objects can't be looped.
+					if ( !this.linkAPI ) {
+						return;
+					}
+
+					$.map(this.linkAPI, function(api){
+						api.remove();
+					});
+
+					delete this.linkAPI;
+				});
+			}
+
+			if ( flag === undefined ) {
+
+				flag = 0;
+
+			} else if ( typeof flag !== 'string') {
+
+				throw new Error("Flag must be string.");
+			}
+
+			return {
+				to: function( a, b, c ){
+					return that.each(function(){
+						binder.call(this, flag, a, b, c);
+					});
+				}
+			};
+		};
+
+	}( __webpack_provided_window_dot_jQuery || window.Zepto ));
+
+	/*jslint browser: true */
+	/*jslint white: true */
+
+	(function( $ ){
+
+		'use strict';
+
+
+		// Removes duplicates from an array.
+		function unique(array) {
+			return $.grep(array, function(el, index) {
+				return index === $.inArray(el, array);
+			});
+		}
+
+		// Round a value to the closest 'to'.
+		function closest ( value, to ) {
+			return Math.round(value / to) * to;
+		}
+
+		// Checks whether a value is numerical.
+		function isNumeric ( a ) {
+			return typeof a === 'number' && !isNaN( a ) && isFinite( a );
+		}
+
+		// Rounds a number to 7 supported decimals.
+		function accurateNumber( number ) {
+			var p = Math.pow(10, 7);
+			return Number((Math.round(number*p)/p).toFixed(7));
+		}
+
+		// Sets a class and removes it after [duration] ms.
+		function addClassFor ( element, className, duration ) {
+			element.addClass(className);
+			setTimeout(function(){
+				element.removeClass(className);
+			}, duration);
+		}
+
+		// Limits a value to 0 - 100
+		function limit ( a ) {
+			return Math.max(Math.min(a, 100), 0);
+		}
+
+		// Wraps a variable as an array, if it isn't one yet.
+		function asArray ( a ) {
+			return $.isArray(a) ? a : [a];
+		}
+
+		// Counts decimals
+		function countDecimals ( numStr ) {
+			var pieces = numStr.split(".");
+			return pieces.length > 1 ? pieces[1].length : 0;
+		}
+
+
+		var
+		// Cache the document selector;
+		/** @const */
+		doc = $(document),
+		// Make a backup of the original jQuery/Zepto .val() method.
+		/** @const */
+		$val = $.fn.val,
+		// Namespace for binding and unbinding slider events;
+		/** @const */
+		namespace = '.nui',
+		// Determine the events to bind. IE11 implements pointerEvents without
+		// a prefix, which breaks compatibility with the IE10 implementation.
+		/** @const */
+		actions = window.navigator.pointerEnabled ? {
+			start: 'pointerdown',
+			move: 'pointermove',
+			end: 'pointerup'
+		} : window.navigator.msPointerEnabled ? {
+			start: 'MSPointerDown',
+			move: 'MSPointerMove',
+			end: 'MSPointerUp'
+		} : {
+			start: 'mousedown touchstart',
+			move: 'mousemove touchmove',
+			end: 'mouseup touchend'
+		},
+		// Re-usable list of classes;
+		/** @const */
+		Classes = [
+	/*  0 */  'noUi-target'
+	/*  1 */ ,'noUi-base'
+	/*  2 */ ,'noUi-origin'
+	/*  3 */ ,'noUi-handle'
+	/*  4 */ ,'noUi-horizontal'
+	/*  5 */ ,'noUi-vertical'
+	/*  6 */ ,'noUi-background'
+	/*  7 */ ,'noUi-connect'
+	/*  8 */ ,'noUi-ltr'
+	/*  9 */ ,'noUi-rtl'
+	/* 10 */ ,'noUi-dragable'
+	/* 11 */ ,''
+	/* 12 */ ,'noUi-state-drag'
+	/* 13 */ ,''
+	/* 14 */ ,'noUi-state-tap'
+	/* 15 */ ,'noUi-active'
+	/* 16 */ ,''
+	/* 17 */ ,'noUi-stacking'
+		];
+
+
+	// Value calculation
+
+		// Determine the size of a sub-range in relation to a full range.
+		function subRangeRatio ( pa, pb ) {
+			return (100 / (pb - pa));
+		}
+
+		// (percentage) How many percent is this value of this range?
+		function fromPercentage ( range, value ) {
+			return (value * 100) / ( range[1] - range[0] );
+		}
+
+		// (percentage) Where is this value on this range?
+		function toPercentage ( range, value ) {
+			return fromPercentage( range, range[0] < 0 ?
+				value + Math.abs(range[0]) :
+					value - range[0] );
+		}
+
+		// (value) How much is this percentage on this range?
+		function isPercentage ( range, value ) {
+			return ((value * ( range[1] - range[0] )) / 100) + range[0];
+		}
+
+
+	// Range conversion
+
+		function getJ ( value, arr ) {
+
+			var j = 1;
+
+			while ( value >= arr[j] ){
+				j += 1;
+			}
+
+			return j;
+		}
+
+		// (percentage) Input a value, find where, on a scale of 0-100, it applies.
+		function toStepping ( xVal, xPct, value ) {
+
+			if ( value >= xVal.slice(-1)[0] ){
+				return 100;
+			}
+
+			var j = getJ( value, xVal ), va, vb, pa, pb;
+
+			va = xVal[j-1];
+			vb = xVal[j];
+			pa = xPct[j-1];
+			pb = xPct[j];
+
+			return pa + (toPercentage([va, vb], value) / subRangeRatio (pa, pb));
+		}
+
+		// (value) Input a percentage, find where it is on the specified range.
+		function fromStepping ( xVal, xPct, value ) {
+
+			// There is no range group that fits 100
+			if ( value >= 100 ){
+				return xVal.slice(-1)[0];
+			}
+
+			var j = getJ( value, xPct ), va, vb, pa, pb;
+
+			va = xVal[j-1];
+			vb = xVal[j];
+			pa = xPct[j-1];
+			pb = xPct[j];
+
+			return isPercentage([va, vb], (value - pa) * subRangeRatio (pa, pb));
+		}
+
+		// (percentage) Get the step that applies at a certain value.
+		function getStep ( xPct, xSteps, snap, value ) {
+
+			if ( value === 100 ) {
+				return value;
+			}
+
+			var j = getJ( value, xPct ), a, b;
+
+			// If 'snap' is set, steps are used as fixed points on the slider.
+			if ( snap ) {
+
+				a = xPct[j-1];
+				b = xPct[j];
+
+				// Find the closest position, a or b.
+				if ((value - a) > ((b-a)/2)){
+					return b;
+				}
+
+				return a;
+			}
+
+			if ( !xSteps[j-1] ){
+				return value;
+			}
+
+			return xPct[j-1] + closest(
+				value - xPct[j-1],
+				xSteps[j-1]
+			);
+		}
+
+
+	// Entry parsing
+
+		function handleEntryPoint ( index, value, that ) {
+
+			var percentage;
+
+			// Wrap numerical input in an array.
+			if ( typeof value === "number" ) {
+				value = [value];
+			}
+
+			// Reject any invalid input, by testing whether value is an array.
+			if ( Object.prototype.toString.call( value ) !== '[object Array]' ){
+				throw new Error("noUiSlider: 'range' contains invalid value.");
+			}
+
+			// Covert min/max syntax to 0 and 100.
+			if ( index === 'min' ) {
+				percentage = 0;
+			} else if ( index === 'max' ) {
+				percentage = 100;
+			} else {
+				percentage = parseFloat( index );
+			}
+
+			// Check for correct input.
+			if ( !isNumeric( percentage ) || !isNumeric( value[0] ) ) {
+				throw new Error("noUiSlider: 'range' value isn't numeric.");
+			}
+
+			// Store values.
+			that.xPct.push( percentage );
+			that.xVal.push( value[0] );
+
+			// NaN will evaluate to false too, but to keep
+			// logging clear, set step explicitly. Make sure
+			// not to override the 'step' setting with false.
+			if ( !percentage ) {
+				if ( !isNaN( value[1] ) ) {
+					that.xSteps[0] = value[1];
+				}
+			} else {
+				that.xSteps.push( isNaN(value[1]) ? false : value[1] );
+			}
+		}
+
+		function handleStepPoint ( i, n, that ) {
+
+			// Ignore 'false' stepping.
+			if ( !n ) {
+				return true;
+			}
+
+			// Factor to range ratio
+			that.xSteps[i] = fromPercentage([
+				 that.xVal[i]
+				,that.xVal[i+1]
+			], n) / subRangeRatio (
+				that.xPct[i],
+				that.xPct[i+1] );
+		}
+
+
+	// Interface
+
+		// The interface to Spectrum handles all direction-based
+		// conversions, so the above values are unaware.
+
+		function Spectrum ( entry, snap, direction, singleStep ) {
+
+			this.xPct = [];
+			this.xVal = [];
+			this.xSteps = [ singleStep || false ];
+			this.xNumSteps = [ false ];
+
+			this.snap = snap;
+			this.direction = direction;
+
+			var index, ordered = [ /* [0, 'min'], [1, '50%'], [2, 'max'] */ ];
+
+			// Map the object keys to an array.
+			for ( index in entry ) {
+				if ( entry.hasOwnProperty(index) ) {
+					ordered.push([entry[index], index]);
+				}
+			}
+
+			// Sort all entries by value (numeric sort).
+			ordered.sort(function(a, b) { return a[0] - b[0]; });
+
+			// Convert all entries to subranges.
+			for ( index = 0; index < ordered.length; index++ ) {
+				handleEntryPoint(ordered[index][1], ordered[index][0], this);
+			}
+
+			// Store the actual step values.
+			// xSteps is sorted in the same order as xPct and xVal.
+			this.xNumSteps = this.xSteps.slice(0);
+
+			// Convert all numeric steps to the percentage of the subrange they represent.
+			for ( index = 0; index < this.xNumSteps.length; index++ ) {
+				handleStepPoint(index, this.xNumSteps[index], this);
+			}
+		}
+
+		Spectrum.prototype.getMargin = function ( value ) {
+			return this.xPct.length === 2 ? fromPercentage(this.xVal, value) : false;
+		};
+
+		Spectrum.prototype.toStepping = function ( value ) {
+
+			value = toStepping( this.xVal, this.xPct, value );
+
+			// Invert the value if this is a right-to-left slider.
+			if ( this.direction ) {
+				value = 100 - value;
+			}
+
+			return value;
+		};
+
+		Spectrum.prototype.fromStepping = function ( value ) {
+
+			// Invert the value if this is a right-to-left slider.
+			if ( this.direction ) {
+				value = 100 - value;
+			}
+
+			return accurateNumber(fromStepping( this.xVal, this.xPct, value ));
+		};
+
+		Spectrum.prototype.getStep = function ( value ) {
+
+			// Find the proper step for rtl sliders by search in inverse direction.
+			// Fixes issue #262.
+			if ( this.direction ) {
+				value = 100 - value;
+			}
+
+			value = getStep(this.xPct, this.xSteps, this.snap, value );
+
+			if ( this.direction ) {
+				value = 100 - value;
+			}
+
+			return value;
+		};
+
+		Spectrum.prototype.getApplicableStep = function ( value ) {
+
+			// If the value is 100%, return the negative step twice.
+			var j = getJ(value, this.xPct), offset = value === 100 ? 2 : 1;
+			return [this.xNumSteps[j-2], this.xVal[j-offset], this.xNumSteps[j-offset]];
+		};
+
+		// Outside testing
+		Spectrum.prototype.convert = function ( value ) {
+			return this.getStep(this.toStepping(value));
+		};
+
+	/*	Every input option is tested and parsed. This'll prevent
+		endless validation in internal methods. These tests are
+		structured with an item for every option available. An
+		option can be marked as required by setting the 'r' flag.
+		The testing function is provided with three arguments:
+			- The provided value for the option;
+			- A reference to the options object;
+			- The name for the option;
+
+		The testing function returns false when an error is detected,
+		or true when everything is OK. It can also modify the option
+		object, to make sure all values can be correctly looped elsewhere. */
+
+		/** @const */
+		var defaultFormatter = { 'to': function( value ){
+			return value.toFixed(2);
+		}, 'from': Number };
+
+		function testStep ( parsed, entry ) {
+
+			if ( !isNumeric( entry ) ) {
+				throw new Error("noUiSlider: 'step' is not numeric.");
+			}
+
+			// The step option can still be used to set stepping
+			// for linear sliders. Overwritten if set in 'range'.
+			parsed.singleStep = entry;
+		}
+
+		function testRange ( parsed, entry ) {
+
+			// Filter incorrect input.
+			if ( typeof entry !== 'object' || $.isArray(entry) ) {
+				throw new Error("noUiSlider: 'range' is not an object.");
+			}
+
+			// Catch missing start or end.
+			if ( entry.min === undefined || entry.max === undefined ) {
+				throw new Error("noUiSlider: Missing 'min' or 'max' in 'range'.");
+			}
+
+			parsed.spectrum = new Spectrum(entry, parsed.snap, parsed.dir, parsed.singleStep);
+		}
+
+		function testStart ( parsed, entry ) {
+
+			entry = asArray(entry);
+
+			// Validate input. Values aren't tested, as the public .val method
+			// will always provide a valid location.
+			if ( !$.isArray( entry ) || !entry.length || entry.length > 2 ) {
+				throw new Error("noUiSlider: 'start' option is incorrect.");
+			}
+
+			// Store the number of handles.
+			parsed.handles = entry.length;
+
+			// When the slider is initialized, the .val method will
+			// be called with the start options.
+			parsed.start = entry;
+		}
+
+		function testSnap ( parsed, entry ) {
+
+			// Enforce 100% stepping within subranges.
+			parsed.snap = entry;
+
+			if ( typeof entry !== 'boolean' ){
+				throw new Error("noUiSlider: 'snap' option must be a boolean.");
+			}
+		}
+
+		function testAnimate ( parsed, entry ) {
+
+			// Enforce 100% stepping within subranges.
+			parsed.animate = entry;
+
+			if ( typeof entry !== 'boolean' ){
+				throw new Error("noUiSlider: 'animate' option must be a boolean.");
+			}
+		}
+
+		function testConnect ( parsed, entry ) {
+
+			if ( entry === 'lower' && parsed.handles === 1 ) {
+				parsed.connect = 1;
+			} else if ( entry === 'upper' && parsed.handles === 1 ) {
+				parsed.connect = 2;
+			} else if ( entry === true && parsed.handles === 2 ) {
+				parsed.connect = 3;
+			} else if ( entry === false ) {
+				parsed.connect = 0;
+			} else {
+				throw new Error("noUiSlider: 'connect' option doesn't match handle count.");
+			}
+		}
+
+		function testOrientation ( parsed, entry ) {
+
+			// Set orientation to an a numerical value for easy
+			// array selection.
+			switch ( entry ){
+			  case 'horizontal':
+				parsed.ort = 0;
+				break;
+			  case 'vertical':
+				parsed.ort = 1;
+				break;
+			  default:
+				throw new Error("noUiSlider: 'orientation' option is invalid.");
+			}
+		}
+
+		function testMargin ( parsed, entry ) {
+
+			if ( !isNumeric(entry) ){
+				throw new Error("noUiSlider: 'margin' option must be numeric.");
+			}
+
+			parsed.margin = parsed.spectrum.getMargin(entry);
+
+			if ( !parsed.margin ) {
+				throw new Error("noUiSlider: 'margin' option is only supported on linear sliders.");
+			}
+		}
+
+		function testLimit ( parsed, entry ) {
+
+			if ( !isNumeric(entry) ){
+				throw new Error("noUiSlider: 'limit' option must be numeric.");
+			}
+
+			parsed.limit = parsed.spectrum.getMargin(entry);
+
+			if ( !parsed.limit ) {
+				throw new Error("noUiSlider: 'limit' option is only supported on linear sliders.");
+			}
+		}
+
+		function testDirection ( parsed, entry ) {
+
+			// Set direction as a numerical value for easy parsing.
+			// Invert connection for RTL sliders, so that the proper
+			// handles get the connect/background classes.
+			switch ( entry ) {
+			  case 'ltr':
+				parsed.dir = 0;
+				break;
+			  case 'rtl':
+				parsed.dir = 1;
+				parsed.connect = [0,2,1,3][parsed.connect];
+				break;
+			  default:
+				throw new Error("noUiSlider: 'direction' option was not recognized.");
+			}
+		}
+
+		function testBehaviour ( parsed, entry ) {
+
+			// Make sure the input is a string.
+			if ( typeof entry !== 'string' ) {
+				throw new Error("noUiSlider: 'behaviour' must be a string containing options.");
+			}
+
+			// Check if the string contains any keywords.
+			// None are required.
+			var tap = entry.indexOf('tap') >= 0,
+				drag = entry.indexOf('drag') >= 0,
+				fixed = entry.indexOf('fixed') >= 0,
+				snap = entry.indexOf('snap') >= 0;
+
+			parsed.events = {
+				tap: tap || snap,
+				drag: drag,
+				fixed: fixed,
+				snap: snap
+			};
+		}
+
+		function testFormat ( parsed, entry ) {
+
+			parsed.format = entry;
+
+			// Any object with a to and from method is supported.
+			if ( typeof entry.to === 'function' && typeof entry.from === 'function' ) {
+				return true;
+			}
+
+			throw new Error( "noUiSlider: 'format' requires 'to' and 'from' methods.");
+		}
+
+		// Test all developer settings and parse to assumption-safe values.
+		function testOptions ( options ) {
+
+			var parsed = {
+				margin: 0,
+				limit: 0,
+				animate: true,
+				format: defaultFormatter
+			}, tests;
+
+			// Tests are executed in the order they are presented here.
+			tests = {
+				'step': { r: false, t: testStep },
+				'start': { r: true, t: testStart },
+				'connect': { r: true, t: testConnect },
+				'direction': { r: true, t: testDirection },
+				'snap': { r: false, t: testSnap },
+				'animate': { r: false, t: testAnimate },
+				'range': { r: true, t: testRange },
+				'orientation': { r: false, t: testOrientation },
+				'margin': { r: false, t: testMargin },
+				'limit': { r: false, t: testLimit },
+				'behaviour': { r: true, t: testBehaviour },
+				'format': { r: false, t: testFormat }
+			};
+
+			// Set defaults where applicable.
+			options = $.extend({
+				'connect': false,
+				'direction': 'ltr',
+				'behaviour': 'tap',
+				'orientation': 'horizontal'
+			}, options);
+
+			// Run all options through a testing mechanism to ensure correct
+			// input. It should be noted that options might get modified to
+			// be handled properly. E.g. wrapping integers in arrays.
+			$.each( tests, function( name, test ){
+
+				// If the option isn't set, but it is required, throw an error.
+				if ( options[name] === undefined ) {
+
+					if ( test.r ) {
+						throw new Error("noUiSlider: '" + name + "' is required.");
+					}
+
+					return true;
+				}
+
+				test.t( parsed, options[name] );
+			});
+
+			// Pre-define the styles.
+			parsed.style = parsed.ort ? 'top' : 'left';
+
+			return parsed;
+		}
+
+	// Class handling
+
+		// Delimit proposed values for handle positions.
+		function getPositions ( a, b, delimit ) {
+
+			// Add movement to current position.
+			var c = a + b[0], d = a + b[1];
+
+			// Only alter the other position on drag,
+			// not on standard sliding.
+			if ( delimit ) {
+				if ( c < 0 ) {
+					d += Math.abs(c);
+				}
+				if ( d > 100 ) {
+					c -= ( d - 100 );
+				}
+
+				// Limit values to 0 and 100.
+				return [limit(c), limit(d)];
+			}
+
+			return [c,d];
+		}
+
+
+	// Event handling
+
+		// Provide a clean event with standardized offset values.
+		function fixEvent ( e ) {
+
+			// Prevent scrolling and panning on touch events, while
+			// attempting to slide. The tap event also depends on this.
+			e.preventDefault();
+
+			// Filter the event to register the type, which can be
+			// touch, mouse or pointer. Offset changes need to be
+			// made on an event specific basis.
+			var  touch = e.type.indexOf('touch') === 0
+				,mouse = e.type.indexOf('mouse') === 0
+				,pointer = e.type.indexOf('pointer') === 0
+				,x,y, event = e;
+
+			// IE10 implemented pointer events with a prefix;
+			if ( e.type.indexOf('MSPointer') === 0 ) {
+				pointer = true;
+			}
+
+			// Get the originalEvent, if the event has been wrapped
+			// by jQuery. Zepto doesn't wrap the event.
+			if ( e.originalEvent ) {
+				e = e.originalEvent;
+			}
+
+			if ( touch ) {
+				// noUiSlider supports one movement at a time,
+				// so we can select the first 'changedTouch'.
+				x = e.changedTouches[0].pageX;
+				y = e.changedTouches[0].pageY;
+			}
+
+			if ( mouse || pointer ) {
+
+				// Polyfill the pageXOffset and pageYOffset
+				// variables for IE7 and IE8;
+				if( !pointer && window.pageXOffset === undefined ){
+					window.pageXOffset = document.documentElement.scrollLeft;
+					window.pageYOffset = document.documentElement.scrollTop;
+				}
+
+				x = e.clientX + window.pageXOffset;
+				y = e.clientY + window.pageYOffset;
+			}
+
+			event.points = [x, y];
+			event.cursor = mouse;
+
+			return event;
+		}
+
+
+	// DOM additions
+
+		// Append a handle to the base.
+		function addHandle ( direction, index ) {
+
+			var handle = $('<div><div/></div>').addClass( Classes[2] ),
+				additions = [ '-lower', '-upper' ];
+
+			if ( direction ) {
+				additions.reverse();
+			}
+
+			handle.children().addClass(
+				Classes[3] + " " + Classes[3]+additions[index]
+			);
+
+			return handle;
+		}
+
+		// Add the proper connection classes.
+		function addConnection ( connect, target, handles ) {
+
+			// Apply the required connection classes to the elements
+			// that need them. Some classes are made up for several
+			// segments listed in the class list, to allow easy
+			// renaming and provide a minor compression benefit.
+			switch ( connect ) {
+				case 1:	target.addClass( Classes[7] );
+						handles[0].addClass( Classes[6] );
+						break;
+				case 3: handles[1].addClass( Classes[6] );
+						/* falls through */
+				case 2: handles[0].addClass( Classes[7] );
+						/* falls through */
+				case 0: target.addClass(Classes[6]);
+						break;
+			}
+		}
+
+		// Add handles to the slider base.
+		function addHandles ( nrHandles, direction, base ) {
+
+			var index, handles = [];
+
+			// Append handles.
+			for ( index = 0; index < nrHandles; index += 1 ) {
+
+				// Keep a list of all added handles.
+				handles.push( addHandle( direction, index ).appendTo(base) );
+			}
+
+			return handles;
+		}
+
+		// Initialize a single slider.
+		function addSlider ( direction, orientation, target ) {
+
+			// Apply classes and data to the target.
+			target.addClass([
+				Classes[0],
+				Classes[8 + direction],
+				Classes[4 + orientation]
+			].join(' '));
+
+			return $('<div/>').appendTo(target).addClass( Classes[1] );
+		}
+
+	function closure ( target, options, originalOptions ){
+
+	// Internal variables
+
+		// All variables local to 'closure' are marked $.
+		var $Target = $(target),
+			$Locations = [-1, -1],
+			$Base,
+			$Handles,
+			$Spectrum = options.spectrum,
+			$Values = [],
+		// libLink. For rtl sliders, 'lower' and 'upper' should not be inverted
+		// for one-handle sliders, so trim 'upper' it that case.
+			triggerPos = ['lower', 'upper'].slice(0, options.handles);
+
+		// Invert the libLink connection for rtl sliders.
+		if ( options.dir ) {
+			triggerPos.reverse();
+		}
+
+	// Helpers
+
+		// Shorthand for base dimensions.
+		function baseSize ( ) {
+			return $Base[['width', 'height'][options.ort]]();
+		}
+
+		// External event handling
+		function fireEvents ( events ) {
+
+			// Use the external api to get the values.
+			// Wrap the values in an array, as .trigger takes
+			// only one additional argument.
+			var index, values = [ $Target.val() ];
+
+			for ( index = 0; index < events.length; index += 1 ){
+				$Target.trigger(events[index], values);
+			}
+		}
+
+		// Returns the input array, respecting the slider direction configuration.
+		function inSliderOrder ( values ) {
+
+			// If only one handle is used, return a single value.
+			if ( values.length === 1 ){
+				return values[0];
+			}
+
+			if ( options.dir ) {
+				return values.reverse();
+			}
+
+			return values;
+		}
+
+	// libLink integration
+
+		// Create a new function which calls .val on input change.
+		function createChangeHandler ( trigger ) {
+			return function ( ignore, value ){
+				// Determine which array position to 'null' based on 'trigger'.
+				$Target.val( [ trigger ? null : value, trigger ? value : null ], true );
+			};
+		}
+
+		// Called by libLink when it wants a set of links updated.
+		function linkUpdate ( flag ) {
+
+			var trigger = $.inArray(flag, triggerPos);
+
+			// The API might not have been set yet.
+			if ( $Target[0].linkAPI && $Target[0].linkAPI[flag] ) {
+				$Target[0].linkAPI[flag].change(
+					$Values[trigger],
+					$Handles[trigger].children(),
+					$Target
+				);
+			}
+		}
+
+		// Called by libLink to append an element to the slider.
+		function linkConfirm ( flag, element ) {
+
+			// Find the trigger for the passed flag.
+			var trigger = $.inArray(flag, triggerPos);
+
+			// If set, append the element to the handle it belongs to.
+			if ( element ) {
+				element.appendTo( $Handles[trigger].children() );
+			}
+
+			// The public API is reversed for rtl sliders, so the changeHandler
+			// should not be aware of the inverted trigger positions.
+			// On rtl slider with one handle, 'lower' should be used.
+			if ( options.dir && options.handles > 1 ) {
+				trigger = trigger === 1 ? 0 : 1;
+			}
+
+			return createChangeHandler( trigger );
+		}
+
+		// Place elements back on the slider.
+		function reAppendLink ( ) {
+
+			var i, flag;
+
+			// The API keeps a list of elements: we can re-append them on rebuild.
+			for ( i = 0; i < triggerPos.length; i += 1 ) {
+				if ( this.linkAPI && this.linkAPI[(flag = triggerPos[i])] ) {
+					this.linkAPI[flag].reconfirm(flag);
+				}
+			}
+		}
+
+		target.LinkUpdate = linkUpdate;
+		target.LinkConfirm = linkConfirm;
+		target.LinkDefaultFormatter = options.format;
+		target.LinkDefaultFlag = 'lower';
+
+		target.reappend = reAppendLink;
+
+
+		// Handler for attaching events trough a proxy.
+		function attach ( events, element, callback, data ) {
+
+			// This function can be used to 'filter' events to the slider.
+
+			// Add the noUiSlider namespace to all events.
+			events = events.replace( /\s/g, namespace + ' ' ) + namespace;
+
+			// Bind a closure on the target.
+			return element.on( events, function( e ){
+
+				// jQuery and Zepto (1) handle unset attributes differently,
+				// but always falsy; #208
+				if ( !!$Target.attr('disabled') ) {
+					return false;
+				}
+
+				// Stop if an active 'tap' transition is taking place.
+				if ( $Target.hasClass( Classes[14] ) ) {
+					return false;
+				}
+
+				e = fixEvent(e);
+				e.calcPoint = e.points[ options.ort ];
+
+				// Call the event handler with the event [ and additional data ].
+				callback ( e, data );
+			});
+		}
+
+		// Handle movement on document for handle and range drag.
+		function move ( event, data ) {
+
+			var handles = data.handles || $Handles, positions, state = false,
+				proposal = ((event.calcPoint - data.start) * 100) / baseSize(),
+				h = handles[0][0] !== $Handles[0][0] ? 1 : 0;
+
+			// Calculate relative positions for the handles.
+			positions = getPositions( proposal, data.positions, handles.length > 1);
+
+			state = setHandle ( handles[0], positions[h], handles.length === 1 );
+
+			if ( handles.length > 1 ) {
+				state = setHandle ( handles[1], positions[h?0:1], false ) || state;
+			}
+
+			// Fire the 'slide' event if any handle moved.
+			if ( state ) {
+				fireEvents(['slide']);
+			}
+		}
+
+		// Unbind move events on document, call callbacks.
+		function end ( event ) {
+
+			// The handle is no longer active, so remove the class.
+			$('.' + Classes[15]).removeClass(Classes[15]);
+
+			// Remove cursor styles and text-selection events bound to the body.
+			if ( event.cursor ) {
+				$('body').css('cursor', '').off( namespace );
+			}
+
+			// Unbind the move and end events, which are added on 'start'.
+			doc.off( namespace );
+
+			// Remove dragging class.
+			$Target.removeClass(Classes[12]);
+
+			// Fire the change and set events.
+			fireEvents(['set', 'change']);
+		}
+
+		// Bind move events on document.
+		function start ( event, data ) {
+
+			// Mark the handle as 'active' so it can be styled.
+			if( data.handles.length === 1 ) {
+				data.handles[0].children().addClass(Classes[15]);
+			}
+
+			// A drag should never propagate up to the 'tap' event.
+			event.stopPropagation();
+
+			// Attach the move event.
+			attach ( actions.move, doc, move, {
+				start: event.calcPoint,
+				handles: data.handles,
+				positions: [
+					$Locations[0],
+					$Locations[$Handles.length - 1]
+				]
+			});
+
+			// Unbind all movement when the drag ends.
+			attach ( actions.end, doc, end, null );
+
+			// Text selection isn't an issue on touch devices,
+			// so adding cursor styles can be skipped.
+			if ( event.cursor ) {
+
+				// Prevent the 'I' cursor and extend the range-drag cursor.
+				$('body').css('cursor', $(event.target).css('cursor'));
+
+				// Mark the target with a dragging state.
+				if ( $Handles.length > 1 ) {
+					$Target.addClass(Classes[12]);
+				}
+
+				// Prevent text selection when dragging the handles.
+				$('body').on('selectstart' + namespace, false);
+			}
+		}
+
+		// Move closest handle to tapped location.
+		function tap ( event ) {
+
+			var location = event.calcPoint, total = 0, to;
+
+			// The tap event shouldn't propagate up and cause 'edge' to run.
+			event.stopPropagation();
+
+			// Add up the handle offsets.
+			$.each( $Handles, function(){
+				total += this.offset()[ options.style ];
+			});
+
+			// Find the handle closest to the tapped position.
+			total = ( location < total/2 || $Handles.length === 1 ) ? 0 : 1;
+
+			location -= $Base.offset()[ options.style ];
+
+			// Calculate the new position.
+			to = ( location * 100 ) / baseSize();
+
+			if ( !options.events.snap ) {
+				// Flag the slider as it is now in a transitional state.
+				// Transition takes 300 ms, so re-enable the slider afterwards.
+				addClassFor( $Target, Classes[14], 300 );
+			}
+
+			// Find the closest handle and calculate the tapped point.
+			// The set handle to the new position.
+			setHandle( $Handles[total], to );
+
+			fireEvents(['slide', 'set', 'change']);
+
+			if ( options.events.snap ) {
+				start(event, { handles: [$Handles[total]] });
+			}
+		}
+
+		// Attach events to several slider parts.
+		function events ( behaviour ) {
+
+			var i, drag;
+
+			// Attach the standard drag event to the handles.
+			if ( !behaviour.fixed ) {
+
+				for ( i = 0; i < $Handles.length; i += 1 ) {
+
+					// These events are only bound to the visual handle
+					// element, not the 'real' origin element.
+					attach ( actions.start, $Handles[i].children(), start, {
+						handles: [ $Handles[i] ]
+					});
+				}
+			}
+
+			// Attach the tap event to the slider base.
+			if ( behaviour.tap ) {
+
+				attach ( actions.start, $Base, tap, {
+					handles: $Handles
+				});
+			}
+
+			// Make the range dragable.
+			if ( behaviour.drag ){
+
+				drag = $Base.find( '.' + Classes[7] ).addClass( Classes[10] );
+
+				// When the range is fixed, the entire range can
+				// be dragged by the handles. The handle in the first
+				// origin will propagate the start event upward,
+				// but it needs to be bound manually on the other.
+				if ( behaviour.fixed ) {
+					drag = drag.add($Base.children().not( drag ).children());
+				}
+
+				attach ( actions.start, drag, start, {
+					handles: $Handles
+				});
+			}
+		}
+
+
+		// Test suggested values and apply margin, step.
+		function setHandle ( handle, to, noLimitOption ) {
+
+			var trigger = handle[0] !== $Handles[0][0] ? 1 : 0,
+				lowerMargin = $Locations[0] + options.margin,
+				upperMargin = $Locations[1] - options.margin,
+				lowerLimit = $Locations[0] + options.limit,
+				upperLimit = $Locations[1] - options.limit;
+
+			// For sliders with multiple handles,
+			// limit movement to the other handle.
+			// Apply the margin option by adding it to the handle positions.
+			if ( $Handles.length > 1 ) {
+				to = trigger ? Math.max( to, lowerMargin ) : Math.min( to, upperMargin );
+			}
+
+			// The limit option has the opposite effect, limiting handles to a
+			// maximum distance from another. Limit must be > 0, as otherwise
+			// handles would be unmoveable. 'noLimitOption' is set to 'false'
+			// for the .val() method, except for pass 4/4.
+			if ( noLimitOption !== false && options.limit && $Handles.length > 1 ) {
+				to = trigger ? Math.min ( to, lowerLimit ) : Math.max( to, upperLimit );
+			}
+
+			// Handle the step option.
+			to = $Spectrum.getStep( to );
+
+			// Limit to 0/100 for .val input, trim anything beyond 7 digits, as
+			// JavaScript has some issues in its floating point implementation.
+			to = limit(parseFloat(to.toFixed(7)));
+
+			// Return false if handle can't move.
+			if ( to === $Locations[trigger] ) {
+				return false;
+			}
+
+			// Set the handle to the new position.
+			handle.css( options.style, to + '%' );
+
+			// Force proper handle stacking
+			if ( handle.is(':first-child') ) {
+				handle.toggleClass(Classes[17], to > 50 );
+			}
+
+			// Update locations.
+			$Locations[trigger] = to;
+
+			// Convert the value to the slider stepping/range.
+			$Values[trigger] = $Spectrum.fromStepping( to );
+
+			linkUpdate(triggerPos[trigger]);
+
+			return true;
+		}
+
+		// Loop values from value method and apply them.
+		function setValues ( count, values ) {
+
+			var i, trigger, to;
+
+			// With the limit option, we'll need another limiting pass.
+			if ( options.limit ) {
+				count += 1;
+			}
+
+			// If there are multiple handles to be set run the setting
+			// mechanism twice for the first handle, to make sure it
+			// can be bounced of the second one properly.
+			for ( i = 0; i < count; i += 1 ) {
+
+				trigger = i%2;
+
+				// Get the current argument from the array.
+				to = values[trigger];
+
+				// Setting with null indicates an 'ignore'.
+				// Inputting 'false' is invalid.
+				if ( to !== null && to !== false ) {
+
+					// If a formatted number was passed, attemt to decode it.
+					if ( typeof to === 'number' ) {
+						to = String(to);
+					}
+
+					to = options.format.from( to );
+
+					// Request an update for all links if the value was invalid.
+					// Do so too if setting the handle fails.
+					if ( to === false || isNaN(to) || setHandle( $Handles[trigger], $Spectrum.toStepping( to ), i === (3 - options.dir) ) === false ) {
+
+						linkUpdate(triggerPos[trigger]);
+					}
+				}
+			}
+		}
+
+		// Set the slider value.
+		function valueSet ( input ) {
+
+			// LibLink: don't accept new values when currently emitting changes.
+			if ( $Target[0].LinkIsEmitting ) {
+				return this;
+			}
+
+			var count, values = asArray( input );
+
+			// The RTL settings is implemented by reversing the front-end,
+			// internal mechanisms are the same.
+			if ( options.dir && options.handles > 1 ) {
+				values.reverse();
+			}
+
+			// Animation is optional.
+			// Make sure the initial values where set before using animated
+			// placement. (no report, unit testing);
+			if ( options.animate && $Locations[0] !== -1 ) {
+				addClassFor( $Target, Classes[14], 300 );
+			}
+
+			// Determine how often to set the handles.
+			count = $Handles.length > 1 ? 3 : 1;
+
+			if ( values.length === 1 ) {
+				count = 1;
+			}
+
+			setValues ( count, values );
+
+			// Fire the 'set' event. As of noUiSlider 7,
+			// this is no longer optional.
+			fireEvents(['set']);
+
+			return this;
+		}
+
+		// Get the slider value.
+		function valueGet ( ) {
+
+			var i, retour = [];
+
+			// Get the value from all handles.
+			for ( i = 0; i < options.handles; i += 1 ){
+				retour[i] = options.format.to( $Values[i] );
+			}
+
+			return inSliderOrder( retour );
+		}
+
+		// Destroy the slider and unbind all events.
+		function destroyTarget ( ) {
+
+			// Unbind events on the slider, remove all classes and child elements.
+			$(this).off(namespace)
+				.removeClass(Classes.join(' '))
+				.empty();
+
+			delete this.LinkUpdate;
+			delete this.LinkConfirm;
+			delete this.LinkDefaultFormatter;
+			delete this.LinkDefaultFlag;
+			delete this.reappend;
+			delete this.vGet;
+			delete this.vSet;
+			delete this.getCurrentStep;
+			delete this.getInfo;
+			delete this.destroy;
+
+			// Return the original options from the closure.
+			return originalOptions;
+		}
+
+		// Get the current step size for the slider.
+		function getCurrentStep ( ) {
+
+			// Check all locations, map them to their stepping point.
+			// Get the step point, then find it in the input list.
+			var retour = $.map($Locations, function( location, index ){
+
+				var step = $Spectrum.getApplicableStep( location ),
+
+					// As per #391, the comparison for the decrement step can have some rounding issues.
+					// Round the value to the precision used in the step.
+					stepDecimals = countDecimals(String(step[2])),
+
+					// Get the current numeric value
+					value = $Values[index],
+
+					// To move the slider 'one step up', the current step value needs to be added.
+					// Use null if we are at the maximum slider value.
+					increment = location === 100 ? null : step[2],
+
+					// Going 'one step down' might put the slider in a different sub-range, so we
+					// need to switch between the current or the previous step.
+					prev = Number((value - step[2]).toFixed(stepDecimals)),
+
+					// If the value fits the step, return the current step value. Otherwise, use the
+					// previous step. Return null if the slider is at its minimum value.
+					decrement = location === 0 ? null : (prev >= step[1]) ? step[2] : (step[0] || false);
+
+				return [[decrement, increment]];
+			});
+
+			// Return values in the proper order.
+			return inSliderOrder( retour );
+		}
+
+		// Get the original set of options.
+		function getOriginalOptions ( ) {
+			return originalOptions;
+		}
+
+
+	// Initialize slider
+
+		// Throw an error if the slider was already initialized.
+		if ( $Target.hasClass(Classes[0]) ) {
+			throw new Error('Slider was already initialized.');
+		}
+
+		// Create the base element, initialise HTML and set classes.
+		// Add handles and links.
+		$Base = addSlider( options.dir, options.ort, $Target );
+		$Handles = addHandles( options.handles, options.dir, $Base );
+
+		// Set the connect classes.
+		addConnection ( options.connect, $Target, $Handles );
+
+		// Attach user events.
+		events( options.events );
+
+	// Methods
+
+		target.vSet = valueSet;
+		target.vGet = valueGet;
+		target.destroy = destroyTarget;
+
+		target.getCurrentStep = getCurrentStep;
+		target.getOriginalOptions = getOriginalOptions;
+
+		target.getInfo = function(){
+			return [
+				$Spectrum,
+				options.style,
+				options.ort
+			];
+		};
+
+		// Use the public value method to set the start values.
+		$Target.val( options.start );
+
+	}
+
+
+		// Run the standard initializer
+		function initialize ( originalOptions ) {
+
+			// Test the options once, not for every slider.
+			var options = testOptions( originalOptions, this );
+
+			// Loop all items, and provide a new closed-scope environment.
+			return this.each(function(){
+				closure(this, options, originalOptions);
+			});
+		}
+
+		// Destroy the slider, then re-enter initialization.
+		function rebuild ( options ) {
+
+			return this.each(function(){
+
+				// The rebuild flag can be used if the slider wasn't initialized yet.
+				if ( !this.destroy ) {
+					$(this).noUiSlider( options );
+					return;
+				}
+
+				// Get the current values from the slider,
+				// including the initialization options.
+				var values = $(this).val(), originalOptions = this.destroy(),
+
+					// Extend the previous options with the newly provided ones.
+					newOptions = $.extend( {}, originalOptions, options );
+
+				// Run the standard initializer.
+				$(this).noUiSlider( newOptions );
+
+				// Place Link elements back.
+				this.reappend();
+
+				// If the start option hasn't changed,
+				// reset the previous values.
+				if ( originalOptions.start === newOptions.start ) {
+					$(this).val(values);
+				}
+			});
+		}
+
+		// Access the internal getting and setting methods based on argument count.
+		function value ( ) {
+			return this[0][ !arguments.length ? 'vGet' : 'vSet' ].apply(this[0], arguments);
+		}
+
+		// Override the .val() method. Test every element. Is it a slider? Go to
+		// the slider value handling. No? Use the standard method.
+		// Note how $.fn.val expects 'this' to be an instance of $. For convenience,
+		// the above 'value' function does too.
+		$.fn.val = function ( arg ) {
+
+			// this === instanceof $
+
+			function valMethod( a ){
+				return a.hasClass(Classes[0]) ? value : $val;
+			}
+
+			// If no value is passed, this is 'get'.
+			if ( !arguments.length ) {
+				var first = $(this[0]);
+				return valMethod(first).call(first);
+			}
+
+			var isFunction = $.isFunction(arg);
+
+			// Return the set so it remains chainable. Make sure not to break
+			// jQuery's .val(function( index, value ){}) signature.
+			return this.each(function( i ){
+
+				var val = arg, $t = $(this);
+
+				if ( isFunction ) {
+					val = arg.call(this, i, $t.val());
+				}
+
+				valMethod($t).call($t, val);
+			});
+		};
+
+	// Extend jQuery/Zepto with the noUiSlider method.
+		$.fn.noUiSlider = function ( options, rebuildFlag ) {
+
+			switch ( options ) {
+				case 'step': return this[0].getCurrentStep();
+				case 'options': return this[0].getOriginalOptions();
+			}
+
+			return ( rebuildFlag ? rebuild : initialize ).call(this, options);
+		};
+
+		function getGroup ( $Spectrum, mode, values, stepped ) {
+
+			// Use the range.
+			if ( mode === 'range' || mode === 'steps' ) {
+				return $Spectrum.xVal;
+			}
+
+			if ( mode === 'count' ) {
+
+				// Divide 0 - 100 in 'count' parts.
+				var spread = ( 100 / (values-1) ), v, i = 0;
+				values = [];
+
+				// List these parts and have them handled as 'positions'.
+				while ((v=i++*spread) <= 100 ) {
+					values.push(v);
+				}
+
+				mode = 'positions';
+			}
+
+			if ( mode === 'positions' ) {
+
+				// Map all percentages to on-range values.
+				return $.map(values, function( value ){
+					return $Spectrum.fromStepping( stepped ? $Spectrum.getStep( value ) : value );
+				});
+			}
+
+			if ( mode === 'values' ) {
+
+				// If the value must be stepped, it needs to be converted to a percentage first.
+				if ( stepped ) {
+
+					return $.map(values, function( value ){
+
+						// Convert to percentage, apply step, return to value.
+						return $Spectrum.fromStepping( $Spectrum.getStep( $Spectrum.toStepping( value ) ) );
+					});
+
+				}
+
+				// Otherwise, we can simply use the values.
+				return values;
+			}
+		}
+
+		function generateSpread ( $Spectrum, density, mode, group ) {
+
+			var originalSpectrumDirection = $Spectrum.direction,
+				indexes = {},
+				firstInRange = $Spectrum.xVal[0],
+				lastInRange = $Spectrum.xVal[$Spectrum.xVal.length-1],
+				ignoreFirst = false,
+				ignoreLast = false,
+				prevPct = 0;
+
+			// This function loops the spectrum in an ltr linear fashion,
+			// while the toStepping method is direction aware. Trick it into
+			// believing it is ltr.
+			$Spectrum.direction = 0;
+
+			// Create a copy of the group, sort it and filter away all duplicates.
+			group = unique(group.slice().sort(function(a, b){ return a - b; }));
+
+			// Make sure the range starts with the first element.
+			if ( group[0] !== firstInRange ) {
+				group.unshift(firstInRange);
+				ignoreFirst = true;
+			}
+
+			// Likewise for the last one.
+			if ( group[group.length - 1] !== lastInRange ) {
+				group.push(lastInRange);
+				ignoreLast = true;
+			}
+
+			$.each(group, function ( index ) {
+
+				// Get the current step and the lower + upper positions.
+				var step, i, q,
+					low = group[index],
+					high = group[index+1],
+					newPct, pctDifference, pctPos, type,
+					steps, realSteps, stepsize;
+
+				// When using 'steps' mode, use the provided steps.
+				// Otherwise, we'll step on to the next subrange.
+				if ( mode === 'steps' ) {
+					step = $Spectrum.xNumSteps[ index ];
+				}
+
+				// Default to a 'full' step.
+				if ( !step ) {
+					step = high-low;
+				}
+
+				// Low can be 0, so test for false. If high is undefined,
+				// we are at the last subrange. Index 0 is already handled.
+				if ( low === false || high === undefined ) {
+					return;
+				}
+
+				// Find all steps in the subrange.
+				for ( i = low; i <= high; i += step ) {
+
+					// Get the percentage value for the current step,
+					// calculate the size for the subrange.
+					newPct = $Spectrum.toStepping( i );
+					pctDifference = newPct - prevPct;
+
+					steps = pctDifference / density;
+					realSteps = Math.round(steps);
+
+					// This ratio represents the ammount of percentage-space a point indicates.
+					// For a density 1 the points/percentage = 1. For density 2, that percentage needs to be re-devided.
+					// Round the percentage offset to an even number, then divide by two
+					// to spread the offset on both sides of the range.
+					stepsize = pctDifference/realSteps;
+
+					// Divide all points evenly, adding the correct number to this subrange.
+					// Run up to <= so that 100% gets a point, event if ignoreLast is set.
+					for ( q = 1; q <= realSteps; q += 1 ) {
+
+						// The ratio between the rounded value and the actual size might be ~1% off.
+						// Correct the percentage offset by the number of points
+						// per subrange. density = 1 will result in 100 points on the
+						// full range, 2 for 50, 4 for 25, etc.
+						pctPos = prevPct + ( q * stepsize );
+						indexes[pctPos.toFixed(5)] = ['x', 0];
+					}
+
+					// Determine the point type.
+					type = ($.inArray(i, group) > -1) ? 1 : ( mode === 'steps' ? 2 : 0 );
+
+					// Enforce the 'ignoreFirst' option by overwriting the type for 0.
+					if ( !index && ignoreFirst ) {
+						type = 0;
+					}
+
+					if ( !(i === high && ignoreLast)) {
+						// Mark the 'type' of this point. 0 = plain, 1 = real value, 2 = step value.
+						indexes[newPct.toFixed(5)] = [i, type];
+					}
+
+					// Update the percentage count.
+					prevPct = newPct;
+				}
+			});
+
+			// Reset the spectrum.
+			$Spectrum.direction = originalSpectrumDirection;
+
+			return indexes;
+		}
+
+		function addMarking ( CSSstyle, orientation, direction, spread, filterFunc, formatter ) {
+
+			var style = ['horizontal', 'vertical'][orientation],
+				element = $('<div/>');
+
+			element.addClass('noUi-pips noUi-pips-'+style);
+
+			function getSize( type, value ){
+				return [ '-normal', '-large', '-sub' ][type];
+			}
+
+			function getTags( offset, source, values ) {
+				return 'class="' + source + ' ' +
+					source + '-' + style + ' ' +
+					source + getSize(values[1], values[0]) +
+					'" style="' + CSSstyle + ': ' + offset + '%"';
+			}
+
+			function addSpread ( offset, values ){
+
+				if ( direction ) {
+					offset = 100 - offset;
+				}
+
+				// Apply the filter function, if it is set.
+				values[1] = (values[1] && filterFunc) ? filterFunc(values[0], values[1]) : values[1];
+
+				// Add a marker for every point
+				element.append('<div ' + getTags(offset, 'noUi-marker', values) + '></div>');
+
+				// Values are only appended for points marked '1' or '2'.
+				if ( values[1] ) {
+					element.append('<div '+getTags(offset, 'noUi-value', values)+'>' + formatter.to(values[0]) + '</div>');
+				}
+			}
+
+			// Append all points.
+			$.each(spread, addSpread);
+
+			return element;
+		}
+
+		$.fn.noUiSlider_pips = function ( grid ) {
+
+		var mode = grid.mode,
+			density = grid.density || 1,
+			filter = grid.filter || false,
+			values = grid.values || false,
+			format = grid.format || {
+				to: Math.round
+			},
+			stepped = grid.stepped || false;
+
+			return this.each(function(){
+
+			var info = this.getInfo(),
+				group = getGroup( info[0], mode, values, stepped ),
+				spread = generateSpread( info[0], density, mode, group );
+
+				return $(this).append(addMarking(
+					info[1],
+					info[2],
+					info[0].direction,
+					spread,
+					filter,
+					format
+				));
+			});
+		};
+
+	}( __webpack_provided_window_dot_jQuery || window.Zepto ));
+
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)))
+
+/***/ },
+/* 4 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var __WEBPACK_AMD_DEFINE_RESULT__;;(function () {
+		'use strict';
+
+		/**
+		 * @preserve FastClick: polyfill to remove click delays on browsers with touch UIs.
+		 *
+		 * @codingstandard ftlabs-jsv2
+		 * @copyright The Financial Times Limited [All Rights Reserved]
+		 * @license MIT License (see LICENSE.txt)
+		 */
+
+		/*jslint browser:true, node:true*/
+		/*global define, Event, Node*/
+
+
+		/**
+		 * Instantiate fast-clicking listeners on the specified layer.
+		 *
+		 * @constructor
+		 * @param {Element} layer The layer to listen on
+		 * @param {Object} [options={}] The options to override the defaults
+		 */
+		function FastClick(layer, options) {
+			var oldOnClick;
+
+			options = options || {};
+
+			/**
+			 * Whether a click is currently being tracked.
+			 *
+			 * @type boolean
+			 */
+			this.trackingClick = false;
+
+
+			/**
+			 * Timestamp for when click tracking started.
+			 *
+			 * @type number
+			 */
+			this.trackingClickStart = 0;
+
+
+			/**
+			 * The element being tracked for a click.
+			 *
+			 * @type EventTarget
+			 */
+			this.targetElement = null;
+
+
+			/**
+			 * X-coordinate of touch start event.
+			 *
+			 * @type number
+			 */
+			this.touchStartX = 0;
+
+
+			/**
+			 * Y-coordinate of touch start event.
+			 *
+			 * @type number
+			 */
+			this.touchStartY = 0;
+
+
+			/**
+			 * ID of the last touch, retrieved from Touch.identifier.
+			 *
+			 * @type number
+			 */
+			this.lastTouchIdentifier = 0;
+
+
+			/**
+			 * Touchmove boundary, beyond which a click will be cancelled.
+			 *
+			 * @type number
+			 */
+			this.touchBoundary = options.touchBoundary || 10;
+
+
+			/**
+			 * The FastClick layer.
+			 *
+			 * @type Element
+			 */
+			this.layer = layer;
+
+			/**
+			 * The minimum time between tap(touchstart and touchend) events
+			 *
+			 * @type number
+			 */
+			this.tapDelay = options.tapDelay || 200;
+
+			/**
+			 * The maximum time for a tap
+			 *
+			 * @type number
+			 */
+			this.tapTimeout = options.tapTimeout || 700;
+
+			if (FastClick.notNeeded(layer)) {
+				return;
+			}
+
+			// Some old versions of Android don't have Function.prototype.bind
+			function bind(method, context) {
+				return function() { return method.apply(context, arguments); };
+			}
+
+
+			var methods = ['onMouse', 'onClick', 'onTouchStart', 'onTouchMove', 'onTouchEnd', 'onTouchCancel'];
+			var context = this;
+			for (var i = 0, l = methods.length; i < l; i++) {
+				context[methods[i]] = bind(context[methods[i]], context);
+			}
+
+			// Set up event handlers as required
+			if (deviceIsAndroid) {
+				layer.addEventListener('mouseover', this.onMouse, true);
+				layer.addEventListener('mousedown', this.onMouse, true);
+				layer.addEventListener('mouseup', this.onMouse, true);
+			}
+
+			layer.addEventListener('click', this.onClick, true);
+			layer.addEventListener('touchstart', this.onTouchStart, false);
+			layer.addEventListener('touchmove', this.onTouchMove, false);
+			layer.addEventListener('touchend', this.onTouchEnd, false);
+			layer.addEventListener('touchcancel', this.onTouchCancel, false);
+
+			// Hack is required for browsers that don't support Event#stopImmediatePropagation (e.g. Android 2)
+			// which is how FastClick normally stops click events bubbling to callbacks registered on the FastClick
+			// layer when they are cancelled.
+			if (!Event.prototype.stopImmediatePropagation) {
+				layer.removeEventListener = function(type, callback, capture) {
+					var rmv = Node.prototype.removeEventListener;
+					if (type === 'click') {
+						rmv.call(layer, type, callback.hijacked || callback, capture);
+					} else {
+						rmv.call(layer, type, callback, capture);
+					}
+				};
+
+				layer.addEventListener = function(type, callback, capture) {
+					var adv = Node.prototype.addEventListener;
+					if (type === 'click') {
+						adv.call(layer, type, callback.hijacked || (callback.hijacked = function(event) {
+							if (!event.propagationStopped) {
+								callback(event);
+							}
+						}), capture);
+					} else {
+						adv.call(layer, type, callback, capture);
+					}
+				};
+			}
+
+			// If a handler is already declared in the element's onclick attribute, it will be fired before
+			// FastClick's onClick handler. Fix this by pulling out the user-defined handler function and
+			// adding it as listener.
+			if (typeof layer.onclick === 'function') {
+
+				// Android browser on at least 3.2 requires a new reference to the function in layer.onclick
+				// - the old one won't work if passed to addEventListener directly.
+				oldOnClick = layer.onclick;
+				layer.addEventListener('click', function(event) {
+					oldOnClick(event);
+				}, false);
+				layer.onclick = null;
+			}
+		}
+
+		/**
+		* Windows Phone 8.1 fakes user agent string to look like Android and iPhone.
+		*
+		* @type boolean
+		*/
+		var deviceIsWindowsPhone = navigator.userAgent.indexOf("Windows Phone") >= 0;
+
+		/**
+		 * Android requires exceptions.
+		 *
+		 * @type boolean
+		 */
+		var deviceIsAndroid = navigator.userAgent.indexOf('Android') > 0 && !deviceIsWindowsPhone;
+
+
+		/**
+		 * iOS requires exceptions.
+		 *
+		 * @type boolean
+		 */
+		var deviceIsIOS = /iP(ad|hone|od)/.test(navigator.userAgent) && !deviceIsWindowsPhone;
+
+
+		/**
+		 * iOS 4 requires an exception for select elements.
+		 *
+		 * @type boolean
+		 */
+		var deviceIsIOS4 = deviceIsIOS && (/OS 4_\d(_\d)?/).test(navigator.userAgent);
+
+
+		/**
+		 * iOS 6.0-7.* requires the target element to be manually derived
+		 *
+		 * @type boolean
+		 */
+		var deviceIsIOSWithBadTarget = deviceIsIOS && (/OS [6-7]_\d/).test(navigator.userAgent);
+
+		/**
+		 * BlackBerry requires exceptions.
+		 *
+		 * @type boolean
+		 */
+		var deviceIsBlackBerry10 = navigator.userAgent.indexOf('BB10') > 0;
+
+		/**
+		 * Determine whether a given element requires a native click.
+		 *
+		 * @param {EventTarget|Element} target Target DOM element
+		 * @returns {boolean} Returns true if the element needs a native click
+		 */
+		FastClick.prototype.needsClick = function(target) {
+			switch (target.nodeName.toLowerCase()) {
+
+			// Don't send a synthetic click to disabled inputs (issue #62)
+			case 'button':
+			case 'select':
+			case 'textarea':
+				if (target.disabled) {
+					return true;
+				}
+
+				break;
+			case 'input':
+
+				// File inputs need real clicks on iOS 6 due to a browser bug (issue #68)
+				if ((deviceIsIOS && target.type === 'file') || target.disabled) {
+					return true;
+				}
+
+				break;
+			case 'label':
+			case 'iframe': // iOS8 homescreen apps can prevent events bubbling into frames
+			case 'video':
+				return true;
+			}
+
+			return (/\bneedsclick\b/).test(target.className);
+		};
+
+
+		/**
+		 * Determine whether a given element requires a call to focus to simulate click into element.
+		 *
+		 * @param {EventTarget|Element} target Target DOM element
+		 * @returns {boolean} Returns true if the element requires a call to focus to simulate native click.
+		 */
+		FastClick.prototype.needsFocus = function(target) {
+			switch (target.nodeName.toLowerCase()) {
+			case 'textarea':
+				return true;
+			case 'select':
+				return !deviceIsAndroid;
+			case 'input':
+				switch (target.type) {
+				case 'button':
+				case 'checkbox':
+				case 'file':
+				case 'image':
+				case 'radio':
+				case 'submit':
+					return false;
+				}
+
+				// No point in attempting to focus disabled inputs
+				return !target.disabled && !target.readOnly;
+			default:
+				return (/\bneedsfocus\b/).test(target.className);
+			}
+		};
+
+
+		/**
+		 * Send a click event to the specified element.
+		 *
+		 * @param {EventTarget|Element} targetElement
+		 * @param {Event} event
+		 */
+		FastClick.prototype.sendClick = function(targetElement, event) {
+			var clickEvent, touch;
+
+			// On some Android devices activeElement needs to be blurred otherwise the synthetic click will have no effect (#24)
+			if (document.activeElement && document.activeElement !== targetElement) {
+				document.activeElement.blur();
+			}
+
+			touch = event.changedTouches[0];
+
+			// Synthesise a click event, with an extra attribute so it can be tracked
+			clickEvent = document.createEvent('MouseEvents');
+			clickEvent.initMouseEvent(this.determineEventType(targetElement), true, true, window, 1, touch.screenX, touch.screenY, touch.clientX, touch.clientY, false, false, false, false, 0, null);
+			clickEvent.forwardedTouchEvent = true;
+			targetElement.dispatchEvent(clickEvent);
+		};
+
+		FastClick.prototype.determineEventType = function(targetElement) {
+
+			//Issue #159: Android Chrome Select Box does not open with a synthetic click event
+			if (deviceIsAndroid && targetElement.tagName.toLowerCase() === 'select') {
+				return 'mousedown';
+			}
+
+			return 'click';
+		};
+
+
+		/**
+		 * @param {EventTarget|Element} targetElement
+		 */
+		FastClick.prototype.focus = function(targetElement) {
+			var length;
+
+			// Issue #160: on iOS 7, some input elements (e.g. date datetime month) throw a vague TypeError on setSelectionRange. These elements don't have an integer value for the selectionStart and selectionEnd properties, but unfortunately that can't be used for detection because accessing the properties also throws a TypeError. Just check the type instead. Filed as Apple bug #15122724.
+			if (deviceIsIOS && targetElement.setSelectionRange && targetElement.type.indexOf('date') !== 0 && targetElement.type !== 'time' && targetElement.type !== 'month') {
+				length = targetElement.value.length;
+				targetElement.setSelectionRange(length, length);
+			} else {
+				targetElement.focus();
+			}
+		};
+
+
+		/**
+		 * Check whether the given target element is a child of a scrollable layer and if so, set a flag on it.
+		 *
+		 * @param {EventTarget|Element} targetElement
+		 */
+		FastClick.prototype.updateScrollParent = function(targetElement) {
+			var scrollParent, parentElement;
+
+			scrollParent = targetElement.fastClickScrollParent;
+
+			// Attempt to discover whether the target element is contained within a scrollable layer. Re-check if the
+			// target element was moved to another parent.
+			if (!scrollParent || !scrollParent.contains(targetElement)) {
+				parentElement = targetElement;
+				do {
+					if (parentElement.scrollHeight > parentElement.offsetHeight) {
+						scrollParent = parentElement;
+						targetElement.fastClickScrollParent = parentElement;
+						break;
+					}
+
+					parentElement = parentElement.parentElement;
+				} while (parentElement);
+			}
+
+			// Always update the scroll top tracker if possible.
+			if (scrollParent) {
+				scrollParent.fastClickLastScrollTop = scrollParent.scrollTop;
+			}
+		};
+
+
+		/**
+		 * @param {EventTarget} targetElement
+		 * @returns {Element|EventTarget}
+		 */
+		FastClick.prototype.getTargetElementFromEventTarget = function(eventTarget) {
+
+			// On some older browsers (notably Safari on iOS 4.1 - see issue #56) the event target may be a text node.
+			if (eventTarget.nodeType === Node.TEXT_NODE) {
+				return eventTarget.parentNode;
+			}
+
+			return eventTarget;
+		};
+
+
+		/**
+		 * On touch start, record the position and scroll offset.
+		 *
+		 * @param {Event} event
+		 * @returns {boolean}
+		 */
+		FastClick.prototype.onTouchStart = function(event) {
+			var targetElement, touch, selection;
+
+			// Ignore multiple touches, otherwise pinch-to-zoom is prevented if both fingers are on the FastClick element (issue #111).
+			if (event.targetTouches.length > 1) {
+				return true;
+			}
+
+			targetElement = this.getTargetElementFromEventTarget(event.target);
+			touch = event.targetTouches[0];
+
+			if (deviceIsIOS) {
+
+				// Only trusted events will deselect text on iOS (issue #49)
+				selection = window.getSelection();
+				if (selection.rangeCount && !selection.isCollapsed) {
+					return true;
+				}
+
+				if (!deviceIsIOS4) {
+
+					// Weird things happen on iOS when an alert or confirm dialog is opened from a click event callback (issue #23):
+					// when the user next taps anywhere else on the page, new touchstart and touchend events are dispatched
+					// with the same identifier as the touch event that previously triggered the click that triggered the alert.
+					// Sadly, there is an issue on iOS 4 that causes some normal touch events to have the same identifier as an
+					// immediately preceeding touch event (issue #52), so this fix is unavailable on that platform.
+					// Issue 120: touch.identifier is 0 when Chrome dev tools 'Emulate touch events' is set with an iOS device UA string,
+					// which causes all touch events to be ignored. As this block only applies to iOS, and iOS identifiers are always long,
+					// random integers, it's safe to to continue if the identifier is 0 here.
+					if (touch.identifier && touch.identifier === this.lastTouchIdentifier) {
+						event.preventDefault();
+						return false;
+					}
+
+					this.lastTouchIdentifier = touch.identifier;
+
+					// If the target element is a child of a scrollable layer (using -webkit-overflow-scrolling: touch) and:
+					// 1) the user does a fling scroll on the scrollable layer
+					// 2) the user stops the fling scroll with another tap
+					// then the event.target of the last 'touchend' event will be the element that was under the user's finger
+					// when the fling scroll was started, causing FastClick to send a click event to that layer - unless a check
+					// is made to ensure that a parent layer was not scrolled before sending a synthetic click (issue #42).
+					this.updateScrollParent(targetElement);
+				}
+			}
+
+			this.trackingClick = true;
+			this.trackingClickStart = event.timeStamp;
+			this.targetElement = targetElement;
+
+			this.touchStartX = touch.pageX;
+			this.touchStartY = touch.pageY;
+
+			// Prevent phantom clicks on fast double-tap (issue #36)
+			if ((event.timeStamp - this.lastClickTime) < this.tapDelay) {
+				event.preventDefault();
+			}
+
+			return true;
+		};
+
+
+		/**
+		 * Based on a touchmove event object, check whether the touch has moved past a boundary since it started.
+		 *
+		 * @param {Event} event
+		 * @returns {boolean}
+		 */
+		FastClick.prototype.touchHasMoved = function(event) {
+			var touch = event.changedTouches[0], boundary = this.touchBoundary;
+
+			if (Math.abs(touch.pageX - this.touchStartX) > boundary || Math.abs(touch.pageY - this.touchStartY) > boundary) {
+				return true;
+			}
+
+			return false;
+		};
+
+
+		/**
+		 * Update the last position.
+		 *
+		 * @param {Event} event
+		 * @returns {boolean}
+		 */
+		FastClick.prototype.onTouchMove = function(event) {
+			if (!this.trackingClick) {
+				return true;
+			}
+
+			// If the touch has moved, cancel the click tracking
+			if (this.targetElement !== this.getTargetElementFromEventTarget(event.target) || this.touchHasMoved(event)) {
+				this.trackingClick = false;
+				this.targetElement = null;
+			}
+
+			return true;
+		};
+
+
+		/**
+		 * Attempt to find the labelled control for the given label element.
+		 *
+		 * @param {EventTarget|HTMLLabelElement} labelElement
+		 * @returns {Element|null}
+		 */
+		FastClick.prototype.findControl = function(labelElement) {
+
+			// Fast path for newer browsers supporting the HTML5 control attribute
+			if (labelElement.control !== undefined) {
+				return labelElement.control;
+			}
+
+			// All browsers under test that support touch events also support the HTML5 htmlFor attribute
+			if (labelElement.htmlFor) {
+				return document.getElementById(labelElement.htmlFor);
+			}
+
+			// If no for attribute exists, attempt to retrieve the first labellable descendant element
+			// the list of which is defined here: http://www.w3.org/TR/html5/forms.html#category-label
+			return labelElement.querySelector('button, input:not([type=hidden]), keygen, meter, output, progress, select, textarea');
+		};
+
+
+		/**
+		 * On touch end, determine whether to send a click event at once.
+		 *
+		 * @param {Event} event
+		 * @returns {boolean}
+		 */
+		FastClick.prototype.onTouchEnd = function(event) {
+			var forElement, trackingClickStart, targetTagName, scrollParent, touch, targetElement = this.targetElement;
+
+			if (!this.trackingClick) {
+				return true;
+			}
+
+			// Prevent phantom clicks on fast double-tap (issue #36)
+			if ((event.timeStamp - this.lastClickTime) < this.tapDelay) {
+				this.cancelNextClick = true;
+				return true;
+			}
+
+			if ((event.timeStamp - this.trackingClickStart) > this.tapTimeout) {
+				return true;
+			}
+
+			// Reset to prevent wrong click cancel on input (issue #156).
+			this.cancelNextClick = false;
+
+			this.lastClickTime = event.timeStamp;
+
+			trackingClickStart = this.trackingClickStart;
+			this.trackingClick = false;
+			this.trackingClickStart = 0;
+
+			// On some iOS devices, the targetElement supplied with the event is invalid if the layer
+			// is performing a transition or scroll, and has to be re-detected manually. Note that
+			// for this to function correctly, it must be called *after* the event target is checked!
+			// See issue #57; also filed as rdar://13048589 .
+			if (deviceIsIOSWithBadTarget) {
+				touch = event.changedTouches[0];
+
+				// In certain cases arguments of elementFromPoint can be negative, so prevent setting targetElement to null
+				targetElement = document.elementFromPoint(touch.pageX - window.pageXOffset, touch.pageY - window.pageYOffset) || targetElement;
+				targetElement.fastClickScrollParent = this.targetElement.fastClickScrollParent;
+			}
+
+			targetTagName = targetElement.tagName.toLowerCase();
+			if (targetTagName === 'label') {
+				forElement = this.findControl(targetElement);
+				if (forElement) {
+					this.focus(targetElement);
+					if (deviceIsAndroid) {
+						return false;
+					}
+
+					targetElement = forElement;
+				}
+			} else if (this.needsFocus(targetElement)) {
+
+				// Case 1: If the touch started a while ago (best guess is 100ms based on tests for issue #36) then focus will be triggered anyway. Return early and unset the target element reference so that the subsequent click will be allowed through.
+				// Case 2: Without this exception for input elements tapped when the document is contained in an iframe, then any inputted text won't be visible even though the value attribute is updated as the user types (issue #37).
+				if ((event.timeStamp - trackingClickStart) > 100 || (deviceIsIOS && window.top !== window && targetTagName === 'input')) {
+					this.targetElement = null;
+					return false;
+				}
+
+				this.focus(targetElement);
+				this.sendClick(targetElement, event);
+
+				// Select elements need the event to go through on iOS 4, otherwise the selector menu won't open.
+				// Also this breaks opening selects when VoiceOver is active on iOS6, iOS7 (and possibly others)
+				if (!deviceIsIOS || targetTagName !== 'select') {
+					this.targetElement = null;
+					event.preventDefault();
+				}
+
+				return false;
+			}
+
+			if (deviceIsIOS && !deviceIsIOS4) {
+
+				// Don't send a synthetic click event if the target element is contained within a parent layer that was scrolled
+				// and this tap is being used to stop the scrolling (usually initiated by a fling - issue #42).
+				scrollParent = targetElement.fastClickScrollParent;
+				if (scrollParent && scrollParent.fastClickLastScrollTop !== scrollParent.scrollTop) {
+					return true;
+				}
+			}
+
+			// Prevent the actual click from going though - unless the target node is marked as requiring
+			// real clicks or if it is in the whitelist in which case only non-programmatic clicks are permitted.
+			if (!this.needsClick(targetElement)) {
+				event.preventDefault();
+				this.sendClick(targetElement, event);
+			}
+
+			return false;
+		};
+
+
+		/**
+		 * On touch cancel, stop tracking the click.
+		 *
+		 * @returns {void}
+		 */
+		FastClick.prototype.onTouchCancel = function() {
+			this.trackingClick = false;
+			this.targetElement = null;
+		};
+
+
+		/**
+		 * Determine mouse events which should be permitted.
+		 *
+		 * @param {Event} event
+		 * @returns {boolean}
+		 */
+		FastClick.prototype.onMouse = function(event) {
+
+			// If a target element was never set (because a touch event was never fired) allow the event
+			if (!this.targetElement) {
+				return true;
+			}
+
+			if (event.forwardedTouchEvent) {
+				return true;
+			}
+
+			// Programmatically generated events targeting a specific element should be permitted
+			if (!event.cancelable) {
+				return true;
+			}
+
+			// Derive and check the target element to see whether the mouse event needs to be permitted;
+			// unless explicitly enabled, prevent non-touch click events from triggering actions,
+			// to prevent ghost/doubleclicks.
+			if (!this.needsClick(this.targetElement) || this.cancelNextClick) {
+
+				// Prevent any user-added listeners declared on FastClick element from being fired.
+				if (event.stopImmediatePropagation) {
+					event.stopImmediatePropagation();
+				} else {
+
+					// Part of the hack for browsers that don't support Event#stopImmediatePropagation (e.g. Android 2)
+					event.propagationStopped = true;
+				}
+
+				// Cancel the event
+				event.stopPropagation();
+				event.preventDefault();
+
+				return false;
+			}
+
+			// If the mouse event is permitted, return true for the action to go through.
+			return true;
+		};
+
+
+		/**
+		 * On actual clicks, determine whether this is a touch-generated click, a click action occurring
+		 * naturally after a delay after a touch (which needs to be cancelled to avoid duplication), or
+		 * an actual click which should be permitted.
+		 *
+		 * @param {Event} event
+		 * @returns {boolean}
+		 */
+		FastClick.prototype.onClick = function(event) {
+			var permitted;
+
+			// It's possible for another FastClick-like library delivered with third-party code to fire a click event before FastClick does (issue #44). In that case, set the click-tracking flag back to false and return early. This will cause onTouchEnd to return early.
+			if (this.trackingClick) {
+				this.targetElement = null;
+				this.trackingClick = false;
+				return true;
+			}
+
+			// Very odd behaviour on iOS (issue #18): if a submit element is present inside a form and the user hits enter in the iOS simulator or clicks the Go button on the pop-up OS keyboard the a kind of 'fake' click event will be triggered with the submit-type input element as the target.
+			if (event.target.type === 'submit' && event.detail === 0) {
+				return true;
+			}
+
+			permitted = this.onMouse(event);
+
+			// Only unset targetElement if the click is not permitted. This will ensure that the check for !targetElement in onMouse fails and the browser's click doesn't go through.
+			if (!permitted) {
+				this.targetElement = null;
+			}
+
+			// If clicks are permitted, return true for the action to go through.
+			return permitted;
+		};
+
+
+		/**
+		 * Remove all FastClick's event listeners.
+		 *
+		 * @returns {void}
+		 */
+		FastClick.prototype.destroy = function() {
+			var layer = this.layer;
+
+			if (deviceIsAndroid) {
+				layer.removeEventListener('mouseover', this.onMouse, true);
+				layer.removeEventListener('mousedown', this.onMouse, true);
+				layer.removeEventListener('mouseup', this.onMouse, true);
+			}
+
+			layer.removeEventListener('click', this.onClick, true);
+			layer.removeEventListener('touchstart', this.onTouchStart, false);
+			layer.removeEventListener('touchmove', this.onTouchMove, false);
+			layer.removeEventListener('touchend', this.onTouchEnd, false);
+			layer.removeEventListener('touchcancel', this.onTouchCancel, false);
+		};
+
+
+		/**
+		 * Check whether FastClick is needed.
+		 *
+		 * @param {Element} layer The layer to listen on
+		 */
+		FastClick.notNeeded = function(layer) {
+			var metaViewport;
+			var chromeVersion;
+			var blackberryVersion;
+			var firefoxVersion;
+
+			// Devices that don't support touch don't need FastClick
+			if (typeof window.ontouchstart === 'undefined') {
+				return true;
+			}
+
+			// Chrome version - zero for other browsers
+			chromeVersion = +(/Chrome\/([0-9]+)/.exec(navigator.userAgent) || [,0])[1];
+
+			if (chromeVersion) {
+
+				if (deviceIsAndroid) {
+					metaViewport = document.querySelector('meta[name=viewport]');
+
+					if (metaViewport) {
+						// Chrome on Android with user-scalable="no" doesn't need FastClick (issue #89)
+						if (metaViewport.content.indexOf('user-scalable=no') !== -1) {
+							return true;
+						}
+						// Chrome 32 and above with width=device-width or less don't need FastClick
+						if (chromeVersion > 31 && document.documentElement.scrollWidth <= window.outerWidth) {
+							return true;
+						}
+					}
+
+				// Chrome desktop doesn't need FastClick (issue #15)
+				} else {
+					return true;
+				}
+			}
+
+			if (deviceIsBlackBerry10) {
+				blackberryVersion = navigator.userAgent.match(/Version\/([0-9]*)\.([0-9]*)/);
+
+				// BlackBerry 10.3+ does not require Fastclick library.
+				// https://github.com/ftlabs/fastclick/issues/251
+				if (blackberryVersion[1] >= 10 && blackberryVersion[2] >= 3) {
+					metaViewport = document.querySelector('meta[name=viewport]');
+
+					if (metaViewport) {
+						// user-scalable=no eliminates click delay.
+						if (metaViewport.content.indexOf('user-scalable=no') !== -1) {
+							return true;
+						}
+						// width=device-width (or less than device-width) eliminates click delay.
+						if (document.documentElement.scrollWidth <= window.outerWidth) {
+							return true;
+						}
+					}
+				}
+			}
+
+			// IE10 with -ms-touch-action: none or manipulation, which disables double-tap-to-zoom (issue #97)
+			if (layer.style.msTouchAction === 'none' || layer.style.touchAction === 'manipulation') {
+				return true;
+			}
+
+			// Firefox version - zero for other browsers
+			firefoxVersion = +(/Firefox\/([0-9]+)/.exec(navigator.userAgent) || [,0])[1];
+
+			if (firefoxVersion >= 27) {
+				// Firefox 27+ does not have tap delay if the content is not zoomable - https://bugzilla.mozilla.org/show_bug.cgi?id=922896
+
+				metaViewport = document.querySelector('meta[name=viewport]');
+				if (metaViewport && (metaViewport.content.indexOf('user-scalable=no') !== -1 || document.documentElement.scrollWidth <= window.outerWidth)) {
+					return true;
+				}
+			}
+
+			// IE11: prefixed -ms-touch-action is no longer supported and it's recomended to use non-prefixed version
+			// http://msdn.microsoft.com/en-us/library/windows/apps/Hh767313.aspx
+			if (layer.style.touchAction === 'none' || layer.style.touchAction === 'manipulation') {
+				return true;
+			}
+
+			return false;
+		};
+
+
+		/**
+		 * Factory method for creating a FastClick object
+		 *
+		 * @param {Element} layer The layer to listen on
+		 * @param {Object} [options={}] The options to override the defaults
+		 */
+		FastClick.attach = function(layer, options) {
+			return new FastClick(layer, options);
+		};
+
+
+		if (true) {
+
+			// AMD. Register as an anonymous module.
+			!(__WEBPACK_AMD_DEFINE_RESULT__ = function() {
+				return FastClick;
+			}.call(exports, __webpack_require__, exports, module), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
+		} else if (typeof module !== 'undefined' && module.exports) {
+			module.exports = FastClick.attach;
+			module.exports.FastClick = FastClick;
+		} else {
+			window.FastClick = FastClick;
+		}
+	}());
+
+
+/***/ },
+/* 5 */
+/***/ function(module, exports) {
+
+	/*** IMPORTS FROM imports-loader ***/
+	(function() {
+
+	/*!
+	 * Modernizr v2.8.3
+	 * www.modernizr.com
+	 *
+	 * Copyright (c) Faruk Ates, Paul Irish, Alex Sexton
+	 * Available under the BSD and MIT licenses: www.modernizr.com/license/
+	 */
+
+	/*
+	 * Modernizr tests which native CSS3 and HTML5 features are available in
+	 * the current UA and makes the results available to you in two ways:
+	 * as properties on a global Modernizr object, and as classes on the
+	 * <html> element. This information allows you to progressively enhance
+	 * your pages with a granular level of control over the experience.
+	 *
+	 * Modernizr has an optional (not included) conditional resource loader
+	 * called Modernizr.load(), based on Yepnope.js (yepnopejs.com).
+	 * To get a build that includes Modernizr.load(), as well as choosing
+	 * which tests to include, go to www.modernizr.com/download/
+	 *
+	 * Authors        Faruk Ates, Paul Irish, Alex Sexton
+	 * Contributors   Ryan Seddon, Ben Alman
+	 */
+
+	window.Modernizr = (function( window, document, undefined ) {
+
+	    var version = '2.8.3',
+
+	    Modernizr = {},
+
+	    /*>>cssclasses*/
+	    // option for enabling the HTML classes to be added
+	    enableClasses = true,
+	    /*>>cssclasses*/
+
+	    docElement = document.documentElement,
+
+	    /**
+	     * Create our "modernizr" element that we do most feature tests on.
+	     */
+	    mod = 'modernizr',
+	    modElem = document.createElement(mod),
+	    mStyle = modElem.style,
+
+	    /**
+	     * Create the input element for various Web Forms feature tests.
+	     */
+	    inputElem /*>>inputelem*/ = document.createElement('input') /*>>inputelem*/ ,
+
+	    /*>>smile*/
+	    smile = ':)',
+	    /*>>smile*/
+
+	    toString = {}.toString,
+
+	    // TODO :: make the prefixes more granular
+	    /*>>prefixes*/
+	    // List of property values to set for css tests. See ticket #21
+	    prefixes = ' -webkit- -moz- -o- -ms- '.split(' '),
+	    /*>>prefixes*/
+
+	    /*>>domprefixes*/
+	    // Following spec is to expose vendor-specific style properties as:
+	    //   elem.style.WebkitBorderRadius
+	    // and the following would be incorrect:
+	    //   elem.style.webkitBorderRadius
+
+	    // Webkit ghosts their properties in lowercase but Opera & Moz do not.
+	    // Microsoft uses a lowercase `ms` instead of the correct `Ms` in IE8+
+	    //   erik.eae.net/archives/2008/03/10/21.48.10/
+
+	    // More here: github.com/Modernizr/Modernizr/issues/issue/21
+	    omPrefixes = 'Webkit Moz O ms',
+
+	    cssomPrefixes = omPrefixes.split(' '),
+
+	    domPrefixes = omPrefixes.toLowerCase().split(' '),
+	    /*>>domprefixes*/
+
+	    /*>>ns*/
+	    ns = {'svg': 'http://www.w3.org/2000/svg'},
+	    /*>>ns*/
+
+	    tests = {},
+	    inputs = {},
+	    attrs = {},
+
+	    classes = [],
+
+	    slice = classes.slice,
+
+	    featureName, // used in testing loop
+
+
+	    /*>>teststyles*/
+	    // Inject element with style element and some CSS rules
+	    injectElementWithStyles = function( rule, callback, nodes, testnames ) {
+
+	      var style, ret, node, docOverflow,
+	          div = document.createElement('div'),
+	          // After page load injecting a fake body doesn't work so check if body exists
+	          body = document.body,
+	          // IE6 and 7 won't return offsetWidth or offsetHeight unless it's in the body element, so we fake it.
+	          fakeBody = body || document.createElement('body');
+
+	      if ( parseInt(nodes, 10) ) {
+	          // In order not to give false positives we create a node for each test
+	          // This also allows the method to scale for unspecified uses
+	          while ( nodes-- ) {
+	              node = document.createElement('div');
+	              node.id = testnames ? testnames[nodes] : mod + (nodes + 1);
+	              div.appendChild(node);
+	          }
+	      }
+
+	      // <style> elements in IE6-9 are considered 'NoScope' elements and therefore will be removed
+	      // when injected with innerHTML. To get around this you need to prepend the 'NoScope' element
+	      // with a 'scoped' element, in our case the soft-hyphen entity as it won't mess with our measurements.
+	      // msdn.microsoft.com/en-us/library/ms533897%28VS.85%29.aspx
+	      // Documents served as xml will throw if using &shy; so use xml friendly encoded version. See issue #277
+	      style = ['&#173;','<style id="s', mod, '">', rule, '</style>'].join('');
+	      div.id = mod;
+	      // IE6 will false positive on some tests due to the style element inside the test div somehow interfering offsetHeight, so insert it into body or fakebody.
+	      // Opera will act all quirky when injecting elements in documentElement when page is served as xml, needs fakebody too. #270
+	      (body ? div : fakeBody).innerHTML += style;
+	      fakeBody.appendChild(div);
+	      if ( !body ) {
+	          //avoid crashing IE8, if background image is used
+	          fakeBody.style.background = '';
+	          //Safari 5.13/5.1.4 OSX stops loading if ::-webkit-scrollbar is used and scrollbars are visible
+	          fakeBody.style.overflow = 'hidden';
+	          docOverflow = docElement.style.overflow;
+	          docElement.style.overflow = 'hidden';
+	          docElement.appendChild(fakeBody);
+	      }
+
+	      ret = callback(div, rule);
+	      // If this is done after page load we don't want to remove the body so check if body exists
+	      if ( !body ) {
+	          fakeBody.parentNode.removeChild(fakeBody);
+	          docElement.style.overflow = docOverflow;
+	      } else {
+	          div.parentNode.removeChild(div);
+	      }
+
+	      return !!ret;
+
+	    },
+	    /*>>teststyles*/
+
+	    /*>>mq*/
+	    // adapted from matchMedia polyfill
+	    // by Scott Jehl and Paul Irish
+	    // gist.github.com/786768
+	    testMediaQuery = function( mq ) {
+
+	      var matchMedia = window.matchMedia || window.msMatchMedia;
+	      if ( matchMedia ) {
+	        return matchMedia(mq) && matchMedia(mq).matches || false;
+	      }
+
+	      var bool;
+
+	      injectElementWithStyles('@media ' + mq + ' { #' + mod + ' { position: absolute; } }', function( node ) {
+	        bool = (window.getComputedStyle ?
+	                  getComputedStyle(node, null) :
+	                  node.currentStyle)['position'] == 'absolute';
+	      });
+
+	      return bool;
+
+	     },
+	     /*>>mq*/
+
+
+	    /*>>hasevent*/
+	    //
+	    // isEventSupported determines if a given element supports the given event
+	    // kangax.github.com/iseventsupported/
+	    //
+	    // The following results are known incorrects:
+	    //   Modernizr.hasEvent("webkitTransitionEnd", elem) // false negative
+	    //   Modernizr.hasEvent("textInput") // in Webkit. github.com/Modernizr/Modernizr/issues/333
+	    //   ...
+	    isEventSupported = (function() {
+
+	      var TAGNAMES = {
+	        'select': 'input', 'change': 'input',
+	        'submit': 'form', 'reset': 'form',
+	        'error': 'img', 'load': 'img', 'abort': 'img'
+	      };
+
+	      function isEventSupported( eventName, element ) {
+
+	        element = element || document.createElement(TAGNAMES[eventName] || 'div');
+	        eventName = 'on' + eventName;
+
+	        // When using `setAttribute`, IE skips "unload", WebKit skips "unload" and "resize", whereas `in` "catches" those
+	        var isSupported = eventName in element;
+
+	        if ( !isSupported ) {
+	          // If it has no `setAttribute` (i.e. doesn't implement Node interface), try generic element
+	          if ( !element.setAttribute ) {
+	            element = document.createElement('div');
+	          }
+	          if ( element.setAttribute && element.removeAttribute ) {
+	            element.setAttribute(eventName, '');
+	            isSupported = is(element[eventName], 'function');
+
+	            // If property was created, "remove it" (by setting value to `undefined`)
+	            if ( !is(element[eventName], 'undefined') ) {
+	              element[eventName] = undefined;
+	            }
+	            element.removeAttribute(eventName);
+	          }
+	        }
+
+	        element = null;
+	        return isSupported;
+	      }
+	      return isEventSupported;
+	    })(),
+	    /*>>hasevent*/
+
+	    // TODO :: Add flag for hasownprop ? didn't last time
+
+	    // hasOwnProperty shim by kangax needed for Safari 2.0 support
+	    _hasOwnProperty = ({}).hasOwnProperty, hasOwnProp;
+
+	    if ( !is(_hasOwnProperty, 'undefined') && !is(_hasOwnProperty.call, 'undefined') ) {
+	      hasOwnProp = function (object, property) {
+	        return _hasOwnProperty.call(object, property);
+	      };
+	    }
+	    else {
+	      hasOwnProp = function (object, property) { /* yes, this can give false positives/negatives, but most of the time we don't care about those */
+	        return ((property in object) && is(object.constructor.prototype[property], 'undefined'));
+	      };
+	    }
+
+	    // Adapted from ES5-shim https://github.com/kriskowal/es5-shim/blob/master/es5-shim.js
+	    // es5.github.com/#x15.3.4.5
+
+	    if (!Function.prototype.bind) {
+	      Function.prototype.bind = function bind(that) {
+
+	        var target = this;
+
+	        if (typeof target != "function") {
+	            throw new TypeError();
+	        }
+
+	        var args = slice.call(arguments, 1),
+	            bound = function () {
+
+	            if (this instanceof bound) {
+
+	              var F = function(){};
+	              F.prototype = target.prototype;
+	              var self = new F();
+
+	              var result = target.apply(
+	                  self,
+	                  args.concat(slice.call(arguments))
+	              );
+	              if (Object(result) === result) {
+	                  return result;
+	              }
+	              return self;
+
+	            } else {
+
+	              return target.apply(
+	                  that,
+	                  args.concat(slice.call(arguments))
+	              );
+
+	            }
+
+	        };
+
+	        return bound;
+	      };
+	    }
+
+	    /**
+	     * setCss applies given styles to the Modernizr DOM node.
+	     */
+	    function setCss( str ) {
+	        mStyle.cssText = str;
+	    }
+
+	    /**
+	     * setCssAll extrapolates all vendor-specific css strings.
+	     */
+	    function setCssAll( str1, str2 ) {
+	        return setCss(prefixes.join(str1 + ';') + ( str2 || '' ));
+	    }
+
+	    /**
+	     * is returns a boolean for if typeof obj is exactly type.
+	     */
+	    function is( obj, type ) {
+	        return typeof obj === type;
+	    }
+
+	    /**
+	     * contains returns a boolean for if substr is found within str.
+	     */
+	    function contains( str, substr ) {
+	        return !!~('' + str).indexOf(substr);
+	    }
+
+	    /*>>testprop*/
+
+	    // testProps is a generic CSS / DOM property test.
+
+	    // In testing support for a given CSS property, it's legit to test:
+	    //    `elem.style[styleName] !== undefined`
+	    // If the property is supported it will return an empty string,
+	    // if unsupported it will return undefined.
+
+	    // We'll take advantage of this quick test and skip setting a style
+	    // on our modernizr element, but instead just testing undefined vs
+	    // empty string.
+
+	    // Because the testing of the CSS property names (with "-", as
+	    // opposed to the camelCase DOM properties) is non-portable and
+	    // non-standard but works in WebKit and IE (but not Gecko or Opera),
+	    // we explicitly reject properties with dashes so that authors
+	    // developing in WebKit or IE first don't end up with
+	    // browser-specific content by accident.
+
+	    function testProps( props, prefixed ) {
+	        for ( var i in props ) {
+	            var prop = props[i];
+	            if ( !contains(prop, "-") && mStyle[prop] !== undefined ) {
+	                return prefixed == 'pfx' ? prop : true;
+	            }
+	        }
+	        return false;
+	    }
+	    /*>>testprop*/
+
+	    // TODO :: add testDOMProps
+	    /**
+	     * testDOMProps is a generic DOM property test; if a browser supports
+	     *   a certain property, it won't return undefined for it.
+	     */
+	    function testDOMProps( props, obj, elem ) {
+	        for ( var i in props ) {
+	            var item = obj[props[i]];
+	            if ( item !== undefined) {
+
+	                // return the property name as a string
+	                if (elem === false) return props[i];
+
+	                // let's bind a function
+	                if (is(item, 'function')){
+	                  // default to autobind unless override
+	                  return item.bind(elem || obj);
+	                }
+
+	                // return the unbound function or obj or value
+	                return item;
+	            }
+	        }
+	        return false;
+	    }
+
+	    /*>>testallprops*/
+	    /**
+	     * testPropsAll tests a list of DOM properties we want to check against.
+	     *   We specify literally ALL possible (known and/or likely) properties on
+	     *   the element including the non-vendor prefixed one, for forward-
+	     *   compatibility.
+	     */
+	    function testPropsAll( prop, prefixed, elem ) {
+
+	        var ucProp  = prop.charAt(0).toUpperCase() + prop.slice(1),
+	            props   = (prop + ' ' + cssomPrefixes.join(ucProp + ' ') + ucProp).split(' ');
+
+	        // did they call .prefixed('boxSizing') or are we just testing a prop?
+	        if(is(prefixed, "string") || is(prefixed, "undefined")) {
+	          return testProps(props, prefixed);
+
+	        // otherwise, they called .prefixed('requestAnimationFrame', window[, elem])
+	        } else {
+	          props = (prop + ' ' + (domPrefixes).join(ucProp + ' ') + ucProp).split(' ');
+	          return testDOMProps(props, prefixed, elem);
+	        }
+	    }
+	    /*>>testallprops*/
+
+
+	    /**
+	     * Tests
+	     * -----
+	     */
+
+	    // The *new* flexbox
+	    // dev.w3.org/csswg/css3-flexbox
+
+	    tests['flexbox'] = function() {
+	      return testPropsAll('flexWrap');
+	    };
+
+	    // The *old* flexbox
+	    // www.w3.org/TR/2009/WD-css3-flexbox-20090723/
+
+	    tests['flexboxlegacy'] = function() {
+	        return testPropsAll('boxDirection');
+	    };
+
+	    // On the S60 and BB Storm, getContext exists, but always returns undefined
+	    // so we actually have to call getContext() to verify
+	    // github.com/Modernizr/Modernizr/issues/issue/97/
+
+	    tests['canvas'] = function() {
+	        var elem = document.createElement('canvas');
+	        return !!(elem.getContext && elem.getContext('2d'));
+	    };
+
+	    tests['canvastext'] = function() {
+	        return !!(Modernizr['canvas'] && is(document.createElement('canvas').getContext('2d').fillText, 'function'));
+	    };
+
+	    // webk.it/70117 is tracking a legit WebGL feature detect proposal
+
+	    // We do a soft detect which may false positive in order to avoid
+	    // an expensive context creation: bugzil.la/732441
+
+	    tests['webgl'] = function() {
+	        return !!window.WebGLRenderingContext;
+	    };
+
+	    /*
+	     * The Modernizr.touch test only indicates if the browser supports
+	     *    touch events, which does not necessarily reflect a touchscreen
+	     *    device, as evidenced by tablets running Windows 7 or, alas,
+	     *    the Palm Pre / WebOS (touch) phones.
+	     *
+	     * Additionally, Chrome (desktop) used to lie about its support on this,
+	     *    but that has since been rectified: crbug.com/36415
+	     *
+	     * We also test for Firefox 4 Multitouch Support.
+	     *
+	     * For more info, see: modernizr.github.com/Modernizr/touch.html
+	     */
+
+	    tests['touch'] = function() {
+	        var bool;
+
+	        if(('ontouchstart' in window) || window.DocumentTouch && document instanceof DocumentTouch) {
+	          bool = true;
+	        } else {
+	          injectElementWithStyles(['@media (',prefixes.join('touch-enabled),('),mod,')','{#modernizr{top:9px;position:absolute}}'].join(''), function( node ) {
+	            bool = node.offsetTop === 9;
+	          });
+	        }
+
+	        return bool;
+	    };
+
+
+	    // geolocation is often considered a trivial feature detect...
+	    // Turns out, it's quite tricky to get right:
+	    //
+	    // Using !!navigator.geolocation does two things we don't want. It:
+	    //   1. Leaks memory in IE9: github.com/Modernizr/Modernizr/issues/513
+	    //   2. Disables page caching in WebKit: webk.it/43956
+	    //
+	    // Meanwhile, in Firefox < 8, an about:config setting could expose
+	    // a false positive that would throw an exception: bugzil.la/688158
+
+	    tests['geolocation'] = function() {
+	        return 'geolocation' in navigator;
+	    };
+
+
+	    tests['postmessage'] = function() {
+	      return !!window.postMessage;
+	    };
+
+
+	    // Chrome incognito mode used to throw an exception when using openDatabase
+	    // It doesn't anymore.
+	    tests['websqldatabase'] = function() {
+	      return !!window.openDatabase;
+	    };
+
+	    // Vendors had inconsistent prefixing with the experimental Indexed DB:
+	    // - Webkit's implementation is accessible through webkitIndexedDB
+	    // - Firefox shipped moz_indexedDB before FF4b9, but since then has been mozIndexedDB
+	    // For speed, we don't test the legacy (and beta-only) indexedDB
+	    tests['indexedDB'] = function() {
+	      return !!testPropsAll("indexedDB", window);
+	    };
+
+	    // documentMode logic from YUI to filter out IE8 Compat Mode
+	    //   which false positives.
+	    tests['hashchange'] = function() {
+	      return isEventSupported('hashchange', window) && (document.documentMode === undefined || document.documentMode > 7);
+	    };
+
+	    // Per 1.6:
+	    // This used to be Modernizr.historymanagement but the longer
+	    // name has been deprecated in favor of a shorter and property-matching one.
+	    // The old API is still available in 1.6, but as of 2.0 will throw a warning,
+	    // and in the first release thereafter disappear entirely.
+	    tests['history'] = function() {
+	      return !!(window.history && history.pushState);
+	    };
+
+	    tests['draganddrop'] = function() {
+	        var div = document.createElement('div');
+	        return ('draggable' in div) || ('ondragstart' in div && 'ondrop' in div);
+	    };
+
+	    // FF3.6 was EOL'ed on 4/24/12, but the ESR version of FF10
+	    // will be supported until FF19 (2/12/13), at which time, ESR becomes FF17.
+	    // FF10 still uses prefixes, so check for it until then.
+	    // for more ESR info, see: mozilla.org/en-US/firefox/organizations/faq/
+	    tests['websockets'] = function() {
+	        return 'WebSocket' in window || 'MozWebSocket' in window;
+	    };
+
+
+	    // css-tricks.com/rgba-browser-support/
+	    tests['rgba'] = function() {
+	        // Set an rgba() color and check the returned value
+
+	        setCss('background-color:rgba(150,255,150,.5)');
+
+	        return contains(mStyle.backgroundColor, 'rgba');
+	    };
+
+	    tests['hsla'] = function() {
+	        // Same as rgba(), in fact, browsers re-map hsla() to rgba() internally,
+	        //   except IE9 who retains it as hsla
+
+	        setCss('background-color:hsla(120,40%,100%,.5)');
+
+	        return contains(mStyle.backgroundColor, 'rgba') || contains(mStyle.backgroundColor, 'hsla');
+	    };
+
+	    tests['multiplebgs'] = function() {
+	        // Setting multiple images AND a color on the background shorthand property
+	        //  and then querying the style.background property value for the number of
+	        //  occurrences of "url(" is a reliable method for detecting ACTUAL support for this!
+
+	        setCss('background:url(https://),url(https://),red url(https://)');
+
+	        // If the UA supports multiple backgrounds, there should be three occurrences
+	        //   of the string "url(" in the return value for elemStyle.background
+
+	        return (/(url\s*\(.*?){3}/).test(mStyle.background);
+	    };
+
+
+
+	    // this will false positive in Opera Mini
+	    //   github.com/Modernizr/Modernizr/issues/396
+
+	    tests['backgroundsize'] = function() {
+	        return testPropsAll('backgroundSize');
+	    };
+
+	    tests['borderimage'] = function() {
+	        return testPropsAll('borderImage');
+	    };
+
+
+	    // Super comprehensive table about all the unique implementations of
+	    // border-radius: muddledramblings.com/table-of-css3-border-radius-compliance
+
+	    tests['borderradius'] = function() {
+	        return testPropsAll('borderRadius');
+	    };
+
+	    // WebOS unfortunately false positives on this test.
+	    tests['boxshadow'] = function() {
+	        return testPropsAll('boxShadow');
+	    };
+
+	    // FF3.0 will false positive on this test
+	    tests['textshadow'] = function() {
+	        return document.createElement('div').style.textShadow === '';
+	    };
+
+
+	    tests['opacity'] = function() {
+	        // Browsers that actually have CSS Opacity implemented have done so
+	        //  according to spec, which means their return values are within the
+	        //  range of [0.0,1.0] - including the leading zero.
+
+	        setCssAll('opacity:.55');
+
+	        // The non-literal . in this regex is intentional:
+	        //   German Chrome returns this value as 0,55
+	        // github.com/Modernizr/Modernizr/issues/#issue/59/comment/516632
+	        return (/^0.55$/).test(mStyle.opacity);
+	    };
+
+
+	    // Note, Android < 4 will pass this test, but can only animate
+	    //   a single property at a time
+	    //   goo.gl/v3V4Gp
+	    tests['cssanimations'] = function() {
+	        return testPropsAll('animationName');
+	    };
+
+
+	    tests['csscolumns'] = function() {
+	        return testPropsAll('columnCount');
+	    };
+
+
+	    tests['cssgradients'] = function() {
+	        /**
+	         * For CSS Gradients syntax, please see:
+	         * webkit.org/blog/175/introducing-css-gradients/
+	         * developer.mozilla.org/en/CSS/-moz-linear-gradient
+	         * developer.mozilla.org/en/CSS/-moz-radial-gradient
+	         * dev.w3.org/csswg/css3-images/#gradients-
+	         */
+
+	        var str1 = 'background-image:',
+	            str2 = 'gradient(linear,left top,right bottom,from(#9f9),to(white));',
+	            str3 = 'linear-gradient(left top,#9f9, white);';
+
+	        setCss(
+	             // legacy webkit syntax (FIXME: remove when syntax not in use anymore)
+	              (str1 + '-webkit- '.split(' ').join(str2 + str1) +
+	             // standard syntax             // trailing 'background-image:'
+	              prefixes.join(str3 + str1)).slice(0, -str1.length)
+	        );
+
+	        return contains(mStyle.backgroundImage, 'gradient');
+	    };
+
+
+	    tests['cssreflections'] = function() {
+	        return testPropsAll('boxReflect');
+	    };
+
+
+	    tests['csstransforms'] = function() {
+	        return !!testPropsAll('transform');
+	    };
+
+
+	    tests['csstransforms3d'] = function() {
+
+	        var ret = !!testPropsAll('perspective');
+
+	        // Webkit's 3D transforms are passed off to the browser's own graphics renderer.
+	        //   It works fine in Safari on Leopard and Snow Leopard, but not in Chrome in
+	        //   some conditions. As a result, Webkit typically recognizes the syntax but
+	        //   will sometimes throw a false positive, thus we must do a more thorough check:
+	        if ( ret && 'webkitPerspective' in docElement.style ) {
+
+	          // Webkit allows this media query to succeed only if the feature is enabled.
+	          // `@media (transform-3d),(-webkit-transform-3d){ ... }`
+	          injectElementWithStyles('@media (transform-3d),(-webkit-transform-3d){#modernizr{left:9px;position:absolute;height:3px;}}', function( node, rule ) {
+	            ret = node.offsetLeft === 9 && node.offsetHeight === 3;
+	          });
+	        }
+	        return ret;
+	    };
+
+
+	    tests['csstransitions'] = function() {
+	        return testPropsAll('transition');
+	    };
+
+
+	    /*>>fontface*/
+	    // @font-face detection routine by Diego Perini
+	    // javascript.nwbox.com/CSSSupport/
+
+	    // false positives:
+	    //   WebOS github.com/Modernizr/Modernizr/issues/342
+	    //   WP7   github.com/Modernizr/Modernizr/issues/538
+	    tests['fontface'] = function() {
+	        var bool;
+
+	        injectElementWithStyles('@font-face {font-family:"font";src:url("https://")}', function( node, rule ) {
+	          var style = document.getElementById('smodernizr'),
+	              sheet = style.sheet || style.styleSheet,
+	              cssText = sheet ? (sheet.cssRules && sheet.cssRules[0] ? sheet.cssRules[0].cssText : sheet.cssText || '') : '';
+
+	          bool = /src/i.test(cssText) && cssText.indexOf(rule.split(' ')[0]) === 0;
+	        });
+
+	        return bool;
+	    };
+	    /*>>fontface*/
+
+	    // CSS generated content detection
+	    tests['generatedcontent'] = function() {
+	        var bool;
+
+	        injectElementWithStyles(['#',mod,'{font:0/0 a}#',mod,':after{content:"',smile,'";visibility:hidden;font:3px/1 a}'].join(''), function( node ) {
+	          bool = node.offsetHeight >= 3;
+	        });
+
+	        return bool;
+	    };
+
+
+
+	    // These tests evaluate support of the video/audio elements, as well as
+	    // testing what types of content they support.
+	    //
+	    // We're using the Boolean constructor here, so that we can extend the value
+	    // e.g.  Modernizr.video     // true
+	    //       Modernizr.video.ogg // 'probably'
+	    //
+	    // Codec values from : github.com/NielsLeenheer/html5test/blob/9106a8/index.html#L845
+	    //                     thx to NielsLeenheer and zcorpan
+
+	    // Note: in some older browsers, "no" was a return value instead of empty string.
+	    //   It was live in FF3.5.0 and 3.5.1, but fixed in 3.5.2
+	    //   It was also live in Safari 4.0.0 - 4.0.4, but fixed in 4.0.5
+
+	    tests['video'] = function() {
+	        var elem = document.createElement('video'),
+	            bool = false;
+
+	        // IE9 Running on Windows Server SKU can cause an exception to be thrown, bug #224
+	        try {
+	            if ( bool = !!elem.canPlayType ) {
+	                bool      = new Boolean(bool);
+	                bool.ogg  = elem.canPlayType('video/ogg; codecs="theora"')      .replace(/^no$/,'');
+
+	                // Without QuickTime, this value will be `undefined`. github.com/Modernizr/Modernizr/issues/546
+	                bool.h264 = elem.canPlayType('video/mp4; codecs="avc1.42E01E"') .replace(/^no$/,'');
+
+	                bool.webm = elem.canPlayType('video/webm; codecs="vp8, vorbis"').replace(/^no$/,'');
+	            }
+
+	        } catch(e) { }
+
+	        return bool;
+	    };
+
+	    tests['audio'] = function() {
+	        var elem = document.createElement('audio'),
+	            bool = false;
+
+	        try {
+	            if ( bool = !!elem.canPlayType ) {
+	                bool      = new Boolean(bool);
+	                bool.ogg  = elem.canPlayType('audio/ogg; codecs="vorbis"').replace(/^no$/,'');
+	                bool.mp3  = elem.canPlayType('audio/mpeg;')               .replace(/^no$/,'');
+
+	                // Mimetypes accepted:
+	                //   developer.mozilla.org/En/Media_formats_supported_by_the_audio_and_video_elements
+	                //   bit.ly/iphoneoscodecs
+	                bool.wav  = elem.canPlayType('audio/wav; codecs="1"')     .replace(/^no$/,'');
+	                bool.m4a  = ( elem.canPlayType('audio/x-m4a;')            ||
+	                              elem.canPlayType('audio/aac;'))             .replace(/^no$/,'');
+	            }
+	        } catch(e) { }
+
+	        return bool;
+	    };
+
+
+	    // In FF4, if disabled, window.localStorage should === null.
+
+	    // Normally, we could not test that directly and need to do a
+	    //   `('localStorage' in window) && ` test first because otherwise Firefox will
+	    //   throw bugzil.la/365772 if cookies are disabled
+
+	    // Also in iOS5 Private Browsing mode, attempting to use localStorage.setItem
+	    // will throw the exception:
+	    //   QUOTA_EXCEEDED_ERRROR DOM Exception 22.
+	    // Peculiarly, getItem and removeItem calls do not throw.
+
+	    // Because we are forced to try/catch this, we'll go aggressive.
+
+	    // Just FWIW: IE8 Compat mode supports these features completely:
+	    //   www.quirksmode.org/dom/html5.html
+	    // But IE8 doesn't support either with local files
+
+	    tests['localstorage'] = function() {
+	        try {
+	            localStorage.setItem(mod, mod);
+	            localStorage.removeItem(mod);
+	            return true;
+	        } catch(e) {
+	            return false;
+	        }
+	    };
+
+	    tests['sessionstorage'] = function() {
+	        try {
+	            sessionStorage.setItem(mod, mod);
+	            sessionStorage.removeItem(mod);
+	            return true;
+	        } catch(e) {
+	            return false;
+	        }
+	    };
+
+
+	    tests['webworkers'] = function() {
+	        return !!window.Worker;
+	    };
+
+
+	    tests['applicationcache'] = function() {
+	        return !!window.applicationCache;
+	    };
+
+
+	    // Thanks to Erik Dahlstrom
+	    tests['svg'] = function() {
+	        return !!document.createElementNS && !!document.createElementNS(ns.svg, 'svg').createSVGRect;
+	    };
+
+	    // specifically for SVG inline in HTML, not within XHTML
+	    // test page: paulirish.com/demo/inline-svg
+	    tests['inlinesvg'] = function() {
+	      var div = document.createElement('div');
+	      div.innerHTML = '<svg/>';
+	      return (div.firstChild && div.firstChild.namespaceURI) == ns.svg;
+	    };
+
+	    // SVG SMIL animation
+	    tests['smil'] = function() {
+	        return !!document.createElementNS && /SVGAnimate/.test(toString.call(document.createElementNS(ns.svg, 'animate')));
+	    };
+
+	    // This test is only for clip paths in SVG proper, not clip paths on HTML content
+	    // demo: srufaculty.sru.edu/david.dailey/svg/newstuff/clipPath4.svg
+
+	    // However read the comments to dig into applying SVG clippaths to HTML content here:
+	    //   github.com/Modernizr/Modernizr/issues/213#issuecomment-1149491
+	    tests['svgclippaths'] = function() {
+	        return !!document.createElementNS && /SVGClipPath/.test(toString.call(document.createElementNS(ns.svg, 'clipPath')));
+	    };
+
+	    /*>>webforms*/
+	    // input features and input types go directly onto the ret object, bypassing the tests loop.
+	    // Hold this guy to execute in a moment.
+	    function webforms() {
+	        /*>>input*/
+	        // Run through HTML5's new input attributes to see if the UA understands any.
+	        // We're using f which is the <input> element created early on
+	        // Mike Taylr has created a comprehensive resource for testing these attributes
+	        //   when applied to all input types:
+	        //   miketaylr.com/code/input-type-attr.html
+	        // spec: www.whatwg.org/specs/web-apps/current-work/multipage/the-input-element.html#input-type-attr-summary
+
+	        // Only input placeholder is tested while textarea's placeholder is not.
+	        // Currently Safari 4 and Opera 11 have support only for the input placeholder
+	        // Both tests are available in feature-detects/forms-placeholder.js
+	        Modernizr['input'] = (function( props ) {
+	            for ( var i = 0, len = props.length; i < len; i++ ) {
+	                attrs[ props[i] ] = !!(props[i] in inputElem);
+	            }
+	            if (attrs.list){
+	              // safari false positive's on datalist: webk.it/74252
+	              // see also github.com/Modernizr/Modernizr/issues/146
+	              attrs.list = !!(document.createElement('datalist') && window.HTMLDataListElement);
+	            }
+	            return attrs;
+	        })('autocomplete autofocus list placeholder max min multiple pattern required step'.split(' '));
+	        /*>>input*/
+
+	        /*>>inputtypes*/
+	        // Run through HTML5's new input types to see if the UA understands any.
+	        //   This is put behind the tests runloop because it doesn't return a
+	        //   true/false like all the other tests; instead, it returns an object
+	        //   containing each input type with its corresponding true/false value
+
+	        // Big thanks to @miketaylr for the html5 forms expertise. miketaylr.com/
+	        Modernizr['inputtypes'] = (function(props) {
+
+	            for ( var i = 0, bool, inputElemType, defaultView, len = props.length; i < len; i++ ) {
+
+	                inputElem.setAttribute('type', inputElemType = props[i]);
+	                bool = inputElem.type !== 'text';
+
+	                // We first check to see if the type we give it sticks..
+	                // If the type does, we feed it a textual value, which shouldn't be valid.
+	                // If the value doesn't stick, we know there's input sanitization which infers a custom UI
+	                if ( bool ) {
+
+	                    inputElem.value         = smile;
+	                    inputElem.style.cssText = 'position:absolute;visibility:hidden;';
+
+	                    if ( /^range$/.test(inputElemType) && inputElem.style.WebkitAppearance !== undefined ) {
+
+	                      docElement.appendChild(inputElem);
+	                      defaultView = document.defaultView;
+
+	                      // Safari 2-4 allows the smiley as a value, despite making a slider
+	                      bool =  defaultView.getComputedStyle &&
+	                              defaultView.getComputedStyle(inputElem, null).WebkitAppearance !== 'textfield' &&
+	                              // Mobile android web browser has false positive, so must
+	                              // check the height to see if the widget is actually there.
+	                              (inputElem.offsetHeight !== 0);
+
+	                      docElement.removeChild(inputElem);
+
+	                    } else if ( /^(search|tel)$/.test(inputElemType) ){
+	                      // Spec doesn't define any special parsing or detectable UI
+	                      //   behaviors so we pass these through as true
+
+	                      // Interestingly, opera fails the earlier test, so it doesn't
+	                      //  even make it here.
+
+	                    } else if ( /^(url|email)$/.test(inputElemType) ) {
+	                      // Real url and email support comes with prebaked validation.
+	                      bool = inputElem.checkValidity && inputElem.checkValidity() === false;
+
+	                    } else {
+	                      // If the upgraded input compontent rejects the :) text, we got a winner
+	                      bool = inputElem.value != smile;
+	                    }
+	                }
+
+	                inputs[ props[i] ] = !!bool;
+	            }
+	            return inputs;
+	        })('search tel url email datetime date month week time datetime-local number range color'.split(' '));
+	        /*>>inputtypes*/
+	    }
+	    /*>>webforms*/
+
+
+	    // End of test definitions
+	    // -----------------------
+
+
+
+	    // Run through all tests and detect their support in the current UA.
+	    // todo: hypothetically we could be doing an array of tests and use a basic loop here.
+	    for ( var feature in tests ) {
+	        if ( hasOwnProp(tests, feature) ) {
+	            // run the test, throw the return value into the Modernizr,
+	            //   then based on that boolean, define an appropriate className
+	            //   and push it into an array of classes we'll join later.
+	            featureName  = feature.toLowerCase();
+	            Modernizr[featureName] = tests[feature]();
+
+	            classes.push((Modernizr[featureName] ? '' : 'no-') + featureName);
+	        }
+	    }
+
+	    /*>>webforms*/
+	    // input tests need to run.
+	    Modernizr.input || webforms();
+	    /*>>webforms*/
+
+
+	    /**
+	     * addTest allows the user to define their own feature tests
+	     * the result will be added onto the Modernizr object,
+	     * as well as an appropriate className set on the html element
+	     *
+	     * @param feature - String naming the feature
+	     * @param test - Function returning true if feature is supported, false if not
+	     */
+	     Modernizr.addTest = function ( feature, test ) {
+	       if ( typeof feature == 'object' ) {
+	         for ( var key in feature ) {
+	           if ( hasOwnProp( feature, key ) ) {
+	             Modernizr.addTest( key, feature[ key ] );
+	           }
+	         }
+	       } else {
+
+	         feature = feature.toLowerCase();
+
+	         if ( Modernizr[feature] !== undefined ) {
+	           // we're going to quit if you're trying to overwrite an existing test
+	           // if we were to allow it, we'd do this:
+	           //   var re = new RegExp("\\b(no-)?" + feature + "\\b");
+	           //   docElement.className = docElement.className.replace( re, '' );
+	           // but, no rly, stuff 'em.
+	           return Modernizr;
+	         }
+
+	         test = typeof test == 'function' ? test() : test;
+
+	         if (typeof enableClasses !== "undefined" && enableClasses) {
+	           docElement.className += ' ' + (test ? '' : 'no-') + feature;
+	         }
+	         Modernizr[feature] = test;
+
+	       }
+
+	       return Modernizr; // allow chaining.
+	     };
+
+
+	    // Reset modElem.cssText to nothing to reduce memory footprint.
+	    setCss('');
+	    modElem = inputElem = null;
+
+	    /*>>shiv*/
+	    /**
+	     * @preserve HTML5 Shiv prev3.7.1 | @afarkas @jdalton @jon_neal @rem | MIT/GPL2 Licensed
+	     */
+	    ;(function(window, document) {
+	        /*jshint evil:true */
+	        /** version */
+	        var version = '3.7.0';
+
+	        /** Preset options */
+	        var options = window.html5 || {};
+
+	        /** Used to skip problem elements */
+	        var reSkip = /^<|^(?:button|map|select|textarea|object|iframe|option|optgroup)$/i;
+
+	        /** Not all elements can be cloned in IE **/
+	        var saveClones = /^(?:a|b|code|div|fieldset|h1|h2|h3|h4|h5|h6|i|label|li|ol|p|q|span|strong|style|table|tbody|td|th|tr|ul)$/i;
+
+	        /** Detect whether the browser supports default html5 styles */
+	        var supportsHtml5Styles;
+
+	        /** Name of the expando, to work with multiple documents or to re-shiv one document */
+	        var expando = '_html5shiv';
+
+	        /** The id for the the documents expando */
+	        var expanID = 0;
+
+	        /** Cached data for each document */
+	        var expandoData = {};
+
+	        /** Detect whether the browser supports unknown elements */
+	        var supportsUnknownElements;
+
+	        (function() {
+	          try {
+	            var a = document.createElement('a');
+	            a.innerHTML = '<xyz></xyz>';
+	            //if the hidden property is implemented we can assume, that the browser supports basic HTML5 Styles
+	            supportsHtml5Styles = ('hidden' in a);
+
+	            supportsUnknownElements = a.childNodes.length == 1 || (function() {
+	              // assign a false positive if unable to shiv
+	              (document.createElement)('a');
+	              var frag = document.createDocumentFragment();
+	              return (
+	                typeof frag.cloneNode == 'undefined' ||
+	                typeof frag.createDocumentFragment == 'undefined' ||
+	                typeof frag.createElement == 'undefined'
+	              );
+	            }());
+	          } catch(e) {
+	            // assign a false positive if detection fails => unable to shiv
+	            supportsHtml5Styles = true;
+	            supportsUnknownElements = true;
+	          }
+
+	        }());
+
+	        /*--------------------------------------------------------------------------*/
+
+	        /**
+	         * Creates a style sheet with the given CSS text and adds it to the document.
+	         * @private
+	         * @param {Document} ownerDocument The document.
+	         * @param {String} cssText The CSS text.
+	         * @returns {StyleSheet} The style element.
+	         */
+	        function addStyleSheet(ownerDocument, cssText) {
+	          var p = ownerDocument.createElement('p'),
+	          parent = ownerDocument.getElementsByTagName('head')[0] || ownerDocument.documentElement;
+
+	          p.innerHTML = 'x<style>' + cssText + '</style>';
+	          return parent.insertBefore(p.lastChild, parent.firstChild);
+	        }
+
+	        /**
+	         * Returns the value of `html5.elements` as an array.
+	         * @private
+	         * @returns {Array} An array of shived element node names.
+	         */
+	        function getElements() {
+	          var elements = html5.elements;
+	          return typeof elements == 'string' ? elements.split(' ') : elements;
+	        }
+
+	        /**
+	         * Returns the data associated to the given document
+	         * @private
+	         * @param {Document} ownerDocument The document.
+	         * @returns {Object} An object of data.
+	         */
+	        function getExpandoData(ownerDocument) {
+	          var data = expandoData[ownerDocument[expando]];
+	          if (!data) {
+	            data = {};
+	            expanID++;
+	            ownerDocument[expando] = expanID;
+	            expandoData[expanID] = data;
+	          }
+	          return data;
+	        }
+
+	        /**
+	         * returns a shived element for the given nodeName and document
+	         * @memberOf html5
+	         * @param {String} nodeName name of the element
+	         * @param {Document} ownerDocument The context document.
+	         * @returns {Object} The shived element.
+	         */
+	        function createElement(nodeName, ownerDocument, data){
+	          if (!ownerDocument) {
+	            ownerDocument = document;
+	          }
+	          if(supportsUnknownElements){
+	            return ownerDocument.createElement(nodeName);
+	          }
+	          if (!data) {
+	            data = getExpandoData(ownerDocument);
+	          }
+	          var node;
+
+	          if (data.cache[nodeName]) {
+	            node = data.cache[nodeName].cloneNode();
+	          } else if (saveClones.test(nodeName)) {
+	            node = (data.cache[nodeName] = data.createElem(nodeName)).cloneNode();
+	          } else {
+	            node = data.createElem(nodeName);
+	          }
+
+	          // Avoid adding some elements to fragments in IE < 9 because
+	          // * Attributes like `name` or `type` cannot be set/changed once an element
+	          //   is inserted into a document/fragment
+	          // * Link elements with `src` attributes that are inaccessible, as with
+	          //   a 403 response, will cause the tab/window to crash
+	          // * Script elements appended to fragments will execute when their `src`
+	          //   or `text` property is set
+	          return node.canHaveChildren && !reSkip.test(nodeName) && !node.tagUrn ? data.frag.appendChild(node) : node;
+	        }
+
+	        /**
+	         * returns a shived DocumentFragment for the given document
+	         * @memberOf html5
+	         * @param {Document} ownerDocument The context document.
+	         * @returns {Object} The shived DocumentFragment.
+	         */
+	        function createDocumentFragment(ownerDocument, data){
+	          if (!ownerDocument) {
+	            ownerDocument = document;
+	          }
+	          if(supportsUnknownElements){
+	            return ownerDocument.createDocumentFragment();
+	          }
+	          data = data || getExpandoData(ownerDocument);
+	          var clone = data.frag.cloneNode(),
+	          i = 0,
+	          elems = getElements(),
+	          l = elems.length;
+	          for(;i<l;i++){
+	            clone.createElement(elems[i]);
+	          }
+	          return clone;
+	        }
+
+	        /**
+	         * Shivs the `createElement` and `createDocumentFragment` methods of the document.
+	         * @private
+	         * @param {Document|DocumentFragment} ownerDocument The document.
+	         * @param {Object} data of the document.
+	         */
+	        function shivMethods(ownerDocument, data) {
+	          if (!data.cache) {
+	            data.cache = {};
+	            data.createElem = ownerDocument.createElement;
+	            data.createFrag = ownerDocument.createDocumentFragment;
+	            data.frag = data.createFrag();
+	          }
+
+
+	          ownerDocument.createElement = function(nodeName) {
+	            //abort shiv
+	            if (!html5.shivMethods) {
+	              return data.createElem(nodeName);
+	            }
+	            return createElement(nodeName, ownerDocument, data);
+	          };
+
+	          ownerDocument.createDocumentFragment = Function('h,f', 'return function(){' +
+	                                                          'var n=f.cloneNode(),c=n.createElement;' +
+	                                                          'h.shivMethods&&(' +
+	                                                          // unroll the `createElement` calls
+	                                                          getElements().join().replace(/[\w\-]+/g, function(nodeName) {
+	            data.createElem(nodeName);
+	            data.frag.createElement(nodeName);
+	            return 'c("' + nodeName + '")';
+	          }) +
+	            ');return n}'
+	                                                         )(html5, data.frag);
+	        }
+
+	        /*--------------------------------------------------------------------------*/
+
+	        /**
+	         * Shivs the given document.
+	         * @memberOf html5
+	         * @param {Document} ownerDocument The document to shiv.
+	         * @returns {Document} The shived document.
+	         */
+	        function shivDocument(ownerDocument) {
+	          if (!ownerDocument) {
+	            ownerDocument = document;
+	          }
+	          var data = getExpandoData(ownerDocument);
+
+	          if (html5.shivCSS && !supportsHtml5Styles && !data.hasCSS) {
+	            data.hasCSS = !!addStyleSheet(ownerDocument,
+	                                          // corrects block display not defined in IE6/7/8/9
+	                                          'article,aside,dialog,figcaption,figure,footer,header,hgroup,main,nav,section{display:block}' +
+	                                            // adds styling not present in IE6/7/8/9
+	                                            'mark{background:#FF0;color:#000}' +
+	                                            // hides non-rendered elements
+	                                            'template{display:none}'
+	                                         );
+	          }
+	          if (!supportsUnknownElements) {
+	            shivMethods(ownerDocument, data);
+	          }
+	          return ownerDocument;
+	        }
+
+	        /*--------------------------------------------------------------------------*/
+
+	        /**
+	         * The `html5` object is exposed so that more elements can be shived and
+	         * existing shiving can be detected on iframes.
+	         * @type Object
+	         * @example
+	         *
+	         * // options can be changed before the script is included
+	         * html5 = { 'elements': 'mark section', 'shivCSS': false, 'shivMethods': false };
+	         */
+	        var html5 = {
+
+	          /**
+	           * An array or space separated string of node names of the elements to shiv.
+	           * @memberOf html5
+	           * @type Array|String
+	           */
+	          'elements': options.elements || 'abbr article aside audio bdi canvas data datalist details dialog figcaption figure footer header hgroup main mark meter nav output progress section summary template time video',
+
+	          /**
+	           * current version of html5shiv
+	           */
+	          'version': version,
+
+	          /**
+	           * A flag to indicate that the HTML5 style sheet should be inserted.
+	           * @memberOf html5
+	           * @type Boolean
+	           */
+	          'shivCSS': (options.shivCSS !== false),
+
+	          /**
+	           * Is equal to true if a browser supports creating unknown/HTML5 elements
+	           * @memberOf html5
+	           * @type boolean
+	           */
+	          'supportsUnknownElements': supportsUnknownElements,
+
+	          /**
+	           * A flag to indicate that the document's `createElement` and `createDocumentFragment`
+	           * methods should be overwritten.
+	           * @memberOf html5
+	           * @type Boolean
+	           */
+	          'shivMethods': (options.shivMethods !== false),
+
+	          /**
+	           * A string to describe the type of `html5` object ("default" or "default print").
+	           * @memberOf html5
+	           * @type String
+	           */
+	          'type': 'default',
+
+	          // shivs the document according to the specified `html5` object options
+	          'shivDocument': shivDocument,
+
+	          //creates a shived element
+	          createElement: createElement,
+
+	          //creates a shived documentFragment
+	          createDocumentFragment: createDocumentFragment
+	        };
+
+	        /*--------------------------------------------------------------------------*/
+
+	        // expose html5
+	        window.html5 = html5;
+
+	        // shiv the document
+	        shivDocument(document);
+
+	    }(this, document));
+	    /*>>shiv*/
+
+	    // Assign private properties to the return object with prefix
+	    Modernizr._version      = version;
+
+	    // expose these for the plugin API. Look in the source for how to join() them against your input
+	    /*>>prefixes*/
+	    Modernizr._prefixes     = prefixes;
+	    /*>>prefixes*/
+	    /*>>domprefixes*/
+	    Modernizr._domPrefixes  = domPrefixes;
+	    Modernizr._cssomPrefixes  = cssomPrefixes;
+	    /*>>domprefixes*/
+
+	    /*>>mq*/
+	    // Modernizr.mq tests a given media query, live against the current state of the window
+	    // A few important notes:
+	    //   * If a browser does not support media queries at all (eg. oldIE) the mq() will always return false
+	    //   * A max-width or orientation query will be evaluated against the current state, which may change later.
+	    //   * You must specify values. Eg. If you are testing support for the min-width media query use:
+	    //       Modernizr.mq('(min-width:0)')
+	    // usage:
+	    // Modernizr.mq('only screen and (max-width:768)')
+	    Modernizr.mq            = testMediaQuery;
+	    /*>>mq*/
+
+	    /*>>hasevent*/
+	    // Modernizr.hasEvent() detects support for a given event, with an optional element to test on
+	    // Modernizr.hasEvent('gesturestart', elem)
+	    Modernizr.hasEvent      = isEventSupported;
+	    /*>>hasevent*/
+
+	    /*>>testprop*/
+	    // Modernizr.testProp() investigates whether a given style property is recognized
+	    // Note that the property names must be provided in the camelCase variant.
+	    // Modernizr.testProp('pointerEvents')
+	    Modernizr.testProp      = function(prop){
+	        return testProps([prop]);
+	    };
+	    /*>>testprop*/
+
+	    /*>>testallprops*/
+	    // Modernizr.testAllProps() investigates whether a given style property,
+	    //   or any of its vendor-prefixed variants, is recognized
+	    // Note that the property names must be provided in the camelCase variant.
+	    // Modernizr.testAllProps('boxSizing')
+	    Modernizr.testAllProps  = testPropsAll;
+	    /*>>testallprops*/
+
+
+	    /*>>teststyles*/
+	    // Modernizr.testStyles() allows you to add custom styles to the document and test an element afterwards
+	    // Modernizr.testStyles('#modernizr { position:absolute }', function(elem, rule){ ... })
+	    Modernizr.testStyles    = injectElementWithStyles;
+	    /*>>teststyles*/
+
+
+	    /*>>prefixed*/
+	    // Modernizr.prefixed() returns the prefixed or nonprefixed property name variant of your input
+	    // Modernizr.prefixed('boxSizing') // 'MozBoxSizing'
+
+	    // Properties must be passed as dom-style camelcase, rather than `box-sizing` hypentated style.
+	    // Return values will also be the camelCase variant, if you need to translate that to hypenated style use:
+	    //
+	    //     str.replace(/([A-Z])/g, function(str,m1){ return '-' + m1.toLowerCase(); }).replace(/^ms-/,'-ms-');
+
+	    // If you're trying to ascertain which transition end event to bind to, you might do something like...
+	    //
+	    //     var transEndEventNames = {
+	    //       'WebkitTransition' : 'webkitTransitionEnd',
+	    //       'MozTransition'    : 'transitionend',
+	    //       'OTransition'      : 'oTransitionEnd',
+	    //       'msTransition'     : 'MSTransitionEnd',
+	    //       'transition'       : 'transitionend'
+	    //     },
+	    //     transEndEventName = transEndEventNames[ Modernizr.prefixed('transition') ];
+
+	    Modernizr.prefixed      = function(prop, obj, elem){
+	      if(!obj) {
+	        return testPropsAll(prop, 'pfx');
+	      } else {
+	        // Testing DOM property e.g. Modernizr.prefixed('requestAnimationFrame', window) // 'mozRequestAnimationFrame'
+	        return testPropsAll(prop, obj, elem);
+	      }
+	    };
+	    /*>>prefixed*/
+
+
+	    /*>>cssclasses*/
+	    // Remove "no-js" class from <html> element, if it exists:
+	    docElement.className = docElement.className.replace(/(^|\s)no-js(\s|$)/, '$1$2') +
+
+	                            // Add the new classes to the <html> element.
+	                            (enableClasses ? ' js ' + classes.join(' ') : '');
+	    /*>>cssclasses*/
+
+	    return Modernizr;
+
+	})(this, this.document);
+
+
+	/*** EXPORTS FROM exports-loader ***/
+	module.exports = window.Modernizr}.call(window));
+
+/***/ },
+/* 6 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(jQuery) {/*
@@ -6478,4592 +11066,6 @@ module.exports =
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)))
 
 /***/ },
-/* 4 */
-/***/ function(module, exports, __webpack_require__) {
-
-	var __WEBPACK_AMD_DEFINE_RESULT__;;(function () {
-		'use strict';
-
-		/**
-		 * @preserve FastClick: polyfill to remove click delays on browsers with touch UIs.
-		 *
-		 * @codingstandard ftlabs-jsv2
-		 * @copyright The Financial Times Limited [All Rights Reserved]
-		 * @license MIT License (see LICENSE.txt)
-		 */
-
-		/*jslint browser:true, node:true*/
-		/*global define, Event, Node*/
-
-
-		/**
-		 * Instantiate fast-clicking listeners on the specified layer.
-		 *
-		 * @constructor
-		 * @param {Element} layer The layer to listen on
-		 * @param {Object} [options={}] The options to override the defaults
-		 */
-		function FastClick(layer, options) {
-			var oldOnClick;
-
-			options = options || {};
-
-			/**
-			 * Whether a click is currently being tracked.
-			 *
-			 * @type boolean
-			 */
-			this.trackingClick = false;
-
-
-			/**
-			 * Timestamp for when click tracking started.
-			 *
-			 * @type number
-			 */
-			this.trackingClickStart = 0;
-
-
-			/**
-			 * The element being tracked for a click.
-			 *
-			 * @type EventTarget
-			 */
-			this.targetElement = null;
-
-
-			/**
-			 * X-coordinate of touch start event.
-			 *
-			 * @type number
-			 */
-			this.touchStartX = 0;
-
-
-			/**
-			 * Y-coordinate of touch start event.
-			 *
-			 * @type number
-			 */
-			this.touchStartY = 0;
-
-
-			/**
-			 * ID of the last touch, retrieved from Touch.identifier.
-			 *
-			 * @type number
-			 */
-			this.lastTouchIdentifier = 0;
-
-
-			/**
-			 * Touchmove boundary, beyond which a click will be cancelled.
-			 *
-			 * @type number
-			 */
-			this.touchBoundary = options.touchBoundary || 10;
-
-
-			/**
-			 * The FastClick layer.
-			 *
-			 * @type Element
-			 */
-			this.layer = layer;
-
-			/**
-			 * The minimum time between tap(touchstart and touchend) events
-			 *
-			 * @type number
-			 */
-			this.tapDelay = options.tapDelay || 200;
-
-			/**
-			 * The maximum time for a tap
-			 *
-			 * @type number
-			 */
-			this.tapTimeout = options.tapTimeout || 700;
-
-			if (FastClick.notNeeded(layer)) {
-				return;
-			}
-
-			// Some old versions of Android don't have Function.prototype.bind
-			function bind(method, context) {
-				return function() { return method.apply(context, arguments); };
-			}
-
-
-			var methods = ['onMouse', 'onClick', 'onTouchStart', 'onTouchMove', 'onTouchEnd', 'onTouchCancel'];
-			var context = this;
-			for (var i = 0, l = methods.length; i < l; i++) {
-				context[methods[i]] = bind(context[methods[i]], context);
-			}
-
-			// Set up event handlers as required
-			if (deviceIsAndroid) {
-				layer.addEventListener('mouseover', this.onMouse, true);
-				layer.addEventListener('mousedown', this.onMouse, true);
-				layer.addEventListener('mouseup', this.onMouse, true);
-			}
-
-			layer.addEventListener('click', this.onClick, true);
-			layer.addEventListener('touchstart', this.onTouchStart, false);
-			layer.addEventListener('touchmove', this.onTouchMove, false);
-			layer.addEventListener('touchend', this.onTouchEnd, false);
-			layer.addEventListener('touchcancel', this.onTouchCancel, false);
-
-			// Hack is required for browsers that don't support Event#stopImmediatePropagation (e.g. Android 2)
-			// which is how FastClick normally stops click events bubbling to callbacks registered on the FastClick
-			// layer when they are cancelled.
-			if (!Event.prototype.stopImmediatePropagation) {
-				layer.removeEventListener = function(type, callback, capture) {
-					var rmv = Node.prototype.removeEventListener;
-					if (type === 'click') {
-						rmv.call(layer, type, callback.hijacked || callback, capture);
-					} else {
-						rmv.call(layer, type, callback, capture);
-					}
-				};
-
-				layer.addEventListener = function(type, callback, capture) {
-					var adv = Node.prototype.addEventListener;
-					if (type === 'click') {
-						adv.call(layer, type, callback.hijacked || (callback.hijacked = function(event) {
-							if (!event.propagationStopped) {
-								callback(event);
-							}
-						}), capture);
-					} else {
-						adv.call(layer, type, callback, capture);
-					}
-				};
-			}
-
-			// If a handler is already declared in the element's onclick attribute, it will be fired before
-			// FastClick's onClick handler. Fix this by pulling out the user-defined handler function and
-			// adding it as listener.
-			if (typeof layer.onclick === 'function') {
-
-				// Android browser on at least 3.2 requires a new reference to the function in layer.onclick
-				// - the old one won't work if passed to addEventListener directly.
-				oldOnClick = layer.onclick;
-				layer.addEventListener('click', function(event) {
-					oldOnClick(event);
-				}, false);
-				layer.onclick = null;
-			}
-		}
-
-		/**
-		* Windows Phone 8.1 fakes user agent string to look like Android and iPhone.
-		*
-		* @type boolean
-		*/
-		var deviceIsWindowsPhone = navigator.userAgent.indexOf("Windows Phone") >= 0;
-
-		/**
-		 * Android requires exceptions.
-		 *
-		 * @type boolean
-		 */
-		var deviceIsAndroid = navigator.userAgent.indexOf('Android') > 0 && !deviceIsWindowsPhone;
-
-
-		/**
-		 * iOS requires exceptions.
-		 *
-		 * @type boolean
-		 */
-		var deviceIsIOS = /iP(ad|hone|od)/.test(navigator.userAgent) && !deviceIsWindowsPhone;
-
-
-		/**
-		 * iOS 4 requires an exception for select elements.
-		 *
-		 * @type boolean
-		 */
-		var deviceIsIOS4 = deviceIsIOS && (/OS 4_\d(_\d)?/).test(navigator.userAgent);
-
-
-		/**
-		 * iOS 6.0-7.* requires the target element to be manually derived
-		 *
-		 * @type boolean
-		 */
-		var deviceIsIOSWithBadTarget = deviceIsIOS && (/OS [6-7]_\d/).test(navigator.userAgent);
-
-		/**
-		 * BlackBerry requires exceptions.
-		 *
-		 * @type boolean
-		 */
-		var deviceIsBlackBerry10 = navigator.userAgent.indexOf('BB10') > 0;
-
-		/**
-		 * Determine whether a given element requires a native click.
-		 *
-		 * @param {EventTarget|Element} target Target DOM element
-		 * @returns {boolean} Returns true if the element needs a native click
-		 */
-		FastClick.prototype.needsClick = function(target) {
-			switch (target.nodeName.toLowerCase()) {
-
-			// Don't send a synthetic click to disabled inputs (issue #62)
-			case 'button':
-			case 'select':
-			case 'textarea':
-				if (target.disabled) {
-					return true;
-				}
-
-				break;
-			case 'input':
-
-				// File inputs need real clicks on iOS 6 due to a browser bug (issue #68)
-				if ((deviceIsIOS && target.type === 'file') || target.disabled) {
-					return true;
-				}
-
-				break;
-			case 'label':
-			case 'iframe': // iOS8 homescreen apps can prevent events bubbling into frames
-			case 'video':
-				return true;
-			}
-
-			return (/\bneedsclick\b/).test(target.className);
-		};
-
-
-		/**
-		 * Determine whether a given element requires a call to focus to simulate click into element.
-		 *
-		 * @param {EventTarget|Element} target Target DOM element
-		 * @returns {boolean} Returns true if the element requires a call to focus to simulate native click.
-		 */
-		FastClick.prototype.needsFocus = function(target) {
-			switch (target.nodeName.toLowerCase()) {
-			case 'textarea':
-				return true;
-			case 'select':
-				return !deviceIsAndroid;
-			case 'input':
-				switch (target.type) {
-				case 'button':
-				case 'checkbox':
-				case 'file':
-				case 'image':
-				case 'radio':
-				case 'submit':
-					return false;
-				}
-
-				// No point in attempting to focus disabled inputs
-				return !target.disabled && !target.readOnly;
-			default:
-				return (/\bneedsfocus\b/).test(target.className);
-			}
-		};
-
-
-		/**
-		 * Send a click event to the specified element.
-		 *
-		 * @param {EventTarget|Element} targetElement
-		 * @param {Event} event
-		 */
-		FastClick.prototype.sendClick = function(targetElement, event) {
-			var clickEvent, touch;
-
-			// On some Android devices activeElement needs to be blurred otherwise the synthetic click will have no effect (#24)
-			if (document.activeElement && document.activeElement !== targetElement) {
-				document.activeElement.blur();
-			}
-
-			touch = event.changedTouches[0];
-
-			// Synthesise a click event, with an extra attribute so it can be tracked
-			clickEvent = document.createEvent('MouseEvents');
-			clickEvent.initMouseEvent(this.determineEventType(targetElement), true, true, window, 1, touch.screenX, touch.screenY, touch.clientX, touch.clientY, false, false, false, false, 0, null);
-			clickEvent.forwardedTouchEvent = true;
-			targetElement.dispatchEvent(clickEvent);
-		};
-
-		FastClick.prototype.determineEventType = function(targetElement) {
-
-			//Issue #159: Android Chrome Select Box does not open with a synthetic click event
-			if (deviceIsAndroid && targetElement.tagName.toLowerCase() === 'select') {
-				return 'mousedown';
-			}
-
-			return 'click';
-		};
-
-
-		/**
-		 * @param {EventTarget|Element} targetElement
-		 */
-		FastClick.prototype.focus = function(targetElement) {
-			var length;
-
-			// Issue #160: on iOS 7, some input elements (e.g. date datetime month) throw a vague TypeError on setSelectionRange. These elements don't have an integer value for the selectionStart and selectionEnd properties, but unfortunately that can't be used for detection because accessing the properties also throws a TypeError. Just check the type instead. Filed as Apple bug #15122724.
-			if (deviceIsIOS && targetElement.setSelectionRange && targetElement.type.indexOf('date') !== 0 && targetElement.type !== 'time' && targetElement.type !== 'month') {
-				length = targetElement.value.length;
-				targetElement.setSelectionRange(length, length);
-			} else {
-				targetElement.focus();
-			}
-		};
-
-
-		/**
-		 * Check whether the given target element is a child of a scrollable layer and if so, set a flag on it.
-		 *
-		 * @param {EventTarget|Element} targetElement
-		 */
-		FastClick.prototype.updateScrollParent = function(targetElement) {
-			var scrollParent, parentElement;
-
-			scrollParent = targetElement.fastClickScrollParent;
-
-			// Attempt to discover whether the target element is contained within a scrollable layer. Re-check if the
-			// target element was moved to another parent.
-			if (!scrollParent || !scrollParent.contains(targetElement)) {
-				parentElement = targetElement;
-				do {
-					if (parentElement.scrollHeight > parentElement.offsetHeight) {
-						scrollParent = parentElement;
-						targetElement.fastClickScrollParent = parentElement;
-						break;
-					}
-
-					parentElement = parentElement.parentElement;
-				} while (parentElement);
-			}
-
-			// Always update the scroll top tracker if possible.
-			if (scrollParent) {
-				scrollParent.fastClickLastScrollTop = scrollParent.scrollTop;
-			}
-		};
-
-
-		/**
-		 * @param {EventTarget} targetElement
-		 * @returns {Element|EventTarget}
-		 */
-		FastClick.prototype.getTargetElementFromEventTarget = function(eventTarget) {
-
-			// On some older browsers (notably Safari on iOS 4.1 - see issue #56) the event target may be a text node.
-			if (eventTarget.nodeType === Node.TEXT_NODE) {
-				return eventTarget.parentNode;
-			}
-
-			return eventTarget;
-		};
-
-
-		/**
-		 * On touch start, record the position and scroll offset.
-		 *
-		 * @param {Event} event
-		 * @returns {boolean}
-		 */
-		FastClick.prototype.onTouchStart = function(event) {
-			var targetElement, touch, selection;
-
-			// Ignore multiple touches, otherwise pinch-to-zoom is prevented if both fingers are on the FastClick element (issue #111).
-			if (event.targetTouches.length > 1) {
-				return true;
-			}
-
-			targetElement = this.getTargetElementFromEventTarget(event.target);
-			touch = event.targetTouches[0];
-
-			if (deviceIsIOS) {
-
-				// Only trusted events will deselect text on iOS (issue #49)
-				selection = window.getSelection();
-				if (selection.rangeCount && !selection.isCollapsed) {
-					return true;
-				}
-
-				if (!deviceIsIOS4) {
-
-					// Weird things happen on iOS when an alert or confirm dialog is opened from a click event callback (issue #23):
-					// when the user next taps anywhere else on the page, new touchstart and touchend events are dispatched
-					// with the same identifier as the touch event that previously triggered the click that triggered the alert.
-					// Sadly, there is an issue on iOS 4 that causes some normal touch events to have the same identifier as an
-					// immediately preceeding touch event (issue #52), so this fix is unavailable on that platform.
-					// Issue 120: touch.identifier is 0 when Chrome dev tools 'Emulate touch events' is set with an iOS device UA string,
-					// which causes all touch events to be ignored. As this block only applies to iOS, and iOS identifiers are always long,
-					// random integers, it's safe to to continue if the identifier is 0 here.
-					if (touch.identifier && touch.identifier === this.lastTouchIdentifier) {
-						event.preventDefault();
-						return false;
-					}
-
-					this.lastTouchIdentifier = touch.identifier;
-
-					// If the target element is a child of a scrollable layer (using -webkit-overflow-scrolling: touch) and:
-					// 1) the user does a fling scroll on the scrollable layer
-					// 2) the user stops the fling scroll with another tap
-					// then the event.target of the last 'touchend' event will be the element that was under the user's finger
-					// when the fling scroll was started, causing FastClick to send a click event to that layer - unless a check
-					// is made to ensure that a parent layer was not scrolled before sending a synthetic click (issue #42).
-					this.updateScrollParent(targetElement);
-				}
-			}
-
-			this.trackingClick = true;
-			this.trackingClickStart = event.timeStamp;
-			this.targetElement = targetElement;
-
-			this.touchStartX = touch.pageX;
-			this.touchStartY = touch.pageY;
-
-			// Prevent phantom clicks on fast double-tap (issue #36)
-			if ((event.timeStamp - this.lastClickTime) < this.tapDelay) {
-				event.preventDefault();
-			}
-
-			return true;
-		};
-
-
-		/**
-		 * Based on a touchmove event object, check whether the touch has moved past a boundary since it started.
-		 *
-		 * @param {Event} event
-		 * @returns {boolean}
-		 */
-		FastClick.prototype.touchHasMoved = function(event) {
-			var touch = event.changedTouches[0], boundary = this.touchBoundary;
-
-			if (Math.abs(touch.pageX - this.touchStartX) > boundary || Math.abs(touch.pageY - this.touchStartY) > boundary) {
-				return true;
-			}
-
-			return false;
-		};
-
-
-		/**
-		 * Update the last position.
-		 *
-		 * @param {Event} event
-		 * @returns {boolean}
-		 */
-		FastClick.prototype.onTouchMove = function(event) {
-			if (!this.trackingClick) {
-				return true;
-			}
-
-			// If the touch has moved, cancel the click tracking
-			if (this.targetElement !== this.getTargetElementFromEventTarget(event.target) || this.touchHasMoved(event)) {
-				this.trackingClick = false;
-				this.targetElement = null;
-			}
-
-			return true;
-		};
-
-
-		/**
-		 * Attempt to find the labelled control for the given label element.
-		 *
-		 * @param {EventTarget|HTMLLabelElement} labelElement
-		 * @returns {Element|null}
-		 */
-		FastClick.prototype.findControl = function(labelElement) {
-
-			// Fast path for newer browsers supporting the HTML5 control attribute
-			if (labelElement.control !== undefined) {
-				return labelElement.control;
-			}
-
-			// All browsers under test that support touch events also support the HTML5 htmlFor attribute
-			if (labelElement.htmlFor) {
-				return document.getElementById(labelElement.htmlFor);
-			}
-
-			// If no for attribute exists, attempt to retrieve the first labellable descendant element
-			// the list of which is defined here: http://www.w3.org/TR/html5/forms.html#category-label
-			return labelElement.querySelector('button, input:not([type=hidden]), keygen, meter, output, progress, select, textarea');
-		};
-
-
-		/**
-		 * On touch end, determine whether to send a click event at once.
-		 *
-		 * @param {Event} event
-		 * @returns {boolean}
-		 */
-		FastClick.prototype.onTouchEnd = function(event) {
-			var forElement, trackingClickStart, targetTagName, scrollParent, touch, targetElement = this.targetElement;
-
-			if (!this.trackingClick) {
-				return true;
-			}
-
-			// Prevent phantom clicks on fast double-tap (issue #36)
-			if ((event.timeStamp - this.lastClickTime) < this.tapDelay) {
-				this.cancelNextClick = true;
-				return true;
-			}
-
-			if ((event.timeStamp - this.trackingClickStart) > this.tapTimeout) {
-				return true;
-			}
-
-			// Reset to prevent wrong click cancel on input (issue #156).
-			this.cancelNextClick = false;
-
-			this.lastClickTime = event.timeStamp;
-
-			trackingClickStart = this.trackingClickStart;
-			this.trackingClick = false;
-			this.trackingClickStart = 0;
-
-			// On some iOS devices, the targetElement supplied with the event is invalid if the layer
-			// is performing a transition or scroll, and has to be re-detected manually. Note that
-			// for this to function correctly, it must be called *after* the event target is checked!
-			// See issue #57; also filed as rdar://13048589 .
-			if (deviceIsIOSWithBadTarget) {
-				touch = event.changedTouches[0];
-
-				// In certain cases arguments of elementFromPoint can be negative, so prevent setting targetElement to null
-				targetElement = document.elementFromPoint(touch.pageX - window.pageXOffset, touch.pageY - window.pageYOffset) || targetElement;
-				targetElement.fastClickScrollParent = this.targetElement.fastClickScrollParent;
-			}
-
-			targetTagName = targetElement.tagName.toLowerCase();
-			if (targetTagName === 'label') {
-				forElement = this.findControl(targetElement);
-				if (forElement) {
-					this.focus(targetElement);
-					if (deviceIsAndroid) {
-						return false;
-					}
-
-					targetElement = forElement;
-				}
-			} else if (this.needsFocus(targetElement)) {
-
-				// Case 1: If the touch started a while ago (best guess is 100ms based on tests for issue #36) then focus will be triggered anyway. Return early and unset the target element reference so that the subsequent click will be allowed through.
-				// Case 2: Without this exception for input elements tapped when the document is contained in an iframe, then any inputted text won't be visible even though the value attribute is updated as the user types (issue #37).
-				if ((event.timeStamp - trackingClickStart) > 100 || (deviceIsIOS && window.top !== window && targetTagName === 'input')) {
-					this.targetElement = null;
-					return false;
-				}
-
-				this.focus(targetElement);
-				this.sendClick(targetElement, event);
-
-				// Select elements need the event to go through on iOS 4, otherwise the selector menu won't open.
-				// Also this breaks opening selects when VoiceOver is active on iOS6, iOS7 (and possibly others)
-				if (!deviceIsIOS || targetTagName !== 'select') {
-					this.targetElement = null;
-					event.preventDefault();
-				}
-
-				return false;
-			}
-
-			if (deviceIsIOS && !deviceIsIOS4) {
-
-				// Don't send a synthetic click event if the target element is contained within a parent layer that was scrolled
-				// and this tap is being used to stop the scrolling (usually initiated by a fling - issue #42).
-				scrollParent = targetElement.fastClickScrollParent;
-				if (scrollParent && scrollParent.fastClickLastScrollTop !== scrollParent.scrollTop) {
-					return true;
-				}
-			}
-
-			// Prevent the actual click from going though - unless the target node is marked as requiring
-			// real clicks or if it is in the whitelist in which case only non-programmatic clicks are permitted.
-			if (!this.needsClick(targetElement)) {
-				event.preventDefault();
-				this.sendClick(targetElement, event);
-			}
-
-			return false;
-		};
-
-
-		/**
-		 * On touch cancel, stop tracking the click.
-		 *
-		 * @returns {void}
-		 */
-		FastClick.prototype.onTouchCancel = function() {
-			this.trackingClick = false;
-			this.targetElement = null;
-		};
-
-
-		/**
-		 * Determine mouse events which should be permitted.
-		 *
-		 * @param {Event} event
-		 * @returns {boolean}
-		 */
-		FastClick.prototype.onMouse = function(event) {
-
-			// If a target element was never set (because a touch event was never fired) allow the event
-			if (!this.targetElement) {
-				return true;
-			}
-
-			if (event.forwardedTouchEvent) {
-				return true;
-			}
-
-			// Programmatically generated events targeting a specific element should be permitted
-			if (!event.cancelable) {
-				return true;
-			}
-
-			// Derive and check the target element to see whether the mouse event needs to be permitted;
-			// unless explicitly enabled, prevent non-touch click events from triggering actions,
-			// to prevent ghost/doubleclicks.
-			if (!this.needsClick(this.targetElement) || this.cancelNextClick) {
-
-				// Prevent any user-added listeners declared on FastClick element from being fired.
-				if (event.stopImmediatePropagation) {
-					event.stopImmediatePropagation();
-				} else {
-
-					// Part of the hack for browsers that don't support Event#stopImmediatePropagation (e.g. Android 2)
-					event.propagationStopped = true;
-				}
-
-				// Cancel the event
-				event.stopPropagation();
-				event.preventDefault();
-
-				return false;
-			}
-
-			// If the mouse event is permitted, return true for the action to go through.
-			return true;
-		};
-
-
-		/**
-		 * On actual clicks, determine whether this is a touch-generated click, a click action occurring
-		 * naturally after a delay after a touch (which needs to be cancelled to avoid duplication), or
-		 * an actual click which should be permitted.
-		 *
-		 * @param {Event} event
-		 * @returns {boolean}
-		 */
-		FastClick.prototype.onClick = function(event) {
-			var permitted;
-
-			// It's possible for another FastClick-like library delivered with third-party code to fire a click event before FastClick does (issue #44). In that case, set the click-tracking flag back to false and return early. This will cause onTouchEnd to return early.
-			if (this.trackingClick) {
-				this.targetElement = null;
-				this.trackingClick = false;
-				return true;
-			}
-
-			// Very odd behaviour on iOS (issue #18): if a submit element is present inside a form and the user hits enter in the iOS simulator or clicks the Go button on the pop-up OS keyboard the a kind of 'fake' click event will be triggered with the submit-type input element as the target.
-			if (event.target.type === 'submit' && event.detail === 0) {
-				return true;
-			}
-
-			permitted = this.onMouse(event);
-
-			// Only unset targetElement if the click is not permitted. This will ensure that the check for !targetElement in onMouse fails and the browser's click doesn't go through.
-			if (!permitted) {
-				this.targetElement = null;
-			}
-
-			// If clicks are permitted, return true for the action to go through.
-			return permitted;
-		};
-
-
-		/**
-		 * Remove all FastClick's event listeners.
-		 *
-		 * @returns {void}
-		 */
-		FastClick.prototype.destroy = function() {
-			var layer = this.layer;
-
-			if (deviceIsAndroid) {
-				layer.removeEventListener('mouseover', this.onMouse, true);
-				layer.removeEventListener('mousedown', this.onMouse, true);
-				layer.removeEventListener('mouseup', this.onMouse, true);
-			}
-
-			layer.removeEventListener('click', this.onClick, true);
-			layer.removeEventListener('touchstart', this.onTouchStart, false);
-			layer.removeEventListener('touchmove', this.onTouchMove, false);
-			layer.removeEventListener('touchend', this.onTouchEnd, false);
-			layer.removeEventListener('touchcancel', this.onTouchCancel, false);
-		};
-
-
-		/**
-		 * Check whether FastClick is needed.
-		 *
-		 * @param {Element} layer The layer to listen on
-		 */
-		FastClick.notNeeded = function(layer) {
-			var metaViewport;
-			var chromeVersion;
-			var blackberryVersion;
-			var firefoxVersion;
-
-			// Devices that don't support touch don't need FastClick
-			if (typeof window.ontouchstart === 'undefined') {
-				return true;
-			}
-
-			// Chrome version - zero for other browsers
-			chromeVersion = +(/Chrome\/([0-9]+)/.exec(navigator.userAgent) || [,0])[1];
-
-			if (chromeVersion) {
-
-				if (deviceIsAndroid) {
-					metaViewport = document.querySelector('meta[name=viewport]');
-
-					if (metaViewport) {
-						// Chrome on Android with user-scalable="no" doesn't need FastClick (issue #89)
-						if (metaViewport.content.indexOf('user-scalable=no') !== -1) {
-							return true;
-						}
-						// Chrome 32 and above with width=device-width or less don't need FastClick
-						if (chromeVersion > 31 && document.documentElement.scrollWidth <= window.outerWidth) {
-							return true;
-						}
-					}
-
-				// Chrome desktop doesn't need FastClick (issue #15)
-				} else {
-					return true;
-				}
-			}
-
-			if (deviceIsBlackBerry10) {
-				blackberryVersion = navigator.userAgent.match(/Version\/([0-9]*)\.([0-9]*)/);
-
-				// BlackBerry 10.3+ does not require Fastclick library.
-				// https://github.com/ftlabs/fastclick/issues/251
-				if (blackberryVersion[1] >= 10 && blackberryVersion[2] >= 3) {
-					metaViewport = document.querySelector('meta[name=viewport]');
-
-					if (metaViewport) {
-						// user-scalable=no eliminates click delay.
-						if (metaViewport.content.indexOf('user-scalable=no') !== -1) {
-							return true;
-						}
-						// width=device-width (or less than device-width) eliminates click delay.
-						if (document.documentElement.scrollWidth <= window.outerWidth) {
-							return true;
-						}
-					}
-				}
-			}
-
-			// IE10 with -ms-touch-action: none or manipulation, which disables double-tap-to-zoom (issue #97)
-			if (layer.style.msTouchAction === 'none' || layer.style.touchAction === 'manipulation') {
-				return true;
-			}
-
-			// Firefox version - zero for other browsers
-			firefoxVersion = +(/Firefox\/([0-9]+)/.exec(navigator.userAgent) || [,0])[1];
-
-			if (firefoxVersion >= 27) {
-				// Firefox 27+ does not have tap delay if the content is not zoomable - https://bugzilla.mozilla.org/show_bug.cgi?id=922896
-
-				metaViewport = document.querySelector('meta[name=viewport]');
-				if (metaViewport && (metaViewport.content.indexOf('user-scalable=no') !== -1 || document.documentElement.scrollWidth <= window.outerWidth)) {
-					return true;
-				}
-			}
-
-			// IE11: prefixed -ms-touch-action is no longer supported and it's recomended to use non-prefixed version
-			// http://msdn.microsoft.com/en-us/library/windows/apps/Hh767313.aspx
-			if (layer.style.touchAction === 'none' || layer.style.touchAction === 'manipulation') {
-				return true;
-			}
-
-			return false;
-		};
-
-
-		/**
-		 * Factory method for creating a FastClick object
-		 *
-		 * @param {Element} layer The layer to listen on
-		 * @param {Object} [options={}] The options to override the defaults
-		 */
-		FastClick.attach = function(layer, options) {
-			return new FastClick(layer, options);
-		};
-
-
-		if (true) {
-
-			// AMD. Register as an anonymous module.
-			!(__WEBPACK_AMD_DEFINE_RESULT__ = function() {
-				return FastClick;
-			}.call(exports, __webpack_require__, exports, module), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
-		} else if (typeof module !== 'undefined' && module.exports) {
-			module.exports = FastClick.attach;
-			module.exports.FastClick = FastClick;
-		} else {
-			window.FastClick = FastClick;
-		}
-	}());
-
-
-/***/ },
-/* 5 */
-/***/ function(module, exports) {
-
-	/*** IMPORTS FROM imports-loader ***/
-	(function() {
-
-	/*!
-	 * Modernizr v2.8.3
-	 * www.modernizr.com
-	 *
-	 * Copyright (c) Faruk Ates, Paul Irish, Alex Sexton
-	 * Available under the BSD and MIT licenses: www.modernizr.com/license/
-	 */
-
-	/*
-	 * Modernizr tests which native CSS3 and HTML5 features are available in
-	 * the current UA and makes the results available to you in two ways:
-	 * as properties on a global Modernizr object, and as classes on the
-	 * <html> element. This information allows you to progressively enhance
-	 * your pages with a granular level of control over the experience.
-	 *
-	 * Modernizr has an optional (not included) conditional resource loader
-	 * called Modernizr.load(), based on Yepnope.js (yepnopejs.com).
-	 * To get a build that includes Modernizr.load(), as well as choosing
-	 * which tests to include, go to www.modernizr.com/download/
-	 *
-	 * Authors        Faruk Ates, Paul Irish, Alex Sexton
-	 * Contributors   Ryan Seddon, Ben Alman
-	 */
-
-	window.Modernizr = (function( window, document, undefined ) {
-
-	    var version = '2.8.3',
-
-	    Modernizr = {},
-
-	    /*>>cssclasses*/
-	    // option for enabling the HTML classes to be added
-	    enableClasses = true,
-	    /*>>cssclasses*/
-
-	    docElement = document.documentElement,
-
-	    /**
-	     * Create our "modernizr" element that we do most feature tests on.
-	     */
-	    mod = 'modernizr',
-	    modElem = document.createElement(mod),
-	    mStyle = modElem.style,
-
-	    /**
-	     * Create the input element for various Web Forms feature tests.
-	     */
-	    inputElem /*>>inputelem*/ = document.createElement('input') /*>>inputelem*/ ,
-
-	    /*>>smile*/
-	    smile = ':)',
-	    /*>>smile*/
-
-	    toString = {}.toString,
-
-	    // TODO :: make the prefixes more granular
-	    /*>>prefixes*/
-	    // List of property values to set for css tests. See ticket #21
-	    prefixes = ' -webkit- -moz- -o- -ms- '.split(' '),
-	    /*>>prefixes*/
-
-	    /*>>domprefixes*/
-	    // Following spec is to expose vendor-specific style properties as:
-	    //   elem.style.WebkitBorderRadius
-	    // and the following would be incorrect:
-	    //   elem.style.webkitBorderRadius
-
-	    // Webkit ghosts their properties in lowercase but Opera & Moz do not.
-	    // Microsoft uses a lowercase `ms` instead of the correct `Ms` in IE8+
-	    //   erik.eae.net/archives/2008/03/10/21.48.10/
-
-	    // More here: github.com/Modernizr/Modernizr/issues/issue/21
-	    omPrefixes = 'Webkit Moz O ms',
-
-	    cssomPrefixes = omPrefixes.split(' '),
-
-	    domPrefixes = omPrefixes.toLowerCase().split(' '),
-	    /*>>domprefixes*/
-
-	    /*>>ns*/
-	    ns = {'svg': 'http://www.w3.org/2000/svg'},
-	    /*>>ns*/
-
-	    tests = {},
-	    inputs = {},
-	    attrs = {},
-
-	    classes = [],
-
-	    slice = classes.slice,
-
-	    featureName, // used in testing loop
-
-
-	    /*>>teststyles*/
-	    // Inject element with style element and some CSS rules
-	    injectElementWithStyles = function( rule, callback, nodes, testnames ) {
-
-	      var style, ret, node, docOverflow,
-	          div = document.createElement('div'),
-	          // After page load injecting a fake body doesn't work so check if body exists
-	          body = document.body,
-	          // IE6 and 7 won't return offsetWidth or offsetHeight unless it's in the body element, so we fake it.
-	          fakeBody = body || document.createElement('body');
-
-	      if ( parseInt(nodes, 10) ) {
-	          // In order not to give false positives we create a node for each test
-	          // This also allows the method to scale for unspecified uses
-	          while ( nodes-- ) {
-	              node = document.createElement('div');
-	              node.id = testnames ? testnames[nodes] : mod + (nodes + 1);
-	              div.appendChild(node);
-	          }
-	      }
-
-	      // <style> elements in IE6-9 are considered 'NoScope' elements and therefore will be removed
-	      // when injected with innerHTML. To get around this you need to prepend the 'NoScope' element
-	      // with a 'scoped' element, in our case the soft-hyphen entity as it won't mess with our measurements.
-	      // msdn.microsoft.com/en-us/library/ms533897%28VS.85%29.aspx
-	      // Documents served as xml will throw if using &shy; so use xml friendly encoded version. See issue #277
-	      style = ['&#173;','<style id="s', mod, '">', rule, '</style>'].join('');
-	      div.id = mod;
-	      // IE6 will false positive on some tests due to the style element inside the test div somehow interfering offsetHeight, so insert it into body or fakebody.
-	      // Opera will act all quirky when injecting elements in documentElement when page is served as xml, needs fakebody too. #270
-	      (body ? div : fakeBody).innerHTML += style;
-	      fakeBody.appendChild(div);
-	      if ( !body ) {
-	          //avoid crashing IE8, if background image is used
-	          fakeBody.style.background = '';
-	          //Safari 5.13/5.1.4 OSX stops loading if ::-webkit-scrollbar is used and scrollbars are visible
-	          fakeBody.style.overflow = 'hidden';
-	          docOverflow = docElement.style.overflow;
-	          docElement.style.overflow = 'hidden';
-	          docElement.appendChild(fakeBody);
-	      }
-
-	      ret = callback(div, rule);
-	      // If this is done after page load we don't want to remove the body so check if body exists
-	      if ( !body ) {
-	          fakeBody.parentNode.removeChild(fakeBody);
-	          docElement.style.overflow = docOverflow;
-	      } else {
-	          div.parentNode.removeChild(div);
-	      }
-
-	      return !!ret;
-
-	    },
-	    /*>>teststyles*/
-
-	    /*>>mq*/
-	    // adapted from matchMedia polyfill
-	    // by Scott Jehl and Paul Irish
-	    // gist.github.com/786768
-	    testMediaQuery = function( mq ) {
-
-	      var matchMedia = window.matchMedia || window.msMatchMedia;
-	      if ( matchMedia ) {
-	        return matchMedia(mq) && matchMedia(mq).matches || false;
-	      }
-
-	      var bool;
-
-	      injectElementWithStyles('@media ' + mq + ' { #' + mod + ' { position: absolute; } }', function( node ) {
-	        bool = (window.getComputedStyle ?
-	                  getComputedStyle(node, null) :
-	                  node.currentStyle)['position'] == 'absolute';
-	      });
-
-	      return bool;
-
-	     },
-	     /*>>mq*/
-
-
-	    /*>>hasevent*/
-	    //
-	    // isEventSupported determines if a given element supports the given event
-	    // kangax.github.com/iseventsupported/
-	    //
-	    // The following results are known incorrects:
-	    //   Modernizr.hasEvent("webkitTransitionEnd", elem) // false negative
-	    //   Modernizr.hasEvent("textInput") // in Webkit. github.com/Modernizr/Modernizr/issues/333
-	    //   ...
-	    isEventSupported = (function() {
-
-	      var TAGNAMES = {
-	        'select': 'input', 'change': 'input',
-	        'submit': 'form', 'reset': 'form',
-	        'error': 'img', 'load': 'img', 'abort': 'img'
-	      };
-
-	      function isEventSupported( eventName, element ) {
-
-	        element = element || document.createElement(TAGNAMES[eventName] || 'div');
-	        eventName = 'on' + eventName;
-
-	        // When using `setAttribute`, IE skips "unload", WebKit skips "unload" and "resize", whereas `in` "catches" those
-	        var isSupported = eventName in element;
-
-	        if ( !isSupported ) {
-	          // If it has no `setAttribute` (i.e. doesn't implement Node interface), try generic element
-	          if ( !element.setAttribute ) {
-	            element = document.createElement('div');
-	          }
-	          if ( element.setAttribute && element.removeAttribute ) {
-	            element.setAttribute(eventName, '');
-	            isSupported = is(element[eventName], 'function');
-
-	            // If property was created, "remove it" (by setting value to `undefined`)
-	            if ( !is(element[eventName], 'undefined') ) {
-	              element[eventName] = undefined;
-	            }
-	            element.removeAttribute(eventName);
-	          }
-	        }
-
-	        element = null;
-	        return isSupported;
-	      }
-	      return isEventSupported;
-	    })(),
-	    /*>>hasevent*/
-
-	    // TODO :: Add flag for hasownprop ? didn't last time
-
-	    // hasOwnProperty shim by kangax needed for Safari 2.0 support
-	    _hasOwnProperty = ({}).hasOwnProperty, hasOwnProp;
-
-	    if ( !is(_hasOwnProperty, 'undefined') && !is(_hasOwnProperty.call, 'undefined') ) {
-	      hasOwnProp = function (object, property) {
-	        return _hasOwnProperty.call(object, property);
-	      };
-	    }
-	    else {
-	      hasOwnProp = function (object, property) { /* yes, this can give false positives/negatives, but most of the time we don't care about those */
-	        return ((property in object) && is(object.constructor.prototype[property], 'undefined'));
-	      };
-	    }
-
-	    // Adapted from ES5-shim https://github.com/kriskowal/es5-shim/blob/master/es5-shim.js
-	    // es5.github.com/#x15.3.4.5
-
-	    if (!Function.prototype.bind) {
-	      Function.prototype.bind = function bind(that) {
-
-	        var target = this;
-
-	        if (typeof target != "function") {
-	            throw new TypeError();
-	        }
-
-	        var args = slice.call(arguments, 1),
-	            bound = function () {
-
-	            if (this instanceof bound) {
-
-	              var F = function(){};
-	              F.prototype = target.prototype;
-	              var self = new F();
-
-	              var result = target.apply(
-	                  self,
-	                  args.concat(slice.call(arguments))
-	              );
-	              if (Object(result) === result) {
-	                  return result;
-	              }
-	              return self;
-
-	            } else {
-
-	              return target.apply(
-	                  that,
-	                  args.concat(slice.call(arguments))
-	              );
-
-	            }
-
-	        };
-
-	        return bound;
-	      };
-	    }
-
-	    /**
-	     * setCss applies given styles to the Modernizr DOM node.
-	     */
-	    function setCss( str ) {
-	        mStyle.cssText = str;
-	    }
-
-	    /**
-	     * setCssAll extrapolates all vendor-specific css strings.
-	     */
-	    function setCssAll( str1, str2 ) {
-	        return setCss(prefixes.join(str1 + ';') + ( str2 || '' ));
-	    }
-
-	    /**
-	     * is returns a boolean for if typeof obj is exactly type.
-	     */
-	    function is( obj, type ) {
-	        return typeof obj === type;
-	    }
-
-	    /**
-	     * contains returns a boolean for if substr is found within str.
-	     */
-	    function contains( str, substr ) {
-	        return !!~('' + str).indexOf(substr);
-	    }
-
-	    /*>>testprop*/
-
-	    // testProps is a generic CSS / DOM property test.
-
-	    // In testing support for a given CSS property, it's legit to test:
-	    //    `elem.style[styleName] !== undefined`
-	    // If the property is supported it will return an empty string,
-	    // if unsupported it will return undefined.
-
-	    // We'll take advantage of this quick test and skip setting a style
-	    // on our modernizr element, but instead just testing undefined vs
-	    // empty string.
-
-	    // Because the testing of the CSS property names (with "-", as
-	    // opposed to the camelCase DOM properties) is non-portable and
-	    // non-standard but works in WebKit and IE (but not Gecko or Opera),
-	    // we explicitly reject properties with dashes so that authors
-	    // developing in WebKit or IE first don't end up with
-	    // browser-specific content by accident.
-
-	    function testProps( props, prefixed ) {
-	        for ( var i in props ) {
-	            var prop = props[i];
-	            if ( !contains(prop, "-") && mStyle[prop] !== undefined ) {
-	                return prefixed == 'pfx' ? prop : true;
-	            }
-	        }
-	        return false;
-	    }
-	    /*>>testprop*/
-
-	    // TODO :: add testDOMProps
-	    /**
-	     * testDOMProps is a generic DOM property test; if a browser supports
-	     *   a certain property, it won't return undefined for it.
-	     */
-	    function testDOMProps( props, obj, elem ) {
-	        for ( var i in props ) {
-	            var item = obj[props[i]];
-	            if ( item !== undefined) {
-
-	                // return the property name as a string
-	                if (elem === false) return props[i];
-
-	                // let's bind a function
-	                if (is(item, 'function')){
-	                  // default to autobind unless override
-	                  return item.bind(elem || obj);
-	                }
-
-	                // return the unbound function or obj or value
-	                return item;
-	            }
-	        }
-	        return false;
-	    }
-
-	    /*>>testallprops*/
-	    /**
-	     * testPropsAll tests a list of DOM properties we want to check against.
-	     *   We specify literally ALL possible (known and/or likely) properties on
-	     *   the element including the non-vendor prefixed one, for forward-
-	     *   compatibility.
-	     */
-	    function testPropsAll( prop, prefixed, elem ) {
-
-	        var ucProp  = prop.charAt(0).toUpperCase() + prop.slice(1),
-	            props   = (prop + ' ' + cssomPrefixes.join(ucProp + ' ') + ucProp).split(' ');
-
-	        // did they call .prefixed('boxSizing') or are we just testing a prop?
-	        if(is(prefixed, "string") || is(prefixed, "undefined")) {
-	          return testProps(props, prefixed);
-
-	        // otherwise, they called .prefixed('requestAnimationFrame', window[, elem])
-	        } else {
-	          props = (prop + ' ' + (domPrefixes).join(ucProp + ' ') + ucProp).split(' ');
-	          return testDOMProps(props, prefixed, elem);
-	        }
-	    }
-	    /*>>testallprops*/
-
-
-	    /**
-	     * Tests
-	     * -----
-	     */
-
-	    // The *new* flexbox
-	    // dev.w3.org/csswg/css3-flexbox
-
-	    tests['flexbox'] = function() {
-	      return testPropsAll('flexWrap');
-	    };
-
-	    // The *old* flexbox
-	    // www.w3.org/TR/2009/WD-css3-flexbox-20090723/
-
-	    tests['flexboxlegacy'] = function() {
-	        return testPropsAll('boxDirection');
-	    };
-
-	    // On the S60 and BB Storm, getContext exists, but always returns undefined
-	    // so we actually have to call getContext() to verify
-	    // github.com/Modernizr/Modernizr/issues/issue/97/
-
-	    tests['canvas'] = function() {
-	        var elem = document.createElement('canvas');
-	        return !!(elem.getContext && elem.getContext('2d'));
-	    };
-
-	    tests['canvastext'] = function() {
-	        return !!(Modernizr['canvas'] && is(document.createElement('canvas').getContext('2d').fillText, 'function'));
-	    };
-
-	    // webk.it/70117 is tracking a legit WebGL feature detect proposal
-
-	    // We do a soft detect which may false positive in order to avoid
-	    // an expensive context creation: bugzil.la/732441
-
-	    tests['webgl'] = function() {
-	        return !!window.WebGLRenderingContext;
-	    };
-
-	    /*
-	     * The Modernizr.touch test only indicates if the browser supports
-	     *    touch events, which does not necessarily reflect a touchscreen
-	     *    device, as evidenced by tablets running Windows 7 or, alas,
-	     *    the Palm Pre / WebOS (touch) phones.
-	     *
-	     * Additionally, Chrome (desktop) used to lie about its support on this,
-	     *    but that has since been rectified: crbug.com/36415
-	     *
-	     * We also test for Firefox 4 Multitouch Support.
-	     *
-	     * For more info, see: modernizr.github.com/Modernizr/touch.html
-	     */
-
-	    tests['touch'] = function() {
-	        var bool;
-
-	        if(('ontouchstart' in window) || window.DocumentTouch && document instanceof DocumentTouch) {
-	          bool = true;
-	        } else {
-	          injectElementWithStyles(['@media (',prefixes.join('touch-enabled),('),mod,')','{#modernizr{top:9px;position:absolute}}'].join(''), function( node ) {
-	            bool = node.offsetTop === 9;
-	          });
-	        }
-
-	        return bool;
-	    };
-
-
-	    // geolocation is often considered a trivial feature detect...
-	    // Turns out, it's quite tricky to get right:
-	    //
-	    // Using !!navigator.geolocation does two things we don't want. It:
-	    //   1. Leaks memory in IE9: github.com/Modernizr/Modernizr/issues/513
-	    //   2. Disables page caching in WebKit: webk.it/43956
-	    //
-	    // Meanwhile, in Firefox < 8, an about:config setting could expose
-	    // a false positive that would throw an exception: bugzil.la/688158
-
-	    tests['geolocation'] = function() {
-	        return 'geolocation' in navigator;
-	    };
-
-
-	    tests['postmessage'] = function() {
-	      return !!window.postMessage;
-	    };
-
-
-	    // Chrome incognito mode used to throw an exception when using openDatabase
-	    // It doesn't anymore.
-	    tests['websqldatabase'] = function() {
-	      return !!window.openDatabase;
-	    };
-
-	    // Vendors had inconsistent prefixing with the experimental Indexed DB:
-	    // - Webkit's implementation is accessible through webkitIndexedDB
-	    // - Firefox shipped moz_indexedDB before FF4b9, but since then has been mozIndexedDB
-	    // For speed, we don't test the legacy (and beta-only) indexedDB
-	    tests['indexedDB'] = function() {
-	      return !!testPropsAll("indexedDB", window);
-	    };
-
-	    // documentMode logic from YUI to filter out IE8 Compat Mode
-	    //   which false positives.
-	    tests['hashchange'] = function() {
-	      return isEventSupported('hashchange', window) && (document.documentMode === undefined || document.documentMode > 7);
-	    };
-
-	    // Per 1.6:
-	    // This used to be Modernizr.historymanagement but the longer
-	    // name has been deprecated in favor of a shorter and property-matching one.
-	    // The old API is still available in 1.6, but as of 2.0 will throw a warning,
-	    // and in the first release thereafter disappear entirely.
-	    tests['history'] = function() {
-	      return !!(window.history && history.pushState);
-	    };
-
-	    tests['draganddrop'] = function() {
-	        var div = document.createElement('div');
-	        return ('draggable' in div) || ('ondragstart' in div && 'ondrop' in div);
-	    };
-
-	    // FF3.6 was EOL'ed on 4/24/12, but the ESR version of FF10
-	    // will be supported until FF19 (2/12/13), at which time, ESR becomes FF17.
-	    // FF10 still uses prefixes, so check for it until then.
-	    // for more ESR info, see: mozilla.org/en-US/firefox/organizations/faq/
-	    tests['websockets'] = function() {
-	        return 'WebSocket' in window || 'MozWebSocket' in window;
-	    };
-
-
-	    // css-tricks.com/rgba-browser-support/
-	    tests['rgba'] = function() {
-	        // Set an rgba() color and check the returned value
-
-	        setCss('background-color:rgba(150,255,150,.5)');
-
-	        return contains(mStyle.backgroundColor, 'rgba');
-	    };
-
-	    tests['hsla'] = function() {
-	        // Same as rgba(), in fact, browsers re-map hsla() to rgba() internally,
-	        //   except IE9 who retains it as hsla
-
-	        setCss('background-color:hsla(120,40%,100%,.5)');
-
-	        return contains(mStyle.backgroundColor, 'rgba') || contains(mStyle.backgroundColor, 'hsla');
-	    };
-
-	    tests['multiplebgs'] = function() {
-	        // Setting multiple images AND a color on the background shorthand property
-	        //  and then querying the style.background property value for the number of
-	        //  occurrences of "url(" is a reliable method for detecting ACTUAL support for this!
-
-	        setCss('background:url(https://),url(https://),red url(https://)');
-
-	        // If the UA supports multiple backgrounds, there should be three occurrences
-	        //   of the string "url(" in the return value for elemStyle.background
-
-	        return (/(url\s*\(.*?){3}/).test(mStyle.background);
-	    };
-
-
-
-	    // this will false positive in Opera Mini
-	    //   github.com/Modernizr/Modernizr/issues/396
-
-	    tests['backgroundsize'] = function() {
-	        return testPropsAll('backgroundSize');
-	    };
-
-	    tests['borderimage'] = function() {
-	        return testPropsAll('borderImage');
-	    };
-
-
-	    // Super comprehensive table about all the unique implementations of
-	    // border-radius: muddledramblings.com/table-of-css3-border-radius-compliance
-
-	    tests['borderradius'] = function() {
-	        return testPropsAll('borderRadius');
-	    };
-
-	    // WebOS unfortunately false positives on this test.
-	    tests['boxshadow'] = function() {
-	        return testPropsAll('boxShadow');
-	    };
-
-	    // FF3.0 will false positive on this test
-	    tests['textshadow'] = function() {
-	        return document.createElement('div').style.textShadow === '';
-	    };
-
-
-	    tests['opacity'] = function() {
-	        // Browsers that actually have CSS Opacity implemented have done so
-	        //  according to spec, which means their return values are within the
-	        //  range of [0.0,1.0] - including the leading zero.
-
-	        setCssAll('opacity:.55');
-
-	        // The non-literal . in this regex is intentional:
-	        //   German Chrome returns this value as 0,55
-	        // github.com/Modernizr/Modernizr/issues/#issue/59/comment/516632
-	        return (/^0.55$/).test(mStyle.opacity);
-	    };
-
-
-	    // Note, Android < 4 will pass this test, but can only animate
-	    //   a single property at a time
-	    //   goo.gl/v3V4Gp
-	    tests['cssanimations'] = function() {
-	        return testPropsAll('animationName');
-	    };
-
-
-	    tests['csscolumns'] = function() {
-	        return testPropsAll('columnCount');
-	    };
-
-
-	    tests['cssgradients'] = function() {
-	        /**
-	         * For CSS Gradients syntax, please see:
-	         * webkit.org/blog/175/introducing-css-gradients/
-	         * developer.mozilla.org/en/CSS/-moz-linear-gradient
-	         * developer.mozilla.org/en/CSS/-moz-radial-gradient
-	         * dev.w3.org/csswg/css3-images/#gradients-
-	         */
-
-	        var str1 = 'background-image:',
-	            str2 = 'gradient(linear,left top,right bottom,from(#9f9),to(white));',
-	            str3 = 'linear-gradient(left top,#9f9, white);';
-
-	        setCss(
-	             // legacy webkit syntax (FIXME: remove when syntax not in use anymore)
-	              (str1 + '-webkit- '.split(' ').join(str2 + str1) +
-	             // standard syntax             // trailing 'background-image:'
-	              prefixes.join(str3 + str1)).slice(0, -str1.length)
-	        );
-
-	        return contains(mStyle.backgroundImage, 'gradient');
-	    };
-
-
-	    tests['cssreflections'] = function() {
-	        return testPropsAll('boxReflect');
-	    };
-
-
-	    tests['csstransforms'] = function() {
-	        return !!testPropsAll('transform');
-	    };
-
-
-	    tests['csstransforms3d'] = function() {
-
-	        var ret = !!testPropsAll('perspective');
-
-	        // Webkit's 3D transforms are passed off to the browser's own graphics renderer.
-	        //   It works fine in Safari on Leopard and Snow Leopard, but not in Chrome in
-	        //   some conditions. As a result, Webkit typically recognizes the syntax but
-	        //   will sometimes throw a false positive, thus we must do a more thorough check:
-	        if ( ret && 'webkitPerspective' in docElement.style ) {
-
-	          // Webkit allows this media query to succeed only if the feature is enabled.
-	          // `@media (transform-3d),(-webkit-transform-3d){ ... }`
-	          injectElementWithStyles('@media (transform-3d),(-webkit-transform-3d){#modernizr{left:9px;position:absolute;height:3px;}}', function( node, rule ) {
-	            ret = node.offsetLeft === 9 && node.offsetHeight === 3;
-	          });
-	        }
-	        return ret;
-	    };
-
-
-	    tests['csstransitions'] = function() {
-	        return testPropsAll('transition');
-	    };
-
-
-	    /*>>fontface*/
-	    // @font-face detection routine by Diego Perini
-	    // javascript.nwbox.com/CSSSupport/
-
-	    // false positives:
-	    //   WebOS github.com/Modernizr/Modernizr/issues/342
-	    //   WP7   github.com/Modernizr/Modernizr/issues/538
-	    tests['fontface'] = function() {
-	        var bool;
-
-	        injectElementWithStyles('@font-face {font-family:"font";src:url("https://")}', function( node, rule ) {
-	          var style = document.getElementById('smodernizr'),
-	              sheet = style.sheet || style.styleSheet,
-	              cssText = sheet ? (sheet.cssRules && sheet.cssRules[0] ? sheet.cssRules[0].cssText : sheet.cssText || '') : '';
-
-	          bool = /src/i.test(cssText) && cssText.indexOf(rule.split(' ')[0]) === 0;
-	        });
-
-	        return bool;
-	    };
-	    /*>>fontface*/
-
-	    // CSS generated content detection
-	    tests['generatedcontent'] = function() {
-	        var bool;
-
-	        injectElementWithStyles(['#',mod,'{font:0/0 a}#',mod,':after{content:"',smile,'";visibility:hidden;font:3px/1 a}'].join(''), function( node ) {
-	          bool = node.offsetHeight >= 3;
-	        });
-
-	        return bool;
-	    };
-
-
-
-	    // These tests evaluate support of the video/audio elements, as well as
-	    // testing what types of content they support.
-	    //
-	    // We're using the Boolean constructor here, so that we can extend the value
-	    // e.g.  Modernizr.video     // true
-	    //       Modernizr.video.ogg // 'probably'
-	    //
-	    // Codec values from : github.com/NielsLeenheer/html5test/blob/9106a8/index.html#L845
-	    //                     thx to NielsLeenheer and zcorpan
-
-	    // Note: in some older browsers, "no" was a return value instead of empty string.
-	    //   It was live in FF3.5.0 and 3.5.1, but fixed in 3.5.2
-	    //   It was also live in Safari 4.0.0 - 4.0.4, but fixed in 4.0.5
-
-	    tests['video'] = function() {
-	        var elem = document.createElement('video'),
-	            bool = false;
-
-	        // IE9 Running on Windows Server SKU can cause an exception to be thrown, bug #224
-	        try {
-	            if ( bool = !!elem.canPlayType ) {
-	                bool      = new Boolean(bool);
-	                bool.ogg  = elem.canPlayType('video/ogg; codecs="theora"')      .replace(/^no$/,'');
-
-	                // Without QuickTime, this value will be `undefined`. github.com/Modernizr/Modernizr/issues/546
-	                bool.h264 = elem.canPlayType('video/mp4; codecs="avc1.42E01E"') .replace(/^no$/,'');
-
-	                bool.webm = elem.canPlayType('video/webm; codecs="vp8, vorbis"').replace(/^no$/,'');
-	            }
-
-	        } catch(e) { }
-
-	        return bool;
-	    };
-
-	    tests['audio'] = function() {
-	        var elem = document.createElement('audio'),
-	            bool = false;
-
-	        try {
-	            if ( bool = !!elem.canPlayType ) {
-	                bool      = new Boolean(bool);
-	                bool.ogg  = elem.canPlayType('audio/ogg; codecs="vorbis"').replace(/^no$/,'');
-	                bool.mp3  = elem.canPlayType('audio/mpeg;')               .replace(/^no$/,'');
-
-	                // Mimetypes accepted:
-	                //   developer.mozilla.org/En/Media_formats_supported_by_the_audio_and_video_elements
-	                //   bit.ly/iphoneoscodecs
-	                bool.wav  = elem.canPlayType('audio/wav; codecs="1"')     .replace(/^no$/,'');
-	                bool.m4a  = ( elem.canPlayType('audio/x-m4a;')            ||
-	                              elem.canPlayType('audio/aac;'))             .replace(/^no$/,'');
-	            }
-	        } catch(e) { }
-
-	        return bool;
-	    };
-
-
-	    // In FF4, if disabled, window.localStorage should === null.
-
-	    // Normally, we could not test that directly and need to do a
-	    //   `('localStorage' in window) && ` test first because otherwise Firefox will
-	    //   throw bugzil.la/365772 if cookies are disabled
-
-	    // Also in iOS5 Private Browsing mode, attempting to use localStorage.setItem
-	    // will throw the exception:
-	    //   QUOTA_EXCEEDED_ERRROR DOM Exception 22.
-	    // Peculiarly, getItem and removeItem calls do not throw.
-
-	    // Because we are forced to try/catch this, we'll go aggressive.
-
-	    // Just FWIW: IE8 Compat mode supports these features completely:
-	    //   www.quirksmode.org/dom/html5.html
-	    // But IE8 doesn't support either with local files
-
-	    tests['localstorage'] = function() {
-	        try {
-	            localStorage.setItem(mod, mod);
-	            localStorage.removeItem(mod);
-	            return true;
-	        } catch(e) {
-	            return false;
-	        }
-	    };
-
-	    tests['sessionstorage'] = function() {
-	        try {
-	            sessionStorage.setItem(mod, mod);
-	            sessionStorage.removeItem(mod);
-	            return true;
-	        } catch(e) {
-	            return false;
-	        }
-	    };
-
-
-	    tests['webworkers'] = function() {
-	        return !!window.Worker;
-	    };
-
-
-	    tests['applicationcache'] = function() {
-	        return !!window.applicationCache;
-	    };
-
-
-	    // Thanks to Erik Dahlstrom
-	    tests['svg'] = function() {
-	        return !!document.createElementNS && !!document.createElementNS(ns.svg, 'svg').createSVGRect;
-	    };
-
-	    // specifically for SVG inline in HTML, not within XHTML
-	    // test page: paulirish.com/demo/inline-svg
-	    tests['inlinesvg'] = function() {
-	      var div = document.createElement('div');
-	      div.innerHTML = '<svg/>';
-	      return (div.firstChild && div.firstChild.namespaceURI) == ns.svg;
-	    };
-
-	    // SVG SMIL animation
-	    tests['smil'] = function() {
-	        return !!document.createElementNS && /SVGAnimate/.test(toString.call(document.createElementNS(ns.svg, 'animate')));
-	    };
-
-	    // This test is only for clip paths in SVG proper, not clip paths on HTML content
-	    // demo: srufaculty.sru.edu/david.dailey/svg/newstuff/clipPath4.svg
-
-	    // However read the comments to dig into applying SVG clippaths to HTML content here:
-	    //   github.com/Modernizr/Modernizr/issues/213#issuecomment-1149491
-	    tests['svgclippaths'] = function() {
-	        return !!document.createElementNS && /SVGClipPath/.test(toString.call(document.createElementNS(ns.svg, 'clipPath')));
-	    };
-
-	    /*>>webforms*/
-	    // input features and input types go directly onto the ret object, bypassing the tests loop.
-	    // Hold this guy to execute in a moment.
-	    function webforms() {
-	        /*>>input*/
-	        // Run through HTML5's new input attributes to see if the UA understands any.
-	        // We're using f which is the <input> element created early on
-	        // Mike Taylr has created a comprehensive resource for testing these attributes
-	        //   when applied to all input types:
-	        //   miketaylr.com/code/input-type-attr.html
-	        // spec: www.whatwg.org/specs/web-apps/current-work/multipage/the-input-element.html#input-type-attr-summary
-
-	        // Only input placeholder is tested while textarea's placeholder is not.
-	        // Currently Safari 4 and Opera 11 have support only for the input placeholder
-	        // Both tests are available in feature-detects/forms-placeholder.js
-	        Modernizr['input'] = (function( props ) {
-	            for ( var i = 0, len = props.length; i < len; i++ ) {
-	                attrs[ props[i] ] = !!(props[i] in inputElem);
-	            }
-	            if (attrs.list){
-	              // safari false positive's on datalist: webk.it/74252
-	              // see also github.com/Modernizr/Modernizr/issues/146
-	              attrs.list = !!(document.createElement('datalist') && window.HTMLDataListElement);
-	            }
-	            return attrs;
-	        })('autocomplete autofocus list placeholder max min multiple pattern required step'.split(' '));
-	        /*>>input*/
-
-	        /*>>inputtypes*/
-	        // Run through HTML5's new input types to see if the UA understands any.
-	        //   This is put behind the tests runloop because it doesn't return a
-	        //   true/false like all the other tests; instead, it returns an object
-	        //   containing each input type with its corresponding true/false value
-
-	        // Big thanks to @miketaylr for the html5 forms expertise. miketaylr.com/
-	        Modernizr['inputtypes'] = (function(props) {
-
-	            for ( var i = 0, bool, inputElemType, defaultView, len = props.length; i < len; i++ ) {
-
-	                inputElem.setAttribute('type', inputElemType = props[i]);
-	                bool = inputElem.type !== 'text';
-
-	                // We first check to see if the type we give it sticks..
-	                // If the type does, we feed it a textual value, which shouldn't be valid.
-	                // If the value doesn't stick, we know there's input sanitization which infers a custom UI
-	                if ( bool ) {
-
-	                    inputElem.value         = smile;
-	                    inputElem.style.cssText = 'position:absolute;visibility:hidden;';
-
-	                    if ( /^range$/.test(inputElemType) && inputElem.style.WebkitAppearance !== undefined ) {
-
-	                      docElement.appendChild(inputElem);
-	                      defaultView = document.defaultView;
-
-	                      // Safari 2-4 allows the smiley as a value, despite making a slider
-	                      bool =  defaultView.getComputedStyle &&
-	                              defaultView.getComputedStyle(inputElem, null).WebkitAppearance !== 'textfield' &&
-	                              // Mobile android web browser has false positive, so must
-	                              // check the height to see if the widget is actually there.
-	                              (inputElem.offsetHeight !== 0);
-
-	                      docElement.removeChild(inputElem);
-
-	                    } else if ( /^(search|tel)$/.test(inputElemType) ){
-	                      // Spec doesn't define any special parsing or detectable UI
-	                      //   behaviors so we pass these through as true
-
-	                      // Interestingly, opera fails the earlier test, so it doesn't
-	                      //  even make it here.
-
-	                    } else if ( /^(url|email)$/.test(inputElemType) ) {
-	                      // Real url and email support comes with prebaked validation.
-	                      bool = inputElem.checkValidity && inputElem.checkValidity() === false;
-
-	                    } else {
-	                      // If the upgraded input compontent rejects the :) text, we got a winner
-	                      bool = inputElem.value != smile;
-	                    }
-	                }
-
-	                inputs[ props[i] ] = !!bool;
-	            }
-	            return inputs;
-	        })('search tel url email datetime date month week time datetime-local number range color'.split(' '));
-	        /*>>inputtypes*/
-	    }
-	    /*>>webforms*/
-
-
-	    // End of test definitions
-	    // -----------------------
-
-
-
-	    // Run through all tests and detect their support in the current UA.
-	    // todo: hypothetically we could be doing an array of tests and use a basic loop here.
-	    for ( var feature in tests ) {
-	        if ( hasOwnProp(tests, feature) ) {
-	            // run the test, throw the return value into the Modernizr,
-	            //   then based on that boolean, define an appropriate className
-	            //   and push it into an array of classes we'll join later.
-	            featureName  = feature.toLowerCase();
-	            Modernizr[featureName] = tests[feature]();
-
-	            classes.push((Modernizr[featureName] ? '' : 'no-') + featureName);
-	        }
-	    }
-
-	    /*>>webforms*/
-	    // input tests need to run.
-	    Modernizr.input || webforms();
-	    /*>>webforms*/
-
-
-	    /**
-	     * addTest allows the user to define their own feature tests
-	     * the result will be added onto the Modernizr object,
-	     * as well as an appropriate className set on the html element
-	     *
-	     * @param feature - String naming the feature
-	     * @param test - Function returning true if feature is supported, false if not
-	     */
-	     Modernizr.addTest = function ( feature, test ) {
-	       if ( typeof feature == 'object' ) {
-	         for ( var key in feature ) {
-	           if ( hasOwnProp( feature, key ) ) {
-	             Modernizr.addTest( key, feature[ key ] );
-	           }
-	         }
-	       } else {
-
-	         feature = feature.toLowerCase();
-
-	         if ( Modernizr[feature] !== undefined ) {
-	           // we're going to quit if you're trying to overwrite an existing test
-	           // if we were to allow it, we'd do this:
-	           //   var re = new RegExp("\\b(no-)?" + feature + "\\b");
-	           //   docElement.className = docElement.className.replace( re, '' );
-	           // but, no rly, stuff 'em.
-	           return Modernizr;
-	         }
-
-	         test = typeof test == 'function' ? test() : test;
-
-	         if (typeof enableClasses !== "undefined" && enableClasses) {
-	           docElement.className += ' ' + (test ? '' : 'no-') + feature;
-	         }
-	         Modernizr[feature] = test;
-
-	       }
-
-	       return Modernizr; // allow chaining.
-	     };
-
-
-	    // Reset modElem.cssText to nothing to reduce memory footprint.
-	    setCss('');
-	    modElem = inputElem = null;
-
-	    /*>>shiv*/
-	    /**
-	     * @preserve HTML5 Shiv prev3.7.1 | @afarkas @jdalton @jon_neal @rem | MIT/GPL2 Licensed
-	     */
-	    ;(function(window, document) {
-	        /*jshint evil:true */
-	        /** version */
-	        var version = '3.7.0';
-
-	        /** Preset options */
-	        var options = window.html5 || {};
-
-	        /** Used to skip problem elements */
-	        var reSkip = /^<|^(?:button|map|select|textarea|object|iframe|option|optgroup)$/i;
-
-	        /** Not all elements can be cloned in IE **/
-	        var saveClones = /^(?:a|b|code|div|fieldset|h1|h2|h3|h4|h5|h6|i|label|li|ol|p|q|span|strong|style|table|tbody|td|th|tr|ul)$/i;
-
-	        /** Detect whether the browser supports default html5 styles */
-	        var supportsHtml5Styles;
-
-	        /** Name of the expando, to work with multiple documents or to re-shiv one document */
-	        var expando = '_html5shiv';
-
-	        /** The id for the the documents expando */
-	        var expanID = 0;
-
-	        /** Cached data for each document */
-	        var expandoData = {};
-
-	        /** Detect whether the browser supports unknown elements */
-	        var supportsUnknownElements;
-
-	        (function() {
-	          try {
-	            var a = document.createElement('a');
-	            a.innerHTML = '<xyz></xyz>';
-	            //if the hidden property is implemented we can assume, that the browser supports basic HTML5 Styles
-	            supportsHtml5Styles = ('hidden' in a);
-
-	            supportsUnknownElements = a.childNodes.length == 1 || (function() {
-	              // assign a false positive if unable to shiv
-	              (document.createElement)('a');
-	              var frag = document.createDocumentFragment();
-	              return (
-	                typeof frag.cloneNode == 'undefined' ||
-	                typeof frag.createDocumentFragment == 'undefined' ||
-	                typeof frag.createElement == 'undefined'
-	              );
-	            }());
-	          } catch(e) {
-	            // assign a false positive if detection fails => unable to shiv
-	            supportsHtml5Styles = true;
-	            supportsUnknownElements = true;
-	          }
-
-	        }());
-
-	        /*--------------------------------------------------------------------------*/
-
-	        /**
-	         * Creates a style sheet with the given CSS text and adds it to the document.
-	         * @private
-	         * @param {Document} ownerDocument The document.
-	         * @param {String} cssText The CSS text.
-	         * @returns {StyleSheet} The style element.
-	         */
-	        function addStyleSheet(ownerDocument, cssText) {
-	          var p = ownerDocument.createElement('p'),
-	          parent = ownerDocument.getElementsByTagName('head')[0] || ownerDocument.documentElement;
-
-	          p.innerHTML = 'x<style>' + cssText + '</style>';
-	          return parent.insertBefore(p.lastChild, parent.firstChild);
-	        }
-
-	        /**
-	         * Returns the value of `html5.elements` as an array.
-	         * @private
-	         * @returns {Array} An array of shived element node names.
-	         */
-	        function getElements() {
-	          var elements = html5.elements;
-	          return typeof elements == 'string' ? elements.split(' ') : elements;
-	        }
-
-	        /**
-	         * Returns the data associated to the given document
-	         * @private
-	         * @param {Document} ownerDocument The document.
-	         * @returns {Object} An object of data.
-	         */
-	        function getExpandoData(ownerDocument) {
-	          var data = expandoData[ownerDocument[expando]];
-	          if (!data) {
-	            data = {};
-	            expanID++;
-	            ownerDocument[expando] = expanID;
-	            expandoData[expanID] = data;
-	          }
-	          return data;
-	        }
-
-	        /**
-	         * returns a shived element for the given nodeName and document
-	         * @memberOf html5
-	         * @param {String} nodeName name of the element
-	         * @param {Document} ownerDocument The context document.
-	         * @returns {Object} The shived element.
-	         */
-	        function createElement(nodeName, ownerDocument, data){
-	          if (!ownerDocument) {
-	            ownerDocument = document;
-	          }
-	          if(supportsUnknownElements){
-	            return ownerDocument.createElement(nodeName);
-	          }
-	          if (!data) {
-	            data = getExpandoData(ownerDocument);
-	          }
-	          var node;
-
-	          if (data.cache[nodeName]) {
-	            node = data.cache[nodeName].cloneNode();
-	          } else if (saveClones.test(nodeName)) {
-	            node = (data.cache[nodeName] = data.createElem(nodeName)).cloneNode();
-	          } else {
-	            node = data.createElem(nodeName);
-	          }
-
-	          // Avoid adding some elements to fragments in IE < 9 because
-	          // * Attributes like `name` or `type` cannot be set/changed once an element
-	          //   is inserted into a document/fragment
-	          // * Link elements with `src` attributes that are inaccessible, as with
-	          //   a 403 response, will cause the tab/window to crash
-	          // * Script elements appended to fragments will execute when their `src`
-	          //   or `text` property is set
-	          return node.canHaveChildren && !reSkip.test(nodeName) && !node.tagUrn ? data.frag.appendChild(node) : node;
-	        }
-
-	        /**
-	         * returns a shived DocumentFragment for the given document
-	         * @memberOf html5
-	         * @param {Document} ownerDocument The context document.
-	         * @returns {Object} The shived DocumentFragment.
-	         */
-	        function createDocumentFragment(ownerDocument, data){
-	          if (!ownerDocument) {
-	            ownerDocument = document;
-	          }
-	          if(supportsUnknownElements){
-	            return ownerDocument.createDocumentFragment();
-	          }
-	          data = data || getExpandoData(ownerDocument);
-	          var clone = data.frag.cloneNode(),
-	          i = 0,
-	          elems = getElements(),
-	          l = elems.length;
-	          for(;i<l;i++){
-	            clone.createElement(elems[i]);
-	          }
-	          return clone;
-	        }
-
-	        /**
-	         * Shivs the `createElement` and `createDocumentFragment` methods of the document.
-	         * @private
-	         * @param {Document|DocumentFragment} ownerDocument The document.
-	         * @param {Object} data of the document.
-	         */
-	        function shivMethods(ownerDocument, data) {
-	          if (!data.cache) {
-	            data.cache = {};
-	            data.createElem = ownerDocument.createElement;
-	            data.createFrag = ownerDocument.createDocumentFragment;
-	            data.frag = data.createFrag();
-	          }
-
-
-	          ownerDocument.createElement = function(nodeName) {
-	            //abort shiv
-	            if (!html5.shivMethods) {
-	              return data.createElem(nodeName);
-	            }
-	            return createElement(nodeName, ownerDocument, data);
-	          };
-
-	          ownerDocument.createDocumentFragment = Function('h,f', 'return function(){' +
-	                                                          'var n=f.cloneNode(),c=n.createElement;' +
-	                                                          'h.shivMethods&&(' +
-	                                                          // unroll the `createElement` calls
-	                                                          getElements().join().replace(/[\w\-]+/g, function(nodeName) {
-	            data.createElem(nodeName);
-	            data.frag.createElement(nodeName);
-	            return 'c("' + nodeName + '")';
-	          }) +
-	            ');return n}'
-	                                                         )(html5, data.frag);
-	        }
-
-	        /*--------------------------------------------------------------------------*/
-
-	        /**
-	         * Shivs the given document.
-	         * @memberOf html5
-	         * @param {Document} ownerDocument The document to shiv.
-	         * @returns {Document} The shived document.
-	         */
-	        function shivDocument(ownerDocument) {
-	          if (!ownerDocument) {
-	            ownerDocument = document;
-	          }
-	          var data = getExpandoData(ownerDocument);
-
-	          if (html5.shivCSS && !supportsHtml5Styles && !data.hasCSS) {
-	            data.hasCSS = !!addStyleSheet(ownerDocument,
-	                                          // corrects block display not defined in IE6/7/8/9
-	                                          'article,aside,dialog,figcaption,figure,footer,header,hgroup,main,nav,section{display:block}' +
-	                                            // adds styling not present in IE6/7/8/9
-	                                            'mark{background:#FF0;color:#000}' +
-	                                            // hides non-rendered elements
-	                                            'template{display:none}'
-	                                         );
-	          }
-	          if (!supportsUnknownElements) {
-	            shivMethods(ownerDocument, data);
-	          }
-	          return ownerDocument;
-	        }
-
-	        /*--------------------------------------------------------------------------*/
-
-	        /**
-	         * The `html5` object is exposed so that more elements can be shived and
-	         * existing shiving can be detected on iframes.
-	         * @type Object
-	         * @example
-	         *
-	         * // options can be changed before the script is included
-	         * html5 = { 'elements': 'mark section', 'shivCSS': false, 'shivMethods': false };
-	         */
-	        var html5 = {
-
-	          /**
-	           * An array or space separated string of node names of the elements to shiv.
-	           * @memberOf html5
-	           * @type Array|String
-	           */
-	          'elements': options.elements || 'abbr article aside audio bdi canvas data datalist details dialog figcaption figure footer header hgroup main mark meter nav output progress section summary template time video',
-
-	          /**
-	           * current version of html5shiv
-	           */
-	          'version': version,
-
-	          /**
-	           * A flag to indicate that the HTML5 style sheet should be inserted.
-	           * @memberOf html5
-	           * @type Boolean
-	           */
-	          'shivCSS': (options.shivCSS !== false),
-
-	          /**
-	           * Is equal to true if a browser supports creating unknown/HTML5 elements
-	           * @memberOf html5
-	           * @type boolean
-	           */
-	          'supportsUnknownElements': supportsUnknownElements,
-
-	          /**
-	           * A flag to indicate that the document's `createElement` and `createDocumentFragment`
-	           * methods should be overwritten.
-	           * @memberOf html5
-	           * @type Boolean
-	           */
-	          'shivMethods': (options.shivMethods !== false),
-
-	          /**
-	           * A string to describe the type of `html5` object ("default" or "default print").
-	           * @memberOf html5
-	           * @type String
-	           */
-	          'type': 'default',
-
-	          // shivs the document according to the specified `html5` object options
-	          'shivDocument': shivDocument,
-
-	          //creates a shived element
-	          createElement: createElement,
-
-	          //creates a shived documentFragment
-	          createDocumentFragment: createDocumentFragment
-	        };
-
-	        /*--------------------------------------------------------------------------*/
-
-	        // expose html5
-	        window.html5 = html5;
-
-	        // shiv the document
-	        shivDocument(document);
-
-	    }(this, document));
-	    /*>>shiv*/
-
-	    // Assign private properties to the return object with prefix
-	    Modernizr._version      = version;
-
-	    // expose these for the plugin API. Look in the source for how to join() them against your input
-	    /*>>prefixes*/
-	    Modernizr._prefixes     = prefixes;
-	    /*>>prefixes*/
-	    /*>>domprefixes*/
-	    Modernizr._domPrefixes  = domPrefixes;
-	    Modernizr._cssomPrefixes  = cssomPrefixes;
-	    /*>>domprefixes*/
-
-	    /*>>mq*/
-	    // Modernizr.mq tests a given media query, live against the current state of the window
-	    // A few important notes:
-	    //   * If a browser does not support media queries at all (eg. oldIE) the mq() will always return false
-	    //   * A max-width or orientation query will be evaluated against the current state, which may change later.
-	    //   * You must specify values. Eg. If you are testing support for the min-width media query use:
-	    //       Modernizr.mq('(min-width:0)')
-	    // usage:
-	    // Modernizr.mq('only screen and (max-width:768)')
-	    Modernizr.mq            = testMediaQuery;
-	    /*>>mq*/
-
-	    /*>>hasevent*/
-	    // Modernizr.hasEvent() detects support for a given event, with an optional element to test on
-	    // Modernizr.hasEvent('gesturestart', elem)
-	    Modernizr.hasEvent      = isEventSupported;
-	    /*>>hasevent*/
-
-	    /*>>testprop*/
-	    // Modernizr.testProp() investigates whether a given style property is recognized
-	    // Note that the property names must be provided in the camelCase variant.
-	    // Modernizr.testProp('pointerEvents')
-	    Modernizr.testProp      = function(prop){
-	        return testProps([prop]);
-	    };
-	    /*>>testprop*/
-
-	    /*>>testallprops*/
-	    // Modernizr.testAllProps() investigates whether a given style property,
-	    //   or any of its vendor-prefixed variants, is recognized
-	    // Note that the property names must be provided in the camelCase variant.
-	    // Modernizr.testAllProps('boxSizing')
-	    Modernizr.testAllProps  = testPropsAll;
-	    /*>>testallprops*/
-
-
-	    /*>>teststyles*/
-	    // Modernizr.testStyles() allows you to add custom styles to the document and test an element afterwards
-	    // Modernizr.testStyles('#modernizr { position:absolute }', function(elem, rule){ ... })
-	    Modernizr.testStyles    = injectElementWithStyles;
-	    /*>>teststyles*/
-
-
-	    /*>>prefixed*/
-	    // Modernizr.prefixed() returns the prefixed or nonprefixed property name variant of your input
-	    // Modernizr.prefixed('boxSizing') // 'MozBoxSizing'
-
-	    // Properties must be passed as dom-style camelcase, rather than `box-sizing` hypentated style.
-	    // Return values will also be the camelCase variant, if you need to translate that to hypenated style use:
-	    //
-	    //     str.replace(/([A-Z])/g, function(str,m1){ return '-' + m1.toLowerCase(); }).replace(/^ms-/,'-ms-');
-
-	    // If you're trying to ascertain which transition end event to bind to, you might do something like...
-	    //
-	    //     var transEndEventNames = {
-	    //       'WebkitTransition' : 'webkitTransitionEnd',
-	    //       'MozTransition'    : 'transitionend',
-	    //       'OTransition'      : 'oTransitionEnd',
-	    //       'msTransition'     : 'MSTransitionEnd',
-	    //       'transition'       : 'transitionend'
-	    //     },
-	    //     transEndEventName = transEndEventNames[ Modernizr.prefixed('transition') ];
-
-	    Modernizr.prefixed      = function(prop, obj, elem){
-	      if(!obj) {
-	        return testPropsAll(prop, 'pfx');
-	      } else {
-	        // Testing DOM property e.g. Modernizr.prefixed('requestAnimationFrame', window) // 'mozRequestAnimationFrame'
-	        return testPropsAll(prop, obj, elem);
-	      }
-	    };
-	    /*>>prefixed*/
-
-
-	    /*>>cssclasses*/
-	    // Remove "no-js" class from <html> element, if it exists:
-	    docElement.className = docElement.className.replace(/(^|\s)no-js(\s|$)/, '$1$2') +
-
-	                            // Add the new classes to the <html> element.
-	                            (enableClasses ? ' js ' + classes.join(' ') : '');
-	    /*>>cssclasses*/
-
-	    return Modernizr;
-
-	})(this, this.document);
-
-
-	/*** EXPORTS FROM exports-loader ***/
-	module.exports = window.Modernizr}.call(window));
-
-/***/ },
-/* 6 */
-/***/ function(module, exports, __webpack_require__) {
-
-	/* WEBPACK VAR INJECTION */(function(__webpack_provided_window_dot_jQuery) {/*! noUiSlider - 7.0.10 - 2014-12-27 14:50:46 */
-
-	(function(){
-
-		'use strict';
-
-	var
-	/** @const */ FormatOptions = [
-		'decimals',
-		'thousand',
-		'mark',
-		'prefix',
-		'postfix',
-		'encoder',
-		'decoder',
-		'negativeBefore',
-		'negative',
-		'edit',
-		'undo'
-	];
-
-	// General
-
-		// Reverse a string
-		function strReverse ( a ) {
-			return a.split('').reverse().join('');
-		}
-
-		// Check if a string starts with a specified prefix.
-		function strStartsWith ( input, match ) {
-			return input.substring(0, match.length) === match;
-		}
-
-		// Check is a string ends in a specified postfix.
-		function strEndsWith ( input, match ) {
-			return input.slice(-1 * match.length) === match;
-		}
-
-		// Throw an error if formatting options are incompatible.
-		function throwEqualError( F, a, b ) {
-			if ( (F[a] || F[b]) && (F[a] === F[b]) ) {
-				throw new Error(a);
-			}
-		}
-
-		// Check if a number is finite and not NaN
-		function isValidNumber ( input ) {
-			return typeof input === 'number' && isFinite( input );
-		}
-
-		// Provide rounding-accurate toFixed method.
-		function toFixed ( value, decimals ) {
-			var scale = Math.pow(10, decimals);
-			return ( Math.round(value * scale) / scale).toFixed( decimals );
-		}
-
-
-	// Formatting
-
-		// Accept a number as input, output formatted string.
-		function formatTo ( decimals, thousand, mark, prefix, postfix, encoder, decoder, negativeBefore, negative, edit, undo, input ) {
-
-			var originalInput = input, inputIsNegative, inputPieces, inputBase, inputDecimals = '', output = '';
-
-			// Apply user encoder to the input.
-			// Expected outcome: number.
-			if ( encoder ) {
-				input = encoder(input);
-			}
-
-			// Stop if no valid number was provided, the number is infinite or NaN.
-			if ( !isValidNumber(input) ) {
-				return false;
-			}
-
-			// Rounding away decimals might cause a value of -0
-			// when using very small ranges. Remove those cases.
-			if ( decimals !== false && parseFloat(input.toFixed(decimals)) === 0 ) {
-				input = 0;
-			}
-
-			// Formatting is done on absolute numbers,
-			// decorated by an optional negative symbol.
-			if ( input < 0 ) {
-				inputIsNegative = true;
-				input = Math.abs(input);
-			}
-
-			// Reduce the number of decimals to the specified option.
-			if ( decimals !== false ) {
-				input = toFixed( input, decimals );
-			}
-
-			// Transform the number into a string, so it can be split.
-			input = input.toString();
-
-			// Break the number on the decimal separator.
-			if ( input.indexOf('.') !== -1 ) {
-				inputPieces = input.split('.');
-
-				inputBase = inputPieces[0];
-
-				if ( mark ) {
-					inputDecimals = mark + inputPieces[1];
-				}
-
-			} else {
-
-			// If it isn't split, the entire number will do.
-				inputBase = input;
-			}
-
-			// Group numbers in sets of three.
-			if ( thousand ) {
-				inputBase = strReverse(inputBase).match(/.{1,3}/g);
-				inputBase = strReverse(inputBase.join( strReverse( thousand ) ));
-			}
-
-			// If the number is negative, prefix with negation symbol.
-			if ( inputIsNegative && negativeBefore ) {
-				output += negativeBefore;
-			}
-
-			// Prefix the number
-			if ( prefix ) {
-				output += prefix;
-			}
-
-			// Normal negative option comes after the prefix. Defaults to '-'.
-			if ( inputIsNegative && negative ) {
-				output += negative;
-			}
-
-			// Append the actual number.
-			output += inputBase;
-			output += inputDecimals;
-
-			// Apply the postfix.
-			if ( postfix ) {
-				output += postfix;
-			}
-
-			// Run the output through a user-specified post-formatter.
-			if ( edit ) {
-				output = edit ( output, originalInput );
-			}
-
-			// All done.
-			return output;
-		}
-
-		// Accept a sting as input, output decoded number.
-		function formatFrom ( decimals, thousand, mark, prefix, postfix, encoder, decoder, negativeBefore, negative, edit, undo, input ) {
-
-			var originalInput = input, inputIsNegative, output = '';
-
-			// User defined pre-decoder. Result must be a non empty string.
-			if ( undo ) {
-				input = undo(input);
-			}
-
-			// Test the input. Can't be empty.
-			if ( !input || typeof input !== 'string' ) {
-				return false;
-			}
-
-			// If the string starts with the negativeBefore value: remove it.
-			// Remember is was there, the number is negative.
-			if ( negativeBefore && strStartsWith(input, negativeBefore) ) {
-				input = input.replace(negativeBefore, '');
-				inputIsNegative = true;
-			}
-
-			// Repeat the same procedure for the prefix.
-			if ( prefix && strStartsWith(input, prefix) ) {
-				input = input.replace(prefix, '');
-			}
-
-			// And again for negative.
-			if ( negative && strStartsWith(input, negative) ) {
-				input = input.replace(negative, '');
-				inputIsNegative = true;
-			}
-
-			// Remove the postfix.
-			// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/slice
-			if ( postfix && strEndsWith(input, postfix) ) {
-				input = input.slice(0, -1 * postfix.length);
-			}
-
-			// Remove the thousand grouping.
-			if ( thousand ) {
-				input = input.split(thousand).join('');
-			}
-
-			// Set the decimal separator back to period.
-			if ( mark ) {
-				input = input.replace(mark, '.');
-			}
-
-			// Prepend the negative symbol.
-			if ( inputIsNegative ) {
-				output += '-';
-			}
-
-			// Add the number
-			output += input;
-
-			// Trim all non-numeric characters (allow '.' and '-');
-			output = output.replace(/[^0-9\.\-.]/g, '');
-
-			// The value contains no parse-able number.
-			if ( output === '' ) {
-				return false;
-			}
-
-			// Covert to number.
-			output = Number(output);
-
-			// Run the user-specified post-decoder.
-			if ( decoder ) {
-				output = decoder(output);
-			}
-
-			// Check is the output is valid, otherwise: return false.
-			if ( !isValidNumber(output) ) {
-				return false;
-			}
-
-			return output;
-		}
-
-
-	// Framework
-
-		// Validate formatting options
-		function validate ( inputOptions ) {
-
-			var i, optionName, optionValue,
-				filteredOptions = {};
-
-			for ( i = 0; i < FormatOptions.length; i+=1 ) {
-
-				optionName = FormatOptions[i];
-				optionValue = inputOptions[optionName];
-
-				if ( optionValue === undefined ) {
-
-					// Only default if negativeBefore isn't set.
-					if ( optionName === 'negative' && !filteredOptions.negativeBefore ) {
-						filteredOptions[optionName] = '-';
-					// Don't set a default for mark when 'thousand' is set.
-					} else if ( optionName === 'mark' && filteredOptions.thousand !== '.' ) {
-						filteredOptions[optionName] = '.';
-					} else {
-						filteredOptions[optionName] = false;
-					}
-
-				// Floating points in JS are stable up to 7 decimals.
-				} else if ( optionName === 'decimals' ) {
-					if ( optionValue >= 0 && optionValue < 8 ) {
-						filteredOptions[optionName] = optionValue;
-					} else {
-						throw new Error(optionName);
-					}
-
-				// These options, when provided, must be functions.
-				} else if ( optionName === 'encoder' || optionName === 'decoder' || optionName === 'edit' || optionName === 'undo' ) {
-					if ( typeof optionValue === 'function' ) {
-						filteredOptions[optionName] = optionValue;
-					} else {
-						throw new Error(optionName);
-					}
-
-				// Other options are strings.
-				} else {
-
-					if ( typeof optionValue === 'string' ) {
-						filteredOptions[optionName] = optionValue;
-					} else {
-						throw new Error(optionName);
-					}
-				}
-			}
-
-			// Some values can't be extracted from a
-			// string if certain combinations are present.
-			throwEqualError(filteredOptions, 'mark', 'thousand');
-			throwEqualError(filteredOptions, 'prefix', 'negative');
-			throwEqualError(filteredOptions, 'prefix', 'negativeBefore');
-
-			return filteredOptions;
-		}
-
-		// Pass all options as function arguments
-		function passAll ( options, method, input ) {
-			var i, args = [];
-
-			// Add all options in order of FormatOptions
-			for ( i = 0; i < FormatOptions.length; i+=1 ) {
-				args.push(options[FormatOptions[i]]);
-			}
-
-			// Append the input, then call the method, presenting all
-			// options as arguments.
-			args.push(input);
-			return method.apply('', args);
-		}
-
-		/** @constructor */
-		function wNumb ( options ) {
-
-			if ( !(this instanceof wNumb) ) {
-				return new wNumb ( options );
-			}
-
-			if ( typeof options !== "object" ) {
-				return;
-			}
-
-			options = validate(options);
-
-			// Call 'formatTo' with proper arguments.
-			this.to = function ( input ) {
-				return passAll(options, formatTo, input);
-			};
-
-			// Call 'formatFrom' with proper arguments.
-			this.from = function ( input ) {
-				return passAll(options, formatFrom, input);
-			};
-		}
-
-		/** @export */
-		window.wNumb = wNumb;
-
-	}());
-
-	/*jslint browser: true */
-	/*jslint white: true */
-
-	(function( $ ){
-
-		'use strict';
-
-	// Helpers
-
-		// Test in an object is an instance of jQuery or Zepto.
-		function isInstance ( a ) {
-			return a instanceof $ || ( $.zepto && $.zepto.isZ(a) );
-		}
-
-
-	// Link types
-
-		function fromPrefix ( target, method ) {
-
-			// If target is a string, a new hidden input will be created.
-			if ( typeof target === 'string' && target.indexOf('-inline-') === 0 ) {
-
-				// By default, use the 'html' method.
-				this.method = method || 'html';
-
-				// Use jQuery to create the element
-				this.target = this.el = $( target.replace('-inline-', '') || '<div/>' );
-
-				return true;
-			}
-		}
-
-		function fromString ( target ) {
-
-			// If the string doesn't begin with '-', which is reserved, add a new hidden input.
-			if ( typeof target === 'string' && target.indexOf('-') !== 0 ) {
-
-				this.method = 'val';
-
-				var element = document.createElement('input');
-					element.name = target;
-					element.type = 'hidden';
-				this.target = this.el = $(element);
-
-				return true;
-			}
-		}
-
-		function fromFunction ( target ) {
-
-			// The target can also be a function, which will be called.
-			if ( typeof target === 'function' ) {
-				this.target = false;
-				this.method = target;
-
-				return true;
-			}
-		}
-
-		function fromInstance ( target, method ) {
-
-			if ( isInstance( target ) && !method ) {
-
-			// If a jQuery/Zepto input element is provided, but no method is set,
-			// the element can assume it needs to respond to 'change'...
-				if ( target.is('input, select, textarea') ) {
-
-					// Default to .val if this is an input element.
-					this.method = 'val';
-
-					// Fire the API changehandler when the target changes.
-					this.target = target.on('change.liblink', this.changeHandler);
-
-				} else {
-
-					this.target = target;
-
-					// If no method is set, and we are not auto-binding an input, default to 'html'.
-					this.method = 'html';
-				}
-
-				return true;
-			}
-		}
-
-		function fromInstanceMethod ( target, method ) {
-
-			// The method must exist on the element.
-			if ( isInstance( target ) &&
-				(typeof method === 'function' ||
-					(typeof method === 'string' && target[method]))
-			) {
-				this.method = method;
-				this.target = target;
-
-				return true;
-			}
-		}
-
-	var
-	/** @const */
-		creationFunctions = [fromPrefix, fromString, fromFunction, fromInstance, fromInstanceMethod];
-
-
-	// Link Instance
-
-	/** @constructor */
-		function Link ( target, method, format ) {
-
-			var that = this, valid = false;
-
-			// Forward calls within scope.
-			this.changeHandler = function ( changeEvent ) {
-				var decodedValue = that.formatInstance.from( $(this).val() );
-
-				// If the value is invalid, stop this event, as well as it's propagation.
-				if ( decodedValue === false || isNaN(decodedValue) ) {
-
-					// Reset the value.
-					$(this).val(that.lastSetValue);
-					return false;
-				}
-
-				that.changeHandlerMethod.call( '', changeEvent, decodedValue );
-			};
-
-			// See if this Link needs individual targets based on its usage.
-			// If so, return the element that needs to be copied by the
-			// implementing interface.
-			// Default the element to false.
-			this.el = false;
-
-			// Store the formatter, or use the default.
-			this.formatInstance = format;
-
-			// Try all Link types.
-			/*jslint unparam: true*/
-			$.each(creationFunctions, function(i, fn){
-				valid = fn.call(that, target, method);
-				return !valid;
-			});
-			/*jslint unparam: false*/
-
-			// Nothing matched, throw error.
-			if ( !valid ) {
-				throw new RangeError("(Link) Invalid Link.");
-			}
-		}
-
-		// Provides external items with the object value.
-		Link.prototype.set = function ( value ) {
-
-			// Ignore the value, so only the passed-on arguments remain.
-			var args = Array.prototype.slice.call( arguments ),
-				additionalArgs = args.slice(1);
-
-			// Store some values. The actual, numerical value,
-			// the formatted value and the parameters for use in 'resetValue'.
-			// Slice additionalArgs to break the relation.
-			this.lastSetValue = this.formatInstance.to( value );
-
-			// Prepend the value to the function arguments.
-			additionalArgs.unshift(
-				this.lastSetValue
-			);
-
-			// When target is undefined, the target was a function.
-			// In that case, provided the object as the calling scope.
-			// Branch between writing to a function or an object.
-			( typeof this.method === 'function' ?
-				this.method :
-				this.target[ this.method ] ).apply( this.target, additionalArgs );
-		};
-
-
-	// Developer API
-
-	/** @constructor */
-		function LinkAPI ( origin ) {
-			this.items = [];
-			this.elements = [];
-			this.origin = origin;
-		}
-
-		LinkAPI.prototype.push = function( item, element ) {
-			this.items.push(item);
-
-			// Prevent 'false' elements
-			if ( element ) {
-				this.elements.push(element);
-			}
-		};
-
-		LinkAPI.prototype.reconfirm = function ( flag ) {
-			var i;
-			for ( i = 0; i < this.elements.length; i += 1 ) {
-				this.origin.LinkConfirm(flag, this.elements[i]);
-			}
-		};
-
-		LinkAPI.prototype.remove = function ( flag ) {
-			var i;
-			for ( i = 0; i < this.items.length; i += 1 ) {
-				this.items[i].target.off('.liblink');
-			}
-			for ( i = 0; i < this.elements.length; i += 1 ) {
-				this.elements[i].remove();
-			}
-		};
-
-		LinkAPI.prototype.change = function ( value ) {
-
-			if ( this.origin.LinkIsEmitting ) {
-				return false;
-			}
-
-			this.origin.LinkIsEmitting = true;
-
-			var args = Array.prototype.slice.call( arguments, 1 ), i;
-			args.unshift( value );
-
-			// Write values to serialization Links.
-			// Convert the value to the correct relative representation.
-			for ( i = 0; i < this.items.length; i += 1 ) {
-				this.items[i].set.apply(this.items[i], args);
-			}
-
-			this.origin.LinkIsEmitting = false;
-		};
-
-
-	// jQuery plugin
-
-		function binder ( flag, target, method, format ){
-
-			if ( flag === 0 ) {
-				flag = this.LinkDefaultFlag;
-			}
-
-			// Create a list of API's (if it didn't exist yet);
-			if ( !this.linkAPI ) {
-				this.linkAPI = {};
-			}
-
-			// Add an API point.
-			if ( !this.linkAPI[flag] ) {
-				this.linkAPI[flag] = new LinkAPI(this);
-			}
-
-			var linkInstance = new Link ( target, method, format || this.LinkDefaultFormatter );
-
-			// Default the calling scope to the linked object.
-			if ( !linkInstance.target ) {
-				linkInstance.target = $(this);
-			}
-
-			// If the Link requires creation of a new element,
-			// Pass the element and request confirmation to get the changehandler.
-			// Set the method to be called when a Link changes.
-			linkInstance.changeHandlerMethod = this.LinkConfirm( flag, linkInstance.el );
-
-			// Store the linkInstance in the flagged list.
-			this.linkAPI[flag].push( linkInstance, linkInstance.el );
-
-			// Now that Link have been connected, request an update.
-			this.LinkUpdate( flag );
-		}
-
-		/** @export */
-		$.fn.Link = function( flag ){
-
-			var that = this;
-
-			// Delete all linkAPI
-			if ( flag === false ) {
-
-				return that.each(function(){
-
-					// .Link(false) can be called on elements without Links.
-					// When that happens, the objects can't be looped.
-					if ( !this.linkAPI ) {
-						return;
-					}
-
-					$.map(this.linkAPI, function(api){
-						api.remove();
-					});
-
-					delete this.linkAPI;
-				});
-			}
-
-			if ( flag === undefined ) {
-
-				flag = 0;
-
-			} else if ( typeof flag !== 'string') {
-
-				throw new Error("Flag must be string.");
-			}
-
-			return {
-				to: function( a, b, c ){
-					return that.each(function(){
-						binder.call(this, flag, a, b, c);
-					});
-				}
-			};
-		};
-
-	}( __webpack_provided_window_dot_jQuery || window.Zepto ));
-
-	/*jslint browser: true */
-	/*jslint white: true */
-
-	(function( $ ){
-
-		'use strict';
-
-
-		// Removes duplicates from an array.
-		function unique(array) {
-			return $.grep(array, function(el, index) {
-				return index === $.inArray(el, array);
-			});
-		}
-
-		// Round a value to the closest 'to'.
-		function closest ( value, to ) {
-			return Math.round(value / to) * to;
-		}
-
-		// Checks whether a value is numerical.
-		function isNumeric ( a ) {
-			return typeof a === 'number' && !isNaN( a ) && isFinite( a );
-		}
-
-		// Rounds a number to 7 supported decimals.
-		function accurateNumber( number ) {
-			var p = Math.pow(10, 7);
-			return Number((Math.round(number*p)/p).toFixed(7));
-		}
-
-		// Sets a class and removes it after [duration] ms.
-		function addClassFor ( element, className, duration ) {
-			element.addClass(className);
-			setTimeout(function(){
-				element.removeClass(className);
-			}, duration);
-		}
-
-		// Limits a value to 0 - 100
-		function limit ( a ) {
-			return Math.max(Math.min(a, 100), 0);
-		}
-
-		// Wraps a variable as an array, if it isn't one yet.
-		function asArray ( a ) {
-			return $.isArray(a) ? a : [a];
-		}
-
-		// Counts decimals
-		function countDecimals ( numStr ) {
-			var pieces = numStr.split(".");
-			return pieces.length > 1 ? pieces[1].length : 0;
-		}
-
-
-		var
-		// Cache the document selector;
-		/** @const */
-		doc = $(document),
-		// Make a backup of the original jQuery/Zepto .val() method.
-		/** @const */
-		$val = $.fn.val,
-		// Namespace for binding and unbinding slider events;
-		/** @const */
-		namespace = '.nui',
-		// Determine the events to bind. IE11 implements pointerEvents without
-		// a prefix, which breaks compatibility with the IE10 implementation.
-		/** @const */
-		actions = window.navigator.pointerEnabled ? {
-			start: 'pointerdown',
-			move: 'pointermove',
-			end: 'pointerup'
-		} : window.navigator.msPointerEnabled ? {
-			start: 'MSPointerDown',
-			move: 'MSPointerMove',
-			end: 'MSPointerUp'
-		} : {
-			start: 'mousedown touchstart',
-			move: 'mousemove touchmove',
-			end: 'mouseup touchend'
-		},
-		// Re-usable list of classes;
-		/** @const */
-		Classes = [
-	/*  0 */  'noUi-target'
-	/*  1 */ ,'noUi-base'
-	/*  2 */ ,'noUi-origin'
-	/*  3 */ ,'noUi-handle'
-	/*  4 */ ,'noUi-horizontal'
-	/*  5 */ ,'noUi-vertical'
-	/*  6 */ ,'noUi-background'
-	/*  7 */ ,'noUi-connect'
-	/*  8 */ ,'noUi-ltr'
-	/*  9 */ ,'noUi-rtl'
-	/* 10 */ ,'noUi-dragable'
-	/* 11 */ ,''
-	/* 12 */ ,'noUi-state-drag'
-	/* 13 */ ,''
-	/* 14 */ ,'noUi-state-tap'
-	/* 15 */ ,'noUi-active'
-	/* 16 */ ,''
-	/* 17 */ ,'noUi-stacking'
-		];
-
-
-	// Value calculation
-
-		// Determine the size of a sub-range in relation to a full range.
-		function subRangeRatio ( pa, pb ) {
-			return (100 / (pb - pa));
-		}
-
-		// (percentage) How many percent is this value of this range?
-		function fromPercentage ( range, value ) {
-			return (value * 100) / ( range[1] - range[0] );
-		}
-
-		// (percentage) Where is this value on this range?
-		function toPercentage ( range, value ) {
-			return fromPercentage( range, range[0] < 0 ?
-				value + Math.abs(range[0]) :
-					value - range[0] );
-		}
-
-		// (value) How much is this percentage on this range?
-		function isPercentage ( range, value ) {
-			return ((value * ( range[1] - range[0] )) / 100) + range[0];
-		}
-
-
-	// Range conversion
-
-		function getJ ( value, arr ) {
-
-			var j = 1;
-
-			while ( value >= arr[j] ){
-				j += 1;
-			}
-
-			return j;
-		}
-
-		// (percentage) Input a value, find where, on a scale of 0-100, it applies.
-		function toStepping ( xVal, xPct, value ) {
-
-			if ( value >= xVal.slice(-1)[0] ){
-				return 100;
-			}
-
-			var j = getJ( value, xVal ), va, vb, pa, pb;
-
-			va = xVal[j-1];
-			vb = xVal[j];
-			pa = xPct[j-1];
-			pb = xPct[j];
-
-			return pa + (toPercentage([va, vb], value) / subRangeRatio (pa, pb));
-		}
-
-		// (value) Input a percentage, find where it is on the specified range.
-		function fromStepping ( xVal, xPct, value ) {
-
-			// There is no range group that fits 100
-			if ( value >= 100 ){
-				return xVal.slice(-1)[0];
-			}
-
-			var j = getJ( value, xPct ), va, vb, pa, pb;
-
-			va = xVal[j-1];
-			vb = xVal[j];
-			pa = xPct[j-1];
-			pb = xPct[j];
-
-			return isPercentage([va, vb], (value - pa) * subRangeRatio (pa, pb));
-		}
-
-		// (percentage) Get the step that applies at a certain value.
-		function getStep ( xPct, xSteps, snap, value ) {
-
-			if ( value === 100 ) {
-				return value;
-			}
-
-			var j = getJ( value, xPct ), a, b;
-
-			// If 'snap' is set, steps are used as fixed points on the slider.
-			if ( snap ) {
-
-				a = xPct[j-1];
-				b = xPct[j];
-
-				// Find the closest position, a or b.
-				if ((value - a) > ((b-a)/2)){
-					return b;
-				}
-
-				return a;
-			}
-
-			if ( !xSteps[j-1] ){
-				return value;
-			}
-
-			return xPct[j-1] + closest(
-				value - xPct[j-1],
-				xSteps[j-1]
-			);
-		}
-
-
-	// Entry parsing
-
-		function handleEntryPoint ( index, value, that ) {
-
-			var percentage;
-
-			// Wrap numerical input in an array.
-			if ( typeof value === "number" ) {
-				value = [value];
-			}
-
-			// Reject any invalid input, by testing whether value is an array.
-			if ( Object.prototype.toString.call( value ) !== '[object Array]' ){
-				throw new Error("noUiSlider: 'range' contains invalid value.");
-			}
-
-			// Covert min/max syntax to 0 and 100.
-			if ( index === 'min' ) {
-				percentage = 0;
-			} else if ( index === 'max' ) {
-				percentage = 100;
-			} else {
-				percentage = parseFloat( index );
-			}
-
-			// Check for correct input.
-			if ( !isNumeric( percentage ) || !isNumeric( value[0] ) ) {
-				throw new Error("noUiSlider: 'range' value isn't numeric.");
-			}
-
-			// Store values.
-			that.xPct.push( percentage );
-			that.xVal.push( value[0] );
-
-			// NaN will evaluate to false too, but to keep
-			// logging clear, set step explicitly. Make sure
-			// not to override the 'step' setting with false.
-			if ( !percentage ) {
-				if ( !isNaN( value[1] ) ) {
-					that.xSteps[0] = value[1];
-				}
-			} else {
-				that.xSteps.push( isNaN(value[1]) ? false : value[1] );
-			}
-		}
-
-		function handleStepPoint ( i, n, that ) {
-
-			// Ignore 'false' stepping.
-			if ( !n ) {
-				return true;
-			}
-
-			// Factor to range ratio
-			that.xSteps[i] = fromPercentage([
-				 that.xVal[i]
-				,that.xVal[i+1]
-			], n) / subRangeRatio (
-				that.xPct[i],
-				that.xPct[i+1] );
-		}
-
-
-	// Interface
-
-		// The interface to Spectrum handles all direction-based
-		// conversions, so the above values are unaware.
-
-		function Spectrum ( entry, snap, direction, singleStep ) {
-
-			this.xPct = [];
-			this.xVal = [];
-			this.xSteps = [ singleStep || false ];
-			this.xNumSteps = [ false ];
-
-			this.snap = snap;
-			this.direction = direction;
-
-			var index, ordered = [ /* [0, 'min'], [1, '50%'], [2, 'max'] */ ];
-
-			// Map the object keys to an array.
-			for ( index in entry ) {
-				if ( entry.hasOwnProperty(index) ) {
-					ordered.push([entry[index], index]);
-				}
-			}
-
-			// Sort all entries by value (numeric sort).
-			ordered.sort(function(a, b) { return a[0] - b[0]; });
-
-			// Convert all entries to subranges.
-			for ( index = 0; index < ordered.length; index++ ) {
-				handleEntryPoint(ordered[index][1], ordered[index][0], this);
-			}
-
-			// Store the actual step values.
-			// xSteps is sorted in the same order as xPct and xVal.
-			this.xNumSteps = this.xSteps.slice(0);
-
-			// Convert all numeric steps to the percentage of the subrange they represent.
-			for ( index = 0; index < this.xNumSteps.length; index++ ) {
-				handleStepPoint(index, this.xNumSteps[index], this);
-			}
-		}
-
-		Spectrum.prototype.getMargin = function ( value ) {
-			return this.xPct.length === 2 ? fromPercentage(this.xVal, value) : false;
-		};
-
-		Spectrum.prototype.toStepping = function ( value ) {
-
-			value = toStepping( this.xVal, this.xPct, value );
-
-			// Invert the value if this is a right-to-left slider.
-			if ( this.direction ) {
-				value = 100 - value;
-			}
-
-			return value;
-		};
-
-		Spectrum.prototype.fromStepping = function ( value ) {
-
-			// Invert the value if this is a right-to-left slider.
-			if ( this.direction ) {
-				value = 100 - value;
-			}
-
-			return accurateNumber(fromStepping( this.xVal, this.xPct, value ));
-		};
-
-		Spectrum.prototype.getStep = function ( value ) {
-
-			// Find the proper step for rtl sliders by search in inverse direction.
-			// Fixes issue #262.
-			if ( this.direction ) {
-				value = 100 - value;
-			}
-
-			value = getStep(this.xPct, this.xSteps, this.snap, value );
-
-			if ( this.direction ) {
-				value = 100 - value;
-			}
-
-			return value;
-		};
-
-		Spectrum.prototype.getApplicableStep = function ( value ) {
-
-			// If the value is 100%, return the negative step twice.
-			var j = getJ(value, this.xPct), offset = value === 100 ? 2 : 1;
-			return [this.xNumSteps[j-2], this.xVal[j-offset], this.xNumSteps[j-offset]];
-		};
-
-		// Outside testing
-		Spectrum.prototype.convert = function ( value ) {
-			return this.getStep(this.toStepping(value));
-		};
-
-	/*	Every input option is tested and parsed. This'll prevent
-		endless validation in internal methods. These tests are
-		structured with an item for every option available. An
-		option can be marked as required by setting the 'r' flag.
-		The testing function is provided with three arguments:
-			- The provided value for the option;
-			- A reference to the options object;
-			- The name for the option;
-
-		The testing function returns false when an error is detected,
-		or true when everything is OK. It can also modify the option
-		object, to make sure all values can be correctly looped elsewhere. */
-
-		/** @const */
-		var defaultFormatter = { 'to': function( value ){
-			return value.toFixed(2);
-		}, 'from': Number };
-
-		function testStep ( parsed, entry ) {
-
-			if ( !isNumeric( entry ) ) {
-				throw new Error("noUiSlider: 'step' is not numeric.");
-			}
-
-			// The step option can still be used to set stepping
-			// for linear sliders. Overwritten if set in 'range'.
-			parsed.singleStep = entry;
-		}
-
-		function testRange ( parsed, entry ) {
-
-			// Filter incorrect input.
-			if ( typeof entry !== 'object' || $.isArray(entry) ) {
-				throw new Error("noUiSlider: 'range' is not an object.");
-			}
-
-			// Catch missing start or end.
-			if ( entry.min === undefined || entry.max === undefined ) {
-				throw new Error("noUiSlider: Missing 'min' or 'max' in 'range'.");
-			}
-
-			parsed.spectrum = new Spectrum(entry, parsed.snap, parsed.dir, parsed.singleStep);
-		}
-
-		function testStart ( parsed, entry ) {
-
-			entry = asArray(entry);
-
-			// Validate input. Values aren't tested, as the public .val method
-			// will always provide a valid location.
-			if ( !$.isArray( entry ) || !entry.length || entry.length > 2 ) {
-				throw new Error("noUiSlider: 'start' option is incorrect.");
-			}
-
-			// Store the number of handles.
-			parsed.handles = entry.length;
-
-			// When the slider is initialized, the .val method will
-			// be called with the start options.
-			parsed.start = entry;
-		}
-
-		function testSnap ( parsed, entry ) {
-
-			// Enforce 100% stepping within subranges.
-			parsed.snap = entry;
-
-			if ( typeof entry !== 'boolean' ){
-				throw new Error("noUiSlider: 'snap' option must be a boolean.");
-			}
-		}
-
-		function testAnimate ( parsed, entry ) {
-
-			// Enforce 100% stepping within subranges.
-			parsed.animate = entry;
-
-			if ( typeof entry !== 'boolean' ){
-				throw new Error("noUiSlider: 'animate' option must be a boolean.");
-			}
-		}
-
-		function testConnect ( parsed, entry ) {
-
-			if ( entry === 'lower' && parsed.handles === 1 ) {
-				parsed.connect = 1;
-			} else if ( entry === 'upper' && parsed.handles === 1 ) {
-				parsed.connect = 2;
-			} else if ( entry === true && parsed.handles === 2 ) {
-				parsed.connect = 3;
-			} else if ( entry === false ) {
-				parsed.connect = 0;
-			} else {
-				throw new Error("noUiSlider: 'connect' option doesn't match handle count.");
-			}
-		}
-
-		function testOrientation ( parsed, entry ) {
-
-			// Set orientation to an a numerical value for easy
-			// array selection.
-			switch ( entry ){
-			  case 'horizontal':
-				parsed.ort = 0;
-				break;
-			  case 'vertical':
-				parsed.ort = 1;
-				break;
-			  default:
-				throw new Error("noUiSlider: 'orientation' option is invalid.");
-			}
-		}
-
-		function testMargin ( parsed, entry ) {
-
-			if ( !isNumeric(entry) ){
-				throw new Error("noUiSlider: 'margin' option must be numeric.");
-			}
-
-			parsed.margin = parsed.spectrum.getMargin(entry);
-
-			if ( !parsed.margin ) {
-				throw new Error("noUiSlider: 'margin' option is only supported on linear sliders.");
-			}
-		}
-
-		function testLimit ( parsed, entry ) {
-
-			if ( !isNumeric(entry) ){
-				throw new Error("noUiSlider: 'limit' option must be numeric.");
-			}
-
-			parsed.limit = parsed.spectrum.getMargin(entry);
-
-			if ( !parsed.limit ) {
-				throw new Error("noUiSlider: 'limit' option is only supported on linear sliders.");
-			}
-		}
-
-		function testDirection ( parsed, entry ) {
-
-			// Set direction as a numerical value for easy parsing.
-			// Invert connection for RTL sliders, so that the proper
-			// handles get the connect/background classes.
-			switch ( entry ) {
-			  case 'ltr':
-				parsed.dir = 0;
-				break;
-			  case 'rtl':
-				parsed.dir = 1;
-				parsed.connect = [0,2,1,3][parsed.connect];
-				break;
-			  default:
-				throw new Error("noUiSlider: 'direction' option was not recognized.");
-			}
-		}
-
-		function testBehaviour ( parsed, entry ) {
-
-			// Make sure the input is a string.
-			if ( typeof entry !== 'string' ) {
-				throw new Error("noUiSlider: 'behaviour' must be a string containing options.");
-			}
-
-			// Check if the string contains any keywords.
-			// None are required.
-			var tap = entry.indexOf('tap') >= 0,
-				drag = entry.indexOf('drag') >= 0,
-				fixed = entry.indexOf('fixed') >= 0,
-				snap = entry.indexOf('snap') >= 0;
-
-			parsed.events = {
-				tap: tap || snap,
-				drag: drag,
-				fixed: fixed,
-				snap: snap
-			};
-		}
-
-		function testFormat ( parsed, entry ) {
-
-			parsed.format = entry;
-
-			// Any object with a to and from method is supported.
-			if ( typeof entry.to === 'function' && typeof entry.from === 'function' ) {
-				return true;
-			}
-
-			throw new Error( "noUiSlider: 'format' requires 'to' and 'from' methods.");
-		}
-
-		// Test all developer settings and parse to assumption-safe values.
-		function testOptions ( options ) {
-
-			var parsed = {
-				margin: 0,
-				limit: 0,
-				animate: true,
-				format: defaultFormatter
-			}, tests;
-
-			// Tests are executed in the order they are presented here.
-			tests = {
-				'step': { r: false, t: testStep },
-				'start': { r: true, t: testStart },
-				'connect': { r: true, t: testConnect },
-				'direction': { r: true, t: testDirection },
-				'snap': { r: false, t: testSnap },
-				'animate': { r: false, t: testAnimate },
-				'range': { r: true, t: testRange },
-				'orientation': { r: false, t: testOrientation },
-				'margin': { r: false, t: testMargin },
-				'limit': { r: false, t: testLimit },
-				'behaviour': { r: true, t: testBehaviour },
-				'format': { r: false, t: testFormat }
-			};
-
-			// Set defaults where applicable.
-			options = $.extend({
-				'connect': false,
-				'direction': 'ltr',
-				'behaviour': 'tap',
-				'orientation': 'horizontal'
-			}, options);
-
-			// Run all options through a testing mechanism to ensure correct
-			// input. It should be noted that options might get modified to
-			// be handled properly. E.g. wrapping integers in arrays.
-			$.each( tests, function( name, test ){
-
-				// If the option isn't set, but it is required, throw an error.
-				if ( options[name] === undefined ) {
-
-					if ( test.r ) {
-						throw new Error("noUiSlider: '" + name + "' is required.");
-					}
-
-					return true;
-				}
-
-				test.t( parsed, options[name] );
-			});
-
-			// Pre-define the styles.
-			parsed.style = parsed.ort ? 'top' : 'left';
-
-			return parsed;
-		}
-
-	// Class handling
-
-		// Delimit proposed values for handle positions.
-		function getPositions ( a, b, delimit ) {
-
-			// Add movement to current position.
-			var c = a + b[0], d = a + b[1];
-
-			// Only alter the other position on drag,
-			// not on standard sliding.
-			if ( delimit ) {
-				if ( c < 0 ) {
-					d += Math.abs(c);
-				}
-				if ( d > 100 ) {
-					c -= ( d - 100 );
-				}
-
-				// Limit values to 0 and 100.
-				return [limit(c), limit(d)];
-			}
-
-			return [c,d];
-		}
-
-
-	// Event handling
-
-		// Provide a clean event with standardized offset values.
-		function fixEvent ( e ) {
-
-			// Prevent scrolling and panning on touch events, while
-			// attempting to slide. The tap event also depends on this.
-			e.preventDefault();
-
-			// Filter the event to register the type, which can be
-			// touch, mouse or pointer. Offset changes need to be
-			// made on an event specific basis.
-			var  touch = e.type.indexOf('touch') === 0
-				,mouse = e.type.indexOf('mouse') === 0
-				,pointer = e.type.indexOf('pointer') === 0
-				,x,y, event = e;
-
-			// IE10 implemented pointer events with a prefix;
-			if ( e.type.indexOf('MSPointer') === 0 ) {
-				pointer = true;
-			}
-
-			// Get the originalEvent, if the event has been wrapped
-			// by jQuery. Zepto doesn't wrap the event.
-			if ( e.originalEvent ) {
-				e = e.originalEvent;
-			}
-
-			if ( touch ) {
-				// noUiSlider supports one movement at a time,
-				// so we can select the first 'changedTouch'.
-				x = e.changedTouches[0].pageX;
-				y = e.changedTouches[0].pageY;
-			}
-
-			if ( mouse || pointer ) {
-
-				// Polyfill the pageXOffset and pageYOffset
-				// variables for IE7 and IE8;
-				if( !pointer && window.pageXOffset === undefined ){
-					window.pageXOffset = document.documentElement.scrollLeft;
-					window.pageYOffset = document.documentElement.scrollTop;
-				}
-
-				x = e.clientX + window.pageXOffset;
-				y = e.clientY + window.pageYOffset;
-			}
-
-			event.points = [x, y];
-			event.cursor = mouse;
-
-			return event;
-		}
-
-
-	// DOM additions
-
-		// Append a handle to the base.
-		function addHandle ( direction, index ) {
-
-			var handle = $('<div><div/></div>').addClass( Classes[2] ),
-				additions = [ '-lower', '-upper' ];
-
-			if ( direction ) {
-				additions.reverse();
-			}
-
-			handle.children().addClass(
-				Classes[3] + " " + Classes[3]+additions[index]
-			);
-
-			return handle;
-		}
-
-		// Add the proper connection classes.
-		function addConnection ( connect, target, handles ) {
-
-			// Apply the required connection classes to the elements
-			// that need them. Some classes are made up for several
-			// segments listed in the class list, to allow easy
-			// renaming and provide a minor compression benefit.
-			switch ( connect ) {
-				case 1:	target.addClass( Classes[7] );
-						handles[0].addClass( Classes[6] );
-						break;
-				case 3: handles[1].addClass( Classes[6] );
-						/* falls through */
-				case 2: handles[0].addClass( Classes[7] );
-						/* falls through */
-				case 0: target.addClass(Classes[6]);
-						break;
-			}
-		}
-
-		// Add handles to the slider base.
-		function addHandles ( nrHandles, direction, base ) {
-
-			var index, handles = [];
-
-			// Append handles.
-			for ( index = 0; index < nrHandles; index += 1 ) {
-
-				// Keep a list of all added handles.
-				handles.push( addHandle( direction, index ).appendTo(base) );
-			}
-
-			return handles;
-		}
-
-		// Initialize a single slider.
-		function addSlider ( direction, orientation, target ) {
-
-			// Apply classes and data to the target.
-			target.addClass([
-				Classes[0],
-				Classes[8 + direction],
-				Classes[4 + orientation]
-			].join(' '));
-
-			return $('<div/>').appendTo(target).addClass( Classes[1] );
-		}
-
-	function closure ( target, options, originalOptions ){
-
-	// Internal variables
-
-		// All variables local to 'closure' are marked $.
-		var $Target = $(target),
-			$Locations = [-1, -1],
-			$Base,
-			$Handles,
-			$Spectrum = options.spectrum,
-			$Values = [],
-		// libLink. For rtl sliders, 'lower' and 'upper' should not be inverted
-		// for one-handle sliders, so trim 'upper' it that case.
-			triggerPos = ['lower', 'upper'].slice(0, options.handles);
-
-		// Invert the libLink connection for rtl sliders.
-		if ( options.dir ) {
-			triggerPos.reverse();
-		}
-
-	// Helpers
-
-		// Shorthand for base dimensions.
-		function baseSize ( ) {
-			return $Base[['width', 'height'][options.ort]]();
-		}
-
-		// External event handling
-		function fireEvents ( events ) {
-
-			// Use the external api to get the values.
-			// Wrap the values in an array, as .trigger takes
-			// only one additional argument.
-			var index, values = [ $Target.val() ];
-
-			for ( index = 0; index < events.length; index += 1 ){
-				$Target.trigger(events[index], values);
-			}
-		}
-
-		// Returns the input array, respecting the slider direction configuration.
-		function inSliderOrder ( values ) {
-
-			// If only one handle is used, return a single value.
-			if ( values.length === 1 ){
-				return values[0];
-			}
-
-			if ( options.dir ) {
-				return values.reverse();
-			}
-
-			return values;
-		}
-
-	// libLink integration
-
-		// Create a new function which calls .val on input change.
-		function createChangeHandler ( trigger ) {
-			return function ( ignore, value ){
-				// Determine which array position to 'null' based on 'trigger'.
-				$Target.val( [ trigger ? null : value, trigger ? value : null ], true );
-			};
-		}
-
-		// Called by libLink when it wants a set of links updated.
-		function linkUpdate ( flag ) {
-
-			var trigger = $.inArray(flag, triggerPos);
-
-			// The API might not have been set yet.
-			if ( $Target[0].linkAPI && $Target[0].linkAPI[flag] ) {
-				$Target[0].linkAPI[flag].change(
-					$Values[trigger],
-					$Handles[trigger].children(),
-					$Target
-				);
-			}
-		}
-
-		// Called by libLink to append an element to the slider.
-		function linkConfirm ( flag, element ) {
-
-			// Find the trigger for the passed flag.
-			var trigger = $.inArray(flag, triggerPos);
-
-			// If set, append the element to the handle it belongs to.
-			if ( element ) {
-				element.appendTo( $Handles[trigger].children() );
-			}
-
-			// The public API is reversed for rtl sliders, so the changeHandler
-			// should not be aware of the inverted trigger positions.
-			// On rtl slider with one handle, 'lower' should be used.
-			if ( options.dir && options.handles > 1 ) {
-				trigger = trigger === 1 ? 0 : 1;
-			}
-
-			return createChangeHandler( trigger );
-		}
-
-		// Place elements back on the slider.
-		function reAppendLink ( ) {
-
-			var i, flag;
-
-			// The API keeps a list of elements: we can re-append them on rebuild.
-			for ( i = 0; i < triggerPos.length; i += 1 ) {
-				if ( this.linkAPI && this.linkAPI[(flag = triggerPos[i])] ) {
-					this.linkAPI[flag].reconfirm(flag);
-				}
-			}
-		}
-
-		target.LinkUpdate = linkUpdate;
-		target.LinkConfirm = linkConfirm;
-		target.LinkDefaultFormatter = options.format;
-		target.LinkDefaultFlag = 'lower';
-
-		target.reappend = reAppendLink;
-
-
-		// Handler for attaching events trough a proxy.
-		function attach ( events, element, callback, data ) {
-
-			// This function can be used to 'filter' events to the slider.
-
-			// Add the noUiSlider namespace to all events.
-			events = events.replace( /\s/g, namespace + ' ' ) + namespace;
-
-			// Bind a closure on the target.
-			return element.on( events, function( e ){
-
-				// jQuery and Zepto (1) handle unset attributes differently,
-				// but always falsy; #208
-				if ( !!$Target.attr('disabled') ) {
-					return false;
-				}
-
-				// Stop if an active 'tap' transition is taking place.
-				if ( $Target.hasClass( Classes[14] ) ) {
-					return false;
-				}
-
-				e = fixEvent(e);
-				e.calcPoint = e.points[ options.ort ];
-
-				// Call the event handler with the event [ and additional data ].
-				callback ( e, data );
-			});
-		}
-
-		// Handle movement on document for handle and range drag.
-		function move ( event, data ) {
-
-			var handles = data.handles || $Handles, positions, state = false,
-				proposal = ((event.calcPoint - data.start) * 100) / baseSize(),
-				h = handles[0][0] !== $Handles[0][0] ? 1 : 0;
-
-			// Calculate relative positions for the handles.
-			positions = getPositions( proposal, data.positions, handles.length > 1);
-
-			state = setHandle ( handles[0], positions[h], handles.length === 1 );
-
-			if ( handles.length > 1 ) {
-				state = setHandle ( handles[1], positions[h?0:1], false ) || state;
-			}
-
-			// Fire the 'slide' event if any handle moved.
-			if ( state ) {
-				fireEvents(['slide']);
-			}
-		}
-
-		// Unbind move events on document, call callbacks.
-		function end ( event ) {
-
-			// The handle is no longer active, so remove the class.
-			$('.' + Classes[15]).removeClass(Classes[15]);
-
-			// Remove cursor styles and text-selection events bound to the body.
-			if ( event.cursor ) {
-				$('body').css('cursor', '').off( namespace );
-			}
-
-			// Unbind the move and end events, which are added on 'start'.
-			doc.off( namespace );
-
-			// Remove dragging class.
-			$Target.removeClass(Classes[12]);
-
-			// Fire the change and set events.
-			fireEvents(['set', 'change']);
-		}
-
-		// Bind move events on document.
-		function start ( event, data ) {
-
-			// Mark the handle as 'active' so it can be styled.
-			if( data.handles.length === 1 ) {
-				data.handles[0].children().addClass(Classes[15]);
-			}
-
-			// A drag should never propagate up to the 'tap' event.
-			event.stopPropagation();
-
-			// Attach the move event.
-			attach ( actions.move, doc, move, {
-				start: event.calcPoint,
-				handles: data.handles,
-				positions: [
-					$Locations[0],
-					$Locations[$Handles.length - 1]
-				]
-			});
-
-			// Unbind all movement when the drag ends.
-			attach ( actions.end, doc, end, null );
-
-			// Text selection isn't an issue on touch devices,
-			// so adding cursor styles can be skipped.
-			if ( event.cursor ) {
-
-				// Prevent the 'I' cursor and extend the range-drag cursor.
-				$('body').css('cursor', $(event.target).css('cursor'));
-
-				// Mark the target with a dragging state.
-				if ( $Handles.length > 1 ) {
-					$Target.addClass(Classes[12]);
-				}
-
-				// Prevent text selection when dragging the handles.
-				$('body').on('selectstart' + namespace, false);
-			}
-		}
-
-		// Move closest handle to tapped location.
-		function tap ( event ) {
-
-			var location = event.calcPoint, total = 0, to;
-
-			// The tap event shouldn't propagate up and cause 'edge' to run.
-			event.stopPropagation();
-
-			// Add up the handle offsets.
-			$.each( $Handles, function(){
-				total += this.offset()[ options.style ];
-			});
-
-			// Find the handle closest to the tapped position.
-			total = ( location < total/2 || $Handles.length === 1 ) ? 0 : 1;
-
-			location -= $Base.offset()[ options.style ];
-
-			// Calculate the new position.
-			to = ( location * 100 ) / baseSize();
-
-			if ( !options.events.snap ) {
-				// Flag the slider as it is now in a transitional state.
-				// Transition takes 300 ms, so re-enable the slider afterwards.
-				addClassFor( $Target, Classes[14], 300 );
-			}
-
-			// Find the closest handle and calculate the tapped point.
-			// The set handle to the new position.
-			setHandle( $Handles[total], to );
-
-			fireEvents(['slide', 'set', 'change']);
-
-			if ( options.events.snap ) {
-				start(event, { handles: [$Handles[total]] });
-			}
-		}
-
-		// Attach events to several slider parts.
-		function events ( behaviour ) {
-
-			var i, drag;
-
-			// Attach the standard drag event to the handles.
-			if ( !behaviour.fixed ) {
-
-				for ( i = 0; i < $Handles.length; i += 1 ) {
-
-					// These events are only bound to the visual handle
-					// element, not the 'real' origin element.
-					attach ( actions.start, $Handles[i].children(), start, {
-						handles: [ $Handles[i] ]
-					});
-				}
-			}
-
-			// Attach the tap event to the slider base.
-			if ( behaviour.tap ) {
-
-				attach ( actions.start, $Base, tap, {
-					handles: $Handles
-				});
-			}
-
-			// Make the range dragable.
-			if ( behaviour.drag ){
-
-				drag = $Base.find( '.' + Classes[7] ).addClass( Classes[10] );
-
-				// When the range is fixed, the entire range can
-				// be dragged by the handles. The handle in the first
-				// origin will propagate the start event upward,
-				// but it needs to be bound manually on the other.
-				if ( behaviour.fixed ) {
-					drag = drag.add($Base.children().not( drag ).children());
-				}
-
-				attach ( actions.start, drag, start, {
-					handles: $Handles
-				});
-			}
-		}
-
-
-		// Test suggested values and apply margin, step.
-		function setHandle ( handle, to, noLimitOption ) {
-
-			var trigger = handle[0] !== $Handles[0][0] ? 1 : 0,
-				lowerMargin = $Locations[0] + options.margin,
-				upperMargin = $Locations[1] - options.margin,
-				lowerLimit = $Locations[0] + options.limit,
-				upperLimit = $Locations[1] - options.limit;
-
-			// For sliders with multiple handles,
-			// limit movement to the other handle.
-			// Apply the margin option by adding it to the handle positions.
-			if ( $Handles.length > 1 ) {
-				to = trigger ? Math.max( to, lowerMargin ) : Math.min( to, upperMargin );
-			}
-
-			// The limit option has the opposite effect, limiting handles to a
-			// maximum distance from another. Limit must be > 0, as otherwise
-			// handles would be unmoveable. 'noLimitOption' is set to 'false'
-			// for the .val() method, except for pass 4/4.
-			if ( noLimitOption !== false && options.limit && $Handles.length > 1 ) {
-				to = trigger ? Math.min ( to, lowerLimit ) : Math.max( to, upperLimit );
-			}
-
-			// Handle the step option.
-			to = $Spectrum.getStep( to );
-
-			// Limit to 0/100 for .val input, trim anything beyond 7 digits, as
-			// JavaScript has some issues in its floating point implementation.
-			to = limit(parseFloat(to.toFixed(7)));
-
-			// Return false if handle can't move.
-			if ( to === $Locations[trigger] ) {
-				return false;
-			}
-
-			// Set the handle to the new position.
-			handle.css( options.style, to + '%' );
-
-			// Force proper handle stacking
-			if ( handle.is(':first-child') ) {
-				handle.toggleClass(Classes[17], to > 50 );
-			}
-
-			// Update locations.
-			$Locations[trigger] = to;
-
-			// Convert the value to the slider stepping/range.
-			$Values[trigger] = $Spectrum.fromStepping( to );
-
-			linkUpdate(triggerPos[trigger]);
-
-			return true;
-		}
-
-		// Loop values from value method and apply them.
-		function setValues ( count, values ) {
-
-			var i, trigger, to;
-
-			// With the limit option, we'll need another limiting pass.
-			if ( options.limit ) {
-				count += 1;
-			}
-
-			// If there are multiple handles to be set run the setting
-			// mechanism twice for the first handle, to make sure it
-			// can be bounced of the second one properly.
-			for ( i = 0; i < count; i += 1 ) {
-
-				trigger = i%2;
-
-				// Get the current argument from the array.
-				to = values[trigger];
-
-				// Setting with null indicates an 'ignore'.
-				// Inputting 'false' is invalid.
-				if ( to !== null && to !== false ) {
-
-					// If a formatted number was passed, attemt to decode it.
-					if ( typeof to === 'number' ) {
-						to = String(to);
-					}
-
-					to = options.format.from( to );
-
-					// Request an update for all links if the value was invalid.
-					// Do so too if setting the handle fails.
-					if ( to === false || isNaN(to) || setHandle( $Handles[trigger], $Spectrum.toStepping( to ), i === (3 - options.dir) ) === false ) {
-
-						linkUpdate(triggerPos[trigger]);
-					}
-				}
-			}
-		}
-
-		// Set the slider value.
-		function valueSet ( input ) {
-
-			// LibLink: don't accept new values when currently emitting changes.
-			if ( $Target[0].LinkIsEmitting ) {
-				return this;
-			}
-
-			var count, values = asArray( input );
-
-			// The RTL settings is implemented by reversing the front-end,
-			// internal mechanisms are the same.
-			if ( options.dir && options.handles > 1 ) {
-				values.reverse();
-			}
-
-			// Animation is optional.
-			// Make sure the initial values where set before using animated
-			// placement. (no report, unit testing);
-			if ( options.animate && $Locations[0] !== -1 ) {
-				addClassFor( $Target, Classes[14], 300 );
-			}
-
-			// Determine how often to set the handles.
-			count = $Handles.length > 1 ? 3 : 1;
-
-			if ( values.length === 1 ) {
-				count = 1;
-			}
-
-			setValues ( count, values );
-
-			// Fire the 'set' event. As of noUiSlider 7,
-			// this is no longer optional.
-			fireEvents(['set']);
-
-			return this;
-		}
-
-		// Get the slider value.
-		function valueGet ( ) {
-
-			var i, retour = [];
-
-			// Get the value from all handles.
-			for ( i = 0; i < options.handles; i += 1 ){
-				retour[i] = options.format.to( $Values[i] );
-			}
-
-			return inSliderOrder( retour );
-		}
-
-		// Destroy the slider and unbind all events.
-		function destroyTarget ( ) {
-
-			// Unbind events on the slider, remove all classes and child elements.
-			$(this).off(namespace)
-				.removeClass(Classes.join(' '))
-				.empty();
-
-			delete this.LinkUpdate;
-			delete this.LinkConfirm;
-			delete this.LinkDefaultFormatter;
-			delete this.LinkDefaultFlag;
-			delete this.reappend;
-			delete this.vGet;
-			delete this.vSet;
-			delete this.getCurrentStep;
-			delete this.getInfo;
-			delete this.destroy;
-
-			// Return the original options from the closure.
-			return originalOptions;
-		}
-
-		// Get the current step size for the slider.
-		function getCurrentStep ( ) {
-
-			// Check all locations, map them to their stepping point.
-			// Get the step point, then find it in the input list.
-			var retour = $.map($Locations, function( location, index ){
-
-				var step = $Spectrum.getApplicableStep( location ),
-
-					// As per #391, the comparison for the decrement step can have some rounding issues.
-					// Round the value to the precision used in the step.
-					stepDecimals = countDecimals(String(step[2])),
-
-					// Get the current numeric value
-					value = $Values[index],
-
-					// To move the slider 'one step up', the current step value needs to be added.
-					// Use null if we are at the maximum slider value.
-					increment = location === 100 ? null : step[2],
-
-					// Going 'one step down' might put the slider in a different sub-range, so we
-					// need to switch between the current or the previous step.
-					prev = Number((value - step[2]).toFixed(stepDecimals)),
-
-					// If the value fits the step, return the current step value. Otherwise, use the
-					// previous step. Return null if the slider is at its minimum value.
-					decrement = location === 0 ? null : (prev >= step[1]) ? step[2] : (step[0] || false);
-
-				return [[decrement, increment]];
-			});
-
-			// Return values in the proper order.
-			return inSliderOrder( retour );
-		}
-
-		// Get the original set of options.
-		function getOriginalOptions ( ) {
-			return originalOptions;
-		}
-
-
-	// Initialize slider
-
-		// Throw an error if the slider was already initialized.
-		if ( $Target.hasClass(Classes[0]) ) {
-			throw new Error('Slider was already initialized.');
-		}
-
-		// Create the base element, initialise HTML and set classes.
-		// Add handles and links.
-		$Base = addSlider( options.dir, options.ort, $Target );
-		$Handles = addHandles( options.handles, options.dir, $Base );
-
-		// Set the connect classes.
-		addConnection ( options.connect, $Target, $Handles );
-
-		// Attach user events.
-		events( options.events );
-
-	// Methods
-
-		target.vSet = valueSet;
-		target.vGet = valueGet;
-		target.destroy = destroyTarget;
-
-		target.getCurrentStep = getCurrentStep;
-		target.getOriginalOptions = getOriginalOptions;
-
-		target.getInfo = function(){
-			return [
-				$Spectrum,
-				options.style,
-				options.ort
-			];
-		};
-
-		// Use the public value method to set the start values.
-		$Target.val( options.start );
-
-	}
-
-
-		// Run the standard initializer
-		function initialize ( originalOptions ) {
-
-			// Test the options once, not for every slider.
-			var options = testOptions( originalOptions, this );
-
-			// Loop all items, and provide a new closed-scope environment.
-			return this.each(function(){
-				closure(this, options, originalOptions);
-			});
-		}
-
-		// Destroy the slider, then re-enter initialization.
-		function rebuild ( options ) {
-
-			return this.each(function(){
-
-				// The rebuild flag can be used if the slider wasn't initialized yet.
-				if ( !this.destroy ) {
-					$(this).noUiSlider( options );
-					return;
-				}
-
-				// Get the current values from the slider,
-				// including the initialization options.
-				var values = $(this).val(), originalOptions = this.destroy(),
-
-					// Extend the previous options with the newly provided ones.
-					newOptions = $.extend( {}, originalOptions, options );
-
-				// Run the standard initializer.
-				$(this).noUiSlider( newOptions );
-
-				// Place Link elements back.
-				this.reappend();
-
-				// If the start option hasn't changed,
-				// reset the previous values.
-				if ( originalOptions.start === newOptions.start ) {
-					$(this).val(values);
-				}
-			});
-		}
-
-		// Access the internal getting and setting methods based on argument count.
-		function value ( ) {
-			return this[0][ !arguments.length ? 'vGet' : 'vSet' ].apply(this[0], arguments);
-		}
-
-		// Override the .val() method. Test every element. Is it a slider? Go to
-		// the slider value handling. No? Use the standard method.
-		// Note how $.fn.val expects 'this' to be an instance of $. For convenience,
-		// the above 'value' function does too.
-		$.fn.val = function ( arg ) {
-
-			// this === instanceof $
-
-			function valMethod( a ){
-				return a.hasClass(Classes[0]) ? value : $val;
-			}
-
-			// If no value is passed, this is 'get'.
-			if ( !arguments.length ) {
-				var first = $(this[0]);
-				return valMethod(first).call(first);
-			}
-
-			var isFunction = $.isFunction(arg);
-
-			// Return the set so it remains chainable. Make sure not to break
-			// jQuery's .val(function( index, value ){}) signature.
-			return this.each(function( i ){
-
-				var val = arg, $t = $(this);
-
-				if ( isFunction ) {
-					val = arg.call(this, i, $t.val());
-				}
-
-				valMethod($t).call($t, val);
-			});
-		};
-
-	// Extend jQuery/Zepto with the noUiSlider method.
-		$.fn.noUiSlider = function ( options, rebuildFlag ) {
-
-			switch ( options ) {
-				case 'step': return this[0].getCurrentStep();
-				case 'options': return this[0].getOriginalOptions();
-			}
-
-			return ( rebuildFlag ? rebuild : initialize ).call(this, options);
-		};
-
-		function getGroup ( $Spectrum, mode, values, stepped ) {
-
-			// Use the range.
-			if ( mode === 'range' || mode === 'steps' ) {
-				return $Spectrum.xVal;
-			}
-
-			if ( mode === 'count' ) {
-
-				// Divide 0 - 100 in 'count' parts.
-				var spread = ( 100 / (values-1) ), v, i = 0;
-				values = [];
-
-				// List these parts and have them handled as 'positions'.
-				while ((v=i++*spread) <= 100 ) {
-					values.push(v);
-				}
-
-				mode = 'positions';
-			}
-
-			if ( mode === 'positions' ) {
-
-				// Map all percentages to on-range values.
-				return $.map(values, function( value ){
-					return $Spectrum.fromStepping( stepped ? $Spectrum.getStep( value ) : value );
-				});
-			}
-
-			if ( mode === 'values' ) {
-
-				// If the value must be stepped, it needs to be converted to a percentage first.
-				if ( stepped ) {
-
-					return $.map(values, function( value ){
-
-						// Convert to percentage, apply step, return to value.
-						return $Spectrum.fromStepping( $Spectrum.getStep( $Spectrum.toStepping( value ) ) );
-					});
-
-				}
-
-				// Otherwise, we can simply use the values.
-				return values;
-			}
-		}
-
-		function generateSpread ( $Spectrum, density, mode, group ) {
-
-			var originalSpectrumDirection = $Spectrum.direction,
-				indexes = {},
-				firstInRange = $Spectrum.xVal[0],
-				lastInRange = $Spectrum.xVal[$Spectrum.xVal.length-1],
-				ignoreFirst = false,
-				ignoreLast = false,
-				prevPct = 0;
-
-			// This function loops the spectrum in an ltr linear fashion,
-			// while the toStepping method is direction aware. Trick it into
-			// believing it is ltr.
-			$Spectrum.direction = 0;
-
-			// Create a copy of the group, sort it and filter away all duplicates.
-			group = unique(group.slice().sort(function(a, b){ return a - b; }));
-
-			// Make sure the range starts with the first element.
-			if ( group[0] !== firstInRange ) {
-				group.unshift(firstInRange);
-				ignoreFirst = true;
-			}
-
-			// Likewise for the last one.
-			if ( group[group.length - 1] !== lastInRange ) {
-				group.push(lastInRange);
-				ignoreLast = true;
-			}
-
-			$.each(group, function ( index ) {
-
-				// Get the current step and the lower + upper positions.
-				var step, i, q,
-					low = group[index],
-					high = group[index+1],
-					newPct, pctDifference, pctPos, type,
-					steps, realSteps, stepsize;
-
-				// When using 'steps' mode, use the provided steps.
-				// Otherwise, we'll step on to the next subrange.
-				if ( mode === 'steps' ) {
-					step = $Spectrum.xNumSteps[ index ];
-				}
-
-				// Default to a 'full' step.
-				if ( !step ) {
-					step = high-low;
-				}
-
-				// Low can be 0, so test for false. If high is undefined,
-				// we are at the last subrange. Index 0 is already handled.
-				if ( low === false || high === undefined ) {
-					return;
-				}
-
-				// Find all steps in the subrange.
-				for ( i = low; i <= high; i += step ) {
-
-					// Get the percentage value for the current step,
-					// calculate the size for the subrange.
-					newPct = $Spectrum.toStepping( i );
-					pctDifference = newPct - prevPct;
-
-					steps = pctDifference / density;
-					realSteps = Math.round(steps);
-
-					// This ratio represents the ammount of percentage-space a point indicates.
-					// For a density 1 the points/percentage = 1. For density 2, that percentage needs to be re-devided.
-					// Round the percentage offset to an even number, then divide by two
-					// to spread the offset on both sides of the range.
-					stepsize = pctDifference/realSteps;
-
-					// Divide all points evenly, adding the correct number to this subrange.
-					// Run up to <= so that 100% gets a point, event if ignoreLast is set.
-					for ( q = 1; q <= realSteps; q += 1 ) {
-
-						// The ratio between the rounded value and the actual size might be ~1% off.
-						// Correct the percentage offset by the number of points
-						// per subrange. density = 1 will result in 100 points on the
-						// full range, 2 for 50, 4 for 25, etc.
-						pctPos = prevPct + ( q * stepsize );
-						indexes[pctPos.toFixed(5)] = ['x', 0];
-					}
-
-					// Determine the point type.
-					type = ($.inArray(i, group) > -1) ? 1 : ( mode === 'steps' ? 2 : 0 );
-
-					// Enforce the 'ignoreFirst' option by overwriting the type for 0.
-					if ( !index && ignoreFirst ) {
-						type = 0;
-					}
-
-					if ( !(i === high && ignoreLast)) {
-						// Mark the 'type' of this point. 0 = plain, 1 = real value, 2 = step value.
-						indexes[newPct.toFixed(5)] = [i, type];
-					}
-
-					// Update the percentage count.
-					prevPct = newPct;
-				}
-			});
-
-			// Reset the spectrum.
-			$Spectrum.direction = originalSpectrumDirection;
-
-			return indexes;
-		}
-
-		function addMarking ( CSSstyle, orientation, direction, spread, filterFunc, formatter ) {
-
-			var style = ['horizontal', 'vertical'][orientation],
-				element = $('<div/>');
-
-			element.addClass('noUi-pips noUi-pips-'+style);
-
-			function getSize( type, value ){
-				return [ '-normal', '-large', '-sub' ][type];
-			}
-
-			function getTags( offset, source, values ) {
-				return 'class="' + source + ' ' +
-					source + '-' + style + ' ' +
-					source + getSize(values[1], values[0]) +
-					'" style="' + CSSstyle + ': ' + offset + '%"';
-			}
-
-			function addSpread ( offset, values ){
-
-				if ( direction ) {
-					offset = 100 - offset;
-				}
-
-				// Apply the filter function, if it is set.
-				values[1] = (values[1] && filterFunc) ? filterFunc(values[0], values[1]) : values[1];
-
-				// Add a marker for every point
-				element.append('<div ' + getTags(offset, 'noUi-marker', values) + '></div>');
-
-				// Values are only appended for points marked '1' or '2'.
-				if ( values[1] ) {
-					element.append('<div '+getTags(offset, 'noUi-value', values)+'>' + formatter.to(values[0]) + '</div>');
-				}
-			}
-
-			// Append all points.
-			$.each(spread, addSpread);
-
-			return element;
-		}
-
-		$.fn.noUiSlider_pips = function ( grid ) {
-
-		var mode = grid.mode,
-			density = grid.density || 1,
-			filter = grid.filter || false,
-			values = grid.values || false,
-			format = grid.format || {
-				to: Math.round
-			},
-			stepped = grid.stepped || false;
-
-			return this.each(function(){
-
-			var info = this.getInfo(),
-				group = getGroup( info[0], mode, values, stepped ),
-				spread = generateSpread( info[0], density, mode, group );
-
-				return $(this).append(addMarking(
-					info[1],
-					info[2],
-					info[0].direction,
-					spread,
-					filter,
-					format
-				));
-			});
-		};
-
-	}( __webpack_provided_window_dot_jQuery || window.Zepto ));
-
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)))
-
-/***/ },
 /* 7 */
 /***/ function(module, exports, __webpack_require__) {
 
@@ -17188,12 +17190,2665 @@ module.exports =
 /* 8 */
 /***/ function(module, exports, __webpack_require__) {
 
-	/* WEBPACK VAR INJECTION */(function($) {var Foundation = __webpack_require__(3);
+	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/* WEBPACK VAR INJECTION */(function(setImmediate) {/*!
+	 * typeahead.js 0.11.1
+	 * https://github.com/twitter/typeahead.js
+	 * Copyright 2013-2015 Twitter, Inc. and other contributors; Licensed MIT
+	 */
+
+	(function(root, factory) {
+	    if (true) {
+	        !(__WEBPACK_AMD_DEFINE_ARRAY__ = [ __webpack_require__(1) ], __WEBPACK_AMD_DEFINE_RESULT__ = function(a0) {
+	            return factory(a0);
+	        }.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
+	    } else if (typeof exports === "object") {
+	        module.exports = factory(require("jquery"));
+	    } else {
+	        factory(jQuery);
+	    }
+	})(this, function($) {
+	    var _ = function() {
+	        "use strict";
+	        return {
+	            isMsie: function() {
+	                return /(msie|trident)/i.test(navigator.userAgent) ? navigator.userAgent.match(/(msie |rv:)(\d+(.\d+)?)/i)[2] : false;
+	            },
+	            isBlankString: function(str) {
+	                return !str || /^\s*$/.test(str);
+	            },
+	            escapeRegExChars: function(str) {
+	                return str.replace(/[\-\[\]\/\{\}\(\)\*\+\?\.\\\^\$\|]/g, "\\$&");
+	            },
+	            isString: function(obj) {
+	                return typeof obj === "string";
+	            },
+	            isNumber: function(obj) {
+	                return typeof obj === "number";
+	            },
+	            isArray: $.isArray,
+	            isFunction: $.isFunction,
+	            isObject: $.isPlainObject,
+	            isUndefined: function(obj) {
+	                return typeof obj === "undefined";
+	            },
+	            isElement: function(obj) {
+	                return !!(obj && obj.nodeType === 1);
+	            },
+	            isJQuery: function(obj) {
+	                return obj instanceof $;
+	            },
+	            toStr: function toStr(s) {
+	                return _.isUndefined(s) || s === null ? "" : s + "";
+	            },
+	            bind: $.proxy,
+	            each: function(collection, cb) {
+	                $.each(collection, reverseArgs);
+	                function reverseArgs(index, value) {
+	                    return cb(value, index);
+	                }
+	            },
+	            map: $.map,
+	            filter: $.grep,
+	            every: function(obj, test) {
+	                var result = true;
+	                if (!obj) {
+	                    return result;
+	                }
+	                $.each(obj, function(key, val) {
+	                    if (!(result = test.call(null, val, key, obj))) {
+	                        return false;
+	                    }
+	                });
+	                return !!result;
+	            },
+	            some: function(obj, test) {
+	                var result = false;
+	                if (!obj) {
+	                    return result;
+	                }
+	                $.each(obj, function(key, val) {
+	                    if (result = test.call(null, val, key, obj)) {
+	                        return false;
+	                    }
+	                });
+	                return !!result;
+	            },
+	            mixin: $.extend,
+	            identity: function(x) {
+	                return x;
+	            },
+	            clone: function(obj) {
+	                return $.extend(true, {}, obj);
+	            },
+	            getIdGenerator: function() {
+	                var counter = 0;
+	                return function() {
+	                    return counter++;
+	                };
+	            },
+	            templatify: function templatify(obj) {
+	                return $.isFunction(obj) ? obj : template;
+	                function template() {
+	                    return String(obj);
+	                }
+	            },
+	            defer: function(fn) {
+	                setTimeout(fn, 0);
+	            },
+	            debounce: function(func, wait, immediate) {
+	                var timeout, result;
+	                return function() {
+	                    var context = this, args = arguments, later, callNow;
+	                    later = function() {
+	                        timeout = null;
+	                        if (!immediate) {
+	                            result = func.apply(context, args);
+	                        }
+	                    };
+	                    callNow = immediate && !timeout;
+	                    clearTimeout(timeout);
+	                    timeout = setTimeout(later, wait);
+	                    if (callNow) {
+	                        result = func.apply(context, args);
+	                    }
+	                    return result;
+	                };
+	            },
+	            throttle: function(func, wait) {
+	                var context, args, timeout, result, previous, later;
+	                previous = 0;
+	                later = function() {
+	                    previous = new Date();
+	                    timeout = null;
+	                    result = func.apply(context, args);
+	                };
+	                return function() {
+	                    var now = new Date(), remaining = wait - (now - previous);
+	                    context = this;
+	                    args = arguments;
+	                    if (remaining <= 0) {
+	                        clearTimeout(timeout);
+	                        timeout = null;
+	                        previous = now;
+	                        result = func.apply(context, args);
+	                    } else if (!timeout) {
+	                        timeout = setTimeout(later, remaining);
+	                    }
+	                    return result;
+	                };
+	            },
+	            stringify: function(val) {
+	                return _.isString(val) ? val : JSON.stringify(val);
+	            },
+	            noop: function() {}
+	        };
+	    }();
+	    var WWW = function() {
+	        "use strict";
+	        var defaultClassNames = {
+	            wrapper: "twitter-typeahead",
+	            input: "tt-input",
+	            hint: "tt-hint",
+	            menu: "tt-menu",
+	            dataset: "tt-dataset",
+	            suggestion: "tt-suggestion",
+	            selectable: "tt-selectable",
+	            empty: "tt-empty",
+	            open: "tt-open",
+	            cursor: "tt-cursor",
+	            highlight: "tt-highlight"
+	        };
+	        return build;
+	        function build(o) {
+	            var www, classes;
+	            classes = _.mixin({}, defaultClassNames, o);
+	            www = {
+	                css: buildCss(),
+	                classes: classes,
+	                html: buildHtml(classes),
+	                selectors: buildSelectors(classes)
+	            };
+	            return {
+	                css: www.css,
+	                html: www.html,
+	                classes: www.classes,
+	                selectors: www.selectors,
+	                mixin: function(o) {
+	                    _.mixin(o, www);
+	                }
+	            };
+	        }
+	        function buildHtml(c) {
+	            return {
+	                wrapper: '<span class="' + c.wrapper + '"></span>',
+	                menu: '<div class="' + c.menu + '"></div>'
+	            };
+	        }
+	        function buildSelectors(classes) {
+	            var selectors = {};
+	            _.each(classes, function(v, k) {
+	                selectors[k] = "." + v;
+	            });
+	            return selectors;
+	        }
+	        function buildCss() {
+	            var css = {
+	                wrapper: {
+	                    position: "relative",
+	                    display: "inline-block"
+	                },
+	                hint: {
+	                    position: "absolute",
+	                    top: "0",
+	                    left: "0",
+	                    borderColor: "transparent",
+	                    boxShadow: "none",
+	                    opacity: "1"
+	                },
+	                input: {
+	                    position: "relative",
+	                    verticalAlign: "top",
+	                    backgroundColor: "transparent"
+	                },
+	                inputWithNoHint: {
+	                    position: "relative",
+	                    verticalAlign: "top"
+	                },
+	                menu: {
+	                    position: "absolute",
+	                    top: "100%",
+	                    left: "0",
+	                    zIndex: "100",
+	                    display: "none"
+	                },
+	                ltr: {
+	                    left: "0",
+	                    right: "auto"
+	                },
+	                rtl: {
+	                    left: "auto",
+	                    right: " 0"
+	                }
+	            };
+	            if (_.isMsie()) {
+	                _.mixin(css.input, {
+	                    backgroundImage: "url(data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7)"
+	                });
+	            }
+	            return css;
+	        }
+	    }();
+	    var EventBus = function() {
+	        "use strict";
+	        var namespace, deprecationMap;
+	        namespace = "typeahead:";
+	        deprecationMap = {
+	            render: "rendered",
+	            cursorchange: "cursorchanged",
+	            select: "selected",
+	            autocomplete: "autocompleted"
+	        };
+	        function EventBus(o) {
+	            if (!o || !o.el) {
+	                $.error("EventBus initialized without el");
+	            }
+	            this.$el = $(o.el);
+	        }
+	        _.mixin(EventBus.prototype, {
+	            _trigger: function(type, args) {
+	                var $e;
+	                $e = $.Event(namespace + type);
+	                (args = args || []).unshift($e);
+	                this.$el.trigger.apply(this.$el, args);
+	                return $e;
+	            },
+	            before: function(type) {
+	                var args, $e;
+	                args = [].slice.call(arguments, 1);
+	                $e = this._trigger("before" + type, args);
+	                return $e.isDefaultPrevented();
+	            },
+	            trigger: function(type) {
+	                var deprecatedType;
+	                this._trigger(type, [].slice.call(arguments, 1));
+	                if (deprecatedType = deprecationMap[type]) {
+	                    this._trigger(deprecatedType, [].slice.call(arguments, 1));
+	                }
+	            }
+	        });
+	        return EventBus;
+	    }();
+	    var EventEmitter = function() {
+	        "use strict";
+	        var splitter = /\s+/, nextTick = getNextTick();
+	        return {
+	            onSync: onSync,
+	            onAsync: onAsync,
+	            off: off,
+	            trigger: trigger
+	        };
+	        function on(method, types, cb, context) {
+	            var type;
+	            if (!cb) {
+	                return this;
+	            }
+	            types = types.split(splitter);
+	            cb = context ? bindContext(cb, context) : cb;
+	            this._callbacks = this._callbacks || {};
+	            while (type = types.shift()) {
+	                this._callbacks[type] = this._callbacks[type] || {
+	                    sync: [],
+	                    async: []
+	                };
+	                this._callbacks[type][method].push(cb);
+	            }
+	            return this;
+	        }
+	        function onAsync(types, cb, context) {
+	            return on.call(this, "async", types, cb, context);
+	        }
+	        function onSync(types, cb, context) {
+	            return on.call(this, "sync", types, cb, context);
+	        }
+	        function off(types) {
+	            var type;
+	            if (!this._callbacks) {
+	                return this;
+	            }
+	            types = types.split(splitter);
+	            while (type = types.shift()) {
+	                delete this._callbacks[type];
+	            }
+	            return this;
+	        }
+	        function trigger(types) {
+	            var type, callbacks, args, syncFlush, asyncFlush;
+	            if (!this._callbacks) {
+	                return this;
+	            }
+	            types = types.split(splitter);
+	            args = [].slice.call(arguments, 1);
+	            while ((type = types.shift()) && (callbacks = this._callbacks[type])) {
+	                syncFlush = getFlush(callbacks.sync, this, [ type ].concat(args));
+	                asyncFlush = getFlush(callbacks.async, this, [ type ].concat(args));
+	                syncFlush() && nextTick(asyncFlush);
+	            }
+	            return this;
+	        }
+	        function getFlush(callbacks, context, args) {
+	            return flush;
+	            function flush() {
+	                var cancelled;
+	                for (var i = 0, len = callbacks.length; !cancelled && i < len; i += 1) {
+	                    cancelled = callbacks[i].apply(context, args) === false;
+	                }
+	                return !cancelled;
+	            }
+	        }
+	        function getNextTick() {
+	            var nextTickFn;
+	            if (window.setImmediate) {
+	                nextTickFn = function nextTickSetImmediate(fn) {
+	                    setImmediate(function() {
+	                        fn();
+	                    });
+	                };
+	            } else {
+	                nextTickFn = function nextTickSetTimeout(fn) {
+	                    setTimeout(function() {
+	                        fn();
+	                    }, 0);
+	                };
+	            }
+	            return nextTickFn;
+	        }
+	        function bindContext(fn, context) {
+	            return fn.bind ? fn.bind(context) : function() {
+	                fn.apply(context, [].slice.call(arguments, 0));
+	            };
+	        }
+	    }();
+	    var highlight = function(doc) {
+	        "use strict";
+	        var defaults = {
+	            node: null,
+	            pattern: null,
+	            tagName: "strong",
+	            className: null,
+	            wordsOnly: false,
+	            caseSensitive: false
+	        };
+	        return function hightlight(o) {
+	            var regex;
+	            o = _.mixin({}, defaults, o);
+	            if (!o.node || !o.pattern) {
+	                return;
+	            }
+	            o.pattern = _.isArray(o.pattern) ? o.pattern : [ o.pattern ];
+	            regex = getRegex(o.pattern, o.caseSensitive, o.wordsOnly);
+	            traverse(o.node, hightlightTextNode);
+	            function hightlightTextNode(textNode) {
+	                var match, patternNode, wrapperNode;
+	                if (match = regex.exec(textNode.data)) {
+	                    wrapperNode = doc.createElement(o.tagName);
+	                    o.className && (wrapperNode.className = o.className);
+	                    patternNode = textNode.splitText(match.index);
+	                    patternNode.splitText(match[0].length);
+	                    wrapperNode.appendChild(patternNode.cloneNode(true));
+	                    textNode.parentNode.replaceChild(wrapperNode, patternNode);
+	                }
+	                return !!match;
+	            }
+	            function traverse(el, hightlightTextNode) {
+	                var childNode, TEXT_NODE_TYPE = 3;
+	                for (var i = 0; i < el.childNodes.length; i++) {
+	                    childNode = el.childNodes[i];
+	                    if (childNode.nodeType === TEXT_NODE_TYPE) {
+	                        i += hightlightTextNode(childNode) ? 1 : 0;
+	                    } else {
+	                        traverse(childNode, hightlightTextNode);
+	                    }
+	                }
+	            }
+	        };
+	        function getRegex(patterns, caseSensitive, wordsOnly) {
+	            var escapedPatterns = [], regexStr;
+	            for (var i = 0, len = patterns.length; i < len; i++) {
+	                escapedPatterns.push(_.escapeRegExChars(patterns[i]));
+	            }
+	            regexStr = wordsOnly ? "\\b(" + escapedPatterns.join("|") + ")\\b" : "(" + escapedPatterns.join("|") + ")";
+	            return caseSensitive ? new RegExp(regexStr) : new RegExp(regexStr, "i");
+	        }
+	    }(window.document);
+	    var Input = function() {
+	        "use strict";
+	        var specialKeyCodeMap;
+	        specialKeyCodeMap = {
+	            9: "tab",
+	            27: "esc",
+	            37: "left",
+	            39: "right",
+	            13: "enter",
+	            38: "up",
+	            40: "down"
+	        };
+	        function Input(o, www) {
+	            o = o || {};
+	            if (!o.input) {
+	                $.error("input is missing");
+	            }
+	            www.mixin(this);
+	            this.$hint = $(o.hint);
+	            this.$input = $(o.input);
+	            this.query = this.$input.val();
+	            this.queryWhenFocused = this.hasFocus() ? this.query : null;
+	            this.$overflowHelper = buildOverflowHelper(this.$input);
+	            this._checkLanguageDirection();
+	            if (this.$hint.length === 0) {
+	                this.setHint = this.getHint = this.clearHint = this.clearHintIfInvalid = _.noop;
+	            }
+	        }
+	        Input.normalizeQuery = function(str) {
+	            return _.toStr(str).replace(/^\s*/g, "").replace(/\s{2,}/g, " ");
+	        };
+	        _.mixin(Input.prototype, EventEmitter, {
+	            _onBlur: function onBlur() {
+	                this.resetInputValue();
+	                this.trigger("blurred");
+	            },
+	            _onFocus: function onFocus() {
+	                this.queryWhenFocused = this.query;
+	                this.trigger("focused");
+	            },
+	            _onKeydown: function onKeydown($e) {
+	                var keyName = specialKeyCodeMap[$e.which || $e.keyCode];
+	                this._managePreventDefault(keyName, $e);
+	                if (keyName && this._shouldTrigger(keyName, $e)) {
+	                    this.trigger(keyName + "Keyed", $e);
+	                }
+	            },
+	            _onInput: function onInput() {
+	                this._setQuery(this.getInputValue());
+	                this.clearHintIfInvalid();
+	                this._checkLanguageDirection();
+	            },
+	            _managePreventDefault: function managePreventDefault(keyName, $e) {
+	                var preventDefault;
+	                switch (keyName) {
+	                  case "up":
+	                  case "down":
+	                    preventDefault = !withModifier($e);
+	                    break;
+
+	                  default:
+	                    preventDefault = false;
+	                }
+	                preventDefault && $e.preventDefault();
+	            },
+	            _shouldTrigger: function shouldTrigger(keyName, $e) {
+	                var trigger;
+	                switch (keyName) {
+	                  case "tab":
+	                    trigger = !withModifier($e);
+	                    break;
+
+	                  default:
+	                    trigger = true;
+	                }
+	                return trigger;
+	            },
+	            _checkLanguageDirection: function checkLanguageDirection() {
+	                var dir = (this.$input.css("direction") || "ltr").toLowerCase();
+	                if (this.dir !== dir) {
+	                    this.dir = dir;
+	                    this.$hint.attr("dir", dir);
+	                    this.trigger("langDirChanged", dir);
+	                }
+	            },
+	            _setQuery: function setQuery(val, silent) {
+	                var areEquivalent, hasDifferentWhitespace;
+	                areEquivalent = areQueriesEquivalent(val, this.query);
+	                hasDifferentWhitespace = areEquivalent ? this.query.length !== val.length : false;
+	                this.query = val;
+	                if (!silent && !areEquivalent) {
+	                    this.trigger("queryChanged", this.query);
+	                } else if (!silent && hasDifferentWhitespace) {
+	                    this.trigger("whitespaceChanged", this.query);
+	                }
+	            },
+	            bind: function() {
+	                var that = this, onBlur, onFocus, onKeydown, onInput;
+	                onBlur = _.bind(this._onBlur, this);
+	                onFocus = _.bind(this._onFocus, this);
+	                onKeydown = _.bind(this._onKeydown, this);
+	                onInput = _.bind(this._onInput, this);
+	                this.$input.on("blur.tt", onBlur).on("focus.tt", onFocus).on("keydown.tt", onKeydown);
+	                if (!_.isMsie() || _.isMsie() > 9) {
+	                    this.$input.on("input.tt", onInput);
+	                } else {
+	                    this.$input.on("keydown.tt keypress.tt cut.tt paste.tt", function($e) {
+	                        if (specialKeyCodeMap[$e.which || $e.keyCode]) {
+	                            return;
+	                        }
+	                        _.defer(_.bind(that._onInput, that, $e));
+	                    });
+	                }
+	                return this;
+	            },
+	            focus: function focus() {
+	                this.$input.focus();
+	            },
+	            blur: function blur() {
+	                this.$input.blur();
+	            },
+	            getLangDir: function getLangDir() {
+	                return this.dir;
+	            },
+	            getQuery: function getQuery() {
+	                return this.query || "";
+	            },
+	            setQuery: function setQuery(val, silent) {
+	                this.setInputValue(val);
+	                this._setQuery(val, silent);
+	            },
+	            hasQueryChangedSinceLastFocus: function hasQueryChangedSinceLastFocus() {
+	                return this.query !== this.queryWhenFocused;
+	            },
+	            getInputValue: function getInputValue() {
+	                return this.$input.val();
+	            },
+	            setInputValue: function setInputValue(value) {
+	                this.$input.val(value);
+	                this.clearHintIfInvalid();
+	                this._checkLanguageDirection();
+	            },
+	            resetInputValue: function resetInputValue() {
+	                this.setInputValue(this.query);
+	            },
+	            getHint: function getHint() {
+	                return this.$hint.val();
+	            },
+	            setHint: function setHint(value) {
+	                this.$hint.val(value);
+	            },
+	            clearHint: function clearHint() {
+	                this.setHint("");
+	            },
+	            clearHintIfInvalid: function clearHintIfInvalid() {
+	                var val, hint, valIsPrefixOfHint, isValid;
+	                val = this.getInputValue();
+	                hint = this.getHint();
+	                valIsPrefixOfHint = val !== hint && hint.indexOf(val) === 0;
+	                isValid = val !== "" && valIsPrefixOfHint && !this.hasOverflow();
+	                !isValid && this.clearHint();
+	            },
+	            hasFocus: function hasFocus() {
+	                return this.$input.is(":focus");
+	            },
+	            hasOverflow: function hasOverflow() {
+	                var constraint = this.$input.width() - 2;
+	                this.$overflowHelper.text(this.getInputValue());
+	                return this.$overflowHelper.width() >= constraint;
+	            },
+	            isCursorAtEnd: function() {
+	                var valueLength, selectionStart, range;
+	                valueLength = this.$input.val().length;
+	                selectionStart = this.$input[0].selectionStart;
+	                if (_.isNumber(selectionStart)) {
+	                    return selectionStart === valueLength;
+	                } else if (document.selection) {
+	                    range = document.selection.createRange();
+	                    range.moveStart("character", -valueLength);
+	                    return valueLength === range.text.length;
+	                }
+	                return true;
+	            },
+	            destroy: function destroy() {
+	                this.$hint.off(".tt");
+	                this.$input.off(".tt");
+	                this.$overflowHelper.remove();
+	                this.$hint = this.$input = this.$overflowHelper = $("<div>");
+	            }
+	        });
+	        return Input;
+	        function buildOverflowHelper($input) {
+	            return $('<pre aria-hidden="true"></pre>').css({
+	                position: "absolute",
+	                visibility: "hidden",
+	                whiteSpace: "pre",
+	                fontFamily: $input.css("font-family"),
+	                fontSize: $input.css("font-size"),
+	                fontStyle: $input.css("font-style"),
+	                fontVariant: $input.css("font-variant"),
+	                fontWeight: $input.css("font-weight"),
+	                wordSpacing: $input.css("word-spacing"),
+	                letterSpacing: $input.css("letter-spacing"),
+	                textIndent: $input.css("text-indent"),
+	                textRendering: $input.css("text-rendering"),
+	                textTransform: $input.css("text-transform")
+	            }).insertAfter($input);
+	        }
+	        function areQueriesEquivalent(a, b) {
+	            return Input.normalizeQuery(a) === Input.normalizeQuery(b);
+	        }
+	        function withModifier($e) {
+	            return $e.altKey || $e.ctrlKey || $e.metaKey || $e.shiftKey;
+	        }
+	    }();
+	    var Dataset = function() {
+	        "use strict";
+	        var keys, nameGenerator;
+	        keys = {
+	            val: "tt-selectable-display",
+	            obj: "tt-selectable-object"
+	        };
+	        nameGenerator = _.getIdGenerator();
+	        function Dataset(o, www) {
+	            o = o || {};
+	            o.templates = o.templates || {};
+	            o.templates.notFound = o.templates.notFound || o.templates.empty;
+	            if (!o.source) {
+	                $.error("missing source");
+	            }
+	            if (!o.node) {
+	                $.error("missing node");
+	            }
+	            if (o.name && !isValidName(o.name)) {
+	                $.error("invalid dataset name: " + o.name);
+	            }
+	            www.mixin(this);
+	            this.highlight = !!o.highlight;
+	            this.name = o.name || nameGenerator();
+	            this.limit = o.limit || 5;
+	            this.displayFn = getDisplayFn(o.display || o.displayKey);
+	            this.templates = getTemplates(o.templates, this.displayFn);
+	            this.source = o.source.__ttAdapter ? o.source.__ttAdapter() : o.source;
+	            this.async = _.isUndefined(o.async) ? this.source.length > 2 : !!o.async;
+	            this._resetLastSuggestion();
+	            this.$el = $(o.node).addClass(this.classes.dataset).addClass(this.classes.dataset + "-" + this.name);
+	        }
+	        Dataset.extractData = function extractData(el) {
+	            var $el = $(el);
+	            if ($el.data(keys.obj)) {
+	                return {
+	                    val: $el.data(keys.val) || "",
+	                    obj: $el.data(keys.obj) || null
+	                };
+	            }
+	            return null;
+	        };
+	        _.mixin(Dataset.prototype, EventEmitter, {
+	            _overwrite: function overwrite(query, suggestions) {
+	                suggestions = suggestions || [];
+	                if (suggestions.length) {
+	                    this._renderSuggestions(query, suggestions);
+	                } else if (this.async && this.templates.pending) {
+	                    this._renderPending(query);
+	                } else if (!this.async && this.templates.notFound) {
+	                    this._renderNotFound(query);
+	                } else {
+	                    this._empty();
+	                }
+	                this.trigger("rendered", this.name, suggestions, false);
+	            },
+	            _append: function append(query, suggestions) {
+	                suggestions = suggestions || [];
+	                if (suggestions.length && this.$lastSuggestion.length) {
+	                    this._appendSuggestions(query, suggestions);
+	                } else if (suggestions.length) {
+	                    this._renderSuggestions(query, suggestions);
+	                } else if (!this.$lastSuggestion.length && this.templates.notFound) {
+	                    this._renderNotFound(query);
+	                }
+	                this.trigger("rendered", this.name, suggestions, true);
+	            },
+	            _renderSuggestions: function renderSuggestions(query, suggestions) {
+	                var $fragment;
+	                $fragment = this._getSuggestionsFragment(query, suggestions);
+	                this.$lastSuggestion = $fragment.children().last();
+	                this.$el.html($fragment).prepend(this._getHeader(query, suggestions)).append(this._getFooter(query, suggestions));
+	            },
+	            _appendSuggestions: function appendSuggestions(query, suggestions) {
+	                var $fragment, $lastSuggestion;
+	                $fragment = this._getSuggestionsFragment(query, suggestions);
+	                $lastSuggestion = $fragment.children().last();
+	                this.$lastSuggestion.after($fragment);
+	                this.$lastSuggestion = $lastSuggestion;
+	            },
+	            _renderPending: function renderPending(query) {
+	                var template = this.templates.pending;
+	                this._resetLastSuggestion();
+	                template && this.$el.html(template({
+	                    query: query,
+	                    dataset: this.name
+	                }));
+	            },
+	            _renderNotFound: function renderNotFound(query) {
+	                var template = this.templates.notFound;
+	                this._resetLastSuggestion();
+	                template && this.$el.html(template({
+	                    query: query,
+	                    dataset: this.name
+	                }));
+	            },
+	            _empty: function empty() {
+	                this.$el.empty();
+	                this._resetLastSuggestion();
+	            },
+	            _getSuggestionsFragment: function getSuggestionsFragment(query, suggestions) {
+	                var that = this, fragment;
+	                fragment = document.createDocumentFragment();
+	                _.each(suggestions, function getSuggestionNode(suggestion) {
+	                    var $el, context;
+	                    context = that._injectQuery(query, suggestion);
+	                    $el = $(that.templates.suggestion(context)).data(keys.obj, suggestion).data(keys.val, that.displayFn(suggestion)).addClass(that.classes.suggestion + " " + that.classes.selectable);
+	                    fragment.appendChild($el[0]);
+	                });
+	                this.highlight && highlight({
+	                    className: this.classes.highlight,
+	                    node: fragment,
+	                    pattern: query
+	                });
+	                return $(fragment);
+	            },
+	            _getFooter: function getFooter(query, suggestions) {
+	                return this.templates.footer ? this.templates.footer({
+	                    query: query,
+	                    suggestions: suggestions,
+	                    dataset: this.name
+	                }) : null;
+	            },
+	            _getHeader: function getHeader(query, suggestions) {
+	                return this.templates.header ? this.templates.header({
+	                    query: query,
+	                    suggestions: suggestions,
+	                    dataset: this.name
+	                }) : null;
+	            },
+	            _resetLastSuggestion: function resetLastSuggestion() {
+	                this.$lastSuggestion = $();
+	            },
+	            _injectQuery: function injectQuery(query, obj) {
+	                return _.isObject(obj) ? _.mixin({
+	                    _query: query
+	                }, obj) : obj;
+	            },
+	            update: function update(query) {
+	                var that = this, canceled = false, syncCalled = false, rendered = 0;
+	                this.cancel();
+	                this.cancel = function cancel() {
+	                    canceled = true;
+	                    that.cancel = $.noop;
+	                    that.async && that.trigger("asyncCanceled", query);
+	                };
+	                this.source(query, sync, async);
+	                !syncCalled && sync([]);
+	                function sync(suggestions) {
+	                    if (syncCalled) {
+	                        return;
+	                    }
+	                    syncCalled = true;
+	                    suggestions = (suggestions || []).slice(0, that.limit);
+	                    rendered = suggestions.length;
+	                    that._overwrite(query, suggestions);
+	                    if (rendered < that.limit && that.async) {
+	                        that.trigger("asyncRequested", query);
+	                    }
+	                }
+	                function async(suggestions) {
+	                    suggestions = suggestions || [];
+	                    if (!canceled && rendered < that.limit) {
+	                        that.cancel = $.noop;
+	                        rendered += suggestions.length;
+	                        that._append(query, suggestions.slice(0, that.limit - rendered));
+	                        that.async && that.trigger("asyncReceived", query);
+	                    }
+	                }
+	            },
+	            cancel: $.noop,
+	            clear: function clear() {
+	                this._empty();
+	                this.cancel();
+	                this.trigger("cleared");
+	            },
+	            isEmpty: function isEmpty() {
+	                return this.$el.is(":empty");
+	            },
+	            destroy: function destroy() {
+	                this.$el = $("<div>");
+	            }
+	        });
+	        return Dataset;
+	        function getDisplayFn(display) {
+	            display = display || _.stringify;
+	            return _.isFunction(display) ? display : displayFn;
+	            function displayFn(obj) {
+	                return obj[display];
+	            }
+	        }
+	        function getTemplates(templates, displayFn) {
+	            return {
+	                notFound: templates.notFound && _.templatify(templates.notFound),
+	                pending: templates.pending && _.templatify(templates.pending),
+	                header: templates.header && _.templatify(templates.header),
+	                footer: templates.footer && _.templatify(templates.footer),
+	                suggestion: templates.suggestion || suggestionTemplate
+	            };
+	            function suggestionTemplate(context) {
+	                return $("<div>").text(displayFn(context));
+	            }
+	        }
+	        function isValidName(str) {
+	            return /^[_a-zA-Z0-9-]+$/.test(str);
+	        }
+	    }();
+	    var Menu = function() {
+	        "use strict";
+	        function Menu(o, www) {
+	            var that = this;
+	            o = o || {};
+	            if (!o.node) {
+	                $.error("node is required");
+	            }
+	            www.mixin(this);
+	            this.$node = $(o.node);
+	            this.query = null;
+	            this.datasets = _.map(o.datasets, initializeDataset);
+	            function initializeDataset(oDataset) {
+	                var node = that.$node.find(oDataset.node).first();
+	                oDataset.node = node.length ? node : $("<div>").appendTo(that.$node);
+	                return new Dataset(oDataset, www);
+	            }
+	        }
+	        _.mixin(Menu.prototype, EventEmitter, {
+	            _onSelectableClick: function onSelectableClick($e) {
+	                this.trigger("selectableClicked", $($e.currentTarget));
+	            },
+	            _onRendered: function onRendered(type, dataset, suggestions, async) {
+	                this.$node.toggleClass(this.classes.empty, this._allDatasetsEmpty());
+	                this.trigger("datasetRendered", dataset, suggestions, async);
+	            },
+	            _onCleared: function onCleared() {
+	                this.$node.toggleClass(this.classes.empty, this._allDatasetsEmpty());
+	                this.trigger("datasetCleared");
+	            },
+	            _propagate: function propagate() {
+	                this.trigger.apply(this, arguments);
+	            },
+	            _allDatasetsEmpty: function allDatasetsEmpty() {
+	                return _.every(this.datasets, isDatasetEmpty);
+	                function isDatasetEmpty(dataset) {
+	                    return dataset.isEmpty();
+	                }
+	            },
+	            _getSelectables: function getSelectables() {
+	                return this.$node.find(this.selectors.selectable);
+	            },
+	            _removeCursor: function _removeCursor() {
+	                var $selectable = this.getActiveSelectable();
+	                $selectable && $selectable.removeClass(this.classes.cursor);
+	            },
+	            _ensureVisible: function ensureVisible($el) {
+	                var elTop, elBottom, nodeScrollTop, nodeHeight;
+	                elTop = $el.position().top;
+	                elBottom = elTop + $el.outerHeight(true);
+	                nodeScrollTop = this.$node.scrollTop();
+	                nodeHeight = this.$node.height() + parseInt(this.$node.css("paddingTop"), 10) + parseInt(this.$node.css("paddingBottom"), 10);
+	                if (elTop < 0) {
+	                    this.$node.scrollTop(nodeScrollTop + elTop);
+	                } else if (nodeHeight < elBottom) {
+	                    this.$node.scrollTop(nodeScrollTop + (elBottom - nodeHeight));
+	                }
+	            },
+	            bind: function() {
+	                var that = this, onSelectableClick;
+	                onSelectableClick = _.bind(this._onSelectableClick, this);
+	                this.$node.on("click.tt", this.selectors.selectable, onSelectableClick);
+	                _.each(this.datasets, function(dataset) {
+	                    dataset.onSync("asyncRequested", that._propagate, that).onSync("asyncCanceled", that._propagate, that).onSync("asyncReceived", that._propagate, that).onSync("rendered", that._onRendered, that).onSync("cleared", that._onCleared, that);
+	                });
+	                return this;
+	            },
+	            isOpen: function isOpen() {
+	                return this.$node.hasClass(this.classes.open);
+	            },
+	            open: function open() {
+	                this.$node.addClass(this.classes.open);
+	            },
+	            close: function close() {
+	                this.$node.removeClass(this.classes.open);
+	                this._removeCursor();
+	            },
+	            setLanguageDirection: function setLanguageDirection(dir) {
+	                this.$node.attr("dir", dir);
+	            },
+	            selectableRelativeToCursor: function selectableRelativeToCursor(delta) {
+	                var $selectables, $oldCursor, oldIndex, newIndex;
+	                $oldCursor = this.getActiveSelectable();
+	                $selectables = this._getSelectables();
+	                oldIndex = $oldCursor ? $selectables.index($oldCursor) : -1;
+	                newIndex = oldIndex + delta;
+	                newIndex = (newIndex + 1) % ($selectables.length + 1) - 1;
+	                newIndex = newIndex < -1 ? $selectables.length - 1 : newIndex;
+	                return newIndex === -1 ? null : $selectables.eq(newIndex);
+	            },
+	            setCursor: function setCursor($selectable) {
+	                this._removeCursor();
+	                if ($selectable = $selectable && $selectable.first()) {
+	                    $selectable.addClass(this.classes.cursor);
+	                    this._ensureVisible($selectable);
+	                }
+	            },
+	            getSelectableData: function getSelectableData($el) {
+	                return $el && $el.length ? Dataset.extractData($el) : null;
+	            },
+	            getActiveSelectable: function getActiveSelectable() {
+	                var $selectable = this._getSelectables().filter(this.selectors.cursor).first();
+	                return $selectable.length ? $selectable : null;
+	            },
+	            getTopSelectable: function getTopSelectable() {
+	                var $selectable = this._getSelectables().first();
+	                return $selectable.length ? $selectable : null;
+	            },
+	            update: function update(query) {
+	                var isValidUpdate = query !== this.query;
+	                if (isValidUpdate) {
+	                    this.query = query;
+	                    _.each(this.datasets, updateDataset);
+	                }
+	                return isValidUpdate;
+	                function updateDataset(dataset) {
+	                    dataset.update(query);
+	                }
+	            },
+	            empty: function empty() {
+	                _.each(this.datasets, clearDataset);
+	                this.query = null;
+	                this.$node.addClass(this.classes.empty);
+	                function clearDataset(dataset) {
+	                    dataset.clear();
+	                }
+	            },
+	            destroy: function destroy() {
+	                this.$node.off(".tt");
+	                this.$node = $("<div>");
+	                _.each(this.datasets, destroyDataset);
+	                function destroyDataset(dataset) {
+	                    dataset.destroy();
+	                }
+	            }
+	        });
+	        return Menu;
+	    }();
+	    var DefaultMenu = function() {
+	        "use strict";
+	        var s = Menu.prototype;
+	        function DefaultMenu() {
+	            Menu.apply(this, [].slice.call(arguments, 0));
+	        }
+	        _.mixin(DefaultMenu.prototype, Menu.prototype, {
+	            open: function open() {
+	                !this._allDatasetsEmpty() && this._show();
+	                return s.open.apply(this, [].slice.call(arguments, 0));
+	            },
+	            close: function close() {
+	                this._hide();
+	                return s.close.apply(this, [].slice.call(arguments, 0));
+	            },
+	            _onRendered: function onRendered() {
+	                if (this._allDatasetsEmpty()) {
+	                    this._hide();
+	                } else {
+	                    this.isOpen() && this._show();
+	                }
+	                return s._onRendered.apply(this, [].slice.call(arguments, 0));
+	            },
+	            _onCleared: function onCleared() {
+	                if (this._allDatasetsEmpty()) {
+	                    this._hide();
+	                } else {
+	                    this.isOpen() && this._show();
+	                }
+	                return s._onCleared.apply(this, [].slice.call(arguments, 0));
+	            },
+	            setLanguageDirection: function setLanguageDirection(dir) {
+	                this.$node.css(dir === "ltr" ? this.css.ltr : this.css.rtl);
+	                return s.setLanguageDirection.apply(this, [].slice.call(arguments, 0));
+	            },
+	            _hide: function hide() {
+	                this.$node.hide();
+	            },
+	            _show: function show() {
+	                this.$node.css("display", "block");
+	            }
+	        });
+	        return DefaultMenu;
+	    }();
+	    var Typeahead = function() {
+	        "use strict";
+	        function Typeahead(o, www) {
+	            var onFocused, onBlurred, onEnterKeyed, onTabKeyed, onEscKeyed, onUpKeyed, onDownKeyed, onLeftKeyed, onRightKeyed, onQueryChanged, onWhitespaceChanged;
+	            o = o || {};
+	            if (!o.input) {
+	                $.error("missing input");
+	            }
+	            if (!o.menu) {
+	                $.error("missing menu");
+	            }
+	            if (!o.eventBus) {
+	                $.error("missing event bus");
+	            }
+	            www.mixin(this);
+	            this.eventBus = o.eventBus;
+	            this.minLength = _.isNumber(o.minLength) ? o.minLength : 1;
+	            this.input = o.input;
+	            this.menu = o.menu;
+	            this.enabled = true;
+	            this.active = false;
+	            this.input.hasFocus() && this.activate();
+	            this.dir = this.input.getLangDir();
+	            this._hacks();
+	            this.menu.bind().onSync("selectableClicked", this._onSelectableClicked, this).onSync("asyncRequested", this._onAsyncRequested, this).onSync("asyncCanceled", this._onAsyncCanceled, this).onSync("asyncReceived", this._onAsyncReceived, this).onSync("datasetRendered", this._onDatasetRendered, this).onSync("datasetCleared", this._onDatasetCleared, this);
+	            onFocused = c(this, "activate", "open", "_onFocused");
+	            onBlurred = c(this, "deactivate", "_onBlurred");
+	            onEnterKeyed = c(this, "isActive", "isOpen", "_onEnterKeyed");
+	            onTabKeyed = c(this, "isActive", "isOpen", "_onTabKeyed");
+	            onEscKeyed = c(this, "isActive", "_onEscKeyed");
+	            onUpKeyed = c(this, "isActive", "open", "_onUpKeyed");
+	            onDownKeyed = c(this, "isActive", "open", "_onDownKeyed");
+	            onLeftKeyed = c(this, "isActive", "isOpen", "_onLeftKeyed");
+	            onRightKeyed = c(this, "isActive", "isOpen", "_onRightKeyed");
+	            onQueryChanged = c(this, "_openIfActive", "_onQueryChanged");
+	            onWhitespaceChanged = c(this, "_openIfActive", "_onWhitespaceChanged");
+	            this.input.bind().onSync("focused", onFocused, this).onSync("blurred", onBlurred, this).onSync("enterKeyed", onEnterKeyed, this).onSync("tabKeyed", onTabKeyed, this).onSync("escKeyed", onEscKeyed, this).onSync("upKeyed", onUpKeyed, this).onSync("downKeyed", onDownKeyed, this).onSync("leftKeyed", onLeftKeyed, this).onSync("rightKeyed", onRightKeyed, this).onSync("queryChanged", onQueryChanged, this).onSync("whitespaceChanged", onWhitespaceChanged, this).onSync("langDirChanged", this._onLangDirChanged, this);
+	        }
+	        _.mixin(Typeahead.prototype, {
+	            _hacks: function hacks() {
+	                var $input, $menu;
+	                $input = this.input.$input || $("<div>");
+	                $menu = this.menu.$node || $("<div>");
+	                $input.on("blur.tt", function($e) {
+	                    var active, isActive, hasActive;
+	                    active = document.activeElement;
+	                    isActive = $menu.is(active);
+	                    hasActive = $menu.has(active).length > 0;
+	                    if (_.isMsie() && (isActive || hasActive)) {
+	                        $e.preventDefault();
+	                        $e.stopImmediatePropagation();
+	                        _.defer(function() {
+	                            $input.focus();
+	                        });
+	                    }
+	                });
+	                $menu.on("mousedown.tt", function($e) {
+	                    $e.preventDefault();
+	                });
+	            },
+	            _onSelectableClicked: function onSelectableClicked(type, $el) {
+	                this.select($el);
+	            },
+	            _onDatasetCleared: function onDatasetCleared() {
+	                this._updateHint();
+	            },
+	            _onDatasetRendered: function onDatasetRendered(type, dataset, suggestions, async) {
+	                this._updateHint();
+	                this.eventBus.trigger("render", suggestions, async, dataset);
+	            },
+	            _onAsyncRequested: function onAsyncRequested(type, dataset, query) {
+	                this.eventBus.trigger("asyncrequest", query, dataset);
+	            },
+	            _onAsyncCanceled: function onAsyncCanceled(type, dataset, query) {
+	                this.eventBus.trigger("asynccancel", query, dataset);
+	            },
+	            _onAsyncReceived: function onAsyncReceived(type, dataset, query) {
+	                this.eventBus.trigger("asyncreceive", query, dataset);
+	            },
+	            _onFocused: function onFocused() {
+	                this._minLengthMet() && this.menu.update(this.input.getQuery());
+	            },
+	            _onBlurred: function onBlurred() {
+	                if (this.input.hasQueryChangedSinceLastFocus()) {
+	                    this.eventBus.trigger("change", this.input.getQuery());
+	                }
+	            },
+	            _onEnterKeyed: function onEnterKeyed(type, $e) {
+	                var $selectable;
+	                if ($selectable = this.menu.getActiveSelectable()) {
+	                    this.select($selectable) && $e.preventDefault();
+	                }
+	            },
+	            _onTabKeyed: function onTabKeyed(type, $e) {
+	                var $selectable;
+	                if ($selectable = this.menu.getActiveSelectable()) {
+	                    this.select($selectable) && $e.preventDefault();
+	                } else if ($selectable = this.menu.getTopSelectable()) {
+	                    this.autocomplete($selectable) && $e.preventDefault();
+	                }
+	            },
+	            _onEscKeyed: function onEscKeyed() {
+	                this.close();
+	            },
+	            _onUpKeyed: function onUpKeyed() {
+	                this.moveCursor(-1);
+	            },
+	            _onDownKeyed: function onDownKeyed() {
+	                this.moveCursor(+1);
+	            },
+	            _onLeftKeyed: function onLeftKeyed() {
+	                if (this.dir === "rtl" && this.input.isCursorAtEnd()) {
+	                    this.autocomplete(this.menu.getTopSelectable());
+	                }
+	            },
+	            _onRightKeyed: function onRightKeyed() {
+	                if (this.dir === "ltr" && this.input.isCursorAtEnd()) {
+	                    this.autocomplete(this.menu.getTopSelectable());
+	                }
+	            },
+	            _onQueryChanged: function onQueryChanged(e, query) {
+	                this._minLengthMet(query) ? this.menu.update(query) : this.menu.empty();
+	            },
+	            _onWhitespaceChanged: function onWhitespaceChanged() {
+	                this._updateHint();
+	            },
+	            _onLangDirChanged: function onLangDirChanged(e, dir) {
+	                if (this.dir !== dir) {
+	                    this.dir = dir;
+	                    this.menu.setLanguageDirection(dir);
+	                }
+	            },
+	            _openIfActive: function openIfActive() {
+	                this.isActive() && this.open();
+	            },
+	            _minLengthMet: function minLengthMet(query) {
+	                query = _.isString(query) ? query : this.input.getQuery() || "";
+	                return query.length >= this.minLength;
+	            },
+	            _updateHint: function updateHint() {
+	                var $selectable, data, val, query, escapedQuery, frontMatchRegEx, match;
+	                $selectable = this.menu.getTopSelectable();
+	                data = this.menu.getSelectableData($selectable);
+	                val = this.input.getInputValue();
+	                if (data && !_.isBlankString(val) && !this.input.hasOverflow()) {
+	                    query = Input.normalizeQuery(val);
+	                    escapedQuery = _.escapeRegExChars(query);
+	                    frontMatchRegEx = new RegExp("^(?:" + escapedQuery + ")(.+$)", "i");
+	                    match = frontMatchRegEx.exec(data.val);
+	                    match && this.input.setHint(val + match[1]);
+	                } else {
+	                    this.input.clearHint();
+	                }
+	            },
+	            isEnabled: function isEnabled() {
+	                return this.enabled;
+	            },
+	            enable: function enable() {
+	                this.enabled = true;
+	            },
+	            disable: function disable() {
+	                this.enabled = false;
+	            },
+	            isActive: function isActive() {
+	                return this.active;
+	            },
+	            activate: function activate() {
+	                if (this.isActive()) {
+	                    return true;
+	                } else if (!this.isEnabled() || this.eventBus.before("active")) {
+	                    return false;
+	                } else {
+	                    this.active = true;
+	                    this.eventBus.trigger("active");
+	                    return true;
+	                }
+	            },
+	            deactivate: function deactivate() {
+	                if (!this.isActive()) {
+	                    return true;
+	                } else if (this.eventBus.before("idle")) {
+	                    return false;
+	                } else {
+	                    this.active = false;
+	                    this.close();
+	                    this.eventBus.trigger("idle");
+	                    return true;
+	                }
+	            },
+	            isOpen: function isOpen() {
+	                return this.menu.isOpen();
+	            },
+	            open: function open() {
+	                if (!this.isOpen() && !this.eventBus.before("open")) {
+	                    this.menu.open();
+	                    this._updateHint();
+	                    this.eventBus.trigger("open");
+	                }
+	                return this.isOpen();
+	            },
+	            close: function close() {
+	                if (this.isOpen() && !this.eventBus.before("close")) {
+	                    this.menu.close();
+	                    this.input.clearHint();
+	                    this.input.resetInputValue();
+	                    this.eventBus.trigger("close");
+	                }
+	                return !this.isOpen();
+	            },
+	            setVal: function setVal(val) {
+	                this.input.setQuery(_.toStr(val));
+	            },
+	            getVal: function getVal() {
+	                return this.input.getQuery();
+	            },
+	            select: function select($selectable) {
+	                var data = this.menu.getSelectableData($selectable);
+	                if (data && !this.eventBus.before("select", data.obj)) {
+	                    this.input.setQuery(data.val, true);
+	                    this.eventBus.trigger("select", data.obj);
+	                    this.close();
+	                    return true;
+	                }
+	                return false;
+	            },
+	            autocomplete: function autocomplete($selectable) {
+	                var query, data, isValid;
+	                query = this.input.getQuery();
+	                data = this.menu.getSelectableData($selectable);
+	                isValid = data && query !== data.val;
+	                if (isValid && !this.eventBus.before("autocomplete", data.obj)) {
+	                    this.input.setQuery(data.val);
+	                    this.eventBus.trigger("autocomplete", data.obj);
+	                    return true;
+	                }
+	                return false;
+	            },
+	            moveCursor: function moveCursor(delta) {
+	                var query, $candidate, data, payload, cancelMove;
+	                query = this.input.getQuery();
+	                $candidate = this.menu.selectableRelativeToCursor(delta);
+	                data = this.menu.getSelectableData($candidate);
+	                payload = data ? data.obj : null;
+	                cancelMove = this._minLengthMet() && this.menu.update(query);
+	                if (!cancelMove && !this.eventBus.before("cursorchange", payload)) {
+	                    this.menu.setCursor($candidate);
+	                    if (data) {
+	                        this.input.setInputValue(data.val);
+	                    } else {
+	                        this.input.resetInputValue();
+	                        this._updateHint();
+	                    }
+	                    this.eventBus.trigger("cursorchange", payload);
+	                    return true;
+	                }
+	                return false;
+	            },
+	            destroy: function destroy() {
+	                this.input.destroy();
+	                this.menu.destroy();
+	            }
+	        });
+	        return Typeahead;
+	        function c(ctx) {
+	            var methods = [].slice.call(arguments, 1);
+	            return function() {
+	                var args = [].slice.call(arguments);
+	                _.each(methods, function(method) {
+	                    return ctx[method].apply(ctx, args);
+	                });
+	            };
+	        }
+	    }();
+	    (function() {
+	        "use strict";
+	        var old, keys, methods;
+	        old = $.fn.typeahead;
+	        keys = {
+	            www: "tt-www",
+	            attrs: "tt-attrs",
+	            typeahead: "tt-typeahead"
+	        };
+	        methods = {
+	            initialize: function initialize(o, datasets) {
+	                var www;
+	                datasets = _.isArray(datasets) ? datasets : [].slice.call(arguments, 1);
+	                o = o || {};
+	                www = WWW(o.classNames);
+	                return this.each(attach);
+	                function attach() {
+	                    var $input, $wrapper, $hint, $menu, defaultHint, defaultMenu, eventBus, input, menu, typeahead, MenuConstructor;
+	                    _.each(datasets, function(d) {
+	                        d.highlight = !!o.highlight;
+	                    });
+	                    $input = $(this);
+	                    $wrapper = $(www.html.wrapper);
+	                    $hint = $elOrNull(o.hint);
+	                    $menu = $elOrNull(o.menu);
+	                    defaultHint = o.hint !== false && !$hint;
+	                    defaultMenu = o.menu !== false && !$menu;
+	                    defaultHint && ($hint = buildHintFromInput($input, www));
+	                    defaultMenu && ($menu = $(www.html.menu).css(www.css.menu));
+	                    $hint && $hint.val("");
+	                    $input = prepInput($input, www);
+	                    if (defaultHint || defaultMenu) {
+	                        $wrapper.css(www.css.wrapper);
+	                        $input.css(defaultHint ? www.css.input : www.css.inputWithNoHint);
+	                        $input.wrap($wrapper).parent().prepend(defaultHint ? $hint : null).append(defaultMenu ? $menu : null);
+	                    }
+	                    MenuConstructor = defaultMenu ? DefaultMenu : Menu;
+	                    eventBus = new EventBus({
+	                        el: $input
+	                    });
+	                    input = new Input({
+	                        hint: $hint,
+	                        input: $input
+	                    }, www);
+	                    menu = new MenuConstructor({
+	                        node: $menu,
+	                        datasets: datasets
+	                    }, www);
+	                    typeahead = new Typeahead({
+	                        input: input,
+	                        menu: menu,
+	                        eventBus: eventBus,
+	                        minLength: o.minLength
+	                    }, www);
+	                    $input.data(keys.www, www);
+	                    $input.data(keys.typeahead, typeahead);
+	                }
+	            },
+	            isEnabled: function isEnabled() {
+	                var enabled;
+	                ttEach(this.first(), function(t) {
+	                    enabled = t.isEnabled();
+	                });
+	                return enabled;
+	            },
+	            enable: function enable() {
+	                ttEach(this, function(t) {
+	                    t.enable();
+	                });
+	                return this;
+	            },
+	            disable: function disable() {
+	                ttEach(this, function(t) {
+	                    t.disable();
+	                });
+	                return this;
+	            },
+	            isActive: function isActive() {
+	                var active;
+	                ttEach(this.first(), function(t) {
+	                    active = t.isActive();
+	                });
+	                return active;
+	            },
+	            activate: function activate() {
+	                ttEach(this, function(t) {
+	                    t.activate();
+	                });
+	                return this;
+	            },
+	            deactivate: function deactivate() {
+	                ttEach(this, function(t) {
+	                    t.deactivate();
+	                });
+	                return this;
+	            },
+	            isOpen: function isOpen() {
+	                var open;
+	                ttEach(this.first(), function(t) {
+	                    open = t.isOpen();
+	                });
+	                return open;
+	            },
+	            open: function open() {
+	                ttEach(this, function(t) {
+	                    t.open();
+	                });
+	                return this;
+	            },
+	            close: function close() {
+	                ttEach(this, function(t) {
+	                    t.close();
+	                });
+	                return this;
+	            },
+	            select: function select(el) {
+	                var success = false, $el = $(el);
+	                ttEach(this.first(), function(t) {
+	                    success = t.select($el);
+	                });
+	                return success;
+	            },
+	            autocomplete: function autocomplete(el) {
+	                var success = false, $el = $(el);
+	                ttEach(this.first(), function(t) {
+	                    success = t.autocomplete($el);
+	                });
+	                return success;
+	            },
+	            moveCursor: function moveCursoe(delta) {
+	                var success = false;
+	                ttEach(this.first(), function(t) {
+	                    success = t.moveCursor(delta);
+	                });
+	                return success;
+	            },
+	            val: function val(newVal) {
+	                var query;
+	                if (!arguments.length) {
+	                    ttEach(this.first(), function(t) {
+	                        query = t.getVal();
+	                    });
+	                    return query;
+	                } else {
+	                    ttEach(this, function(t) {
+	                        t.setVal(newVal);
+	                    });
+	                    return this;
+	                }
+	            },
+	            destroy: function destroy() {
+	                ttEach(this, function(typeahead, $input) {
+	                    revert($input);
+	                    typeahead.destroy();
+	                });
+	                return this;
+	            }
+	        };
+	        $.fn.typeahead = function(method) {
+	            if (methods[method]) {
+	                return methods[method].apply(this, [].slice.call(arguments, 1));
+	            } else {
+	                return methods.initialize.apply(this, arguments);
+	            }
+	        };
+	        $.fn.typeahead.noConflict = function noConflict() {
+	            $.fn.typeahead = old;
+	            return this;
+	        };
+	        function ttEach($els, fn) {
+	            $els.each(function() {
+	                var $input = $(this), typeahead;
+	                (typeahead = $input.data(keys.typeahead)) && fn(typeahead, $input);
+	            });
+	        }
+	        function buildHintFromInput($input, www) {
+	            return $input.clone().addClass(www.classes.hint).removeData().css(www.css.hint).css(getBackgroundStyles($input)).prop("readonly", true).removeAttr("id name placeholder required").attr({
+	                autocomplete: "off",
+	                spellcheck: "false",
+	                tabindex: -1
+	            });
+	        }
+	        function prepInput($input, www) {
+	            $input.data(keys.attrs, {
+	                dir: $input.attr("dir"),
+	                autocomplete: $input.attr("autocomplete"),
+	                spellcheck: $input.attr("spellcheck"),
+	                style: $input.attr("style")
+	            });
+	            $input.addClass(www.classes.input).attr({
+	                autocomplete: "off",
+	                spellcheck: false
+	            });
+	            try {
+	                !$input.attr("dir") && $input.attr("dir", "auto");
+	            } catch (e) {}
+	            return $input;
+	        }
+	        function getBackgroundStyles($el) {
+	            return {
+	                backgroundAttachment: $el.css("background-attachment"),
+	                backgroundClip: $el.css("background-clip"),
+	                backgroundColor: $el.css("background-color"),
+	                backgroundImage: $el.css("background-image"),
+	                backgroundOrigin: $el.css("background-origin"),
+	                backgroundPosition: $el.css("background-position"),
+	                backgroundRepeat: $el.css("background-repeat"),
+	                backgroundSize: $el.css("background-size")
+	            };
+	        }
+	        function revert($input) {
+	            var www, $wrapper;
+	            www = $input.data(keys.www);
+	            $wrapper = $input.parent().filter(www.selectors.wrapper);
+	            _.each($input.data(keys.attrs), function(val, key) {
+	                _.isUndefined(val) ? $input.removeAttr(key) : $input.attr(key, val);
+	            });
+	            $input.removeData(keys.typeahead).removeData(keys.www).removeData(keys.attr).removeClass(www.classes.input);
+	            if ($wrapper.length) {
+	                $input.detach().insertAfter($wrapper);
+	                $wrapper.remove();
+	            }
+	        }
+	        function $elOrNull(obj) {
+	            var isValid, $el;
+	            isValid = _.isJQuery(obj) || _.isElement(obj);
+	            $el = isValid ? $(obj).first() : [];
+	            return $el.length ? $el : null;
+	        }
+	    })();
+	});
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(9).setImmediate))
+
+/***/ },
+/* 9 */
+/***/ function(module, exports, __webpack_require__) {
+
+	/* WEBPACK VAR INJECTION */(function(setImmediate, clearImmediate) {var nextTick = __webpack_require__(10).nextTick;
+	var apply = Function.prototype.apply;
+	var slice = Array.prototype.slice;
+	var immediateIds = {};
+	var nextImmediateId = 0;
+
+	// DOM APIs, for completeness
+
+	exports.setTimeout = function() {
+	  return new Timeout(apply.call(setTimeout, window, arguments), clearTimeout);
+	};
+	exports.setInterval = function() {
+	  return new Timeout(apply.call(setInterval, window, arguments), clearInterval);
+	};
+	exports.clearTimeout =
+	exports.clearInterval = function(timeout) { timeout.close(); };
+
+	function Timeout(id, clearFn) {
+	  this._id = id;
+	  this._clearFn = clearFn;
+	}
+	Timeout.prototype.unref = Timeout.prototype.ref = function() {};
+	Timeout.prototype.close = function() {
+	  this._clearFn.call(window, this._id);
+	};
+
+	// Does not start the time, just sets up the members needed.
+	exports.enroll = function(item, msecs) {
+	  clearTimeout(item._idleTimeoutId);
+	  item._idleTimeout = msecs;
+	};
+
+	exports.unenroll = function(item) {
+	  clearTimeout(item._idleTimeoutId);
+	  item._idleTimeout = -1;
+	};
+
+	exports._unrefActive = exports.active = function(item) {
+	  clearTimeout(item._idleTimeoutId);
+
+	  var msecs = item._idleTimeout;
+	  if (msecs >= 0) {
+	    item._idleTimeoutId = setTimeout(function onTimeout() {
+	      if (item._onTimeout)
+	        item._onTimeout();
+	    }, msecs);
+	  }
+	};
+
+	// That's not how node.js implements it but the exposed api is the same.
+	exports.setImmediate = typeof setImmediate === "function" ? setImmediate : function(fn) {
+	  var id = nextImmediateId++;
+	  var args = arguments.length < 2 ? false : slice.call(arguments, 1);
+
+	  immediateIds[id] = true;
+
+	  nextTick(function onNextTick() {
+	    if (immediateIds[id]) {
+	      // fn.call() is faster so we optimize for the common use-case
+	      // @see http://jsperf.com/call-apply-segu
+	      if (args) {
+	        fn.apply(null, args);
+	      } else {
+	        fn.call(null);
+	      }
+	      // Prevent ids from leaking
+	      exports.clearImmediate(id);
+	    }
+	  });
+
+	  return id;
+	};
+
+	exports.clearImmediate = typeof clearImmediate === "function" ? clearImmediate : function(id) {
+	  delete immediateIds[id];
+	};
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(9).setImmediate, __webpack_require__(9).clearImmediate))
+
+/***/ },
+/* 10 */
+/***/ function(module, exports) {
+
+	// shim for using process in browser
+
+	var process = module.exports = {};
+	var queue = [];
+	var draining = false;
+	var currentQueue;
+	var queueIndex = -1;
+
+	function cleanUpNextTick() {
+	    draining = false;
+	    if (currentQueue.length) {
+	        queue = currentQueue.concat(queue);
+	    } else {
+	        queueIndex = -1;
+	    }
+	    if (queue.length) {
+	        drainQueue();
+	    }
+	}
+
+	function drainQueue() {
+	    if (draining) {
+	        return;
+	    }
+	    var timeout = setTimeout(cleanUpNextTick);
+	    draining = true;
+
+	    var len = queue.length;
+	    while(len) {
+	        currentQueue = queue;
+	        queue = [];
+	        while (++queueIndex < len) {
+	            currentQueue[queueIndex].run();
+	        }
+	        queueIndex = -1;
+	        len = queue.length;
+	    }
+	    currentQueue = null;
+	    draining = false;
+	    clearTimeout(timeout);
+	}
+
+	process.nextTick = function (fun) {
+	    var args = new Array(arguments.length - 1);
+	    if (arguments.length > 1) {
+	        for (var i = 1; i < arguments.length; i++) {
+	            args[i - 1] = arguments[i];
+	        }
+	    }
+	    queue.push(new Item(fun, args));
+	    if (queue.length === 1 && !draining) {
+	        setTimeout(drainQueue, 0);
+	    }
+	};
+
+	// v8 likes predictible objects
+	function Item(fun, array) {
+	    this.fun = fun;
+	    this.array = array;
+	}
+	Item.prototype.run = function () {
+	    this.fun.apply(null, this.array);
+	};
+	process.title = 'browser';
+	process.browser = true;
+	process.env = {};
+	process.argv = [];
+	process.version = ''; // empty string to avoid regexp issues
+	process.versions = {};
+
+	function noop() {}
+
+	process.on = noop;
+	process.addListener = noop;
+	process.once = noop;
+	process.off = noop;
+	process.removeListener = noop;
+	process.removeAllListeners = noop;
+	process.emit = noop;
+
+	process.binding = function (name) {
+	    throw new Error('process.binding is not supported');
+	};
+
+	// TODO(shtylman)
+	process.cwd = function () { return '/' };
+	process.chdir = function (dir) {
+	    throw new Error('process.chdir is not supported');
+	};
+	process.umask = function() { return 0; };
+
+
+/***/ },
+/* 11 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*** IMPORTS FROM imports-loader ***/
+	(function() {
+
+	/*!
+	 * typeahead.js 0.11.1
+	 * https://github.com/twitter/typeahead.js
+	 * Copyright 2013-2015 Twitter, Inc. and other contributors; Licensed MIT
+	 */
+
+	(function(root, factory) {
+	    if (true) {
+	        !(__WEBPACK_AMD_DEFINE_ARRAY__ = [ __webpack_require__(1) ], __WEBPACK_AMD_DEFINE_RESULT__ = function(a0) {
+	            return root["Bloodhound"] = factory(a0);
+	        }.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
+	    } else if (typeof exports === "object") {
+	        module.exports = factory(require("jquery"));
+	    } else {
+	        root["Bloodhound"] = factory(jQuery);
+	    }
+	})(this, function($) {
+	    var _ = function() {
+	        "use strict";
+	        return {
+	            isMsie: function() {
+	                return /(msie|trident)/i.test(navigator.userAgent) ? navigator.userAgent.match(/(msie |rv:)(\d+(.\d+)?)/i)[2] : false;
+	            },
+	            isBlankString: function(str) {
+	                return !str || /^\s*$/.test(str);
+	            },
+	            escapeRegExChars: function(str) {
+	                return str.replace(/[\-\[\]\/\{\}\(\)\*\+\?\.\\\^\$\|]/g, "\\$&");
+	            },
+	            isString: function(obj) {
+	                return typeof obj === "string";
+	            },
+	            isNumber: function(obj) {
+	                return typeof obj === "number";
+	            },
+	            isArray: $.isArray,
+	            isFunction: $.isFunction,
+	            isObject: $.isPlainObject,
+	            isUndefined: function(obj) {
+	                return typeof obj === "undefined";
+	            },
+	            isElement: function(obj) {
+	                return !!(obj && obj.nodeType === 1);
+	            },
+	            isJQuery: function(obj) {
+	                return obj instanceof $;
+	            },
+	            toStr: function toStr(s) {
+	                return _.isUndefined(s) || s === null ? "" : s + "";
+	            },
+	            bind: $.proxy,
+	            each: function(collection, cb) {
+	                $.each(collection, reverseArgs);
+	                function reverseArgs(index, value) {
+	                    return cb(value, index);
+	                }
+	            },
+	            map: $.map,
+	            filter: $.grep,
+	            every: function(obj, test) {
+	                var result = true;
+	                if (!obj) {
+	                    return result;
+	                }
+	                $.each(obj, function(key, val) {
+	                    if (!(result = test.call(null, val, key, obj))) {
+	                        return false;
+	                    }
+	                });
+	                return !!result;
+	            },
+	            some: function(obj, test) {
+	                var result = false;
+	                if (!obj) {
+	                    return result;
+	                }
+	                $.each(obj, function(key, val) {
+	                    if (result = test.call(null, val, key, obj)) {
+	                        return false;
+	                    }
+	                });
+	                return !!result;
+	            },
+	            mixin: $.extend,
+	            identity: function(x) {
+	                return x;
+	            },
+	            clone: function(obj) {
+	                return $.extend(true, {}, obj);
+	            },
+	            getIdGenerator: function() {
+	                var counter = 0;
+	                return function() {
+	                    return counter++;
+	                };
+	            },
+	            templatify: function templatify(obj) {
+	                return $.isFunction(obj) ? obj : template;
+	                function template() {
+	                    return String(obj);
+	                }
+	            },
+	            defer: function(fn) {
+	                setTimeout(fn, 0);
+	            },
+	            debounce: function(func, wait, immediate) {
+	                var timeout, result;
+	                return function() {
+	                    var context = this, args = arguments, later, callNow;
+	                    later = function() {
+	                        timeout = null;
+	                        if (!immediate) {
+	                            result = func.apply(context, args);
+	                        }
+	                    };
+	                    callNow = immediate && !timeout;
+	                    clearTimeout(timeout);
+	                    timeout = setTimeout(later, wait);
+	                    if (callNow) {
+	                        result = func.apply(context, args);
+	                    }
+	                    return result;
+	                };
+	            },
+	            throttle: function(func, wait) {
+	                var context, args, timeout, result, previous, later;
+	                previous = 0;
+	                later = function() {
+	                    previous = new Date();
+	                    timeout = null;
+	                    result = func.apply(context, args);
+	                };
+	                return function() {
+	                    var now = new Date(), remaining = wait - (now - previous);
+	                    context = this;
+	                    args = arguments;
+	                    if (remaining <= 0) {
+	                        clearTimeout(timeout);
+	                        timeout = null;
+	                        previous = now;
+	                        result = func.apply(context, args);
+	                    } else if (!timeout) {
+	                        timeout = setTimeout(later, remaining);
+	                    }
+	                    return result;
+	                };
+	            },
+	            stringify: function(val) {
+	                return _.isString(val) ? val : JSON.stringify(val);
+	            },
+	            noop: function() {}
+	        };
+	    }();
+	    var VERSION = "0.11.1";
+	    var tokenizers = function() {
+	        "use strict";
+	        return {
+	            nonword: nonword,
+	            whitespace: whitespace,
+	            obj: {
+	                nonword: getObjTokenizer(nonword),
+	                whitespace: getObjTokenizer(whitespace)
+	            }
+	        };
+	        function whitespace(str) {
+	            str = _.toStr(str);
+	            return str ? str.split(/\s+/) : [];
+	        }
+	        function nonword(str) {
+	            str = _.toStr(str);
+	            return str ? str.split(/\W+/) : [];
+	        }
+	        function getObjTokenizer(tokenizer) {
+	            return function setKey(keys) {
+	                keys = _.isArray(keys) ? keys : [].slice.call(arguments, 0);
+	                return function tokenize(o) {
+	                    var tokens = [];
+	                    _.each(keys, function(k) {
+	                        tokens = tokens.concat(tokenizer(_.toStr(o[k])));
+	                    });
+	                    return tokens;
+	                };
+	            };
+	        }
+	    }();
+	    var LruCache = function() {
+	        "use strict";
+	        function LruCache(maxSize) {
+	            this.maxSize = _.isNumber(maxSize) ? maxSize : 100;
+	            this.reset();
+	            if (this.maxSize <= 0) {
+	                this.set = this.get = $.noop;
+	            }
+	        }
+	        _.mixin(LruCache.prototype, {
+	            set: function set(key, val) {
+	                var tailItem = this.list.tail, node;
+	                if (this.size >= this.maxSize) {
+	                    this.list.remove(tailItem);
+	                    delete this.hash[tailItem.key];
+	                    this.size--;
+	                }
+	                if (node = this.hash[key]) {
+	                    node.val = val;
+	                    this.list.moveToFront(node);
+	                } else {
+	                    node = new Node(key, val);
+	                    this.list.add(node);
+	                    this.hash[key] = node;
+	                    this.size++;
+	                }
+	            },
+	            get: function get(key) {
+	                var node = this.hash[key];
+	                if (node) {
+	                    this.list.moveToFront(node);
+	                    return node.val;
+	                }
+	            },
+	            reset: function reset() {
+	                this.size = 0;
+	                this.hash = {};
+	                this.list = new List();
+	            }
+	        });
+	        function List() {
+	            this.head = this.tail = null;
+	        }
+	        _.mixin(List.prototype, {
+	            add: function add(node) {
+	                if (this.head) {
+	                    node.next = this.head;
+	                    this.head.prev = node;
+	                }
+	                this.head = node;
+	                this.tail = this.tail || node;
+	            },
+	            remove: function remove(node) {
+	                node.prev ? node.prev.next = node.next : this.head = node.next;
+	                node.next ? node.next.prev = node.prev : this.tail = node.prev;
+	            },
+	            moveToFront: function(node) {
+	                this.remove(node);
+	                this.add(node);
+	            }
+	        });
+	        function Node(key, val) {
+	            this.key = key;
+	            this.val = val;
+	            this.prev = this.next = null;
+	        }
+	        return LruCache;
+	    }();
+	    var PersistentStorage = function() {
+	        "use strict";
+	        var LOCAL_STORAGE;
+	        try {
+	            LOCAL_STORAGE = window.localStorage;
+	            LOCAL_STORAGE.setItem("~~~", "!");
+	            LOCAL_STORAGE.removeItem("~~~");
+	        } catch (err) {
+	            LOCAL_STORAGE = null;
+	        }
+	        function PersistentStorage(namespace, override) {
+	            this.prefix = [ "__", namespace, "__" ].join("");
+	            this.ttlKey = "__ttl__";
+	            this.keyMatcher = new RegExp("^" + _.escapeRegExChars(this.prefix));
+	            this.ls = override || LOCAL_STORAGE;
+	            !this.ls && this._noop();
+	        }
+	        _.mixin(PersistentStorage.prototype, {
+	            _prefix: function(key) {
+	                return this.prefix + key;
+	            },
+	            _ttlKey: function(key) {
+	                return this._prefix(key) + this.ttlKey;
+	            },
+	            _noop: function() {
+	                this.get = this.set = this.remove = this.clear = this.isExpired = _.noop;
+	            },
+	            _safeSet: function(key, val) {
+	                try {
+	                    this.ls.setItem(key, val);
+	                } catch (err) {
+	                    if (err.name === "QuotaExceededError") {
+	                        this.clear();
+	                        this._noop();
+	                    }
+	                }
+	            },
+	            get: function(key) {
+	                if (this.isExpired(key)) {
+	                    this.remove(key);
+	                }
+	                return decode(this.ls.getItem(this._prefix(key)));
+	            },
+	            set: function(key, val, ttl) {
+	                if (_.isNumber(ttl)) {
+	                    this._safeSet(this._ttlKey(key), encode(now() + ttl));
+	                } else {
+	                    this.ls.removeItem(this._ttlKey(key));
+	                }
+	                return this._safeSet(this._prefix(key), encode(val));
+	            },
+	            remove: function(key) {
+	                this.ls.removeItem(this._ttlKey(key));
+	                this.ls.removeItem(this._prefix(key));
+	                return this;
+	            },
+	            clear: function() {
+	                var i, keys = gatherMatchingKeys(this.keyMatcher);
+	                for (i = keys.length; i--; ) {
+	                    this.remove(keys[i]);
+	                }
+	                return this;
+	            },
+	            isExpired: function(key) {
+	                var ttl = decode(this.ls.getItem(this._ttlKey(key)));
+	                return _.isNumber(ttl) && now() > ttl ? true : false;
+	            }
+	        });
+	        return PersistentStorage;
+	        function now() {
+	            return new Date().getTime();
+	        }
+	        function encode(val) {
+	            return JSON.stringify(_.isUndefined(val) ? null : val);
+	        }
+	        function decode(val) {
+	            return $.parseJSON(val);
+	        }
+	        function gatherMatchingKeys(keyMatcher) {
+	            var i, key, keys = [], len = LOCAL_STORAGE.length;
+	            for (i = 0; i < len; i++) {
+	                if ((key = LOCAL_STORAGE.key(i)).match(keyMatcher)) {
+	                    keys.push(key.replace(keyMatcher, ""));
+	                }
+	            }
+	            return keys;
+	        }
+	    }();
+	    var Transport = function() {
+	        "use strict";
+	        var pendingRequestsCount = 0, pendingRequests = {}, maxPendingRequests = 6, sharedCache = new LruCache(10);
+	        function Transport(o) {
+	            o = o || {};
+	            this.cancelled = false;
+	            this.lastReq = null;
+	            this._send = o.transport;
+	            this._get = o.limiter ? o.limiter(this._get) : this._get;
+	            this._cache = o.cache === false ? new LruCache(0) : sharedCache;
+	        }
+	        Transport.setMaxPendingRequests = function setMaxPendingRequests(num) {
+	            maxPendingRequests = num;
+	        };
+	        Transport.resetCache = function resetCache() {
+	            sharedCache.reset();
+	        };
+	        _.mixin(Transport.prototype, {
+	            _fingerprint: function fingerprint(o) {
+	                o = o || {};
+	                return o.url + o.type + $.param(o.data || {});
+	            },
+	            _get: function(o, cb) {
+	                var that = this, fingerprint, jqXhr;
+	                fingerprint = this._fingerprint(o);
+	                if (this.cancelled || fingerprint !== this.lastReq) {
+	                    return;
+	                }
+	                if (jqXhr = pendingRequests[fingerprint]) {
+	                    jqXhr.done(done).fail(fail);
+	                } else if (pendingRequestsCount < maxPendingRequests) {
+	                    pendingRequestsCount++;
+	                    pendingRequests[fingerprint] = this._send(o).done(done).fail(fail).always(always);
+	                } else {
+	                    this.onDeckRequestArgs = [].slice.call(arguments, 0);
+	                }
+	                function done(resp) {
+	                    cb(null, resp);
+	                    that._cache.set(fingerprint, resp);
+	                }
+	                function fail() {
+	                    cb(true);
+	                }
+	                function always() {
+	                    pendingRequestsCount--;
+	                    delete pendingRequests[fingerprint];
+	                    if (that.onDeckRequestArgs) {
+	                        that._get.apply(that, that.onDeckRequestArgs);
+	                        that.onDeckRequestArgs = null;
+	                    }
+	                }
+	            },
+	            get: function(o, cb) {
+	                var resp, fingerprint;
+	                cb = cb || $.noop;
+	                o = _.isString(o) ? {
+	                    url: o
+	                } : o || {};
+	                fingerprint = this._fingerprint(o);
+	                this.cancelled = false;
+	                this.lastReq = fingerprint;
+	                if (resp = this._cache.get(fingerprint)) {
+	                    cb(null, resp);
+	                } else {
+	                    this._get(o, cb);
+	                }
+	            },
+	            cancel: function() {
+	                this.cancelled = true;
+	            }
+	        });
+	        return Transport;
+	    }();
+	    var SearchIndex = window.SearchIndex = function() {
+	        "use strict";
+	        var CHILDREN = "c", IDS = "i";
+	        function SearchIndex(o) {
+	            o = o || {};
+	            if (!o.datumTokenizer || !o.queryTokenizer) {
+	                $.error("datumTokenizer and queryTokenizer are both required");
+	            }
+	            this.identify = o.identify || _.stringify;
+	            this.datumTokenizer = o.datumTokenizer;
+	            this.queryTokenizer = o.queryTokenizer;
+	            this.reset();
+	        }
+	        _.mixin(SearchIndex.prototype, {
+	            bootstrap: function bootstrap(o) {
+	                this.datums = o.datums;
+	                this.trie = o.trie;
+	            },
+	            add: function(data) {
+	                var that = this;
+	                data = _.isArray(data) ? data : [ data ];
+	                _.each(data, function(datum) {
+	                    var id, tokens;
+	                    that.datums[id = that.identify(datum)] = datum;
+	                    tokens = normalizeTokens(that.datumTokenizer(datum));
+	                    _.each(tokens, function(token) {
+	                        var node, chars, ch;
+	                        node = that.trie;
+	                        chars = token.split("");
+	                        while (ch = chars.shift()) {
+	                            node = node[CHILDREN][ch] || (node[CHILDREN][ch] = newNode());
+	                            node[IDS].push(id);
+	                        }
+	                    });
+	                });
+	            },
+	            get: function get(ids) {
+	                var that = this;
+	                return _.map(ids, function(id) {
+	                    return that.datums[id];
+	                });
+	            },
+	            search: function search(query) {
+	                var that = this, tokens, matches;
+	                tokens = normalizeTokens(this.queryTokenizer(query));
+	                _.each(tokens, function(token) {
+	                    var node, chars, ch, ids;
+	                    if (matches && matches.length === 0) {
+	                        return false;
+	                    }
+	                    node = that.trie;
+	                    chars = token.split("");
+	                    while (node && (ch = chars.shift())) {
+	                        node = node[CHILDREN][ch];
+	                    }
+	                    if (node && chars.length === 0) {
+	                        ids = node[IDS].slice(0);
+	                        matches = matches ? getIntersection(matches, ids) : ids;
+	                    } else {
+	                        matches = [];
+	                        return false;
+	                    }
+	                });
+	                return matches ? _.map(unique(matches), function(id) {
+	                    return that.datums[id];
+	                }) : [];
+	            },
+	            all: function all() {
+	                var values = [];
+	                for (var key in this.datums) {
+	                    values.push(this.datums[key]);
+	                }
+	                return values;
+	            },
+	            reset: function reset() {
+	                this.datums = {};
+	                this.trie = newNode();
+	            },
+	            serialize: function serialize() {
+	                return {
+	                    datums: this.datums,
+	                    trie: this.trie
+	                };
+	            }
+	        });
+	        return SearchIndex;
+	        function normalizeTokens(tokens) {
+	            tokens = _.filter(tokens, function(token) {
+	                return !!token;
+	            });
+	            tokens = _.map(tokens, function(token) {
+	                return token.toLowerCase();
+	            });
+	            return tokens;
+	        }
+	        function newNode() {
+	            var node = {};
+	            node[IDS] = [];
+	            node[CHILDREN] = {};
+	            return node;
+	        }
+	        function unique(array) {
+	            var seen = {}, uniques = [];
+	            for (var i = 0, len = array.length; i < len; i++) {
+	                if (!seen[array[i]]) {
+	                    seen[array[i]] = true;
+	                    uniques.push(array[i]);
+	                }
+	            }
+	            return uniques;
+	        }
+	        function getIntersection(arrayA, arrayB) {
+	            var ai = 0, bi = 0, intersection = [];
+	            arrayA = arrayA.sort();
+	            arrayB = arrayB.sort();
+	            var lenArrayA = arrayA.length, lenArrayB = arrayB.length;
+	            while (ai < lenArrayA && bi < lenArrayB) {
+	                if (arrayA[ai] < arrayB[bi]) {
+	                    ai++;
+	                } else if (arrayA[ai] > arrayB[bi]) {
+	                    bi++;
+	                } else {
+	                    intersection.push(arrayA[ai]);
+	                    ai++;
+	                    bi++;
+	                }
+	            }
+	            return intersection;
+	        }
+	    }();
+	    var Prefetch = function() {
+	        "use strict";
+	        var keys;
+	        keys = {
+	            data: "data",
+	            protocol: "protocol",
+	            thumbprint: "thumbprint"
+	        };
+	        function Prefetch(o) {
+	            this.url = o.url;
+	            this.ttl = o.ttl;
+	            this.cache = o.cache;
+	            this.prepare = o.prepare;
+	            this.transform = o.transform;
+	            this.transport = o.transport;
+	            this.thumbprint = o.thumbprint;
+	            this.storage = new PersistentStorage(o.cacheKey);
+	        }
+	        _.mixin(Prefetch.prototype, {
+	            _settings: function settings() {
+	                return {
+	                    url: this.url,
+	                    type: "GET",
+	                    dataType: "json"
+	                };
+	            },
+	            store: function store(data) {
+	                if (!this.cache) {
+	                    return;
+	                }
+	                this.storage.set(keys.data, data, this.ttl);
+	                this.storage.set(keys.protocol, location.protocol, this.ttl);
+	                this.storage.set(keys.thumbprint, this.thumbprint, this.ttl);
+	            },
+	            fromCache: function fromCache() {
+	                var stored = {}, isExpired;
+	                if (!this.cache) {
+	                    return null;
+	                }
+	                stored.data = this.storage.get(keys.data);
+	                stored.protocol = this.storage.get(keys.protocol);
+	                stored.thumbprint = this.storage.get(keys.thumbprint);
+	                isExpired = stored.thumbprint !== this.thumbprint || stored.protocol !== location.protocol;
+	                return stored.data && !isExpired ? stored.data : null;
+	            },
+	            fromNetwork: function(cb) {
+	                var that = this, settings;
+	                if (!cb) {
+	                    return;
+	                }
+	                settings = this.prepare(this._settings());
+	                this.transport(settings).fail(onError).done(onResponse);
+	                function onError() {
+	                    cb(true);
+	                }
+	                function onResponse(resp) {
+	                    cb(null, that.transform(resp));
+	                }
+	            },
+	            clear: function clear() {
+	                this.storage.clear();
+	                return this;
+	            }
+	        });
+	        return Prefetch;
+	    }();
+	    var Remote = function() {
+	        "use strict";
+	        function Remote(o) {
+	            this.url = o.url;
+	            this.prepare = o.prepare;
+	            this.transform = o.transform;
+	            this.transport = new Transport({
+	                cache: o.cache,
+	                limiter: o.limiter,
+	                transport: o.transport
+	            });
+	        }
+	        _.mixin(Remote.prototype, {
+	            _settings: function settings() {
+	                return {
+	                    url: this.url,
+	                    type: "GET",
+	                    dataType: "json"
+	                };
+	            },
+	            get: function get(query, cb) {
+	                var that = this, settings;
+	                if (!cb) {
+	                    return;
+	                }
+	                query = query || "";
+	                settings = this.prepare(query, this._settings());
+	                return this.transport.get(settings, onResponse);
+	                function onResponse(err, resp) {
+	                    err ? cb([]) : cb(that.transform(resp));
+	                }
+	            },
+	            cancelLastRequest: function cancelLastRequest() {
+	                this.transport.cancel();
+	            }
+	        });
+	        return Remote;
+	    }();
+	    var oParser = function() {
+	        "use strict";
+	        return function parse(o) {
+	            var defaults, sorter;
+	            defaults = {
+	                initialize: true,
+	                identify: _.stringify,
+	                datumTokenizer: null,
+	                queryTokenizer: null,
+	                sufficient: 5,
+	                sorter: null,
+	                local: [],
+	                prefetch: null,
+	                remote: null
+	            };
+	            o = _.mixin(defaults, o || {});
+	            !o.datumTokenizer && $.error("datumTokenizer is required");
+	            !o.queryTokenizer && $.error("queryTokenizer is required");
+	            sorter = o.sorter;
+	            o.sorter = sorter ? function(x) {
+	                return x.sort(sorter);
+	            } : _.identity;
+	            o.local = _.isFunction(o.local) ? o.local() : o.local;
+	            o.prefetch = parsePrefetch(o.prefetch);
+	            o.remote = parseRemote(o.remote);
+	            return o;
+	        };
+	        function parsePrefetch(o) {
+	            var defaults;
+	            if (!o) {
+	                return null;
+	            }
+	            defaults = {
+	                url: null,
+	                ttl: 24 * 60 * 60 * 1e3,
+	                cache: true,
+	                cacheKey: null,
+	                thumbprint: "",
+	                prepare: _.identity,
+	                transform: _.identity,
+	                transport: null
+	            };
+	            o = _.isString(o) ? {
+	                url: o
+	            } : o;
+	            o = _.mixin(defaults, o);
+	            !o.url && $.error("prefetch requires url to be set");
+	            o.transform = o.filter || o.transform;
+	            o.cacheKey = o.cacheKey || o.url;
+	            o.thumbprint = VERSION + o.thumbprint;
+	            o.transport = o.transport ? callbackToDeferred(o.transport) : $.ajax;
+	            return o;
+	        }
+	        function parseRemote(o) {
+	            var defaults;
+	            if (!o) {
+	                return;
+	            }
+	            defaults = {
+	                url: null,
+	                cache: true,
+	                prepare: null,
+	                replace: null,
+	                wildcard: null,
+	                limiter: null,
+	                rateLimitBy: "debounce",
+	                rateLimitWait: 300,
+	                transform: _.identity,
+	                transport: null
+	            };
+	            o = _.isString(o) ? {
+	                url: o
+	            } : o;
+	            o = _.mixin(defaults, o);
+	            !o.url && $.error("remote requires url to be set");
+	            o.transform = o.filter || o.transform;
+	            o.prepare = toRemotePrepare(o);
+	            o.limiter = toLimiter(o);
+	            o.transport = o.transport ? callbackToDeferred(o.transport) : $.ajax;
+	            delete o.replace;
+	            delete o.wildcard;
+	            delete o.rateLimitBy;
+	            delete o.rateLimitWait;
+	            return o;
+	        }
+	        function toRemotePrepare(o) {
+	            var prepare, replace, wildcard;
+	            prepare = o.prepare;
+	            replace = o.replace;
+	            wildcard = o.wildcard;
+	            if (prepare) {
+	                return prepare;
+	            }
+	            if (replace) {
+	                prepare = prepareByReplace;
+	            } else if (o.wildcard) {
+	                prepare = prepareByWildcard;
+	            } else {
+	                prepare = idenityPrepare;
+	            }
+	            return prepare;
+	            function prepareByReplace(query, settings) {
+	                settings.url = replace(settings.url, query);
+	                return settings;
+	            }
+	            function prepareByWildcard(query, settings) {
+	                settings.url = settings.url.replace(wildcard, encodeURIComponent(query));
+	                return settings;
+	            }
+	            function idenityPrepare(query, settings) {
+	                return settings;
+	            }
+	        }
+	        function toLimiter(o) {
+	            var limiter, method, wait;
+	            limiter = o.limiter;
+	            method = o.rateLimitBy;
+	            wait = o.rateLimitWait;
+	            if (!limiter) {
+	                limiter = /^throttle$/i.test(method) ? throttle(wait) : debounce(wait);
+	            }
+	            return limiter;
+	            function debounce(wait) {
+	                return function debounce(fn) {
+	                    return _.debounce(fn, wait);
+	                };
+	            }
+	            function throttle(wait) {
+	                return function throttle(fn) {
+	                    return _.throttle(fn, wait);
+	                };
+	            }
+	        }
+	        function callbackToDeferred(fn) {
+	            return function wrapper(o) {
+	                var deferred = $.Deferred();
+	                fn(o, onSuccess, onError);
+	                return deferred;
+	                function onSuccess(resp) {
+	                    _.defer(function() {
+	                        deferred.resolve(resp);
+	                    });
+	                }
+	                function onError(err) {
+	                    _.defer(function() {
+	                        deferred.reject(err);
+	                    });
+	                }
+	            };
+	        }
+	    }();
+	    var Bloodhound = function() {
+	        "use strict";
+	        var old;
+	        old = window && window.Bloodhound;
+	        function Bloodhound(o) {
+	            o = oParser(o);
+	            this.sorter = o.sorter;
+	            this.identify = o.identify;
+	            this.sufficient = o.sufficient;
+	            this.local = o.local;
+	            this.remote = o.remote ? new Remote(o.remote) : null;
+	            this.prefetch = o.prefetch ? new Prefetch(o.prefetch) : null;
+	            this.index = new SearchIndex({
+	                identify: this.identify,
+	                datumTokenizer: o.datumTokenizer,
+	                queryTokenizer: o.queryTokenizer
+	            });
+	            o.initialize !== false && this.initialize();
+	        }
+	        Bloodhound.noConflict = function noConflict() {
+	            window && (window.Bloodhound = old);
+	            return Bloodhound;
+	        };
+	        Bloodhound.tokenizers = tokenizers;
+	        _.mixin(Bloodhound.prototype, {
+	            __ttAdapter: function ttAdapter() {
+	                var that = this;
+	                return this.remote ? withAsync : withoutAsync;
+	                function withAsync(query, sync, async) {
+	                    return that.search(query, sync, async);
+	                }
+	                function withoutAsync(query, sync) {
+	                    return that.search(query, sync);
+	                }
+	            },
+	            _loadPrefetch: function loadPrefetch() {
+	                var that = this, deferred, serialized;
+	                deferred = $.Deferred();
+	                if (!this.prefetch) {
+	                    deferred.resolve();
+	                } else if (serialized = this.prefetch.fromCache()) {
+	                    this.index.bootstrap(serialized);
+	                    deferred.resolve();
+	                } else {
+	                    this.prefetch.fromNetwork(done);
+	                }
+	                return deferred.promise();
+	                function done(err, data) {
+	                    if (err) {
+	                        return deferred.reject();
+	                    }
+	                    that.add(data);
+	                    that.prefetch.store(that.index.serialize());
+	                    deferred.resolve();
+	                }
+	            },
+	            _initialize: function initialize() {
+	                var that = this, deferred;
+	                this.clear();
+	                (this.initPromise = this._loadPrefetch()).done(addLocalToIndex);
+	                return this.initPromise;
+	                function addLocalToIndex() {
+	                    that.add(that.local);
+	                }
+	            },
+	            initialize: function initialize(force) {
+	                return !this.initPromise || force ? this._initialize() : this.initPromise;
+	            },
+	            add: function add(data) {
+	                this.index.add(data);
+	                return this;
+	            },
+	            get: function get(ids) {
+	                ids = _.isArray(ids) ? ids : [].slice.call(arguments);
+	                return this.index.get(ids);
+	            },
+	            search: function search(query, sync, async) {
+	                var that = this, local;
+	                local = this.sorter(this.index.search(query));
+	                sync(this.remote ? local.slice() : local);
+	                if (this.remote && local.length < this.sufficient) {
+	                    this.remote.get(query, processRemote);
+	                } else if (this.remote) {
+	                    this.remote.cancelLastRequest();
+	                }
+	                return this;
+	                function processRemote(remote) {
+	                    var nonDuplicates = [];
+	                    _.each(remote, function(r) {
+	                        !_.some(local, function(l) {
+	                            return that.identify(r) === that.identify(l);
+	                        }) && nonDuplicates.push(r);
+	                    });
+	                    async && async(nonDuplicates);
+	                }
+	            },
+	            all: function all() {
+	                return this.index.all();
+	            },
+	            clear: function clear() {
+	                this.index.reset();
+	                return this;
+	            },
+	            clearPrefetchCache: function clearPrefetchCache() {
+	                this.prefetch && this.prefetch.clear();
+	                return this;
+	            },
+	            clearRemoteCache: function clearRemoteCache() {
+	                Transport.resetCache();
+	                return this;
+	            },
+	            ttAdapter: function ttAdapter() {
+	                return this.__ttAdapter();
+	            }
+	        });
+	        return Bloodhound;
+	    }();
+	    return Bloodhound;
+	});
+
+	/*** EXPORTS FROM exports-loader ***/
+	module.exports = window.Bloodhound}.call(window));
+
+/***/ },
+/* 12 */
+/***/ function(module, exports, __webpack_require__) {
+
+	/* WEBPACK VAR INJECTION */(function($) {var Foundation = __webpack_require__(6);
+	var Bloodhound = __webpack_require__(11);
 
 	module.exports = function() {
 		var $search_toggle = $('#search-toggle');
 		var $close_search = $('#close-search');
 		var $search_form = $('#search-form');
+		var $search_box = $('#search-box');
 
 		$search_toggle.click(function(e) {
 			e.preventDefault();
@@ -17213,14 +19868,30 @@ module.exports =
 			$search_form.attr('aria-hidden', true);
 		});
 
+
+		var typeahead_menu_repositioning = function() {
+			var offset = $search_box.offset();
+			$('.top-nav-search-menu').css({
+				top: (offset.top + $search_box.outerHeight()) + 'px',
+				left: offset.left + 'px',
+				width: $search_box.outerWidth()
+			});
+		};
+
+		$search_box.on('typeahead:open', typeahead_menu_repositioning);
+
+
+		var close_button_visibility = function() {
+			$close_search.attr('aria-hidden', Foundation.utils.is_large_up());
+		};
+
+		// Initial call
+		close_button_visibility();
+
 		// Throttled resize function
 		$(window).on('resize', Foundation.utils.throttle(function() {
-			if(Foundation.utils.is_large_up()) {
-				$close_search.attr('aria-hidden', true);
-			}
-			else {
-				$close_search.attr('aria-hidden', false);
-			}
+			close_button_visibility();
+			typeahead_menu_repositioning();
 		}, 200));
 
 		// kv-toggle
@@ -17237,7 +19908,7 @@ module.exports =
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)))
 
 /***/ },
-/* 9 */
+/* 13 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function($) {module.exports = function() {

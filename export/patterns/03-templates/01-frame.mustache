@@ -1,6 +1,52 @@
 <div class="pageWrap">
 	{{> templates-header}}
 
+	{{#show-secondary}}
+		<div class="secondary-nav-bar show-for-large-up">
+			<div class="row">
+				<div class="large-12 columns">
+					<ul>
+						{{#bar-links}}
+						<li>
+							<a href="#" {{#active}}class="active"{{/active}}>{{title}}</a>
+						</li>
+						{{/bar-links}}
+					</ul>
+				</div>
+			</div>
+		</div>
+
+		<div class="hide-for-large-up secondary-nav-dropdown">
+			<a data-dropdown="secondary-nav-drop" aria-controls="secondary-nav-drop" aria-expanded="false">{{main-title}}<i class="fa fa-chevron-down closed-icon"></i><i class="fa fa-chevron-up open-icon"></i></a>
+			<ul id="secondary-nav-drop" class="f-dropdown dropdown-list" data-dropdown-content aria-hidden="true" tabindex="-1">
+				{{#drop-links}}
+				<li>
+					<a href="#" {{#active}}class="active"{{/active}}>{{title}}</a>
+					<ul>
+						{{#sub-links}}
+						<li><a href="#" {{#sub-active}}class="active"{{/sub-active}}>{{sub-title}}</a></li>
+						{{/sub-links}}
+					</ul>
+				</li>
+				{{/drop-links}}
+				{{#is-borrower}}
+					{{#drop-links-borrower}}
+						<li>
+							<a href="#" {{#active}}class="active"{{/active}}>{{title}}</a>
+						</li>
+					{{/drop-links-borrower}}
+				{{/is-borrower}}
+				{{#is-trustee}}
+					{{#drop-links-trustee}}
+						<li>
+							<a href="#" {{#active}}class="active"{{/active}}>{{title}}</a>
+						</li>
+					{{/drop-links-trustee}}
+				{{/is-trustee}}
+			</ul>
+		</div>
+	{{/show-secondary}}
+
 	<div style="text-align: center; margin: 5rem auto;">
 		Page content goes here
 	</div>
