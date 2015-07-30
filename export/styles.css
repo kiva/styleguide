@@ -7012,6 +7012,9 @@ a.header-button#search-toggle {
   height: 0;
   position: absolute;
   z-index: 1; }
+  @media only screen and (min-width:42.5625rem) {
+    .search-container {
+      position: static; } }
 
 #search-form {
   display: block;
@@ -7022,8 +7025,14 @@ a.header-button#search-toggle {
   -moz-transition: width 0.5s ease;
   -o-transition: width 0.5s ease;
   transition: width 0.5s ease; }
+  @media only screen and (min-width:42.5625rem) {
+    #search-form {
+      width: auto; } }
   #search-form[aria-hidden="true"] {
     width: 0; }
+    @media only screen and (min-width:42.5625rem) {
+      #search-form[aria-hidden="true"] {
+        width: auto; } }
     #search-form[aria-hidden="true"] div {
       width: 0; }
   #search-form div {
@@ -7037,8 +7046,15 @@ a.header-button#search-toggle {
     -moz-transition: width 0.5s ease;
     -o-transition: width 0.5s ease;
     transition: width 0.5s ease; }
+    @media only screen and (min-width:42.5625rem) {
+      #search-form div {
+        height: 3.5555555556rem; } }
   #search-form span.twitter-typeahead {
     width: calc(100% - 2.5rem); }
+    @media only screen and (min-width:42.5625rem) {
+      #search-form span.twitter-typeahead {
+        position: static !important;
+        width: 100%; } }
     #search-form span.twitter-typeahead pre {
       top: 0; }
   #search-form .search-icon {
@@ -7046,6 +7062,9 @@ a.header-button#search-toggle {
     left: 2.9rem;
     top: 50%;
     z-index: 100; }
+    @media only screen and (min-width:42.5625rem) {
+      #search-form .search-icon {
+        left: 0.4rem; } }
     #search-form .search-icon:before {
       position: absolute;
       top: -0.5833333333rem; }
@@ -7055,6 +7074,11 @@ a.header-button#search-toggle {
     margin: 0.32rem 0;
     display: inline-block;
     height: auto; }
+    @media only screen and (min-width:42.5625rem) {
+      #search-form input {
+        width: calc(100% - 0.6rem);
+        margin: 0.65rem 0;
+        padding: 0.6rem 0.6rem 0.6rem 1.75rem; } }
   #search-form .tt-hint {
     color: #CCCCCC; }
 
@@ -7069,9 +7093,15 @@ a.header-button#search-toggle {
   background-color: #FFFFFF;
   border: 0.0555555556rem solid #CCCCCC;
   padding: 0.4rem;
-  font-size: 0.7777777778rem; }
+  font-size: 0.8888888889rem; }
+  @media only screen and (min-width:42.5625rem) {
+    .top-nav-search-menu {
+      font-size: 0.7777777778rem; } }
   .top-nav-search-menu .tt-suggestion {
-    padding-left: 1rem; }
+    padding: 0.4rem 0.4rem 0.4rem 1rem; }
+    @media only screen and (min-width:42.5625rem) {
+      .top-nav-search-menu .tt-suggestion {
+        padding: 0 0 0 1rem; } }
   .top-nav-search-menu .tt-cursor {
     color: #FFFFFF;
     background-color: #26b6e8; }
@@ -7080,24 +7110,7 @@ a.header-button#search-toggle {
 
 @media only screen and (min-width:42.5625rem) {
   .search-button-container {
-    width: auto; }
-  .search-container {
-    position: static; }
-  #search-form {
-    width: auto; }
-    #search-form[aria-hidden="true"] {
-      width: auto; }
-    #search-form div {
-      height: 3.5555555556rem; }
-    #search-form span.twitter-typeahead {
-      position: static !important;
-      width: 100%; }
-    #search-form input {
-      width: calc(100% - 0.6rem);
-      margin: 0.65rem 0;
-      padding: 0.6rem 0.6rem 0.6rem 1.75rem; }
-    #search-form .search-icon {
-      left: 0.4rem; } }
+    width: auto; } }
 
 .secondary-nav-bar {
   background-color: #236133;
