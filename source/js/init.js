@@ -272,6 +272,64 @@
 		local: countries
 	});
 
+
+	/*
+	 1. Use Bloodhound instance for initial results.
+	 2. Sort Bloodhound results
+	 	a. match those that have the query as the first part of their string
+	 	b. alphabetically
+	 */
+	var state_search2 = function(query, callback) {
+		state_search.search(query, function(results) {
+			results.sort(first_comp(query));
+			callback(results);
+		});
+	};
+
+	var country_search2 = function(query, callback) {
+		country_search.search(query, function(results) {
+			results.sort(first_comp(query, 'name'));
+			callback(results);
+		});
+	};
+
+	function alpha_comp(a, b) {
+		if(a === b) {
+			return 0;
+		}
+		if(a < b) {
+			return -1;
+		}
+		return 1;
+	}
+
+	function first_comp(query, key) {
+		var q = query.toLowerCase();
+		return function(a,b) {
+			if(key) {
+				a = a[key];
+				b = b[key];
+			}
+			var astr = a.toLowerCase();
+			var bstr = b.toLowerCase();
+
+			var a_index = astr.indexOf(q);
+			var b_index = bstr.indexOf(q);
+
+			if(a_index === 0) {
+				if(b_index === 0) {
+					return alpha_comp(astr, bstr);
+				}
+				return -1;
+			}
+			if(b_index === 0) {
+				return 1;
+			}
+			return alpha_comp(astr, bstr);
+		};
+	}
+
+
 	$('#search-box').typeahead({
 			highlight: true,
 			classNames: {
@@ -289,7 +347,7 @@
 		},
 		{
 			name: 'countries',
-			source: country_search,
+			source: country_search2,
 			display: 'name',
 			templates: {
 				header: 'Countries',
@@ -300,7 +358,7 @@
 		},
 		{
 			name: 'states',
-			source: state_search,
+			source: state_search2,
 			templates: {
 				header: 'States'
 			}
