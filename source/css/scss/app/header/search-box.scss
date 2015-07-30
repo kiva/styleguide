@@ -31,6 +31,10 @@ a.header-button#search-toggle {
     height: 0;
     position: absolute;
     z-index: 1;
+
+    @media #{$large-up} {
+        position: static;
+    }
 }
 
 #search-form {
@@ -44,8 +48,16 @@ a.header-button#search-toggle {
     -o-transition: $search-form-transition;
     transition: $search-form-transition;
 
+    @media #{$large-up} {
+        width: auto;
+    }
+
     &[aria-hidden="true"] {
         width: 0;
+
+        @media #{$large-up} {
+            width: auto;
+        }
 
         div {
             width: 0;
@@ -64,10 +76,19 @@ a.header-button#search-toggle {
         -moz-transition: $search-form-transition;
         -o-transition: $search-form-transition;
         transition: $search-form-transition;
+
+        @media #{$large-up} {
+            height: $search-form-height;
+        }
     }
 
     span.twitter-typeahead {
         width: calc(100% - #{$search-button-size-small});
+
+        @media #{$large-up} {
+            position: static !important;
+            width: 100%;
+        }
 
         pre {
             top: 0;
@@ -79,6 +100,10 @@ a.header-button#search-toggle {
         left: 0.4rem + $search-button-size-small;
         top:50%;
         z-index: 100;
+
+        @media #{$large-up} {
+            left: 0.4rem;
+        }
 
         &:before {
             position: absolute;
@@ -93,6 +118,12 @@ a.header-button#search-toggle {
         margin: $search-centering-margin-small 0;
         display: inline-block;
         height: auto;
+
+        @media #{$large-up} {
+            width: $search-input-width;
+            margin: $search-centering-margin 0;
+            padding: $search-input-padding $search-input-padding $search-input-padding ($top-nav-font-size * 1.5);
+        }
     }
 
     .tt-hint {
@@ -112,10 +143,19 @@ a.header-button#search-toggle {
     background-color: $white;
     border: rem-calc(1) solid $iron;
     padding: $search-margin-small;
-    font-size: rem-calc(14);
+    font-size: rem-calc(16);
+
+    @media #{$large-up} {
+        font-size: rem-calc(14);
+    }
 
     .tt-suggestion {
-        padding-left: 1rem;
+        $spacing: 0.4rem;
+        padding: $spacing $spacing $spacing 1rem;
+
+        @media #{$large-up} {
+            padding: 0 0 0 1rem;
+        }
     }
 
     .tt-cursor {
@@ -129,40 +169,8 @@ a.header-button#search-toggle {
 }
 
 
-
 @media #{$large-up} {
     .search-button-container {
         width: auto;
-    }
-
-    .search-container {
-        position: static;
-    }
-
-    #search-form {
-        width: auto;
-
-        &[aria-hidden="true"] {
-            width: auto;
-        }
-
-        div {
-            height: $search-form-height;
-        }
-
-        span.twitter-typeahead {
-            position: static !important;
-            width: 100%;
-        }
-
-        input {
-            width: $search-input-width;
-            margin: $search-centering-margin 0;
-            padding: $search-input-padding $search-input-padding $search-input-padding ($top-nav-font-size * 1.5);
-        }
-
-        .search-icon {
-            left: 0.4rem;
-        }
     }
 }
