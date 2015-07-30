@@ -300,33 +300,27 @@
 				a = a[key];
 				b = b[key];
 			}
-			var astr = a.toLowerCase();
-			var bstr = b.toLowerCase();
+			var a_str = a.toLowerCase();
+			var b_str = b.toLowerCase();
 
-			var a_index = astr.indexOf(q);
-			var b_index = bstr.indexOf(q);
+			var a_index = a_str.indexOf(q);
+			var b_index = b_str.indexOf(q);
 
 			if(a_index === 0) {
 				if(b_index === 0) {
-					return alpha_comp(astr, bstr);
+					return alpha_comp(a_str, b_str);
 				}
 				return -1;
 			}
 			if(b_index === 0) {
 				return 1;
 			}
-			return alpha_comp(astr, bstr);
+			return alpha_comp(a_str, b_str);
 		};
 	}
 
 	function alpha_comp(a, b) {
-		if(a === b) {
-			return 0;
-		}
-		if(a < b) {
-			return -1;
-		}
-		return 1;
+		return a < b ? -1 : 1;
 	}
 
 
