@@ -211,6 +211,17 @@ module.exports = function(grunt) {
 				, output: {
 					path: 'export/js'
 				}
+			}
+
+			, ugly_bundle: {
+				entry: {
+					nav: './nav'
+				}
+				, output: {
+					path: 'export/js'
+					, filename: '[name].bundle.min.js'
+					, chunkFilename: '[id].bundle.min.js'
+				}
 				, plugins: [
 					new webpack.optimize.UglifyJsPlugin()
 				]
@@ -251,7 +262,7 @@ module.exports = function(grunt) {
 
 	grunt.registerTask('init', ['copy:init']);
 	grunt.registerTask('compile', ['concat:vendorCss', 'sass:compile', 'shell:compile', 'copy:js', 'webpack:compile']);
-	grunt.registerTask('export', ['clean:export', 'sass:export', 'webpack:bundle', 'webpack:module', 'copy:export', 'gitadd:export']);
+	grunt.registerTask('export', ['clean:export', 'sass:export', 'webpack:bundle', 'webpack:ugly_bundle', 'webpack:module', 'copy:export', 'gitadd:export']);
 	grunt.registerTask('default', 'compile');
 
 };
