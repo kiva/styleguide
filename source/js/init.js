@@ -293,16 +293,6 @@
 		});
 	};
 
-	function alpha_comp(a, b) {
-		if(a === b) {
-			return 0;
-		}
-		if(a < b) {
-			return -1;
-		}
-		return 1;
-	}
-
 	function first_comp(query, key) {
 		var q = query.toLowerCase();
 		return function(a,b) {
@@ -327,6 +317,16 @@
 			}
 			return alpha_comp(astr, bstr);
 		};
+	}
+
+	function alpha_comp(a, b) {
+		if(a === b) {
+			return 0;
+		}
+		if(a < b) {
+			return -1;
+		}
+		return 1;
 	}
 
 
