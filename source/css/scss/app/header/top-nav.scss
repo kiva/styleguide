@@ -4,6 +4,11 @@
     .columns {
         padding:0;
 
+        @media #{$large-up} {
+            padding:0;
+            width:auto;
+        }
+
         .kv-dropdown {
             position: inherit;
         }
@@ -25,6 +30,12 @@
         color: inherit;
         background: none;
         padding: 0;
+
+        @media #{$large-up} {
+            color: $kiva-green;
+            background: $white;
+            padding: rem-calc(1) rem-calc(7);
+        }
     }
 
     .promo-space.columns {
@@ -46,12 +57,17 @@
         float: right;
         border: none;
 
+        @media #{$large-up} {
+            width: auto;
+        }
+
         .columns a {
             border-left: rem-calc(1) solid $kiva-navdivider-green;
         }
     }
 
     .f-dropdown {
+        background-color: $level-one-background;
         outline: none;
         width: auto;
         max-width: none;
@@ -60,6 +76,10 @@
 
         &:after {
             display: none;
+        }
+
+        &.content {
+            padding: 0;
         }
     }
 
@@ -73,6 +93,15 @@
             color: $white;
             width: 100%;
             display: block;
+        }
+    }
+
+    @media #{$large-up} {
+        .logo-area {
+            text-align: left;
+            .header-button {
+                padding: 0 rem-calc(24) 0 rem-calc(8);
+            }
         }
     }
 }
@@ -130,33 +159,6 @@
             &:before, &:after {
                 display: none;
             }
-        }
-    }
-}
-
-
-@media #{$large-up} {
-    .top-nav {
-        .amount {
-            color: $kiva-green;
-            background: $white;
-            padding: rem-calc(1) rem-calc(7);
-        }
-
-        .columns {
-            padding:0;
-            width:auto;
-        }
-
-        .logo-area {
-            text-align: left;
-            .header-button {
-                padding: 0 rem-calc(24) 0 rem-calc(8);
-            }
-        }
-
-        .right-side {
-            width: auto;
         }
     }
 }

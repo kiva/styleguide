@@ -360,6 +360,6 @@
 	);
 
 	var $typeahead_menu = $('.top-nav-search-menu').detach();
-	$(document.body).append($typeahead_menu);
+	$('.top-nav').append($typeahead_menu);
 
 })(this, jQuery);
