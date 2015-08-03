@@ -2,17 +2,17 @@
     <div class="row header-row">
         <div class="show-for-xxlarge-up xxlarge-4 xxlarge-centered columns promo-space">
 			{{#bonus}}
-                <a href="{{header_links.bonus_href}}"><span class="amount">$25</span> Bonus Credit <i class="fa fa-chevron-down"></i></a>
+                <a href="{{bonus.href}}"><span class="amount">{{bonus.amount}}</span> {{bonus.label}} <i class="fa fa-chevron-down"></i></a>
 			{{/bonus}}
 			{{^bonus}}
                 <span class="promo"><!-- Promo Space --></span>
 			{{/bonus}}
         </div>
         <div class="small-3 large-2 xxlarge-2 columns header-column logo-area">
-			<a class="header-button" href="{{header_links.logo_href}}"><img src="/images/logo-white-cropped.png" data-interchange="[/images/logo-white-cropped.png, (default)], [/images/logo-letter-mark.png, (small-only)]"></a>
+			<a class="header-button" href="{{logo_href}}"><img src="/images/logo-white-cropped.png" data-interchange="[/images/logo-white-cropped.png, (default)], [/images/logo-letter-mark.png, (small-only)]"></a>
         </div>
         <div class="small-3 large-2 xxlarge-1 columns header-column">
-            <a class="header-button" href="{{header_links.lend_href}}">Lend <i class="fa fa-chevron-down"></i></a>
+            <a data-dropdown="lend-dropdown" aria-controls="lend-dropdown" aria-expanded="false" class="header-button" href="{{lend_href}}">Lend <i class="fa fa-chevron-down"></i></a>
         </div>
 		{{> 02-organisms/08-header/01-search-button}}
 		{{#is-visitor}}
@@ -21,17 +21,17 @@
 					<a data-dropdown="about-dropdown" aria-controls="about-dropdown" aria-expanded="false" class="header-button" href="#">About <i class="fa fa-chevron-down"></i></a>
 				</div>
 				<div class="show-for-large-up large-4 columns">
-					<a class="header-button" href="{{header_links.basket_href}}">{{#basket.item_count}}<span class="amount">{{basket.item_count}}</span>{{/basket.item_count}} Basket</a>
+					<a class="header-button" href="{{basket_href}}">{{#basket.item_count}}<span class="amount">{{basket.item_count}}</span>{{/basket.item_count}} Basket</a>
 				</div>
 				<div class="small-6 large-4 columns">
-					<a class="header-button" href="{{header_links.login_href}}">Login</a>
+					<a class="header-button" href="{{login_href}}">Login</a>
 				</div>
 			</div>
 		{{/is-visitor}}
 		{{^is-visitor}}
 			<div class="small-3-8ths xxlarge-2 columns header-column right-side">
 				<div class="show-for-large-up large-6 columns">
-					<a class="header-button" href="{{header_links.basket_href}}">{{#basket.item_count}}<span class="amount">{{basket.item_count}}</span>{{/basket.item_count}} Basket</a>
+					<a class="header-button" href="{{basket_href}}">{{#basket.item_count}}<span class="amount">{{basket.item_count}}</span>{{/basket.item_count}} Basket</a>
 				</div>
 				<div class="small-12 large-6 columns">
 					<a data-dropdown="my-kiva-dropdown" aria-controls="my-kiva-dropdown" aria-expanded="false" class="header-button my-kiva" href="#">
@@ -43,8 +43,47 @@
 		{{> 02-organisms/08-header/02-search-box}}
     </div>
 
+	<div id="lend-dropdown" class="f-dropdown content" data-dropdown-content aria-hidden="true" aria-autoclose="false" tabindex="-1">
+		<ul class="lend-menu">
+			<li>
+				<a href="#" data-kv-toggle aria-controls="lend-menu-category-panel" aria-expanded="false" class="section-title">Category<i class="fa fa-chevron-down closed"></i><i class="fa fa-chevron-up open"></i></a>
+				<ul id="lend-menu-category-panel" aria-hidden="true">
+					{{#categories}}
+						<li><a href="{{href}}">{{name}}</a></li>
+					{{/categories}}
+				</ul>
+			</li>
+            <li>
+                <a href="#" data-kv-toggle aria-controls="lend-menu-countries-panel" aria-expanded="false" class="section-title">Countries<i class="fa fa-chevron-down closed"></i><i class="fa fa-chevron-up open"></i></a>
+                <ul id="lend-menu-countries-panel" aria-hidden="true">
+					{{#regions}}
+                        <li>
+                            <a href="#" data-kv-toggle aria-controls="lend-menu-{{id}}-panel" aria-expanded="false" class="section-title">{{name}}<i class="fa fa-chevron-down closed"></i><i class="fa fa-chevron-up open"></i></a>
+                            <ul id="lend-menu-{{id}}-panel" aria-hidden="true">
+								{{#countries}}
+                                <li><a href="{{href}}"><span class="f16 {{code}}"></span>{{name}}</a></li>
+								{{/countries}}
+                            </ul>
+                        </li>
+					{{/regions}}
+				</ul>
+            </li>
+			<li>
+				<a href="{{lend_href}}">All Loans</a>
+			</li>
+			{{^is-visitor}}
+				<li>
+					<a href="#" data-kv-toggle aria-controls="lend-menu-personalized-panel" aria-expanded="false" class="section-title">Personalized<i class="fa fa-chevron-down closed"></i><i class="fa fa-chevron-up open"></i></a>
+					<ul id="lend-menu-personalized-panel" aria-hidden="true">
+
+					</ul>
+				</li>
+			{{/is-visitor}}
+		</ul>
+	</div>
+
 	{{#is-visitor}}
-		<ul id="about-dropdown" class="f-dropdown dropdown-list" data-dropdown-content aria-hidden="true">
+		<ul id="about-dropdown" class="f-dropdown dropdown-list" data-dropdown-content aria-hidden="true" tabindex="-1">
 			{{#about-nav.links}}
 				<li><a href="{{href}}">{{label}}</a></li>
 			{{/about-nav.links}}
@@ -52,7 +91,7 @@
 	{{/is-visitor}}
 
 	{{^is-visitor}}
-		<ul id="my-kiva-dropdown" class="f-dropdown dropdown-list" data-dropdown-content aria-hidden="true">
+		<ul id="my-kiva-dropdown" class="f-dropdown dropdown-list" data-dropdown-content aria-hidden="true" tabindex="-1">
 			{{#my-kiva.links}}
 				<li><a href="{{href}}" {{#end-section}}class="end-section"{{/end-section}}>{{label}}</a></li>
 			{{/my-kiva.links}}
@@ -60,10 +99,10 @@
 	{{/is-visitor}}
 
 	{{#bonus}}
-        <div class="hide-for-xxlarge-up pronus"><a href="{{header_links.bonus_href}}">$25 Bonus Credit</a></div>
+        <div class="hide-for-xxlarge-up pronus"><a href="{{bonus.href}}">{{bonus.amount}} {{bonus.label}}</a></div>
 	{{/bonus}}
 </div>
 
-{{#basket-count}}
+{{#basket.item_count}}
     <div class="show-for-small-only basket-bar"><a href="basket-href">Basket ({{basket.item_count}})</a></div>
-{{/basket-count}}
+{{/basket.item_count}}
