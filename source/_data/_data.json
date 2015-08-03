@@ -161,5 +161,16 @@
 		,"lend_href": "#"
 		,"login_href": "#"
 	}
-	
+    ,"categories": [
+        { "name": "Women", "href": "#" }
+    ]
+    ,"regions": [
+        {
+            "name": "South America"
+            ,"id": "south-america"
+            ,"countries": [
+                { "name": "Bolivia", "code": "bo", "href": "#" }
+            ]
+        }
+    ]
 }
