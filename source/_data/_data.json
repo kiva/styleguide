@@ -151,15 +151,17 @@
           { "label": "Sign Out", "href": "#"}
         ]
     }
+	,"logo_href": "#"
+	,"basket_href": "#"
+	,"lend_href": "#"
+	,"login_href": "#"
 	,"basket": {
 		"item_count": "3"
 	}
-	,"header_links":{
-		"logo_href": "#"
-		,"basket_href": "#"
-		,"bonus_href": "#"
-		,"lend_href": "#"
-		,"login_href": "#"
+	,"bonus":{
+		"href":"#"
+		,"amount": "$25"
+		,"label": "Bonus Credit"
 	}
     ,"categories": [
         { "name": "Women", "href": "#" }
@@ -173,4 +175,5 @@
             ]
         }
     ]
+
 }
