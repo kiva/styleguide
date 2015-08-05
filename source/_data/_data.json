@@ -187,60 +187,130 @@
 			"name": "North America"
 			,"id": "north-america"
 			,"countries": [
-				{"name": "Dominican Republic", "code": "do"}
-				,{"name": "Haiti", "code": "ht"}
-				,{"name": "Mexico", "code": "mx"}
-				,{"name": "St Vincent", "code": "vc"}
-				,{"name": "United States", "code": "us"}
+				{"name": "Dominican Republic", "code": "do", "href": "#"}
+				,{"name": "Haiti", "code": "ht", "href": "#"}
+				,{"name": "Mexico", "code": "mx", "href": "#"}
+				,{"name": "St Vincent", "code": "vc", "href": "#"}
+				,{"name": "United States", "code": "us", "href": "#"}
 			]
 		}
 		,{
 			"name": "Central America"
 			,"id": "central-america"
 			,"countries": [
-				{ "name": "Bolivia", "code": "bo", "href": "#" }
+				{"name": "Belize", "code": "bz", "href": "#"}
+				,{"name": "Costa Rica", "code": "cr", "href": "#"}
+				,{"name": "El Salvador", "code": "sv", "href": "#"}
+				,{"name": "Guatemala", "code": "gt", "href": "#"}
+				,{"name": "Honduras", "code": "hn", "href": "#"}
+				,{"name": "Nicaragua", "code": "ni", "href": "#"}
+				,{"name": "Panama", "code": "pa", "href": "#"}
 			]
 		}
 		,{
 			"name": "South America"
 			,"id": "south-america"
 			,"countries": [
-				{ "name": "Bolivia", "code": "bo", "href": "#" }
+				{"name": "Bolivia", "code": "bo", "href": "#"}
+				,{"name": "Brazil", "code": "br", "href": "#"}
+				,{"name": "Chile", "code": "cl", "href": "#"}
+				,{"name": "Colombia", "code": "co", "href": "#"}
+				,{"name": "Ecuador", "code": "ec", "href": "#"}
+				,{"name": "Paraguay", "code": "py", "href": "#"}
+				,{"name": "Peru", "code": "pe", "href": "#"}
+				,{"name": "Suriname", "code": "sr", "href": "#"}
 			]
 		}
 		,{
 			"name": "Africa"
 			,"id": "africa"
 			,"countries": [
-				{ "name": "Bolivia", "code": "bo", "href": "#" }
+				{"name": "Benin", "code": "bj", "href": "#"}
+				,{"name": "Burkina Faso", "code": "bf", "href": "#"}
+				,{"name": "Burundi", "code": "bi", "href": "#"}
+				,{"name": "Cameroon", "code": "cm", "href": "#"}
+				,{"name": "Congo (Dem. Rep.)", "code": "cd", "href": "#"}
+				,{"name": "Congo (Rep.)", "code": "cg", "href": "#"}
+				,{"name": "Egypt", "code": "eg", "href": "#"}
+				,{"name": "Ghana", "code": "gh", "href": "#"}
+				,{"name": "Kenya", "code": "ke", "href": "#"}
+				,{"name": "Lesotho", "code": "ls", "href": "#"}
+				,{"name": "Liberia", "code": "lr", "href": "#"}
+				,{"name": "Madagascar", "code": "mg", "href": "#"}
+				,{"name": "Malawi", "code": "mw", "href": "#"}
+				,{"name": "Mali", "code": "ml", "href": "#"}
+				,{"name": "Mauritania", "code": "mr", "href": "#"}
+				,{"name": "Mozambique", "code": "mz", "href": "#"}
+				,{"name": "Namibia", "code": "na", "href": "#"}
+				,{"name": "Nigeria", "code": "ng", "href": "#"}
+				,{"name": "Rwanda", "code": "rw", "href": "#"}
+				,{"name": "Senegal", "code": "sn", "href": "#"}
+				,{"name": "Sierra Leone", "code": "sl", "href": "#"}
+				,{"name": "Somalia", "code": "so", "href": "#"}
+				,{"name": "South Africa", "code": "za", "href": "#"}
+				,{"name": "South Sudan", "code": "sd", "href": "#"}
+				,{"name": "Tanzania", "code": "tz", "href": "#"}
+				,{"name": "Togo", "code": "tg", "href": "#"}
+				,{"name": "Uganda", "code": "ug", "href": "#"}
+				,{"name": "Zambia", "code": "zm", "href": "#"}
+				,{"name": "Zimbabwe", "code": "zw", "href": "#"}
 			]
 		}
 		,{
 			"name": "Eastern Europe"
 			,"id": "eastern-europe"
 			,"countries": [
-				{ "name": "Bolivia", "code": "bo", "href": "#" }
+				{"name": "Albania", "code": "al", "href": "#"}
+				,{"name": "Armenia", "code": "am", "href": "#"}
+				,{"name": "Georgia", "code": "ge", "href": "#"}
+				,{"name": "Kosovo", "code": "xk", "href": "#"}
+				,{"name": "Moldova", "code": "md", "href": "#"}
+				,{"name": "Ukraine", "code": "ua", "href": "#"}
 			]
 		}
 		,{
 			"name": "Middle East"
 			,"id": "middle-east"
 			,"countries": [
-				{ "name": "Bolivia", "code": "bo", "href": "#" }
+				{"name": "Iraq", "code": "iq", "href": "#"}
+				,{"name": "Israel", "code": "il", "href": "#"}
+				,{"name": "Jordan", "code": "jo", "href": "#"}
+				,{"name": "Lebanon", "code": "lb", "href": "#"}
+				,{"name": "Palestine", "code": "ps", "href": "#"}
+				,{"name": "Turkey", "code": "tr", "href": "#"}
+				,{"name": "Yemen", "code": "ye", "href": "#"}
 			]
 		}
 		,{
 			"name": "Asia"
 			,"id": "asia"
 			,"countries": [
-				{ "name": "Bolivia", "code": "bo", "href": "#" }
+				{"name": "Azerbaijan", "code": "az", "href": "#"}
+				,{"name": "Cambodia", "code": "kh", "href": "#"}
+				,{"name": "China", "code": "cn", "href": "#"}
+				,{"name": "India", "code": "in", "href": "#"}
+				,{"name": "Indonesia", "code": "id", "href": "#"}
+				,{"name": "Kyrgyzstan", "code": "kg", "href": "#"}
+				,{"name": "Lao PDR", "code": "la", "href": "#"}
+				,{"name": "Mongolia", "code": "mn", "href": "#"}
+				,{"name": "Myanmar (Burma)", "code": "mm", "href": "#"}
+				,{"name": "Nepal", "code": "np", "href": "#"}
+				,{"name": "Pakistan", "code": "pk", "href": "#"}
+				,{"name": "Philippines", "code": "ph", "href": "#"}
+				,{"name": "Tajikistan", "code": "tj", "href": "#"}
+				,{"name": "Thailand", "code": "th", "href": "#"}
+				,{"name": "Vietnam", "code": "vn", "href": "#"}
 			]
 		}
 		,{
 			"name": "Oceania"
 			,"id": "oceania"
 			,"countries": [
-				{ "name": "Bolivia", "code": "bo", "href": "#" }
+				{"name": "Papua New Guinea", "code": "pg", "href": "#"}
+				,{"name": "Samoa", "code": "ws", "href": "#"}
+				,{"name": "Solomon Islands", "code": "sb", "href": "#"}
+				,{"name": "Timor-Leste", "code": "tl", "href": "#"}
+				,{"name": "Vanuatu", "code": "vu", "href": "#"}
 			]
 		}
 	]

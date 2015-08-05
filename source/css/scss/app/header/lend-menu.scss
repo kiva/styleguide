@@ -179,6 +179,11 @@ div.lend-menu-large {
         }
     }
 
+    .region-link[aria-expanded="true"] {
+        color: $kiva-green;
+        text-decoration: underline;
+    }
+
     li a {
         padding: 0;
         line-height: $row-height;
