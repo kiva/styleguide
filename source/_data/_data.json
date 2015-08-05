@@ -47,21 +47,21 @@
 	},
 	"description" : "So, setting about it as methodically as men might smoke out a wasps' nest, the Martians spread this strange stifling vapour over the Londonward country. The horns of the crescent slowly moved apart, until at last they formed a line from Hanwell to Coombe and Malden. All night through their destructive tubes advanced.",
 	"number" : {
-	  "short" : "575%",
-	  "medium" : "10,485",
-	  "long": "987,654,321"
+		"short" : "575%",
+		"medium" : "10,485",
+		"long": "987,654,321"
 	},
 	"decimal" : {
-	  "short" : "6.2",
-	  "medium" : "10,485.87",
-	  "long": "987,654,321.0174"
+		"short" : "6.2",
+		"medium" : "10,485.87",
+		"long": "987,654,321.0174"
 	},
 	"price" : {
-	  "short" : "$ 3.50",
-	  "medium" : "$ 1,485.87",
-	  "long": "$ 654,321.01"
+		"short" : "$ 3.50",
+		"medium" : "$ 1,485.87",
+		"long": "$ 654,321.01"
 	},
-  	"nav-text" : "Lend  About  Login",
+		"nav-text" : "Lend  About  Login",
 	"url" : "#",
 	"name" : {
 		"first": "Lacy",
@@ -129,28 +129,28 @@
 		, "country-iso": ""
 		, "country-name": "Grenadines"
 	}
-    , "about-nav": {
-        "links": [
-            { "label": "About Us", "href": "#" },
-            { "label": "Get to know us", "href": "#" },
-            { "label": "How Kiva Works", "href": "#" },
-            { "label": "Where Kiva Works", "href": "#" },
-            { "label": "Impact", "href": "#" },
-            { "label": "Press Center", "href": "#" },
-            { "label": "Due diligence and monitoring", "href": "#" }
-        ]
-    }
-    , "my-kiva": {
-        "links": [
-          { "label": "Portfolio", "href": "#"},
-          { "label": "My Teams", "href": "#"},
-          { "label": "Donations", "href": "#"},
-          { "label": "Lender Profile", "href": "#"},
-          { "label": "My Campaigns", "href": "#"},
-          { "label": "Settings", "href": "#", "end-section": true},
-          { "label": "Sign Out", "href": "#"}
-        ]
-    }
+	, "about-nav": {
+		"links": [
+			{ "label": "About Us", "href": "#" },
+			{ "label": "Get to know us", "href": "#" },
+			{ "label": "How Kiva Works", "href": "#" },
+			{ "label": "Where Kiva Works", "href": "#" },
+			{ "label": "Impact", "href": "#" },
+			{ "label": "Press Center", "href": "#" },
+			{ "label": "Due diligence and monitoring", "href": "#" }
+		]
+	}
+	, "my-kiva": {
+		"links": [
+			{ "label": "Portfolio", "href": "#"},
+			{ "label": "My Teams", "href": "#"},
+			{ "label": "Donations", "href": "#"},
+			{ "label": "Lender Profile", "href": "#"},
+			{ "label": "My Campaigns", "href": "#"},
+			{ "label": "Settings", "href": "#", "end-section": true},
+			{ "label": "Sign Out", "href": "#"}
+		]
+	}
 	,"logo_href": "#"
 	,"basket_href": "#"
 	,"lend_href": "#"
@@ -163,17 +163,17 @@
 		,"amount": "$25"
 		,"label": "Bonus Credit"
 	}
-    ,"categories": [
-        { "name": "Women", "href": "#" }
-    ]
-    ,"regions": [
-        {
-            "name": "South America"
-            ,"id": "south-america"
-            ,"countries": [
-                { "name": "Bolivia", "code": "bo", "href": "#" }
-            ]
-        }
-    ]
+	,"categories": [
+		{ "name": "Women", "href": "#" }
+	]
+	,"regions": [
+		{
+			"name": "South America"
+			,"id": "south-america"
+			,"countries": [
+				{ "name": "Bolivia", "code": "bo", "href": "#" }
+			]
+		}
+	]
 
 }
