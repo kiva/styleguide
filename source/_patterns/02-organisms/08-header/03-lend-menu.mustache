@@ -1,0 +1,86 @@
+<div id="lend-dropdown" class="f-dropdown content" data-dropdown-content aria-hidden="true" aria-autoclose="false" tabindex="-1">
+    <ul class="lend-menu-small hide-for-large-up">
+        <li>
+            <a href="#" data-kv-toggle aria-controls="lend-menu-category-panel" aria-expanded="false" class="section-title">Category<i class="fa fa-chevron-down closed"></i><i class="fa fa-chevron-up open"></i></a>
+            <ul id="lend-menu-category-panel" aria-hidden="true">
+				{{#categories}}
+                    <li><a href="{{href}}">{{name}}</a></li>
+				{{/categories}}
+            </ul>
+        </li>
+        <li>
+            <a href="#" data-kv-toggle aria-controls="lend-menu-countries-panel" aria-expanded="false" class="section-title">Countries<i class="fa fa-chevron-down closed"></i><i class="fa fa-chevron-up open"></i></a>
+            <ul id="lend-menu-countries-panel" aria-hidden="true">
+				{{#regions}}
+                    <li>
+                        <a href="#" data-kv-toggle aria-controls="lend-menu-{{id}}-panel" aria-expanded="false" class="section-title">{{name}}<i class="fa fa-chevron-down closed"></i><i class="fa fa-chevron-up open"></i></a>
+                        <ul id="lend-menu-{{id}}-panel" aria-hidden="true">
+							{{#countries}}
+                                <li><a href="{{href}}"><span class="f16 {{code}}"></span>{{name}}</a></li>
+							{{/countries}}
+                        </ul>
+                    </li>
+				{{/regions}}
+            </ul>
+        </li>
+        <li>
+            <a href="{{lend_href}}">All Loans</a>
+        </li>
+		{{^is-visitor}}
+            <li>
+                <a href="#" data-kv-toggle aria-controls="lend-menu-personalized-panel" aria-expanded="false" class="section-title">Personalized<i class="fa fa-chevron-down closed"></i><i class="fa fa-chevron-up open"></i></a>
+                <ul id="lend-menu-personalized-panel" aria-hidden="true">
+                    <li><a href="#">Favorites</a></li>
+                    <li><a href="#">Saved Searches</a></li>
+                    <li><a href="#">Countries I Have Not Lent To</a></li>
+                </ul>
+            </li>
+		{{/is-visitor}}
+    </ul>
+	<div class="lend-menu-large show-for-large-up">
+		<div>
+			<div class="section-title">Category</div>
+			<div class="column-list-container">
+				<ul class="column-list">
+					{{#categories}}
+                        <li><a href="{{href}}">{{name}}</a></li>
+					{{/categories}}
+                    <li class="bottom"><a href="#">All Loans</a></li>
+                    <li class="bottom"><a href="#">All Categories</a></li>
+				</ul>
+			</div>
+		</div>
+		<div class="close-section" aria-hidden="true">
+            <a href="#"><i class="fa fa-chevron-left"></i></a>
+		</div>
+        <div>
+			<div class="section-title">Countries</div>
+			<ul>
+				{{#regions}}
+                    <li>
+                        <a href="#" data-kv-toggle aria-controls="lend-menu-{{id}}-section" aria-expanded="false" class="region-link">{{name}}</a>
+                    </li>
+				{{/regions}}
+				<li><a href="#">Loans Near Me</a></li>
+			</ul>
+			{{^is-visitor}}
+				<div class="section-title">Personalized</div>
+				<ul>
+					<li><a href="#">Favorites</a></li>
+					<li><a href="#">Saved Searches</a></li>
+					<li><a href="#">Countries I Have Not Lent To</a></li>
+				</ul>
+			{{/is-visitor}}
+		</div>
+		{{#regions}}
+            <div id="lend-menu-{{id}}-section" aria-hidden="true" class="country-list">
+                <div class="section-title">{{name}}</div>
+                <ul>
+					{{#countries}}
+                        <li><a href="{{href}}"><span class="f16 {{code}}"></span>{{name}}</a></li>
+					{{/countries}}
+                </ul>
+            </div>
+		{{/regions}}
+	</div>
+</div>

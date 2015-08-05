@@ -51,6 +51,42 @@ module.exports = function() {
 		typeahead_menu_repositioning();
 	}, 200));
 
+
+	// Lend Mega-Menu
+	var $category_section = $('.lend-menu-large > div:first-child');
+	var $close_section = $('.lend-menu-large .close-section');
+	var $region_links = $('.lend-menu-large .region-link');
+	var $country_lists = $('.lend-menu-large .country-list');
+
+	$close_section.click(function(e) {
+		e.preventDefault();
+
+		$region_links.attr('aria-expanded', false);
+		$country_lists.attr('aria-hidden', true);
+
+		$category_section.removeClass('slide-left');
+		$close_section.attr('aria-hidden', true);
+	});
+
+	$('.lend-menu-large [data-kv-toggle]').click(function(e) {
+		e.preventDefault();
+
+		var $this = $(this);
+
+		if($this.attr('aria-expanded') === 'true') {
+			$category_section.removeClass('slide-left');
+			$close_section.attr('aria-hidden', true);
+		}
+		else {
+			$region_links.attr('aria-expanded', false);
+			$country_lists.attr('aria-hidden', true);
+
+			$category_section.addClass('slide-left');
+			$close_section.attr('aria-hidden', false);
+		}
+	});
+
+
 	// kv-toggle
 	$('[data-kv-toggle]').click(function(e) {
 		e.preventDefault();

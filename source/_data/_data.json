@@ -165,11 +165,80 @@
 	}
 	,"categories": [
 		{ "name": "Women", "href": "#" }
+		,{ "name": "Men", "href": "#" }
+		,{ "name": "Education", "href": "#" }
+		,{ "name": "Expiring Soon", "href": "#" }
+		,{ "name": "Shelter", "href": "#" }
+		,{ "name": "Conflict Zones", "href": "#" }
+		,{ "name": "Repeat Borrower", "href": "#" }
+		,{ "name": "Great Photo", "href": "#" }
+		,{ "name": "Matched Loans", "href": "#" }
+		,{ "name": "Single Parent", "href": "#" }
+		,{ "name": "Agriculture", "href": "#" }
+		,{ "name": "Health", "href": "#" }
+		,{ "name": "Food", "href": "#" }
+		,{ "name": "Sustainable Ventures", "href": "#" }
+		,{ "name": "Transportation", "href": "#" }
+		,{ "name": "Livestock", "href": "#" }
+		,{ "name": "Short-term Loans", "href": "#" }
 	]
 	,"regions": [
 		{
+			"name": "North America"
+			,"id": "north-america"
+			,"countries": [
+				{"name": "Dominican Republic", "code": "do"}
+				,{"name": "Haiti", "code": "ht"}
+				,{"name": "Mexico", "code": "mx"}
+				,{"name": "St Vincent", "code": "vc"}
+				,{"name": "United States", "code": "us"}
+			]
+		}
+		,{
+			"name": "Central America"
+			,"id": "central-america"
+			,"countries": [
+				{ "name": "Bolivia", "code": "bo", "href": "#" }
+			]
+		}
+		,{
 			"name": "South America"
 			,"id": "south-america"
+			,"countries": [
+				{ "name": "Bolivia", "code": "bo", "href": "#" }
+			]
+		}
+		,{
+			"name": "Africa"
+			,"id": "africa"
+			,"countries": [
+				{ "name": "Bolivia", "code": "bo", "href": "#" }
+			]
+		}
+		,{
+			"name": "Eastern Europe"
+			,"id": "eastern-europe"
+			,"countries": [
+				{ "name": "Bolivia", "code": "bo", "href": "#" }
+			]
+		}
+		,{
+			"name": "Middle East"
+			,"id": "middle-east"
+			,"countries": [
+				{ "name": "Bolivia", "code": "bo", "href": "#" }
+			]
+		}
+		,{
+			"name": "Asia"
+			,"id": "asia"
+			,"countries": [
+				{ "name": "Bolivia", "code": "bo", "href": "#" }
+			]
+		}
+		,{
+			"name": "Oceania"
+			,"id": "oceania"
 			,"countries": [
 				{ "name": "Bolivia", "code": "bo", "href": "#" }
 			]
