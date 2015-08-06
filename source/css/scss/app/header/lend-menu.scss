@@ -90,11 +90,18 @@ ul.lend-menu-small {
 }
 
 div.lend-menu-large {
+    $fixed-item-count: 2;
+    $two-column-break-count: 7;
+    $max-count: 50;
+    $min-spacing: 1;
+
     $row-height: 1.5rem;
-    $row-count: 10;
     $col-width: 12rem;
-    $list-width: 22rem;
     $section-padding: 1rem;
+
+    $half-list-width: $col-width - $row-height;
+    $list-width: 2*$half-list-width + $section-padding;
+
 
     overflow: hidden;
 
@@ -119,7 +126,7 @@ div.lend-menu-large {
         transition: $menu-transition;
 
         &.slide-left {
-            margin-left: -($section-padding + $list-width);
+            margin-left: -($section-padding + $half-list-width);
         }
 
         &::before {
@@ -192,12 +199,13 @@ div.lend-menu-large {
     .column-list-container {
         overflow: hidden;
         height: auto;
-        width: $list-width;
+        width: $half-list-width;
     }
 
     ul.column-list {
         float: left;
-        height: $row-height * $row-count;
+        width: $row-height * $fixed-item-count;
+        height: $row-height * $fixed-item-count;
 
         $rotation: rotate(-90deg);
 
@@ -232,14 +240,62 @@ div.lend-menu-large {
             -o-transform: $rotation;
             transform: $rotation;
 
-            &:nth-child(10n+1) { clear: right; }
-
             &.bottom {
                 float: left;
             }
 
             a {
                 width: $col-width - 2*$section-padding;
+            }
+        }
+    }
+
+    @for $i from 1 through $two-column-break-count {
+        $break: $i + $min-spacing+$fixed-item-count;
+
+        .list-length-#{$i} {
+            ul.column-list {
+                width: $row-height * $break;
+                height: $row-height * $break;
+
+                li {
+                    &:nth-child(#{$break}n+1) {
+                        clear: right;
+                    }
+
+                    &.bottom:last-of-type {
+                        margin-right: $row-height;
+                    }
+                }
+            }
+        }
+    }
+
+    @for $i from $two-column-break-count+1 through $max-count {
+        $break: min( ceil( ($i + $min-spacing+$fixed-item-count) / 2 ), max(2, $i) );
+
+        .list-length-#{$i} {
+            > div.slide-left {
+                margin-left: -($section-padding + $list-width);
+            }
+
+            .column-list-container {
+                width: $list-width;
+            }
+
+            ul.column-list {
+                width: $row-height * $break;
+                height: $row-height * $break;
+
+                li {
+                    &:nth-child(#{$break}n+1) {
+                        clear: right;
+                    }
+
+                    &.bottom:last-of-type {
+                        margin-right: $row-height;
+                    }
+                }
             }
         }
     }

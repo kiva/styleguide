@@ -163,9 +163,10 @@
 		,"amount": "$25"
 		,"label": "Bonus Credit"
 	}
-	,"categories": [
-		{ "name": "Women", "href": "#" }
-		,{ "name": "Men", "href": "#" }
+	,"categories": {
+		"list": [
+			{ "name": "Women", "href": "#" }
+			,{ "name": "Men", "href": "#" }
 		,{ "name": "Education", "href": "#" }
 		,{ "name": "Expiring Soon", "href": "#" }
 		,{ "name": "Shelter", "href": "#" }
@@ -181,7 +182,9 @@
 		,{ "name": "Transportation", "href": "#" }
 		,{ "name": "Livestock", "href": "#" }
 		,{ "name": "Short-term Loans", "href": "#" }
-	]
+		]
+		,"count": 17
+	}
 	,"regions": [
 		{
 			"name": "North America"
