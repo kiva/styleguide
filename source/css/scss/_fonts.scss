@@ -1,28 +1,58 @@
-/*
- * Temporary Brown font from ufonts.com
- *
- * @todo - replace these ** interim ** versions of the Brown font when we have officially-licensed copies
-
- */
-
 @font-face {
-    font-family: 'Brown';
-    src: url('../fonts/br.eot') format('eot')
-		,url('../fonts/br.woff') format('woff')
-		,url('../fonts/br.ttf') format('ttf')
-		,url('../fonts/br.svg') format('svg');
-    font-weight: normal;
+    font-family: 'PostGrotesk';
+    src: url('../fonts/PostGrotesk-Bold.eot') format('eot')
+		,url('../fonts/PostGrotesk-Bold.woff') format('woff')
+		,url('../fonts/PostGrotesk-Bold.svg') format('svg');
+    font-weight: 700;
     font-style: normal;
 }
 
 @font-face {
-    font-family: 'Brown';
-    src: url('../fonts/bb.eot') format('eot')
-		,url('../fonts/bb.woff') format('woff')
-		,url('../fonts/bb.ttf') format('ttf')
-		,url('../fonts/bb.svg') format('svg');
-    font-weight: bold;
+    font-family: 'PostGrotesk';
+    src: url('../fonts/PostGrotesk-BoldItalic.eot') format('eot')
+		,url('../fonts/PostGrotesk-BoldItalic.woff') format('woff')
+		,url('../fonts/PostGrotesk-BoldItalic.svg') format('svg');
+    font-weight: 700;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'PostGrotesk';
+    src: url('../fonts/PostGrotesk-Book.eot') format('eot')
+		,url('../fonts/PostGrotesk-Book.woff') format('woff')
+		,url('../fonts/PostGrotesk-Book.svg') format('svg');
+    font-weight: 400;
     font-style: normal;
 }
 
+@font-face {
+    font-family: 'PostGrotesk';
+    src: url('../fonts/PostGrotesk-BookItalic.eot') format('eot')
+		,url('../fonts/PostGrotesk-BookItalic.woff') format('woff')
+		,url('../fonts/PostGrotesk-BookItalic.svg') format('svg');
+    font-weight: 400;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'PostGrotesk';
+    src: url('../fonts/PostGrotesk-Light.eot') format('eot')
+		,url('../fonts/PostGrotesk-Light.woff') format('woff')
+		,url('../fonts/PostGrotesk-Light.svg') format('svg');
+    font-weight: 100;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'PostGrotesk';
+    src: url('../fonts/PostGrotesk-LightItalic.eot') format('eot')
+		,url('../fonts/PostGrotesk-LightItalic.woff') format('woff')
+		,url('../fonts/PostGrotesk-LightItalic.svg') format('svg');
+    font-weight: 100;
+    font-style: italic;
+}
+
+.light {
+	font-weight: 100;
+}
 

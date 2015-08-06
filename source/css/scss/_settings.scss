@@ -91,8 +91,7 @@ $include-xl-html-grid-classes: true;
 
 @import "fonts";
 // We use these to define default font stacks
-//$font-family-sans-serif: "Brown Regular", Arial, Helvetica, sans-serif;
-$font-family-sans-serif: "Brown", Arial, Helvetica, sans-serif;
+$font-family-sans-serif: "PostGrotesk", Arial, Helvetica, sans-serif;
 
 // Kiva custom palette is in _palette.scss
 @import "palette";
@@ -180,7 +179,7 @@ $anchor-text-decoration-hover: underline;
 
 $anchor-text-decoration-hover: underline;
 $anchor-font-color: $kiva-textlink;
-$anchor-font-color-hover:$kiva-textlink-hover;
+$anchor-font-color-hover: $kiva-textlink-hover;
 
 
 // 01. Accordion
