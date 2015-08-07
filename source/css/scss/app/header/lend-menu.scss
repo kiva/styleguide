@@ -54,14 +54,18 @@
         &[aria-expanded="true"] {
             color: $selected-color;
 
-            .closed {
-                display: none;
+            .icon {
+                transform: rotate(-180deg);
             }
         }
 
-        i {
+        .icon {
             float: right;
-            line-height: $header-height-small;
+            height: $header-height-small;
+            width: rem-calc(25);
+            fill: none;
+            stroke: $kiva-text-dark;
+            transition: transform 300ms ease;
         }
     }
 
@@ -160,6 +164,7 @@
         overflow: hidden;
         padding: 0;
         width: 5*$section-padding;
+        $height: 8rem;
         font-size: 2rem;
 
         -webkit-transition: $close-transition;
@@ -173,13 +178,17 @@
             position: relative;
             display: block;
             width: 100%;
-            height: 6rem;
+            height: $height;
         }
 
-        .fa {
+        .icon {
+            fill: none;
+            stroke: $kiva-text-dark;
+            transform: rotate(90deg);
+            width: rem-calc(52);
+            height: $height;
             position: absolute;
-            left: 50%;
-            top: 50%;
+            left: calc(50% - #{rem-calc(23)});
 
             &::before {
                 position: absolute;

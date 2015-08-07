@@ -60,7 +60,10 @@ module.exports = function(grunt) {
 
 		, gitadd: {
 			export: {
-				files: {
+				options: {
+					all: true
+				}
+				,files: {
 					src: ['export/']
 				}
 			}
@@ -101,7 +104,7 @@ module.exports = function(grunt) {
 					// but output .css file is styles.css to meet PatternLab expectation
 					'source/css/styles.css': 'source/css/scss/app.scss',
 					'core/styleguide/css/styleguide.css': 'core/styleguide/css/styleguide.scss',
-					'core/styleguide/css/styleguide-specific.css': 'core/styleguide/css/styleguide-specific.scss',
+					'core/styleguide/css/styleguide-specific.css': 'core/styleguide/css/styleguide-specific.scss'
 				}
 			}
 
@@ -116,6 +119,28 @@ module.exports = function(grunt) {
 		, shell: {
 			 compile: {
 				command: "php core/builder.php -g"
+			}
+		}
+
+
+		, svgstore: {
+			options: {
+				prefix: 'icon-'
+				,svg: {
+					xmlns: 'http://www.w3.org/2000/svg'
+					,style: 'display:none;'
+				}
+				,cleanup: ['stroke', 'fill']
+			}
+			,compile: {
+				files: {
+					'source/images/icons.svg': ['source/images/icons/*.svg']
+				}
+			}
+			,export: {
+				files: {
+					'export/icons.svg': ['source/images/icons/*.svg']
+				}
 			}
 		}
 
@@ -256,13 +281,15 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks('grunt-git');
 	grunt.loadNpmTasks('grunt-sass');
 	grunt.loadNpmTasks('grunt-shell');
+	grunt.loadNpmTasks('grunt-svgstore');
 	grunt.loadNpmTasks('grunt-release');
 	grunt.loadNpmTasks('grunt-webpack');
 	// @todo add livereload?
 
 	grunt.registerTask('init', ['copy:init']);
+	grunt.registerTask('svg', ['svgstore:compile']);
 	grunt.registerTask('compile', ['concat:vendorCss', 'sass:compile', 'shell:compile', 'copy:js', 'webpack:compile']);
-	grunt.registerTask('export', ['clean:export', 'sass:export', 'webpack:bundle', 'webpack:ugly_bundle', 'webpack:module', 'copy:export', 'gitadd:export']);
+	grunt.registerTask('export', ['clean:export', 'sass:export', 'svgstore:export', 'webpack:bundle', 'webpack:ugly_bundle', 'webpack:module', 'copy:export', 'gitadd:export']);
 	grunt.registerTask('default', 'compile');
 
 };

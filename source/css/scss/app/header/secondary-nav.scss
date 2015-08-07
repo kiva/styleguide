@@ -64,25 +64,17 @@ $link-spacing: rem-calc(16);
         background-color: $kiva-darkgreen;
         color: $white;
 
-        .open-icon, .closed-icon {
+        .icon {
             float: right;
-            line-height: inherit;
+            fill: none;
+            stroke: $white;
+            height: $header-height-small;
+            width: rem-calc(25);
+            transition: transform 300ms ease;
         }
 
-        .closed-icon {
-            display: inline;
-        }
-        .open-icon {
-            display: none;
-        }
-
-        &.active {
-            .closed-icon {
-                display: none;
-            }
-            .open-icon {
-                display: inline;
-            }
+        &[aria-expanded="true"] .icon {
+            transform: rotate(-180deg);
         }
     }
 

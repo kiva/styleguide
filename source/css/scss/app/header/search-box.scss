@@ -7,7 +7,7 @@ $search-margin-small: 0.4rem;
 $search-centering-margin: 0.65rem;
 $search-centering-margin-small: 0.32rem;
 $search-button-size-small: 2.5rem;
-$search-icon-size: $top-nav-font-size;
+$search-icon-size: $top-nav-font-size - $top-nav-font-reduction;
 
 $search-input-width-small: calc(100% - #{$search-margin-small} );
 $search-input-width: calc(100% - #{$search-margin} );
@@ -16,9 +16,29 @@ $search-input-padding-small: $search-margin-small;
 
 a.header-button#search-toggle {
     border-right: none;
+    line-height: 0;
 
-    &[aria-expanded="true"] .search-icon {
-        display: none;
+    .icon {
+        height: $header-height-small;
+
+        @media #{$large-up} {
+            height: $header-height;
+        }
+    }
+
+    .close-icon {
+        fill: none;
+        stroke: $white;
+    }
+
+    &[aria-expanded="true"] {
+        .search-icon {
+            display: none;
+        }
+
+        .close-icon {
+            stroke: $kiva-darkgreen;
+        }
     }
 
     &[aria-expanded="false"] .close-icon {
@@ -98,16 +118,13 @@ a.header-button#search-toggle {
     .search-icon {
         position: absolute;
         left: 0.4rem + $search-button-size-small;
-        top:50%;
         z-index: 100;
+        width: $search-icon-size;
+        height: $header-height-small;
 
         @media #{$large-up} {
             left: 0.4rem;
-        }
-
-        &:before {
-            position: absolute;
-            top: -$search-icon-size/2;
+            height: $header-height;
         }
     }
 
@@ -134,9 +151,15 @@ a.header-button#search-toggle {
 #close-search {
     float: left;
     width: $search-button-size-small;
-    line-height: $search-form-height-small;
+    line-height: 0;
     text-align: center;
-    color: $kiva-darkgreen;
+
+    .close-icon {
+        width: $top-nav-font-size - $top-nav-font-reduction;
+        height: $search-button-size-small;
+        fill:none;
+        stroke: $kiva-darkgreen;
+    }
 }
 
 .top-nav-search-menu {
