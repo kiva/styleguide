@@ -3,9 +3,9 @@
         <li>
             <a href="#" data-kv-toggle aria-controls="lend-menu-category-panel" aria-expanded="false" class="section-title">Category<i class="fa fa-chevron-down closed"></i><i class="fa fa-chevron-up open"></i></a>
             <ul id="lend-menu-category-panel" aria-hidden="true">
-				{{#categories}}
+				{{#categories.list}}
                     <li><a href="{{href}}">{{name}}</a></li>
-				{{/categories}}
+				{{/categories.list}}
             </ul>
         </li>
         <li>
@@ -38,22 +38,22 @@
 		{{/is-visitor}}
     </ul>
 	<div class="lend-menu-large show-for-large-up">
-		<div>
+		<div class="column-section list-length-{{categories.count}}">
 			<div class="section-title">Category</div>
 			<div class="column-list-container">
 				<ul class="column-list">
-					{{#categories}}
+					{{#categories.list}}
                         <li><a href="{{href}}">{{name}}</a></li>
-					{{/categories}}
+					{{/categories.list}}
                     <li class="bottom"><a href="#">All Loans</a></li>
-                    <li class="bottom"><a href="#">All Categories</a></li>
+					<li class="bottom"><a href="#">All Categories</a></li>
 				</ul>
 			</div>
 		</div>
 		<div class="close-section" aria-hidden="true">
             <a href="#"><i class="fa fa-chevron-left"></i></a>
 		</div>
-        <div>
+        <div class="column-section">
 			<div class="section-title">Countries</div>
 			<ul>
 				{{#regions}}
@@ -73,13 +73,13 @@
 			{{/is-visitor}}
 		</div>
 		{{#regions}}
-            <div id="lend-menu-{{id}}-section" aria-hidden="true" class="country-list">
-                <div class="section-title">{{name}}</div>
-                <ul>
+            <div id="lend-menu-{{id}}-section" aria-hidden="true" class="country-list column-section">
+				<div class="section-title">{{name}}</div>
+				<ul>
 					{{#countries}}
-                        <li><a href="{{href}}"><span class="f16 {{code}}"></span>{{name}}</a></li>
+						<li><a href="{{href}}"><span class="f16 {{code}}"></span>{{name}}</a></li>
 					{{/countries}}
-                </ul>
+				</ul>
             </div>
 		{{/regions}}
 	</div>
