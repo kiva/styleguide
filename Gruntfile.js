@@ -134,12 +134,7 @@ module.exports = function(grunt) {
 			}
 			,compile: {
 				files: {
-					'source/images/icons.svg': ['source/images/icons/*.svg']
-				}
-			}
-			,export: {
-				files: {
-					'export/icons.svg': ['source/images/icons/*.svg']
+					'source/_patterns/01-molecules/03-media/01-icons.mustache': ['source/images/icons/*.svg']
 				}
 			}
 		}
@@ -288,8 +283,8 @@ module.exports = function(grunt) {
 
 	grunt.registerTask('init', ['copy:init']);
 	grunt.registerTask('svg', ['svgstore:compile']);
-	grunt.registerTask('compile', ['concat:vendorCss', 'sass:compile', 'shell:compile', 'copy:js', 'webpack:compile']);
-	grunt.registerTask('export', ['clean:export', 'sass:export', 'svgstore:export', 'webpack:bundle', 'webpack:ugly_bundle', 'webpack:module', 'copy:export', 'gitadd:export']);
+	grunt.registerTask('compile', ['concat:vendorCss', 'sass:compile', 'svg', 'shell:compile', 'copy:js', 'webpack:compile']);
+	grunt.registerTask('export', ['clean:export', 'sass:export', 'svg', 'webpack:bundle', 'webpack:ugly_bundle', 'webpack:module', 'copy:export', 'gitadd:export']);
 	grunt.registerTask('default', 'compile');
 
 };
