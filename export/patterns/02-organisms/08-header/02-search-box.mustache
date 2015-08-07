@@ -1,8 +1,14 @@
 <div class="search-container {{#is-visitor}}show-for-large-up{{/is-visitor}}">
 	<form id="search-form" aria-hidden="true">
 		<div>
-			<a id="close-search" aria-controls="search-form" aria-hidden="true" aria-expanded="false" class="hide-for-large-up" href="#"><i class="fa fa-times close-icon"></i></a>
-			<i class="fa fa-search search-icon"></i>
+			<a id="close-search" aria-controls="search-form" aria-hidden="true" aria-expanded="false" class="hide-for-large-up" href="#">
+                <svg class="icon close-icon">
+                    <use xlink:href="#icon-x" />
+                </svg>
+			</a>
+            <svg class="icon search-icon">
+                <use xlink:href="#icon-magnify-glass" />
+            </svg>
 			<input id="search-box" type="text" placeholder="Search" />
 		</div>
 	</form>

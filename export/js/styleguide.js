@@ -19874,7 +19874,7 @@ module.exports =
 			$('.top-nav-search-menu').css({
 				top: (offset.top + $search_box.outerHeight()) + 'px',
 				left: offset.left + 'px',
-				width: ($search_box.outerWidth() - 1) + 'px'
+				width: $search_box.outerWidth() + 'px'
 			});
 		};
 

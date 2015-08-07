@@ -1,7 +1,7 @@
 <div id="lend-dropdown" class="f-dropdown content" data-dropdown-content aria-hidden="true" aria-autoclose="false" tabindex="-1">
     <ul class="lend-menu-small hide-for-large-up">
         <li>
-            <a href="#" data-kv-toggle aria-controls="lend-menu-category-panel" aria-expanded="false" class="section-title">Category<i class="fa fa-chevron-down closed"></i><i class="fa fa-chevron-up open"></i></a>
+            <a href="#" data-kv-toggle aria-controls="lend-menu-category-panel" aria-expanded="false" class="section-title">Category<svg class="icon"><use xlink:href="#icon-small-chevron-mobile" /></svg></a>
             <ul id="lend-menu-category-panel" aria-hidden="true">
 				{{#categories.list}}
                     <li><a href="{{href}}">{{name}}</a></li>
@@ -9,11 +9,11 @@
             </ul>
         </li>
         <li>
-            <a href="#" data-kv-toggle aria-controls="lend-menu-countries-panel" aria-expanded="false" class="section-title">Countries<i class="fa fa-chevron-down closed"></i><i class="fa fa-chevron-up open"></i></a>
+            <a href="#" data-kv-toggle aria-controls="lend-menu-countries-panel" aria-expanded="false" class="section-title">Countries<svg class="icon"><use xlink:href="#icon-small-chevron-mobile" /></svg></a>
             <ul id="lend-menu-countries-panel" aria-hidden="true">
 				{{#regions}}
                     <li>
-                        <a href="#" data-kv-toggle aria-controls="lend-menu-{{id}}-panel" aria-expanded="false" class="section-title">{{name}}<i class="fa fa-chevron-down closed"></i><i class="fa fa-chevron-up open"></i></a>
+                        <a href="#" data-kv-toggle aria-controls="lend-menu-{{id}}-panel" aria-expanded="false" class="section-title">{{name}}<svg class="icon"><use xlink:href="#icon-small-chevron-mobile" /></svg></a>
                         <ul id="lend-menu-{{id}}-panel" aria-hidden="true">
 							{{#countries}}
                                 <li><a href="{{href}}"><span class="f16 {{code}}"></span>{{name}}</a></li>
@@ -28,7 +28,7 @@
         </li>
 		{{^is-visitor}}
             <li>
-                <a href="#" data-kv-toggle aria-controls="lend-menu-personalized-panel" aria-expanded="false" class="section-title">Personalized<i class="fa fa-chevron-down closed"></i><i class="fa fa-chevron-up open"></i></a>
+                <a href="#" data-kv-toggle aria-controls="lend-menu-personalized-panel" aria-expanded="false" class="section-title">Personalized<svg class="icon"><use xlink:href="#icon-small-chevron-mobile" /></svg></a>
                 <ul id="lend-menu-personalized-panel" aria-hidden="true">
                     <li><a href="#">Favorites</a></li>
                     <li><a href="#">Saved Searches</a></li>
@@ -51,7 +51,11 @@
 			</div>
 		</div>
 		<div class="close-section" aria-hidden="true">
-            <a href="#"><i class="fa fa-chevron-left"></i></a>
+            <a href="#">
+				<svg class="icon">
+					<use xlink:href="#icon-medium-chevron" />
+				</svg>
+			</a>
 		</div>
         <div class="column-section">
 			<div class="section-title">Countries</div>
