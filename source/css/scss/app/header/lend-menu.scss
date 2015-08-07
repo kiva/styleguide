@@ -32,7 +32,7 @@
     }
 }
 
-ul.lend-menu-small {
+.lend-menu-small {
     list-style: none;
     margin: 0;
     background-color: $level-one-background;
@@ -89,15 +89,20 @@ ul.lend-menu-small {
     }
 }
 
-div.lend-menu-large {
+.lend-menu-large {
     $fixed-item-count: 2;
     $two-column-break-count: 7;
     $max-count: 50;
     $min-spacing: 1;
 
     $row-height: 1.5rem;
-    $col-width: 12rem;
+    $col-width: 10.5rem;
     $section-padding: 1rem;
+
+    $duration: 0.5s;
+    $menu-transition: margin #{$duration} ease;
+    $close-transition: width #{$duration} ease;
+    $region-transition: width #{$duration}, padding #{$duration} ease;
 
     $half-list-width: $col-width - $row-height;
     $list-width: 2*$half-list-width + $section-padding;
@@ -105,22 +110,26 @@ div.lend-menu-large {
 
     overflow: hidden;
 
+    li a {
+        padding: 0;
+        line-height: $row-height;
+    }
+
     .section-title {
         font-size: rem-calc(21);
         margin: 1.5rem 0 0.5rem;
+        white-space: nowrap;
 
         &:first-of-type {
             margin-top: 0;
         }
     }
 
-    > div {
+    .column-section {
         display: inline-block;
         padding: 0 2*$section-padding;
         margin: $section-padding 0;
         vertical-align: top;
-
-        $menu-transition: margin 0.5s ease;
 
         -webkit-transition: $menu-transition;
         transition: $menu-transition;
@@ -147,23 +156,17 @@ div.lend-menu-large {
     }
 
     .close-section {
+        display: inline-block;
         overflow: hidden;
         padding: 0;
         width: 5*$section-padding;
         font-size: 2rem;
 
-        $transition: width 0.5s ease;
-
-        -webkit-transition: $transition;
-        transition: $transition;
+        -webkit-transition: $close-transition;
+        transition: $close-transition;
 
         &[aria-hidden="true"] {
-            display: inline-block;
             width: 0;
-        }
-
-        &::before {
-            display: none;
         }
 
         a {
@@ -191,10 +194,28 @@ div.lend-menu-large {
         text-decoration: underline;
     }
 
-    li a {
-        padding: 0;
-        line-height: $row-height;
+    .country-list {
+        overflow: hidden;
+        width: 0;
+
+        -webkit-transition: $region-transition;
+        transition: $region-transition;
+
+        &[aria-hidden="true"] {
+            height: 0;
+            margin: 0 0 0 -0.2rem;
+            padding: 0;
+
+            &::before {
+                display: none;
+            }
+        }
+
+        &[aria-hidden="false"] {
+            width: $col-width + ($section-padding/2);
+        }
     }
+
 
     .column-list-container {
         overflow: hidden;
@@ -275,7 +296,7 @@ div.lend-menu-large {
         $break: min( ceil( ($i + $min-spacing+$fixed-item-count) / 2 ), max(2, $i) );
 
         .list-length-#{$i} {
-            > div.slide-left {
+            &.column-section.slide-left {
                 margin-left: -($section-padding + $list-width);
             }
 
