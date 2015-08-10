@@ -148,6 +148,13 @@ a.header-button#search-toggle {
     }
 }
 
+#search-form .search-form-submit {
+	position: absolute;
+	left: -9999px;
+	width: 1px;
+	height: 1px;
+}
+
 #close-search {
     float: left;
     width: $search-button-size-small;
