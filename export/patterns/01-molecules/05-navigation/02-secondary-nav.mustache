@@ -7,7 +7,7 @@
 			<ul>
 				{{#bar-links}}
 					<li>
-						<a href="#"
+						<a href="{{url}}"
 						   {{#active}}class="active"{{/active}}>{{title}}</a>
 					</li>
 				{{/bar-links}}
@@ -27,10 +27,10 @@
 		data-dropdown-content aria-hidden="true" tabindex="-1">
 		{{#drop-links}}
 			<li>
-				<a href="#" {{#active}}class="active"{{/active}}>{{title}}</a>
+				<a href="{{url}}" {{#active}}class="active"{{/active}}>{{title}}</a>
 				<ul>
 					{{#sub-links}}
-						<li><a href="#"
+						<li><a href="{{url}}"
 							   {{#sub-active}}class="active"{{/sub-active}}>{{sub-title}}</a>
 						</li>
 					{{/sub-links}}
@@ -40,7 +40,7 @@
 		{{#is-borrower}}
 			{{#drop-links-borrower}}
 				<li>
-					<a href="#"
+					<a href="{{url}}"
 					   {{#active}}class="active"{{/active}}>{{title}}</a>
 				</li>
 			{{/drop-links-borrower}}
@@ -48,7 +48,7 @@
 		{{#is-trustee}}
 			{{#drop-links-trustee}}
 				<li>
-					<a href="#"
+					<a href="{{url}}"
 					   {{#active}}class="active"{{/active}}>{{title}}</a>
 				</li>
 			{{/drop-links-trustee}}

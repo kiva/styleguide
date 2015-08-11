@@ -7823,6 +7823,12 @@ a.header-button#search-toggle {
   #search-form .tt-hint {
     color: #CCCCCC; }
 
+#search-form .search-form-submit {
+  position: absolute;
+  left: -9999px;
+  width: 1px;
+  height: 1px; }
+
 #close-search {
   float: left;
   width: 2.5rem;
