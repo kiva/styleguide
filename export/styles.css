@@ -8008,7 +8008,8 @@ ul.tertiary-nav {
   text-align: center;
   font-size: 1.8rem;
   font-weight: bold;
-  background-color: #26b6e8; }
+  background-color: #26b6e8;
+  z-index: 1; }
   .basket-bar a {
     color: #FFFFFF;
     line-height: 3.5555555556rem;
