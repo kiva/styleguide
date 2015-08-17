@@ -7009,7 +7009,10 @@ ul.dropdown-list {
   .header-button[data-dropdown] .icon {
     width: 0.5rem;
     height: 0.5rem;
+    -webkit-transition: -webkit-transform 400ms ease;
     transition: transform 400ms ease;
+    -webkit-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
     transform: rotate(180deg); }
     @media only screen and (min-width:30.0625rem) {
       .header-button[data-dropdown] .icon {
@@ -7019,6 +7022,8 @@ ul.dropdown-list {
     color: #236133;
     fill: #236133; }
     .header-button[aria-expanded="true"] .icon {
+      -webkit-transform: rotate(0deg);
+      -ms-transform: rotate(0deg);
       transform: rotate(0deg); }
   .header-button .icon {
     width: 1rem;
@@ -7067,6 +7072,8 @@ ul.dropdown-list {
     .lend-menu-small li a[aria-expanded="true"] {
       color: #a9a9a9; }
       .lend-menu-small li a[aria-expanded="true"] .icon {
+        -webkit-transform: rotate(-180deg);
+        -ms-transform: rotate(-180deg);
         transform: rotate(-180deg); }
     .lend-menu-small li a .icon {
       float: right;
@@ -7074,6 +7081,7 @@ ul.dropdown-list {
       width: 1.3888888889rem;
       fill: none;
       stroke: #333;
+      -webkit-transition: -webkit-transform 300ms ease;
       transition: transform 300ms ease; }
   .lend-menu-small ul {
     background-color: #f5f5f5; }
@@ -7135,11 +7143,13 @@ ul.dropdown-list {
     .lend-menu-large .close-section .icon {
       fill: none;
       stroke: #333;
-      transform: rotate(90deg);
       width: 2.8888888889rem;
       height: 8rem;
       position: absolute;
-      left: calc(50% - 1.2777777778rem); }
+      left: calc(50% - 1.2777777778rem);
+      -webkit-transform: rotate(90deg);
+      -ms-transform: rotate(90deg);
+      transform: rotate(90deg); }
       .lend-menu-large .close-section .icon::before {
         position: absolute;
         left: -0.75rem;
@@ -7169,9 +7179,7 @@ ul.dropdown-list {
     width: 3rem;
     height: 3rem;
     -webkit-transform: rotate(-90deg);
-    -moz-transform: rotate(-90deg);
     -ms-transform: rotate(-90deg);
-    -o-transform: rotate(-90deg);
     transform: rotate(-90deg); }
     .lend-menu-large ul.column-list + * {
       clear: both; }
@@ -7181,14 +7189,10 @@ ul.dropdown-list {
       margin-bottom: 9rem;
       float: right;
       -webkit-transform-origin: 50% 50%;
-      -moz-transform-origin: 50% 50%;
       -ms-transform-origin: 50% 50%;
-      -o-transform-origin: 50% 50%;
       transform-origin: 50% 50%;
       -webkit-transform: rotate(90deg);
-      -moz-transform: rotate(90deg);
       -ms-transform: rotate(90deg);
-      -o-transform: rotate(90deg);
       transform: rotate(90deg); }
       .lend-menu-large ul.column-list li.bottom {
         float: left; }
@@ -7764,8 +7768,6 @@ a.header-button#search-toggle {
   width: 100%;
   background-color: #63a541;
   -webkit-transition: width 0.5s ease;
-  -moz-transition: width 0.5s ease;
-  -o-transition: width 0.5s ease;
   transition: width 0.5s ease; }
   @media only screen and (min-width:42.5625rem) {
     #search-form {
@@ -7785,8 +7787,6 @@ a.header-button#search-toggle {
     height: 2.5rem;
     border-right: 0.0555555556rem solid #49953f;
     -webkit-transition: width 0.5s ease;
-    -moz-transition: width 0.5s ease;
-    -o-transition: width 0.5s ease;
     transition: width 0.5s ease; }
     @media only screen and (min-width:42.5625rem) {
       #search-form div {
@@ -7912,8 +7912,11 @@ a.header-button#search-toggle {
     stroke: #FFFFFF;
     height: 2.5rem;
     width: 1.3888888889rem;
+    -webkit-transition: -webkit-transform 300ms ease;
     transition: transform 300ms ease; }
   .secondary-nav-dropdown > a[aria-expanded="true"] .icon {
+    -webkit-transform: rotate(-180deg);
+    -ms-transform: rotate(-180deg);
     transform: rotate(-180deg); }
 .secondary-nav-dropdown ul.f-dropdown {
   outline: none;
