@@ -70,11 +70,19 @@ $link-spacing: rem-calc(16);
             stroke: $white;
             height: $header-height-small;
             width: rem-calc(25);
-            transition: transform 300ms ease;
+
+            $transition: 300ms ease;
+
+            -webkit-transition: -webkit-transform $transition;
+            transition: transform $transition;
         }
 
         &[aria-expanded="true"] .icon {
-            transform: rotate(-180deg);
+            $transform: rotate(-180deg);
+
+            -webkit-transform: $transform;
+            -ms-transform: $transform;
+            transform: $transform;
         }
     }
 

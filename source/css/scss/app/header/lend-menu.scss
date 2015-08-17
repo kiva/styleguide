@@ -55,7 +55,11 @@
             color: $selected-color;
 
             .icon {
-                transform: rotate(-180deg);
+                $transform: rotate(-180deg);
+
+                -webkit-transform: $transform;
+                -ms-transform: $transform;
+                transform: $transform;
             }
         }
 
@@ -65,7 +69,11 @@
             width: rem-calc(25);
             fill: none;
             stroke: $kiva-text-dark;
-            transition: transform 300ms ease;
+
+            $transition: 300ms ease;
+
+            -webkit-transition: -webkit-transform $transition;
+            transition: transform $transition;
         }
     }
 
@@ -184,11 +192,16 @@
         .icon {
             fill: none;
             stroke: $kiva-text-dark;
-            transform: rotate(90deg);
             width: rem-calc(52);
             height: $height;
             position: absolute;
             left: calc(50% - #{rem-calc(23)});
+
+            $transform: rotate(90deg);
+
+            -webkit-transform: $transform;
+            -ms-transform: $transform;
+            transform: $transform;
 
             &::before {
                 position: absolute;
@@ -240,9 +253,7 @@
         $rotation: rotate(-90deg);
 
         -webkit-transform: $rotation;
-        -moz-transform: $rotation;
         -ms-transform: $rotation;
-        -o-transform: $rotation;
         transform: $rotation;
 
         & + * {
@@ -259,15 +270,11 @@
             $rotation: rotate(90deg);
 
             -webkit-transform-origin: $origin;
-            -moz-transform-origin: $origin;
             -ms-transform-origin: $origin;
-            -o-transform-origin: $origin;
             transform-origin: $origin;
 
             -webkit-transform: $rotation;
-            -moz-transform: $rotation;
             -ms-transform: $rotation;
-            -o-transform: $rotation;
             transform: $rotation;
 
             &.bottom {

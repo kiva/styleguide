@@ -64,8 +64,6 @@ a.header-button#search-toggle {
     background-color: $kiva-green;
 
     -webkit-transition: $search-form-transition;
-    -moz-transition: $search-form-transition;
-    -o-transition: $search-form-transition;
     transition: $search-form-transition;
 
     @media #{$large-up} {
@@ -93,8 +91,6 @@ a.header-button#search-toggle {
         border-right: rem-calc(1) solid $kiva-navdivider-green;
 
         -webkit-transition: $search-form-transition;
-        -moz-transition: $search-form-transition;
-        -o-transition: $search-form-transition;
         transition: $search-form-transition;
 
         @media #{$large-up} {
