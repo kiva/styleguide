@@ -156,6 +156,7 @@
 	,"basket_href": "#"
 	,"lend_href": "#"
 	,"login_href": "#"
+	,"categories_href": "#"
 	,"basket": {
 		"item_count": "3"
 	}
