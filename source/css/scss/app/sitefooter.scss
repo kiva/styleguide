@@ -6,7 +6,7 @@ $footer-top-bottom-padding: rem-calc(40);
 	color: $white;
 	font-size: $small-font-size;
 	line-height: $small-line-height;
-	padding: rem-calc(20);
+	padding: rem-calc(40);
 
 	@media #{$large-up} {
 		height: $footer-height;
