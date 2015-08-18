@@ -27,14 +27,18 @@
             <a href="{{lend_href}}">All Loans</a>
         </li>
 		{{^is-visitor}}
-            <li>
-                <a href="#" data-kv-toggle aria-controls="lend-menu-personalized-panel" aria-expanded="false" class="section-title">Personalized<svg class="icon"><use xlink:href="#icon-small-chevron-mobile" /></svg></a>
-                <ul id="lend-menu-personalized-panel" aria-hidden="true">
-                    <li><a href="#">Favorites</a></li>
-                    <li><a href="#">Saved Searches</a></li>
-                    <li><a href="#">Countries I Have Not Lent To</a></li>
-                </ul>
-            </li>
+			{{#has_personalized}}
+	            <li>
+	                <a href="#" data-kv-toggle aria-controls="lend-menu-personalized-panel" aria-expanded="false" class="section-title">Personalized<svg class="icon"><use xlink:href="#icon-small-chevron-mobile" /></svg></a>
+	                <ul id="lend-menu-personalized-panel" aria-hidden="true">
+	                    <li><a href="#">Favorites</a></li>
+	                    <li><a href="#">Saved Searches</a></li>
+	                    {{#countries_unlent_href}}
+	                    	<li><a href="{{countries_unlent_href}}">Countries I Have Not Lent To</a></li>
+	                    {{/countries_unlent_href}}
+	                </ul>
+	            </li>
+			{{/has_personalized}}
 		{{/is-visitor}}
     </ul>
 	<div class="lend-menu-large show-for-large-up">
