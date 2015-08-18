@@ -7195,7 +7195,8 @@ ul.dropdown-list {
       -ms-transform: rotate(90deg);
       transform: rotate(90deg); }
       .lend-menu-large ul.column-list li.bottom {
-        float: left; }
+        float: left;
+        position: static; }
       .lend-menu-large ul.column-list li a {
         width: 8.5rem; }
   .lend-menu-large .list-length-1 ul.column-list {

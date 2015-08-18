@@ -72,12 +72,16 @@
 				<li><a href="#">Loans Near Me</a></li>
 			</ul>
 			{{^is-visitor}}
-				<div class="section-title">Personalized</div>
-				<ul>
-					<li><a href="#">Favorites</a></li>
-					<li><a href="#">Saved Searches</a></li>
-					<li><a href="#">Countries I Have Not Lent To</a></li>
-				</ul>
+				{{#has_personalized}}
+					<div class="section-title">Personalized</div>
+					<ul>
+						<li><a href="#">Favorites</a></li>
+						<li><a href="#">Saved Searches</a></li>
+	                    {{#countries_unlent_href}}
+	                    	<li><a href="{{countries_unlent_href}}">Countries I Have Not Lent To</a></li>
+	                    {{/countries_unlent_href}}
+					</ul>
+				{{/has_personalized}}
 			{{/is-visitor}}
 		</div>
 		{{#regions}}
