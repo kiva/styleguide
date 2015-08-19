@@ -7046,7 +7046,6 @@ ul.dropdown-list {
 .lend-menu-small li:hover, .lend-menu-small li:focus, .lend-menu-large li:hover, .lend-menu-large li:focus {
   background: none; }
 .lend-menu-small li a, .lend-menu-large li a {
-  white-space: nowrap;
   color: #22a9d8; }
   .lend-menu-small li a:focus, .lend-menu-large li a:focus {
     text-decoration: none; }
@@ -7098,6 +7097,7 @@ ul.dropdown-list {
 .lend-menu-large {
   overflow: hidden; }
   .lend-menu-large li a {
+    white-space: nowrap;
     padding: 0;
     line-height: 1.5rem; }
   .lend-menu-large .section-title {
@@ -7855,6 +7855,9 @@ a.header-button#search-toggle {
     @media only screen and (min-width:42.5625rem) {
       .top-nav-search-menu .tt-suggestion {
         padding: 0 0 0 1rem; } }
+  .top-nav-search-menu .tt-suggestion:first-of-type {
+    border-top: 1px solid #ccc;
+    margin-top: 0.4rem; }
   .top-nav-search-menu .tt-cursor {
     color: #FFFFFF;
     background-color: #26b6e8; }
