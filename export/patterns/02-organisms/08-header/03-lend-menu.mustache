@@ -32,7 +32,16 @@
 	                <a href="#" data-kv-toggle aria-controls="lend-menu-personalized-panel" aria-expanded="false" class="section-title">Personalized<svg class="icon"><use xlink:href="#icon-small-chevron-mobile" /></svg></a>
 	                <ul id="lend-menu-personalized-panel" aria-hidden="true">
 	                    <li><a href="#">Favorites</a></li>
-	                    <li><a href="#">Saved Searches</a></li>
+						{{#has_saved_searches}}
+                            <li>
+								<a href="#" data-kv-toggle aria-controls="lend-menu-searches-panel" aria-expanded="false" class="section-title">Saved Searches<svg class="icon"><use xlink:href="#icon-small-chevron-mobile" /></a>
+								<ul id="lend-menu-searches-panel" aria-hidden="true">
+									{{#saved_searches}}
+										<li><a href="{{href}}">{{name}}</a></li>
+									{{/saved_searches}}
+								</ul>
+							</li>
+						{{/has_saved_searches}}
 	                    {{#countries_unlent_href}}
 	                    	<li><a href="{{countries_unlent_href}}">Countries I Have Not Lent To</a></li>
 	                    {{/countries_unlent_href}}
@@ -66,7 +75,7 @@
 			<ul>
 				{{#regions}}
                     <li>
-                        <a href="#" data-kv-toggle aria-controls="lend-menu-{{id}}-section" aria-expanded="false" class="region-link">{{name}}</a>
+                        <a href="#" data-kv-toggle aria-controls="lend-menu-{{id}}-section" aria-expanded="false" class="tertiary-link">{{name}}</a>
                     </li>
 				{{/regions}}
 				<li><a href="#">Loans Near Me</a></li>
@@ -76,7 +85,11 @@
 					<div class="section-title">Personalized</div>
 					<ul>
 						<li><a href="#">Favorites</a></li>
-						<li><a href="#">Saved Searches</a></li>
+						{{#has_saved_searches}}
+							<li>
+								<a href="#" data-kv-toggle aria-controls="lend-menu-searches-section" aria-expanded="false" class="tertiary-link">Saved Searches</a>
+							</li>
+						{{/has_saved_searches}}
 	                    {{#countries_unlent_href}}
 	                    	<li><a href="{{countries_unlent_href}}">Countries I Have Not Lent To</a></li>
 	                    {{/countries_unlent_href}}
@@ -84,8 +97,18 @@
 				{{/has_personalized}}
 			{{/is-visitor}}
 		</div>
+		{{#has_saved_searches}}
+			<div id="lend-menu-searches-section" aria-hidden="true" class="tertiary-list column-section">
+				<div class="section-title">Saved Searches</div>
+				<ul>
+					{{#saved_searches}}
+						<li><a href="{{href}}">{{name}}</a></li>
+					{{/saved_searches}}
+				</ul>
+			</div>
+		{{/has_saved_searches}}
 		{{#regions}}
-            <div id="lend-menu-{{id}}-section" aria-hidden="true" class="country-list column-section">
+            <div id="lend-menu-{{id}}-section" aria-hidden="true" class="tertiary-list column-section">
 				<div class="section-title">{{name}}</div>
 				<ul>
 					{{#countries}}

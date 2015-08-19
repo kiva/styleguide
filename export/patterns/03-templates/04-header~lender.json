@@ -1,4 +1,9 @@
 {
     "is-lender": true,
+	"has_personalized": true,
+	"has_saved_searches": true,
+	"saved_searches": [
+		{"href":"#", "name":"Burundi"}
+	],
     "balance": "$23"
 }

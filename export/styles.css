@@ -7154,22 +7154,23 @@ ul.dropdown-list {
         position: absolute;
         left: -0.75rem;
         top: -0.75rem; }
-  .lend-menu-large .region-link[aria-expanded="true"] {
+  .lend-menu-large .tertiary-link[aria-expanded="true"] {
     color: #63a541;
     text-decoration: underline; }
-  .lend-menu-large .country-list {
+  .lend-menu-large .tertiary-list {
     overflow: hidden;
+    float: right;
     width: 0;
     -webkit-transition: width 0.5s, padding 0.5s ease;
     transition: width 0.5s, padding 0.5s ease; }
-    .lend-menu-large .country-list[aria-hidden="true"] {
+    .lend-menu-large .tertiary-list[aria-hidden="true"] {
       height: 0;
       margin: 0 0 0 -0.2rem;
       padding: 0; }
-      .lend-menu-large .country-list[aria-hidden="true"]::before {
+      .lend-menu-large .tertiary-list[aria-hidden="true"]::before {
         display: none; }
-    .lend-menu-large .country-list[aria-hidden="false"] {
-      width: 11rem; }
+    .lend-menu-large .tertiary-list[aria-hidden="false"] {
+      width: 11.5rem; }
   .lend-menu-large .column-list-container {
     overflow: hidden;
     height: auto;
