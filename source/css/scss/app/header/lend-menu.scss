@@ -123,12 +123,13 @@
 
     li a {
         white-space: nowrap;
-        padding: 0;
+        padding: 0 2*$section-padding;
         line-height: $row-height;
     }
 
     .section-title {
         font-size: rem-calc(21);
+        padding: 0 2*$section-padding;
         margin: 1.5rem 0 0.5rem;
         white-space: nowrap;
 
@@ -139,7 +140,6 @@
 
     .column-section {
         display: inline-block;
-        padding: 0 2*$section-padding;
         margin: $section-padding 0;
         vertical-align: top;
 
@@ -155,11 +155,14 @@
             border-left: rem-calc(1) solid $kiva-stroke-gray;
             height: calc(100% - #{2*$section-padding});
             position: absolute;
-            margin-left: -2*$section-padding;
         }
 
         &:first-child {
             padding: 0 0 0 $section-padding;
+
+            li a, .section-title {
+                padding:0;
+            }
 
             &::before {
                 display: none;
@@ -212,12 +215,14 @@
     }
 
     .tertiary-link[aria-expanded="true"] {
-        color: $kiva-green;
-        text-decoration: underline;
+        color: $selected-color;
+        text-decoration: none;
+        background-color: $level-two-background;
     }
 
     .tertiary-list {
         overflow: hidden;
+        margin-left: -0.2rem;
         width: 0;
 
         -webkit-transition: $tertiary-transition;
@@ -225,7 +230,7 @@
 
         &[aria-hidden="true"] {
             height: 0;
-            margin: 0 0 0 -0.2rem;
+            margin: 0 0 0 -0.18rem;
             padding: 0;
 
             &::before {
