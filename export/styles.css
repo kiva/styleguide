@@ -7098,17 +7098,17 @@ ul.dropdown-list {
   overflow: hidden; }
   .lend-menu-large li a {
     white-space: nowrap;
-    padding: 0;
+    padding: 0 2rem;
     line-height: 1.5rem; }
   .lend-menu-large .section-title {
     font-size: 1.1666666667rem;
+    padding: 0 2rem;
     margin: 1.5rem 0 0.5rem;
     white-space: nowrap; }
     .lend-menu-large .section-title:first-of-type {
       margin-top: 0; }
   .lend-menu-large .column-section {
     display: inline-block;
-    padding: 0 2rem;
     margin: 1rem 0;
     vertical-align: top;
     -webkit-transition: margin 0.5s ease;
@@ -7119,10 +7119,11 @@ ul.dropdown-list {
       content: "";
       border-left: 0.0555555556rem solid #d8d8d8;
       height: calc(100% - 2rem);
-      position: absolute;
-      margin-left: -2rem; }
+      position: absolute; }
     .lend-menu-large .column-section:first-child {
       padding: 0 0 0 1rem; }
+      .lend-menu-large .column-section:first-child li a, .lend-menu-large .column-section:first-child .section-title {
+        padding: 0; }
       .lend-menu-large .column-section:first-child::before {
         display: none; }
   .lend-menu-large .close-section {
@@ -7155,22 +7156,23 @@ ul.dropdown-list {
         left: -0.75rem;
         top: -0.75rem; }
   .lend-menu-large .tertiary-link[aria-expanded="true"] {
-    color: #63a541;
-    text-decoration: underline; }
+    color: #a9a9a9;
+    text-decoration: none;
+    background-color: #f5f5f5; }
   .lend-menu-large .tertiary-list {
     overflow: hidden;
-    float: right;
+    margin-left: -0.2rem;
     width: 0;
     -webkit-transition: width 0.5s, padding 0.5s ease;
     transition: width 0.5s, padding 0.5s ease; }
     .lend-menu-large .tertiary-list[aria-hidden="true"] {
       height: 0;
-      margin: 0 0 0 -0.2rem;
+      margin: 0 0 0 -0.18rem;
       padding: 0; }
       .lend-menu-large .tertiary-list[aria-hidden="true"]::before {
         display: none; }
     .lend-menu-large .tertiary-list[aria-hidden="false"] {
-      width: 11.5rem; }
+      width: 11rem; }
   .lend-menu-large .column-list-container {
     overflow: hidden;
     height: auto;
