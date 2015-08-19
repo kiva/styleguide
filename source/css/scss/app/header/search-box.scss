@@ -166,6 +166,8 @@ a.header-button#search-toggle {
 }
 
 .top-nav-search-menu {
+	$spacing: 0.4rem;
+	
     background-color: $white;
     border: rem-calc(1) solid $iron;
     padding: $search-margin-small;
@@ -176,13 +178,17 @@ a.header-button#search-toggle {
     }
 
     .tt-suggestion {
-        $spacing: 0.4rem;
         padding: $spacing $spacing $spacing 1rem;
 
         @media #{$large-up} {
             padding: 0 0 0 1rem;
         }
     }
+
+	.tt-suggestion:first-of-type {
+		border-top: 1px solid #ccc;
+		margin-top: $spacing;
+	}
 
     .tt-cursor {
         color: $white;
