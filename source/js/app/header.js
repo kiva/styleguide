@@ -55,14 +55,14 @@ module.exports = function() {
 	// Lend Mega-Menu
 	var $category_section = $('.lend-menu-large > div:first-child');
 	var $close_section = $('.lend-menu-large .close-section');
-	var $region_links = $('.lend-menu-large .region-link');
-	var $country_lists = $('.lend-menu-large .country-list');
+	var $tertiary_links = $('.lend-menu-large .tertiary-link');
+	var $tertiary_lists = $('.lend-menu-large .tertiary-list');
 
 	$close_section.click(function(e) {
 		e.preventDefault();
 
-		$region_links.attr('aria-expanded', false);
-		$country_lists.attr('aria-hidden', true);
+		$tertiary_links.attr('aria-expanded', false);
+		$tertiary_lists.attr('aria-hidden', true);
 
 		$category_section.removeClass('slide-left');
 		$close_section.attr('aria-hidden', true);
@@ -78,8 +78,8 @@ module.exports = function() {
 			$close_section.attr('aria-hidden', true);
 		}
 		else {
-			$region_links.attr('aria-expanded', false);
-			$country_lists.attr('aria-hidden', true);
+			$tertiary_links.attr('aria-expanded', false);
+			$tertiary_lists.attr('aria-hidden', true);
 
 			$category_section.addClass('slide-left');
 			$close_section.attr('aria-hidden', false);

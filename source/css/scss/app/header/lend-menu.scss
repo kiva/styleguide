@@ -114,7 +114,7 @@
     $duration: 0.5s;
     $menu-transition: margin #{$duration} ease;
     $close-transition: width #{$duration} ease;
-    $region-transition: width #{$duration}, padding #{$duration} ease;
+    $tertiary-transition: width #{$duration}, padding #{$duration} ease;
 
     $half-list-width: $col-width - $row-height;
     $list-width: 2*$half-list-width + $section-padding;
@@ -211,17 +211,18 @@
         }
     }
 
-    .region-link[aria-expanded="true"] {
+    .tertiary-link[aria-expanded="true"] {
         color: $kiva-green;
         text-decoration: underline;
     }
 
-    .country-list {
+    .tertiary-list {
         overflow: hidden;
+        float:right;
         width: 0;
 
-        -webkit-transition: $region-transition;
-        transition: $region-transition;
+        -webkit-transition: $tertiary-transition;
+        transition: $tertiary-transition;
 
         &[aria-hidden="true"] {
             height: 0;
@@ -234,7 +235,7 @@
         }
 
         &[aria-hidden="false"] {
-            width: $col-width + ($section-padding/2);
+            width: $col-width + $section-padding;
         }
     }
 
