@@ -14,7 +14,6 @@
         }
 
         a {
-            white-space: nowrap;
             color: $kiva-textlink;
 
             &:focus {
@@ -123,6 +122,7 @@
     overflow: hidden;
 
     li a {
+        white-space: nowrap;
         padding: 0;
         line-height: $row-height;
     }
