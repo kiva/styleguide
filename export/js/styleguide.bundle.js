@@ -19939,6 +19939,12 @@
 			$this.attr('aria-expanded', $this.attr('aria-expanded') === 'false');
 			$target.attr('aria-hidden', $target.attr('aria-hidden') === 'false');
 		});
+
+
+		// close window when normal links clicked
+		$('a:not([data-kv-toggle],[href="#"])').click(function() {
+			Foundation.libs.dropdown.close($('#lend-dropdown'));
+		});
 	};
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)))
 
