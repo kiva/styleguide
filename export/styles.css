@@ -7062,7 +7062,11 @@ ul.dropdown-list {
     font-size: 1rem;
     padding: 0 1rem;
     line-height: 2.5rem;
-    border-bottom: 0.0555555556rem solid #d8d8d8; }
+    border-bottom: 0.0555555556rem solid #d8d8d8;
+    color: #333;
+    text-decoration: none; }
+    .lend-menu-small li a:hover {
+      color: #333; }
     .lend-menu-small li a.section-title {
       color: #333;
       text-decoration: none; }
