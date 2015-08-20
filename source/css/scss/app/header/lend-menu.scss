@@ -41,6 +41,12 @@
         padding: 0 1rem;
         line-height: $header-height-small;
         border-bottom: rem-calc(1) solid $kiva-stroke-gray;
+        color: $kiva-text-dark;
+        text-decoration: none;
+
+        &:hover {
+            color: $kiva-text-dark;
+        }
 
         &.section-title {
             color: $kiva-text-dark;
