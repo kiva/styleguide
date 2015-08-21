@@ -101,16 +101,6 @@
 				{{/has_personalized}}
 			{{/is-visitor}}
 		</div>
-		{{#has_saved_searches}}
-			<div id="lend-menu-searches-section" aria-hidden="true" class="tertiary-list column-section">
-				<div class="section-title">Saved Searches</div>
-				<ul>
-					{{#saved_searches}}
-						<li><a href="{{href}}">{{name}}</a></li>
-					{{/saved_searches}}
-				</ul>
-			</div>
-		{{/has_saved_searches}}
 		{{#regions}}
             <div id="lend-menu-{{id}}-section" aria-hidden="true" class="tertiary-list column-section">
 				<div class="section-title">{{name}}</div>
@@ -121,5 +111,15 @@
 				</ul>
             </div>
 		{{/regions}}
+        {{#has_saved_searches}}
+            <div id="lend-menu-searches-section" aria-hidden="true" class="tertiary-list column-section">
+                <div class="section-title">Saved Searches</div>
+                <ul>
+                    {{#saved_searches}}
+                        <li><a href="{{href}}">{{name}}</a></li>
+                    {{/saved_searches}}
+                </ul>
+            </div>
+        {{/has_saved_searches}}
 	</div>
 </div>

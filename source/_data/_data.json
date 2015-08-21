@@ -172,6 +172,7 @@
 		,{ "name": "Education", "href": "#" }
 		,{ "name": "Expiring Soon", "href": "#" }
 		,{ "name": "Shelter", "href": "#" }
+		,{ "name": "Sustainable Ventures", "href": "#" }
 		,{ "name": "Conflict Zones", "href": "#" }
 		,{ "name": "Repeat Borrower", "href": "#" }
 		,{ "name": "Great Photo", "href": "#" }
@@ -180,7 +181,6 @@
 		,{ "name": "Agriculture", "href": "#" }
 		,{ "name": "Health", "href": "#" }
 		,{ "name": "Food", "href": "#" }
-		,{ "name": "Sustainable Ventures", "href": "#" }
 		,{ "name": "Transportation", "href": "#" }
 		,{ "name": "Livestock", "href": "#" }
 		,{ "name": "Short-term Loans", "href": "#" }

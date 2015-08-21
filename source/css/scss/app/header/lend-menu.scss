@@ -25,7 +25,7 @@
             }
 
             .f16 {
-                margin-right: 0.5rem;
+                margin-right: 0.25rem;
             }
         }
     }
@@ -113,7 +113,8 @@
     $min-spacing: 1;
 
     $row-height: 1.5rem;
-    $col-width: 10.5rem;
+    $col-width: 8rem;
+    $tertiary-list-width: 11rem;
     $section-padding: 1rem;
 
     $duration: 0.5s;
@@ -121,7 +122,7 @@
     $close-transition: width #{$duration} ease;
     $tertiary-transition: width #{$duration}, padding #{$duration} ease;
 
-    $half-list-width: $col-width - $row-height;
+    $half-list-width: $col-width;
     $list-width: 2*$half-list-width + $section-padding;
 
 
@@ -129,13 +130,13 @@
 
     li a {
         white-space: nowrap;
-        padding: 0 2*$section-padding;
+        padding: 0 1.5*$section-padding;
         line-height: $row-height;
     }
 
     .section-title {
         font-size: rem-calc(21);
-        padding: 0 2*$section-padding;
+        padding: 0 1.5*$section-padding;
         margin: 1.5rem 0 0.5rem;
         white-space: nowrap;
 
@@ -146,6 +147,7 @@
 
     .column-section {
         display: inline-block;
+        float: left;
         margin: $section-padding 0;
         vertical-align: top;
 
@@ -153,7 +155,7 @@
         transition: $menu-transition;
 
         &.slide-left {
-            margin-left: -($section-padding + $half-list-width);
+            margin-left: -(2*$section-padding + $half-list-width);
         }
 
         &::before {
@@ -164,7 +166,7 @@
         }
 
         &:first-child {
-            padding: 0 0 0 $section-padding;
+            padding: 0 $section-padding;
 
             li a, .section-title {
                 padding:0;
@@ -178,6 +180,7 @@
 
     .close-section {
         display: inline-block;
+        float: left;
         overflow: hidden;
         padding: 0;
         width: 5*$section-padding;
@@ -204,7 +207,7 @@
             width: rem-calc(52);
             height: $height;
             position: absolute;
-            left: calc(50% - #{rem-calc(23)});
+            left: calc(50% - #{rem-calc(27)});
 
             $transform: rotate(90deg);
 
@@ -228,7 +231,6 @@
 
     .tertiary-list {
         overflow: hidden;
-        margin-left: -0.2rem;
         width: 0;
 
         -webkit-transition: $tertiary-transition;
@@ -236,7 +238,7 @@
 
         &[aria-hidden="true"] {
             height: 0;
-            margin: 0 0 0 -0.18rem;
+            margin: 0;
             padding: 0;
 
             &::before {
@@ -245,7 +247,7 @@
         }
 
         &[aria-hidden="false"] {
-            width: $col-width + ($section-padding/2);
+            width: $tertiary-list-width;
         }
     }
 
@@ -274,7 +276,7 @@
         li {
             width: $row-height;
             height: $row-height;
-            margin-bottom: ($col-width - $row-height);
+            margin-bottom: ($col-width - $row-height) + $section-padding;
             float: right;
 
             $origin: 50% 50%;
@@ -294,7 +296,7 @@
             }
 
             a {
-                width: $col-width - 2*$section-padding;
+                width: $col-width;
             }
         }
     }
@@ -325,7 +327,7 @@
 
         .list-length-#{$i} {
             &.column-section.slide-left {
-                margin-left: -($section-padding + $list-width);
+                margin-left: -(2*$section-padding + $list-width);
             }
 
             .column-list-container {
