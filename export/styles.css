@@ -7060,8 +7060,8 @@ ul.dropdown-list {
   background-color: #FFFFFF; }
   .lend-menu-small li a {
     font-size: 1rem;
-    padding: 0 1rem;
-    line-height: 2.5rem;
+    padding: 0.5rem 1rem;
+    line-height: 1.5rem;
     border-bottom: 0.0555555556rem solid #d8d8d8;
     color: #333;
     text-decoration: none; }
@@ -7170,6 +7170,11 @@ ul.dropdown-list {
     width: 0;
     -webkit-transition: width 0.5s, padding 0.5s ease;
     transition: width 0.5s, padding 0.5s ease; }
+    .lend-menu-large .tertiary-list li a {
+      width: 11rem;
+      white-space: normal;
+      line-height: 1rem;
+      padding: 0.223rem 1.5rem; }
     .lend-menu-large .tertiary-list[aria-hidden="true"] {
       height: 0;
       margin: 0;

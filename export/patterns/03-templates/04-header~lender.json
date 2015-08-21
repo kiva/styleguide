@@ -3,7 +3,8 @@
 	"has_personalized": true,
 	"has_saved_searches": true,
 	"saved_searches": [
-		{"href":"#", "name":"Burundi"}
+		{"href":"#", "name":"Burundi"},
+		{"href":"#", "name":"Something really long that won't be truncated and should wrap onto multiple lines"}
 	],
 	"countries_unlent_href": "#",
     "balance": "$23"
