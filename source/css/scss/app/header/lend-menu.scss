@@ -32,14 +32,15 @@
 }
 
 .lend-menu-small {
+    $row-height: $header-height-small - 1rem;
     list-style: none;
     margin: 0;
     background-color: $level-one-background;
 
     li a {
         font-size: $body-font-size;
-        padding: 0 1rem;
-        line-height: $header-height-small;
+        padding: 0.5rem 1rem;
+        line-height: $row-height;
         border-bottom: rem-calc(1) solid $kiva-stroke-gray;
         color: $kiva-text-dark;
         text-decoration: none;
@@ -235,6 +236,14 @@
 
         -webkit-transition: $tertiary-transition;
         transition: $tertiary-transition;
+
+        li a {
+            $line-height: rem-calc(18);
+            width: $tertiary-list-width;
+            white-space: normal;
+            line-height: $line-height;
+            padding: ($row-height - ($line-height + 0.054))/2 1.5*$section-padding; // don't know why the 0.054 is needed, but it is.
+        }
 
         &[aria-hidden="true"] {
             height: 0;
