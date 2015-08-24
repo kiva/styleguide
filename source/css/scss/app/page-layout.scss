@@ -5,7 +5,6 @@
 html, body {
 	height: 100%;
     -webkit-font-smoothing: antialiased; /* fix font issues in webkit browsers on osx/ios */
-    -webkit-backface-visibility: hidden; /* fix font issues in webkit browsers on osx/ios */
 }
 
 .pageWrap {
