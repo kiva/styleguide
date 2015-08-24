@@ -19942,7 +19942,7 @@
 
 
 		// close window when normal links clicked
-		$('a:not([data-kv-toggle],[href="#"])').click(function() {
+		$('#lend-dropdown a:not([data-kv-toggle],[href="#"])').click(function() {
 			Foundation.libs.dropdown.close($('#lend-dropdown'));
 		});
 	};
