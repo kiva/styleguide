@@ -6924,7 +6924,11 @@ small {
   margin: 0; }
 
 html, body {
-  height: 100%; }
+  height: 100%;
+  -webkit-font-smoothing: antialiased;
+  /* fix font issues in webkit browsers on osx/ios */
+  -webkit-backface-visibility: hidden;
+  /* fix font issues in webkit browsers on osx/ios */ }
 
 .pageWrap {
   min-height: 100%;
@@ -6943,6 +6947,9 @@ html, body {
   @media only screen and (min-width:42.5625rem) {
     .pageWrap:after {
       height: 25.5555555556rem; } }
+
+svg {
+  pointer-events: none; }
 
 .fundraising-meter {
   border: none;
