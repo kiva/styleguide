@@ -152,6 +152,7 @@
 			{ "label": "Sign Out", "href": "#"}
 		]
 	}
+	,"profile_picture_href": "../../images/fpo_avatar.png"
 	,"logo_href": "#"
 	,"basket_href": "#"
 	,"lend_href": "#"
