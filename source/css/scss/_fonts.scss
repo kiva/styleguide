@@ -1,53 +1,71 @@
 @font-face {
     font-family: 'PostGrotesk';
-    src: url('../fonts/PostGrotesk-Bold.eot') format('eot')
-		,url('../fonts/PostGrotesk-Bold.woff') format('woff')
-		,url('../fonts/PostGrotesk-Bold.svg') format('svg');
+    src: url('/fonts/PostGrotesk-Bold.eot') format('eot')
+		,url('/fonts/PostGrotesk-Bold.woff') format('woff')
+		,url('/fonts/PostGrotesk-Bold.svg') format('svg');
     font-weight: 700;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'PostGrotesk';
-    src: url('../fonts/PostGrotesk-BoldItalic.eot') format('eot')
-		,url('../fonts/PostGrotesk-BoldItalic.woff') format('woff')
-		,url('../fonts/PostGrotesk-BoldItalic.svg') format('svg');
+    src: url('/fonts/PostGrotesk-BoldItalic.eot') format('eot')
+		,url('/fonts/PostGrotesk-BoldItalic.woff') format('woff')
+		,url('/fonts/PostGrotesk-BoldItalic.svg') format('svg');
     font-weight: 700;
     font-style: italic;
 }
 
 @font-face {
     font-family: 'PostGrotesk';
-    src: url('../fonts/PostGrotesk-Book.eot') format('eot')
-		,url('../fonts/PostGrotesk-Book.woff') format('woff')
-		,url('../fonts/PostGrotesk-Book.svg') format('svg');
+    src: url('/fonts/PostGrotesk-Medium.eot') format('eot')
+		,url('/fonts/PostGrotesk-Medium.woff') format('woff')
+		,url('/fonts/PostGrotesk-Medium.svg') format('svg');
     font-weight: 400;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'PostGrotesk';
-    src: url('../fonts/PostGrotesk-BookItalic.eot') format('eot')
-		,url('../fonts/PostGrotesk-BookItalic.woff') format('woff')
-		,url('../fonts/PostGrotesk-BookItalic.svg') format('svg');
+    src: url('/fonts/PostGrotesk-MediumItalic.eot') format('eot')
+		,url('/fonts/PostGrotesk-MediumItalic.woff') format('woff')
+		,url('/fonts/PostGrotesk-MediumItalic.svg') format('svg');
     font-weight: 400;
     font-style: italic;
 }
 
 @font-face {
     font-family: 'PostGrotesk';
-    src: url('../fonts/PostGrotesk-Light.eot') format('eot')
-		,url('../fonts/PostGrotesk-Light.woff') format('woff')
-		,url('../fonts/PostGrotesk-Light.svg') format('svg');
+    src: url('/fonts/PostGrotesk-Book.eot') format('eot')
+		,url('/fonts/PostGrotesk-Book.woff') format('woff')
+		,url('/fonts/PostGrotesk-Book.svg') format('svg');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'PostGrotesk';
+    src: url('/fonts/PostGrotesk-BookItalic.eot') format('eot')
+		,url('/fonts/PostGrotesk-BookItalic.woff') format('woff')
+		,url('/fonts/PostGrotesk-BookItalic.svg') format('svg');
+    font-weight: 300;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'PostGrotesk';
+    src: url('/fonts/PostGrotesk-Light.eot') format('eot')
+		,url('/fonts/PostGrotesk-Light.woff') format('woff')
+		,url('/fonts/PostGrotesk-Light.svg') format('svg');
     font-weight: 100;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'PostGrotesk';
-    src: url('../fonts/PostGrotesk-LightItalic.eot') format('eot')
-		,url('../fonts/PostGrotesk-LightItalic.woff') format('woff')
-		,url('../fonts/PostGrotesk-LightItalic.svg') format('svg');
+    src: url('/fonts/PostGrotesk-LightItalic.eot') format('eot')
+		,url('/fonts/PostGrotesk-LightItalic.woff') format('woff')
+		,url('/fonts/PostGrotesk-LightItalic.svg') format('svg');
     font-weight: 100;
     font-style: italic;
 }
@@ -56,3 +74,6 @@
 	font-weight: 100;
 }
 
+.book {
+	font-weight: 300;
+}
