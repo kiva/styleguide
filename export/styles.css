@@ -7100,7 +7100,7 @@ ul.dropdown-list {
         transform: rotate(-180deg); }
     .lend-menu-small li a .icon {
       float: right;
-      height: 2.5rem;
+      height: 1rem;
       width: 1.3888888889rem;
       fill: none;
       stroke: #333;
@@ -7191,7 +7191,7 @@ ul.dropdown-list {
     -webkit-transition: width 0.5s, padding 0.5s ease;
     transition: width 0.5s, padding 0.5s ease; }
     .lend-menu-large .tertiary-list li a {
-      width: 11rem;
+      width: 11.5rem;
       white-space: normal;
       line-height: 1rem;
       padding: 0.223rem 1.5rem; }
@@ -7202,7 +7202,7 @@ ul.dropdown-list {
       .lend-menu-large .tertiary-list[aria-hidden="true"]::before {
         display: none; }
     .lend-menu-large .tertiary-list[aria-hidden="false"] {
-      width: 11rem; }
+      width: 11.5rem; }
   .lend-menu-large .column-list-container {
     overflow: hidden;
     height: auto;
