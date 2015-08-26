@@ -19854,7 +19854,9 @@
 
 			$search_toggle.attr('aria-expanded', expanded);
 			$close_search.attr('aria-expanded', expanded);
-			$search_form.attr('aria-hidden', $search_form.attr('aria-hidden') === 'false');
+			$search_form
+	            .attr('aria-hidden', $search_form.attr('aria-hidden') === 'false')
+	            .trigger(expanded ? 'show' : 'hide');
 		});
 
 		$close_search.click(function(e) {
