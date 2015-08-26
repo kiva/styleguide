@@ -8188,7 +8188,7 @@ ul.tertiary-nav {
 
 @media only screen and (max-width: 30rem), only screen and (min-width:30.0625rem) and (max-width:42.5rem) {
   .siteFooter {
-    padding: 2.2222222222rem 1rem; }
+    padding: 1rem; }
   .siteFooter-nav .siteFooter-links {
     border-bottom: white 1px solid;
     list-style-type: none;
@@ -8201,9 +8201,11 @@ ul.tertiary-nav {
     text-align: left; }
   .siteFooter-nav li:last-of-type {
     text-align: right; }
-  .siteFooter-nav .siteFooter-policy, .siteFooter-nav .siteFooter-legal {
+  .siteFooter-nav .siteFooter-policy {
     text-align: center;
     margin-bottom: 2.2222222222rem; }
+  .siteFooter-nav .siteFooter-legal {
+    text-align: center; }
   .siteFooter-nav .siteFooter-privacy {
     border-right: #FFFFFF 1px solid;
     padding-right: 1.1111111111rem;
