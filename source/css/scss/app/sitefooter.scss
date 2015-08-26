@@ -72,7 +72,7 @@ $footer-top-bottom-padding: rem-calc(40);
 
 @media #{$small-only}, #{$medium-only} {
     .siteFooter {
-        padding: 1.5rem 1rem;
+        padding: 1rem;
     }
 
 	.siteFooter-nav {
