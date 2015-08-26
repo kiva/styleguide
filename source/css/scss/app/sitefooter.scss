@@ -72,7 +72,7 @@ $footer-top-bottom-padding: rem-calc(40);
 
 @media #{$small-only}, #{$medium-only} {
     .siteFooter {
-        padding: rem-calc(40) 1rem;
+        padding: 1.5rem 1rem;
     }
 
 	.siteFooter-nav {
@@ -96,10 +96,14 @@ $footer-top-bottom-padding: rem-calc(40);
 			text-align: right;
 		}
 
-		.siteFooter-policy, .siteFooter-legal {
+		.siteFooter-policy {
 			text-align: center;
 			margin-bottom: rem-calc(40);
 		}
+
+        .siteFooter-legal {
+            text-align: center;
+        }
 
 		.siteFooter-privacy {
 			border-right: $white 1px solid;
