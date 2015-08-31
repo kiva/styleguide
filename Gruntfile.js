@@ -67,7 +67,7 @@ module.exports = function(grunt) {
 
         , githooks: {
             all: {
-                'pre-commit': 'test',
+                'pre-commit': 'test'
             }
         }
 
@@ -286,6 +286,7 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-jshint');
     grunt.loadNpmTasks('grunt-contrib-watch');
 	grunt.loadNpmTasks('grunt-git');
+    grunt.loadNpmTasks('grunt-githooks');
 	grunt.loadNpmTasks('grunt-sass');
 	grunt.loadNpmTasks('grunt-shell');
 	grunt.loadNpmTasks('grunt-svgstore');
