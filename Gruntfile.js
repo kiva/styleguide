@@ -36,12 +36,7 @@ module.exports = function(grunt) {
 
 			, js: {
 				files: [
-					{src: 'bower_components/fastclick/lib/fastclick.js', dest: 'public/dep/fastclick/fastclick.js'}
-					, {src: 'bower_components/foundation/js/foundation.js', dest: 'public/dep/foundation/foundation.js'}
-					, {src: 'bower_components/jquery/dist/jquery.js', dest: 'public/dep/jquery/jquery.js'}
-					, {src: 'bower_components/modernizr/modernizr.js', dest: 'public/dep/modernizr/modernizr.js'}
-                    , {src: 'bower_components/nouislider/distribute/jquery.nouislider.all.js', dest: 'public/dep/nouislider/nouislider.js'}
-                    , {src: 'bower_components/select2/dist/js/select2.full.js', dest: 'public/dep/select2/select2.js'}
+					{src: 'bower_components/jquery/dist/jquery.js', dest: 'public/dep/jquery/jquery.js'}
 				]
 			}
 
@@ -68,6 +63,21 @@ module.exports = function(grunt) {
 				}
 			}
 		}
+
+
+        , githooks: {
+            all: {
+                'pre-commit': 'test',
+            }
+        }
+
+
+        , jshint: {
+            options: {
+                jshintrc: '.jshintrc'
+            }
+            , all: ['source/js']
+        }
 
 
 		, release: {
@@ -177,13 +187,14 @@ module.exports = function(grunt) {
 				, resolve: {
 					root: 'bower_components'
 					, alias: {
-						Foundation: 'foundation/js/foundation.js'
-						, fastclick: 'fastclick/lib/fastclick.js'
+                        bloodhound: 'typeahead.js/dist/bloodhound.js'
+                        , fastclick: 'fastclick/lib/fastclick.js'
+						, Foundation: 'foundation/js/foundation.js'
 						, modernizr: 'modernizr/modernizr.js'
 						, nouislider: 'nouislider/distribute/jquery.nouislider.all.js'
 						, select2: 'select2/dist/js/select2.full.js'
+                        , slick: 'slick.js/slick/slick.js'
 						, typeahead: 'typeahead.js/dist/typeahead.jquery.js'
-						, bloodhound: 'typeahead.js/dist/bloodhound.js'
 					}
 				}
 				, entry: {
@@ -272,6 +283,7 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks('grunt-contrib-clean');
     grunt.loadNpmTasks('grunt-contrib-concat');
 	grunt.loadNpmTasks('grunt-contrib-copy');
+    grunt.loadNpmTasks('grunt-contrib-jshint');
     grunt.loadNpmTasks('grunt-contrib-watch');
 	grunt.loadNpmTasks('grunt-git');
 	grunt.loadNpmTasks('grunt-sass');
@@ -286,5 +298,6 @@ module.exports = function(grunt) {
 	grunt.registerTask('compile', ['concat:vendorCss', 'sass:compile', 'svg', 'shell:compile', 'copy:js', 'webpack:compile']);
 	grunt.registerTask('export', ['clean:export', 'sass:export', 'svg', 'webpack:bundle', 'webpack:ugly_bundle', 'webpack:module', 'copy:export', 'gitadd:export']);
 	grunt.registerTask('default', 'compile');
+    grunt.registerTask('test', ['jshint']);
 
 };
