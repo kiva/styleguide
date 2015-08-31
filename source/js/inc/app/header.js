@@ -1,7 +1,10 @@
 var Foundation = require('Foundation');
 var Bloodhound = require('bloodhound');
+var $ = require('jquery');
 
 module.exports = function() {
+    'use strict';
+
 	var $search_toggle = $('#search-toggle');
 	var $close_search = $('#close-search');
 	var $search_form = $('#search-form');

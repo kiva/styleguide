@@ -1,4 +1,7 @@
 module.exports = function() {
+    'use strict';
+
+    var $ = require('jquery');
 
 	// NoUiSlider
 	$('.loan-repayments-slider').noUiSlider({

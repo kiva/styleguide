@@ -1,4 +1,7 @@
+/* globals Bloodhound */
 (function(global, $){
+    'use strict';
+
 
 	//Navigation toggle
 	$('.nav-toggle-menu').click(function(e) {
@@ -273,12 +276,14 @@
 	});
 
 
-	/*
-	 1. Use Bloodhound instance for initial results.
-	 2. Sort Bloodhound results
-	 	a. match those that have the query as the first part of their string
-	 	b. alphabetically
-	 */
+    /**************
+     *  1. Use Bloodhound instance for initial results.
+     *  2. Sort Bloodhound results
+     *      a. match those that have the query as the first part of their string
+     *      b. alphabetically
+     **************/
+
+
 	var state_search2 = function(query, callback) {
 		state_search.search(query, function(results) {
 			results.sort(first_comp(query));
@@ -322,6 +327,13 @@
 	function alpha_comp(a, b) {
 		return a < b ? -1 : 1;
 	}
+
+    $('.figure-scrollable').slick({
+        mobileFirst: true
+        , prevArrow: '.scrollable-prev-arrow'
+        , nextArrow: '.scrollable-next-arrow'
+    });
+
 
 
 	$('#search-box').typeahead({
