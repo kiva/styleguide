@@ -294,7 +294,7 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks('grunt-webpack');
 	// @todo add livereload?
 
-	grunt.registerTask('init', ['copy:init']);
+	grunt.registerTask('init', ['copy:init', 'githooks']);
 	grunt.registerTask('svg', ['svgstore:compile']);
 	grunt.registerTask('compile', ['concat:vendorCss', 'sass:compile', 'svg', 'shell:compile', 'copy:js', 'webpack:compile']);
 	grunt.registerTask('export', ['clean:export', 'sass:export', 'svg', 'webpack:bundle', 'webpack:ugly_bundle', 'webpack:module', 'copy:export', 'gitadd:export']);
