@@ -253,7 +253,7 @@ module.exports = function(grunt) {
 					, filename: '[name].js'
 					, chunkFilename: '[id].js'
 					, library: 'Styleguide'
-					, libraryTarget: 'commonjs2'
+					, libraryTarget: 'amd'
 				}
 			}
 		}
