@@ -1,5 +1,4 @@
-module.exports =
-/******/ (function(modules) { // webpackBootstrap
+define("Styleguide", ["jQuery"], function(__WEBPACK_EXTERNAL_MODULE_1__) { return /******/ (function(modules) { // webpackBootstrap
 /******/ 	// The module cache
 /******/ 	var installedModules = {};
 
@@ -60,7 +59,7 @@ module.exports =
 /* 1 */
 /***/ function(module, exports) {
 
-	module.exports = require("jQuery");
+	module.exports = __WEBPACK_EXTERNAL_MODULE_1__;
 
 /***/ },
 /* 2 */
@@ -19867,7 +19866,9 @@ module.exports =
 
 			$search_toggle.attr('aria-expanded', false);
 			$close_search.attr('aria-expanded', false);
-			$search_form.attr('aria-hidden', true);
+			$search_form
+				.attr('aria-hidden', true)
+				.trigger('hide');
 		});
 
 
@@ -19938,9 +19939,12 @@ module.exports =
 
 			var $this = $(this);
 			var $target = $('#'+$this.attr('aria-controls'));
+			var hidden = $target.attr('aria-hidden') === 'false';
 
 			$this.attr('aria-expanded', $this.attr('aria-expanded') === 'false');
-			$target.attr('aria-hidden', $target.attr('aria-hidden') === 'false');
+			$target
+				.attr('aria-hidden', hidden)
+				.trigger(hidden ? 'hide' : 'show');
 		});
 
 
@@ -19970,4 +19974,4 @@ module.exports =
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)))
 
 /***/ }
-/******/ ]);
+/******/ ])});;

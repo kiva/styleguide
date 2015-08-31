@@ -19864,7 +19864,9 @@
 
 			$search_toggle.attr('aria-expanded', false);
 			$close_search.attr('aria-expanded', false);
-			$search_form.attr('aria-hidden', true);
+			$search_form
+				.attr('aria-hidden', true)
+				.trigger('hide');
 		});
 
 
@@ -19935,9 +19937,12 @@
 
 			var $this = $(this);
 			var $target = $('#'+$this.attr('aria-controls'));
+			var hidden = $target.attr('aria-hidden') === 'false';
 
 			$this.attr('aria-expanded', $this.attr('aria-expanded') === 'false');
-			$target.attr('aria-hidden', $target.attr('aria-hidden') === 'false');
+			$target
+				.attr('aria-hidden', hidden)
+				.trigger(hidden ? 'hide' : 'show');
 		});
 
 
