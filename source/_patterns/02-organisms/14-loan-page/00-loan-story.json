@@ -1,0 +1,9 @@
+{
+  "borrowerFirstName": "John",
+  "storyBody": "John applied for a loan\\n\\nHe wants to accomplish his dreams",
+  "borrowers": [
+    {"name": "John", "pictured": true},
+    {"name": "Adam", "pictured": true},
+    {"name": "Sean", "pictured": false}
+  ]
+}

@@ -1,0 +1,21 @@
+<div class="loan-section">
+    <p class="featured">{{borrowerFirstName}}'s Story</p>
+
+    <p class="show-for-small-only mobile">
+        {{storyBody}}
+    </p>
+
+    <p class="show-for-medium-up desktop">
+        {{storyBody}}
+    </p>
+
+    <p class="show-for-small-only mobile">In this group:{{#borrowers}}{{name}}{{^pictured}}*{{/pictured}},{{/borrowers}}
+        <br/>
+        *not pictured
+    </p>
+
+    <p class="show-for-medium-up desktop">In this group:{{#borrowers}}{{name}}{{^pictured}}*{{/pictured}},{{/borrowers}}
+        <br/>
+        *not pictured
+    </p>
+</div>
