@@ -55,12 +55,13 @@
 
 // Vendor Sass
 @import 'select2/src/scss/core';
+@import 'slick.js/slick/slick';
 
 // Custom vendor overrides
 @import 'vendor_override/nouislider/nouislider';
 
-
 // App specific styling
+@import 'app/figure';
 @import 'app/page-layout';
 @import 'app/fundraising-meter';
 @import 'app/header';
