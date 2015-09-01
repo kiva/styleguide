@@ -24,6 +24,10 @@
 			"src": "http://placeimg.com/400/300/tech",
 			"alt": "Rectangle"
 		},
+		"borrower": {
+			"src": "http://placeimg.com/680/425/people",
+			"alt": "Borrower Picture"
+		},
 		"borrower1" : {
 			"src" : "../../images/borrower1.jpg",
 			"alt" : "Borrower photo 1"
@@ -127,7 +131,7 @@
 	, "loancard": {
 		"amount-left": "$33.5k left"
 		, "sector": "Transportation"
-		, "country-iso": ""
+		, "country-code": "ht"
 		, "country-name": "Grenadines"
 	}
 	, "about-nav": {
