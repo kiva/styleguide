@@ -10,3 +10,4 @@ config.ini
 latest-change.txt
 *-ck.js
 *.sass-cache/
+npm-debug.log

@@ -198,7 +198,7 @@ module.exports = function(grunt) {
 					}
 				}
 				, entry: {
-					styleguide: './app'
+					styleguide: './inc/app'
 				}
 				, output: {
 					filename: '[name].bundle.js'
@@ -228,7 +228,7 @@ module.exports = function(grunt) {
 
 			, compile: {
 				entry: {
-					nav: './nav'
+					nav: './inc/nav'
 				}
 				, output: {
 					path: 'public/js'
@@ -237,7 +237,7 @@ module.exports = function(grunt) {
 
 			, bundle: {
 				entry: {
-					nav: './nav'
+					nav: './inc/nav'
 				}
 				, output: {
 					path: 'export/js'
@@ -246,7 +246,7 @@ module.exports = function(grunt) {
 
 			, ugly_bundle: {
 				entry: {
-					nav: './nav'
+					nav: './inc/nav'
 				}
 				, output: {
 					path: 'export/js'
