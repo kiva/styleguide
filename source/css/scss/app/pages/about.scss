@@ -5,4 +5,21 @@ a.joinlink:visited {
 
 .joinSection {
   text-align: center;
+  background-color: $kiva-darkgreen;
+  padding: 20px 35px 20px 35px;
+}
+
+.joinText {
+  line-height: 65px;
+}
+
+.white {
+  color: $white;
+}
+
+.hrDivider {
+  color: $kiva-green;
+  border-color: $kiva-green;
+  background-color: $kiva-green;
+  margin-bottom: 35px;
 }
