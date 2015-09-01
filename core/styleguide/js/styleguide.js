@@ -90,7 +90,7 @@
 	function goSmall() {
 		killDisco();
 		killHay();
-		sizeiframe(getRandom(minViewportWidth,500));
+		sizeiframe(getRandom(320,480));
 	}
 	
 	$('#sg-size-s').on("click", function(e){
@@ -107,7 +107,7 @@
 	function goMedium() {
 		killDisco();
 		killHay();
-		sizeiframe(getRandom(500,800));
+		sizeiframe(getRandom(481,680));
 	}
 	
 	$('#sg-size-m').on("click", function(e){
@@ -124,9 +124,33 @@
 	function goLarge() {
 		killDisco();
 		killHay();
-		sizeiframe(getRandom(800,1200));
+		sizeiframe(getRandom(680,988));
 	}
 	
+	$('#sg-size-xl').on("click", function(e){
+		e.preventDefault();
+		goXLarge();
+	});
+
+	// handle large button
+	function goXLarge() {
+		killDisco();
+		killHay();
+		sizeiframe(getRandom(988,988));
+	}
+
+	$('#sg-size-xxl').on("click", function(e){
+		e.preventDefault();
+		goXXLarge();
+	});
+
+	// handle large button
+	function goXXLarge() {
+		killDisco();
+		killHay();
+		sizeiframe(getRandom(989,1600));
+	}
+
 	$('#sg-size-l').on("click", function(e){
 		e.preventDefault();
 		goLarge();
