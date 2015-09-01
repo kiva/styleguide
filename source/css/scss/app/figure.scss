@@ -1,0 +1,34 @@
+.figure-scrollable-with-caption {
+	position: relative;
+	margin: 0;
+	padding: 0;
+
+	.scrollable-prev-arrow {
+		position: absolute;
+		left: 0;
+		top: 0;
+	}
+
+	.scrollable-next-arrow {
+		position: absolute;
+		right: 0;
+		top: 0;
+	}
+
+	.figure-veil {
+		outline: 1px solid red;
+		position: absolute;
+		bottom: 0;
+		height: 100px;
+		width: 100%
+	}
+
+	figcaption {
+		height: 100%;
+	}
+
+	.star-icon {
+		float: right;
+		height: 100%
+	}
+}
