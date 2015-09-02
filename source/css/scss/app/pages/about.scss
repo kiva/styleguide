@@ -23,3 +23,18 @@ a.joinlink:visited {
   background-color: $kiva-green;
   margin-bottom: 35px;
 }
+
+.textContainer {
+  margin-top: rem-calc(90);
+  padding-left: rem-calc(20);
+    @media #{$large-up} {
+      margin-top: rem-calc(160);
+    }
+}
+
+.statContainer {
+  padding-right: rem-calc(20);
+    @media #{$large-up} {
+      padding-right: rem-calc(150);
+    }
+}
