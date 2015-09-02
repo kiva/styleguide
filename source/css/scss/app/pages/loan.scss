@@ -20,4 +20,11 @@
   ul.borrower-names li:last-child:after {
     content: "";
   }
+  a{
+    color: black;
+    text-decoration: underline;
+  }
+  a:hover{
+    color: $kiva-accent-blue
+  }
 }
