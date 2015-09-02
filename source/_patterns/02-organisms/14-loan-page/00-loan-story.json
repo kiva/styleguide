@@ -5,5 +5,10 @@
     {"name": "John", "pictured": true},
     {"name": "Adam", "pictured": true},
     {"name": "Sean", "pictured": false}
-  ]
+  ],
+  "translation": {
+    "language": "Spanish",
+    "translator": "Tayah Wheeland",
+    "original": "original translation in spanish"
+  }
 }
