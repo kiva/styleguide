@@ -1,10 +1,26 @@
 {
   "borrowerFirstName": "John",
-  "storyBody": "John applied for a loan\\n\\nHe wants to accomplish his dreams",
+  "storyBody": [
+    {
+      "content": "John applied for a loan"
+    },
+    {
+      "content": "He wants to accomplish his dreams"
+    }
+  ],
   "borrowers": [
-    {"name": "John", "pictured": true},
-    {"name": "Adam", "pictured": true},
-    {"name": "Sean", "pictured": false}
+    {
+      "name": "John",
+      "pictured": true
+    },
+    {
+      "name": "Adam",
+      "pictured": true
+    },
+    {
+      "name": "Sean",
+      "pictured": false
+    }
   ],
   "translation": {
     "language": "Spanish",

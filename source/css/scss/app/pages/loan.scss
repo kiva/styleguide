@@ -6,18 +6,18 @@
     padding: 0;
   }
 
-  ul.borrower-names li {
+  ul.borrower-names > li {
     display: inline;
     list-style: none;
     margin: 0;
     padding: 0;
   }
 
-  ul.borrower-names li:after {
+  ul.borrower-names > li:after {
     content: ",";
   }
 
-  ul.borrower-names li:last-child:after {
+  ul.borrower-names > li:last-child:after {
     content: "";
   }
 }

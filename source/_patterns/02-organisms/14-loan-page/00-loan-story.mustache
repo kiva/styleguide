@@ -1,9 +1,11 @@
 <div class="loan-section">
     <p class="featured">{{borrowerFirstName}}'s Story</p>
 
-    <p>
-        {{storyBody}}
-    </p>
+    {{#storyBody}}
+        <p>
+            {{content}}
+        </p>
+    {{/storyBody}}
 
     <div>
         In this group:
@@ -12,20 +14,19 @@
                 <li>{{name}}{{^pictured}}*{{/pictured}}</li>
             {{/borrowers}}
         </ul>
-        <br/>
-        *not pictured
+        <p>*not pictured</p>
     </div>
 
     <br/>
     {{#translation}}
-        <p>Translated from {{language}} by Kiva Volunteer {{translator}}
-            <br/>
-            <a href="#" class="modal-link" data-reveal-id="translationModal">View original language description</a>
-        </p>
-
-        <div id="translationModal" class="reveal-modal" data-reveal aria-labelledby="modalTitle" aria-hidden="true" role="dialog">
-            <p>{{original}}</p>
-            <a class="close-reveal-modal" aria-label="Close">&#215;</a>
-        </div>
+        <span>Translated from {{language}} by Kiva Volunteer {{translator}}</span>
+        <ul class="accordion" data-accordion>
+            <li class="accordion-navigation">
+                <a href="#translation">View original language description</a>
+                <div id="translation" class="content">
+                    {{original}}
+                </div>
+            </li>
+        </ul>
     {{/translation}}
 </div>
