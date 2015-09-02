@@ -1,11 +1,12 @@
+$footer-height: 4rem;
+
 // Loan cards - listing
 .loancards-list > li {
-	margin-bottom: 20px;
+	//margin-bottom: 1rem;
 }
 
-.loan-card-listing {
-	border: #333 1px solid;
-	height: auto;
+.loan-card {
+	height: 100%;
 	position: relative;
 
 	.amount-left {
@@ -21,14 +22,15 @@
 	}
 
 	.borrower-img-wrap {
-		position: relative;
+        position: relative;
+        display: block;
 		width: 100%;
-		height: 60%;
+		padding-bottom: 62.5%;
 	}
 
 	.borrower-img {
+        position: absolute;
 		width: 100%;
-		height: 100%;
 	}
 
 	.matcher-text {
@@ -40,16 +42,57 @@
 	}
 
 	.borrower-details-wrap {
-		padding: 0 2px 2px 2px;
-//		text-align: right;
+		padding: 0 0.5rem;
+        $border: rem-calc(1) solid $kiva-stroke-gray;
+        border-left: $border;
+        border-right: $border;
 	}
 
-	.borrower-details-more {
-		display: none;
-		position: absolute;
-		bottom: 0;
-		left: 0;
-	}
+    .borrower-footer-wrap {
+        width: 100%;
+        overflow: hidden;
+
+        .fundraising-meter {
+            height: 2rem;
+            width: 100%;
+            margin: 0;
+        }
+    }
+
+    &:hover {
+        .loan-card-buttons {
+            height: $footer-height;
+        }
+    }
+}
+
+.no-touch .loan-card-buttons {
+    position: absolute;
+    bottom: 0;
+    height: 0;
+    overflow: hidden;
+}
+
+.loan-card-buttons {
+    width: 100%;
+
+    .button {
+        height: $footer-height;
+        width: 50%;
+        margin: 0;
+        padding-left: 0;
+        padding-right: 0;
+        float: left;
+        white-space: nowrap;
+
+        &:first-child {
+            border-right: rem-calc(1) solid $white;
+        }
+
+        &:hover, &:active, &:visited {
+            color: $white;
+        }
+    }
 }
 
 

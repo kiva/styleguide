@@ -1,10 +1,10 @@
-<li class="loan-card loan-card-listing" data-equalizer-watch>
-    <div class="borrower-img-wrap">
+<div class="loan-card">
+    <a class="borrower-img-wrap" href="#">
         <img class="borrower-img" src="{{img.borrower.src}}" >
-    </div>
+    </a>
 
-    <div class="borrower-details-wrap">
-        <a href="##">{{title}}</a>
+    <div class="borrower-details-wrap" data-equalizer-watch>
+        <a href="#">{{title}}</a>
         <div class="country">
 			<span class="f16 {{country.code}}"></span>{{country.name}}
         </div>
@@ -12,5 +12,14 @@
 		<p>{{description}}</p>
     </div>
 
-    <!--{{> molecules-fundraising-meter}}-->
-</li>
+    <div class="borrower-footer-wrap">
+        <div class="fundraising-meter progress">
+            <span class="meter"></span>
+        </div>
+
+        <div class="loan-card-buttons">
+            <a class="button" href="#">Lend $25</a>
+            <a class="button" href="#">Read More</a>
+        </div>
+    </div>
+</div>

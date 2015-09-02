@@ -698,14 +698,23 @@ span.sg-pattern-state:before {
 	}
 }
 
-.sg-type-size-head {
-	margin: 0 0 2px 0;
+.sg-element-description
+, .sg-element-group-description {
+	margin: 2px;
 	font-family: $sg-font;
 	font-size: $sg-font-size-sm;
-	font-weight: normal;
 	color: #999;
 	padding: 0;
 	border-bottom: 1px solid #ccc;
+}
+
+.sg-element-description {
+	font-weight: normal;
+}
+
+.sg-element-group-description{
+	font-weight: bold;
+	border-bottom: 2px solid #ccc;
 }
 
 //Annotations and code view container
