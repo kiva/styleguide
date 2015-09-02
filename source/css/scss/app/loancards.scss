@@ -49,15 +49,10 @@ $footer-height: 4rem;
 	}
 
     .borrower-footer-wrap {
-        position: absolute;
-        bottom: 0;
         width: 100%;
-        height: $footer-height;
         overflow: hidden;
 
         .fundraising-meter {
-            position: absolute;
-            bottom: 0;
             height: 2rem;
             width: 100%;
             margin: 0;
@@ -66,16 +61,20 @@ $footer-height: 4rem;
 
     &:hover {
         .loan-card-buttons {
-            margin-bottom: 0;
+            height: $footer-height;
         }
     }
 }
 
-.loan-card-buttons {
+.no-touch .loan-card-buttons {
     position: absolute;
     bottom: 0;
+    height: 0;
+    overflow: hidden;
+}
+
+.loan-card-buttons {
     width: 100%;
-    margin-bottom: -$footer-height;
 
     .button {
         height: $footer-height;
@@ -85,6 +84,14 @@ $footer-height: 4rem;
         padding-right: 0;
         float: left;
         white-space: nowrap;
+
+        &:first-child {
+            border-right: rem-calc(1) solid $white;
+        }
+
+        &:hover, &:active, &:visited {
+            color: $white;
+        }
     }
 }
 
