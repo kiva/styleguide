@@ -21,3 +21,13 @@
     content: "";
   }
 }
+
+a.modal-link {
+  color: black;
+  text-decoration: underline;
+}
+
+a.modal-link:hover {
+  color: $dark-green;
+  text-decoration: underline;
+}
