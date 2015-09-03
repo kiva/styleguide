@@ -33,7 +33,9 @@ $feature-line-height			: $section-head-line-height;
 $headline-font-size				: rem-calc(56);
 $headline-line-height			: rem-calc(64);
 $headline-font-size-reduction	: rem-calc(10);
+$headline-font-size-max-reduction	: rem-calc(26);
 $headline-line-height-reduction	: rem-calc(10);
+
 
 $impact-font-size				: rem-calc(72);
 $impact-line-height				: rem-calc(80);
@@ -106,7 +108,7 @@ p {
 }
 
 h1 {
-	font-size: $headline-font-size - $headline-font-size-reduction;
+	font-size: $headline-font-size - $headline-font-size-max-reduction;
 	line-height: $headline-line-height - $headline-line-height-reduction;
 	font-weight: $font-weight-bold;
 
@@ -188,6 +190,10 @@ small {
     font-size: $impact-font-size;
     line-height: $impact-line-height;
     font-weight: $font-weight-bold;
+  }
+
+  h1 {
+    font-size: $headline-font-size - $headline-font-size-max-reduction;
   }
 }
 
