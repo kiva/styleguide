@@ -1,23 +1,66 @@
 .loan-section{
   padding: 10px;
-  ul.borrower-names {
+  .borrower-names {
     display: inline;
     margin: 0;
     padding: 0;
   }
 
-  ul.borrower-names li {
+  .borrower-names > li {
     display: inline;
     list-style: none;
     margin: 0;
     padding: 0;
   }
 
-  ul.borrower-names li:after {
+  .borrower-names > li:after {
     content: ",";
   }
 
-  ul.borrower-names li:last-child:after {
+  .borrower-names > li:last-child:after {
     content: "";
   }
+
+  .accordion {
+    margin-left: 0;
+  }
+
+  .accordion .accordion-navigation > a {
+    font-size: 1rem;
+    background: none;
+    padding: 0;
+  }
+  .accordion .accordion-navigation > .content{
+    background: none;
+    padding-left: 0 !important;
+  }
+
+  .accordion
+  {
+    .accordion-navigation
+    {
+      .content
+      {
+        display: block;
+        max-height: 0;
+        overflow-y: auto;
+        // leave the top and bottom padding at 0, have the sides match the .active element's padding value below
+        padding: rem-calc(0 16);
+        // change as desired but the transition needs to cover both max-height and padding; this is how long the panel takes to close
+        transition: ease 0.4s all;
+        &.active
+        {
+          // change as desired
+          max-height: 80vh;
+          // change as desired
+          padding: rem-calc(16);
+          // change as desired; this is how long the panel takes to open
+          transition: ease 0.4s all;
+          // change as desired, but for best results keep at around half the other transition durations
+          transition-delay: 0.2s;
+        }
+      }
+    }
+  }
 }
+
