@@ -1,5 +1,29 @@
-.loan-section{
+.loan-section {
   padding: 10px;
+
+  .icon {
+    float: right;
+    height: 1.5rem;
+    width: rem-calc(25);
+    fill: none;
+    stroke: $kiva-text-dark;
+
+    $transition: 300ms ease;
+
+    -webkit-transition: -webkit-transform $transition;
+    transition: transform $transition;
+  }
+
+  [aria-expanded="true"] {
+    .icon {
+      $transform: rotate(-180deg);
+
+      -webkit-transform: $transform;
+      -ms-transform: $transform;
+      transform: $transform;
+    }
+  }
+
   .borrower-names {
     display: inline;
     margin: 0;
@@ -30,37 +54,27 @@
     background: none;
     padding: 0;
   }
-  .accordion .accordion-navigation > .content{
+
+  .accordion .accordion-navigation > .content {
     background: none;
-    padding-left: 0 !important;
+    padding-left: 0;
   }
 
-  .accordion
-  {
-    .accordion-navigation
-    {
-      .content
-      {
-        display: block;
+  .accordion {
+    .accordion-navigation {
+      .content {
         max-height: 0;
-        overflow-y: auto;
-        // leave the top and bottom padding at 0, have the sides match the .active element's padding value below
-        padding: rem-calc(0 16);
-        // change as desired but the transition needs to cover both max-height and padding; this is how long the panel takes to close
+        display: block;
+        overflow-y: hidden;
+        padding: rem-calc(0);
         transition: ease 0.4s all;
-        &.active
-        {
-          // change as desired
-          max-height: 80vh;
-          // change as desired
-          padding: rem-calc(16);
-          // change as desired; this is how long the panel takes to open
+
+        &.active {
+          max-height: 100vh;
+          padding: rem-calc(10 0);
           transition: ease 0.4s all;
-          // change as desired, but for best results keep at around half the other transition durations
-          transition-delay: 0.2s;
         }
       }
     }
   }
 }
-
