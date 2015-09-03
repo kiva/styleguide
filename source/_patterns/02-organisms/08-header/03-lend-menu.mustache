@@ -1,7 +1,7 @@
 <div id="lend-dropdown" class="f-dropdown content" data-dropdown-content aria-hidden="true" aria-autoclose="false" tabindex="-1">
     <ul class="lend-menu-small hide-for-large-up">
         <li>
-            <a href="#" data-kv-toggle aria-controls="lend-menu-category-panel" aria-expanded="false" class="section-title">Category<svg class="icon"><use xlink:href="#icon-small-chevron-mobile" /></svg></a>
+            <a href="#" data-kv-toggle aria-controls="lend-menu-category-panel" aria-expanded="false" class="section-title">Category<svg class="icon icon-small-chevron-mobile"><use xlink:href="#icon-small-chevron-mobile" /></svg></a>
             <ul id="lend-menu-category-panel" aria-hidden="true">
 				{{#categories.list}}
                     <li><a href="{{href}}">{{name}}</a></li>
@@ -10,11 +10,11 @@
             </ul>
         </li>
         <li>
-            <a href="#" data-kv-toggle aria-controls="lend-menu-countries-panel" aria-expanded="false" class="section-title">Countries<svg class="icon"><use xlink:href="#icon-small-chevron-mobile" /></svg></a>
+            <a href="#" data-kv-toggle aria-controls="lend-menu-countries-panel" aria-expanded="false" class="section-title">Countries<svg class="icon icon-small-chevron-mobile"><use xlink:href="#icon-small-chevron-mobile" /></svg></a>
             <ul id="lend-menu-countries-panel" aria-hidden="true">
 				{{#regions}}
                     <li>
-                        <a href="#" data-kv-toggle aria-controls="lend-menu-{{id}}-panel" aria-expanded="false" class="section-title">{{name}}<svg class="icon"><use xlink:href="#icon-small-chevron-mobile" /></svg></a>
+                        <a href="#" data-kv-toggle aria-controls="lend-menu-{{id}}-panel" aria-expanded="false" class="section-title">{{name}}<svg class="icon icon-small-chevron-mobile"><use xlink:href="#icon-small-chevron-mobile" /></svg></a>
                         <ul id="lend-menu-{{id}}-panel" aria-hidden="true">
 							{{#countries}}
                                 <li><a href="{{href}}"><span class="f16 {{code}}"></span>{{name}}</a></li>
@@ -30,14 +30,14 @@
 		{{^is-visitor}}
 			{{#has_personalized}}
 	            <li>
-	                <a href="#" data-kv-toggle aria-controls="lend-menu-personalized-panel" aria-expanded="false" class="section-title">Personalized<svg class="icon"><use xlink:href="#icon-small-chevron-mobile" /></svg></a>
+	                <a href="#" data-kv-toggle aria-controls="lend-menu-personalized-panel" aria-expanded="false" class="section-title">Personalized<svg class="icon icon-small-chevron-mobile"><use xlink:href="#icon-small-chevron-mobile" /></svg></a>
 	                <ul id="lend-menu-personalized-panel" aria-hidden="true">
                         {{#favorites_href}}
                             <li><a href="{{favorites_href}}">Favorites</a></li>
                         {{/favorites_href}}
 						{{#has_saved_searches}}
                             <li>
-								<a href="#" data-kv-toggle aria-controls="lend-menu-searches-panel" aria-expanded="false" class="section-title">Saved Searches<svg class="icon"><use xlink:href="#icon-small-chevron-mobile" /></a>
+								<a href="#" data-kv-toggle aria-controls="lend-menu-searches-panel" aria-expanded="false" class="section-title">Saved Searches<svg class="icon icon-small-chevron-mobile"><use xlink:href="#icon-small-chevron-mobile" /></a>
 								<ul id="lend-menu-searches-panel" aria-hidden="true">
 									{{#saved_searches}}
 										<li><a href="{{href}}">{{name}}</a></li>
@@ -68,7 +68,7 @@
 		</div>
 		<div class="close-section" aria-hidden="true">
             <a href="#">
-				<svg class="icon">
+				<svg class="icon icon-medium-chevron">
 					<use xlink:href="#icon-medium-chevron" />
 				</svg>
 			</a>

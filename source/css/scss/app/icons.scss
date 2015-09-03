@@ -8,7 +8,7 @@ svg.icon {
     &.icon-magnify-glass,
     &.icon-nearme,
     &.icon-triangle {
-        fill: #333;
+        fill: $kiva-text-dark;
         //fill: $blue;
     }
 
@@ -18,7 +18,7 @@ svg.icon {
     &.icon-small-chevron,
     &.icon-small-chevron-mobile,
     &.icon-x {
-        stroke: #333;
+        stroke: $kiva-text-dark;
         //stroke: $blue;
     }
 
