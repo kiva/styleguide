@@ -2,9 +2,7 @@
     <p class="featured">{{borrowerFirstName}}'s Story</p>
 
     {{#storyBody}}
-        <p>
-            {{content}}
-        </p>
+        <p>{{content}}</p>
     {{/storyBody}}
 
     <div>
@@ -17,12 +15,12 @@
         <p>*not pictured</p>
     </div>
 
-    <br/>
     {{#translation}}
         <span>Translated from {{language}} by Kiva Volunteer {{translator}}</span>
         <ul class="accordion" data-accordion>
             <li class="accordion-navigation">
-                <a href="#translation">View original language description</a>
+                <a href="#translation" class="modal-link">View original language description</a>
+
                 <div id="translation" class="content">
                     {{original}}
                 </div>
