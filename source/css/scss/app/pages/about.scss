@@ -4,13 +4,14 @@ a.joinlink:visited {
 }
 
 .joinSection {
-  text-align: center;
+  //text-align: center;
+  overflow: auto;
   background-color: $kiva-darkgreen;
-  padding: 20px 35px 20px 35px;
+  padding: rem-calc(20) rem-calc(35) rem-calc(20) rem-calc(35);
 }
 
 .joinText {
-  line-height: 65px;
+  line-height: rem-calc(65);
 }
 
 .white {
@@ -21,20 +22,70 @@ a.joinlink:visited {
   color: $kiva-green;
   border-color: $kiva-green;
   background-color: $kiva-green;
-  margin-bottom: 35px;
+  margin-bottom: rem-calc(35);
 }
 
-.textContainer {
+.row1 {
+  display: inline-block;
+}
+
+.row1TextContainer {
   margin-top: rem-calc(90);
   padding-left: rem-calc(20);
-    @media #{$large-up} {
-      margin-top: rem-calc(160);
-    }
+  @media #{$large-up} {
+    margin-top: rem-calc(160);
+  }
 }
 
-.statContainer {
+.row1StatContainer {
   padding-right: rem-calc(20);
-    @media #{$large-up} {
-      padding-right: rem-calc(150);
-    }
+  @media #{$large-up} {
+    padding-right: rem-calc(150);
+  }
+}
+
+.row2 {
+  display: inline-block;
+}
+
+.row2StatContainer {
+  padding-top: rem-calc(504);
+}
+
+.row3 {
+  display: inline-block;
+}
+
+.row3TextContainer {
+  padding-top: rem-calc(75);
+}
+
+.row4 {
+  display: inline-block;
+  padding-top: rem-calc(60);
+}
+
+.row5 {
+  display: inline-block;
+}
+
+.row5TextContainer {
+  padding-top: rem-calc(600);
+}
+
+.row6 {
+  display: inline-block;
+}
+
+.row6StatContainer {
+  padding-top: rem-calc(40);
+}
+
+.row7 {
+  display: inline-block;
+  padding-top: rem-calc(100);
+}
+
+.row7TextContainer {
+  padding-top: rem-calc(20);
 }

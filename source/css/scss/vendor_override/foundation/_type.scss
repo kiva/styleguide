@@ -38,6 +38,7 @@ $headline-line-height-reduction	: rem-calc(10);
 $impact-font-size				: rem-calc(72);
 $impact-line-height				: rem-calc(80);
 $impact-font-reduction			: rem-calc(18);
+$impact-font-max-reduction      : rem-calc(36);
 
 $huge-headline-font-size				: rem-calc(108);
 $huge-headline-line-height				: rem-calc(108);
@@ -82,8 +83,8 @@ $paragraph-line-height: $body-line-height;
 }
 
 .impact {
-	font-size: $impact-font-size - $impact-font-reduction;
-	line-height: $impact-line-height - $impact-font-reduction;
+	font-size: $impact-font-size - $impact-font-max-reduction;
+	line-height: $impact-line-height - $impact-font-max-reduction;
 	font-weight: $font-weight-bold;
 }
 
@@ -108,6 +109,10 @@ h1 {
 	font-size: $headline-font-size - $headline-font-size-reduction;
 	line-height: $headline-line-height - $headline-line-height-reduction;
 	font-weight: $font-weight-bold;
+
+    h1.normal {
+      font-weight: $font-weight-normal;
+    }
 }
 
 h1.huge {
@@ -143,8 +148,8 @@ small {
 
 @media #{$medium-up} {
 	.impact {
-		font-size: $impact-font-size;
-		line-height: $impact-line-height;
+		font-size: $impact-font-size - $impact-font-reduction;
+		line-height: $impact-line-height - $impact-font-reduction;
 		font-weight: $font-weight-bold;
 	}
 
@@ -153,16 +158,14 @@ small {
 		line-height: $headline-line-height;
 	}
 
+    h1.normal {
+      font-weight: normal;
+
+    }
+
 	h1.huge {
 		font-size: $huge-headline-font-size;
 		line-height: $huge-headline-line-height;
-		letter-spacing: $huge-type-kerning;
-	}
-
-	.huge-statistic {
-		font-size: $huge-statistic-font-size;
-		line-height: $huge-statistic-line-height;
-		font-weight: $font-weight-bold;
 		letter-spacing: $huge-type-kerning;
 	}
 
@@ -171,6 +174,21 @@ small {
 		line-height: $top-nav-line-height ;
 	}
 
+}
+
+@media #{$large-up} {
+  .huge-statistic {
+    font-size: $huge-statistic-font-size;
+    line-height: $huge-statistic-line-height;
+    font-weight: $font-weight-bold;
+    letter-spacing: $huge-type-kerning;
+  }
+
+  .impact {
+    font-size: $impact-font-size;
+    line-height: $impact-line-height;
+    font-weight: $font-weight-bold;
+  }
 }
 
 
