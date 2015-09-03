@@ -1,0 +1,84 @@
+$light-blue-gray: #DBE3E5;
+
+svg.icon {
+    fill: none;
+    stroke: none;
+
+    &.icon-checkmark,
+    &.icon-magnify-glass,
+    &.icon-nearme,
+    &.icon-triangle {
+        fill: #333;
+        //fill: $blue;
+    }
+
+    &.icon-large-chevron,
+    &.icon-large-chevron-mobile,
+    &.icon-medium-chevron,
+    &.icon-small-chevron,
+    &.icon-small-chevron-mobile,
+    &.icon-x {
+        stroke: #333;
+        //stroke: $blue;
+    }
+
+    &.icon-slideshow-dot {
+        stroke: $white;
+        fill: $white;
+        fill-opacity: 0.3;
+        //stroke: $red;
+        //fill: $blue;
+
+        &.active {
+            fill-opacity: 1;
+        }
+    }
+
+    &.icon-favorite {
+        fill: $black;
+        color: $white;
+        //fill: $blue;
+        //color: $red;
+
+        &.selected {
+            color: $kiva-accent-green;
+        }
+    }
+
+    &.icon-facebook,
+    &.icon-pinterest,
+    &.icon-twitter,
+    &.icon-youtube,
+    &.icon-linkedIn {
+        color: $light-gray;
+        //fill: $red;
+        //color: $blue;
+    }
+
+    &.icon-boundaries,
+    &.icon-hand-up,
+    &.icon-lifting,
+    &.icon-recycle,
+    &.icon-impact {
+        fill: $light-blue-gray;
+        color: $kiva-green;
+        //fill: $blue;
+        //color: $red;
+    }
+
+    &.icon-choose,
+    &.icon-lend,
+    &.icon-repaid,
+    &.icon-repeat {
+        fill: $kiva-green;
+        color: $kiva-icon-green;
+        //fill: $blue;
+        //color: $red;
+    }
+
+    &.icon-leaf,
+    &.icon-leaves {
+        fill: $kiva-green;
+        //fill: $blue;
+    }
+}

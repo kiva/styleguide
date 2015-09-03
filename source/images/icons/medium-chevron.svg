@@ -4,7 +4,7 @@
     <title>Medium Chevron</title>
     <desc>Medium chevron icon.</desc>
     <defs></defs>
-    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
-        <path d="M1,1.02170409 L26.0149596,21 L51,1" id="Path-5" stroke="#333333" stroke-width="2" sketch:type="MSShapeGroup"></path>
+    <g id="Page-1" stroke-width="1" fill-rule="evenodd" sketch:type="MSPage">
+        <path d="M1,1.02170409 L26.0149596,21 L51,1" id="Path-5" stroke-width="2" sketch:type="MSShapeGroup"></path>
     </g>
 </svg>

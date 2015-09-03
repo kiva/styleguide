@@ -4,7 +4,7 @@
     <title>Fill 4 Copy</title>
     <desc>Created with Sketch.</desc>
     <defs></defs>
-    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
-        <path d="M50,18.75 L50,0 L31.2499061,0 C31.2499061,0 0,0 0,31.25 L0,43.75 C0,43.75 11.358685,42.1773904 29.8150458,22.3018512 C29.8150458,22.3018512 20.8528029,43.5979811 0,50 L18.7500939,50 C18.7500939,50 50,50 50,18.75" id="Fill-4-Copy" fill="#63A541" sketch:type="MSShapeGroup"></path>
+    <g id="Page-1" stroke-width="1" fill-rule="evenodd" sketch:type="MSPage">
+        <path d="M50,18.75 L50,0 L31.2499061,0 C31.2499061,0 0,0 0,31.25 L0,43.75 C0,43.75 11.358685,42.1773904 29.8150458,22.3018512 C29.8150458,22.3018512 20.8528029,43.5979811 0,50 L18.7500939,50 C18.7500939,50 50,50 50,18.75" id="Fill-4-Copy" sketch:type="MSShapeGroup"></path>
     </g>
 </svg>

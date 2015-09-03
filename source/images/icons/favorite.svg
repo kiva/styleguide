@@ -4,10 +4,10 @@
     <title>Favorite - Mobile</title>
     <desc>Created with Sketch.</desc>
     <defs></defs>
-    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+    <g id="Page-1" stroke-width="1" fill-rule="evenodd" sketch:type="MSPage">
         <g id="Favorite---Mobile" sketch:type="MSLayerGroup">
-            <rect id="Rectangle-43" fill-opacity="0.75" fill="#000000" sketch:type="MSShapeGroup" x="0" y="0" width="70" height="70"></rect>
-            <path d="M43.05476,39.75776 L56,29.75 L40.25,29.75 L35,14 L29.75,29.75 L14,29.75 L26.96078,39.7166 L21.875,56 L35.02058,45.92042 L48.13508,56 L43.05476,39.75776 Z" id="Shape" fill="#A9D14C" sketch:type="MSShapeGroup"></path>
+            <rect id="Rectangle-43" fill-opacity="0.75" sketch:type="MSShapeGroup" x="0" y="0" width="70" height="70"></rect>
+            <path d="M43.05476,39.75776 L56,29.75 L40.25,29.75 L35,14 L29.75,29.75 L14,29.75 L26.96078,39.7166 L21.875,56 L35.02058,45.92042 L48.13508,56 L43.05476,39.75776 Z" id="Shape" fill="currentColor" sketch:type="MSShapeGroup"></path>
         </g>
     </g>
 </svg>

@@ -4,7 +4,7 @@
     <title>Large Chevron Mobile</title>
     <desc>Large chevron icon for mobile.</desc>
     <defs></defs>
-    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
-        <path d="M1,1.02821532 L33.5194474,27 L66,1" id="Path-5-Copy-3" stroke="#333333" stroke-width="2" sketch:type="MSShapeGroup"></path>
+    <g id="Page-1" stroke-width="1" fill-rule="evenodd" sketch:type="MSPage">
+        <path d="M1,1.02821532 L33.5194474,27 L66,1" id="Path-5-Copy-3" stroke-width="2" sketch:type="MSShapeGroup"></path>
     </g>
 </svg>
