@@ -25,17 +25,14 @@
     margin-left: 0;
   }
 
-  .accordion .a {
+  .accordion .accordion-navigation > a {
+    font-size: 1rem;
     background: none;
+    padding: 0;
   }
-  .accordion .accordion-navigation.active > a, .accordion dd.active > a{
+  .accordion .accordion-navigation > .content{
     background: none;
-  }
-  .accordion .accordion-navigation > a, .accordion dd > a {
-    background: none;
-  }
-  .accordion .accordion-navigation > .content.active, .accordion dd > .content.active{
-    background: none;
+    padding-left: 0 !important;
   }
 
   .accordion
