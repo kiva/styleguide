@@ -140,6 +140,7 @@ module.exports = function(grunt) {
 					xmlns: 'http://www.w3.org/2000/svg'
 					,style: 'display:none;'
 				}
+				,preserveDescElement: false
 			}
 			,compile: {
 				files: {
