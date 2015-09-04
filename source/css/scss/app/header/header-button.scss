@@ -13,8 +13,11 @@
 
     &:link, &:visited, &:hover, &:active {
         color: $white;
-        fill: $white;
         text-decoration: none;
+
+        .icon {
+            fill: $white;
+        }
     }
 
     &[data-dropdown] .icon {
@@ -39,9 +42,10 @@
 
     &[aria-expanded="true"]{
         color: $kiva-darkgreen;
-        fill: $kiva-darkgreen;
 
         .icon {
+            fill: $kiva-darkgreen;
+
             $transform: rotate(0deg);
 
             -webkit-transform: $transform;

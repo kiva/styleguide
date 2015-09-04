@@ -4,7 +4,7 @@
     <title>Triangle</title>
     <desc>Small triangle icon.</desc>
     <defs></defs>
-    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
-        <polygon id="Triangle-1" fill="#236133" sketch:type="MSShapeGroup" points="6 0 12 6.85714286 0 6.85714286 "></polygon>
+    <g id="Page-1" stroke-width="1" fill-rule="evenodd" sketch:type="MSPage">
+        <polygon id="Triangle-1" sketch:type="MSShapeGroup" points="6 0 12 6.85714286 0 6.85714286 "></polygon>
     </g>
 </svg>

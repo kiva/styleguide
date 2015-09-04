@@ -4,7 +4,7 @@
     <title>Small Chevron</title>
     <desc>Small chevron icon.</desc>
     <defs></defs>
-    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
-        <path d="M1,1.01302246 L16.0089757,13 L31,1" id="Path-5-Copy-4" stroke="#333333" stroke-width="2" sketch:type="MSShapeGroup"></path>
+    <g id="Page-1" stroke-width="1" fill-rule="evenodd" sketch:type="MSPage">
+        <path d="M1,1.01302246 L16.0089757,13 L31,1" id="Path-5-Copy-4" stroke-width="2" sketch:type="MSShapeGroup"></path>
     </g>
 </svg>

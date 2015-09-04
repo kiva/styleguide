@@ -6,7 +6,6 @@ source/css/*.css.map
 source/dep
 node_modules
 bower_components
-config.ini
 latest-change.txt
 *-ck.js
 *.sass-cache/

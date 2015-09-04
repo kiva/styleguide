@@ -73,8 +73,6 @@
             float: right;
             height: 1.5rem;
             width: rem-calc(25);
-            fill: none;
-            stroke: $kiva-text-dark;
 
             $transition: 300ms ease;
 
@@ -203,8 +201,6 @@
         }
 
         .icon {
-            fill: none;
-            stroke: $kiva-text-dark;
             width: rem-calc(52);
             height: $height;
             position: absolute;

@@ -136,15 +136,24 @@ module.exports = function(grunt) {
 		, svgstore: {
 			options: {
 				prefix: 'icon-'
-				,svg: {
-					xmlns: 'http://www.w3.org/2000/svg'
-					,style: 'display:none;'
+				, svg: {
+					'xmlns': 'http://www.w3.org/2000/svg'
+					, 'xmlns:xlink': 'http://www.w3.org/1999/xlink'
+					, 'xmlns:sketch': 'http://www.bohemiancoding.com/sketch/ns'
+					, 'style': 'display:none;'
 				}
-				,cleanup: ['stroke', 'fill']
+				,preserveDescElement: false
 			}
-			,compile: {
+
+			, compile: {
 				files: {
-					'source/_patterns/01-molecules/03-media/01-icons.mustache': ['source/images/icons/*.svg']
+					'public/images/icons.svg': ['source/images/icons/*.svg']
+				}
+			}
+
+			, export: {
+				files: {
+					'export/images/icons.svg': ['source/images/icons/*.svg']
 				}
 			}
 		}
@@ -295,9 +304,8 @@ module.exports = function(grunt) {
 	// @todo add livereload?
 
 	grunt.registerTask('init', ['copy:init', 'githooks']);
-	grunt.registerTask('svg', ['svgstore:compile']);
-	grunt.registerTask('compile', ['concat:vendorCss', 'sass:compile', 'svg', 'shell:compile', 'copy:js', 'webpack:compile']);
-	grunt.registerTask('export', ['clean:export', 'sass:export', 'svg', 'webpack:bundle', 'webpack:ugly_bundle', 'webpack:module', 'copy:export', 'gitadd:export']);
+	grunt.registerTask('compile', ['concat:vendorCss', 'sass:compile', 'shell:compile', 'svgstore:compile', 'copy:js', 'webpack:compile']);
+	grunt.registerTask('export', ['clean:export', 'sass:export', 'svgstore:export', 'webpack:bundle', 'webpack:ugly_bundle', 'webpack:module', 'copy:export', 'gitadd:export']);
 	grunt.registerTask('default', 'compile');
     grunt.registerTask('test', ['jshint']);
 

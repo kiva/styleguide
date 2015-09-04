@@ -4,7 +4,7 @@
     <title>Oval 11 Copy</title>
     <desc>Created with Sketch.</desc>
     <defs></defs>
-    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
-        <circle id="Oval-11-Copy" stroke="#FFFFFF" fill-opacity="0.3" fill="#FFFFFF" sketch:type="MSShapeGroup" cx="9" cy="9" r="8"></circle>
+    <g id="Page-1" stroke-width="1" fill-rule="evenodd" sketch:type="MSPage">
+        <circle id="Oval-11-Copy" sketch:type="MSShapeGroup" cx="9" cy="9" r="8"></circle>
     </g>
 </svg>

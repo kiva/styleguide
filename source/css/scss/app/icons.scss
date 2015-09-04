@@ -1,0 +1,81 @@
+$light-blue-gray: #DBE3E5;
+
+svg.icon {
+    fill: none;
+    stroke: none;
+
+    &.icon-checkmark,
+    &.icon-magnify-glass,
+    &.icon-nearme,
+    &.icon-triangle,
+    &.icon-globe,
+    &.icon-handshake,
+    &.icon-sort {
+        fill: $kiva-text-dark;
+    }
+
+    &.icon-large-chevron,
+    &.icon-large-chevron-mobile,
+    &.icon-medium-chevron,
+    &.icon-small-chevron,
+    &.icon-small-chevron-mobile,
+    &.icon-x,
+    &.icon-filter {
+        stroke: $kiva-text-dark;
+    }
+
+    &.icon-distribution {
+        color: $kiva-text-dark;
+    }
+
+    &.icon-star,
+    &.icon-half-star {
+        fill: $kiva-bg-darkgray;
+        color: $kiva-text-dark;
+    }
+
+    &.icon-slideshow-dot {
+        stroke: $white;
+        fill: $white;
+        fill-opacity: 0.3;
+
+        &.active {
+            fill-opacity: 1;
+        }
+    }
+
+    &.icon-facebook,
+    &.icon-pinterest,
+    &.icon-twitter,
+    &.icon-youtube,
+    &.icon-linkedIn {
+        color: $light-gray;
+    }
+
+    &.icon-boundaries,
+    &.icon-hand-up,
+    &.icon-lifting,
+    &.icon-recycle,
+    &.icon-impact {
+        fill: $light-blue-gray;
+        color: $kiva-green;
+    }
+
+    &.icon-choose,
+    &.icon-lend,
+    &.icon-repaid,
+    &.icon-repeat {
+        fill: $kiva-green;
+        color: $kiva-icon-green;
+    }
+
+    &.icon-leaf,
+    &.icon-leaves {
+        fill: $kiva-green;
+    }
+
+    &.icon-match {
+        fill: $white;
+        color: $kiva-icon-green;
+    }
+}
