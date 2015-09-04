@@ -1,0 +1,30 @@
+{
+  "borrowerFirstName": "John",
+  "storyBody": [
+    {
+      "content": "John applied for a loan"
+    },
+    {
+      "content": "He wants to accomplish his dreams"
+    }
+  ],
+  "borrowers": [
+    {
+      "name": "John",
+      "pictured": true
+    },
+    {
+      "name": "Adam",
+      "pictured": true
+    },
+    {
+      "name": "Sean",
+      "pictured": false
+    }
+  ],
+  "translation": {
+    "language": "Spanish",
+    "translator": "Tayah Wheeland",
+    "original": "original translation in spanish"
+  }
+}

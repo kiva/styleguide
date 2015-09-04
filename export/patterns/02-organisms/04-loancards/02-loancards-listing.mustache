@@ -1,40 +1,9 @@
 <div class="row">
-    <ul class="loancards-list small-block-grid-2 medium-block-grid-3 large-block-grid-4">
-        <li>
-            {{> organisms-loancard-listing}}
-        </li>
-        <li>
-            {{> organisms-loancard-listing}}
-        </li>
-        <li>
-            {{> organisms-loancard-listing}}
-        </li>
-        <li>
-            {{> organisms-loancard-listing}}
-        </li>
-        <li>
-            {{> organisms-loancard-listing}}
-        </li>
-        <li>
-            {{> organisms-loancard-listing}}
-        </li>
-        <li>
-            {{> organisms-loancard-listing}}
-        </li>
-        <li>
-            {{> organisms-loancard-listing}}
-        </li>
-        <li>
-            {{> organisms-loancard-listing}}
-        </li>
-        <li>
-            {{> organisms-loancard-listing}}
-        </li>
-        <li>
-            {{> organisms-loancard-listing}}
-        </li>
-        <li>
-            {{> organisms-loancard-listing}}
-        </li>
-    </ul>
+	<ul class="loancards-list small-block-grid-1 large-block-grid-2 xxlarge-block-grid-3" data-equalizer>
+		{{#loans}}
+            <li>
+			    {{> 02-organisms/04-loancards/00-loancard-listing}}
+            </li>
+		{{/loans}}
+	</ul>
 </div>
