@@ -55,7 +55,6 @@
       }
     }
   }
-
   .loan-story {
     .borrower-names {
       display: inline;
@@ -99,3 +98,14 @@
     //margin: 0 auto;
   }
 }
+
+.more-loan-info {
+  text-align: center;
+  max-width: 60%;
+  margin: 0 auto;
+  @media #{$small-only} {
+    text-align: left;
+    max-width: 100%;
+  }
+}
+
