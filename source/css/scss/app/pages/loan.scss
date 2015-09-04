@@ -78,5 +78,24 @@
       content: "";
     }
   }
+}
 
+.is-special {
+  .kivan {
+    .show-for-medium-up {
+      padding-top: 1rem;
+      p {
+        line-height: 0.3rem;
+      }
+    }
+  }
+  .green-bolded {
+    font-size: 2.5rem;
+    font-weight: bold;
+    line-height: 2.5rem;
+    color: $kiva-green;
+    text-align: left;
+    max-width: 75%;
+    //margin: 0 auto;
+  }
 }
