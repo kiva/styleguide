@@ -4,24 +4,29 @@
     </p>
 
     <h2 class="green-bolded">
-        It's in a rural region many banks won't serve.
+        {{specialBody}}
     </h2>
 
-    <div class="kivan">
-        <div class="show-for-small-only">
-            <p>
-                Jomay, Kiva Knowledge Manager
-            </p>
-        </div>
-        <div class="show-for-medium-up">
+    {{#kivan}}
+        <div class="kivan">
+            <div class="profile-photo">
+                <img src="{{profilePhotoHref}}">
+            </div>
+            <div class="show-for-small-only">
+                <p>
+                    {{name}}, {{title}}
+                </p>
+            </div>
+            <div class="show-for-medium-up">
 
-            <p>
-                Jomay
-            </p>
+                <p>
+                    {{name}}
+                </p>
 
-            <p>
-                Kiva Knowledge Manager
-            </p>
+                <p>
+                    {{title}}
+                </p>
+            </div>
         </div>
-    </div>
+    {{/kivan}}
 </div>
