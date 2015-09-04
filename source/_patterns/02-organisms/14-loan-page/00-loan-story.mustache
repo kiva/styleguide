@@ -1,31 +1,37 @@
-{{> 01-molecules/03-media/01-icons }}
 <div class="loan-section">
-    <p class="featured">{{borrowerFirstName}}'s Story</p>
+    <div class="loan-story">
+        <p class="featured">{{borrowerFirstName}}'s Story</p>
 
-    {{#storyBody}}
-        <p>{{content}}</p>
-    {{/storyBody}}
+        {{#storyBody}}
+            <p>{{content}}</p>
+        {{/storyBody}}
 
-    <div>
-        In this group:
-        <ul class="borrower-names">
-            {{#borrowers}}
-                <li>{{name}}{{^pictured}}*{{/pictured}}</li>
-            {{/borrowers}}
-        </ul>
-        <p>*not pictured</p>
+        <div>
+            In this group:
+            <ul class="borrower-names">
+                {{#borrowers}}
+                    <li>{{name}}{{^pictured}}*{{/pictured}}</li>
+                {{/borrowers}}
+            </ul>
+            <p>*not pictured</p>
+        </div>
+
+        {{#translation}}
+            <span>Translated from {{language}} by Kiva Volunteer {{translator}}</span>
+            <ul class="accordion animated" data-accordion>
+                <li class="accordion-navigation">
+                    <a href="#translation" class="black-underlined">View original language description
+                        <svg class="icon">
+                            <use xlink:href="#icon-triangle"/>
+                        </svg>
+                    </a>
+
+                    <div id="translation" class="content">
+                        {{original}}
+                    </div>
+                </li>
+            </ul>
+        {{/translation}}
+
     </div>
-
-    {{#translation}}
-        <span>Translated from {{language}} by Kiva Volunteer {{translator}}</span>
-        <ul class="accordion" data-accordion>
-            <li class="accordion-navigation">
-                <a href="#translation" class="modal-link">View original language description <svg class="icon"><use xlink:href="#icon-triangle" /></svg></a>
-
-                <div id="translation" class="content">
-                    {{original}}
-                </div>
-            </li>
-        </ul>
-    {{/translation}}
 </div>

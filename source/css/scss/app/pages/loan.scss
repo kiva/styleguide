@@ -1,9 +1,13 @@
 .loan-section {
-  padding: 10px;
+  padding: 1rem;
 
+  .black-underlined {
+    text-decoration: underline;
+    color: #333;
+  }
   .icon {
     float: right;
-    height: 1.5rem;
+    height: 1rem;
     width: rem-calc(25);
     fill: none;
     stroke: $kiva-text-dark;
@@ -24,57 +28,55 @@
     }
   }
 
-  .borrower-names {
-    display: inline;
+  .accordion.animated {
     margin: 0;
-    padding: 0;
   }
 
-  .borrower-names > li {
-    display: inline;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-  }
+  .accordion.animated .accordion-navigation > {
+    a {
+      position: relative;
+      z-index: 10;
+      background-color: transparent;
+      padding: 0;
+      min-height: 1rem;
+      font-size: 1rem;
+    }
+    .content {
+      display: block;
+      overflow: hidden;
+      height: 0;
+      transition: all .5s ease;
+      background-color: transparent;
+      padding: 0;
 
-  .borrower-names > li:after {
-    content: ",";
-  }
-
-  .borrower-names > li:last-child:after {
-    content: "";
-  }
-
-  .accordion {
-    margin-left: 0;
-  }
-
-  .accordion .accordion-navigation > a {
-    font-size: 1rem;
-    background: none;
-    padding: 0;
-  }
-
-  .accordion .accordion-navigation > .content {
-    background: none;
-    padding-left: 0;
-  }
-
-  .accordion {
-    .accordion-navigation {
-      .content {
-        max-height: 0;
-        display: block;
-        overflow-y: hidden;
-        padding: rem-calc(0);
-        transition: ease 0.4s all;
-
-        &.active {
-          max-height: 100vh;
-          padding: rem-calc(10 0);
-          transition: ease 0.4s all;
-        }
+      &.active {
+        height: auto;
+        padding: 0.9375rem 0;
       }
     }
   }
+
+  .loan-story {
+    .borrower-names {
+      display: inline;
+      margin: 0;
+      padding: 0;
+    }
+
+    .borrower-names > li {
+      display: inline;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    .borrower-names > li:after {
+      content: ",";
+    }
+
+    .borrower-names > li:last-child:after {
+      content: "";
+    }
+  }
+
 }
