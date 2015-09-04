@@ -335,6 +335,14 @@
     });
 
 
+	function loadSvgIcons() {
+		return $.get('/images/icons.svg', function(data) {
+			var div = document.createElement('div');
+			div.innerHTML = new XMLSerializer().serializeToString(data.documentElement);
+			document.body.insertBefore(div, document.body.childNodes[0]);
+		});
+	}
+
 
 	$('#search-box').typeahead({
 			highlight: true,
@@ -373,5 +381,7 @@
 
 	var $typeahead_menu = $('.top-nav-search-menu').detach();
 	$('.top-nav').append($typeahead_menu);
+
+	loadSvgIcons();
 
 })(this, jQuery);
