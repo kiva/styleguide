@@ -9,7 +9,7 @@
 		$(this).toggleClass('active');
 		$('.nav').toggleClass('active');
 	});
-	
+
 	//Navigation toggle
 	$('.nav-toggle-search').click(function(e) {
 		e.preventDefault();
@@ -381,6 +381,16 @@
 
 	var $typeahead_menu = $('.top-nav-search-menu').detach();
 	$('.top-nav').append($typeahead_menu);
+
+	$(document).foundation({
+		accordion: {
+			// allow multiple accordion panels to be active at the same time
+			multi_expand: true,
+			// allow accordion panels to be closed by clicking on their headers
+			// setting to false only closes accordion panels when another is opened
+			toggleable: true
+		}
+	});
 
 	loadSvgIcons();
 
