@@ -7,9 +7,11 @@ svg.icon {
     &.icon-checkmark,
     &.icon-magnify-glass,
     &.icon-nearme,
-    &.icon-triangle {
+    &.icon-triangle,
+    &.icon-globe,
+    &.icon-handshake,
+    &.icon-sort {
         fill: $kiva-text-dark;
-        //fill: $blue;
     }
 
     &.icon-large-chevron,
@@ -17,31 +19,28 @@ svg.icon {
     &.icon-medium-chevron,
     &.icon-small-chevron,
     &.icon-small-chevron-mobile,
-    &.icon-x {
+    &.icon-x,
+    &.icon-filter {
         stroke: $kiva-text-dark;
-        //stroke: $blue;
+    }
+
+    &.icon-distribution {
+        color: $kiva-text-dark;
+    }
+
+    &.icon-star,
+    &.icon-half-star {
+        fill: $kiva-bg-darkgray;
+        color: $kiva-text-dark;
     }
 
     &.icon-slideshow-dot {
         stroke: $white;
         fill: $white;
         fill-opacity: 0.3;
-        //stroke: $red;
-        //fill: $blue;
 
         &.active {
             fill-opacity: 1;
-        }
-    }
-
-    &.icon-favorite {
-        fill: $black;
-        color: $white;
-        //fill: $blue;
-        //color: $red;
-
-        &.selected {
-            color: $kiva-accent-green;
         }
     }
 
@@ -51,8 +50,6 @@ svg.icon {
     &.icon-youtube,
     &.icon-linkedIn {
         color: $light-gray;
-        //fill: $red;
-        //color: $blue;
     }
 
     &.icon-boundaries,
@@ -62,8 +59,6 @@ svg.icon {
     &.icon-impact {
         fill: $light-blue-gray;
         color: $kiva-green;
-        //fill: $blue;
-        //color: $red;
     }
 
     &.icon-choose,
@@ -72,13 +67,15 @@ svg.icon {
     &.icon-repeat {
         fill: $kiva-green;
         color: $kiva-icon-green;
-        //fill: $blue;
-        //color: $red;
     }
 
     &.icon-leaf,
     &.icon-leaves {
         fill: $kiva-green;
-        //fill: $blue;
+    }
+
+    &.icon-match {
+        fill: $white;
+        color: $kiva-icon-green;
     }
 }
