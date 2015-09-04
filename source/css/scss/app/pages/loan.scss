@@ -87,6 +87,10 @@
         line-height: 0.3rem;
       }
     }
+    .show-for-small-only{
+      text-align: center;
+      margin: 0 auto;
+    }
   }
   .green-bolded {
     font-size: 2.5rem;
@@ -95,7 +99,11 @@
     color: $kiva-green;
     text-align: left;
     max-width: 75%;
-    //margin: 0 auto;
+    @media #{$small-only} {
+      text-align: center;
+      max-width: 90%;
+      margin: 0 auto;
+    }
   }
 }
 
