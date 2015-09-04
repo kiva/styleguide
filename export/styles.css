@@ -7053,21 +7053,21 @@ small {
 svg.icon {
   fill: none;
   stroke: none; }
-  svg.icon.icon-checkmark, svg.icon.icon-magnify-glass, svg.icon.icon-nearme, svg.icon.icon-triangle {
+  svg.icon.icon-checkmark, svg.icon.icon-magnify-glass, svg.icon.icon-nearme, svg.icon.icon-triangle, svg.icon.icon-globe, svg.icon.icon-handshake, svg.icon.icon-sort {
     fill: #333; }
-  svg.icon.icon-large-chevron, svg.icon.icon-large-chevron-mobile, svg.icon.icon-medium-chevron, svg.icon.icon-small-chevron, svg.icon.icon-small-chevron-mobile, svg.icon.icon-x {
+  svg.icon.icon-large-chevron, svg.icon.icon-large-chevron-mobile, svg.icon.icon-medium-chevron, svg.icon.icon-small-chevron, svg.icon.icon-small-chevron-mobile, svg.icon.icon-x, svg.icon.icon-filter {
     stroke: #333; }
+  svg.icon.icon-distribution {
+    color: #333; }
+  svg.icon.icon-star, svg.icon.icon-half-star {
+    fill: #efefef;
+    color: #333; }
   svg.icon.icon-slideshow-dot {
     stroke: #FFFFFF;
     fill: #FFFFFF;
     fill-opacity: 0.3; }
     svg.icon.icon-slideshow-dot.active {
       fill-opacity: 1; }
-  svg.icon.icon-favorite {
-    fill: #000000;
-    color: #FFFFFF; }
-    svg.icon.icon-favorite.selected {
-      color: #a9d14c; }
   svg.icon.icon-facebook, svg.icon.icon-pinterest, svg.icon.icon-twitter, svg.icon.icon-youtube, svg.icon.icon-linkedIn {
     color: #d8d8d8; }
   svg.icon.icon-boundaries, svg.icon.icon-hand-up, svg.icon.icon-lifting, svg.icon.icon-recycle, svg.icon.icon-impact {
@@ -7078,6 +7078,9 @@ svg.icon {
     color: #488443; }
   svg.icon.icon-leaf, svg.icon.icon-leaves {
     fill: #63a541; }
+  svg.icon.icon-match {
+    fill: #FFFFFF;
+    color: #488443; }
 
 .figure-scrollable-with-caption {
   position: relative;
