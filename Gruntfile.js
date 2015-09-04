@@ -144,9 +144,16 @@ module.exports = function(grunt) {
 				}
 				,preserveDescElement: false
 			}
-			,compile: {
+
+			, compile: {
 				files: {
 					'public/images/icons.svg': ['source/images/icons/*.svg']
+				}
+			}
+
+			, export: {
+				files: {
+					'export/images/icons.svg': ['source/images/icons/*.svg']
 				}
 			}
 		}
@@ -297,9 +304,8 @@ module.exports = function(grunt) {
 	// @todo add livereload?
 
 	grunt.registerTask('init', ['copy:init', 'githooks']);
-	grunt.registerTask('svg', ['svgstore:compile']);
-	grunt.registerTask('compile', ['concat:vendorCss', 'sass:compile', 'shell:compile', 'svg', 'copy:js', 'webpack:compile']);
-	grunt.registerTask('export', ['clean:export', 'sass:export', 'svg', 'webpack:bundle', 'webpack:ugly_bundle', 'webpack:module', 'copy:export', 'gitadd:export']);
+	grunt.registerTask('compile', ['concat:vendorCss', 'sass:compile', 'shell:compile', 'svgstore:compile', 'copy:js', 'webpack:compile']);
+	grunt.registerTask('export', ['clean:export', 'sass:export', 'svgstore:export', 'webpack:bundle', 'webpack:ugly_bundle', 'webpack:module', 'copy:export', 'gitadd:export']);
 	grunt.registerTask('default', 'compile');
     grunt.registerTask('test', ['jshint']);
 
