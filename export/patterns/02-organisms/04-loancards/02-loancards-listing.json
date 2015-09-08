@@ -4,9 +4,18 @@
 			"title": "Senia Del Carmen"
 			, "description": "A portion of Tuzamurane Group's $6,800 loan helps a member to buy more sorghum for sale."
 			, "country" : {
-			"name": "Argentina"
-			, "code": "ar"
-		}
+				"name": "Argentina"
+				, "code": "ar"
+			}
+			, "progress": {
+				"percent": 42
+				, "message": "$1,800 to go"
+			}
+			, "is_regular": true
+			, "is_lent_to": false
+			, "is_adding": false
+			, "is_in_basket": false
+			, "expiring_soon": true
 		}
 		, {
 			"title": "Mirian Yamileh"
@@ -15,6 +24,17 @@
 				"name": "American Samoa"
 				, "code": "as"
 			}
+			, "progress": {
+					"percent": 42
+				, "message": "$1,800 to go"
+				}
+			, "is_regular": false
+			, "is_lent_to": true
+			, "is_adding": false
+			, "is_in_basket": false
+			, "expiring_soon": true
+			, "show_loan_length": true
+			, "loan_length": "12 months"
 		}
 		, {
 			"title": "Emprendedoras Group"
@@ -23,6 +43,14 @@
 				"name": "Bosnia and Herzegovina"
 				, "code": "ba"
 			}
+			, "progress": {
+					"percent": 42
+				, "message": "$1,800 to go"
+				}
+			, "is_regular": false
+			, "is_lent_to": false
+			, "is_adding": true
+			, "is_in_basket": false
 		}
 		, {
 			"title": "Lillian"
@@ -31,6 +59,14 @@
 				"name": "South Africa"
 				, "code": "za"
 			}
+			, "progress": {
+					"percent": 42
+				, "message": "$1,800 to go"
+				}
+			, "is_regular": false
+			, "is_lent_to": false
+			, "is_adding": false
+			, "is_in_basket": true
 		}
 		, {
 			"title": "Estebana Sofia"
@@ -39,6 +75,14 @@
 				"name": "Burundi"
 				, "code": "bi"
 			}
+			, "progress": {
+					"percent": 42
+				, "message": "$1,800 to go"
+				}
+			, "is_regular": true
+			, "is_lent_to": false
+			, "is_adding": false
+			, "is_in_basket": false
 		}
 		, {
 			"title": "Cynthia"
@@ -47,6 +91,14 @@
 				"name": "Honduras"
 				, "code": "hn"
 			}
+			, "progress": {
+					"percent": 42
+				, "message": "$1,800 to go"
+				}
+			, "is_regular": true
+			, "is_lent_to": false
+			, "is_adding": false
+			, "is_in_basket": false
 		}
 		, {
 			"title": "Juvenal"
@@ -55,6 +107,14 @@
 				"name": "Albania"
 				, "code": "al"
 			}
+			, "progress": {
+					"percent": 42
+				, "message": "$1,800 to go"
+				}
+			, "is_regular": true
+			, "is_lent_to": false
+			, "is_adding": false
+			, "is_in_basket": false
 		}
 		, {
 			"title": "Abel Amauris"
@@ -63,6 +123,14 @@
 				"name": "Nepal"
 				, "code": "np"
 			}
+			, "progress": {
+					"percent": 42
+				, "message": "$1,800 to go"
+				}
+			, "is_regular": true
+			, "is_lent_to": false
+			, "is_adding": false
+			, "is_in_basket": false
 		}
 		, {
 			"title": "Nhóm 14 Thôn 3 Quảng Nhân Group"
@@ -71,6 +139,14 @@
 				"name": "Jordan"
 				, "code": "jo"
 			}
+			, "progress": {
+					"percent": 42
+				, "message": "$1,800 to go"
+				}
+			, "is_regular": true
+			, "is_lent_to": false
+			, "is_adding": false
+			, "is_in_basket": false
 		}
 		, {
 			"title": "Marie Fatini's Group"
@@ -79,6 +155,14 @@
 				"name": "Somalia"
 				, "code": "so"
 			}
+			, "progress": {
+					"percent": 42
+				, "message": "$1,800 to go"
+				}
+			, "is_regular": true
+			, "is_lent_to": false
+			, "is_adding": false
+			, "is_in_basket": false
 		}
 		, {
 			"title": "Karanjung Lestari 2 Group"
@@ -87,6 +171,14 @@
 				"name": "Moldova"
 				, "code": "md"
 			}
+			, "progress": {
+					"percent": 42
+				, "message": "$1,800 to go"
+				}
+			, "is_regular": true
+			, "is_lent_to": false
+			, "is_adding": false
+			, "is_in_basket": false
 		}
 		, {
 			"title": "Narkul"
@@ -95,6 +187,14 @@
 				"name": "Yemen"
 				, "code": "ye"
 			}
+			, "progress": {
+					"percent": 42
+				, "message": "$1,800 to go"
+				}
+			, "is_regular": true
+			, "is_lent_to": false
+			, "is_adding": false
+			, "is_in_basket": false
 		}
 	]
 }

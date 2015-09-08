@@ -1,0 +1,28 @@
+<figure class="loan-figure">
+    <div class="loan-figure-carousel">
+        {{#figures}}
+            <div class="loan-image-wrap">
+                <img src="{{url}}" class="loan-image" alt="{{alt}}" />
+            </div>
+        {{/figures}}
+    </div>
+
+    <div class="carousel-prev carousel-nav">
+        <svg class="icon-small-chevron icon"><use xlink:href="#icon-small-chevron"/></svg>
+    </div>
+
+    <div class="carousel-next carousel-nav">
+        <svg class="icon-small-chevron icon"><use xlink:href="#icon-small-chevron"/></svg>
+    </div>
+
+    {{#is_match}}
+        <div class="matching-message">
+            <svg class="icon icon-match"><use xlink:href="#icon-match"/></svg>
+            <span>Your loan will be matched!</span>
+        </div>
+    {{/is_match}}
+
+    <a href="#" class="favorite-link {{#is_favorite}}is-favorite{{/is_favorite}}">
+        <svg class="icon icon-star"><use xlink:href="#icon-star"/></svg>
+    </a>
+</figure>
