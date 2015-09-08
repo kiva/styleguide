@@ -10,4 +10,18 @@
     <div class="fundraising-meter progress">
         <span class="meter" style="width: {{lenderCountPercent}}%"></span>
     </div>
+    <p class="black-underlined">
+        {{daysLeft}} days left to reach {{lenderCountNeeded}} lenders.
+    </p>
+
+    <div class="amount-raised">
+        <p>
+            ${{amountRaised}} of ${{amountNeeded}} raised so far.
+        </p>
+
+        <div class="fundraising-meter progress">
+            <span class="meter" style="width: {{amountRaisedPercent}}%"></span>
+        </div>
+    </div>
+
 </div>

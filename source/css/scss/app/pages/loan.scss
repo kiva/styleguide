@@ -5,13 +5,14 @@
   color: $kiva-green;
 }
 
+.black-underlined {
+  text-decoration: underline;
+  color: #333;
+}
+
 .loan-section {
   padding: 1rem;
 
-  .black-underlined {
-    text-decoration: underline;
-    color: #333;
-  }
   .icon {
     float: right;
     height: 1rem;
@@ -141,6 +142,17 @@
   .lender-count {
     h2, p {
       display: inline-block;
+    }
+    p {
+      margin-bottom: .4rem;
+    }
+  }
+  .amount-raised {
+    p {
+      margin-bottom: .4rem;
+    }
+    .fundraising-meter {
+      height: .7rem;
     }
   }
 
