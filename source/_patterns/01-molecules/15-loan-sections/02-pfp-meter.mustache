@@ -1,0 +1,32 @@
+<div class="pfp-meter">
+    <div class="lender-count">
+        <h2 class="green-bolded">
+            {{lenderCount}} of {{lenderCountNeeded}}
+        </h2>
+
+        <p>Lenders</p>
+    </div>
+
+    {{#kivan}}
+        <div class="kivan">
+            <div class="profile-photo">
+                <img src="{{profilePhotoHref}}">
+            </div>
+            <div class="show-for-small-only">
+                <p>
+                    {{name}}, {{title}}
+                </p>
+            </div>
+            <div class="show-for-medium-up">
+
+                <p>
+                    {{name}}
+                </p>
+
+                <p>
+                    {{title}}
+                </p>
+            </div>
+        </div>
+    {{/kivan}}
+</div>

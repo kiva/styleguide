@@ -1,3 +1,10 @@
+.green-bolded {
+  font-size: 2.5rem;
+  font-weight: bold;
+  line-height: 2.5rem;
+  color: $kiva-green;
+}
+
 .loan-section {
   padding: 1rem;
 
@@ -110,10 +117,6 @@
     }
   }
   .green-bolded {
-    font-size: 2.5rem;
-    font-weight: bold;
-    line-height: 2.5rem;
-    color: $kiva-green;
     text-align: left;
     max-width: 75%;
     @media #{$small-only} {
@@ -134,3 +137,11 @@
   }
 }
 
+.pfp-meter {
+  .lender-count {
+    h2, p {
+      display: inline-block;
+    }
+  }
+
+}
