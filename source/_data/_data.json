@@ -39,7 +39,7 @@
 		"borrower3" : {
 			"src" : "../../images/borrower3.jpg",
 			"alt" : "Borrower photo 3"
-		}
+		},
 		"defaultLender" : {
 			"src" : "../../images/default_lender.jpg",
 			"alt" : "Anonymous Lender Photo"
