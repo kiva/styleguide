@@ -4,9 +4,13 @@
 			"title": "Senia Del Carmen"
 			, "description": "A portion of Tuzamurane Group's $6,800 loan helps a member to buy more sorghum for sale."
 			, "country" : {
-			"name": "Argentina"
-			, "code": "ar"
-		}
+				"name": "Argentina"
+				, "code": "ar"
+			}
+			, "progress": {
+				"percent": 42
+				, "remaining": "$1,800 to go"
+			}
 		}
 		, {
 			"title": "Mirian Yamileh"

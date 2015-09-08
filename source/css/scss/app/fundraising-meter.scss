@@ -1,9 +1,17 @@
 .fundraising-meter {
+    position: relative;
 	border: none;
-	height: 4px;
 	padding: 0;
 
 	.meter {
-		background-color: #74b446;
+		background-color: $kiva-green;
 	}
+
+    .caption {
+        position: absolute;
+        top: 0;
+        height: 100%;
+        width: 100%;
+        text-align: center;
+    }
 }

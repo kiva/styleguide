@@ -9,12 +9,13 @@
 			<span class="f16 {{country.code}}"></span>{{country.name}}
         </div>
 
-		<p>{{description}}</p>
+		<p class="small-text">{{description}}</p>
     </div>
 
     <div class="borrower-footer-wrap">
         <div class="fundraising-meter progress">
-            <span class="meter"></span>
+            <span class="meter" style="width:{{progress.percent}}%"></span>
+            <span class="caption">{{progress.remaining}}</span>
         </div>
 
         <div class="loan-card-buttons">

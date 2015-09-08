@@ -1,4 +1,4 @@
-$footer-height: 4rem;
+$footer-height: 3rem;
 
 // Loan cards - listing
 .loancards-list > li {
@@ -8,18 +8,6 @@ $footer-height: 4rem;
 .loan-card {
 	height: 100%;
 	position: relative;
-
-	.amount-left {
-		font-size: 13px;
-	}
-
-	.country-name {
-//		font-size: 12px;
-	}
-
-	.sector {
-		font-size: 12px;
-	}
 
 	.borrower-img-wrap {
         position: relative;
@@ -35,9 +23,8 @@ $footer-height: 4rem;
 
 	.matcher-text {
 		background-color: rgba(255, 255, 255, .8);
-		font-size: 16px;
 		position: absolute;
-		top: 0;
+		bottom: 0;
 		left: 0;
 	}
 
@@ -46,14 +33,27 @@ $footer-height: 4rem;
         $border: rem-calc(1) solid $kiva-stroke-gray;
         border-left: $border;
         border-right: $border;
+
+        p {
+            margin-bottom: 0.25rem;
+        }
 	}
+
+    .country {
+        display: inline;
+        white-space: nowrap;
+
+        span.f16 {
+            margin-right: 0.25rem;
+        }
+    }
 
     .borrower-footer-wrap {
         width: 100%;
         overflow: hidden;
 
         .fundraising-meter {
-            height: 2rem;
+            height: $footer-height/2;
             width: 100%;
             margin: 0;
         }
@@ -78,10 +78,11 @@ $footer-height: 4rem;
 
     .button {
         height: $footer-height;
+        line-height: $footer-height;
+        font-size: $top-nav-font-size;
         width: 50%;
         margin: 0;
-        padding-left: 0;
-        padding-right: 0;
+        padding: 0;
         float: left;
         white-space: nowrap;
 
@@ -93,45 +94,4 @@ $footer-height: 4rem;
             color: $white;
         }
     }
-}
-
-
-.loan-card--listing-selected {
-	.borrower-img-wrap {
-		position: relative;
-		width: 100%;
-		height: 30%;
-	}
-
-	.borrower-img {
-		width: 50%
-	}
-
-	.country-flag {
-		position: absolute;
-		left: 50%;
-		top: 50%;
-		margin-top: -14px;
-		margin-left: 3px;
-	}
-
-	.amount-left {
-		position: absolute;
-		left: 50%;
-		bottom: 0;
-		margin-left: 3px;
-	}
-
-	.borrower-details-wrap {
-		text-align: left;
-	}
-
-	.borrower-name {
-		font-size: 13px;
-	}
-
-	.matcher-text {
-		font-size: 12px;
-		position: static;
-	}
 }
