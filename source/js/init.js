@@ -328,12 +328,11 @@
 		return a < b ? -1 : 1;
 	}
 
-    $('.figure-scrollable').slick({
-        mobileFirst: true
-        , prevArrow: '.scrollable-prev-arrow'
-        , nextArrow: '.scrollable-next-arrow'
+    $('.loan-figure-carousel').slick({
+		mobileFirst: true
+		, prevArrow: '.carousel-prev '
+		, nextArrow: '.carousel-next'
     });
-
 
 	function loadSvgIcons() {
 		return $.get('/images/icons.svg', function(data) {
@@ -342,7 +341,6 @@
 			document.body.insertBefore(div, document.body.childNodes[0]);
 		});
 	}
-
 
 	$('#search-box').typeahead({
 			highlight: true,
