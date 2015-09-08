@@ -43,6 +43,10 @@
 		"defaultLender" : {
 			"src" : "../../images/default_lender.jpg",
 			"alt" : "Anonymous Lender Photo"
+		},
+		"loan-card-loader" : {
+			"src" : "../../images/loan-card-loader.gif",
+			"alt" : "Loading"
 		}
 
 	},

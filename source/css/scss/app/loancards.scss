@@ -60,38 +60,66 @@ $footer-height: 3rem;
     }
 
     &:hover {
-        .loan-card-buttons {
+        .bottom-bar {
             height: $footer-height;
         }
     }
 }
 
-.no-touch .loan-card-buttons {
+.no-touch .bottom-bar {
     position: absolute;
     bottom: 0;
     height: 0;
     overflow: hidden;
+
+    &.no-hide {
+        height: $footer-height;
+    }
 }
 
-.loan-card-buttons {
+.bottom-bar {
     width: 100%;
 
-    .button {
+    .button, .message {
         height: $footer-height;
         line-height: $footer-height;
         font-size: $top-nav-font-size;
-        width: 50%;
+        font-weight: normal;
+        width: 100%;
         margin: 0;
         padding: 0;
         float: left;
         white-space: nowrap;
-
-        &:first-child {
-            border-right: rem-calc(1) solid $white;
-        }
+        color: $white;
 
         &:hover, &:active, &:visited {
             color: $white;
         }
+
+        &.half-width {
+            width: 50%;
+
+            &:first-child {
+                border-right: rem-calc(1) solid $white;
+            }
+        }
+
+        .icon {
+            fill: $white;
+            width: 1rem;
+            height: 1.1rem;
+            margin-right: 0.5rem;
+            padding-top: rem-calc(4);
+        }
+
+        .loader {
+            height: 1rem;
+            padding-right: 1rem;
+        }
+    }
+
+    .message {
+        background-color: $kiva-icon-green;
+        text-align: center;
     }
 }

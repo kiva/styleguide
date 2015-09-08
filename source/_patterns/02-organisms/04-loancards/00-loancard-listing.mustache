@@ -15,12 +15,37 @@
     <div class="borrower-footer-wrap">
         <div class="fundraising-meter progress">
             <span class="meter" style="width:{{progress.percent}}%"></span>
-            <span class="caption">{{progress.remaining}}</span>
+            <span class="caption">{{progress.message}}</span>
         </div>
 
-        <div class="loan-card-buttons">
-            <a class="button" href="#">Lend $25</a>
-            <a class="button" href="#">Read More</a>
-        </div>
+        {{#is_regular}}
+            <div class="bottom-bar">
+                <a class="half-width button" href="#">Lend $25</a>
+                <a class="half-width button" href="#">Read More</a>
+            </div>
+        {{/is_regular}}
+        {{#is_lent_to}}
+            <div class="bottom-bar">
+                <a class="half-width button" href="#">Lend Again</a>
+                <a class="half-width button" href="#">Read More</a>
+            </div>
+        {{/is_lent_to}}
+        {{#is_adding}}
+            <div class="bottom-bar no-hide">
+                <div class="message">
+                    <img class="loader" src="{{img.loan-card-loader.src}}">Adding to basket
+                </div>
+            </div>
+        {{/is_adding}}
+        {{#is_in_basket}}
+            <div class="bottom-bar">
+                <a class="success button" href="#">
+                    <svg class="icon">
+                        <use xlink:href="#icon-checkmark" />
+                    </svg>
+                    Proceed to checkout
+                </a>
+            </div>
+        {{/is_in_basket}}
     </div>
 </div>
