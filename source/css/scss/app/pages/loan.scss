@@ -77,7 +77,51 @@
       content: "";
     }
   }
+}
 
+.is-special {
+  .kivan {
+    position: relative;
+    .profile-photo {
+      padding-top: 1rem;
+      text-align: center;
+      @media #{$medium-up}{
+        float: left;
+        width: 4rem;
+      }
+      img {
+        background-repeat: no-repeat;
+        border-radius: 50%;
+        width: 100px;
+      }
+    }
+    .show-for-medium-up {
+      padding-top: 1rem;
+      padding-left: 5rem;
+      top: 0.5rem;
+      position: absolute;
+      p {
+        line-height: 0.3rem;
+      }
+    }
+    .show-for-small-only {
+      text-align: center;
+      margin: 0 auto;
+    }
+  }
+  .green-bolded {
+    font-size: 2.5rem;
+    font-weight: bold;
+    line-height: 2.5rem;
+    color: $kiva-green;
+    text-align: left;
+    max-width: 75%;
+    @media #{$small-only} {
+      text-align: center;
+      max-width: 85%;
+      margin: 0 auto;
+    }
+  }
 }
 
 .more-loan-info {
