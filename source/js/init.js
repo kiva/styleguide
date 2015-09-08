@@ -332,6 +332,7 @@
 		mobileFirst: true
 		, prevArrow: '.carousel-prev '
 		, nextArrow: '.carousel-next'
+		, adaptiveHeight: true
     });
 
 	function loadSvgIcons() {
