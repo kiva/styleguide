@@ -1,6 +1,14 @@
 <div class="loan-card">
     <a class="borrower-img-wrap" href="#">
         <img class="borrower-img" src="{{img.borrower.src}}" >
+        {{#show_loan_length}}
+            <div class="loan-message">{{loan_length}}</div>
+        {{/show_loan_length}}
+        {{^show_loan_length}}
+            {{#expiring_soon}}
+                <div class="loan-message urgent">Expiring soon!</div>
+            {{/expiring_soon}}
+        {{/show_loan_length}}
     </a>
 
     <div class="borrower-details-wrap" data-equalizer-watch>
