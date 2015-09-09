@@ -140,17 +140,11 @@
 
 .pfp-meter {
   .lender-count {
-    h2, p {
+    h2, div {
       display: inline-block;
-    }
-    p {
-      margin-bottom: .4rem;
     }
   }
   .amount-raised {
-    p {
-      margin-bottom: .4rem;
-    }
     .fundraising-meter {
       height: .7rem;
     }
