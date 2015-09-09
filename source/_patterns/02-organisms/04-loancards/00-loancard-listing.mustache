@@ -6,7 +6,7 @@
         {{/show_loan_length}}
         {{^show_loan_length}}
             {{#expiring_soon}}
-                <div class="loan-message urgent">Expiring soon!</div>
+                <div class="loan-message urgent">{{expiring_message}}</div>
             {{/expiring_soon}}
         {{/show_loan_length}}
     </a>
@@ -21,7 +21,7 @@
     </div>
 
     <div class="borrower-footer-wrap">
-        <div class="fundraising-meter progress">
+        <div class="fundraising-meter progress {{#progress.repaying}}repaying{{/progress.repaying}}">
             <span class="meter" style="width:{{progress.percent}}%"></span>
             <span class="caption">{{progress.message}}</span>
         </div>
@@ -33,9 +33,16 @@
             </div>
         {{/is_regular}}
         {{#is_lent_to}}
-            <div class="bottom-bar">
-                <a class="half-width button" href="#">Lend Again</a>
-                <a class="half-width button" href="#">Read More</a>
+            <div class="bottom-bar show-short">
+                <a class="success button" href="#">
+                    <svg class="icon">
+                        <use xlink:href="#icon-checkmark" />
+                    </svg>
+                    <span>You've lent to this loan</span>
+                </a>
+            </div>
+            <div class="bottom-bar hide-for-touch">
+                <a class="button" href="#">Lend Again</a>
             </div>
         {{/is_lent_to}}
         {{#is_adding}}
@@ -46,12 +53,20 @@
             </div>
         {{/is_adding}}
         {{#is_in_basket}}
-            <div class="bottom-bar">
+            <div class="bottom-bar show-short">
                 <a class="success button" href="#">
                     <svg class="icon">
                         <use xlink:href="#icon-checkmark" />
                     </svg>
-                    Proceed to checkout
+                    <span>$25 in basket</span>
+                </a>
+            </div>
+            <div class="bottom-bar hide-for-touch">
+                <a class="success button" href="#">
+                    <svg class="icon">
+                        <use xlink:href="#icon-checkmark" />
+                    </svg>
+                    <span>Proceed to checkout</span>
                 </a>
             </div>
         {{/is_in_basket}}
