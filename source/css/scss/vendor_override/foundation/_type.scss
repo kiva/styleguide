@@ -29,12 +29,15 @@ $section-head-line-height		: rem-calc(36);
 
 $feature-font-size				: $section-head-font-size;
 $feature-line-height			: $section-head-line-height;
+$featured-line-height-reduction : rem-calc(25);
+$feature-font-medium-reduction  : $section-head-font-size - (rem-calc(7));
+$feature-font-small-reduction   : $section-head-font-size - (rem-calc(14));
 
 $headline-font-size				: rem-calc(56);
 $headline-line-height			: rem-calc(64);
 $headline-font-size-reduction	: rem-calc(10);
 $headline-font-size-max-reduction	: rem-calc(26);
-$headline-line-height-reduction	: rem-calc(10);
+$headline-line-height-reduction	: rem-calc(32);
 
 
 $impact-font-size				: rem-calc(72);
@@ -44,15 +47,17 @@ $impact-font-max-reduction      : rem-calc(36);
 
 $huge-headline-font-size				: rem-calc(108);
 $huge-headline-line-height				: rem-calc(108);
-$huge-headline-font-reduction			: rem-calc(48);
-$huge-headline-line-height-reduction	: rem-calc(48);
+$huge-headline-line-height-reduction	: rem-calc(73);
+$huge-headline-line-medium-reduction    : rem-calc(35);
+$huge-headline-font-small-reduction		: rem-calc(54);
 
 $statistic-font-size			: rem-calc(48);
 $statistic-line-height			: rem-calc(56);
 
 $huge-statistic-font-size		: rem-calc(144);
 $huge-statistic-line-height		: rem-calc(156);
-$huge-statistic-font-reduction	: rem-calc(72);
+$huge-statistic-font-medium-reduction: rem-calc(36);
+$huge-statistic-font-small-reduction	: rem-calc(72);
 
 $huge-type-kerning				: -0.4rem;
 $huge-type-kerning-reduction	: -0.3rem;
@@ -73,8 +78,7 @@ $paragraph-line-height: $body-line-height;
 }
 
 .featured {
-	font-size: $feature-font-size;
-	line-height: $feature-line-height;
+  line-height: $featured-line-height-reduction;
 }
 
 .overlay {
@@ -96,8 +100,8 @@ $paragraph-line-height: $body-line-height;
 }
 
 .huge-statistic {
-	font-size: $huge-statistic-font-size - $huge-statistic-font-reduction;
-	line-height: $huge-statistic-line-height - $huge-statistic-font-reduction;
+	font-size: $huge-statistic-font-size - $huge-statistic-font-small-reduction;
+	line-height: $huge-statistic-line-height - $huge-statistic-font-small-reduction;
 	font-weight: $font-weight-bold;
 	letter-spacing: $huge-type-kerning - $huge-type-kerning-reduction;
 }
@@ -108,19 +112,20 @@ p {
 }
 
 h1 {
-	font-size: $headline-font-size - $headline-font-size-max-reduction;
-	line-height: $headline-line-height - $headline-line-height-reduction;
-	font-weight: $font-weight-bold;
+  font-size: $headline-font-size - $headline-font-size-max-reduction;
+  font-weight: $font-weight-bold;
 
-    h1.normal {
-      font-weight: $font-weight-normal;
-    }
+  h1.normal {
+    font-weight: $font-weight-normal;
+    line-height: $headline-line-height - $headline-line-height-reduction;
+    font-size: $headline-font-size - $headline-font-size-max-reduction;
+  }
 }
 
-h1.huge {
-	font-size: $huge-headline-font-size - $huge-headline-font-reduction;
-	line-height: $huge-headline-line-height - $huge-headline-font-reduction;
-	letter-spacing: $huge-type-kerning - $huge-type-kerning-reduction;
+.huge {
+  font-size: $huge-headline-font-size - $huge-headline-font-small-reduction;
+  line-height: $huge-headline-line-height - $huge-headline-font-small-reduction;
+  letter-spacing: $huge-type-kerning - $huge-type-kerning-reduction;
 }
 
 h2 {
@@ -149,33 +154,25 @@ small {
 
 
 @media #{$medium-up} {
-	.impact {
-		font-size: $impact-font-size - $impact-font-reduction;
-		line-height: $impact-line-height - $impact-font-reduction;
-		font-weight: $font-weight-bold;
-	}
-
-	h1 {
-		font-size: $headline-font-size;
-		line-height: $headline-line-height;
-	}
-
-    h1.normal {
-      font-weight: normal;
-
+    .huge {
+      font-size: $huge-headline-font-size;
+      line-height: $huge-headline-line-height;
+      letter-spacing: $huge-type-kerning;
     }
-
-	h1.huge {
-		font-size: $huge-headline-font-size;
-		line-height: $huge-headline-line-height;
-		letter-spacing: $huge-type-kerning;
-	}
 
 	.top-nav {
 		font-size: $top-nav-font-size;
 		line-height: $top-nav-line-height ;
 	}
 
+    .huge-statistic {
+      font-size: $huge-statistic-font-size - $huge-statistic-font-medium-reduction;
+    }
+
+    .featured {
+      font-size: $feature-font-size;
+      line-height: $feature-line-height;
+    }
 }
 
 @media #{$large-up} {
@@ -186,14 +183,9 @@ small {
     letter-spacing: $huge-type-kerning;
   }
 
-  .impact {
-    font-size: $impact-font-size;
-    line-height: $impact-line-height;
-    font-weight: $font-weight-bold;
-  }
-
-  h1 {
-    font-size: $headline-font-size - $headline-font-size-max-reduction;
+  h1.normal {
+    font-size: $headline-font-size;
+    line-height: $headline-line-height;
   }
 }
 
