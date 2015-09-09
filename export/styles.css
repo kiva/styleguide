@@ -7050,61 +7050,107 @@ small {
 .blabla {
   color: red; }
 
-svg.icon {
+.icon {
   fill: none;
   stroke: none; }
-  svg.icon.icon-checkmark, svg.icon.icon-magnify-glass, svg.icon.icon-nearme, svg.icon.icon-triangle, svg.icon.icon-globe, svg.icon.icon-handshake, svg.icon.icon-sort {
+  .icon.icon-checkmark, .icon.icon-magnify-glass, .icon.icon-nearme, .icon.icon-triangle, .icon.icon-globe, .icon.icon-handshake, .icon.icon-sort {
     fill: #333; }
-  svg.icon.icon-large-chevron, svg.icon.icon-large-chevron-mobile, svg.icon.icon-medium-chevron, svg.icon.icon-small-chevron, svg.icon.icon-small-chevron-mobile, svg.icon.icon-x, svg.icon.icon-filter {
+  .icon.icon-large-chevron, .icon.icon-large-chevron-mobile, .icon.icon-medium-chevron, .icon.icon-small-chevron, .icon.icon-small-chevron-mobile, .icon.icon-x, .icon.icon-filter {
     stroke: #333; }
-  svg.icon.icon-distribution {
+  .icon.icon-distribution {
     color: #333; }
-  svg.icon.icon-star, svg.icon.icon-half-star {
+  .icon.icon-star, .icon.icon-half-star {
     fill: #efefef;
     color: #333; }
-  svg.icon.icon-slideshow-dot {
+  .icon.icon-slideshow-dot {
     stroke: #FFFFFF;
     fill: #FFFFFF;
     fill-opacity: 0.3; }
-    svg.icon.icon-slideshow-dot.active {
+    .icon.icon-slideshow-dot.active {
       fill-opacity: 1; }
-  svg.icon.icon-facebook, svg.icon.icon-pinterest, svg.icon.icon-twitter, svg.icon.icon-youtube, svg.icon.icon-linkedIn {
+  .icon.icon-facebook, .icon.icon-pinterest, .icon.icon-twitter, .icon.icon-youtube, .icon.icon-linkedIn {
     color: #d8d8d8; }
-  svg.icon.icon-boundaries, svg.icon.icon-hand-up, svg.icon.icon-lifting, svg.icon.icon-recycle, svg.icon.icon-impact {
+  .icon.icon-boundaries, .icon.icon-hand-up, .icon.icon-lifting, .icon.icon-recycle, .icon.icon-impact {
     fill: #DBE3E5;
     color: #63a541; }
-  svg.icon.icon-choose, svg.icon.icon-lend, svg.icon.icon-repaid, svg.icon.icon-repeat {
+  .icon.icon-choose, .icon.icon-lend, .icon.icon-repaid, .icon.icon-repeat {
     fill: #63a541;
     color: #488443; }
-  svg.icon.icon-leaf, svg.icon.icon-leaves {
+  .icon.icon-leaf, .icon.icon-leaves {
     fill: #63a541; }
-  svg.icon.icon-match {
+  .icon.icon-match {
     fill: #FFFFFF;
     color: #488443; }
 
-.figure-scrollable-with-caption {
+.loan-figure {
   position: relative;
   margin: 0;
   padding: 0; }
-  .figure-scrollable-with-caption .scrollable-prev-arrow {
+  .loan-figure .loan-figure-carousel:nth-child(n+2) {
+    display: none; }
+  .loan-figure .carousel-nav {
+    position: absolute;
+    top: 50%;
+    width: 50px;
+    height: 100px;
+    margin-top: -50px;
+    transform: rotate(180deg); }
+  .loan-figure .carousel-prev-arrow {
     position: absolute;
     left: 0;
     top: 0; }
-  .figure-scrollable-with-caption .scrollable-next-arrow {
+  .loan-figure .icon-match {
+    height: 40px;
+    width: 40px;
+    padding: 3px;
+    vertical-align: middle; }
+  .loan-figure .matching-message {
+    background-color: rgba(200, 200, 200, 0.8);
+    height: 40px;
+    width: 100%;
+    padding-right: 40px;
     position: absolute;
-    right: 0;
-    top: 0; }
-  .figure-scrollable-with-caption .figure-veil {
-    outline: 1px solid red;
+    left: 0;
+    bottom: 0; }
+    .loan-figure .matching-message span {
+      line-height: 40px;
+      vertical-align: middle; }
+  .loan-figure .carousel-prev {
+    left: 0; }
+    .loan-figure .carousel-prev svg {
+      transform: rotate(270deg); }
+  .loan-figure .carousel-next {
+    right: 0; }
+    .loan-figure .carousel-next svg {
+      transform: rotate(90deg); }
+  .loan-figure .carousel-nav:hover {
+    background-color: rgba(200, 200, 200, 0.2);
+    cursor: pointer; }
+  .loan-figure .icon-small-chevron {
+    width: 50px;
+    margin-top: -75px;
+    position: absolute;
+    top: 50%; }
+  .loan-figure .icon-small-chevron:hover {
+    cursor: pointer; }
+  .loan-figure .favorite-link {
     position: absolute;
     bottom: 0;
-    height: 100px;
-    width: 100%; }
-  .figure-scrollable-with-caption figcaption {
-    height: 100%; }
-  .figure-scrollable-with-caption .star-icon {
-    float: right;
-    height: 100%; }
+    right: 0; }
+  .loan-figure .favorite-link.is-favorite .icon-star {
+    color: #488443;
+    opacity: .8; }
+  .loan-figure .favorite-link:hover .icon-star {
+    opacity: .7; }
+  .loan-figure .icon-star {
+    background-color: #000000;
+    color: #FFFFFF;
+    fill: none;
+    height: 40px;
+    width: 40px;
+    padding: 8px;
+    opacity: .6;
+    vertical-align: bottom; }
 
 * {
   margin: 0; }
@@ -7136,11 +7182,18 @@ svg {
   pointer-events: none; }
 
 .fundraising-meter {
+  background-color: #efefef;
+  position: relative;
   border: none;
-  height: 4px;
   padding: 0; }
   .fundraising-meter .meter {
-    background-color: #74b446; }
+    background-color: #63a541; }
+  .fundraising-meter .caption {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    text-align: center; }
 
 ul.dropdown-list {
   background-color: #f5f5f5;
@@ -8246,86 +8299,95 @@ ul.tertiary-nav {
 .loan-card {
   height: 100%;
   position: relative; }
-  .loan-card .amount-left {
-    font-size: 13px; }
-  .loan-card .sector {
-    font-size: 12px; }
   .loan-card .borrower-img-wrap {
     position: relative;
     display: block;
     width: 100%;
     padding-bottom: 62.5%; }
+    .loan-card .borrower-img-wrap .loan-message {
+      position: absolute;
+      right: 0;
+      top: 0;
+      padding: 0 0.25rem;
+      font-size: 0.7777777778rem;
+      line-height: 1.1111111111rem;
+      background-color: rgba(255, 255, 255, 0.5);
+      color: #333; }
+      .loan-card .borrower-img-wrap .loan-message.urgent {
+        color: #9C021A; }
   .loan-card .borrower-img {
     position: absolute;
     width: 100%; }
   .loan-card .matcher-text {
     background-color: rgba(255, 255, 255, 0.8);
-    font-size: 16px;
     position: absolute;
-    top: 0;
+    bottom: 0;
     left: 0; }
   .loan-card .borrower-details-wrap {
     padding: 0 0.5rem;
     border-left: 0.0555555556rem solid #d8d8d8;
     border-right: 0.0555555556rem solid #d8d8d8; }
+    .loan-card .borrower-details-wrap a, .loan-card .borrower-details-wrap a:visited, .loan-card .borrower-details-wrap a:hover, .loan-card .borrower-details-wrap a:active {
+      color: #333; }
+    .loan-card .borrower-details-wrap p {
+      margin-bottom: 0.25rem; }
+  .loan-card .country {
+    display: inline;
+    white-space: nowrap; }
+    .loan-card .country span.f16 {
+      margin-right: 0.25rem; }
   .loan-card .borrower-footer-wrap {
     width: 100%;
     overflow: hidden; }
     .loan-card .borrower-footer-wrap .fundraising-meter {
-      height: 2rem;
+      height: 1.5rem;
       width: 100%;
       margin: 0; }
-  .loan-card:hover .loan-card-buttons {
-    height: 4rem; }
+  .loan-card:hover .bottom-bar {
+    height: 3rem; }
 
-.no-touch .loan-card-buttons {
+.no-touch .bottom-bar {
   position: absolute;
   bottom: 0;
   height: 0;
   overflow: hidden; }
+  .no-touch .bottom-bar.no-hide {
+    height: 3rem; }
 
-.loan-card-buttons {
+.bottom-bar {
   width: 100%; }
-  .loan-card-buttons .button {
-    height: 4rem;
-    width: 50%;
+  .bottom-bar .button, .bottom-bar .message {
+    height: 3rem;
+    line-height: 3rem;
+    font-size: 1.1666666667rem;
+    font-weight: normal;
+    width: 100%;
     margin: 0;
-    padding-left: 0;
-    padding-right: 0;
+    padding: 0;
     float: left;
-    white-space: nowrap; }
-    .loan-card-buttons .button:first-child {
-      border-right: 0.0555555556rem solid #FFFFFF; }
-    .loan-card-buttons .button:hover, .loan-card-buttons .button:active, .loan-card-buttons .button:visited {
+    white-space: nowrap;
+    color: #FFFFFF; }
+    .bottom-bar .button:hover, .bottom-bar .button:active, .bottom-bar .button:visited, .bottom-bar .message:hover, .bottom-bar .message:active, .bottom-bar .message:visited {
       color: #FFFFFF; }
-
-.loan-card--listing-selected .borrower-img-wrap {
-  position: relative;
-  width: 100%;
-  height: 30%; }
-.loan-card--listing-selected .borrower-img {
-  width: 50%; }
-.loan-card--listing-selected .country-flag {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  margin-top: -14px;
-  margin-left: 3px; }
-.loan-card--listing-selected .amount-left {
-  position: absolute;
-  left: 50%;
-  bottom: 0;
-  margin-left: 3px; }
-.loan-card--listing-selected .borrower-details-wrap {
-  text-align: left; }
-.loan-card--listing-selected .borrower-name {
-  font-size: 13px; }
-.loan-card--listing-selected .matcher-text {
-  font-size: 12px;
-  position: static; }
+    .bottom-bar .button.half-width, .bottom-bar .message.half-width {
+      width: 50%; }
+      .bottom-bar .button.half-width:first-child, .bottom-bar .message.half-width:first-child {
+        border-right: 0.0555555556rem solid #FFFFFF; }
+    .bottom-bar .button .icon, .bottom-bar .message .icon {
+      fill: #FFFFFF;
+      width: 1rem;
+      height: 1.1rem;
+      margin-right: 0.5rem;
+      padding-top: 0.2222222222rem; }
+    .bottom-bar .button .loader, .bottom-bar .message .loader {
+      height: 1rem;
+      padding-right: 1rem; }
+  .bottom-bar .message {
+    background-color: #63a541;
+    text-align: center; }
 
 .siteFooter {
-  height: -4rem;
+  height: -5rem;
   background-color: #236133;
   color: #FFFFFF;
   font-size: 0.7777777778rem;
@@ -8333,7 +8395,7 @@ ul.tertiary-nav {
   padding: 2.2222222222rem; }
   @media only screen and (min-width:42.5625rem) {
     .siteFooter {
-      height: 4rem; } }
+      height: 3rem; } }
   .siteFooter a {
     color: #a9d14c;
     font-size: 0.7777777778rem;
@@ -8414,7 +8476,7 @@ ul.tertiary-nav {
   .siteFooter {
     padding: 2.2222222222rem 1rem; }
   .siteFooter-nav {
-    height: 1.7777777778rem;
+    height: 0.7777777778rem;
     position: relative;
     padding-bottom: 2.2222222222rem; }
     .siteFooter-nav > .column {
@@ -8470,41 +8532,103 @@ a.joinlink, a.joinlink:visited {
   background-color: #63a541;
   margin-bottom: 1.9444444444rem; }
 
+.what-makes-us-unique svg {
+  width: 6.6666666667rem; }
+
 .loan-section {
-  padding: 10px; }
-  .loan-section .borrower-names {
+  padding: 1rem; }
+  .loan-section .black-underlined {
+    text-decoration: underline;
+    color: #333; }
+  .loan-section .icon {
+    float: right;
+    height: 1rem;
+    width: 1.3888888889rem;
+    fill: none;
+    stroke: #333;
+    -webkit-transition: -webkit-transform 300ms ease;
+    transition: transform 300ms ease; }
+  .loan-section [aria-expanded="true"] .icon {
+    -webkit-transform: rotate(-180deg);
+    -ms-transform: rotate(-180deg);
+    transform: rotate(-180deg); }
+  .loan-section .accordion.animated {
+    margin: 0; }
+  .loan-section .accordion.animated .accordion-navigation > a {
+    position: relative;
+    z-index: 10;
+    background-color: transparent;
+    padding: 0;
+    min-height: 1rem;
+    font-size: 1rem; }
+  .loan-section .accordion.animated .accordion-navigation > .content {
+    display: block;
+    overflow: hidden;
+    height: 0;
+    transition: all .5s ease;
+    background-color: transparent;
+    padding: 0; }
+    .loan-section .accordion.animated .accordion-navigation > .content.active {
+      height: auto;
+      padding: 0.9375rem 0; }
+  .loan-section .loan-story .borrower-names {
     display: inline;
     margin: 0;
     padding: 0; }
-  .loan-section .borrower-names > li {
+  .loan-section .loan-story .borrower-names > li {
     display: inline;
     list-style: none;
     margin: 0;
     padding: 0; }
-  .loan-section .borrower-names > li:after {
+  .loan-section .loan-story .borrower-names > li:after {
     content: ","; }
-  .loan-section .borrower-names > li:last-child:after {
+  .loan-section .loan-story .borrower-names > li:last-child:after {
     content: ""; }
-  .loan-section .accordion {
-    margin-left: 0; }
-  .loan-section .accordion .accordion-navigation > a {
-    font-size: 1rem;
-    background: none;
-    padding: 0; }
-  .loan-section .accordion .accordion-navigation > .content {
-    background: none;
-    padding-left: 0 !important; }
-  .loan-section .accordion .accordion-navigation .content {
-    display: block;
-    max-height: 0;
-    overflow-y: auto;
-    padding: 0 0.8888888889rem;
-    transition: ease 0.4s all; }
-    .loan-section .accordion .accordion-navigation .content.active {
-      max-height: 80vh;
-      padding: 0.8888888889rem;
-      transition: ease 0.4s all;
-      transition-delay: 0.2s; }
+
+.is-special .kivan {
+  position: relative; }
+  .is-special .kivan .profile-photo {
+    padding-top: 1rem;
+    text-align: center; }
+    @media only screen and (min-width:30.0625rem) {
+      .is-special .kivan .profile-photo {
+        float: left;
+        width: 4rem; } }
+    .is-special .kivan .profile-photo img {
+      background-repeat: no-repeat;
+      border-radius: 50%;
+      width: 100px; }
+  .is-special .kivan .show-for-medium-up {
+    padding-top: 1rem;
+    padding-left: 5rem;
+    top: 0.5rem;
+    position: absolute; }
+    .is-special .kivan .show-for-medium-up p {
+      line-height: 0.3rem; }
+  .is-special .kivan .show-for-small-only {
+    text-align: center;
+    margin: 0 auto; }
+.is-special .green-bolded {
+  font-size: 2.5rem;
+  font-weight: bold;
+  line-height: 2.5rem;
+  color: #63a541;
+  text-align: left;
+  max-width: 75%; }
+  @media only screen and (max-width: 30rem) {
+    .is-special .green-bolded {
+      text-align: center;
+      max-width: 85%;
+      margin: 0 auto; } }
+
+.more-loan-info {
+  text-align: center;
+  max-width: 60%;
+  margin: 0 auto; }
+  @media only screen and (max-width: 30rem) {
+    .more-loan-info {
+      text-align: left;
+      max-width: 100%; } }
 
 a.modal-link {
   color: black;

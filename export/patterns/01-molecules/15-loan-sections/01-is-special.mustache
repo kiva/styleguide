@@ -1,0 +1,32 @@
+<div class="is-special">
+    <p class="featured">
+        This loan is special because:
+    </p>
+
+    <h2 class="green-bolded">
+        {{specialBody}}
+    </h2>
+
+    {{#kivan}}
+        <div class="kivan">
+            <div class="profile-photo">
+                <img src="{{profilePhotoHref}}">
+            </div>
+            <div class="show-for-small-only">
+                <p>
+                    {{name}}, {{title}}
+                </p>
+            </div>
+            <div class="show-for-medium-up">
+
+                <p>
+                    {{name}}
+                </p>
+
+                <p>
+                    {{title}}
+                </p>
+            </div>
+        </div>
+    {{/kivan}}
+</div>
