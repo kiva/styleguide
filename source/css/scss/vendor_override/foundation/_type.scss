@@ -36,7 +36,8 @@ $feature-font-small-reduction   : $section-head-font-size - (rem-calc(14));
 $headline-font-size				: rem-calc(56);
 $headline-line-height			: rem-calc(64);
 $headline-font-size-reduction	: rem-calc(10);
-$headline-font-size-max-reduction	: rem-calc(26);
+$headline-font-size-small-reduction	: rem-calc(26);
+$headline-font-size-extra-small-reduction	: rem-calc(31);
 $headline-line-height-reduction	: rem-calc(32);
 
 
@@ -56,8 +57,11 @@ $statistic-line-height			: rem-calc(56);
 
 $huge-statistic-font-size		: rem-calc(144);
 $huge-statistic-line-height		: rem-calc(156);
+$huge-statistic-font-large-reduction: rem-calc(14);
 $huge-statistic-font-medium-reduction: rem-calc(36);
+$huge-statistic-font-extra-medium-reduction: rem-calc(54);
 $huge-statistic-font-small-reduction	: rem-calc(72);
+$huge-statistic-font-extra-small-reduction	: rem-calc(79);
 
 $huge-type-kerning				: -0.4rem;
 $huge-type-kerning-reduction	: -0.3rem;
@@ -112,15 +116,14 @@ p {
 }
 
 h1 {
-  font-size: $headline-font-size - $headline-font-size-max-reduction;
+  font-size: $headline-font-size - $headline-font-size-small-reduction;
   font-weight: $font-weight-bold;
-
+}
   h1.normal {
     font-weight: $font-weight-normal;
     line-height: $headline-line-height - $headline-line-height-reduction;
-    font-size: $headline-font-size - $headline-font-size-max-reduction;
+    font-size: $headline-font-size - $headline-font-size-small-reduction;
   }
-}
 
 .huge {
   font-size: $huge-headline-font-size - $huge-headline-font-small-reduction;
@@ -186,6 +189,28 @@ small {
   h1.normal {
     font-size: $headline-font-size;
     line-height: $headline-line-height;
+  }
+}
+//These media queries are handling additional font size reductions based on screen sizes, these are needed so text is always
+//on the screen.
+@media (min-width: mq-rem-calc(320)) and (max-width: mq-rem-calc(360)) {
+  h1.normal {
+    font-size: $headline-font-size - $headline-font-size-extra-small-reduction;
+  }
+  .huge-statistic {
+    font-size: $huge-statistic-font-size - $huge-statistic-font-extra-small-reduction;
+  }
+}
+
+@media (min-width: mq-rem-calc(481)) and (max-width: mq-rem-calc(535)) {
+  .huge-statistic {
+    font-size: $huge-statistic-font-size - $huge-statistic-font-extra-medium-reduction;
+  }
+}
+
+@media (min-width: mq-rem-calc(681)) and (max-width: mq-rem-calc(760)) {
+  .huge-statistic {
+    font-size: $huge-statistic-font-size - $huge-statistic-font-large-reduction;
   }
 }
 
