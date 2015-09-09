@@ -31,7 +31,8 @@
         </div>
     </div>
 
-    <div class="row row3">
+{{! This section is inserted when user has a small and medium 320px-680 screen size and hidden when in a screen larger than 680px }}
+    <div id="row3Small-MediumView" class="row row3 hide-for-large-up">
 		<div class="small-12 large-12 columns">
 			<div class="row3TextContainer text-center">
 				<div class="featured white">"I've been lending to seamstressess for 7 years. After 168 loans, it's
@@ -41,6 +42,26 @@
 			</div>
 		</div>
 	</div>
+
+{{! This section is inserted when user has a screen size larger than 680px and is removed when in a small and medium 320px-680 screen size.}}
+    <div id="row3LargeView" class="row row3a hide-for-small-only hide-for-medium-only">
+        <div class="small-6 large-6 columns">
+            <div class="row3TextContainer">
+                <div class="featured white"></div>
+                <div class="featured kiva-green"></div>
+            </div>
+        </div>
+        <div class="small-6 large-6 columns">
+            <div class="row3TextContainer text-left">
+                <div class="featured white">"I've been lending to seamstressess for 7 years. After 168 loans, it's
+                    still exciting to send $25 to my sewing 'sisters' and know we're connected not just by thread, but hearts
+                    and minds, too."</div>
+                <div class="featured kiva-green">Jo Ann, Kiva lender</div>
+            </div>
+        </div>
+    </div>
+
+
 
 	<div class="row row4">
 		<div class="small-6 large-6 columns">
@@ -69,7 +90,9 @@
         </div>
     </div>
 
-    <div class="row row6">
+{{! This section is inserted when user has a small and medium 320px-680 screen size and hidden when in a screen larger than 680px }}
+<div class="hide-for-large-up">
+    <div id="row6Small-MediumView" class="row row6">
         <div class="small-12 large-12 columns">
             <div class="row6StatContainer text-right">
                 <div class="huge-statistic white">1,200</div>
@@ -77,7 +100,6 @@
             </div>
         </div>
     </div>
-
     <div class="row row7">
         <div class="small-6 large-6 columns">
             <div class="row7StatContainer text-center">
@@ -93,5 +115,29 @@
             </div>
         </div>
     </div>
+</div>
+
+{{! This section is inserted when user has a screen size larger than 680px and is removed when in a small and medium 320px-680 screen size.}}
+<div class="hide-for-small-only hide-for-medium-only">
+	<div id="row6LargeView" class="row row6a">
+        <div class="small-6 large-6 columns">
+            <div class="row6aTextContainer text-right">
+                <div class="featured white">"I joined Kiva because I wanted to work side-by-side with people who
+                    want to make a difference in the world."</div>
+                <div class="featured kiva-green">Kelly, Kiva employee</div>
+            </div>
+        </div>
+        <div class="small-6 large-6 columns text-center">
+            <div class="row6aStatContainer">
+                <div class="huge-statistic white">1,200</div>
+                <div class="featured kiva-green">Field partners and trustees</div>
+            </div>
+            <div class="row6aStatContainer2">
+                <div class="huge-statistic white">110</div>
+                <div class="featured kiva-green">Employees</div>
+            </div>
+        </div>
+    </div>
+</div>
 </div>
 
