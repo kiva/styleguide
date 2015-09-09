@@ -1,10 +1,18 @@
+.green-bolded {
+  font-size: 2.5rem;
+  font-weight: bold;
+  line-height: 2.5rem;
+  color: $kiva-green;
+}
+
+.black-underlined {
+  text-decoration: underline;
+  color: #333;
+}
+
 .loan-section {
   padding: 1rem;
 
-  .black-underlined {
-    text-decoration: underline;
-    color: #333;
-  }
   .icon {
     float: right;
     height: 1rem;
@@ -110,10 +118,6 @@
     }
   }
   .green-bolded {
-    font-size: 2.5rem;
-    font-weight: bold;
-    line-height: 2.5rem;
-    color: $kiva-green;
     text-align: left;
     max-width: 75%;
     @media #{$small-only} {
@@ -134,3 +138,16 @@
   }
 }
 
+.pfp-meter {
+  .lender-count {
+    h2, div {
+      display: inline-block;
+    }
+  }
+  .amount-raised {
+    .fundraising-meter {
+      height: .7rem;
+    }
+  }
+
+}
