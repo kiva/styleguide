@@ -138,16 +138,44 @@
   }
 }
 
-.pfp-meter {
-  .lender-count {
-    h2, div {
-      display: inline-block;
-    }
+.lender-count {
+  h2, div {
+    display: inline-block;
   }
+}
+
+.pfp-meter {
   .amount-raised {
     .fundraising-meter {
       height: .7rem;
     }
   }
+}
 
+.current-status-meter {
+  .lender-count {
+    @media #{$small-only}{
+      div {
+        font-size: $small-font-size;
+      }
+    }
+  }
+
+  .raised-info {
+    div {
+      padding: 0;
+    }
+    @media #{$small-only}{
+      div {
+        font-size: $small-font-size;
+        display: inline-block;
+        &.loan-total {
+          text-align: left;
+        }
+        &.black-underlined {
+          text-align: right;
+        }
+      }
+    }
+  }
 }
