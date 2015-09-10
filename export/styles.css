@@ -6331,8 +6331,7 @@ button, a.button, .button {
   line-height: 1.1111111111rem; }
 
 .featured {
-  font-size: 1.5555555556rem;
-  line-height: 2rem; }
+  line-height: 1.3888888889rem; }
 
 .overlay {
   font-size: 1.5555555556rem;
@@ -6341,8 +6340,8 @@ button, a.button, .button {
   text-shadow: 1px 2px 3px #666; }
 
 .impact {
-  font-size: 3rem;
-  line-height: 3.4444444444rem;
+  font-size: 2rem;
+  line-height: 2.4444444444rem;
   font-weight: bold; }
 
 .statistic {
@@ -6360,13 +6359,17 @@ p {
   line-height: 1.3333333333rem; }
 
 h1 {
-  font-size: 2.5555555556rem;
-  line-height: 3rem;
+  font-size: 1.6666666667rem;
   font-weight: bold; }
 
-h1.huge {
-  font-size: 3.3333333333rem;
-  line-height: 3.3333333333rem;
+h1.normal {
+  font-weight: normal;
+  line-height: 1.7777777778rem;
+  font-size: 1.6666666667rem; }
+
+.huge {
+  font-size: 3rem;
+  line-height: 3rem;
   letter-spacing: -0.1rem; }
 
 h2 {
@@ -6389,25 +6392,42 @@ small {
   line-height: 1.1111111111rem; }
 
 @media only screen and (min-width:30.0625rem) {
-  .impact {
-    font-size: 4rem;
-    line-height: 4.4444444444rem;
-    font-weight: bold; }
-  h1 {
-    font-size: 3.1111111111rem;
-    line-height: 3.5555555556rem; }
-  h1.huge {
+  .huge {
     font-size: 6rem;
     line-height: 6rem;
     letter-spacing: -0.4rem; }
+  .top-nav {
+    font-size: 1.1666666667rem;
+    line-height: 1.1666666667rem; }
+  .huge-statistic {
+    font-size: 6rem; }
+  .featured {
+    font-size: 1.5555555556rem;
+    line-height: 2rem; } }
+
+@media only screen and (min-width:42.5625rem) {
   .huge-statistic {
     font-size: 8rem;
     line-height: 8.6666666667rem;
     font-weight: bold;
     letter-spacing: -0.4rem; }
-  .top-nav {
-    font-size: 1.1666666667rem;
-    line-height: 1.1666666667rem; } }
+  h1.normal {
+    font-size: 3.1111111111rem;
+    line-height: 3.5555555556rem; } }
+
+@media (min-width: 20rem) and (max-width: 22.5rem) {
+  h1.normal {
+    font-size: 1.3888888889rem; }
+  .huge-statistic {
+    font-size: 3.6111111111rem; } }
+
+@media (min-width: 30.0625rem) and (max-width: 33.4375rem) {
+  .huge-statistic {
+    font-size: 5rem; } }
+
+@media (min-width: 42.5625rem) and (max-width: 47.5rem) {
+  .huge-statistic {
+    font-size: 7.2222222222rem; } }
 
 /**
  * This file was auto-generated in order to merge all vendor css in one scss file.
@@ -7188,6 +7208,8 @@ svg {
   padding: 0; }
   .fundraising-meter .meter {
     background-color: #63a541; }
+  .fundraising-meter.repaying .meter {
+    background-color: #999; }
   .fundraising-meter .caption {
     position: absolute;
     top: 0;
@@ -8353,9 +8375,22 @@ ul.tertiary-nav {
   overflow: hidden; }
   .no-touch .bottom-bar.no-hide {
     height: 3rem; }
+  .no-touch .bottom-bar.show-short {
+    height: 1.5rem; }
+    .no-touch .bottom-bar.show-short .button, .no-touch .bottom-bar.show-short .message {
+      height: 1.5rem;
+      line-height: 1.5rem;
+      font-size: 0.7777777778rem; }
+      .no-touch .bottom-bar.show-short .button .icon, .no-touch .bottom-bar.show-short .message .icon {
+        height: 1.5rem;
+        width: 0.7777777778rem; }
+      .no-touch .bottom-bar.show-short .button span, .no-touch .bottom-bar.show-short .message span {
+        padding-left: 1.25rem; }
 
 .bottom-bar {
-  width: 100%; }
+  width: 100%;
+  -webkit-transition: height 200ms ease-out;
+  transition: height 200ms ease-out; }
   .bottom-bar .button, .bottom-bar .message {
     height: 3rem;
     line-height: 3rem;
@@ -8367,7 +8402,7 @@ ul.tertiary-nav {
     float: left;
     white-space: nowrap;
     color: #FFFFFF; }
-    .bottom-bar .button:hover, .bottom-bar .button:active, .bottom-bar .button:visited, .bottom-bar .message:hover, .bottom-bar .message:active, .bottom-bar .message:visited {
+    .bottom-bar .button:hover, .bottom-bar .button:active, .bottom-bar .button:visited, .bottom-bar .button:focus, .bottom-bar .message:hover, .bottom-bar .message:active, .bottom-bar .message:visited, .bottom-bar .message:focus {
       color: #FFFFFF; }
     .bottom-bar .button.half-width, .bottom-bar .message.half-width {
       width: 50%; }
@@ -8376,14 +8411,17 @@ ul.tertiary-nav {
     .bottom-bar .button .icon, .bottom-bar .message .icon {
       fill: #FFFFFF;
       width: 1rem;
-      height: 1.1rem;
-      margin-right: 0.5rem;
-      padding-top: 0.2222222222rem; }
+      height: 3rem;
+      position: absolute; }
+    .bottom-bar .button span, .bottom-bar .message span {
+      padding-left: 1.5rem; }
     .bottom-bar .button .loader, .bottom-bar .message .loader {
       height: 1rem;
       padding-right: 1rem; }
+  .bottom-bar .button.success, .bottom-bar .button.success:hover, .bottom-bar .button.success:active, .bottom-bar .button.success:visited, .bottom-bar .button.success:focus {
+    background-color: #49953f; }
   .bottom-bar .message {
-    background-color: #63a541;
+    background-color: #49953f;
     text-align: center; }
 
 .siteFooter {
@@ -8515,10 +8553,10 @@ ul.tertiary-nav {
 a.joinlink, a.joinlink:visited {
   color: #a9d14c; }
 
-.joinSection {
-  text-align: center;
+.aboutSeeMoreContainer {
+  overflow: auto;
   background-color: #236133;
-  padding: 1.1111111111rem 1.9444444444rem 1.1111111111rem 1.9444444444rem; }
+  padding: 0.5555555556rem 0.5555555556rem 0.5555555556rem 0.5555555556rem; }
 
 .joinText {
   line-height: 3.6111111111rem; }
@@ -8535,11 +8573,105 @@ a.joinlink, a.joinlink:visited {
 .what-makes-us-unique svg {
   width: 6.6666666667rem; }
 
+.row {
+  padding: 0 0.2777777778rem 0 0.2777777778rem; }
+
+.row1 {
+  display: inline-block; }
+
+.row1TextContainer {
+  margin-top: 5rem;
+  padding-left: 1.1111111111rem; }
+  @media only screen and (min-width:42.5625rem) {
+    .row1TextContainer {
+      margin-top: 8.8888888889rem; } }
+
+.row1StatContainer {
+  padding-right: 1.1111111111rem; }
+  @media only screen and (min-width:42.5625rem) {
+    .row1StatContainer {
+      padding-right: 8.3333333333rem; } }
+
+.row2 {
+  display: inline-block; }
+
+.row2TextContainer {
+  margin-top: 1.1111111111rem; }
+
+.row2StatContainer {
+  padding-top: 24.9444444444rem; }
+  @media only screen and (min-width:30.0625rem) {
+    .row2StatContainer {
+      padding-top: 13.3333333333rem;
+      padding-left: 1.3888888889rem; } }
+  @media only screen and (min-width:42.5625rem) {
+    .row2StatContainer {
+      padding-top: 24.9444444444rem;
+      padding-left: 2.7777777778rem; } }
+
+.row3 {
+  display: inline-block; }
+
+.row3TextContainer {
+  padding-top: 3.3333333333rem; }
+
+.row4 {
+  display: inline-block;
+  padding-top: 3.3333333333rem; }
+
+@media only screen and (min-width:42.5625rem) {
+  .row4StatsContainer {
+    text-align: center; } }
+
+.row5 {
+  display: inline-block; }
+
+.row5TextContainer {
+  padding-top: 28.8888888889rem; }
+  @media only screen and (min-width:30.0625rem) {
+    .row5TextContainer {
+      padding-top: 16.6666666667rem; } }
+
+.row5TextContainer2 {
+  margin-top: -4.1666666667rem; }
+
+.row6 {
+  display: inline-block; }
+
+.row6StatContainer {
+  padding-top: 1.6666666667rem; }
+  @media large-up {
+    .row6StatContainer {
+      text-align: center; } }
+
+#row6LargeView {
+  padding-top: 6.1111111111rem; }
+
+.row6aTextContainer {
+  padding-top: 6.6666666667rem; }
+
+.row6aStatContainer2 {
+  padding-top: 1.9444444444rem; }
+
+.row7 {
+  display: inline-block;
+  padding-top: 2.7777777778rem; }
+
+.row7TextContainer {
+  padding-top: 0.6666666667rem; }
+
+.green-bolded {
+  font-size: 2.5rem;
+  font-weight: bold;
+  line-height: 2.5rem;
+  color: #63a541; }
+
+.black-underlined {
+  text-decoration: underline;
+  color: #333; }
+
 .loan-section {
   padding: 1rem; }
-  .loan-section .black-underlined {
-    text-decoration: underline;
-    color: #333; }
   .loan-section .icon {
     float: right;
     height: 1rem;
@@ -8609,10 +8741,6 @@ a.joinlink, a.joinlink:visited {
     text-align: center;
     margin: 0 auto; }
 .is-special .green-bolded {
-  font-size: 2.5rem;
-  font-weight: bold;
-  line-height: 2.5rem;
-  color: #63a541;
   text-align: left;
   max-width: 75%; }
   @media only screen and (max-width: 30rem) {
@@ -8629,6 +8757,11 @@ a.joinlink, a.joinlink:visited {
     .more-loan-info {
       text-align: left;
       max-width: 100%; } }
+
+.pfp-meter .lender-count h2, .pfp-meter .lender-count div {
+  display: inline-block; }
+.pfp-meter .amount-raised .fundraising-meter {
+  height: .7rem; }
 
 a.modal-link {
   color: black;

@@ -1,6 +1,22 @@
 {
 	"loans": [
 		{
+			"title": "Cynthia"
+			, "description": "A loan of $575 helps Sau to buy a chainsaw, banana tubes (seedlings), taro roots (seedlings), a wheelbarrow, a water tank, gloves, a rake, a shovel, and chemicals."
+			, "country" : {
+				"name": "Honduras"
+				, "code": "hn"
+				}
+			, "progress": {
+				"percent": 42
+				, "message": "$1,800 to go"
+				}
+			, "is_regular": true
+			, "is_lent_to": false
+			, "is_adding": false
+			, "is_in_basket": false
+		}
+		, {
 			"title": "Senia Del Carmen"
 			, "description": "A portion of Tuzamurane Group's $6,800 loan helps a member to buy more sorghum for sale."
 			, "country" : {
@@ -16,25 +32,7 @@
 			, "is_adding": false
 			, "is_in_basket": false
 			, "expiring_soon": true
-		}
-		, {
-			"title": "Mirian Yamileh"
-			, "description": "A portion of Sareoun's Group's $225 loan helps a member to buy a water filter to provide safe drinking water for their family."
-			, "country" : {
-				"name": "American Samoa"
-				, "code": "as"
-			}
-			, "progress": {
-					"percent": 42
-				, "message": "$1,800 to go"
-				}
-			, "is_regular": false
-			, "is_lent_to": true
-			, "is_adding": false
-			, "is_in_basket": false
-			, "expiring_soon": true
-			, "show_loan_length": true
-			, "loan_length": "12 months"
+			, "expiring_message": "Only 1 day left!"
 		}
 		, {
 			"title": "Emprendedoras Group"
@@ -44,7 +42,7 @@
 				, "code": "ba"
 			}
 			, "progress": {
-					"percent": 42
+				"percent": 42
 				, "message": "$1,800 to go"
 				}
 			, "is_regular": false
@@ -60,13 +58,32 @@
 				, "code": "za"
 			}
 			, "progress": {
-					"percent": 42
+				"percent": 42
 				, "message": "$1,800 to go"
 				}
 			, "is_regular": false
 			, "is_lent_to": false
 			, "is_adding": false
 			, "is_in_basket": true
+		}
+		, {
+			"title": "Mirian Yamileh"
+			, "description": "A portion of Sareoun's Group's $225 loan helps a member to buy a water filter to provide safe drinking water for their family."
+			, "country" : {
+				"name": "American Samoa"
+				, "code": "as"
+				}
+			, "progress": {
+				"percent": 42
+				, "message": "$1,800 to go"
+				}
+			, "is_regular": false
+			, "is_lent_to": true
+			, "is_adding": false
+			, "is_in_basket": false
+			, "expiring_soon": true
+			, "show_loan_length": true
+			, "loan_length": "12 months"
 		}
 		, {
 			"title": "Estebana Sofia"
@@ -76,24 +93,9 @@
 				, "code": "bi"
 			}
 			, "progress": {
-					"percent": 42
-				, "message": "$1,800 to go"
-				}
-			, "is_regular": true
-			, "is_lent_to": false
-			, "is_adding": false
-			, "is_in_basket": false
-		}
-		, {
-			"title": "Cynthia"
-			, "description": "A loan of $575 helps Sau to buy a chainsaw, banana tubes (seedlings), taro roots (seedlings), a wheelbarrow, a water tank, gloves, a rake, a shovel, and chemicals."
-			, "country" : {
-				"name": "Honduras"
-				, "code": "hn"
-			}
-			, "progress": {
-					"percent": 42
-				, "message": "$1,800 to go"
+				"percent": 68
+				, "message": "68% repaid"
+				, "repaying": true
 				}
 			, "is_regular": true
 			, "is_lent_to": false
@@ -108,7 +110,7 @@
 				, "code": "al"
 			}
 			, "progress": {
-					"percent": 42
+				"percent": 42
 				, "message": "$1,800 to go"
 				}
 			, "is_regular": true
@@ -124,7 +126,7 @@
 				, "code": "np"
 			}
 			, "progress": {
-					"percent": 42
+				"percent": 42
 				, "message": "$1,800 to go"
 				}
 			, "is_regular": true
@@ -140,7 +142,7 @@
 				, "code": "jo"
 			}
 			, "progress": {
-					"percent": 42
+				"percent": 42
 				, "message": "$1,800 to go"
 				}
 			, "is_regular": true
@@ -156,7 +158,7 @@
 				, "code": "so"
 			}
 			, "progress": {
-					"percent": 42
+				"percent": 42
 				, "message": "$1,800 to go"
 				}
 			, "is_regular": true
@@ -172,7 +174,7 @@
 				, "code": "md"
 			}
 			, "progress": {
-					"percent": 42
+				"percent": 42
 				, "message": "$1,800 to go"
 				}
 			, "is_regular": true
@@ -188,7 +190,7 @@
 				, "code": "ye"
 			}
 			, "progress": {
-					"percent": 42
+				"percent": 42
 				, "message": "$1,800 to go"
 				}
 			, "is_regular": true

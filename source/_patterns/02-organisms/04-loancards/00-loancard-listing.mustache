@@ -26,49 +26,51 @@
             <span class="caption">{{progress.message}}</span>
         </div>
 
-        {{#is_regular}}
-            <div class="bottom-bar">
-                <a class="half-width button" href="#">Lend $25</a>
-                <a class="half-width button" href="#">Read More</a>
-            </div>
-        {{/is_regular}}
-        {{#is_lent_to}}
-            <div class="bottom-bar show-short">
-                <a class="success button" href="#">
-                    <svg class="icon">
-                        <use xlink:href="#icon-checkmark" />
-                    </svg>
-                    <span>You've lent to this loan</span>
-                </a>
-            </div>
-            <div class="bottom-bar hide-for-touch">
-                <a class="button" href="#">Lend Again</a>
-            </div>
-        {{/is_lent_to}}
-        {{#is_adding}}
-            <div class="bottom-bar no-hide">
-                <div class="message">
-                    <img class="loader" src="{{img.loan-card-loader.src}}">Adding to basket
+        {{^progress.repaying}}
+            {{#is_regular}}
+                <div class="bottom-bar">
+                    <a class="half-width button" href="#">Lend $25</a>
+                    <a class="half-width button" href="#">Read More</a>
                 </div>
-            </div>
-        {{/is_adding}}
-        {{#is_in_basket}}
-            <div class="bottom-bar show-short">
-                <a class="success button" href="#">
-                    <svg class="icon">
-                        <use xlink:href="#icon-checkmark" />
-                    </svg>
-                    <span>$25 in basket</span>
-                </a>
-            </div>
-            <div class="bottom-bar hide-for-touch">
-                <a class="success button" href="#">
-                    <svg class="icon">
-                        <use xlink:href="#icon-checkmark" />
-                    </svg>
-                    <span>Proceed to checkout</span>
-                </a>
-            </div>
-        {{/is_in_basket}}
+            {{/is_regular}}
+            {{#is_lent_to}}
+                <div class="bottom-bar show-short">
+                    <a class="success button" href="#">
+                        <svg class="icon">
+                            <use xlink:href="#icon-checkmark" />
+                        </svg>
+                        <span>You've lent to this loan</span>
+                    </a>
+                </div>
+                <div class="bottom-bar hide-for-touch">
+                    <a class="button" href="#">Lend Again</a>
+                </div>
+            {{/is_lent_to}}
+            {{#is_adding}}
+                <div class="bottom-bar no-hide">
+                    <div class="message">
+                        <img class="loader" src="{{img.loan-card-loader.src}}">Adding to basket
+                    </div>
+                </div>
+            {{/is_adding}}
+            {{#is_in_basket}}
+                <div class="bottom-bar show-short">
+                    <a class="success button" href="#">
+                        <svg class="icon">
+                            <use xlink:href="#icon-checkmark" />
+                        </svg>
+                        <span>$25 in basket</span>
+                    </a>
+                </div>
+                <div class="bottom-bar hide-for-touch">
+                    <a class="success button" href="#">
+                        <svg class="icon">
+                            <use xlink:href="#icon-checkmark" />
+                        </svg>
+                        <span>Proceed to checkout</span>
+                    </a>
+                </div>
+            {{/is_in_basket}}
+        {{/progress.repaying}}
     </div>
 </div>
