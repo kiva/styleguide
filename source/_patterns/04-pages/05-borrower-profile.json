@@ -1,0 +1,20 @@
+{
+  "figures": [
+    {
+      "url": "http://www.kiva.org/img/w800/1970076.jpg",
+      "alt": "one"
+    },
+    {
+      "url": "http://www.kiva.org/img/w800/1969963.jpg",
+      "alt": "two"
+    }
+  ],
+  "is_match": true,
+  "lenderCount": 7,
+  "lenderCountNeeded": 25,
+  "lenderCountPercent": 28,
+  "daysLeft": 12,
+  "amountRaised": 175,
+  "amountNeeded": 1300,
+  "amountRaisedPercent": 14
+}
