@@ -27,8 +27,16 @@ var comments = {
 	},
 	{
 		"el": ".block-hero",
-		"title" : "Hero",
+		"title": "Hero",
 		"comment": "<p>The hero area highlights one major story using a large image and a captivating headline.</p>"
-	}
-]
+	},
+	{
+		"el": "img.full-width-image",
+		"title" : "Full Width Image",
+		"comment": "<p>"
+		+ "Provide 10 image asset files for a full-width image, with widths of"
+		+ "480px, 680px, 1024px, 1440px and 1920px for standard resolution and "
+		+ "960px, 1360px, 2048px, 2880px and 3840px for retina resolution."
+		+ "</p>"
+	}]
 };
