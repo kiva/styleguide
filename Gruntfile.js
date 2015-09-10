@@ -133,6 +133,24 @@ module.exports = function(grunt) {
 		}
 
 
+		, svgmin: {
+			options: {
+				plugins: [
+					{ removeViewBox: false }
+					,{ removeEmptyAttrs: false }
+				]
+			}
+			, compile: {
+				files: [{
+					expand: true
+					, cwd: 'source/images/icons'
+					, src: ['*.svg']
+					, dest: 'source/images/icons.min'
+				}]
+			}
+		}
+
+
 		, svgstore: {
 			options: {
 				prefix: 'icon-'
@@ -147,13 +165,13 @@ module.exports = function(grunt) {
 
 			, compile: {
 				files: {
-					'public/images/icons.svg': ['source/images/icons/*.svg']
+					'public/images/icons.svg': ['source/images/icons.min/*.svg']
 				}
 			}
 
 			, export: {
 				files: {
-					'export/images/icons.svg': ['source/images/icons/*.svg']
+					'export/images/icons.svg': ['source/images/icons.min/*.svg']
 				}
 			}
 		}
@@ -298,13 +316,14 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-githooks');
 	grunt.loadNpmTasks('grunt-sass');
 	grunt.loadNpmTasks('grunt-shell');
+	grunt.loadNpmTasks('grunt-svgmin');
 	grunt.loadNpmTasks('grunt-svgstore');
 	grunt.loadNpmTasks('grunt-release');
 	grunt.loadNpmTasks('grunt-webpack');
 	// @todo add livereload?
 
 	grunt.registerTask('init', ['copy:init', 'githooks']);
-	grunt.registerTask('compile', ['concat:vendorCss', 'sass:compile', 'shell:compile', 'svgstore:compile', 'copy:js', 'webpack:compile']);
+	grunt.registerTask('compile', ['concat:vendorCss', 'sass:compile', 'shell:compile', 'svgmin:compile', 'svgstore:compile', 'copy:js', 'webpack:compile']);
 	grunt.registerTask('export', ['clean:export', 'sass:export', 'svgstore:export', 'webpack:bundle', 'webpack:ugly_bundle', 'webpack:module', 'copy:export', 'gitadd:export']);
 	grunt.registerTask('default', 'compile');
     grunt.registerTask('test', ['jshint']);
