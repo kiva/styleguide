@@ -81,7 +81,7 @@
 /* 2 */
 /***/ function(module, exports) {
 
-	module.exports = jquery;
+	module.exports = jQuery;
 
 /***/ },
 /* 3 */
