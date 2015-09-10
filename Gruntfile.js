@@ -208,8 +208,8 @@ module.exports = function(grunt) {
 			options: {
 				context: 'source/js'
 				, externals: {
-					jQuery: 'jquery'
-					, jquery: 'jquery'
+					jquery: 'jQuery'
+					, jQuery: 'jQuery'
 				}
 				, resolve: {
 					root: 'bower_components'
