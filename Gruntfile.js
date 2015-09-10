@@ -140,7 +140,7 @@ module.exports = function(grunt) {
 					,{ removeEmptyAttrs: false }
 				]
 			}
-			, compile: {
+			, minify: {
 				files: [{
 					expand: true
 					, cwd: 'source/images/icons'
@@ -323,8 +323,8 @@ module.exports = function(grunt) {
 	// @todo add livereload?
 
 	grunt.registerTask('init', ['copy:init', 'githooks']);
-	grunt.registerTask('compile', ['concat:vendorCss', 'sass:compile', 'shell:compile', 'svgmin:compile', 'svgstore:compile', 'copy:js', 'webpack:compile']);
-	grunt.registerTask('export', ['clean:export', 'sass:export', 'svgstore:export', 'webpack:bundle', 'webpack:ugly_bundle', 'webpack:module', 'copy:export', 'gitadd:export']);
+	grunt.registerTask('compile', ['concat:vendorCss', 'sass:compile', 'shell:compile', 'svgmin', 'svgstore:compile', 'copy:js', 'webpack:compile']);
+	grunt.registerTask('export', ['clean:export', 'sass:export', 'svgmin', 'svgstore:export', 'webpack:bundle', 'webpack:ugly_bundle', 'webpack:module', 'copy:export', 'gitadd:export']);
 	grunt.registerTask('default', 'compile');
     grunt.registerTask('test', ['jshint']);
 
