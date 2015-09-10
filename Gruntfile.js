@@ -208,8 +208,8 @@ module.exports = function(grunt) {
 			options: {
 				context: 'source/js'
 				, externals: {
-					jQuery: 'jQuery'
-					, jquery: 'jQuery'
+					jQuery: 'jquery'
+					, jquery: 'jquery'
 				}
 				, resolve: {
 					root: 'bower_components'
@@ -286,7 +286,10 @@ module.exports = function(grunt) {
 			}
 
 			, module: {
-				output: {
+				entry: {
+					nav: './inc/nav'
+				}
+				, output: {
 					path: 'export/js'
 					, filename: '[name].js'
 					, chunkFilename: '[id].js'
