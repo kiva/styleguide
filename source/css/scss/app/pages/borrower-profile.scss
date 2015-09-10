@@ -1,0 +1,13 @@
+.borrower-profile-wrapper {
+  .line-break {
+    width: 90%;
+    margin: auto;
+    padding: 0.6rem 0;
+    @media #{$medium-up}{
+      width: 100%;
+    }
+  }
+  .row {
+    padding-bottom: 1rem;
+  }
+}
