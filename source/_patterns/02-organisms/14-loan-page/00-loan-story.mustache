@@ -1,37 +1,37 @@
-<div class="loan-section">
-    <div class="loan-story">
-        <div class="featured">{{borrowerFirstName}}'s Story</div>
+<div class="loan-story">
+    <div class="story-header">{{borrowerFirstName}}'s Story</div>
 
-        {{#storyBody}}
-            <p>{{content}}</p>
-        {{/storyBody}}
+    {{#storyBody}}
+        <div class="body-text small-text">{{content}}</div>
+    {{/storyBody}}
 
-        <div>
-            In this group:
-            <ul class="borrower-names">
-                {{#borrowers}}
-                    <li>{{name}}{{^pictured}}*{{/pictured}}</li>
-                {{/borrowers}}
-            </ul>
-            <p>*not pictured</p>
-        </div>
-
-        {{#translation}}
-            <span>Translated from {{language}} by Kiva Volunteer {{translator}}</span>
-            <ul class="accordion animated" data-accordion>
-                <li class="accordion-navigation">
-                    <a href="#translation" class="black-underlined">View original language description
-                        <svg class="icon">
-                            <use xlink:href="#icon-triangle"/>
-                        </svg>
-                    </a>
-
-                    <div id="translation" class="content">
-                        {{original}}
-                    </div>
-                </li>
-            </ul>
-        {{/translation}}
-
+    <div>
+        <span class="small-text">In this group:</span>
+        <ul class="borrower-names">
+            {{#borrowers}}
+                <li class="small-text">{{name}}{{^pictured}}*{{/pictured}}</li>
+            {{/borrowers}}
+        </ul>
+        <div class="body-text small-text">*not pictured</div>
     </div>
+
+    {{#translation}}
+        <span class="small-text">Translated from {{language}} by Kiva Volunteer {{translator}}</span>
+        <ul class="accordion animated" data-accordion>
+            <li class="accordion-navigation">
+                <a href="#translation" class="black-underlined small-text">View original language description
+                    <svg class="icon">
+                        <use xlink:href="#icon-triangle"/>
+                    </svg>
+                </a>
+
+                <div id="translation" class="content">
+                    {{#storyBody}}
+                        <div class="body-text small-text">{{content}}</div>
+                    {{/storyBody}}
+                </div>
+            </li>
+        </ul>
+    {{/translation}}
+
 </div>

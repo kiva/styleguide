@@ -10,9 +10,10 @@
   color: #333;
 }
 
-.loan-section {
-  padding: 1rem;
-
+.loan-story {
+  .story-header, .body-text{
+    padding-bottom: 0.6rem;
+  }
   .icon {
     float: right;
     height: 1rem;
@@ -40,14 +41,17 @@
     margin: 0;
   }
 
-  .accordion.animated .accordion-navigation > {
+  .accordion .accordion-navigation > a{
+    font-size: $small-font-size;
+  }
+
+  .accordion.animated .accordion-navigation {
     a {
       position: relative;
       z-index: 10;
       background-color: transparent;
       padding: 0;
       min-height: 1rem;
-      font-size: 1rem;
     }
     .content {
       display: block;
@@ -63,27 +67,25 @@
       }
     }
   }
-  .loan-story {
-    .borrower-names {
-      display: inline;
-      margin: 0;
-      padding: 0;
-    }
+  .borrower-names {
+    display: inline;
+    margin: 0;
+    padding: 0;
+  }
 
-    .borrower-names > li {
-      display: inline;
-      list-style: none;
-      margin: 0;
-      padding: 0;
-    }
+  .borrower-names > li {
+    display: inline;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
 
-    .borrower-names > li:after {
-      content: ",";
-    }
+  .borrower-names > li:after {
+    content: ",";
+  }
 
-    .borrower-names > li:last-child:after {
-      content: "";
-    }
+  .borrower-names > li:last-child:after {
+    content: "";
   }
 }
 
