@@ -50,6 +50,7 @@
 		}
 
 	},
+	"about-headline-image-path" : "../../images/about/about-top",
 	"headline" : {
 		"short" : "Lorem ipsum dolor sit (37 characters)",
 		"medium" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. (72 characters)"
