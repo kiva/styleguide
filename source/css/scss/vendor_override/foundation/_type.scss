@@ -158,7 +158,7 @@ small {
 
 @media #{$medium-up} {
     .huge {
-      font-size: $huge-headline-font-size;
+      font-size: $huge-headline-font-size - $huge-headline-line-medium-reduction;
       line-height: $huge-headline-line-height;
       letter-spacing: $huge-type-kerning;
     }
@@ -184,6 +184,10 @@ small {
     line-height: $huge-statistic-line-height;
     font-weight: $font-weight-bold;
     letter-spacing: $huge-type-kerning;
+  }
+
+  .huge {
+    font-size: $huge-headline-font-size;
   }
 
   h1.normal {
