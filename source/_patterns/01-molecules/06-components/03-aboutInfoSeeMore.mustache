@@ -1,12 +1,14 @@
 <div class="aboutSeeMoreContainer">
-	<div class="row row1">
-		<div class="small-6 large-6 columns">
+
+{{! This section is shown on all screen sizes }}
+	<div class="row row1 show-for-small-up">
+		<div class="small-12 medium-6 large-6 columns">
         	<div class="row1StatContainer text-right">
 				<div class="huge-statistic white">450</div>
 				<div class="featured kiva-green">Volunteers</div>
 			</div>
    		</div>
-    	<div class="small-6 large-6 columns">
+    	<div class="small-12 medium-6 large-6 columns">
 			<div class="row1TextContainer text-left">
 				<div class="featured white">
 					"I feel like part of an international family. I hope entrepreneurs around the world feel supported not
@@ -16,14 +18,15 @@
 		</div>
 	</div>
 
-    <div class="row row2">
-        <div class="small-6 large-6 columns">
+{{! This section is shown on all screen sizes }}
+    <div class="row row2 show-for-small-up">
+        <div class="small-12 medium-6 large-6 columns">
             <div class="row2TextContainer text-right">
                 <div><h1 class="normal white">"People, even with a very modest amount of money, can have a huge impact."</h1></div>
                 <div class="featured kiva-green">President Bill Clinton, on Kiva</div>
             </div>
         </div>
-        <div class="small-6 large-6 columns">
+        <div class="small-12 medium-6 large-6 columns">
             <div class="row2StatContainer text-left">
                 <div class="huge-statistic white">75%</div>
                 <div class="featured kiva-green">Kiva loans that empower women</div>
@@ -33,7 +36,7 @@
 
 {{! This section is inserted when user has a small and medium 320px-680 screen size and hidden when in a screen larger than 680px }}
     <div id="row3Small-MediumView" class="row row3 hide-for-large-up">
-		<div class="small-12 large-12 columns">
+		<div class="small-12 medium-12 columns">
 			<div class="row3TextContainer text-center">
 				<div class="featured white">"I've been lending to seamstressess for 7 years. After 168 loans, it's
 					still exciting to send $25 to my sewing 'sisters' and know we're connected not just by thread, but hearts
@@ -51,7 +54,7 @@
                 <div class="featured kiva-green"></div>
             </div>
         </div>
-        <div class="small-6 large-6 columns">
+		<div class="large-6 columns">
             <div class="row3TextContainer text-left">
                 <div class="featured white">"I've been lending to seamstressess for 7 years. After 168 loans, it's
                     still exciting to send $25 to my sewing 'sisters' and know we're connected not just by thread, but hearts
@@ -61,10 +64,9 @@
         </div>
     </div>
 
-
-
-	<div class="row row4">
-		<div class="small-6 large-6 columns">
+{{! This section is shown on all screen sizes }}
+	<div class="row row4 show-for-small-up">
+		<div class="small-12 medium-6 large-6 columns">
             <div class="row4StatContainer text-right">
                 <div class="featured white">A Kiva loan is funded every</div>
                 <div><h1 class="huge white">2 min</h1></div>
@@ -73,15 +75,16 @@
         </div>
     </div>
 
-    <div class="row row5">
-        <div class="small-6 large-6 columns">
+{{! This section is shown on all screen sizes }}
+    <div class="row row5 show-for-small-up">
+        <div class="small-12 medium-6 large-6 columns">
             <div class="row5TextContainer text-right">
                 <div class="featured white">"We've seen first-hand how motivated borrowers feel when they know there's a community
 				behind them."</div>
                 <div class="featured kiva-green">Kiva Field Partner</div>
             </div>
         </div>
-        <div class="small-6 large-6 columns">
+        <div class="small-12 medium-6 large-6 columns">
             <div class="row5TextContainer2 text-left">
                 <div><h1 class="normal white">"Because of my Kiva lender, I feel empowered to grow my business and
 				provide a better life for my family."</h1></div>
@@ -91,53 +94,53 @@
     </div>
 
 {{! This section is inserted when user has a small and medium 320px-680 screen size and hidden when in a screen larger than 680px }}
-<div class="hide-for-large-up">
-    <div id="row6Small-MediumView" class="row row6">
-        <div class="small-12 large-12 columns">
-            <div class="row6StatContainer text-right">
-                <div class="huge-statistic white">1,200</div>
-                <div class="featured kiva-green">Field partners and trustees</div>
-            </div>
-        </div>
-    </div>
-    <div class="row row7">
-        <div class="small-6 large-6 columns">
-            <div class="row7StatContainer text-center">
-                <div class="huge-statistic white">110</div>
-                <div class="featured kiva-green">Employees</div>
-            </div>
-        </div>
-        <div class="small-6 large-6 columns">
-            <div class="row7TextContainer text-left">
-                <div class="featured white">"I joined Kiva because I wanted to work side-by-side with people who
-					want to make a difference in the world."</div>
-                <div class="featured kiva-green">Kelly, Kiva employee</div>
-            </div>
-        </div>
-    </div>
-</div>
+	<div class="hide-for-large-up">
+		<div id="row6Small-MediumView" class="row row6">
+			<div class="small-12 medium-12 columns">
+				<div class="row6StatContainer text-center">
+					<div class="huge-statistic white">1,200</div>
+					<div class="featured kiva-green">Field partners and trustees</div>
+				</div>
+			</div>
+		</div>
+		<div class="row row7">
+			<div class="small-12 medium-6 columns">
+				<div class="row7StatContainer text-center">
+					<div class="huge-statistic white">110</div>
+					<div class="featured kiva-green">Employees</div>
+				</div>
+			</div>
+			<div class="small-12 medium-6 columns">
+				<div class="row7TextContainer text-left">
+					<div class="featured white">"I joined Kiva because I wanted to work side-by-side with people who
+						want to make a difference in the world."</div>
+					<div class="featured kiva-green">Kelly, Kiva employee</div>
+				</div>
+			</div>
+		</div>
+	</div>
 
 {{! This section is inserted when user has a screen size larger than 680px and is removed when in a small and medium 320px-680 screen size.}}
-<div class="hide-for-small-only hide-for-medium-only">
-	<div id="row6LargeView" class="row row6a">
-        <div class="small-6 large-6 columns">
-            <div class="row6aTextContainer text-right">
-                <div class="featured white">"I joined Kiva because I wanted to work side-by-side with people who
-                    want to make a difference in the world."</div>
-                <div class="featured kiva-green">Kelly, Kiva employee</div>
-            </div>
-        </div>
-        <div class="small-6 large-6 columns text-center">
-            <div class="row6aStatContainer">
-                <div class="huge-statistic white">1,200</div>
-                <div class="featured kiva-green">Field partners and trustees</div>
-            </div>
-            <div class="row6aStatContainer2">
-                <div class="huge-statistic white">110</div>
-                <div class="featured kiva-green">Employees</div>
-            </div>
-        </div>
-    </div>
-</div>
+	<div class="hide-for-small-only hide-for-medium-only">
+		<div id="row6LargeView" class="row row6a">
+			<div class="large-6 columns">
+				<div class="row6aTextContainer text-right">
+					<div class="featured white">"I joined Kiva because I wanted to work side-by-side with people who
+						want to make a difference in the world."</div>
+					<div class="featured kiva-green">Kelly, Kiva employee</div>
+				</div>
+			</div>
+			<div class="large-6 columns text-center">
+				<div class="row6aStatContainer">
+					<div class="huge-statistic white">1,200</div>
+					<div class="featured kiva-green">Field partners and trustees</div>
+				</div>
+				<div class="row6aStatContainer2">
+					<div class="huge-statistic white">110</div>
+					<div class="featured kiva-green">Employees</div>
+				</div>
+			</div>
+		</div>
+	</div>
 </div>
 
