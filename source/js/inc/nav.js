@@ -1,7 +1,7 @@
 require('./vendor');
 
 var header = require('./app/header');
-var $ = require('jQuery');
+var $ = require('jquery');
 
 $(document).foundation();
 
