@@ -209,7 +209,7 @@ module.exports = function(grunt) {
 				context: 'source/js'
 				, externals: {
 					jquery: {
-						root: 'jQuery'
+						var: 'jQuery'
 						, amd: 'jquery'
 					}
 				}
