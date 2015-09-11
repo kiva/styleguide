@@ -1,9 +1,15 @@
-a.joinlink,
-a.joinlink:visited {
+a.joinLink,
+a.joinLink:visited {
   color: $kiva-accent-green;
 }
 
-.aboutSeeMoreContainer {
+a.visitLink,
+a.visitLink:visited {
+  color: $kiva-green;
+}
+
+.aboutSeeMoreContainer,
+.joinSection {
   overflow: auto;
   background-color: $kiva-darkgreen;
   padding: rem-calc(10);
@@ -11,6 +17,10 @@ a.joinlink:visited {
 
 .joinText {
   line-height: rem-calc(65);
+}
+
+.joinLinkWrapper {
+  padding-top: rem-calc(20);
 }
 
 .white {
