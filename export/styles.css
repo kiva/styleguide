@@ -6393,7 +6393,7 @@ small {
 
 @media only screen and (min-width:30.0625rem) {
   .huge {
-    font-size: 6rem;
+    font-size: 4.0555555556rem;
     line-height: 6rem;
     letter-spacing: -0.4rem; }
   .top-nav {
@@ -6411,6 +6411,8 @@ small {
     line-height: 8.6666666667rem;
     font-weight: bold;
     letter-spacing: -0.4rem; }
+  .huge {
+    font-size: 6rem; }
   h1.normal {
     font-size: 3.1111111111rem;
     line-height: 3.5555555556rem; } }
@@ -8550,16 +8552,22 @@ ul.tertiary-nav {
       padding-left: 0.4444444444rem;
       margin-left: 0.4444444444rem; } }
 
-a.joinlink, a.joinlink:visited {
+a.joinLink, a.joinLink:visited {
   color: #a9d14c; }
 
-.aboutSeeMoreContainer {
+a.visitLink, a.visitLink:visited {
+  color: #63a541; }
+
+.aboutSeeMoreContainer, .joinSection {
   overflow: auto;
   background-color: #236133;
-  padding: 0.5555555556rem 0.5555555556rem 0.5555555556rem 0.5555555556rem; }
+  padding: 0.5555555556rem; }
 
 .joinText {
   line-height: 3.6111111111rem; }
+
+.joinLinkWrapper {
+  padding-top: 1.1111111111rem; }
 
 .white {
   color: #FFFFFF; }
@@ -8573,18 +8581,20 @@ a.joinlink, a.joinlink:visited {
 .what-makes-us-unique svg {
   width: 6.6666666667rem; }
 
-.row {
-  padding: 0 0.2777777778rem 0 0.2777777778rem; }
+.aboutSeeMoreContainer .row {
+  padding: 0 0.2777777778rem; }
 
 .row1 {
   display: inline-block; }
 
 .row1TextContainer {
-  margin-top: 5rem;
-  padding-left: 1.1111111111rem; }
+  padding-top: 1.9444444444rem; }
+  @media only screen and (min-width:30.0625rem) {
+    .row1TextContainer {
+      padding-top: 5rem; } }
   @media only screen and (min-width:42.5625rem) {
     .row1TextContainer {
-      margin-top: 8.8888888889rem; } }
+      padding-top: 8.8888888889rem; } }
 
 .row1StatContainer {
   padding-right: 1.1111111111rem; }
@@ -8599,7 +8609,7 @@ a.joinlink, a.joinlink:visited {
   margin-top: 1.1111111111rem; }
 
 .row2StatContainer {
-  padding-top: 24.9444444444rem; }
+  padding-top: 1.9444444444rem; }
   @media only screen and (min-width:30.0625rem) {
     .row2StatContainer {
       padding-top: 13.3333333333rem;
@@ -8613,11 +8623,14 @@ a.joinlink, a.joinlink:visited {
   display: inline-block; }
 
 .row3TextContainer {
-  padding-top: 3.3333333333rem; }
+  padding-top: 1.9444444444rem; }
+  @media only screen and (min-width:30.0625rem) {
+    .row3TextContainer {
+      padding-top: 3.3333333333rem; } }
 
 .row4 {
   display: inline-block;
-  padding-top: 3.3333333333rem; }
+  padding-top: 1.9444444444rem; }
 
 @media only screen and (min-width:42.5625rem) {
   .row4StatsContainer {
@@ -8627,22 +8640,25 @@ a.joinlink, a.joinlink:visited {
   display: inline-block; }
 
 .row5TextContainer {
-  padding-top: 28.8888888889rem; }
+  padding-top: 1.9444444444rem; }
   @media only screen and (min-width:30.0625rem) {
     .row5TextContainer {
       padding-top: 16.6666666667rem; } }
 
 .row5TextContainer2 {
-  margin-top: -4.1666666667rem; }
+  padding-top: 1.9444444444rem; }
+  @media only screen and (min-width:30.0625rem) {
+    .row5TextContainer2 {
+      margin-top: -4.1666666667rem; } }
 
 .row6 {
   display: inline-block; }
 
 .row6StatContainer {
-  padding-top: 1.6666666667rem; }
-  @media large-up {
+  padding-top: 1.9444444444rem; }
+  @media only screen and (min-width:30.0625rem) and (max-width:42.5rem) {
     .row6StatContainer {
-      text-align: center; } }
+      text-align: right !important; } }
 
 #row6LargeView {
   padding-top: 6.1111111111rem; }
@@ -8655,10 +8671,13 @@ a.joinlink, a.joinlink:visited {
 
 .row7 {
   display: inline-block;
-  padding-top: 2.7777777778rem; }
+  padding-top: 1.9444444444rem; }
+  @media only screen and (min-width:30.0625rem) {
+    .row7 {
+      padding-top: 2.7777777778rem; } }
 
 .row7TextContainer {
-  padding-top: 0.6666666667rem; }
+  padding-top: 1.9444444444rem; }
 
 .green-bolded {
   font-size: 2.5rem;
