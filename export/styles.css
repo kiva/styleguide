@@ -6361,11 +6361,10 @@ p {
 h1 {
   font-size: 1.6666666667rem;
   font-weight: bold; }
-
-h1.normal {
-  font-weight: normal;
-  line-height: 1.7777777778rem;
-  font-size: 1.6666666667rem; }
+  h1 .normal {
+    font-weight: normal;
+    line-height: 1.7777777778rem;
+    font-size: 1.6666666667rem; }
 
 .huge {
   font-size: 3rem;
@@ -6411,11 +6410,11 @@ small {
     line-height: 8.6666666667rem;
     font-weight: bold;
     letter-spacing: -0.4rem; }
-  .huge {
-    font-size: 6rem; }
-  h1.normal {
+  h1 {
     font-size: 3.1111111111rem;
-    line-height: 3.5555555556rem; } }
+    line-height: 3.5555555556rem; }
+    h1 .huge {
+      font-size: 6rem; } }
 
 @media (min-width: 20rem) and (max-width: 22.5rem) {
   h1.normal {
@@ -8147,8 +8146,7 @@ a.header-button#search-toggle {
     width: auto; } }
 
 .secondary-nav-bar {
-  background-color: #236133;
-  margin-bottom: 0.5rem; }
+  background-color: #236133; }
   .secondary-nav-bar ul {
     list-style: none;
     margin: 0;
@@ -8427,7 +8425,7 @@ ul.tertiary-nav {
     text-align: center; }
 
 .siteFooter {
-  height: -5rem;
+  height: 15.5555555556rem;
   background-color: #236133;
   color: #FFFFFF;
   font-size: 0.7777777778rem;
@@ -8435,7 +8433,7 @@ ul.tertiary-nav {
   padding: 2.2222222222rem; }
   @media only screen and (min-width:42.5625rem) {
     .siteFooter {
-      height: 3rem; } }
+      height: 23.5555555556rem; } }
   .siteFooter a {
     color: #a9d14c;
     font-size: 0.7777777778rem;
@@ -8516,7 +8514,7 @@ ul.tertiary-nav {
   .siteFooter {
     padding: 2.2222222222rem 1rem; }
   .siteFooter-nav {
-    height: 0.7777777778rem;
+    height: 21.3333333333rem;
     position: relative;
     padding-bottom: 2.2222222222rem; }
     .siteFooter-nav > .column {
