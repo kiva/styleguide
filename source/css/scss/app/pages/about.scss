@@ -6,7 +6,7 @@ a.joinlink:visited {
 .aboutSeeMoreContainer {
   overflow: auto;
   background-color: $kiva-darkgreen;
-  padding: rem-calc(10) rem-calc(10) rem-calc(10) rem-calc(10);
+  padding: rem-calc(10);
 }
 
 .joinText {
@@ -25,13 +25,13 @@ a.joinlink:visited {
 }
 
 .what-makes-us-unique {
-          svg {
-            width: rem-calc(120);
-          }
-        }
+  svg {
+    width: rem-calc(120);
+  }
+}
 
-.row {
-  padding: rem-calc(0) rem-calc(5) rem-calc(0) rem-calc(5);
+.aboutSeeMoreContainer .row {
+  padding: rem-calc(0) rem-calc(5);
 }
 
 .row1 {
