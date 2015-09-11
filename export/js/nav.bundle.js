@@ -73,7 +73,7 @@
 /* 2 */
 /***/ function(module, exports) {
 
-	module.exports = undefined;
+	module.exports = jQuery;
 
 /***/ },
 /* 3 */
