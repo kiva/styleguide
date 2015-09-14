@@ -40,16 +40,15 @@ $headline-font-size-small-reduction	: rem-calc(26);
 $headline-font-size-extra-small-reduction	: rem-calc(31);
 $headline-line-height-reduction	: rem-calc(32);
 
-$impact-font-size				: rem-calc(72);
-$impact-line-height				: rem-calc(80);
-$impact-font-reduction			: rem-calc(18);
-$impact-font-max-reduction      : rem-calc(36);
+$impact-font-size				: rem-calc(45);
+$impact-line-height				: rem-calc(54);
+$impact-font-size-reduction		: rem-calc(19);
+$impact-line-height-reduction	: rem-calc(22);
 
-$huge-headline-font-size				: rem-calc(108);
-$huge-headline-line-height				: rem-calc(108);
-$huge-headline-line-height-reduction	: rem-calc(73);
-$huge-headline-line-medium-reduction    : rem-calc(35);
-$huge-headline-font-small-reduction		: rem-calc(54);
+$huge-headline-font-size		: rem-calc(81);
+$huge-headline-line-height		: rem-calc(84);
+$huge-headline-font-size-reduction		: rem-calc(27);
+$huge-headline-line-height-reduction	: rem-calc(28);
 
 $statistic-font-size			: rem-calc(48);
 $statistic-line-height			: rem-calc(56);
@@ -62,8 +61,8 @@ $huge-statistic-font-extra-medium-reduction: rem-calc(54);
 $huge-statistic-font-small-reduction	: rem-calc(72);
 $huge-statistic-font-extra-small-reduction	: rem-calc(79);
 
-$huge-type-kerning				: -0.4rem;
-$huge-type-kerning-reduction	: -0.3rem;
+$huge-type-kerning				: rem-calc(-4);
+$huge-type-kerning-reduction	: rem-calc(-2);
 
 $header-font-color: $kiva-text-dark;
 
@@ -73,6 +72,11 @@ $h2-font-size: $section-head-font-size;
 
 $paragraph-font-size: $body-font-size;
 $paragraph-line-height: $body-line-height;
+
+@mixin text-shadow() {
+	text-shadow: 1px 2px 3px #666;
+}
+
 
 .small-text {
 	font-size: $small-font-size;
@@ -87,13 +91,17 @@ $paragraph-line-height: $body-line-height;
 	font-size: $feature-font-size;
 	line-height: $feature-line-height;
 	color: $white;
-	text-shadow: 1px 2px 3px #666;
+	@include text-shadow();
 }
 
 .impact {
-	font-size: $impact-font-size - $impact-font-max-reduction;
-	line-height: $impact-line-height - $impact-font-max-reduction;
+	font-size: $impact-font-size - $impact-font-size-reduction;
+	line-height: $impact-line-height - $impact-line-height-reduction;
 	font-weight: $font-weight-bold;
+
+	&.shadow {
+		@include text-shadow();
+	}
 }
 
 .statistic {
@@ -125,8 +133,8 @@ h1 {
 }
 
 .huge {
-	font-size: $huge-headline-font-size - $huge-headline-font-small-reduction;
-	line-height: $huge-headline-line-height - $huge-headline-font-small-reduction;
+	font-size: $huge-headline-font-size - $huge-headline-font-size-reduction;
+	line-height: $huge-headline-line-height - $huge-headline-line-height-reduction;
 	letter-spacing: $huge-type-kerning - $huge-type-kerning-reduction;
 }
 
@@ -155,12 +163,6 @@ small {
 }
 
 @media #{$medium-up} {
-	.huge {
-		font-size: $huge-headline-font-size - $huge-headline-line-medium-reduction;
-		line-height: $huge-headline-line-height;
-		letter-spacing: $huge-type-kerning;
-	}
-
 	.top-nav {
 		font-size: $top-nav-font-size;
 		line-height: $top-nav-line-height;
@@ -177,6 +179,17 @@ small {
 }
 
 @media #{$large-up} {
+	.impact {
+		font-size: $impact-font-size;
+		line-height: $impact-line-height;
+	}
+
+	.huge {
+		font-size: $huge-headline-font-size;
+		line-height: $huge-headline-line-height;
+		letter-spacing: $huge-type-kerning;
+	}
+
 	.huge-statistic {
 		font-size: $huge-statistic-font-size;
 		line-height: $huge-statistic-line-height;
@@ -190,6 +203,7 @@ small {
 
 		.huge {
 			font-size: $huge-headline-font-size;
+			line-height: $huge-headline-line-height;
 		}
 	}
 }
