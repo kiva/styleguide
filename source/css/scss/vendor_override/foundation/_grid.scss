@@ -1,0 +1,13 @@
+// override Foundation default max row width (1000) to Kiva's 990 frame
+$row-width: rem-calc(990);
+
+$frame-width: $row-width;
+
+@mixin frame-width() {
+	max-width: $frame-width;
+}
+
+.frame {
+	@include frame-width();
+	margin: 0 auto;
+}
