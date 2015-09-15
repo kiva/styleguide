@@ -51,7 +51,12 @@
 		"full-width" : {
 			"src" : "../../images/about/about-top",
 			"alt" : ""
+		},
+		"category" : {
+			"src" : "../../images/category/hp-cats-livestock",
+			"alt" : "Livestock"
 		}
+
 
 	},
 	"headline" : {
