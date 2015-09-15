@@ -40,17 +40,15 @@ $headline-font-size-small-reduction	: rem-calc(26);
 $headline-font-size-extra-small-reduction	: rem-calc(31);
 $headline-line-height-reduction	: rem-calc(32);
 
+$impact-font-size				: rem-calc(45);
+$impact-line-height				: rem-calc(54);
+$impact-font-size-reduction		: rem-calc(19);
+$impact-line-height-reduction	: rem-calc(22);
 
-$impact-font-size				: rem-calc(72);
-$impact-line-height				: rem-calc(80);
-$impact-font-reduction			: rem-calc(18);
-$impact-font-max-reduction      : rem-calc(36);
-
-$huge-headline-font-size				: rem-calc(108);
-$huge-headline-line-height				: rem-calc(108);
-$huge-headline-line-height-reduction	: rem-calc(73);
-$huge-headline-line-medium-reduction    : rem-calc(35);
-$huge-headline-font-small-reduction		: rem-calc(54);
+$huge-headline-font-size		: rem-calc(81);
+$huge-headline-line-height		: rem-calc(84);
+$huge-headline-font-size-reduction		: rem-calc(27);
+$huge-headline-line-height-reduction	: rem-calc(28);
 
 $statistic-font-size			: rem-calc(48);
 $statistic-line-height			: rem-calc(56);
@@ -63,9 +61,8 @@ $huge-statistic-font-extra-medium-reduction: rem-calc(54);
 $huge-statistic-font-small-reduction	: rem-calc(72);
 $huge-statistic-font-extra-small-reduction	: rem-calc(79);
 
-$huge-type-kerning				: -0.4rem;
-$huge-type-kerning-reduction	: -0.3rem;
-
+$huge-type-kerning				: rem-calc(-4);
+$huge-type-kerning-reduction	: rem-calc(-2);
 
 $header-font-color: $kiva-text-dark;
 
@@ -76,26 +73,35 @@ $h2-font-size: $section-head-font-size;
 $paragraph-font-size: $body-font-size;
 $paragraph-line-height: $body-line-height;
 
+@mixin text-shadow() {
+	text-shadow: 1px 2px 3px #666;
+}
+
+
 .small-text {
 	font-size: $small-font-size;
 	line-height: $small-line-height;
 }
 
 .featured {
-  line-height: $featured-line-height-reduction;
+	line-height: $featured-line-height-reduction;
 }
 
 .overlay {
 	font-size: $feature-font-size;
 	line-height: $feature-line-height;
 	color: $white;
-	text-shadow: 1px 2px 3px #666;
+	@include text-shadow();
 }
 
 .impact {
-	font-size: $impact-font-size - $impact-font-max-reduction;
-	line-height: $impact-line-height - $impact-font-max-reduction;
+	font-size: $impact-font-size - $impact-font-size-reduction;
+	line-height: $impact-line-height - $impact-line-height-reduction;
 	font-weight: $font-weight-bold;
+
+	&.shadow {
+		@include text-shadow();
+	}
 }
 
 .statistic {
@@ -116,19 +122,20 @@ p {
 }
 
 h1 {
-  font-size: $headline-font-size - $headline-font-size-small-reduction;
-  font-weight: $font-weight-bold;
+	font-size: $headline-font-size - $headline-font-size-small-reduction;
+	font-weight: $font-weight-bold;
+
+	.normal {
+		font-weight: $font-weight-normal;
+		line-height: $headline-line-height - $headline-line-height-reduction;
+		font-size: $headline-font-size - $headline-font-size-small-reduction;
+	}
 }
-  h1.normal {
-    font-weight: $font-weight-normal;
-    line-height: $headline-line-height - $headline-line-height-reduction;
-    font-size: $headline-font-size - $headline-font-size-small-reduction;
-  }
 
 .huge {
-  font-size: $huge-headline-font-size - $huge-headline-font-small-reduction;
-  line-height: $huge-headline-line-height - $huge-headline-font-small-reduction;
-  letter-spacing: $huge-type-kerning - $huge-type-kerning-reduction;
+	font-size: $huge-headline-font-size - $huge-headline-font-size-reduction;
+	line-height: $huge-headline-line-height - $huge-headline-line-height-reduction;
+	letter-spacing: $huge-type-kerning - $huge-type-kerning-reduction;
 }
 
 h2 {
@@ -151,71 +158,76 @@ a:visited {
 }
 
 small {
-  font-size: $small-font-size;
-  line-height: $small-line-height;
+	font-size: $small-font-size;
+	line-height: $small-line-height;
 }
 
-
 @media #{$medium-up} {
-    .huge {
-      font-size: $huge-headline-font-size - $huge-headline-line-medium-reduction;
-      line-height: $huge-headline-line-height;
-      letter-spacing: $huge-type-kerning;
-    }
-
 	.top-nav {
 		font-size: $top-nav-font-size;
-		line-height: $top-nav-line-height ;
+		line-height: $top-nav-line-height;
 	}
 
-    .huge-statistic {
-      font-size: $huge-statistic-font-size - $huge-statistic-font-medium-reduction;
-    }
+	.huge-statistic {
+		font-size: $huge-statistic-font-size - $huge-statistic-font-medium-reduction;
+	}
 
-    .featured {
-      font-size: $feature-font-size;
-      line-height: $feature-line-height;
-    }
+	.featured {
+		font-size: $feature-font-size;
+		line-height: $feature-line-height;
+	}
 }
 
 @media #{$large-up} {
-  .huge-statistic {
-    font-size: $huge-statistic-font-size;
-    line-height: $huge-statistic-line-height;
-    font-weight: $font-weight-bold;
-    letter-spacing: $huge-type-kerning;
-  }
+	.impact {
+		font-size: $impact-font-size;
+		line-height: $impact-line-height;
+	}
 
-  .huge {
-    font-size: $huge-headline-font-size;
-  }
+	.huge {
+		font-size: $huge-headline-font-size;
+		line-height: $huge-headline-line-height;
+		letter-spacing: $huge-type-kerning;
+	}
 
-  h1.normal {
-    font-size: $headline-font-size;
-    line-height: $headline-line-height;
-  }
+	.huge-statistic {
+		font-size: $huge-statistic-font-size;
+		line-height: $huge-statistic-line-height;
+		font-weight: $font-weight-bold;
+		letter-spacing: $huge-type-kerning;
+	}
+
+	h1 {
+		font-size: $headline-font-size;
+		line-height: $headline-line-height;
+
+		.huge {
+			font-size: $huge-headline-font-size;
+			line-height: $huge-headline-line-height;
+		}
+	}
 }
+
 //These media queries are handling additional font size reductions based on screen sizes, these are needed so text is always
 //on the screen.
 @media (min-width: mq-rem-calc(320)) and (max-width: mq-rem-calc(360)) {
-  h1.normal {
-    font-size: $headline-font-size - $headline-font-size-extra-small-reduction;
-  }
-  .huge-statistic {
-    font-size: $huge-statistic-font-size - $huge-statistic-font-extra-small-reduction;
-  }
+	h1.normal {
+		font-size: $headline-font-size - $headline-font-size-extra-small-reduction;
+	}
+	.huge-statistic {
+		font-size: $huge-statistic-font-size - $huge-statistic-font-extra-small-reduction;
+	}
 }
 
 @media (min-width: mq-rem-calc(481)) and (max-width: mq-rem-calc(535)) {
-  .huge-statistic {
-    font-size: $huge-statistic-font-size - $huge-statistic-font-extra-medium-reduction;
-  }
+	.huge-statistic {
+		font-size: $huge-statistic-font-size - $huge-statistic-font-extra-medium-reduction;
+	}
 }
 
 @media (min-width: mq-rem-calc(681)) and (max-width: mq-rem-calc(760)) {
-  .huge-statistic {
-    font-size: $huge-statistic-font-size - $huge-statistic-font-large-reduction;
-  }
+	.huge-statistic {
+		font-size: $huge-statistic-font-size - $huge-statistic-font-large-reduction;
+	}
 }
-
 

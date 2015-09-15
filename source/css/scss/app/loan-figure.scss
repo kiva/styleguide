@@ -22,29 +22,6 @@
 		top: 0;
 	}
 
-	.icon-match {
-		height: 40px;
-		width: 40px;
-		padding: 3px;
-		vertical-align: middle;
-	}
-
-	.matching-message {
-		background-color: rgba(200, 200, 200, .8);
-		height: 40px;
-		width: 100%;
-		padding-right: 40px;
-
-		position: absolute;
-		left: 0;
-		bottom: 0;
-
-		span {
-			line-height: 40px;
-			vertical-align: middle;
-		}
-	}
-
 	.carousel-prev {
 		left: 0;
 
@@ -75,31 +52,5 @@
 
 	.icon-small-chevron:hover {
 		cursor: pointer;
-	}
-
-	.favorite-link {
-		position: absolute;
-		bottom: 0;
-		right: 0;
-	}
-
-	.favorite-link.is-favorite .icon-star {
-		color: $graphic-green;
-		opacity: .8;
-	}
-
-	.favorite-link:hover .icon-star{
-		opacity: .7;
-	}
-
-	.icon-star {
-		background-color: $black;
-		color: $white;
-		fill: none;
-		height: 40px;
-		width: 40px;
-		padding: 8px;
-		opacity: .6;
-		vertical-align: bottom;
 	}
 }

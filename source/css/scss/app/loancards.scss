@@ -1,5 +1,5 @@
-$footer-height: 3rem;
-$meter-height: $footer-height/2;
+$loan-card-footer-height: 3rem;
+$loan-card-meter-height: $loan-card-footer-height/2;
 
 // Loan cards - listing
 .loancards-list > li {
@@ -73,7 +73,7 @@ $meter-height: $footer-height/2;
         overflow: hidden;
 
         .fundraising-meter {
-            height: $meter-height;
+            height: $loan-card-meter-height;
             width: 100%;
             margin: 0;
         }
@@ -81,7 +81,7 @@ $meter-height: $footer-height/2;
 
     &:hover {
         .bottom-bar {
-            height: $footer-height;
+            height: $loan-card-footer-height;
         }
     }
 }
@@ -93,19 +93,19 @@ $meter-height: $footer-height/2;
     overflow: hidden;
 
     &.no-hide {
-        height: $footer-height;
+        height: $loan-card-footer-height;
     }
 
     &.show-short {
-        height: $meter-height;
+        height: $loan-card-meter-height;
 
         .button, .message {
-            height: $meter-height;
-            line-height: $meter-height;
+            height: $loan-card-meter-height;
+            line-height: $loan-card-meter-height;
             font-size: $small-font-size;
 
             .icon {
-                height: $meter-height;
+                height: $loan-card-meter-height;
                 width: rem-calc(14);
             }
 
@@ -124,8 +124,8 @@ $meter-height: $footer-height/2;
     transition: $transition;
 
     .button, .message {
-        height: $footer-height;
-        line-height: $footer-height;
+        height: $loan-card-footer-height;
+        line-height: $loan-card-footer-height;
         font-size: $top-nav-font-size;
         font-weight: normal;
         width: 100%;
@@ -150,7 +150,7 @@ $meter-height: $footer-height/2;
         .icon {
             fill: $white;
             width: 1rem;
-            height: $footer-height;
+            height: $loan-card-footer-height;
             position: absolute;
         }
 
