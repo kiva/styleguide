@@ -2077,368 +2077,6 @@ select {
     right: 91.6666666667%;
     left: auto; } }
 
-@media only screen and (min-width:61.8125rem) {
-  .xlarge-push-0 {
-    position: relative;
-    left: 0;
-    right: auto; }
-  .xlarge-pull-0 {
-    position: relative;
-    right: 0;
-    left: auto; }
-  .xlarge-push-1 {
-    position: relative;
-    left: 8.3333333333%;
-    right: auto; }
-  .xlarge-pull-1 {
-    position: relative;
-    right: 8.3333333333%;
-    left: auto; }
-  .xlarge-push-2 {
-    position: relative;
-    left: 16.6666666667%;
-    right: auto; }
-  .xlarge-pull-2 {
-    position: relative;
-    right: 16.6666666667%;
-    left: auto; }
-  .xlarge-push-3 {
-    position: relative;
-    left: 25%;
-    right: auto; }
-  .xlarge-pull-3 {
-    position: relative;
-    right: 25%;
-    left: auto; }
-  .xlarge-push-4 {
-    position: relative;
-    left: 33.3333333333%;
-    right: auto; }
-  .xlarge-pull-4 {
-    position: relative;
-    right: 33.3333333333%;
-    left: auto; }
-  .xlarge-push-5 {
-    position: relative;
-    left: 41.6666666667%;
-    right: auto; }
-  .xlarge-pull-5 {
-    position: relative;
-    right: 41.6666666667%;
-    left: auto; }
-  .xlarge-push-6 {
-    position: relative;
-    left: 50%;
-    right: auto; }
-  .xlarge-pull-6 {
-    position: relative;
-    right: 50%;
-    left: auto; }
-  .xlarge-push-7 {
-    position: relative;
-    left: 58.3333333333%;
-    right: auto; }
-  .xlarge-pull-7 {
-    position: relative;
-    right: 58.3333333333%;
-    left: auto; }
-  .xlarge-push-8 {
-    position: relative;
-    left: 66.6666666667%;
-    right: auto; }
-  .xlarge-pull-8 {
-    position: relative;
-    right: 66.6666666667%;
-    left: auto; }
-  .xlarge-push-9 {
-    position: relative;
-    left: 75%;
-    right: auto; }
-  .xlarge-pull-9 {
-    position: relative;
-    right: 75%;
-    left: auto; }
-  .xlarge-push-10 {
-    position: relative;
-    left: 83.3333333333%;
-    right: auto; }
-  .xlarge-pull-10 {
-    position: relative;
-    right: 83.3333333333%;
-    left: auto; }
-  .xlarge-push-11 {
-    position: relative;
-    left: 91.6666666667%;
-    right: auto; }
-  .xlarge-pull-11 {
-    position: relative;
-    right: 91.6666666667%;
-    left: auto; }
-  .column, .columns {
-    position: relative;
-    padding-left: 0.8333333333rem;
-    padding-right: 0.8333333333rem;
-    float: left; }
-  .xlarge-1 {
-    width: 8.3333333333%; }
-  .xlarge-2 {
-    width: 16.6666666667%; }
-  .xlarge-3 {
-    width: 25%; }
-  .xlarge-4 {
-    width: 33.3333333333%; }
-  .xlarge-5 {
-    width: 41.6666666667%; }
-  .xlarge-6 {
-    width: 50%; }
-  .xlarge-7 {
-    width: 58.3333333333%; }
-  .xlarge-8 {
-    width: 66.6666666667%; }
-  .xlarge-9 {
-    width: 75%; }
-  .xlarge-10 {
-    width: 83.3333333333%; }
-  .xlarge-11 {
-    width: 91.6666666667%; }
-  .xlarge-12 {
-    width: 100%; }
-  .xlarge-offset-0 {
-    margin-left: 0 !important; }
-  .xlarge-offset-1 {
-    margin-left: 8.3333333333% !important; }
-  .xlarge-offset-2 {
-    margin-left: 16.6666666667% !important; }
-  .xlarge-offset-3 {
-    margin-left: 25% !important; }
-  .xlarge-offset-4 {
-    margin-left: 33.3333333333% !important; }
-  .xlarge-offset-5 {
-    margin-left: 41.6666666667% !important; }
-  .xlarge-offset-6 {
-    margin-left: 50% !important; }
-  .xlarge-offset-7 {
-    margin-left: 58.3333333333% !important; }
-  .xlarge-offset-8 {
-    margin-left: 66.6666666667% !important; }
-  .xlarge-offset-9 {
-    margin-left: 75% !important; }
-  .xlarge-offset-10 {
-    margin-left: 83.3333333333% !important; }
-  .xlarge-offset-11 {
-    margin-left: 91.6666666667% !important; }
-  .xlarge-reset-order {
-    float: left;
-    left: auto;
-    margin-left: 0;
-    margin-right: 0;
-    right: auto; }
-  .column.xlarge-centered, .columns.xlarge-centered {
-    margin-left: auto;
-    margin-right: auto;
-    float: none; }
-  .column.xlarge-uncentered, .columns.xlarge-uncentered {
-    float: left;
-    margin-left: 0;
-    margin-right: 0; }
-  .column.xlarge-centered:last-child, .columns.xlarge-centered:last-child {
-    float: none; }
-  .column.xlarge-uncentered:last-child, .columns.xlarge-uncentered:last-child {
-    float: left; }
-  .column.xlarge-uncentered.opposite, .columns.xlarge-uncentered.opposite {
-    float: right; }
-  .row.xlarge-collapse > .column, .row.xlarge-collapse > .columns {
-    padding-left: 0;
-    padding-right: 0; }
-  .row.xlarge-collapse .row {
-    margin-left: 0;
-    margin-right: 0; }
-  .row.xlarge-uncollapse > .column, .row.xlarge-uncollapse > .columns {
-    padding-left: 0.8333333333rem;
-    padding-right: 0.8333333333rem;
-    float: left; } }
-
-@media only screen and (min-width:61.8125rem) {
-  .xxlarge-push-0 {
-    position: relative;
-    left: 0;
-    right: auto; }
-  .xxlarge-pull-0 {
-    position: relative;
-    right: 0;
-    left: auto; }
-  .xxlarge-push-1 {
-    position: relative;
-    left: 8.3333333333%;
-    right: auto; }
-  .xxlarge-pull-1 {
-    position: relative;
-    right: 8.3333333333%;
-    left: auto; }
-  .xxlarge-push-2 {
-    position: relative;
-    left: 16.6666666667%;
-    right: auto; }
-  .xxlarge-pull-2 {
-    position: relative;
-    right: 16.6666666667%;
-    left: auto; }
-  .xxlarge-push-3 {
-    position: relative;
-    left: 25%;
-    right: auto; }
-  .xxlarge-pull-3 {
-    position: relative;
-    right: 25%;
-    left: auto; }
-  .xxlarge-push-4 {
-    position: relative;
-    left: 33.3333333333%;
-    right: auto; }
-  .xxlarge-pull-4 {
-    position: relative;
-    right: 33.3333333333%;
-    left: auto; }
-  .xxlarge-push-5 {
-    position: relative;
-    left: 41.6666666667%;
-    right: auto; }
-  .xxlarge-pull-5 {
-    position: relative;
-    right: 41.6666666667%;
-    left: auto; }
-  .xxlarge-push-6 {
-    position: relative;
-    left: 50%;
-    right: auto; }
-  .xxlarge-pull-6 {
-    position: relative;
-    right: 50%;
-    left: auto; }
-  .xxlarge-push-7 {
-    position: relative;
-    left: 58.3333333333%;
-    right: auto; }
-  .xxlarge-pull-7 {
-    position: relative;
-    right: 58.3333333333%;
-    left: auto; }
-  .xxlarge-push-8 {
-    position: relative;
-    left: 66.6666666667%;
-    right: auto; }
-  .xxlarge-pull-8 {
-    position: relative;
-    right: 66.6666666667%;
-    left: auto; }
-  .xxlarge-push-9 {
-    position: relative;
-    left: 75%;
-    right: auto; }
-  .xxlarge-pull-9 {
-    position: relative;
-    right: 75%;
-    left: auto; }
-  .xxlarge-push-10 {
-    position: relative;
-    left: 83.3333333333%;
-    right: auto; }
-  .xxlarge-pull-10 {
-    position: relative;
-    right: 83.3333333333%;
-    left: auto; }
-  .xxlarge-push-11 {
-    position: relative;
-    left: 91.6666666667%;
-    right: auto; }
-  .xxlarge-pull-11 {
-    position: relative;
-    right: 91.6666666667%;
-    left: auto; }
-  .column, .columns {
-    position: relative;
-    padding-left: 0.8333333333rem;
-    padding-right: 0.8333333333rem;
-    float: left; }
-  .xxlarge-1 {
-    width: 8.3333333333%; }
-  .xxlarge-2 {
-    width: 16.6666666667%; }
-  .xxlarge-3 {
-    width: 25%; }
-  .xxlarge-4 {
-    width: 33.3333333333%; }
-  .xxlarge-5 {
-    width: 41.6666666667%; }
-  .xxlarge-6 {
-    width: 50%; }
-  .xxlarge-7 {
-    width: 58.3333333333%; }
-  .xxlarge-8 {
-    width: 66.6666666667%; }
-  .xxlarge-9 {
-    width: 75%; }
-  .xxlarge-10 {
-    width: 83.3333333333%; }
-  .xxlarge-11 {
-    width: 91.6666666667%; }
-  .xxlarge-12 {
-    width: 100%; }
-  .xxlarge-offset-0 {
-    margin-left: 0 !important; }
-  .xxlarge-offset-1 {
-    margin-left: 8.3333333333% !important; }
-  .xxlarge-offset-2 {
-    margin-left: 16.6666666667% !important; }
-  .xxlarge-offset-3 {
-    margin-left: 25% !important; }
-  .xxlarge-offset-4 {
-    margin-left: 33.3333333333% !important; }
-  .xxlarge-offset-5 {
-    margin-left: 41.6666666667% !important; }
-  .xxlarge-offset-6 {
-    margin-left: 50% !important; }
-  .xxlarge-offset-7 {
-    margin-left: 58.3333333333% !important; }
-  .xxlarge-offset-8 {
-    margin-left: 66.6666666667% !important; }
-  .xxlarge-offset-9 {
-    margin-left: 75% !important; }
-  .xxlarge-offset-10 {
-    margin-left: 83.3333333333% !important; }
-  .xxlarge-offset-11 {
-    margin-left: 91.6666666667% !important; }
-  .xxlarge-reset-order {
-    float: left;
-    left: auto;
-    margin-left: 0;
-    margin-right: 0;
-    right: auto; }
-  .column.xxlarge-centered, .columns.xxlarge-centered {
-    margin-left: auto;
-    margin-right: auto;
-    float: none; }
-  .column.xxlarge-uncentered, .columns.xxlarge-uncentered {
-    float: left;
-    margin-left: 0;
-    margin-right: 0; }
-  .column.xxlarge-centered:last-child, .columns.xxlarge-centered:last-child {
-    float: none; }
-  .column.xxlarge-uncentered:last-child, .columns.xxlarge-uncentered:last-child {
-    float: left; }
-  .column.xxlarge-uncentered.opposite, .columns.xxlarge-uncentered.opposite {
-    float: right; }
-  .row.xxlarge-collapse > .column, .row.xxlarge-collapse > .columns {
-    padding-left: 0;
-    padding-right: 0; }
-  .row.xxlarge-collapse .row {
-    margin-left: 0;
-    margin-right: 0; }
-  .row.xxlarge-uncollapse > .column, .row.xxlarge-uncollapse > .columns {
-    padding-left: 0.8333333333rem;
-    padding-right: 0.8333333333rem;
-    float: left; } }
-
 .accordion {
   margin-bottom: 0; }
   .accordion:before, .accordion:after {
@@ -6340,9 +5978,11 @@ button, a.button, .button {
   text-shadow: 1px 2px 3px #666; }
 
 .impact {
-  font-size: 2rem;
-  line-height: 2.4444444444rem;
+  font-size: 1.4444444444rem;
+  line-height: 1.7777777778rem;
   font-weight: bold; }
+  .impact.shadow {
+    text-shadow: 1px 2px 3px #666; }
 
 .statistic {
   font-size: 2.6666666667rem;
@@ -6352,7 +5992,7 @@ button, a.button, .button {
   font-size: 4rem;
   line-height: 4.6666666667rem;
   font-weight: bold;
-  letter-spacing: -0.1rem; }
+  letter-spacing: -0.1111111111rem; }
 
 p {
   font-size: 1rem;
@@ -6368,8 +6008,8 @@ h1 {
 
 .huge {
   font-size: 3rem;
-  line-height: 3rem;
-  letter-spacing: -0.1rem; }
+  line-height: 3.1111111111rem;
+  letter-spacing: -0.1111111111rem; }
 
 h2 {
   font-size: 1.5555555556rem;
@@ -6391,10 +6031,6 @@ small {
   line-height: 1.1111111111rem; }
 
 @media only screen and (min-width:30.0625rem) {
-  .huge {
-    font-size: 4.0555555556rem;
-    line-height: 6rem;
-    letter-spacing: -0.4rem; }
   .top-nav {
     font-size: 1.1666666667rem;
     line-height: 1.1666666667rem; }
@@ -6405,16 +6041,24 @@ small {
     line-height: 2rem; } }
 
 @media only screen and (min-width:42.5625rem) {
+  .impact {
+    font-size: 2.5rem;
+    line-height: 3rem; }
+  .huge {
+    font-size: 4.5rem;
+    line-height: 4.6666666667rem;
+    letter-spacing: -0.2222222222rem; }
   .huge-statistic {
     font-size: 8rem;
     line-height: 8.6666666667rem;
     font-weight: bold;
-    letter-spacing: -0.4rem; }
+    letter-spacing: -0.2222222222rem; }
   h1 {
     font-size: 3.1111111111rem;
     line-height: 3.5555555556rem; }
     h1 .huge {
-      font-size: 6rem; } }
+      font-size: 4.5rem;
+      line-height: 4.6666666667rem; } }
 
 @media (min-width: 20rem) and (max-width: 22.5rem) {
   h1.normal {
@@ -6429,6 +6073,10 @@ small {
 @media (min-width: 42.5625rem) and (max-width: 47.5rem) {
   .huge-statistic {
     font-size: 7.2222222222rem; } }
+
+.frame {
+  max-width: 55rem;
+  margin: 0 auto; }
 
 /**
  * This file was auto-generated in order to merge all vendor css in one scss file.
@@ -8550,7 +8198,7 @@ ul.tertiary-nav {
       padding-left: 0.4444444444rem;
       margin-left: 0.4444444444rem; } }
 
-a.joinLink, a.joinLink:visited {
+a.aboutJoinLink, a.aboutJoinLink:visited {
   color: #a9d14c; }
 
 a.visitLink, a.visitLink:visited {
@@ -8560,6 +8208,14 @@ a.visitLink, a.visitLink:visited {
   overflow: auto;
   background-color: #236133;
   padding: 0.5555555556rem; }
+
+.aboutIntroTextSection {
+  padding-top: 2rem; }
+  .aboutIntroTextSection svg {
+    width: 3.3333333333rem;
+    height: 3.3333333333rem; }
+  .aboutIntroTextSection svg, .aboutIntroTextSection p {
+    padding-bottom: 1.1111111111rem; }
 
 .joinText {
   line-height: 3.6111111111rem; }
@@ -8581,100 +8237,80 @@ a.visitLink, a.visitLink:visited {
 
 .aboutSeeMoreContainer .row {
   padding: 0 0.2777777778rem; }
-
-.row1 {
+.aboutSeeMoreContainer .row1 {
   display: inline-block; }
-
-.row1TextContainer {
+.aboutSeeMoreContainer .row1TextContainer {
   padding-top: 1.9444444444rem; }
   @media only screen and (min-width:30.0625rem) {
-    .row1TextContainer {
+    .aboutSeeMoreContainer .row1TextContainer {
       padding-top: 5rem; } }
   @media only screen and (min-width:42.5625rem) {
-    .row1TextContainer {
+    .aboutSeeMoreContainer .row1TextContainer {
       padding-top: 8.8888888889rem; } }
-
-.row1StatContainer {
+.aboutSeeMoreContainer .row1StatContainer {
   padding-right: 1.1111111111rem; }
   @media only screen and (min-width:42.5625rem) {
-    .row1StatContainer {
+    .aboutSeeMoreContainer .row1StatContainer {
       padding-right: 8.3333333333rem; } }
-
-.row2 {
+.aboutSeeMoreContainer .row2 {
   display: inline-block; }
-
-.row2TextContainer {
+.aboutSeeMoreContainer .row2TextContainer {
   margin-top: 1.1111111111rem; }
-
-.row2StatContainer {
+.aboutSeeMoreContainer .row2StatContainer {
   padding-top: 1.9444444444rem; }
   @media only screen and (min-width:30.0625rem) {
-    .row2StatContainer {
+    .aboutSeeMoreContainer .row2StatContainer {
       padding-top: 13.3333333333rem;
       padding-left: 1.3888888889rem; } }
   @media only screen and (min-width:42.5625rem) {
-    .row2StatContainer {
+    .aboutSeeMoreContainer .row2StatContainer {
       padding-top: 24.9444444444rem;
       padding-left: 2.7777777778rem; } }
-
-.row3 {
+.aboutSeeMoreContainer .row3 {
   display: inline-block; }
-
-.row3TextContainer {
+.aboutSeeMoreContainer .row3TextContainer {
   padding-top: 1.9444444444rem; }
   @media only screen and (min-width:30.0625rem) {
-    .row3TextContainer {
+    .aboutSeeMoreContainer .row3TextContainer {
       padding-top: 3.3333333333rem; } }
-
-.row4 {
+.aboutSeeMoreContainer .row4 {
   display: inline-block;
   padding-top: 1.9444444444rem; }
-
 @media only screen and (min-width:42.5625rem) {
-  .row4StatsContainer {
+  .aboutSeeMoreContainer .row4StatsContainer {
     text-align: center; } }
-
-.row5 {
+.aboutSeeMoreContainer .row5 {
   display: inline-block; }
-
-.row5TextContainer {
+.aboutSeeMoreContainer .row5TextContainer {
   padding-top: 1.9444444444rem; }
   @media only screen and (min-width:30.0625rem) {
-    .row5TextContainer {
+    .aboutSeeMoreContainer .row5TextContainer {
       padding-top: 16.6666666667rem; } }
-
-.row5TextContainer2 {
+.aboutSeeMoreContainer .row5TextContainer2 {
   padding-top: 1.9444444444rem; }
   @media only screen and (min-width:30.0625rem) {
-    .row5TextContainer2 {
+    .aboutSeeMoreContainer .row5TextContainer2 {
       margin-top: -4.1666666667rem; } }
-
-.row6 {
+.aboutSeeMoreContainer .row6 {
   display: inline-block; }
-
-.row6StatContainer {
+.aboutSeeMoreContainer .row6StatContainer {
   padding-top: 1.9444444444rem; }
   @media only screen and (min-width:30.0625rem) and (max-width:42.5rem) {
-    .row6StatContainer {
+    .aboutSeeMoreContainer .row6StatContainer {
       text-align: right !important; } }
-
-#row6LargeView {
+.aboutSeeMoreContainer #row6LargeView {
   padding-top: 6.1111111111rem; }
-
-.row6aTextContainer {
+.aboutSeeMoreContainer .row6aTextContainer {
   padding-top: 6.6666666667rem; }
-
-.row6aStatContainer2 {
+.aboutSeeMoreContainer .row6aStatContainer2 {
   padding-top: 1.9444444444rem; }
-
-.row7 {
+.aboutSeeMoreContainer .row7 {
   display: inline-block;
   padding-top: 1.9444444444rem; }
   @media only screen and (min-width:30.0625rem) {
-    .row7 {
+    .aboutSeeMoreContainer .row7 {
       padding-top: 2.7777777778rem; } }
-
-.row7TextContainer {
+.aboutSeeMoreContainer .row7TextContainer {
   padding-top: 1.9444444444rem; }
 
 .green-bolded {
@@ -8780,6 +8416,18 @@ a.visitLink, a.visitLink:visited {
 .pfp-meter .amount-raised .fundraising-meter {
   height: .7rem; }
 
+.loan-gist .country-image {
+  display: inline; }
+  .loan-gist .country-image img {
+    height: auto;
+    width: 3rem; }
+.loan-gist .country-text {
+  width: 75%;
+  vertical-align: top;
+  display: inline-block; }
+  .loan-gist .country-text div {
+    display: inline; }
+
 a.modal-link {
   color: black;
   text-decoration: underline; }
@@ -8787,3 +8435,24 @@ a.modal-link {
 a.modal-link:hover {
   color: #236133;
   text-decoration: underline; }
+
+.text-over-image {
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  transform-style: preserve-3d; }
+
+.text-over-image img {
+  position: relative; }
+
+.text-over-image div {
+  position: absolute;
+  width: 100%;
+  top: 50%;
+  transform: translateY(-50%); }
+
+.text-over-image p {
+  max-width: 990px;
+  /* 55rem */
+  margin: 0 auto;
+  padding: 0 2rem;
+  text-align: center; }
