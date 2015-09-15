@@ -7,11 +7,24 @@
       width: 100%;
     }
   }
-  .loan-figure{
+  .loan-figure {
     padding-left: 0;
     padding-right: 0;
   }
   .row {
     padding-bottom: 1rem;
   }
+
+  .left-content {
+    @media #{$medium-up}{
+      background-color: $kiva-bg-darkgray
+    }
+  }
+
+  .story{
+    max-width: none;
+    margin: 0
+  ;
+  }
 }
+

@@ -11,7 +11,7 @@
 }
 
 .loan-story {
-  .story-header, .body-text{
+  .story-header, .body-text {
     padding-bottom: 0.6rem;
   }
   .icon {
@@ -41,7 +41,7 @@
     margin: 0;
   }
 
-  .accordion .accordion-navigation > a{
+  .accordion .accordion-navigation > a {
     font-size: $small-font-size;
   }
 
@@ -170,3 +170,81 @@
     }
   }
 }
+
+.ac-container label {
+  position: relative;
+  z-index: 20;
+  display: block;
+  height: 30px;
+  cursor: pointer;
+  line-height: 33px;
+}
+
+.ac-container label:hover:after,
+.ac-container input:checked + label:hover:after {
+  content: '';
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  right: 13px;
+  top: 7px;
+  background: transparent;
+
+}
+
+.ac-container input {
+  display: none;
+}
+
+.ac-container article {
+  margin-top: -1px;
+  overflow: hidden;
+  max-height: 0px;
+  position: relative;
+  z-index: 10;
+  transition: max-height 0.3s ease-in-out;
+}
+
+.ac-container input:checked ~ article {
+  transition: max-height 0.5s ease-in-out;
+}
+
+.ac-container input:checked ~ .icon {
+  $transform: rotate(-180deg);
+
+  -webkit-transform: $transform;
+  -ms-transform: $transform;
+  transform: $transform;
+}
+
+.ac-container article p {
+  padding: 20px;
+  display: block;
+  overflow: auto;
+}
+
+.ac-container input:checked ~ article.ac-small {
+  max-height: 5000px;
+}
+
+.ac-container input:checked ~ article.ac-medium {
+  max-height: 5000px;
+}
+
+.ac-container input:checked ~ article.ac-large {
+  //height: 230px;
+}
+
+.icon {
+  float: right;
+  height: 1rem;
+  width: rem-calc(25);
+  fill: none;
+  stroke: $kiva-text-dark;
+
+  $transition: 300ms ease;
+
+  -webkit-transition: -webkit-transform $transition;
+  transition: transform $transition;
+}
+

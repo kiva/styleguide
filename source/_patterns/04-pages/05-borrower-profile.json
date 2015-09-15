@@ -21,29 +21,36 @@
   "borrowerFirstName": "John",
   "storyBody": [
     {
-      "content": "John applied for a loan"
+      "content": "John applied for his first loan of KES 25,000 from Vision Fund Kenya to buy a dairy cow so that he can increase the amount of milk he supplies and thereby earn more income. He plans to use part of his profit to repay the loan and to expand his agricultural business."
     },
     {
-      "content": "He wants to accomplish his dreams"
+      "content": "His hope for the future is to be financially stable."
     }
   ],
   "borrowers": [
+    {
+      "name": "Sarah",
+      "pictured": true
+    },
     {
       "name": "John",
       "pictured": true
     },
     {
-      "name": "Adam",
-      "pictured": true
-    },
-    {
-      "name": "Sean",
+      "name": "Anna",
       "pictured": false
     }
   ],
   "translation": {
     "language": "Spanish",
     "translator": "Tayah Wheeland",
-    "original": "original translation in spanish"
+    "storyBody":[
+      {
+        "content": "John ha solicitado su primer prestamo de KES 25.000 de Vision Fondo Kenia para comprar una vaca lechera para que pueda QUE Aumentar la cantidad de leche que abastece esta manera y ganar mas ingresos. El planea utilizar parte de sus ganancias para pagar el prestamo y ampliar su negocio agricola."
+      },
+      {
+        "content": "Su esperanza para el futuro es ser financieramente estable."
+      }
+    ]
   }
 }
