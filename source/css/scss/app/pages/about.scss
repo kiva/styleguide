@@ -1,27 +1,51 @@
-a.joinlink,
-a.joinlink:visited {
-  color: $kiva-accent-green;
+a.aboutJoinLink,
+a.aboutJoinLink:visited {
+	color: $kiva-accent-green;
 }
 
+a.visitLink,
+a.visitLink:visited {
+	color: $kiva-green;
+}
+
+.aboutSeeMoreContainer,
 .joinSection {
-  text-align: center;
-  background-color: $kiva-darkgreen;
-  padding: rem-calc(20) rem-calc(35) rem-calc(20) rem-calc(35);
+	overflow: auto;
+	background-color: $kiva-darkgreen;
+	padding: rem-calc(10);
+}
+
+.aboutIntroTextSection {
+	padding-top: rem-calc(36);
+
+	svg {
+		width: rem-calc(60);
+		height: rem-calc(60);
+	}
+
+	svg,
+	p {
+		padding-bottom: rem-calc(20);
+	}
 }
 
 .joinText {
-  line-height: rem-calc(65);
+	line-height: rem-calc(65);
+}
+
+.joinLinkWrapper {
+	padding-top: rem-calc(20);
 }
 
 .white {
-  color: $white;
+	color: $white;
 }
 
 .hrDivider {
-  color: $kiva-green;
-  border-color: $kiva-green;
-  background-color: $kiva-green;
-  margin-bottom: rem-calc(35);
+	color: $kiva-green;
+	border-color: $kiva-green;
+	background-color: $kiva-green;
+	margin-bottom: rem-calc(35);
 }
 
 .what-makes-us-unique {
@@ -29,3 +53,135 @@ a.joinlink:visited {
 		width: rem-calc(120);
 	}
 }
+
+.aboutSeeMoreContainer {
+	.row {
+		padding: rem-calc(0) rem-calc(5);
+	}
+	.row1 {
+		display: inline-block;
+	}
+
+	.row1TextContainer {
+		padding-top: rem-calc(35);
+
+		@media #{$medium-up} {
+			padding-top: rem-calc(90);
+		}
+
+		@media #{$large-up} {
+			padding-top: rem-calc(160);
+		}
+	}
+
+	.row1StatContainer {
+		padding-right: rem-calc(20);
+
+		@media #{$large-up} {
+			padding-right: rem-calc(150);
+		}
+	}
+
+	.row2 {
+		display: inline-block;
+	}
+
+	.row2TextContainer {
+		margin-top: rem-calc(20);
+	}
+
+	.row2StatContainer {
+		padding-top: rem-calc(35);
+
+		@media #{$medium-up} {
+			padding-top: rem-calc(240);
+			padding-left: rem-calc(25);
+		}
+
+		@media #{$large-up} {
+			padding-top: rem-calc(449);
+			padding-left: rem-calc(50);
+		}
+	}
+
+	.row3 {
+		display: inline-block;
+	}
+
+	.row3TextContainer {
+		padding-top: rem-calc(35);
+
+		@media #{$medium-up} {
+			padding-top: rem-calc(60);
+		}
+	}
+
+	.row4 {
+		display: inline-block;
+		padding-top: rem-calc(35);
+	}
+
+	.row4StatsContainer {
+		@media #{$large-up} {
+			text-align: center;
+		}
+	}
+
+	.row5 {
+		display: inline-block;
+	}
+
+	.row5TextContainer {
+		padding-top: rem-calc(35);
+
+		@media #{$medium-up} {
+			padding-top: rem-calc(300);
+		}
+	}
+
+	.row5TextContainer2 {
+		padding-top: rem-calc(35);
+
+		@media #{$medium-up} {
+			margin-top: rem-calc(-75);
+		}
+	}
+
+	.row6 {
+		display: inline-block;
+	}
+
+	.row6StatContainer {
+		padding-top: rem-calc(35);
+
+		@media #{$medium-only} {
+			text-align: right !important;
+		}
+	}
+
+	#row6LargeView {
+		padding-top: rem-calc(110);
+	}
+
+	.row6aTextContainer {
+		padding-top: rem-calc(120);
+	}
+
+	.row6aStatContainer2 {
+		padding-top: rem-calc(35);
+	}
+
+	.row7 {
+		display: inline-block;
+		padding-top: rem-calc(35);
+
+		@media #{$medium-up} {
+			padding-top: rem-calc(50);
+		}
+	}
+
+	.row7TextContainer {
+		padding-top: rem-calc(35);
+	}
+}
+

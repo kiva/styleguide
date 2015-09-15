@@ -1,0 +1,27 @@
+<div class="pfp-meter">
+    <div class="lender-count">
+        <h2 class="green-bolded">
+            {{lenderCount}} of {{lenderCountNeeded}}
+        </h2>
+
+        <div>Lenders</div>
+    </div>
+
+    <div class="fundraising-meter progress">
+        <span class="meter" style="width: {{lenderCountPercent}}%"></span>
+    </div>
+    <p class="black-underlined">
+        {{daysLeft}} days left to reach {{lenderCountNeeded}} lenders.
+    </p>
+
+    <div class="amount-raised">
+        <div>
+            ${{amountRaised}} of ${{amountNeeded}} raised so far.
+        </div>
+
+        <div class="fundraising-meter progress">
+            <span class="meter" style="width: {{amountRaisedPercent}}%"></span>
+        </div>
+    </div>
+
+</div>

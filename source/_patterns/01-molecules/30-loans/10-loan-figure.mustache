@@ -1,0 +1,20 @@
+<figure class="loan-figure">
+    <div class="loan-figure-carousel">
+        {{#figures}}
+            <div class="loan-image-wrap">
+                <img src="{{url}}" class="loan-image" alt="{{alt}}" />
+            </div>
+        {{/figures}}
+    </div>
+
+    <div class="carousel-prev carousel-nav">
+        <svg class="icon-small-chevron icon"><use xlink:href="#icon-small-chevron"/></svg>
+    </div>
+
+    <div class="carousel-next carousel-nav">
+        <svg class="icon-small-chevron icon"><use xlink:href="#icon-small-chevron"/></svg>
+    </div>
+
+    {{> molecules-loan-image-footer}}
+</figure>
+

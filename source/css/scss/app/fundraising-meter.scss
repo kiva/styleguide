@@ -1,18 +1,22 @@
 .fundraising-meter {
-  position: relative;
-  border: none;
-  padding: 0;
-  background-color: $kiva-bg-darkgray;
+    background-color: $kiva-bg-darkgray;
+    position: relative;
+	border: none;
+	padding: 0;
 
-  .meter {
-    background-color: $kiva-green;
-  }
+	.meter {
+		background-color: $kiva-green;
+	}
 
-  .caption {
-    position: absolute;
-    top: 0;
-    height: 100%;
-    width: 100%;
-    text-align: center;
-  }
+    &.repaying .meter {
+        background-color: $gray;
+    }
+
+    .caption {
+        position: absolute;
+        top: 0;
+        height: 100%;
+        width: 100%;
+        text-align: center;
+    }
 }

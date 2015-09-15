@@ -1,0 +1,25 @@
+// white shadowed text over a full-width image
+// see http://zerosixthree.se/vertical-align-anything-with-just-3-lines-of-css/
+.text-over-image {
+	-webkit-transform-style: preserve-3d;
+	-moz-transform-style: preserve-3d;
+	transform-style: preserve-3d;
+}
+
+.text-over-image img {
+	position: relative;
+}
+
+.text-over-image div {
+	position: absolute;
+	width: 100%;
+	top: 50%;
+	transform: translateY(-50%);
+}
+
+.text-over-image p {
+	max-width: 990px;  /* 55rem */
+	margin: 0 auto;
+	padding: 0 2rem;
+	text-align: center;
+}

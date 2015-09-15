@@ -47,7 +47,16 @@
 		"loan-card-loader" : {
 			"src" : "../../images/loan-card-loader.gif",
 			"alt" : "Loading"
+		},
+		"full-width" : {
+			"src" : "../../images/about/about-top",
+			"alt" : ""
+		},
+		"category" : {
+			"src" : "../../images/category/hp-cats-livestock",
+			"alt" : "Livestock"
 		}
+
 
 	},
 	"headline" : {

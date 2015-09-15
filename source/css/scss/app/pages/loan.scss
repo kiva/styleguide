@@ -179,3 +179,21 @@
     }
   }
 }
+
+.loan-gist {
+  .country-image {
+    display: inline;
+    img {
+      height: auto;
+      width: 3rem;
+    }
+  }
+  .country-text {
+    width: 75%;
+    vertical-align: top;
+    display: inline-block;
+    div {
+      display: inline;
+    }
+  }
+}
