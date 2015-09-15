@@ -1,0 +1,10 @@
+{{#is_match}}
+    <div class="matching-message">
+        <svg class="icon icon-match"><use xlink:href="#icon-match"/></svg>
+        <span>{{matching_text}}</span>
+    </div>
+{{/is_match}}
+
+<a href="#" class="favorite-link {{#is_favorite}}is-favorite{{/is_favorite}}">
+    <svg class="icon icon-star"><use xlink:href="#icon-star"/></svg>
+</a>
