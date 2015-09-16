@@ -81,6 +81,8 @@ div.about-video-wrapper {
 			width: rem-calc(16);
 			height: rem-calc(14);
 			fill: #fff;
+			-webkit-transform: rotate(90deg);
+			-moz-transform: rotate(90deg);
 			transform: rotate(90deg);
 
 			@media #{$xlarge-up} {
