@@ -68,6 +68,8 @@ a.visitLink:visited {
 			svg {
 				height: rem-calc(30);
 				stroke: $kiva-green;
+				float: none;
+				width: rem-calc(60);
 			}
 		}
 	}
@@ -94,7 +96,11 @@ a.visitLink:visited {
 		display: inline-block;
 
 		h1 {
-			line-height: 45px;
+			line-height: rem-calc(45);
+
+			@media #{$small-only} {
+				line-height: rem-calc(20);
+			}
 		}
 	}
 
