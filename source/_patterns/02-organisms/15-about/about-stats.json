@@ -1,0 +1,21 @@
+{
+  "borrowers": {
+    "small": {$num_borrowers|number_format}
+  }
+
+  "countries": {
+    "small": {$num_countries|number_format}
+  }
+
+  "lenders": {
+    "small": {$num_users_with_loans|number_format}
+  }
+
+  "dollarsLent": {
+    "small": {$amt_loan_purchases|currency:whole}
+  }
+
+  "repaymentRate": {
+    "small": {$repayment_rate|percent}
+  }
+}

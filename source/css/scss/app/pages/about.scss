@@ -61,9 +61,15 @@ a.visitLink:visited {
 	overflow: auto;
 	background-color: $kiva-darkgreen;
 
-	svg {
-		height: rem-calc(30);
-		stroke: $kiva-green;
+	.ac-container {
+
+		.ac-dropdown-icon {
+
+			svg {
+				height: rem-calc(30);
+				stroke: $kiva-green;
+			}
+		}
 	}
 
 	#panelSeeMore {
@@ -86,6 +92,10 @@ a.visitLink:visited {
 
 	.row {
 		display: inline-block;
+
+		h1 {
+			line-height: 45px;
+		}
 	}
 
 	.row1 {
