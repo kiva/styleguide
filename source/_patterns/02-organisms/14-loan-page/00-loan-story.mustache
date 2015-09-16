@@ -1,42 +1,58 @@
 <div class="loan-story">
-    <div class="story-header">{{borrowerFirstName}}'s Story</div>
-
-    {{#storyBody}}
-        <div class="body-text small-text">{{content}}</div>
-    {{/storyBody}}
-
-    <div>
-        <span class="small-text">In this group:</span>
-        <ul class="borrower-names">
-            {{#borrowers}}
-                <li class="small-text">{{name}}{{^pictured}}*{{/pictured}}</li>
-            {{/borrowers}}
-        </ul>
-        <div class="body-text small-text">*not pictured</div>
-    </div>
-
-    {{#translation}}
-        <span class="small-text">Translated from {{language}} by Kiva Volunteer {{translator}}</span>
-        <section class="ac-container">
-            <div>
-                <input class="ac-input" id="ac-translation" type="checkbox"/>
-                <label class="black-underlined small-text ac-title" for="ac-translation">
-                    View original language description
-                    <div class="ac-dropdown-icon">
-                        <svg class="icon icon-large-chevron">
-                            <use xlink:href="#icon-large-chevron"></use>
-                        </svg>
+    <section class="ac-container">
+        <div>
+            <input class="ac-input" id="ac-loan-story" type="checkbox" checked/>
+            <label class="ac-title" for="ac-loan-story">
+                <span class="story-header">{{borrowerFirstName}}'s Story</span>
+                <span class="ac-dropdown-icon">
+                    <svg class="icon icon-large-chevron">
+                        <use xlink:href="#icon-large-chevron"></use>
+                    </svg>
+                </span>
+            </label>
+            <article class="ac-body">
+                <span>
+                    {{#storyBody}}
+                        <div class="body-text small-text">{{content}}</div>
+                    {{/storyBody}}
+                    <div>
+                        <span class="small-text">In this group:</span>
+                        <ul class="borrower-names">
+                            {{#borrowers}}
+                                <li class="small-text">{{name}}{{^pictured}}*{{/pictured}}</li>
+                            {{/borrowers}}
+                        </ul>
+                        <div class="body-text small-text">*not pictured</div>
                     </div>
-                </label>
-                <article class="ac-body">
-                    <span>
-                        {{#storyBody}}
-                            <div class="body-text small-text">{{content}}</div>
-                        {{/storyBody}}
-                    </span>
-                </article>
-            </div>
-        </section>
-    {{/translation}}
+
+                    {{#translation}}
+                        <span class="small-text">Translated from {{language}}
+                            by Kiva Volunteer {{translator}}</span>
+                            <section class="ac-container">
+                                <div>
+                                    <input class="ac-input" id="ac-translation" type="checkbox"/>
+                                    <label class="black-underlined small-text ac-title" for="ac-translation">
+                                        View original language description
+                                        <div class="ac-dropdown-icon">
+                                            <svg class="icon icon-large-chevron">
+                                                <use xlink:href="#icon-large-chevron"></use>
+                                            </svg>
+                                        </div>
+                                    </label>
+                                    <article class="ac-body">
+                                        <span>
+                                            {{#storyBody}}
+                                                <div class="body-text small-text">{{content}}</div>
+                                            {{/storyBody}}
+                                        </span>
+                                    </article>
+                                </div>
+                            </section>
+                    {{/translation}}
+                </span>
+            </article>
+        </div>
+    </section>
+
 
 </div>
