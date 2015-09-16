@@ -13,25 +13,29 @@
   }
   .row {
     padding-bottom: 1rem;
-  }
-
-  .left-content {
-    @media #{$medium-up}{
-      background-color: $kiva-bg-darkgray
-    }
-  }
-
-  .story {
-    @media #{$medium-up} {
-      .left-content {
-        padding-left: 4.833333rem;
-      }
-    }
     max-width: none;
     margin: 0;
     .line-break {
       margin-top: 1rem;
     }
   }
+
+  @media #{$medium-up} {
+    .left-content {
+      padding-left: 4.833333rem;
+    }
+    .right-content {
+      padding-right: 4.833333rem;
+    }
+  }
+
+  .story {
+    .left-content {
+      @media #{$medium-up}{
+        background-color: $kiva-bg-darkgray
+      }
+    }
+  }
+
 }
 
