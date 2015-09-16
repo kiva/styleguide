@@ -1,4 +1,5 @@
 .borrower-profile-wrapper {
+
   .line-break {
     width: 90%;
     margin: auto;
@@ -21,6 +22,7 @@
   }
 
   @media #{$medium-up} {
+    padding-top: 1rem;
     .left-content {
       padding-left: 4.833333rem;
     }
