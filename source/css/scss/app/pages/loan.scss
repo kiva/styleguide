@@ -95,6 +95,12 @@
 }
 
 .is-special {
+  .ac-body {
+    padding-top: 1rem;
+  }
+  label {
+    font-size: 1rem;
+  }
   .kivan {
     position: relative;
     .profile-photo {
