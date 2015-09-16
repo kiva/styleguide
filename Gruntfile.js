@@ -135,18 +135,27 @@ module.exports = function(grunt) {
 
 		, svgmin: {
 			options: {
-				plugins: [
-					{ removeViewBox: false }
-					,{ removeEmptyAttrs: false }
-				]
+				plugins: []
+				, floatPrecision: 2
 			}
 			, minify: {
-				files: [{
-					expand: true
-					, cwd: 'source/images/icons'
-					, src: ['*.svg']
-					, dest: 'source/images/icons.min'
-				}]
+				files: [
+					{
+						expand: true
+						, cwd: 'source/images/icons'
+						, src: ['*.svg']
+						, dest: 'source/images/icons.min'
+					}
+					,{
+						expand: true
+						, cwd: 'source/images/about'
+						, src: ['*.svg', '!*.min.svg']
+						, dest: 'source/images/about/'
+						, rename: function(dest, src) {
+							return dest + src.replace('.svg', '.min.svg');
+						}
+					}
+				]
 			}
 		}
 
