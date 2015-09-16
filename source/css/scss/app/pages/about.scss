@@ -1,25 +1,17 @@
-a.aboutJoinLink,
-a.aboutJoinLink:visited {
-	color: $kiva-accent-green;
-}
-
 a.visitLink,
 a.visitLink:visited {
 	color: $kiva-green;
 }
 
+.white {
+	color: $white;
+}
+
 .aboutSeeMoreContainer,
-.aboutContainer,
 .joinSection {
 	overflow: auto;
 	background-color: $kiva-darkgreen;
 	padding: rem-calc(10);
-
-	svg {
-		height: rem-calc(30);
-		stroke: $kiva-green;
-	}
-
 }
 
 .aboutIntroTextSection {
@@ -36,23 +28,26 @@ a.visitLink:visited {
 	}
 }
 
-.joinText {
-	line-height: rem-calc(65);
-}
+.joinSection {
+	.joinText {
+		line-height: rem-calc(65);
+	}
 
-.joinLinkWrapper {
-	padding-top: rem-calc(20);
-}
+	.joinLinkWrapper {
+		padding-top: rem-calc(20);
+	}
 
-.white {
-	color: $white;
-}
+	.hrDivider {
+		color: $kiva-green;
+		border-color: $kiva-green;
+		background-color: $kiva-green;
+		margin-bottom: rem-calc(35);
+	}
 
-.hrDivider {
-	color: $kiva-green;
-	border-color: $kiva-green;
-	background-color: $kiva-green;
-	margin-bottom: rem-calc(35);
+	a.aboutJoinLink,
+	a.aboutJoinLink:visited {
+		color: $kiva-accent-green;
+	}
 }
 
 .what-makes-us-unique {
@@ -61,12 +56,20 @@ a.visitLink:visited {
 	}
 }
 
-.panelSeeMore,
-#panelSeeMore {
-	background-color: $kiva-darkgreen;
-}
 
 .aboutContainer {
+	overflow: auto;
+	background-color: $kiva-darkgreen;
+
+	svg {
+		height: rem-calc(30);
+		stroke: $kiva-green;
+	}
+
+	#panelSeeMore {
+		background-color: $kiva-darkgreen;
+	}
+
 	.accordion-navigation,
 	.accordion-navigation.active {
 
@@ -80,13 +83,27 @@ a.visitLink:visited {
 			background-color: $kiva-darkgreen;
 		}
 	}
+
+	.row {
+		display: inline-block;
+	}
+
+	.row1 {
+		padding: rem-calc(10) rem-calc(0) rem-calc(35) rem-calc(0);
+	}
+
+	.row2 {
+		padding-bottom: rem-calc(35);
+	}
+
+	.row3 {
+		padding-bottom: rem-calc(35);
+	}
 }
 
 .aboutSeeMoreContainer {
 	.row {
 		padding: rem-calc(0) rem-calc(5);
-	}
-	.row1 {
 		display: inline-block;
 	}
 
@@ -110,10 +127,6 @@ a.visitLink:visited {
 		}
 	}
 
-	.row2 {
-		display: inline-block;
-	}
-
 	.row2TextContainer {
 		margin-top: rem-calc(20);
 	}
@@ -132,10 +145,6 @@ a.visitLink:visited {
 		}
 	}
 
-	.row3 {
-		display: inline-block;
-	}
-
 	.row3TextContainer {
 		padding-top: rem-calc(35);
 
@@ -145,7 +154,6 @@ a.visitLink:visited {
 	}
 
 	.row4 {
-		display: inline-block;
 		padding-top: rem-calc(35);
 	}
 
@@ -153,10 +161,6 @@ a.visitLink:visited {
 		@media #{$large-up} {
 			text-align: center;
 		}
-	}
-
-	.row5 {
-		display: inline-block;
 	}
 
 	.row5TextContainer {
@@ -173,10 +177,6 @@ a.visitLink:visited {
 		@media #{$medium-up} {
 			margin-top: rem-calc(-75);
 		}
-	}
-
-	.row6 {
-		display: inline-block;
 	}
 
 	.row6StatContainer {
@@ -200,7 +200,6 @@ a.visitLink:visited {
 	}
 
 	.row7 {
-		display: inline-block;
 		padding-top: rem-calc(35);
 
 		@media #{$medium-up} {
