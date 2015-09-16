@@ -1,0 +1,22 @@
+<div class="current-status-meter">
+    <div class="lender-count">
+        <h2 class="green-bolded">
+            {{amountRaisedPercent}}%
+        </h2>
+
+        <div>funded, ${{amountLeft}} to go</div>
+    </div>
+
+    <div class="fundraising-meter progress">
+        <span class="meter" style="width: {{amountRaisedPercent}}%"></span>
+    </div>
+
+    <div class="raised-info row">
+        <div class="loan-total small-4 medium-12 columns">
+            Total loan:${{totalLoanAmount}}
+        </div>
+        <div class="black-underlined small-8 medium-12 columns">
+            Powered by {{lenderCount}} Kiva lenders
+        </div>
+    </div>
+</div>

@@ -1,0 +1,43 @@
+.borrower-profile-wrapper {
+
+  .line-break {
+    width: 90%;
+    margin: auto;
+    padding: 0.6rem 0;
+    @media #{$medium-up}{
+      width: 100%;
+    }
+  }
+  .loan-figure {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .row {
+    padding-bottom: 1rem;
+    max-width: none;
+    margin: 0;
+    .line-break {
+      margin-top: 1rem;
+    }
+  }
+
+  @media #{$medium-up} {
+    padding-top: 1rem;
+    .left-content {
+      padding-left: 4.833333rem;
+    }
+    .right-content {
+      padding-right: 4.833333rem;
+    }
+  }
+
+  .story {
+    .left-content {
+      @media #{$medium-up}{
+        background-color: $kiva-bg-darkgray
+      }
+    }
+  }
+
+}
+

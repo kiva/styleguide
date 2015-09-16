@@ -3,10 +3,8 @@
 		{
 			"url": "http://www.kiva.org/img/w800/1970076.jpg", "alt": "one"
 		}
-		, {
-			"url": "http://www.kiva.org/img/w800/1969963.jpg", "alt": "two"
-		}
 	]
 
 	, "is_match": true
+	, "matching_text": "Your loan will be matched!"
 }

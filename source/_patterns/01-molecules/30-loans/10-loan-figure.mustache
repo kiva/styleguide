@@ -15,14 +15,6 @@
         <svg class="icon-small-chevron icon"><use xlink:href="#icon-small-chevron"/></svg>
     </div>
 
-    {{#is_match}}
-        <div class="matching-message">
-            <svg class="icon icon-match"><use xlink:href="#icon-match"/></svg>
-            <span>Your loan will be matched!</span>
-        </div>
-    {{/is_match}}
-
-    <a href="#" class="favorite-link {{#is_favorite}}is-favorite{{/is_favorite}}">
-        <svg class="icon icon-star"><use xlink:href="#icon-star"/></svg>
-    </a>
+    {{> molecules-loan-image-footer}}
 </figure>
+
