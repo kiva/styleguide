@@ -29,9 +29,8 @@ $section-head-line-height		: rem-calc(36);
 
 $feature-font-size				: $section-head-font-size;
 $feature-line-height			: $section-head-line-height;
-$featured-line-height-reduction : rem-calc(25);
-$feature-font-medium-reduction  : $section-head-font-size - (rem-calc(7));
-$feature-font-small-reduction   : $section-head-font-size - (rem-calc(14));
+$feature-font-size-reduction 	: rem-calc(6);
+$feature-line-height-reduction	: rem-calc(9);
 
 $headline-font-size				: rem-calc(56);
 $headline-line-height			: rem-calc(64);
@@ -40,10 +39,12 @@ $headline-font-size-small-reduction	: rem-calc(26);
 $headline-font-size-extra-small-reduction	: rem-calc(31);
 $headline-line-height-reduction	: rem-calc(32);
 
-$impact-font-size				: rem-calc(45);
-$impact-line-height				: rem-calc(54);
-$impact-font-size-reduction		: rem-calc(19);
-$impact-line-height-reduction	: rem-calc(22);
+$impact-font-size					: rem-calc(45);
+$impact-line-height					: rem-calc(54);
+$impact-font-size-med-reduction		: rem-calc(9);
+$impact-line-height-med-reduction	: rem-calc(14);
+$impact-font-size-reduction			: rem-calc(19);
+$impact-line-height-reduction		: rem-calc(22);
 
 $huge-headline-font-size		: rem-calc(81);
 $huge-headline-line-height		: rem-calc(84);
@@ -77,6 +78,32 @@ $paragraph-line-height: $body-line-height;
 	text-shadow: 1px 2px 3px #666;
 }
 
+@mixin featured-text() {
+	font-size: $feature-font-size - $feature-font-size-reduction;
+	line-height: $feature-line-height - $feature-line-height-reduction;
+
+	@media #{$medium-up} {
+		font-size: $feature-font-size;
+		line-height: $feature-line-height;
+	}
+}
+
+@mixin impact-text() {
+	font-size: $impact-font-size - $impact-font-size-reduction;
+	line-height: $impact-line-height - $impact-line-height-reduction;
+	font-weight: $font-weight-bold;
+
+	@media #{$medium-only} {
+		font-size: $impact-font-size - $impact-font-size-med-reduction;
+		line-height: $impact-line-height - $impact-line-height-med-reduction;
+	}
+
+	@media #{$large-up} {
+		font-size: $impact-font-size;
+		line-height: $impact-line-height;
+	}
+}
+
 
 .small-text {
 	font-size: $small-font-size;
@@ -84,20 +111,23 @@ $paragraph-line-height: $body-line-height;
 }
 
 .featured {
-	line-height: $featured-line-height-reduction;
+	@include featured-text();
+}
+
+.featured-medium-up {
+	@media #{$medium-up} {
+		@include featured-text();
+	}
 }
 
 .overlay {
-	font-size: $feature-font-size;
-	line-height: $feature-line-height;
-	color: $white;
+	@include featured-text();
 	@include text-shadow();
+	color: $white;
 }
 
 .impact {
-	font-size: $impact-font-size - $impact-font-size-reduction;
-	line-height: $impact-line-height - $impact-line-height-reduction;
-	font-weight: $font-weight-bold;
+	@include impact-text();
 
 	&.shadow {
 		@include text-shadow();
@@ -179,11 +209,6 @@ small {
 }
 
 @media #{$large-up} {
-	.impact {
-		font-size: $impact-font-size;
-		line-height: $impact-line-height;
-	}
-
 	.huge {
 		font-size: $huge-headline-font-size;
 		line-height: $huge-headline-line-height;

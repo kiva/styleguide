@@ -7,9 +7,14 @@ $frame-width: $row-width;
 
 @mixin frame-width() {
 	max-width: $frame-width;
+	margin: 0 auto;
+	padding: 0 rem-calc(10);
+
+	@media #{$medium-up} {
+		padding: 0 rem-calc(20);
+	}
 }
 
 .frame {
 	@include frame-width();
-	margin: 0 auto;
 }

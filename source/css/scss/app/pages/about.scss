@@ -15,7 +15,7 @@ a.visitLink:visited {
 	padding: rem-calc(10);
 }
 
-.aboutIntroTextSection {
+div.aboutIntro {
 	padding-top: rem-calc(36);
 
 	svg {
@@ -37,8 +37,58 @@ a.visitLink:visited {
 	padding-top: rem-calc(20);
 }
 
-.white {
-	color: $white;
+div.about-video-wrapper {
+	position: relative;
+
+	.button-wrapper {
+		position: absolute;
+		top: 75%;
+		left: 0;
+		width: 100%;
+		height: 40%;
+
+		@media #{$medium-up} {
+			top: 40%;
+		}
+	}
+
+	.play-button {
+		position: relative;
+		width: 16rem;
+		padding: rem-calc(8);
+		text-align: center;
+		background-color: black;
+		color: white;
+
+		@media #{$small-only} {
+			margin: 0 auto;
+		}
+
+		@media #{$medium-up} {
+			left: 40%;
+		}
+
+		@media #{$xlarge-up} {
+			@include featured-text();
+			width: 24rem;
+		}
+
+		@media #{$xxlarge-up} {
+			left: 50%;
+		}
+
+		svg.icon-triangle {
+			width: rem-calc(16);
+			height: rem-calc(14);
+			fill: #fff;
+			transform: rotate(90deg);
+
+			@media #{$xlarge-up} {
+				width: rem-calc(24);
+				height: rem-calc(22);
+			}
+		}
+	}
 }
 
 .hrDivider {
@@ -49,8 +99,22 @@ a.visitLink:visited {
 }
 
 .what-makes-us-unique {
+	margin-bottom: 2rem;
+
+	@media #{small} {
+		margin-bottom: 1rem;
+	}
+
 	svg {
-		width: rem-calc(120);
+		width: rem-calc(70);
+		height: rem-calc(70);
+		margin-top: rem-calc(30);
+
+
+		@media #{$medium-up} {
+			width: rem-calc(120);
+			height: rem-calc(120);
+		}
 	}
 }
 

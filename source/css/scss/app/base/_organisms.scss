@@ -1,9 +1,15 @@
-// white shadowed text over a full-width image
-// see http://zerosixthree.se/vertical-align-anything-with-just-3-lines-of-css/
-.text-over-image {
+@mixin preserve-3d() {
 	-webkit-transform-style: preserve-3d;
 	-moz-transform-style: preserve-3d;
 	transform-style: preserve-3d;
+}
+
+
+
+// white shadowed text over a full-width image
+// see http://zerosixthree.se/vertical-align-anything-with-just-3-lines-of-css/
+.text-over-image {
+	@include  preserve-3d();
 }
 
 .text-over-image img {
@@ -18,8 +24,7 @@
 }
 
 .text-over-image p {
-	max-width: 990px;  /* 55rem */
-	margin: 0 auto;
+	@include frame-width();
 	padding: 0 2rem;
 	text-align: center;
 }
