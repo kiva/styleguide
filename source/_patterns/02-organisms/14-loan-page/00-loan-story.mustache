@@ -17,21 +17,26 @@
 
     {{#translation}}
         <span class="small-text">Translated from {{language}} by Kiva Volunteer {{translator}}</span>
-        <ul class="accordion animated" data-accordion>
-            <li class="accordion-navigation">
-                <a href="#translation" class="black-underlined small-text">View original language description
-                    <svg class="icon">
-                        <use xlink:href="#icon-triangle"/>
-                    </svg>
-                </a>
-
-                <div id="translation" class="content">
-                    {{#storyBody}}
-                        <div class="body-text small-text">{{content}}</div>
-                    {{/storyBody}}
-                </div>
-            </li>
-        </ul>
+        <section class="ac-container">
+            <div>
+                <input class="ac-input" id="ac-translation" type="checkbox"/>
+                <label class="black-underlined small-text ac-title" for="ac-translation">
+                    View original language description
+                    <div class="ac-dropdown-icon">
+                        <svg class="icon icon-large-chevron">
+                            <use xlink:href="#icon-large-chevron"></use>
+                        </svg>
+                    </div>
+                </label>
+                <article class="ac-body">
+                    <span>
+                        {{#storyBody}}
+                            <div class="body-text small-text">{{content}}</div>
+                        {{/storyBody}}
+                    </span>
+                </article>
+            </div>
+        </section>
     {{/translation}}
 
 </div>
