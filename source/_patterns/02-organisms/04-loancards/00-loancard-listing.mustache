@@ -5,19 +5,19 @@
             <div class="loan-message">{{loan_length}}</div>
         {{/show_loan_length}}
         {{^show_loan_length}}
-            {{#expiring_soon}}
-                <div class="loan-message urgent">{{expiring_message}}</div>
-            {{/expiring_soon}}
+            {{#isExpiringSoon}}
+                <div class="loan-message urgent">{{expiringSoonMessage}}</div>
+            {{/isExpiringSoon}}
         {{/show_loan_length}}
     </a>
 
     <div class="borrower-details-wrap" data-equalizer-watch>
-        <a href="#">{{title}}</a>
+        <a href="#">{{name}}</a>
         <div class="country">
-			<span class="f16 {{country.code}}"></span>{{country.name}}
+			<span class="f16 {{location.country.isoCode}}"></span>{{location.country.name}}
         </div>
 
-		<p class="small-text">{{description}}</p>
+		<p class="small-text">{{use}}</p>
     </div>
 
     <div class="borrower-footer-wrap">
