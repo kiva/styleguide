@@ -1,32 +1,44 @@
 <div class="is-special">
-    <p class="featured">
-        This loan is special because:
-    </p>
+    <section class="ac-container">
+        <div>
+            <input class="ac-input" id="ac-loan-special" name="accordion-1" type="checkbox" checked/>
+            <label class="ac-title" for="ac-loan-special">
+                This loan is special because:
+                <span class="ac-dropdown-icon">
+                    <svg class="icon icon-large-chevron">
+                        <use xlink:href="#icon-large-chevron"></use>
+                    </svg>
+                </span>
+            </label>
+            <article class="ac-body">
+                <h2 class="green-bolded">
+                    {{specialBody}}
+                </h2>
 
-    <h2 class="green-bolded">
-        {{specialBody}}
-    </h2>
+                {{#kivan}}
+                    <div class="kivan">
+                        <div class="profile-photo">
+                            <img src="{{profilePhotoHref}}">
+                        </div>
+                        <div class="show-for-small-only">
+                            <p>
+                                {{name}}, {{title}}
+                            </p>
+                        </div>
+                        <div class="show-for-medium-up">
 
-    {{#kivan}}
-        <div class="kivan">
-            <div class="profile-photo">
-                <img src="{{profilePhotoHref}}">
-            </div>
-            <div class="show-for-small-only">
-                <p>
-                    {{name}}, {{title}}
-                </p>
-            </div>
-            <div class="show-for-medium-up">
+                            <p>
+                                {{name}}
+                            </p>
 
-                <p>
-                    {{name}}
-                </p>
-
-                <p>
-                    {{title}}
-                </p>
-            </div>
+                            <p>
+                                {{title}}
+                            </p>
+                        </div>
+                    </div>
+                {{/kivan}}
+            </article>
         </div>
-    {{/kivan}}
+    </section>
+
 </div>

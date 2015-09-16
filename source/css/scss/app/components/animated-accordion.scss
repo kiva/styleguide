@@ -1,0 +1,48 @@
+.ac-container {
+  .ac-title {
+    margin: 0;
+    display: inline;
+  }
+  .ac-dropdown-icon {
+    display: inline;
+    .icon {
+      margin-top: .2rem;
+      float: right;
+      height: 1rem;
+      width: rem-calc(25);
+      fill: none;
+      stroke: $kiva-text-dark;
+
+      $transition: 300ms ease-in-out;
+
+      -webkit-transition: -webkit-transform $transition;
+      transition: transform $transition;
+    }
+  }
+  .ac-input:checked + .ac-title {
+    .icon {
+      $transform: rotate(-180deg);
+
+      -webkit-transform: $transform;
+      -ms-transform: $transform;
+      transform: $transform;
+    }
+  }
+
+  .ac-input {
+    display: none;
+  }
+  .ac-body {
+    margin-top: -1px;
+    overflow: hidden;
+    max-height: 0px;
+    position: relative;
+    z-index: 10;
+    transition: max-height 0.3s ease-in-out;
+  }
+  .ac-input:checked ~ .ac-body {
+    transition: max-height 0.5s ease-in-out;
+    max-height: 5000px;
+  }
+
+}
