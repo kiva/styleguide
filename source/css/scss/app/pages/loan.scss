@@ -15,63 +15,10 @@
     padding-bottom: 0.6rem;
   }
 
-  .story-header{
+  .story-header {
     font-size: 1rem;
   }
 
-  .icon {
-    float: right;
-    height: 1rem;
-    width: rem-calc(25);
-    fill: none;
-    stroke: $kiva-text-dark;
-
-    $transition: 300ms ease;
-
-    -webkit-transition: -webkit-transform $transition;
-    transition: transform $transition;
-  }
-
-  [aria-expanded="true"] {
-    .icon {
-      $transform: rotate(-180deg);
-
-      -webkit-transform: $transform;
-      -ms-transform: $transform;
-      transform: $transform;
-    }
-  }
-
-  .accordion.animated {
-    margin: 0;
-  }
-
-  .accordion .accordion-navigation > a {
-    font-size: $small-font-size;
-  }
-
-  .accordion.animated .accordion-navigation {
-    a {
-      position: relative;
-      z-index: 10;
-      background-color: transparent;
-      padding: 0;
-      min-height: 1rem;
-    }
-    .content {
-      display: block;
-      overflow: hidden;
-      height: 0;
-      transition: all .5s ease;
-      background-color: transparent;
-      padding: 0;
-
-      &.active {
-        height: auto;
-        padding: 0.9375rem 0;
-      }
-    }
-  }
   .borrower-names {
     display: inline;
     margin: 0;

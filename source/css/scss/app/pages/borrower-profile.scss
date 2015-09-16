@@ -21,10 +21,17 @@
     }
   }
 
-  .story{
+  .story {
+    @media #{$medium-up} {
+      .left-content {
+        padding-left: 4.833333rem;
+      }
+    }
     max-width: none;
-    margin: 0
-  ;
+    margin: 0;
+    .line-break {
+      margin-top: 1rem;
+    }
   }
 }
 
