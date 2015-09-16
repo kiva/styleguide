@@ -58,5 +58,10 @@
   "kivan":{
     "name": "Jomay",
     "title": "Kiva Knowledge Manager"
-  }
+  },
+  "groupName":"Myi Ni Gone Village Group",
+  "countryIso": "ad",
+  "country": "New Guinea",
+  "city": "Papau",
+  "typeText": "Renewable Energy Products"
 }
