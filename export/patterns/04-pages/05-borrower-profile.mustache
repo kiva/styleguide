@@ -1,0 +1,39 @@
+<div class="pageWrap">
+    {{> templates-header}}
+
+    <div class="borrower-profile-wrapper">
+        <div class="row">
+            <div class="small-12 medium-7 columns loan-figure left-content">
+                {{> molecules-loan-figure-multiple-photos}}
+            </div>
+            <div class="small-12 medium-5 columns right-content">
+                {{> molecules-pfp-meter}}
+                {{> molecules-loan-gist}}
+            </div>
+        </div>
+
+        <hr class="line-break"/>
+
+        <div class="row">
+            <div class="small-12 columns">
+                {{> molecules-more-loan-info}}
+            </div>
+        </div>
+
+        <hr class="line-break"/>
+
+        <div class="row story">
+            <div class="small-12 medium-7 columns left-content">
+                {{> organisms-loan-story}}
+                <hr class="line-break"/>
+                {{> molecules-is-special}}
+            </div>
+            <div class="small-12 medium-5 columns right-content">
+            </div>
+        </div>
+
+
+    </div>
+</div>
+
+{{> organisms-footer}}

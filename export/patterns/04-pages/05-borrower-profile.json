@@ -1,4 +1,23 @@
 {
+  "figures": [
+    {
+      "url": "http://www.kiva.org/img/w800/1970076.jpg",
+      "alt": "one"
+    },
+    {
+      "url": "http://www.kiva.org/img/w800/1969963.jpg",
+      "alt": "two"
+    }
+  ],
+  "is_match": true,
+  "lenderCount": 7,
+  "lenderCountNeeded": 25,
+  "lenderCountPercent": 28,
+  "daysLeft": 12,
+  "amountRaised": 175,
+  "amountNeeded": 1300,
+  "amountRaisedPercent": 14,
+  "loan-info": "A loan of $275 helps John to buy a dairy cow so that he can increase the amount of milk he supplies and thereby earn more income.",
   "borrowerFirstName": "John",
   "storyBody": [
     {
@@ -33,5 +52,16 @@
         "content": "Su esperanza para el futuro es ser financieramente estable."
       }
     ]
-  }
+  },
+  "profilePhotoHref":"/images/borrower1.jpg",
+  "specialBody": "It's in a rural region many banks won't serve.",
+  "kivan":{
+    "name": "Jomay",
+    "title": "Kiva Knowledge Manager"
+  },
+  "groupName":"Myi Ni Gone Village Group",
+  "countryIso": "ad",
+  "country": "New Guinea",
+  "city": "Papau",
+  "typeText": "Renewable Energy Products"
 }
