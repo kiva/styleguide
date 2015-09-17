@@ -1,10 +1,15 @@
 {
 	"figures": [
 		{
-			"url": "http://www.kiva.org/img/w800/1970076.jpg", "alt": "one"
+			"youtube-video-id": "lSN2WdqXwfc"
 		}
 		, {
-			"url": "http://www.kiva.org/img/w800/1969963.jpg", "alt": "two"
+			"url": "//www.kiva.org/img/w800/1970076.jpg"
+			, "alt": "one"
+		}
+		, {
+			"url": "//www.kiva.org/img/w800/1969963.jpg"
+			, "alt": "two"
 		}
 	]
 
