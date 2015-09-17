@@ -49,11 +49,11 @@
 			"alt" : "Loading"
 		},
 		"full-width" : {
-			"src" : "../../images/about/about-top",
+			"src" : "http://cms.kiva.org.s3.amazonaws.com/page/images/about-top",
 			"alt" : "full width image"
 		},
 		"behind-text" : {
-			"src" : "../../images/about/unique",
+			"src" : "http://cms.kiva.org.s3.amazonaws.com/page/images/unique-lg-std.jpg",
 			"alt" : "transparent text with image behind"
 		},
 		"category" : {
