@@ -118,6 +118,35 @@ div.about-video-wrapper {
 			height: rem-calc(120);
 		}
 	}
+
+	.photo-headline {
+		margin-top: 2rem;
+		padding: 0 2rem;
+		color: $kiva-text-dark;
+		-webkit-text-fill-color: transparent;
+		background-size: cover;
+		
+		@media #{$small-only} {
+			background: -webkit-linear-gradient(transparent, transparent),
+			url(./../images/about/unique-sm-std.jpg) no-repeat;
+			-webkit-background-clip: text;
+			background: -o-linear-gradient(transparent, transparent);
+		}
+
+		@media #{$medium-only} {
+			background: -webkit-linear-gradient(transparent, transparent),
+			url(./../images/about/unique-med-std.jpg) no-repeat;
+			-webkit-background-clip: text;
+			background: -o-linear-gradient(transparent, transparent);
+		}
+
+		@media #{$large-up} {
+			background: -webkit-linear-gradient(transparent, transparent),
+			url(./../images/about/unique-lg-std.jpg) no-repeat;
+			-webkit-background-clip: text;
+			background: -o-linear-gradient(transparent, transparent);
+		}
+	}
 }
 
 .aboutSeeMoreContainer {

@@ -52,12 +52,14 @@
 			"src" : "../../images/about/about-top",
 			"alt" : "full width image"
 		},
+		"behind-text" : {
+			"src" : "../../images/about/unique",
+			"alt" : "transparent text with image behind"
+		},
 		"category" : {
 			"src" : "../../images/category/hp-cats-livestock",
 			"alt" : "Livestock"
 		}
-
-
 	},
 	"headline" : {
 		"short" : "Lorem ipsum dolor sit (37 characters)",
