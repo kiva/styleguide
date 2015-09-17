@@ -33,12 +33,9 @@ $loan-card-meter-height: $loan-card-footer-height/2;
         }
 	}
 
-	.matcher-text {
-		background-color: rgba(255, 255, 255, .8);
-		position: absolute;
-		bottom: 0;
-		left: 0;
-	}
+	.loan-image-footer {
+        position: relative;
+    }
 
 	.borrower-details-wrap {
 		padding: 0 0.5rem;
