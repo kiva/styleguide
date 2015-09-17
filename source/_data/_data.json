@@ -52,12 +52,14 @@
 			"src" : "../../images/about/about-top",
 			"alt" : "full width image"
 		},
+		"behind-text" : {
+			"src" : "../../images/about/unique",
+			"alt" : "transparent text with image behind"
+		},
 		"category" : {
 			"src" : "../../images/category/hp-cats-livestock",
 			"alt" : "Livestock"
 		}
-
-
 	},
 	"headline" : {
 		"short" : "Lorem ipsum dolor sit (37 characters)",
@@ -86,14 +88,6 @@
 	},
 		"nav-text" : "Lend  About  Login",
 	"url" : "#",
-	"name" : {
-		"first": "Lacy",
-		"firsti": "L",
-		"middle": "Tommie",
-		"middlei": "T",
-		"last": "Way",
-		"lasti": "W"
-	},
 	"year" : {
 		"long": "2013",
 		"short": "13"
