@@ -159,6 +159,12 @@
 }
 
 .loan-details {
+  .show-for-medium-up{
+    .ac-body{
+      max-height: 1000px;
+      overflow: auto;
+    }
+  }
   .ac-body {
     padding-top: 1rem;
   }
@@ -171,14 +177,21 @@
 
     @media #{$medium-up}{
       text-align:left;
+      padding-bottom: 0.5rem;
     }
 
     .green-bolded {
       padding-top: 0.5rem;
       font-size: 2rem;
+      @media #{$medium-up}{
+        padding-top: 0;
+      }
     }
     .featured {
       padding-top: 0.5rem;
+      @media #{$medium-up}{
+        padding-top: 0;
+      }
     }
     .icon-recycle {
       height: 3rem;
