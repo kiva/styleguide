@@ -161,7 +161,7 @@ div.about-video-wrapper {
 
 			svg {
 				height: rem-calc(30);
-				stroke: $kiva-green;
+				stroke: $kiva-accent-green;
 				float: none;
 				width: rem-calc(60);
 			}
@@ -174,10 +174,6 @@ div.about-video-wrapper {
 
 	.accordion-navigation,
 	.accordion-navigation.active {
-
-		.icon {
-			stroke: $kiva-green;
-		}
 
 		.panelSeeMore,
 		.panelSeeMore:hover,
@@ -209,7 +205,7 @@ div.about-video-wrapper {
 	}
 
 	.row1 {
-		padding: rem-calc(10) rem-calc(0) rem-calc(35) rem-calc(0);
+		padding: rem-calc(30) rem-calc(0) rem-calc(35) rem-calc(0);
 	}
 
 	.row2 {
