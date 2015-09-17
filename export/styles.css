@@ -8001,7 +8001,8 @@ ul.tertiary-nav {
     position: relative;
     display: block;
     width: 100%;
-    padding-bottom: 62.5%; }
+    padding-bottom: 62.5%;
+    background-size: cover; }
     .loan-card .borrower-img-wrap .loan-message {
       position: absolute;
       right: 0;
@@ -8013,9 +8014,6 @@ ul.tertiary-nav {
       color: #333; }
       .loan-card .borrower-img-wrap .loan-message.urgent {
         color: #9C021A; }
-  .loan-card .borrower-img {
-    position: absolute;
-    width: 100%; }
   .loan-card .matcher-text {
     background-color: rgba(255, 255, 255, 0.8);
     position: absolute;
@@ -8589,7 +8587,7 @@ a.modal-link:hover {
   max-height: 0px;
   position: relative;
   z-index: 10;
-  transition: max-height 0.3s ease-in-out; }
+  transition: max-height 0.5s ease-in-out; }
 .ac-container .ac-input:checked ~ .ac-body {
   transition: max-height 0.5s ease-in-out;
   max-height: 5000px; }
