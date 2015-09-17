@@ -15,7 +15,7 @@
 			, "progress": {
 				"percent": 42
 				, "message": "$1,800 to go"
-				}
+			}
 			, "is_regular": true
 			, "is_lent_to": false
 			, "is_adding": false
