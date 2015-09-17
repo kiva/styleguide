@@ -1,12 +1,17 @@
 {
 	"loans": [
 		{
-			"title": "Cynthia"
-			, "description": "A loan of $575 helps Sau to buy a chainsaw, banana tubes (seedlings), taro roots (seedlings), a wheelbarrow, a water tank, gloves, a rake, a shovel, and chemicals."
-			, "country" : {
-				"name": "Honduras"
-				, "code": "hn"
+			"name": "Cynthia"
+			, "use": "A loan of $575 helps Sau to buy a chainsaw, banana tubes (seedlings), taro roots (seedlings), a wheelbarrow, a water tank, gloves, a rake, a shovel, and chemicals."
+			, "location": {
+				"country" : {
+					"name": "Honduras"
+					, "code": "hn"
 				}
+			}
+			, "image": {
+				"url": "http://placeimg.com/680/425/people"
+			}
 			, "progress": {
 				"percent": 42
 				, "message": "$1,800 to go"
