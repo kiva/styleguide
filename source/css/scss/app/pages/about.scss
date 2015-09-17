@@ -189,11 +189,21 @@ div.about-video-wrapper {
 	.row {
 		display: inline-block;
 
-		h1 {
-			line-height: rem-calc(45);
+		@media #{$small-only} {
+			.stat {
+				line-height: rem-calc(25);
+			}
+		}
 
-			@media #{$small-only} {
-				line-height: rem-calc(20);
+		@media #{$medium-only} {
+			.stat {
+				line-height: rem-calc(25);
+			}
+		}
+
+		@media #{$large-up} {
+			.seeMore {
+				padding-bottom: rem-calc(35);
 			}
 		}
 	}
