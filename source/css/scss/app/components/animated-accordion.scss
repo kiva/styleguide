@@ -13,7 +13,7 @@
       fill: none;
       stroke: $kiva-text-dark;
 
-      $transition: 300ms ease-in-out;
+      $transition: 0.3s ease-in-out;
 
       -webkit-transition: -webkit-transform $transition;
       transition: transform $transition;
@@ -38,11 +38,11 @@
     max-height: 0px;
     position: relative;
     z-index: 10;
-    transition: max-height 0.5s ease-in-out;
+    transition: max-height 1s ease-in-out;
   }
   .ac-input:checked ~ .ac-body {
-    transition: max-height 0.5s ease-in-out;
-    max-height: 5000px;
+    transition: max-height 1s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    max-height: 50rem;
   }
 
 }
