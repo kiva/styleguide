@@ -34,7 +34,19 @@
   .story {
     .left-content {
       @media #{$medium-up}{
-        background-color: $kiva-bg-darkgray
+        min-height: 50rem;
+        background-color: $kiva-bg-darkgray;
+        border-top: 1px solid $kiva-text-medium;
+        border-bottom: 1px solid $kiva-text-medium;
+        border-right: 1px solid $kiva-text-medium;
+      }
+    }
+    .right-content {
+      @media #{$medium-up}{
+        border-top: 1px solid $kiva-text-medium;
+        border-bottom: 1px solid $kiva-text-medium;
+        min-height: 50rem;
+        background-color: $kiva-stroke-gray;
       }
     }
   }

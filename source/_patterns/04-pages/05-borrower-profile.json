@@ -63,5 +63,30 @@
   "countryIso": "ad",
   "country": "New Guinea",
   "city": "Papau",
-  "typeText": "Renewable Energy Products"
+  "typeText": "Renewable Energy Products",
+  "months": 11,
+  "loanDetails": {
+    "repaymentSchedule": "Monthly",
+    "disbursalDate": "April 6, 2015",
+    "currencyExchangeLoss": "Possible",
+    "fieldPartner": "VisionFund Kenya",
+    "borrowerPayingInterest": true,
+    "stars": [
+      {
+        "isFullStar": true
+      },
+      {
+        "isFullStar": true
+      },
+      {
+        "isFullStar": true
+      },
+      {
+        "isHalfStar": true
+      },
+      {
+        "isEmptyStar": true
+      }
+    ]
+  }
 }
