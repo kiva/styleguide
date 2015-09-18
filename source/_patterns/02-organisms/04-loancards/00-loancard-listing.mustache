@@ -4,9 +4,9 @@
             <div class="loan-message">{{loan_length}}</div>
         {{/show_loan_length}}
         {{^show_loan_length}}
-            {{#isExpiringSoon}}
+            {{#is_expiring_Soon}}
                 <div class="loan-message urgent">{{expiring_soon_message}}</div>
-            {{/isExpiringSoon}}
+            {{/is_expiring_soon}}
         {{/show_loan_length}}
     </a>
     {{> molecules-loan-image-footer}}
@@ -14,7 +14,7 @@
     <div class="borrower-details-wrap" data-equalizer-watch>
         <a href="{{borrower_url}}">{{name}}</a>
         <div class="country">
-			<span class="f16 {{location.country.isoCode}}"></span>{{location.country.name}}
+			<span class="f16 {{location.country.iso_code}}"></span>{{location.country.name}}
         </div>
 
 		<p class="small-text">{{use}}</p>
