@@ -1,17 +1,18 @@
 <div class="loan-card">
-    <a class="borrower-img-wrap" href="#" style="background-image: url({{image.url}});">
+    <a class="borrower-img-wrap" href="{{borrower_url}}" style="background-image: url({{image.url}});">
         {{#show_loan_length}}
             <div class="loan-message">{{loan_length}}</div>
         {{/show_loan_length}}
         {{^show_loan_length}}
             {{#isExpiringSoon}}
-                <div class="loan-message urgent">{{expiringSoonMessage}}</div>
+                <div class="loan-message urgent">{{expiring_soon_message}}</div>
             {{/isExpiringSoon}}
         {{/show_loan_length}}
     </a>
+    {{> molecules-loan-image-footer}}
 
     <div class="borrower-details-wrap" data-equalizer-watch>
-        <a href="#">{{name}}</a>
+        <a href="{{borrower_url}}">{{name}}</a>
         <div class="country">
 			<span class="f16 {{location.country.isoCode}}"></span>{{location.country.name}}
         </div>
@@ -29,12 +30,12 @@
             {{#is_regular}}
                 <div class="bottom-bar">
                     <a class="half-width button" href="#">Lend $25</a>
-                    <a class="half-width button" href="#">Read More</a>
+                    <a class="half-width button" href="{{borrower_url}}">Read More</a>
                 </div>
             {{/is_regular}}
             {{#is_lent_to}}
                 <div class="bottom-bar show-short">
-                    <a class="success button" href="#">
+                    <a class="success button" href="{{borrower_url}}">
                         <svg class="icon">
                             <use xlink:href="#icon-checkmark" />
                         </svg>
@@ -42,7 +43,7 @@
                     </a>
                 </div>
                 <div class="bottom-bar hide-for-touch">
-                    <a class="button" href="#">Lend Again</a>
+                    <a class="button" href="{{borrower_url}}">Lend Again</a>
                 </div>
             {{/is_lent_to}}
             {{#is_adding}}
@@ -54,7 +55,7 @@
             {{/is_adding}}
             {{#is_in_basket}}
                 <div class="bottom-bar show-short">
-                    <a class="success button" href="#">
+                    <a class="success button" href="{{basket_url}}">
                         <svg class="icon">
                             <use xlink:href="#icon-checkmark" />
                         </svg>
@@ -62,7 +63,7 @@
                     </a>
                 </div>
                 <div class="bottom-bar hide-for-touch">
-                    <a class="success button" href="#">
+                    <a class="success button" href="{{basket_url}}">
                         <svg class="icon">
                             <use xlink:href="#icon-checkmark" />
                         </svg>
