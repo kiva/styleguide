@@ -9,7 +9,7 @@
       "alt": "two"
     }
   ],
-  "is_match": true,
+  "isMatched": true,
   "lenderCount": 7,
   "lenderCountNeeded": 25,
   "lenderCountPercent": 28,

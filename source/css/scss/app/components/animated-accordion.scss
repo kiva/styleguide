@@ -32,17 +32,5 @@
   .ac-input {
     display: none;
   }
-  .ac-body {
-    margin-top: -1px;
-    overflow: hidden;
-    max-height: 0px;
-    position: relative;
-    z-index: 10;
-    transition: max-height 1s ease-in-out;
-  }
-  .ac-input:checked ~ .ac-body {
-    transition: max-height 1s ease-in-out;
-    max-height: 50rem;
-  }
 
 }
