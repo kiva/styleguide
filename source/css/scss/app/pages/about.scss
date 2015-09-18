@@ -3,13 +3,6 @@ a.visitLink:visited {
 	color: $kiva-green;
 }
 
-.aboutSeeMoreContainer,
-.joinSection {
-	overflow: auto;
-	background-color: $kiva-darkgreen;
-	padding: rem-calc(10);
-}
-
 div.aboutIntro {
 	padding-top: rem-calc(36);
 
@@ -25,6 +18,10 @@ div.aboutIntro {
 }
 
 .joinSection {
+	overflow: auto;
+	background-color: $kiva-darkgreen;
+	padding: rem-calc(10);
+
 	.joinText {
 		line-height: rem-calc(65);
 	}
@@ -151,9 +148,15 @@ div.about-video-wrapper {
 	}
 }
 
-.aboutContainer {
+.aboutStatsContainer {
 	overflow: auto;
 	background-color: $kiva-darkgreen;
+
+	.topStats {
+		background: url(../../images/about/map-bg.min.svg) no-repeat;
+		background-size: contain;
+		background-position: center center;
+	}
 
 	.ac-container {
 
@@ -166,10 +169,6 @@ div.about-video-wrapper {
 				width: rem-calc(60);
 			}
 		}
-	}
-
-	#panelSeeMore {
-		background-color: $kiva-darkgreen;
 	}
 
 	.accordion-navigation,
@@ -215,9 +214,21 @@ div.about-video-wrapper {
 	.row3 {
 		padding-bottom: rem-calc(35);
 	}
+
+	.seeMoreSection {
+		background: url(../../images/about/numbers-bg-sm-std.min.svg) no-repeat;
+		background-position: center;
+		background-size: contain;
+
+		@media #{$large-up} {
+			background: url(../../images/about/numbers-bg-lg-std.min.svg) no-repeat;
+		}
+	}
+
 }
 
 .aboutSeeMoreContainer {
+
 	.row {
 		padding: rem-calc(0) rem-calc(5);
 		display: inline-block;
