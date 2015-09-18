@@ -1,9 +1,6 @@
 {
 	"figures": [
 		{
-			"youtube-video-id": "lSN2WdqXwfc"
-		}
-		, {
 			"url": "//www.kiva.org/img/w800/1970076.jpg"
 			, "alt": "one"
 		}
@@ -13,6 +10,5 @@
 		}
 	]
 
-	, "isMatched": true
-	, "matching_text": "Your loan will be matched!"
+	, "is_match": false
 }
