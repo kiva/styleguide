@@ -1,7 +1,7 @@
 <div class="loan-story">
     <section class="ac-container">
         <div>
-            <input class="ac-input" id="ac-loan-story" type="checkbox" checked/>
+            <input class="ac-input" id="ac-loan-story" type="checkbox"/>
             <label class="ac-title" for="ac-loan-story">
                 <span class="story-header">{{borrowerFirstName}}'s Story</span>
                 <span class="ac-dropdown-icon">
@@ -34,7 +34,7 @@
                                     <label class="black-underlined small-text ac-title" for="ac-translation">
                                         View original language description
                                     </label>
-                                    <article class="ac-body">
+                                    <article class="ac-body" style="display: none;">
                                         <span>
                                             {{#storyBody}}
                                                 <div class="body-text small-text">{{content}}</div>

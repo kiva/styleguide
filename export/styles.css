@@ -6783,19 +6783,30 @@ small {
   position: relative;
   margin: 0;
   padding: 0; }
+  .loan-figure .loan-image-wrap {
+    position: relative; }
+    .loan-figure .loan-image-wrap img {
+      margin: 0 auto; }
+    .loan-figure .loan-image-wrap .icon-youtube {
+      position: absolute;
+      height: 80px;
+      width: 80px;
+      top: 50%;
+      left: 50%;
+      margin-top: -40px;
+      margin-left: -40px; }
   .loan-figure .loan-figure-carousel:nth-child(n+2) {
     display: none; }
   .loan-figure .carousel-nav {
+    background-color: rgba(51, 51, 51, 0.3);
     position: absolute;
     top: 50%;
     width: 50px;
     height: 100px;
     margin-top: -50px;
     transform: rotate(180deg); }
-  .loan-figure .carousel-prev-arrow {
-    position: absolute;
-    left: 0;
-    top: 0; }
+    .loan-figure .carousel-nav svg {
+      stroke: #fff; }
   .loan-figure .carousel-prev {
     left: 0; }
     .loan-figure .carousel-prev svg {
@@ -6805,7 +6816,7 @@ small {
     .loan-figure .carousel-next svg {
       transform: rotate(90deg); }
   .loan-figure .carousel-nav:hover {
-    background-color: rgba(200, 200, 200, 0.2);
+    background-color: rgba(51, 51, 51, 0.6);
     cursor: pointer; }
   .loan-figure .icon-small-chevron {
     width: 50px;
@@ -8225,11 +8236,6 @@ ul.tertiary-nav {
 a.visitLink, a.visitLink:visited {
   color: #63a541; }
 
-.aboutSeeMoreContainer, .joinSection {
-  overflow: auto;
-  background-color: #236133;
-  padding: 0.5555555556rem; }
-
 div.aboutIntro {
   padding-top: 2rem; }
   div.aboutIntro svg {
@@ -8238,15 +8244,19 @@ div.aboutIntro {
   div.aboutIntro svg, div.aboutIntro p {
     padding-bottom: 1.1111111111rem; }
 
-.joinSection .joinText {
-  line-height: 3.6111111111rem; }
-.joinSection .joinLinkWrapper {
-  padding-top: 1.1111111111rem; }
-.joinSection .hrDivider {
-  color: #63a541;
-  border-color: #63a541;
-  background-color: #63a541;
-  margin-bottom: 1.9444444444rem; }
+.joinSection {
+  overflow: auto;
+  background-color: #236133;
+  padding: 0.5555555556rem; }
+  .joinSection .joinText {
+    line-height: 3.6111111111rem; }
+  .joinSection .joinLinkWrapper {
+    padding-top: 1.1111111111rem; }
+  .joinSection .hrDivider {
+    color: #63a541;
+    border-color: #63a541;
+    background-color: #63a541;
+    margin-bottom: 1.9444444444rem; }
 
 div.about-video-wrapper {
   position: relative; }
@@ -8334,102 +8344,115 @@ a.aboutJoinLink, a.aboutJoinLink:visited {
         -webkit-background-clip: text;
         background: -o-linear-gradient(transparent, transparent); } }
 
-.aboutContainer {
+.aboutStatsContainer {
   overflow: auto;
   background-color: #236133; }
-  .aboutContainer .ac-container .ac-dropdown-icon svg {
+  .aboutStatsContainer .topStats {
+    background: url(../../images/about/map-bg.min.svg) no-repeat;
+    background-size: contain;
+    background-position: center center; }
+    @media only screen and (max-width: 30rem) {
+      .aboutStatsContainer .topStats {
+        background-size: cover; } }
+  .aboutStatsContainer .ac-container .ac-dropdown-icon svg {
     height: 1.6666666667rem;
     stroke: #a9d14c;
     float: none;
     width: 3.3333333333rem; }
-  .aboutContainer #panelSeeMore {
+  .aboutStatsContainer .accordion-navigation .panelSeeMore, .aboutStatsContainer .accordion-navigation .panelSeeMore:hover, .aboutStatsContainer .accordion-navigation .panelSeeMore:active, .aboutStatsContainer .accordion-navigation.active .panelSeeMore, .aboutStatsContainer .accordion-navigation.active .panelSeeMore:hover, .aboutStatsContainer .accordion-navigation.active .panelSeeMore:active {
     background-color: #236133; }
-  .aboutContainer .accordion-navigation .panelSeeMore, .aboutContainer .accordion-navigation .panelSeeMore:hover, .aboutContainer .accordion-navigation .panelSeeMore:active, .aboutContainer .accordion-navigation.active .panelSeeMore, .aboutContainer .accordion-navigation.active .panelSeeMore:hover, .aboutContainer .accordion-navigation.active .panelSeeMore:active {
-    background-color: #236133; }
-  .aboutContainer .row {
+  .aboutStatsContainer .row {
     display: inline-block; }
     @media only screen and (max-width: 30rem) {
-      .aboutContainer .row .stat {
+      .aboutStatsContainer .row .stat {
         line-height: 1.3888888889rem; } }
     @media only screen and (min-width:30.0625rem) and (max-width:42.5rem) {
-      .aboutContainer .row .stat {
+      .aboutStatsContainer .row .stat {
         line-height: 1.3888888889rem; } }
     @media only screen and (min-width:42.5625rem) {
-      .aboutContainer .row .seeMore {
+      .aboutStatsContainer .row .seeMore {
         padding-bottom: 1.9444444444rem; } }
-  .aboutContainer .row1 {
+  .aboutStatsContainer .row1 {
     padding: 1.6666666667rem 0 1.9444444444rem 0; }
-  .aboutContainer .row2 {
+  .aboutStatsContainer .row2 {
     padding-bottom: 1.9444444444rem; }
-  .aboutContainer .row3 {
+  .aboutStatsContainer .row3 {
     padding-bottom: 1.9444444444rem; }
-
-.aboutSeeMoreContainer .row {
-  padding: 0 0.2777777778rem;
-  display: inline-block; }
-.aboutSeeMoreContainer .row1TextContainer {
-  padding-top: 1.9444444444rem; }
-  @media only screen and (min-width:30.0625rem) {
-    .aboutSeeMoreContainer .row1TextContainer {
-      padding-top: 5rem; } }
-  @media only screen and (min-width:42.5625rem) {
-    .aboutSeeMoreContainer .row1TextContainer {
-      padding-top: 8.8888888889rem; } }
-.aboutSeeMoreContainer .row1StatContainer {
-  padding-right: 1.1111111111rem; }
-  @media only screen and (min-width:42.5625rem) {
-    .aboutSeeMoreContainer .row1StatContainer {
-      padding-right: 8.3333333333rem; } }
-.aboutSeeMoreContainer .row2TextContainer {
-  margin-top: 1.1111111111rem; }
-.aboutSeeMoreContainer .row2StatContainer {
-  padding-top: 1.9444444444rem; }
-  @media only screen and (min-width:30.0625rem) {
-    .aboutSeeMoreContainer .row2StatContainer {
-      padding-top: 13.3333333333rem;
-      padding-left: 1.3888888889rem; } }
-  @media only screen and (min-width:42.5625rem) {
-    .aboutSeeMoreContainer .row2StatContainer {
-      padding-top: 24.9444444444rem;
-      padding-left: 2.7777777778rem; } }
-.aboutSeeMoreContainer .row3TextContainer {
-  padding-top: 1.9444444444rem; }
-  @media only screen and (min-width:30.0625rem) {
-    .aboutSeeMoreContainer .row3TextContainer {
-      padding-top: 3.3333333333rem; } }
-.aboutSeeMoreContainer .row4 {
-  padding-top: 1.9444444444rem; }
-@media only screen and (min-width:42.5625rem) {
-  .aboutSeeMoreContainer .row4StatsContainer {
-    text-align: center; } }
-.aboutSeeMoreContainer .row5TextContainer {
-  padding-top: 1.9444444444rem; }
-  @media only screen and (min-width:30.0625rem) {
-    .aboutSeeMoreContainer .row5TextContainer {
-      padding-top: 16.6666666667rem; } }
-.aboutSeeMoreContainer .row5TextContainer2 {
-  padding-top: 1.9444444444rem; }
-  @media only screen and (min-width:30.0625rem) {
-    .aboutSeeMoreContainer .row5TextContainer2 {
-      margin-top: -4.1666666667rem; } }
-.aboutSeeMoreContainer .row6StatContainer {
-  padding-top: 1.9444444444rem; }
-  @media only screen and (min-width:30.0625rem) and (max-width:42.5rem) {
-    .aboutSeeMoreContainer .row6StatContainer {
-      text-align: right !important; } }
-.aboutSeeMoreContainer #row6LargeView {
-  padding-top: 6.1111111111rem; }
-.aboutSeeMoreContainer .row6aTextContainer {
-  padding-top: 6.6666666667rem; }
-.aboutSeeMoreContainer .row6aStatContainer2 {
-  padding-top: 1.9444444444rem; }
-.aboutSeeMoreContainer .row7 {
-  padding-top: 1.9444444444rem; }
-  @media only screen and (min-width:30.0625rem) {
-    .aboutSeeMoreContainer .row7 {
-      padding-top: 2.7777777778rem; } }
-.aboutSeeMoreContainer .row7TextContainer {
-  padding-top: 1.9444444444rem; }
+  .aboutStatsContainer .seeMoreSection .ac-body .aboutSeeMoreContainer {
+    background: url(../../images/about/numbers-bg-sm-std.min.svg);
+    background-position: center;
+    background-size: contain;
+    background-repeat: repeat-y; }
+    @media only screen and (min-width:42.5625rem) {
+      .aboutStatsContainer .seeMoreSection .ac-body .aboutSeeMoreContainer {
+        background: url(../../images/about/numbers-bg-lg-std.min.svg);
+        background-size: 100%; } }
+    .aboutStatsContainer .seeMoreSection .ac-body .aboutSeeMoreContainer .row {
+      padding: 0 0.2777777778rem;
+      display: inline-block; }
+    .aboutStatsContainer .seeMoreSection .ac-body .aboutSeeMoreContainer .row1TextContainer {
+      padding-top: 1.9444444444rem; }
+      @media only screen and (min-width:30.0625rem) {
+        .aboutStatsContainer .seeMoreSection .ac-body .aboutSeeMoreContainer .row1TextContainer {
+          padding-top: 5rem; } }
+      @media only screen and (min-width:42.5625rem) {
+        .aboutStatsContainer .seeMoreSection .ac-body .aboutSeeMoreContainer .row1TextContainer {
+          padding-top: 8.8888888889rem; } }
+    .aboutStatsContainer .seeMoreSection .ac-body .aboutSeeMoreContainer .row1StatContainer {
+      padding-right: 1.1111111111rem; }
+      @media only screen and (min-width:42.5625rem) {
+        .aboutStatsContainer .seeMoreSection .ac-body .aboutSeeMoreContainer .row1StatContainer {
+          padding-right: 8.3333333333rem; } }
+    .aboutStatsContainer .seeMoreSection .ac-body .aboutSeeMoreContainer .row2TextContainer {
+      margin-top: 1.1111111111rem; }
+    .aboutStatsContainer .seeMoreSection .ac-body .aboutSeeMoreContainer .row2StatContainer {
+      padding-top: 1.9444444444rem; }
+      @media only screen and (min-width:30.0625rem) {
+        .aboutStatsContainer .seeMoreSection .ac-body .aboutSeeMoreContainer .row2StatContainer {
+          padding-top: 13.3333333333rem;
+          padding-left: 1.3888888889rem; } }
+      @media only screen and (min-width:42.5625rem) {
+        .aboutStatsContainer .seeMoreSection .ac-body .aboutSeeMoreContainer .row2StatContainer {
+          padding-top: 24.9444444444rem;
+          padding-left: 2.7777777778rem; } }
+    .aboutStatsContainer .seeMoreSection .ac-body .aboutSeeMoreContainer .row3TextContainer {
+      padding-top: 1.9444444444rem; }
+      @media only screen and (min-width:30.0625rem) {
+        .aboutStatsContainer .seeMoreSection .ac-body .aboutSeeMoreContainer .row3TextContainer {
+          padding-top: 3.3333333333rem; } }
+    .aboutStatsContainer .seeMoreSection .ac-body .aboutSeeMoreContainer .row4 {
+      padding-top: 1.9444444444rem; }
+    @media only screen and (min-width:42.5625rem) {
+      .aboutStatsContainer .seeMoreSection .ac-body .aboutSeeMoreContainer .row4StatsContainer {
+        text-align: center; } }
+    .aboutStatsContainer .seeMoreSection .ac-body .aboutSeeMoreContainer .row5TextContainer {
+      padding-top: 1.9444444444rem; }
+      @media only screen and (min-width:30.0625rem) {
+        .aboutStatsContainer .seeMoreSection .ac-body .aboutSeeMoreContainer .row5TextContainer {
+          padding-top: 16.6666666667rem; } }
+    .aboutStatsContainer .seeMoreSection .ac-body .aboutSeeMoreContainer .row5TextContainer2 {
+      padding-top: 1.9444444444rem; }
+      @media only screen and (min-width:30.0625rem) {
+        .aboutStatsContainer .seeMoreSection .ac-body .aboutSeeMoreContainer .row5TextContainer2 {
+          margin-top: -4.1666666667rem; } }
+    .aboutStatsContainer .seeMoreSection .ac-body .aboutSeeMoreContainer .row6StatContainer {
+      padding-top: 1.9444444444rem; }
+      @media only screen and (min-width:30.0625rem) and (max-width:42.5rem) {
+        .aboutStatsContainer .seeMoreSection .ac-body .aboutSeeMoreContainer .row6StatContainer {
+          text-align: right !important; } }
+    .aboutStatsContainer .seeMoreSection .ac-body .aboutSeeMoreContainer #row6LargeView {
+      padding-top: 6.1111111111rem; }
+    .aboutStatsContainer .seeMoreSection .ac-body .aboutSeeMoreContainer .row6aTextContainer {
+      padding-top: 6.6666666667rem; }
+    .aboutStatsContainer .seeMoreSection .ac-body .aboutSeeMoreContainer .row6aStatContainer2 {
+      padding-top: 1.9444444444rem; }
+    .aboutStatsContainer .seeMoreSection .ac-body .aboutSeeMoreContainer .row7 {
+      padding-top: 1.9444444444rem; }
+      @media only screen and (min-width:30.0625rem) {
+        .aboutStatsContainer .seeMoreSection .ac-body .aboutSeeMoreContainer .row7 {
+          padding-top: 2.7777777778rem; } }
+    .aboutStatsContainer .seeMoreSection .ac-body .aboutSeeMoreContainer .row7TextContainer {
+      padding-top: 1.9444444444rem; }
 
 .green-bolded {
   font-size: 2.5rem;
@@ -8513,6 +8536,8 @@ a.aboutJoinLink, a.aboutJoinLink:visited {
 @media only screen and (max-width: 30rem) {
   .current-status-meter .lender-count div {
     font-size: 0.7777777778rem; } }
+.current-status-meter .row {
+  max-width: none; }
 .current-status-meter .raised-info div {
   padding: 0; }
 @media only screen and (max-width: 30rem) {
@@ -8535,6 +8560,50 @@ a.aboutJoinLink, a.aboutJoinLink:visited {
   display: inline-block; }
   .loan-gist .country-text div {
     display: inline; }
+
+.loan-details .show-for-medium-up .ac-body {
+  max-height: 1000px;
+  overflow: auto; }
+.loan-details .ac-body {
+  padding-top: 1rem; }
+.loan-details .ac-title {
+  font-size: 1rem; }
+.loan-details .loan-term {
+  padding-bottom: 1rem;
+  text-align: center; }
+  @media only screen and (min-width:30.0625rem) {
+    .loan-details .loan-term {
+      text-align: left;
+      padding-bottom: 0.5rem; } }
+  .loan-details .loan-term .green-bolded {
+    padding-top: 0.5rem;
+    font-size: 2rem; }
+    @media only screen and (min-width:30.0625rem) {
+      .loan-details .loan-term .green-bolded {
+        padding-top: 0; } }
+  .loan-details .loan-term .featured {
+    padding-top: 0.5rem; }
+    @media only screen and (min-width:30.0625rem) {
+      .loan-details .loan-term .featured {
+        padding-top: 0; } }
+  .loan-details .loan-term .icon-recycle {
+    height: 3rem;
+    color: #999;
+    fill: #999; }
+    @media only screen and (min-width:30.0625rem) {
+      .loan-details .loan-term .icon-recycle {
+        width: 54.8px; } }
+.loan-details .loan-stats .black-underlined {
+  display: inline-block; }
+.loan-details .loan-stats .bold {
+  font-weight: bold;
+  padding-left: 0.3rem; }
+.loan-details .loan-stats .risk-rating .icon {
+  height: 1rem;
+  width: 18px;
+  fill: transparent; }
+.loan-details .loan-stats .risk-rating .empty-star {
+  color: #efefef; }
 
 .borrower-profile-wrapper .line-break {
   width: 90%;
@@ -8561,7 +8630,17 @@ a.aboutJoinLink, a.aboutJoinLink:visited {
       padding-right: 4.833333rem; } }
 @media only screen and (min-width:30.0625rem) {
   .borrower-profile-wrapper .story .left-content {
-    background-color: #efefef; } }
+    min-height: 50rem;
+    background-color: #efefef;
+    border-top: 1px solid #666;
+    border-bottom: 1px solid #666;
+    border-right: 1px solid #666; } }
+@media only screen and (min-width:30.0625rem) {
+  .borrower-profile-wrapper .story .right-content {
+    border-top: 1px solid #666;
+    border-bottom: 1px solid #666;
+    min-height: 50rem;
+    background-color: #d8d8d8; } }
 
 a.modal-link {
   color: black;
@@ -8617,13 +8696,3 @@ a.modal-link:hover {
   transform: rotate(-180deg); }
 .ac-container .ac-input {
   display: none; }
-.ac-container .ac-body {
-  margin-top: -1px;
-  overflow: hidden;
-  max-height: 0px;
-  position: relative;
-  z-index: 10;
-  transition: max-height 1s ease-in-out; }
-.ac-container .ac-input:checked ~ .ac-body {
-  transition: max-height 1s ease-in-out;
-  max-height: 142rem; }
