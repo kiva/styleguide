@@ -156,6 +156,10 @@ div.about-video-wrapper {
 		background: url(../../images/about/map-bg.min.svg) no-repeat;
 		background-size: contain;
 		background-position: center center;
+
+		@media #{$small-only} {
+			background-size: cover;
+			}
 	}
 
 	.ac-container {
