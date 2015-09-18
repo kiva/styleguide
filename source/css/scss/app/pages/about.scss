@@ -3,6 +3,18 @@ a.visitLink:visited {
 	color: $kiva-green;
 }
 
+div.about-headline-wrapper {
+	height: 0;
+
+	@media #{$small-only} {
+		padding-bottom: 86.04%;
+	}
+
+	@media #{$medium-up} {
+		padding-bottom: 43.05%;
+	}
+}
+
 div.aboutIntro {
 	padding-top: rem-calc(36);
 
@@ -122,14 +134,15 @@ div.about-video-wrapper {
 		margin-top: 2rem;
 		padding: 0 2rem;
 		color: $kiva-text-dark;
-		-webkit-text-fill-color: transparent;
-		background-size: cover;
-		
+
 		@media #{$small-only} {
 			background: -webkit-linear-gradient(transparent, transparent),
 			url(http://cms.kiva.org.s3.amazonaws.com/page/images/unique-sm-std.jpg) no-repeat;
 			-webkit-background-clip: text;
 			background: -o-linear-gradient(transparent, transparent);
+			-webkit-text-fill-color: transparent;
+			background-size: cover;
+			background-position: center;
 		}
 
 		@media #{$medium-only} {
@@ -137,6 +150,9 @@ div.about-video-wrapper {
 			url(http://cms.kiva.org.s3.amazonaws.com/page/images/unique-med-std.jpg) no-repeat;
 			-webkit-background-clip: text;
 			background: -o-linear-gradient(transparent, transparent);
+			-webkit-text-fill-color: transparent;
+			background-size: cover;
+			background-position: center;
 		}
 
 		@media #{$large-up} {
@@ -144,6 +160,9 @@ div.about-video-wrapper {
 			url(http://cms.kiva.org.s3.amazonaws.com/page/images/unique-lg-std.jpg) no-repeat;
 			-webkit-background-clip: text;
 			background: -o-linear-gradient(transparent, transparent);
+			-webkit-text-fill-color: transparent;
+			background-size: cover;
+			background-position: center;
 		}
 	}
 }
