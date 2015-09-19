@@ -8236,6 +8236,15 @@ ul.tertiary-nav {
 a.visitLink, a.visitLink:visited {
   color: #63a541; }
 
+div.about-headline-wrapper {
+  height: 0; }
+  @media only screen and (max-width: 30rem) {
+    div.about-headline-wrapper {
+      padding-bottom: 86.04%; } }
+  @media only screen and (min-width:30.0625rem) {
+    div.about-headline-wrapper {
+      padding-bottom: 43.05%; } }
+
 div.aboutIntro {
   padding-top: 2rem; }
   div.aboutIntro svg {
@@ -8259,7 +8268,8 @@ div.aboutIntro {
     margin-bottom: 1.9444444444rem; }
 
 div.about-video-wrapper {
-  position: relative; }
+  position: relative;
+  cursor: pointer; }
   div.about-video-wrapper .button-wrapper {
     position: absolute;
     top: 75%;
@@ -8325,24 +8335,31 @@ a.aboutJoinLink, a.aboutJoinLink:visited {
   .what-makes-us-unique .photo-headline {
     margin-top: 2rem;
     padding: 0 2rem;
-    color: #333;
-    -webkit-text-fill-color: transparent;
-    background-size: cover; }
+    color: #333; }
     @media only screen and (max-width: 30rem) {
       .what-makes-us-unique .photo-headline {
         background: -webkit-linear-gradient(transparent, transparent), url(http://cms.kiva.org.s3.amazonaws.com/page/images/unique-sm-std.jpg) no-repeat;
         -webkit-background-clip: text;
-        background: -o-linear-gradient(transparent, transparent); } }
+        background: -o-linear-gradient(transparent, transparent);
+        -webkit-text-fill-color: transparent;
+        background-size: cover;
+        background-position: center; } }
     @media only screen and (min-width:30.0625rem) and (max-width:42.5rem) {
       .what-makes-us-unique .photo-headline {
         background: -webkit-linear-gradient(transparent, transparent), url(http://cms.kiva.org.s3.amazonaws.com/page/images/unique-med-std.jpg) no-repeat;
         -webkit-background-clip: text;
-        background: -o-linear-gradient(transparent, transparent); } }
+        background: -o-linear-gradient(transparent, transparent);
+        -webkit-text-fill-color: transparent;
+        background-size: cover;
+        background-position: center; } }
     @media only screen and (min-width:42.5625rem) {
       .what-makes-us-unique .photo-headline {
         background: -webkit-linear-gradient(transparent, transparent), url(http://cms.kiva.org.s3.amazonaws.com/page/images/unique-lg-std.jpg) no-repeat;
         -webkit-background-clip: text;
-        background: -o-linear-gradient(transparent, transparent); } }
+        background: -o-linear-gradient(transparent, transparent);
+        -webkit-text-fill-color: transparent;
+        background-size: cover;
+        background-position: center; } }
 
 .aboutStatsContainer {
   overflow: auto;
@@ -8379,7 +8396,7 @@ a.aboutJoinLink, a.aboutJoinLink:visited {
   .aboutStatsContainer .row3 {
     padding-bottom: 1.9444444444rem; }
   .aboutStatsContainer .seeMoreSection .ac-body .aboutSeeMoreContainer {
-    background: url(../../images/about/numbers-bg-sm-std.min.svg);
+    background: url(../../images/about/numbers-bg-sm-std-new.min.svg);
     background-position: center;
     background-size: contain;
     background-repeat: repeat-y; }
