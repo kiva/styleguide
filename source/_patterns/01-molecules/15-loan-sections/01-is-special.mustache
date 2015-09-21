@@ -15,28 +15,25 @@
                     {{specialBody}}
                 </h2>
 
-                {{#kivan}}
-                    <div class="kivan">
-                        <div class="profile-photo">
-                            <img src="{{profilePhotoHref}}">
+                <div class="kivan">
+                    <div class="profile-photo">
+                        <img src="{{profilePhotoHref}}">
+                    </div>
+                    <div class="show-for-small-only">
+                        <p>
+                            {{kivan.name}}, {{kivan.title}}
+                        </p>
+                    </div>
+                    <div class="show-for-medium-up">
+                        <div>
+                            {{kivan.name}}
                         </div>
-                        <div class="show-for-small-only">
-                            <p>
-                                {{name}}, {{title}}
-                            </p>
-                        </div>
-                        <div class="show-for-medium-up">
 
-                            <p>
-                                {{name}}
-                            </p>
-
-                            <p>
-                                {{title}}
-                            </p>
+                        <div>
+                            {{kivan.title}}
                         </div>
                     </div>
-                {{/kivan}}
+                </div>
             </article>
         </div>
     </section>
