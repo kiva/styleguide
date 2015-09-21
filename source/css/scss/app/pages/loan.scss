@@ -162,8 +162,8 @@
 }
 
 .loan-details {
-  .show-for-medium-up{
-    .ac-body{
+  .show-for-medium-up {
+    .ac-body {
       max-height: 1000px;
       overflow: auto;
     }
@@ -179,7 +179,7 @@
     text-align: center;
 
     @media #{$medium-up}{
-      text-align:left;
+      text-align: left;
       padding-bottom: 0.5rem;
     }
 
@@ -226,4 +226,21 @@
     }
   }
 
+}
+
+.lenders-teams {
+  .ac-title {
+    font-size: 1rem;
+  }
+  .photos {
+    display: inline;
+    img {
+      background-repeat: no-repeat;
+      border-radius: 50%;
+      width: 50px;
+    }
+  }
+  .photos:nth-child(n+2) {
+    padding-left: 5px;
+  }
 }
