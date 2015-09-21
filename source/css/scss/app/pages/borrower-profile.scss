@@ -22,6 +22,9 @@
   }
 
   @media #{$medium-up} {
+    .loan-story, .loan-details{
+      padding-top: 1rem;
+    }
     padding-top: 1rem;
     .left-content {
       padding-left: 4.833333rem;
