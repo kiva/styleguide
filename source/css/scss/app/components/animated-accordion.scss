@@ -2,12 +2,14 @@
   .ac-title {
     margin: 0;
     display: block;
+    position: relative;
   }
   .ac-dropdown-icon {
     display: inline;
     .icon {
+      position: absolute;
+      right: 1px;
       margin-top: .2rem;
-      float: right;
       height: 1rem;
       width: rem-calc(25);
       fill: none;
