@@ -7,7 +7,12 @@
                 {{> molecules-loan-figure-multiple-photos}}
             </div>
             <div class="small-12 medium-5 columns right-content">
-                {{> molecules-pfp-meter}}
+                {{#inPfp}}
+                    {{> molecules-pfp-meter}}
+                {{/inPfp}}
+                {{^inPfp}}
+                    {{> molecules-current-status-meter}}
+                {{/inPfp}}
                 {{> molecules-loan-gist}}
             </div>
         </div>

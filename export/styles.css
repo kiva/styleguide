@@ -6795,10 +6795,9 @@ small {
       left: 50%;
       margin-top: -40px;
       margin-left: -40px; }
-  .loan-figure .loan-figure-carousel:nth-child(n+2) {
-    display: none; }
   .loan-figure .carousel-nav {
     background-color: rgba(51, 51, 51, 0.3);
+    display: none;
     position: absolute;
     top: 50%;
     width: 50px;
@@ -6847,7 +6846,7 @@ small {
   bottom: 0;
   right: 0; }
 .loan-image-footer .favorite-link.is-favorite .icon-star {
-  color: #488443;
+  color: #a9d14c;
   opacity: .8; }
 .loan-image-footer .favorite-link:hover .icon-star {
   opacity: .7; }
@@ -8641,6 +8640,8 @@ a.aboutJoinLink, a.aboutJoinLink:visited {
 @media only screen and (min-width:30.0625rem) {
   .borrower-profile-wrapper {
     padding-top: 1rem; }
+    .borrower-profile-wrapper .loan-story, .borrower-profile-wrapper .loan-details {
+      padding-top: 1rem; }
     .borrower-profile-wrapper .left-content {
       padding-left: 4.833333rem; }
     .borrower-profile-wrapper .right-content {

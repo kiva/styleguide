@@ -21,16 +21,9 @@
 		}
 	}
 
-	.loan-image-wrap > img {
-
-	}
-
-	.loan-figure-carousel:nth-child(n + 2) {
-		display: none;
-	}
-
 	.carousel-nav {
 		background-color: rgba(51, 51, 51, .3);
+		display: none;
 		position: absolute;
 		top:50%;
 		width: 50px;
