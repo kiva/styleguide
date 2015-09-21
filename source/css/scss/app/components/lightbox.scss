@@ -1,7 +1,29 @@
-.icon.icon-x {
-	stroke: $kiva-green;
+.lightbox {
+	max-width: rem-calc(600);
 }
 
-h1 {
-	font-size: 1px;
+.icon.icon-x {
+	stroke: $kiva-green;
+	height: rem-calc(30);
+	width: rem-calc(30);
+}
+
+div.reveal-modal-bg {
+	background: black;
+	opacity: .88;
+}
+
+.reveal-modal {
+	top: rem-calc(0);
+}
+
+#modal {
+	border: none;
+	border-radius: 0;
+	background: none;
+	box-shadow: none;
+}
+
+a.close-reveal-modal {
+	top: rem-calc(-85);
 }
