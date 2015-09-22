@@ -1,0 +1,19 @@
+<a href="#" data-reveal-id="modal">{{lightbox.video.modal-trigger-text}}</a>
+
+<section class="lightbox">
+    <div id="modal" class="reveal-modal" data-reveal aria-labelledby="modalTitle" aria-hidden="true" role="dialog">
+
+
+        <h1 id="modalTitle" class="white">{{lightbox.video.modal-title}}</h1>
+
+        <div class="flex-video widescreen vimeo">
+            <iframe width="{{lightbox.video.youtube-video.width}}" height="{{lightbox.video.youtube-video.height}}" src="{{lightbox.video.youtube-video.src}}" frameborder="{{lightbox.video.youtube-video.frameborder}}" allowfullscreen></iframe>
+        </div>
+
+        <a class="close-reveal-modal" aria-label="Close">
+            <svg class="icon icon-x">
+                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-x"></use>
+            </svg>
+        </a>
+    </div>
+</section>
