@@ -1,8 +1,8 @@
 {{!To make an element show a lightbox your triggers DATA-REVEAL-ID and the modal's ID need to match}}
-<a href="#" data-reveal-id="modal">{{lightbox.modal-trigger-text}}</a>
+<a href="#" data-reveal-id="{{lightbox.modal-reveal-id}}">{{lightbox.modal-trigger-content}}</a>
 
 <section class="videoLightbox">
-    <div id="modal" class="reveal-modal" data-reveal aria-labelledby="modalTitle" aria-hidden="true" role="dialog">
+    <div id="{{lightbox.modal-reveal-id}}" class="reveal-modal" data-reveal aria-labelledby="modalTitle" aria-hidden="true" role="video">
 
         <h1 id="modalTitle" class="white">{{lightbox.video.youtube.modal-title}}</h1>
 

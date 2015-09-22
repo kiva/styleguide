@@ -13,12 +13,12 @@
             <article class="ac-body">
                 {{#teams}}
                     <div class="photos">
-                        <img src="{{imgUrl}}">
+                        <img data-tooltip aria-haspopup="true" data-options="show_on:medium;" title="{{tooltip}}" src="{{imgUrl}}">
                     </div>
                 {{/teams}}
                 {{#lenders}}
                     <div class="photos">
-                        <img src="{{imgUrl}}">
+                        <img data-tooltip aria-haspopup="true" data-options="show_on:medium;" title="{{tooltip}}" src="{{imgUrl}}">
                     </div>
                 {{/lenders}}
             </article>
