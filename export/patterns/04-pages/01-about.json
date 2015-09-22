@@ -3,6 +3,11 @@
 		"medium": "We envision a world where all people hold the power to create opportunity for themselves and others."
 	},
 	"textOverImageNameSpaceClass": "about-headline-wrapper",
+	"img": {
+		"full-width" : {
+			"alt" : "Photo of hands and a leaf"
+		}
+	},
 	"main-title": "About",
 	"page-title": "About Us",
 	"bar-links": [

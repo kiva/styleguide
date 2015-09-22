@@ -89,5 +89,22 @@
         "isEmptyStar": true
       }
     ]
-  }
+  },
+  "teamCount": 5,
+  "teams": [
+    {
+      "imgUrl": "/images/borrower1.jpg"
+    },
+    {
+      "imgUrl": "/images/borrower1.jpg"
+    }
+  ],
+  "lenders": [
+    {
+      "imgUrl": "/images/borrower1.jpg"
+    },
+    {
+      "imgUrl": "/images/borrower1.jpg"
+    }
+  ]
 }
