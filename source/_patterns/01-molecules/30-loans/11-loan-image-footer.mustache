@@ -6,7 +6,9 @@
         </div>
     {{/is_matched}}
 
-    <a href="#" class="favorite-link {{#is_favorite}}is-favorite{{/is_favorite}}">
-        <svg class="icon icon-star"><use xlink:href="#icon-star"/></svg>
-    </a>
+    {{#can_favorite}}
+        <a href="#" class="favorite-link {{#is_favorite}}is-favorite{{/is_favorite}}">
+            <svg class="icon icon-star"><use xlink:href="#icon-star"/></svg>
+        </a>
+    {{/can_favorite}}
 </div>
