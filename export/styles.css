@@ -6826,20 +6826,20 @@ small {
     cursor: pointer; }
 
 .loan-image-footer .icon-match {
-  height: 40px;
-  width: 40px;
-  padding: 3px;
+  height: 2.2222222222rem;
+  width: 2.2222222222rem;
+  padding: 0.1666666667rem;
   vertical-align: middle; }
 .loan-image-footer .matching-message {
-  background-color: rgba(200, 200, 200, 0.8);
-  height: 40px;
+  background-color: rgba(255, 255, 255, 0.8);
+  height: 2.2222222222rem;
   width: 100%;
-  padding-right: 40px;
+  padding-right: 2.2222222222rem;
   position: absolute;
   left: 0;
   bottom: 0; }
   .loan-image-footer .matching-message span {
-    line-height: 40px;
+    line-height: 2.2222222222rem;
     vertical-align: middle; }
 .loan-image-footer .favorite-link {
   position: absolute;
@@ -6854,9 +6854,9 @@ small {
   background-color: #000000;
   color: #FFFFFF;
   fill: none;
-  height: 40px;
-  width: 40px;
-  padding: 8px;
+  height: 2.2222222222rem;
+  width: 2.2222222222rem;
+  padding: 0.4444444444rem;
   opacity: .6;
   vertical-align: bottom; }
 
@@ -8029,6 +8029,18 @@ ul.tertiary-nav {
         color: #9C021A; }
   .loan-card .loan-image-footer {
     position: relative; }
+    .loan-card .loan-image-footer .icon-match {
+      height: 2rem;
+      width: 2rem; }
+    .loan-card .loan-image-footer .matching-message {
+      font-size: 0.7777777778rem;
+      height: 2rem;
+      padding-right: 2rem; }
+      .loan-card .loan-image-footer .matching-message span {
+        line-height: 2rem; }
+    .loan-card .loan-image-footer .icon-star {
+      height: 2rem;
+      width: 2rem; }
   .loan-card .borrower-details-wrap {
     padding: 0 0.5rem;
     border-left: 0.0555555556rem solid #d8d8d8;
