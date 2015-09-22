@@ -225,12 +225,15 @@ div.about-video-wrapper {
 
 		.ac-container {
 
+			.ac-title {
+				//height: rem-calc(30);
+			}
 			.ac-dropdown-icon {
 
 				svg {
 					height: rem-calc(30);
 					stroke: $kiva-accent-green;
-					float: none;
+					position: relative;
 					width: rem-calc(60);
 				}
 			}
