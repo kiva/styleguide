@@ -124,7 +124,7 @@ module.exports = function(grunt) {
 				}
 			}
 
-			, exportmin: {
+			, export_min: {
 				options: {
 					outputStyle: 'compressed'
 				}
@@ -347,7 +347,7 @@ module.exports = function(grunt) {
 
 	grunt.registerTask('init', ['copy:init', 'githooks']);
 	grunt.registerTask('compile', ['concat:vendorCss', 'sass:compile', 'shell:compile', 'svgmin', 'svgstore:compile', 'copy:js', 'webpack:compile']);
-	grunt.registerTask('export', ['clean:export', 'sass:export', 'svgmin', 'svgstore:export', 'webpack:bundle', 'webpack:ugly_bundle', 'webpack:module', 'copy:export', 'gitadd:export']);
+	grunt.registerTask('export', ['clean:export', 'sass:export', 'sass:export_min', 'svgmin', 'svgstore:export', 'webpack:bundle', 'webpack:ugly_bundle', 'webpack:module', 'copy:export', 'gitadd:export']);
 	grunt.registerTask('default', 'compile');
     grunt.registerTask('test', ['jshint']);
 
