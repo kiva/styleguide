@@ -25,6 +25,9 @@
     .loan-story, .loan-details{
       padding-top: 1rem;
     }
+  }
+
+  @media #{$large-up} {
     padding-top: 1rem;
     .left-content {
       padding-left: 4.833333rem;
@@ -37,7 +40,7 @@
   .story {
     .left-content {
       @media #{$medium-up}{
-        min-height: 50rem;
+        min-height: 80rem;
         background-color: $kiva-bg-darkgray;
         border-top: 1px solid $kiva-text-medium;
         border-bottom: 1px solid $kiva-text-medium;
@@ -46,9 +49,9 @@
     }
     .right-content {
       @media #{$medium-up}{
+        min-height: 80rem;
         border-top: 1px solid $kiva-text-medium;
         border-bottom: 1px solid $kiva-text-medium;
-        min-height: 50rem;
         background-color: $kiva-stroke-gray;
       }
     }
