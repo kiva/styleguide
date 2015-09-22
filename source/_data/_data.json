@@ -1,438 +1,872 @@
 {
-	"is-patternlab": true,
-	"title" : "Kiva Style Guide",
-	"htmlClass": "pl",
-	"bodyClass": "body",
-	"img": {
-		"landscape-4x3": {
-			"src": "../../images/fpo_4x3.png",
-			"alt": "4x3 Image"
-		},
-		"landscape-16x9": {
-			"src": "../../images/fpo_16x9.png",
-			"alt": "16x9 Image"
-		},
-		"square": {
-			"src": "../../images/fpo_square.png",
-			"alt": "Square Thumbnail"
-		},
-		"avatar" : {
-			"src" : "../../images/fpo_avatar.png",
-			"alt" : "Person Name"
-		},
-		"rectangle": {
-			"src": "http://placeimg.com/400/300/tech",
-			"alt": "Rectangle"
-		},
-		"borrower": {
-			"src": "http://placeimg.com/680/425/people",
-			"alt": "Borrower Picture"
-		},
-		"borrower1" : {
-			"src" : "../../images/borrower1.jpg",
-			"alt" : "Borrower photo 1"
-		},
-		"borrower2" : {
-			"src" : "../../images/borrower2.jpg",
-			"alt" : "Borrower photo 2"
-		},
-		"borrower3" : {
-			"src" : "../../images/borrower3.jpg",
-			"alt" : "Borrower photo 3"
-		},
-		"defaultLender" : {
-			"src" : "../../images/default_lender.jpg",
-			"alt" : "Anonymous Lender Photo"
-		},
-		"loan-card-loader" : {
-			"src" : "../../images/loan-card-loader.gif",
-			"alt" : "Loading"
-		},
-		"full-width" : {
-			"src" : "http://cms.kiva.org.s3.amazonaws.com/page/images/about-top",
-			"alt" : "full width image"
-		},
-		"behind-text" : {
-			"src" : "http://cms.kiva.org.s3.amazonaws.com/page/images/unique-lg-std.jpg",
-			"alt" : "transparent text with image behind"
-		},
-		"category" : {
-			"src" : "../../images/category/hp-cats-livestock",
-			"alt" : "Livestock"
-		}
+  "is-patternlab": true,
+  "title": "Kiva Style Guide",
+  "htmlClass": "pl",
+  "bodyClass": "body",
+  "img": {
+	"landscape-4x3": {
+	  "src": "../../images/fpo_4x3.png",
+	  "alt": "4x3 Image"
 	},
-	"headline" : {
-		"short" : "Lorem ipsum dolor sit (37 characters)",
-		"medium" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. (72 characters)"
+	"landscape-16x9": {
+	  "src": "../../images/fpo_16x9.png",
+	  "alt": "16x9 Image"
 	},
-	"excerpt" : {
-		"short" : "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam",
-		"medium" : "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-		"long" : "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+	"square": {
+	  "src": "../../images/fpo_square.png",
+	  "alt": "Square Thumbnail"
 	},
-	"description" : "So, setting about it as methodically as men might smoke out a wasps' nest, the Martians spread this strange stifling vapour over the Londonward country. The horns of the crescent slowly moved apart, until at last they formed a line from Hanwell to Coombe and Malden. All night through their destructive tubes advanced.",
-	"number" : {
-		"short" : "575%",
-		"medium" : "10,485",
-		"long": "987,654,321"
+	"avatar": {
+	  "src": "../../images/fpo_avatar.png",
+	  "alt": "Person Name"
 	},
-	"decimal" : {
-		"short" : "6.2",
-		"medium" : "10,485.87",
-		"long": "987,654,321.0174"
+	"rectangle": {
+	  "src": "http://placeimg.com/400/300/tech",
+	  "alt": "Rectangle"
 	},
-	"price" : {
-		"short" : "$ 3.50",
-		"medium" : "$ 1,485.87",
-		"long": "$ 654,321.01"
+	"borrower": {
+	  "src": "http://placeimg.com/680/425/people",
+	  "alt": "Borrower Picture"
 	},
-		"nav-text" : "Lend  About  Login",
-	"url" : "#",
-	"year" : {
-		"long": "2013",
-		"short": "13"
+	"borrower1": {
+	  "src": "../../images/borrower1.jpg",
+	  "alt": "Borrower photo 1"
 	},
-	"month" : {
-		"long": "February",
-		"short": "Feb",
-		"digit": "02"
+	"borrower2": {
+	  "src": "../../images/borrower2.jpg",
+	  "alt": "Borrower photo 2"
 	},
-	"dayofweek" : {
-		"long": "Monday",
-		"short": "Mon"
+	"borrower3": {
+	  "src": "../../images/borrower3.jpg",
+	  "alt": "Borrower photo 3"
 	},
-	"day" : {
-		"long": "10",
-		"short": "10",
-		"ordinal": "th"
+	"defaultLender": {
+	  "src": "../../images/default_lender.jpg",
+	  "alt": "Anonymous Lender Photo"
 	},
-	"hour" : {
-		"long": "01",
-		"short": "1",
-		"military": "13",
-		"ampm": "pm"
+	"loan-card-loader": {
+	  "src": "../../images/loan-card-loader.gif",
+	  "alt": "Loading"
 	},
-	"minute" : {
-		"long": "20",
-		"short": "20"
+	"full-width": {
+	  "src": "http://cms.kiva.org.s3.amazonaws.com/page/images/about-top",
+	  "alt": "full width image"
 	},
-	"seconds" : "31",
-	"author" : {
-		"first-name": "Author",
-		"last-name": "Name"
+	"behind-text": {
+	  "src": "http://cms.kiva.org.s3.amazonaws.com/page/images/unique-lg-std.jpg",
+	  "alt": "transparent text with image behind"
 	},
-	"hero": true,
-	"emergency" : false,
-	"touts" : [
-		{ },
-		{ },
-		{ }
-	],
-	"latest-posts" : [
-		{ },
-		{ },
-		{ },
-		{ },
-		{ }
-	],
-	"meter": {
-		"fundraising-meter": {
-			"fundraised-percentage": "80%"
-		}
+	"category": {
+	  "src": "../../images/category/hp-cats-livestock",
+	  "alt": "Livestock"
 	}
-	, "loancard": {
-		"amount-left": "$33.5k left"
-		, "sector": "Transportation"
-		, "country-code": "ht"
-		, "country-name": "Grenadines"
+  },
+  "headline": {
+	"short": "Lorem ipsum dolor sit (37 characters)",
+	"medium": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. (72 characters)"
+  },
+  "excerpt": {
+	"short": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam",
+	"medium": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+	"long": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+  },
+  "description": "So, setting about it as methodically as men might smoke out a wasps' nest, the Martians spread this strange stifling vapour over the Londonward country. The horns of the crescent slowly moved apart, until at last they formed a line from Hanwell to Coombe and Malden. All night through their destructive tubes advanced.",
+  "number": {
+	"short": "575%",
+	"medium": "10,485",
+	"long": "987,654,321"
+  },
+  "decimal": {
+	"short": "6.2",
+	"medium": "10,485.87",
+	"long": "987,654,321.0174"
+  },
+  "price": {
+	"short": "$ 3.50",
+	"medium": "$ 1,485.87",
+	"long": "$ 654,321.01"
+  },
+  "nav-text": "Lend  About  Login",
+  "url": "#",
+  "year": {
+	"long": "2013",
+	"short": "13"
+  },
+  "month": {
+	"long": "February",
+	"short": "Feb",
+	"digit": "02"
+  },
+  "dayofweek": {
+	"long": "Monday",
+	"short": "Mon"
+  },
+  "day": {
+	"long": "10",
+	"short": "10",
+	"ordinal": "th"
+  },
+  "hour": {
+	"long": "01",
+	"short": "1",
+	"military": "13",
+	"ampm": "pm"
+  },
+  "minute": {
+	"long": "20",
+	"short": "20"
+  },
+  "seconds": "31",
+  "author": {
+	"first-name": "Author",
+	"last-name": "Name"
+  },
+  "hero": true,
+  "emergency": false,
+  "touts": [
+	{},
+	{},
+	{}
+  ],
+  "latest-posts": [
+	{},
+	{},
+	{},
+	{},
+	{}
+  ],
+  "meter": {
+	"fundraising-meter": {
+	  "fundraised-percentage": "80%"
 	}
-	, "about-nav": {
-		"links": [
-			{ "label": "About Us", "href": "#" },
-			{ "label": "Get to know us", "href": "#" },
-			{ "label": "How Kiva Works", "href": "#" },
-			{ "label": "Where Kiva Works", "href": "#" },
-			{ "label": "Impact", "href": "#" },
-			{ "label": "Press Center", "href": "#" },
-			{ "label": "Due diligence and monitoring", "href": "#" }
-		]
-	}
-	, "my-kiva": {
-		"links": [
-			{ "label": "Portfolio", "href": "#"},
-			{ "label": "My Teams", "href": "#"},
-			{ "label": "Donations", "href": "#"},
-			{ "label": "Lender Profile", "href": "#"},
-			{ "label": "My Campaigns", "href": "#"},
-			{ "label": "Settings", "href": "#", "end-section": true},
-			{ "label": "Sign Out", "href": "#"}
-		]
-	}
-	,"profile_picture_href": "../../images/fpo_avatar.png"
-	,"logo_href": "#"
-	,"basket_href": "#"
-	,"lend_href": "#"
-	,"login_href": "#"
-	,"categories_href": "#"
-	,"basket": {
-		"item_count": "3"
-	}
-	,"bonus":{
-		"href":"#"
-		,"amount": "$25"
-		,"label": "Bonus Credit"
-	}
-	,"categories": {
-		"list": [
-			{ "name": "Women", "href": "#" }
-			,{ "name": "Men", "href": "#" }
-		,{ "name": "Education", "href": "#" }
-		,{ "name": "Expiring Soon", "href": "#" }
-		,{ "name": "Shelter", "href": "#" }
-		,{ "name": "Sustainable Ventures", "href": "#" }
-		,{ "name": "Conflict Zones", "href": "#" }
-		,{ "name": "Repeat Borrower", "href": "#" }
-		,{ "name": "Great Photo", "href": "#" }
-		,{ "name": "Matched Loans", "href": "#" }
-		,{ "name": "Single Parent", "href": "#" }
-		,{ "name": "Agriculture", "href": "#" }
-		,{ "name": "Health", "href": "#" }
-		,{ "name": "Food", "href": "#" }
-		,{ "name": "Transportation", "href": "#" }
-		,{ "name": "Livestock", "href": "#" }
-		,{ "name": "Short-term Loans", "href": "#" }
-		]
-		,"count": 17
-	}
-	,"regions": [
-		{
-			"name": "North America"
-			,"id": "north-america"
-			,"countries": [
-				{"name": "Dominican Republic", "code": "do", "href": "#"}
-				,{"name": "Haiti", "code": "ht", "href": "#"}
-				,{"name": "Mexico", "code": "mx", "href": "#"}
-				,{"name": "St Vincent", "code": "vc", "href": "#"}
-				,{"name": "United States", "code": "us", "href": "#"}
-			]
-		}
-		,{
-			"name": "Central America"
-			,"id": "central-america"
-			,"countries": [
-				{"name": "Belize", "code": "bz", "href": "#"}
-				,{"name": "Costa Rica", "code": "cr", "href": "#"}
-				,{"name": "El Salvador", "code": "sv", "href": "#"}
-				,{"name": "Guatemala", "code": "gt", "href": "#"}
-				,{"name": "Honduras", "code": "hn", "href": "#"}
-				,{"name": "Nicaragua", "code": "ni", "href": "#"}
-				,{"name": "Panama", "code": "pa", "href": "#"}
-			]
-		}
-		,{
-			"name": "South America"
-			,"id": "south-america"
-			,"countries": [
-				{"name": "Bolivia", "code": "bo", "href": "#"}
-				,{"name": "Brazil", "code": "br", "href": "#"}
-				,{"name": "Chile", "code": "cl", "href": "#"}
-				,{"name": "Colombia", "code": "co", "href": "#"}
-				,{"name": "Ecuador", "code": "ec", "href": "#"}
-				,{"name": "Paraguay", "code": "py", "href": "#"}
-				,{"name": "Peru", "code": "pe", "href": "#"}
-				,{"name": "Suriname", "code": "sr", "href": "#"}
-			]
-		}
-		,{
-			"name": "Africa"
-			,"id": "africa"
-			,"countries": [
-				{"name": "Benin", "code": "bj", "href": "#"}
-				,{"name": "Burkina Faso", "code": "bf", "href": "#"}
-				,{"name": "Burundi", "code": "bi", "href": "#"}
-				,{"name": "Cameroon", "code": "cm", "href": "#"}
-				,{"name": "Congo (Dem. Rep.)", "code": "cd", "href": "#"}
-				,{"name": "Congo (Rep.)", "code": "cg", "href": "#"}
-				,{"name": "Egypt", "code": "eg", "href": "#"}
-				,{"name": "Ghana", "code": "gh", "href": "#"}
-				,{"name": "Kenya", "code": "ke", "href": "#"}
-				,{"name": "Lesotho", "code": "ls", "href": "#"}
-				,{"name": "Liberia", "code": "lr", "href": "#"}
-				,{"name": "Madagascar", "code": "mg", "href": "#"}
-				,{"name": "Malawi", "code": "mw", "href": "#"}
-				,{"name": "Mali", "code": "ml", "href": "#"}
-				,{"name": "Mauritania", "code": "mr", "href": "#"}
-				,{"name": "Mozambique", "code": "mz", "href": "#"}
-				,{"name": "Namibia", "code": "na", "href": "#"}
-				,{"name": "Nigeria", "code": "ng", "href": "#"}
-				,{"name": "Rwanda", "code": "rw", "href": "#"}
-				,{"name": "Senegal", "code": "sn", "href": "#"}
-				,{"name": "Sierra Leone", "code": "sl", "href": "#"}
-				,{"name": "Somalia", "code": "so", "href": "#"}
-				,{"name": "South Africa", "code": "za", "href": "#"}
-				,{"name": "South Sudan", "code": "sd", "href": "#"}
-				,{"name": "Tanzania", "code": "tz", "href": "#"}
-				,{"name": "Togo", "code": "tg", "href": "#"}
-				,{"name": "Uganda", "code": "ug", "href": "#"}
-				,{"name": "Zambia", "code": "zm", "href": "#"}
-				,{"name": "Zimbabwe", "code": "zw", "href": "#"}
-			]
-		}
-		,{
-			"name": "Eastern Europe"
-			,"id": "eastern-europe"
-			,"countries": [
-				{"name": "Albania", "code": "al", "href": "#"}
-				,{"name": "Armenia", "code": "am", "href": "#"}
-				,{"name": "Georgia", "code": "ge", "href": "#"}
-				,{"name": "Kosovo", "code": "xk", "href": "#"}
-				,{"name": "Moldova", "code": "md", "href": "#"}
-				,{"name": "Ukraine", "code": "ua", "href": "#"}
-			]
-		}
-		,{
-			"name": "Middle East"
-			,"id": "middle-east"
-			,"countries": [
-				{"name": "Iraq", "code": "iq", "href": "#"}
-				,{"name": "Israel", "code": "il", "href": "#"}
-				,{"name": "Jordan", "code": "jo", "href": "#"}
-				,{"name": "Lebanon", "code": "lb", "href": "#"}
-				,{"name": "Palestine", "code": "ps", "href": "#"}
-				,{"name": "Turkey", "code": "tr", "href": "#"}
-				,{"name": "Yemen", "code": "ye", "href": "#"}
-			]
-		}
-		,{
-			"name": "Asia"
-			,"id": "asia"
-			,"countries": [
-				{"name": "Azerbaijan", "code": "az", "href": "#"}
-				,{"name": "Cambodia", "code": "kh", "href": "#"}
-				,{"name": "China", "code": "cn", "href": "#"}
-				,{"name": "India", "code": "in", "href": "#"}
-				,{"name": "Indonesia", "code": "id", "href": "#"}
-				,{"name": "Kyrgyzstan", "code": "kg", "href": "#"}
-				,{"name": "Lao PDR", "code": "la", "href": "#"}
-				,{"name": "Mongolia", "code": "mn", "href": "#"}
-				,{"name": "Myanmar (Burma)", "code": "mm", "href": "#"}
-				,{"name": "Nepal", "code": "np", "href": "#"}
-				,{"name": "Pakistan", "code": "pk", "href": "#"}
-				,{"name": "Philippines", "code": "ph", "href": "#"}
-				,{"name": "Tajikistan", "code": "tj", "href": "#"}
-				,{"name": "Thailand", "code": "th", "href": "#"}
-				,{"name": "Vietnam", "code": "vn", "href": "#"}
-			]
-		}
-		,{
-			"name": "Oceania"
-			,"id": "oceania"
-			,"countries": [
-				{"name": "Papua New Guinea", "code": "pg", "href": "#"}
-				,{"name": "Samoa", "code": "ws", "href": "#"}
-				,{"name": "Solomon Islands", "code": "sb", "href": "#"}
-				,{"name": "Timor-Leste", "code": "tl", "href": "#"}
-				,{"name": "Vanuatu", "code": "vu", "href": "#"}
-			]
-		}
+  },
+  "loancard": {
+	"amount-left": "$33.5k left",
+	"sector": "Transportation",
+	"country-code": "ht",
+	"country-name": "Grenadines"
+  },
+  "about-nav": {
+	"links": [
+	  {
+		"label": "About Us",
+		"href": "#"
+	  },
+	  {
+		"label": "Get to know us",
+		"href": "#"
+	  },
+	  {
+		"label": "How Kiva Works",
+		"href": "#"
+	  },
+	  {
+		"label": "Where Kiva Works",
+		"href": "#"
+	  },
+	  {
+		"label": "Impact",
+		"href": "#"
+	  },
+	  {
+		"label": "Press Center",
+		"href": "#"
+	  },
+	  {
+		"label": "Due diligence and monitoring",
+		"href": "#"
+	  }
 	]
-	, "loans": [
-		{
-			"title": "Senia Del Carmen"
-			, "description": "A portion of Tuzamurane Group's $6,800 loan helps a member to buy more sorghum for sale."
-			, "country" : {
-			"name": "Argentina"
-			, "code": "ar"
-		}
-		}
-		, {
-			"title": "Mirian Yamileh"
-			, "description": "A portion of Sareoun's Group's $225 loan helps a member to buy a water filter to provide safe drinking water for their family."
-			, "country" : {
-				"name": "American Samoa"
-				, "code": "as"
-			}
-		}
-		, {
-			"title": "Emprendedoras Group"
-			, "description": "A loan of $575 helps Intissar to pay her children’s educational fees."
-			, "country" : {
-				"name": "Bosnia and Herzegovina"
-				, "code": "ba"
-			}
-		}
-		, {
-			"title": "Lillian"
-			, "description": "A loan of $600 helps Narciso to buy supplies for agricultural work and carpentry tools."
-			, "country" : {
-				"name": "South Africa"
-				, "code": "za"
-			}
-		}
-		, {
-			"title": "Estebana Sofia"
-			, "description": "A loan of $225 helps Ganga to purchase a dairy cow for starting her milk-selling business."
-			, "country" : {
-				"name": "Burundi"
-				, "code": "bi"
-			}
-		}
-		, {
-			"title": "Cynthia"
-			, "description": "A loan of $575 helps Sau to buy a chainsaw, banana tubes (seedlings), taro roots (seedlings), a wheelbarrow, a water tank, gloves, a rake, a shovel, and chemicals."
-			, "country" : {
-				"name": "Honduras"
-				, "code": "hn"
-			}
-		}
-		, {
-			"title": "Juvenal"
-			, "description": "A loan of $400 helps Juliana to pay university fees."
-			, "country" : {
-				"name": "Albania"
-				, "code": "al"
-			}
-		}
-		, {
-			"title": "Abel Amauris"
-			, "description": "A loan of $1,525 helps Jessica to pay the fees for the course of study."
-			, "country" : {
-				"name": "Nepal"
-				, "code": "np"
-			}
-		}
-		, {
-			"title": "Nhóm 14 Thôn 3 Quảng Nhân Group"
-			, "description": "A loan of $375 helps Mele to pay for her daughter’s university tuition fee."
-			, "country" : {
-				"name": "Jordan"
-				, "code": "jo"
-			}
-		}
-		, {
-			"title": "Marie Fatini's Group"
-			, "description": "A loan of $3,000 helps Yocasta Magaly to pay the expenses to finish her studies and also to pay for an English course."
-			, "country" : {
-				"name": "Somalia"
-				, "code": "so"
-			}
-		}
-		, {
-			"title": "Karanjung Lestari 2 Group"
-			, "description": "A loan of $1,500 helps Eda to buy 5 sacks of rice, 2 sacks of sugar, 5 boxes of canned goods, 10 cases of soft drinks and electronic load to sell to her store."
-			, "country" : {
-				"name": "Moldova"
-				, "code": "md"
-			}
-		}
-		, {
-			"title": "Narkul"
-			, "description": "A portion of Ndugu Nipe Shauri B Group's $6,000 loan helps a member to stock up on wheat, sugar, Omo soap, and cooking oil."
-			, "country" : {
-				"name": "Yemen"
-				, "code": "ye"
-			}
-		}
+  },
+  "my-kiva": {
+	"links": [
+	  {
+		"label": "Portfolio",
+		"href": "#"
+	  },
+	  {
+		"label": "My Teams",
+		"href": "#"
+	  },
+	  {
+		"label": "Donations",
+		"href": "#"
+	  },
+	  {
+		"label": "Lender Profile",
+		"href": "#"
+	  },
+	  {
+		"label": "My Campaigns",
+		"href": "#"
+	  },
+	  {
+		"label": "Settings",
+		"href": "#",
+		"end-section": true
+	  },
+	  {
+		"label": "Sign Out",
+		"href": "#"
+	  }
+	]
+  },
+  "profile_picture_href": "../../images/fpo_avatar.png",
+  "logo_href": "#",
+  "basket_href": "#",
+  "lend_href": "#",
+  "login_href": "#",
+  "categories_href": "#",
+  "basket": {
+	"item_count": "3"
+  },
+  "bonus": {
+	"href": "#",
+	"amount": "$25",
+	"label": "Bonus Credit"
+  },
+  "categories": {
+	"list": [
+	  {
+		"name": "Women",
+		"href": "#"
+	  },
+	  {
+		"name": "Men",
+		"href": "#"
+	  },
+	  {
+		"name": "Education",
+		"href": "#"
+	  },
+	  {
+		"name": "Expiring Soon",
+		"href": "#"
+	  },
+	  {
+		"name": "Shelter",
+		"href": "#"
+	  },
+	  {
+		"name": "Sustainable Ventures",
+		"href": "#"
+	  },
+	  {
+		"name": "Conflict Zones",
+		"href": "#"
+	  },
+	  {
+		"name": "Repeat Borrower",
+		"href": "#"
+	  },
+	  {
+		"name": "Great Photo",
+		"href": "#"
+	  },
+	  {
+		"name": "Matched Loans",
+		"href": "#"
+	  },
+	  {
+		"name": "Single Parent",
+		"href": "#"
+	  },
+	  {
+		"name": "Agriculture",
+		"href": "#"
+	  },
+	  {
+		"name": "Health",
+		"href": "#"
+	  },
+	  {
+		"name": "Food",
+		"href": "#"
+	  },
+	  {
+		"name": "Transportation",
+		"href": "#"
+	  },
+	  {
+		"name": "Livestock",
+		"href": "#"
+	  },
+	  {
+		"name": "Short-term Loans",
+		"href": "#"
+	  }
 	],
-	"textOverImageNameSpaceClass": ""
+	"count": 17
+  },
+  "regions": [
+	{
+	  "name": "North America",
+	  "id": "north-america",
+	  "countries": [
+		{
+		  "name": "Dominican Republic",
+		  "code": "do",
+		  "href": "#"
+		},
+		{
+		  "name": "Haiti",
+		  "code": "ht",
+		  "href": "#"
+		},
+		{
+		  "name": "Mexico",
+		  "code": "mx",
+		  "href": "#"
+		},
+		{
+		  "name": "St Vincent",
+		  "code": "vc",
+		  "href": "#"
+		},
+		{
+		  "name": "United States",
+		  "code": "us",
+		  "href": "#"
+		}
+	  ]
+	},
+	{
+	  "name": "Central America",
+	  "id": "central-america",
+	  "countries": [
+		{
+		  "name": "Belize",
+		  "code": "bz",
+		  "href": "#"
+		},
+		{
+		  "name": "Costa Rica",
+		  "code": "cr",
+		  "href": "#"
+		},
+		{
+		  "name": "El Salvador",
+		  "code": "sv",
+		  "href": "#"
+		},
+		{
+		  "name": "Guatemala",
+		  "code": "gt",
+		  "href": "#"
+		},
+		{
+		  "name": "Honduras",
+		  "code": "hn",
+		  "href": "#"
+		},
+		{
+		  "name": "Nicaragua",
+		  "code": "ni",
+		  "href": "#"
+		},
+		{
+		  "name": "Panama",
+		  "code": "pa",
+		  "href": "#"
+		}
+	  ]
+	},
+	{
+	  "name": "South America",
+	  "id": "south-america",
+	  "countries": [
+		{
+		  "name": "Bolivia",
+		  "code": "bo",
+		  "href": "#"
+		},
+		{
+		  "name": "Brazil",
+		  "code": "br",
+		  "href": "#"
+		},
+		{
+		  "name": "Chile",
+		  "code": "cl",
+		  "href": "#"
+		},
+		{
+		  "name": "Colombia",
+		  "code": "co",
+		  "href": "#"
+		},
+		{
+		  "name": "Ecuador",
+		  "code": "ec",
+		  "href": "#"
+		},
+		{
+		  "name": "Paraguay",
+		  "code": "py",
+		  "href": "#"
+		},
+		{
+		  "name": "Peru",
+		  "code": "pe",
+		  "href": "#"
+		},
+		{
+		  "name": "Suriname",
+		  "code": "sr",
+		  "href": "#"
+		}
+	  ]
+	},
+	{
+	  "name": "Africa",
+	  "id": "africa",
+	  "countries": [
+		{
+		  "name": "Benin",
+		  "code": "bj",
+		  "href": "#"
+		},
+		{
+		  "name": "Burkina Faso",
+		  "code": "bf",
+		  "href": "#"
+		},
+		{
+		  "name": "Burundi",
+		  "code": "bi",
+		  "href": "#"
+		},
+		{
+		  "name": "Cameroon",
+		  "code": "cm",
+		  "href": "#"
+		},
+		{
+		  "name": "Congo (Dem. Rep.)",
+		  "code": "cd",
+		  "href": "#"
+		},
+		{
+		  "name": "Congo (Rep.)",
+		  "code": "cg",
+		  "href": "#"
+		},
+		{
+		  "name": "Egypt",
+		  "code": "eg",
+		  "href": "#"
+		},
+		{
+		  "name": "Ghana",
+		  "code": "gh",
+		  "href": "#"
+		},
+		{
+		  "name": "Kenya",
+		  "code": "ke",
+		  "href": "#"
+		},
+		{
+		  "name": "Lesotho",
+		  "code": "ls",
+		  "href": "#"
+		},
+		{
+		  "name": "Liberia",
+		  "code": "lr",
+		  "href": "#"
+		},
+		{
+		  "name": "Madagascar",
+		  "code": "mg",
+		  "href": "#"
+		},
+		{
+		  "name": "Malawi",
+		  "code": "mw",
+		  "href": "#"
+		},
+		{
+		  "name": "Mali",
+		  "code": "ml",
+		  "href": "#"
+		},
+		{
+		  "name": "Mauritania",
+		  "code": "mr",
+		  "href": "#"
+		},
+		{
+		  "name": "Mozambique",
+		  "code": "mz",
+		  "href": "#"
+		},
+		{
+		  "name": "Namibia",
+		  "code": "na",
+		  "href": "#"
+		},
+		{
+		  "name": "Nigeria",
+		  "code": "ng",
+		  "href": "#"
+		},
+		{
+		  "name": "Rwanda",
+		  "code": "rw",
+		  "href": "#"
+		},
+		{
+		  "name": "Senegal",
+		  "code": "sn",
+		  "href": "#"
+		},
+		{
+		  "name": "Sierra Leone",
+		  "code": "sl",
+		  "href": "#"
+		},
+		{
+		  "name": "Somalia",
+		  "code": "so",
+		  "href": "#"
+		},
+		{
+		  "name": "South Africa",
+		  "code": "za",
+		  "href": "#"
+		},
+		{
+		  "name": "South Sudan",
+		  "code": "sd",
+		  "href": "#"
+		},
+		{
+		  "name": "Tanzania",
+		  "code": "tz",
+		  "href": "#"
+		},
+		{
+		  "name": "Togo",
+		  "code": "tg",
+		  "href": "#"
+		},
+		{
+		  "name": "Uganda",
+		  "code": "ug",
+		  "href": "#"
+		},
+		{
+		  "name": "Zambia",
+		  "code": "zm",
+		  "href": "#"
+		},
+		{
+		  "name": "Zimbabwe",
+		  "code": "zw",
+		  "href": "#"
+		}
+	  ]
+	},
+	{
+	  "name": "Eastern Europe",
+	  "id": "eastern-europe",
+	  "countries": [
+		{
+		  "name": "Albania",
+		  "code": "al",
+		  "href": "#"
+		},
+		{
+		  "name": "Armenia",
+		  "code": "am",
+		  "href": "#"
+		},
+		{
+		  "name": "Georgia",
+		  "code": "ge",
+		  "href": "#"
+		},
+		{
+		  "name": "Kosovo",
+		  "code": "xk",
+		  "href": "#"
+		},
+		{
+		  "name": "Moldova",
+		  "code": "md",
+		  "href": "#"
+		},
+		{
+		  "name": "Ukraine",
+		  "code": "ua",
+		  "href": "#"
+		}
+	  ]
+	},
+	{
+	  "name": "Middle East",
+	  "id": "middle-east",
+	  "countries": [
+		{
+		  "name": "Iraq",
+		  "code": "iq",
+		  "href": "#"
+		},
+		{
+		  "name": "Israel",
+		  "code": "il",
+		  "href": "#"
+		},
+		{
+		  "name": "Jordan",
+		  "code": "jo",
+		  "href": "#"
+		},
+		{
+		  "name": "Lebanon",
+		  "code": "lb",
+		  "href": "#"
+		},
+		{
+		  "name": "Palestine",
+		  "code": "ps",
+		  "href": "#"
+		},
+		{
+		  "name": "Turkey",
+		  "code": "tr",
+		  "href": "#"
+		},
+		{
+		  "name": "Yemen",
+		  "code": "ye",
+		  "href": "#"
+		}
+	  ]
+	},
+	{
+	  "name": "Asia",
+	  "id": "asia",
+	  "countries": [
+		{
+		  "name": "Azerbaijan",
+		  "code": "az",
+		  "href": "#"
+		},
+		{
+		  "name": "Cambodia",
+		  "code": "kh",
+		  "href": "#"
+		},
+		{
+		  "name": "China",
+		  "code": "cn",
+		  "href": "#"
+		},
+		{
+		  "name": "India",
+		  "code": "in",
+		  "href": "#"
+		},
+		{
+		  "name": "Indonesia",
+		  "code": "id",
+		  "href": "#"
+		},
+		{
+		  "name": "Kyrgyzstan",
+		  "code": "kg",
+		  "href": "#"
+		},
+		{
+		  "name": "Lao PDR",
+		  "code": "la",
+		  "href": "#"
+		},
+		{
+		  "name": "Mongolia",
+		  "code": "mn",
+		  "href": "#"
+		},
+		{
+		  "name": "Myanmar (Burma)",
+		  "code": "mm",
+		  "href": "#"
+		},
+		{
+		  "name": "Nepal",
+		  "code": "np",
+		  "href": "#"
+		},
+		{
+		  "name": "Pakistan",
+		  "code": "pk",
+		  "href": "#"
+		},
+		{
+		  "name": "Philippines",
+		  "code": "ph",
+		  "href": "#"
+		},
+		{
+		  "name": "Tajikistan",
+		  "code": "tj",
+		  "href": "#"
+		},
+		{
+		  "name": "Thailand",
+		  "code": "th",
+		  "href": "#"
+		},
+		{
+		  "name": "Vietnam",
+		  "code": "vn",
+		  "href": "#"
+		}
+	  ]
+	},
+	{
+	  "name": "Oceania",
+	  "id": "oceania",
+	  "countries": [
+		{
+		  "name": "Papua New Guinea",
+		  "code": "pg",
+		  "href": "#"
+		},
+		{
+		  "name": "Samoa",
+		  "code": "ws",
+		  "href": "#"
+		},
+		{
+		  "name": "Solomon Islands",
+		  "code": "sb",
+		  "href": "#"
+		},
+		{
+		  "name": "Timor-Leste",
+		  "code": "tl",
+		  "href": "#"
+		},
+		{
+		  "name": "Vanuatu",
+		  "code": "vu",
+		  "href": "#"
+		}
+	  ],
+	  "textOverImageNameSpaceClass": ""
+	}
+  ],
+  "loans": [
+	{
+	  "title": "Senia Del Carmen",
+	  "description": "A portion of Tuzamurane Group's $6,800 loan helps a member to buy more sorghum for sale.",
+	  "country": {
+		"name": "Argentina",
+		"code": "ar"
+	  }
+	},
+	{
+	  "title": "Mirian Yamileh",
+	  "description": "A portion of Sareoun's Group's $225 loan helps a member to buy a water filter to provide safe drinking water for their family.",
+	  "country": {
+		"name": "American Samoa",
+		"code": "as"
+	  }
+	},
+	{
+	  "title": "Emprendedoras Group",
+	  "description": "A loan of $575 helps Intissar to pay her children’s educational fees.",
+	  "country": {
+		"name": "Bosnia and Herzegovina",
+		"code": "ba"
+	  }
+	},
+	{
+	  "title": "Lillian",
+	  "description": "A loan of $600 helps Narciso to buy supplies for agricultural work and carpentry tools.",
+	  "country": {
+		"name": "South Africa",
+		"code": "za"
+	  }
+	},
+	{
+	  "title": "Estebana Sofia",
+	  "description": "A loan of $225 helps Ganga to purchase a dairy cow for starting her milk-selling business.",
+	  "country": {
+		"name": "Burundi",
+		"code": "bi"
+	  }
+	},
+	{
+	  "title": "Cynthia",
+	  "description": "A loan of $575 helps Sau to buy a chainsaw, banana tubes (seedlings), taro roots (seedlings), a wheelbarrow, a water tank, gloves, a rake, a shovel, and chemicals.",
+	  "country": {
+		"name": "Honduras",
+		"code": "hn"
+	  }
+	},
+	{
+	  "title": "Juvenal",
+	  "description": "A loan of $400 helps Juliana to pay university fees.",
+	  "country": {
+		"name": "Albania",
+		"code": "al"
+	  }
+	},
+	{
+	  "title": "Abel Amauris",
+	  "description": "A loan of $1,525 helps Jessica to pay the fees for the course of study.",
+	  "country": {
+		"name": "Nepal",
+		"code": "np"
+	  }
+	},
+	{
+	  "title": "Nhóm 14 Thôn 3 Quảng Nhân Group",
+	  "description": "A loan of $375 helps Mele to pay for her daughter’s university tuition fee.",
+	  "country": {
+		"name": "Jordan",
+		"code": "jo"
+	  }
+	},
+	{
+	  "title": "Marie Fatini's Group",
+	  "description": "A loan of $3,000 helps Yocasta Magaly to pay the expenses to finish her studies and also to pay for an English course.",
+	  "country": {
+		"name": "Somalia",
+		"code": "so"
+	  }
+	},
+	{
+	  "title": "Karanjung Lestari 2 Group",
+	  "description": "A loan of $1,500 helps Eda to buy 5 sacks of rice, 2 sacks of sugar, 5 boxes of canned goods, 10 cases of soft drinks and electronic load to sell to her store.",
+	  "country": {
+		"name": "Moldova",
+		"code": "md"
+	  }
+	},
+	{
+	  "title": "Narkul",
+	  "description": "A portion of Ndugu Nipe Shauri B Group's $6,000 loan helps a member to stock up on wheat, sugar, Omo soap, and cooking oil.",
+	  "country": {
+		"name": "Yemen",
+		"code": "ye"
+	  }
+	}
+  ],
+  "lightbox": {
+	"modal-trigger-text": "Check out this video",
+	"video": {
+	  "youtube": {
+		"src": "//www.youtube.com/embed/lSN2WdqXwfc?hd=1",
+		"modal-title": "Beyond Charity, rethinking how we give.",
+		"height": "320",
+		"width": "640",
+		"frameborder": "0"
+	  }
+	}
+  }
 }
