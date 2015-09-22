@@ -123,6 +123,15 @@ module.exports = function(grunt) {
 					'export/styles.css': 'source/css/scss/app.scss'
 				}
 			}
+
+			, exportmin: {
+				options: {
+					outputStyle: 'compressed'
+				}
+				, files: {
+					'export/styles.min.css': 'source/css/scss/app.scss'
+				}
+			}
 		}
 
 
