@@ -177,190 +177,185 @@ div.about-video-wrapper {
 		background-size: contain;
 		background-position: center center;
 
-		@media #{$small-only} {
-			background-size: cover;
+			@media #{$small-only} {
+				background-size: cover;
 			}
-	}
 
-	.ac-container {
+		.row {
+			display: inline-block;
 
-		.ac-dropdown-icon {
-
-			svg {
-				height: rem-calc(30);
-				stroke: $kiva-accent-green;
-				float: none;
-				width: rem-calc(60);
+			@media #{$small-only} {
+				.stat {
+					line-height: rem-calc(25);
+				}
 			}
-		}
-	}
 
-	.accordion-navigation,
-	.accordion-navigation.active {
+			@media #{$medium-only} {
+				.stat {
+					line-height: rem-calc(25);
+				}
+			}
 
-		.panelSeeMore,
-		.panelSeeMore:hover,
-		.panelSeeMore:active {
-			background-color: $kiva-darkgreen;
-		}
-	}
-
-	.row {
-		display: inline-block;
-
-		@media #{$small-only} {
-			.stat {
-				line-height: rem-calc(25);
+			@media #{$large-up} {
+				.seeMore {
+					padding-bottom: rem-calc(35);
+				}
 			}
 		}
 
-		@media #{$medium-only} {
-			.stat {
-				line-height: rem-calc(25);
-			}
+		.row1 {
+			padding: rem-calc(30) rem-calc(0) rem-calc(35) rem-calc(0);
 		}
 
-		@media #{$large-up} {
-			.seeMore {
-				padding-bottom: rem-calc(35);
-			}
+		.row2 {
+			padding-bottom: rem-calc(35);
 		}
-	}
 
-	.row1 {
-		padding: rem-calc(30) rem-calc(0) rem-calc(35) rem-calc(0);
-	}
-
-	.row2 {
-		padding-bottom: rem-calc(35);
-	}
-
-	.row3 {
-		padding-bottom: rem-calc(35);
+		.row3 {
+			padding-bottom: rem-calc(35);
+		}
 	}
 
 	.seeMoreSection {
+		.SeeMore,
+		.SeeMore:hover,
+		.SeeMore:active {
+			background-color: $kiva-darkgreen;
+		}
 
-		.ac-body {
+		.ac-container {
 
-			.aboutSeeMoreContainer {
-				background: url(../../images/about/numbers-bg-sm-std-new.min.svg);
-				background-position: center;
-				background-size: contain;
-				background-repeat: repeat-y;
+			.ac-dropdown-icon {
 
-				@media #{$large-up} {
-					background: url(../../images/about/numbers-bg-lg-std.min.svg);
-					background-size: 100%
+				svg {
+					height: rem-calc(30);
+					stroke: $kiva-accent-green;
+					float: none;
+					width: rem-calc(60);
 				}
+			}
 
-				.row {
-					padding: rem-calc(0) rem-calc(5);
-					display: inline-block;
-				}
+			.ac-body {
 
-				.row1TextContainer {
-					padding-top: rem-calc(35);
-
-					@media #{$medium-up} {
-						padding-top: rem-calc(90);
-					}
+				.aboutSeeMoreContainer {
+					background: url(../../images/about/numbers-bg-sm-std-new.min.svg);
+					background-position: center;
+					background-size: contain;
+					background-repeat: repeat-y;
 
 					@media #{$large-up} {
-						padding-top: rem-calc(160);
-					}
-				}
-
-				.row1StatContainer {
-					padding-right: rem-calc(20);
-
-					@media #{$large-up} {
-						padding-right: rem-calc(150);
-					}
-				}
-
-				.row2TextContainer {
-					margin-top: rem-calc(20);
-				}
-
-				.row2StatContainer {
-					padding-top: rem-calc(35);
-
-					@media #{$medium-up} {
-						padding-top: rem-calc(240);
-						padding-left: rem-calc(25);
+						background: url(../../images/about/numbers-bg-lg-std.min.svg);
+						background-size: 100%
 					}
 
-					@media #{$large-up} {
-						padding-top: rem-calc(449);
-						padding-left: rem-calc(50);
+					.row {
+						padding: rem-calc(0) rem-calc(5);
+						display: inline-block;
 					}
-				}
 
-				.row3TextContainer {
-					padding-top: rem-calc(35);
+					.row1TextContainer {
+						padding-top: rem-calc(35);
 
-					@media #{$medium-up} {
-						padding-top: rem-calc(60);
+						@media #{$medium-up} {
+							padding-top: rem-calc(90);
+						}
+
+						@media #{$large-up} {
+							padding-top: rem-calc(160);
+						}
 					}
-				}
 
-				.row4 {
-					padding-top: rem-calc(35);
-				}
+					.row1StatContainer {
+						padding-right: rem-calc(20);
 
-				.row4StatsContainer {
-					@media #{$large-up} {
-						text-align: center;
+						@media #{$large-up} {
+							padding-right: rem-calc(150);
+						}
 					}
-				}
 
-				.row5TextContainer {
-					padding-top: rem-calc(35);
-
-					@media #{$medium-up} {
-						padding-top: rem-calc(300);
+					.row2TextContainer {
+						margin-top: rem-calc(20);
 					}
-				}
 
-				.row5TextContainer2 {
-					padding-top: rem-calc(35);
+					.row2StatContainer {
+						padding-top: rem-calc(35);
 
-					@media #{$medium-up} {
-						margin-top: rem-calc(-75);
+						@media #{$medium-up} {
+							padding-top: rem-calc(240);
+							padding-left: rem-calc(25);
+						}
+
+						@media #{$large-up} {
+							padding-top: rem-calc(449);
+							padding-left: rem-calc(50);
+						}
 					}
-				}
 
-				.row6StatContainer {
-					padding-top: rem-calc(35);
+					.row3TextContainer {
+						padding-top: rem-calc(35);
 
-					@media #{$medium-only} {
-						text-align: right !important;
+						@media #{$medium-up} {
+							padding-top: rem-calc(60);
+						}
 					}
-				}
 
-				#row6LargeView {
-					padding-top: rem-calc(110);
-				}
-
-				.row6aTextContainer {
-					padding-top: rem-calc(120);
-				}
-
-				.row6aStatContainer2 {
-					padding-top: rem-calc(35);
-				}
-
-				.row7 {
-					padding-top: rem-calc(35);
-
-					@media #{$medium-up} {
-						padding-top: rem-calc(50);
+					.row4 {
+						padding-top: rem-calc(35);
 					}
-				}
 
-				.row7TextContainer {
-					padding-top: rem-calc(35);
+					.row4StatsContainer {
+						@media #{$large-up} {
+							text-align: center;
+						}
+					}
+
+					.row5TextContainer {
+						padding-top: rem-calc(35);
+
+						@media #{$medium-up} {
+							padding-top: rem-calc(300);
+						}
+					}
+
+					.row5TextContainer2 {
+						padding-top: rem-calc(35);
+
+						@media #{$medium-up} {
+							margin-top: rem-calc(-75);
+						}
+					}
+
+					.row6StatContainer {
+						padding-top: rem-calc(35);
+
+						@media #{$medium-only} {
+							text-align: right !important;
+						}
+					}
+
+					#row6LargeView {
+						padding-top: rem-calc(110);
+					}
+
+					.row6aTextContainer {
+						padding-top: rem-calc(120);
+					}
+
+					.row6aStatContainer2 {
+						padding-top: rem-calc(35);
+					}
+
+					.row7 {
+						padding-top: rem-calc(35);
+
+						@media #{$medium-up} {
+							padding-top: rem-calc(50);
+						}
+					}
+
+					.row7TextContainer {
+						padding-top: rem-calc(35);
+					}
 				}
 			}
 		}
