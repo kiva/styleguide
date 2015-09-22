@@ -70,6 +70,7 @@
 			, "is_lent_to": false
 			, "is_adding": false
 			, "is_in_basket": true
+			, "amount_in_basket": "$50"
 		}
 		, {
 			"title": "Mirian Yamileh"
