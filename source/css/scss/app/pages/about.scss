@@ -53,6 +53,16 @@ div.aboutIntro {
 div.about-video-wrapper {
 	position: relative;
 	cursor: pointer;
+	height: 0;
+
+	@media #{$small-only} {
+		padding-bottom: 57.46%;
+	}
+
+	@media #{$medium-up} {
+		padding-bottom: 31.05%;
+	}
+
 
 	.button-wrapper {
 		position: absolute;

@@ -857,10 +857,11 @@
 	}
   ],
   "lightbox": {
-	"modal-trigger-text": "Check out this video",
+	"modal-trigger-content": "Click to view",
+	  "modal-reveal-id" : "my-modal-id",
 	"video": {
 	  "youtube": {
-		"src": "//www.youtube.com/embed/lSN2WdqXwfc?hd=1",
+		"src": "//www.youtube.com/embed/lSN2WdqXwfc",
 		"modal-title": "Beyond Charity, rethinking how we give.",
 		"height": "320",
 		"width": "640",

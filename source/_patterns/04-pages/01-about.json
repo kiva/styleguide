@@ -90,5 +90,15 @@
 	],
 	"basket" : {
 		"item_count": 0
+	},
+	"lightbox": {
+		"video": {
+			"youtube": {
+				"src": "//www.youtube.com/embed/lSN2WdqXwfc?controls=0&showinfo=0&rel=0&hd=1",
+				"modal-title": "Beyond Charity, rethinking how we give.",
+				"width": "100%",
+				"frameborder": "0"
+			}
+		}
 	}
 }
