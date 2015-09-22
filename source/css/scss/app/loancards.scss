@@ -35,6 +35,27 @@ $loan-card-meter-height: $loan-card-footer-height/2;
 
 	.loan-image-footer {
         position: relative;
+        $loan-image-footer-height: 2rem;
+
+        .icon-match {
+            height: $loan-image-footer-height;
+            width: $loan-image-footer-height;
+        }
+
+        .matching-message {
+            font-size: $small-font-size;
+            height: $loan-image-footer-height;
+            padding-right: $loan-image-footer-height;
+
+            span {
+                line-height: $loan-image-footer-height;
+            }
+        }
+
+        .icon-star {
+            height: $loan-image-footer-height;
+            width: $loan-image-footer-height;
+        }
     }
 
 	.borrower-details-wrap {
