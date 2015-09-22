@@ -7,7 +7,12 @@
                 {{> molecules-loan-figure-multiple-photos}}
             </div>
             <div class="small-12 medium-5 columns right-content">
-                {{> molecules-pfp-meter}}
+                {{#inPfp}}
+                    {{> molecules-pfp-meter}}
+                {{/inPfp}}
+                {{^inPfp}}
+                    {{> molecules-current-status-meter}}
+                {{/inPfp}}
                 {{> molecules-loan-gist}}
             </div>
         </div>
@@ -27,10 +32,14 @@
                 {{> organisms-loan-story}}
                 <hr class="line-break"/>
                 {{> molecules-is-special}}
-            </div>
-            <div class="show-for-small-only">
                 <hr class="line-break"/>
+                {{> molecules-lenders-teams}}
+
+                <div class="show-for-small-only">
+                    <hr class="line-break"/>
+                </div>
             </div>
+
             <div class="small-12 medium-5 columns right-content">
                 {{> molecules-loan-details}}
             </div>

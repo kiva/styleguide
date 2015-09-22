@@ -14,6 +14,7 @@
   "lenderCountNeeded": 25,
   "lenderCountPercent": 28,
   "daysLeft": 12,
+  "inPfp": true,
   "amountRaised": 175,
   "amountNeeded": 1300,
   "amountRaisedPercent": 14,
@@ -88,5 +89,22 @@
         "isEmptyStar": true
       }
     ]
-  }
+  },
+  "teamCount": 5,
+  "teams": [
+    {
+      "imgUrl": "/images/borrower1.jpg"
+    },
+    {
+      "imgUrl": "/images/borrower1.jpg"
+    }
+  ],
+  "lenders": [
+    {
+      "imgUrl": "/images/borrower1.jpg"
+    },
+    {
+      "imgUrl": "/images/borrower1.jpg"
+    }
+  ]
 }

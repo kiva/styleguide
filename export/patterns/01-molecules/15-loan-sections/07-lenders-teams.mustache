@@ -1,0 +1,27 @@
+<div class="lenders-teams">
+    <section class="ac-container">
+        <div>
+            <input class="ac-input" id="ac-lenders-teams" name="accordion-1" type="checkbox" checked/>
+            <label class="ac-title" for="ac-lenders-teams">
+                Lenders ({{lenderCount}}) & Lending Teams ({{teamCount}})
+                <span class="ac-dropdown-icon">
+                    <svg class="icon icon-large-chevron">
+                        <use xlink:href="#icon-large-chevron"></use>
+                    </svg>
+                </span>
+            </label>
+            <article class="ac-body">
+                {{#teams}}
+                    <div class="photos">
+                        <img src="{{imgUrl}}">
+                    </div>
+                {{/teams}}
+                {{#lenders}}
+                    <div class="photos">
+                        <img src="{{imgUrl}}">
+                    </div>
+                {{/lenders}}
+            </article>
+        </div>
+    </section>
+</div>

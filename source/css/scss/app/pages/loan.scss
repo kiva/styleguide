@@ -50,26 +50,29 @@
   }
   .kivan {
     position: relative;
+    @media #{$medium-up} {
+      display: inline-block;
+    }
     .profile-photo {
       padding-top: 1rem;
       text-align: center;
       @media #{$medium-up}{
-        float: left;
-        width: 4rem;
+        display: inline;
       }
       img {
         background-repeat: no-repeat;
         border-radius: 50%;
         width: 100px;
+        @media #{$medium-up} {
+          width: 50px;
+        }
       }
     }
     .show-for-medium-up {
-      padding-top: 1rem;
-      padding-left: 5rem;
-      top: 0.5rem;
-      position: absolute;
-      p {
-        line-height: 0.3rem;
+      vertical-align: middle;
+      div{
+        display: block;
+        padding-left: 1rem;
       }
     }
     .show-for-small-only {
@@ -162,8 +165,8 @@
 }
 
 .loan-details {
-  .show-for-medium-up{
-    .ac-body{
+  .show-for-medium-up {
+    .ac-body {
       max-height: 1000px;
       overflow: auto;
     }
@@ -179,7 +182,7 @@
     text-align: center;
 
     @media #{$medium-up}{
-      text-align:left;
+      text-align: left;
       padding-bottom: 0.5rem;
     }
 
@@ -226,4 +229,21 @@
     }
   }
 
+}
+
+.lenders-teams {
+  .ac-title {
+    font-size: 1rem;
+  }
+  .photos {
+    display: inline;
+    img {
+      background-repeat: no-repeat;
+      border-radius: 50%;
+      width: 50px;
+    }
+  }
+  .photos:nth-child(n+2) {
+    padding-left: 5px;
+  }
 }

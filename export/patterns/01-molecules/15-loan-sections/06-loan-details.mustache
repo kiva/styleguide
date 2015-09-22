@@ -25,78 +25,79 @@
                     </div>
 
                     <div class="loan-stats">
-                        {{#loanDetails}}
-                            <div class="stat">
+                        <div class="stat">
                             <span class="black-underlined">
                                 Repayment schedule:
                             </span>
                             <span class="bold">
-                                {{repaymentSchedule}}
+                                {{loanDetails.repaymentSchedule}}
                             </span>
-                            </div>
-                            <div class="stat">
+                        </div>
+                        <div class="stat">
                             <span class="black-underlined">
                                 Disbursal date:
                             </span>
                             <span class="bold">
-                                {{disbursalDate}}
+                                {{loanDetails.disbursalDate}}
                             </span>
-                            </div>
-                            <div class="stat">
+                        </div>
+                        <div class="stat">
                             <span class="black-underlined">
                                 Currency exchange loss:
                             </span>
                             <span class="bold">
-                                {{currencyExchangeLoss}}
+                                {{loanDetails.currencyExchangeLoss}}
                             </span>
-                            </div>
-                            <div class="stat">
+                        </div>
+                        <div class="stat">
                             <span class="black-underlined">
-                                Facilitated by Field Partner:
+                                Facilitated by {{#loanDetails.fieldPartner}}
+                                Field Partner{{/loanDetails.fieldPartner}}{{#loanDetails.trustee}}
+                                Trustee{{/loanDetails.trustee}}:
                             </span>
                             <span class="bold">
-                                {{fieldPartner}}
+                                {{loanDetails.fieldPartner}}{{loanDetails.trustee}}
                             </span>
-                            </div>
-                            <div class="stat">
+                        </div>
+                        <div class="stat">
                             <span class="black-underlined">
                                 Is borrower paying interest?
                             </span>
                             <span class="bold">
-                                {{#borrowerPayingInterest}}
+                                {{#loanDetails.borrowerPayingInterest}}
                                     Yes
-                                {{/borrowerPayingInterest}}
-                                {{^borrowerPayingInterest}}
+                                {{/loanDetails.borrowerPayingInterest}}
+                                {{^loanDetails.borrowerPayingInterest}}
                                     No
-                                {{/borrowerPayingInterest}}
+                                {{/loanDetails.borrowerPayingInterest}}
                             </span>
-                            </div>
+                        </div>
+                        {{#loanDetails.fieldPartner}}
                             <div class="stat">
-                            <span class="black-underlined">
-                                Field Partner risk rating:
-                            </span>
-                            <span class="bold risk-rating">
-                                {{#stars}}
-                                    {{#isFullStar}}
-                                        <svg class="icon icon-star">
-                                            <use xlink:href="#icon-star"></use>
-                                        </svg>
-                                    {{/isFullStar}}
-                                    {{#isHalfStar}}
-                                        <svg class="icon icon-half-star">
-                                            <use xlink:href="#icon-half-star"></use>
-                                        </svg>
-                                    {{/isHalfStar}}
-                                    {{#isEmptyStar}}
-                                        <svg class="icon icon-star empty-star">
-                                            <use xlink:href="#icon-star"></use>
-                                        </svg>
-                                    {{/isEmptyStar}}
-                                {{/stars}}
-                                {{riskRating}}
-                            </span>
+                                    <span class="black-underlined">
+                                        Field Partner risk rating:
+                                    </span>
+                                    <span class="bold risk-rating">
+                                        {{#loanDetails.stars}}
+                                            {{#isFullStar}}
+                                                <svg class="icon icon-star">
+                                                    <use xlink:href="#icon-star"></use>
+                                                </svg>
+                                            {{/isFullStar}}
+                                            {{#isHalfStar}}
+                                                <svg class="icon icon-half-star">
+                                                    <use xlink:href="#icon-half-star"></use>
+                                                </svg>
+                                            {{/isHalfStar}}
+                                            {{#isEmptyStar}}
+                                                <svg class="icon icon-star empty-star">
+                                                    <use xlink:href="#icon-star"></use>
+                                                </svg>
+                                            {{/isEmptyStar}}
+                                        {{/loanDetails.stars}}
+                                    </span>
                             </div>
-                        {{/loanDetails}}
+                        {{/loanDetails.fieldPartner}}
                     </div>
 
                 </article>
@@ -121,58 +122,60 @@
                     </div>
 
                     <div class="loan-stats">
-                        {{#loanDetails}}
-                            <div class="stat">
+                        <div class="stat">
                             <span class="black-underlined">
                                 Repayment schedule:
                             </span>
                             <span class="bold">
-                                {{repaymentSchedule}}
+                                {{loanDetails.repaymentSchedule}}
                             </span>
-                            </div>
-                            <div class="stat">
+                        </div>
+                        <div class="stat">
                             <span class="black-underlined">
                                 Disbursal date:
                             </span>
                             <span class="bold">
-                                {{disbursalDate}}
+                                {{loanDetails.disbursalDate}}
                             </span>
-                            </div>
-                            <div class="stat">
+                        </div>
+                        <div class="stat">
                             <span class="black-underlined">
                                 Currency exchange loss:
                             </span>
                             <span class="bold">
-                                {{currencyExchangeLoss}}
+                                {{loanDetails.currencyExchangeLoss}}
                             </span>
-                            </div>
-                            <div class="stat">
+                        </div>
+                        <div class="stat">
                             <span class="black-underlined">
-                                Facilitated by Field Partner:
+                                Facilitated by {{#loanDetails.fieldPartner}}
+                                Field Partner{{/loanDetails.fieldPartner}}{{#loanDetails.trustee}}
+                                Trustee{{/loanDetails.trustee}}:
                             </span>
                             <span class="bold">
-                                {{fieldPartner}}
+                                {{loanDetails.fieldPartner}}{{loanDetails.trustee}}
                             </span>
-                            </div>
-                            <div class="stat">
+                        </div>
+                        <div class="stat">
                             <span class="black-underlined">
                                 Is borrower paying interest?
                             </span>
                             <span class="bold">
-                                {{#borrowerPayingInterest}}
+                                {{#loanDetails.borrowerPayingInterest}}
                                     Yes
-                                {{/borrowerPayingInterest}}
-                                {{^borrowerPayingInterest}}
+                                {{/loanDetails.borrowerPayingInterest}}
+                                {{^loanDetails.borrowerPayingInterest}}
                                     No
-                                {{/borrowerPayingInterest}}
+                                {{/loanDetails.borrowerPayingInterest}}
                             </span>
-                            </div>
+                        </div>
+                        {{#loanDetails.fieldPartner}}
                             <div class="stat">
                             <span class="black-underlined">
                                 Field Partner risk rating:
                             </span>
                             <span class="bold risk-rating">
-                                {{#stars}}
+                                {{#loanDetails.stars}}
                                     {{#isFullStar}}
                                         <svg class="icon icon-star">
                                             <use xlink:href="#icon-star"></use>
@@ -188,11 +191,10 @@
                                             <use xlink:href="#icon-star"></use>
                                         </svg>
                                     {{/isEmptyStar}}
-                                {{/stars}}
-                                {{riskRating}}
+                                {{/loanDetails.stars}}
                             </span>
                             </div>
-                        {{/loanDetails}}
+                        {{/loanDetails.fieldPartner}}
                     </div>
 
                 </article>
