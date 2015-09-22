@@ -1,20 +1,6 @@
-.lightbox {
-	max-width: rem-calc(600);
-}
-
-.icon.icon-x {
-	stroke: $kiva-green;
-	height: rem-calc(30);
-	width: rem-calc(30);
-}
-
 div.reveal-modal-bg {
 	background: black;
 	opacity: .88;
-}
-
-.reveal-modal {
-	top: rem-calc(0);
 }
 
 #modal {
@@ -26,4 +12,22 @@ div.reveal-modal-bg {
 
 a.close-reveal-modal {
 	top: rem-calc(-85);
+}
+
+.icon.icon-x {
+	stroke: $kiva-green;
+	height: rem-calc(30);
+	width: rem-calc(30);
+}
+
+.videoLightbox {
+	max-width: rem-calc(600);
+
+	.reveal-modal {
+		top: rem-calc(0);
+
+		#modalTitle {
+			padding: rem-calc(10) 0 rem-calc(10) 0;
+		}
+	}
 }

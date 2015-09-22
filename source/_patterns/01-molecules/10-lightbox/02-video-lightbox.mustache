@@ -1,10 +1,10 @@
-<a href="#" data-reveal-id="modal">{{lightbox.video.modal-trigger-text}}</a>
+{{!To make an element show a lightbox your triggers DATA-REVEAL-ID and the modal's ID need to match}}
+<a href="#" data-reveal-id="modal">{{lightbox.modal-trigger-text}}</a>
 
-<section class="lightbox">
+<section class="videoLightbox">
     <div id="modal" class="reveal-modal" data-reveal aria-labelledby="modalTitle" aria-hidden="true" role="dialog">
 
-
-        <h1 id="modalTitle" class="white">{{lightbox.video.modal-title}}</h1>
+        <h1 id="modalTitle" class="white">{{lightbox.video.youtube.modal-title}}</h1>
 
         <div class="flex-video widescreen vimeo">
             <iframe width="{{lightbox.video.youtube.width}}" height="{{lightbox.video.youtube.height}}" src="{{lightbox.video.youtube.src}}" frameborder="{{lightbox.video.youtube.frameborder}}" allowfullscreen></iframe>
