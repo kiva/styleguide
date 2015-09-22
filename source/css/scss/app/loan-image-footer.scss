@@ -1,24 +1,25 @@
 .loan-image-footer {
+    $loan-image-footer-height: rem-calc(40);
 
 	.icon-match {
-		height: 40px;
-		width: 40px;
-		padding: 3px;
+		height: $loan-image-footer-height;
+		width: $loan-image-footer-height;
+		padding: rem-calc(3);
 		vertical-align: middle;
 	}
 
 	.matching-message {
 		background-color: rgba(255, 255, 255, .8);
-		height: 40px;
+		height: $loan-image-footer-height;
 		width: 100%;
-		padding-right: 40px;
+		padding-right: $loan-image-footer-height;
 
 		position: absolute;
 		left: 0;
 		bottom: 0;
 
 		span {
-			line-height: 40px;
+			line-height: $loan-image-footer-height;
 			vertical-align: middle;
 		}
 	}
@@ -42,9 +43,9 @@
 		background-color: $black;
 		color: $white;
 		fill: none;
-		height: 40px;
-		width: 40px;
-		padding: 8px;
+		height: $loan-image-footer-height;
+		width: $loan-image-footer-height;
+		padding: rem-calc(8);
 		opacity: .6;
 		vertical-align: bottom;
 	}
