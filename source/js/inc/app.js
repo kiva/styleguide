@@ -5,6 +5,7 @@ require('./vendor');
 var header = require('./app/header');
 var filters = require('./app/filters');
 var imagesizes = require('./app/imagesizes');
+var accordion = require('./app/accordion');
 var $ = require('jquery');
 
 $(document).foundation({
@@ -13,10 +14,9 @@ $(document).foundation({
 	}
 });
 
-$('.ac-input').change(function(){
-	$(this).nextAll('.ac-body:first').slideToggle('slow');
-});
+
 
 header();
 filters();
 imagesizes();
+accordion();
