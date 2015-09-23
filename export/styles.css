@@ -6795,6 +6795,9 @@ small {
       left: 50%;
       margin-top: -40px;
       margin-left: -40px; }
+    .loan-figure .loan-image-wrap iframe {
+      display: block;
+      margin: 0 auto; }
   .loan-figure .carousel-nav {
     background-color: rgba(51, 51, 51, 0.3);
     display: none;
@@ -7925,6 +7928,16 @@ ul.tertiary-nav {
     border-right: 0.0555555556rem solid #49953f; }
   .top-nav .header-column:last-child > a {
     border-right: none; }
+  .top-nav .logo-area .header-button {
+    padding: 0 0.3rem; }
+    .top-nav .logo-area .header-button img {
+      max-height: 1.1111111111rem; }
+      @media only screen and (max-width: 30rem) {
+        .top-nav .logo-area .header-button img {
+          margin-top: -0.4444444444rem; } }
+      @media only screen and (min-width:30.0625rem) {
+        .top-nav .logo-area .header-button img {
+          max-height: 1.7777777778rem; } }
   .top-nav .amount {
     color: inherit;
     background: none;
@@ -7975,7 +7988,9 @@ ul.tertiary-nav {
     .top-nav .logo-area {
       text-align: left; }
       .top-nav .logo-area .header-button {
-        padding: 0 1.3333333333rem 0 0.4444444444rem; } }
+        padding: 0 0.8888888889rem; }
+        .top-nav .logo-area .header-button img {
+          max-height: none; } }
 
 .basket-bar {
   position: fixed;
@@ -8048,6 +8063,8 @@ ul.tertiary-nav {
     padding: 0 0.5rem;
     border-left: 0.0555555556rem solid #d8d8d8;
     border-right: 0.0555555556rem solid #d8d8d8; }
+    .loan-card .borrower-details-wrap a, .loan-card .borrower-details-wrap a:visited {
+      color: #22a9d8; }
     .loan-card .borrower-details-wrap p {
       margin-bottom: 0.25rem; }
   .loan-card .country {
@@ -8654,8 +8671,25 @@ a.aboutJoinLink, a.aboutJoinLink:visited {
     background-repeat: no-repeat;
     border-radius: 50%;
     width: 50px; }
-.lenders-teams .photos:nth-child(n+2) {
+.lenders-teams .photos:nth-child(2) {
   padding-left: 5px; }
+
+.lend-action .lend-button-wrapper {
+  display: inline; }
+  .lend-action .lend-button-wrapper .lend-button:nth-child(1) {
+    padding-right: 35px; }
+  .lend-action .lend-button-wrapper .lend-button:nth-child(1):after {
+    right: 0.95rem; }
+  .lend-action .lend-button-wrapper .lend-button {
+    height: 3rem;
+    padding: 10px;
+    outline: 0 !important; }
+.lend-action .f-dropdown {
+  margin-top: 0;
+  max-width: 96px;
+  border-top: none; }
+  .lend-action .f-dropdown li a {
+    font-size: 1rem; }
 
 .borrower-profile-wrapper .line-break {
   width: 90%;
@@ -8680,9 +8714,9 @@ a.aboutJoinLink, a.aboutJoinLink:visited {
   .borrower-profile-wrapper {
     padding-top: 1rem; }
     .borrower-profile-wrapper .left-content {
-      padding-left: 4.833333rem; }
+      padding-left: 3.833333rem; }
     .borrower-profile-wrapper .right-content {
-      padding-right: 4.833333rem; } }
+      padding-right: 3.833333rem; } }
 @media only screen and (min-width:30.0625rem) {
   .borrower-profile-wrapper .story .left-content {
     min-height: 80rem;

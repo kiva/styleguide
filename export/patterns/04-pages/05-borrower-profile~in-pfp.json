@@ -1,6 +1,9 @@
 {
   "figures": [
     {
+      "youtube-video-id": "lSN2WdqXwfc"
+    },
+    {
       "url": "http://www.kiva.org/img/w800/1970076.jpg",
       "alt": "one"
     },
@@ -45,7 +48,7 @@
   "translation": {
     "language": "Spanish",
     "translator": "Tayah Wheeland",
-    "storyBody":[
+    "storyBody": [
       {
         "content": "John ha solicitado su primer prestamo de KES 25.000 de Vision Fondo Kenia para comprar una vaca lechera para que pueda QUE Aumentar la cantidad de leche que abastece esta manera y ganar mas ingresos. El planea utilizar parte de sus ganancias para pagar el prestamo y ampliar su negocio agricola."
       },
@@ -54,13 +57,13 @@
       }
     ]
   },
-  "profilePhotoHref":"/images/borrower1.jpg",
+  "profilePhotoHref": "/images/borrower1.jpg",
   "specialBody": "It's in a rural region many banks won't serve.",
-  "kivan":{
+  "kivan": {
     "name": "Jomay",
     "title": "Kiva Knowledge Manager"
   },
-  "groupName":"Myi Ni Gone Village Group",
+  "groupName": "Myi Ni Gone Village Group",
   "countryIso": "ad",
   "country": "New Guinea",
   "city": "Papau",
@@ -109,6 +112,23 @@
     {
       "imgUrl": "/images/borrower1.jpg",
       "tooltip": "lender 2"
+    }
+  ],
+  "lendValues": [
+    {
+      "amount": 50
+    },
+    {
+      "amount": 75
+    },
+    {
+      "amount": 100
+    },
+    {
+      "amount": 125
+    },
+    {
+      "amount": 5000
     }
   ]
 }

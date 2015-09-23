@@ -44,11 +44,14 @@ define("Styleguide", ["jquery"], function(__WEBPACK_EXTERNAL_MODULE_2__) { retur
 /* 0 */
 /***/ function(module, exports, __webpack_require__) {
 
+	'use strict';
+
 	__webpack_require__(1);
 
 	var header = __webpack_require__(13);
-	var filters = __webpack_require__(14);
-	var imagesizes = __webpack_require__(15);
+	var filters = __webpack_require__(15);
+	var imagesizes = __webpack_require__(14);
+	var accordion = __webpack_require__(16);
 	var $ = __webpack_require__(2);
 
 	$(document).foundation({
@@ -57,9 +60,12 @@ define("Styleguide", ["jquery"], function(__WEBPACK_EXTERNAL_MODULE_2__) { retur
 		}
 	});
 
+
+
 	header();
 	filters();
 	imagesizes();
+	accordion();
 
 /***/ },
 /* 1 */
@@ -22616,26 +22622,6 @@ define("Styleguide", ["jquery"], function(__WEBPACK_EXTERNAL_MODULE_2__) { retur
 /* 14 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = function() {
-	    'use strict';
-
-	    var $ = __webpack_require__(2);
-
-		// NoUiSlider
-		$('.loan-repayments-slider').noUiSlider({
-			start: [ 10, 30 ],
-			connect: true,
-			range: {
-				'min': -20,
-				'max': 40
-			}
-		});
-	};
-
-/***/ },
-/* 15 */
-/***/ function(module, exports, __webpack_require__) {
-
 	var $ = __webpack_require__(2);
 
 	module.exports = function() {
@@ -22680,6 +22666,42 @@ define("Styleguide", ["jquery"], function(__WEBPACK_EXTERNAL_MODULE_2__) { retur
 			}
 		});
 
+	};
+
+/***/ },
+/* 15 */
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = function() {
+	    'use strict';
+
+	    var $ = __webpack_require__(2);
+
+		// NoUiSlider
+		$('.loan-repayments-slider').noUiSlider({
+			start: [ 10, 30 ],
+			connect: true,
+			range: {
+				'min': -20,
+				'max': 40
+			}
+		});
+	};
+
+/***/ },
+/* 16 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var $ = __webpack_require__(2);
+
+	module.exports = function() {
+	    'use strict';
+
+
+	    // for the accordion toggle
+	    $('.ac-input').change(function(){
+	        $(this).nextAll('.ac-body:first').slideToggle('slow');
+	    });
 	};
 
 /***/ }
