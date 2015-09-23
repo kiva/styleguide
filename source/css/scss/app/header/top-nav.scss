@@ -29,13 +29,6 @@
     .logo-area .header-button {
         padding: 0 0.3rem;
         img {
-            max-height: rem-calc(32);
-        }
-    }
-
-    .logo-area.wordmark .header-button {
-        padding: 0 0.3rem;
-        img {
             max-height: rem-calc(20);
 
             @media #{$small-only} {
@@ -120,16 +113,6 @@
 
     @media #{$large-up} {
         .logo-area {
-            text-align: left;
-            .header-button {
-                padding: 0 rem-calc(16);
-                img {
-                    max-height: none;
-                }
-            }
-        }
-
-        .logo-area.wordmark {
             text-align: left;
             .header-button {
                 padding: 0 rem-calc(16);
