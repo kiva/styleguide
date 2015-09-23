@@ -242,6 +242,7 @@ module.exports = function(grunt) {
 						, select2: 'select2/dist/js/select2.full.js'
                         , slick: 'slick.js/slick/slick.js'
 						, typeahead: 'typeahead.js/dist/typeahead.jquery.js'
+						, fitvids: 'fitvids/jquery.fitvids.js'
 					}
 				}
 				, entry: {
