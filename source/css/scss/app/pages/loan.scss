@@ -249,24 +249,29 @@
 }
 
 .lend-action {
-  .lend-button {
+  .lend-button-wrapper {
     display: inline;
-  }
-  .lend-button:nth-child(2) {
-    position: absolute;
-    left: 11.8rem;
-    button:focus{
+
+    .lend-button:nth-child(1) {
+      padding-right: 35px;
+    }
+
+    .lend-button:nth-child(1):after {
+      right: 0.95rem;
+    }
+
+    .lend-button {
+      height: 3rem;
+      padding: 10px;
       outline: 0 !important;
     }
   }
-  .f-dropdown{
-    top: 62px !important;
-    border-left: solid 1px #cccccc;
-    border-bottom: solid 1px #cccccc;
-    border-right: solid 1px #cccccc;
-    max-width: 210px;
+
+  .f-dropdown {
+    margin-top: 0;
+    max-width: 96px;
     border-top: none;
-    li a{
+    li a {
       font-size: 1rem;
     }
   }
