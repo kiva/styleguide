@@ -1,0 +1,121 @@
+<div class="off-canvas-wrap" data-offcanvas>
+    <div class="inner-wrap">
+
+        <!-- build an aside menu here -->
+        <a class="left-off-canvas-toggle" href="#" >Filters</a>
+
+        <aside class="left-off-canvas-menu">
+            <ul class="filters-menu-list off-canvas-list">
+                <li class="country-filters-submenu-wrap has-submenu">
+                    <a href="#"><span>Country or Region</span></a>
+					{{> 02-organisms/05-filters/03-country-filter}}
+                </li>
+
+                <li class="country-filters-submenu-wrap has-submenu">
+                    <a href="#"><span>Borrowers</span></a>
+					{{> 01-molecules/09-filters/01-filters-paired-buttons}}
+                </li>
+
+                <li>
+                    <label>Loan Repayments</label>
+                    <div class="filter-slider">
+                        <div class="loan-repayments-slider"></div>
+                    </div>
+                </li>
+
+                <li>
+                    <a href="#"><span>Keywords</span></a>
+					{{> 01-molecules/09-filters/01-filters-paired-buttons}}
+                </li>
+
+                <li>
+                    <a href="#"><span>Sector</span></a>
+					{{> 01-molecules/09-filters/01-filters-paired-buttons}}
+                </li>
+
+                <li class="loan-use-filters-submenu-wrap has-submenu">
+                    <a href="#"><span>Loan Use</span></a>
+					{{> 02-organisms/05-filters/04-loan-use-filter}}
+                </li>
+
+				<li class="attributes-filters-submenu-wrap has-submenu">
+					<a href="#"><span>Attributes</span></a>
+					{{> 02-organisms/05-filters/05-loan-attributes-filter}}
+				</li>
+
+				<li class="tags-filters-submenu-wrap has-submenu">
+					<a href="#"><span>Tags</span></a>
+					<div class="right-submenu">@todo</div>
+				</li>
+
+				<li class="status-filters-submenu-wrap has-submenu">
+					<a href="#"><span>Loan Status</span>></a>
+					{{> 02-organisms/05-filters/06-loan-status-filter}}
+				</li>
+
+				{{#is_partner_visible}}
+                    <li class="partner-filters-submenu-wrap has-submenu">
+                        <a href="#"><span>Partner</span></a>
+						{{> 02-organisms/05-filters/07-partner-filter}}
+                    </li>
+
+                    <li class="partner-focus-filters-submenu-wrap has-submenu">
+                        <a href="#"><span>Partner focus</span></a>
+						{{> 02-organisms/05-filters/08-partner-focus-filter}}
+                    </li>
+
+                    <li class="delinquency-filter-submenu-wrap">
+                        <label>Delinquency (%)</label>
+                        <div class="filter-slider">
+                            <div class="loan-repayments-slider"></div>
+                        </div>
+                    </li>
+
+                    <li class="default-filter-submenu-wrap">
+                        <label>Default (%)</label>
+                        <div class="filter-slider">
+                            <div class="loan-repayments-slider"></div>
+                        </div>
+                    </li>
+
+                    <li class="cost-filter-submenu-wrap">
+                        <label>Average Cost To Borrowers (%)</label>
+                        <div class="filter-slider">
+                            <div class="loan-repayments-slider"></div>
+                        </div>
+                    </li>
+
+                    <li class="profit-filter-submenu-wrap">
+                        <label>Partner Profitability (%)</label>
+                        <div class="filter-slider">
+                            <div class="loan-repayments-slider"></div>
+                        </div>
+                    </li>
+				{{/is_partner_visible}}
+
+				{{! todo - the "link" syntax mentioned here: http://patternlab.io/docs/data-link-variable.html does not seem to work}}
+                <li>
+					{{#is_more_visible}}
+						{{^is_partner_visible}}
+                            <a href="{{link.02-organisms/05-filters/00-filters-menu-partner}}" class="show-more-filters button small secondary">Partner Filters</a>
+						{{/is_partner_visible}}
+					{{/is_more_visible}}
+					{{^is_more_visible}}
+                        <a href="{{link.02-organisms/05-filters/00-filters-menu-more}}" class="show-more-filters button small secondary">More Filters</a>
+					{{/is_more_visible}}
+
+                    <a href="#" class="button small secondary">Save this search</a>
+                    <a href="#" class="button small">Apply</a>
+                </li>
+            </ul>
+        </aside>
+
+        <!-- loans -->
+        <div class="column_1">
+			{{> 02-organisms/04-loancards/02-loancards-listing }}
+        </div>
+
+        <a class="exit-off-canvas"></a>
+
+    </div>
+</div>
