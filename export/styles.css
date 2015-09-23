@@ -6835,6 +6835,9 @@ small {
   height: 2.2222222222rem;
   width: 100%;
   padding-right: 2.2222222222rem;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
   position: absolute;
   left: 0;
   bottom: 0; }
@@ -8045,8 +8048,6 @@ ul.tertiary-nav {
     padding: 0 0.5rem;
     border-left: 0.0555555556rem solid #d8d8d8;
     border-right: 0.0555555556rem solid #d8d8d8; }
-    .loan-card .borrower-details-wrap a, .loan-card .borrower-details-wrap a:visited, .loan-card .borrower-details-wrap a:hover, .loan-card .borrower-details-wrap a:active {
-      color: #333; }
     .loan-card .borrower-details-wrap p {
       margin-bottom: 0.25rem; }
   .loan-card .country {
