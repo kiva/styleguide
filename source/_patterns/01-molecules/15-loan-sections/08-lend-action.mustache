@@ -1,0 +1,20 @@
+<div class="lend-action">
+    <div class="button-wrapper show-for-medium-up">
+        <div class="lend-button">
+            <button data-dropdown="lend-dropdown" aria-controls="lend-dropdown" aria-expanded="false"
+                    class="button dropdown">
+                Lend $25
+            </button>
+            <ul id="lend-dropdown" data-dropdown-content class="f-dropdown" aria-hidden="true">
+                {{#lendValues}}
+                    <li><a href="#">${{amount}}</a></li>
+                {{/lendValues}}
+            </ul>
+        </div>
+        <div class="lend-button">
+            <button href="#" class="button">
+                Lend Now
+            </button>
+        </div>
+    </div>
+</div>
