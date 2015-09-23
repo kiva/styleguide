@@ -1,15 +1,54 @@
 module.exports = function() {
-    'use strict';
+	'use strict';
 
-    var $ = require('jquery');
+	var $ = require('jquery');
+
+	// Open Filters By Default
+	$('.off-canvas-wrap').foundation('offcanvas', 'show', 'move-right');
 
 	// NoUiSlider
-	$('.loan-repayments-slider').noUiSlider({
-		start: [ 10, 30 ],
+	$('.risk-rating-slider').noUiSlider({
+		start: [ 0, 5 ],
 		connect: true,
 		range: {
-			'min': -20,
-			'max': 40
+			'min': 0,
+			'max': 5
+		}
+	});
+
+	$('.delinquency-rate-slider').noUiSlider({
+		start: [ 0, 99 ],
+		connect: true,
+		range: {
+			'min': 0,
+			'max': 99
+		}
+	});
+
+	$('.default-rate-slider').noUiSlider({
+		start: [ 0, 99 ],
+		connect: true,
+		range: {
+			'min': 0,
+			'max': 99
+		}
+	});
+
+	$('.borrower-cost-slider').noUiSlider({
+		start: [ 0, 99 ],
+		connect: true,
+		range: {
+			'min': 0,
+			'max': 99
+		}
+	});
+
+	$('.profitability-slider').noUiSlider({
+		start: [ 0, 99 ],
+		connect: true,
+		range: {
+			'min': 0,
+			'max': 99
 		}
 	});
 };
