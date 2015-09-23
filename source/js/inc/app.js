@@ -1,3 +1,5 @@
+'use strict';
+
 require('./vendor');
 
 var header = require('./app/header');
