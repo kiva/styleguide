@@ -26,6 +26,28 @@
         border-right:none;
     }
 
+    .logo-area .header-button {
+        padding: 0 0.3rem;
+        img {
+            max-height: rem-calc(32);
+        }
+    }
+
+    .logo-area.wordmark .header-button {
+        padding: 0 0.3rem;
+        img {
+            max-height: rem-calc(20);
+
+            @media #{$small-only} {
+                margin-top: rem-calc(-8);
+            }
+
+            @media #{$medium-up} {
+                max-height: rem-calc(32);
+            }
+        }
+    }
+
     .amount {
         color: inherit;
         background: none;
@@ -100,7 +122,20 @@
         .logo-area {
             text-align: left;
             .header-button {
-                padding: 0 rem-calc(24) 0 rem-calc(8);
+                padding: 0 rem-calc(16);
+                img {
+                    max-height: none;
+                }
+            }
+        }
+
+        .logo-area.wordmark {
+            text-align: left;
+            .header-button {
+                padding: 0 rem-calc(16);
+                img {
+                    max-height: none;
+                }
             }
         }
     }
