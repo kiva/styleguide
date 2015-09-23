@@ -70,7 +70,7 @@
     }
     .show-for-medium-up {
       vertical-align: middle;
-      div{
+      div {
         display: block;
         padding-left: 1rem;
       }
@@ -243,7 +243,36 @@
       width: 50px;
     }
   }
-  .photos:nth-child(n+2) {
+  .photos:nth-child(2) {
     padding-left: 5px;
+  }
+}
+
+.lend-action {
+  .lend-button-wrapper {
+    display: inline;
+
+    .lend-button:nth-child(1) {
+      padding-right: 35px;
+    }
+
+    .lend-button:nth-child(1):after {
+      right: 0.95rem;
+    }
+
+    .lend-button {
+      height: 3rem;
+      padding: 10px;
+      outline: 0 !important;
+    }
+  }
+
+  .f-dropdown {
+    margin-top: 0;
+    max-width: 96px;
+    border-top: none;
+    li a {
+      font-size: 1rem;
+    }
   }
 }
