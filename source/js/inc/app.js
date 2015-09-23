@@ -11,6 +11,10 @@ $(document).foundation({
 	}
 });
 
+$('.ac-input').change(function(){
+	$(this).nextAll('.ac-body:first').slideToggle('slow');
+});
+
 header();
 filters();
 imagesizes();
