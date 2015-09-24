@@ -252,12 +252,13 @@
   .lend-button-wrapper {
     display: inline;
 
-    .lend-button:nth-child(1) {
-      padding-right: 35px;
-    }
-
-    .lend-button:nth-child(1):after {
-      right: 0.95rem;
+    &:first-child{
+      .lend-button {
+        padding-right: 35px;
+        &:after {
+          right: 0.95rem;
+        }
+      }
     }
 
     .lend-button {
