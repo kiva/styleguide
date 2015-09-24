@@ -162,6 +162,12 @@
       display: inline;
     }
   }
+  .group-name{
+    font-weight: bold;
+    @media #{$medium-up} {
+      font-weight: normal;
+    }
+  }
 }
 
 .loan-details {
