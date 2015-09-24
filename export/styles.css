@@ -6822,7 +6822,8 @@ small {
     cursor: pointer; }
   .loan-figure .icon-small-chevron {
     width: 50px;
-    margin-top: -75px;
+    height: 50px;
+    margin-top: -27px;
     position: absolute;
     top: 50%; }
   .loan-figure .icon-small-chevron:hover {
@@ -8676,10 +8677,10 @@ a.aboutJoinLink, a.aboutJoinLink:visited {
 
 .lend-action .lend-button-wrapper {
   display: inline; }
-  .lend-action .lend-button-wrapper .lend-button:nth-child(1) {
+  .lend-action .lend-button-wrapper:first-child .lend-button {
     padding-right: 35px; }
-  .lend-action .lend-button-wrapper .lend-button:nth-child(1):after {
-    right: 0.95rem; }
+    .lend-action .lend-button-wrapper:first-child .lend-button:after {
+      right: 0.95rem; }
   .lend-action .lend-button-wrapper .lend-button {
     height: 3rem;
     padding: 10px;
@@ -8710,7 +8711,7 @@ a.aboutJoinLink, a.aboutJoinLink:visited {
 @media only screen and (min-width:30.0625rem) {
   .borrower-profile-wrapper .loan-story, .borrower-profile-wrapper .loan-details {
     padding-top: 1rem; } }
-@media only screen and (min-width:42.5625rem) {
+@media only screen and (min-width:47.5625rem) {
   .borrower-profile-wrapper {
     padding-top: 1rem; }
     .borrower-profile-wrapper .left-content {
