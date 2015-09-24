@@ -128,11 +128,14 @@
   }
 
   .raised-info {
-    div {
+    div, .lender-count {
       padding: 0;
     }
+    .lender-count{
+      color: #333;
+    }
     @media #{$small-only}{
-      div {
+      div, .lender-count {
         font-size: $small-font-size;
         display: inline-block;
         &.loan-total {
@@ -162,7 +165,7 @@
       display: inline;
     }
   }
-  .group-name{
+  .group-name {
     font-weight: bold;
     @media #{$medium-up} {
       font-weight: normal;
@@ -258,7 +261,7 @@
   .lend-button-wrapper {
     display: inline;
 
-    &:first-child{
+    &:first-child {
       .lend-button {
         padding-right: 35px;
         &:after {
