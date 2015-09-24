@@ -8404,7 +8404,7 @@ a.aboutJoinLink, a.aboutJoinLink:visited {
   overflow: auto;
   background-color: #236133; }
   .aboutStatsContainer .topStats {
-    background: url(../../images/about/map-bg.min.svg) no-repeat;
+    background: url(http://cms.kiva.org.s3.amazonaws.com/map-bg.min_.svg) no-repeat;
     background-size: contain;
     background-position: center center; }
     @media only screen and (max-width: 30rem) {
@@ -8435,13 +8435,13 @@ a.aboutJoinLink, a.aboutJoinLink:visited {
     position: relative;
     width: 3.3333333333rem; }
   .aboutStatsContainer .seeMoreSection .ac-container .ac-body .aboutSeeMoreContainer {
-    background: url(../../images/about/numbers-bg-sm-std-new.min.svg);
+    background: url(http://cms.kiva.org.s3.amazonaws.com/page/images/numbers-bg-sm-std-new.min_.svg);
     background-position: center;
     background-size: contain;
     background-repeat: repeat-y; }
     @media only screen and (min-width:42.5625rem) {
       .aboutStatsContainer .seeMoreSection .ac-container .ac-body .aboutSeeMoreContainer {
-        background: url(../../images/about/numbers-bg-lg-std.min.svg);
+        background: url(http://cms.kiva.org.s3.amazonaws.com/page/images/numbers-bg-lg-std.min__0.svg);
         background-size: 100%; } }
     .aboutStatsContainer .seeMoreSection .ac-container .ac-body .aboutSeeMoreContainer .row {
       padding: 0 0.2777777778rem;
@@ -8597,15 +8597,17 @@ a.aboutJoinLink, a.aboutJoinLink:visited {
     font-size: 0.7777777778rem; } }
 .current-status-meter .row {
   max-width: none; }
-.current-status-meter .raised-info div {
+.current-status-meter .raised-info div, .current-status-meter .raised-info .lender-count {
   padding: 0; }
+.current-status-meter .raised-info .lender-count {
+  color: #333; }
 @media only screen and (max-width: 30rem) {
-  .current-status-meter .raised-info div {
+  .current-status-meter .raised-info div, .current-status-meter .raised-info .lender-count {
     font-size: 0.7777777778rem;
     display: inline-block; }
-    .current-status-meter .raised-info div.loan-total {
+    .current-status-meter .raised-info div.loan-total, .current-status-meter .raised-info .lender-count.loan-total {
       text-align: left; }
-    .current-status-meter .raised-info div.black-underlined {
+    .current-status-meter .raised-info div.black-underlined, .current-status-meter .raised-info .lender-count.black-underlined {
       text-align: right; } }
 
 .loan-gist .country-image {
@@ -8619,6 +8621,11 @@ a.aboutJoinLink, a.aboutJoinLink:visited {
   display: inline-block; }
   .loan-gist .country-text div {
     display: inline; }
+.loan-gist .group-name {
+  font-weight: bold; }
+  @media only screen and (min-width:30.0625rem) {
+    .loan-gist .group-name {
+      font-weight: normal; } }
 
 .loan-details .show-for-medium-up .ac-body {
   max-height: 1000px;
