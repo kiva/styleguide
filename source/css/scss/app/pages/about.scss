@@ -5,7 +5,8 @@ a.visitLink:visited {
 
 div.about-headline-wrapper {
 	height: 0;
-
+	position: relative;
+	
 	@media #{$small-only} {
 		padding-bottom: 86.04%;
 	}
