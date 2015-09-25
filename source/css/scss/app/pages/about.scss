@@ -19,6 +19,11 @@ div.about-headline-wrapper {
 div.aboutIntro {
 	padding-top: rem-calc(36);
 
+	@media #{$medium-only} {
+		padding-top: rem-calc(90);
+	}
+
+
 	svg {
 		width: rem-calc(60);
 		height: rem-calc(60);
