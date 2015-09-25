@@ -8269,7 +8269,8 @@ a.visitLink, a.visitLink:visited {
   color: #63a541; }
 
 div.about-headline-wrapper {
-  height: 0; }
+  height: 0;
+  position: relative; }
   @media only screen and (max-width: 30rem) {
     div.about-headline-wrapper {
       padding-bottom: 86.04%; } }
@@ -8279,6 +8280,9 @@ div.about-headline-wrapper {
 
 div.aboutIntro {
   padding-top: 2rem; }
+  @media only screen and (min-width:30.0625rem) and (max-width:42.5rem) {
+    div.aboutIntro {
+      padding-top: 5rem; } }
   div.aboutIntro svg {
     width: 3.3333333333rem;
     height: 3.3333333333rem; }
@@ -8404,7 +8408,7 @@ a.aboutJoinLink, a.aboutJoinLink:visited {
   overflow: auto;
   background-color: #236133; }
   .aboutStatsContainer .topStats {
-    background: url(http://cms.kiva.org.s3.amazonaws.com/map-bg.min_.svg) no-repeat;
+    background: url(//www.kiva.org/cms/page/images/map-bg.min_.svg) no-repeat;
     background-size: contain;
     background-position: center center; }
     @media only screen and (max-width: 30rem) {
@@ -8435,13 +8439,13 @@ a.aboutJoinLink, a.aboutJoinLink:visited {
     position: relative;
     width: 3.3333333333rem; }
   .aboutStatsContainer .seeMoreSection .ac-container .ac-body .aboutSeeMoreContainer {
-    background: url(http://cms.kiva.org.s3.amazonaws.com/page/images/numbers-bg-sm-std-new.min_.svg);
+    background: url(//www.kiva.org/cms/page/images/numbers-bg-sm-std-new.min_.svg);
     background-position: center;
     background-size: contain;
     background-repeat: repeat-y; }
     @media only screen and (min-width:42.5625rem) {
       .aboutStatsContainer .seeMoreSection .ac-container .ac-body .aboutSeeMoreContainer {
-        background: url(http://cms.kiva.org.s3.amazonaws.com/page/images/numbers-bg-lg-std.min__0.svg);
+        background: url(//www.kiva.org/cms/page/images/numbers-bg-lg-std.min_.svg);
         background-size: 100%; } }
     .aboutStatsContainer .seeMoreSection .ac-container .ac-body .aboutSeeMoreContainer .row {
       padding: 0 0.2777777778rem;
