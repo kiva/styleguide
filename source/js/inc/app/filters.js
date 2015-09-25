@@ -6,6 +6,11 @@ module.exports = function() {
 	// Open Filters By Default
 	$('.off-canvas-wrap').foundation('offcanvas', 'show', 'move-right');
 
+	// Keywords Search Box
+	$('#filters-keywords-search-box').click(function(){
+		$(this).val("");
+	});
+
 	// NoUiSlider
 	$('.risk-rating-slider').noUiSlider({
 		start: [ 0, 5 ],
