@@ -189,7 +189,7 @@ div.about-video-wrapper {
 	background-color: $kiva-darkgreen;
 
 	.topStats {
-		background: url(http://cms.kiva.org.s3.amazonaws.com/map-bg.min_.svg) no-repeat;
+		background: url(//www.kiva.org/cms/page/images/map-bg.min_.svg) no-repeat;
 		background-size: contain;
 		background-position: center center;
 
@@ -255,15 +255,14 @@ div.about-video-wrapper {
 			}
 
 			.ac-body {
-
 				.aboutSeeMoreContainer {
-					background: url(http://cms.kiva.org.s3.amazonaws.com/page/images/numbers-bg-sm-std-new.min_.svg);
+					background: url(//www.kiva.org/cms/page/images/numbers-bg-sm-std-new.min_.svg);
 					background-position: center;
 					background-size: contain;
 					background-repeat: repeat-y;
 
 					@media #{$large-up} {
-						background: url(http://cms.kiva.org.s3.amazonaws.com/page/images/numbers-bg-lg-std.min__0.svg);
+						background: url(//www.kiva.org/cms/page/images/numbers-bg-lg-std.min_.svg);
 						background-size: 100%
 					}
 
