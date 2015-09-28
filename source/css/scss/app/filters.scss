@@ -1,3 +1,9 @@
+.filter {
+  .layover-icon{
+    float: right;
+  }
+}
+
 .filter-component {
   margin: 1em 0;
 }
@@ -20,4 +26,8 @@
 
 .filter-slider-inner {
   margin: 0em 1rem;
+}
+
+.clear {
+  clear: both;
 }
