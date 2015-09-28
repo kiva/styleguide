@@ -5,6 +5,20 @@ module.exports = function(grunt) {
 	grunt.initConfig({
 		pkg: grunt.file.readJSON('package.json')
 
+		, postcss: {
+			options: {
+				map: true,
+				processors: [
+					require('autoprefixer')({
+						browsers: ['last 3 versions']
+					})
+				]
+			},
+			dist: {
+				src: ['source/css/*.css']
+			}
+		}
+
 		, clean: {
 			export: ['export']
 		}
@@ -344,10 +358,11 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks('grunt-svgstore');
 	grunt.loadNpmTasks('grunt-release');
 	grunt.loadNpmTasks('grunt-webpack');
+	grunt.loadNpmTasks('grunt-postcss');
 	// @todo add livereload?
 
 	grunt.registerTask('init', ['copy:init', 'githooks']);
-	grunt.registerTask('compile', ['concat:vendorCss', 'sass:compile', 'shell:compile', 'svgmin', 'svgstore:compile', 'copy:js', 'webpack:compile']);
+	grunt.registerTask('compile', ['concat:vendorCss', 'sass:compile', 'postcss:dist', 'shell:compile', 'svgmin', 'svgstore:compile', 'copy:js', 'webpack:compile']);
 	grunt.registerTask('export', ['clean:export', 'sass:export', 'sass:export_min', 'svgmin', 'svgstore:export', 'webpack:bundle', 'webpack:ugly_bundle', 'webpack:module', 'copy:export', 'gitadd:export']);
 	grunt.registerTask('default', 'compile');
     grunt.registerTask('test', ['jshint']);
