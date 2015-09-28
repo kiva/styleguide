@@ -43,7 +43,7 @@
   .carousel-prev {
     left: 0;
 
-    svg {
+    .icon {
       transform: rotate(270deg);
     }
   }
@@ -51,7 +51,7 @@
   .carousel-next {
     right: 0;
 
-    svg {
+    .icon {
       transform: rotate(90deg);
     }
   }
