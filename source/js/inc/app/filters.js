@@ -7,8 +7,13 @@ module.exports = function() {
 	$('.off-canvas-wrap').foundation('offcanvas', 'show', 'move-right');
 
 	// Keywords Search Box
-	$('#filters-keywords-search-box').click(function(){
+	$('#filter-keywords-search-box').click(function(){
 		$(this).val("");
+	});
+	$('#filter-keywords-search-box').focusout(function(){
+		if ($(this).text() == "") {
+			$(this).val("Borrower name, description");
+		}
 	});
 
 	// NoUiSlider

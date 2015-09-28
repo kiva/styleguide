@@ -33,4 +33,59 @@
   .filter-slider-inner {
     margin: 0em 1rem;
   }
+
+  .country-filter-box {
+    padding: 0em 0.6666666667rem;
+  }
+
+  .country-filter-text {
+    margin-left: 5px;
+  }
+
+  .borrower-filter-box {
+    width: 100px;
+    height: 25px;
+    position: relative;
+    border: 1px solid #000;
+    text-align: center;
+  }
+
+  .borrower-filter-box-right {
+    width: 100px;
+    height: 25px;
+    position: relative;
+    border: 1px solid #000;
+    text-align: center;
+    border-left: 0px;
+  }
+
+  .borrower-input {
+    display: none;
+  }
+
+  .borrower-label {
+    border: 0px;
+    margin-top: 4%;
+  }
+
+  .checkbox-input {
+    margin-left: 12px;
+    display:block;
+    height:21px;
+  }
+
+  .checkbox-input-span {
+    left:20%;
+    font-size:0.8em;
+    color:#000;
+  }
+}
+
+.filter-button-group-ul {
+  padding: 0em 1rem;
+}
+
+.filter-button-group-ul-bottom {
+  padding: 0em 1rem;
+  line-height: 1em;
 }
