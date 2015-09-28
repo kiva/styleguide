@@ -181,6 +181,15 @@ module.exports = function(grunt) {
 							return dest + src.replace('.svg', '.min.svg');
 						}
 					}
+					,{
+						expand: true
+						, cwd: 'source/images'
+						, src: ['*.svg', '!*.min.svg']
+						, dest: 'source/images/'
+						, rename: function(dest, src) {
+							return dest + src.replace('.svg', '.min.svg');
+						}
+					}
 				]
 			}
 		}
