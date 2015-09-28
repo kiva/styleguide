@@ -15,7 +15,7 @@ module.exports = function(grunt) {
 				]
 			},
 			dist: {
-				src: ['export/*.css', 'public/css/*.css']
+				src: ['source/css/*.css']
 			}
 		}
 
