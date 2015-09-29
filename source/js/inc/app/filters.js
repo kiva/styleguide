@@ -8,11 +8,11 @@ module.exports = function() {
 
 	// Keywords Search Box
 	$('#filter-keywords-search-box').click(function(){
-		$(this).val("");
+		$(this).val('');
 	});
 	$('#filter-keywords-search-box').focusout(function(){
-		if ($(this).text() == "") {
-			$(this).val("Borrower name, description");
+		if ($(this).text() === '') {
+			$(this).val('Borrower name, description');
 		}
 	});
 
