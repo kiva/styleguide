@@ -11,7 +11,7 @@ module.exports = function() {
 		$(this).val('');
 	});
 	$('#filter-keywords-search-box').focusout(function(){
-		if ($(this).text() == '') {
+		if ($(this).text() === '') {
 			$(this).val('Borrower name, description');
 		}
 	});
