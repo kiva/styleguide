@@ -54,6 +54,7 @@
 	var accordion = __webpack_require__(17);
 	var videoResizing = __webpack_require__(18);
 	var borrowerPage = __webpack_require__(19);
+	var slickLoadingFix = __webpack_require__(20);
 	var $ = __webpack_require__(2);
 
 	$(document).foundation({
@@ -68,6 +69,8 @@
 	accordion();
 	videoResizing();
 	borrowerPage();
+	slickLoadingFix();
+
 
 /***/ },
 /* 1 */
@@ -22700,20 +22703,70 @@
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = function() {
-	    'use strict';
+		'use strict';
 
-	    var $ = __webpack_require__(2);
+		var $ = __webpack_require__(2);
+
+		// Open Filters By Default
+		$('.off-canvas-wrap').foundation('offcanvas', 'show', 'move-right');
+
+		// Keywords Search Box
+		$('#filter-keywords-search-box').click(function(){
+			$(this).val('');
+		});
+		$('#filter-keywords-search-box').focusout(function(){
+			if ($(this).text() === '') {
+				$(this).val('Borrower name, description');
+			}
+		});
 
 		// NoUiSlider
-		$('.loan-repayments-slider').noUiSlider({
-			start: [ 10, 30 ],
+		$('.risk-rating-slider').noUiSlider({
+			start: [ 0, 5 ],
 			connect: true,
 			range: {
-				'min': -20,
-				'max': 40
+				'min': 0,
+				'max': 5
+			}
+		});
+
+		$('.delinquency-rate-slider').noUiSlider({
+			start: [ 0, 99 ],
+			connect: true,
+			range: {
+				'min': 0,
+				'max': 99
+			}
+		});
+
+		$('.default-rate-slider').noUiSlider({
+			start: [ 0, 99 ],
+			connect: true,
+			range: {
+				'min': 0,
+				'max': 99
+			}
+		});
+
+		$('.borrower-cost-slider').noUiSlider({
+			start: [ 0, 99 ],
+			connect: true,
+			range: {
+				'min': 0,
+				'max': 99
+			}
+		});
+
+		$('.profitability-slider').noUiSlider({
+			start: [ 0, 99 ],
+			connect: true,
+			range: {
+				'min': 0,
+				'max': 99
 			}
 		});
 	};
+
 
 /***/ },
 /* 16 */
@@ -22774,10 +22827,48 @@
 	module.exports = function () {
 	    'use strict';
 
-	    // for the accordion toggle
-	    $('.ac-input').change(function () {
-	        $(this).nextAll('.ac-body:first').slideToggle('slow');
-	    });
+		$('[data-kv-accordion]').click(function() {
+			var $this = $(this);
+			var $target = $('#'+$this.attr('aria-controls'));
+			var is_hidden = $target.attr('aria-hidden') === 'true';
+
+			if(is_hidden) {
+				// hide it and measure it
+				$target.css({
+					visibility: 'hidden'
+					, height: 'auto'
+				});
+
+				var height = $target.height();
+
+				// show it with no height...
+				$target.css({
+					visibility: 'visible'
+					, height: 0
+				});
+
+				// ...and set the height immediately after so it animates
+				window.setTimeout(function() {
+					$target.css('height', height + 'px');
+				}, 0);
+			}
+			else {
+				// if the heihgt hasn't been set yet, measure and set it
+				if($target[0].style.height.length === 0 || $target[0].style.height === 'auto') {
+					$target.css('height', $target.height() + 'px');
+				}
+
+				// set the height to 0 immediately after so it animates
+				window.setTimeout(function() {
+					$target.css('height', 0);
+				}, 0);
+			}
+
+			$target.parents('[data-kv-accordion] + *').css('height', 'auto');
+
+			$this.attr('aria-expanded', is_hidden);
+			$target.attr('aria-hidden', !is_hidden);
+		});
 	};
 
 /***/ },
@@ -22808,6 +22899,21 @@
 	            teamMolecule.prop('checked', true);
 	            teamMolecule.nextAll('.ac-body:first').slideToggle('slow');
 	        }
+	    });
+	};
+
+/***/ },
+/* 20 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var $ = __webpack_require__(2);
+
+	module.exports = function () {
+	    'use strict';
+
+	    // for the accordion toggle
+	    $.each($('.slick-loading-fix'), function(i, v){
+	        $(v).css('display', 'block');
 	    });
 	};
 
