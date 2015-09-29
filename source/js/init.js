@@ -391,8 +391,6 @@
 		}
 	});
 
-
-
 	loadSvgIcons();
 
 })(this, jQuery);
