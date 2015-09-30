@@ -39,7 +39,11 @@
 
 [data-kv-accordion] + * {
     overflow: hidden;
-    transition: height 500ms ease-in-out;
+
+    $transition: height 500ms ease-in-out;
+
+    -webkit-transition: $transition;
+    transition: $transition;
 
     &[aria-hidden="true"], &[aria-hidden="false"] {
         display: block;
