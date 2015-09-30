@@ -5,7 +5,8 @@ a.visitLink:visited {
 
 div.about-headline-wrapper {
 	height: 0;
-
+	position: relative;
+	
 	@media #{$small-only} {
 		padding-bottom: 86.04%;
 	}
@@ -17,6 +18,11 @@ div.about-headline-wrapper {
 
 div.aboutIntro {
 	padding-top: rem-calc(36);
+
+	@media #{$medium-only} {
+		padding-top: rem-calc(90);
+	}
+
 
 	svg {
 		width: rem-calc(60);
@@ -183,7 +189,7 @@ div.about-video-wrapper {
 	background-color: $kiva-darkgreen;
 
 	.topStats {
-		background: url(../../images/about/map-bg.min.svg) no-repeat;
+		background: url(//www.kiva.org/cms/page/images/map-bg.min_.svg) no-repeat;
 		background-size: contain;
 		background-position: center center;
 
@@ -235,9 +241,6 @@ div.about-video-wrapper {
 
 		.ac-container {
 
-			.ac-title {
-				//height: rem-calc(30);
-			}
 			.ac-dropdown-icon {
 
 				svg {
@@ -249,15 +252,14 @@ div.about-video-wrapper {
 			}
 
 			.ac-body {
-
 				.aboutSeeMoreContainer {
-					background: url(../../images/about/numbers-bg-sm-std-new.min.svg);
+					background: url(//www.kiva.org/cms/page/images/numbers-bg-sm-std-new.min_.svg);
 					background-position: center;
 					background-size: contain;
 					background-repeat: repeat-y;
 
 					@media #{$large-up} {
-						background: url(../../images/about/numbers-bg-lg-std.min.svg);
+						background: url(//www.kiva.org/cms/page/images/numbers-bg-lg-std.min_.svg);
 						background-size: 100%
 					}
 

@@ -84,6 +84,10 @@
     ul {
         background-color: $level-two-background;
 
+        &[aria-hidden="true"] {
+            height: 0;
+        }
+
         li a {
             padding-left: 2rem;
         }

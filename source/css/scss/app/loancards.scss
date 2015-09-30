@@ -64,6 +64,10 @@ $loan-card-meter-height: $loan-card-footer-height/2;
         border-left: $border;
         border-right: $border;
 
+        a, a:visited {
+            color: $kiva-textlink;
+        }
+
         p {
             margin-bottom: 0.25rem;
         }

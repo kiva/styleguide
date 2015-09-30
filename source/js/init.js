@@ -391,10 +391,6 @@
 		}
 	});
 
-	$('.ac-input').change(function(){
-		$(this).nextAll('article:first').slideToggle('slow');
-	});
-
 	loadSvgIcons();
 
 })(this, jQuery);

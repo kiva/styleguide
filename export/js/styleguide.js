@@ -44,22 +44,33 @@ define("Styleguide", ["jquery"], function(__WEBPACK_EXTERNAL_MODULE_2__) { retur
 /* 0 */
 /***/ function(module, exports, __webpack_require__) {
 
+	'use strict';
+
 	__webpack_require__(1);
 
-	var header = __webpack_require__(13);
-	var filters = __webpack_require__(14);
-	var imagesizes = __webpack_require__(15);
+	var header = __webpack_require__(14);
+	var filters = __webpack_require__(15);
+	var imagesizes = __webpack_require__(16);
+	var accordion = __webpack_require__(17);
+	var videoResizing = __webpack_require__(18);
+	var borrowerPage = __webpack_require__(19);
+	var slickLoadingFix = __webpack_require__(20);
 	var $ = __webpack_require__(2);
 
 	$(document).foundation({
-		equalizer: {
-			equalize_on_stack: true
-		}
+	    equalizer: {
+	        equalize_on_stack: true
+	    }
 	});
 
 	header();
 	filters();
 	imagesizes();
+	accordion();
+	videoResizing();
+	borrowerPage();
+	slickLoadingFix();
+
 
 /***/ },
 /* 1 */
@@ -76,6 +87,7 @@ define("Styleguide", ["jquery"], function(__WEBPACK_EXTERNAL_MODULE_2__) { retur
 	__webpack_require__(8);
 	__webpack_require__(11);
 	__webpack_require__(12);
+	__webpack_require__(13);
 
 /***/ },
 /* 2 */
@@ -22495,6 +22507,80 @@ define("Styleguide", ["jquery"], function(__WEBPACK_EXTERNAL_MODULE_2__) { retur
 /* 13 */
 /***/ function(module, exports, __webpack_require__) {
 
+	/* WEBPACK VAR INJECTION */(function(__webpack_provided_window_dot_jQuery) {/*global jQuery */
+	/*jshint browser:true */
+	/*!
+	* FitVids 1.1
+	*
+	* Copyright 2013, Chris Coyier - http://css-tricks.com + Dave Rupert - http://daverupert.com
+	* Credit to Thierry Koblentz - http://www.alistapart.com/articles/creating-intrinsic-ratios-for-video/
+	* Released under the WTFPL license - http://sam.zoy.org/wtfpl/
+	*
+	*/
+
+	(function( $ ){
+
+	  "use strict";
+
+	  $.fn.fitVids = function( options ) {
+	    var settings = {
+	      customSelector: null
+	    };
+
+	    if(!document.getElementById('fit-vids-style')) {
+	      // appendStyles: https://github.com/toddmotto/fluidvids/blob/master/dist/fluidvids.js
+	      var head = document.head || document.getElementsByTagName('head')[0];
+	      var css = '.fluid-width-video-wrapper{width:100%;position:relative;padding:0;}.fluid-width-video-wrapper iframe,.fluid-width-video-wrapper object,.fluid-width-video-wrapper embed {position:absolute;top:0;left:0;width:100%;height:100%;}';
+	      var div = document.createElement('div');
+	      div.innerHTML = '<p>x</p><style id="fit-vids-style">' + css + '</style>';
+	      head.appendChild(div.childNodes[1]);
+	    }
+
+	    if ( options ) {
+	      $.extend( settings, options );
+	    }
+
+	    return this.each(function(){
+	      var selectors = [
+	        "iframe[src*='player.vimeo.com']",
+	        "iframe[src*='youtube.com']",
+	        "iframe[src*='youtube-nocookie.com']",
+	        "iframe[src*='kickstarter.com'][src*='video.html']",
+	        "object",
+	        "embed"
+	      ];
+
+	      if (settings.customSelector) {
+	        selectors.push(settings.customSelector);
+	      }
+
+	      var $allVideos = $(this).find(selectors.join(','));
+	      $allVideos = $allVideos.not("object object"); // SwfObj conflict patch
+
+	      $allVideos.each(function(){
+	        var $this = $(this);
+	        if (this.tagName.toLowerCase() === 'embed' && $this.parent('object').length || $this.parent('.fluid-width-video-wrapper').length) { return; }
+	        var height = ( this.tagName.toLowerCase() === 'object' || ($this.attr('height') && !isNaN(parseInt($this.attr('height'), 10))) ) ? parseInt($this.attr('height'), 10) : $this.height(),
+	            width = !isNaN(parseInt($this.attr('width'), 10)) ? parseInt($this.attr('width'), 10) : $this.width(),
+	            aspectRatio = height / width;
+	        if(!$this.attr('id')){
+	          var videoID = 'fitvid' + Math.floor(Math.random()*999999);
+	          $this.attr('id', videoID);
+	        }
+	        $this.wrap('<div class="fluid-width-video-wrapper"></div>').parent('.fluid-width-video-wrapper').css('padding-top', (aspectRatio * 100)+"%");
+	        $this.removeAttr('height').removeAttr('width');
+	      });
+	    });
+	  };
+	// Works with either jQuery or Zepto
+	})( __webpack_provided_window_dot_jQuery || window.Zepto );
+
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(2)))
+
+/***/ },
+/* 14 */
+/***/ function(module, exports, __webpack_require__) {
+
 	var Foundation = __webpack_require__(5);
 	var Bloodhound = __webpack_require__(11);
 	var $ = __webpack_require__(2);
@@ -22613,27 +22699,77 @@ define("Styleguide", ["jquery"], function(__WEBPACK_EXTERNAL_MODULE_2__) { retur
 	};
 
 /***/ },
-/* 14 */
+/* 15 */
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = function() {
-	    'use strict';
+		'use strict';
 
-	    var $ = __webpack_require__(2);
+		var $ = __webpack_require__(2);
+
+		// Open Filters By Default
+		$('.off-canvas-wrap').foundation('offcanvas', 'show', 'move-right');
+
+		// Keywords Search Box
+		$('#filter-keywords-search-box').click(function(){
+			$(this).val('');
+		});
+		$('#filter-keywords-search-box').focusout(function(){
+			if ($(this).text() === '') {
+				$(this).val('Borrower name, description');
+			}
+		});
 
 		// NoUiSlider
-		$('.loan-repayments-slider').noUiSlider({
-			start: [ 10, 30 ],
+		$('.risk-rating-slider').noUiSlider({
+			start: [ 0, 5 ],
 			connect: true,
 			range: {
-				'min': -20,
-				'max': 40
+				'min': 0,
+				'max': 5
+			}
+		});
+
+		$('.delinquency-rate-slider').noUiSlider({
+			start: [ 0, 99 ],
+			connect: true,
+			range: {
+				'min': 0,
+				'max': 99
+			}
+		});
+
+		$('.default-rate-slider').noUiSlider({
+			start: [ 0, 99 ],
+			connect: true,
+			range: {
+				'min': 0,
+				'max': 99
+			}
+		});
+
+		$('.borrower-cost-slider').noUiSlider({
+			start: [ 0, 99 ],
+			connect: true,
+			range: {
+				'min': 0,
+				'max': 99
+			}
+		});
+
+		$('.profitability-slider').noUiSlider({
+			start: [ 0, 99 ],
+			connect: true,
+			range: {
+				'min': 0,
+				'max': 99
 			}
 		});
 	};
 
+
 /***/ },
-/* 15 */
+/* 16 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var $ = __webpack_require__(2);
@@ -22680,6 +22816,105 @@ define("Styleguide", ["jquery"], function(__WEBPACK_EXTERNAL_MODULE_2__) { retur
 			}
 		});
 
+	};
+
+/***/ },
+/* 17 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var $ = __webpack_require__(2);
+
+	module.exports = function () {
+	    'use strict';
+
+		$('[data-kv-accordion]').click(function() {
+			var $this = $(this);
+			var $target = $('#'+$this.attr('aria-controls'));
+			var is_hidden = $target.attr('aria-hidden') === 'true';
+
+			if(is_hidden) {
+				// hide it and measure it
+				$target.css({
+					visibility: 'hidden'
+					, height: 'auto'
+				});
+
+				var height = $target.height();
+
+				// show it with no height...
+				$target.css({
+					visibility: 'visible'
+					, height: 0
+				});
+
+				// ...and set the height immediately after so it animates
+				window.setTimeout(function() {
+					$target.css('height', height + 'px');
+				}, 0);
+			}
+			else {
+				// if the heihgt hasn't been set yet, measure and set it
+				if($target[0].style.height.length === 0 || $target[0].style.height === 'auto') {
+					$target.css('height', $target.height() + 'px');
+				}
+
+				// set the height to 0 immediately after so it animates
+				window.setTimeout(function() {
+					$target.css('height', 0);
+				}, 0);
+			}
+
+			$target.parents('[data-kv-accordion] + *').css('height', 'auto');
+
+			$this.attr('aria-expanded', is_hidden);
+			$target.attr('aria-hidden', !is_hidden);
+		});
+	};
+
+/***/ },
+/* 18 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var $ = __webpack_require__(2);
+
+	module.exports = function () {
+	    'use strict';
+
+	    $('.loan-image-wrap').fitVids();
+	};
+
+/***/ },
+/* 19 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var $ = __webpack_require__(2);
+
+	module.exports = function () {
+	    'use strict';
+
+	    // for the lenders teams section to expand upon click
+	    $('.lender-count').click(function () {
+	        var teamMolecule = $('#ac-lenders-teams');
+	        if (!teamMolecule.prop('checked')) {
+	            teamMolecule.prop('checked', true);
+	            teamMolecule.nextAll('.ac-body:first').slideToggle('slow');
+	        }
+	    });
+	};
+
+/***/ },
+/* 20 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var $ = __webpack_require__(2);
+
+	module.exports = function () {
+	    'use strict';
+
+	    // for the accordion toggle
+	    $.each($('.slick-loading-fix'), function(i, v){
+	        $(v).css('display', 'block');
+	    });
 	};
 
 /***/ }

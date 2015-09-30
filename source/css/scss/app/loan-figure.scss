@@ -1,70 +1,80 @@
 .loan-figure {
-	position: relative;
-	margin: 0;
-	padding: 0;
+  position: relative;
+  margin: 0;
+  padding: 0;
 
-	.loan-image-wrap {
-		position: relative;
+  .slick-loading-fix{
+    display: none;
+  }
 
-		img {
-			margin: 0 auto;
-		}
+  .loan-image-wrap {
+    position: relative;
 
-		.icon-youtube {
-			position: absolute;
-			height: 80px;
-			width: 80px;
-			top: 50%;
-			left: 50%;
-			margin-top: -40px;
-			margin-left: -40px;
-		}
-	}
+    img {
+      margin: 0 auto;
+    }
 
-	.carousel-nav {
-		background-color: rgba(51, 51, 51, .3);
-		display: none;
-		position: absolute;
-		top:50%;
-		width: 50px;
-		height: 100px;
-		margin-top: -50px;
-		transform: rotate(180deg);
+    .icon-youtube {
+      position: absolute;
+      height: 80px;
+      width: 80px;
+      top: 50%;
+      left: 50%;
+      margin-top: -40px;
+      margin-left: -40px;
+    }
+    iframe {
+      display: block;
+      margin: 0 auto;
+    }
+  }
 
-		svg {
-			stroke: #fff;
-		}
-	}
+  .carousel-nav {
+    background-color: rgba(51, 51, 51, .3);
+    display: none;
+    position: absolute;
+    top: 50%;
+    width: 50px;
+    height: 100px;
+    margin-top: -50px;
+    transform: rotate(180deg);
 
-	.carousel-prev {
-		left: 0;
+    svg {
+      stroke: #fff;
+    }
+  }
 
-		svg {
-			transform: rotate(270deg);
-		}
-	}
+  .carousel-prev {
+    left: 0;
 
-	.carousel-next {
-		right: 0;
+    .icon {
+      transform: rotate(270deg);
+    }
+  }
 
-		svg {
-			transform: rotate(90deg);
-		}
-	}
+  .carousel-next {
+    right: 0;
 
-	.carousel-nav:hover {
-		background-color: rgba(51, 51, 51, .6);
-		cursor: pointer;
-	}
+    .icon {
+      transform: rotate(90deg);
+    }
+  }
 
-	.icon-small-chevron {
-		width: 50px;
-		margin-top: -75px;
-		position: absolute;
-		top: 50%;
-	}
+  .carousel-nav:hover {
+    background-color: rgba(51, 51, 51, .6);
+    cursor: pointer;
+  }
 
-	.icon-small-chevron:hover {
-		cursor: pointer;
-	}
+  .icon-small-chevron {
+    width: 50px;
+    height: 50px;
+    margin-top: -27px;
+    position: absolute;
+    top: 50%;
+  }
+
+  .icon-small-chevron:hover {
+    cursor: pointer;
+  }
+
 }
