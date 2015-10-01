@@ -1,9 +1,17 @@
+var Foundation = require('Foundation');
 var $ = require('jquery');
 
 module.exports = function () {
     'use strict';
 
-	$('[data-kv-accordion]').click(function() {
+	var $accordions = $('[data-kv-accordion]');
+
+	var $targets = $($accordions.get().reduce(function(prev, curr, i) {
+		return prev + (i===0 ? '' : ', ') + '#' + $(curr).attr('aria-controls');
+	}, ''));
+	
+
+	$accordions.click(function() {
 		var $this = $(this);
 		var $target = $('#'+$this.attr('aria-controls'));
 		var is_hidden = $target.attr('aria-hidden') === 'true';
@@ -40,9 +48,18 @@ module.exports = function () {
 			}, 0);
 		}
 
-		$target.parents('[data-kv-accordion] + *').css('height', 'auto');
+		$targets.filter($target.parents()).css('height', 'auto');
 
 		$this.attr('aria-expanded', is_hidden);
 		$target.attr('aria-hidden', !is_hidden);
 	});
+
+	$(window).on('resize', Foundation.utils.throttle(function() {
+		$targets.each(function() {
+			var $this = $(this);
+			if($this.height() > 0) {
+				$this.css('height', 'auto');
+			}
+		});
+	}, 200));
 };
