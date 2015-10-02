@@ -2,6 +2,12 @@
 	"headline": {
 		"medium": "We envision a world where all people hold the power to create opportunity for themselves and others."
 	},
+	"textOverImageNameSpaceClass": "about-headline-wrapper",
+	"img": {
+		"full-width" : {
+			"alt" : "Photo of hands and a leaf"
+		}
+	},
 	"main-title": "About",
 	"page-title": "About Us",
 	"bar-links": [
@@ -84,5 +90,15 @@
 	],
 	"basket" : {
 		"item_count": 0
+	},
+	"lightbox": {
+		"video": {
+			"youtube": {
+				"src": "//www.youtube.com/embed/lSN2WdqXwfc?controls=0&showinfo=0&rel=0&hd=1",
+				"modal-title": "Beyond Charity, rethinking how we give.",
+				"width": "100%",
+				"frameborder": "0"
+			}
+		}
 	}
 }

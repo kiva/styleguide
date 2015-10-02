@@ -2,7 +2,7 @@
     <section class="ac-container">
         <div>
             <input class="ac-input" id="ac-loan-special" name="accordion-1" type="checkbox" checked/>
-            <label class="ac-title" for="ac-loan-special">
+            <label class="ac-title" for="ac-loan-special" data-kv-accordion aria-controls="ac-loan-special-body" aria-expanded="true">
                 This loan is special because:
                 <span class="ac-dropdown-icon">
                     <svg class="icon icon-large-chevron">
@@ -10,33 +10,30 @@
                     </svg>
                 </span>
             </label>
-            <article class="ac-body">
+            <article class="ac-body" id="ac-loan-special-body" aria-hidden="false">
                 <h2 class="green-bolded">
                     {{specialBody}}
                 </h2>
 
-                {{#kivan}}
-                    <div class="kivan">
-                        <div class="profile-photo">
-                            <img src="{{profilePhotoHref}}">
+                <div class="kivan">
+                    <div class="profile-photo">
+                        <img src="{{profilePhotoHref}}">
+                    </div>
+                    <div class="show-for-small-only">
+                        <p>
+                            {{kivan.name}}, {{kivan.title}}
+                        </p>
+                    </div>
+                    <div class="show-for-medium-up">
+                        <div>
+                            {{kivan.name}}
                         </div>
-                        <div class="show-for-small-only">
-                            <p>
-                                {{name}}, {{title}}
-                            </p>
-                        </div>
-                        <div class="show-for-medium-up">
 
-                            <p>
-                                {{name}}
-                            </p>
-
-                            <p>
-                                {{title}}
-                            </p>
+                        <div>
+                            {{kivan.title}}
                         </div>
                     </div>
-                {{/kivan}}
+                </div>
             </article>
         </div>
     </section>

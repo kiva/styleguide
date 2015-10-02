@@ -1,0 +1,29 @@
+// Kiva overrides to default Foundation _reveal.scss
+
+div.reveal-modal-bg {
+	background: black;
+	opacity: .88;
+}
+
+.reveal-modal {
+	border: none;
+	border-radius: 0;
+	background: none;
+	box-shadow: none;
+
+	.flex-video {
+		margin-top: rem-calc(30);
+	}
+}
+
+a.close-reveal-modal {
+	top: rem-calc(-50);
+
+	.icon.icon-x {
+		stroke: $kiva-green;
+		height: rem-calc(30);
+		width: rem-calc(30);
+	}
+
+}
+

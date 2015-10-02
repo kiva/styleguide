@@ -1,0 +1,24 @@
+{
+  "lenderCount": 2,
+  "teamCount": 5,
+  "teams": [
+    {
+      "imgUrl": "/images/borrower1.jpg",
+      "tooltip": "team 1"
+    },
+    {
+      "imgUrl": "/images/borrower1.jpg",
+      "tooltip": "team 2"
+    }
+  ],
+  "lenders": [
+    {
+      "imgUrl": "/images/borrower1.jpg",
+      "tooltip": "lender 1"
+    },
+    {
+      "imgUrl": "/images/borrower1.jpg",
+      "tooltip": "lender 2"
+    }
+  ]
+}

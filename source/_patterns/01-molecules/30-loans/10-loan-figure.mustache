@@ -1,20 +1,34 @@
 <figure class="loan-figure">
     <div class="loan-figure-carousel">
         {{#figures}}
-            <div class="loan-image-wrap">
-                <img src="{{url}}" class="loan-image" alt="{{alt}}" />
-            </div>
+            {{#youtube-video-id}}
+
+                <div class="loan-image-wrap">
+                    <iframe class="slick-loading-fix" width="560" height="315" src="https://www.youtube.com/embed/{{youtube-video-id}}"
+                            frameborder="0" allowfullscreen></iframe>
+                </div>
+            {{/youtube-video-id}}
+
+            {{^youtube-video-id}}
+                <div class="loan-image-wrap">
+                    <img src="{{url}}" class="slick-loading-fix loan-image" alt="{{alt}}">
+                </div>
+            {{/youtube-video-id}}
         {{/figures}}
     </div>
 
     <div class="carousel-prev carousel-nav">
-        <svg class="icon-small-chevron icon"><use xlink:href="#icon-small-chevron"/></svg>
+        <svg class="icon-small-chevron icon">
+            <use xlink:href="#icon-small-chevron"/>
+        </svg>
     </div>
 
     <div class="carousel-next carousel-nav">
-        <svg class="icon-small-chevron icon"><use xlink:href="#icon-small-chevron"/></svg>
+        <svg class="icon-small-chevron icon">
+            <use xlink:href="#icon-small-chevron"/>
+        </svg>
     </div>
 
-    {{> molecules-loan-image-footer}}
+    {{> 01-molecules/30-loans/11-loan-image-footer}}
 </figure>
 

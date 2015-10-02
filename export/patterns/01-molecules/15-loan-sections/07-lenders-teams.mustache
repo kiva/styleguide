@@ -1,0 +1,27 @@
+<div class="lenders-teams" id="lenders-teams">
+    <section class="ac-container">
+        <div>
+            <input class="ac-input" id="ac-lenders-teams" name="accordion-1" type="checkbox" checked/>
+            <label class="ac-title" for="ac-lenders-teams" id="ac-lenders-teams-label" data-kv-accordion aria-controls="ac-lenders-teams-body" aria-expanded="true">
+                Lenders ({{lenderCount}}) & Lending Teams ({{teamCount}})
+                <span class="ac-dropdown-icon">
+                    <svg class="icon icon-large-chevron">
+                        <use xlink:href="#icon-large-chevron"></use>
+                    </svg>
+                </span>
+            </label>
+            <article class="ac-body" id="ac-lenders-teams-body" aria-hidden="false">
+                {{#teams}}
+                    <div class="photos">
+                        <img data-tooltip aria-haspopup="true" data-options="show_on:medium;" title="{{tooltip}}" src="{{imgUrl}}">
+                    </div>
+                {{/teams}}
+                {{#lenders}}
+                    <div class="photos">
+                        <img data-tooltip aria-haspopup="true" data-options="show_on:medium;" title="{{tooltip}}" src="{{imgUrl}}">
+                    </div>
+                {{/lenders}}
+            </article>
+        </div>
+    </section>
+</div>

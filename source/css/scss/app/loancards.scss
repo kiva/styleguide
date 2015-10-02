@@ -33,12 +33,30 @@ $loan-card-meter-height: $loan-card-footer-height/2;
         }
 	}
 
-	.matcher-text {
-		background-color: rgba(255, 255, 255, .8);
-		position: absolute;
-		bottom: 0;
-		left: 0;
-	}
+	.loan-image-footer {
+        position: relative;
+        $loan-image-footer-height: 2rem;
+
+        .icon-match {
+            height: $loan-image-footer-height;
+            width: $loan-image-footer-height;
+        }
+
+        .matching-message {
+            font-size: $small-font-size;
+            height: $loan-image-footer-height;
+            padding-right: $loan-image-footer-height;
+
+            span {
+                line-height: $loan-image-footer-height;
+            }
+        }
+
+        .icon-star {
+            height: $loan-image-footer-height;
+            width: $loan-image-footer-height;
+        }
+    }
 
 	.borrower-details-wrap {
 		padding: 0 0.5rem;
@@ -46,8 +64,8 @@ $loan-card-meter-height: $loan-card-footer-height/2;
         border-left: $border;
         border-right: $border;
 
-        a, a:visited, a:hover, a:active {
-            color: $kiva-text-dark;
+        a, a:visited {
+            color: $kiva-textlink;
         }
 
         p {

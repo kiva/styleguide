@@ -2,12 +2,14 @@
   .ac-title {
     margin: 0;
     display: block;
+    position: relative;
   }
   .ac-dropdown-icon {
     display: inline;
     .icon {
+      position: absolute;
+      right: 1px;
       margin-top: .2rem;
-      float: right;
       height: 1rem;
       width: rem-calc(25);
       fill: none;
@@ -32,17 +34,18 @@
   .ac-input {
     display: none;
   }
-  .ac-body {
-    margin-top: -1px;
-    overflow: hidden;
-    max-height: 0px;
-    position: relative;
-    z-index: 10;
-    transition: max-height 1s ease-in-out;
-  }
-  .ac-input:checked ~ .ac-body {
-    transition: max-height 1s ease-in-out;
-    max-height: 50rem;
-  }
+}
 
+
+[data-kv-accordion] + * {
+    overflow: hidden;
+
+    $transition: height 500ms ease-in-out;
+
+    -webkit-transition: $transition;
+    transition: $transition;
+
+    &[aria-hidden="true"], &[aria-hidden="false"] {
+        display: block;
+    }
 }

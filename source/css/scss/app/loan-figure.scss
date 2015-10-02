@@ -1,56 +1,80 @@
 .loan-figure {
-	position: relative;
-	margin: 0;
-	padding: 0;
+  position: relative;
+  margin: 0;
+  padding: 0;
 
-	.loan-figure-carousel:nth-child(n + 2) {
-		display: none;
-	}
+  .slick-loading-fix{
+    display: none;
+  }
 
-	.carousel-nav {
-		position: absolute;
-		top:50%;
-		width: 50px;
-		height: 100px;
-		margin-top: -50px;
-		transform: rotate(180deg);
-	}
+  .loan-image-wrap {
+    position: relative;
 
-	.carousel-prev-arrow {
-		position: absolute;
-		left: 0;
-		top: 0;
-	}
+    img {
+      margin: 0 auto;
+    }
 
-	.carousel-prev {
-		left: 0;
+    .icon-youtube {
+      position: absolute;
+      height: 80px;
+      width: 80px;
+      top: 50%;
+      left: 50%;
+      margin-top: -40px;
+      margin-left: -40px;
+    }
+    iframe {
+      display: block;
+      margin: 0 auto;
+    }
+  }
 
-		svg {
-			transform: rotate(270deg);
-		}
-	}
+  .carousel-nav {
+    background-color: rgba(51, 51, 51, .3);
+    display: none;
+    position: absolute;
+    top: 50%;
+    width: 50px;
+    height: 100px;
+    margin-top: -50px;
+    transform: rotate(180deg);
 
-	.carousel-next {
-		right: 0;
+    svg {
+      stroke: #fff;
+    }
+  }
 
-		svg {
-			transform: rotate(90deg);
-		}
-	}
+  .carousel-prev {
+    left: 0;
 
-	.carousel-nav:hover {
-		background-color: rgba(200, 200, 200, .2);
-		cursor: pointer;
-	}
+    .icon {
+      transform: rotate(270deg);
+    }
+  }
 
-	.icon-small-chevron {
-		width: 50px;
-		margin-top: -75px;
-		position: absolute;
-		top: 50%;
-	}
+  .carousel-next {
+    right: 0;
 
-	.icon-small-chevron:hover {
-		cursor: pointer;
-	}
+    .icon {
+      transform: rotate(90deg);
+    }
+  }
+
+  .carousel-nav:hover {
+    background-color: rgba(51, 51, 51, .6);
+    cursor: pointer;
+  }
+
+  .icon-small-chevron {
+    width: 50px;
+    height: 50px;
+    margin-top: -27px;
+    position: absolute;
+    top: 50%;
+  }
+
+  .icon-small-chevron:hover {
+    cursor: pointer;
+  }
+
 }

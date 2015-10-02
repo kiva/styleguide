@@ -2,7 +2,7 @@
     <section class="ac-container">
         <div>
             <input class="ac-input" id="ac-loan-story" type="checkbox" checked/>
-            <label class="ac-title" for="ac-loan-story">
+            <label class="ac-title" for="ac-loan-story" data-kv-accordion aria-controls="ac-loan-story-body" aria-expanded="true">
                 <span class="story-header">{{borrowerFirstName}}'s Story</span>
                 <span class="ac-dropdown-icon">
                     <svg class="icon icon-large-chevron">
@@ -10,7 +10,7 @@
                     </svg>
                 </span>
             </label>
-            <article class="ac-body">
+            <article class="ac-body" id="ac-loan-story-body" aria-hidden="false">
                 <span>
                     {{#storyBody}}
                         <div class="body-text small-text">{{content}}</div>
@@ -31,10 +31,10 @@
                             <section class="ac-container">
                                 <div>
                                     <input class="ac-input" id="ac-translation" type="checkbox"/>
-                                    <label class="black-underlined small-text ac-title" for="ac-translation">
+                                    <label class="black-underlined small-text ac-title" for="ac-translation" data-kv-accordion aria-controls="ac-translation-body" aria-expanded="false">
                                         View original language description
                                     </label>
-                                    <article class="ac-body">
+                                    <article class="ac-body" style="height:0" id="ac-translation-body" aria-hidden="true">
                                         <span>
                                             {{#storyBody}}
                                                 <div class="body-text small-text">{{content}}</div>

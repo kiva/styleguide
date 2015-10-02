@@ -43,33 +43,36 @@
 
 .is-special {
   .ac-body {
-    padding-top: 1rem;
+    margin-top: 1rem;
   }
   label {
     font-size: 1rem;
   }
   .kivan {
     position: relative;
+    @media #{$medium-up} {
+      display: inline-block;
+    }
     .profile-photo {
       padding-top: 1rem;
       text-align: center;
       @media #{$medium-up}{
-        float: left;
-        width: 4rem;
+        display: inline;
       }
       img {
         background-repeat: no-repeat;
         border-radius: 50%;
         width: 100px;
+        @media #{$medium-up} {
+          width: 50px;
+        }
       }
     }
     .show-for-medium-up {
-      padding-top: 1rem;
-      padding-left: 5rem;
-      top: 0.5rem;
-      position: absolute;
-      p {
-        line-height: 0.3rem;
+      vertical-align: middle;
+      div {
+        display: block;
+        padding-left: 1rem;
       }
     }
     .show-for-small-only {
@@ -120,13 +123,19 @@
       }
     }
   }
+  .row {
+    max-width: none;
+  }
 
   .raised-info {
-    div {
+    div, .lender-count {
       padding: 0;
     }
+    .lender-count{
+      color: #333;
+    }
     @media #{$small-only}{
-      div {
+      div, .lender-count {
         font-size: $small-font-size;
         display: inline-block;
         &.loan-total {
@@ -154,6 +163,126 @@
     display: inline-block;
     div {
       display: inline;
+    }
+  }
+  .group-name {
+    font-weight: bold;
+    @media #{$medium-up} {
+      font-weight: normal;
+    }
+  }
+}
+
+.loan-details {
+  .show-for-medium-up {
+    .ac-body {
+      max-height: 1000px;
+      overflow: auto;
+    }
+  }
+  .ac-body {
+    margin-top: 1rem;
+  }
+  .ac-title {
+    font-size: 1rem;
+  }
+  .loan-term {
+    padding-bottom: 1rem;
+    text-align: center;
+
+    @media #{$medium-up}{
+      text-align: left;
+      padding-bottom: 0.5rem;
+    }
+
+    .green-bolded {
+      padding-top: 0.5rem;
+      font-size: 2rem;
+      @media #{$medium-up}{
+        padding-top: 0;
+      }
+    }
+    .featured {
+      padding-top: 0.5rem;
+      @media #{$medium-up}{
+        padding-top: 0;
+      }
+    }
+    .icon-recycle {
+      height: 3rem;
+      color: $kiva-text-light;
+      fill: $kiva-text-light;
+      @media #{$medium-up}{
+        width: 54.8px;
+      }
+    }
+  }
+
+  .loan-stats {
+    .black-underlined {
+      display: inline-block;
+    }
+    .bold {
+      font-weight: bold;
+      padding-left: 0.3rem;
+    }
+    .risk-rating {
+      .icon {
+        height: 1rem;
+        width: 18px;
+        fill: transparent;
+      }
+      .empty-star {
+        color: $kiva-bg-darkgray;
+      }
+    }
+  }
+
+}
+
+.lenders-teams {
+  .ac-title {
+    font-size: 1rem;
+  }
+  .photos {
+    display: inline;
+    img {
+      background-repeat: no-repeat;
+      border-radius: 50%;
+      width: 50px;
+    }
+  }
+  .photos:nth-child(2) {
+    padding-left: 5px;
+  }
+}
+
+.lend-action {
+  .lend-button-wrapper {
+    display: inline;
+
+    &:first-child {
+      .lend-button {
+        padding-right: 35px;
+        &:after {
+          right: 0.95rem;
+        }
+      }
+    }
+
+    .lend-button {
+      height: 3rem;
+      padding: 10px;
+      outline: 0 !important;
+    }
+  }
+
+  .f-dropdown {
+    margin-top: 0;
+    max-width: 96px;
+    border-top: none;
+    li a {
+      font-size: 1rem;
     }
   }
 }

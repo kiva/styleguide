@@ -1,0 +1,134 @@
+{
+  "figures": [
+    {
+      "youtube-video-id": "lSN2WdqXwfc"
+    },
+    {
+      "url": "http://www.kiva.org/img/w800/1970076.jpg",
+      "alt": "one"
+    },
+    {
+      "url": "http://www.kiva.org/img/w800/1969963.jpg",
+      "alt": "two"
+    }
+  ],
+  "isMatched": true,
+  "lenderCount": 7,
+  "lenderCountNeeded": 25,
+  "lenderCountPercent": 28,
+  "daysLeft": 12,
+  "inPfp": true,
+  "amountRaised": 175,
+  "amountNeeded": 1300,
+  "amountRaisedPercent": 14,
+  "loan-info": "A loan of $275 helps John to buy a dairy cow so that he can increase the amount of milk he supplies and thereby earn more income.",
+  "borrowerFirstName": "John",
+  "storyBody": [
+    {
+      "content": "John applied for his first loan of KES 25,000 from Vision Fund Kenya to buy a dairy cow so that he can increase the amount of milk he supplies and thereby earn more income. He plans to use part of his profit to repay the loan and to expand his agricultural business."
+    },
+    {
+      "content": "His hope for the future is to be financially stable."
+    }
+  ],
+  "borrowers": [
+    {
+      "name": "Sarah",
+      "pictured": true
+    },
+    {
+      "name": "John",
+      "pictured": true
+    },
+    {
+      "name": "Anna",
+      "pictured": false
+    }
+  ],
+  "translation": {
+    "language": "Spanish",
+    "translator": "Tayah Wheeland",
+    "storyBody": [
+      {
+        "content": "John ha solicitado su primer prestamo de KES 25.000 de Vision Fondo Kenia para comprar una vaca lechera para que pueda QUE Aumentar la cantidad de leche que abastece esta manera y ganar mas ingresos. El planea utilizar parte de sus ganancias para pagar el prestamo y ampliar su negocio agricola."
+      },
+      {
+        "content": "Su esperanza para el futuro es ser financieramente estable."
+      }
+    ]
+  },
+  "profilePhotoHref": "/images/borrower1.jpg",
+  "specialBody": "It's in a rural region many banks won't serve.",
+  "kivan": {
+    "name": "Jomay",
+    "title": "Kiva Knowledge Manager"
+  },
+  "groupName": "Myi Ni Gone Village Group",
+  "countryIso": "ad",
+  "country": "New Guinea",
+  "city": "Papau",
+  "typeText": "Renewable Energy Products",
+  "months": 11,
+  "loanDetails": {
+    "repaymentSchedule": "Monthly",
+    "disbursalDate": "April 6, 2015",
+    "currencyExchangeLoss": "Possible",
+    "fieldPartner": "VisionFund Kenya",
+    "borrowerPayingInterest": true,
+    "stars": [
+      {
+        "isFullStar": true
+      },
+      {
+        "isFullStar": true
+      },
+      {
+        "isFullStar": true
+      },
+      {
+        "isHalfStar": true
+      },
+      {
+        "isEmptyStar": true
+      }
+    ]
+  },
+  "teamCount": 5,
+  "teams": [
+    {
+      "imgUrl": "/images/borrower1.jpg",
+      "tooltip": "team 1"
+    },
+    {
+      "imgUrl": "/images/borrower1.jpg",
+      "tooltip": "team 2"
+    }
+  ],
+  "lenders": [
+    {
+      "imgUrl": "/images/borrower1.jpg",
+      "tooltip": "lender 1"
+    },
+    {
+      "imgUrl": "/images/borrower1.jpg",
+      "tooltip": "lender 2"
+    }
+  ],
+  "lendValues": [
+    {
+      "amount": 50
+    },
+    {
+      "amount": 75
+    },
+    {
+      "amount": 100
+    },
+    {
+      "amount": 125
+    },
+    {
+      "amount": 5000
+    }
+  ]
+}

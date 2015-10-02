@@ -22,19 +22,37 @@
   }
 
   @media #{$medium-up} {
+    .loan-story, .loan-details{
+      padding-top: 1rem;
+    }
+  }
+
+  @media #{$xlarge-up} {
     padding-top: 1rem;
     .left-content {
-      padding-left: 4.833333rem;
+      padding-left: 3.833333rem;
     }
     .right-content {
-      padding-right: 4.833333rem;
+      padding-right: 3.833333rem;
     }
   }
 
   .story {
     .left-content {
       @media #{$medium-up}{
-        background-color: $kiva-bg-darkgray
+        min-height: 80rem;
+        background-color: $kiva-bg-darkgray;
+        border-top: 1px solid $kiva-text-medium;
+        border-bottom: 1px solid $kiva-text-medium;
+        border-right: 1px solid $kiva-text-medium;
+      }
+    }
+    .right-content {
+      @media #{$medium-up}{
+        min-height: 80rem;
+        border-top: 1px solid $kiva-text-medium;
+        border-bottom: 1px solid $kiva-text-medium;
+        background-color: $kiva-stroke-gray;
       }
     }
   }

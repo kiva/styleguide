@@ -5,6 +5,23 @@ module.exports = function(grunt) {
 	grunt.initConfig({
 		pkg: grunt.file.readJSON('package.json')
 
+		, postcss: {
+			options: {
+				map: true,
+				processors: [
+					require('autoprefixer')({
+						browsers: ['last 3 versions']
+					})
+				]
+			},
+			dist: {
+				src: ['source/css/*.css']
+			},
+			export: {
+				src: ['export/*.css']
+			}
+		}
+
 		, clean: {
 			export: ['export']
 		}
@@ -123,6 +140,15 @@ module.exports = function(grunt) {
 					'export/styles.css': 'source/css/scss/app.scss'
 				}
 			}
+
+			, export_min: {
+				options: {
+					outputStyle: 'compressed'
+				}
+				, files: {
+					'export/styles.min.css': 'source/css/scss/app.scss'
+				}
+			}
 		}
 
 
@@ -151,6 +177,15 @@ module.exports = function(grunt) {
 						, cwd: 'source/images/about'
 						, src: ['*.svg', '!*.min.svg']
 						, dest: 'source/images/about/'
+						, rename: function(dest, src) {
+							return dest + src.replace('.svg', '.min.svg');
+						}
+					}
+					,{
+						expand: true
+						, cwd: 'source/images'
+						, src: ['*.svg', '!*.min.svg']
+						, dest: 'source/images/'
 						, rename: function(dest, src) {
 							return dest + src.replace('.svg', '.min.svg');
 						}
@@ -233,6 +268,7 @@ module.exports = function(grunt) {
 						, select2: 'select2/dist/js/select2.full.js'
                         , slick: 'slick.js/slick/slick.js'
 						, typeahead: 'typeahead.js/dist/typeahead.jquery.js'
+						, fitvids: 'fitvids/jquery.fitvids.js'
 					}
 				}
 				, entry: {
@@ -334,11 +370,12 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks('grunt-svgstore');
 	grunt.loadNpmTasks('grunt-release');
 	grunt.loadNpmTasks('grunt-webpack');
+	grunt.loadNpmTasks('grunt-postcss');
 	// @todo add livereload?
 
 	grunt.registerTask('init', ['copy:init', 'githooks']);
-	grunt.registerTask('compile', ['concat:vendorCss', 'sass:compile', 'shell:compile', 'svgmin', 'svgstore:compile', 'copy:js', 'webpack:compile']);
-	grunt.registerTask('export', ['clean:export', 'sass:export', 'svgmin', 'svgstore:export', 'webpack:bundle', 'webpack:ugly_bundle', 'webpack:module', 'copy:export', 'gitadd:export']);
+	grunt.registerTask('compile', ['concat:vendorCss', 'sass:compile', 'postcss:dist', 'shell:compile', 'svgmin', 'svgstore:compile', 'copy:js', 'webpack:compile']);
+	grunt.registerTask('export', ['clean:export', 'sass:export', 'sass:export_min', 'postcss:export', 'svgmin', 'svgstore:export', 'webpack:bundle', 'webpack:ugly_bundle', 'webpack:module', 'copy:export', 'gitadd:export']);
 	grunt.registerTask('default', 'compile');
     grunt.registerTask('test', ['jshint']);
 
