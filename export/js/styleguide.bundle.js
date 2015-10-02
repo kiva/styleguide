@@ -54,7 +54,6 @@
 	var accordion = __webpack_require__(15);
 	var videoResizing = __webpack_require__(18);
 	var borrowerPage = __webpack_require__(19);
-	var slickInitializeFix = __webpack_require__(20);
 	var $ = __webpack_require__(2);
 
 	$(document).foundation({
@@ -69,7 +68,6 @@
 	accordion();
 	videoResizing();
 	borrowerPage();
-	slickInitializeFix();
 
 /***/ },
 /* 1 */
@@ -22918,28 +22916,6 @@
 	            teamsLabel.trigger('click');
 	        }
 	    });
-	};
-
-/***/ },
-/* 20 */
-/***/ function(module, exports, __webpack_require__) {
-
-	var $ = __webpack_require__(2);
-
-	module.exports = function () {
-	    'use strict';
-
-	    // Make sure the images load after the page loads
-	    var loanFigure = $('.loan-figure');
-
-	    var $images = loanFigure.find('.loan-image-wrap');
-	    $images.css('position', 'relative');
-	    $images.css('opacity', 1);
-	    setTimeout(function(){
-	        var slickChildren = loanFigure.find('.slick-list');
-	        slickChildren.css('position', 'relative');
-	        slickChildren.css('opacity', 1);
-	    }, 0);
 	};
 
 /***/ }
