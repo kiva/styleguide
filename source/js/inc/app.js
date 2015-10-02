@@ -8,7 +8,6 @@ var imagesizes = require('./app/imagesizes');
 var accordion = require('./app/accordion');
 var videoResizing = require('./app/videoResizing');
 var borrowerPage = require('./app/pages/borrowerPage');
-var slickInitializeFix = require('./app/slickInitializeFix');
 var $ = require('jquery');
 
 $(document).foundation({
@@ -23,4 +22,3 @@ imagesizes();
 accordion();
 videoResizing();
 borrowerPage();
-slickInitializeFix();

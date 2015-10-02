@@ -328,12 +328,21 @@
 		return a < b ? -1 : 1;
 	}
 
-    $('.loan-figure-carousel').slick({
+	$('.loan-figure-carousel').on('init', function(slick) {
+		var loanFigure = $('.loan-figure');
+
+		var $images = loanFigure.find('.loan-image-wrap');
+		$images.css('transition', 'opacity 2s ease-in-out');
+		$images.css('position', 'relative');
+		$images.css('opacity', 1);
+	}).slick({
 		mobileFirst: true
-		, prevArrow: '.carousel-prev '
+		, prevArrow: '.carousel-prev'
 		, nextArrow: '.carousel-next'
-		, adaptiveHeight: true
-    });
+		, adaptiveHeight: true,
+		lazyLoad: 'ondemand',
+		speed: 1000
+	});
 
 	function loadSvgIcons() {
 		return $.get('/images/icons.svg', function(data) {

@@ -3,8 +3,6 @@
   margin: 0;
   padding: 0;
 
-
-
   .loan-message {
     position: absolute;
     right: 0;
@@ -90,20 +88,12 @@
     cursor: pointer;
   }
 
-  .loan-figure-carousel{
+  .loan-figure-carousel {
     .loan-image-wrap {
       opacity: 0;
       position: absolute;
-      transition: opacity 2s ease-in-out;
     }
   }
 
-  .slick-slider .slick-list {
-    opacity: 0;
-    position: absolute;
-  }
-  .slick-slider.slick-initialized .slick-list {
-    transition: opacity 2s ease-in-out;
-  }
 }
 
