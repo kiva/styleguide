@@ -12,7 +12,11 @@
       "alt": "two"
     }
   ],
-  "isMatched": true,
+  "is_matched": true,
+  "matching_text": "Your loan will be matched!",
+  "can_favorite": true,
+  "is_expiring_soon": true,
+  "expiring_soon_message": "2 days",
   "lenderCount": 7,
   "lenderCountNeeded": 25,
   "lenderCountPercent": 28,
