@@ -13,5 +13,5 @@ module.exports = function () {
         var slickChildren = loanFigure.find('.slick-list');
         slickChildren.css('position', 'relative');
         slickChildren.css('opacity', 1);
-    }, 0)
+    }, 0);
 };
