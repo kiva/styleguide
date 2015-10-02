@@ -252,6 +252,11 @@ div.about-video-wrapper {
 			}
 
 			.ac-body {
+                $transition: height 1s ease-in-out;
+
+                -webkit-transition: $transition;
+                transition: $transition;
+
 				.aboutSeeMoreContainer {
 					background: url(//www.kiva.org/cms/page/images/numbers-bg-sm-std-new.min_.svg);
 					background-position: center;

@@ -124,7 +124,7 @@
 	function goLarge() {
 		killDisco();
 		killHay();
-		sizeiframe(getRandom(680,988));
+		sizeiframe(getRandom(681,760));
 	}
 	
 	$('#sg-size-xl').on("click", function(e){
@@ -136,7 +136,7 @@
 	function goXLarge() {
 		killDisco();
 		killHay();
-		sizeiframe(getRandom(988,988));
+		sizeiframe(getRandom(761,988));
 	}
 
 	$('#sg-size-xxl').on("click", function(e){
