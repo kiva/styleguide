@@ -328,7 +328,7 @@
 		return a < b ? -1 : 1;
 	}
 
-	var $slickCarousel = $('.loan-figure-carousel')
+	var $slickCarousel = $('.loan-figure-carousel');
 	$slickCarousel.on('init', function(slick) {
 		var loanFigure = $('.loan-figure');
 
