@@ -109,12 +109,13 @@ ul.tertiary-nav {
     li a {
         line-height: 2rem;
 
+		&:visited {
+			color: $kiva-textlink;
+		}
+
         &.active {
             color: $kiva-stroke-gray;
         }
 
-		&:visited {
-			color: $kiva-textlink;
-		}
     }
 }
