@@ -29,14 +29,9 @@
             <use xlink:href="#icon-small-chevron"/>
         </svg>
     </div>
-    {{#show_loan_length}}
-        <div class="loan-message">{{loan_length}}</div>
-    {{/show_loan_length}}
-    {{^show_loan_length}}
-        {{#is_expiring_soon}}
-            <div class="loan-message urgent">{{expiring_soon_message}}</div>
-        {{/is_expiring_soon}}
-    {{/show_loan_length}}
+    {{#show_loan_expiration}}
+        <div class="loan-message {{#is_expiring_soon}}urgent{{/is_expiring_soon}}">{{loan_length}}</div>
+    {{/show_loan_expiration}}
     {{> 01-molecules/30-loans/11-loan-image-footer}}
 </figure>
 

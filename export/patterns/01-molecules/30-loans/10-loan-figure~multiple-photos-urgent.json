@@ -14,6 +14,7 @@
   ],
   "is_matched": true,
   "matching_text": "Your loan will be matched!",
+  "show_loan_expiration": true,
   "is_expiring_soon": true,
-  "expiring_soon_message": "2 days"
+  "loan_length": "2 days"
 }
