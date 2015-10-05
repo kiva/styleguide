@@ -114,21 +114,20 @@ $footer-height-reduction: rem-calc(144);
 // d. Media Query Ranges
 // - - - - - - - - - - - - - - - - - - - - - - - - -
 
-// r/ems are useless in media queries, as browsers will ignore any change to the rem-value and use the default (usually 16px)
-@function mq-rem-calc($value) {
-    @return rem-calc($value, 16);
-}
+$small-breakpoint:  480px;  // Previously 760. Foundation default 640
+$medium-breakpoint: 680px;  // Previously 988. Foundation default 1024
+$large-breakpoint:  760px;  // JimE changed to 760. Previously 1116, then 988. Foundation default 1440
+$xlarge-breakpoint: 988px;  // Foundation default 1920
 
-$small-breakpoint:  mq-rem-calc(480);  // Possibly changing to 480. Previously 760. Foundation default 640
-$medium-breakpoint: mq-rem-calc(680);  // Previously 988. Foundation default 1024
-$large-breakpoint:  mq-rem-calc(760);  // JimE changed to 760. Previously 1116, then 988. Foundation default 1440
-$xlarge-breakpoint: mq-rem-calc(988);  // Foundation default 1920
+$x-small-breakpoint:	360px; // used in _type.scss
+$sm-medium-breakpoint:	535px; // used in _type.scss
+
 
 $small-range:   (0, $small-breakpoint);
-$medium-range:  ($small-breakpoint  + mq-rem-calc(1), $medium-breakpoint);
-$large-range:   ($medium-breakpoint + mq-rem-calc(1), $large-breakpoint);
-$xlarge-range:  ($large-breakpoint  + mq-rem-calc(1), $xlarge-breakpoint);
-$xxlarge-range: ($xlarge-breakpoint + mq-rem-calc(1), mq-rem-calc(99999999));
+$medium-range:  ($small-breakpoint  + 1, $medium-breakpoint);
+$large-range:   ($medium-breakpoint + 1, $large-breakpoint);
+$xlarge-range:  ($large-breakpoint  + 1, $xlarge-breakpoint);
+$xxlarge-range: ($xlarge-breakpoint + 1, 99999999px);
 
 $screen: "only screen";
 
