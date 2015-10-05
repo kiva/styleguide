@@ -351,6 +351,9 @@
 	var $loanImageFooter = $('.loan-image-footer');
 	var $prevArrow = $('.carousel-prev');
 	var $nextArrow = $('.carousel-next');
+	var margin = $('.slick-active').find('.loan-image').css('margin-right');
+	$loanMessage.css('right', margin);
+	$loanMessage.css('visibility', 'visible');
 	$loanImageFooter.css('position', 'relative');
 	$loanImageFooter.css('transition', 'margin 0.3s ease-in-out');
 
