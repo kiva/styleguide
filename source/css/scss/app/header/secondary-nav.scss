@@ -112,5 +112,9 @@ ul.tertiary-nav {
         &.active {
             color: $kiva-stroke-gray;
         }
+
+		&:visited {
+			color: $kiva-textlink;
+		}
     }
 }
