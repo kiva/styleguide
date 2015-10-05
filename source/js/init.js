@@ -332,6 +332,8 @@
 		var loanFigure = $('.loan-figure');
 
 		var $images = loanFigure.find('.loan-image-wrap');
+		var $slickList = loanFigure.find('.slick-list');
+		$slickList.css('height', 'auto');
 		$images.css('transition', 'opacity 2s ease-in-out');
 		$images.css('position', 'relative');
 		$images.css('opacity', 1);
