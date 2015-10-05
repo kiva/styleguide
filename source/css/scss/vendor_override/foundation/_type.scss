@@ -244,7 +244,7 @@ small {
 	}
 }
 
-@media ($small-breakpoint + 1) and (max-width: $sm-medium-breakpoint) {
+@media (min-width: $small-breakpoint + 1) and (max-width: $sm-medium-breakpoint) {
 	.huge-statistic {
 		font-size: $huge-statistic-font-size - $huge-statistic-font-extra-medium-reduction;
 	}
