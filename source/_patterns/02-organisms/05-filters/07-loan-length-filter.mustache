@@ -1,20 +1,20 @@
 <a href="#"><span>Loan Length</span></a>
-<ul class="button-group toggle" data-toggle="buttons-radio" style="padding: 0em 1rem">
-	<li style="width:100px;height:25px;position:relative;border:1px solid #000">
-		<input style="display:none" type="radio" id="r1" name="r-group" data-toggle="button">
-		<label style="position:absolute;top:15%;height:1px;left:25%" class="button" for="r1">8 mths or less</label>
-	</li>
-	<li style="width:100px;height:25px;position:relative;border:1px solid #000;border-left:0px">
-		<input style="display:none" type="radio" id="r2" name="r-group" data-toggle="button">
-		<label style="position:absolute;top:15%;height:1px;left:35%" class="button" for="r2">16 mths or less</label>
-	</li>
-	<br/>
-	<li style="width:100px;height:25px;position:relative;border:1px solid #000">
-		<input style="display:none" type="radio" id="r1" name="r-group" data-toggle="button">
-		<label style="position:absolute;top:15%;height:1px;left:18%" class="button" for="r3">2 yrs or less</label>
-	</li>
-	<li style="width:100px;height:25px;position:relative;border:1px solid #000;border-left:0px">
-		<input style="display:none" type="radio" id="r2" name="r-group" data-toggle="button">
-		<label style="position:absolute;top:15%;height:1px;left:25%" class="button" for="r4">2 yrs or more</label>
-	</li>
+<ul class="button-group toggle filter-button-group-ul" data-toggle="buttons-radio">
+    <li class="filter borrower-filter-box">
+        <input class="filter borrower-input" type="checkbox" id="filter-loan-length-label-0to8" name="filter-loan-length-label-0to8" data-toggle="button">
+        <label class="filter borrower-label" class="button" for="filter-loan-length-label-0to8">8 mths or less</label>
+    </li>
+    <li class="filter borrower-filter-box-right">
+        <input class="filter borrower-input" type="checkbox" id="filter-loan-length-label-0to16" name="filter-loan-length-label-0to16" data-toggle="button">
+        <label class="filter borrower-label" class="button" for="filter-loan-length-label-0to16">16 mths or less</label>
+    </li>
+    <br/>
+    <li class="filter borrower-filter-box">
+        <input class="filter borrower-input" type="checkbox" id="filter-loan-length-label-0to24" name="filter-loan-length-label-0to24" data-toggle="button">
+        <label class="filter borrower-label" class="button" for="filter-loan-length-label-0to24">2 yrs or less</label>
+    </li>
+    <li class="filter borrower-filter-box-right">
+        <input class="filter borrower-input" type="checkbox" id="filter-loan-length-label-24to400" name="filter-loan-length-label-24to400" data-toggle="button">
+        <label class="filter borrower-label" class="button" for="filter-loan-length-label-24to400">2 yrs or more</label>
+    </li>
 </ul>

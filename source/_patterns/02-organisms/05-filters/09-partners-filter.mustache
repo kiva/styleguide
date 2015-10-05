@@ -1,7 +1,15 @@
-<a href="#"><span>Partner</span></a>
-<a href="#">
-	<svg class="icon icon-handshake" width="23" height="23">
-		<use xlink:href="#icon-handshake"/>
-	</svg>
-	<span style="margin-left:5px">Specify a partner</span>
-</a>
+<a href="#" xmlns="http://www.w3.org/1999/html"><span>Partner</span></a>
+<div class="filter country-filter-box">
+    <a href="#" data-reveal-id="partnerSelectModal">
+        <svg class="icon icon-handshake" width="23" height="23">
+            <use xlink:href="#icon-handshake"/>
+        </svg>
+        <span class="filter country-filter-text">Specify a partner</span>
+    </a>
+
+    <div id="partnerSelectModal" class="reveal-modal filters_countries" data-reveal>
+        <form id="allPartners">
+            <input type="submit" id="filter-partner-submit" class="applyButton smaller" value="Done" />
+        </form>
+    </div>
+</div>

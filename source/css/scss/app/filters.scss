@@ -21,7 +21,7 @@
   .filter-keywords-search-box {
     color: #aaa;
     border: 1px solid #000;
-    width: 200px;
+    width: 210px;
   }
 
   .filter-slider {
@@ -38,12 +38,12 @@
     padding: 0em 0.6666666667rem;
   }
 
-  .country-filter-text {
+  .country-filter-text, .partner_filter_text {
     margin-left: 5px;
   }
 
   .borrower-filter-box {
-    width: 100px;
+    width: 105px;
     height: 25px;
     position: relative;
     border: 1px solid #000;
@@ -51,7 +51,7 @@
   }
 
   .borrower-filter-box-right {
-    width: 100px;
+    width: 105px;
     height: 25px;
     position: relative;
     border: 1px solid #000;
@@ -75,10 +75,17 @@
   }
 
   .checkbox-input-span {
-    left:20%;
-    font-size:0.8em;
-    color:#000;
+    margin-left: 7px;
+    font-size: 0.8em;
+    color: #000;
+    border: 0px;
+    display: inline;
+    text-transform: none;
   }
+}
+
+.reveal-modal {
+  background: #fff;
 }
 
 .filter-button-group-ul {
@@ -86,6 +93,11 @@
 }
 
 .filter-button-group-ul-bottom {
+  margin-top: 0.5em;
   padding: 0em 1rem;
   line-height: 1em;
+}
+
+.filters_countries {
+  background: #fff;
 }

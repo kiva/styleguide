@@ -1,18 +1,18 @@
 <a href="#"><span>Miscellaneous</span></a>
-<ul class="button-group toggle" data-toggle="buttons-radio" style="padding: 0em 1rem">
-	<li style="margin-left: 12px;display:block;height:21px">
-		<input type="checkbox" value="">
-		<span style="left:20%;font-size:0.8em;color:#000">Matched Loans Only</span>
+<ul class="button-group toggle filter-button-group-ul" data-toggle="buttons-radio">
+	<li class="filter checkbox-input">
+		<input type="checkbox" id="filter-matched" name="" value="matcherAccountId">
+		<label for="" class="filter checkbox-input-span">Matched Loans Only</label>
 		</input>
 	</li>
-	<li style="margin-left: 12px;display:block;height:21px">
-		<input type="checkbox" value="">
-		<span style="left:20%;font-size:0.8em;color:#000">Exclude Loans with currency risk</span>
+    <li class="filter checkbox-input">
+		<input type="checkbox" id='filter-currencyRisk' name="filter-currencyRisk" value="currencyLossPossible">
+		<label class="filter checkbox-input-span">Exclude Loans with currency risk</label>
 		</input>
 	</li>
-	<li style="margin-left: 12px;display:block;height:21px">
-		<input type="checkbox" value="">
-		<span style="left:20%;font-size:0.8em;color:#000">Exclude Non-Rated Partners</span>
+    <li class="filter checkbox-input">
+		<input type="checkbox" id="filter-nonRated" name="filter-nonRated" value="excludeNonRated">
+		<label class="filter checkbox-input-span">Exclude Non-Rated Partners</label>
 		</input>
 	</li>
 </ul>

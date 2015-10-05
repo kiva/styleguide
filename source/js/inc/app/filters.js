@@ -8,10 +8,12 @@ module.exports = function() {
 
 	// Keywords Search Box
 	$('#filter-keywords-search-box').click(function(){
-		$(this).val('');
+		if ($(this).val() === 'Borrower name, description') {
+			$(this).val('');
+		}
 	});
 	$('#filter-keywords-search-box').focusout(function(){
-		if ($(this).text() === '') {
+		if ($(this).val() === '') {
 			$(this).val('Borrower name, description');
 		}
 	});
