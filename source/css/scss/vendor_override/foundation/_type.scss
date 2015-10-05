@@ -235,7 +235,7 @@ small {
 
 //These media queries are handling additional font size reductions based on screen sizes, these are needed so text is always
 //on the screen.
-@media (min-width: mq-rem-calc(320)) and (max-width: mq-rem-calc(360)) {
+@media (max-width: $x-small-breakpoint) {
 	h1.normal {
 		font-size: $headline-font-size - $headline-font-size-extra-small-reduction;
 	}
@@ -244,13 +244,13 @@ small {
 	}
 }
 
-@media (min-width: mq-rem-calc(481)) and (max-width: mq-rem-calc(535)) {
+@media (min-width: $small-breakpoint + 1) and (max-width: $sm-medium-breakpoint) {
 	.huge-statistic {
 		font-size: $huge-statistic-font-size - $huge-statistic-font-extra-medium-reduction;
 	}
 }
 
-@media (min-width: mq-rem-calc(681)) and (max-width: mq-rem-calc(760)) {
+@media (min-width: $medium-breakpoint + 1) and (max-width: $large-breakpoint) {
 	.huge-statistic {
 		font-size: $huge-statistic-font-size - $huge-statistic-font-large-reduction;
 	}
