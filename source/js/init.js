@@ -328,7 +328,8 @@
 		return a < b ? -1 : 1;
 	}
 
-	$('.loan-figure-carousel').on('init', function(slick) {
+	var $slickCarousel = $('.loan-figure-carousel')
+	$slickCarousel.on('init', function(slick) {
 		var loanFigure = $('.loan-figure');
 
 		var $images = loanFigure.find('.loan-image-wrap');
@@ -344,6 +345,23 @@
 		, adaptiveHeight: true,
 		lazyLoad: 'ondemand',
 		speed: 1000
+	});
+
+	var $loanMessage = $('.loan-message');
+	var $loanImageFooter = $('.loan-image-footer');
+	$loanImageFooter.css('position', 'relative');
+	$loanImageFooter.css('transition', 'margin 0.3s ease-in-out');
+
+	$slickCarousel.on('beforeChange', function () {
+		$('.loan-message').css('visibility', 'hidden');
+	});
+
+	$slickCarousel.on('afterChange', function (event, slick, currentSlide) {
+		var margin = $('.slick-active').find('.loan-image').css('margin-right');
+		$loanMessage.css('right', margin);
+		$loanMessage.css('visibility', 'visible');
+		$loanImageFooter.css('margin-right', margin);
+		$loanImageFooter.css('margin-left', margin);
 	});
 
 	function loadSvgIcons() {
