@@ -93,7 +93,7 @@ module.exports = function(grunt) {
             options: {
                 jshintrc: '.jshintrc'
             }
-            , all: ['source/js']
+            , all: ['source/js/app']
         }
 
 
