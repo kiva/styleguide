@@ -14,6 +14,6 @@
   ],
   "is_matched": true,
   "matching_text": "Your loan will be matched!",
-  "show_loan_length": true,
+  "show_loan_expiration": true,
   "loan_length": "12 months"
 }
