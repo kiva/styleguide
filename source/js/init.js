@@ -349,19 +349,28 @@
 
 	var $loanMessage = $('.loan-message');
 	var $loanImageFooter = $('.loan-image-footer');
+	var $prevArrow = $('.carousel-prev');
+	var $nextArrow = $('.carousel-next');
 	$loanImageFooter.css('position', 'relative');
 	$loanImageFooter.css('transition', 'margin 0.3s ease-in-out');
 
 	$slickCarousel.on('beforeChange', function () {
-		$('.loan-message').css('visibility', 'hidden');
+		$loanMessage.css('visibility', 'hidden');
+		$prevArrow.css('visibility', 'hidden');
+		$nextArrow.css('visibility', 'hidden');
 	});
 
 	$slickCarousel.on('afterChange', function (event, slick, currentSlide) {
 		var margin = $('.slick-active').find('.loan-image').css('margin-right');
-		$loanMessage.css('right', margin);
-		$loanMessage.css('visibility', 'visible');
 		$loanImageFooter.css('margin-right', margin);
 		$loanImageFooter.css('margin-left', margin);
+		$loanMessage.css('right', margin);
+		$prevArrow.css('left', margin);
+		$nextArrow.css('right', margin);
+
+		$loanMessage.css('visibility', 'visible');
+		$prevArrow.css('visibility', 'visible');
+		$nextArrow.css('visibility', 'visible');
 	});
 
 	function loadSvgIcons() {
