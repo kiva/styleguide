@@ -1,11 +1,21 @@
 <a href="#"><span>Countries</span></a>
 <div class="filter country-filter-box">
-    <a href="http://dev-vm-01.kiva.org/lend/callLend_ListingMapSubView" data-reveal-id="countrySelectModal" data-reveal-ajax="true">
+    <a href="#" data-reveal-id="countrySelectModal">
         <svg class="icon icon-globe" width="23" height="23">
             <use xlink:href="#icon-globe"/>
         </svg>
         <span class="filter country-filter-text">Select a country</span>
     </a>
 
-    <div id="countrySelectModal" class="reveal-modal filters_countries" data-reveal />
+    <div id="countrySelectModal" class="reveal-modal filters_countries" data-reveal>
+        <form id="allCountries">
+			{{#countries_by_column}}
+                <li class="country filter checkbox-input">
+					{{> 02-organisms/05-filters/14-countries-items}}
+                </li>
+			{{/countries_by_column}}
+
+            <input type="submit" id="filter-country-submit" class="applyButton smaller" value="Done" />
+        </form>
+    </div>
 </div>
