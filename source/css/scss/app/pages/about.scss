@@ -140,7 +140,7 @@ div.about-video-wrapper {
 	margin-bottom: 2rem;
 
 	p.large-text-left {
-		line-height: 1.6rem;
+		line-height: rem-calc(30);
 	}
 
 	@media #{small} {
