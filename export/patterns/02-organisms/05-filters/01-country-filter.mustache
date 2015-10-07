@@ -10,9 +10,9 @@
     <div id="countrySelectModal" class="reveal-modal filters_countries" data-reveal>
         <form id="allCountries">
 			{{#countries_by_column}}
-                <li class="country filter checkbox-input">
+                <div class="country filter checkbox-input">
 					{{> 02-organisms/05-filters/14-countries-items}}
-                </li>
+                </div>
 			{{/countries_by_column}}
 
             <input type="submit" id="filter-country-submit" class="applyButton smaller" value="Done" />
