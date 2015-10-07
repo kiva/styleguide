@@ -11,6 +11,10 @@ div.siteMapContainer {
 		list-style-type: none;
 		padding: 0;
 		margin: 0;
+
+		a:visited {
+			color: #22a9d8;
+		}
 		
 		p {
 			margin-bottom: rem-calc(5);
