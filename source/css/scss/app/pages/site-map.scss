@@ -1,4 +1,4 @@
-div.siteMapContainer {
+nav.siteMapContainer {
 	padding-top: rem-calc(40);
 	padding-bottom: rem-calc(40);
 
@@ -10,9 +10,9 @@ div.siteMapContainer {
 	}
 	.siteMapList {
 		list-style-type: none;
-		padding: 0;
-		margin: 0;
-		
+		padding: 0 0 0 rem-calc(8);
+		margin: 0 0 0 rem-calc(8);
+
 		p {
 			margin-bottom: rem-calc(5);
 			font-weight: bold;
