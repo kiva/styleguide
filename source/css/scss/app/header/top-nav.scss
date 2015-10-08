@@ -1,15 +1,3 @@
-@mixin nav-link-hover-color() {
-	&:hover {
-		color: $kiva-darkgreen;
-	}
-}
-
-@mixin nav-link-svg-hover-fill() {
-	fill: $kiva-darkgreen;
-}
-
-
-
 .top-nav {
     background-color: $kiva-green;
 
@@ -28,19 +16,10 @@
 
     .header-row {
         position: relative;
-
-		& a {
-			@include nav-link-hover-color();
-
-			&:hover svg {
-				@include nav-link-svg-hover-fill();
-			}
-		}
     }
 
     .header-column > a {
         border-right: rem-calc(1) solid $kiva-navdivider-green;
-
     }
 
     .header-column:last-child > a {
@@ -61,6 +40,10 @@
             }
         }
     }
+
+	.header-button:hover {
+		background-color: $kiva-icon-green;
+	}
 
     .amount {
         color: inherit;
