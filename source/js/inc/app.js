@@ -11,10 +11,14 @@ var borrowerPage = require('./app/pages/borrowerPage');
 var $ = require('jquery');
 
 $(document).foundation({
-    equalizer: {
-        equalize_on_stack: true
-    }
+	equalizer: {
+		equalize_on_stack: true
+	}
+	, offcanvas : {
+		open_method: 'overlap'
+	}
 });
+
 
 header();
 filters();

@@ -5125,7 +5125,7 @@ blockquote, blockquote p {
 
 .inner-wrap {
   position: relative;
-  width: 100%;
+  width: 80%;
   transition: -webkit-transform 500ms ease;
   transition: transform 500ms ease; }
   .inner-wrap:before, .inner-wrap:after {
