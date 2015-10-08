@@ -1,25 +1,27 @@
-nav.siteMapContainer {
-	padding-top: rem-calc(40);
-	padding-bottom: rem-calc(40);
+div.siteMapPageWrap {
+	padding: 2.2222222222rem 1rem;
 
-	.pageTitle {
-		font-weight: bold;
-		@media #{$small-up} {
-			font-size: rem-calc(28);
-		}
-	}
-	.siteMapList {
-		list-style-type: none;
-		padding: 0 0 0 rem-calc(8);
-		margin: 0 0 0 rem-calc(8);
+	nav.siteMapContainer {
 
-		a:visited {
-			color: $kiva-textlink;
-		}
-
-		p {
-			margin-bottom: rem-calc(5);
+		.pageTitle {
 			font-weight: bold;
+			@media #{$small-up} {
+				font-size: rem-calc(28);
+			}
+		}
+		.siteMapList {
+			list-style-type: none;
+			margin: 0;
+			padding: 0;
+
+			a:visited {
+				color: $kiva-textlink;
+			}
+
+			p {
+				margin-bottom: rem-calc(5);
+				font-weight: bold;
+			}
 		}
 	}
 }
