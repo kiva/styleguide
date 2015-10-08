@@ -8,14 +8,13 @@
     </a>
 
     <div id="partnerSelectModal" class="reveal-modal filters_countries" data-reveal>
-        <form id="allPartners">
-			{{#partners_list}}
-                <div class="partner filter checkbox-input">
+        <ul id="allPartners">
+			{{#partners}}
+                <li class="partner filter checkbox-input">
 					{{> 02-organisms/05-filters/15-partners-items}}
-                </div>
-			{{/partners_list}}
-
+                </li>
+			{{/partners}}
             <input type="submit" id="filter-partner-submit" class="applyButton smaller" value="Done" />
-        </form>
+        </ul>
     </div>
 </div>
