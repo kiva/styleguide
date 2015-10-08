@@ -57,10 +57,14 @@ define("Styleguide", ["jquery"], function(__WEBPACK_EXTERNAL_MODULE_2__) { retur
 	var $ = __webpack_require__(2);
 
 	$(document).foundation({
-	    equalizer: {
-	        equalize_on_stack: true
-	    }
+		equalizer: {
+			equalize_on_stack: true
+		}
+		, offcanvas : {
+			open_method: 'overlap'
+		}
 	});
+
 
 	header();
 	filters();
