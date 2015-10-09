@@ -17,9 +17,4 @@ $frame-width: $row-width;
 
 .frame {
 	@include frame-width();
-
-	.no-horizontal-padding {
-		padding-right: 0;
-		padding-left: 0;
-	}
 }
