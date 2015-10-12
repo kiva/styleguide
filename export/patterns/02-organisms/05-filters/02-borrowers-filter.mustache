@@ -1,8 +1,21 @@
 <a href="#"><span>Borrowers</span></a>
-<ul id="filter-gender-ul" class="button-group toggle filter-button-group-ul" data-toggle="buttons-radio">
-	{{#genders}}
-        <li class="filter borrower-filter-box">
-			{{> 02-organisms/05-filters/16-gender-items}}
-        </li>
-	{{/genders}}
+<ul class="button-group toggle filter-button-group-ul" data-toggle="buttons-radio">
+    <li class="filter borrower-filter-box">
+        <input class="filter borrower-input" type="checkbox" id="filter-borrower-label-women" name="filter-borrower-label-female" data-toggle="button">
+        <label class="filter borrower-label" class="button" for="filter-borrower-label-women">Women</label>
+    </li>
+    <li class="filter borrower-filter-box-right">
+        <input class="filter borrower-input" type="checkbox" id="filter-borrower-label-men" name="filter-borrower-label-male" data-toggle="button">
+        <label class="filter borrower-label" class="button" for="filter-borrower-label-men">Men</label>
+    </li>
+</ul>
+<ul class="button-group toggle filter-button-group-ul-bottom" data-toggle="buttons-radio">
+    <li class="filter borrower-filter-box">
+        <input class="filter borrower-input" type="checkbox" id="filter-borrower-label-individual" name="filter-borrower-label-individual" data-toggle="button">
+        <label class="filter borrower-label" class="button" for="filter-borrower-label-individual">Individual</label>
+    </li>
+    <li class="filter borrower-filter-box-right">
+        <input class="filter borrower-input" type="checkbox" id="filter-borrower-label-group" name="filter-borrower-label-group" data-toggle="button">
+        <label class="filter borrower-label" class="button" for="filter-borrower-label-group">Group</label>
+    </li>
 </ul>

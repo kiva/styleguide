@@ -1,7 +1,36 @@
-<div id="filter-slider-container" class="filter filter-slider">
-	{{#sliders}}
-        <li class="filter filter-slider-item">
-			{{> 02-organisms/05-filters/20-slider-items}}
-        </li>
-	{{/sliders}}
+
+<div class="filter filter-slider">
+	<span>Risk Rating</span>
+	<div class="filter filter-slider-inner">
+		<div class="risk-rating-slider" data-kv-name="riskRating"></div>
+	</div>
+</div>
+
+<div class="filter filter-slider">
+	<span>Delinquency Rate</span>
+    <div class="filter filter-slider-inner">
+		<div class="delinquency-rate-slider" data-kv-name=arrearsRate" data-kv-fraction></div>
+	</div>
+</div>
+
+
+<div class="filter filter-slider">
+	<span>Default Rate</span>
+    <div class="filter filter-slider-inner">
+		<div class="default-rate-slider" data-kv-name="defaultRate" data-kv-fraction></div>
+	</div>
+</div>
+
+<div class="filter filter-slider">
+	<span>Avg Cost to Borrowers</span>
+    <div class="filter filter-slider-inner">
+		<div class="borrower-cost-slider" data-kv-name="avgBorrowerCost" data-kv-fraction></div>
+	</div>
+</div>
+
+<div class="filter filter-slider">
+	<span>Profitability</span>
+    <div class="filter filter-slider-inner">
+		<div class="profitability-slider" data-kv-name="profitability"></div>
+	</div>
 </div>
