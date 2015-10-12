@@ -1,8 +1,18 @@
 <a href="#"><span>Miscellaneous</span></a>
-<ul id="misc-filters-container" class="button-group toggle filter-button-group-ul" data-toggle="buttons-radio">
+<ul class="button-group toggle filter-button-group-ul" data-toggle="buttons-radio">
+	<li class="filter checkbox-input">
+		<input type="checkbox" id="filter-matched" name="" value="matcherAccountId">
+		<label for="" class="filter checkbox-input-span">Matched Loans Only</label>
+		</input>
+	</li>
     <li class="filter checkbox-input">
-		{{#misc_filters}}
-			{{> 02-organisms/05-filters/21-misc-filters-items}}
-		{{/misc_filters}}
-    </li>
+		<input type="checkbox" id='filter-currencyRisk' name="filter-currencyRisk" value="currencyLossPossible">
+		<label class="filter checkbox-input-span">Exclude Loans with currency risk</label>
+		</input>
+	</li>
+    <li class="filter checkbox-input">
+		<input type="checkbox" id="filter-nonRated" name="filter-nonRated" value="excludeNonRated">
+		<label class="filter checkbox-input-span">Exclude Non-Rated Partners</label>
+		</input>
+	</li>
 </ul>
