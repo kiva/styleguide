@@ -42,8 +42,15 @@
 }
 
 ul.off-canvas-list li label {
-  background: #fff;
+  background: transparent;
   padding: 0rem;
+}
+
+.filter input[type=checkbox]:checked+label{
+    background: #7BA439;
+    color: #fff;
+    vertical-align: middle;
+    display: table-cell;
 }
 
 ul.off-canvas-list li a {
@@ -59,4 +66,15 @@ ul.off-canvas-list li a:hover {
 
 .inner-wrap {
   width: 80%;
+}
+.noUi-handle-lower div, .noUi-handle-upper div {
+    position: absolute;
+    color: #888;
+    bottom: -25px;
+    text-align: center;
+    width: 18px;
+    font-size: 0.8em;
+}
+. filter-slider-item {
+    margin: 1.5em 0;
 }
