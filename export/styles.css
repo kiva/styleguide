@@ -6982,6 +6982,7 @@ svg {
 .filter .checkbox-input {
   margin-left: 12px;
   display: block;
+  overflow: hidden;
   height: 21px; }
 .filter .checkbox-input-span {
   margin-left: 7px;
