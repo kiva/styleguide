@@ -1,0 +1,18 @@
+.select2-selection--multiple {
+
+    .select2-selection__choice {
+        background-color: #d2f0f8;
+
+        border: 1px solid $kiva-accent-blue;
+        border-radius: 0;
+        color: $kiva-accent-blue;
+    }
+
+    .select2-selection__choice__remove {
+        color: $kiva-accent-blue;
+
+        &:hover {
+            color: $kiva-textlink-hover;
+        }
+    }
+}

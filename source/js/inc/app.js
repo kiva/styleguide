@@ -19,6 +19,10 @@ $(document).foundation({
 	}
 });
 
+$('#partnersFilter').select2({
+	placeholder: 'Specify a partner'
+	, width: 'style'
+});
 
 header();
 filters();
