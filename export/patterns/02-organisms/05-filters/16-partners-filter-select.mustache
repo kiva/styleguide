@@ -1,0 +1,10 @@
+<a href="#"><span>Partner</span></a>
+<select name="partner[]" id="partnersFilter" multiple="multiple">
+    {{#partner-regions}}
+        <optgroup label="{{label}}">
+            {{#partners}}
+                <option value="{{id}}">{{name}}</option>
+            {{/partners}}
+        </optgroup>
+    {{/partner-regions}}
+</select>
