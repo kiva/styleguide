@@ -18,10 +18,20 @@
     margin-bottom: 0;
   }
 
+  .filter-component-mobile {
+    margin: 1em 0;
+  }
+
   .filter-keywords-search-box {
     color: #aaa;
     border: 1px solid #000;
     width: 210px;
+  }
+
+  .filter-keywords-search-box-mobile {
+    color: #aaa;
+    border: 1px solid #000;
+    width: 286px;
   }
 
   .filter-slider {
@@ -42,8 +52,16 @@
     padding: 0em 0.6666666667rem;
   }
 
+  .country-filter-box-mobile {
+    padding: 0em;
+  }
+
   .country-filter-text, .partner_filter_text {
     margin-left: 5px;
+  }
+
+  #misc-filters-container {
+    margin-bottom: 1em;
   }
 
   .borrower-filter-box {
@@ -65,7 +83,30 @@
     border-left: 0px;
     display: inline-table;
     vertical-align: middle;
+  }
 
+  .borrower-filter-box-mobile {
+    width: 143px;
+    height: 35px;
+    position: relative;
+    border: 1px solid #000;
+    text-align: center;
+    display: inline-table;
+    vertical-align: middle;
+    margin-top: 5px;
+  }
+
+  .borrower-filter-box-right-mobile {
+    width: 143px;
+    height: 35px;
+    position: relative;
+    border: 1px solid #000;
+    text-align: center;
+    border-left: 0px;
+    display: inline-table;
+    vertical-align: middle;
+    margin-left: -5px;
+    margin-top: 5px;
   }
 
   input[type=checkbox]:checked+label {
@@ -131,4 +172,13 @@
 .filter input[type=checkbox]:checked+label{
   background: #7BA439;
   color: #fff
+}
+
+hr {
+  margin: 0.2em 0;
+}
+
+.mobile-filters {
+  background: #fbfcfc;
+  margin-top: 0.5em;
 }
