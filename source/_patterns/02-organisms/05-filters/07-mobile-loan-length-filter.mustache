@@ -1,20 +1,9 @@
 <a href="#"><span class="filter mobile-filter-title">Loan Length</span></a>
 <ul id="filter-loan-length-ul" class="button-group toggle filter-button-group-ul" data-toggle="buttons-radio">
+	{{#loan_lengths}}
         <li class="filter borrower-filter-box-mobile">
-            <input class="filter borrower-input" type="checkbox" id="filter-loan-length-label-" name="filter-loan-length-label" data-toggle="button">
-            <label class="filter borrower-label-mobile" class="button" for="filter-loan-length-label-">8 MTHS OR LESS</label>
+			{{> 02-organisms/05-filters/30-mobile-loan-length-items}}
         </li>
-    <li class="filter borrower-filter-box-right-mobile">
-        <input class="filter borrower-input" type="checkbox" id="filter-loan-length-label-" name="filter-loan-length-label-" data-toggle="button">
-        <label class="filter borrower-label-mobile" class="button" for="filter-loan-length-label-">16 MTHS OR LESS</label>
-    </li>
-    <li class="filter borrower-filter-box-mobile">
-        <input class="filter borrower-input" type="checkbox" id="filter-loan-length-label-" name="filter-loan-length-label-" data-toggle="button">
-        <label class="filter borrower-label-mobile" class="button" for="filter-loan-length-label-">2 YRS OR LESS</label>
-    </li>
-    <li class="filter borrower-filter-box-right-mobile">
-        <input class="filter borrower-input" type="checkbox" id="filter-loan-length-label-" name="filter-loan-length-label-" data-toggle="button">
-        <label class="filter borrower-label-mobile" class="button" for="filter-loan-length-label-">2 YRS OR MORE</label>
-    </li>
+	{{/loan_lengths}}
 </ul>
 <hr/>
