@@ -33,6 +33,16 @@
     height:40px;
   }
 
+  .mobile-filter-sub-menu {
+    font-size: 0.8em;
+    color: #000;
+  }
+
+  .mobile-filter-title {
+    font-size:0.8em;
+    font-weight:bold;
+  }
+
   .filter-keywords-search-box {
     color: #aaa;
     border: 1px solid #000;
@@ -135,6 +145,13 @@
     border: 0px;
     display: table-cell;
     vertical-align: middle;
+  }
+
+  .borrower-label-mobile {
+    border: 0px;
+    display: table-cell;
+    vertical-align: middle;
+    color: #000;
   }
 
   .checkbox-input {
