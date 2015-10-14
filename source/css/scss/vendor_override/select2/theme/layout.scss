@@ -9,27 +9,27 @@
     $indent: 1rem;
 
     .select2-results__option .select2-results__option {
-        padding-left: 1em;
+        padding-left: $spacing + $indent;
 
         .select2-results__option {
-            margin-left: -1em;
-            padding-left: 2em;
+            margin-left: -$indent;
+            padding-left: $spacing + (2*$indent);
 
             .select2-results__option {
-                margin-left: -2em;
-                padding-left: 3em;
+                margin-left: -2*$indent;
+                padding-left: $spacing + (3*$indent);
 
                 .select2-results__option {
-                    margin-left: -3em;
-                    padding-left: 4em;
+                    margin-left: -3*$indent;
+                    padding-left: $spacing + (4*$indent);
 
                     .select2-results__option {
-                        margin-left: -4em;
-                        padding-left: 5em;
+                        margin-left: -4*$indent;
+                        padding-left: $spacing + (5*$indent);
 
                         .select2-results__option {
-                            margin-left: -5em;
-                            padding-left: 6em;
+                            margin-left: -5*$indent;
+                            padding-left: $spacing + (6*$indent);
                         }
                     }
                 }
@@ -38,7 +38,9 @@
     }
 
     .select2-results__group {
-        padding: $spacing 0;
-        margin: 0 $spacing;
+        padding: $spacing 0 0 0;
+        margin: 0 $spacing $spacing;
+        border-bottom: rem-calc(1) solid $iron;
+        font-weight: normal;
     }
 }
