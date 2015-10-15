@@ -11,15 +11,17 @@
   }
 
   .filter-component {
-    margin: 1em 0;
+    @media #{$small-only} {
+      margin: 1em 0;
+    }
+
+    @media #{$medium-up} {
+      margin: 1em 0;
+    }
   }
 
   .filter-component input {
     margin-bottom: 0;
-  }
-
-  .filter-component-mobile {
-    margin: 1em 0;
   }
 
   .mobile-apply-filters-button {
@@ -43,16 +45,32 @@
     font-weight:bold;
   }
 
+  h3 {
+    @media #{$small-only} {
+      font-size:0.8em;
+      font-weight: bold;
+      color: #928f8c;
+      margin: 0em 0.6666666667rem;
+    }
+
+    @media #{$medium-up} {
+      font-size:1em;
+      color: #928f8c;
+      margin: 0em 0.6666666667rem;
+    }
+  }
+
   .filter-keywords-search-box {
     color: #aaa;
     border: 1px solid #000;
-    width: 210px;
-  }
 
-  .filter-keywords-search-box-mobile {
-    color: #aaa;
-    border: 1px solid #000;
-    width: 286px;
+    @media #{$small-only} {
+      width: 286px;
+    }
+
+    @media #{$medium-up} {
+      width: 210px;
+    }
   }
 
   .filter-slider {
@@ -70,11 +88,13 @@
   }
 
   .country-filter-box {
-    padding: 0em 0.6666666667rem;
-  }
+    @media #{$small-only} {
+      padding: 0em;
+    }
 
-  .country-filter-box-mobile {
-    padding: 0em;
+    @media #{$medium-up} {
+      padding: 0em 0.6666666667rem;
+    }
   }
 
   .country-filter-text, .partner_filter_text {
@@ -86,48 +106,43 @@
   }
 
   .borrower-filter-box {
-    width: 105px;
-    height: 25px;
     position: relative;
     border: 1px solid #000;
     text-align: center;
     display: inline-table;
     vertical-align: middle;
+
+    @media #{$small-only} {
+      width: 143px;
+      height: 35px;
+      margin-top: 5px;
+    }
+
+    @media #{$medium-up} {
+      width: 105px;
+      height: 25px;
+    }
   }
 
   .borrower-filter-box-right {
-    width: 105px;
-    height: 25px;
     position: relative;
     border: 1px solid #000;
     text-align: center;
     border-left: 0px;
     display: inline-table;
     vertical-align: middle;
-  }
 
-  .borrower-filter-box-mobile {
-    width: 143px;
-    height: 35px;
-    position: relative;
-    border: 1px solid #000;
-    text-align: center;
-    display: inline-table;
-    vertical-align: middle;
-    margin-top: 5px;
-  }
+    @media #{$small-only} {
+      width: 143px;
+      height: 35px;
+      margin-left: -5px;
+      margin-top: 5px;
+    }
 
-  .borrower-filter-box-right-mobile {
-    width: 143px;
-    height: 35px;
-    position: relative;
-    border: 1px solid #000;
-    text-align: center;
-    border-left: 0px;
-    display: inline-table;
-    vertical-align: middle;
-    margin-left: -5px;
-    margin-top: 5px;
+    @media #{$medium-up} {
+      width: 105px;
+      height: 25px;
+    }
   }
 
   input[type=checkbox]:checked+label {

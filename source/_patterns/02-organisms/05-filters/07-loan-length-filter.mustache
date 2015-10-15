@@ -1,4 +1,9 @@
-<a href="#"><span>Loan Length</span></a>
-{{#loan-length}}
-    {{> 01-molecules/09-filters/04-quintuple-state-buttons}}
-{{/loan-length}}
+<h3 class="filter">Loan Length</h3>
+<ul id="filter-loan-length-ul" class="button-group toggle filter-button-group-ul" data-toggle="buttons-radio">
+	{{#loan_lengths}}
+        <li class="filter borrower-filter-box show-for-medium-up">
+			{{> 02-organisms/05-filters/19-loan-length-items}}
+        </li>
+	{{/loan_lengths}}
+</ul>
+<hr class="show-for-small-only"/>

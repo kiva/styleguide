@@ -1,38 +1,31 @@
-<a href="#"><span>Countries</span></a>
-<div class="filter country-filter-box">
-	<a href="#" data-reveal-id="countrySelectModal">
-		<svg class="icon icon-globe" width="23" height="23">
-			<use xlink:href="#icon-globe"/>
-		</svg>
-		<span class="filter country-filter-text">Select countries</span>
-	</a>
+<h3 class="filter">Countries</h3>
+<div class="filter country-filter-box show-for-medium-up">
+    <a href="#" data-reveal-id="countrySelectModal">
+        <svg class="icon icon-globe" width="23" height="23">
+            <use xlink:href="#icon-globe"/>
+        </svg>
+        <span class="filter country-filter-text">Select a country</span>
+    </a>
 
-	<div id="countrySelectModal" class="reveal-modal filters_countries"
-		 data-reveal>
+    <div id="countrySelectModal" class="reveal-modal filters_countries" data-reveal>
+        <form id="allCountries">
+			{{#countries_by_column}}
+                <div class="country filter checkbox-input show-for-medium-up">
+					{{> 02-organisms/05-filters/14-countries-items}}
+                </div>
+			{{/countries_by_column}}
 
-		<a class="close-reveal-modal" aria-label="Close">
-			<svg class="icon icon-x">
-				<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-x"></use>
-			</svg>
-		</a>
-
-
-		<form id="allCountries">
-			<div id="country-list">
-				{{#regions}}
-					<section class="region-name">{{name}}
-						{{#countries}}
-							<div class="country filter checkbox-input">
-								{{> 02-organisms/05-filters/14-countries-items}}
-							</div>
-						{{/countries}}
-					</section>
-				{{/regions}}
-			</div>
-
-			<input type="submit" id="filter-country-submit"
-				   class="applyButton smaller right" value="Done"/>
-		</form>
-	</div>
+            <input type="submit" id="filter-country-submit" class="applyButton smaller" value="Done" />
+        </form>
+    </div>
 </div>
 
+<div class="show-for-small-only">
+    <hr/>
+    <a href="#"><div class="filter mobile-filter-sub-menu">Select a Country
+        <svg class="icon-small-chevron-mobile" style="width:20;height:20;float:right">
+            <use xlink:href="#icon-small-chevron-mobile" transform='rotate(270 10 10)'/>
+        </svg>
+    </div></a>
+    <hr/>
+</div>
