@@ -18,10 +18,41 @@
     margin-bottom: 0;
   }
 
+  .filter-component-mobile {
+    margin: 1em 0;
+  }
+
+  .mobile-apply-filters-button {
+    display: block;
+    width:286px;
+    background:#25a7e2;
+    color:#fff;
+    margin:auto;
+    text-align:center;
+    border:0;
+    height:40px;
+  }
+
+  .mobile-filter-sub-menu {
+    font-size: 0.8em;
+    color: #000;
+  }
+
+  .mobile-filter-title {
+    font-size:0.8em;
+    font-weight:bold;
+  }
+
   .filter-keywords-search-box {
     color: #aaa;
     border: 1px solid #000;
     width: 210px;
+  }
+
+  .filter-keywords-search-box-mobile {
+    color: #aaa;
+    border: 1px solid #000;
+    width: 286px;
   }
 
   .filter-slider {
@@ -42,8 +73,16 @@
     padding: 0em 0.6666666667rem;
   }
 
+  .country-filter-box-mobile {
+    padding: 0em;
+  }
+
   .country-filter-text, .partner_filter_text {
     margin-left: 5px;
+  }
+
+  #misc-filters-container {
+    margin-bottom: 1em;
   }
 
   .borrower-filter-box {
@@ -65,7 +104,30 @@
     border-left: 0px;
     display: inline-table;
     vertical-align: middle;
+  }
 
+  .borrower-filter-box-mobile {
+    width: 143px;
+    height: 35px;
+    position: relative;
+    border: 1px solid #000;
+    text-align: center;
+    display: inline-table;
+    vertical-align: middle;
+    margin-top: 5px;
+  }
+
+  .borrower-filter-box-right-mobile {
+    width: 143px;
+    height: 35px;
+    position: relative;
+    border: 1px solid #000;
+    text-align: center;
+    border-left: 0px;
+    display: inline-table;
+    vertical-align: middle;
+    margin-left: -5px;
+    margin-top: 5px;
   }
 
   input[type=checkbox]:checked+label {
@@ -83,6 +145,13 @@
     border: 0px;
     display: table-cell;
     vertical-align: middle;
+  }
+
+  .borrower-label-mobile {
+    border: 0px;
+    display: table-cell;
+    vertical-align: middle;
+    color: #000;
   }
 
   .checkbox-input {
@@ -131,4 +200,33 @@
 .filter input[type=checkbox]:checked+label{
   background: #7BA439;
   color: #fff
+}
+
+.csscolumns #countrySelectModal #country-list {
+	@media #{$large-up} {
+		@include column-count(2);
+	}
+
+	@media #{$xxlarge-up} {
+		@include column-count(3);
+	}
+
+	.region-name {
+		@include column-break();
+	}
+}
+
+.no-csscolumns  #countrySelectModal #country-list {
+	width: 14rem;
+	margin: 0 auto;
+	padding-left: 3rem;
+}
+
+hr {
+  margin: 0.2em 0;
+}
+
+.mobile-filters {
+  background: #fbfcfc;
+  margin-top: 0.5em;
 }

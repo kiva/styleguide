@@ -1,0 +1,23 @@
+{
+	"name": "group",
+	"left-top": {
+		"id": "left-top",
+		"value": "left-top",
+		"label": "Left-top"
+	},
+	"right-top": {
+		"id": "right-top",
+		"value": "right-top",
+		"label": "Right-top"
+	},
+	"left-bottom": {
+		"id": "left-bottom",
+		"value": "left-bottom",
+		"label": "Left-bottom"
+	},
+	"right-bottom": {
+		"id": "right-bottom",
+		"value": "right-bottom",
+		"label": "Right-bottom"
+	}
+}

@@ -1,0 +1,13 @@
+// COLUMNS
+@mixin column-count($num-cols) {
+	-webkit-column-count: $num-cols;
+	-moz-column-count: $num-cols;
+	column-count: $num-cols;
+}
+
+@mixin column-break($value: avoid) {
+	-webkit-column-break-inside: $value;
+	page-break-inside: $value;
+	break-inside: $value;
+}
+
