@@ -13,7 +13,7 @@
     padding-right: 0;
   }
   .row {
-    padding-bottom: 1rem;
+    padding-bottom: 0;
     max-width: none;
     margin: 0;
     .line-break {
@@ -38,6 +38,9 @@
   }
 
   .story {
+    .line-break{
+      width: 100%;
+    }
     .left-content {
       @media #{$medium-up}{
         min-height: 80rem;
