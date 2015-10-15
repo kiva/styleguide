@@ -32,9 +32,9 @@
 }
 
 .filter-slider {
-  margin-bottom: 20px;
-  padding-top: 10px;
-  padding-bottom: 10px;
+  margin-bottom: rem-calc(20);
+  padding-top: rem-calc(10);
+  padding-bottom: rem-calc(10);
 }
 
 .left-off-canvas-menu {
@@ -42,8 +42,11 @@
 }
 
 ul.off-canvas-list li label {
-  background: transparent;
-  padding: 0rem;
+    background: transparent;
+    padding: 0;
+    font-size: $small-font-size;
+    font-weight: normal;
+    text-transform: none;
 }
 
 .filter input[type=checkbox]:checked+label{
@@ -55,8 +58,8 @@ ul.off-canvas-list li label {
 
 ul.off-canvas-list li a {
   color: #928f8c;
-  border: 0px;
-  padding: 0em 0.6666666667rem;
+  border: 0;
+  padding: 0 0.6666666667rem;
 }
 
 ul.off-canvas-list li a:hover {
@@ -70,12 +73,12 @@ ul.off-canvas-list li a:hover {
 .noUi-handle-lower div, .noUi-handle-upper div {
     position: absolute;
     color: #888;
-    bottom: -25px;
+    bottom: rem-calc(-25);
     text-align: center;
-    width: 18px;
-    font-size: 0.8em;
+    width: rem-calc(18);
+    font-size: 0.8rem;
 }
 
 .filter-slider-item {
-    margin: 1.5em 0;
+    margin: 1.5rem 0;
 }

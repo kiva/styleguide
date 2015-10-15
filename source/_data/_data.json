@@ -869,6 +869,59 @@
 			}
 		}
 	},
+	"borrower-filters": [
+		{
+			"name": "gender",
+			"left": {
+				"id": "women",
+				"value": "women",
+				"label": "Women"
+			},
+			"right": {
+				"id": "men",
+				"value": "men",
+				"label": "Men"
+			}
+		},
+		{
+			"name": "group",
+			"left": {
+				"id": "individual",
+				"value": "false",
+				"label": "Individual"
+			},
+			"right": {
+				"id": "group",
+				"value": "true",
+				"label": "Group"
+			}
+		}
+	],
+	"loan-length": [
+		{
+			"name": "loan-length",
+			"left-top": {
+				"id": "left-top",
+				"value": "left-top",
+				"label": "8 mths or less"
+			},
+			"right-top": {
+				"id": "right-top",
+				"value": "right-top",
+				"label": "16 mths or less"
+			},
+			"left-bottom": {
+				"id": "left-bottom",
+				"value": "left-bottom",
+				"label": "2 yrs or less"
+			},
+			"right-bottom": {
+				"id": "right-bottom",
+				"value": "right-bottom",
+				"label": "2 yrs or more"
+			}
+		}
+	],
 	"partners": [
 		{"id":"312", "name":"Abaarso School of Science and Technology"},
 		{"id":"131", "name":"Accion East"},
