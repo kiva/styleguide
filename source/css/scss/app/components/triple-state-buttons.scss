@@ -1,0 +1,67 @@
+.triple-state-buttons, .quintuple-state-buttons {
+    position: relative;
+    background-color: $white;
+
+    label.ts-label, label.qs-label {
+        width: 50%;
+        text-align: center;
+        float: left;
+        cursor: pointer;
+
+        margin: 0;
+        padding: 0.4rem;
+        border: rem-calc(1) solid $kiva-text-dark;
+        color: $kiva-text-dark;
+
+        &:nth-of-type(even) {
+            border-left: none;
+        }
+
+        &:nth-of-type(n+3) {
+            border-top: none;
+        }
+
+        &.ts-floater, &.qs-floater {
+            display: none;
+            position: absolute;
+            border: rem-calc(1) solid $kiva-green;
+        }
+    }
+
+    input {
+        display: none;
+
+        &:checked + label.ts-label,
+        &:checked + label.qs-label {
+            border-color: $kiva-green;
+            color: $white;
+            background-color: $kiva-green;
+        }
+
+        &.ts-left:checked ~ label.ts-floater,
+        &.qs-left-top:checked ~ label.qs-floater {
+            display: block;
+            left: 0;
+            top: 0;
+        }
+
+        &.ts-right:checked ~ label.ts-floater,
+        &.qs-right-top:checked ~ label.qs-floater {
+            display: block;
+            right: rem-calc(1);
+            top: 0;
+        }
+
+        &.qs-left-bottom:checked ~ label.qs-floater {
+            display: block;
+            left: 0;
+            bottom: 0;
+        }
+
+        &.qs-right-bottom:checked ~ label.qs-floater {
+            display: block;
+            right: rem-calc(1);
+            bottom: 0;
+        }
+    }
+}

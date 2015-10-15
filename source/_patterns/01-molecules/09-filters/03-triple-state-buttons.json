@@ -1,0 +1,13 @@
+{
+	"name": "group",
+	"left": {
+		"id": "left",
+		"value": "left",
+		"label": "Left"
+	},
+	"right": {
+		"id": "right",
+		"value": "right",
+		"label": "Right"
+	}
+}
