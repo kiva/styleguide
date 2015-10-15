@@ -202,6 +202,26 @@
   color: #fff
 }
 
+.csscolumns #countrySelectModal #country-list {
+	@media #{$large-up} {
+		@include column-count(2);
+	}
+
+	@media #{$xxlarge-up} {
+		@include column-count(3);
+	}
+
+	.region-name {
+		@include column-break();
+	}
+}
+
+.no-csscolumns  #countrySelectModal #country-list {
+	width: 14rem;
+	margin: 0 auto;
+	padding-left: 3rem;
+}
+
 hr {
   margin: 0.2em 0;
 }
