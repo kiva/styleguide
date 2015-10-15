@@ -351,7 +351,10 @@
 	var $loanImageFooter = $('.loan-image-footer');
 	var $prevArrow = $('.carousel-prev');
 	var $nextArrow = $('.carousel-next');
-	var margin = $('.slick-active').find('.loan-image').css('margin-right');
+	var $slickActive = $('.slick-active');
+	var slickWidth = $slickActive.width();
+	var imageWidth = $($slickActive.children()[0]).width();
+	var margin = (slickWidth - imageWidth) / 2;
 	$loanMessage.css('right', margin);
 	$loanMessage.css('visibility', 'visible');
 	$loanImageFooter.css('position', 'relative');
@@ -364,7 +367,10 @@
 	});
 
 	$slickCarousel.on('afterChange', function (event, slick, currentSlide) {
-		var margin = $('.slick-active').find('.loan-image').css('margin-right');
+		var $slickActive = $('.slick-active');
+		var slickWidth = $slickActive.width();
+		var imageWidth = $($slickActive.children()[0]).width();
+		var margin = (slickWidth - imageWidth) / 2;
 		$loanImageFooter.css('margin-right', margin);
 		$loanImageFooter.css('margin-left', margin);
 		$loanMessage.css('right', margin);
