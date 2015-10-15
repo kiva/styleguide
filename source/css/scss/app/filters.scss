@@ -160,13 +160,9 @@
     border: 0px;
     display: table-cell;
     vertical-align: middle;
-  }
-
-  .borrower-label-mobile {
-    border: 0px;
-    display: table-cell;
-    vertical-align: middle;
-    color: #000;
+    @media #{$small-only} {
+      color: #000;
+    }
   }
 
   .checkbox-input {
