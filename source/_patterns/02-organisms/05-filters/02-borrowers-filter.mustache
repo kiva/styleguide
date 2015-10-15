@@ -1,8 +1,4 @@
 <a href="#"><span>Borrowers</span></a>
-<ul id="filter-gender-ul" class="button-group toggle filter-button-group-ul" data-toggle="buttons-radio">
-	{{#genders}}
-        <li class="filter borrower-filter-box">
-			{{> 02-organisms/05-filters/16-gender-items}}
-        </li>
-	{{/genders}}
-</ul>
+{{#borrower-filters}}
+    {{> 01-molecules/09-filters/03-triple-state-buttons}}
+{{/borrower-filters}}

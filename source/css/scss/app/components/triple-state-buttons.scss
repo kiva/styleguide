@@ -3,6 +3,7 @@
     background-color: $white;
 
     label.ts-label, label.qs-label {
+        box-sizing: border-box;
         width: 50%;
         text-align: center;
         float: left;
