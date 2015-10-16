@@ -63,14 +63,7 @@
   .filter-keywords-search-box {
     color: #aaa;
     border: 1px solid #000;
-
-    @media #{$small-only} {
-      width: 286px;
-    }
-
-    @media #{$medium-up} {
-      width: 210px;
-    }
+    width: 220px;
   }
 
   .filter-slider {
