@@ -7,17 +7,31 @@
         <span class="filter country-filter-text">Select a country</span>
     </a>
 
-    <div id="countrySelectModal" class="reveal-modal filters_countries" data-reveal>
-        <form id="allCountries">
-			{{#countries_by_column}}
-                <div class="country filter checkbox-input show-for-medium-up">
-					{{> 02-organisms/05-filters/14-countries-items}}
-                </div>
-			{{/countries_by_column}}
+	<div id="countrySelectModal" class="reveal-modal filters_countries" data-reveal>
 
-            <input type="submit" id="filter-country-submit" class="applyButton smaller" value="Done" />
-        </form>
-    </div>
+		<a class="close-reveal-modal" aria-label="Close">
+			<svg class="icon icon-x">
+				<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-x"></use>
+			</svg>
+		</a>
+
+
+		<form id="allCountries">
+			<div id="country-list">
+				{{#regions}}
+					<section class="region-name">{{name}}
+						{{#countries}}
+							<div class="country filter checkbox-input show-for-medium-up">
+								{{> 02-organisms/05-filters/14-countries-items}}
+							</div>
+						{{/countries}}
+					</section>
+				{{/regions}}
+			</div>
+
+			<input type="submit" id="filter-country-submit" class="applyButton smaller right" value="Done"/>
+		</form>
+	</div>
 </div>
 
 <div class="show-for-small-only">
