@@ -127,17 +127,21 @@
     max-width: none;
   }
 
+  .amount-raised {
+    .inline {
+      display: inline-block;
+    }
+  }
   .raised-info {
     div, .lender-count {
       padding: 0;
     }
-    .lender-count{
+    .lender-count {
       color: #333;
     }
     @media #{$small-only}{
       .lender-count {
-        position: absolute;
-        right: 15px;
+        float: right;
       }
       div, .lender-count {
         font-size: $small-font-size;
