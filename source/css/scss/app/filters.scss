@@ -161,7 +161,15 @@
   .checkbox-input {
     margin-left: 12px;
     display:block;
-    height:21px;
+  }
+
+  input[type=checkbox] {
+    margin: 0;
+  }
+
+  input[type=checkbox]:checked+label{
+    background: #7BA439;
+    color: #fff
   }
 
   .checkbox-input-span {
@@ -199,11 +207,6 @@
   text-align: center;
   width: 18px;
   font-size: 0.8em;
-}
-
-.filter input[type=checkbox]:checked+label{
-  background: #7BA439;
-  color: #fff
 }
 
 .csscolumns #countrySelectModal #country-list {

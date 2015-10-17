@@ -31,6 +31,17 @@
     }
   }
 
+  &[aria-expanded="true"] {
+    .icon {
+      $transform: rotate(-180deg);
+
+      -webkit-transform: $transform;
+      -ms-transform: $transform;
+      transform: $transform;
+    }
+  }
+
+
   .ac-input {
     display: none;
   }
