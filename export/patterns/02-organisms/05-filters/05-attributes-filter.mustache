@@ -1,29 +1,10 @@
-<div class="show-for-small-only">
-    <dl class="accordion" data-accordion>
-        <dd>
-            <h3 class="filter show-for-small-only">
-                <a href="#attributes-panels">Attributes
-                    <svg class="icon-small-chevron-mobile" style="width:20;height:20;float:right">
-                        <use xlink:href="#icon-small-chevron-mobile" transform='rotate(270 10 10)'/>
-                    </svg></a>
-            </h3>
+<h3 class="filter show-for-medium-up">Attributes</h3>
+<h3 data-kv-accordion class="show-for-small-only" aria-controls="filter-attributes-ul" aria-expanded="true">Attributes</h3>
 
-            <div class="content" id="attributes-panels">
-                <li class="links">
-					{{> 02-organisms/05-filters/12-attributes-items}}
-                </li>
-            </div>
-        </dd>
-    </dl>
-
-    <hr class="show-for-small-only"/>
-</div>
-
-<h3 class="filter show-for-medium-up">Attribtues</h3>
-<ul id="filter-attributes-ul" class="button-group toggle filter-button-group-ul show-for-medium-up" data-toggle="buttons-radio">
+<ul id="filter-attributes-ul" class="button-group toggle filter-button-group-ul" data-toggle="buttons-radio">
 	{{#attributes}}
         <li class="filter checkbox-input">
-			{{> 02-organisms/05-filters/12-attributes-items}}
+			{{> 02-organisms/05-filters/24-checkbox-item}}
         </li>
 	{{/attributes}}
 </ul>
