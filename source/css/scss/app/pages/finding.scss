@@ -35,3 +35,34 @@
 .select2-results__option--highlighted {
     background-color: $kiva-accent-blue;
 }
+
+.left-off-canvas-menu {
+    $border: rem-calc(1) solid $iron;
+    border-right: $border;
+    border-bottom: $border;
+}
+
+.results-region {
+    padding-left: rem-calc(20);
+}
+
+@media #{$large-up} {
+    .move-right > .inner-wrap {
+        -webkit-transform: none;
+        transform: none;
+        width: 100%;
+
+        .left-off-canvas-menu {
+            float: left;
+            position: relative;
+            display: inline-block;
+            -webkit-transform: none;
+            transform: none;
+        }
+
+        .results-region {
+            display: inline-block;
+            width: calc(100% - #{rem-calc(251)});
+        }
+    }
+}
