@@ -49,7 +49,7 @@
     @media #{$small-only} {
       font-size:0.8em;
       font-weight: bold;
-      color: #928f8c;
+      color: #000;
       margin: 0em 0.6666666667rem;
     }
 
@@ -63,7 +63,13 @@
   .filter-keywords-search-box {
     color: #aaa;
     border: 1px solid #000;
-    width: 220px;
+    @media #{$small-only} {
+      width: 225px;
+    }
+
+    @media #{$medium-up} {
+      width: 220px;
+    }
   }
 
   .filter-slider {
@@ -165,11 +171,17 @@
 
   input[type=checkbox] {
     margin: 0;
+    @media #{$small-only} {
+      display: none;
+    }
   }
 
   input[type=checkbox]:checked+label{
     background: #7BA439;
-    color: #fff
+    color: #fff;
+    @media #{$small-only} {
+      display: none;
+    }
   }
 
   .checkbox-input-span {
@@ -187,13 +199,25 @@
 }
 
 .filter-button-group-ul {
-  padding: 0em 1rem;
+  @media #{$small-only} {
+    padding: 0em 0.7rem;
+  }
+
+  @media #{$medium-up} {
+    padding: 0em 1rem;
+  }
 }
 
 .filter-button-group-ul-bottom {
   margin-top: 0.5em;
-  padding: 0em 1rem;
   line-height: 1em;
+  @media #{$small-only} {
+    padding: 0em 0.7rem;
+  }
+
+  @media #{$medium-up} {
+    padding: 0em 1rem;
+  }
 }
 
 .filters_countries {
