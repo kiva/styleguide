@@ -144,13 +144,6 @@
     }
   }
 
-  input[type=checkbox]:checked+label {
-    background: #7BA439;
-    color: #fff;
-    display: table-cell;
-    vertical-align: middle;
-  }
-
   .borrower-input {
     display: none;
   }
@@ -177,8 +170,6 @@
   }
 
   input[type=checkbox]:checked+label{
-    background: #7BA439;
-    color: #fff;
     @media #{$small-only} {
       display: none;
     }
