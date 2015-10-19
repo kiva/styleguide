@@ -62,7 +62,7 @@
 
   .filter-keywords-search-box {
     margin: 0em 0.6666666667rem;
-    color: #aaa;
+    color: #000;
     border: 1px solid #000;
     @media #{$small-only} {
       width: 225px;
@@ -161,6 +161,7 @@
   .checkbox-input {
     margin-left: 12px;
     display:block;
+    height: 21px;
   }
 
   input[type=checkbox] {
