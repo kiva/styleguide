@@ -7,39 +7,41 @@
         <span class="filter country-filter-text">Select a country</span>
     </a>
 
-	<div id="countrySelectModal" class="reveal-modal filters_countries" data-reveal>
+    <div id="countrySelectModal" class="reveal-modal filters_countries" data-reveal>
 
-		<a class="close-reveal-modal" aria-label="Close">
-			<svg class="icon icon-x">
-				<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-x"></use>
-			</svg>
-		</a>
+        <a class="close-reveal-modal" aria-label="Close">
+            <svg class="icon icon-x">
+                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-x"></use>
+            </svg>
+        </a>
 
 
-		<form id="allCountries">
-			<div id="country-list">
+        <form id="allCountries">
+            <div id="country-list">
 				{{#regions}}
-					<section class="region-name">{{name}}
+                    <section class="region-name">{{name}}
 						{{#countries}}
-							<div class="country filter checkbox-input show-for-medium-up">
+                            <div class="country filter checkbox-input show-for-medium-up">
 								{{> 02-organisms/05-filters/14-countries-items}}
-							</div>
+                            </div>
 						{{/countries}}
-					</section>
+                    </section>
 				{{/regions}}
-			</div>
+            </div>
 
-			<input type="submit" id="filter-country-submit" class="applyButton smaller right" value="Done"/>
-		</form>
-	</div>
+            <input type="submit" id="filter-country-submit" class="applyButton smaller right" value="Done"/>
+        </form>
+    </div>
 </div>
 
 <div class="show-for-small-only">
     <hr/>
-    <a href="#"><div class="filter mobile-filter-sub-menu">Select a Country
-        <svg class="icon-small-chevron-mobile" style="width:20;height:20;float:right">
-            <use xlink:href="#icon-small-chevron-mobile" transform='rotate(270 10 10)'/>
-        </svg>
+    <a href="#"><div class="ac-container filter mobile-filter-sub-menu">Select a Country
+		<span class="ac-dropdown-icon">
+			<svg class="icon icon-large-chevron" style="margin-right: 12px">
+                <use xlink:href="#icon-large-chevron"></use>
+            </svg>
+		</span>
     </div></a>
     <hr/>
 </div>

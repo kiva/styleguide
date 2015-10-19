@@ -22598,7 +22598,6 @@
 				.trigger('hide');
 		});
 
-
 		var typeahead_menu_repositioning = function() {
 			var offset = $search_box.offset();
 			$('.top-nav-search-menu').css({
@@ -22623,6 +22622,7 @@
 			close_button_visibility();
 			typeahead_menu_repositioning();
 		}, 200));
+
 
 
 		// Lend Mega-Menu
