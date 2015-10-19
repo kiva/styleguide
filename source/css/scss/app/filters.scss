@@ -195,12 +195,13 @@
       &:after{
         content: '';
         display: inline-block;
-        width: 3px;
-        height: 6px;
+        width: 6px;
+        height: 12px;
         border: solid #25a7e2 2px;
         border-width: 0 2px 2px 0;
         transform: rotate(45deg);
         text-align: right;
+        margin-right: -0.5em;
       }
     }
   }
