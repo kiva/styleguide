@@ -758,6 +758,191 @@
 			]
 		}
 	],
+	"filters": [
+		{
+			"dom-id": "2",
+			"name": "Agriculture",
+			"id": "3"
+		},
+		{
+			"dom-id": "2",
+			"name": "Arts",
+			"id": "33"
+		},
+		{
+			"dom-id": "2",
+			"name": "Clothing",
+			"id": "33"
+		},
+		{
+			"dom-id": "2",
+			"name": "Construction",
+			"id": "33"
+		},
+		{
+			"dom-id": "2",
+			"name": "Education",
+			"id": "33"
+		},
+		{
+			"dom-id": "2",
+			"name": "Entertainment",
+			"id": "33"
+		},
+		{
+			"dom-id": "2",
+			"name": "Food",
+			"id": "33"
+		},
+		{
+			"dom-id": "2",
+			"name": "Health",
+			"id": "33"
+		},
+		{
+			"dom-id": "2",
+			"name": "Housing",
+			"id": "33"
+		},
+		{
+			"dom-id": "2",
+			"name": "Manufacturing",
+			"id": "33"
+		},
+		{
+			"dom-id": "2",
+			"name": "Personal Use",
+			"id": "33"
+		},
+		{
+			"dom-id": "2",
+			"name": "Retail",
+			"id": "33"
+		},
+		{
+			"dom-id": "2",
+			"name": "Services",
+			"id": "33"
+		},
+		{
+			"dom-id": "2",
+			"name": "Transportation",
+			"id": "33"
+		},
+		{
+			"dom-id": "2",
+			"name": "Wholesale",
+			"id": "33"
+		}
+	],
+	"attributes": [
+		{
+			"dom-id": "2",
+			"name": "Green",
+			"id": "3"
+		},
+		{
+			"dom-id": "2",
+			"name": "Higher Education",
+			"id": "33"
+		},
+		{
+			"name": "Islamic Finance"
+		},
+		{
+			"name": "Youth"
+		},
+		{
+			"name": "Start-Up"
+		},
+		{
+			"name": "Water and Sanitation"
+		},
+		{
+			"name": "Vulnerable Groups"
+		},
+		{
+			"name": "Fair Trade"
+		},
+		{
+			"name": "Rural Exclusion"
+		},
+		{
+			"name": "Mobile Technology"
+		},
+		{
+			"name": "Underfunded Areas"
+		},
+		{
+			"name": "Conflict Zones"
+		},
+		{
+			"name": "Job Creation"
+		},
+		{
+			"name": "Growing Businesses"
+		},
+		{
+			"name": "Disaster recovery"
+		},
+		{
+			"name": "Innovative Loans"
+		}
+	],
+	"tags": [
+		{
+			"dom-id": "2",
+			"name": "Animals",
+			"id": "3"
+		},
+		{
+			"dom-id": "2",
+			"name": "Eco-friendly",
+			"id": "33"
+		},
+		{
+			"name": "Elderly"
+		},
+		{
+			"name": "Fabrics"
+		},
+		{
+			"name": "FirstLoan"
+		},
+		{
+			"name": "Fabrics"
+		},
+		{
+			"name": "Vulnerable Groups"
+		},
+		{
+			"name": "Fair Trade"
+		},
+		{
+			"name": "Rural Exclusion"
+		},
+		{
+			"name": "Mobile Technology"
+		},
+		{
+			"name": "Underfunded Areas"
+		},
+		{
+			"name": "Conflict Zones"
+		},
+		{
+			"name": "Job Creation"
+		},
+		{
+			"name": "Growing Businesses"
+		},
+		{
+			"name": "Disaster recovery"
+		},
+		{
+			"name": "Innovative Loans"
+		}
+	],
 	"loans": [
 		{
 			"title": "Senia Del Carmen",
