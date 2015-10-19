@@ -37,12 +37,6 @@
             border-color: $kiva-green;
             color: $white;
             background-color: $kiva-green;
-          @media #{$medium-up} {
-            background-color: $blue;
-          }
-          @media #{$small-only} {
-            background-color: $blue;
-          }
         }
 
         &.ts-left:checked ~ label.ts-floater,

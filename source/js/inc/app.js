@@ -15,7 +15,7 @@ $(document).foundation({
 		equalize_on_stack: true
 	}
 	, offcanvas : {
-		open_method: 'overlap'
+		open_method: 'move'
 	}
 });
 
