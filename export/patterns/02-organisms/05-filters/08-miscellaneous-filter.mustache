@@ -1,5 +1,15 @@
-<h3 class="filter">Loan Miscellaneous</h3>
-<ul id="misc-filters-container" class="button-group toggle filter-button-group-ul" data-toggle="buttons-radio">
+<h3 class="filter show-for-medium-up">Loan Miscellaneous</h3>
+
+<h3 id="misc-accordion-selector" data-kv-accordion class="interact ac-container show-for-small-only" aria-controls="misc-filters-container" aria-expanded="false">
+    Loan Miscellaneous
+	<span class="ac-dropdown-icon">
+		<svg class="icon icon-large-chevron" style="margin-right: 12px">
+            <use xlink:href="#icon-large-chevron"></use>
+        </svg>
+	</span>
+</h3>
+
+<ul id="misc-filters-container" class="button-group toggle filter-button-group-ul" data-toggle="buttons-radio" aria-hidden="false">
     <li class="filter checkbox-input show-for-medium-up">
 		{{#misc_filters}}
 			{{> 02-organisms/05-filters/21-misc-filters-items}}

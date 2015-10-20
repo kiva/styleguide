@@ -22742,13 +22742,11 @@ define("Styleguide", ["jquery"], function(__WEBPACK_EXTERNAL_MODULE_2__) { retur
 		});
 
 		$(window).on('resize', Foundation.utils.throttle(function() {
-			// move these elsewhere
-			if (window.matchMedia(Foundation.media_queries.xlarge).matches || window.matchMedia(Foundation.media_queries.xxlarge).matches){
-				$('.off-canvas-wrap').foundation('offcanvas', 'show', 'move-right');
-				$('.filter-menu-button').css('display','none');
-			} else {
-				$('.off-canvas-wrap').foundation('offcanvas', 'hide', 'move-right');
-				$('.filter-menu-button').css('display','block');
+			if (!$('.off-canvas-wrap').hasClass('move-right')){
+				if (window.matchMedia(Foundation.media_queries.xlarge).matches || window.matchMedia(Foundation.media_queries.xxlarge).matches){
+					$('.off-canvas-wrap').foundation('offcanvas', 'show', 'move-right');
+					$('.filter-menu-button').css('display','none');
+				}
 			}
 
 			$targets.each(function() {
