@@ -50,13 +50,13 @@ ul.off-canvas-list li label {
 }
 
 ul.off-canvas-list li a {
-  color: #928f8c;
+  color: $charcoal;
   border: 0;
   padding: 0 0.6666666667rem;
 }
 
 ul.off-canvas-list li a:hover {
-  background: #fff;
+  background: $white;
   text-decoration: none;
 }
 
@@ -65,7 +65,7 @@ ul.off-canvas-list li a:hover {
 }
 .noUi-handle-lower div, .noUi-handle-upper div {
     position: absolute;
-    color: #888;
+    color: $jumbo;
     bottom: rem-calc(-25);
     text-align: center;
     width: rem-calc(18);

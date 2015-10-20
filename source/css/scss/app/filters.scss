@@ -1,38 +1,33 @@
 .filter {
-  .layover-icon{
-    float: right;
-  }
-
   .filter-distribution-icon {
     margin-left: 75%;
     margin-top:10px;
-    border:1px solid #000;
+    border:1px solid $charcoal;
     padding:1px 5px;
   }
 
   .filter-distribution-icon a {
-    color: #000;
-  }
-
-  .filter-header, .filter-header a:link {
-    margin: 0.5em;
-    text-align:center;
-    color:#000;
+    color: $charcoal;
   }
 
   .filter-menu-button {
-    border:1px solid #000;
+    border:1px solid $charcoal;
     font-size: 0.8em;
     width: 80px;
     height: 25px;
     margin: 0.5em
   }
 
-  .filter-component {
+  .filter-header {
     @media #{$small-only} {
-      margin: 1em 0;
+      margin: 0.5em;
+      text-align:center;
+      color:$charcoal;
     }
+  }
 
+  .filter-component {
+    margin: 0;
     @media #{$medium-up} {
       margin: 1em 0;
     }
@@ -46,7 +41,7 @@
     display: block;
     width:286px;
     background:#25a7e2;
-    color:#fff;
+    color:$white;
     margin:auto;
     text-align:center;
     border:0;
@@ -55,7 +50,7 @@
 
   .mobile-filter-sub-menu {
     font-size: 0.8em;
-    color: #000;
+    color: $charcoal;
   }
 
   .mobile-filter-title {
@@ -64,33 +59,28 @@
   }
 
   h3 {
-    @media #{$small-only} {
-      font-size:0.8em;
-      font-weight: bold;
-      color: #aaa;
-      margin: 0.5em 0.6666666667rem;
-    }
+    font-size:0.8em;
+    font-weight: bold;
+    color: $gray;
+    margin: 0.5em 0.6666666667rem;
 
     @media #{$medium-up} {
       font-size:1em;
-      color: #928f8c;
+      color: $gray;
       margin: 0em 0.6666666667rem;
     }
   }
 
   .active {
-    @media #{$small-only} {
-      color: #000;
-    }
+    color: $charcoal;
+    font-weight: 300;
   }
 
   .filter-keywords-search-box {
-    color: #000;
-    border: 1px solid #000;
-    @media #{$small-only} {
-      width: 225px;
-      margin: 0;
-    }
+    color: $charcoal;
+    border: 1px solid $charcoal;
+    width: 225px;
+    margin: 0;
 
     @media #{$medium-up} {
       width: 220px;
@@ -99,7 +89,7 @@
   }
 
   .filter-slider {
-    color: #928f8c;
+    color: $green;
     border: 0px;
     padding: 0em 0.6666666667rem;
   }
@@ -113,16 +103,14 @@
   }
 
   .country-filter-box {
-    @media #{$small-only} {
-      padding: 0em;
-    }
+    padding: 0em;
 
     @media #{$medium-up} {
       padding: 0em 0.6666666667rem;
     }
   }
 
-  .country-filter-text, .partner_filter_text {
+  .partner_filter_text {
     margin-left: 5px;
   }
 
@@ -132,16 +120,13 @@
 
   .borrower-filter-box {
     position: relative;
-    border: 1px solid #000;
+    border: 1px solid $charcoal;
     text-align: center;
     display: inline-table;
     vertical-align: middle;
-
-    @media #{$small-only} {
-      width: 143px;
-      height: 35px;
-      margin-top: 5px;
-    }
+    width: 143px;
+    height: 35px;
+    margin-top: 5px;
 
     @media #{$medium-up} {
       width: 105px;
@@ -151,18 +136,15 @@
 
   .borrower-filter-box-right {
     position: relative;
-    border: 1px solid #000;
+    border: 1px solid $charcoal;
     text-align: center;
     border-left: 0px;
     display: inline-table;
     vertical-align: middle;
-
-    @media #{$small-only} {
-      width: 143px;
-      height: 35px;
-      margin-left: -5px;
-      margin-top: 5px;
-    }
+    width: 143px;
+    height: 35px;
+    margin-left: -5px;
+    margin-top: 5px;
 
     @media #{$medium-up} {
       width: 105px;
@@ -178,20 +160,22 @@
     border: 0px;
     display: table-cell;
     vertical-align: middle;
+
     @media #{$small-only} {
-      color: #000;
+      color: $charcoal;
     }
   }
 
   .checkbox-input {
     padding-left: 12px;
     display:block;
-    @media #{$small-only} {
-      height: 25px;
-      display: inline-table;
-    }
+    height: 44px;
+    display: inline-table;
+
     @media #{$medium-up} {
-      height: 44px;
+      height: 25px;
+      margin-left: 10px;
+      width: 240px;
     }
   }
 
@@ -204,7 +188,7 @@
 
   input[type=checkbox]:checked+label{
     @media #{$small-only} {
-      &:after{
+      &:before{
         content: '';
         display: inline-block;
         width: 6px;
@@ -212,9 +196,7 @@
         border: solid $kiva-green 2px;
         border-width: 0 2px 2px 0;
         transform: rotate(45deg);
-        text-align: right;
-        float:right;
-        margin-right: 0.3em 1.5em 0 0;
+        margin-right: 10px;
       }
     }
   }
@@ -222,10 +204,14 @@
   .checkbox-input-span {
     margin-left: 3px;
     font-size: 0.8em;
-    color: #000;
+    color: $charcoal;
     border: 0px;
-    display: table-cell;
-    text-transform: none;
+    display: inline;
+    @media #{$small-only} {
+      display: table-cell;
+      text-transform: none;
+      vertical-align: middle;
+    }
   }
 
   .filter-button-group-ul {
@@ -233,17 +219,18 @@
     -webkit-box-shadow: inset 0px 1px 1px rgba(50, 50, 50, 0.75);
     -moz-box-shadow:    inset 0px 1px 1px rgba(50, 50, 50, 0.75);
     box-shadow:         inset 0px 1px 1px rgba(50, 50, 50, 0.75);
+    @media #{$medium-up} {
+      background: #fff;
+    }
   }
 }
 
 .reveal-modal {
-  background: #fff;
+  background: $white;
 }
 
 .filter-button-group-ul {
-  @media #{$small-only} {
-    padding: 0em;
-  }
+  padding: 0em;
 
   @media #{$medium-up} {
     padding: 0;
@@ -253,9 +240,7 @@
 .filter-button-group-ul-bottom {
   margin-top: 0.5em;
   line-height: 1em;
-  @media #{$small-only} {
-    padding: 0em 0.7rem;
-  }
+  padding: 0em 0.7rem;
 
   @media #{$medium-up} {
     padding: 0;
@@ -263,12 +248,12 @@
 }
 
 .filters_countries {
-  background: #fff;
+  background: $white;
 }
 
 .noUi-handle-lower div, .noUi-handle-upper div {
   position: absolute;
-  color: #888;
+  color: $jumbo;
   bottom: -25px;
   text-align: center;
   width: 18px;
@@ -296,11 +281,10 @@
 }
 
 hr {
-  margin: 0.2em 0;
+  margin: 0;
 }
 
 .mobile-filters {
   background: #fbfcfc;
   margin-top: 0.5em;
 }
-
