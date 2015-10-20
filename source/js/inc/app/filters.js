@@ -4,13 +4,19 @@ module.exports = function() {
 	var $ = require('jquery');
 	var Foundation = require('Foundation');
 
-	if (window.matchMedia(Foundation.media_queries.xlarge).matches || window.matchMedia(Foundation.media_queries.xxlarge).matches){
-		$('.off-canvas-wrap').foundation('offcanvas', 'show', 'move-right');
-		$('.filter-menu-button').css('display','none');
-	} else {
-		$('.off-canvas-wrap').foundation('offcanvas', 'hide', 'move-right');
-		$('.filter-menu-button').css('display','block');
-	}
+	$(document).on('open.fndtn.offcanvas', '[data-offcanvas]', function () {
+		if ($('#filter-sectors-ul').height() > 0){
+			$('#sectors-accordion-selector').trigger('click');
+		}
+
+		if ($('#filter-attributes-ul').height() > 0){
+			$('#attributes-accordion-selector').trigger('click');
+		}
+
+		if ($('#filter-tags-ul').height() > 0){
+			$('#tags-accordion-selector').trigger('click');
+		}
+	});
 
 	// init the multi-select for partners
 	$('#partnersFilter').select2({
