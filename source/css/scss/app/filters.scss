@@ -28,7 +28,7 @@
   .filter-dropdown {
     color: $light-gray;
     border: 1px solid $charcoal;
-    width: 225px;
+    width: 210px;
     margin: 0 0.6666666667rem 0.3333333333rem;
     height: 16px;
 
@@ -43,6 +43,14 @@
       margin: 0.5em;
       text-align:center;
       color:$charcoal;
+    }
+  }
+
+  .filter-header-title {
+    @media #{$small-only} {
+      position:fixed;
+      left:100px;
+      top:8px;
     }
   }
 
@@ -338,6 +346,5 @@ hr {
 }
 
 #filter-clear-button {
-  display:table-cell;
-  vertical-align:middle;
+  font-size: 0.7em;
 }
