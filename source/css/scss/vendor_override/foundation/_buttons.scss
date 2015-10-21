@@ -6,10 +6,12 @@ $button-bg-hover: $kiva-textlink-hover;
 
 $button-font-med: rem-calc(28);
 $button-font-med-reduction: rem-calc(14);
+$button-font-sm: rem-calc(18);
 $button-font-weight: $font-weight-bold;
 
 $button-height-med: rem-calc(64);
 $button-height-med-reduction: rem-calc(20);
+$button-height-sm: rem-calc(44);
 
 $button-width-standard: rem-calc(244);
 
@@ -75,3 +77,8 @@ button, a.button, .button {
 	}
 }
 
+.button.smaller {
+	font-size: $button-font-sm;
+	height: $button-height-sm;
+	padding-top: rem-calc(10);
+}

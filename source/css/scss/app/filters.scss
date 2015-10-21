@@ -314,6 +314,7 @@
 
 	.region-name {
 		@include column-break();
+		padding-top: 1rem;
 	}
 }
 
