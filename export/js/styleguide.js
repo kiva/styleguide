@@ -22716,7 +22716,7 @@ define("Styleguide", ["jquery"], function(__WEBPACK_EXTERNAL_MODULE_2__) { retur
 		var $targets = $($accordions.get().reduce(function(prev, curr, i) {
 			return prev + (i===0 ? '' : ', ') + '#' + $(curr).attr('aria-controls');
 		}, ''));
-		
+
 
 		$accordions.click(function() {
 			var $this = $(this);
@@ -22764,12 +22764,10 @@ define("Styleguide", ["jquery"], function(__WEBPACK_EXTERNAL_MODULE_2__) { retur
 		$(window).on('resize', Foundation.utils.throttle(function() {
 			if (Foundation.utils.is_medium_up()){
 				$('.off-canvas-wrap').foundation('offcanvas', 'show', 'move-right');
-				$('#filter-menu-button').css('visibility','hidden');
 			}
 
 			if (Foundation.utils.is_small_only()){
 				$('.off-canvas-wrap').foundation('offcanvas', 'hide', 'move-right');
-				$('#filter-menu-button').css('visibility','initial');
 			}
 
 			// expand all accordions if stepping out of mobile mode
@@ -22822,12 +22820,10 @@ define("Styleguide", ["jquery"], function(__WEBPACK_EXTERNAL_MODULE_2__) { retur
 
 		if (Foundation.utils.is_medium_up()){
 			$('.off-canvas-wrap').foundation('offcanvas', 'show', 'move-right');
-			$('#filter-menu-button').css('visibility','hidden');
 		}
 
 		if (Foundation.utils.is_small_only()){
 			$('.off-canvas-wrap').foundation('offcanvas', 'hide', 'move-right');
-			$('#filter-menu-button').css('visibility','initial');
 		}
 
 		// init the multi-select for partners

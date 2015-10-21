@@ -22699,7 +22699,7 @@
 		var $targets = $($accordions.get().reduce(function(prev, curr, i) {
 			return prev + (i===0 ? '' : ', ') + '#' + $(curr).attr('aria-controls');
 		}, ''));
-		
+
 
 		$accordions.click(function() {
 			var $this = $(this);
@@ -22747,12 +22747,10 @@
 		$(window).on('resize', Foundation.utils.throttle(function() {
 			if (Foundation.utils.is_medium_up()){
 				$('.off-canvas-wrap').foundation('offcanvas', 'show', 'move-right');
-				$('#filter-menu-button').css('visibility','hidden');
 			}
 
 			if (Foundation.utils.is_small_only()){
 				$('.off-canvas-wrap').foundation('offcanvas', 'hide', 'move-right');
-				$('#filter-menu-button').css('visibility','initial');
 			}
 
 			// expand all accordions if stepping out of mobile mode
