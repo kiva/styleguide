@@ -2,10 +2,8 @@
 	<div class="row header-row">
 		<div class="show-for-xxlarge-up xxlarge-4 xxlarge-centered columns promo-space">
 			{{#bonus}}
-				<a href="{{bonus.href}}"><span class="amount">{{bonus.amount}}</span> {{bonus.label}}</a>
-			{{/bonus}}
-			{{^bonus}}
-				<span class="promo"><!-- Promo Space --></span>
+                <a href="{{bonus.href}}"><div style="font-weight: normal;">Select a borrower to </br><span style="font-weight: bold;">Redeem your {{bonus.amount}} {{bonus.label}}</span></div></a>
+				{{!<a href="{{bonus.href"><span class="amount">{{bonus.amount</span> {{bonus.label</a> }}
 			{{/bonus}}
 		</div>
 		<div class="small-3 large-2 xxlarge-2 columns header-column logo-area">
