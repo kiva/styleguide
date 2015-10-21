@@ -22706,7 +22706,10 @@
 	var $ = __webpack_require__(2);
 
 	module.exports = function () {
-	    'use strict';
+		/* jshint maxstatements: 30 */
+		/*jshint maxcomplexity: 15 */
+
+		'use strict';
 
 		var $accordions = $('[data-kv-accordion]');
 
