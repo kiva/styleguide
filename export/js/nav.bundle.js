@@ -22689,8 +22689,8 @@
 	var $ = __webpack_require__(2);
 
 	module.exports = function () {
-		/* jshint maxstatements: 30 */
-		/*jshint maxcomplexity: 15 */
+		/* jshint maxstatements: 31 */
+		/*jshint maxcomplexity: 19 */
 
 		'use strict';
 
