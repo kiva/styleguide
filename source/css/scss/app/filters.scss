@@ -28,12 +28,12 @@
   .filter-dropdown {
     color: $light-gray;
     border: 1px solid $charcoal;
-    width: 100px;
+    width: 225px;
     margin: 0 0.6666666667rem 0.3333333333rem;
     height: 16px;
 
     @media #{$medium-up} {
-      width: 95px;
+      width: 220px;
       margin: 0em 0.6666666667rem;
     }
   }
