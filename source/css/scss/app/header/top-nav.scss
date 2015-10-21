@@ -110,6 +110,15 @@
 		height: rem-calc(45);
 		line-height: rem-calc(45);
 
+		@media #{$small-only} {
+			line-height: rem-calc(17);
+
+			a {
+				margin-top: rem-calc(5);
+			}
+		}
+
+
 		a {
             color: $dark-green;
             width: 100%;
