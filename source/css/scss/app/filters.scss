@@ -117,7 +117,10 @@
   }
 
   #misc-filters-container {
-    margin-bottom: 1em;
+    margin-bottom: 0em;
+    @media #{$medium-up} {
+      margin-bottom: 1em;
+    }
   }
 
   .borrower-filter-box {
