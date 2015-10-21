@@ -58,7 +58,7 @@ module.exports = function () {
 	});
 
 	$(window).on('resize', Foundation.utils.throttle(function() {
-		if (Foundation.utils.is_medium_up()){
+		if (Foundation.utils.is_xlarge_up()){
 			$('.off-canvas-wrap').foundation('offcanvas', 'show', 'move-right');
 		}
 

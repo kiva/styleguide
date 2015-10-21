@@ -4,7 +4,7 @@ module.exports = function() {
 	var $ = require('jquery');
 	var Foundation = require('Foundation');
 
-	if (Foundation.utils.is_medium_up()){
+	if (Foundation.utils.is_xlarge_up()){
 		$('.off-canvas-wrap').foundation('offcanvas', 'show', 'move-right');
 	}
 

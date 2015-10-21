@@ -19,7 +19,23 @@
   }
 
   .button_box {
-    padding-left: 60px
+    padding-left: 60px;
+    @media #{$small-only} {
+      padding-top: 10px;
+    }
+  }
+
+  .filter-dropdown {
+    color: $light-gray;
+    border: 1px solid $charcoal;
+    width: 100px;
+    margin: 0 0.6666666667rem 0.3333333333rem;
+    height: 16px;
+
+    @media #{$medium-up} {
+      width: 95px;
+      margin: 0em 0.6666666667rem;
+    }
   }
 
   .filter-header {
@@ -83,7 +99,7 @@
   }
 
   .filter-keywords-search-box {
-    color: $light-gray;
+    color: $charcoal;
     border: 1px solid $charcoal;
     width: 225px;
     margin: 0 0.6666666667rem 0.3333333333rem;
@@ -91,6 +107,19 @@
     @media #{$medium-up} {
       width: 220px;
       margin: 0em 0.6666666667rem;
+    }
+
+    ::-webkit-input-placeholder {
+      color: $light-gray;
+    }
+    :-moz-placeholder { /* Firefox 18- */
+      color: $light-gray;
+    }
+    ::-moz-placeholder {  /* Firefox 19+ */
+      color: $light-gray;
+    }
+    :-ms-input-placeholder {
+      color: $light-gray;
     }
   }
 
