@@ -2,8 +2,8 @@ var Foundation = require('Foundation');
 var $ = require('jquery');
 
 module.exports = function () {
-	/* jshint maxstatements: 30 */
-	/*jshint maxcomplexity: 15 */
+	/* jshint maxstatements: 31 */
+	/*jshint maxcomplexity: 19 */
 
 	'use strict';
 
