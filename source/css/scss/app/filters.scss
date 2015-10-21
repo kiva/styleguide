@@ -18,6 +18,10 @@
     margin: 0.5em
   }
 
+  .button_box {
+    padding-left: 60px
+  }
+
   .filter-header {
     @media #{$small-only} {
       margin: 0.5em;
@@ -301,4 +305,9 @@ hr {
 
 .left-off-canvas-toggle {
   margin: 10px 5px;
+}
+
+#filter-clear-button {
+  display:table-cell;
+  vertical-align:middle;
 }
