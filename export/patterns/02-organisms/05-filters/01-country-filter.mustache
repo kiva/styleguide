@@ -1,5 +1,5 @@
 <h3 class="filter">Countries</h3>
-<div class="filter country-filter-box show-for-medium-up">
+<div class="filter country-filter-box">
     <a href="#" data-reveal-id="countrySelectModal">
         <svg class="icon icon-globe" width="23" height="23">
             <use xlink:href="#icon-globe"/>
@@ -7,35 +7,7 @@
         <span class="filter country-filter-text">Select a country</span>
     </a>
 
-    <div id="countrySelectModal" class="reveal-modal filters_countries" data-reveal>
-
-        <a class="close-reveal-modal" aria-label="Close">
-            <svg class="icon icon-x">
-                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-x"></use>
-            </svg>
-        </a>
-
-
-        <form id="allCountries">
-            <div id="country-list">
-				{{#regions}}
-                    <section class="region-name">{{name}}
-						{{#countries}}
-                            <div class="country filter checkbox-input show-for-medium-up">
-								{{> 02-organisms/05-filters/14-countries-items}}
-                            </div>
-						{{/countries}}
-                    </section>
-				{{/regions}}
-            </div>
-
-            <input type="submit" id="filter-country-submit" class="applyButton smaller right" value="Done"/>
-        </form>
-    </div>
-</div>
-
-<div class="show-for-small-only">
-    <hr/>
-    <h3 class="ac-container filter interact">Select a Country</h3>
-    <hr/>
+	<div id="countrySelectModal" class="reveal-modal filters_countries" data-reveal>
+		{{> 02-organisms/05-filters/country-filter-components/country-filter-modal}}
+	</div>
 </div>
