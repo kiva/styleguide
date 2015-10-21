@@ -2,7 +2,10 @@ var Foundation = require('Foundation');
 var $ = require('jquery');
 
 module.exports = function () {
-    'use strict';
+	/* jshint maxstatements: 30 */
+	/*jshint maxcomplexity: 15 */
+
+	'use strict';
 
 	var $accordions = $('[data-kv-accordion]');
 
