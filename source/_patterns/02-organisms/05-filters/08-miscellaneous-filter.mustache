@@ -10,10 +10,11 @@
 </h3>
 
 <ul id="misc-filters-container" class="button-group toggle filter-button-group-ul" data-toggle="buttons-radio" aria-hidden="false">
+	{{#misc_filters}}
     <li class="filter checkbox-input show-for-medium-up">
-		{{#misc_filters}}
-			{{> 02-organisms/05-filters/21-misc-filters-items}}
-		{{/misc_filters}}
+		{{> 02-organisms/05-filters/21-misc-filters-items}}
     </li>
+	{{/misc_filters}}
+
 </ul>
 <hr class="show-for-small-only"/>

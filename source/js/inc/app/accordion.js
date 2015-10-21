@@ -79,6 +79,18 @@ module.exports = function () {
 			if ($('#filter-tags-ul').height() < 1){
 				$('#tags-accordion-selector').trigger('click');
 			}
+
+			if ($('#misc-filters-container').height() < 1){
+				$('#misc-accordion-selector').trigger('click');
+			}
+
+			if ($('#filter-partners-ul').height() < 1){
+				$('#partner-accordion-selector').trigger('click');
+			}
+
+			if ($('#filter-slider-container').height() < 1){
+				$('#slider-accordion-selector').trigger('click');
+			}
 		}
 
 		if ($(window).width() < 440){
@@ -92,6 +104,18 @@ module.exports = function () {
 
 			if ($('#filter-tags-ul').height() > 0){
 				$('#tags-accordion-selector').trigger('click');
+			}
+
+			if ($('#misc-filters-container').height() > 0){
+				$('#misc-accordion-selector').trigger('click');
+			}
+
+			if ($('#filter-partners-ul').height() > 0){
+				$('#partner-accordion-selector').trigger('click');
+			}
+
+			if ($('#filter-slider-container').height() > 0){
+				$('#slider-accordion-selector').trigger('click');
 			}
 		}
 

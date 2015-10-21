@@ -943,6 +943,20 @@
 			"name": "Innovative Loans"
 		}
 	],
+	"misc_filters": [
+		{
+			"name": "Matched Loans Only"
+			, "value": "XX"
+		},
+		{
+			"name": "Exclude Loans with currency risk"
+			, "value": "XX"
+		},
+		{
+			"name": "Exclude Non-Rated Partners"
+			, "value": "XX"
+		}
+	],
 	"loans": [
 		{
 			"title": "Senia Del Carmen",
