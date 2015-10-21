@@ -22762,7 +22762,7 @@ define("Styleguide", ["jquery"], function(__WEBPACK_EXTERNAL_MODULE_2__) { retur
 		});
 
 		$(window).on('resize', Foundation.utils.throttle(function() {
-			if (Foundation.utils.is_medium_up()){
+			if (Foundation.utils.is_xlarge_up()){
 				$('.off-canvas-wrap').foundation('offcanvas', 'show', 'move-right');
 			}
 
@@ -22838,7 +22838,7 @@ define("Styleguide", ["jquery"], function(__WEBPACK_EXTERNAL_MODULE_2__) { retur
 		var $ = __webpack_require__(2);
 		var Foundation = __webpack_require__(5);
 
-		if (Foundation.utils.is_medium_up()){
+		if (Foundation.utils.is_xlarge_up()){
 			$('.off-canvas-wrap').foundation('offcanvas', 'show', 'move-right');
 		}
 

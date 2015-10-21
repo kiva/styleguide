@@ -22762,7 +22762,7 @@
 		});
 
 		$(window).on('resize', Foundation.utils.throttle(function() {
-			if (Foundation.utils.is_medium_up()){
+			if (Foundation.utils.is_xlarge_up()){
 				$('.off-canvas-wrap').foundation('offcanvas', 'show', 'move-right');
 			}
 
@@ -22838,7 +22838,7 @@
 		var $ = __webpack_require__(2);
 		var Foundation = __webpack_require__(5);
 
-		if (Foundation.utils.is_medium_up()){
+		if (Foundation.utils.is_xlarge_up()){
 			$('.off-canvas-wrap').foundation('offcanvas', 'show', 'move-right');
 		}
 
