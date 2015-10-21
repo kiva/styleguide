@@ -174,10 +174,12 @@
     height: 44px;
     display: inline-table;
     width: 240px;
+    border-bottom: 1px solid $charcoal;
 
     @media #{$medium-up} {
       height: 25px;
       margin-left: 10px;
+      border-bottom: 0px;
     }
   }
 
