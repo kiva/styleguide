@@ -20,12 +20,12 @@ $link-spacing: rem-calc(16);
             color: $white;
             text-decoration: none;
 
-            &.active {
+            &.active, &:hover {
                 color: $kiva-green;
                 font-weight: bold;
             }
 
-            &.active:before {
+            &.active:before, &:hover:before {
                 content: ' ';
                 position: absolute;
                 bottom: rem-calc(10);
