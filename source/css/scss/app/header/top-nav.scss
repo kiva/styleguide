@@ -102,10 +102,13 @@
         font-size: 0.8rem;
         font-weight: bold;
         text-align: center;
-        background-color: $kiva-darkgreen;
+        background-color: $kiva-green;
+		border-top: 1px solid $kiva-navdivider-green;
+		height: rem-calc(45);
+		line-height: rem-calc(45);
 
-        a {
-            color: $white;
+		a {
+            color: $dark-green;
             width: 100%;
             display: block;
         }

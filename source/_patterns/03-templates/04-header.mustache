@@ -60,9 +60,9 @@
 			{{/my-kiva.links}}
 		</ul>
 	{{/is-visitor}}
-
+{{! This is the bonus banner that is shown in the medidum screen state}}
 	{{#bonus}}
-		<div class="hide-for-xxlarge-up pronus"><a href="{{bonus.href}}">{{bonus.amount}} {{bonus.label}}</a></div>
+		<div class="hide-for-xxlarge-up pronus"><a href="{{bonus.href}}"><span style="font-weight: normal;">Select a borrower to <span style="font-weight: bold;">Redeem your {{bonus.amount}} {{bonus.label}}</span></span></a></div>
 	{{/bonus}}
 </div>
 
