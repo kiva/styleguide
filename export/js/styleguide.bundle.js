@@ -22762,12 +22762,14 @@
 		});
 
 		$(window).on('resize', Foundation.utils.throttle(function() {
-			if (Foundation.utils.is_medium_up()){
-				$('.off-canvas-wrap').foundation('offcanvas', 'show', 'move-right');
-			}
-
 			if (Foundation.utils.is_small_only()){
 				$('.off-canvas-wrap').foundation('offcanvas', 'hide', 'move-right');
+			}
+		}, 1000));
+
+		$(window).on('resize', Foundation.utils.throttle(function() {
+			if (Foundation.utils.is_medium_up()){
+				$('.off-canvas-wrap').foundation('offcanvas', 'show', 'move-right');
 			}
 
 			// expand all accordions if stepping out of mobile mode
