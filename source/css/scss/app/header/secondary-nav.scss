@@ -20,10 +20,14 @@ $link-spacing: rem-calc(16);
             color: $white;
             text-decoration: none;
 
-            &.active, &:hover {
+            &.active {
                 color: $kiva-green;
                 font-weight: bold;
             }
+
+			&:hover {
+				color: $kiva-green;
+			}
 
             &.active:before, &:hover:before {
                 content: ' ';
@@ -39,7 +43,7 @@ $link-spacing: rem-calc(16);
         &:first-child a {
             padding-left: 0;
 
-            &.active:before {
+            &.active:before, &:hover:before {
                 left: 0;
             }
         }
@@ -47,7 +51,7 @@ $link-spacing: rem-calc(16);
         &:last-child a {
             padding-right: 0;
 
-            &.active:before {
+            &.active:before, &:hover:before {
                 right: 0;
             }
         }
