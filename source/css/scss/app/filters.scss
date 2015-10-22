@@ -1,9 +1,9 @@
 .filter {
   .filter-distribution-icon {
-    margin-left: 75%;
+    margin-left: 200px;
     margin-top:10px;
     border:1px solid $charcoal;
-    padding:1px 5px;
+    padding:1px 0;
   }
 
   .filter-distribution-icon a {
@@ -47,7 +47,7 @@
   .filter-component {
     margin: 0;
     @media #{$medium-up} {
-      margin: 1em 0;
+      margin: 0 0 1.666666666rem 0;
     }
   }
 
@@ -87,7 +87,7 @@
     @media #{$medium-up} {
       font-size:1em;
       color: $gray;
-      margin: 0em 0.6666666667rem 0.6666666667rem 0.6666666667rem;
+      margin: 0em 0.6666666667rem 0.555555555rem 0.6666666667rem;
     }
   }
 
@@ -103,7 +103,7 @@
     margin: 0 0.6666666667rem 0.3333333333rem;
 
     @media #{$medium-up} {
-      width: 220px;
+      width: 225px;
       margin: 0em 0.6666666667rem;
     }
   }
@@ -132,6 +132,15 @@
 
   .partner_filter_text {
     margin-left: 5px;
+    color: $sky-blue;
+  }
+
+  .partner_filter_text a {
+    color: $sky-blue;
+  }
+
+  .partner_filter_text:hover {
+    text-decoration: underline;
   }
 
   #misc-filters-container {
@@ -198,7 +207,7 @@
     border-bottom: 1px solid $charcoal;
 
     @media #{$medium-up} {
-      height: 25px;
+      height: auto;
       margin-left: 5px;
       border-bottom: 0px;
     }
@@ -246,6 +255,7 @@
     box-shadow:         inset 0px 1px 1px rgba(50, 50, 50, 0.75);
     @media #{$medium-up} {
       background: #fff;
+      margin-top: -10px;
       -webkit-box-shadow: inset 0px 0px 0px rgba(50, 50, 50, 0.75);
       -moz-box-shadow:    inset 0px 0px 0px rgba(50, 50, 50, 0.75);
       box-shadow:         inset 0px 0px 0px rgba(50, 50, 50, 0.75);
