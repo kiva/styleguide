@@ -22780,6 +22780,7 @@
 
 		var $ = __webpack_require__(2);
 		var Foundation = __webpack_require__(5);
+		var $expandable_filter_selector = $('.expandable-filter');
 
 		// init the multi-select for partners
 		$('#partnersFilter').select2({
@@ -22800,9 +22801,12 @@
 		// Collapse all accordions if opening up offcanvas
 		$(document).on('open.fndtn.offcanvas', '[data-offcanvas]', function () {
 			if (Foundation.utils.is_small_only()){
-				if ($('.expandable-filter').attr('aria-expanded') === 'true'){
-					$('.expandable-filter').trigger('click');
-				}
+				$expandable_filter_selector.each(function(){
+					var $this = $(this);
+					if ($this.attr('aria-expanded') === 'true'){
+						$this.trigger('click');
+					}
+				});
 			}
 		});
 
@@ -22814,15 +22818,17 @@
 
 			// expand all accordions if stepping out of mobile mode
 			if (Foundation.utils.is_medium_up()){
-				if ($('.expandable-filter').attr('aria-expanded') === 'false'){
-					$('.expandable-filter').trigger('click');
+				var $this = $(this);
+				if ($this.attr('aria-expanded') === 'false'){
+					$this.trigger('click');
 				}
 			}
 
 			// collapse all accordions if stepping into mobile mode
 			if (Foundation.utils.is_small_only()){
-				if ($('.expandable-filter').attr('aria-expanded') === 'true'){
-					$('.expandable-filter').trigger('click');
+				var $this = $(this);
+				if ($this.attr('aria-expanded') === 'true'){
+					$this.trigger('click');
 				}
 			}
 		}, 200));
