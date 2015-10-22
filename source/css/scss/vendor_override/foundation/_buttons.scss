@@ -40,6 +40,10 @@ button, a.button, .button {
 		font-size: $button-font-med;
 		height: $button-height-med;
 	}
+
+	&:visited {
+		color: $button-font-color;
+	}
 }
 
 .button.setting {
