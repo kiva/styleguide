@@ -1,6 +1,9 @@
 <h3 class="filter">Loan Status</h3>
 
-<select id="filter-loan-status-dropdown" class="filter-dropdown">
-	{{#filters}}
-	{{/filters}}
-</select>
+<ul id="filter-status-ul" class="button-group toggle filter-button-group-ul-alt" data-toggle="buttons-radio">
+    <select name="status[]" id="filter-loan-status-dropdown" ﻿class="filter-dropdown">
+	{{#status_options}}
+        <option value="{{value}}">{{label}}</option>
+	{{/status_options}}
+    </select>
+</ul>
