@@ -1,0 +1,21 @@
+::-webkit-input-placeholder {
+    color: $kiva-text-light;
+    font-style: italic;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+    color: $kiva-text-light;
+    font-style: italic;
+    opacity: 1 !important;
+}
+
+::-moz-placeholder { /* Firefox 19+ */
+    color: $kiva-text-light;
+    font-style: italic;
+    opacity: 1 !important;
+}
+
+:-ms-input-placeholder {
+    color: $kiva-text-light;
+    font-style: italic;
+}
