@@ -22826,9 +22826,8 @@
 
 			// collapse all accordions if stepping into mobile mode
 			if (Foundation.utils.is_small_only()){
-				var $this = $(this);
-				if ($this.attr('aria-expanded') === 'true'){
-					$this.trigger('click');
+				if ($(this).attr('aria-expanded') === 'true'){
+					$(this).trigger('click');
 				}
 			}
 		}, 200));
