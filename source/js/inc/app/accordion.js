@@ -58,63 +58,6 @@ module.exports = function () {
 	});
 
 	$(window).on('resize', Foundation.utils.throttle(function() {
-		if (Foundation.utils.is_xlarge_up()){
-			$('.off-canvas-wrap').foundation('offcanvas', 'show', 'move-right');
-		}
-
-		// expand all accordions if stepping out of mobile mode
-		if (window.matchMedia(Foundation.media_queries.medium).matches || window.matchMedia(Foundation.media_queries.xlarge).matches || window.matchMedia(Foundation.media_queries.xxlarge).matches){
-			if ($('#filter-sectors-ul').height() < 1){
-				$('#sectors-accordion-selector').trigger('click');
-			}
-
-			if ($('#filter-attributes-ul').height() < 1){
-				$('#attributes-accordion-selector').trigger('click');
-			}
-
-			if ($('#filter-tags-ul').height() < 1){
-				$('#tags-accordion-selector').trigger('click');
-			}
-
-			if ($('#misc-filters-container').height() < 1){
-				$('#misc-accordion-selector').trigger('click');
-			}
-
-			if ($('#filter-partners-ul').height() < 1){
-				$('#partner-accordion-selector').trigger('click');
-			}
-
-			if ($('#filter-slider-container').height() < 1){
-				$('#slider-accordion-selector').trigger('click');
-			}
-		}
-
-		if ($(window).width() < 440){
-			if ($('#filter-sectors-ul').height() > 0){
-				$('#sectors-accordion-selector').trigger('click');
-			}
-
-			if ($('#filter-attributes-ul').height() > 0){
-				$('#attributes-accordion-selector').trigger('click');
-			}
-
-			if ($('#filter-tags-ul').height() > 0){
-				$('#tags-accordion-selector').trigger('click');
-			}
-
-			if ($('#misc-filters-container').height() > 0){
-				$('#misc-accordion-selector').trigger('click');
-			}
-
-			if ($('#filter-partners-ul').height() > 0){
-				$('#partner-accordion-selector').trigger('click');
-			}
-
-			if ($('#filter-slider-container').height() > 0){
-				$('#slider-accordion-selector').trigger('click');
-			}
-		}
-
 		$targets.each(function() {
 			var $this = $(this);
 			if($this.height() > 0) {
