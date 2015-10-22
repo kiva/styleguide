@@ -40,9 +40,7 @@
 
   .filter-header-title {
     @media #{$small-only} {
-      position:fixed;
-      left:100px;
-      top:8px;
+      margin-left: -30px;
     }
   }
 

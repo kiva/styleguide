@@ -25,8 +25,9 @@ module.exports = function() {
 	$(document).on('open.fndtn.offcanvas', '[data-offcanvas]', function () {
 		if (Foundation.utils.is_small_only()){
 			$expandable_filter_selector.each(function(){
-				if ($expandable_filter_selector.attr('aria-expanded') === 'true'){
-					$expandable_filter_selector.trigger('click');
+				var $this = $(this);
+				if ($this.attr('aria-expanded') === 'true'){
+					$this.trigger('click');
 				}
 			});
 		}
@@ -40,15 +41,17 @@ module.exports = function() {
 
 		// expand all accordions if stepping out of mobile mode
 		if (Foundation.utils.is_medium_up()){
-			if ($expandable_filter_selector.attr('aria-expanded') === 'false'){
-				$expandable_filter_selector.trigger('click');
+			var $this = $(this);
+			if ($this.attr('aria-expanded') === 'false'){
+				$this.trigger('click');
 			}
 		}
 
 		// collapse all accordions if stepping into mobile mode
 		if (Foundation.utils.is_small_only()){
-			if ($expandable_filter_selector.attr('aria-expanded') === 'true'){
-				$expandable_filter_selector.trigger('click');
+			var $this = $(this);
+			if ($this.attr('aria-expanded') === 'true'){
+				$this.trigger('click');
 			}
 		}
 	}, 200));
