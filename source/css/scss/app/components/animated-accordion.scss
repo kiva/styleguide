@@ -63,4 +63,8 @@
     &[aria-hidden="true"], &[aria-hidden="false"] {
         display: block;
     }
+
+    &[aria-hidden="true"] {
+      height: 0;
+    }
 }
