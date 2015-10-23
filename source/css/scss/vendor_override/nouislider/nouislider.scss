@@ -1,13 +1,24 @@
 .noUi-connect {
   background: #82AA4C;
+  height: 10px;
 }
 
-.noUi-horizontal .noUi-handle {
-  width: 28px;
-  height: 28px;
+.noUi-horizontal {
+  height: 10px;
+  width: 205px;
 }
+.noUi-horizontal .noUi-handle {
+  width: 24px;
+  height: 24px; }
 
 .noUi-handle {
   border-radius: 50%;
-  border: 2px solid #82AA4C;
+  border: 2px solid #82AA4C; }
+
+.noUi-handle::before, .noUi-handle::after {
+  display:none;
+}
+
+.noUi-handle .noUi-handle-lower div, .noUi-handle .noUi-handle-upper div {
+  bottom: -22px;
 }

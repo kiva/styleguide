@@ -98,15 +98,16 @@
   .filter-slider {
     color: $green;
     border: 0px;
-    padding: 0em 0.6666666667rem;
+    padding: 0.2777777777rem 1rem;
   }
 
   .filter-slider-item {
-    margin: 1.5em 0;
+    font-size: 0.8em;
+    margin-bottom: 2.2222222222rem;
   }
 
   .filter-slider-inner {
-    margin: 0em 1rem;
+    margin: 0.2777777777rem 1rem;
   }
 
   .country-filter-box, .country-filter-box a {
@@ -198,6 +199,8 @@
       height: auto;
       margin-left: 5px;
       border-bottom: 0px;
+      margin-bottom: -5px;
+      display: block;
     }
   }
 
