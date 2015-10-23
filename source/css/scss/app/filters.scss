@@ -4,8 +4,8 @@
     margin-top:10px;
     border:1px solid $charcoal;
     padding:1px 5px;
-    width: 25;
-    height: 25;
+    width: 25px;
+    height: 25px;
   }
 
   .filter-distribution-icon a {
@@ -113,10 +113,9 @@
   }
 
   .country-filter-box, .country-filter-box a {
-    padding: 0em;
+    padding: 0em 0.3rem;
 
     @media #{$medium-up} {
-      padding: 0em 0.3rem;
       color: $sky-blue;
     }
   }
