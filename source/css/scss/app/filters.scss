@@ -3,7 +3,9 @@
     margin-left: 200px;
     margin-top:10px;
     border:1px solid $charcoal;
-    padding:1px 0;
+    padding:1px 5px;
+    width: 25;
+    height: 25;
   }
 
   .filter-distribution-icon a {
@@ -114,7 +116,7 @@
     padding: 0em;
 
     @media #{$medium-up} {
-      padding: 0em 0.6666666667rem;
+      padding: 0em 0.3rem;
       color: $sky-blue;
     }
   }
@@ -340,4 +342,25 @@ hr {
   @media #{$medium-up} {
     margin: 0em 0.6666666667rem;
   }
+}
+
+.icon-globe {
+  width: 25px;
+  height: 25px;
+  vertical-align: middle;
+}
+
+.icon-large-chevron {
+  margin-right: 12px;
+}
+
+.country-filter-text {
+  vertical-align: middle;
+}
+
+.filters-close-icon {
+  position:absolute;
+  top:-4px;
+  right:1px;
+  // width: 0.55em
 }

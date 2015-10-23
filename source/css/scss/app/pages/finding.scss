@@ -48,11 +48,19 @@
         margin: 0.5rem 0 1rem;
         padding-left: 0;
         padding-right: 0;
-
-        @media #{$medium-up} {
-            width: 6rem;
-        }
+        color: #000;
     }
+
+  .filter-menu-button {
+    width: 5rem;
+    margin: 0.5rem 0 1rem;
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+a.filter-menu-button:visited {
+  color: #000;
 }
 
 .control-region, .results-region {
