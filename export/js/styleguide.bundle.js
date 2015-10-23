@@ -18866,9 +18866,7 @@
 	        currentQueue = queue;
 	        queue = [];
 	        while (++queueIndex < len) {
-	            if (currentQueue) {
-	                currentQueue[queueIndex].run();
-	            }
+	            currentQueue[queueIndex].run();
 	        }
 	        queueIndex = -1;
 	        len = queue.length;
@@ -18920,6 +18918,7 @@
 	    throw new Error('process.binding is not supported');
 	};
 
+	// TODO(shtylman)
 	process.cwd = function () { return '/' };
 	process.chdir = function (dir) {
 	    throw new Error('process.chdir is not supported');
@@ -22819,17 +22818,21 @@
 
 			// expand all accordions if stepping out of mobile mode
 			if (Foundation.utils.is_medium_up()){
-				var $this = $(this);
-				if ($this.attr('aria-expanded') === 'false'){
-					$this.trigger('click');
-				}
+				$expandable_filter_selector.each(function(){
+					var $this = $(this);
+					if ($this.attr('aria-expanded') === 'false'){
+						$this.trigger('click');
+					}
+				});
 			}
 
 			// collapse all accordions if stepping into mobile mode
 			if (Foundation.utils.is_small_only()){
-				if ($(this).attr('aria-expanded') === 'true'){
-					$(this).trigger('click');
-				}
+				$expandable_filter_selector.each(function(){
+					if ($(this).attr('aria-expanded') === 'true'){
+						$(this).trigger('click');
+					}
+				});
 			}
 		}, 200));
 	};
