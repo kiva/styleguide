@@ -17,19 +17,6 @@
     }
   }
 
-  .filter-dropdown {
-    color: $light-gray;
-    border: 1px solid $charcoal;
-    width: 210px;
-    margin: 0 0.6666666667rem 0.3333333333rem;
-    height: 16px;
-    color: $charcoal;
-
-    @media #{$medium-up} {
-      margin: 0em 0.6666666667rem;
-    }
-  }
-
   .filter-header {
     @media #{$small-only} {
       margin: 0.5em;
@@ -336,4 +323,17 @@ hr {
   font-size: 0.7em;
   float: left;
   visibility: hidden;
+}
+
+#filter-loan-status-dropdown {
+  color: $light-gray;
+  border: 1px solid $charcoal;
+  width: 210px;
+  margin: 0 0.6666666667rem 0.3333333333rem;
+  height: 16px;
+  color: $charcoal;
+
+  @media #{$medium-up} {
+    margin: 0em 0.6666666667rem;
+  }
 }
