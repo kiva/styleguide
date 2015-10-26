@@ -48,15 +48,8 @@
         margin: 0.5rem 0 1rem;
         padding-left: 0;
         padding-right: 0;
-        color: #000;
+        color: $kiva-text-dark;
     }
-
-  .filter-menu-button {
-    width: 5rem;
-    margin: 0.5rem 0 1rem;
-    padding-left: 0;
-    padding-right: 0;
-  }
 }
 
 a.filter-menu-button:visited {

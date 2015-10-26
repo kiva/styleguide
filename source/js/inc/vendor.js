@@ -1,5 +1,4 @@
 require('jquery');
-require('fastclick');
 require('modernizr');
 
 require('Foundation');
