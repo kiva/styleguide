@@ -4,6 +4,7 @@ module.exports = function() {
 	var $ = require('jquery');
 	var Foundation = require('Foundation');
 	var $expandable_filter_selector = $('.expandable-filter');
+	var currently_small = false;
 
 	// init the multi-select for partners
 	$('#partnersFilter').select2({
@@ -30,6 +31,7 @@ module.exports = function() {
 					$this.trigger('click');
 				}
 			});
+			currently_small = true;
 		}
 	});
 
@@ -40,22 +42,24 @@ module.exports = function() {
 		}
 
 		// expand all accordions if stepping out of mobile mode
-		if (Foundation.utils.is_medium_up()){
+		if (Foundation.utils.is_medium_up() && currently_small){
 			$expandable_filter_selector.each(function(){
 				var $this = $(this);
 				if ($this.attr('aria-expanded') === 'false'){
 					$this.trigger('click');
 				}
 			});
+			currently_small = false;
 		}
 
 		// collapse all accordions if stepping into mobile mode
-		if (Foundation.utils.is_small_only()){
+		if (Foundation.utils.is_small_only() && !currently_small){
 			$expandable_filter_selector.each(function(){
 				if ($(this).attr('aria-expanded') === 'true'){
 					$(this).trigger('click');
 				}
 			});
+			currently_small = true;
 		}
 	}, 200));
 };
