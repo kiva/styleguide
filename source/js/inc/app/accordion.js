@@ -62,7 +62,7 @@ module.exports = function () {
 	$(window).on('resize', Foundation.utils.throttle(function() {
 		$targets.each(function() {
 			var $this = $(this);
-			if($this.height() > 0) {
+			if($this.attr('aria-hidden') === 'false') {
 				$this.css('height', 'auto');
 			}
 		});
