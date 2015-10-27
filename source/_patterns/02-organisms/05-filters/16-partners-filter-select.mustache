@@ -20,5 +20,13 @@
                 </optgroup>
 			{{/partner-regions}}
         </select>
+
+        <div id="filter-slider-container" class="filter filter-slider" aria-hidden="false" aria-hidden="false">
+			{{#sliders}}
+                <li class="filter filter-slider-item">
+					{{> 02-organisms/05-filters/20-slider-items}}
+                </li>
+			{{/sliders}}
+        </div>
     </ul>
 </div>
