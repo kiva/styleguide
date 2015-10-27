@@ -50,8 +50,9 @@
         &.ts-right:checked ~ label.ts-floater,
         &.qs-right-top:checked ~ label.qs-floater {
             display: block;
-            right: rem-calc(1);
+            right: 0;
             top: 0;
+            border-left: none;
         }
 
         &.qs-left-bottom:checked ~ label.qs-floater {
@@ -62,8 +63,9 @@
 
         &.qs-right-bottom:checked ~ label.qs-floater {
             display: block;
-            right: rem-calc(1);
+            right: 0;
             bottom: 0;
+            border-left: none;
         }
     }
 }
