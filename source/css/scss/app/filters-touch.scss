@@ -1,4 +1,14 @@
 .touch .filter {
+  .small-touch {
+    visibility: visible;
+    height: auto;
+  }
+
+  .medium-notouch {
+    visibility: hidden;
+    height: 0;
+  }
+
   .button_box {
     padding-top: 10px;
   }
@@ -22,7 +32,7 @@
   }
 
   .filter-component input {
-    width: 260px;
+    width: 12.5rem
   }
 
   .borrower-label {

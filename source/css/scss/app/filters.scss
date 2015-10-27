@@ -1,4 +1,22 @@
 .filter {
+  .small-touch {
+    visibility: visible;
+    height: auto;
+    @media #{$medium-up} {
+      visibility: hidden;
+      height: 0;
+    }
+  }
+
+  .medium-notouch {
+    visibility: hidden;
+    height: 0;
+    @media #{$medium-up} {
+      visibility: visible;
+      height: auto;
+    }
+  }
+
   .filter-header {
     @media #{$medium-up} {
       height: 0;
