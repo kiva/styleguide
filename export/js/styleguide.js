@@ -21878,6 +21878,7 @@ define("Styleguide", ["jquery"], function(__WEBPACK_EXTERNAL_MODULE_2__) { retur
 			var $this = $(this);
 			var $target = $('#'+$this.attr('aria-controls'));
 			var is_hidden = $target.attr('aria-hidden') === 'true';
+			var hiding = !is_hidden;
 
 			if(is_hidden) {
 				// hide it and measure it
@@ -21913,8 +21914,9 @@ define("Styleguide", ["jquery"], function(__WEBPACK_EXTERNAL_MODULE_2__) { retur
 
 			$targets.filter($target.parents()).css('height', 'auto');
 
-			$this.attr('aria-expanded', is_hidden);
-			$target.attr('aria-hidden', !is_hidden);
+			$this.attr('aria-expanded', !hiding);
+			$target.attr('aria-hidden', hiding)
+				.trigger(hiding ? 'hide' : 'show');
 		});
 
 		$(window).on('resize', Foundation.utils.throttle(function() {
@@ -21937,12 +21939,22 @@ define("Styleguide", ["jquery"], function(__WEBPACK_EXTERNAL_MODULE_2__) { retur
 		var $ = __webpack_require__(2);
 		var Foundation = __webpack_require__(4);
 		var $expandable_filter_selector = $('.expandable-filter');
+		var $partners_filter = $('#partnersFilter');
+		var $partners_ul = $('#filter-partners-ul');
 		var currently_small = false;
 
 		// init the multi-select for partners
-		$('#partnersFilter').select2({
-			placeholder: 'Specify a partner'
-			, width: 'style'
+		$partners_filter.select2();
+		$partners_filter.on('select2:open', function() {
+			$('.select2-dropdown .select2-results__option').addClass('needsclick');
+		});
+		$partners_filter.on('select2:select select2:unselect', function() {
+			if($partners_ul.css('height') !== 'auto') {
+				$partners_ul.css('height', 'auto');
+			}
+		});
+		$partners_ul.on('hide', function() {
+			$partners_filter.select2('close');
 		});
 
 		// If large or higher, show filters
