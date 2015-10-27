@@ -4,12 +4,22 @@ module.exports = function() {
 	var $ = require('jquery');
 	var Foundation = require('Foundation');
 	var $expandable_filter_selector = $('.expandable-filter');
+	var $partners_filter = $('#partnersFilter');
+	var $partners_ul = $('#filter-partners-ul');
 	var currently_small = false;
 
 	// init the multi-select for partners
-	$('#partnersFilter').select2({
-		placeholder: 'Specify a partner'
-		, width: 'style'
+	$partners_filter.select2();
+	$partners_filter.on('select2:open', function() {
+		$('.select2-dropdown .select2-results__option').addClass('needsclick');
+	});
+	$partners_filter.on('select2:select select2:unselect', function() {
+		if($partners_ul.css('height') !== 'auto') {
+			$partners_ul.css('height', 'auto');
+		}
+	});
+	$partners_ul.on('hide', function() {
+		$partners_filter.select2('close');
 	});
 
 	// If large or higher, show filters

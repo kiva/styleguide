@@ -18,6 +18,7 @@ module.exports = function () {
 		var $this = $(this);
 		var $target = $('#'+$this.attr('aria-controls'));
 		var is_hidden = $target.attr('aria-hidden') === 'true';
+		var hiding = !is_hidden;
 
 		if(is_hidden) {
 			// hide it and measure it
@@ -53,8 +54,9 @@ module.exports = function () {
 
 		$targets.filter($target.parents()).css('height', 'auto');
 
-		$this.attr('aria-expanded', is_hidden);
-		$target.attr('aria-hidden', !is_hidden);
+		$this.attr('aria-expanded', !hiding);
+		$target.attr('aria-hidden', hiding)
+			.trigger(hiding ? 'hide' : 'show');
 	});
 
 	$(window).on('resize', Foundation.utils.throttle(function() {
