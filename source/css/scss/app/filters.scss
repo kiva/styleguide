@@ -38,7 +38,7 @@
     margin: 0;
     min-height: 44px;
     cursor: pointer;
-    border-bottom: 0.0555555556rem solid #D8D8C8;
+    border-bottom: 1px solid #D8D8C8;
     padding-top: 10px;
     @media #{$medium-up} {
       margin: 0 0 1.666666666rem 0;
@@ -261,6 +261,14 @@
       box-shadow:         inset 0px 0px 0px rgba(50, 50, 50, 0.75);
     }
   }
+
+  .no-border {
+    border: 0;
+  }
+
+  .extra-padding-bottom {
+    padding-bottom: 10px;
+  }
 }
 
 .reveal-modal {
@@ -400,7 +408,7 @@ a.close-reveal-modal .icon.icon-x {
   .filter-component {
     min-height: 44px;
     cursor: pointer;
-    border-bottom: 0.0555555556rem solid #D8D8C8;
+    border-bottom: 1px solid #D8D8C8;
     padding-top: 10px;
   }
 
