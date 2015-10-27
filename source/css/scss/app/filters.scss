@@ -14,6 +14,7 @@
 
   .button_box {
     padding-left: 60px;
+
     @media #{$small-only} {
       padding-top: 10px;
     }
@@ -363,4 +364,51 @@ hr {
   top:-4px;
   right:1px;
   // width: 0.55em
+}
+
+.touch .filter {
+  .button_box {
+    padding-top: 10px;
+  }
+
+  .filter-header {
+    margin: 0.5em;
+    text-align:center;
+    color:$charcoal;
+  }
+
+  .filter-header-title {
+    margin-left: -30px;
+
+  }
+  .filter-component input {
+    width: 260px;
+  }
+
+  .borrower-label {
+    color: $charcoal;
+  }
+
+  input[type=checkbox] {
+    display: none;
+  }
+
+  input[type=checkbox]:checked+label{
+    &:before{
+      content: '';
+      display: inline-block;
+      width: 6px;
+      height: 12px;
+      border: solid $kiva-green 2px;
+      border-width: 0 2px 2px 0;
+      transform: rotate(45deg);
+      margin-right: 10px;
+    }
+  }
+
+  .checkbox-input-span {
+    display: table-cell;
+    text-transform: none;
+    vertical-align: middle;
+  }
 }
