@@ -1,22 +1,32 @@
 <h3 class="filter show-for-medium-up">Partners</h3>
 
-<h3 id="partner-accordion-selector" data-kv-accordion class="ac-container show-for-small-only expandable-filter" aria-controls="filter-partners-ul" aria-expanded="true">
-    Partners
+<div class="filter-component-container">
+    <h3 id="partner-accordion-selector" data-kv-accordion class="ac-container show-for-small-only expandable-filter" aria-controls="filter-partners-ul" aria-expanded="true">
+        Partners
 	<span class="ac-dropdown-icon">
 		<svg class="icon icon-large-chevron">
             <use xlink:href="#icon-large-chevron"></use>
         </svg>
 	</span>
-</h3>
+    </h3>
 
-<ul id="filter-partners-ul" class="button-group toggle filter-button-group-ul-alt" data-toggle="buttons-radio" aria-hidden="false">
-    <select name="partner[]" id="partnersFilter" multiple="multiple" aria-hidden="false" aria-hidden="false">
-		{{#partner-regions}}
-            <optgroup label="{{label}}">
-				{{#partners}}
-                    <option value="{{id}}">{{name}}</option>
-				{{/partners}}
-            </optgroup>
-		{{/partner-regions}}
-    </select>
-</ul>
+    <ul id="filter-partners-ul" class="button-group toggle filter-button-group-ul-alt" data-toggle="buttons-radio" aria-hidden="false">
+        <select name="partner[]" id="partnersFilter" multiple="multiple" aria-hidden="false" aria-hidden="false">
+			{{#partner-regions}}
+                <optgroup label="{{label}}">
+					{{#partners}}
+                        <option value="{{id}}">{{name}}</option>
+					{{/partners}}
+                </optgroup>
+			{{/partner-regions}}
+        </select>
+
+        <div id="filter-slider-container" class="filter filter-slider" aria-hidden="false" aria-hidden="false">
+			{{#sliders}}
+                <li class="filter filter-slider-item">
+					{{> 02-organisms/05-filters/20-slider-items}}
+                </li>
+			{{/sliders}}
+        </div>
+    </ul>
+</div>
