@@ -195,7 +195,7 @@
   }
 
   .checkbox-input {
-    padding-left: 12px;
+    padding-left: 35px;
     display:block;
     height: 44px;
     display: inline-table;
@@ -229,6 +229,7 @@
         border-width: 0 2px 2px 0;
         transform: rotate(45deg);
         margin-right: 10px;
+        margin-left: -18px;
       }
     }
   }
@@ -437,6 +438,7 @@ a.close-reveal-modal .icon.icon-x {
       border-width: 0 2px 2px 0;
       transform: rotate(45deg);
       margin-right: 10px;
+      margin-left: -18px;
     }
   }
 
