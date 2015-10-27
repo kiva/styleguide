@@ -1,19 +1,21 @@
 <h3 class="filter show-for-medium-up">Sectors</h3>
 
-<h3 id="sectors-accordion-selector" data-kv-accordion class="interact ac-container show-for-small-only expandable-filter" aria-controls="filter-sectors-ul" aria-expanded="true">
-    Sectors
+<div class="filter-component-container">
+    <h3 id="sectors-accordion-selector" data-kv-accordion class="interact ac-container show-for-small-only expandable-filter" aria-controls="filter-sectors-ul" aria-expanded="true">
+        Sectors
 	<span class="ac-dropdown-icon">
 		<svg class="icon icon-large-chevron">
             <use xlink:href="#icon-large-chevron"></use>
         </svg>
 	</span>
-</h3>
+    </h3>
 
-<ul id="filter-sectors-ul" class="button-group toggle filter-button-group-ul" data-toggle="buttons-radio" aria-hidden="false">
-	{{#filters}}
-        <li class="filter checkbox-input">
-			{{> 02-organisms/05-filters/24-checkbox-item}}
-        </li>
-	{{/filters}}
-</ul>
-<hr class="show-for-small-only"/>
+    <ul id="filter-sectors-ul" class="button-group toggle filter-button-group-ul" data-toggle="buttons-radio" aria-hidden="false">
+		{{#filters}}
+            <li class="filter checkbox-input">
+				{{> 02-organisms/05-filters/24-checkbox-item}}
+            </li>
+		{{/filters}}
+    </ul>
+
+</div>

@@ -1,19 +1,21 @@
 <h3 class="filter show-for-medium-up">Tags</h3>
 
-<h3 id="tags-accordion-selector" data-kv-accordion class="interact ac-container show-for-small-only expandable-filter" aria-controls="filter-tags-ul" aria-expanded="true">
-    Tags
+<div class="filter-component-container">
+    <h3 id="tags-accordion-selector" data-kv-accordion class="interact ac-container show-for-small-only expandable-filter" aria-controls="filter-tags-ul" aria-expanded="true">
+        Tags
 	<span class="ac-dropdown-icon">
 		<svg class="icon icon-large-chevron">
             <use xlink:href="#icon-large-chevron"></use>
         </svg>
 	</span>
-</h3>
+    </h3>
 
-<ul id="filter-tags-ul" class="button-group toggle filter-button-group-ul" data-toggle="buttons-radio" aria-hidden="false">
-	{{#tags}}
-        <li class="filter checkbox-input">
-			{{> 02-organisms/05-filters/24-checkbox-item}}
-        </li>
-	{{/tags}}
-</ul>
-<hr class="show-for-small-only"/>
+    <ul id="filter-tags-ul" class="button-group toggle filter-button-group-ul" data-toggle="buttons-radio" aria-hidden="false">
+		{{#tags}}
+            <li class="filter checkbox-input">
+				{{> 02-organisms/05-filters/24-checkbox-item}}
+            </li>
+		{{/tags}}
+    </ul>
+
+</div>
