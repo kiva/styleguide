@@ -1,7 +1,8 @@
 .filter {
   .filter-header {
     @media #{$medium-up} {
-      display: none;
+      height: 0;
+      overflow: hidden;
     }
   }
 
@@ -387,6 +388,9 @@ hr {
 .filters-close-icon {
   position:absolute;
   right:1px;
+  @media #{$medium-up} {
+    display: none;
+  }
 }
 
 a.close-reveal-modal {
