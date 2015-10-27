@@ -21950,14 +21950,14 @@
 			$('.off-canvas-wrap').foundation('offcanvas', 'show', 'move-right');
 		}
 
-		// If small, then hide filters
-		if (Foundation.utils.is_small_only()){
+		// If small or touch, then hide filters
+		if (Foundation.utils.is_small_only() || $('html').hasClass('touch')){
 			$('.off-canvas-wrap').foundation('offcanvas', 'hide', 'move-right');
 		}
 
 		// Collapse all accordions if opening up offcanvas
 		$(document).on('open.fndtn.offcanvas', '[data-offcanvas]', function () {
-			if (Foundation.utils.is_small_only()){
+			if (Foundation.utils.is_small_only() || $('html').hasClass('touch')){
 				$expandable_filter_selector.each(function(){
 					var $this = $(this);
 					if ($this.attr('aria-expanded') === 'true'){
