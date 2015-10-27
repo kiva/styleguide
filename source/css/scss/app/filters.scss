@@ -268,6 +268,9 @@
 
   .extra-padding-bottom {
     padding-bottom: 10px;
+    @media #{$medium-up} {
+      padding: 0;
+    }
   }
 }
 
