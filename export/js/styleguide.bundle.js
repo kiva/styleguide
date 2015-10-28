@@ -21967,6 +21967,17 @@
 			$('.off-canvas-wrap').foundation('offcanvas', 'hide', 'move-right');
 		}
 
+		// Close accordions if we're on a youch interface
+		if ($('html').hasClass('touch')){
+			$expandable_filter_selector.each(function(){
+				var $this = $(this);
+				if ($this.attr('aria-expanded') === 'true'){
+					$this.trigger('click');
+				}
+			});
+			currently_small = true;
+		}
+
 		// Collapse all accordions if opening up offcanvas
 		$(document).on('open.fndtn.offcanvas', '[data-offcanvas]', function () {
 			if (Foundation.utils.is_small_only() || $('html').hasClass('touch')){
