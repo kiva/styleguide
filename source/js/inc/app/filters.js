@@ -65,7 +65,7 @@ module.exports = function() {
 		}
 
 		// expand all accordions if stepping out of mobile mode
-		if (Foundation.utils.is_medium_up() && currently_small){
+		if (Foundation.utils.is_medium_up() && currently_small && !($('html').hasClass('touch'))){
 			$expandable_filter_selector.each(function(){
 				var $this = $(this);
 				if ($this.attr('aria-expanded') === 'false'){
@@ -76,7 +76,7 @@ module.exports = function() {
 		}
 
 		// collapse all accordions if stepping into mobile mode
-		if (Foundation.utils.is_small_only() && !currently_small){
+		if (Foundation.utils.is_small_only() && !currently_small && !($('html').hasClass('touch'))){
 			$expandable_filter_selector.each(function(){
 				if ($(this).attr('aria-expanded') === 'true'){
 					$(this).trigger('click');
