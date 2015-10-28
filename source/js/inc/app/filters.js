@@ -33,15 +33,17 @@ module.exports = function() {
 	}
 
 	// Close accordions if we're on a youch interface
-	if ($('html').hasClass('touch')){
-		$expandable_filter_selector.each(function(){
-			var $this = $(this);
-			if ($this.attr('aria-expanded') === 'true'){
-				$this.trigger('click');
-			}
-		});
-		currently_small = true;
-	}
+	$(window).load(function() {
+		if ($('html').hasClass('touch')){
+			$expandable_filter_selector.each(function(){
+				var $this = $(this);
+				if ($this.attr('aria-expanded') === 'true'){
+					$this.trigger('click');
+				}
+			});
+			currently_small = true;
+		}
+	});
 
 	// Collapse all accordions if opening up offcanvas
 	$(document).on('open.fndtn.offcanvas', '[data-offcanvas]', function () {

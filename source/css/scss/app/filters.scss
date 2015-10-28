@@ -299,9 +299,6 @@
 
   .no-border {
     border: 0;
-    @media #{$medium-up} {
-      border: 0;
-    }
   }
 
   .extra-padding-bottom {
