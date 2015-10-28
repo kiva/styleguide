@@ -111,6 +111,7 @@
     display: inline-table;
     width: 240px;
     border-bottom: 1px solid $charcoal;
+    margin-left: 0;
   }
 
   .filter-button-group-ul {
@@ -127,5 +128,12 @@
 
   .no-border {
     border: 0;
+  }
+}
+
+.touch{
+  .filters-close-icon {
+    position:absolute;
+    right:1px;
   }
 }

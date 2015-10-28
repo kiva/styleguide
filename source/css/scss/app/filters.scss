@@ -235,8 +235,10 @@
     display: inline-table;
     width: 240px;
     border-bottom: 1px solid $charcoal;
+    margin-left: 0;
 
     @media #{$medium-up} {
+      padding-left: 13px;
       height: auto;
       margin-left: 5px;
       border-bottom: 0px;
