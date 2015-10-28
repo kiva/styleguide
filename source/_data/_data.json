@@ -179,7 +179,7 @@
 		]
 	},
 	"my-kiva": {
-		"links": [
+		"default_links": [
 			{
 				"label": "Portfolio",
 				"href": "#"
