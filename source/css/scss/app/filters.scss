@@ -124,7 +124,7 @@
 
   .interact {
     color: $charcoal;
-    font-weight: 300;
+    font-weight: normal;
   }
 
   .filter-keywords-search-box {
@@ -234,9 +234,7 @@
     height: 44px;
     display: inline-table;
     width: 240px;
-    border-bottom: 1px solid $charcoal;
-    margin-left: 0;
-
+    border-bottom: 1px solid #D8D8C8;
     @media #{$medium-up} {
       padding-left: 13px;
       height: auto;

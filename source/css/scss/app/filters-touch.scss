@@ -35,6 +35,11 @@
     border-bottom: 1px solid #D8D8C8;
   }
 
+  .interact {
+    color: $charcoal;
+    font-weight: normal;
+  }
+
   .filter-component input {
     width: 12.5rem
   }
@@ -109,7 +114,7 @@
     height: 44px;
     display: inline-table;
     width: 240px;
-    border-bottom: 1px solid $charcoal;
+    border-bottom: 1px solid #D8D8C8;
     margin-left: 0;
   }
 
