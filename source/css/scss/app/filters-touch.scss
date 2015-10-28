@@ -19,7 +19,7 @@
   }
 
   .filter-header {
-    margin: 0.5em;
+    margin: 0.5em 0;
     text-align:center;
     color:$charcoal;
     height: auto;
@@ -135,5 +135,6 @@
   .filters-close-icon {
     position:absolute;
     right:1px;
+    display: block;
   }
 }
