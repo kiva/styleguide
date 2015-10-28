@@ -21967,7 +21967,7 @@ define("Styleguide", ["jquery"], function(__WEBPACK_EXTERNAL_MODULE_2__) { retur
 			$('.off-canvas-wrap').foundation('offcanvas', 'hide', 'move-right');
 		}
 
-		// Close accordions if we're on a youch interface
+		// Close accordions if we're on a touch interface
 		$(window).load(function() {
 			if ($('html').hasClass('touch')){
 				$expandable_filter_selector.each(function(){
