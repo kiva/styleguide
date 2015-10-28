@@ -1,0 +1,18 @@
+.category-card {
+	max-width: rem-calc(235);
+}
+
+.category-card-title {
+	@include featured-text;
+	@include text-shadow;
+	color: $white;
+	font-weight: $font-weight-bold;
+}
+
+.category-card-grid li {
+	padding: 1px;
+
+	@media #{$medium-up} {
+		padding: 2px;
+	}
+}
