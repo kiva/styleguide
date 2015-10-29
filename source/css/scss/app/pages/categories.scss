@@ -3,23 +3,29 @@
 
 	&.search-card {
 		background-color: #2db4ec;
-        position: relative;
-        width: 100%;
-        padding-bottom: 56%;
-
-        div {
-            position: absolute;
-        }
-
-		.category-card-title {
-			margin: 0;
-            text-align: center;
-		}
 
         input {
             margin: 0;
         }
 	}
+}
+
+.solid-color-card {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56%;
+
+    div {
+        position: absolute;
+        width: 100%;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    .category-card-title {
+        margin: 0;
+        text-align: center;
+    }
 }
 
 .category-card-title {
