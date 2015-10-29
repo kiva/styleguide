@@ -4,8 +4,42 @@
 	&.search-card {
 		background-color: #2db4ec;
 
+        div {
+            padding: 5% 0.5rem 0;
+        }
+
         input {
-            margin: 0;
+            margin: 0 auto 0.4rem;
+            max-width: 10rem;
+
+            @media #{$small-only} {
+                padding: 0 0.25rem;
+                height: 1.5rem;
+            }
+
+            &::-webkit-input-placeholder { /* Chrome, Safari, Opera */
+                text-align: center;
+            }
+
+            &:-moz-placeholder { /* Firefox 18- */
+                text-align: center;
+            }
+
+            &::-moz-placeholder { /* Firefox 19+ */
+                text-align: center;
+            }
+
+            &:-ms-input-placeholder { /* IE10-11 */
+                text-align: center !important;
+            }
+
+            &::-ms-input-placeholder { /* Edge */
+                text-align: center;
+            }
+
+            &::placeholder { /* CSS Working Draft */
+                text-align: center;
+            }
         }
 	}
 }
@@ -13,7 +47,7 @@
 .solid-color-card {
     position: relative;
     width: 100%;
-    padding-bottom: 56%;
+    padding-bottom: 56.35593%;
 
     div {
         position: absolute;
