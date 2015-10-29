@@ -1,11 +1,9 @@
 <div class="top-nav" role="navigation">
 	<div class="row header-row">
+	{{! This is the Promo/Bonus banner that is shown in the XXlarge screen state}}
 		<div class="show-for-xxlarge-up xxlarge-4 xxlarge-centered columns promo-space">
 			{{#bonus}}
-				<a href="{{bonus.href}}"><span class="amount">{{bonus.amount}}</span> {{bonus.label}}</a>
-			{{/bonus}}
-			{{^bonus}}
-				<span class="promo"><!-- Promo Space --></span>
+                <a href="{{bonus.href}}"><div style="font-weight: normal;">Select a borrower to </br><span style="font-weight: bold;">Redeem your {{bonus.amount}} {{bonus.label}}</span></div></a>
 			{{/bonus}}
 		</div>
 		<div class="small-3 large-2 xxlarge-2 columns header-column logo-area">
@@ -60,10 +58,15 @@
 			{{/my-kiva.links}}
 		</ul>
 	{{/is-visitor}}
-
+{{! This is the Promo/Bonus banner that is shown in the medium screen state}}
 	{{#bonus}}
-		<div class="hide-for-xxlarge-up pronus"><a href="{{bonus.href}}">{{bonus.amount}} {{bonus.label}}</a></div>
+		<div class="hide-for-xxlarge-up hide-for-small-only pronus"><a href="{{bonus.href}}"><span style="font-weight: normal;">Select a borrower to <span style="font-weight: bold;">Redeem your {{bonus.amount}} {{bonus.label}}</span></span></a></div>
 	{{/bonus}}
+{{! This is the Promo/Bonus banner that is shown in the small screen state}}
+	{{#bonus}}
+        <div class="show-for-small-only small-centered columns pronus"><a href="{{bonus.href}}"><div style="font-weight: normal;">Select a borrower to </br><span style="font-weight: bold;">Redeem your {{bonus.amount}} {{bonus.label}}</span></div></a></div>
+	{{/bonus}}
+
 </div>
 
 {{#basket.item_count}}

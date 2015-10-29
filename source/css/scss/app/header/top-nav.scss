@@ -56,8 +56,11 @@
     .promo-space.columns {
         position: absolute;
         text-align: center;
-        line-height: $header-height;
+        line-height: rem-calc(20);
         width: 100%;
+		font-size: 0.8rem;
+		font-weight: bold;
+		margin-top: rem-calc(11);
 
         a {
             color: $kiva-darkgreen;
@@ -102,10 +105,22 @@
         font-size: 0.8rem;
         font-weight: bold;
         text-align: center;
-        background-color: $kiva-darkgreen;
+        background-color: $kiva-green;
+		border-top: 1px solid $kiva-navdivider-green;
+		height: rem-calc(45);
+		line-height: rem-calc(45);
 
-        a {
-            color: $white;
+		@media #{$small-only} {
+			line-height: rem-calc(17);
+
+			a {
+				margin-top: rem-calc(5);
+			}
+		}
+
+
+		a {
+            color: $dark-green;
             width: 100%;
             display: block;
         }
