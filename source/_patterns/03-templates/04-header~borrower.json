@@ -1,12 +1,9 @@
 {
-    "is-borrower": true,
     "my-kiva": {
-        "borrower_links": [
+        "links": [
             { "label": "My Loan Page", "href": "#"},
             { "label": "Conversations", "href": "#"},
-            { "label": "My Borrower Home", "href": "#", "end-section": true}
-        ],
-        "default_links": [
+            { "label": "My Borrower Home", "href": "#"},
             { "label": "Portfolio", "href": "#"},
             { "label": "My Teams", "href": "#"},
             { "label": "Donations", "href": "#"},
