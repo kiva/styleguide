@@ -49,6 +49,13 @@
             }
         }
 
+        input.category-search-form-submit {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            left: -9999px;
+        }
+
         .category-card-title {
             margin-top: 0.4rem;
         }
