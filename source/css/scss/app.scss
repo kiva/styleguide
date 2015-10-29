@@ -67,23 +67,25 @@
 @import 'vendor_override/typeahead/typeahead';
 
 // App specific styling
+@import "app/base/_organisms";
+@import "app/base/_links";
+@import "app/components/animated-accordion";
+@import "app/components/triple-state-buttons";
+
 @import 'app/icons';
+@import 'app/header';
+@import 'app/sitefooter';
+@import 'app/page-layout';
 @import 'app/loan-figure';
 @import 'app/loan-image-footer';
-@import 'app/page-layout';
 @import 'app/fundraising-meter';
 @import 'app/filters';
 @import 'app/filters-touch';
-@import 'app/header';
 @import 'app/loancards';
-@import 'app/sitefooter';
+
 @import 'app/pages/about';
+@import 'app/pages/borrower-profile';
 @import 'app/pages/categories';
 @import 'app/pages/finding';
 @import 'app/pages/loan';
-@import 'app/pages/borrower-profile';
-@import "app/base/_links";
-@import "app/base/_organisms";
-@import "app/components/animated-accordion";
-@import "app/components/triple-state-buttons";
 @import 'app/pages/site-map';

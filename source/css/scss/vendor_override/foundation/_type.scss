@@ -88,6 +88,17 @@ $paragraph-line-height: $body-line-height;
 	}
 }
 
+@mixin small-featured-text() {
+	font-size: $feature-font-size - $feature-font-size-reduction;
+	line-height: $feature-line-height - $feature-line-height-reduction;
+}
+
+@mixin large-featured-text() {
+	font-size: $feature-font-size;
+	line-height: $feature-line-height;
+}
+
+
 @mixin impact-text() {
 	font-size: $impact-font-size - $impact-font-size-reduction;
 	line-height: $impact-line-height - $impact-line-height-reduction;
@@ -254,5 +265,14 @@ small {
 	.huge-statistic {
 		font-size: $huge-statistic-font-size - $huge-statistic-font-large-reduction;
 	}
+}
+
+@mixin vertical-center-text() {
+	position: absolute;
+	width: 100%;
+	top: 50%;
+	-webkit-transform: translateY(-50%);
+	-moz-transform: translateY(-50%);
+	transform: translateY(-50%);
 }
 

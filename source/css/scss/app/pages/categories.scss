@@ -1,8 +1,26 @@
 .category-card {
-	max-width: rem-calc(235);
+	@include preserve-3d;
+	position: relative;
+	width: 100%;
+	padding-bottom: 56.17%;
+
+	& img {
+		position: absolute;
+	}
+
+	& div {
+		@include vertical-center-text;
+	}
+
+	& p {
+		padding: 0 rem-calc(6);
+		text-align: center;
+		@include text-shadow();
+	}
+
 
 	&.search-card {
-		background-color: #2db4ec;
+		background-color: $kiva-accent-blue;
         z-index: 100;
 
         .color-card-center {
@@ -63,15 +81,8 @@
 }
 
 .solid-color-card {
-    position: relative;
-    width: 100%;
-    padding-bottom: 56.35593%;
-
     .color-card-center {
-        position: absolute;
-        width: 100%;
-        top: 50%;
-        transform: translateY(-50%);
+		@include vertical-center-text;
     }
 
     .category-card-title {
@@ -81,9 +92,25 @@
 }
 
 .category-card-title {
-	@include featured-text;
 	color: $white;
 	font-weight: $font-weight-bold;
+	@include small-featured-text;
+
+	@media (min-width: $x-small-breakpoint +1) and (max-width: $small-breakpoint) {
+		@include large-featured-text;
+	}
+
+	@media (min-width: $sm-medium-breakpoint + 1) and (max-width: $medium-breakpoint) {
+		@include large-featured-text;
+	}
+
+	@media #{$xlarge-up}  {
+		@include large-featured-text;
+	}
+
+	.text-over-image p {
+		padding: 0 rem-calc(6);
+	}
 }
 
 .text-over-image .category-card-title {

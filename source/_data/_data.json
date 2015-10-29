@@ -140,6 +140,10 @@
 			"fundraised-percentage": "80%"
 		}
 	},
+	"category": {
+		"name": "Agriculture",
+		"href": "/lend#/?&sortBy=popularity&gender=Female&partner_risk_rating_max=5&distributionModel=field_partner"
+	},
 	"loancard": {
 		"amount-left": "$33.5k left",
 		"sector": "Transportation",
@@ -216,7 +220,6 @@
 	"basket_href": "#",
 	"lend_href": "#",
 	"login_href": "#",
-	"categories_href": "#",
 	"basket": {
 		"item_count": "3"
 	},
@@ -1120,6 +1123,29 @@
 				"label": "2 yrs or more"
 			}
 		}
+	],
+	"categories-primary": [
+		{"name":"Women", "src":"../../images/category/women.jpg", "retina-src":"../../images/category/women-retina.jpg", "href":"##"},
+		{"name":"Agriculture", "src":"../../images/category/agriculture.jpg", "retina-src":"../../images/category/agriculture-retina.jpg", "href":"##"},
+		{"name":"Education", "src":"../../images/category/education.jpg", "retina-src":"../../images/category/education-retina.jpg", "href":"##"},
+		{"name":"Health", "src":"../../images/category/health.jpg", "retina-src":"../../images/category/health-retina.jpg", "href":"##"},
+		{"name":"Single Parents", "src":"../../images/category/single.jpg", "retina-src":"../../images/category/single-retina.jpg", "href":"##"},
+		{"name":"Shelter", "src":"../../images/category/shelter.jpg", "retina-src":"../../images/category/shelter-retina.jpg", "href":"##"},
+		{"name":"Food", "src":"../../images/category/food.jpg", "retina-src":"../../images/category/food-retina.jpg", "href":"##"},
+		{"name":"Livestock", "src":"../../images/category/livestock.jpg", "retina-src":"../../images/category/livestock-retina.jpg", "href":"##"},
+		{"name":"Sustainable", "src":"../../images/category/sustain.jpg", "retina-src":"../../images/category/sustain-retina.jpg", "href":"##"},
+		{"name":"Expiring Soon", "src":"../../images/category/expiring.jpg", "retina-src":"../../images/category/expiring-retina.jpg", "href":"##"}
+	],
+	"categories-secondary": [
+		{"name":"Retail Businesses", "href":"##"},
+		{"name":"Africa", "href":"##"},
+		{"name":"Green", "href":"##"},
+		{"name":"Conflict Zones", "href":"##"},
+		{"name":"Underbanked Areas", "href":"##"},
+		{"name":"Transportation", "href":"##"},
+		{"name":"Short-term Loans", "href":"##"},
+		{"name":"Men", "href":"##"},
+		{"name":"Groups", "href":"##"}
 	],
 	"partners": [
 		{"id":"312", "name":"Abaarso School of Science and Technology"},

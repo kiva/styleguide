@@ -1,14 +1,16 @@
-<div class="text-over-image category-card">
-	<img class="category-image" alt="{{img.category.alt}}"
-		 data-interchange="
-			[{{img.category.src}}.jpg, (default)]
-			, [{{img.category.src}}-retina.jpg, (retina)]
-		 ">
-	</img>
+<a href="{{href}}">
+	<div class="category-card">
+			<img class="category-image" alt=""
+				 data-interchange="
+					[{{src}}, (default)]
+					, [{{retina-src}}, (retina)]
+				 ">
+			</img>
 
-	<div>
-		<p class="category-card-title">
-			{{img.category.alt}}
-		</p>
+			<div>
+				<p class="category-card-title">
+					{{name}}
+				</p>
+			</div>
 	</div>
-</div>
+</a>
