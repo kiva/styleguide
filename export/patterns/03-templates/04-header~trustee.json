@@ -1,6 +1,6 @@
 {
     "my-kiva": {
-        "default_links": [
+        "links": [
             { "label": "Trustee Dashboard", "href": "#", "end-section": true},
             { "label": "Portfolio", "href": "#"},
             { "label": "My Teams", "href": "#"},

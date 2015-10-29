@@ -1,6 +1,6 @@
 {
     "my-kiva": {
-        "default_links": [
+        "links": [
             { "label": "Borrow", "href": "#"},
             { "label": "Trustee Dashboard", "href": "#", "end-section": true},
             { "label": "Portfolio", "href": "#"},

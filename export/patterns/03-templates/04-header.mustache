@@ -55,14 +55,9 @@
 
 	{{^is-visitor}}
 		<ul id="my-kiva-dropdown" class="f-dropdown dropdown-list" data-dropdown-content aria-hidden="true" tabindex="-1">
-			{{#is-borrower}}
-				{{#my-kiva.borrower_links}}
-                    <li><a href="{{href}}" {{#end-section}}class="end-section"{{/end-section}}>{{label}}</a></li>
-				{{/my-kiva.borrower_links}}
-			{{/is-borrower}}
-			{{#my-kiva.default_links}}
+			{{#my-kiva.links}}
 				<li><a href="{{href}}" {{#end-section}}class="end-section"{{/end-section}}>{{label}}</a></li>
-			{{/my-kiva.default_links}}
+			{{/my-kiva.links}}
 		</ul>
 	{{/is-visitor}}
 
