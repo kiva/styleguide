@@ -1,0 +1,39 @@
+.tt-menu {
+    $spacing: 0.4rem;
+
+    background-color: $white;
+    border: rem-calc(1) solid $iron;
+    padding: $spacing;
+    font-size: rem-calc(16);
+
+    @media #{$large-up} {
+        font-size: rem-calc(14);
+    }
+
+    .tt-suggestion {
+        padding: $spacing $spacing $spacing 1rem;
+
+        @media #{$large-up} {
+            padding: 0.1rem 0.1rem 0.1rem 1rem;
+        }
+    }
+
+    .tt-suggestion:first-of-type {
+        border-top: 1px solid #ccc;
+        margin-top: 0.2rem;
+        padding-top: 0.4rem;
+    }
+
+    .tt-cursor {
+        color: $white;
+        background-color: $kiva-accent-blue;
+    }
+
+    .tt-highlight {
+        text-decoration: underline;
+    }
+}
+
+.tt-hint {
+    color: $iron;
+}

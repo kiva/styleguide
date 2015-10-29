@@ -390,12 +390,7 @@
 		});
 	}
 
-	$('#search-box').typeahead({
-			highlight: true,
-			classNames: {
-				menu: 'top-nav-search-menu'
-			}
-		},
+	var engines = [
 		{
 			name: 'keyword',
 			source: function(query, results) {
@@ -423,10 +418,27 @@
 				header: 'States'
 			}
 		}
-	);
+	];
 
-	var $typeahead_menu = $('.top-nav-search-menu').detach();
-	$('.top-nav').append($typeahead_menu);
+	$('#search-box').typeahead({
+		highlight: true,
+		classNames: {
+			menu: 'top-nav-search-menu tt-menu'
+		}
+	}, engines);
+
+	$('#category-search-box').typeahead({
+		highlight: true,
+		classNames: {
+			menu: 'category-search-menu tt-menu'
+		}
+	}, engines);
+
+	var $top_nav_menu = $('.top-nav-search-menu').detach();
+	$('.top-nav').append($top_nav_menu);
+
+	//var $category_menu = $('.category-search-menu').detach();
+	//$('.category-card-grid').append($category_menu);
 
 	$(document).foundation({
 		accordion: {
