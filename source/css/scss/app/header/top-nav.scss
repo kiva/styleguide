@@ -61,10 +61,8 @@
 		font-size: 0.8rem;
 		font-weight: bold;
 		margin-top: rem-calc(11);
+		color: $kiva-darkgreen;
 
-        a {
-            color: $kiva-darkgreen;
-        }
 
         .amount {
             background-color: $kiva-darkgreen;
@@ -103,27 +101,18 @@
 
     .pronus {
         font-size: 0.8rem;
-        font-weight: bold;
         text-align: center;
         background-color: $kiva-green;
 		border-top: 1px solid $kiva-navdivider-green;
 		height: rem-calc(45);
 		line-height: rem-calc(45);
+		color: $dark-green;
+		width: 100%;
+		display: block;
 
 		@media #{$small-only} {
-			line-height: rem-calc(17);
-
-			a {
-				margin-top: rem-calc(5);
-			}
+			line-height: rem-calc(21);
 		}
-
-
-		a {
-            color: $dark-green;
-            width: 100%;
-            display: block;
-        }
     }
 
     @media #{$large-up} {
