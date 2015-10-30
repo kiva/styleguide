@@ -8,12 +8,13 @@
 		position: absolute;
 	}
 
-	& div {
+	& div.category-card-title-wrap {
 		@include vertical-center-text;
 	}
 
 	& p {
 		padding: 0 rem-calc(6);
+		margin: 0;
 		text-align: center;
 		@include text-shadow();
 	}
@@ -88,6 +89,7 @@
     .category-card-title {
         margin: 0;
         text-align: center;
+		text-shadow: none;
     }
 }
 
@@ -108,13 +110,9 @@
 		@include large-featured-text;
 	}
 
-	.text-over-image p {
+	p {
 		padding: 0 rem-calc(6);
 	}
-}
-
-.text-over-image .category-card-title {
-	@include text-shadow;
 }
 
 .category-card-grid li {
@@ -122,5 +120,19 @@
 
 	@media #{$medium-up} {
 		padding: 2px;
+	}
+}
+
+div.category-cards-header {
+	padding-top: 1rem;
+
+	p {
+		margin: 0;
+	}
+
+	svg {
+		height: rem-calc(50);
+		width: rem-calc(100);
+		padding: 0.5rem 0 1rem 0;
 	}
 }
