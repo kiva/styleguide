@@ -21995,7 +21995,7 @@ define("Styleguide", ["jquery"], function(__WEBPACK_EXTERNAL_MODULE_2__) { retur
 
 		$(window).on('resize', Foundation.utils.throttle(function() {
 			// on resize, if canvas closed, open it
-			if (Foundation.utils.is_large_up()){
+			if (Foundation.utils.is_large_up() && !($('html').hasClass('touch'))){
 				$('.off-canvas-wrap').foundation('offcanvas', 'show', 'move-right');
 			}
 
