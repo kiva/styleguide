@@ -21901,7 +21901,7 @@ define("Styleguide", ["jquery"], function(__WEBPACK_EXTERNAL_MODULE_2__) { retur
 		$(window).on('resize', Foundation.utils.throttle(function() {
 			$targets.each(function() {
 				var $this = $(this);
-				if($this.attr('aria-hidden') === 'false') {
+				if($this.attr('aria-hidden') === 'false' && !($this.hasClass('touch'))) {
 					$this.css('height', 'auto');
 				}
 			});

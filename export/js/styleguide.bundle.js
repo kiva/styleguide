@@ -21922,7 +21922,7 @@
 		$(window).on('resize', Foundation.utils.throttle(function() {
 			$targets.each(function() {
 				var $this = $(this);
-				if($this.attr('aria-hidden') === 'false') {
+				if($this.attr('aria-hidden') === 'false' && !($this.hasClass('touch'))) {
 					$this.css('height', 'auto');
 				}
 			});
