@@ -1,7 +1,11 @@
 <div class="frame">
 	<ul class="category-link-grid small-block-grid-1 medium-block-grid-2 large-block-grid-2">
 		{{#categories-secondary}}
-			<li>{{> 00-atoms/10-links/04-category-link-item}}</li>
+			<li>
+				<div class="secondary-category-link text-center">
+                	<a href="{{href}}">{{name}}</a>
+            	</div>
+			</li>
 		{{/categories-secondary}}
 	</ul>
 </div>
