@@ -6,6 +6,7 @@ module.exports = function() {
 	var $partners_filter = $('#partnersFilter');
 	var $partners_ul = $('#filter-partners-ul');
 	var $expandable_filter_selector = $('.expandable-filter');
+	var $html = $('html');
 	var currently_mobile = false;
 
 	// init the multi-select for partners
@@ -45,26 +46,26 @@ module.exports = function() {
 
 	// Close accordions if we're on a touch interface
 	$(window).load(function() {
-		if ($('html').hasClass('touch')){
+		if ($html.hasClass('touch')){
 			go_mobile();
 		}
 	});
 
 	// Collapse all accordions if opening up offcanvas
 	$(document).on('open.fndtn.offcanvas', '[data-offcanvas]', function () {
-		if (Foundation.utils.is_small_only() || $('html').hasClass('touch')){
+		if (Foundation.utils.is_small_only() || $html.hasClass('touch')){
 			go_mobile();
 		}
 	});
 
 	$(window).on('resize', Foundation.utils.throttle(function() {
 		// expand all accordions if stepping out of mobile mode
-		if (Foundation.utils.is_medium_up() && currently_mobile && !($('html').hasClass('touch'))){
+		if (Foundation.utils.is_medium_up() && currently_mobile && !($html.hasClass('touch'))){
 			leave_mobile();
 		}
 
 		// collapse all accordions if stepping into mobile mode
-		if (Foundation.utils.is_small_only() && !currently_mobile && !($('html').hasClass('touch'))){
+		if (Foundation.utils.is_small_only() && !currently_mobile && !($html.hasClass('touch'))){
 			go_mobile();
 		}
 	}, 200));
