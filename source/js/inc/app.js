@@ -8,6 +8,7 @@ var imagesizes = require('./app/imagesizes');
 var accordion = require('./app/accordion');
 var videoResizing = require('./app/videoResizing');
 var borrowerPage = require('./app/pages/borrowerPage');
+var categories = require('./app/pages/categories');
 
 var $ = require('jquery');
 var FastClick = require('fastclick');
@@ -29,3 +30,4 @@ imagesizes();
 accordion();
 videoResizing();
 borrowerPage();
+categories();
