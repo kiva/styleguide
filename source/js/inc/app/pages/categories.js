@@ -2,6 +2,8 @@ var $ = require('jquery');
 var Foundation = require('Foundation');
 
 module.exports = function() {
+	'use strict';
+
 	var $search_box = $('#category-search-box');
 
 	var search_box_resizing = function() {
