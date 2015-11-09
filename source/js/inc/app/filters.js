@@ -1,4 +1,5 @@
 module.exports = function() {
+	/* jshint maxstatements: 23 */
 	'use strict';
 
 	var $ = require('jquery');
@@ -78,7 +79,7 @@ module.exports = function() {
 
 	$(window).on('resize', Foundation.utils.throttle(function() {
 		// on resize, if canvas closed, open it
-		if (Foundation.utils.is_xlarge_up() && !($('html').hasClass('touch'))){
+		if (Foundation.utils.is_xxlarge_up() && !($('html').hasClass('touch'))){
 			open_filters();
 		}
 
