@@ -1,12 +1,10 @@
 module.exports = function() {
-	/* jshint maxstatements: 23 */
 	'use strict';
 
 	var $ = require('jquery');
 	var Foundation = require('Foundation');
 	var $partners_filter = $('#partnersFilter');
 	var $partners_ul = $('#filter-partners-ul');
-	var $filters_menu = $('.off-canvas-wrap');
 	var $expandable_filter_selector = $('.expandable-filter');
 	var currently_mobile = false;
 
@@ -44,24 +42,6 @@ module.exports = function() {
 		currently_mobile = false;
 	};
 
-	var open_filters = function() {
-		$filters_menu.foundation('offcanvas', 'show', 'move-right');
-	};
-
-	var close_filters = function() {
-		$filters_menu.foundation('offcanvas', 'hide', 'move-right');
-	};
-
-
-	// If large or higher, show filters
-	if (Foundation.utils.is_xxlarge_up()){
-		open_filters();
-	}
-
-	// If small or touch, then hide filters
-	if (!Foundation.utils.is_xxlarge_up() || $('html').hasClass('touch')){
-		close_filters();
-	}
 
 	// Close accordions if we're on a touch interface
 	$(window).load(function() {
@@ -78,11 +58,6 @@ module.exports = function() {
 	});
 
 	$(window).on('resize', Foundation.utils.throttle(function() {
-		// on resize, if canvas closed, open it
-		if (Foundation.utils.is_xxlarge_up() && !($('html').hasClass('touch'))){
-			open_filters();
-		}
-
 		// expand all accordions if stepping out of mobile mode
 		if (Foundation.utils.is_medium_up() && currently_mobile && !($('html').hasClass('touch'))){
 			leave_mobile();
