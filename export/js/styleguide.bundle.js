@@ -54,9 +54,10 @@
 	var accordion = __webpack_require__(14);
 	var videoResizing = __webpack_require__(17);
 	var borrowerPage = __webpack_require__(18);
+	var categories = __webpack_require__(19);
 
 	var $ = __webpack_require__(2);
-	var FastClick = __webpack_require__(19);
+	var FastClick = __webpack_require__(20);
 
 	$(document).foundation({
 		equalizer: {
@@ -75,6 +76,8 @@
 	accordion();
 	videoResizing();
 	borrowerPage();
+	categories();
+
 
 /***/ },
 /* 1 */
@@ -21938,10 +21941,10 @@
 
 		var $ = __webpack_require__(2);
 		var Foundation = __webpack_require__(4);
-		var $expandable_filter_selector = $('.expandable-filter');
 		var $partners_filter = $('#partnersFilter');
 		var $partners_ul = $('#filter-partners-ul');
-		var currently_small = false;
+		var $expandable_filter_selector = $('.expandable-filter');
+		var currently_mobile = false;
 
 		// init the multi-select for partners
 		$partners_filter.select2();
@@ -21957,67 +21960,50 @@
 			$partners_filter.select2('close');
 		});
 
-		// If large or higher, show filters
-		if (Foundation.utils.is_large_up()){
-			$('.off-canvas-wrap').foundation('offcanvas', 'show', 'move-right');
-		}
 
-		// If small or touch, then hide filters
-		if (Foundation.utils.is_small_only() || $('html').hasClass('touch')){
-			$('.off-canvas-wrap').foundation('offcanvas', 'hide', 'move-right');
-		}
+		var _click_accordions_if = function(condition) {
+			$expandable_filter_selector.each(function(){
+				var $this = $(this);
+				if ($this.attr('aria-expanded') === condition){
+					$this.trigger('click');
+				}
+			});
+		};
+
+		var go_mobile = function() {
+			_click_accordions_if('true');
+			currently_mobile = true;
+		};
+
+		var leave_mobile = function() {
+			_click_accordions_if('false');
+			currently_mobile = false;
+		};
+
 
 		// Close accordions if we're on a touch interface
 		$(window).load(function() {
 			if ($('html').hasClass('touch')){
-				$expandable_filter_selector.each(function(){
-					var $this = $(this);
-					if ($this.attr('aria-expanded') === 'true'){
-						$this.trigger('click');
-					}
-				});
-				currently_small = true;
+				go_mobile();
 			}
 		});
 
 		// Collapse all accordions if opening up offcanvas
 		$(document).on('open.fndtn.offcanvas', '[data-offcanvas]', function () {
 			if (Foundation.utils.is_small_only() || $('html').hasClass('touch')){
-				$expandable_filter_selector.each(function(){
-					var $this = $(this);
-					if ($this.attr('aria-expanded') === 'true'){
-						$this.trigger('click');
-					}
-				});
-				currently_small = true;
+				go_mobile();
 			}
 		});
 
 		$(window).on('resize', Foundation.utils.throttle(function() {
-			// on resize, if canvas closed, open it
-			if (Foundation.utils.is_large_up() && !($('html').hasClass('touch'))){
-				$('.off-canvas-wrap').foundation('offcanvas', 'show', 'move-right');
-			}
-
 			// expand all accordions if stepping out of mobile mode
-			if (Foundation.utils.is_medium_up() && currently_small && !($('html').hasClass('touch'))){
-				$expandable_filter_selector.each(function(){
-					var $this = $(this);
-					if ($this.attr('aria-expanded') === 'false'){
-						$this.trigger('click');
-					}
-				});
-				currently_small = false;
+			if (Foundation.utils.is_medium_up() && currently_mobile && !($('html').hasClass('touch'))){
+				leave_mobile();
 			}
 
 			// collapse all accordions if stepping into mobile mode
-			if (Foundation.utils.is_small_only() && !currently_small && !($('html').hasClass('touch'))){
-				$expandable_filter_selector.each(function(){
-					if ($(this).attr('aria-expanded') === 'true'){
-						$(this).trigger('click');
-					}
-				});
-				currently_small = true;
+			if (Foundation.utils.is_small_only() && !currently_mobile && !($('html').hasClass('touch'))){
+				go_mobile();
 			}
 		}, 200));
 	};
@@ -22117,6 +22103,30 @@
 
 /***/ },
 /* 19 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var $ = __webpack_require__(2);
+	var Foundation = __webpack_require__(4);
+
+	module.exports = function() {
+		'use strict';
+
+		var $search_box = $('#category-search-box');
+
+		var search_box_resizing = function() {
+			$('.category-search-menu').css('width', $search_box.outerWidth() + 'px');
+		};
+
+		$search_box.on('typeahead:open', search_box_resizing);
+
+		// Throttled resize function
+		$(window).on('resize', Foundation.utils.throttle(function() {
+			search_box_resizing();
+		}, 200));
+	};
+
+/***/ },
+/* 20 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_RESULT__;;(function () {
