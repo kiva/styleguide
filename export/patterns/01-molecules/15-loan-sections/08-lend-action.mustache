@@ -1,5 +1,5 @@
 <div class="lend-action">
-    <div class="show-for-medium-up">
+    <div class="show-for-large-up">
         <div class="lend-button-wrapper">
             <button data-dropdown="lend-button-dropdown" aria-controls="lend-button-dropdown"
                     aria-expanded="false"
@@ -19,4 +19,37 @@
             </button>
         </div>
     </div>
+    <div class="show-for-medium-down">
+        <div class="small-lend-button-content">
+            <div class="lend-button-wrapper">
+                <button data-dropdown="lend-button-dropdown" aria-controls="lend-button-dropdown"
+                        aria-expanded="false"
+                        class="button dropdown lend-button"
+                        id="lend-values-button">
+                    $25
+                </button>
+                <ul id="lend-button-dropdown" data-dropdown-content class="f-dropdown" aria-hidden="true">
+                    {{#lendValues}}
+                        <li><a href="#">${{amount}}</a></li>
+                    {{/lendValues}}
+                </ul>
+            </div>
+            <div class="lend-button-wrapper">
+                <button href="#" class="button lend-button">
+                    Lend Now
+                </button>
+            </div>
+            <div class="lend-button-wrapper">
+                <button href="#" class="button lend-button">
+                    <span class="basket-button-content">
+                        Basket
+                    </span>
+                    <span class="basket-button-content">
+                        1
+                    </span>
+                </button>
+            </div>
+        </div>
+    </div>
 </div>
+

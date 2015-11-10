@@ -18025,7 +18025,9 @@
 	        currentQueue = queue;
 	        queue = [];
 	        while (++queueIndex < len) {
-	            currentQueue[queueIndex].run();
+	            if (currentQueue) {
+	                currentQueue[queueIndex].run();
+	            }
 	        }
 	        queueIndex = -1;
 	        len = queue.length;
@@ -18077,7 +18079,6 @@
 	    throw new Error('process.binding is not supported');
 	};
 
-	// TODO(shtylman)
 	process.cwd = function () { return '/' };
 	process.chdir = function (dir) {
 	    throw new Error('process.chdir is not supported');
@@ -21944,6 +21945,7 @@
 		var $partners_filter = $('#partnersFilter');
 		var $partners_ul = $('#filter-partners-ul');
 		var $expandable_filter_selector = $('.expandable-filter');
+		var is_touch = $('html').hasClass('touch');
 		var currently_mobile = false;
 
 		// init the multi-select for partners
@@ -21983,27 +21985,29 @@
 
 		// Close accordions if we're on a touch interface
 		$(window).load(function() {
-			if ($('html').hasClass('touch')){
+			if (is_touch){
 				go_mobile();
 			}
 		});
 
 		// Collapse all accordions if opening up offcanvas
 		$(document).on('open.fndtn.offcanvas', '[data-offcanvas]', function () {
-			if (Foundation.utils.is_small_only() || $('html').hasClass('touch')){
+			if (is_touch || Foundation.utils.is_small_only()){
 				go_mobile();
 			}
 		});
 
 		$(window).on('resize', Foundation.utils.throttle(function() {
-			// expand all accordions if stepping out of mobile mode
-			if (Foundation.utils.is_medium_up() && currently_mobile && !($('html').hasClass('touch'))){
-				leave_mobile();
-			}
+			if(!is_touch) {
+				// expand all accordions if stepping out of mobile mode
+				if (currently_mobile && Foundation.utils.is_medium_up()){
+					leave_mobile();
+				}
 
-			// collapse all accordions if stepping into mobile mode
-			if (Foundation.utils.is_small_only() && !currently_mobile && !($('html').hasClass('touch'))){
-				go_mobile();
+				// collapse all accordions if stepping into mobile mode
+				if (!currently_mobile && !Foundation.utils.is_medium_up()){
+					go_mobile();
+				}
 			}
 		}, 200));
 	};
