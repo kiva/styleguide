@@ -1,14 +1,12 @@
 $loan-card-footer-height: 3rem;
 $loan-card-meter-height: $loan-card-footer-height/2;
 
-// Loan cards - listing
-.loancards-list > li {
-	//margin-bottom: 1rem;
-}
-
 .loan-card {
 	height: 100%;
 	position: relative;
+    min-width: rem-calc(300);
+    max-width: rem-calc(480);
+    margin: auto;
 
 	.borrower-img-wrap {
         position: relative;

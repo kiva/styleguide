@@ -1,55 +1,55 @@
 .triple-state-buttons, .quintuple-state-buttons {
-    margin: 0 rem-calc(12) rem-calc(6);
+	margin: 0 rem-calc(12) rem-calc(6);
 }
 
 #partnersFilter {
-    $padding: rem-calc(12);
-    width: calc(100% - #{$padding*2 + rem-calc(2)});
-    margin-left: $padding;
-    padding: 0;
+	$padding: rem-calc(12);
+	width: calc(100% - #{$padding*2 + rem-calc(2)});
+	margin-left: $padding;
+	padding: 0;
 
-    &+.select2-container {
-        width: calc(100% - #{$padding*2});
-        margin-left: $padding;
+	&+.select2-container {
+		width: calc(100% - #{$padding*2});
+		margin-left: $padding;
 
-        .select2-selection {
-            border: 1px solid $charcoal;
-            border-radius: 0;
-        }
+		.select2-selection {
+			border: 1px solid $charcoal;
+			border-radius: 0;
+		}
 
-        input {
-            box-shadow: none;
-            padding: 0;
-            margin-bottom: 0;
-            font-size: $small-font-size;
-            height: $small-line-height;
-        }
-    }
+		input {
+			box-shadow: none;
+			padding: 0;
+			margin-bottom: 0;
+			font-size: $small-font-size;
+			height: $small-line-height;
+		}
+	}
 }
 
 .select2-results__option, .select2-selection__choice {
-    font-size: $small-font-size;
-    line-height: $small-line-height;
+	font-size: $small-font-size;
+	line-height: $small-line-height;
 }
 
 .select2-results__option--highlighted {
-    background-color: $kiva-accent-blue;
+	background-color: $kiva-accent-blue;
 }
 
 .left-off-canvas-menu {
-    $border: rem-calc(1) solid $iron;
-    border-right: $border;
-    border-bottom: $border;
+	$border: rem-calc(1) solid $iron;
+	border-right: $border;
+	border-bottom: $border;
 }
 
 .control-region {
-    .filter-menu-button {
-        width: 5rem;
-        margin: 0.5rem 0 1rem;
-        padding-left: 0;
-        padding-right: 0;
-        color: $kiva-text-dark;
-    }
+	.filter-menu-button {
+		width: 5rem;
+		margin: 0.5rem 0 1rem;
+		padding-left: 0;
+		padding-right: 0;
+		color: $kiva-text-dark;
+	}
 }
 
 a.filter-menu-button:visited {
@@ -57,41 +57,79 @@ a.filter-menu-button:visited {
 }
 
 .control-region, .results-region {
-    padding-left: rem-calc(20);
+	//padding-left: rem-calc(20);
+	max-width: rem-calc(1300);
+}
+
+.loancards-list {
+	@media #{$screen} and (min-width: 1230px) {
+		@include block-grid(3);
+	}
+
+	@media #{$screen} and (min-width: 1550px) {
+		@include block-grid(4);
+	}
+
+	@media #{$large-up} {
+		margin: 0 rem-calc(10);
+	}
 }
 
 .inner-wrap {
-    $menu-width: rem-calc(251);
-    $transform: translate3d(-$menu-width, 0, 0);
+	$menu-margin: rem-calc(20);
+	$menu-base-width: rem-calc(251);
+	$menu-width: rem-calc(251) + $menu-margin;
+	$transform: translate3d(-$menu-width, 0, 0);
 
-    width: calc(100% + #{$menu-width});
-    -webkit-transform: $transform;
-    transform: $transform;
+	width: calc(100% + #{$menu-width});
+	-webkit-transform: $transform;
+	transform: $transform;
 
-    @media #{$large-up} {
-        -webkit-transform: none;
-        transform: none;
-        width: 100%;
-    }
+	@media #{$large-up} {
+		$transform: translate3d(-$menu-base-width, 0, 0);
 
-    .left-off-canvas-menu {
-        position: relative;
-        float: left;
-        -webkit-transform: none;
-        transform: none;
-    }
+		width: calc(100% + #{$menu-base-width});
+		-webkit-transform: $transform;
+		transform: $transform;
+	}
 
-    .control-region, .results-region {
-        display: inline-block;
-        width: calc(100% - #{$menu-width});
-    }
+	@media #{$xxlarge-up} {
+		-webkit-transform: none;
+		transform: none;
+		width: 100%;
+	}
 
-    .exit-off-canvas {
-        left: $menu-width;
-    }
+	.left-off-canvas-menu {
+		position: relative;
+		float: left;
+		-webkit-transform: none;
+		transform: none;
+		margin-right: $menu-margin;
+
+		@media #{$large-up} {
+			margin-right: 0;
+		}
+	}
+
+	.control-region, .results-region {
+		display: inline-block;
+		width: calc(100% - #{$menu-width});
+
+        @media #{$large-up} {
+            width: calc(100% - #{$menu-base-width});
+        }
+	}
+
+	.exit-off-canvas {
+		left: $menu-width;
+
+        @media #{$large-up} {
+            left: $menu-base-width;
+        }
+	}
 }
 
 .move-right > .inner-wrap {
-    -webkit-transform: none;
-    transform: none;
+	-webkit-transform: none;
+	transform: none;
 }
