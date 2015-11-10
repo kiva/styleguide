@@ -87,6 +87,7 @@
 }
 
 .solid-color-card {
+	background-color: $kiva-green;
 	.color-card-center {
 		@include vertical-center-text;
 	}
@@ -95,10 +96,6 @@
 		margin: 0;
 		text-align: center;
 		text-shadow: none;
-	}
-
-	.all-categories {
-		background-color: $kiva-green;
 	}
 }
 
