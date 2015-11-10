@@ -85,9 +85,12 @@
 		}
 	}
 }
+.solid-color-card.all-loans-card {
+	background-color: $kiva-green;
+}
 
 .solid-color-card {
-	background-color: $kiva-green;
+
 	.color-card-center {
 		@include vertical-center-text;
 	}
