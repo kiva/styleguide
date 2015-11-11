@@ -300,6 +300,7 @@
 }
 
 .mobile-lend-action {
+  border-top: solid 1px green;
   position: fixed;
   max-width: none;
   bottom: 0;
@@ -307,9 +308,15 @@
   .button {
     margin-bottom: 0;
     display: inline-block;
-    font-size: 0.7rem;
+    font-size: 1rem;
     height: 2.8rem;
     width: 100%;
+    #basket-text{
+      font-size: 0.6rem;
+      position: absolute;
+      top: 5%;
+      right: 48.9%;
+    }
   }
   .columns {
     padding: 0;
