@@ -1,5 +1,12 @@
 .borrower-profile-wrapper {
 
+  .left-content {
+    padding-left: 1rem;
+  }
+  .right-content {
+    padding-right: 1rem;
+  }
+
   .line-break {
     width: 90%;
     margin: auto;
@@ -27,7 +34,7 @@
     }
   }
 
-  @media #{$xlarge-up} {
+  @media #{$xxlarge-up} {
     padding-top: 1rem;
     .left-content {
       padding-left: 3.833333rem;

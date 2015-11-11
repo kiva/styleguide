@@ -267,43 +267,12 @@
 }
 
 .lend-action {
-
-  .small-lend-button-content {
-    position: fixed;
-    z-index: 9999;
-    bottom: 0;
-    width: 100%;
-
-    .lend-button-wrapper {
-      .lend-button {
-        margin: 0;
-        height: 3rem;
-        padding: 0;
-        outline: 0 !important;
-      }
-      &:first-child {
-        .lend-button {
-          width: 25%;
-        }
-      }
-
-      &:last-child {
-        .lend-button {
-          width: 20%;
-        }
-      }
-      &:nth-child(2) {
-        .lend-button {
-          width: 50%;
-        }
-      }
-    }
-  }
-
   .lend-button-wrapper {
     display: inline;
+    padding: 0;
 
     &:first-child {
+      padding-right: 5px;
       .lend-button {
         padding-right: 35px;
         &:after {
@@ -314,8 +283,9 @@
 
     .lend-button {
       height: 3rem;
-      padding: 10px;
+      padding: 8px;
       outline: 0 !important;
+      width: 100%;
     }
   }
 
