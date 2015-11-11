@@ -328,3 +328,25 @@
     }
   }
 }
+
+.mobile-lend-action {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  z-index: 9999;
+  .button {
+    margin-bottom: 0;
+    display: inline-block;
+    font-size: 0.7rem;
+    height: 2.8rem;
+  }
+  #loan-amount {
+    width: 25%;
+  }
+  #lend-button {
+    width: 48%;
+  }
+  #basket-button {
+    width: 24%;
+  }
+}
