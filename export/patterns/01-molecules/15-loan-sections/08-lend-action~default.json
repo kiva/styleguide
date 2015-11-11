@@ -12,5 +12,6 @@
     {
       "amount": 125
     }
-  ]
+  ],
+  "alreadyLent": false
 }
