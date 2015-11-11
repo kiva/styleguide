@@ -1526,7 +1526,7 @@ define("Styleguide", ["jquery"], function(__WEBPACK_EXTERNAL_MODULE_2__) { retur
 	/* WEBPACK VAR INJECTION */(function(jQuery) {/*
 	 * Foundation Responsive Library
 	 * http://foundation.zurb.com
-	 * Copyright 2014, ZURB
+	 * Copyright 2015, ZURB
 	 * Free to use under the MIT license.
 	 * http://www.opensource.org/licenses/mit-license.php
 	*/
@@ -1535,14 +1535,12 @@ define("Styleguide", ["jquery"], function(__WEBPACK_EXTERNAL_MODULE_2__) { retur
 	  'use strict';
 
 	  var header_helpers = function (class_array) {
-	    var i = class_array.length;
 	    var head = $('head');
-
-	    while (i--) {
-	      if (head.has('.' + class_array[i]).length === 0) {
-	        head.append('<meta class="' + class_array[i] + '" />');
+	    head.prepend($.map(class_array, function (class_name) {
+	      if (head.has('.' + class_name).length === 0) {
+	        return '<meta class="' + class_name + '" />';
 	      }
-	    }
+	    }));
 	  };
 
 	  header_helpers([
@@ -1815,21 +1813,30 @@ define("Styleguide", ["jquery"], function(__WEBPACK_EXTERNAL_MODULE_2__) { retur
 	    return string;
 	  }
 
+	  function MediaQuery(selector) {
+	    this.selector = selector;
+	    this.query = '';
+	  }
+
+	  MediaQuery.prototype.toString = function () {
+	    return this.query || (this.query = S(this.selector).css('font-family').replace(/^[\/\\'"]+|(;\s?})+|[\/\\'"]+$/g, ''));
+	  };
+
 	  window.Foundation = {
 	    name : 'Foundation',
 
-	    version : '5.5.2',
+	    version : '5.5.3',
 
 	    media_queries : {
-	      'small'       : S('.foundation-mq-small').css('font-family').replace(/^[\/\\'"]+|(;\s?})+|[\/\\'"]+$/g, ''),
-	      'small-only'  : S('.foundation-mq-small-only').css('font-family').replace(/^[\/\\'"]+|(;\s?})+|[\/\\'"]+$/g, ''),
-	      'medium'      : S('.foundation-mq-medium').css('font-family').replace(/^[\/\\'"]+|(;\s?})+|[\/\\'"]+$/g, ''),
-	      'medium-only' : S('.foundation-mq-medium-only').css('font-family').replace(/^[\/\\'"]+|(;\s?})+|[\/\\'"]+$/g, ''),
-	      'large'       : S('.foundation-mq-large').css('font-family').replace(/^[\/\\'"]+|(;\s?})+|[\/\\'"]+$/g, ''),
-	      'large-only'  : S('.foundation-mq-large-only').css('font-family').replace(/^[\/\\'"]+|(;\s?})+|[\/\\'"]+$/g, ''),
-	      'xlarge'      : S('.foundation-mq-xlarge').css('font-family').replace(/^[\/\\'"]+|(;\s?})+|[\/\\'"]+$/g, ''),
-	      'xlarge-only' : S('.foundation-mq-xlarge-only').css('font-family').replace(/^[\/\\'"]+|(;\s?})+|[\/\\'"]+$/g, ''),
-	      'xxlarge'     : S('.foundation-mq-xxlarge').css('font-family').replace(/^[\/\\'"]+|(;\s?})+|[\/\\'"]+$/g, '')
+	      'small'       : new MediaQuery('.foundation-mq-small'),
+	      'small-only'  : new MediaQuery('.foundation-mq-small-only'),
+	      'medium'      : new MediaQuery('.foundation-mq-medium'),
+	      'medium-only' : new MediaQuery('.foundation-mq-medium-only'),
+	      'large'       : new MediaQuery('.foundation-mq-large'),
+	      'large-only'  : new MediaQuery('.foundation-mq-large-only'),
+	      'xlarge'      : new MediaQuery('.foundation-mq-xlarge'),
+	      'xlarge-only' : new MediaQuery('.foundation-mq-xlarge-only'),
+	      'xxlarge'     : new MediaQuery('.foundation-mq-xxlarge')
 	    },
 
 	    stylesheet : $('<style></style>').appendTo('head')[0].sheet,
@@ -2255,15 +2262,18 @@ define("Styleguide", ["jquery"], function(__WEBPACK_EXTERNAL_MODULE_2__) { retur
 	  Foundation.libs.abide = {
 	    name : 'abide',
 
-	    version : '5.5.2',
+	    version : '5.5.3',
 
 	    settings : {
-	      live_validate : true,
-	      validate_on_blur : true,
-	      // validate_on: 'tab', // tab (when user tabs between fields), change (input changes), manual (call custom events) 
-	      focus_on_invalid : true,
-	      error_labels : true, // labels with a for="inputId" will recieve an `error` class
-	      error_class : 'error',
+	      live_validate : true, // validate the form as you go
+	      validate_on_blur : true, // validate whenever you focus/blur on an input field
+	      // validate_on: 'tab', // tab (when user tabs between fields), change (input changes), manual (call custom events)
+
+	      focus_on_invalid : true, // automatically bring the focus to an invalid input field
+	      error_labels : true, // labels with a for="inputId" will receive an `error` class
+	      error_class : 'error', // labels with a for="inputId" will receive an `error` class
+	      // the amount of time Abide will take before it validates the form (in ms).
+	      // smaller time will result in faster validation
 	      timeout : 1000,
 	      patterns : {
 	        alpha : /^[a-zA-Z]+$/,
@@ -2328,7 +2338,6 @@ define("Styleguide", ["jquery"], function(__WEBPACK_EXTERNAL_MODULE_2__) { retur
 	        }.bind(originalSelf), settings.timeout);
 	      }
 
-
 	      form
 	        .off('.abide')
 	        .on('submit.fndtn.abide', function (e) {
@@ -2341,15 +2350,21 @@ define("Styleguide", ["jquery"], function(__WEBPACK_EXTERNAL_MODULE_2__) { retur
 	          }
 	        })
 	        .on('reset', function (e) {
-	          return self.reset($(this), e);          
+	          return self.reset($(this), e);
 	        })
 	        .find('input, textarea, select').not(":hidden, [data-abide-ignore]")
 	          .off('.abide')
 	          .on('blur.fndtn.abide change.fndtn.abide', function (e) {
+	              var id = this.getAttribute('id'),
+	                  eqTo = form.find('[data-equalto="'+ id +'"]');
 	            // old settings fallback
 	            // will be deprecated with F6 release
 	            if (settings.validate_on_blur && settings.validate_on_blur === true) {
 	              validate(this, e);
+	            }
+	            // checks if there is an equalTo equivalent related by id
+	            if(typeof eqTo.get(0) !== "undefined" && eqTo.val().length){
+	              validate(eqTo.get(0),e);
 	            }
 	            // new settings combining validate options into one setting
 	            if (settings.validate_on === 'change') {
@@ -2357,10 +2372,16 @@ define("Styleguide", ["jquery"], function(__WEBPACK_EXTERNAL_MODULE_2__) { retur
 	            }
 	          })
 	          .on('keydown.fndtn.abide', function (e) {
+	            var id = this.getAttribute('id'),
+	                eqTo = form.find('[data-equalto="'+ id +'"]');
 	            // old settings fallback
 	            // will be deprecated with F6 release
 	            if (settings.live_validate && settings.live_validate === true && e.which != 9) {
 	              validate(this, e);
+	            }
+	            // checks if there is an equalTo equivalent related by id
+	            if(typeof eqTo.get(0) !== "undefined" && eqTo.val().length){
+	              validate(eqTo.get(0),e);
 	            }
 	            // new settings combining validate options into one setting
 	            if (settings.validate_on === 'tab' && e.which === 9) {
@@ -2375,7 +2396,7 @@ define("Styleguide", ["jquery"], function(__WEBPACK_EXTERNAL_MODULE_2__) { retur
 	              $('html, body').animate({
 	                  scrollTop: $(e.target).offset().top
 	              }, 100);
-	            } 
+	            }
 	          });
 	    },
 
@@ -2454,8 +2475,11 @@ define("Styleguide", ["jquery"], function(__WEBPACK_EXTERNAL_MODULE_2__) { retur
 	    // TODO: Break this up into smaller methods, getting hard to read.
 	    check_validation_and_apply_styles : function (el_patterns) {
 	      var i = el_patterns.length,
-	          validations = [],
-	          form = this.S(el_patterns[0][0]).closest('[data-' + this.attr_name(true) + ']'),
+	          validations = [];
+	      if (i == 0) {
+	        return validations;
+	      }
+	      var form = this.S(el_patterns[0][0]).closest('[data-' + this.attr_name(true) + ']'),
 	          settings = form.data(this.attr_name(true) + '-init') || {};
 	      while (i--) {
 	        var el = el_patterns[i][0],
@@ -2550,6 +2574,7 @@ define("Styleguide", ["jquery"], function(__WEBPACK_EXTERNAL_MODULE_2__) { retur
 	        }
 	        validations = validations.concat(el_validations);
 	      }
+
 	      return validations;
 	    },
 
@@ -2576,20 +2601,20 @@ define("Styleguide", ["jquery"], function(__WEBPACK_EXTERNAL_MODULE_2__) { retur
 	          disabled = false;
 
 	      // Has to count up to make sure the focus gets applied to the top error
-	        for (var i=0; i < count; i++) {
-	            if( group[i].getAttribute('disabled') ){
-	                disabled=true;
-	                valid=true;
-	            } else {
-	                if (group[i].checked){
-	                    valid = true;
-	                } else {
-	                    if( disabled ){
-	                        valid = false;
-	                    }
-	                }
+	      for (var i=0; i < count; i++) {
+	        if( group[i].getAttribute('disabled') ){
+	          disabled=true;
+	          valid=true;
+	        } else {
+	          if (group[i].checked){
+	            valid = true;
+	          } else {
+	            if( disabled ){
+	              valid = false;
 	            }
+	          }
 	        }
+	      }
 
 	      // Has to count up to make sure the focus gets applied to the top error
 	      for (var i = 0; i < count; i++) {
@@ -2664,7 +2689,7 @@ define("Styleguide", ["jquery"], function(__WEBPACK_EXTERNAL_MODULE_2__) { retur
 	  Foundation.libs.accordion = {
 	    name : 'accordion',
 
-	    version : '5.5.2',
+	    version : '5.5.3',
 
 	    settings : {
 	      content_class : 'content',
@@ -2734,12 +2759,49 @@ define("Styleguide", ["jquery"], function(__WEBPACK_EXTERNAL_MODULE_2__) { retur
 	          settings = accordion.data(self.attr_name(true) + '-init') || self.settings;
 
 	      aunts.children('a').attr('aria-expanded','false');
-	      aunts.has('.' + settings.content_class + '.' + settings.active_class).children('a').attr('aria-expanded','true');
+	      aunts.has('.' + settings.content_class + '.' + settings.active_class).addClass(settings.active_class).children('a').attr('aria-expanded','true');
 
 	      if (settings.multi_expand) {
 	        $instance.attr('aria-multiselectable','true');
 	      }
 	    },
+		
+	  	toggle : function(options) {
+	  		var options = typeof options !== 'undefined' ? options : {};
+	  		var selector = typeof options.selector !== 'undefined' ? options.selector : '';
+	  		var toggle_state = typeof options.toggle_state !== 'undefined' ? options.toggle_state : '';
+	  		var $accordion = typeof options.$accordion !== 'undefined' ? options.$accordion : this.S(this.scope).closest('[' + this.attr_name() + ']');
+	  
+	  		var $items = $accordion.find('> dd' + selector + ', > li' + selector);
+	  		if ( $items.length < 1 ) {
+	  			if ( window.console ) {
+	  				console.error('Selection not found.', selector);
+	  			}
+	  			return false;
+	  		}
+	  
+	  		var S = this.S;
+	  		var active_class = this.settings.active_class;
+	  		$items.each(function() {
+	  			var $item = S(this);
+	  			var is_active = $item.hasClass(active_class);
+	  			if ( ( is_active && toggle_state === 'close' ) || ( !is_active && toggle_state === 'open' ) || toggle_state === '' ) {
+	  				$item.find('> a').trigger('click.fndtn.accordion');
+	  			}
+	  		});
+	  	},
+	  
+	  	open : function(options) {
+	  		var options = typeof options !== 'undefined' ? options : {};
+	  		options.toggle_state = 'open';
+	  		this.toggle(options);
+	  	},
+	  
+	  	close : function(options) {
+	  		var options = typeof options !== 'undefined' ? options : {};
+	  		options.toggle_state = 'close';
+	  		this.toggle(options);
+	  	},	
 
 	    off : function () {},
 
@@ -2753,7 +2815,7 @@ define("Styleguide", ["jquery"], function(__WEBPACK_EXTERNAL_MODULE_2__) { retur
 	  Foundation.libs.alert = {
 	    name : 'alert',
 
-	    version : '5.5.2',
+	    version : '5.5.3',
 
 	    settings : {
 	      callback : function () {}
@@ -2797,7 +2859,7 @@ define("Styleguide", ["jquery"], function(__WEBPACK_EXTERNAL_MODULE_2__) { retur
 	  Foundation.libs.clearing = {
 	    name : 'clearing',
 
-	    version : '5.5.2',
+	    version : '5.5.3',
 
 	    settings : {
 	      templates : {
@@ -2821,7 +2883,7 @@ define("Styleguide", ["jquery"], function(__WEBPACK_EXTERNAL_MODULE_2__) { retur
 
 	      touch_label : '',
 
-	      // event initializers and locks
+	      // event initializer and locks
 	      init : false,
 	      locked : false
 	    },
@@ -3246,9 +3308,9 @@ define("Styleguide", ["jquery"], function(__WEBPACK_EXTERNAL_MODULE_2__) { retur
 	      var caption = $image.attr('data-caption');
 
 	      if (caption) {
-	        container
-	          .html(caption)
-	          .show();
+	      	var containerPlain = container.get(0);
+	      	containerPlain.innerHTML = caption;
+	        container.show();
 	      } else {
 	        container
 	          .text('')
@@ -3384,7 +3446,7 @@ define("Styleguide", ["jquery"], function(__WEBPACK_EXTERNAL_MODULE_2__) { retur
 	  Foundation.libs.dropdown = {
 	    name : 'dropdown',
 
-	    version : '5.5.2',
+	    version : '5.5.3',
 
 	    settings : {
 	      active_class : 'open',
@@ -3638,7 +3700,7 @@ define("Styleguide", ["jquery"], function(__WEBPACK_EXTERNAL_MODULE_2__) { retur
 	    // `this` is the dropdown
 	    dirs : {
 	      // Calculate target offset
-	      _base : function (t) {
+	      _base : function (t, s) {
 	        var o_p = this.offsetParent(),
 	            o = o_p.offset(),
 	            p = t.offset();
@@ -3655,31 +3717,36 @@ define("Styleguide", ["jquery"], function(__WEBPACK_EXTERNAL_MODULE_2__) { retur
 	        //lets see if the panel will be off the screen
 	        //get the actual width of the page and store it
 	        var actualBodyWidth;
+	        var windowWidth = window.innerWidth;
+	        
 	        if (document.getElementsByClassName('row')[0]) {
 	          actualBodyWidth = document.getElementsByClassName('row')[0].clientWidth;
 	        } else {
-	          actualBodyWidth = window.innerWidth;
+	          actualBodyWidth = windowWidth;
 	        }
 
-	        var actualMarginWidth = (window.innerWidth - actualBodyWidth) / 2;
+	        var actualMarginWidth = (windowWidth - actualBodyWidth) / 2;
 	        var actualBoundary = actualBodyWidth;
 
-	        if (!this.hasClass('mega')) {
+	        if (!this.hasClass('mega') && !s.ignore_repositioning) {
+	          var outerWidth = this.outerWidth();
+	          var o_left = t.offset().left;
+			  
 	          //miss top
 	          if (t.offset().top <= this.outerHeight()) {
 	            p.missTop = true;
-	            actualBoundary = window.innerWidth - actualMarginWidth;
+	            actualBoundary = windowWidth - actualMarginWidth;
 	            p.leftRightFlag = true;
 	          }
 
 	          //miss right
-	          if (t.offset().left + this.outerWidth() > t.offset().left + actualMarginWidth && t.offset().left - actualMarginWidth > this.outerWidth()) {
+	          if (o_left + outerWidth > o_left + actualMarginWidth && o_left - actualMarginWidth > outerWidth) {
 	            p.missRight = true;
 	            p.missLeft = false;
 	          }
 
 	          //miss left
-	          if (t.offset().left - this.outerWidth() <= 0) {
+	          if (o_left - outerWidth <= 0) {
 	            p.missLeft = true;
 	            p.missRight = false;
 	          }
@@ -3690,7 +3757,7 @@ define("Styleguide", ["jquery"], function(__WEBPACK_EXTERNAL_MODULE_2__) { retur
 
 	      top : function (t, s) {
 	        var self = Foundation.libs.dropdown,
-	            p = self.dirs._base.call(this, t);
+	            p = self.dirs._base.call(this, t, s);
 
 	        this.addClass('drop-top');
 
@@ -3717,7 +3784,7 @@ define("Styleguide", ["jquery"], function(__WEBPACK_EXTERNAL_MODULE_2__) { retur
 
 	      bottom : function (t, s) {
 	        var self = Foundation.libs.dropdown,
-	            p = self.dirs._base.call(this, t);
+	            p = self.dirs._base.call(this, t, s);
 
 	        if (p.missRight == true) {
 	          p.left = p.left - this.outerWidth() + t.outerWidth();
@@ -3735,7 +3802,7 @@ define("Styleguide", ["jquery"], function(__WEBPACK_EXTERNAL_MODULE_2__) { retur
 	      },
 
 	      left : function (t, s) {
-	        var p = Foundation.libs.dropdown.dirs._base.call(this, t);
+	        var p = Foundation.libs.dropdown.dirs._base.call(this, t, s);
 
 	        this.addClass('drop-left');
 
@@ -3749,7 +3816,7 @@ define("Styleguide", ["jquery"], function(__WEBPACK_EXTERNAL_MODULE_2__) { retur
 	      },
 
 	      right : function (t, s) {
-	        var p = Foundation.libs.dropdown.dirs._base.call(this, t);
+	        var p = Foundation.libs.dropdown.dirs._base.call(this, t, s);
 
 	        this.addClass('drop-right');
 
@@ -3848,7 +3915,7 @@ define("Styleguide", ["jquery"], function(__WEBPACK_EXTERNAL_MODULE_2__) { retur
 	  Foundation.libs.equalizer = {
 	    name : 'equalizer',
 
-	    version : '5.5.2',
+	    version : '5.5.3',
 
 	    settings : {
 	      use_tallest : true,
@@ -3953,7 +4020,7 @@ define("Styleguide", ["jquery"], function(__WEBPACK_EXTERNAL_MODULE_2__) { retur
 	  Foundation.libs.interchange = {
 	    name : 'interchange',
 
-	    version : '5.5.2',
+	    version : '5.5.3',
 
 	    cache : {},
 
@@ -3998,7 +4065,8 @@ define("Styleguide", ["jquery"], function(__WEBPACK_EXTERNAL_MODULE_2__) { retur
 	          // });
 
 	          if (el !== null && /IMG/.test(el[0].nodeName)) {
-	            var orig_path = el[0].src;
+	            var orig_path = $.each(el, function(){this.src = path;});
+	            // var orig_path = el[0].src;
 
 	            if (new RegExp(path, 'i').test(orig_path)) {
 	              return;
@@ -4315,13 +4383,13 @@ define("Styleguide", ["jquery"], function(__WEBPACK_EXTERNAL_MODULE_2__) { retur
 	  Foundation.libs.joyride = {
 	    name : 'joyride',
 
-	    version : '5.5.2',
+	    version : '5.5.3',
 
 	    defaults : {
 	      expose                   : false,     // turn on or off the expose feature
 	      modal                    : true,      // Whether to cover page with modal during the tour
 	      keyboard                 : true,      // enable left, right and esc keystrokes
-	      tip_location             : 'bottom',  // 'top' or 'bottom' in relation to parent
+	      tip_location             : 'bottom',  // 'top', 'bottom', 'left' or 'right' in relation to parent
 	      nub_position             : 'auto',    // override on a per tooltip bases
 	      scroll_speed             : 1500,      // Page scrolling speed in milliseconds, 0 = no scroll animation
 	      scroll_animation         : 'linear',  // supports 'swing' and 'linear', extend with jQuery UI.
@@ -4632,8 +4700,8 @@ define("Styleguide", ["jquery"], function(__WEBPACK_EXTERNAL_MODULE_2__) { retur
 
 	          this.settings.tip_settings.tip_location_pattern = this.settings.tip_location_patterns[this.settings.tip_settings.tip_location];
 
-	          // scroll and hide bg if not modal
-	          if (!/body/i.test(this.settings.$target.selector)) {
+	          // scroll and hide bg if not modal and not expose
+	          if (!/body/i.test(this.settings.$target.selector) && !this.settings.expose) {
 	            var joyridemodalbg = $('.joyride-modal-bg');
 	            if (/pop/i.test(this.settings.tipAnimation)) {
 	                joyridemodalbg.hide();
@@ -4809,67 +4877,67 @@ define("Styleguide", ["jquery"], function(__WEBPACK_EXTERNAL_MODULE_2__) { retur
 	      }
 
 	      if (!/body/i.test(this.settings.$target.selector)) {
-	          var topAdjustment = this.settings.tip_settings.tipAdjustmentY ? parseInt(this.settings.tip_settings.tipAdjustmentY) : 0,
-	              leftAdjustment = this.settings.tip_settings.tipAdjustmentX ? parseInt(this.settings.tip_settings.tipAdjustmentX) : 0;
+	        var topAdjustment = this.settings.tip_settings.tipAdjustmentY ? parseInt(this.settings.tip_settings.tipAdjustmentY) : 0,
+	            leftAdjustment = this.settings.tip_settings.tipAdjustmentX ? parseInt(this.settings.tip_settings.tipAdjustmentX) : 0;
 
-	          if (this.bottom()) {
-	            if (this.rtl) {
-	              this.settings.$next_tip.css({
-	                top : (this.settings.$target.offset().top + nub_height + this.settings.$target.outerHeight() + topAdjustment),
-	                left : this.settings.$target.offset().left + this.settings.$target.outerWidth() - this.settings.$next_tip.outerWidth() + leftAdjustment});
-	            } else {
-	              this.settings.$next_tip.css({
-	                top : (this.settings.$target.offset().top + nub_height + this.settings.$target.outerHeight() + topAdjustment),
-	                left : this.settings.$target.offset().left + leftAdjustment});
-	            }
-
-	            this.nub_position($nub, this.settings.tip_settings.nub_position, 'top');
-
-	          } else if (this.top()) {
-	            if (this.rtl) {
-	              this.settings.$next_tip.css({
-	                top : (this.settings.$target.offset().top - this.settings.$next_tip.outerHeight() - nub_height + topAdjustment),
-	                left : this.settings.$target.offset().left + this.settings.$target.outerWidth() - this.settings.$next_tip.outerWidth()});
-	            } else {
-	              this.settings.$next_tip.css({
-	                top : (this.settings.$target.offset().top - this.settings.$next_tip.outerHeight() - nub_height + topAdjustment),
-	                left : this.settings.$target.offset().left + leftAdjustment});
-	            }
-
-	            this.nub_position($nub, this.settings.tip_settings.nub_position, 'bottom');
-
-	          } else if (this.right()) {
-
+	        if (this.bottom()) {
+	          if (this.rtl) {
 	            this.settings.$next_tip.css({
-	              top : this.settings.$target.offset().top + topAdjustment,
-	              left : (this.settings.$target.outerWidth() + this.settings.$target.offset().left + nub_width + leftAdjustment)});
-
-	            this.nub_position($nub, this.settings.tip_settings.nub_position, 'left');
-
-	          } else if (this.left()) {
-
+	              top : (this.settings.$target.offset().top + nub_height + this.settings.$target.outerHeight() + topAdjustment),
+	              left : this.settings.$target.offset().left + this.settings.$target.outerWidth() - this.settings.$next_tip.outerWidth() + leftAdjustment});
+	          } else {
 	            this.settings.$next_tip.css({
-	              top : this.settings.$target.offset().top + topAdjustment,
-	              left : (this.settings.$target.offset().left - this.settings.$next_tip.outerWidth() - nub_width + leftAdjustment)});
-
-	            this.nub_position($nub, this.settings.tip_settings.nub_position, 'right');
-
+	              top : (this.settings.$target.offset().top + nub_height + this.settings.$target.outerHeight() + topAdjustment),
+	              left : this.settings.$target.offset().left + leftAdjustment});
 	          }
 
-	          if (!this.visible(this.corners(this.settings.$next_tip)) && this.settings.attempts < this.settings.tip_settings.tip_location_pattern.length) {
+	          this.nub_position($nub, this.settings.tip_settings.nub_position, 'top');
 
-	            $nub.removeClass('bottom')
-	              .removeClass('top')
-	              .removeClass('right')
-	              .removeClass('left');
-
-	            this.settings.tip_settings.tip_location = this.settings.tip_settings.tip_location_pattern[this.settings.attempts];
-
-	            this.settings.attempts++;
-
-	            this.pos_default();
-
+	        } else if (this.top()) {
+	          if (this.rtl) {
+	            this.settings.$next_tip.css({
+	              top : (this.settings.$target.offset().top - this.settings.$next_tip.outerHeight() - nub_height + topAdjustment),
+	              left : this.settings.$target.offset().left + this.settings.$target.outerWidth() - this.settings.$next_tip.outerWidth()});
+	          } else {
+	            this.settings.$next_tip.css({
+	              top : (this.settings.$target.offset().top - this.settings.$next_tip.outerHeight() - nub_height + topAdjustment),
+	              left : this.settings.$target.offset().left + leftAdjustment});
 	          }
+
+	          this.nub_position($nub, this.settings.tip_settings.nub_position, 'bottom');
+
+	        } else if (this.right()) {
+
+	          this.settings.$next_tip.css({
+	            top : this.settings.$target.offset().top + topAdjustment,
+	            left : (this.settings.$target.outerWidth() + this.settings.$target.offset().left + nub_width + leftAdjustment)});
+
+	          this.nub_position($nub, this.settings.tip_settings.nub_position, 'left');
+
+	        } else if (this.left()) {
+
+	          this.settings.$next_tip.css({
+	            top : this.settings.$target.offset().top + topAdjustment,
+	            left : (this.settings.$target.offset().left - this.settings.$next_tip.outerWidth() - nub_width + leftAdjustment)});
+
+	          this.nub_position($nub, this.settings.tip_settings.nub_position, 'right');
+
+	        }
+
+	        if (!this.visible(this.corners(this.settings.$next_tip)) && this.settings.attempts < this.settings.tip_settings.tip_location_pattern.length) {
+
+	          $nub.removeClass('bottom')
+	            .removeClass('top')
+	            .removeClass('right')
+	            .removeClass('left');
+
+	          this.settings.tip_settings.tip_location = this.settings.tip_settings.tip_location_pattern[this.settings.attempts];
+
+	          this.settings.attempts++;
+
+	          this.pos_default();
+
+	        }
 
 	      } else if (this.settings.$li.length) {
 
@@ -5136,6 +5204,10 @@ define("Styleguide", ["jquery"], function(__WEBPACK_EXTERNAL_MODULE_2__) { retur
 	    },
 
 	    corners : function (el) {
+	      if (el.length === 0) {
+	         return [false, false, false, false];   
+	      }
+	      
 	      var w = $(window),
 	          window_half = w.height() / 2,
 	          //using this to calculate since scroll may not have finished yet.
@@ -5233,7 +5305,6 @@ define("Styleguide", ["jquery"], function(__WEBPACK_EXTERNAL_MODULE_2__) { retur
 	      $('.joyride-close-tip, .joyride-next-tip, .joyride-modal-bg').off('.joyride');
 	      $('.joyride-tip-guide, .joyride-modal-bg').remove();
 	      clearTimeout(this.settings.automate);
-	      this.settings = {};
 	    },
 
 	    reflow : function () {}
@@ -5246,7 +5317,7 @@ define("Styleguide", ["jquery"], function(__WEBPACK_EXTERNAL_MODULE_2__) { retur
 	  Foundation.libs['magellan-expedition'] = {
 	    name : 'magellan-expedition',
 
-	    version : '5.5.2',
+	    version : '5.5.3',
 
 	    settings : {
 	      active_class : 'active',
@@ -5301,11 +5372,10 @@ define("Styleguide", ["jquery"], function(__WEBPACK_EXTERNAL_MODULE_2__) { retur
 	              'scrollTop' : scroll_top
 	            }, settings.duration, settings.easing, function () {
 	              if (history.pushState) {
-	                        history.pushState(null, null, anchor.pathname + '#' + hash);
+	                history.pushState(null, null, anchor.pathname + anchor.search + '#' + hash);
+	              } else {
+	                location.hash = anchor.pathname + anchor.search + '#' + hash;
 	              }
-	                    else {
-	                        location.hash = anchor.pathname + '#' + hash;
-	                    }
 	            });
 	          }
 	        })
@@ -5462,7 +5532,7 @@ define("Styleguide", ["jquery"], function(__WEBPACK_EXTERNAL_MODULE_2__) { retur
 	  Foundation.libs.offcanvas = {
 	    name : 'offcanvas',
 
-	    version : '5.5.2',
+	    version : '5.5.3',
 
 	    settings : {
 	      open_method : 'move',
@@ -5478,16 +5548,22 @@ define("Styleguide", ["jquery"], function(__WEBPACK_EXTERNAL_MODULE_2__) { retur
 	          S = self.S,
 	          move_class = '',
 	          right_postfix = '',
-	          left_postfix = '';
+	          left_postfix = '',
+	          top_postfix = '',
+	          bottom_postfix = '';
 
 	      if (this.settings.open_method === 'move') {
 	        move_class = 'move-';
 	        right_postfix = 'right';
 	        left_postfix = 'left';
+	        top_postfix = 'top';
+	        bottom_postfix = 'bottom';
 	      } else if (this.settings.open_method === 'overlap_single') {
 	        move_class = 'offcanvas-overlap-';
 	        right_postfix = 'right';
 	        left_postfix = 'left';
+	        top_postfix = 'top';
+	        bottom_postfix = 'bottom';
 	      } else if (this.settings.open_method === 'overlap') {
 	        move_class = 'offcanvas-overlap';
 	      }
@@ -5516,6 +5592,7 @@ define("Styleguide", ["jquery"], function(__WEBPACK_EXTERNAL_MODULE_2__) { retur
 	          }
 	          $('.left-off-canvas-toggle').attr('aria-expanded', 'true');
 	        })
+	        //end of left canvas
 	        .on('click.fndtn.offcanvas', '.right-off-canvas-toggle', function (e) {
 	          self.click_toggle_class(e, move_class + left_postfix);
 	          if (self.settings.open_method !== 'overlap') {
@@ -5539,6 +5616,55 @@ define("Styleguide", ["jquery"], function(__WEBPACK_EXTERNAL_MODULE_2__) { retur
 	          }
 	          $('.right-off-canvas-toggle').attr('aria-expanded', 'true');
 	        })
+	        //end of right canvas
+	        .on('click.fndtn.offcanvas', '.top-off-canvas-toggle', function (e) {
+	          self.click_toggle_class(e, move_class + bottom_postfix);
+	          if (self.settings.open_method !== 'overlap') {
+	            S('.top-submenu').removeClass(move_class + bottom_postfix);
+	          }
+	          $('.top-off-canvas-toggle').attr('aria-expanded', 'true');
+	        })
+	        .on('click.fndtn.offcanvas', '.top-off-canvas-menu a', function (e) {
+	          var settings = self.get_settings(e);
+	          var parent = S(this).parent();
+
+	          if (settings.close_on_click && !parent.hasClass('has-submenu') && !parent.hasClass('back')) {
+	            self.hide.call(self, move_class + bottom_postfix, self.get_wrapper(e));
+	            parent.parent().removeClass(move_class + bottom_postfix);
+	          } else if (S(this).parent().hasClass('has-submenu')) {
+	            e.preventDefault();
+	            S(this).siblings('.top-submenu').toggleClass(move_class + bottom_postfix);
+	          } else if (parent.hasClass('back')) {
+	            e.preventDefault();
+	            parent.parent().removeClass(move_class + bottom_postfix);
+	          }
+	          $('.top-off-canvas-toggle').attr('aria-expanded', 'true');
+	        })
+	        //end of top canvas
+	        .on('click.fndtn.offcanvas', '.bottom-off-canvas-toggle', function (e) {
+	          self.click_toggle_class(e, move_class + top_postfix);
+	          if (self.settings.open_method !== 'overlap') {
+	            S('.bottom-submenu').removeClass(move_class + top_postfix);
+	          }
+	          $('.bottom-off-canvas-toggle').attr('aria-expanded', 'true');
+	        })
+	        .on('click.fndtn.offcanvas', '.bottom-off-canvas-menu a', function (e) {
+	          var settings = self.get_settings(e);
+	          var parent = S(this).parent();
+
+	          if (settings.close_on_click && !parent.hasClass('has-submenu') && !parent.hasClass('back')) {
+	            self.hide.call(self, move_class + top_postfix, self.get_wrapper(e));
+	            parent.parent().removeClass(move_class + top_postfix);
+	          } else if (S(this).parent().hasClass('has-submenu')) {
+	            e.preventDefault();
+	            S(this).siblings('.bottom-submenu').toggleClass(move_class + top_postfix);
+	          } else if (parent.hasClass('back')) {
+	            e.preventDefault();
+	            parent.parent().removeClass(move_class + top_postfix);
+	          }
+	          $('.bottom-off-canvas-toggle').attr('aria-expanded', 'true');
+	        })
+	        //end of bottom
 	        .on('click.fndtn.offcanvas', '.exit-off-canvas', function (e) {
 	          self.click_remove_class(e, move_class + left_postfix);
 	          S('.right-submenu').removeClass(move_class + left_postfix);
@@ -5554,6 +5680,23 @@ define("Styleguide", ["jquery"], function(__WEBPACK_EXTERNAL_MODULE_2__) { retur
 	          if (right_postfix) {
 	            self.click_remove_class(e, move_class + right_postfix);
 	            $('.right-off-canvas-toggle').attr('aria-expanded', 'false');
+	          }
+	        })
+	        .on('click.fndtn.offcanvas', '.exit-off-canvas', function (e) {
+	          self.click_remove_class(e, move_class + top_postfix);
+	          S('.bottom-submenu').removeClass(move_class + top_postfix);
+	          if (bottom_postfix) {
+	            self.click_remove_class(e, move_class + bottom_postfix);
+	            S('.top-submenu').removeClass(move_class + top_postfix);
+	          }
+	          $('.bottom-off-canvas-toggle').attr('aria-expanded', 'true');
+	        })
+	        .on('click.fndtn.offcanvas', '.exit-off-canvas', function (e) {
+	          self.click_remove_class(e, move_class + top_postfix);
+	          $('.top-off-canvas-toggle').attr('aria-expanded', 'false');
+	          if (bottom_postfix) {
+	            self.click_remove_class(e, move_class + bottom_postfix);
+	            $('.bottom-off-canvas-toggle').attr('aria-expanded', 'false');
 	          }
 	        });
 	    },
@@ -6018,7 +6161,7 @@ define("Styleguide", ["jquery"], function(__WEBPACK_EXTERNAL_MODULE_2__) { retur
 	  Foundation.libs.orbit = {
 	    name : 'orbit',
 
-	    version : '5.5.2',
+	    version : '5.5.3',
 
 	    settings : {
 	      animation : 'slide',
@@ -6089,10 +6232,12 @@ define("Styleguide", ["jquery"], function(__WEBPACK_EXTERNAL_MODULE_2__) { retur
 	;(function ($, window, document, undefined) {
 	  'use strict';
 
+	  var openModals = [];
+
 	  Foundation.libs.reveal = {
 	    name : 'reveal',
 
-	    version : '5.5.2',
+	    version : '5.5.3',
 
 	    locked : false,
 
@@ -6243,7 +6388,7 @@ define("Styleguide", ["jquery"], function(__WEBPACK_EXTERNAL_MODULE_2__) { retur
 	      settings = settings || this.settings;
 
 
-	      if (modal.hasClass('open') && target.attr('data-reveal-id') == modal.attr('id')) {
+	      if (modal.hasClass('open') && target !== undefined && target.attr('data-reveal-id') == modal.attr('id')) {
 	        return self.close(modal);
 	      }
 
@@ -6276,16 +6421,25 @@ define("Styleguide", ["jquery"], function(__WEBPACK_EXTERNAL_MODULE_2__) { retur
 	          };
 	        }
 
-	        if (typeof ajax_settings === 'undefined' || !ajax_settings.url) {
-	          if (open_modal.length > 0) {
-	            if (settings.multiple_opened) {
+	        var openModal = function() {
+	          if(open_modal.length > 0) {
+	            if(settings.multiple_opened) {
 	              self.to_back(open_modal);
 	            } else {
 	              self.hide(open_modal, settings.css.close);
 	            }
 	          }
 
-	          this.show(modal, settings.css.open);
+	          // bl: add the open_modal that isn't already in the background to the openModals array
+	          if(settings.multiple_opened) {
+	            openModals.push(modal);
+	          }
+
+	          self.show(modal, settings.css.open);
+	        };
+
+	        if (typeof ajax_settings === 'undefined' || !ajax_settings.url) {
+	          openModal();
 	        } else {
 	          var old_success = typeof ajax_settings.success !== 'undefined' ? ajax_settings.success : null;
 	          $.extend(ajax_settings, {
@@ -6306,14 +6460,7 @@ define("Styleguide", ["jquery"], function(__WEBPACK_EXTERNAL_MODULE_2__) { retur
 	              self.S(modal).foundation('section', 'reflow');
 	              self.S(modal).children().foundation();
 
-	              if (open_modal.length > 0) {
-	                if (settings.multiple_opened) {
-	                  self.to_back(open_modal);
-	                } else {
-	                  self.hide(open_modal, settings.css.close);
-	                }
-	              }
-	              self.show(modal, settings.css.open);
+	              openModal();
 	            }
 	          });
 
@@ -6351,8 +6498,27 @@ define("Styleguide", ["jquery"], function(__WEBPACK_EXTERNAL_MODULE_2__) { retur
 	        }
 
 	        if (settings.multiple_opened) {
+	          var isCurrent = modal.is(':not(.toback)');
 	          self.hide(modal, settings.css.close, settings);
-	          self.to_front($($.makeArray(open_modals).reverse()[1]));
+	          if(isCurrent) {
+	            // remove the last modal since it is now closed
+	            openModals.pop();
+	          } else {
+	            // if this isn't the current modal, then find it in the array and remove it
+	            openModals = $.grep(openModals, function(elt) {
+	              var isThis = elt[0]===modal[0];
+	              if(isThis) {
+	                // since it's not currently in the front, put it in the front now that it is hidden
+	                // so that if it's re-opened, it won't be .toback
+	                self.to_front(modal);
+	              }
+	              return !isThis;
+	            });
+	          }
+	          // finally, show the next modal in the stack, if there is one
+	          if(openModals.length>0) {
+	            self.to_front(openModals[openModals.length - 1]);
+	          }
 	        } else {
 	          self.hide(open_modals, settings.css.close, settings);
 	        }
@@ -6425,8 +6591,9 @@ define("Styleguide", ["jquery"], function(__WEBPACK_EXTERNAL_MODULE_2__) { retur
 	          }, settings.animation_speed / 2);
 	        }
 
+	        css.top = $(window).scrollTop() + el.data('css-top') + 'px';
+
 	        if (animData.fade) {
-	          css.top = $(window).scrollTop() + el.data('css-top') + 'px';
 	          var end_css = {opacity: 1};
 
 	          return setTimeout(function () {
@@ -6591,13 +6758,13 @@ define("Styleguide", ["jquery"], function(__WEBPACK_EXTERNAL_MODULE_2__) { retur
 	  Foundation.libs.slider = {
 	    name : 'slider',
 
-	    version : '5.5.2',
+	    version : '5.5.3',
 
 	    settings : {
 	      start : 0,
 	      end : 100,
 	      step : 1,
-	      precision : null,
+	      precision : 2,
 	      initial : null,
 	      display_selector : '',
 	      vertical : false,
@@ -6615,7 +6782,6 @@ define("Styleguide", ["jquery"], function(__WEBPACK_EXTERNAL_MODULE_2__) { retur
 
 	    events : function () {
 	      var self = this;
-
 	      $(this.scope)
 	        .off('.slider')
 	        .on('mousedown.fndtn.slider touchstart.fndtn.slider pointerdown.fndtn.slider',
@@ -6640,6 +6806,23 @@ define("Styleguide", ["jquery"], function(__WEBPACK_EXTERNAL_MODULE_2__) { retur
 	          }
 	        })
 	        .on('mouseup.fndtn.slider touchend.fndtn.slider pointerup.fndtn.slider', function (e) {
+	          if(!self.cache.active) {
+	            // if the user has just clicked into the slider without starting to drag the handle
+	            var slider = $(e.target).attr('role') === 'slider' ? $(e.target) : $(e.target).closest('.range-slider').find("[role='slider']");
+
+	            if (slider.length && (!slider.parent().hasClass('disabled') && !slider.parent().attr('disabled'))) {
+	              self.set_active_slider(slider);
+	              if ($.data(self.cache.active[0], 'settings').vertical) {
+	                var scroll_offset = 0;
+	                if (!e.pageY) {
+	                  scroll_offset = window.scrollY;
+	                }
+	                self.calculate_position(self.cache.active, self.get_cursor_position(e, 'y') + scroll_offset);
+	              } else {
+	                self.calculate_position(self.cache.active, self.get_cursor_position(e, 'x'));
+	              }
+	            }
+	          }
 	          self.remove_active_slider();
 	        })
 	        .on('change.fndtn.slider', function (e) {
@@ -6659,9 +6842,8 @@ define("Styleguide", ["jquery"], function(__WEBPACK_EXTERNAL_MODULE_2__) { retur
 
 	        if (settings.display_selector != '') {
 	          $(settings.display_selector).each(function(){
-	            if (this.hasOwnProperty('value')) {
-	              $(this).change(function(){
-	                // is there a better way to do this?
+	            if ($(this).attr('value')) {
+	              $(this).off('change').on('change', function () {
 	                slider.foundation("slider", "set_value", $(this).val());
 	              });
 	            }
@@ -6873,7 +7055,7 @@ define("Styleguide", ["jquery"], function(__WEBPACK_EXTERNAL_MODULE_2__) { retur
 	  Foundation.libs.tab = {
 	    name : 'tab',
 
-	    version : '5.5.2',
+	    version : '5.5.3',
 
 	    settings : {
 	      active_class : 'active',
@@ -6889,16 +7071,12 @@ define("Styleguide", ["jquery"], function(__WEBPACK_EXTERNAL_MODULE_2__) { retur
 	      var self = this,
 	          S = this.S;
 
-		  // Store the default active tabs which will be referenced when the
-		  // location hash is absent, as in the case of navigating the tabs and
-		  // returning to the first viewing via the browser Back button.
-		  S('[' + this.attr_name() + '] > .active > a', this.scope).each(function () {
-		    self.default_tab_hashes.push(this.hash);
-		  });
-
-	      // store the initial href, which is used to allow correct behaviour of the
-	      // browser back button when deep linking is turned on.
-	      self.entry_location = window.location.href;
+	  	  // Store the default active tabs which will be referenced when the
+	  	  // location hash is absent, as in the case of navigating the tabs and
+	  	  // returning to the first viewing via the browser Back button.
+	  	  S('[' + this.attr_name() + '] > .active > a', this.scope).each(function () {
+	  	    self.default_tab_hashes.push(this.hash);
+	  	  });
 
 	      this.bindings(method, options);
 	      this.handle_location_hash_change();
@@ -6909,26 +7087,29 @@ define("Styleguide", ["jquery"], function(__WEBPACK_EXTERNAL_MODULE_2__) { retur
 	          S = this.S;
 
 	      var usual_tab_behavior =  function (e, target) {
-	          var settings = S(target).closest('[' + self.attr_name() + ']').data(self.attr_name(true) + '-init');
-	          if (!settings.is_hover || Modernizr.touch) {
+	        var settings = S(target).closest('[' + self.attr_name() + ']').data(self.attr_name(true) + '-init');
+	        if (!settings.is_hover || Modernizr.touch) {
+	          // if user did not pressed tab key, prevent default action
+	          var keyCode = e.keyCode || e.which;
+	          if (keyCode !== 9) { 
 	            e.preventDefault();
 	            e.stopPropagation();
-	            self.toggle_active_tab(S(target).parent());
 	          }
-	        };
+	          self.toggle_active_tab(S(target).parent());
+	          
+	        }
+	      };
 
 	      S(this.scope)
 	        .off('.tab')
 	        // Key event: focus/tab key
 	        .on('keydown.fndtn.tab', '[' + this.attr_name() + '] > * > a', function(e) {
-	          var el = this;
 	          var keyCode = e.keyCode || e.which;
-	            // if user pressed tab key
-	            if (keyCode == 9) { 
-	              e.preventDefault();
-	              // TODO: Change usual_tab_behavior into accessibility function?
-	              usual_tab_behavior(e, el);
-	            } 
+	          // if user pressed tab key
+	          if (keyCode === 13 || keyCode === 32) { // enter or space
+	            var el = this;
+	            usual_tab_behavior(e, el);
+	          } 
 	        })
 	        // Click event: tab title
 	        .on('click.fndtn.tab', '[' + this.attr_name() + '] > * > a', function(e) {
@@ -7050,10 +7231,9 @@ define("Styleguide", ["jquery"], function(__WEBPACK_EXTERNAL_MODULE_2__) { retur
 	          go_to_hash = function(hash) {
 	            // This function allows correct behaviour of the browser's back button when deep linking is enabled. Without it
 	            // the user would get continually redirected to the default hash.
-	            var is_entry_location = window.location.href === self.entry_location,
-	                default_hash = settings.scroll_to_content ? self.default_tab_hashes[0] : is_entry_location ? window.location.hash :'fndtn-' + self.default_tab_hashes[0].replace('#', '')
+	            var default_hash = settings.scroll_to_content ? self.default_tab_hashes[0] : 'fndtn-' + self.default_tab_hashes[0].replace('#', '');
 
-	            if (!(is_entry_location && hash === default_hash)) {
+	            if (hash !== default_hash || window.location.hash) {
 	              window.location.hash = hash;
 	            }
 	          };
@@ -7093,8 +7273,8 @@ define("Styleguide", ["jquery"], function(__WEBPACK_EXTERNAL_MODULE_2__) { retur
 	      tab.addClass(settings.active_class).triggerHandler('opened');
 	      tab_link.attr({'aria-selected' : 'true',  tabindex : 0});
 	      siblings.removeClass(settings.active_class)
-	      siblings.find('a').attr({'aria-selected' : 'false',  tabindex : -1});
-	      target.siblings().removeClass(settings.active_class).attr({'aria-hidden' : 'true',  tabindex : -1});
+	      siblings.find('a').attr({'aria-selected' : 'false'/*,  tabindex : -1*/});
+	      target.siblings().removeClass(settings.active_class).attr({'aria-hidden' : 'true'/*,  tabindex : -1*/});
 	      target.addClass(settings.active_class).attr('aria-hidden', 'false').removeAttr('tabindex');
 	      settings.callback(tab);
 	      target.triggerHandler('toggled', [target]);
@@ -7123,7 +7303,7 @@ define("Styleguide", ["jquery"], function(__WEBPACK_EXTERNAL_MODULE_2__) { retur
 	  Foundation.libs.tooltip = {
 	    name : 'tooltip',
 
-	    version : '5.5.2',
+	    version : '5.5.3',
 
 	    settings : {
 	      additional_inheritable_classes : [],
@@ -7132,6 +7312,8 @@ define("Styleguide", ["jquery"], function(__WEBPACK_EXTERNAL_MODULE_2__) { retur
 	      touch_close_text : 'Tap To Close',
 	      disable_for_touch : false,
 	      hover_delay : 200,
+	      fade_in_duration : 150,
+	      fade_out_duration : 150,
 	      show_on : 'all',
 	      tip_template : function (selector, content) {
 	        return '<span data-selector="' + selector + '" id="' + selector + '" class="'
@@ -7327,14 +7509,14 @@ define("Styleguide", ["jquery"], function(__WEBPACK_EXTERNAL_MODULE_2__) { retur
 	    },
 
 	    reposition : function (target, tip, classes) {
-	      var width, nub, nubHeight, nubWidth, column, objPos;
+	      var width, nub, nubHeight, nubWidth, objPos;
 
 	      tip.css('visibility', 'hidden').show();
 
 	      width = target.data('width');
 	      nub = tip.children('.nub');
 	      nubHeight = nub.outerHeight();
-	      nubWidth = nub.outerHeight();
+	      nubWidth = nub.outerWidth();
 
 	      if (this.small()) {
 	        tip.css({'width' : '100%'});
@@ -7350,39 +7532,46 @@ define("Styleguide", ["jquery"], function(__WEBPACK_EXTERNAL_MODULE_2__) { retur
 	          'right' : (right) ? right : 'auto'
 	        }).end();
 	      };
+	      
+	      var o_top = target.offset().top;
+	      var o_left = target.offset().left;
+	      var outerHeight = target.outerHeight();
 
-	      objPos(tip, (target.offset().top + target.outerHeight() + 10), 'auto', 'auto', target.offset().left);
+	      objPos(tip, (o_top + outerHeight + 10), 'auto', 'auto', o_left);
 
 	      if (this.small()) {
-	        objPos(tip, (target.offset().top + target.outerHeight() + 10), 'auto', 'auto', 12.5, $(this.scope).width());
+	        objPos(tip, (o_top + outerHeight + 10), 'auto', 'auto', 12.5, $(this.scope).width());
 	        tip.addClass('tip-override');
-	        objPos(nub, -nubHeight, 'auto', 'auto', target.offset().left);
+	        objPos(nub, -nubHeight, 'auto', 'auto', o_left);
 	      } else {
-	        var left = target.offset().left;
+	        
 	        if (Foundation.rtl) {
 	          nub.addClass('rtl');
-	          left = target.offset().left + target.outerWidth() - tip.outerWidth();
+	          o_left = o_left + target.outerWidth() - tip.outerWidth();
 	        }
 
-	        objPos(tip, (target.offset().top + target.outerHeight() + 10), 'auto', 'auto', left);
+	        objPos(tip, (o_top + outerHeight + 10), 'auto', 'auto', o_left);
 	        // reset nub from small styles, if they've been applied
 	        if (nub.attr('style')) {
 	          nub.removeAttr('style');
 	        }
 	        
 	        tip.removeClass('tip-override');
+	        
+	        var tip_outerHeight = tip.outerHeight();
+	        
 	        if (classes && classes.indexOf('tip-top') > -1) {
 	          if (Foundation.rtl) {
 	            nub.addClass('rtl');
 	          }
-	          objPos(tip, (target.offset().top - tip.outerHeight()), 'auto', 'auto', left)
+	          objPos(tip, (o_top - tip_outerHeight), 'auto', 'auto', o_left)
 	            .removeClass('tip-override');
 	        } else if (classes && classes.indexOf('tip-left') > -1) {
-	          objPos(tip, (target.offset().top + (target.outerHeight() / 2) - (tip.outerHeight() / 2)), 'auto', 'auto', (target.offset().left - tip.outerWidth() - nubHeight))
+	          objPos(tip, (o_top + (outerHeight / 2) - (tip_outerHeight / 2)), 'auto', 'auto', (o_left - tip.outerWidth() - nubHeight))
 	            .removeClass('tip-override');
 	          nub.removeClass('rtl');
 	        } else if (classes && classes.indexOf('tip-right') > -1) {
-	          objPos(tip, (target.offset().top + (target.outerHeight() / 2) - (tip.outerHeight() / 2)), 'auto', 'auto', (target.offset().left + target.outerWidth() + nubHeight))
+	          objPos(tip, (o_top + (outerHeight / 2) - (tip_outerHeight / 2)), 'auto', 'auto', (o_left + target.outerWidth() + nubHeight))
 	            .removeClass('tip-override');
 	          nub.removeClass('rtl');
 	        }
@@ -7426,19 +7615,19 @@ define("Styleguide", ["jquery"], function(__WEBPACK_EXTERNAL_MODULE_2__) { retur
 
 	    show : function ($target) {
 	      var $tip = this.getTip($target);
-
 	      if ($target.data('tooltip-open-event-type') == 'touch') {
 	        this.convert_to_touch($target);
 	      }
 
 	      this.reposition($target, $tip, $target.attr('class'));
 	      $target.addClass('open');
-	      $tip.fadeIn(150);
+	      $tip.fadeIn(this.settings.fade_in_duration);
 	    },
 
 	    hide : function ($target) {
 	      var $tip = this.getTip($target);
-	      $tip.fadeOut(150, function () {
+
+	      $tip.fadeOut(this.settings.fade_out_duration, function () {
 	        $tip.find('.tap-to-close').remove();
 	        $tip.off('click.fndtn.tooltip.tapclose MSPointerDown.fndtn.tapclose');
 	        $target.removeClass('open');
@@ -7463,7 +7652,7 @@ define("Styleguide", ["jquery"], function(__WEBPACK_EXTERNAL_MODULE_2__) { retur
 	  Foundation.libs.topbar = {
 	    name : 'topbar',
 
-	    version : '5.5.2',
+	    version : '5.5.3',
 
 	    settings : {
 	      index : 0,
@@ -7624,17 +7813,17 @@ define("Styleguide", ["jquery"], function(__WEBPACK_EXTERNAL_MODULE_2__) { retur
 	          self.toggle(this);
 	        })
 	        .on('click.fndtn.topbar contextmenu.fndtn.topbar', '.top-bar .top-bar-section li a[href^="#"],[' + this.attr_name() + '] .top-bar-section li a[href^="#"]', function (e) {
-	            var li = $(this).closest('li'),
-	                topbar = li.closest('[' + self.attr_name() + ']'),
-	                settings = topbar.data(self.attr_name(true) + '-init');
+	          var li = $(this).closest('li'),
+	              topbar = li.closest('[' + self.attr_name() + ']'),
+	              settings = topbar.data(self.attr_name(true) + '-init');
 
-	            if (settings.dropdown_autoclose && settings.is_hover) {
-	              var hoverLi = $(this).closest('.hover');
-	              hoverLi.removeClass('hover');
-	            }
-	            if (self.breakpoint() && !li.hasClass('back') && !li.hasClass('has-dropdown')) {
-	              self.toggle();
-	            }
+	          if (settings.dropdown_autoclose && settings.is_hover) {
+	            var hoverLi = $(this).closest('.hover');
+	            hoverLi.removeClass('hover');
+	          }
+	          if (self.breakpoint() && !li.hasClass('back') && !li.hasClass('has-dropdown')) {
+	            self.toggle();
+	          }
 
 	        })
 	        .on('click.fndtn.topbar', '[' + this.attr_name() + '] li.has-dropdown', function (e) {
