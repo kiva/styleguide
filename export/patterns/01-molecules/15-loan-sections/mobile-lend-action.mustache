@@ -1,0 +1,10 @@
+<div class="mobile-lend-action show-for-medium-down">
+    <a href="#" data-options="align:top" data-dropdown="drop" class="button dropdown lend-button" id="loan-amount">$25</a>
+    <ul id="drop" class="tiny f-dropdown" data-dropdown-content>
+        {{#lendValues}}
+            <li><a href="#">${{amount}}</a></li>
+        {{/lendValues}}
+    </ul>
+    <a href="#" class="button" id="lend-button">Lend Now</a>
+    <a href="#" class="button" id="basket-button"><span>1</span></a>
+</div>
