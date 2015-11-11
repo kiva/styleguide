@@ -331,22 +331,23 @@
 
 .mobile-lend-action {
   position: fixed;
+  max-width: none;
   bottom: 0;
-  width: 100%;
   z-index: 9999;
   .button {
     margin-bottom: 0;
     display: inline-block;
     font-size: 0.7rem;
     height: 2.8rem;
+    width: 100%;
   }
-  #loan-amount {
-    width: 25%;
-  }
-  #lend-button {
-    width: 48%;
+  .columns {
+    padding: 0;
+    &:nth-child(2) {
+      padding: 0 1px;
+    }
   }
   #basket-button {
-    width: 24%;
+    padding-right: 0;
   }
 }
