@@ -48,6 +48,10 @@
 			"src": "../../images/loan-card-loader.gif",
 			"alt": "Loading"
 		},
+		"loader": {
+			"src": "../../images/loading.gif",
+			"alt": "Loading"
+		},
 		"full-width": {
 			"src": "http://cms.kiva.org.s3.amazonaws.com/page/images/about-top",
 			"alt": "full width image"
