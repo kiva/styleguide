@@ -1,12 +1,11 @@
 <div class="lend-action show-for-large-up row">
     {{#alreadyLent}}
-        <div class="already-supported-message columns small-12">You've supported this loan</div>
+        <div id="already-supported-message" class="columns small-12">You've supported this loan</div>
     {{/alreadyLent}}
-    <div class="lend-button-wrapper columns small-5">
+    <div class="lend-button-wrapper columns small-5 lend-values-button">
         <button data-dropdown="lend-button-dropdown" aria-controls="lend-button-dropdown"
                 aria-expanded="false"
-                class="button dropdown lend-button"
-                id="lend-values-button">
+                class="button dropdown lend-button">
             $25
         </button>
         <ul id="lend-button-dropdown" data-dropdown-content class="f-dropdown" aria-hidden="true">
@@ -16,7 +15,7 @@
         </ul>
     </div>
     <div class="lend-button-wrapper columns small-7">
-        <button href="#" class="button lend-button">
+        <button class="button lend-button">
             Lend Now
         </button>
     </div>
