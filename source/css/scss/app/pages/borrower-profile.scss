@@ -1,4 +1,5 @@
 .borrower-profile-wrapper {
+  padding-top: 1rem;
 
   .left-content {
     padding-left: 1rem;
@@ -35,7 +36,6 @@
   }
 
   @media #{$xxlarge-up} {
-    padding-top: 1rem;
     .left-content {
       padding-left: 3.833333rem;
     }
