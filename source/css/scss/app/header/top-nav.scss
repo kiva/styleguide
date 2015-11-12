@@ -89,6 +89,7 @@
         max-width: none;
         margin-top: 0;
         border-top: none;
+	    z-index: 1002;
 
         &:after {
             display: none;
