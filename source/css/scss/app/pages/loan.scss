@@ -296,6 +296,12 @@
       font-size: 1rem;
     }
   }
+
+  #already-supported-message {
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
 }
 
 .mobile-lend-action {
@@ -323,13 +329,12 @@
       padding: 0 1px;
     }
   }
+  #already-supported-message-mobile {
+    text-align: center;
+    background-color: $kiva-stroke-gray;
+  }
 }
 
 #basket-button {
   padding-right: 0;
-}
-
-.already-supported-message {
-  text-align: center;
-  background-color: $kiva-stroke-gray;
 }
