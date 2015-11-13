@@ -1150,6 +1150,28 @@
 			"value": "popularity"
 		}
 	],
+	"sort_options": [
+		{
+			"label": "Popularity",
+			"value": "popularity"
+		}
+		, {
+			"label": "Newest",
+			"value": "popularity"
+		}
+		, {
+			"label": "Oldest",
+			"value": "popularity"
+		}
+		, {
+			"label": "Bestest",
+			"value": "popularity"
+		}
+		, {
+			"label": "Surprise Me!",
+			"value": "popularity"
+		}
+	],
 	"categories-primary": [
 		{"name":"Women", "src":"../../images/category/women.jpg", "retina-src":"../../images/category/women-retina.jpg", "href":"##"},
 		{"name":"Agriculture", "src":"../../images/category/agriculture.jpg", "retina-src":"../../images/category/agriculture-retina.jpg", "href":"##"},
