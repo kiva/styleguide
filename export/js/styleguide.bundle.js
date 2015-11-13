@@ -49,10 +49,10 @@
 	__webpack_require__(1);
 
 	var header = __webpack_require__(13);
-	var filters = __webpack_require__(16);
-	var imagesizes = __webpack_require__(17);
+	var filters = __webpack_require__(15);
+	var imagesizes = __webpack_require__(16);
 	var accordion = __webpack_require__(14);
-	var videoResizing = __webpack_require__(15);
+	var videoResizing = __webpack_require__(17);
 	var borrowerPage = __webpack_require__(18);
 	var categories = __webpack_require__(19);
 
@@ -21936,18 +21936,6 @@
 /* 15 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var $ = __webpack_require__(2);
-
-	module.exports = function () {
-	    'use strict';
-
-	    $('.loan-image-wrap').fitVids();
-	};
-
-/***/ },
-/* 16 */
-/***/ function(module, exports, __webpack_require__) {
-
 	module.exports = function() {
 		'use strict';
 
@@ -22025,7 +22013,7 @@
 
 
 /***/ },
-/* 17 */
+/* 16 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var $ = __webpack_require__(2);
@@ -22082,6 +22070,18 @@
 
 	};
 
+
+/***/ },
+/* 17 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var $ = __webpack_require__(2);
+
+	module.exports = function () {
+	    'use strict';
+
+	    $('.loan-image-wrap').fitVids();
+	};
 
 /***/ },
 /* 18 */

@@ -1,10 +1,26 @@
 <div class="control-region row">
-    <div class="control-box">
-        <a href="#" class="hide-for-xxlarge-up filter-menu-button button setting left-off-canvas-toggle">
-            <svg class="icon icon-filter">
-                <use xlink:href="#icon-filter"/>
-            </svg>
-            Filters
-        </a>
-    </div>
+	<div class="control-box">
+		<a href="#" class="hide-for-xxlarge-up filter-menu-button button setting left-off-canvas-toggle">
+			<svg class="icon icon-filter">
+				<use xlink:href="#icon-filter"/>
+			</svg>
+			Filters
+		</a>
+
+		<div class="filter-menu-sort">
+			<span class="filter-menu-sort-text" class="small-text">Sort By:&nbsp;&nbsp;&nbsp;</span>
+			<span class="filter-menu-sort-dropdown">
+				<select name="sort[]" id="filter-loan-sort-dropdown" class="filter-dropdown">
+					{{#sort_options}}
+						<option value="{{value}}">{{label}}</option>
+					{{/sort_options}}
+				</select>
+			</span>
+		</div>
+		<div class="clear"></div>
+	</div>
+	<div class="show-for-medium-up secondary-nav filter-loan-count">
+		<span id="filtered_loan_count"></span>
+		loans
+	</div>
 </div>
