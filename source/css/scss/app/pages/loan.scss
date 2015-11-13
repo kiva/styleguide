@@ -296,6 +296,29 @@
       font-size: 1rem;
     }
   }
+  .checkout-button-desktop{
+    outline: none;
+    width: 100%;
+    padding-right: 0;
+    font-size: 1.155556rem;
+    @media #{$xxlarge-up}{
+      font-size: 1.5555555556rem;
+    }
+    
+    .icon{
+      width: 33px;
+      height: 50%;
+      position: absolute;
+      left: 10px;
+      fill: white;
+    }
+  }
+  .green-button{
+    background-color: green;
+  }
+  .no-padding{
+    padding: 0;
+  }
 
   #already-supported-message {
     text-align: center;

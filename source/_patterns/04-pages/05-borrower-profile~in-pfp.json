@@ -134,5 +134,6 @@
     {
       "amount": 5000
     }
-  ]
+  ],
+  "inBasket": true
 }
