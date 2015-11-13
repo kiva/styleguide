@@ -14,5 +14,5 @@
     }
   ],
   "alreadyLent": false,
-  "inBasket": false
+  "inBasket": true
 }

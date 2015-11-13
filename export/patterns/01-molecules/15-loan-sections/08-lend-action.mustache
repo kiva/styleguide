@@ -2,22 +2,38 @@
     {{#alreadyLent}}
         <div id="already-supported-message" class="columns small-12">You've supported this loan</div>
     {{/alreadyLent}}
-    <div class="lend-button-wrapper columns small-5 lend-values-button">
-        <button data-dropdown="lend-button-dropdown" aria-controls="lend-button-dropdown"
-                aria-expanded="false"
-                class="button dropdown lend-button loan-amount-button">
-            $25
-        </button>
-        <ul id="lend-button-dropdown" data-dropdown-content class="f-dropdown" aria-hidden="true">
-            {{#lendValues}}
-                <li><a href="#">${{amount}}</a></li>
-            {{/lendValues}}
-        </ul>
-    </div>
-    <div class="lend-button-wrapper columns small-7">
-        <button class="button lend-button">
-            Lend Now
-        </button>
-    </div>
+    {{^inBasket}}
+        <div class="not-in-basket">
+            <div class="lend-button-wrapper columns small-5 lend-values-button">
+                <button data-dropdown="lend-button-dropdown" aria-controls="lend-button-dropdown"
+                        aria-expanded="false"
+                        class="button dropdown lend-button loan-amount-button">
+                    $25
+                </button>
+                <ul id="lend-button-dropdown" data-dropdown-content class="f-dropdown" aria-hidden="true">
+                    {{#lendValues}}
+                        <li><a href="#">${{amount}}</a></li>
+                    {{/lendValues}}
+                </ul>
+            </div>
+            <div class="lend-button-wrapper columns small-7">
+                <button class="button lend-button">
+                    Lend Now
+                </button>
+            </div>
+        </div>
+    {{/inBasket}}
+    {{#inBasket}}
+        <div class="in-basket">
+            <div class="columns small-12 no-padding">
+                <button class="button green-button checkout-button-desktop">
+                    <svg class="icon icon-checkmark">
+                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-checkmark"></use>
+                    </svg>
+                    Proceed to checkout
+                </button>
+            </div>
+        </div>
+    {{/inBasket}}
 </div>
 
