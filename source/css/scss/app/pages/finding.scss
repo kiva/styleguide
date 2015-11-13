@@ -60,10 +60,56 @@
 		padding-left: 0;
 		padding-right: 0;
 		color: $kiva-text-dark;
+	    float: left;
+	    background: transparent;
 
 		@media #{$large-up} {
 			margin-left: 0;
 		}
+	}
+
+    .filter-menu-sort {
+	  float: right;
+	  margin-top:-2px;
+	}
+
+    .filter-menu-sort-text {
+	  float:left;
+	  padding-top: 0.3em;
+	  font-weight:bold;
+	  font-size:0.7rem;
+
+	  @media #{$medium-up} {
+		font-size: 0.9em;
+		margin-top: 0.1rem;
+	  }
+    }
+
+    .filter-menu-sort-dropdown {
+	  float:right;
+	  margin: 0 0.5555555556rem 0 0;
+	}
+
+    .filter-dropdown {
+	  height:26.2px;
+	  border-color:#333;
+	  font-weight:bold;
+	  font-size:0.6666666667rem;
+	  width:90px;
+	  padding:0 0.5rem;
+
+	  @media #{$medium-up} {
+		font-size: 0.8888888889rem;
+		height: 31.9886px;
+		width: 130px;
+		margin-top: 0.1rem;
+	  }
+    }
+
+    .filter-loan-count{
+	  float: left;
+	  font-weight: bold;
+	  color: #999;
 	}
 }
 
