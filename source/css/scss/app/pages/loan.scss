@@ -332,10 +332,16 @@
     text-align: center;
     background-color: $kiva-stroke-gray;
   }
-  #lend-button{
-    .button{
+  #lend-button {
+    .button {
       padding: 0.8rem 0;
     }
+  }
+  .amount-in-basket {
+    display: inline-block;
+    background-color: white;
+    color: #26b6e8;
+    padding: 1px 5px;
   }
 }
 
