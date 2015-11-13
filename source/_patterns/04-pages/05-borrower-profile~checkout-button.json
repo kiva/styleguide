@@ -135,5 +135,6 @@
       "amount": 5000
     }
   ],
-  "inBasket": true
+  "inBasket": true,
+  "showBasket": true
 }
