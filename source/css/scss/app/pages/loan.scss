@@ -332,6 +332,11 @@
     text-align: center;
     background-color: $kiva-stroke-gray;
   }
+  #lend-button{
+    .button{
+      padding: 0.8rem 0;
+    }
+  }
 }
 
 #basket-button {
