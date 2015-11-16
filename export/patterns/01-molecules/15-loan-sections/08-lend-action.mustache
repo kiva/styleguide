@@ -24,16 +24,17 @@
         </div>
     {{/inBasket}}
     {{#inBasket}}
-        <div class="in-basket">
-            <div class="columns small-12 no-padding">
-                <button class="button green-button checkout-button-desktop">
-                    <svg class="icon icon-checkmark">
-                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-checkmark"></use>
-                    </svg>
-                    Proceed to checkout
-                </button>
-            </div>
-        </div>
+
     {{/inBasket}}
+    <div class="checkout" style="display: none;">
+        <div class="columns small-12 no-padding">
+            <button class="button green-button checkout-button-desktop">
+                <svg class="icon icon-checkmark">
+                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-checkmark"></use>
+                </svg>
+                Proceed to checkout
+            </button>
+        </div>
+    </div>
 </div>
 
