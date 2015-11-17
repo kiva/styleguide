@@ -271,7 +271,7 @@
     display: inline;
     padding: 0;
 
-    .lend-button {
+    .lend-action-button {
       height: 3rem;
       padding: 8px;
       outline: 0 !important;
@@ -282,7 +282,7 @@
 
   .lend-values-button {
     padding-right: 5px;
-    .lend-button {
+    .lend-action-button {
       padding-right: 35px;
       &:after {
         right: 0.95rem;
@@ -360,7 +360,8 @@
     text-align: center;
     background-color: $kiva-stroke-gray;
   }
-  #lend-button {
+
+  .lend-action-button {
     .button {
       padding: 0.8rem 0;
     }
@@ -372,7 +373,7 @@
     padding: 1px 5px;
   }
 
-  #lend-button-wrapper{
+  .lend-button-wrapper{
     .button{
       padding-right: 1.4rem;
       padding-left: 1.4rem;
