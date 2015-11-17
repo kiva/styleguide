@@ -298,7 +298,8 @@
       font-size: 1rem;
     }
   }
-  .checkout-button-desktop{
+
+  .proceed-to-checkout {
     outline: none;
     width: 100%;
     padding-right: 0;
@@ -306,7 +307,7 @@
     @media #{$xxlarge-up}{
       font-size: 1.5555555556rem;
     }
-    
+
     .icon{
       width: 33px;
       height: 50%;
@@ -318,6 +319,7 @@
   .green-button{
     background-color: green;
   }
+
   .no-padding{
     padding: 0;
   }
