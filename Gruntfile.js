@@ -54,6 +54,7 @@ module.exports = function(grunt) {
 			, js: {
 				files: [
 					{src: 'bower_components/jquery/dist/jquery.js', dest: 'public/dep/jquery/jquery.js'}
+					, {src: 'bower_components/typeahead.js/dist/typeahead.bundle.js', dest: 'public/dep/typeahead/typeahead.js'}
 				]
 			}
 
@@ -260,14 +261,12 @@ module.exports = function(grunt) {
 				, resolve: {
 					root: 'bower_components'
 					, alias: {
-                        bloodhound: 'typeahead.js/dist/bloodhound.js'
-                        , fastclick: 'fastclick/lib/fastclick.js'
+                        fastclick: 'fastclick/lib/fastclick.js'
 						, Foundation: 'foundation/js/foundation.js'
 						, modernizr: 'modernizr/modernizr.js'
 						, nouislider: 'nouislider/distribute/jquery.nouislider.all.js'
 						, select2: 'select2/dist/js/select2.full.js'
                         , slick: 'slick.js/slick/slick.js'
-						, typeahead: 'typeahead.js/dist/typeahead.jquery.js'
 						, fitvids: 'fitvids/jquery.fitvids.js'
 					}
 				}
@@ -282,7 +281,6 @@ module.exports = function(grunt) {
 					loaders: [
 						{ test: /modernizr/, loader: 'imports?this=>window!exports?window.Modernizr' }
 						, { test: /foundation/, loader: 'exports?window.Foundation'}
-						, { test: /bloodhound/, loader: 'imports?this=>window!exports?window.Bloodhound'}
 					]
 				}
 				, plugins: [

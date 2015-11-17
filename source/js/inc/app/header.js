@@ -1,5 +1,4 @@
 var Foundation = require('Foundation');
-var Bloodhound = require('bloodhound');
 var $ = require('jquery');
 
 module.exports = function() {

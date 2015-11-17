@@ -1,4 +1,4 @@
-require('./vendor');
+require('./nav-only-vendor');
 
 var header = require('./app/header');
 var accordion = require('./app/accordion');
