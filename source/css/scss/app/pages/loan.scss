@@ -278,22 +278,6 @@
       width: 100%;
     }
 
-	.message.adding-to-basket {
-		background-color: $kiva-icon-green;
-		color: $white;
-		font-size: 1.556rem;
-		font-family: PostGrotesk, Arial, Helvetica, sans-serif;
-		height: $loan-card-footer-height;
-		line-height: $loan-card-footer-height;
-		padding: 0;
-		text-align: center;
-
-		.loader {
-			height: 1rem;
-			line-height: $loan-card-footer-height;
-			padding-right: 1rem;
-		}
-	}
   }
 
   .lend-values-button {
@@ -351,24 +335,6 @@
   bottom: 0;
   z-index: 9999;
 
-	.message.mobile-adding-to-basket {
-		background-color: $kiva-accent-blue;
-		color: $white;
-		font-size: 1.556rem;
-		font-family: PostGrotesk, Arial, Helvetica, sans-serif;
-		height: $loan-card-footer-height;
-		line-height: $loan-card-footer-height;
-		padding: 0;
-		text-align: center;
-		width: 100%;
-
-		.loader {
-			height: 1rem;
-			line-height: $loan-card-footer-height;
-			padding-right: 1rem;
-		}
-
-	}
   .button {
     margin-bottom: 0;
     display: inline-block;
@@ -410,6 +376,43 @@
       padding-left: 1.4rem;
     }
   }
+}
+
+.adding-to-basket {
+  background-color: $kiva-icon-green;
+  color: $white;
+  font-size: 1.556rem;
+  font-family: PostGrotesk, Arial, Helvetica, sans-serif;
+  height: $loan-card-footer-height;
+  line-height: $loan-card-footer-height;
+  padding: 0;
+  text-align: center;
+
+  .loader {
+    height: 1rem;
+    line-height: $loan-card-footer-height;
+    padding-right: 1rem;
+  }
+}
+
+.mobile-adding-to-basket {
+  background-color: $kiva-accent-blue;
+  color: $white;
+  font-size: 1.556rem;
+  font-family: PostGrotesk, Arial, Helvetica, sans-serif;
+  height: $loan-card-footer-height;
+  line-height: $loan-card-footer-height;
+  padding: 0;
+  text-align: center;
+  width: 100%;
+  margin: 0 auto;
+
+  .loader {
+    height: 1rem;
+    line-height: $loan-card-footer-height;
+    padding-right: 1rem;
+  }
+
 }
 
 #basket-button {
