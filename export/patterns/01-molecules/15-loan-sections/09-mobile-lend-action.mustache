@@ -1,35 +1,37 @@
-<div class="mobile-lend-action show-for-medium-down row mobile-lend-action-default">
-    {{#alreadyLent}}
-        <div id="already-supported-message-mobile" class="columns small-12">You've supported this loan</div>
-    {{/alreadyLent}}
-    <div class="basket-buttons">
-        {{^inBasket}}
-            <div id="loan-amount" class="columns small-4">
-                <button data-options="align:top; ignore_repositioning:true" data-dropdown="drop"
-                        class="button dropdown lend-action-button loan-amount-button">$25
-                </button>
-                <ul id="drop" class="tiny f-dropdown" data-dropdown-content>
-                    {{#lendValues}}
-                        <li><a href="#">${{amount}}</a></li>
-                    {{/lendValues}}
-                </ul>
-            </div>
-            <div class="lend-button-wrapper columns small-5">
-                <button class="button lend-action-button lend-button">Lend Now</button>
-            </div>
-            <div id="basket-button" class="columns small-3">
-                <div class="button">
-                    <div class="row" id="basket-text">
-                        Basket
-                    </div>
-                    <div class="row">
-                        1
+{{^amountInBasket}}
+    <div class="mobile-lend-action show-for-medium-down row mobile-lend-action-default">
+        {{#alreadyLent}}
+            <div id="already-supported-message-mobile" class="columns small-12">You've supported this loan</div>
+        {{/alreadyLent}}
+        <div class="basket-buttons">
+            {{^inBasket}}
+                <div id="loan-amount" class="columns small-4">
+                    <button data-options="align:top; ignore_repositioning:true" data-dropdown="drop"
+                            class="button dropdown lend-action-button loan-amount-button">$25
+                    </button>
+                    <ul id="drop" class="tiny f-dropdown" data-dropdown-content>
+                        {{#lendValues}}
+                            <li><a href="#">${{amount}}</a></li>
+                        {{/lendValues}}
+                    </ul>
+                </div>
+                <div class="lend-button-wrapper columns small-5">
+                    <button class="button lend-action-button lend-button">Lend Now</button>
+                </div>
+                <div id="basket-button" class="columns small-3">
+                    <div class="button">
+                        <div class="row" id="basket-text">
+                            Basket
+                        </div>
+                        <div class="row">
+                            1
+                        </div>
                     </div>
                 </div>
-            </div>
-        {{/inBasket}}
-        {{#inBasket}}
+            {{/inBasket}}
+            {{#inBasket}}
 
-        {{/inBasket}}
+            {{/inBasket}}
+        </div>
     </div>
-</div>
+{{/amountInBasket}}
