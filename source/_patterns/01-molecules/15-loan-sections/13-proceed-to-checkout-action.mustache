@@ -1,8 +1,20 @@
 <div class="lend-action show-for-large-up">
-    <button class="button green-button proceed-to-checkout" style="display: none;">
-        <svg class="icon icon-checkmark">
-            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-checkmark"></use>
-        </svg>
-        Proceed to checkout
-    </button>
+    <div class="proceed-to-checkout">
+        <div class="browse-more-loans" style="display: none;">
+            <a href="#">Browse more loans</a>
+        </div>
+        {{#amountInBasket}}
+            <div class="value-in-basket">
+                ${{amountInBasket}} in basket
+            </div>
+        {{/amountInBasket}}
+
+
+        <button class="button green-button proceed-to-checkout-button" {{^amountInBasket}}style="display: none;"{{/amountInBasket}}>
+            <svg class="icon icon-checkmark">
+                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-checkmark"></use>
+            </svg>
+            Proceed to checkout
+        </button>
+    </div>
 </div>

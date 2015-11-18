@@ -299,7 +299,7 @@
     }
   }
 
-  .proceed-to-checkout {
+  .proceed-to-checkout-button {
     outline: none;
     width: 100%;
     padding-right: 0;
@@ -308,7 +308,7 @@
       font-size: 1.5555555556rem;
     }
 
-    .icon{
+    .icon {
       width: 33px;
       height: 50%;
       position: absolute;
@@ -316,11 +316,11 @@
       fill: white;
     }
   }
-  .green-button{
+  .green-button {
     background-color: green;
   }
 
-  .no-padding{
+  .no-padding {
     padding: 0;
   }
 
@@ -373,8 +373,8 @@
     padding: 1px 5px;
   }
 
-  .lend-button-wrapper{
-    .button{
+  .lend-button-wrapper {
+    .button {
       padding-right: 1.4rem;
       padding-left: 1.4rem;
     }
@@ -425,8 +425,12 @@
   padding-right: 0;
 }
 
-#browse-more-loans {
-	display: none;
-	text-align: center;
-	margin-bottom: 10px;
+.browse-more-loans {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.value-in-basket {
+  text-align: center;
+  margin-bottom: 10px;
 }
