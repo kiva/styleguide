@@ -316,7 +316,7 @@
     }
   }
   .green-button {
-    background-color: green;
+    background-color: $kiva-navdivider-green;
   }
 
   .no-padding {
@@ -399,7 +399,7 @@
 }
 
 .adding-to-basket {
-  background-color: $kiva-icon-green;
+  background-color: $kiva-navdivider-green;
   color: $white;
   font-size: 1.556rem;
   font-family: PostGrotesk, Arial, Helvetica, sans-serif;
