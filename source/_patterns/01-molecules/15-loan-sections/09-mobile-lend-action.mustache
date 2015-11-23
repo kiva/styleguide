@@ -5,15 +5,15 @@
         {{/alreadyLent}}
         <div class="basket-buttons">
             {{^inBasket}}
-                <div id="loan-amount" class="columns small-4">
-                    <button data-options="align:top; ignore_repositioning:true" data-dropdown="drop"
-                            class="button dropdown lend-action-button loan-amount-button">$25
-                    </button>
-                    <ul id="drop" class="tiny f-dropdown" data-dropdown-content>
+                <div class="columns small-4 lend-values-select-wrapper">
+                    <svg class="icon icon-large-chevron lend-arrow">
+                        <use xlink:href="#icon-large-chevron"></use>
+                    </svg>
+                    <select class="lend-values-select loan-amount-button">
                         {{#lendValues}}
-                            <li><a href="#">${{amount}}</a></li>
+                            <option class="" name="{{amount}}">${{amount}}</option>
                         {{/lendValues}}
-                    </ul>
+                    </select>
                 </div>
                 <div class="lend-button-wrapper columns small-5">
                     <button class="button lend-action-button lend-button">Lend</button>
@@ -33,5 +33,7 @@
 
             {{/inBasket}}
         </div>
+
+
     </div>
 {{/amountInBasket}}
