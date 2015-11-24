@@ -86,3 +86,21 @@ button, a.button, .button {
 	height: $button-height-sm;
 	padding-top: rem-calc(10);
 }
+
+button.secondary, .button.secondary {
+	border-color: $kiva-text-dark;
+
+	&:hover, &:focus {
+		border-color: $kiva-textlink-hover;
+		color: $kiva-textlink-hover;
+	}
+
+	&.disabled, &[disabled] {
+		border-color: $kiva-text-light;
+		color: $kiva-text-light;
+
+		&:hover, &:focus {
+			color: $kiva-text-light;
+		}
+	}
+}
