@@ -69,6 +69,4 @@
 
 </div>
 
-{{#basket.item_count}}
-    <div id="basket" class="hide-for-large-up basket-bar"><a href="{{basket_href}}">Basket ({{basket.item_count}})</a></div>
-{{/basket.item_count}}
+<div id="basket" class="basket-bar {{#basket.item_count}}hide-for-large-up{{/basket.item_count}}{{^basket.item_count}}hide{{/basket.item_count}}"><a href="{{basket_href}}">Basket ({{basket.item_count}})</a></div>
