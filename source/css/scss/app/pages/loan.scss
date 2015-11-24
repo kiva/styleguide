@@ -280,7 +280,6 @@
   }
 
   .lend-values-button {
-    padding-right: 5px;
     .lend-action-button {
       padding-right: 35px;
       &:after {
@@ -288,10 +287,13 @@
       }
     }
   }
+  .lend-now-button{
+    padding-left: 5px;
+  }
 
   .f-dropdown {
     margin-top: 0;
-    max-width: 96px;
+    max-width: 450px;
     border-top: none;
     li a {
       font-size: 1rem;
