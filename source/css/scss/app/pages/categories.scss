@@ -85,7 +85,7 @@
 	}
 }
 
-.category-card:hover > .category-card-overlay{
+.category-card:hover, .category-card:active > .category-card-overlay{
 	width: 100%;
 	height: 100%;
 	background-color: $black;
@@ -117,7 +117,7 @@
 	}
 }
 
-.solid-color-card:hover > .category-card-overlay{
+.solid-color-card:hover, .solid-color-card:active > .category-card-overlay{
 	width: 100%;
 	height: 100%;
 	background-color: $kiva-darkgreen;
