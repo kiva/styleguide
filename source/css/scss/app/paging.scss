@@ -4,8 +4,10 @@
 	.button {
 		display: inline-block;
 		line-height: 0.65rem;
-		width: 7.5rem;
+		width: calc(50% - #{rem-calc(30)});
 		border-width: 1px;
+		padding-left: 0;
+		padding-right: 0;
 
 		@media #{$medium-up} {
 			line-height: 1.75rem;
@@ -14,15 +16,16 @@
 
 		&.previous {
 			margin-right: rem-calc(20);
-			padding-left: $button-sml*2 + 1;
+			padding-left: 0.5rem;
 
 			.icon {
-				right: calc(50% + 1.17rem);
+				right: calc(50% + 1.25rem);
 				transform: rotate(90deg);
 			}
 
 			@media #{$medium-up} {
 				padding-left: $button-med*2 + 1;
+				padding-right: $button-med*2;
 
 				.icon {
 					right: calc(50% + 2.5rem);
@@ -31,7 +34,7 @@
 		}
 
 		&.next {
-			padding-right: $button-sml*2 + 1;
+			padding-right: 0.5rem;
 
 			.icon {
 				left: calc(50% + 0.5rem);
@@ -39,6 +42,7 @@
 			}
 
 			@media #{$medium-up} {
+				padding-left: $button-med*2;
 				padding-right: $button-med*2 + 1;
 
 				.icon {
