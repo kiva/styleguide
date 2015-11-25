@@ -397,7 +397,7 @@
 }
 
 #filter-loan-status-dropdown {
-  color: $light-gray;
+  box-sizing: content-box;
   border: 1px solid $charcoal;
   width: 210px;
   margin: 0 0.6666666667rem 0.3333333333rem;

@@ -90,7 +90,11 @@ button, a.button, .button {
 button.secondary, .button.secondary {
 	border-color: $kiva-text-dark;
 
-	&:hover, &:focus {
+	&:visited {
+		color: $kiva-text-dark;
+	}
+
+	&:hover {
 		border-color: $kiva-textlink-hover;
 		color: $kiva-textlink-hover;
 	}
