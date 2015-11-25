@@ -5,6 +5,7 @@
     border: rem-calc(1) solid $iron;
     padding: $spacing;
     font-size: rem-calc(16);
+	z-index: 1100 !important; // override style set by js
 
     @media #{$large-up} {
         font-size: rem-calc(14);
