@@ -94,7 +94,7 @@ button.secondary, .button.secondary {
 		color: $kiva-text-dark;
 	}
 
-	&:hover {
+	.no-touch &:hover {
 		border-color: $kiva-textlink-hover;
 		color: $kiva-textlink-hover;
 	}

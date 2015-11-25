@@ -1,6 +1,10 @@
 .paging {
 	text-align: center;
 
+	.no-touch & .button:hover .icon {
+		stroke: $kiva-textlink-hover;
+	}
+
 	.button {
 		display: inline-block;
 		line-height: 0.65rem;
@@ -49,10 +53,6 @@
 					left: calc(50% + 1rem);
 				}
 			}
-		}
-
-		&:hover .icon {
-			stroke: $kiva-textlink-hover;
 		}
 
 		&.disabled .icon, &[disabled] .icon {
