@@ -7,7 +7,7 @@
 
 .black-underlined {
   text-decoration: underline;
-  color: #333;
+  color: $charcoal;
 }
 
 .loan-story {
@@ -137,7 +137,7 @@
       padding: 0;
     }
     .lender-count {
-      color: #333;
+      color: $charcoal;
     }
     @media #{$small-only}{
       .lender-count {
@@ -367,11 +367,8 @@
       padding: 0.8rem 0;
     }
   }
-  .amount-in-basket {
-    display: inline-block;
-    background-color: white;
-    color: #26b6e8;
-    padding: 1px 5px;
+  .footer-basket-amount {
+    color: $white;
   }
 
   .lend-button-wrapper {
