@@ -15,16 +15,16 @@
                         {{/lendValues}}
                     </select>
                 </div>
-                <div class="lend-button-wrapper columns small-5">
+                <div class="lend-button-wrapper columns small-8">
                     <button class="button lend-action-button lend-button">Lend</button>
                 </div>
-                <div id="basket-button" class="columns small-3">
+                <div id="basket-button" class="footer-basket-button columns small-3 hide">
                     <div class="button">
                         <div class="row" id="basket-text">
                             Basket
                         </div>
-                        <div class="row">
-                            1
+                        <div class="row footer-basket-amount">
+							{{basket.item_count}}
                         </div>
                     </div>
                 </div>
