@@ -1,0 +1,70 @@
+.paging {
+	text-align: center;
+
+	.button {
+		display: inline-block;
+		line-height: 0.65rem;
+		width: 7.5rem;
+		border-width: 1px;
+
+		@media #{$medium-up} {
+			line-height: 1.75rem;
+			width: 12rem;
+		}
+
+		&.previous {
+			margin-right: rem-calc(20);
+			padding-left: $button-sml*2 + 1;
+
+			.icon {
+				right: calc(50% + 1.17rem);
+				transform: rotate(90deg);
+			}
+
+			@media #{$medium-up} {
+				padding-left: $button-med*2 + 1;
+
+				.icon {
+					right: calc(50% + 2.5rem);
+				}
+			}
+		}
+
+		&.next {
+			padding-right: $button-sml*2 + 1;
+
+			.icon {
+				left: calc(50% + 0.5rem);
+				transform: rotate(-90deg);
+			}
+
+			@media #{$medium-up} {
+				padding-right: $button-med*2 + 1;
+
+				.icon {
+					left: calc(50% + 1rem);
+				}
+			}
+		}
+
+		&:hover .icon, &:focus .icon {
+			stroke: $kiva-textlink-hover;
+		}
+
+		&.disabled .icon, &[disabled] .icon {
+			stroke: $kiva-text-light;
+		}
+	}
+
+	.icon {
+		position: absolute;
+		top: 0;
+		height: $button-height-sm;
+		width: 1rem;
+
+		@media #{$medium-up} {
+			height: $button-height-med;
+			width: 2rem;
+		}
+	}
+}

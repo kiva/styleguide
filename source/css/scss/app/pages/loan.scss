@@ -280,7 +280,6 @@
   }
 
   .lend-values-button {
-    padding-right: 5px;
     .lend-action-button {
       padding-right: 35px;
       &:after {
@@ -288,10 +287,13 @@
       }
     }
   }
+  .lend-now-button{
+    padding-left: 5px;
+  }
 
   .f-dropdown {
     margin-top: 0;
-    max-width: 96px;
+    max-width: 450px;
     border-top: none;
     li a {
       font-size: 1rem;
@@ -396,6 +398,30 @@
       fill: white;
     }
   }
+
+  .lend-values-select-wrapper {
+    padding: 0;
+    .lend-values-select {
+      height: 2.8rem;
+      margin: 0;
+      padding: 0;
+      border: 0;
+      background: $kiva-accent-blue;
+      outline: none;
+      color: $white;
+      font-size: 18px;
+      font-weight: bold;
+      text-indent: 35%;
+    }
+    .lend-arrow {
+      width: 21px;
+      fill: $white;
+      right: 9%;
+      top: 40%;
+      height: 16%;
+      position: absolute;
+    }
+  }
 }
 
 .adding-to-basket {
@@ -450,3 +476,4 @@
   text-align: center;
   margin-bottom: 10px;
 }
+
