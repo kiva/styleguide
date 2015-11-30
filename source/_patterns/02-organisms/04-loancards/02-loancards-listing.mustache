@@ -4,5 +4,11 @@
 			{{> 02-organisms/04-loancards/00-loancard-listing}}
 		</li>
 	{{/loans}}
+
+	{{#if-no-results}}
+		{{> 01-molecules/07-messaging/01-no-results}}
+	{{/if-no-results}}
+
 </ul>
+
 {{> 02-organisms/10-lend/03-paging}}
