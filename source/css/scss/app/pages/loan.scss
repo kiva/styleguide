@@ -347,7 +347,7 @@
     #basket-text {
       font-size: 0.6rem;
       position: absolute;
-      top: 5%;
+      top: 15%;
       right: 48.9%;
     }
   }
@@ -369,6 +369,7 @@
   }
   .footer-basket-amount {
     color: $white;
+    padding-top: 6px;
   }
 
   .lend-button-wrapper {
