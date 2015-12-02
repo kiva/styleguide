@@ -10,9 +10,11 @@ module.exports = function() {
 	var currently_mobile = false;
 
 	// init the multi-select for partners
-	$partners_filter.select2();
-	$partners_filter.on('select2:open', function() {
-		$('.select2-dropdown .select2-results__option').addClass('needsclick');
+	$partners_filter.select2({
+		templateResult: function(result, container) {
+			$(container).addClass('needsclick');
+			return result.text;
+		}
 	});
 	$partners_filter.on('select2:select select2:unselect', function() {
 		if($partners_ul.css('height') !== 'auto') {
