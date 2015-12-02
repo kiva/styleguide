@@ -28,8 +28,8 @@
 		{{/is-visitor}}
 		{{^is-visitor}}
 			<div class="small-3-8ths xxlarge-2 columns header-column right-side">
-				<div class="show-for-large-up large-6 columns">
-					<a class="header-button" href="{{basket_href}}">{{#basket.item_count}}<span class="amount">{{basket.item_count}}</span>{{/basket.item_count}} Basket</a>
+				<div id="top-basket-button" class="show-for-large-up large-6 columns">
+					<a class="header-button" href="{{basket_href}}"><span class="amount {{^basket.item_count}}hide{{/basket.item_count}}">{{basket.item_count}}</span> Basket</a>
 				</div>
 				<div class="small-12 large-6 columns">
 					<a data-dropdown="my-kiva-dropdown" aria-controls="my-kiva-dropdown" aria-expanded="false" class="header-button my-kiva" href="#">
