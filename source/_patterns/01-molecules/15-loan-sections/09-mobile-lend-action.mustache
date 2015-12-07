@@ -10,6 +10,9 @@
                         <use xlink:href="#icon-large-chevron"></use>
                     </svg>
                     <select class="lend-values-select loan-amount-button">
+                        {{#freeTrialEligible}}
+                            <option value="free">Free $25</option>
+                        {{/freeTrialEligible}}
                         {{#lendValues}}
                             <option value="{{amount}}">${{amount}}</option>
                         {{/lendValues}}

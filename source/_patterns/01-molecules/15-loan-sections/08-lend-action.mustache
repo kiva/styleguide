@@ -8,9 +8,12 @@
                 <button data-dropdown="lend-button-dropdown" aria-controls="lend-button-dropdown"
                         aria-expanded="false"
                         class="button dropdown lend-action-button loan-amount-button">
-                    $25
+                    {{#freeTrialEligible}}Free {{/freeTrialEligible}}$25
                 </button>
                 <ul id="lend-button-dropdown" data-dropdown-content class="f-dropdown" aria-hidden="true">
+                    {{#freeTrialEligible}}
+                        <li><a href="#">Free $25</a></li>
+                    {{/freeTrialEligible}}
                     {{#lendValues}}
                         <li><a href="#">${{amount}}</a></li>
                     {{/lendValues}}
