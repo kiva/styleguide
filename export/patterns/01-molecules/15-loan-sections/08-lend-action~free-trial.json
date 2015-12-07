@@ -1,0 +1,19 @@
+{
+  "lendValues": [
+    {
+      "amount": 50
+    },
+    {
+      "amount": 75
+    },
+    {
+      "amount": 100
+    },
+    {
+      "amount": 125
+    }
+  ],
+  "freeTrialEligible": true,
+  "alreadyLent": false,
+  "inBasket": false
+}
