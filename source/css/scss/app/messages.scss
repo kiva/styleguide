@@ -1,0 +1,15 @@
+.confirmation-text {
+	height: 40px;
+	width: 100%;
+	background-color: yellow;
+	border-top: 1px solid black;
+	border-bottom: 1px solid black;
+
+	.icon {
+
+		.icon-checkmark {
+			height: 25px;
+			width: 25px;
+		}
+	}
+}
