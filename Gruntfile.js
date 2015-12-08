@@ -65,6 +65,12 @@ module.exports = function(grunt) {
 						, src: ['**/*.*', '!00-atoms/**']
 						, dest: 'export/patterns'
 						, expand: true
+					},
+					{
+						cwd: 'source/images/flags'
+						, src: ['**/*.svg']
+						, dest: 'export/images/flags'
+						, expand: true
 					}
 				]
 			}
