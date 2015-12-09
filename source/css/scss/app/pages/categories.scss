@@ -193,3 +193,12 @@ div.category-cards-header {
 		padding-bottom: 0.5rem;
 	}
 }
+
+.category-description {
+	@media #{$small-only} {
+		@include small-text();
+	}
+	@media #{$medium-only} {
+		@include small-text();
+	}
+}
