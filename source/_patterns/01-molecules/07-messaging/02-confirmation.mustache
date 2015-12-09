@@ -1,9 +1,9 @@
-<div class="confirmation-text text-center small-12">
-	<div class="conf-icon">
+<div class="confirmation-text show-for-medium-up text-center small-12">
+	<a class="conf-icon">
 		<svg class="icon icon-checkmark">
 			<use xlink:href="#icon-checkmark"></use>
 		</svg>
-    </div>
+    </a>
 	<p class="message">{{confirmation.message}}
 	Your email preferences have been changed.</p>
 	<a class="close-reveal-modal" aria-label="Close">
@@ -11,4 +11,19 @@
 			<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-x"></use>
 		</svg>
 	</a>
+</div>
+
+<div class="confirmation-text show-for-small-only text-center small-12">
+    <div class="conf-icon">
+        <svg class="icon icon-checkmark">
+            <use xlink:href="#icon-checkmark"></use>
+        </svg>
+    </div>
+    <p class="message">{{confirmation.message}}
+        Your email preferences have </br> been changed.</p>
+    <a class="close-reveal-modal" aria-label="Close">
+        <svg class="icon icon-x">
+            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-x"></use>
+        </svg>
+    </a>
 </div>

@@ -5,17 +5,23 @@
 
 	.conf-icon {
 		display: inline-block;
+		vertical-align: middle;
 
-		.icon-checkmark {
-			margin-top: 5px;
+		.icon.icon-checkmark {
 			margin-right: 10px;
+			margin-top: 2px;
 			height: 30px;
 			width: 30px;
 			fill: $kiva-green;
+
+			@media #{$small-only} {
+				margin-bottom: 4px;
+			}
 		}
 	}
 	.message {
 		display: inline-block;
+		margin: auto;
 		vertical-align: middle;
 	}
 
@@ -26,7 +32,13 @@
 			stroke: black;
 			height: 30px;
 			width: 30px;
-			margin-top: 5px;
+			margin-top: 3px;
+
+			@media #{$small-only} {
+				height: 25px;
+				width: 25px;
+				margin-top: 11px;
+			}
 		}
 	}
 
