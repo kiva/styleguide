@@ -1,14 +1,12 @@
 <div class="loan-gist">
     <h2 class="group-name">{{groupName}}</h2>
 
-    <div class="">
+    <div>
         <div class="country-image">
-            <img class="" src="../../images/flags/{{countryIso}}.svg" alt="{{countryFullName}}">
+            <img class="" src="../../images/flags/{{countryISOCode}}.svg" alt="{{countryName}}">
         </div>
         <div class="country-text">
-            <div class="black-underlined">{{city}}, {{country}}</div>
-            <div>/</div>
-            <div>{{typeText}}</div>
+            <a href="#country-section" class="black-underlined">{{city}}, {{countryName}}</a>/{{sectorName}}
         </div>
     </div>
 </div>
