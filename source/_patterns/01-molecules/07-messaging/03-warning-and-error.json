@@ -1,0 +1,6 @@
+{
+  "message": {
+	  "warning": "Your loan fully funded before your transaction completed. $100.00 of excess funds have been added to your account."
+	, "error": "Some error occurred. Only used for serious issues."
+  }
+}

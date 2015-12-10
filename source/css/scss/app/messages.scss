@@ -1,0 +1,86 @@
+//Shared styles for all the message types
+.message-text {
+	display: inline-block;
+	width: 100%;
+	overflow: hidden;
+
+	.icon-wrapper {
+		display: inline-block;
+		vertical-align: middle;
+	}
+
+	.message {
+		display: inline-block;
+		margin: auto;
+		vertical-align: middle;
+		max-width: 60%;
+	}
+
+	.close-reveal-modal {
+		float: right;
+
+		.icon.icon-x {
+			stroke: black;
+			height: 30px;
+			width: 30px;
+			margin-top: 2px;
+		}
+	}
+
+//Custom styles for the 3 types of messages (Confirmation, Warning & Error messages)
+	&.confirmation-text {
+		background-color: $kiva-bg-lightgray;
+
+		.icon.icon-checkmark {
+			margin-right: 10px;
+			margin-top: 2px;
+			height: 30px;
+			width: 30px;
+			fill: $kiva-green;
+
+			@media #{$small-only} {
+				margin-bottom: 4px;
+			}
+		}
+	}
+
+	&.warning-text {
+		background-color: #FFF6A5;
+
+		.icon.icon-info {
+			margin-right: 10px;
+			margin-top: 2px;
+			height: 30px;
+			width: 30px;
+			fill: $black;
+
+			@media #{$small-only} {
+				margin-bottom: 4px;
+			}
+		}
+	}
+
+	&.error-text {
+		background-color: #9A071F;
+
+		.icon.icon-error {
+			margin-right: 10px;
+			margin-top: 2px;
+			height: 30px;
+			width: 30px;
+			fill: $white;
+
+			@media #{$small-only} {
+				margin-bottom: 4px;
+			}
+		}
+
+		.message-warning {
+			color: $white;
+		}
+
+		.icon.icon-x {
+			stroke: $white;
+		}
+	}
+}

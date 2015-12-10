@@ -1,0 +1,31 @@
+{{#warning-message}}
+	<div class="message-text warning-text text-center small-12">
+		<a class="icon-wrapper">
+			<svg class="icon icon-info">
+				<use xlink:href="#icon-info"></use>
+			</svg>
+		</a>
+		<p class="message">{{message.warning}}</p>
+		<a class="close-reveal-modal" aria-label="Close">
+			<svg class="icon icon-x">
+				<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-x"></use>
+			</svg>
+		</a>
+	</div>
+{{/warning-message}}
+
+{{#error-message}}
+    <div class="message-text error-text text-center small-12">
+        <a class="icon-wrapper">
+            <svg class="icon icon-error">
+                <use xlink:href="#icon-error"></use>
+            </svg>
+        </a>
+        <p class="message message-warning">{{message.error}}</p>
+        <a class="close-reveal-modal" aria-label="Close">
+            <svg class="icon icon-x">
+                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-x"></use>
+            </svg>
+        </a>
+    </div>
+{{/error-message}}
