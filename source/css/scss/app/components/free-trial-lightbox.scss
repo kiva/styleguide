@@ -1,5 +1,8 @@
 .free-trial-lightbox {
   background: rgba(0, 0, 0, 0);
+  .button{
+    outline: 0;
+  }
   .button.js-free-trial-decline{
     float: left;
     margin-left: 15px;
