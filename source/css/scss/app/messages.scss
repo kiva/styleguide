@@ -31,7 +31,7 @@
 	&.confirmation-text {
 		background-color: $kiva-bg-lightgray;
 
-		.icon.icon-checkmark {
+		.icon.icon-confirmation {
 			margin-right: 10px;
 			margin-top: 2px;
 			height: 30px;
@@ -47,7 +47,7 @@
 	&.warning-text {
 		background-color: #FFF6A5;
 
-		.icon.icon-info {
+		.icon.icon-warning {
 			margin-right: 10px;
 			margin-top: 2px;
 			height: 30px;
@@ -75,7 +75,7 @@
 			}
 		}
 
-		.message-warning {
+		.message {
 			color: $white;
 		}
 

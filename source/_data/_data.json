@@ -1143,6 +1143,24 @@
 			}
 		}
 	],
+
+  "message": [
+	{
+	  "type": "warning",
+	  "message": "WARNING MESSAGE."
+	}
+  ,
+	{
+	  "type": "error",
+	  "message": "ERROR MESSAGE"
+	}
+  ,
+	{
+	  "type": "confirmation",
+	  "message": "CONFIRMATION MESSAGE"
+	}
+  ]
+,
 	"status_options": [
 		{
 			"label": "Popularity",

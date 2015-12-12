@@ -414,11 +414,19 @@
 }
 
 .filters-close-icon {
-  position:absolute;
-  right:1px;
-  @media #{$medium-up} {
-    display: none;
-  }
+	position:absolute;
+	right:1px;
+	top: 0;
+	margin-top: 10px;
+	margin-right: 10px;
+	.icon.icon-x {
+		stroke: $kiva-green;
+		height: 15px;
+		width: 15px;
+	}
+	@media #{$medium-up} {
+		display: none;
+	}
 }
 
 a.close-reveal-modal {
