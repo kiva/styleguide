@@ -1,160 +1,160 @@
 .green-bolded {
-  font-size: 2.5rem;
-  font-weight: bold;
-  line-height: 2.5rem;
-  color: $kiva-green;
+	font-size: 2.5rem;
+	font-weight: bold;
+	line-height: 2.5rem;
+	color: $kiva-green;
 }
 
 .black-underlined {
-  text-decoration: underline;
-  color: $charcoal;
+	text-decoration: underline;
+	color: $charcoal;
 }
 
 .loan-story {
-  .story-header, .body-text {
-    padding-bottom: 0.6rem;
-  }
+	.story-header, .body-text {
+		padding-bottom: 0.6rem;
+	}
 
-  .story-header {
-    font-size: 1rem;
-  }
+	.story-header {
+		font-size: 1rem;
+	}
 
-  .borrower-names {
-    display: inline;
-    margin: 0;
-    padding: 0;
-  }
+	.borrower-names {
+		display: inline;
+		margin: 0;
+		padding: 0;
+	}
 
-  .borrower-names > li {
-    display: inline;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-  }
+	.borrower-names > li {
+		display: inline;
+		list-style: none;
+		margin: 0;
+		padding: 0;
+	}
 
-  .borrower-names > li:after {
-    content: ",";
-  }
+	.borrower-names > li:after {
+		content: ",";
+	}
 
-  .borrower-names > li:last-child:after {
-    content: "";
-  }
+	.borrower-names > li:last-child:after {
+		content: "";
+	}
 }
 
 .is-special {
-  .ac-body {
-    margin-top: 1rem;
-  }
-  label {
-    font-size: 1rem;
-  }
-  .kivan {
-    position: relative;
-    @media #{$medium-up} {
-      display: inline-block;
-    }
-    .profile-photo {
-      padding-top: 1rem;
-      text-align: center;
-      @media #{$medium-up}{
-        display: inline;
-      }
-      img {
-        background-repeat: no-repeat;
-        border-radius: 50%;
-        width: 100px;
-        @media #{$medium-up} {
-          width: 50px;
-        }
-      }
-    }
-    .show-for-medium-up {
-      vertical-align: middle;
-      div {
-        display: block;
-        padding-left: 1rem;
-      }
-    }
-    .show-for-small-only {
-      text-align: center;
-      margin: 0 auto;
-    }
-  }
-  .green-bolded {
-    text-align: left;
-    max-width: 75%;
-    @media #{$small-only} {
-      text-align: center;
-      max-width: 85%;
-      margin: 0 auto;
-    }
-  }
+	.ac-body {
+		margin-top: 1rem;
+	}
+	label {
+		font-size: 1rem;
+	}
+	.kivan {
+		position: relative;
+		@media #{$medium-up} {
+			display: inline-block;
+		}
+		.profile-photo {
+			padding-top: 1rem;
+			text-align: center;
+			@media #{$medium-up}{
+				display: inline;
+			}
+			img {
+				background-repeat: no-repeat;
+				border-radius: 50%;
+				width: 100px;
+				@media #{$medium-up} {
+					width: 50px;
+				}
+			}
+		}
+		.show-for-medium-up {
+			vertical-align: middle;
+			div {
+				display: block;
+				padding-left: 1rem;
+			}
+		}
+		.show-for-small-only {
+			text-align: center;
+			margin: 0 auto;
+		}
+	}
+	.green-bolded {
+		text-align: left;
+		max-width: 75%;
+		@media #{$small-only} {
+			text-align: center;
+			max-width: 85%;
+			margin: 0 auto;
+		}
+	}
 }
 
 .more-loan-info {
-  text-align: center;
-  max-width: 60%;
-  margin: 0 auto;
-  @media #{$small-only} {
-    text-align: left;
-    max-width: 100%;
-  }
+	text-align: center;
+	max-width: 60%;
+	margin: 0 auto;
+	@media #{$small-only} {
+		text-align: left;
+		max-width: 100%;
+	}
 }
 
 .lender-count {
-  h2, div {
-    display: inline-block;
-  }
+	h2, div {
+		display: inline-block;
+	}
 }
 
 .pfp-meter {
-  .amount-raised {
-    .fundraising-meter {
-      height: .7rem;
-    }
-  }
+	.amount-raised {
+		.fundraising-meter {
+			height: .7rem;
+		}
+	}
 }
 
 .current-status-meter {
-  .lender-count {
-    @media #{$small-only}{
-      div {
-        font-size: $small-font-size;
-      }
-    }
-  }
-  .row {
-    max-width: none;
-  }
+	.lender-count {
+		@media #{$small-only}{
+			div {
+				font-size: $small-font-size;
+			}
+		}
+	}
+	.row {
+		max-width: none;
+	}
 
-  .amount-raised {
-    .inline {
-      display: inline-block;
-    }
-  }
-  .raised-info {
-    div, .lender-count {
-      padding: 0;
-    }
-    .lender-count {
-      color: $charcoal;
-    }
-    @media #{$small-only}{
-      .lender-count {
-        float: right;
-      }
-      div, .lender-count {
-        font-size: $small-font-size;
-        display: inline-block;
-        &.loan-total {
-          text-align: left;
-        }
-        &.black-underlined {
-          text-align: right;
-        }
-      }
-    }
-  }
+	.amount-raised {
+		.inline {
+			display: inline-block;
+		}
+	}
+	.raised-info {
+		div, .lender-count {
+			padding: 0;
+		}
+		.lender-count {
+			color: $charcoal;
+		}
+		@media #{$small-only}{
+			.lender-count {
+				float: right;
+			}
+			div, .lender-count {
+				font-size: $small-font-size;
+				display: inline-block;
+				&.loan-total {
+					text-align: left;
+				}
+				&.black-underlined {
+					text-align: right;
+				}
+			}
+		}
+	}
 }
 
 .loan-gist {
@@ -176,327 +176,327 @@
 		}
 	}
 
-  padding-bottom: 1rem;
-  .country-image {
-    display: inline;
-    img {
-      height: auto;
-      width: 3rem;
-    }
-  }
-  .country-text {
-    width: 70%;
-    vertical-align: middle;
-    display: inline-block;
-    div {
-      display: inline;
-    }
-  }
-  .borrower-name {
-    font-weight: bold;
-    @media #{$medium-up} {
-      font-weight: normal;
-    }
-  }
+	padding-bottom: 1rem;
+	.country-image {
+		display: inline;
+		img {
+			height: auto;
+			width: 3rem;
+		}
+	}
+	.country-text {
+		width: 70%;
+		vertical-align: middle;
+		display: inline-block;
+		div {
+			display: inline;
+		}
+	}
+	.borrower-name {
+		font-weight: bold;
+		@media #{$medium-up} {
+			font-weight: normal;
+		}
+	}
 }
 
 .loan-details {
-  .show-for-medium-up {
-    .ac-body {
-      max-height: 1000px;
-      overflow: auto;
-    }
-  }
-  .ac-body {
-    margin-top: 1rem;
-  }
-  .ac-title {
-    font-size: 1rem;
-  }
-  .loan-term {
-    padding-bottom: 1rem;
-    text-align: center;
+	.show-for-medium-up {
+		.ac-body {
+			max-height: 1000px;
+			overflow: auto;
+		}
+	}
+	.ac-body {
+		margin-top: 1rem;
+	}
+	.ac-title {
+		font-size: 1rem;
+	}
+	.loan-term {
+		padding-bottom: 1rem;
+		text-align: center;
 
-    @media #{$medium-up}{
-      text-align: left;
-      padding-bottom: 0.5rem;
-    }
+		@media #{$medium-up}{
+			text-align: left;
+			padding-bottom: 0.5rem;
+		}
 
-    .green-bolded {
-      padding-top: 0.5rem;
-      font-size: 2rem;
-      @media #{$medium-up}{
-        padding-top: 0;
-      }
-    }
-    .featured {
-      padding-top: 0.5rem;
-      @media #{$medium-up}{
-        padding-top: 0;
-      }
-    }
-    .icon-recycle {
-      height: 3rem;
-      color: $kiva-text-light;
-      fill: $kiva-text-light;
-      @media #{$medium-up}{
-        width: 54.8px;
-      }
-    }
-  }
+		.green-bolded {
+			padding-top: 0.5rem;
+			font-size: 2rem;
+			@media #{$medium-up}{
+				padding-top: 0;
+			}
+		}
+		.featured {
+			padding-top: 0.5rem;
+			@media #{$medium-up}{
+				padding-top: 0;
+			}
+		}
+		.icon-recycle {
+			height: 3rem;
+			color: $kiva-text-light;
+			fill: $kiva-text-light;
+			@media #{$medium-up}{
+				width: 54.8px;
+			}
+		}
+	}
 
-  .loan-stats {
-    .black-underlined {
-      display: inline-block;
-    }
-    .bold {
-      font-weight: bold;
-      padding-left: 0.3rem;
-    }
-    .risk-rating {
-      .icon {
-        height: 1rem;
-        width: 18px;
-        fill: transparent;
-      }
-      .empty-star {
-        color: $kiva-bg-darkgray;
-      }
-    }
-  }
+	.loan-stats {
+		.black-underlined {
+			display: inline-block;
+		}
+		.bold {
+			font-weight: bold;
+			padding-left: 0.3rem;
+		}
+		.risk-rating {
+			.icon {
+				height: 1rem;
+				width: 18px;
+				fill: transparent;
+			}
+			.empty-star {
+				color: $kiva-bg-darkgray;
+			}
+		}
+	}
 
 }
 
 .lenders-teams {
-  .ac-title {
-    font-size: 1rem;
-  }
-  .photos {
-    display: inline;
-    img {
-      background-repeat: no-repeat;
-      border-radius: 50%;
-      width: 50px;
-    }
-  }
-  .photos:nth-child(2) {
-    padding-left: 5px;
-  }
+	.ac-title {
+		font-size: 1rem;
+	}
+	.photos {
+		display: inline;
+		img {
+			background-repeat: no-repeat;
+			border-radius: 50%;
+			width: 50px;
+		}
+	}
+	.photos:nth-child(2) {
+		padding-left: 5px;
+	}
 }
 
 .lend-action {
-  .lend-button-wrapper {
-    display: inline;
-    padding: 0;
+	.lend-button-wrapper {
+		display: inline;
+		padding: 0;
 
-    .lend-action-button {
-      padding: 0;
-      outline: 0 !important;
-      width: 100%;
-      font-size: 1.2rem;
-    }
+		.lend-action-button {
+			padding: 0;
+			outline: 0 !important;
+			width: 100%;
+			font-size: 1.2rem;
+		}
 
-  }
+	}
 
-  .lend-values-button {
-    .lend-action-button {
-      padding-right: 29px;
-      &:after {
-        right: 0.95rem;
-      }
-    }
-  }
-  .lend-now-button {
-    padding-left: 5px;
-  }
+	.lend-values-button {
+		.lend-action-button {
+			padding-right: 29px;
+			&:after {
+				right: 0.95rem;
+			}
+		}
+	}
+	.lend-now-button {
+		padding-left: 5px;
+	}
 
-  .f-dropdown {
-    margin-top: 0;
-    max-width: 450px;
-    border-top: none;
-    li a {
-      font-size: 1rem;
-    }
-  }
+	.f-dropdown {
+		margin-top: 0;
+		max-width: 450px;
+		border-top: none;
+		li a {
+			font-size: 1rem;
+		}
+	}
 
-  .proceed-to-checkout-button {
-    outline: none;
-    width: 100%;
-    padding-right: 0;
-    font-size: 1.155556rem;
-    @media #{$xxlarge-up}{
-      font-size: 1.5555555556rem;
-    }
+	.proceed-to-checkout-button {
+		outline: none;
+		width: 100%;
+		padding-right: 0;
+		font-size: 1.155556rem;
+		@media #{$xxlarge-up}{
+			font-size: 1.5555555556rem;
+		}
 
-    .icon {
-      width: 33px;
-      height: 50%;
-      position: absolute;
-      left: 10px;
-      fill: white;
-    }
-  }
-  .green-button {
-    background-color: $kiva-navdivider-green;
-  }
+		.icon {
+			width: 33px;
+			height: 50%;
+			position: absolute;
+			left: 10px;
+			fill: white;
+		}
+	}
+	.green-button {
+		background-color: $kiva-navdivider-green;
+	}
 
-  .no-padding {
-    padding: 0;
-  }
+	.no-padding {
+		padding: 0;
+	}
 
-  #already-supported-message {
-    text-align: center;
-    padding-top: 10px;
-    padding-bottom: 10px;
-  }
+	#already-supported-message {
+		text-align: center;
+		padding-top: 10px;
+		padding-bottom: 10px;
+	}
 }
 
 .mobile-lend-action {
-  position: fixed;
-  max-width: none;
-  bottom: 0;
-  z-index: 9999;
-  background-color: $white;
+	position: fixed;
+	max-width: none;
+	bottom: 0;
+	z-index: 9999;
+	background-color: $white;
 
-  .button {
-    margin-bottom: 0;
-    display: inline-block;
-    font-size: 1rem;
-    height: 2.8rem;
-    width: 100%;
-    #basket-text {
-      font-size: 0.6rem;
-      position: absolute;
-      top: 15%;
-      right: 48.9%;
-    }
-  }
-  .basket-buttons .columns {
-    padding: 0;
-    &:nth-child(2) {
-      padding: 0 1px;
-    }
-  }
-  #already-supported-message-mobile {
-    text-align: center;
-    background-color: $kiva-stroke-gray;
-  }
+	.button {
+		margin-bottom: 0;
+		display: inline-block;
+		font-size: 1rem;
+		height: 2.8rem;
+		width: 100%;
+		#basket-text {
+			font-size: 0.6rem;
+			position: absolute;
+			top: 15%;
+			right: 48.9%;
+		}
+	}
+	.basket-buttons .columns {
+		padding: 0;
+		&:nth-child(2) {
+			padding: 0 1px;
+		}
+	}
+	#already-supported-message-mobile {
+		text-align: center;
+		background-color: $kiva-stroke-gray;
+	}
 
-  .lend-action-button {
-    .button {
-      padding: 0.8rem 0;
-    }
-  }
-  .footer-basket-amount {
-    color: $white;
-    padding-top: 6px;
-  }
+	.lend-action-button {
+		.button {
+			padding: 0.8rem 0;
+		}
+	}
+	.footer-basket-amount {
+		color: $white;
+		padding-top: 6px;
+	}
 
-  .lend-button-wrapper {
-    .button {
-      padding-right: 1.4rem;
-      padding-left: 1.4rem;
-    }
-  }
+	.lend-button-wrapper {
+		.button {
+			padding-right: 1.4rem;
+			padding-left: 1.4rem;
+		}
+	}
 
-  .mobile-already-in-basket {
-    outline: none;
-    width: 100%;
-    padding-right: 0;
-    font-size: 1.155556rem;
-    @media #{$xxlarge-up}{
-      font-size: 1.5555555556rem;
-    }
+	.mobile-already-in-basket {
+		outline: none;
+		width: 100%;
+		padding-right: 0;
+		font-size: 1.155556rem;
+		@media #{$xxlarge-up}{
+			font-size: 1.5555555556rem;
+		}
 
-    .icon {
-      width: 33px;
-      height: 50%;
-      position: absolute;
-      left: 10px;
-      fill: white;
-    }
-  }
+		.icon {
+			width: 33px;
+			height: 50%;
+			position: absolute;
+			left: 10px;
+			fill: white;
+		}
+	}
 
-  .lend-values-select-wrapper {
-    padding: 0;
-    .lend-values-select {
-      height: 2.8rem;
-      margin: 0;
-      padding-left: 7%;
-      border: 0;
-      background: $kiva-accent-blue;
-      outline: none;
-      text-shadow: 0px 0px 0px $white;
-      color: transparent;
-      font-size: 18px;
-      font-weight: bold;
-    }
-    .lend-arrow {
-      width: 21px;
-      fill: $white;
-      right: 3%;
-      top: 44%;
-      height: 16%;
-      position: absolute;
+	.lend-values-select-wrapper {
+		padding: 0;
+		.lend-values-select {
+			height: 2.8rem;
+			margin: 0;
+			padding-left: 7%;
+			border: 0;
+			background: $kiva-accent-blue;
+			outline: none;
+			text-shadow: 0px 0px 0px $white;
+			color: transparent;
+			font-size: 18px;
+			font-weight: bold;
+		}
+		.lend-arrow {
+			width: 21px;
+			fill: $white;
+			right: 3%;
+			top: 44%;
+			height: 16%;
+			position: absolute;
 		transform: rotate(180deg);
 
 		@media #{$medium-up} {
 			right: 9%;
 		}
-    }
-  }
+		}
+	}
 }
 
 .adding-to-basket {
-  background-color: $kiva-navdivider-green;
-  color: $white;
-  font-size: 1.556rem;
-  font-family: PostGrotesk, Arial, Helvetica, sans-serif;
-  line-height: 65px;
-  padding: 0;
-  text-align: center;
+	background-color: $kiva-navdivider-green;
+	color: $white;
+	font-size: 1.556rem;
+	font-family: PostGrotesk, Arial, Helvetica, sans-serif;
+	line-height: 65px;
+	padding: 0;
+	text-align: center;
 
-  .loader {
-    height: 1rem;
-    line-height: $loan-card-footer-height;
-    padding-right: 1rem;
-  }
+	.loader {
+		height: 1rem;
+		line-height: $loan-card-footer-height;
+		padding-right: 1rem;
+	}
 }
 
 .mobile-adding-to-basket {
-  background-color: $kiva-accent-blue;
-  color: $white;
-  font-size: 1.556rem;
-  font-family: PostGrotesk, Arial, Helvetica, sans-serif;
-  height: $loan-card-footer-height;
-  line-height: $loan-card-footer-height;
-  padding: 0;
-  text-align: center;
-  width: 100%;
-  margin: 0 auto;
-  position: fixed;
-  bottom: 0;
-  z-index: 9999;
+	background-color: $kiva-accent-blue;
+	color: $white;
+	font-size: 1.556rem;
+	font-family: PostGrotesk, Arial, Helvetica, sans-serif;
+	height: $loan-card-footer-height;
+	line-height: $loan-card-footer-height;
+	padding: 0;
+	text-align: center;
+	width: 100%;
+	margin: 0 auto;
+	position: fixed;
+	bottom: 0;
+	z-index: 9999;
 
-  .loader {
-    height: 1rem;
-    line-height: $loan-card-footer-height;
-    padding-right: 1rem;
-  }
+	.loader {
+		height: 1rem;
+		line-height: $loan-card-footer-height;
+		padding-right: 1rem;
+	}
 
 }
 
 #basket-button {
-  padding-right: 0;
+	padding-right: 0;
 }
 
 .browse-more-loans {
-  text-align: center;
-  margin-bottom: 10px;
+	text-align: center;
+	margin-bottom: 10px;
 }
 
 .value-in-basket {
-  text-align: center;
-  margin-bottom: 10px;
+	text-align: center;
+	margin-bottom: 10px;
 }
 
