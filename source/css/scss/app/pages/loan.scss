@@ -434,10 +434,15 @@
     .lend-arrow {
       width: 21px;
       fill: $white;
-      right: 9%;
-      top: 40%;
+      right: 3%;
+      top: 44%;
       height: 16%;
       position: absolute;
+		transform: rotate(180deg);
+
+		@media #{$medium-up} {
+			right: 9%;
+		}
     }
   }
 }
