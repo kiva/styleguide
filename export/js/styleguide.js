@@ -46,13 +46,13 @@ define("Styleguide", ["jquery"], function(__WEBPACK_EXTERNAL_MODULE_2__) { retur
 
 	'use strict';
 
-	__webpack_require__(7);
+	__webpack_require__(8);
 
 	var header = __webpack_require__(5);
-	var filters = __webpack_require__(12);
-	var imagesizes = __webpack_require__(13);
+	var filters = __webpack_require__(13);
+	var imagesizes = __webpack_require__(14);
 	var accordion = __webpack_require__(6);
-	var videoResizing = __webpack_require__(14);
+	var videoResizing = __webpack_require__(7);
 	var borrowerPage = __webpack_require__(15);
 	var categories = __webpack_require__(16);
 
@@ -1502,8 +1502,7 @@ define("Styleguide", ["jquery"], function(__WEBPACK_EXTERNAL_MODULE_2__) { retur
 
 
 	/*** EXPORTS FROM exports-loader ***/
-	module.exports = window.Modernizr
-	}.call(window));
+	module.exports = window.Modernizr}.call(window));
 
 /***/ },
 /* 4 */
@@ -8295,18 +8294,30 @@ define("Styleguide", ["jquery"], function(__WEBPACK_EXTERNAL_MODULE_2__) { retur
 /* 7 */
 /***/ function(module, exports, __webpack_require__) {
 
+	var $ = __webpack_require__(2);
+
+	module.exports = function () {
+	    'use strict';
+
+	    $('.loan-image-wrap').fitVids();
+	};
+
+/***/ },
+/* 8 */
+/***/ function(module, exports, __webpack_require__) {
+
 	__webpack_require__(2);
 	__webpack_require__(3);
 
 	__webpack_require__(4);
 
-	__webpack_require__(8);
 	__webpack_require__(9);
 	__webpack_require__(10);
 	__webpack_require__(11);
+	__webpack_require__(12);
 
 /***/ },
-/* 8 */
+/* 9 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(__webpack_provided_window_dot_jQuery) {/*! noUiSlider - 7.0.10 - 2014-12-27 14:50:46 */
@@ -10627,11 +10638,11 @@ define("Styleguide", ["jquery"], function(__WEBPACK_EXTERNAL_MODULE_2__) { retur
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(2)))
 
 /***/ },
-/* 9 */
+/* 10 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;var require;var require;/* WEBPACK VAR INJECTION */(function($) {/*!
-	 * Select2 4.0.0
+	 * Select2 4.0.1
 	 * https://select2.github.io
 	 *
 	 * Released under the MIT license
@@ -10662,7 +10673,7 @@ define("Styleguide", ["jquery"], function(__WEBPACK_EXTERNAL_MODULE_2__) { retur
 	var S2;(function () { if (!S2 || !S2.requirejs) {
 	if (!S2) { S2 = {}; } else { require = S2; }
 	/**
-	 * @license almond 0.2.9 Copyright (c) 2011-2014, The Dojo Foundation All Rights Reserved.
+	 * @license almond 0.3.1 Copyright (c) 2011-2014, The Dojo Foundation All Rights Reserved.
 	 * Available via the MIT or new BSD license.
 	 * see: http://github.com/jrburke/almond for details
 	 */
@@ -10707,12 +10718,6 @@ define("Styleguide", ["jquery"], function(__WEBPACK_EXTERNAL_MODULE_2__) { retur
 	            //otherwise, assume it is a top-level require that will
 	            //be relative to baseUrl in the end.
 	            if (baseName) {
-	                //Convert baseName to array, and lop off the last part,
-	                //so that . matches that "directory" and not name of the baseName's
-	                //module. For instance, baseName of "one/two/three", maps to
-	                //"one/two/three.js", but we want the directory, "one/two" for
-	                //this normalization.
-	                baseParts = baseParts.slice(0, baseParts.length - 1);
 	                name = name.split('/');
 	                lastIndex = name.length - 1;
 
@@ -10721,7 +10726,11 @@ define("Styleguide", ["jquery"], function(__WEBPACK_EXTERNAL_MODULE_2__) { retur
 	                    name[lastIndex] = name[lastIndex].replace(jsSuffixRegExp, '');
 	                }
 
-	                name = baseParts.concat(name);
+	                //Lop off the last part of baseParts, so that . matches the
+	                //"directory" and not name of the baseName's module. For instance,
+	                //baseName of "one/two/three", maps to "one/two/three.js", but we
+	                //want the directory, "one/two" for this normalization.
+	                name = baseParts.slice(0, baseParts.length - 1).concat(name);
 
 	                //start trimDots
 	                for (i = 0; i < name.length; i += 1) {
@@ -10813,7 +10822,15 @@ define("Styleguide", ["jquery"], function(__WEBPACK_EXTERNAL_MODULE_2__) { retur
 	            //A version of a require function that passes a moduleName
 	            //value for items that may need to
 	            //look up paths relative to the moduleName
-	            return req.apply(undef, aps.call(arguments, 0).concat([relName, forceSync]));
+	            var args = aps.call(arguments, 0);
+
+	            //If first arg is not require('string'), and there is only
+	            //one arg, it is the array form without a callback. Insert
+	            //a null so that the following concat is correct.
+	            if (typeof args[0] !== 'string' && args.length === 1) {
+	                args.push(null);
+	            }
+	            return req.apply(undef, args.concat([relName, forceSync]));
 	        };
 	    }
 
@@ -11063,6 +11080,9 @@ define("Styleguide", ["jquery"], function(__WEBPACK_EXTERNAL_MODULE_2__) { retur
 	    requirejs._defined = defined;
 
 	    define = function (name, deps, callback) {
+	        if (typeof name !== 'string') {
+	            throw new Error('See almond README: incorrect module build, no module name');
+	        }
 
 	        //This module may not have dependencies
 	        if (!deps.splice) {
@@ -11405,7 +11425,8 @@ define("Styleguide", ["jquery"], function(__WEBPACK_EXTERNAL_MODULE_2__) { retur
 	    this.hideLoading();
 
 	    var $message = $(
-	      '<li role="treeitem" class="select2-results__option"></li>'
+	      '<li role="treeitem" aria-live="assertive"' +
+	      ' class="select2-results__option"></li>'
 	    );
 
 	    var message = this.options.get('translations').get(params.message);
@@ -11416,7 +11437,13 @@ define("Styleguide", ["jquery"], function(__WEBPACK_EXTERNAL_MODULE_2__) { retur
 	      )
 	    );
 
+	    $message[0].className += ' select2-results__message';
+
 	    this.$results.append($message);
+	  };
+
+	  Results.prototype.hideMessages = function () {
+	    this.$results.find('.select2-results__message').remove();
 	  };
 
 	  Results.prototype.append = function (data) {
@@ -11618,6 +11645,7 @@ define("Styleguide", ["jquery"], function(__WEBPACK_EXTERNAL_MODULE_2__) { retur
 	    });
 
 	    container.on('query', function (params) {
+	      self.hideMessages();
 	      self.showLoading(params);
 	    });
 
@@ -11673,7 +11701,7 @@ define("Styleguide", ["jquery"], function(__WEBPACK_EXTERNAL_MODULE_2__) { retur
 	      var data = $highlighted.data('data');
 
 	      if ($highlighted.attr('aria-selected') == 'true') {
-	        self.trigger('close');
+	        self.trigger('close', {});
 	      } else {
 	        self.trigger('select', {
 	          data: data
@@ -11795,7 +11823,7 @@ define("Styleguide", ["jquery"], function(__WEBPACK_EXTERNAL_MODULE_2__) { retur
 	            data: data
 	          });
 	        } else {
-	          self.trigger('close');
+	          self.trigger('close', {});
 	        }
 
 	        return;
@@ -11861,7 +11889,7 @@ define("Styleguide", ["jquery"], function(__WEBPACK_EXTERNAL_MODULE_2__) { retur
 	    var template = this.options.get('templateResult');
 	    var escapeMarkup = this.options.get('escapeMarkup');
 
-	    var content = template(result);
+	    var content = template(result, container);
 
 	    if (content == null) {
 	      container.style.display = 'none';
@@ -11918,7 +11946,7 @@ define("Styleguide", ["jquery"], function(__WEBPACK_EXTERNAL_MODULE_2__) { retur
 	  BaseSelection.prototype.render = function () {
 	    var $selection = $(
 	      '<span class="select2-selection" role="combobox" ' +
-	      'aria-autocomplete="list" aria-haspopup="true" aria-expanded="false">' +
+	      ' aria-haspopup="true" aria-expanded="false">' +
 	      '</span>'
 	    );
 
@@ -11951,7 +11979,7 @@ define("Styleguide", ["jquery"], function(__WEBPACK_EXTERNAL_MODULE_2__) { retur
 	    });
 
 	    this.$selection.on('blur', function (evt) {
-	      self.trigger('blur', evt);
+	      self._handleBlur(evt);
 	    });
 
 	    this.$selection.on('keydown', function (evt) {
@@ -11996,6 +12024,24 @@ define("Styleguide", ["jquery"], function(__WEBPACK_EXTERNAL_MODULE_2__) { retur
 	    container.on('disable', function () {
 	      self.$selection.attr('tabindex', '-1');
 	    });
+	  };
+
+	  BaseSelection.prototype._handleBlur = function (evt) {
+	    var self = this;
+
+	    // This needs to be delayed as the active element is the body when the tab
+	    // key is pressed, possibly along with others.
+	    window.setTimeout(function () {
+	      // Don't trigger `blur` if the focus is still in the selection
+	      if (
+	        (document.activeElement == self.$selection[0]) ||
+	        ($.contains(self.$selection[0], document.activeElement))
+	      ) {
+	        return;
+	      }
+
+	      self.trigger('blur', evt);
+	    }, 1);
 	  };
 
 	  BaseSelection.prototype._attachCloseHandler = function (container) {
@@ -12107,11 +12153,11 @@ define("Styleguide", ["jquery"], function(__WEBPACK_EXTERNAL_MODULE_2__) { retur
 	    this.$selection.find('.select2-selection__rendered').empty();
 	  };
 
-	  SingleSelection.prototype.display = function (data) {
+	  SingleSelection.prototype.display = function (data, container) {
 	    var template = this.options.get('templateSelection');
 	    var escapeMarkup = this.options.get('escapeMarkup');
 
-	    return escapeMarkup(template(data));
+	    return escapeMarkup(template(data, container));
 	  };
 
 	  SingleSelection.prototype.selectionContainer = function () {
@@ -12126,9 +12172,9 @@ define("Styleguide", ["jquery"], function(__WEBPACK_EXTERNAL_MODULE_2__) { retur
 
 	    var selection = data[0];
 
-	    var formatted = this.display(selection);
-
 	    var $rendered = this.$selection.find('.select2-selection__rendered');
+	    var formatted = this.display(selection, $rendered);
+
 	    $rendered.empty().append(formatted);
 	    $rendered.prop('title', selection.title || selection.text);
 	  };
@@ -12170,29 +12216,37 @@ define("Styleguide", ["jquery"], function(__WEBPACK_EXTERNAL_MODULE_2__) { retur
 	      });
 	    });
 
-	    this.$selection.on('click', '.select2-selection__choice__remove',
+	    this.$selection.on(
+	      'click',
+	      '.select2-selection__choice__remove',
 	      function (evt) {
-	      var $remove = $(this);
-	      var $selection = $remove.parent();
+	        // Ignore the event if it is disabled
+	        if (self.options.get('disabled')) {
+	          return;
+	        }
 
-	      var data = $selection.data('data');
+	        var $remove = $(this);
+	        var $selection = $remove.parent();
 
-	      self.trigger('unselect', {
-	        originalEvent: evt,
-	        data: data
-	      });
-	    });
+	        var data = $selection.data('data');
+
+	        self.trigger('unselect', {
+	          originalEvent: evt,
+	          data: data
+	        });
+	      }
+	    );
 	  };
 
 	  MultipleSelection.prototype.clear = function () {
 	    this.$selection.find('.select2-selection__rendered').empty();
 	  };
 
-	  MultipleSelection.prototype.display = function (data) {
+	  MultipleSelection.prototype.display = function (data, container) {
 	    var template = this.options.get('templateSelection');
 	    var escapeMarkup = this.options.get('escapeMarkup');
 
-	    return escapeMarkup(template(data));
+	    return escapeMarkup(template(data, container));
 	  };
 
 	  MultipleSelection.prototype.selectionContainer = function () {
@@ -12219,8 +12273,8 @@ define("Styleguide", ["jquery"], function(__WEBPACK_EXTERNAL_MODULE_2__) { retur
 	    for (var d = 0; d < data.length; d++) {
 	      var selection = data[d];
 
-	      var formatted = this.display(selection);
 	      var $selection = this.selectionContainer();
+	      var formatted = this.display(selection, $selection);
 
 	      $selection.append(formatted);
 	      $selection.prop('title', selection.title || selection.text);
@@ -12352,7 +12406,7 @@ define("Styleguide", ["jquery"], function(__WEBPACK_EXTERNAL_MODULE_2__) { retur
 
 	    this.$element.val(this.placeholder.id).trigger('change');
 
-	    this.trigger('toggle');
+	    this.trigger('toggle', {});
 	  };
 
 	  AllowClear.prototype._handleKeyboardClear = function (_, evt, container) {
@@ -12400,7 +12454,7 @@ define("Styleguide", ["jquery"], function(__WEBPACK_EXTERNAL_MODULE_2__) { retur
 	      '<li class="select2-search select2-search--inline">' +
 	        '<input class="select2-search__field" type="search" tabindex="-1"' +
 	        ' autocomplete="off" autocorrect="off" autocapitalize="off"' +
-	        ' spellcheck="false" role="textbox" />' +
+	        ' spellcheck="false" role="textbox" aria-autocomplete="list" />' +
 	      '</li>'
 	    );
 
@@ -12408,6 +12462,8 @@ define("Styleguide", ["jquery"], function(__WEBPACK_EXTERNAL_MODULE_2__) { retur
 	    this.$search = $search.find('input');
 
 	    var $rendered = decorated.call(this);
+
+	    this._transferTabIndex();
 
 	    return $rendered;
 	  };
@@ -12418,24 +12474,31 @@ define("Styleguide", ["jquery"], function(__WEBPACK_EXTERNAL_MODULE_2__) { retur
 	    decorated.call(this, container, $container);
 
 	    container.on('open', function () {
-	      self.$search.attr('tabindex', 0);
-
-	      self.$search.focus();
+	      self.$search.trigger('focus');
 	    });
 
 	    container.on('close', function () {
-	      self.$search.attr('tabindex', -1);
-
 	      self.$search.val('');
-	      self.$search.focus();
+	      self.$search.removeAttr('aria-activedescendant');
+	      self.$search.trigger('focus');
 	    });
 
 	    container.on('enable', function () {
 	      self.$search.prop('disabled', false);
+
+	      self._transferTabIndex();
 	    });
 
 	    container.on('disable', function () {
 	      self.$search.prop('disabled', true);
+	    });
+
+	    container.on('focus', function (evt) {
+	      self.$search.trigger('focus');
+	    });
+
+	    container.on('results:focus', function (params) {
+	      self.$search.attr('aria-activedescendant', params.id);
 	    });
 
 	    this.$selection.on('focusin', '.select2-search--inline', function (evt) {
@@ -12443,7 +12506,7 @@ define("Styleguide", ["jquery"], function(__WEBPACK_EXTERNAL_MODULE_2__) { retur
 	    });
 
 	    this.$selection.on('focusout', '.select2-search--inline', function (evt) {
-	      self.trigger('blur', evt);
+	      self._handleBlur(evt);
 	    });
 
 	    this.$selection.on('keydown', '.select2-search--inline', function (evt) {
@@ -12469,18 +12532,73 @@ define("Styleguide", ["jquery"], function(__WEBPACK_EXTERNAL_MODULE_2__) { retur
 	      }
 	    });
 
+	    // Try to detect the IE version should the `documentMode` property that
+	    // is stored on the document. This is only implemented in IE and is
+	    // slightly cleaner than doing a user agent check.
+	    // This property is not available in Edge, but Edge also doesn't have
+	    // this bug.
+	    var msie = document.documentMode;
+	    var disableInputEvents = msie && msie <= 11;
+
 	    // Workaround for browsers which do not support the `input` event
 	    // This will prevent double-triggering of events for browsers which support
 	    // both the `keyup` and `input` events.
-	    this.$selection.on('input', '.select2-search--inline', function (evt) {
-	      // Unbind the duplicated `keyup` event
-	      self.$selection.off('keyup.search');
-	    });
+	    this.$selection.on(
+	      'input.searchcheck',
+	      '.select2-search--inline',
+	      function (evt) {
+	        // IE will trigger the `input` event when a placeholder is used on a
+	        // search box. To get around this issue, we are forced to ignore all
+	        // `input` events in IE and keep using `keyup`.
+	        if (disableInputEvents) {
+	          self.$selection.off('input.search input.searchcheck');
+	          return;
+	        }
 
-	    this.$selection.on('keyup.search input', '.select2-search--inline',
-	        function (evt) {
-	      self.handleSearch(evt);
-	    });
+	        // Unbind the duplicated `keyup` event
+	        self.$selection.off('keyup.search');
+	      }
+	    );
+
+	    this.$selection.on(
+	      'keyup.search input.search',
+	      '.select2-search--inline',
+	      function (evt) {
+	        // IE will trigger the `input` event when a placeholder is used on a
+	        // search box. To get around this issue, we are forced to ignore all
+	        // `input` events in IE and keep using `keyup`.
+	        if (disableInputEvents && evt.type === 'input') {
+	          self.$selection.off('input.search input.searchcheck');
+	          return;
+	        }
+
+	        var key = evt.which;
+
+	        // We can freely ignore events from modifier keys
+	        if (key == KEYS.SHIFT || key == KEYS.CTRL || key == KEYS.ALT) {
+	          return;
+	        }
+
+	        // Tabbing will be handled during the `keydown` phase
+	        if (key == KEYS.TAB) {
+	          return;
+	        }
+
+	        self.handleSearch(evt);
+	      }
+	    );
+	  };
+
+	  /**
+	   * This method will transfer the tabindex attribute from the rendered
+	   * selection to the search box. This allows for the search box to be used as
+	   * the primary focus instead of the selection container.
+	   *
+	   * @private
+	   */
+	  Search.prototype._transferTabIndex = function (decorated) {
+	    this.$search.attr('tabindex', this.$selection.attr('tabindex'));
+	    this.$selection.attr('tabindex', '-1');
 	  };
 
 	  Search.prototype.createPlaceholder = function (decorated, placeholder) {
@@ -12488,6 +12606,8 @@ define("Styleguide", ["jquery"], function(__WEBPACK_EXTERNAL_MODULE_2__) { retur
 	  };
 
 	  Search.prototype.update = function (decorated, data) {
+	    var searchHadFocus = this.$search[0] == document.activeElement;
+
 	    this.$search.attr('placeholder', '');
 
 	    decorated.call(this, data);
@@ -12496,6 +12616,9 @@ define("Styleguide", ["jquery"], function(__WEBPACK_EXTERNAL_MODULE_2__) { retur
 	                   .append(this.$searchContainer);
 
 	    this.resizeSearch();
+	    if (searchHadFocus) {
+	      this.$search.focus();
+	    }
 	  };
 
 	  Search.prototype.handleSearch = function () {
@@ -12517,9 +12640,8 @@ define("Styleguide", ["jquery"], function(__WEBPACK_EXTERNAL_MODULE_2__) { retur
 	      data: item
 	    });
 
-	    this.trigger('open');
-
-	    this.$search.val(item.text + ' ');
+	    this.$search.val(item.text);
+	    this.handleSearch();
 	  };
 
 	  Search.prototype.resizeSearch = function () {
@@ -13855,7 +13977,7 @@ define("Styleguide", ["jquery"], function(__WEBPACK_EXTERNAL_MODULE_2__) { retur
 	        var existingData = this.item($existingOption);
 	        var newData = $.extend(true, {}, existingData, item);
 
-	        var $newOption = this.option(existingData);
+	        var $newOption = this.option(newData);
 
 	        $existingOption.replaceWith($newOption);
 
@@ -13891,7 +14013,7 @@ define("Styleguide", ["jquery"], function(__WEBPACK_EXTERNAL_MODULE_2__) { retur
 	      this.processResults = this.ajaxOptions.processResults;
 	    }
 
-	    ArrayAdapter.__super__.constructor.call(this, $element, options);
+	    AjaxAdapter.__super__.constructor.call(this, $element, options);
 	  }
 
 	  Utils.Extend(AjaxAdapter, ArrayAdapter);
@@ -13899,9 +14021,9 @@ define("Styleguide", ["jquery"], function(__WEBPACK_EXTERNAL_MODULE_2__) { retur
 	  AjaxAdapter.prototype._applyDefaults = function (options) {
 	    var defaults = {
 	      data: function (params) {
-	        return {
+	        return $.extend({}, params, {
 	          q: params.term
-	        };
+	        });
 	      },
 	      transport: function (params, success, failure) {
 	        var $request = $.ajax(params);
@@ -13938,11 +14060,11 @@ define("Styleguide", ["jquery"], function(__WEBPACK_EXTERNAL_MODULE_2__) { retur
 	    }, this.ajaxOptions);
 
 	    if (typeof options.url === 'function') {
-	      options.url = options.url(params);
+	      options.url = options.url.call(this.$element, params);
 	    }
 
 	    if (typeof options.data === 'function') {
-	      options.data = options.data(params);
+	      options.data = options.data.call(this.$element, params);
 	    }
 
 	    function request () {
@@ -14125,7 +14247,9 @@ define("Styleguide", ["jquery"], function(__WEBPACK_EXTERNAL_MODULE_2__) { retur
 	    var self = this;
 
 	    function select (data) {
-	      self.select(data);
+	      self.trigger('select', {
+	        data: data
+	      });
 	    }
 
 	    params.term = params.term || '';
@@ -14172,6 +14296,11 @@ define("Styleguide", ["jquery"], function(__WEBPACK_EXTERNAL_MODULE_2__) { retur
 	      });
 
 	      var data = createTag(partParams);
+
+	      if (data == null) {
+	        i++;
+	        continue;
+	      }
 
 	      callback(data);
 
@@ -14308,6 +14437,10 @@ define("Styleguide", ["jquery"], function(__WEBPACK_EXTERNAL_MODULE_2__) { retur
 	    this.$dropdown = $dropdown;
 
 	    return $dropdown;
+	  };
+
+	  Dropdown.prototype.bind = function () {
+	    // Should be implemented in subclasses
 	  };
 
 	  Dropdown.prototype.position = function ($dropdown, $container) {
@@ -14536,7 +14669,9 @@ define("Styleguide", ["jquery"], function(__WEBPACK_EXTERNAL_MODULE_2__) { retur
 
 	  InfiniteScroll.prototype.createLoadingMore = function () {
 	    var $option = $(
-	      '<li class="option load-more" role="treeitem"></li>'
+	      '<li ' +
+	      'class="select2-results__option select2-results__option--load-more"' +
+	      'role="treeitem" aria-disabled="true"></li>'
 	    );
 
 	    var message = this.options.get('translations').get('loadingMore');
@@ -14554,7 +14689,7 @@ define("Styleguide", ["jquery"], function(__WEBPACK_EXTERNAL_MODULE_2__) { retur
 	  '../utils'
 	], function ($, Utils) {
 	  function AttachBody (decorated, $element, options) {
-	    this.$dropdownParent = options.get('dropdownParent') || document.body;
+	    this.$dropdownParent = options.get('dropdownParent') || $(document.body);
 
 	    decorated.call(this, $element, options);
 	  }
@@ -14595,6 +14730,12 @@ define("Styleguide", ["jquery"], function(__WEBPACK_EXTERNAL_MODULE_2__) { retur
 	    });
 	  };
 
+	  AttachBody.prototype.destroy = function (decorated) {
+	    decorated.call(this);
+
+	    this.$dropdownContainer.remove();
+	  };
+
 	  AttachBody.prototype.position = function (decorated, $dropdown, $container) {
 	    // Clone all of the container classes
 	    $dropdown.attr('class', $container.attr('class'));
@@ -14625,7 +14766,8 @@ define("Styleguide", ["jquery"], function(__WEBPACK_EXTERNAL_MODULE_2__) { retur
 	    this.$dropdownContainer.detach();
 	  };
 
-	  AttachBody.prototype._attachPositioningHandler = function (container) {
+	  AttachBody.prototype._attachPositioningHandler =
+	      function (decorated, container) {
 	    var self = this;
 
 	    var scrollEvent = 'scroll.select2.' + container.id;
@@ -14652,7 +14794,8 @@ define("Styleguide", ["jquery"], function(__WEBPACK_EXTERNAL_MODULE_2__) { retur
 	    });
 	  };
 
-	  AttachBody.prototype._detachPositioningHandler = function (container) {
+	  AttachBody.prototype._detachPositioningHandler =
+	      function (decorated, container) {
 	    var scrollEvent = 'scroll.select2.' + container.id;
 	    var resizeEvent = 'resize.select2.' + container.id;
 	    var orientationEvent = 'orientationchange.select2.' + container.id;
@@ -14700,6 +14843,14 @@ define("Styleguide", ["jquery"], function(__WEBPACK_EXTERNAL_MODULE_2__) { retur
 	      top: container.bottom
 	    };
 
+	    // Fix positioning with static parents
+	    if (this.$dropdownParent[0].style.position !== 'static') {
+	      var parentOffset = this.$dropdownParent.offset();
+
+	      css.top -= parentOffset.top;
+	      css.left -= parentOffset.left;
+	    }
+
 	    if (!isCurrentlyAbove && !isCurrentlyBelow) {
 	      newDirection = 'below';
 	    }
@@ -14728,8 +14879,6 @@ define("Styleguide", ["jquery"], function(__WEBPACK_EXTERNAL_MODULE_2__) { retur
 	  };
 
 	  AttachBody.prototype._resizeDropdown = function () {
-	    this.$dropdownContainer.width();
-
 	    var css = {
 	      width: this.$container.outerWidth(false) + 'px'
 	    };
@@ -14810,12 +14959,23 @@ define("Styleguide", ["jquery"], function(__WEBPACK_EXTERNAL_MODULE_2__) { retur
 	  SelectOnClose.prototype._handleSelectOnClose = function () {
 	    var $highlightedResults = this.getHighlightedResults();
 
+	    // Only select highlighted results
 	    if ($highlightedResults.length < 1) {
 	      return;
 	    }
 
+	    var data = $highlightedResults.data('data');
+
+	    // Don't re-select already selected resulte
+	    if (
+	      (data.element != null && data.element.selected) ||
+	      (data.element == null && data.selected)
+	    ) {
+	      return;
+	    }
+
 	    this.trigger('select', {
-	        data: $highlightedResults.data('data')
+	        data: data
 	    });
 	  };
 
@@ -14849,7 +15009,7 @@ define("Styleguide", ["jquery"], function(__WEBPACK_EXTERNAL_MODULE_2__) { retur
 	      return;
 	    }
 
-	    this.trigger('close');
+	    this.trigger('close', {});
 	  };
 
 	  return CloseOnSelect;
@@ -15500,8 +15660,8 @@ define("Styleguide", ["jquery"], function(__WEBPACK_EXTERNAL_MODULE_2__) { retur
 
 	    // Hide the original select
 	    $element.addClass('select2-hidden-accessible');
-		$element.attr('aria-hidden', 'true');
-		
+	    $element.attr('aria-hidden', 'true');
+
 	    // Synchronize any monitored attributes
 	    this._syncAttributes();
 
@@ -15636,10 +15796,14 @@ define("Styleguide", ["jquery"], function(__WEBPACK_EXTERNAL_MODULE_2__) { retur
 
 	  Select2.prototype._registerSelectionEvents = function () {
 	    var self = this;
-	    var nonRelayEvents = ['toggle'];
+	    var nonRelayEvents = ['toggle', 'focus'];
 
 	    this.selection.on('toggle', function () {
 	      self.toggleDropdown();
+	    });
+
+	    this.selection.on('focus', function (params) {
+	      self.focus(params);
 	    });
 
 	    this.selection.on('*', function (name, params) {
@@ -15686,17 +15850,13 @@ define("Styleguide", ["jquery"], function(__WEBPACK_EXTERNAL_MODULE_2__) { retur
 	      self.$container.addClass('select2-container--disabled');
 	    });
 
-	    this.on('focus', function () {
-	      self.$container.addClass('select2-container--focus');
-	    });
-
 	    this.on('blur', function () {
 	      self.$container.removeClass('select2-container--focus');
 	    });
 
 	    this.on('query', function (params) {
 	      if (!self.isOpen()) {
-	        self.trigger('open');
+	        self.trigger('open', {});
 	      }
 
 	      this.dataAdapter.query(params, function (data) {
@@ -15720,30 +15880,31 @@ define("Styleguide", ["jquery"], function(__WEBPACK_EXTERNAL_MODULE_2__) { retur
 	      var key = evt.which;
 
 	      if (self.isOpen()) {
-	        if (key === KEYS.ENTER) {
-	          self.trigger('results:select');
+	        if (key === KEYS.ESC || key === KEYS.TAB ||
+	            (key === KEYS.UP && evt.altKey)) {
+	          self.close();
+
+	          evt.preventDefault();
+	        } else if (key === KEYS.ENTER) {
+	          self.trigger('results:select', {});
 
 	          evt.preventDefault();
 	        } else if ((key === KEYS.SPACE && evt.ctrlKey)) {
-	          self.trigger('results:toggle');
+	          self.trigger('results:toggle', {});
 
 	          evt.preventDefault();
 	        } else if (key === KEYS.UP) {
-	          self.trigger('results:previous');
+	          self.trigger('results:previous', {});
 
 	          evt.preventDefault();
 	        } else if (key === KEYS.DOWN) {
-	          self.trigger('results:next');
-
-	          evt.preventDefault();
-	        } else if (key === KEYS.ESC || key === KEYS.TAB) {
-	          self.close();
+	          self.trigger('results:next', {});
 
 	          evt.preventDefault();
 	        }
 	      } else {
 	        if (key === KEYS.ENTER || key === KEYS.SPACE ||
-	            ((key === KEYS.DOWN || key === KEYS.UP) && evt.altKey)) {
+	            (key === KEYS.DOWN && evt.altKey)) {
 	          self.open();
 
 	          evt.preventDefault();
@@ -15760,9 +15921,9 @@ define("Styleguide", ["jquery"], function(__WEBPACK_EXTERNAL_MODULE_2__) { retur
 	        this.close();
 	      }
 
-	      this.trigger('disable');
+	      this.trigger('disable', {});
 	    } else {
-	      this.trigger('enable');
+	      this.trigger('enable', {});
 	    }
 	  };
 
@@ -15778,6 +15939,10 @@ define("Styleguide", ["jquery"], function(__WEBPACK_EXTERNAL_MODULE_2__) { retur
 	      'select': 'selecting',
 	      'unselect': 'unselecting'
 	    };
+
+	    if (args === undefined) {
+	      args = {};
+	    }
 
 	    if (name in preTriggerMap) {
 	      var preTriggerName = preTriggerMap[name];
@@ -15817,8 +15982,6 @@ define("Styleguide", ["jquery"], function(__WEBPACK_EXTERNAL_MODULE_2__) { retur
 	    }
 
 	    this.trigger('query', {});
-
-	    this.trigger('open');
 	  };
 
 	  Select2.prototype.close = function () {
@@ -15826,11 +15989,25 @@ define("Styleguide", ["jquery"], function(__WEBPACK_EXTERNAL_MODULE_2__) { retur
 	      return;
 	    }
 
-	    this.trigger('close');
+	    this.trigger('close', {});
 	  };
 
 	  Select2.prototype.isOpen = function () {
 	    return this.$container.hasClass('select2-container--open');
+	  };
+
+	  Select2.prototype.hasFocus = function () {
+	    return this.$container.hasClass('select2-container--focus');
+	  };
+
+	  Select2.prototype.focus = function (data) {
+	    // No need to re-trigger focus events if we are already focused
+	    if (this.hasFocus()) {
+	      return;
+	    }
+
+	    this.$container.addClass('select2-container--focus');
+	    this.trigger('focus', {});
 	  };
 
 	  Select2.prototype.enable = function (args) {
@@ -15913,7 +16090,7 @@ define("Styleguide", ["jquery"], function(__WEBPACK_EXTERNAL_MODULE_2__) { retur
 	    this.$element.attr('tabindex', this.$element.data('old-tabindex'));
 
 	    this.$element.removeClass('select2-hidden-accessible');
-		this.$element.attr('aria-hidden', 'false');
+	    this.$element.attr('aria-hidden', 'false');
 	    this.$element.removeData('select2');
 
 	    this.dataAdapter.destroy();
@@ -16017,7 +16194,7 @@ define("Styleguide", ["jquery"], function(__WEBPACK_EXTERNAL_MODULE_2__) { retur
 	    containerCssAdapter = containerCssAdapter || _containerAdapter;
 
 	    if (containerCssClass.indexOf(':all:') !== -1) {
-	      containerCssClass = containerCssClass.replace(':all', '');
+	      containerCssClass = containerCssClass.replace(':all:', '');
 
 	      var _cssAdapter = containerCssAdapter;
 
@@ -16074,7 +16251,7 @@ define("Styleguide", ["jquery"], function(__WEBPACK_EXTERNAL_MODULE_2__) { retur
 	    dropdownCssAdapter = dropdownCssAdapter || _dropdownAdapter;
 
 	    if (dropdownCssClass.indexOf(':all:') !== -1) {
-	      dropdownCssClass = dropdownCssClass.replace(':all', '');
+	      dropdownCssClass = dropdownCssClass.replace(':all:', '');
 
 	      var _cssAdapter = dropdownCssAdapter;
 
@@ -16445,76 +16622,18 @@ define("Styleguide", ["jquery"], function(__WEBPACK_EXTERNAL_MODULE_2__) { retur
 	  return StopPropagation;
 	});
 
-	S2.define('jquery.select2',[
-	  'jquery',
-	  'require',
-
-	  './select2/core',
-	  './select2/defaults'
-	], function ($, require, Select2, Defaults) {
-	  // Force jQuery.mousewheel to be loaded if it hasn't already
-	  require('jquery.mousewheel');
-
-	  if ($.fn.select2 == null) {
-	    // All methods that should return the element
-	    var thisMethods = ['open', 'close', 'destroy'];
-
-	    $.fn.select2 = function (options) {
-	      options = options || {};
-
-	      if (typeof options === 'object') {
-	        this.each(function () {
-	          var instanceOptions = $.extend({}, options, true);
-
-	          var instance = new Select2($(this), instanceOptions);
-	        });
-
-	        return this;
-	      } else if (typeof options === 'string') {
-	        var instance = this.data('select2');
-
-	        if (instance == null && window.console && console.error) {
-	          console.error(
-	            'The select2(\'' + options + '\') method was called on an ' +
-	            'element that is not using Select2.'
-	          );
-	        }
-
-	        var args = Array.prototype.slice.call(arguments, 1);
-
-	        var ret = instance[options](args);
-
-	        // Check if we should be returning `this`
-	        if ($.inArray(options, thisMethods) > -1) {
-	          return this;
-	        }
-
-	        return ret;
-	      } else {
-	        throw new Error('Invalid arguments for Select2: ' + options);
-	      }
-	    };
-	  }
-
-	  if ($.fn.select2.defaults == null) {
-	    $.fn.select2.defaults = Defaults;
-	  }
-
-	  return Select2;
-	});
-
 	/*!
-	 * jQuery Mousewheel 3.1.12
+	 * jQuery Mousewheel 3.1.13
 	 *
-	 * Copyright 2014 jQuery Foundation and other contributors
-	 * Released under the MIT license.
+	 * Copyright jQuery Foundation and other contributors
+	 * Released under the MIT license
 	 * http://jquery.org/license
 	 */
 
 	(function (factory) {
 	    if ( typeof S2.define === 'function' && S2.define.amd ) {
 	        // AMD. Register as an anonymous module.
-	        S2.define('jquery.mousewheel',['jquery'], factory);
+	        S2.define('jquery-mousewheel',['jquery'], factory);
 	    } else if (true) {
 	        // Node/CommonJS style for Browserify
 	        module.exports = factory;
@@ -16725,6 +16844,65 @@ define("Styleguide", ["jquery"], function(__WEBPACK_EXTERNAL_MODULE_2__) { retur
 
 	}));
 
+	S2.define('jquery.select2',[
+	  'jquery',
+	  'jquery-mousewheel',
+
+	  './select2/core',
+	  './select2/defaults'
+	], function ($, _, Select2, Defaults) {
+	  if ($.fn.select2 == null) {
+	    // All methods that should return the element
+	    var thisMethods = ['open', 'close', 'destroy'];
+
+	    $.fn.select2 = function (options) {
+	      options = options || {};
+
+	      if (typeof options === 'object') {
+	        this.each(function () {
+	          var instanceOptions = $.extend(true, {}, options);
+
+	          var instance = new Select2($(this), instanceOptions);
+	        });
+
+	        return this;
+	      } else if (typeof options === 'string') {
+	        var ret;
+
+	        this.each(function () {
+	          var instance = $(this).data('select2');
+
+	          if (instance == null && window.console && console.error) {
+	            console.error(
+	              'The select2(\'' + options + '\') method was called on an ' +
+	              'element that is not using Select2.'
+	            );
+	          }
+
+	          var args = Array.prototype.slice.call(arguments, 1);
+
+	          ret = instance[options].apply(instance, args);
+	        });
+
+	        // Check if we should be returning `this`
+	        if ($.inArray(options, thisMethods) > -1) {
+	          return this;
+	        }
+
+	        return ret;
+	      } else {
+	        throw new Error('Invalid arguments for Select2: ' + options);
+	      }
+	    };
+	  }
+
+	  if ($.fn.select2.defaults == null) {
+	    $.fn.select2.defaults = Defaults;
+	  }
+
+	  return Select2;
+	});
+
 	  // Return the AMD loader configuration so it can be used outside of this file
 	  return {
 	    define: S2.define,
@@ -16748,7 +16926,7 @@ define("Styleguide", ["jquery"], function(__WEBPACK_EXTERNAL_MODULE_2__) { retur
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(2)))
 
 /***/ },
-/* 10 */
+/* 11 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*
@@ -16759,7 +16937,7 @@ define("Styleguide", ["jquery"], function(__WEBPACK_EXTERNAL_MODULE_2__) { retur
 	|___/_|_|\___|_|\_(_)/ |___/
 	                   |__/
 
-	 Version: 1.5.8
+	 Version: 1.5.9
 	  Author: Ken Wheeler
 	 Website: http://kenwheeler.github.io
 	    Docs: http://kenwheeler.github.io/slick
@@ -16834,6 +17012,7 @@ define("Styleguide", ["jquery"], function(__WEBPACK_EXTERNAL_MODULE_2__) { retur
 	                touchMove: true,
 	                touchThreshold: 5,
 	                useCSS: true,
+	                useTransform: false,
 	                variableWidth: false,
 	                vertical: false,
 	                verticalSwiping: false,
@@ -17252,8 +17431,6 @@ define("Styleguide", ["jquery"], function(__WEBPACK_EXTERNAL_MODULE_2__) { retur
 	                .attr('data-slick-index', index)
 	                .data('originalStyling', $(element).attr('style') || '');
 	        });
-
-	        _.$slidesCache = _.$slides;
 
 	        _.$slider.addClass('slick-slider');
 
@@ -17720,6 +17897,8 @@ define("Styleguide", ["jquery"], function(__WEBPACK_EXTERNAL_MODULE_2__) { retur
 
 	        if (filter !== null) {
 
+	            _.$slidesCache = _.$slides;
+
 	            _.unload();
 
 	            _.$slideTrack.children(this.options.slide).detach();
@@ -17750,7 +17929,7 @@ define("Styleguide", ["jquery"], function(__WEBPACK_EXTERNAL_MODULE_2__) { retur
 	        if (_.options.infinite === true) {
 	            while (breakPoint < _.slideCount) {
 	                ++pagerQty;
-	                breakPoint = counter + _.options.slidesToShow;
+	                breakPoint = counter + _.options.slidesToScroll;
 	                counter += _.options.slidesToScroll <= _.options.slidesToShow ? _.options.slidesToScroll : _.options.slidesToShow;
 	            }
 	        } else if (_.options.centerMode === true) {
@@ -17758,7 +17937,7 @@ define("Styleguide", ["jquery"], function(__WEBPACK_EXTERNAL_MODULE_2__) { retur
 	        } else {
 	            while (breakPoint < _.slideCount) {
 	                ++pagerQty;
-	                breakPoint = counter + _.options.slidesToShow;
+	                breakPoint = counter + _.options.slidesToScroll;
 	                counter += _.options.slidesToScroll <= _.options.slidesToShow ? _.options.slidesToScroll : _.options.slidesToShow;
 	            }
 	        }
@@ -17827,15 +18006,33 @@ define("Styleguide", ["jquery"], function(__WEBPACK_EXTERNAL_MODULE_2__) { retur
 	                targetSlide = _.$slideTrack.children('.slick-slide').eq(slideIndex + _.options.slidesToShow);
 	            }
 
-	            targetLeft = targetSlide[0] ? targetSlide[0].offsetLeft * -1 : 0;
+	            if (_.options.rtl === true) {
+	                if (targetSlide[0]) {
+	                    targetLeft = (_.$slideTrack.width() - targetSlide[0].offsetLeft - targetSlide.width()) * -1;
+	                } else {
+	                    targetLeft =  0;
+	                }
+	            } else {
+	                targetLeft = targetSlide[0] ? targetSlide[0].offsetLeft * -1 : 0;
+	            }
 
 	            if (_.options.centerMode === true) {
-	                if (_.options.infinite === false) {
+	                if (_.slideCount <= _.options.slidesToShow || _.options.infinite === false) {
 	                    targetSlide = _.$slideTrack.children('.slick-slide').eq(slideIndex);
 	                } else {
 	                    targetSlide = _.$slideTrack.children('.slick-slide').eq(slideIndex + _.options.slidesToShow + 1);
 	                }
-	                targetLeft = targetSlide[0] ? targetSlide[0].offsetLeft * -1 : 0;
+
+	                if (_.options.rtl === true) {
+	                    if (targetSlide[0]) {
+	                        targetLeft = (_.$slideTrack.width() - targetSlide[0].offsetLeft - targetSlide.width()) * -1;
+	                    } else {
+	                        targetLeft =  0;
+	                    }
+	                } else {
+	                    targetLeft = targetSlide[0] ? targetSlide[0].offsetLeft * -1 : 0;
+	                }
+
 	                targetLeft += (_.$list.width() - targetSlide.outerWidth()) / 2;
 	            }
 	        }
@@ -18247,6 +18444,7 @@ define("Styleguide", ["jquery"], function(__WEBPACK_EXTERNAL_MODULE_2__) { retur
 
 	        if (imgCount > 0) {
 	            targetImage = $('img[data-lazy]', _.$slider).first();
+	            targetImage.attr('src', null);
 	            targetImage.attr('src', targetImage.attr('data-lazy')).removeClass('slick-loading').load(function() {
 	                    targetImage.removeAttr('data-lazy');
 	                    _.progressiveLazyLoad();
@@ -18265,8 +18463,22 @@ define("Styleguide", ["jquery"], function(__WEBPACK_EXTERNAL_MODULE_2__) { retur
 
 	    Slick.prototype.refresh = function( initializing ) {
 
-	        var _ = this,
-	            currentSlide = _.currentSlide;
+	        var _ = this, currentSlide, firstVisible;
+
+	        firstVisible = _.slideCount - _.options.slidesToShow;
+
+	        // check that the new breakpoint can actually accept the
+	        // "current slide" as the current slide, otherwise we need
+	        // to set it to the closest possible value.
+	        if ( !_.options.infinite ) {
+	            if ( _.slideCount <= _.options.slidesToShow ) {
+	                _.currentSlide = 0;
+	            } else if ( _.currentSlide > firstVisible ) {
+	                _.currentSlide = firstVisible;
+	            }
+	        }
+
+	         currentSlide = _.currentSlide;
 
 	        _.destroy(true);
 
@@ -18645,8 +18857,7 @@ define("Styleguide", ["jquery"], function(__WEBPACK_EXTERNAL_MODULE_2__) { retur
 	            _.transformType = 'transform';
 	            _.transitionType = 'transition';
 	        }
-	        _.transformsEnabled = (_.animType !== null && _.animType !== false);
-
+	        _.transformsEnabled = _.options.useTransform && (_.animType !== null && _.animType !== false);
 	    };
 
 
@@ -19341,18 +19552,13 @@ define("Styleguide", ["jquery"], function(__WEBPACK_EXTERNAL_MODULE_2__) { retur
 	    };
 
 	    Slick.prototype.activateADA = function() {
-	        var _ = this,
-	        _isSlideOnFocus =_.$slider.find('*').is(':focus');
-	        // _isSlideOnFocus = _.$slides.is(':focus') || _.$slides.find('*').is(':focus');
+	        var _ = this;
 
 	        _.$slideTrack.find('.slick-active').attr({
-	            'aria-hidden': 'false',
-	            'tabindex': '0'
+	            'aria-hidden': 'false'
 	        }).find('a, input, button, select').attr({
 	            'tabindex': '0'
 	        });
-
-	        (_isSlideOnFocus) &&  _.$slideTrack.find('.slick-active').focus();
 
 	    };
 
@@ -19380,9 +19586,9 @@ define("Styleguide", ["jquery"], function(__WEBPACK_EXTERNAL_MODULE_2__) { retur
 	            opt = arguments[0],
 	            args = Array.prototype.slice.call(arguments, 1),
 	            l = _.length,
-	            i = 0,
+	            i,
 	            ret;
-	        for (i; i < l; i++) {
+	        for (i = 0; i < l; i++) {
 	            if (typeof opt == 'object' || typeof opt == 'undefined')
 	                _[i].slick = new Slick(_[i], opt);
 	            else
@@ -19396,7 +19602,7 @@ define("Styleguide", ["jquery"], function(__WEBPACK_EXTERNAL_MODULE_2__) { retur
 
 
 /***/ },
-/* 11 */
+/* 12 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(__webpack_provided_window_dot_jQuery) {/*global jQuery */
@@ -19470,7 +19676,7 @@ define("Styleguide", ["jquery"], function(__WEBPACK_EXTERNAL_MODULE_2__) { retur
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(2)))
 
 /***/ },
-/* 12 */
+/* 13 */
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = function() {
@@ -19552,7 +19758,7 @@ define("Styleguide", ["jquery"], function(__WEBPACK_EXTERNAL_MODULE_2__) { retur
 
 
 /***/ },
-/* 13 */
+/* 14 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var $ = __webpack_require__(2);
@@ -19609,18 +19815,6 @@ define("Styleguide", ["jquery"], function(__WEBPACK_EXTERNAL_MODULE_2__) { retur
 
 	};
 
-
-/***/ },
-/* 14 */
-/***/ function(module, exports, __webpack_require__) {
-
-	var $ = __webpack_require__(2);
-
-	module.exports = function () {
-	    'use strict';
-
-	    $('.loan-image-wrap').fitVids();
-	};
 
 /***/ },
 /* 15 */
