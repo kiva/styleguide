@@ -433,6 +433,9 @@
 			color: transparent;
 			font-size: 18px;
 			font-weight: bold;
+			@media #{$medium-up} {
+				padding-left: 15%;
+			}
 		}
 		.lend-arrow {
 			width: 21px;
@@ -441,11 +444,10 @@
 			top: 44%;
 			height: 16%;
 			position: absolute;
-		transform: rotate(180deg);
-
-		@media #{$medium-up} {
-			right: 9%;
-		}
+			transform: rotate(180deg);
+			@media #{$medium-up} {
+				right: 9%;
+			}
 		}
 	}
 }
