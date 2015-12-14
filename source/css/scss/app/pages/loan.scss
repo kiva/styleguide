@@ -303,9 +303,11 @@
 
 	.lend-values-button {
 		.lend-action-button {
-			padding-right: 29px;
+			padding-right: 1.5rem;
+			padding-left: 0.5rem;
 			&:after {
-				right: 0.95rem;
+				right: 0.5rem;
+				border-width: 0.4rem;
 			}
 		}
 	}
