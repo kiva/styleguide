@@ -1103,6 +1103,21 @@
 			}
 		}
 	],
+	"distribution-model-filters": [
+		{
+			"name": "distribution-model",
+			"left": {
+				"id": "field-partner",
+				"value": "field-partner",
+				"label": "Field Partner"
+			},
+			"right": {
+				"id": "direct",
+				"value": "direct",
+				"label": "Direct"
+			}
+		}
+	],
 	"loan-length": [
 		{
 			"name": "loan-length",
@@ -1132,17 +1147,17 @@
   "message": [
 	{
 	  "type": "warning",
-	  "message": "WARNING MESSAGE."
+	  "message": "This is a warning message, should be in a yellow box.."
 	}
   ,
 	{
 	  "type": "error",
-	  "message": "ERROR MESSAGE"
+	  "message": "This is an error message, should be in a red box."
 	}
   ,
 	{
 	  "type": "confirmation",
-	  "message": "CONFIRMATION MESSAGE"
+	  "message": "This is a confirmation message, it should be in a grey box."
 	}
   ]
 ,
