@@ -1103,6 +1103,21 @@
 			}
 		}
 	],
+	"distribution-model-filters": [
+		{
+			"name": "distribution-model",
+			"left": {
+				"id": "field-partner",
+				"value": "field-partner",
+				"label": "Field Partner"
+			},
+			"right": {
+				"id": "direct",
+				"value": "direct",
+				"label": "Direct"
+			}
+		}
+	],
 	"loan-length": [
 		{
 			"name": "loan-length",
