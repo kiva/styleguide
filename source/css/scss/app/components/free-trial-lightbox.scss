@@ -1,31 +1,32 @@
 .free-trial-lightbox {
-  outline: 0;
-  background: rgba(0, 0, 0, 0);
-  .agree-button{
-    display: inline-block;
-  }
-  .decline-button{
-    display: inline-block;
-    float: none !important;
-    padding-left: 0;
-    padding-right: 0;
-  }
-  .button{
-    outline: 0;
-    padding: 12px;
-    width: 100%;
-    @media only screen and (min-width:481px) and (max-width:530px) {
-      font-size: 0.7777777778rem;
-      font-weight: bold;
-      height: 2.4444444444rem;
-      text-decoration: none;
-    }
-    &.js-free-trial-decline{
-      background: transparent;
-      border: solid 1px #FFFFFF;
-    }
-    &.js-free-trial-agree{
-      border: solid 1px #26b6e8;
-    }
-  }
+	outline: 0;
+	background: rgba(0, 0, 0, 0);
+
+	.button{
+		display: inline-block;
+		float: left;
+		outline: 0;
+		padding: 0 rem-calc(12);
+
+		&.free-trial-agree{
+			border: solid 1px #26b6e8;
+			width: 35%;
+			margin-right: 5%;
+
+			@media #{$large-up} {
+				width: 12rem;
+				margin-right: rem-calc(20);
+			}
+		}
+
+		&.free-trial-decline{
+			background: transparent;
+			border: solid 1px #FFFFFF;
+			width: 60%;
+
+			@media #{$large-up} {
+				width: 16rem;
+			}
+		}
+	}
 }
