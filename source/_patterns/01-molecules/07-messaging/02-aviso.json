@@ -1,0 +1,7 @@
+{
+  "message": {
+	"confirmation": "This is a confirmation message, it should be in a grey box.",
+	"warning": "This is a warning message, should be in a yellow box.",
+	"error": "This is an error message, should be in a red box."
+  }
+}
