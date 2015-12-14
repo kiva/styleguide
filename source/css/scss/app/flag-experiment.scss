@@ -1,0 +1,13 @@
+.flag-experiment {
+	.flag-container {
+		display: inline-block;
+		width: 4rem;
+		height: 3rem;
+
+		img {
+			max-width: 100%;
+			height: 100%;
+			width: 100%;
+		}
+	}
+}
