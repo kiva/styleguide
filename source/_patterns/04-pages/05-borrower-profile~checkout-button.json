@@ -26,25 +26,13 @@
   "amountNeeded": 1300,
   "amountRaisedPercent": 14,
   "loan-info": "A loan of $275 helps John to buy a dairy cow so that he can increase the amount of milk he supplies and thereby earn more income.",
-  "borrowerOrGroupName": "John Group",
+  "borrowerOrGroupName": "John",
   "storyDescription": [
     "John applied for his first loan of KES 25,000 from Vision Fund Kenya to buy a dairy cow so that he can increase the amount of milk he supplies and thereby earn more income. He plans to use part of his profit to repay the loan and to expand his agricultural business.",
     "His hope for the future is to be financially stable."
   ],
-  "borrowers": [
-    {
-      "name": "Sarah,",
-      "pictured": true
-    },
-    {
-      "name": "John,",
-      "pictured": true
-    },
-    {
-      "name": "Anna",
-      "pictured": false
-    }
-  ],
+  "displayBorrowers": false,
+  "borrowers": null,
   "translation": {
     "language": "Spanish",
     "reviewerName": "Tayah Wheeland",
