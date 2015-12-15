@@ -1,6 +1,6 @@
 <section class="loan-story ac-container">
     <h2 class="ac-title" data-kv-accordion aria-controls="ac-loan-story-body" aria-expanded="true">
-        {{borrowerFirstName}}'s Story
+        {{borrowerOrGroupName}}'s Story
 	        <span class="ac-dropdown-icon">
 		        <svg class="icon icon-large-chevron">
                     <use xlink:href="#icon-large-chevron"></use>
@@ -8,9 +8,7 @@
 	        </span>
     </h2>
     <div class="ac-body" id="ac-loan-story-body" aria-hidden="false">
-        {{#storyBody}}
-            <p>{{content}}</p>
-        {{/storyBody}}
+        {{#storyDescription}}<p>{{.}}</p>{{/storyDescription}}
         <p>In this group: {{#borrowers}}{{name}}{{^pictured}}*{{/pictured}} {{/borrowers}}<br>*not pictured</p>
         {{#translation}}
             <p>
@@ -20,7 +18,7 @@
                 </span>
             </p>
             <div class="ac-body" id="ac-translation-body" aria-hidden="true">
-                <p>{{#storyBody}}{{content}}{{/storyBody}}</p>
+                {{#storyDescription}}<p>{{.}}</p>{{/storyDescription}}
             </div>
         {{/translation}}
     </div>
