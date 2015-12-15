@@ -27,10 +27,7 @@
   "amountRaisedPercent": 14,
   "loan-info": "A loan of $275 helps John to buy a dairy cow so that he can increase the amount of milk he supplies and thereby earn more income.",
   "borrowerOrGroupName": "John Group",
-  "storyDescription": [
-    "John applied for his first loan of KES 25,000 from Vision Fund Kenya to buy a dairy cow so that he can increase the amount of milk he supplies and thereby earn more income. He plans to use part of his profit to repay the loan and to expand his agricultural business.",
-    "His hope for the future is to be financially stable."
-  ],
+  "storyDescription": "<p>John applied for his first loan of KES 25,000 from Vision Fund Kenya to buy a dairy cow so that he can increase the amount of milk he supplies and thereby earn more income. He plans to use part of his profit to repay the loan and to expand his agricultural business.</p><p>His hope for the future is to be financially stable.</p>",
   "borrowers": [
     {
       "name": "Sarah,",
@@ -48,10 +45,7 @@
   "translation": {
     "language": "Spanish",
     "translator": "Tayah Wheeland",
-    "storyDescription": [
-      "John ha solicitado su primer prestamo de KES 25.000 de Vision Fondo Kenia para comprar una vaca lechera para que pueda QUE Aumentar la cantidad de leche que abastece esta manera y ganar mas ingresos. El planea utilizar parte de sus ganancias para pagar el prestamo y ampliar su negocio agricola.",
-      "Su esperanza para el futuro es ser financieramente estable."
-    ]
+    "storyDescription": "<p>John ha solicitado su primer prestamo de KES 25.000 de Vision Fondo Kenia para comprar una vaca lechera para que pueda QUE Aumentar la cantidad de leche que abastece esta manera y ganar mas ingresos. El planea utilizar parte de sus ganancias para pagar el prestamo y ampliar su negocio agricola.</p><p>Su esperanza para el futuro es ser financieramente estable.</p>"
   },
   "profilePhotoHref": "/images/borrower1.jpg",
   "specialBody": "It's in a rural region many banks won't serve.",
