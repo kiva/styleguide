@@ -361,7 +361,7 @@
 	position: fixed;
 	max-width: none;
 	bottom: 0;
-	z-index: 9999;
+	z-index: 1200;
 	background-color: $white;
 
 	.button {
@@ -484,7 +484,7 @@
 	margin: 0 auto;
 	position: fixed;
 	bottom: 0;
-	z-index: 9999;
+	z-index: 1200;
 
 	.loader {
 		height: 1rem;
