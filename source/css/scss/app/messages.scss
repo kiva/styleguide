@@ -24,9 +24,12 @@
 
 		.icon.icon-x {
 			stroke: black;
-			height: 30px;
-			width: 30px;
-			margin-top: 2px;
+			height: rem-calc(30);
+			width: rem-calc(30);
+			margin-top: rem-calc(2);
+			position: absolute;
+			top: rem-calc(2);
+			right: rem-calc(2);
 		}
 	}
 
@@ -35,14 +38,14 @@
 		background-color: $kiva-bg-lightgray;
 
 		.icon.icon-confirmation {
-			margin-right: 10px;
-			margin-top: 2px;
-			height: 30px;
-			width: 30px;
+			margin-right: rem-calc(10);
+			margin-top: rem-calc(2);;
+			height: rem-calc(30);
+			width: rem-calc(30);
 			fill: $kiva-green;
 
 			@media #{$small-only} {
-				margin-bottom: 4px;
+				margin-bottom: rem-calc(4);
 			}
 		}
 	}
@@ -51,14 +54,14 @@
 		background-color: #FFF6A5;
 
 		.icon.icon-warning {
-			margin-right: 10px;
-			margin-top: 2px;
-			height: 30px;
-			width: 30px;
+			margin-right: rem-calc(10);
+			margin-top: rem-calc(2);
+			height: rem-calc(30);
+			width: rem-calc(30);
 			fill: $black;
 
 			@media #{$small-only} {
-				margin-bottom: 4px;
+				margin-bottom: rem-calc(4);
 			}
 		}
 	}
@@ -67,14 +70,14 @@
 		background-color: #9A071F;
 
 		.icon.icon-error {
-			margin-right: 10px;
-			margin-top: 2px;
-			height: 30px;
-			width: 30px;
+			margin-right: rem-calc(10);
+			margin-top: rem-calc(2);
+			height: rem-calc(30);
+			width: rem-calc(30);
 			fill: $white;
 
 			@media #{$small-only} {
-				margin-bottom: 4px;
+				margin-bottom: rem-calc(4);
 			}
 		}
 
