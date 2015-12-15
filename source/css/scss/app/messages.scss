@@ -1,8 +1,10 @@
 //Shared styles for all the message types
 .message-text {
-	display: inline-block;
+	display: block;
 	width: 100%;
 	overflow: hidden;
+	position: fixed;
+	top: 0;
 
 	.icon-wrapper {
 		display: inline-block;
@@ -16,7 +18,7 @@
 		max-width: 60%;
 	}
 
-	.close-reveal-modal {
+	.close-tip-message {
 		float: right;
 
 		.icon.icon-x {
@@ -28,7 +30,7 @@
 	}
 
 //Custom styles for the 3 types of messages (Confirmation, Warning & Error messages)
-	&.confirmation-text {
+	&.message-text-confirmation {
 		background-color: $kiva-bg-lightgray;
 
 		.icon.icon-confirmation {
@@ -44,7 +46,7 @@
 		}
 	}
 
-	&.warning-text {
+	&.message-text-warning {
 		background-color: #FFF6A5;
 
 		.icon.icon-warning {
@@ -60,7 +62,7 @@
 		}
 	}
 
-	&.error-text {
+	&.message-text-error {
 		background-color: #9A071F;
 
 		.icon.icon-error {

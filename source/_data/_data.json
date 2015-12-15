@@ -1151,7 +1151,7 @@
   "message": [
 	{
 	  "type": "warning",
-	  "message": "This is a warning message, should be in a yellow box.."
+	  "message": "This is a warning message, should be in a yellow box."
 	}
   ,
 	{

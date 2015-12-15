@@ -1,15 +1,10 @@
-{{#message}}
-<div class="message-text {{type}}-text text-center small-12">
-    <a class="icon-wrapper">
-        <svg class="icon icon-{{type}}">
-            <use xlink:href="#icon-{{type}}"></use>
-        </svg>
-    </a>
-    <p class="message">{{message}}</p>
-    <a class="close-reveal-modal" aria-label="Close">
+<div class="message-text message-text-{{type}} text-center small-12">
+    <div class="message-content">
+		{{> 01-molecules/07-messaging/02-aviso}}
+	</div>
+    <a class="close-tip-message" aria-label="Close">
         <svg class="icon icon-x">
             <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-x"></use>
         </svg>
     </a>
 </div>
-{{/message}}
