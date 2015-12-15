@@ -1,6 +1,9 @@
 {
   "borrowerOrGroupName": "John Group",
-  "storyDescription": "<p>John applied for his first loan of KES 25,000 from Vision Fund Kenya to buy a dairy cow so that he can increase the amount of milk he supplies and thereby earn more income. He plans to use part of his profit to repay the loan and to expand his agricultural business.</p><p>His hope for the future is to be financially stable.</p>",
+  "storyDescription": [
+    "John applied for his first loan of KES 25,000 from Vision Fund Kenya to buy a dairy cow so that he can increase the amount of milk he supplies and thereby earn more income. He plans to use part of his profit to repay the loan and to expand his agricultural business.",
+    "His hope for the future is to be financially stable."
+  ],
   "borrowers": [
     {
       "name": "Sarah,",
@@ -17,7 +20,12 @@
   ],
   "translation": {
     "language": "Spanish",
-    "translator": "Tayah Wheeland",
-    "storyDescription": "<p>John ha solicitado su primer prestamo de KES 25.000 de Vision Fondo Kenia para comprar una vaca lechera para que pueda QUE Aumentar la cantidad de leche que abastece esta manera y ganar mas ingresos. El planea utilizar parte de sus ganancias para pagar el prestamo y ampliar su negocio agricola.</p><p>Su esperanza para el futuro es ser financieramente estable.</p>"
+    "reviewerName": "Tayah Wheeland",
+    "reviewerLink": "http://www.kiva.org/about/translationFAQ",
+    "reviewerImageLink": "http://s3-1.kiva.org/img/s50/1745056.jpg",
+    "storyDescription": [
+      "John ha solicitado su primer prestamo de KES 25.000 de Vision Fondo Kenia para comprar una vaca lechera para que pueda QUE Aumentar la cantidad de leche que abastece esta manera y ganar mas ingresos. El planea utilizar parte de sus ganancias para pagar el prestamo y ampliar su negocio agricola.",
+      "Su esperanza para el futuro es ser financieramente estable."
+    ]
   }
 }

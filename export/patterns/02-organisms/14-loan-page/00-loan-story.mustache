@@ -8,17 +8,22 @@
 	        </span>
     </h2>
     <div class="ac-body" id="ac-loan-story-body" aria-hidden="false">
-        {{#storyDescription}}<p>{{.}}</p>{{/storyDescription}}
+        {{#storyDescription}}
+            <p>{{.}}</p>
+        {{/storyDescription}}
         <p>In this group: {{#borrowers}}{{name}}{{^pictured}}*{{/pictured}} {{/borrowers}}<br>*not pictured</p>
         {{#translation}}
+            <img src="{{reviewerImageLink}}" alt="Translator profile picture" width="50" height="50" />
             <p>
-                Translated from {{language}} by Kiva Volunteer {{translator}}<br>
+                Translated from {{language}} by <a href="{{reviewerLink}}">Kiva Volunteer</a> {{reviewerName}}<br>
                 <span class="ac-title black-underlined" data-kv-accordion aria-controls="ac-translation-body" aria-expanded="false">
                     View original language description
                 </span>
             </p>
             <div class="ac-body" id="ac-translation-body" aria-hidden="true">
-                {{#storyDescription}}<p>{{.}}</p>{{/storyDescription}}
+                {{#storyDescription}}
+                    <p>{{.}}</p>
+                {{/storyDescription}}
             </div>
         {{/translation}}
     </div>
