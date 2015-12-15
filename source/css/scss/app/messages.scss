@@ -20,16 +20,15 @@
 	}
 
 	.close-tip-message {
-		float: right;
+		position: absolute;
+		top: rem-calc(2);
+		right: rem-calc(2);
 
 		.icon.icon-x {
 			stroke: black;
 			height: rem-calc(30);
 			width: rem-calc(30);
 			margin-top: rem-calc(2);
-			position: absolute;
-			top: rem-calc(2);
-			right: rem-calc(2);
 		}
 	}
 
