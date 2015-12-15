@@ -338,6 +338,7 @@
 		display: inline-block;
 		font-size: 1rem;
 		height: 2.8rem;
+		line-height: 2.8rem;
 		width: 100%;
 		#basket-text {
 			font-size: 0.6rem;
@@ -384,11 +385,13 @@
 		}
 
 		.icon {
+			z-index: 999;
 			width: 33px;
-			height: 50%;
+			height: 33px;
 			position: absolute;
 			left: 10px;
 			fill: white;
+			top: 10px;
 		}
 	}
 
