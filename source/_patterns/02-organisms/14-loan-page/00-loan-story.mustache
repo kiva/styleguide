@@ -1,53 +1,27 @@
-<div class="loan-story">
-    <section class="ac-container">
-        <div>
-            <input class="ac-input" id="ac-loan-story" type="checkbox" checked/>
-            <label class="ac-title" for="ac-loan-story" data-kv-accordion aria-controls="ac-loan-story-body" aria-expanded="true">
-                <span class="story-header">{{borrowerFirstName}}'s Story</span>
-                <span class="ac-dropdown-icon">
-                    <svg class="icon icon-large-chevron">
-                        <use xlink:href="#icon-large-chevron"></use>
-                    </svg>
+<section class="loan-story ac-container">
+    <h2 class="ac-title" data-kv-accordion aria-controls="ac-loan-story-body" aria-expanded="true">
+        {{borrowerFirstName}}'s Story
+	        <span class="ac-dropdown-icon">
+		        <svg class="icon icon-large-chevron">
+                    <use xlink:href="#icon-large-chevron"></use>
+                </svg>
+	        </span>
+    </h2>
+    <div class="ac-body" id="ac-loan-story-body" aria-hidden="false">
+        {{#storyBody}}
+            <p>{{content}}</p>
+        {{/storyBody}}
+        <p>In this group: {{#borrowers}}{{name}}{{^pictured}}*{{/pictured}} {{/borrowers}}<br>*not pictured</p>
+        {{#translation}}
+            <p>
+                Translated from {{language}} by Kiva Volunteer {{translator}}<br>
+                <span class="ac-title black-underlined" data-kv-accordion aria-controls="ac-translation-body" aria-expanded="false">
+                    View original language description
                 </span>
-            </label>
-            <article class="ac-body" id="ac-loan-story-body" aria-hidden="false">
-                <span>
-                    {{#storyBody}}
-                        <div class="body-text small-text">{{content}}</div>
-                    {{/storyBody}}
-                    <div>
-                        <span class="small-text">In this group:</span>
-                        <ul class="borrower-names">
-                            {{#borrowers}}
-                                <li class="small-text">{{name}}{{^pictured}}*{{/pictured}}</li>
-                            {{/borrowers}}
-                        </ul>
-                        <div class="body-text small-text">*not pictured</div>
-                    </div>
-
-                    {{#translation}}
-                        <span class="small-text">Translated from {{language}}
-                            by Kiva Volunteer {{translator}}</span>
-                            <section class="ac-container">
-                                <div>
-                                    <input class="ac-input" id="ac-translation" type="checkbox"/>
-                                    <label class="black-underlined small-text ac-title" for="ac-translation" data-kv-accordion aria-controls="ac-translation-body" aria-expanded="false">
-                                        View original language description
-                                    </label>
-                                    <article class="ac-body" style="height:0" id="ac-translation-body" aria-hidden="true">
-                                        <span>
-                                            {{#storyBody}}
-                                                <div class="body-text small-text">{{content}}</div>
-                                            {{/storyBody}}
-                                        </span>
-                                    </article>
-                                </div>
-                            </section>
-                    {{/translation}}
-                </span>
-            </article>
-        </div>
-    </section>
-
-
-</div>
+            </p>
+            <div class="ac-body" id="ac-translation-body" aria-hidden="true">
+                <p>{{#storyBody}}{{content}}{{/storyBody}}</p>
+            </div>
+        {{/translation}}
+    </div>
+</section>

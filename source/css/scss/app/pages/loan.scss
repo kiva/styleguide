@@ -10,37 +10,6 @@
 	color: $charcoal;
 }
 
-.loan-story {
-	.story-header, .body-text {
-		padding-bottom: 0.6rem;
-	}
-
-	.story-header {
-		font-size: 1rem;
-	}
-
-	.borrower-names {
-		display: inline;
-		margin: 0;
-		padding: 0;
-	}
-
-	.borrower-names > li {
-		display: inline;
-		list-style: none;
-		margin: 0;
-		padding: 0;
-	}
-
-	.borrower-names > li:after {
-		content: ",";
-	}
-
-	.borrower-names > li:last-child:after {
-		content: "";
-	}
-}
-
 .is-special {
 	.ac-body {
 		margin-top: 1rem;
