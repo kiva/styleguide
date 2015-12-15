@@ -13,7 +13,9 @@
         {{/storyDescription}}
         <p>In this group: {{#borrowers}}{{name}}{{^pictured}}*{{/pictured}} {{/borrowers}}<br>*not pictured</p>
         {{#translation}}
-            <img class="reviewer-image" src="{{reviewerImageLink}}" alt="Translator profile picture"/>
+            {{#reviewerImageLink}}
+                <img class="reviewer-image" src="{{reviewerImageLink}}" alt="Translator profile picture"/>
+            {{/reviewerImageLink}}
             <p>
                 Translated from {{language}} by <a href="{{reviewerLink}}">Kiva Volunteer</a> {{reviewerName}}<br>
                 <span class="ac-title black-underlined" data-kv-accordion aria-controls="ac-translation-body" aria-expanded="false">
