@@ -11,7 +11,11 @@
         {{#storyDescription}}
             <p>{{.}}</p>
         {{/storyDescription}}
-        <p>In this group: {{#borrowers}}{{name}}{{^pictured}}*{{/pictured}} {{/borrowers}}<br>*not pictured</p>
+
+        {{#displayBorrowers}}
+            <p>In this group: {{#borrowers}}{{name}}{{^pictured}}*{{/pictured}} {{/borrowers}}<br>*not pictured</p>
+        {{/displayBorrowers}}
+
         {{#translation}}
             {{#reviewerImageLink}}
                 <img class="reviewer-image" src="{{reviewerImageLink}}" alt="Translator profile picture"/>
