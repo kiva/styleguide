@@ -10,6 +10,13 @@
 	.icon-wrapper {
 		display: inline-block;
 		vertical-align: middle;
+
+		.icon {
+			margin-right: rem-calc(10);
+			margin-top: rem-calc(2);;
+			height: rem-calc(30);
+			width: rem-calc(30);
+		}
 	}
 
 	.message {
@@ -25,7 +32,7 @@
 		right: rem-calc(2);
 
 		.icon.icon-x {
-			stroke: black;
+			stroke: $kiva-text-dark;
 			height: rem-calc(30);
 			width: rem-calc(30);
 			margin-top: rem-calc(2);
@@ -37,10 +44,6 @@
 		background-color: $kiva-bg-lightgray;
 
 		.icon.icon-confirmation {
-			margin-right: rem-calc(10);
-			margin-top: rem-calc(2);;
-			height: rem-calc(30);
-			width: rem-calc(30);
 			fill: $kiva-green;
 
 			@media #{$small-only} {
@@ -49,15 +52,11 @@
 		}
 	}
 
-	&.message-text-warning {
+	&.message-text-warning, &.message-text-info {
 		background-color: #FFF6A5;
 
-		.icon.icon-warning {
-			margin-right: rem-calc(10);
-			margin-top: rem-calc(2);
-			height: rem-calc(30);
-			width: rem-calc(30);
-			fill: $black;
+		.icon.icon-warning, .icon.icon-info {
+			fill: $kiva-text-dark;
 
 			@media #{$small-only} {
 				margin-bottom: rem-calc(4);
@@ -69,10 +68,6 @@
 		background-color: #9A071F;
 
 		.icon.icon-error {
-			margin-right: rem-calc(10);
-			margin-top: rem-calc(2);
-			height: rem-calc(30);
-			width: rem-calc(30);
 			fill: $white;
 
 			@media #{$small-only} {
