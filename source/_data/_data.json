@@ -1232,6 +1232,9 @@
 		{"name":"Men", "href":"##"},
 		{"name":"Groups", "href":"##"}
 	],
+	"category-title": "Women",
+	"category-description":"On average, women reinvest 80% of their income in the well-being of their children.",
+	"is-category-page": false,
 	"partners": [
 		{"id":"312", "name":"Abaarso School of Science and Technology"},
 		{"id":"131", "name":"Accion East"},

@@ -18,9 +18,15 @@
 			</span>
 		</div>
 		<div style="clear:both"></div>
+
+		{{#is-category-page}}
+			{{> molecules-category-page-head}}
+		{{/is-category-page}}
+
+
 	</div>
 	<div class="show-for-medium-up secondary-nav filter-loan-count">
 		<span id="filtered_loan_count"></span>
-		loans
+		{{^is-category-page}}loans{{/is-category-page}}
 	</div>
 </div>
