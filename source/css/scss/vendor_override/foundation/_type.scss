@@ -88,6 +88,11 @@ $paragraph-line-height: $body-line-height;
 	line-height: $small-line-height;
 }
 
+@mixin body-text() {
+	font-size: $body-font-size;
+	line-height: $body-line-height;
+}
+
 @mixin featured-text() {
 	font-size: $feature-font-size - $feature-font-size-reduction;
 	line-height: $feature-line-height - $feature-line-height-reduction;
