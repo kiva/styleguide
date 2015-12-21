@@ -955,6 +955,10 @@
 			"name": "Matched Loans Only"
 			, "value": "XX"
 		},
+	  	{
+			"name": "My Favorites Only"
+	  		, "value": "XX"
+	  	},
 		{
 			"name": "Exclude Loans with currency risk"
 			, "value": "XX"
