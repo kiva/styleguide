@@ -2,7 +2,7 @@
   "borrowerOrGroupName": "John Group",
   "storyDescription": [
     "John applied for his first loan of KES 25,000 from Vision Fund Kenya to buy a dairy cow so that he can increase the amount of milk he supplies and thereby earn more income. He plans to use part of his profit to repay the loan and to expand his agricultural business.",
-    "His hope for the future is to be financially stable."
+    "<p>His hope for the future is to be financially stable.<br> He has some other ideas too.</p><p>For example, he wants to have another paragraph.</p>"
   ],
   "displayBorrowers": true,
   "borrowers": [

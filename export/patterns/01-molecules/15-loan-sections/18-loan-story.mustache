@@ -1,5 +1,5 @@
-<section class="loan-story ac-container">
-    <h2 class="ac-title" data-kv-accordion aria-controls="ac-loan-story-body" aria-expanded="true">
+<section class="loan-story">
+    <h2 class="ac-title ac-container" data-kv-accordion aria-controls="ac-loan-story-body" aria-expanded="true">
         {{borrowerOrGroupName}}'s Story
 	        <span class="ac-dropdown-icon">
 		        <svg class="icon icon-large-chevron">
@@ -9,7 +9,7 @@
     </h2>
     <div class="ac-body" id="ac-loan-story-body" aria-hidden="false">
         {{#storyDescription}}
-            <p>{{.}}</p>
+            <p>{{{.}}}</p>
         {{/storyDescription}}
 
         {{#displayBorrowers}}
@@ -28,7 +28,7 @@
             </p>
             <div class="ac-body" id="ac-translation-body" aria-hidden="true">
                 {{#storyDescription}}
-                    <p>{{.}}</p>
+                    <p>{{{.}}}</p>
                 {{/storyDescription}}
             </div>
         {{/translation}}
