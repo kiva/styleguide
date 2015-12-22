@@ -1,5 +1,6 @@
 {
   "numberOfMonths": 11,
+  "hasDualStatement": true,
   "repaymentFrequency": "Monthly",
   "disbursalDate": "April 6, 2015",
   "currencyExchangeLoss": "Possible",
