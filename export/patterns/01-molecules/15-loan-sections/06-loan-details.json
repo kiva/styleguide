@@ -4,6 +4,7 @@
   "disbursalDate": "April 6, 2015",
   "currencyExchangeLoss": "Possible",
   "fieldPartner": "VisionFund Kenya",
+  "trustee": null,
   "borrowerPayingInterest": true,
   "stars": [
     {
