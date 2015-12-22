@@ -25,12 +25,12 @@
         </div>
         <div class="stat">
             <span class="black-underlined">Currency exchange loss:</span>
-            {{#fieldPartner}}
-                <strong>{{currencyExchangeLoss}}</strong>
-            {{/fieldPartner}}
-            {{^fieldPartner}}
+            {{#currencyExchangeLoss}}
+                <strong>Possible</strong>
+            {{/currencyExchangeLoss}}
+            {{^currencyExchangeLoss}}
                 <strong>N/A</strong>
-            {{/fieldPartner}}
+            {{/currencyExchangeLoss}}
         </div>
         <div class="stat">
             <span class="black-underlined">

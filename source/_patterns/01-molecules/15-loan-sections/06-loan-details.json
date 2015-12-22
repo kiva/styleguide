@@ -3,7 +3,7 @@
   "hasDualStatement": true,
   "repaymentFrequency": "Monthly",
   "disbursalDate": "April 6, 2015",
-  "currencyExchangeLoss": "Possible",
+  "currencyExchangeLoss": true,
   "fieldPartner": "VisionFund Kenya",
   "trustee": null,
   "borrowerPayingInterest": true,
