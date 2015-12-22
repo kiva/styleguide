@@ -1,10 +1,6 @@
 {
-  "months": 11,
-  "loanDetails": {
-    "repaymentSchedule": "Monthly",
-    "disbursalDate": "April 6, 2015",
-    "currencyExchangeLoss": "Possible",
-    "trustee": "Trustee Fund Kenya",
-    "borrowerPayingInterest": true
-  }
+  "numberOfMonths": 11,
+  "repaymentFrequency": "Monthly",
+  "disbursalDate": "April 6, 2015",
+  "trustee": "Trustee Fund Kenya"
 }

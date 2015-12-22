@@ -1,0 +1,11 @@
+{
+  "repaymentTerm": 11,
+  "hasBulletRepayment": false,
+  "disbursalDate": null,
+  "repaymentSchedule": "Monthly",
+  "currencyExchangeLoss": "Possible",
+  "fieldPartner": null,
+  "trustee": null,
+  "borrowerPayingInterest": true,
+  "stars": null
+}

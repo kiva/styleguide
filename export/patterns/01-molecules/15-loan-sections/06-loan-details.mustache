@@ -1,205 +1,87 @@
-<div class="loan-details">
-    <section class="ac-container">
-        <div class="show-for-small-down">
-            <div>
-                <input class="ac-input" id="ac-loan-details" name="accordion-1" type="checkbox" checked/>
-                <label class="ac-title" for="ac-loan-details" data-kv-accordion aria-controls="ac-loan-details-body" aria-expanded="true">
-                    Loan details
-                <span class="ac-dropdown-icon">
-                    <svg class="icon icon-large-chevron">
-                        <use xlink:href="#icon-large-chevron"></use>
-                    </svg>
-                </span>
-                </label>
-                <article class="ac-body" id="ac-loan-details-body" aria-hidden="false">
-                    <div class="loan-term">
-                        <svg class="icon icon-recycle">
-                            <use xlink:href="#icon-recycle"></use>
-                        </svg>
-                        <div class="black-underlined featured">
-                            Repayment Term:
-                        </div>
-                        <div class="green-bolded">
-                            {{months}} months
-                        </div>
-                    </div>
+<section class="loan-details ac-container">
+    <h2>Loan details</h2>
+    <div class="loan-term">
+        <svg class="icon icon-recycle"><use xlink:href="#icon-recycle"></use></svg>
+        <h2 class="black-underlined">Repayment Term:</h2>
+        <div class="green-bolded">{{repaymentTerm}} months</div>
+        {{#hasBulletRepayment}}
+            <div>(<a href="#repaymentSchedule">Additional Information</a>)</div>
+        {{/hasBulletRepayment}}
+    </div>
 
-                    <div class="loan-stats">
-                        <div class="stat">
-                            <span class="black-underlined">
-                                Repayment schedule:
-                            </span>
-                            <span class="bold">
-                                {{loanDetails.repaymentSchedule}}
-                            </span>
-                        </div>
-                        <div class="stat">
-                            <span class="black-underlined">
-                                Disbursal date:
-                            </span>
-                            <span class="bold">
-                                {{loanDetails.disbursalDate}}
-                            </span>
-                        </div>
-                        <div class="stat">
-                            <span class="black-underlined">
-                                Currency exchange loss:
-                            </span>
-                            <span class="bold">
-                                {{loanDetails.currencyExchangeLoss}}
-                            </span>
-                        </div>
-                        <div class="stat">
-                            <span class="black-underlined">
-                                Facilitated by {{#loanDetails.fieldPartner}}
-                                Field Partner{{/loanDetails.fieldPartner}}{{#loanDetails.trustee}}
-                                Trustee{{/loanDetails.trustee}}:
-                            </span>
-                            <span class="bold">
-                                {{loanDetails.fieldPartner}}{{loanDetails.trustee}}
-                            </span>
-                        </div>
-                        <div class="stat">
-                            <span class="black-underlined">
-                                Is borrower paying interest?
-                            </span>
-                            <span class="bold">
-                                {{#loanDetails.borrowerPayingInterest}}
-                                    Yes
-                                {{/loanDetails.borrowerPayingInterest}}
-                                {{^loanDetails.borrowerPayingInterest}}
-                                    No
-                                {{/loanDetails.borrowerPayingInterest}}
-                            </span>
-                        </div>
-                        {{#loanDetails.fieldPartner}}
-                            <div class="stat">
-                                    <span class="black-underlined">
-                                        Field Partner risk rating:
-                                    </span>
-                                    <span class="bold risk-rating">
-                                        {{#loanDetails.stars}}
-                                            {{#isFullStar}}
-                                                <svg class="icon icon-star">
-                                                    <use xlink:href="#icon-star"></use>
-                                                </svg>
-                                            {{/isFullStar}}
-                                            {{#isHalfStar}}
-                                                <svg class="icon icon-half-star">
-                                                    <use xlink:href="#icon-half-star"></use>
-                                                </svg>
-                                            {{/isHalfStar}}
-                                            {{#isEmptyStar}}
-                                                <svg class="icon icon-star empty-star">
-                                                    <use xlink:href="#icon-star"></use>
-                                                </svg>
-                                            {{/isEmptyStar}}
-                                        {{/loanDetails.stars}}
-                                    </span>
-                            </div>
-                        {{/loanDetails.fieldPartner}}
-                    </div>
-
-                </article>
-            </div>
+    <div class="loan-stats">
+        <div class="stat">
+            <span class="black-underlined">Repayment schedule:</span>
+            <strong>{{repaymentSchedule}}</strong>
         </div>
-        <div class="show-for-medium-up">
-            <div>
-                <div class="ac-title">
-                    Loan details
-                </div>
-                <article class="ac-body">
-                    <div class="loan-term">
-                        <svg class="icon icon-recycle">
-                            <use xlink:href="#icon-recycle"></use>
-                        </svg>
-                        <div class="black-underlined featured">
-                            Repayment Term:
-                        </div>
-                        <div class="green-bolded">
-                            {{months}} months
-                        </div>
-                    </div>
-
-                    <div class="loan-stats">
-                        <div class="stat">
-                            <span class="black-underlined">
-                                Repayment schedule:
-                            </span>
-                            <span class="bold">
-                                {{loanDetails.repaymentSchedule}}
-                            </span>
-                        </div>
-                        <div class="stat">
-                            <span class="black-underlined">
-                                Disbursal date:
-                            </span>
-                            <span class="bold">
-                                {{loanDetails.disbursalDate}}
-                            </span>
-                        </div>
-                        <div class="stat">
-                            <span class="black-underlined">
-                                Currency exchange loss:
-                            </span>
-                            <span class="bold">
-                                {{loanDetails.currencyExchangeLoss}}
-                            </span>
-                        </div>
-                        <div class="stat">
-                            <span class="black-underlined">
-                                Facilitated by {{#loanDetails.fieldPartner}}
-                                Field Partner{{/loanDetails.fieldPartner}}{{#loanDetails.trustee}}
-                                Trustee{{/loanDetails.trustee}}:
-                            </span>
-                            <span class="bold">
-                                {{loanDetails.fieldPartner}}{{loanDetails.trustee}}
-                            </span>
-                        </div>
-                        <div class="stat">
-                            <span class="black-underlined">
-                                Is borrower paying interest?
-                            </span>
-                            <span class="bold">
-                                {{#loanDetails.borrowerPayingInterest}}
-                                    Yes
-                                {{/loanDetails.borrowerPayingInterest}}
-                                {{^loanDetails.borrowerPayingInterest}}
-                                    No
-                                {{/loanDetails.borrowerPayingInterest}}
-                            </span>
-                        </div>
-                        {{#loanDetails.fieldPartner}}
-                            <div class="stat">
-                            <span class="black-underlined">
-                                Field Partner risk rating:
-                            </span>
-                            <span class="bold risk-rating">
-                                {{#loanDetails.stars}}
-                                    {{#isFullStar}}
-                                        <svg class="icon icon-star">
-                                            <use xlink:href="#icon-star"></use>
-                                        </svg>
-                                    {{/isFullStar}}
-                                    {{#isHalfStar}}
-                                        <svg class="icon icon-half-star">
-                                            <use xlink:href="#icon-half-star"></use>
-                                        </svg>
-                                    {{/isHalfStar}}
-                                    {{#isEmptyStar}}
-                                        <svg class="icon icon-star empty-star">
-                                            <use xlink:href="#icon-star"></use>
-                                        </svg>
-                                    {{/isEmptyStar}}
-                                {{/loanDetails.stars}}
-                            </span>
-                            </div>
-                        {{/loanDetails.fieldPartner}}
-                    </div>
-
-                </article>
-            </div>
+        <div class="stat">
+            <span class="black-underlined">Disbursal date:</span>
+            {{#disbursalDate}}
+                <strong>{{disbursalDate}}</strong>
+            {{/disbursalDate}}
+            {{^disbursalDate}}
+                <strong>Disbursed after fully funded on Kiva.</strong>
+            {{/disbursalDate}}
         </div>
-    </section>
-
-</div>
+        <div class="stat">
+            <span class="black-underlined">Currency exchange loss:</span>
+            {{#fieldPartner}}
+                <strong>{{currencyExchangeLoss}}</strong>
+            {{/fieldPartner}}
+            {{^fieldPartner}}
+                <strong>N/A</strong>
+            {{/fieldPartner}}
+        </div>
+        <div class="stat">
+            <span class="black-underlined">
+                {{#fieldPartner}}
+                    Facilitated by Field Partner
+                {{/fieldPartner}}
+                {{^fieldPartner}}
+                    {{#trustee}}
+                        Endorsed by Trustee
+                    {{/trustee}}
+                    {{^trustee}}
+                        Not Facilitated by a Field Partner or Trustee
+                    {{/trustee}}
+                {{/fieldPartner}}
+            </span>
+            <strong>{{fieldPartner}}{{trustee}}</strong>
+        </div>
+        <div class="stat">
+            <span class="black-underlined">Is borrower paying interest?</span>
+            <strong>
+                {{#borrowerPayingInterest}}
+                    Yes
+                {{/borrowerPayingInterest}}
+                {{^borrowerPayingInterest}}
+                    No
+                {{/borrowerPayingInterest}}
+            </strong>
+        </div>
+        {{#fieldPartner}}
+            <div class="stat">
+                <span class="black-underlined">Field Partner risk rating:</span>
+                <strong class="risk-rating">
+                    {{#stars}}
+                        {{#isFullStar}}
+                            <svg class="icon icon-star"><use xlink:href="#icon-star"></use></svg>
+                        {{/isFullStar}}
+                        {{#isHalfStar}}
+                            <svg class="icon icon-half-star"><use xlink:href="#icon-half-star"></use></svg>
+                        {{/isHalfStar}}
+                        {{#isEmptyStar}}
+                            <svg class="icon icon-star empty-star"><use xlink:href="#icon-star"></use></svg>
+                        {{/isEmptyStar}}
+                    {{/stars}}
+                </strong>
+            </div>
+        {{/fieldPartner}}
+        {{^fieldPartner}}
+            <div class="stat">
+                <span class="black-underlined">Risk rating:</span>
+                <strong>N/A</strong>
+            </div>
+        {{/fieldPartner}}
+    </div>
+</section>

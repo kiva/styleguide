@@ -1,6 +1,7 @@
 {
-  "numberOfMonths": 11,
-  "repaymentFrequency": "Monthly",
+  "repaymentTerm": 11,
+  "hasBulletRepayment": true,
+  "repaymentSchedule": "Monthly",
   "disbursalDate": "April 6, 2015",
   "currencyExchangeLoss": "Possible",
   "fieldPartner": "VisionFund Kenya",
