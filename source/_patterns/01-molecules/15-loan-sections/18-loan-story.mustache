@@ -1,6 +1,11 @@
 <section class="loan-story">
     <h2 class="ac-title ac-container" data-kv-accordion aria-controls="ac-loan-story-body" aria-expanded="true">
-        {{borrowerOrGroupName}}'s Story
+        {{#previousLoanDetails}}
+            Update on {{borrowerOrGroupName}}
+        {{/previousLoanDetails}}
+        {{^previousLoanDetails}}
+            {{borrowerOrGroupName}}'s Story
+        {{/previousLoanDetails}}
         <span class="ac-dropdown-icon">
             <svg class="icon icon-large-chevron">
                 <use xlink:href="#icon-large-chevron"></use>
@@ -9,15 +14,26 @@
     </h2>
     <div class="ac-body" id="ac-loan-story-body" aria-hidden="false">
         {{#storyDescription}}
-            <p>{{{.}}}</p>
+            <section class="loan-description">
+                <p>{{{.}}}</p>
+            </section>
         {{/storyDescription}}
 
         {{#displayBorrowers}}
-            <p>In this group: {{#borrowers}}{{name}}{{^pictured}}*{{/pictured}} {{/borrowers}}<br>*not pictured</p>
+            <section>
+                <p>In this group: {{#borrowers}}{{name}}{{^pictured}}*{{/pictured}} {{/borrowers}}<br>*not pictured</p>
+            </section>
         {{/displayBorrowers}}
 
+        {{#previousLoanDetails}}
+            <section class="previous-loan-details">
+                <h2>Previous Loan Details</h2>
+                <p>{{{previousLoanDescriptionBlurb}}} ... <a href="{{previousLoanLink}}">More from {{borrowerOrGroupName}}'s previous loan »</a></p>
+            </section>
+        {{/previousLoanDetails}}
+
         {{#translation}}
-            <div class="ac-container">
+            <section class="loan-translation ac-container">
                 {{#reviewerImageLink}}
                     <img class="reviewer-image" src="{{reviewerImageLink}}" alt="Translator profile picture"/>
                 {{/reviewerImageLink}}
@@ -32,7 +48,7 @@
                         <p>{{{.}}}</p>
                     {{/storyDescription}}
                 </div>
-            </div>
+            </section>
         {{/translation}}
     </div>
 </section>
