@@ -25,12 +25,7 @@
         </div>
         <div class="stat">
             <span class="black-underlined">Currency exchange loss:</span>
-            {{#currencyExchangeLoss}}
-                <strong>Possible</strong>
-            {{/currencyExchangeLoss}}
-            {{^currencyExchangeLoss}}
-                <strong>N/A</strong>
-            {{/currencyExchangeLoss}}
+            <strong>{{currencyExchangeLossScenario}}</strong>
         </div>
         <div class="stat">
             <span class="black-underlined">
