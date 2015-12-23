@@ -3,7 +3,7 @@
   "hasDualStatement": false,
   "repaymentFrequency": "Monthly",
   "disbursalDate": "April 6, 2015",
-  "currencyExchangeLoss": false,
+  "currencyExchangeLossScenario": "N/A",
   "fieldPartner": null,
   "trustee": "Trustee Fund Kenya",
   "borrowerPayingInterest": false,
