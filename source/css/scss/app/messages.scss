@@ -10,6 +10,7 @@
 	.icon-wrapper {
 		display: inline-block;
 		vertical-align: middle;
+		margin-left: -40px;
 
 		.icon {
 			margin-right: rem-calc(10);
@@ -24,6 +25,8 @@
 		margin: auto;
 		vertical-align: middle;
 		max-width: 60%;
+		padding-top: 9px;
+		padding-bottom: 9px;
 	}
 
 	.close-tip-message {
