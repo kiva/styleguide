@@ -313,7 +313,8 @@
 				{
 					"name": "Dominican Republic",
 					"code": "do",
-					"href": "#"
+					"href": "#",
+					"facet": 5120
 				},
 				{
 					"name": "Haiti",
@@ -344,7 +345,8 @@
 				{
 					"name": "Belize",
 					"code": "bz",
-					"href": "#"
+					"href": "#",
+					"facet": 5
 				},
 				{
 					"name": "Costa Rica",
