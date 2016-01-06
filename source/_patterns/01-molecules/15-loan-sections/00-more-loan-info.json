@@ -1,3 +1,11 @@
 {
-  "loan-info": "A loan of $275 helps John to buy a dairy cow so that he can increase the amount of milk he supplies and thereby earn more income."
+  "borrowerOrGroupName": "John Group",
+  "previousLoanLink": "https://confluence.kiva.org/display/BCP/Borrower+Profile+Page#BorrowerProfilePage-13.1",
+  "moreInfoAboutLoan": "<p>A loan of $275 helps John to buy a dairy cow so that he can increase the amount of milk he supplies and thereby earn more income.</p>",
+  "fieldPartnerName": "HKL",
+  "moreAboutFieldPartner": "<p>This is a sentence on this field partner.</p>",
+  "hasDualStatement": true,
+  "dualStatementNote": "<p>This is a note on the dual statement.</p>",
+  "directBusinessDescription": null,
+  "directLoanPurpose": null
 }

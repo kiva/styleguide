@@ -1,5 +1,30 @@
-<div class="more-loan-info">
-    <p>
-        {{loan-info}}
-    </p>
-</div>
+<section class="more-loan-info">
+    <h2 class="ac-title ac-container" data-kv-accordion aria-controls="ac-more-loan-info-body" aria-expanded="true">
+        More about this loan
+        <span class="ac-dropdown-icon">
+            <svg class="icon icon-large-chevron">
+                <use xlink:href="#icon-large-chevron"></use>
+            </svg>
+        </span>
+    </h2>
+    <div class="ac-body" id="ac-more-loan-info-body" aria-hidden="false">
+        {{#previousLoanLink}}
+            <p><a href="">View {{borrowerOrGroupName}}'s previous loan</a></p>
+        {{/previousLoanLink}}
+        {{#fieldPartnerName}}
+            {{{moreInfoAboutLoan}}}
+            <h3>About {{fieldPartnerName}}:</h3>
+            {{{moreAboutFieldPartner}}}
+            {{#hasDualStatement}}
+                <h3>Important Note About This Loan</h3>
+                {{{dualStatementNote}}}
+            {{/hasDualStatement}}
+        {{/fieldPartnerName}}
+        {{^fieldPartnerName}}
+            <h3>Business Description</h3>
+            {{{directBusinessDescription}}}
+            <h3>What is the purpose of this loan?</h3>
+            {{{directLoanPurpose}}}
+        {{/fieldPartnerName}}
+    </div>
+</section>

@@ -1,0 +1,11 @@
+{
+  "borrowerOrGroupName": "John Group",
+  "previousLoanLink": "https://confluence.kiva.org/display/BCP/Borrower+Profile+Page#BorrowerProfilePage-13.1",
+  "moreInfoAboutLoan": null,
+  "fieldPartnerName": null,
+  "moreAboutFieldPartner": null,
+  "hasDualStatement": false,
+  "dualStatementNote": null,
+  "directBusinessDescription": "<p>This is a direct loan's description.</p>",
+  "directLoanPurpose": "<p>This is the purpose of this direct loan.</p>"
+}
