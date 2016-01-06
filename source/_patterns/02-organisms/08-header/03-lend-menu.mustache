@@ -107,7 +107,11 @@
 				<div class="section-title">{{name}}</div>
 				<ul>
 					{{#countries}}
-						<li><a href="{{href}}"><span class="f16 {{code}}"></span>{{name}} {{#facet}}({{facet}}){{/facet}}</a></li>
+						<li>
+							<a href="{{href}}" {{^facet}}class="disabled"{{/facet}}><span class="f16 {{code}}"></span>
+								{{name}}
+								{{#facet}}({{facet}}){{/facet}}{{^facet}}(0){{/facet}}</a>
+						</li>
 					{{/countries}}
 				</ul>
             </div>
