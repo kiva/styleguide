@@ -252,6 +252,11 @@
 				color: $kiva-bg-darkgray;
 			}
 		}
+		.stat {
+			strong {
+				display: inline-block;
+			}
+		}
 	}
 
 }
