@@ -1,6 +1,6 @@
 <section class="loan-details">
     <h2 class="ac-title ac-container" data-kv-accordion aria-controls="ac-loan-details-body" aria-expanded="true">
-        Loan details
+        Loan Details
         <span class="ac-dropdown-icon">
             <svg class="icon icon-large-chevron">
                 <use xlink:href="#icon-large-chevron"></use>
@@ -10,20 +10,20 @@
     <div class="ac-body" id="ac-loan-details-body" aria-hidden="false">
         <div class="loan-term">
             <svg class="icon icon-recycle"><use xlink:href="#icon-recycle"></use></svg>
-            <h2 class="black-underlined">Repayment Term:</h2>
+            <h2><a class="black-underlined">Repayment Term:</a></h2>
             <div class="green-bolded">{{numberOfMonths}} months</div>
             {{#hasDualStatement}}
-                <div>(<a href="#repaymentSchedule">Additional Information</a>)</div>
+                <div>(<a class="black-underlined" href="#repaymentSchedule">Additional Information</a>)</div>
             {{/hasDualStatement}}
         </div>
 
         <div class="loan-stats">
             <div class="stat">
-                <span class="black-underlined">Repayment schedule:</span>
+                <a class="black-underlined">Repayment schedule:</a>
                 <strong>{{repaymentFrequency}}</strong>
             </div>
             <div class="stat">
-                <span class="black-underlined">Disbursal date:</span>
+                <a class="black-underlined">Disbursal date:</a>
                 {{#disbursalDate}}
                     <strong>{{disbursalDate}}</strong>
                 {{/disbursalDate}}
@@ -32,27 +32,27 @@
                 {{/disbursalDate}}
             </div>
             <div class="stat">
-                <span class="black-underlined">Currency exchange loss:</span>
+                <a class="black-underlined">Currency exchange loss:</a>
                 <strong>{{currencyExchangeLossScenario}}</strong>
             </div>
             <div class="stat">
-            <span class="black-underlined">
-                {{#fieldPartner}}
-                    Facilitated by Field Partner:
-                {{/fieldPartner}}
-                {{^fieldPartner}}
-                    {{#trustee}}
-                        Endorsed by Trustee:
-                    {{/trustee}}
-                    {{^trustee}}
-                        Not Facilitated by a Field Partner or Trustee
-                    {{/trustee}}
-                {{/fieldPartner}}
-            </span>
+                <a class="black-underlined">
+                    {{#fieldPartner}}
+                        Facilitated by Field Partner:
+                    {{/fieldPartner}}
+                    {{^fieldPartner}}
+                        {{#trustee}}
+                            Endorsed by Trustee:
+                        {{/trustee}}
+                        {{^trustee}}
+                            Not Facilitated by a Field Partner or Trustee
+                        {{/trustee}}
+                    {{/fieldPartner}}
+                </a>
                 <strong>{{fieldPartner}}{{trustee}}</strong>
             </div>
             <div class="stat">
-                <span class="black-underlined">Is borrower paying interest?</span>
+                <a class="black-underlined">Is borrower paying interest?</a>
                 <strong>
                     {{#borrowerPayingInterest}}
                         Yes
@@ -64,7 +64,7 @@
             </div>
             {{#fieldPartner}}
                 <div class="stat">
-                    <span class="black-underlined">Field Partner risk rating:</span>
+                    <a class="black-underlined">Field Partner risk rating:</a>
                     <strong class="risk-rating">
                         {{#stars}}
                             {{#isFullStar}}
@@ -82,7 +82,7 @@
             {{/fieldPartner}}
             {{^fieldPartner}}
                 <div class="stat">
-                    <span class="black-underlined">Risk rating:</span>
+                    <a class="black-underlined">Risk rating:</a>
                     <strong>N/A</strong>
                 </div>
             {{/fieldPartner}}

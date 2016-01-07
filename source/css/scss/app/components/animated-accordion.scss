@@ -1,70 +1,65 @@
 .ac-container {
-  .ac-title {
-    margin: 0;
-    display: block;
-    position: relative;
-  }
-  .ac-dropdown-icon {
-    display: inline;
-    .icon {
-      position: absolute;
-      right: 1px;
-      margin-top: .2rem;
-      height: 1rem;
-      width: rem-calc(25);
-      fill: none;
-      stroke: $kiva-text-dark;
+	.ac-title {
+		margin: 0;
+		display: block;
+		position: relative;
+	}
+	.ac-dropdown-icon {
+		display: inline;
+		.icon {
+			position: absolute;
+			right: 1px;
+			margin-top: .2rem;
+			height: 1rem;
+			width: rem-calc(25);
+			fill: none;
+			stroke: $kiva-text-dark;
 
-      $transition: 0.3s ease-in-out;
+			$transition: 0.3s ease-in-out;
 
-      -webkit-transition: -webkit-transform $transition;
-      transition: transform $transition;
-    }
-  }
-  .ac-input:checked + .ac-title {
-    .icon {
-      $transform: rotate(-180deg);
+			-webkit-transition: -webkit-transform $transition;
+			transition: transform $transition;
+		}
+	}
+	.ac-input:checked + .ac-title {
+		.icon {
+			$transform: rotate(-180deg);
 
-      -webkit-transform: $transform;
-      -ms-transform: $transform;
-      transform: $transform;
-    }
-  }
+			-webkit-transform: $transform;
+			-ms-transform: $transform;
+			transform: $transform;
+		}
+	}
 
-  &[aria-expanded="true"] {
-    .icon {
-      $transform: rotate(-180deg);
+	&[aria-expanded="true"] {
+		.icon {
+			$transform: rotate(-180deg);
 
-      -webkit-transform: $transform;
-      -ms-transform: $transform;
-      transform: $transform;
-    }
-  }
+			-webkit-transform: $transform;
+			-ms-transform: $transform;
+			transform: $transform;
+		}
+	}
 
-
-  .ac-input {
-    display: none;
-  }
-
-  .ac-body[aria-hidden="true"] {
-      height: 0;
-  }
+	.ac-input {
+		display: none;
+	}
 }
 
 
-[data-kv-accordion] + * {
-    overflow: hidden;
+.ac-body, [data-kv-accordion] + * {
+	overflow: hidden;
 
-    $transition: height 500ms ease-in-out;
+	$transition: height 500ms ease-in-out;
 
-    -webkit-transition: $transition;
-    transition: $transition;
+	-webkit-transition: $transition;
+	transition: $transition;
 
-    &[aria-hidden="true"], &[aria-hidden="false"] {
-        display: block;
-    }
+	&[aria-hidden="true"], &[aria-hidden="false"] {
+		display: block;
+	}
 
-    &[aria-hidden="true"] {
-      height: 0;
-    }
+	&[aria-hidden="true"] {
+		height: 0;
+	}
 }
