@@ -108,7 +108,7 @@
 				<ul>
 					{{#countries}}
 						<li>
-							<a href="{{href}}" {{^facet}}class="disabled"{{/facet}}><span class="f16 {{code}}"></span>
+							<a href="{{#facet}}{{href}}{{/facet}}{{^facet}}#{{/facet}}" {{^facet}}class="disabled"{{/facet}}><span class="f16 {{code}}"></span>
 								{{name}}
 								{{#facet}}({{facet}}){{/facet}}{{^facet}}(0){{/facet}}</a>
 						</li>
