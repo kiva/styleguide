@@ -1,71 +1,58 @@
 .borrower-profile-wrapper {
-  padding-top: 1rem;
+	padding-top: 1rem;
 
-  .left-content {
-    padding-left: 1rem;
-  }
-  .right-content {
-    padding-right: 1rem;
-  }
+	.line-break {
+		width: 90%;
+		margin: auto;
+		padding: 0.6rem 0;
+		@media #{$medium-up}{
+			width: 100%;
+		}
+	}
+	.loan-figure {
+		padding-left: 0;
+		padding-right: 0;
+	}
+	.row {
+		padding-bottom: 0;
+		.line-break {
+			margin-top: 1rem;
+		}
+	}
 
-  .line-break {
-    width: 90%;
-    margin: auto;
-    padding: 0.6rem 0;
-    @media #{$medium-up}{
-      width: 100%;
-    }
-  }
-  .loan-figure {
-    padding-left: 0;
-    padding-right: 0;
-  }
-  .row {
-    padding-bottom: 0;
-    max-width: none;
-    margin: 0;
-    .line-break {
-      margin-top: 1rem;
-    }
-  }
+	@media #{$medium-up} {
+		.loan-story, .loan-details {
+			padding-top: 1rem;
+		}
+	}
 
-  @media #{$medium-up} {
-    .loan-story, .loan-details{
-      padding-top: 1rem;
-    }
-  }
+	.story {
+		@media #{$medium-up}{
+			background: linear-gradient(90deg, #efefef 50%, #d8d8d8 50%);
+		}
+		max-width: none;
+		border-top: 1px solid $kiva-text-medium;
+		border-bottom: 1px solid $kiva-text-medium;
 
-  @media #{$xxlarge-up} {
-    .left-content {
-      padding-left: 3.833333rem;
-    }
-    .right-content {
-      padding-right: 3.833333rem;
-    }
-  }
+		.line-break {
+			width: 100%;
+		}
+		.left-content {
+			@media #{$medium-up}{
+				min-height: 80rem;
+				background-color: $kiva-bg-darkgray;
 
-  .story {
-    .line-break{
-      width: 100%;
-    }
-    .left-content {
-      @media #{$medium-up}{
-        min-height: 80rem;
-        background-color: $kiva-bg-darkgray;
-        border-top: 1px solid $kiva-text-medium;
-        border-bottom: 1px solid $kiva-text-medium;
-        border-right: 1px solid $kiva-text-medium;
-      }
-    }
-    .right-content {
-      @media #{$medium-up}{
-        min-height: 80rem;
-        border-top: 1px solid $kiva-text-medium;
-        border-bottom: 1px solid $kiva-text-medium;
-        background-color: $kiva-stroke-gray;
-      }
-    }
-  }
+
+				border-right: 1px solid $kiva-text-medium;
+			}
+		}
+		.right-content {
+			@media #{$medium-up}{
+				min-height: 80rem;
+				background-color: $kiva-stroke-gray;
+			}
+		}
+	}
 
 }
 
