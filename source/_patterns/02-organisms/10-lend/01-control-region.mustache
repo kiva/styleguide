@@ -1,35 +1,3 @@
 <div class="control-region row">
-	<div class="control-box">
-		<a href="#" class="hide-for-xxlarge-up filter-menu-button button setting left-off-canvas-toggle">
-			<svg class="icon icon-filter">
-				<use xlink:href="#icon-filter"/>
-			</svg>
-			Filters
-		</a>
-
-		<div class="filter-menu-sort">
-			<span class="filter-menu-sort-text" class="small-text">Sort By:&nbsp;&nbsp;&nbsp;</span>
-			<span class="filter-menu-sort-dropdown">
-				<select name="sort[]" id="filter-loan-sort-dropdown" class="filter-dropdown">
-					{{#sort_options}}
-						<option value="{{value}}" {{selected}}>{{label}}</option>
-					{{/sort_options}}
-				</select>
-			</span>
-		</div>
-		<div style="clear:both"></div>
-
-		{{#is-category-page}}
-			{{> 01-molecules/00-text/05-category-page-head}}
-		{{/is-category-page}}
-
-
-	</div>
-	{{^is-category-page}}
-		<div class="secondary-nav filter-loan-count">
-			<span id="filtered_loan_count"></span>
-			loans
-			<span><a href="#" class="filter-clear-button hide-for-small-only">Clear all</a></span>
-		</div>
-	{{/is-category-page}}
+	{{> 02-organisms/10-lend/04-control-box}}
 </div>
