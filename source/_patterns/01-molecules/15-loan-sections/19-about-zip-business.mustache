@@ -1,0 +1,60 @@
+<section class="about-zip">
+	<h2 class="ac-title ac-container" data-kv-accordion aria-controls="ac-about-zip-body" aria-expanded="true">
+		About {{businessName}}
+		<span class="ac-dropdown-icon">
+			<svg class="icon icon-large-chevron">
+				<use xlink:href="#icon-large-chevron"></use>
+			</svg>
+		</span>
+	</h2>
+	<div class="ac-body" id="ac-about-zip-body" aria-hidden="false">
+		{{#industry}}
+			<p>Industry: {{industry}}</p>
+		{{/industry}}
+
+		{{#yearsInBusiness}}
+			<p>Years in operation: {{yearsInBusiness}}</p>
+		{{/yearsInBusiness}}
+
+		{{#websiteUrl}}
+		<p>Website: <a href={{websiteUrl}}>{{displayUrl}}</a></p>
+		{{/websiteUrl}}
+
+		{{#hasSocialMedia}}
+			<p>
+				<span class="icon-label">Follow:</span>
+				<ul class="icons socialmedia inline-list">
+					{{#facebookUrl}}
+					<li class="icon">
+						<a href="{{facebookUrl}}">
+							<svg class="icon icon-facebook" width="30" height="30">
+								<use xlink:href="#icon-facebook"/>
+							</svg>
+						</a>
+					</li>
+					{{/facebookUrl}}
+
+					{{#twitterUrl}}
+					<li class="icon">
+						<a href="{{twitterUrl}}">
+							<svg class="icon icon-twitter" width="30" height="30">
+								<use xlink:href="#icon-twitter"/>
+							</svg>
+						</a>
+					</li>
+					{{/twitterUrl}}
+
+					{{#linkedInUrl}}
+					<li class="icon">
+						<a href="{{linkedInUrl}}">
+							<svg class="icon icon-linkedIn" width="30" height="30">
+								<use xlink:href="#icon-linkedIn"/>
+							</svg>
+						</a>
+					</li>
+					{{/linkedInUrl}}
+				</ul>
+			</p>
+		{{/hasSocialMedia}}
+	</div>
+</section>
