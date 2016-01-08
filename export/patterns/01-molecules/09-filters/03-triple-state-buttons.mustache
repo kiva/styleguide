@@ -1,9 +1,9 @@
 <div class="{{name}}-button-box triple-state-buttons">
     <input type="radio"  class="ts-left" id="filter-{{name}}-{{left.id}}" name="{{name}}" value="{{left.value}}" />
-    <label class="ts-label interact" for="filter-{{name}}-{{left.id}}">{{left.label}} {{#left.facet}}({{left.facet}}){{/left.facet}}{{^left.facet}}(0){{/left.facet}}</label>
+    <label class="ts-label interact" for="filter-{{name}}-{{left.id}}">{{left.label}}</label>
 
     <input type="radio" class="ts-right" id="filter-{{name}}-{{right.id}}" name="{{name}}" value="{{right.value}}" />
-    <label class="ts-label interact" for="filter-{{name}}-{{right.id}}">{{right.label}} {{#right.facet}}({{right.facet}}){{/right.facet}}{{^right.facet}}(0){{/right.facet}}</label>
+    <label class="ts-label interact" for="filter-{{name}}-{{right.id}}">{{right.label}}</label>
 
     <input type="radio" id="filter-{{name}}-none" name="{{name}}" value="none" />
     <label for="filter-{{name}}-none" class="ts-floater ts-label">&nbsp;</label>

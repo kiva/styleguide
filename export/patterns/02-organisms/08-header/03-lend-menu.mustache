@@ -17,7 +17,7 @@
                         <a href="#" data-kv-accordion aria-controls="lend-menu-{{id}}-panel" aria-expanded="false" class="section-title">{{name}}<svg class="icon icon-small-chevron-mobile"><use xlink:href="#icon-small-chevron-mobile" /></svg></a>
                         <ul id="lend-menu-{{id}}-panel" aria-hidden="true">
 							{{#countries}}
-								<li><a href="{{#facet}}{{href}}{{/facet}}{{^facet}}#{{/facet}}"><span class="f16 {{code}}"></span>{{name}} {{#facet}}({{facet}}){{/facet}}</a></li>
+								<li><a href="{{#facet}}{{href}}{{/facet}}{{^facet}}#{{/facet}}" {{^facet}}class="disabled"{{/facet}}><span class="f16 {{code}}"></span>{{name}} {{#facet}}({{facet}}){{/facet}}{{^facet}}(0){{/facet}}</a></li>
 							{{/countries}}
                         </ul>
                     </li>
@@ -108,7 +108,7 @@
 				<ul>
 					{{#countries}}
 						<li>
-							<a href="{{href}}" {{^facet}}class="disabled"{{/facet}}><span class="f16 {{code}}"></span>
+							<a href="{{#facet}}{{href}}{{/facet}}{{^facet}}#{{/facet}}" {{^facet}}class="disabled"{{/facet}}><span class="f16 {{code}}"></span>
 								{{name}}
 								{{#facet}}({{facet}}){{/facet}}{{^facet}}(0){{/facet}}</a>
 						</li>

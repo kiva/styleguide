@@ -142,7 +142,7 @@
   .filter-slider {
     color: $green;
     border: 0px;
-    padding: 0.2777777777rem 1rem;
+    padding: 0.2777777777rem 1rem 0 1rem;
   }
 
   .filter-slider-item {
@@ -393,10 +393,8 @@
   @media #{$medium-up}{
     font-size: 11px;
     margin-left: 14px;
-    float: none;
   }
   font-size: 0.7em;
-  float: left;
   visibility: hidden;
   margin-left: 10px;
 }
