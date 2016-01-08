@@ -33,6 +33,22 @@
 	}
 }
 
+.about-zip {
+	.ac-body {
+		margin-top: 2rem;
+	}
+	.ac-title {
+		position: relative;
+	}
+	.icon-label {
+		float: left;
+	}
+	.icon {
+		width: 30px;
+		height: 30px;
+	}
+}
+
 .is-special {
 	.ac-body {
 		margin-top: 1rem;
@@ -125,6 +141,7 @@
 		}
 	}
 	.raised-info {
+		margin: 0;
 		div, .lender-count {
 			padding: 0;
 		}
@@ -280,7 +297,8 @@
 	}
 }
 
-.lend-action {
+.lend-action, .lend-action.row {
+	margin: 0;
 	.lend-button-wrapper {
 		display: inline;
 		padding: 0;

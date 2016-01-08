@@ -36,20 +36,19 @@
                 <strong>{{currencyExchangeLossScenario}}</strong>
             </div>
             <div class="stat">
-                <a class="black-underlined">
-                    {{#fieldPartner}}
-                        Facilitated by Field Partner:
-                    {{/fieldPartner}}
-                    {{^fieldPartner}}
-                        {{#trustee}}
-                            Endorsed by Trustee:
-                        {{/trustee}}
-                        {{^trustee}}
-                            Not Facilitated by a Field Partner or Trustee
-                        {{/trustee}}
-                    {{/fieldPartner}}
-                </a>
-                <strong>{{fieldPartner}}{{trustee}}</strong>
+                {{#fieldPartner}}
+                    <a class="black-underlined">Facilitated by Field Partner:</a>
+                    <strong>{{fieldPartner}}</strong>
+                {{/fieldPartner}}
+                {{^fieldPartner}}
+                    {{#trustee}}
+                        <a class="black-underlined">Endorsed by Trustee:</a>
+                        <strong>{{trustee}}</strong>
+                    {{/trustee}}
+                    {{^trustee}}
+                        <a class="black-underlined">Not Facilitated by a Field Partner or Trustee</a>
+                    {{/trustee}}
+                {{/fieldPartner}}
             </div>
             <div class="stat">
                 <a class="black-underlined">Is borrower paying interest?</a>
