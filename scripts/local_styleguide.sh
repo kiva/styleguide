@@ -5,7 +5,8 @@ unlink="$1"
 if [ "$unlink" == "--unlink" ] || [ "$unlink" == "-u" ]; then
     echo "Unlinking styleguide"
     echo "Resetting your bower components in kiva/main"
-    cd /kiva/main/sites/www_kiva/client/bower_components & git checkout -f styleguide
+    cd /kiva/main/sites/www_kiva/client/bower_components
+    git checkout -f styleguide/
 else
     cd /kiva/styleguide
     bower link
