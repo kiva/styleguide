@@ -1,0 +1,280 @@
+<style>
+	.hp-slide {
+		width: 100%;
+		max-width: 100%;
+		margin: 0;
+		padding: 0;
+	}
+
+	.hp-slide-element {
+		width: 100%;
+		margin: 0;
+		padding: 0;
+	}
+
+	@media screen and (min-width: 641px) {
+		.hp-slide-element {
+			width: 50%;
+			float: left;
+		}
+	}
+
+	.hp-slide img {
+		width: 100%;
+	}
+
+	.slick-prev,
+	.slick-next {
+	  display: inline;
+	  cursor: pointer;
+	}
+
+	.slick-dots {
+	  position: absolute;
+	  bottom: 10px;
+	  display: block;
+	  width: 100%;
+	  padding: 0;
+	  list-style: none;
+	  text-align: center;
+	}
+
+	.slick-dots li {
+	  position: relative;
+	  display: inline-block;
+	  width: 16px;
+	  height: 16px;
+	  margin: 0 7px;
+	  padding: 0;
+	  cursor: pointer;
+	}
+
+	.slick-dots li button {
+	  font-size: 0;
+	  line-height: 0;
+	  display: block;
+	  width: 18px;
+	  height: 18px;
+	  padding: 0;
+	  cursor: pointer;
+	  color: transparent;
+	  border: 2px solid white;
+	  border-radius: 18px;
+	  outline: none;
+	  background-color: black;
+	  opacity: 0.5
+	}
+
+	.slick-dots li button:hover,
+	.slick-dots li button:focus {
+	  outline: none;
+	}
+
+	.slick-dots li.slick-active button {
+	  background-color: white;
+	  opacity: 1
+	}
+
+	.hp-slideshow-arrow {
+		height: 100%;
+		/*position: absolute;*/
+		/*top: 0;*/
+		background-color: red;;
+	}
+
+	.hp-slideshow-prev-arrow {
+		left: 0;
+	}
+
+	.hp-slideshow-next-arrow {
+		right: 0;
+	}
+
+	.hp-slideshow-arrow svg.icon {
+		height: 75px;
+		width: 75px;
+		/*position: absolute;*/
+		/*top: 50%;*/
+		stroke: #fff;
+	}
+
+	.hp-slideshow-prev-arrow svg {
+		-webkit-transform: rotate(90deg);
+		-moz-transform: rotate(90deg);
+		transform: rotate(90deg);
+	}
+
+	.hp-slideshow-next-arrow svg {
+		-webkit-transform: rotate(-90deg);
+		-moz-transform: rotate(-90deg);
+		transform: rotate(-90deg);
+	}
+</style>
+
+<div class="hp-slideshow-wrapper">
+	<div id="hp-slideshow">
+		<div class="hp-slide">
+			<div class="hp-slide-element">
+				<div class="text-over-image">
+					<!-- @todo update URLs for xlarge and xxlarge versions when available -->
+					<img alt="blah" data-interchange="
+						[//www.kiva.org/cms/page/images/hp-slideshow-l1-sm-std.jpg, (default)]
+						, [//www.kiva.org/cms/page/images/hp-slideshow-l1-sm-retina.jpg, (retina)]
+						, [//www.kiva.org/cms/page/images/hp-slideshow-l1-med-std.jpg, (medium)]
+						, [//www.kiva.org/cms/page/images/hp-slideshow-l1-med-retina.jpg, (medium-retina)]
+						, [//www.kiva.org/cms/page/images/hp-slideshow-l1-lg-std.jpg, (large)]
+						, [//www.kiva.org/cms/page/images/hp-slideshow-l1-lg-retina.jpg, (large-retina)]
+						, [//www.kiva.org/cms/page/images/hp-slideshow-l1-lg-std.jpg, (xlarge)]
+						, [//www.kiva.org/cms/page/images/hp-slideshow-l1-lg-retina.jpg, (xlarge-retina)]
+						, [//www.kiva.org/cms/page/images/hp-slideshow-l1-med-std.jpg, (xxlarge)]
+						, [//www.kiva.org/cms/page/images/hp-slideshow-l1-med-retina.jpg, (xxlarge-retina)]
+					">
+					<div>
+						<p class="slide-overlay-short">
+							{{slide-overlay.short}}
+						</p>
+					</div>
+				</div>
+			</div>
+
+			<div class="hp-slide-element">
+				<div class="text-over-image">
+					<!-- @todo update URLs for xlarge and xxlarge versions when available -->
+					<img alt="blah" data-interchange="
+						[//www.kiva.org/cms/page/images/hp-slideshow-r1-sm-std_0.jpg, (default)]
+						, [//www.kiva.org/cms/page/images/hp-slideshow-r1-sm-retina.jpg, (retina)]
+						, [//www.kiva.org/cms/page/images/hp-slideshow-r1-med-std_0.jpg, (medium)]
+						, [//www.kiva.org/cms/page/images/hp-slideshow-r1-med-retina_0.jpg, (medium-retina)]
+						, [//www.kiva.org/cms/page/images/hp-slideshow-r1-lg-std_0.jpg, (large)]
+						, [//www.kiva.org/cms/page/images/hp-slideshow-r1-lg-retina_0.jpg, (large-retina)]
+						, [//www.kiva.org/cms/page/images/hp-slideshow-r1-lg-std_0.jpg, (xlarge)]
+						, [//www.kiva.org/cms/page/images/hp-slideshow-r1-lg-retina_0.jpg, (xlarge-retina)]
+						, [//www.kiva.org/cms/page/images/hp-slideshow-r1-med-std_0.jpg, (xxlarge)]
+						, [//www.kiva.org/cms/page/images/hp-slideshow-r1-med-retina_0.jpg, (xxlarge-retina)]
+					">
+					<div>
+						<p class="slide-overlay-short">
+							{{slide-overlay.short}}
+						</p>
+
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="hp-slide">
+			<div class="hp-slide-element">
+				<div class="text-over-image">
+					<!-- @todo update URLs for xlarge and xxlarge versions when available -->
+					<img alt="foo" data-interchange="
+						[//www.kiva.org/cms/page/images/hp-slideshow-l2-sm-std.jpg, (default)]
+						, [//www.kiva.org/cms/page/images/hp-slideshow-l2-sm-retina.jpg, (retina)]
+						, [//www.kiva.org/cms/page/images/hp-slideshow-l2-med-std.jpg, (medium)]
+						, [//www.kiva.org/cms/page/images/hp-slideshow-l2-med-retina.jpg, (medium-retina)]
+						, [//www.kiva.org/cms/page/images/hp-slideshow-l2-lg-std.jpg, (large)]
+						, [//www.kiva.org/cms/page/images/hp-slideshow-l2-lg-retina.jpg, (large-retina)]
+						, [//www.kiva.org/cms/page/images/hp-slideshow-l2-lg-std.jpglarge)]
+						, [//www.kiva.org/cms/page/images/hp-slideshow-l2-lg-retina.jpg, (xlarge-retina)]
+						, [//www.kiva.org/cms/page/images/hp-slideshow-l2-med-std.jpg, (xxlarge)]
+						, [//www.kiva.org/cms/page/images/hp-slideshow-l2-med-retina.jpg, (xxlarge-retina)]
+					">
+					<div>
+						<p class="slide-overlay-very-short">
+							{{slide-overlay.very-short}}
+						</p>
+
+					</div>
+				</div>
+			</div>
+
+			<div class="hp-slide-element">
+				<div class="text-over-image">
+					<!-- @todo update URLs for xlarge and xxlarge versions when available -->
+					<img alt="blah" data-interchange="
+						[//www.kiva.org/cms/page/images/hp-slideshow-r2-sm-std_0.jpg, (default)]
+						, [//www.kiva.org/cms/page/images/hp-slideshow-r2-sm-retina_0.jpg, (retina)]
+						, [//www.kiva.org/cms/page/images/hp-slideshow-r2-med-std_0.jpg, (medium)]
+						, [//www.kiva.org/cms/page/images/hp-slideshow-r2-med-retina_0.jpg, (medium-retina)]
+						, [//www.kiva.org/cms/page/images/hp-slideshow-r2-lg-std_0.jpg, (large)]
+						, [//www.kiva.org/cms/page/images/hp-slideshow-r2-lg-retina_0.jpg, (large-retina)]
+						, [//www.kiva.org/cms/page/images/hp-slideshow-r2-lg-std_0.jpg, (xlarge)]
+						, [//www.kiva.org/cms/page/images/hp-slideshow-r2-lg-retina_0.jpg, (xlarge-retina)]
+						, [//www.kiva.org/cms/page/images/hp-slideshow-r2-med-std_0.jpg, (xxlarge)]
+						, [//www.kiva.org/cms/page/images/hp-slideshow-r2-med-retina_0.jpg, (xxlarge-retina)]
+					">
+					<div>
+						<p class="slide-overlay-long">
+							{{slide-overlay.long}}
+						<p class="slide-overlay-attribution">
+							{{slide-overlay.attribution}}
+						</p>
+						<p class="slide-overlay-attribution-detail">
+							{{slide-overlay.attribution-detail}}
+						</p>
+
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="hp-slide">
+			<div class="hp-slide-element">
+				<div class="text-over-image">
+					<!-- @todo update URLs for xlarge and xxlarge versions when available -->
+					<img alt="blah" data-interchange="
+						[//www.kiva.org/cms/page/images/hp-slideshow-l3-sm-std.jpg, (default)]
+						, [//www.kiva.org/cms/page/images/hp-slideshow-l3-sm-retina.jpg, (retina)]
+						, [//www.kiva.org/cms/page/images/hp-slideshow-l3-med-std.jpg, (medium)]
+						, [//www.kiva.org/cms/page/images/hp-slideshow-l3-med-retina.jpg, (medium-retina)]
+						, [//www.kiva.org/cms/page/images/hp-slideshow-l3-lg-std.jpg, (large)]
+						, [//www.kiva.org/cms/page/images/hp-slideshow-l3-lg-retina.jpg, (large-retina)]
+						, [//www.kiva.org/cms/page/images/hp-slideshow-l3-lg-std.jpg, (xlarge)]
+						, [//www.kiva.org/cms/page/images/hp-slideshow-l3-lg-retina.jpg, (xlarge-retina)]
+						, [//www.kiva.org/cms/page/images/hp-slideshow-l3-med-std.jpg, (xxlarge)]
+						, [//www.kiva.org/cms/page/images/hp-slideshow-l3-med-retina.jpg, (xxlarge-retina)]
+					">
+					<div>
+						<p class="slide-overlay-short">
+							{{slide-overlay.short}}
+						</p>
+					</div>
+				</div>
+			</div>
+
+		<div class="hp-slide-element">
+				<div class="text-over-image">
+					<!-- @todo update URLs for xlarge and xxlarge versions when available -->
+					<img alt="blah" data-interchange="
+						[//www.kiva.org/cms/page/images/hp-slideshow-r3-sm-std_0.jpg, (default)]
+						, [//www.kiva.org/cms/page/images/hp-slideshow-r3-sm-retina.jpg, (retina)]
+						, [//www.kiva.org/cms/page/images/hp-slideshow-r3-med-std_0.jpg, (medium)]
+						, [//www.kiva.org/cms/page/images/hp-slideshow-r3-med-retina_0.jpg, (medium-retina)]
+						, [//www.kiva.org/cms/page/images/hp-slideshow-r3-lg-std_0.jpg, (large)]
+						, [//www.kiva.org/cms/page/images/hp-slideshow-r3-lg-retina_0.jpg, (large-retina)]
+						, [//www.kiva.org/cms/page/images/hp-slideshow-r3-lg-std_0.jpg, (xlarge)]
+						, [//www.kiva.org/cms/page/images/hp-slideshow-r3-lg-retina_0.jpg, (xlarge-retina)]
+						, [//www.kiva.org/cms/page/images/hp-slideshow-r3-med-std_0.jpg, (xxlarge)]
+						, [//www.kiva.org/cms/page/images/hp-slideshow-r3-med-retina_0.jpg, (xxlarge-retina)]
+					">
+					<div>
+						<p class="slide-overlay-short">
+							{{slide-overlay.short}}
+						</p>
+
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="hp-slideshow-arrow hp-slideshow-prev-arrow">
+		<svg class="icon-small-chevron icon">
+			<use xlink:href="#icon-small-chevron"/>
+		</svg>
+	</div>
+
+	<div class="hp-slideshow-arrow hp-slideshow-next-arrow">
+		<svg class="icon-small-chevron icon">
+			<use xlink:href="#icon-small-chevron"/>
+		</svg>
+	</div>
+</div>
