@@ -33,7 +33,7 @@ a.close-reveal-modal {
 
 }
 
-#standard-lightbox {
+.standard-lightbox {
 	a.close-reveal-modal {
 		float: right;
 		padding-top: rem-calc(20);
@@ -43,7 +43,6 @@ a.close-reveal-modal {
 			height: rem-calc(40);
 			width: rem-calc(40);
 		}
-
 	}
 
 	.lightbox-text {
