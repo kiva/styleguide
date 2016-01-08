@@ -120,6 +120,11 @@
 		float: left;
 		font-weight: bold;
 		color: #999;
+		margin: 0 0 0 rem-calc(10);
+
+		@media #{$large-up} {
+			margin-left: 0;
+		}
 	}
 
 	.category-description {
