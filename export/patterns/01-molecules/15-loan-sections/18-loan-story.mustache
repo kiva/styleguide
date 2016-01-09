@@ -12,9 +12,12 @@
             <p>{{{.}}}</p>
         {{/storyDescription}}
 
-        {{#displayBorrowers}}
-            <p>In this group: {{#borrowers}}{{name}}{{^pictured}}*{{/pictured}} {{/borrowers}}<br>*not pictured</p>
-        {{/displayBorrowers}}
+        {{#borrowersList}}
+            <p>
+                {{borrowersList}}<br>
+                *not pictured
+            </p>
+        {{/borrowersList}}
 
         {{#translation}}
             <div class="ac-container">
