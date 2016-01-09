@@ -10,7 +10,7 @@
     <div class="ac-body" id="ac-loan-details-body" aria-hidden="false">
         <div class="loan-term">
             <svg class="icon icon-recycle"><use xlink:href="#icon-recycle"></use></svg>
-            <h2><a class="black-underlined">Repayment Term:</a></h2>
+			<h2><a href="#" id="repayment-term" class="black-underlined" data-reveal-id="repayment-term-lightbox">Repayment Term:</a></h2>
             <div class="green-bolded">{{numberOfMonths}} months</div>
             {{#hasDualStatement}}
                 <div>(<a class="black-underlined" href="#repaymentSchedule">Additional Information</a>)</div>
@@ -18,11 +18,11 @@
         </div>
 
         <div class="loan-stats">
-            <div class="stat">
-                <a class="black-underlined">Repayment schedule:</a>
+            <div id="repayment-schedule" class="stat">
+                <a class="black-underlined" data-reveal-id="repayment-schedule-lightbox">Repayment schedule:</a>
                 <strong>{{repaymentFrequency}}</strong>
             </div>
-            <div class="stat">
+            <div id="disbursal-date" class="stat" data-reveal-id="disbursal-date-lightbox">
                 <a class="black-underlined">Disbursal date:</a>
                 {{#disbursalDate}}
                     <strong>{{disbursalDate}}</strong>
@@ -31,13 +31,13 @@
                     <strong>Disbursed after fully funded on Kiva.</strong>
                 {{/disbursalDate}}
             </div>
-            <div class="stat">
-                <a class="black-underlined">Currency exchange loss:</a>
+            <div id="currency-exchange-loss" class="stat">
+                <a class="black-underlined" data-reveal-id="currency-exchange-loss-lightbox">Currency exchange loss:</a>
                 <strong>{{currencyExchangeLossScenario}}</strong>
             </div>
-            <div class="stat">
+            <div id="field-partner" class="stat">
                 {{#fieldPartner}}
-                    <a class="black-underlined">Facilitated by Field Partner:</a>
+                    <a class="black-underlined" data-reveal-id="field-partner-lightbox">Facilitated by Field Partner:</a>
                     <strong>{{fieldPartner}}</strong>
                 {{/fieldPartner}}
                 {{^fieldPartner}}
@@ -50,8 +50,8 @@
                     {{/trustee}}
                 {{/fieldPartner}}
             </div>
-            <div class="stat">
-                <a class="black-underlined">Is borrower paying interest?</a>
+            <div id="borrower-paying-interest" class="stat">
+                <a class="black-underlined" data-reveal-id="borrower-paying-interest-lightbox">Is borrower paying interest?</a>
                 <strong>
                     {{#borrowerPayingInterest}}
                         Yes
@@ -62,8 +62,8 @@
                 </strong>
             </div>
             {{#fieldPartner}}
-                <div class="stat">
-                    <a class="black-underlined">Field Partner risk rating:</a>
+                <div id="field-partner-risk-rating" class="stat">
+                    <a class="black-underlined" data-reveal-id="field-partner-risk-rating-lightbox">Field Partner risk rating:</a>
                     <strong class="risk-rating">
                         {{#stars}}
                             {{#isFullStar}}
@@ -80,11 +80,14 @@
                 </div>
             {{/fieldPartner}}
             {{^fieldPartner}}
-                <div class="stat">
-                    <a class="black-underlined">Risk rating:</a>
+                <div id="risk-rating" class="stat">
+                    <a class="black-underlined" data-reveal-id="risk-rating-lightbox">Risk rating:</a>
                     <strong>N/A</strong>
                 </div>
             {{/fieldPartner}}
-        </div>
+			{{#loan_details_helptext}}
+				{{> molecules-standard-lightbox}}
+			{{/loan_details_helptext}}
+		</div>
     </div>
 </section>
