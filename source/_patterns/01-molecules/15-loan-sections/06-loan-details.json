@@ -23,5 +23,49 @@
     {
       "isEmptyStar": true
     }
+  ],
+
+  "loan_details_helptext": [
+	{
+	  "data_reveal_id": "repayment-term-lightbox",
+	  "description_title": "Repayment term",
+	  "description_text": "Repayment term description text."
+	},
+	{
+	  "data_reveal_id": "repayment-schedule-lightbox",
+	  "description_title": "Repayment schedule",
+	  "description_text": "Repayment schedule description text."
+	},
+	{
+	  "data_reveal_id": "disbursal-date-lightbox",
+	  "description_title": "Disbursal date",
+	  "description_text": "Disbursal date description text."
+	},
+	{
+	  "data_reveal_id": "currency-exchange-loss-lightbox",
+	  "description_title": "Currency exchange loss",
+	  "description_text": "Currency exchange loss description text."
+	},
+	{
+	  "data_reveal_id": "field-partner-lightbox",
+	  "description_title": "Field partner",
+	  "description_text": "Field partner description text."
+	},
+	{
+	  "data_reveal_id": "borrower-paying-interest-lightbox",
+	  "description_title": "Borrower paying interest",
+	  "description_text": "Borrower paying interest description text."
+	},
+	{
+	  "data_reveal_id": "field-partner-risk-rating-lightbox",
+	  "description_title": "Field Partner risk rating",
+	  "description_text": "Field Partner risk rating description text."
+	},
+	{
+	  "data_reveal_id": "risk-rating-lightbox",
+	  "description_title": "Risk rating",
+	  "description_text": "Risk rating description text."
+	}
   ]
+
 }
