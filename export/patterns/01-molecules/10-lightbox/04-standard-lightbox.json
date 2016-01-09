@@ -1,4 +1,7 @@
 {
-  "standard-lightbox-heading": "Standard lightbox heading",
-  "standard-lightbox-text": "Organic cardigan skateboard meh, bushwick craft beer flexitarian aesthetic viral ennui migas messenger bag occupy tumblr. Distillery 8-bit wayfarers sustainable mixtape tacos, keffiyeh microdosing."
+  "lightbox_link_text": "standard-lightbox",
+  "data_reveal_id": "standard-lightbox",
+  "description_title": "Standard title",
+  "description_text": "Standard title description text."
 }
+
