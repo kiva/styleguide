@@ -14,17 +14,23 @@
         {{#fieldPartnerName}}
             {{{moreInfoAboutLoan}}}
             <h3>About {{fieldPartnerName}}:</h3>
-            {{{moreAboutFieldPartner}}}
-            {{#hasDualStatement}}
+            {{#moreAboutFieldPartner}}
+                <p>{{{.}}}</p>
+            {{/moreAboutFieldPartner}}
+            {{#dualStatementNote}}
                 <h3>Important Note About This Loan</h3>
-                {{{dualStatementNote}}}
-            {{/hasDualStatement}}
+                <p>{{{dualStatementNote}}}</p>
+            {{/dualStatementNote}}
         {{/fieldPartnerName}}
         {{^fieldPartnerName}}
             <h3>Business Description</h3>
-            {{{directBusinessDescription}}}
+            {{#directBusinessDescription}}
+                <p>{{{.}}}</p>
+            {{/directBusinessDescription}}
             <h3>What is the purpose of this loan?</h3>
-            {{{directLoanPurpose}}}
+            {{#directLoanPurpose}}
+                <p>{{{.}}}</p>
+            {{/directLoanPurpose}}
         {{/fieldPartnerName}}
     </div>
 </section>
