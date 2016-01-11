@@ -1,0 +1,79 @@
+{
+  "trusteeImgLink": "https://s3.amazonaws.com/media.zip.kiva.org/images/1441/thumb/cover_sketch_6.JPG",
+  "trusteeType": "non-profit",
+  "tier": "Third Tier Trustee",
+  "location": "San Francisco, CA",
+  "onZipSince": "June 26, 2014 (15 months)",
+  "loansEndorsedTotal": 795,
+  "totalValue": "$2,584,725",
+  "fundraisingOrRaisedTotal": 139,
+  "payingOnTimeTotal": 294,
+  "payingBackLateTotal": 50,
+  "repaidInFullTotal": 9,
+  "defaultedTotal": 1,
+  "repaymentRate": "90%",
+  "whyEndorse": "David is a very thoughtful, customer-oriented, and hard-working entrepreneur. Having worked in the restaurant industry for many years, he has developed customer service skills including patience and hospitality that he can apply to his current business, which guarantees his customer a memora...",
+  "borrowerOrGroupName": "David",
+  "trusteeDataHelpText": [
+    {
+      "data_reveal_id": "trustee-type-lightbox"
+      ,"description_title": "Trustee type"
+      ,"description_text": "Trustee type description text."
+    },
+    {
+      "data_reveal_id": "tier-lightbox"
+      ,"description_title": "Tier"
+      ,"description_text": "Tier description text."
+    },
+    {
+      "data_reveal_id": "location-lightbox"
+      ,"description_title": "Location"
+      ,"description_text": "Location description text."
+    },
+    {
+      "data_reveal_id": "on-zip-since-lightbox"
+      ,"description_title": "On Zip Since"
+      ,"description_text": "On Zip Since description text."
+    },
+    {
+      "data_reveal_id": "loans-endorsed-lightbox"
+      ,"description_title": "Loans Endorsed"
+      ,"description_text": "Loans Endorsed description text."
+    },
+    {
+      "data_reveal_id": "total-value-lightbox"
+      ,"description_title": "Total Value"
+      ,"description_text": "Total Value description text."
+    },
+    {
+      "data_reveal_id": "fundraising-or-raised-lightbox"
+      ,"description_title": "Fundraising/Raised"
+      ,"description_text": "Fundraising/Raised description text."
+    },
+    {
+      "data_reveal_id": "paying-on-time-lightbox"
+      ,"description_title": "Paying on Time"
+      ,"description_text": "Paying on Time description text."
+    },
+    {
+      "data_reveal_id": "paying-back-late-lightbox"
+      ,"description_title": "Paying Back Late"
+      ,"description_text": "Paying Back Late description text."
+    },
+    {
+      "data_reveal_id": "repaid-in-full-lightbox"
+      ,"description_title": "Repaid in Full"
+      ,"description_text": "Repaid in Full description text."
+    },
+    {
+      "data_reveal_id": "defaulted-lightbox"
+      ,"description_title": "Defaulted"
+      ,"description_text": "Defaulted description text."
+    },
+    {
+      "data_reveal_id": "repayment-rate-lightbox"
+      ,"description_title": "Repayment Rate"
+      ,"description_text": "Repayment Rate description text."
+    }
+  ]
+}

@@ -212,6 +212,39 @@
 	}
 }
 
+.trustee-details {
+	.ac-body {
+		margin-top: 1rem;
+	}
+
+	.ac-title {
+		position: relative
+	}
+
+	.trustee-image {
+		padding-bottom: 1rem;
+	}
+
+	.trustee-data {
+		.black-underlined {
+			display: inline-block;
+		}
+		.bold {
+			font-weight: bold;
+			padding-left: 0.3rem;
+		}
+		.datum {
+			strong {
+				display: inline-block;
+			}
+		}
+	}
+
+	.why-endorse {
+		padding-top: 1rem;
+	}
+}
+
 .loan-details {
 	.ac-body {
 		margin-top: 2rem;
