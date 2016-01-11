@@ -34,6 +34,8 @@ a.close-reveal-modal {
 }
 
 .standard-lightbox {
+	visibility: hidden;
+	
 	a.close-reveal-modal {
 		float: right;
 		padding-top: rem-calc(20);
