@@ -322,10 +322,10 @@
 				border-width: 0.4rem;
 			}
 			.icon {
-				height: 15px;
+				height: 0.75rem;
 				fill: white;
-				width: 15px;
-				stroke: white;
+				width: 0.75rem;
+				transform: rotate(180deg);
 			}
 		}
 	}
