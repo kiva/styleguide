@@ -14,7 +14,7 @@ elif [ "$flag" == "--compile" ] || [ "$flag" == "-c" ]; then
     echo "Exporting your files for use in Kiva Main"
     cd /kiva/styleguide
     grunt export
-    grunt "Running grunt compile"
+    echo "Running grunt compile"
     cd /kiva/main/sites/www_kiva
     grunt compile
 elif [ "$flag" == "--help" ] || [ "$flag" == "-h" ]; then
