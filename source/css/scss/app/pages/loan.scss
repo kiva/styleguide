@@ -34,6 +34,7 @@
 }
 
 .about-zip {
+	position: relative;
 	.ac-body {
 		margin-top: 2rem;
 	}
@@ -46,6 +47,10 @@
 	.icon {
 		width: 30px;
 		height: 30px;
+	}
+	.icon-large-chevron {
+		position: absolute;
+		top: 0;
 	}
 }
 
