@@ -7,9 +7,14 @@ if [ "$flag" == "--unlink" ] || [ "$flag" == "-u" ]; then
     echo "Resetting your bower components in kiva/main"
     cd /kiva/main/sites/www_kiva/client/bower_components
     git checkout -f styleguide/
+    echo "Resetting your export folder"
+    cd /kiva/styleguide
+    git checkout HEAD export
 elif [ "$flag" == "--compile" ] || [ "$flag" == "-c" ]; then
+    echo "Exporting your files for use in Kiva Main"
     cd /kiva/styleguide
     grunt export
+    grunt "Running grunt compile"
     cd /kiva/main/sites/www_kiva
     grunt compile
 elif [ "$flag" == "--help" ] || [ "$flag" == "-h" ]; then
