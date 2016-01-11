@@ -314,12 +314,18 @@
 
 	.lend-values-button {
 		.lend-action-button {
-			padding-right: 1.5rem;
+			padding-right: 0.5rem;
 			padding-left: 0.5rem;
 			line-height: 1.5rem;
 			&:after {
 				right: 0.5rem;
 				border-width: 0.4rem;
+			}
+			.icon {
+				height: 15px;
+				fill: white;
+				width: 15px;
+				stroke: white;
 			}
 		}
 	}
