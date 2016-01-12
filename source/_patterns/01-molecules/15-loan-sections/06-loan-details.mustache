@@ -37,16 +37,16 @@
             </div>
             <div id="field-partner" class="stat">
                 {{#fieldPartner}}
-                    <a class="black-underlined" data-reveal-id="field-partner-lightbox">Facilitated by Field Partner:</a>
+                    <a class="black-underlined" data-reveal-id="facilitated-or-endorsed-by-lightbox">Facilitated by Field Partner:</a>
                     <strong>{{fieldPartner}}</strong>
                 {{/fieldPartner}}
                 {{^fieldPartner}}
                     {{#trustee}}
-                        <a class="black-underlined">Endorsed by Trustee:</a>
+                        <a class="black-underlined" data-reveal-id="facilitated-or-endorsed-by-lightbox">Endorsed by Trustee:</a>
                         <strong>{{trustee}}</strong>
                     {{/trustee}}
                     {{^trustee}}
-                        <a class="black-underlined">Not Facilitated by a Field Partner or Trustee</a>
+                        <a class="black-underlined" data-reveal-id="facilitated-or-endorsed-by-lightbox">Not Facilitated by a Field Partner or Trustee</a>
                     {{/trustee}}
                 {{/fieldPartner}}
             </div>
@@ -63,7 +63,7 @@
             </div>
             {{#fieldPartner}}
                 <div id="field-partner-risk-rating" class="stat">
-                    <a class="black-underlined" data-reveal-id="field-partner-risk-rating-lightbox">Field Partner risk rating:</a>
+                    <a class="black-underlined" data-reveal-id="risk-rating-lightbox">Field Partner risk rating:</a>
                     <strong class="risk-rating">
                         {{#riskRatingStars}}
                             {{#isFullStar}}
