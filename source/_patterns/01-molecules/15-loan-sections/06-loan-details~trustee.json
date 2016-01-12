@@ -1,11 +1,53 @@
 {
-  "numberOfMonths": 11,
+  "repaymentTerm": 11,
   "hasDualStatement": false,
   "repaymentFrequency": "Monthly",
-  "disbursalDate": "April 6, 2015",
+  "disbursedDate": "April 6, 2015",
   "currencyExchangeLossScenario": "N/A",
   "fieldPartner": null,
   "trustee": "Trustee Fund Kenya",
   "borrowerPayingInterest": false,
-  "stars": []
+  "riskRatingStars": [],
+  "loanDetailsHelpText": [
+    {
+      "dataRevealId": "repayment-term-lightbox",
+      "descriptionTitle": "Repayment term",
+      "descriptionText": "Repayment term description text."
+    },
+    {
+      "dataRevealId": "repayment-schedule-lightbox",
+      "descriptionTitle": "Repayment schedule",
+      "descriptionText": "Repayment schedule description text."
+    },
+    {
+      "dataRevealId": "disbursed-date-lightbox",
+      "descriptionTitle": "Disbursed Date",
+      "descriptionText": "Disbursed date description text."
+    },
+    {
+      "dataRevealId": "currency-exchange-loss-lightbox",
+      "descriptionTitle": "Currency exchange loss",
+      "descriptionText": "Currency exchange loss description text."
+    },
+    {
+      "dataRevealId": "field-partner-lightbox",
+      "descriptionTitle": "Field partner",
+      "descriptionText": "Field partner description text."
+    },
+    {
+      "dataRevealId": "borrower-paying-interest-lightbox",
+      "descriptionTitle": "Borrower paying interest",
+      "descriptionText": "Borrower paying interest description text."
+    },
+    {
+      "dataRevealId": "field-partner-risk-rating-lightbox",
+      "descriptionTitle": "Field Partner risk rating",
+      "descriptionText": "Field Partner risk rating description text."
+    },
+    {
+      "dataRevealId": "risk-rating-lightbox",
+      "descriptionTitle": "Risk rating",
+      "descriptionText": "Risk rating description text."
+    }
+  ]
 }

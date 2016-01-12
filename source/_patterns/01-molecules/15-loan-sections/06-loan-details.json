@@ -1,13 +1,13 @@
 {
-"numberOfMonths": 11
-,"hasDualStatement": true
-,"repaymentFrequency": "Monthly"
-,"disbursalDate": "April 6, 2015"
-,"currencyExchangeLossScenario": "Possible"
-,"fieldPartner": "VisionFund Kenya"
-,"trustee": null
-,"borrowerPayingInterest": true
-	,"stars": [
+  "repaymentTerm": 11,
+  "hasDualStatement": true,
+  "repaymentFrequency": "Monthly",
+  "disbursedDate": "April 6, 2015",
+  "currencyExchangeLossScenario": "Possible",
+  "fieldPartner": "VisionFund Kenya",
+  "trustee": null,
+  "borrowerPayingInterest": true,
+  "riskRatingStars": [
 	  {
 		"isFullStar": true
 	  },
@@ -24,47 +24,46 @@
 		"isEmptyStar": true
 	  }
   ],
-
-  "loan_details_helptext": [
+  "loanDetailsHelpText": [
 	{
-	"data_reveal_id": "repayment-term-lightbox"
-	,"description_title": "Repayment term"
-	,"description_text": "Repayment term description text."
+	  "dataRevealId": "repayment-term-lightbox",
+	  "descriptionTitle": "Repayment term",
+	  "descriptionText": "Repayment term description text."
 	},
 	{
-	"data_reveal_id": "repayment-schedule-lightbox"
-	,"description_title": "Repayment schedule"
-	,"description_text": "Repayment schedule description text."
+	  "dataRevealId": "repayment-schedule-lightbox",
+	  "descriptionTitle": "Repayment schedule",
+	  "descriptionText": "Repayment schedule description text."
 	},
 	{
-	"data_reveal_id": "disbursal-date-lightbox"
-	,"description_title": "Disbursal date"
-	,"description_text": "Disbursal date description text."
+	  "dataRevealId": "disbursed-date-lightbox",
+	  "descriptionTitle": "Disbursed Date",
+	  "descriptionText": "Disbursed date description text."
 	},
 	{
-	"data_reveal_id": "currency-exchange-loss-lightbox"
-	,"description_title": "Currency exchange loss"
-	,"description_text": "Currency exchange loss description text."
+	  "dataRevealId": "currency-exchange-loss-lightbox",
+	  "descriptionTitle": "Currency exchange loss",
+	  "descriptionText": "Currency exchange loss description text."
 	},
 	{
-	"data_reveal_id": "field-partner-lightbox"
-	,"description_title": "Field partner"
-	,"description_text": "Field partner description text."
+	  "dataRevealId": "field-partner-lightbox",
+	  "descriptionTitle": "Field partner",
+	  "descriptionText": "Field partner description text."
 	},
 	{
-	"data_reveal_id": "borrower-paying-interest-lightbox"
-	,"description_title": "Borrower paying interest"
-	,"description_text": "Borrower paying interest description text."
+	  "dataRevealId": "borrower-paying-interest-lightbox",
+	  "descriptionTitle": "Borrower paying interest",
+	  "descriptionText": "Borrower paying interest description text."
 	},
 	{
-	"data_reveal_id": "field-partner-risk-rating-lightbox"
-	,"description_title": "Field Partner risk rating"
-	,"description_text": "Field Partner risk rating description text."
+	  "dataRevealId": "field-partner-risk-rating-lightbox",
+	  "descriptionTitle": "Field Partner risk rating",
+	  "descriptionText": "Field Partner risk rating description text."
 	},
 	{
-	"data_reveal_id": "risk-rating-lightbox"
-	,"description_title": "Risk rating"
-	,"description_text": "Risk rating description text."
+	  "dataRevealId": "risk-rating-lightbox",
+	  "descriptionTitle": "Risk rating",
+	  "descriptionText": "Risk rating description text."
 	}
   ]
 

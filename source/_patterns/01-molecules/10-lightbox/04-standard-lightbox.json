@@ -1,7 +1,7 @@
 {
-  "lightbox_link_text": "This is a link for a lightbox.",
-  "data_reveal_id": "standard-lightbox",
-  "description_title": "Repayment Term",
-  "description_text": "A repayment term is the period over which a loan can be rapid by the borrower."
+  "lightboxLinkText": "This is a link for a lightbox.",
+  "dataRevealId": "standard-lightbox",
+  "descriptionTitle": "Repayment Term",
+  "descriptionText": "A repayment term is the period over which a loan can be rapid by the borrower."
 }
 

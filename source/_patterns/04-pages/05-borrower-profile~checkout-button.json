@@ -55,30 +55,6 @@
   "city": "Papau",
   "typeText": "Renewable Energy Products",
   "months": 11,
-  "loanDetails": {
-    "repaymentSchedule": "Monthly",
-    "disbursalDate": "April 6, 2015",
-    "currencyExchangeLoss": "Possible",
-    "fieldPartner": "VisionFund Kenya",
-    "borrowerPayingInterest": true,
-    "stars": [
-      {
-        "isFullStar": true
-      },
-      {
-        "isFullStar": true
-      },
-      {
-        "isFullStar": true
-      },
-      {
-        "isHalfStar": true
-      },
-      {
-        "isEmptyStar": true
-      }
-    ]
-  },
   "teamCount": 5,
   "teams": [
     {
@@ -118,5 +94,73 @@
     }
   ],
   "inBasket": true,
-  "showBasket": true
+  "showBasket": true,
+  "repaymentTerm": 11,
+  "hasDualStatement": true,
+  "repaymentFrequency": "Monthly",
+  "disbursedDate": "April 6, 2015",
+  "currencyExchangeLossScenario": "Possible",
+  "fieldPartner": "VisionFund Kenya",
+  "trustee": null,
+  "borrowerPayingInterest": true,
+  "riskRatingStars": [
+    {
+      "isFullStar": true
+    },
+    {
+      "isFullStar": true
+    },
+    {
+      "isFullStar": true
+    },
+    {
+      "isHalfStar": true
+    },
+    {
+      "isEmptyStar": true
+    }
+  ],
+  "loanDetailsHelpText": [
+    {
+      "dataRevealId": "repayment-term-lightbox",
+      "descriptionTitle": "Repayment term",
+      "descriptionText": "Repayment term description text."
+    },
+    {
+      "dataRevealId": "repayment-schedule-lightbox",
+      "descriptionTitle": "Repayment schedule",
+      "descriptionText": "Repayment schedule description text."
+    },
+    {
+      "dataRevealId": "disbursed-date-lightbox",
+      "descriptionTitle": "Disbursed Date",
+      "descriptionText": "Disbursed date description text."
+    },
+    {
+      "dataRevealId": "currency-exchange-loss-lightbox",
+      "descriptionTitle": "Currency exchange loss",
+      "descriptionText": "Currency exchange loss description text."
+    },
+    {
+      "dataRevealId": "field-partner-lightbox",
+      "descriptionTitle": "Field partner",
+      "descriptionText": "Field partner description text."
+    },
+    {
+      "dataRevealId": "borrower-paying-interest-lightbox",
+      "descriptionTitle": "Borrower paying interest",
+      "descriptionText": "Borrower paying interest description text."
+    },
+    {
+      "dataRevealId": "field-partner-risk-rating-lightbox",
+      "descriptionTitle": "Field Partner risk rating",
+      "descriptionText": "Field Partner risk rating description text."
+    },
+    {
+      "dataRevealId": "risk-rating-lightbox",
+      "descriptionTitle": "Risk rating",
+      "descriptionText": "Risk rating description text."
+    }
+  ]
+
 }
