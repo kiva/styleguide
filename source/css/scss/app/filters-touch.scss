@@ -139,9 +139,13 @@
   }
 
   .filter-clear-button {
+	.clear-touch {
+		display: none;
+	}
 	font-size: 0.7em;
 	visibility: hidden;
 	margin-left: 10px;
+	float: left;
   }
 }
 

@@ -1,5 +1,5 @@
-{{#lightbox_link_text}}<a href="#" data-reveal-id="{{data_reveal_id}}">{{lightbox_link_text}}</a>{{/lightbox_link_text}}
-<div id="{{data_reveal_id}}" class="standard-lightbox reveal-modal-bg" data-reveal aria-hidden="true" role="dialog">
+<a href="#" data-reveal-id="{{dataRevealId}}">{{lightboxLinkText}}</a>
+<div id="{{dataRevealId}}" class="reveal-modal-bg full standard-lightbox" data-reveal aria-hidden="true" role="dialog">
     <div class="row">
         <div class="columns small-12">
             <a class="close-reveal-modal" aria-label="Close">
@@ -8,9 +8,8 @@
                 </svg>
             </a>
             <div class="lightbox-text white">
-                <p class="featured">{{description_title}}</p>
-
-                <p>{{description_text}}</p>
+                <p class="featured">{{descriptionTitle}}</p>
+                <p>{{descriptionText}}</p>
             </div>
         </div>
     </div>
