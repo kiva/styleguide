@@ -328,59 +328,96 @@
 		return a < b ? -1 : 1;
 	}
 
-	var $slickCarousel = $('.loan-figure-carousel');
-	$slickCarousel.on('init', function(slick) {
-		var loanFigure = $('.loan-figure');
+	// BORROWER PAGE CAROUSEL ================================
+	if ($('.loan-figure-carousel')) {
+		var $slickCarousel = $('.loan-figure-carousel');
+		$slickCarousel.on('init', function(slick) {
+			var loanFigure = $('.loan-figure');
 
-		var $images = loanFigure.find('.loan-image-wrap');
-		var $slickList = loanFigure.find('.slick-list');
-		$slickList.css('height', 'auto');
-		$images.css('transition', 'opacity 2s ease-in-out');
-		$images.css('position', 'relative');
-		$images.css('opacity', 1);
-	}).slick({
-		mobileFirst: true
-		, prevArrow: '.carousel-prev'
-		, nextArrow: '.carousel-next'
-		, adaptiveHeight: true,
-		lazyLoad: 'ondemand',
-		speed: 1000
-	});
+			var $images = loanFigure.find('.loan-image-wrap');
+			var $slickList = loanFigure.find('.slick-list');
+			$slickList.css('height', 'auto');
+			$images.css('transition', 'opacity 2s ease-in-out');
+			$images.css('position', 'relative');
+			$images.css('opacity', 1);
+		}).slick({
+			mobileFirst: true
+			, prevArrow: '.carousel-prev'
+			, nextArrow: '.carousel-next'
+			, adaptiveHeight: true,
+			lazyLoad: 'ondemand',
+			speed: 1000
+		});
 
-	var $loanMessage = $('.loan-message');
-	var $loanImageFooter = $('.loan-image-footer');
-	var $prevArrow = $('.carousel-prev');
-	var $nextArrow = $('.carousel-next');
-	var $slickActive = $('.slick-active');
-	var slickWidth = $slickActive.width();
-	var imageWidth = $($slickActive.children()[0]).width();
-	var margin = (slickWidth - imageWidth) / 2;
-	$loanMessage.css('right', margin);
-	$loanMessage.css('visibility', 'visible');
-	$loanImageFooter.css('position', 'relative');
-	$loanImageFooter.css('transition', 'margin 0.3s ease-in-out');
-
-	$slickCarousel.on('beforeChange', function () {
-		$loanMessage.css('visibility', 'hidden');
-		$prevArrow.css('visibility', 'hidden');
-		$nextArrow.css('visibility', 'hidden');
-	});
-
-	$slickCarousel.on('afterChange', function (event, slick, currentSlide) {
+		var $loanMessage = $('.loan-message');
+		var $loanImageFooter = $('.loan-image-footer');
+		var $prevArrow = $('.carousel-prev');
+		var $nextArrow = $('.carousel-next');
 		var $slickActive = $('.slick-active');
 		var slickWidth = $slickActive.width();
 		var imageWidth = $($slickActive.children()[0]).width();
 		var margin = (slickWidth - imageWidth) / 2;
-		$loanImageFooter.css('margin-right', margin);
-		$loanImageFooter.css('margin-left', margin);
 		$loanMessage.css('right', margin);
-		$prevArrow.css('left', margin);
-		$nextArrow.css('right', margin);
-
 		$loanMessage.css('visibility', 'visible');
-		$prevArrow.css('visibility', 'visible');
-		$nextArrow.css('visibility', 'visible');
-	});
+		$loanImageFooter.css('position', 'relative');
+		$loanImageFooter.css('transition', 'margin 0.3s ease-in-out');
+
+		$slickCarousel.on('beforeChange', function () {
+			$loanMessage.css('visibility', 'hidden');
+			$prevArrow.css('visibility', 'hidden');
+			$nextArrow.css('visibility', 'hidden');
+		});
+
+		$slickCarousel.on('afterChange', function (event, slick, currentSlide) {
+			var $slickActive = $('.slick-active');
+			var slickWidth = $slickActive.width();
+			var imageWidth = $($slickActive.children()[0]).width();
+			var margin = (slickWidth - imageWidth) / 2;
+			$loanImageFooter.css('margin-right', margin);
+			$loanImageFooter.css('margin-left', margin);
+			$loanMessage.css('right', margin);
+			$prevArrow.css('left', margin);
+			$nextArrow.css('right', margin);
+
+			$loanMessage.css('visibility', 'visible');
+			$prevArrow.css('visibility', 'visible');
+			$nextArrow.css('visibility', 'visible');
+		});
+	}
+	// END BORROWER PAGE CAROUSEL
+
+	// HOME PAGE CAROUSEL ======================================
+	if ($('#hp-slideshow')) {
+		var slickOpts = {
+			slide: '.hp-slide',
+			slidesToShow: 1,
+			slidesToScroll: 1,
+			mobileFirst: true,
+			dots: true,
+			arrows: true,
+			prevArrow: $('.hp-slideshow-prev-arrow'),
+			nextArrow: $('.hp-slideshow-next-arrow')
+		};
+		// Init the slick
+		$('#hp-slideshow').slick(slickOpts);
+	}
+
+
+	//if ($('.hp-slideshow')) {
+	//	var slickOpts = {
+	//		slide: '.hp-slide',
+	//		slidesToShow: 1,
+	//		slidesToScroll: 1,
+	//		dots: true,
+	//		arrows: true,
+	//		prevArrow: $('.hp-slideshow-prev-arrow'),
+	//		nextArrow: $('.hp-slideshow-next-arrow'),
+	//		mobileFirst: true
+	//	};
+	//	// Init the slick
+	//	$('#hp-slideshow').slick(slickOpts);
+	//}
+	// END HOME PAGE CAROUSEL
 
 	function loadSvgIcons() {
 		return $.get('/images/icons.svg', function(data) {
