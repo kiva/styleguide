@@ -1,9 +1,10 @@
 // Kiva overrides to default Foundation _reveal.scss
 
 div.reveal-modal-bg {
-	background: black;
-	opacity: .88;
+	background-color: rgba(0,0,0,0.80);
+	overflow-y: scroll;
 	z-index: 1504;
+	height: 100%;
 }
 
 .reveal-modal {
@@ -12,9 +13,16 @@ div.reveal-modal-bg {
 	background: none;
 	box-shadow: none;
 	z-index: 1505;
+	position: absolute;
+	overflow-y: scroll;
+	margin-bottom: rem-calc(100);
 
 	&.toback {
 		z-index: 1503;
+	}
+
+	&.open {
+		top: rem-calc(100) !important;
 	}
 
 	.flex-video {
@@ -30,7 +38,6 @@ a.close-reveal-modal {
 		height: rem-calc(30);
 		width: rem-calc(30);
 	}
-
 }
 
 .standard-lightbox {
