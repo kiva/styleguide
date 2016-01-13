@@ -26,7 +26,7 @@
 		}
 	}
 
-	.story {
+	.borrower-profile-pieces {
 		@media #{$medium-up}{
 			background: linear-gradient(90deg, #efefef 50%, #d8d8d8 50%);
 		}
@@ -39,16 +39,17 @@
 		}
 		.left-content {
 			@media #{$medium-up}{
-				min-height: 80rem;
+				padding-right: 1rem;
+				float: left;
+				display: inline-block;
 				background-color: $kiva-bg-darkgray;
-
-
 				border-right: 1px solid $kiva-text-medium;
 			}
 		}
 		.right-content {
 			@media #{$medium-up}{
-				min-height: 80rem;
+				padding-left: 1rem;
+				display: inline-block;
 				background-color: $kiva-stroke-gray;
 			}
 		}
