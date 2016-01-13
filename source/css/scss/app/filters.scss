@@ -394,16 +394,19 @@
 	margin: 10px 5px;
 }
 
-.filter-links {
-	@media #{$medium-up}{
-		font-size: 11px;
-		margin-left: 14px;
-		float: none;
+.filter-clear-button {
+  @media #{$medium-up}{
+    font-size: 11px;
+    margin-left: 14px;
+	float: none;
+	.clear-touch {
+	  display: none;
 	}
-	font-size: 0.7em;
-	visibility: hidden;
-	margin-left: 10px;
-	float: left;
+  }
+  font-size: 0.7em;
+  visibility: hidden;
+  margin-left: 10px;
+  float: left;
 }
 
 #filter-loan-status-dropdown {
