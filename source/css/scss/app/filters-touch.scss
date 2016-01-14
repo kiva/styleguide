@@ -137,7 +137,9 @@
   .no-border {
     border: 0;
   }
+}
 
+.touch{
   .filter-clear-button {
 	.clear-touch {
 		display: none;
@@ -147,9 +149,7 @@
 	margin-left: 10px;
 	float: left;
   }
-}
 
-.touch{
   .filters-close-icon {
     position:absolute;
     right:1px;
