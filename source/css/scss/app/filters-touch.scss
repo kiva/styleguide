@@ -142,7 +142,10 @@
 .touch{
   .filter-clear-button {
 	.clear-touch {
+	  display: none;
+	  @media #{$medium-up}{
 		display: none;
+	  }
 	}
 	font-size: 0.7em;
 	visibility: hidden;
