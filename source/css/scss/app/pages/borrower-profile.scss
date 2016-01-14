@@ -29,31 +29,31 @@
 	.borrower-profile-pieces {
 		@media #{$medium-up}{
 			background: linear-gradient(90deg, #efefef 50%, #d8d8d8 50%);
+			border-top: 1px solid $kiva-text-medium;
+			border-bottom: 1px solid $kiva-text-medium;
 		}
 		max-width: none;
-		border-top: 1px solid $kiva-text-medium;
-		border-bottom: 1px solid $kiva-text-medium;
 
 		.line-break {
 			width: 100%;
 		}
 		.left-content {
 			@media #{$medium-up}{
-				padding-right: 1rem;
 				float: left;
-				display: inline-block;
-				background-color: $kiva-bg-darkgray;
 				border-right: 1px solid $kiva-text-medium;
+				background-color: $kiva-bg-darkgray;
 			}
 		}
 		.right-content {
 			@media #{$medium-up}{
-				padding-left: 1rem;
-				display: inline-block;
 				background-color: $kiva-stroke-gray;
 			}
 		}
+		.left-content, .right-content {
+			padding-left: 1rem;
+			padding-right: 1rem;
+			display: inline-block;
+		}
 	}
-
 }
 
