@@ -74,7 +74,7 @@ module.exports = function () {
 		$close_section.attr('aria-hidden', true);
 	});
 
-	$('.header-button').click(function (e) {
+	$('.lend-menu-large [data-kv-toggle]').click(function (e) {
 		e.preventDefault();
 		$category_section.removeClass('slide-left');
 		$close_section.attr('aria-hidden', true);
