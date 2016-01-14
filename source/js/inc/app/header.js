@@ -122,7 +122,7 @@ module.exports = function () {
 	});
 
 	// for lend-menu-small
-	$("[data-dropdown='lend-dropdown']").click(function () {
+	$('[data-dropdown=lend-dropdown]').click(function () {
 		$('.lend-menu-small li>a').attr('aria-expanded', false);
 		$('.lend-menu-small ul').attr('aria-hidden', true);
 	});
