@@ -146,6 +146,11 @@
 		visibility: hidden;
 		margin-left: 10px;
 		float: left;
+		&.save-search-button{
+			margin-left: 0;
+			float: none;
+			font-size:18px;
+		}
 	}
 }
 

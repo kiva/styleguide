@@ -327,7 +327,7 @@
 #save-search-modal {
 	background: $white;
 	outline: 0;
-	.submit-save-search{
+	.submit-save-search {
 		height: 2.0555555556rem;
 		line-height: 2.0555555556rem;
 	}
@@ -394,19 +394,27 @@
 	margin: 10px 5px;
 }
 
-.filter-clear-button {
-  @media #{$medium-up}{
-    font-size: 11px;
-    margin-left: 14px;
-	float: none;
-  }
-  font-size: 0.7em;
-  visibility: hidden;
-  margin-left: 10px;
-  float: left;
+.filter-links {
+	font-size: 0.7em;
+	visibility: hidden;
+	margin-left: 10px;
+	float: left;
+	&.save-search-button {
+		margin-left: 0;
+		float: none;
+		font-size: 18px;
+	}
 }
 
-#filter-loan-status-dropdown {
+@media #{$medium-up}{
+	.filter-links, .filter-links.save-search-button {
+		font-size: 11px;
+		margin-left: 14px;
+		float: none;
+	}
+}
+
+	#filter-loan-status-dropdown {
 	box-sizing: content-box;
 	border: 1px solid $charcoal;
 	width: 210px;
