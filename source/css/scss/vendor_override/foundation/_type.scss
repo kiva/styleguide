@@ -45,9 +45,10 @@ $slide-overlay-font-size-reduction	: rem-calc(10);
 $slide-overlay-line-height-reduction: rem-calc(6);
 $slide-overlay-short-addition		: rem-calc(4);
 $slide-overlay-very-short-addition	: rem-calc(8);
-$slide-overlay-attribution-reduction: rem-calc(-8);
-$slide-overlay-attribution-extra-reduction: rem-calc(-12);
 $slide-overlay-long-reduction		: rem-calc(-4);
+$slide-overlay-attribution-font-size: rem-calc(24);
+$slide-overlay-attribution-line-height: rem-calc(28);
+$slide-overlay-attribution-small-size: rem-calc(18);
 
 $impact-font-size					: rem-calc(45);
 $impact-line-height					: rem-calc(54);
@@ -201,15 +202,17 @@ $paragraph-line-height: $body-line-height;
 .slide-overlay-attribution
 , .slide-overlay-attribution-detail {
 	@extend .slide-overlay;
-	@include slide-overlay-text($slide-overlay-attribution-reduction);
+	font-size: $slide-overlay-attribution-small-size;
+	line-height: $slide-overlay-attribution-small-size;
 
-	@media #{$x-small-only} {
-		line-height: 1rem;
+	@media #{$small-medium-only} {
+		font-size: $slide-overlay-attribution-font-size;
+		line-height: $slide-overlay-attribution-line-height;
 	}
 
-	@media #{$med-large-only} {
-		font-size: 1rem;
-		line-height: rem-calc(20);
+	@media #{$xxlarge-up} {
+		font-size: $slide-overlay-attribution-font-size;
+		line-height: $slide-overlay-attribution-line-height;
 	}
 }
 

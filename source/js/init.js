@@ -396,27 +396,13 @@
 			dots: true,
 			arrows: true,
 			prevArrow: $('.hp-slideshow-prev-arrow'),
-			nextArrow: $('.hp-slideshow-next-arrow')
+			nextArrow: $('.hp-slideshow-next-arrow'),
+			autoplay: true,
+			autoplaySpeed: 5000
 		};
 		// Init the slick
 		$('#hp-slideshow').slick(slickOpts);
 	}
-
-
-	//if ($('.hp-slideshow')) {
-	//	var slickOpts = {
-	//		slide: '.hp-slide',
-	//		slidesToShow: 1,
-	//		slidesToScroll: 1,
-	//		dots: true,
-	//		arrows: true,
-	//		prevArrow: $('.hp-slideshow-prev-arrow'),
-	//		nextArrow: $('.hp-slideshow-next-arrow'),
-	//		mobileFirst: true
-	//	};
-	//	// Init the slick
-	//	$('#hp-slideshow').slick(slickOpts);
-	//}
 	// END HOME PAGE CAROUSEL
 
 	function loadSvgIcons() {

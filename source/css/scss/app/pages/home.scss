@@ -109,6 +109,19 @@
 	}
 }
 
+.hp-slide {
+	// this section is to avoid FOUC on before slideshow is initialized
+	display: none;
+
+	&:first-of-type {
+		display: block;
+	}
+
+	&.slick-slide {
+		display: block;
+	}
+}
+
 .hp-element-wrapper {
 	width: 100%;
 
@@ -158,21 +171,37 @@
 	, .attribution-right {
 		@extend %margin-padding-0;
 		position: absolute;
-		top: 80%;
+		top: 66%;
 
-		@media #{$x-small-only} {
-			top: 76%;
+		@media #{$medium-only} {
+			top: 74%;
+		}
+
+		@media #{$large-up} {
+			top: 80%;
 		}
 	}
 
 	.attribution-left {
-		text-align: left;
-		left: 5%
+		width: 100%;
+		text-align: center;
+
+		@media #{$large-up} {
+			text-align: left;
+			left: 5%;
+		}
+
 	}
 
 	.attribution-right {
-		text-align: right;
-		width: 95%;
+		width: 100%;
+		text-align: center;
+
+
+		@media #{$large-up} {
+			text-align: right;
+			width: 95%;
+		}
 	}
 
 	.attribution-detail {
