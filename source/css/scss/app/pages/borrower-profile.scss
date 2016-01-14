@@ -26,33 +26,34 @@
 		}
 	}
 
-	.story {
+	.borrower-profile-pieces {
 		@media #{$medium-up}{
 			background: linear-gradient(90deg, #efefef 50%, #d8d8d8 50%);
+			border-top: 1px solid $kiva-text-medium;
+			border-bottom: 1px solid $kiva-text-medium;
 		}
 		max-width: none;
-		border-top: 1px solid $kiva-text-medium;
-		border-bottom: 1px solid $kiva-text-medium;
 
 		.line-break {
 			width: 100%;
 		}
 		.left-content {
 			@media #{$medium-up}{
-				min-height: 80rem;
-				background-color: $kiva-bg-darkgray;
-
-
+				float: left;
 				border-right: 1px solid $kiva-text-medium;
+				background-color: $kiva-bg-darkgray;
 			}
 		}
 		.right-content {
 			@media #{$medium-up}{
-				min-height: 80rem;
 				background-color: $kiva-stroke-gray;
 			}
 		}
+		.left-content, .right-content {
+			padding-left: 1rem;
+			padding-right: 1rem;
+			display: inline-block;
+		}
 	}
-
 }
 
