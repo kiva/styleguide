@@ -10,10 +10,13 @@
 	.icon-wrapper {
 		display: inline-block;
 		vertical-align: middle;
+		margin-left: rem-calc(-40);
+		padding-top: rem-calc(9);
+		padding-bottom: rem-calc(9);
 
 		.icon {
 			margin-right: rem-calc(10);
-			margin-top: rem-calc(2);;
+			margin-top: rem-calc(2);
 			height: rem-calc(30);
 			width: rem-calc(30);
 		}
@@ -24,6 +27,8 @@
 		margin: auto;
 		vertical-align: middle;
 		max-width: 60%;
+		padding-top: rem-calc(9);
+		padding-bottom: rem-calc(9);
 	}
 
 	.close-tip-message {
@@ -45,10 +50,6 @@
 
 		.icon.icon-confirmation {
 			fill: $kiva-green;
-
-			@media #{$small-only} {
-				margin-bottom: rem-calc(4);
-			}
 		}
 	}
 
@@ -57,10 +58,6 @@
 
 		.icon.icon-warning, .icon.icon-info {
 			fill: $kiva-text-dark;
-
-			@media #{$small-only} {
-				margin-bottom: rem-calc(4);
-			}
 		}
 	}
 
@@ -69,10 +66,6 @@
 
 		.icon.icon-error {
 			fill: $white;
-
-			@media #{$small-only} {
-				margin-bottom: rem-calc(4);
-			}
 		}
 
 		.message {

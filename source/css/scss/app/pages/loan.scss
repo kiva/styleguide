@@ -18,8 +18,34 @@
 		height: 3rem;
 	}
 
-	#ac-loan-story-body {
+	.ac-body {
 		margin-top: 2rem;
+	}
+
+	.ac-title {
+		position: relative
+	}
+
+	#ac-translation-body {
+		p {
+			margin-bottom: 0;
+		}
+	}
+}
+
+.about-zip {
+	.ac-body {
+		margin-top: 2rem;
+	}
+	.ac-title {
+		position: relative;
+	}
+	.icon-label {
+		float: left;
+	}
+	.icon {
+		width: 30px;
+		height: 30px;
 	}
 }
 
@@ -115,6 +141,7 @@
 		}
 	}
 	.raised-info {
+		margin: 0;
 		div, .lender-count {
 			padding: 0;
 		}
@@ -186,18 +213,14 @@
 }
 
 .loan-details {
-	.show-for-medium-up {
-		.ac-body {
-			max-height: 1000px;
-			overflow: auto;
-		}
-	}
 	.ac-body {
-		margin-top: 1rem;
+		margin-top: 2rem;
 	}
+
 	.ac-title {
-		font-size: 1rem;
+		position: relative
 	}
+
 	.loan-term {
 		padding-bottom: 1rem;
 		text-align: center;
@@ -248,6 +271,11 @@
 				color: $kiva-bg-darkgray;
 			}
 		}
+		.stat {
+			strong {
+				display: inline-block;
+			}
+		}
 	}
 
 }
@@ -269,7 +297,8 @@
 	}
 }
 
-.lend-action {
+.lend-action, .lend-action.row {
+	margin: 0;
 	.lend-button-wrapper {
 		display: inline;
 		padding: 0;

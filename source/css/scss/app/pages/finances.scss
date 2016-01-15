@@ -1,0 +1,47 @@
+.finances{
+	$top-padding:rem-calc(32);
+	
+	h2 {
+		color:$kiva-green;
+		margin-top: $top-padding;
+	}
+	.awards {
+		text-align: center;
+		p{
+			color:$aluminum;
+		}
+	}
+	.huge {
+		font-weight: bold;
+	}
+	ul{
+		margin-left: 0;
+		li{
+			list-style: none;
+		}
+		&#entities{
+			margin-left: 20px;
+			margin-bottom: 0;
+			padding-bottom: 0px;
+			li{
+				padding-bottom: 35px;
+				list-style: disc;
+			}
+		}
+	}
+	#archive{
+		width: rem-calc(200);
+	}
+	.pdf-version{
+		margin-left: rem-calc(20);
+	}
+	blockquote{
+		border-left: none;
+		padding-left: rem-calc(60);
+		font-style: italic;
+				
+		cite a{
+			color:$kiva-textlink;
+		}
+	}
+}

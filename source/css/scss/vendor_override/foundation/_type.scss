@@ -24,6 +24,11 @@ $top-nav-font-reduction			: rem-calc(3);
 $secondary-nav-font-size		: rem-calc(16);
 $secondary-nav-line-height		: rem-calc(24);
 
+$page-title-font-size			: rem-calc(36);
+$page-title-line-height			: rem-calc(36);
+$page-title-font-size-reduction 	: rem-calc(12);
+$page-title-line-height-reduction	: rem-calc(12);
+
 $section-head-font-size			: rem-calc(28);
 $section-head-line-height		: rem-calc(36);
 
@@ -89,6 +94,16 @@ $paragraph-line-height: $body-line-height;
 	text-shadow: 1px 1px 3px #333;
 }
 
+@mixin small-text() {
+	font-size: $small-font-size;
+	line-height: $small-line-height;
+}
+
+@mixin body-text() {
+	font-size: $body-font-size;
+	line-height: $body-line-height;
+}
+
 @mixin featured-text() {
 	font-size: $feature-font-size - $feature-font-size-reduction;
 	line-height: $feature-line-height - $feature-line-height-reduction;
@@ -124,6 +139,19 @@ $paragraph-line-height: $body-line-height;
 	}
 }
 
+@mixin page-title() {
+	font-size: $page-title-font-size - $page-title-font-size-reduction;
+	line-height: $page-title-line-height - $page-title-line-height-reduction;
+	font-weight: $font-weight-bold;
+	color: $kiva-green;
+	margin-bottom: 0.5rem;
+
+	@media #{$large-up} {
+		font-size: $page-title-font-size;
+		line-height: $page-title-line-height;
+	}
+}
+
 @mixin impact-text() {
 	font-size: $impact-font-size - $impact-font-size-reduction;
 	line-height: $impact-line-height - $impact-line-height-reduction;
@@ -141,8 +169,7 @@ $paragraph-line-height: $body-line-height;
 }
 
 .small-text {
-	font-size: $small-font-size;
-	line-height: $small-line-height;
+	@include small-text();
 }
 
 .featured {
@@ -214,6 +241,10 @@ $paragraph-line-height: $body-line-height;
 		font-size: $slide-overlay-attribution-font-size;
 		line-height: $slide-overlay-attribution-line-height;
 	}
+}
+
+.page-title {
+	@include page-title();
 }
 
 .impact {

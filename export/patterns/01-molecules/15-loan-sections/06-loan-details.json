@@ -1,0 +1,27 @@
+{
+  "numberOfMonths": 11,
+  "hasDualStatement": true,
+  "repaymentFrequency": "Monthly",
+  "disbursalDate": "April 6, 2015",
+  "currencyExchangeLossScenario": "Possible",
+  "fieldPartner": "VisionFund Kenya",
+  "trustee": null,
+  "borrowerPayingInterest": true,
+  "stars": [
+    {
+      "isFullStar": true
+    },
+    {
+      "isFullStar": true
+    },
+    {
+      "isFullStar": true
+    },
+    {
+      "isHalfStar": true
+    },
+    {
+      "isEmptyStar": true
+    }
+  ]
+}

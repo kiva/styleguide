@@ -18,9 +18,18 @@
 			</span>
 		</div>
 		<div style="clear:both"></div>
+
+		{{#is-category-page}}
+			{{> 01-molecules/00-text/05-category-page-head}}
+		{{/is-category-page}}
+
+
 	</div>
-	<div class="show-for-medium-up secondary-nav filter-loan-count">
-		<span id="filtered_loan_count"></span>
-		loans
-	</div>
+	{{^is-category-page}}
+		<div class="secondary-nav filter-loan-count">
+			<span id="filtered_loan_count"></span>
+			loans
+			<span><a href="#" class="filter-clear-button">Clear all</a></span>
+		</div>
+	{{/is-category-page}}
 </div>

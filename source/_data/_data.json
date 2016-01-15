@@ -321,27 +321,32 @@
 				{
 					"name": "Dominican Republic",
 					"code": "do",
-					"href": "#"
+					"href": "#",
+					"facet": 5120
 				},
 				{
 					"name": "Haiti",
 					"code": "ht",
-					"href": "#"
+					"href": "#",
+					"facet": 120
 				},
 				{
 					"name": "Mexico",
 					"code": "mx",
-					"href": "#"
+					"href": "#",
+					"facet": 20
 				},
 				{
 					"name": "St Vincent",
 					"code": "vc",
-					"href": "#"
+					"href": "#",
+					"facet": 10
 				},
 				{
 					"name": "United States",
 					"code": "us",
-					"href": "#"
+					"href": "#",
+					"facet": 50
 				}
 			]
 		},
@@ -352,7 +357,8 @@
 				{
 					"name": "Belize",
 					"code": "bz",
-					"href": "#"
+					"href": "#",
+					"facet": 5
 				},
 				{
 					"name": "Costa Rica",
@@ -1240,6 +1246,9 @@
 		{"name":"Men", "href":"##"},
 		{"name":"Groups", "href":"##"}
 	],
+	"category-title": "Women",
+	"category-description":"On average, women reinvest 80% of their income in the well-being of their children.",
+	"is-category-page": false,
 	"partners": [
 		{"id":"312", "name":"Abaarso School of Science and Technology"},
 		{"id":"131", "name":"Accion East"},

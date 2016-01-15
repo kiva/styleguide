@@ -52,6 +52,16 @@
 		margin-bottom: rem-calc(20);
 		padding: rem-calc(10) 0;
 		border-bottom: 1px solid $kiva-stroke-gray;
+
+		p {
+			margin-left: rem-calc(10);
+			margin-right: rem-calc(10);
+
+			@media #{$large-up} {
+				margin-left: 0;
+				margin-right: 0;
+			}
+		}
 	}
 
 	.filter-menu-button {
@@ -69,20 +79,20 @@
 	}
 
     .filter-menu-sort {
-	  float: right;
-	  margin-top:-2px;
+		float: right;
+		margin-top:-2px;
 	}
 
     .filter-menu-sort-text {
-	  float:left;
-	  padding-top: 0.3em;
-	  font-weight:bold;
-	  font-size:0.7rem;
+		float:left;
+		padding-top: 0.3rem;
+		font-weight:bold;
+		font-size:0.7rem;
 
-	  @media #{$medium-up} {
-		font-size: 0.9em;
-		margin-top: 0.1rem;
-	  }
+		@media #{$medium-up} {
+			font-size: 0.9em;
+			margin-top: 0.1rem;
+		}
     }
 
     .filter-menu-sort-dropdown {
@@ -91,26 +101,35 @@
 	}
 
     .filter-dropdown {
-	  height:26.2px;
-	  border-color:#333;
-	  font-weight:bold;
-	  font-size:0.6666666667rem;
-	  width:120px;
-	  padding:0 0.5rem;
+		height:26.2px;
+		border-color:#333;
+		font-weight:bold;
+		font-size:0.6666666667rem;
+		width:120px;
+		padding:0 0.5rem;
 
-	  @media #{$medium-up} {
-		font-size: 0.8888888889rem;
-		height: 31.9886px;
-		width: 150px;
-		margin-top: 0.1rem;
-	  }
+		@media #{$medium-up} {
+			font-size: 0.8888888889rem;
+			height: 31.9886px;
+			width: 150px;
+			margin-top: 0.1rem;
+		}
     }
 
     .filter-loan-count{
-	  float: left;
-	  font-weight: bold;
-	  color: #999;
+		float: left;
+		font-weight: bold;
+		color: #999;
 	}
+
+	.category-description {
+		@include small-text();
+
+		@media #{$large-up} {
+			@include body-text();
+		}
+	}
+
 }
 
 a.filter-menu-button:visited {
