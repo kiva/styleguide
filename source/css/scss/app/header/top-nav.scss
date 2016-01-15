@@ -41,6 +41,10 @@
         }
     }
 
+	.header-button:hover {
+		background-color: $kiva-icon-green;
+	}
+
     .amount {
         color: inherit;
         background: none;
