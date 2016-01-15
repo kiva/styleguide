@@ -34,7 +34,10 @@ module.exports = function(grunt) {
                 }
             }
             , vendorCss: {
-                src: ['bower_components/nouislider/distribute/jquery.nouislider.min.css']
+                src: [
+					'bower_components/nouislider/distribute/jquery.nouislider.min.css',
+					'bower_components/responsive-tables/responsive-tables.css'
+				]
                 , dest: 'bower_components/_vendor.scss'
             }
         }
@@ -274,6 +277,7 @@ module.exports = function(grunt) {
 						, select2: 'select2/dist/js/select2.full.js'
                         , slick: 'slick.js/slick/slick.js'
 						, fitvids: 'fitvids/jquery.fitvids.js'
+						, 'responsive-tables': 'responsive-tables/responsive-tables.js'
 					}
 				}
 				, entry: {

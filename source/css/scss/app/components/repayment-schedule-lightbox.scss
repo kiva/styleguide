@@ -4,28 +4,27 @@
 
 	.show-advanced {
 		margin-top: 2rem;
+		margin-bottom: 1rem;
 	}
 
-	.repayment-schedule-wrapper {
-		white-space: nowrap;
-		overflow-x: scroll;
+	.simple-repayment-schedule {
+		width: 100%;
 
-		.simple-repayment-schedule {
-			margin-top: 1rem;
-			width: 100%;
+		tr:nth-of-type(even) {
+			background-color: $kiva-bg-lightgray;
+		}
+		th {
+			background-color: $platinum;
+		}
+		td.shrink {
+			white-space:nowrap
+		}
+		td.expand {
+			width: 99%
+		}
 
-			tr:nth-of-type(even) {
-				background-color: $platinum;
-			}
-			th {
-				background-color: $kiva-bg-lightgray;
-			}
-			td.shrink {
-				white-space:nowrap
-			}
-			td.expand {
-				width: 99%
-			}
+		.month-header {
+			color: $platinum
 		}
 	}
 }
