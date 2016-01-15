@@ -66,6 +66,19 @@ define("Styleguide", ["jquery"], function(__WEBPACK_EXTERNAL_MODULE_2__) { retur
 		, offcanvas : {
 			open_method: 'move'
 		}
+		, reveal: {
+			root_element: '.reveal-modal-bg'
+		}
+	});
+
+	//Blocking scrolling on the body of a page when a lightbox opens
+	$(document).on('open.fndtn.reveal', '[data-reveal]', function () {
+		$('body').css('overflow', 'hidden');
+	});
+
+	//Allowing scrolling on the body of a page when a lightbox is closed
+	$(document).on('close.fndtn.reveal', '[data-reveal]', function () {
+		$('body').css('overflow', 'auto');
 	});
 
 	FastClick.attach(document.body);
