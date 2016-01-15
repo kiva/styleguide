@@ -1,10 +1,10 @@
 {{^amountInBasket}}
-    <div class="lend-action show-for-large-up row">
+    <div class="show-for-large-up row lend-action">
         {{#alreadyLent}}
             <div id="already-supported-message" class="columns small-12">You've supported this loan</div>
         {{/alreadyLent}}
         {{^inBasket}}
-            <div class="lend-button-wrapper columns small-5 lend-values-button">
+            <div class="lend-button-wrapper columns small-4 lend-values-button">
                 <button data-dropdown="lend-button-dropdown" aria-controls="lend-button-dropdown"
                         aria-expanded="false"
                         class="button dropdown lend-action-button loan-amount-button">
@@ -19,7 +19,7 @@
                     {{/lendValues}}
                 </ul>
             </div>
-            <div class="lend-button-wrapper columns small-7 lend-now-button">
+            <div class="lend-button-wrapper columns small-8 lend-now-button">
                 <button class="button lend-action-button lend-button">
                     Lend Now
                 </button>

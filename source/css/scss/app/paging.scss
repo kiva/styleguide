@@ -1,20 +1,24 @@
 .paging {
 	text-align: center;
 
-	.no-touch & .button:hover .icon {
-		stroke: $kiva-textlink-hover;
+	.no-touch & .button {
+		&:hover .icon {
+			stroke: $kiva-textlink-hover;
+		}
+
+		&.disabled:hover .icon, &[disabled]:hover .icon {
+			stroke: $kiva-text-light;
+		}
 	}
 
 	.button {
 		display: inline-block;
-		line-height: 0.65rem;
 		width: calc(50% - #{rem-calc(30)});
 		border-width: 1px;
 		padding-left: 0;
 		padding-right: 0;
 
 		@media #{$medium-up} {
-			line-height: 1.75rem;
 			width: 12rem;
 		}
 

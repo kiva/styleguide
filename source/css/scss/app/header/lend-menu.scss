@@ -27,6 +27,14 @@
             .f16 {
                 margin-right: 0.25rem;
             }
+
+            &.disabled{
+                text-decoration: none;
+                color: $kiva-stroke-gray;
+                &:hover {
+                    color: $kiva-stroke-gray;
+                }
+            }
         }
     }
 }
