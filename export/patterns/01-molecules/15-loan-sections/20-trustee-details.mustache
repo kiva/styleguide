@@ -1,0 +1,74 @@
+<section class="trustee-details">
+    <h2 class="ac-title ac-container" data-kv-accordion aria-controls="ac-trustee-info-body" aria-expanded="true">
+        Trustee
+        <span class="ac-dropdown-icon">
+            <svg class="icon icon-large-chevron">
+                <use xlink:href="#icon-large-chevron"></use>
+            </svg>
+        </span>
+    </h2>
+    <div class="ac-body" id="ac-trustee-info-body" aria-hidden="false">
+        <div class="trustee-image">
+            <img src="{{trusteeImgLink}}" alt="Trustee image">
+        </div>
+        <div class="trustee-data">
+            <div id="trustee-type" class="datum">
+                <a class="black-underlined" data-reveal-id="trustee-type-lightbox">Trustee Type:</a>
+                <strong>{{trusteeType}}</strong>
+            </div>
+            <div id="tier" class="datum">
+                <a class="black-underlined" data-reveal-id="tier-lightbox">Tier:</a>
+                <strong>{{tier}}</strong>
+            </div>
+            <div id="location" class="datum">
+                <a class="black-underlined" data-reveal-id="location-lightbox">Location:</a>
+                <strong>{{location}}</strong>
+            </div>
+            <div id="on-zip-since" class="datum">
+                <a class="black-underlined" data-reveal-id="on-zip-since-lightbox">On Zip Since:</a>
+                <strong>{{onZipSince}}</strong>
+            </div>
+            <div id="loans-endorsed" class="datum">
+                <a class="black-underlined" data-reveal-id="loans-endorsed-lightbox">Loans Endorsed:</a>
+                <strong>{{loansEndorsedTotal}}</strong>
+            </div>
+            <div id="total-value" class="datum">
+                <a class="black-underlined" data-reveal-id="total-value-lightbox">Total Value:</a>
+                <strong>{{totalValue}}</strong>
+            </div>
+            <div id="fundraising-or-raised" class="datum">
+                <a class="black-underlined" data-reveal-id="fundraising-or-raised-lightbox">Findraising/Raised:</a>
+                <strong>{{fundraisingOrRaisedTotal}}</strong>
+            </div>
+            <div id="paying-on-time" class="datum">
+                <a class="black-underlined" data-reveal-id="paying-on-time-lightbox">Paying on Time:</a>
+                <strong>{{payingOnTimeTotal}}</strong>
+            </div>
+            <div id="paying-back-late" class="datum">
+                <a class="black-underlined" data-reveal-id="paying-back-late-lightbox">Paying Back Late:</a>
+                <strong>{{payingBackLateTotal}}</strong>
+            </div>
+            <div id="repaid-in-full" class="datum">
+                <a class="black-underlined" data-reveal-id="repaid-in-full-lightbox">Repaid in Full:</a>
+                <strong>{{repaidInFullTotal}}</strong>
+            </div>
+            <div id="defaulted" class="datum">
+                <a class="black-underlined" data-reveal-id="defaulted-lightbox">Repaid in Full:</a>
+                <strong>{{defaultedTotal}}</strong>
+            </div>
+            <div id="repayment-rate" class="datum">
+                <a class="black-underlined" data-reveal-id="repayment-rate-lightbox">Repayment Rate:</a>
+                <strong>{{repaymentRate}}</strong>
+            </div>
+            {{#trusteeDataHelpText}}
+                {{> molecules-standard-lightbox}}
+            {{/trusteeDataHelpText}}
+        </div>
+        {{#whyEndorse}}
+            <div class="why-endorse">
+                <h3>Why are you endorsing {{borrowerOrGroupName}}?</h3>
+                <p>{{{whyEndorse}}}</p>
+            </div>
+        {{/whyEndorse}}
+    </div>
+</section>

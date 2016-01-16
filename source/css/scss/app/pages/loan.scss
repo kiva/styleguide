@@ -47,6 +47,9 @@
 	.icon-label {
 		float: left;
 	}
+	.inline-list {
+		display: inline;
+	}
 	.icon {
 		width: 30px;
 		height: 30px;
@@ -104,16 +107,6 @@
 			max-width: 85%;
 			margin: 0 auto;
 		}
-	}
-}
-
-.more-loan-info {
-	text-align: center;
-	max-width: 60%;
-	margin: 0 auto;
-	@media #{$small-only} {
-		text-align: left;
-		max-width: 100%;
 	}
 }
 
@@ -220,6 +213,55 @@
 	}
 }
 
+.trustee-details {
+	.ac-body {
+		margin-top: 1rem;
+	}
+
+	.ac-title {
+		position: relative
+	}
+
+	.trustee-image {
+		padding-bottom: 1rem;
+		width: 11rem;
+	}
+
+	.trustee-data {
+		.black-underlined {
+			display: inline-block;
+		}
+		.bold {
+			font-weight: bold;
+			padding-left: 0.3rem;
+		}
+		.datum {
+			strong {
+				display: inline-block;
+			}
+		}
+	}
+
+	.why-endorse {
+		padding-top: 1rem;
+	}
+}
+
+.more-loan-info {
+	.ac-body {
+		margin-top: 1rem;
+	}
+
+	.ac-title {
+		position: relative
+	}
+
+	h3 {
+		font-size: 1rem;
+		font-weight: bold;
+	}
+}
+
 .loan-details {
 	.ac-body {
 		margin-top: 1rem;
@@ -322,12 +364,18 @@
 
 	.lend-values-button {
 		.lend-action-button {
-			padding-right: 1.5rem;
-			padding-left: 0.5rem;
+			padding-right: 0.3rem;
+			padding-left: 0.3rem;
 			line-height: 1.5rem;
 			&:after {
 				right: 0.5rem;
 				border-width: 0.4rem;
+			}
+			.icon {
+				height: 0.75rem;
+				fill: white;
+				width: 0.75rem;
+				transform: rotate(180deg);
 			}
 		}
 	}
