@@ -34,6 +34,10 @@
 }
 
 .about-zip {
+	position: relative;
+	.ac-title-text {
+		margin-right: 26px;
+	}
 	.ac-body {
 		margin-top: 2rem;
 	}
@@ -43,9 +47,16 @@
 	.icon-label {
 		float: left;
 	}
+	.inline-list {
+		display: inline;
+	}
 	.icon {
 		width: 30px;
 		height: 30px;
+	}
+	.icon-large-chevron {
+		position: absolute;
+		top: 0;
 	}
 }
 
@@ -96,16 +107,6 @@
 			max-width: 85%;
 			margin: 0 auto;
 		}
-	}
-}
-
-.more-loan-info {
-	text-align: center;
-	max-width: 60%;
-	margin: 0 auto;
-	@media #{$small-only} {
-		text-align: left;
-		max-width: 100%;
 	}
 }
 
@@ -212,9 +213,24 @@
 	}
 }
 
+.more-loan-info {
+	.ac-body {
+		margin-top: 1rem;
+	}
+
+	.ac-title {
+		position: relative
+	}
+
+	h3 {
+		font-size: 1rem;
+		font-weight: bold;
+	}
+}
+
 .loan-details {
 	.ac-body {
-		margin-top: 2rem;
+		margin-top: 1rem;
 	}
 
 	.ac-title {
@@ -314,12 +330,18 @@
 
 	.lend-values-button {
 		.lend-action-button {
-			padding-right: 1.5rem;
-			padding-left: 0.5rem;
+			padding-right: 0.3rem;
+			padding-left: 0.3rem;
 			line-height: 1.5rem;
 			&:after {
 				right: 0.5rem;
 				border-width: 0.4rem;
+			}
+			.icon {
+				height: 0.75rem;
+				fill: white;
+				width: 0.75rem;
+				transform: rotate(180deg);
 			}
 		}
 	}

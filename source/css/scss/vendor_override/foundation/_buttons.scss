@@ -108,6 +108,7 @@ button.secondary, .button.secondary {
 		color: $kiva-text-light;
 
 		&:hover, &:focus {
+			border-color: $kiva-text-light;
 			color: $kiva-text-light;
 		}
 	}
