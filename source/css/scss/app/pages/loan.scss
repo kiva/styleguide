@@ -110,16 +110,6 @@
 	}
 }
 
-.more-loan-info {
-	text-align: center;
-	max-width: 60%;
-	margin: 0 auto;
-	@media #{$small-only} {
-		text-align: left;
-		max-width: 100%;
-	}
-}
-
 .lender-count {
 	h2, div {
 		display: inline-block;
@@ -257,6 +247,21 @@
 	}
 }
 
+.more-loan-info {
+	.ac-body {
+		margin-top: 1rem;
+	}
+
+	.ac-title {
+		position: relative
+	}
+
+	h3 {
+		font-size: 1rem;
+		font-weight: bold;
+	}
+}
+
 .loan-details {
 	.ac-body {
 		margin-top: 1rem;
@@ -359,12 +364,18 @@
 
 	.lend-values-button {
 		.lend-action-button {
-			padding-right: 1.5rem;
-			padding-left: 0.5rem;
+			padding-right: 0.3rem;
+			padding-left: 0.3rem;
 			line-height: 1.5rem;
 			&:after {
 				right: 0.5rem;
 				border-width: 0.4rem;
+			}
+			.icon {
+				height: 0.75rem;
+				fill: white;
+				width: 0.75rem;
+				transform: rotate(180deg);
 			}
 		}
 	}

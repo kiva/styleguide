@@ -46,13 +46,13 @@ define("Styleguide", ["jquery"], function(__WEBPACK_EXTERNAL_MODULE_2__) { retur
 
 	'use strict';
 
-	__webpack_require__(7);
+	__webpack_require__(8);
 
 	var header = __webpack_require__(5);
-	var filters = __webpack_require__(12);
-	var imagesizes = __webpack_require__(13);
+	var filters = __webpack_require__(13);
+	var imagesizes = __webpack_require__(14);
 	var accordion = __webpack_require__(6);
-	var videoResizing = __webpack_require__(14);
+	var videoResizing = __webpack_require__(7);
 	var borrowerPage = __webpack_require__(15);
 	var categories = __webpack_require__(16);
 
@@ -8115,15 +8115,15 @@ define("Styleguide", ["jquery"], function(__WEBPACK_EXTERNAL_MODULE_2__) { retur
 	var Foundation = __webpack_require__(4);
 	var $ = __webpack_require__(2);
 
-	module.exports = function() {
-	    'use strict';
-
+	/* jshint maxstatements: 50 */
+	module.exports = function () {
+		'use strict';
 		var $search_toggle = $('#search-toggle');
 		var $close_search = $('#close-search');
 		var $search_form = $('#search-form');
 		var $search_box = $('#search-box');
 
-		$search_toggle.click(function(e) {
+		$search_toggle.click(function (e) {
 			e.preventDefault();
 
 			var expanded = $search_toggle.attr('aria-expanded') === 'false';
@@ -8131,11 +8131,11 @@ define("Styleguide", ["jquery"], function(__WEBPACK_EXTERNAL_MODULE_2__) { retur
 			$search_toggle.attr('aria-expanded', expanded);
 			$close_search.attr('aria-expanded', expanded);
 			$search_form
-	            .attr('aria-hidden', $search_form.attr('aria-hidden') === 'false')
-	            .trigger(expanded ? 'show' : 'hide');
+				.attr('aria-hidden', $search_form.attr('aria-hidden') === 'false')
+				.trigger(expanded ? 'show' : 'hide');
 		});
 
-		$close_search.click(function(e) {
+		$close_search.click(function (e) {
 			e.preventDefault();
 
 			$search_toggle.attr('aria-expanded', false);
@@ -8145,7 +8145,7 @@ define("Styleguide", ["jquery"], function(__WEBPACK_EXTERNAL_MODULE_2__) { retur
 				.trigger('hide');
 		});
 
-		var typeahead_menu_repositioning = function() {
+		var typeahead_menu_repositioning = function () {
 			var offset = $search_box.offset();
 			$('.top-nav-search-menu').css({
 				top: (offset.top + $search_box.outerHeight()) + 'px',
@@ -8157,7 +8157,7 @@ define("Styleguide", ["jquery"], function(__WEBPACK_EXTERNAL_MODULE_2__) { retur
 		$search_box.on('typeahead:open', typeahead_menu_repositioning);
 
 
-		var close_button_visibility = function() {
+		var close_button_visibility = function () {
 			$close_search.attr('aria-hidden', Foundation.utils.is_large_up());
 		};
 
@@ -8165,11 +8165,10 @@ define("Styleguide", ["jquery"], function(__WEBPACK_EXTERNAL_MODULE_2__) { retur
 		close_button_visibility();
 
 		// Throttled resize function
-		$(window).on('resize', Foundation.utils.throttle(function() {
+		$(window).on('resize', Foundation.utils.throttle(function () {
 			close_button_visibility();
 			typeahead_menu_repositioning();
 		}, 200));
-
 
 
 		// Lend Mega-Menu
@@ -8178,7 +8177,7 @@ define("Styleguide", ["jquery"], function(__WEBPACK_EXTERNAL_MODULE_2__) { retur
 		var $tertiary_links = $('.lend-menu-large .tertiary-link');
 		var $tertiary_lists = $('.lend-menu-large .tertiary-list');
 
-		$close_section.click(function(e) {
+		$close_section.click(function (e) {
 			e.preventDefault();
 
 			$tertiary_links.attr('aria-expanded', false);
@@ -8188,12 +8187,12 @@ define("Styleguide", ["jquery"], function(__WEBPACK_EXTERNAL_MODULE_2__) { retur
 			$close_section.attr('aria-hidden', true);
 		});
 
-		$('.lend-menu-large [data-kv-toggle]').click(function(e) {
+		$('.lend-menu-large [data-kv-toggle]').click(function (e) {
 			e.preventDefault();
 
 			var $this = $(this);
 
-			if($this.attr('aria-expanded') === 'true') {
+			if ($this.attr('aria-expanded') === 'true') {
 				$category_section.removeClass('slide-left');
 				$close_section.attr('aria-hidden', true);
 			}
@@ -8208,11 +8207,11 @@ define("Styleguide", ["jquery"], function(__WEBPACK_EXTERNAL_MODULE_2__) { retur
 
 
 		// kv-toggle
-		$('[data-kv-toggle]').click(function(e) {
+		$('[data-kv-toggle]').click(function (e) {
 			e.preventDefault();
 
 			var $this = $(this);
-			var $target = $('#'+$this.attr('aria-controls'));
+			var $target = $('#' + $this.attr('aria-controls'));
 			var hidden = $target.attr('aria-hidden') === 'false';
 
 			$this.attr('aria-expanded', $this.attr('aria-expanded') === 'false');
@@ -8223,8 +8222,22 @@ define("Styleguide", ["jquery"], function(__WEBPACK_EXTERNAL_MODULE_2__) { retur
 
 
 		// close window when normal links clicked
-		$('#lend-dropdown a:not([data-kv-toggle],[href="#"])').click(function() {
+		$('#lend-dropdown a:not([data-kv-toggle],[href="#"])').click(function () {
 			Foundation.libs.dropdown.close($('#lend-dropdown'));
+		});
+
+		// Resets lend-menu-large and lend-menu-small
+		$('[data-dropdown=lend-dropdown]').click(function (e) {
+			e.preventDefault();
+			//lend-menu-large
+			$category_section.removeClass('slide-left');
+			$close_section.attr('aria-hidden', true);
+			$tertiary_lists.attr('aria-hidden', true);
+			$tertiary_links.attr('aria-expanded', false);
+
+			// lend-menu-small
+			$('.lend-menu-small li>a').attr('aria-expanded', false);
+			$('.lend-menu-small ul').attr('aria-hidden', true);
 		});
 	};
 
@@ -8307,18 +8320,30 @@ define("Styleguide", ["jquery"], function(__WEBPACK_EXTERNAL_MODULE_2__) { retur
 /* 7 */
 /***/ function(module, exports, __webpack_require__) {
 
+	var $ = __webpack_require__(2);
+
+	module.exports = function () {
+	    'use strict';
+
+	    $('.loan-image-wrap').fitVids();
+	};
+
+/***/ },
+/* 8 */
+/***/ function(module, exports, __webpack_require__) {
+
 	__webpack_require__(2);
 	__webpack_require__(3);
 
 	__webpack_require__(4);
 
-	__webpack_require__(8);
 	__webpack_require__(9);
 	__webpack_require__(10);
 	__webpack_require__(11);
+	__webpack_require__(12);
 
 /***/ },
-/* 8 */
+/* 9 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(__webpack_provided_window_dot_jQuery) {/*! noUiSlider - 7.0.10 - 2014-12-27 14:50:46 */
@@ -10639,7 +10664,7 @@ define("Styleguide", ["jquery"], function(__WEBPACK_EXTERNAL_MODULE_2__) { retur
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(2)))
 
 /***/ },
-/* 9 */
+/* 10 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;var require;var require;/* WEBPACK VAR INJECTION */(function($) {/*!
@@ -16927,7 +16952,7 @@ define("Styleguide", ["jquery"], function(__WEBPACK_EXTERNAL_MODULE_2__) { retur
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(2)))
 
 /***/ },
-/* 10 */
+/* 11 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*
@@ -19575,7 +19600,7 @@ define("Styleguide", ["jquery"], function(__WEBPACK_EXTERNAL_MODULE_2__) { retur
 
 
 /***/ },
-/* 11 */
+/* 12 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(__webpack_provided_window_dot_jQuery) {/*global jQuery */
@@ -19649,7 +19674,7 @@ define("Styleguide", ["jquery"], function(__WEBPACK_EXTERNAL_MODULE_2__) { retur
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(2)))
 
 /***/ },
-/* 12 */
+/* 13 */
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = function() {
@@ -19731,7 +19756,7 @@ define("Styleguide", ["jquery"], function(__WEBPACK_EXTERNAL_MODULE_2__) { retur
 
 
 /***/ },
-/* 13 */
+/* 14 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var $ = __webpack_require__(2);
@@ -19788,18 +19813,6 @@ define("Styleguide", ["jquery"], function(__WEBPACK_EXTERNAL_MODULE_2__) { retur
 
 	};
 
-
-/***/ },
-/* 14 */
-/***/ function(module, exports, __webpack_require__) {
-
-	var $ = __webpack_require__(2);
-
-	module.exports = function () {
-	    'use strict';
-
-	    $('.loan-image-wrap').fitVids();
-	};
 
 /***/ },
 /* 15 */

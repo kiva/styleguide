@@ -5,6 +5,7 @@
     "<p>His hope for the future is to be financially stable.<br> He has some other ideas too.</p><p>For example, he wants to have another paragraph.</p>"
   ],
   "borrowersList": "Sarah, John, Anna*",
+  "previousLoanDetails": null,
   "translation": {
     "language": "Spanish",
     "reviewerName": "Tayah Wheeland",
