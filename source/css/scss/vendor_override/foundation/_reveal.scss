@@ -1,51 +1,20 @@
 // Kiva overrides to default Foundation _reveal.scss
 
-div.reveal-modal-bg {
-	background: black;
-	opacity: .88;
-	z-index: 1504;
+.lightboxLink {
+	//background: black;
+	//opacity: .88;
+	//background-color: rgba(0, 0, 0, 0.80);
+	//z-index: 1504;
 }
-
-.reveal-modal {
-	border: none;
-	border-radius: 0;
-	background: none;
-	box-shadow: none;
-	z-index: 1505;
-
-	&.toback {
-		z-index: 1503;
-	}
-
-	.flex-video {
-		margin-top: rem-calc(30);
-	}
-}
-
-a.close-reveal-modal {
-	top: rem-calc(-50);
-
-	.icon.icon-x {
-		stroke: $kiva-green;
-		height: rem-calc(30);
-		width: rem-calc(30);
-	}
-
-}
-
-.standard-lightbox {
+div.lightboxWrapper {
 	outline: 0;
-	background: rgba(0, 0, 0, 0);
+	background: rgba(0, 0, 0, 0.85);
 	visibility: hidden;
 	position: absolute;
 	top: 0;
 	height: 100%;
 
-	.lightbox-text {
-		padding-top: rem-calc(70);
-	}
-
-	a.close-reveal-modal {
+	a.closeRevealModal {
 		float: right;
 		padding-top: rem-calc(20);
 		padding-right: rem-calc(20);
@@ -53,7 +22,30 @@ a.close-reveal-modal {
 		.icon.icon-x {
 			height: rem-calc(40);
 			width: rem-calc(40);
+			stroke: $kiva-accent-green;
 		}
 	}
+
+	div.lightboxContent {
+		padding-top: rem-calc(70);
+	}
+//need to figure out what this is used for
+	//&.toback {
+	//	z-index: 1503;
+	//}
+
+	.flex-video {
+		margin-top: rem-calc(30);
+	}
 }
+
+
+
+//.reveal-modal {
+// 	border: none;
+//	border-radius: 0;
+//	background: none;
+//	box-shadow: none;
+//	z-index: 1505;
+
 
