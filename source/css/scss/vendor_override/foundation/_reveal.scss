@@ -34,19 +34,10 @@ div.lightbox-wrapper {
 
 	.white-background-box {
 		background-color: $white;
-		height: 400px;
-		width: 400px;
-		//z-index: 1503;
+		padding: rem-calc(20);
+		width: 95%;
 		margin: auto auto;
 	}
 }
-
-
-
-//.reveal-modal {
-// 	border: none;
-//	border-radius: 0;
-//	background: none;
-//	box-shadow: none;
 
 
