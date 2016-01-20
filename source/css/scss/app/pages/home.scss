@@ -3,9 +3,9 @@
 	margin: 0;
 
 	.icon-small-chevron {
-		width: 80px;
-		height: 80px;
-		margin-top: -40px;
+		width: rem-calc(80);
+		height: rem-calc(80);
+		margin-top: rem-calc(-40);
 		position: absolute;
 		top: 50%;
 	}
@@ -19,7 +19,7 @@
 		display: none;
 		position: absolute;
 		top: 0;
-		width: 80px;
+		width: rem-calc(80);
 		height: 100%;
 		margin-top: 0;
 		transform: rotate(180deg);
@@ -42,7 +42,7 @@
 
 		.icon {
 			transform: rotate(270deg);
-			margin-left: 10px;
+			margin-left: rem-calc(10);
 		}
 	}
 
@@ -51,7 +51,7 @@
 
 		.icon {
 			transform: rotate(90deg);
-			margin-left: -10px;
+			margin-left: rem-calc(-10);
 		}
 	}
 
@@ -91,7 +91,7 @@
 		padding: 0;
 		cursor: pointer;
 		color: transparent;
-		border: 2px solid $white;
+		border: rem-calc(2) solid $white;
 		border-radius: rem-calc(18);
 		outline: none;
 		background-color: black;
