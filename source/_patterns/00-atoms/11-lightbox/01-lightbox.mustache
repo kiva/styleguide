@@ -4,16 +4,16 @@
 3: Paste this structure within your new lightbox file
 4: Add your lightbox specific content within the lightboxContent div of this code structure, everything else should stay the same }}
 
-<a href="#" class="lightboxTriggerLink" data-reveal-id="{{dataRevealId}}">{{lightboxTriggerLinkText}}</a>
-<div id="{{dataRevealId}}" class="{{neededClass}} lightboxWrapper" data-reveal aria-hidden="true" role="dialog">
+<a href="#" class="lightbox-trigger-link" data-reveal-id="{{dataRevealId}}">{{lightboxTriggerLinkText}}</a>
+<div id="{{dataRevealId}}" class="{{neededClass}} lightbox-wrapper" data-reveal aria-hidden="true" role="dialog">
     <div class="row">
         <div class="columns small-12">
-            <a class="closeRevealModal" aria-label="Close">
+            <a class="close-reveal-modal" aria-label="Close">
                 <svg class="icon icon-x">
                     <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-x"></use>
                 </svg>
             </a>
-            <div class="lightboxContent white">
+            <div class="lightbox-content white">
                 {{! Add your specific lightbox content here, you shouldn't have to touch the other lines of code wihtin this file.}}
             </div>
         </div>

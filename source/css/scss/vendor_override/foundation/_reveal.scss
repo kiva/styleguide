@@ -1,13 +1,14 @@
 // Kiva overrides to default Foundation _reveal.scss
-div.lightboxWrapper {
+div.lightbox-wrapper {
 	outline: 0;
 	background: rgba(0, 0, 0, 0.85);
 	visibility: hidden;
 	position: absolute;
 	top: 0;
 	height: 100%;
+	z-index: 1505;
 
-	a.closeRevealModal {
+	a.close-reveal-modal {
 		float: right;
 		padding-top: rem-calc(20);
 		padding-right: rem-calc(20);
@@ -19,19 +20,19 @@ div.lightboxWrapper {
 		}
 	}
 
-	div.lightboxContent {
+	div.lightbox-content {
 		padding-top: rem-calc(70);
 	}
-//need to figure out what this is used for
-	//&.toback {
-	//	z-index: 1503;
-	//}
+
+	&.toback {
+		z-index: 1503;
+	}
 
 	.flex-video {
 		margin-top: rem-calc(30);
 	}
 
-	.whiteBackgroundBox {
+	.white-background-box {
 		background-color: $white;
 		height: 400px;
 		width: 400px;
@@ -47,6 +48,5 @@ div.lightboxWrapper {
 //	border-radius: 0;
 //	background: none;
 //	box-shadow: none;
-//	z-index: 1505;
 
 
