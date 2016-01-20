@@ -44,6 +44,17 @@ $headline-font-size-small-reduction	: rem-calc(26);
 $headline-font-size-extra-small-reduction	: rem-calc(31);
 $headline-line-height-reduction	: rem-calc(32);
 
+$slide-overlay-font-size			: rem-calc(32);
+$slide-overlay-line-height			: rem-calc(36);
+$slide-overlay-font-size-reduction	: rem-calc(10);
+$slide-overlay-line-height-reduction: rem-calc(6);
+$slide-overlay-short-addition		: rem-calc(4);
+$slide-overlay-very-short-addition	: rem-calc(8);
+$slide-overlay-long-reduction		: rem-calc(-4);
+$slide-overlay-attribution-font-size: rem-calc(24);
+$slide-overlay-attribution-line-height: rem-calc(28);
+$slide-overlay-attribution-small-size: rem-calc(18);
+
 $impact-font-size					: rem-calc(45);
 $impact-line-height					: rem-calc(54);
 $impact-font-size-med-reduction		: rem-calc(9);
@@ -80,7 +91,7 @@ $paragraph-font-size: $body-font-size;
 $paragraph-line-height: $body-line-height;
 
 @mixin text-shadow() {
-	text-shadow: 1px 2px 3px #666;
+	text-shadow: 1px 1px 3px #333;
 }
 
 @mixin small-text() {
@@ -111,6 +122,21 @@ $paragraph-line-height: $body-line-height;
 @mixin large-featured-text() {
 	font-size: $feature-font-size;
 	line-height: $feature-line-height;
+}
+
+@mixin slide-overlay-text($adjustment: 0) {
+	font-size: $slide-overlay-font-size - $slide-overlay-font-size-reduction + $adjustment;
+	line-height: $slide-overlay-line-height - $slide-overlay-line-height-reduction + $adjustment;
+
+	@media #{$small-medium-only} {
+		font-size: $slide-overlay-font-size + $adjustment;
+		line-height: $slide-overlay-line-height + $adjustment;
+	}
+
+	@media #{$large-up} {
+		font-size: $slide-overlay-font-size + $adjustment;
+		line-height: $slide-overlay-line-height + $adjustment;
+	}
 }
 
 @mixin page-title() {
@@ -159,7 +185,62 @@ $paragraph-line-height: $body-line-height;
 .overlay {
 	@include featured-text();
 	@include text-shadow();
-	color: $white;
+	@extend .white;
+}
+
+.overlay-bold {
+	@extend .overlay;
+	font-weight: $font-weight-bold;
+}
+
+.slide-overlay {
+	@include text-shadow();
+	@extend .white;
+	font-weight: $font-weight-bold;
+}
+
+.slide-overlay-long {
+	@extend .slide-overlay;
+	@include slide-overlay-text();
+
+	@media #{$x-small-only} {
+		@include slide-overlay-text($slide-overlay-long-reduction);
+	}
+
+	@media #{$med-large-only} {
+		@include slide-overlay-text($slide-overlay-long-reduction * 2);
+	}
+
+	@media #{$upper-large-only} {
+		@include slide-overlay-text($slide-overlay-long-reduction);
+	}
+}
+
+.slide-overlay-short {
+	@extend .slide-overlay;
+	@include slide-overlay-text($slide-overlay-short-addition)
+}
+
+.slide-overlay-very-short {
+	@extend .slide-overlay;
+	@include slide-overlay-text($slide-overlay-very-short-addition)
+}
+
+.slide-overlay-attribution
+, .slide-overlay-attribution-detail {
+	@extend .slide-overlay;
+	font-size: $slide-overlay-attribution-small-size;
+	line-height: $slide-overlay-attribution-small-size;
+
+	@media #{$small-medium-only} {
+		font-size: $slide-overlay-attribution-font-size;
+		line-height: $slide-overlay-attribution-line-height;
+	}
+
+	@media #{$xxlarge-up} {
+		font-size: $slide-overlay-attribution-font-size;
+		line-height: $slide-overlay-attribution-line-height;
+	}
 }
 
 .page-title {

@@ -31,13 +31,15 @@ module.exports = function () {
 			.trigger('hide');
 	});
 
-	var typeahead_menu_repositioning = function () {
-		var offset = $search_box.offset();
-		$('.top-nav-search-menu').css({
-			top: (offset.top + $search_box.outerHeight()) + 'px',
-			left: offset.left + 'px',
-			width: $search_box.outerWidth() + 'px'
-		});
+	var typeahead_menu_repositioning = function() {
+		if ($search_box) {
+			var offset = $search_box.offset();
+			$('.top-nav-search-menu').css({
+				top: (offset.top + $search_box.outerHeight()) + 'px',
+				left: offset.left + 'px',
+				width: $search_box.outerWidth() + 'px'
+			});
+		}
 	};
 
 	$search_box.on('typeahead:open', typeahead_menu_repositioning);
