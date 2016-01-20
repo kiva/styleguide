@@ -41,10 +41,6 @@
         }
     }
 
-	.header-button:hover {
-		background-color: $kiva-icon-green;
-	}
-
     .amount {
         color: inherit;
         background: none;
@@ -133,6 +129,9 @@
     }
 }
 
+.n-touch .top-nav .header-button:hover {
+	background-color: $kiva-icon-green;
+}
 
 .basket-bar {
     position: fixed;
