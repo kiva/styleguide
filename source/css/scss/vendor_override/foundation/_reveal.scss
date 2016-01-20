@@ -30,6 +30,14 @@ div.lightboxWrapper {
 	.flex-video {
 		margin-top: rem-calc(30);
 	}
+
+	.whiteBackgroundBox {
+		background-color: $white;
+		height: 400px;
+		width: 400px;
+		//z-index: 1503;
+		margin: auto auto;
+	}
 }
 
 

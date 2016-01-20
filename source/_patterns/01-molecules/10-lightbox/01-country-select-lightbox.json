@@ -1,0 +1,7 @@
+{
+  "_comment": "the needed class in this file is passed through only in styleguide, on the Kiva Main side it's supplied when alightbox is constructed on the page.",
+  "neededClass": "reveal-modal-bg",
+
+  "lightboxTriggerLinkText": "This is a link for the country select lightbox.",
+  "dataRevealId": "country-select-lightbox"
+}
