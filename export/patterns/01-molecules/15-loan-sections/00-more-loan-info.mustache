@@ -9,7 +9,9 @@
     </h2>
     <div class="ac-body" id="ac-more-loan-info-body" aria-hidden="false">
         {{#fieldPartnerName}}
-            {{{moreInfoAboutLoan}}}
+            <div class="override-styling-from-db">
+                {{{moreInfoAboutLoan}}}
+            </div>
             {{#moreAboutFieldPartner}}
                 <h3>About {{fieldPartnerName}}:</h3>
                 {{#paragraphs}}
