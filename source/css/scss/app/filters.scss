@@ -322,6 +322,15 @@
 		margin: 0;
 		color: #D8D8C8;
 	}
+
+	.country-facet {
+		font-size: 0.8em;
+		color: $kiva-text-light;
+	}
+
+	.country-label-disabled {
+		color: $kiva-text-light;
+	}
 }
 
 .reveal-modal {
