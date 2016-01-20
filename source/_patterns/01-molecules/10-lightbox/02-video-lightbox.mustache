@@ -1,13 +1,13 @@
 {{!To make an element show a lightbox your triggers DATA-REVEAL-ID and the modal's ID need to match}}
-<a href="#" data-reveal-id="{{lightbox.modal-reveal-id}}">{{lightbox.modal-trigger-content}}</a>
+{{!<a href="#" data-reveal-id="{{lightbox.modal-reveal-id}}{{!">
 
 <section class="videoLightbox">
-    <div id="{{lightbox.modal-reveal-id}}" class="reveal-modal" data-reveal aria-labelledby="modalTitle" aria-hidden="true" role="video">
+    <div id="{{lightbox.modal-reveal-id}}{{!" class="reveal-modal" data-reveal aria-labelledby="modalTitle" aria-hidden="true" role="video">
 
-        <h1 id="modalTitle" class="white">{{lightbox.video.youtube.modal-title}}</h1>
+        <h1 id="modalTitle" class="white">{{lightbox.video.youtube.modal-title}}{{!</h1>
 
         <div class="flex-video widescreen vimeo">
-            <iframe width="{{lightbox.video.youtube.width}}" height="{{lightbox.video.youtube.height}}" src="{{lightbox.video.youtube.src}}" frameborder="{{lightbox.video.youtube.frameborder}}" allowfullscreen></iframe>
+            <iframe width="{{lightbox.video.youtube.width}}{{!" height="{{lightbox.video.youtube.height}}{{!" src="{{lightbox.video.youtube.src}}{{!" frameborder="{{lightbox.video.youtube.frameborder}}{{!" allowfullscreen></iframe>
         </div>
 
         <a class="close-reveal-modal" aria-label="Close">
@@ -16,4 +16,32 @@
             </svg>
         </a>
     </div>
-</section>
+</section>}}
+
+
+
+<a href="#" class="lightboxTriggerLink" data-reveal-id="{{dataRevealId}}">{{lightboxTriggerLinkText}}</a>
+<div id="{{dataRevealId}}" class="{{neededClass}} lightboxWrapper" data-reveal aria-hidden="true" role="dialog">
+	<div class="row">
+		<div class="columns small-12">
+			<a class="closeRevealModal" aria-label="Close">
+				<svg class="icon icon-x">
+					<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-x"></use>
+				</svg>
+			</a>
+			<div class="lightboxContent white">
+				{{!The content within this div is the only change from the copy and pasted lightbox atom. If you need to
+				 make changes to this lightbox outside of this div those changes need to be made to every lightbox file within the
+				 Molecules/10-lightbox folder. }}
+
+				{{!TODO: on large screens the video opens larger than the black background, gotta fix that.
+				TODO: Also, I want to know where/how Jim has passed through the title and size of this video.}}
+				<h1 class="white">{{lightbox.video.youtube.modal-title}}</h1>
+
+				<div class="flex-video widescreen vimeo">
+					<iframe width="{{lightbox.video.youtube.width}}" height="{{lightbox.video.youtube.height}}" src="{{lightbox.video.youtube.src}}" frameborder="{{lightbox.video.youtube.frameborder}}" allowfullscreen></iframe>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
