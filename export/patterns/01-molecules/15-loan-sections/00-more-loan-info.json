@@ -1,12 +1,13 @@
 {
   "borrowerOrGroupName": "John Group",
-  "previousLoanLink": "https://confluence.kiva.org/display/BCP/Borrower+Profile+Page#BorrowerProfilePage-13.1",
-  "moreInfoAboutLoan": "<p>A loan of $275 helps John to buy a dairy cow so that he can increase the amount of milk he supplies and thereby earn more income.</p>",
+  "moreInfoAboutLoan": "<span style=\"color: rgb(34, 34, 34); font-family: arial,sans-serif; font-size: small;\">This loan is designed to provide growth opportunities to elderly people. People 60 years old and older in El Salvador have limited access to credit, even when fully physically and mentally capable of working. The reason is insurance companies don’t cover people who are over 65 and require them to show a health certificate if they are over 60. This potential for health expenses makes financial institutions less willing to take on the risk of the loan. By funding this loan, you are helping elderly people access opportunities in El Salvador.</span>",
   "fieldPartnerName": "HKL",
-  "moreAboutFieldPartner": [
-    "Apoyo Integral (Apoyo) is a nonprofit organization offering financial products that enable clients to increase their working capital, purchase fixed assets, buy and remodel homes, expand agricultural business and more. The organization’s target group is businessmen and women who have already established their businesses but need financial support to strengthen or expand them.",
-    "Like Kiva, Apoyo is committed to empowering women involved in business activities in rural areas. Kiva lenders’ funds will be used to expand these services to an even greater number of poor clients in rural areas."
-  ],
+  "moreAboutFieldPartner": {
+    "paragraphs": [
+      "Apoyo Integral (Apoyo) is a nonprofit organization offering financial products that enable clients to increase their working capital, purchase fixed assets, buy and remodel homes, expand agricultural business and more. The organization’s target group is businessmen and women who have already established their businesses but need financial support to strengthen or expand them.",
+      "Like Kiva, Apoyo is committed to empowering women involved in business activities in rural areas. Kiva lenders’ funds will be used to expand these services to an even greater number of poor clients in rural areas."
+    ]
+  },
   "dualStatementNote": "<p>This is a note on the dual statement.</p>",
   "directBusinessDescription": null,
   "directLoanPurpose": null

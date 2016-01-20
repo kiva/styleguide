@@ -260,6 +260,16 @@
 		font-size: 1rem;
 		font-weight: bold;
 	}
+
+	.override-styling-from-db span[style] {
+		color: $kiva-text-dark !important;
+		font-family: PostGrotesk, Arial, Helvetica, sans-serif !important;
+		font-size: 1rem !important;
+	}
+
+	.override-styling-from-db {
+		margin-bottom: 1rem;
+	}
 }
 
 .loan-details {
