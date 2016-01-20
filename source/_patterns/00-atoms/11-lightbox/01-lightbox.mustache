@@ -1,3 +1,9 @@
+{{!This is the structure that should be used for all lightboxes. Steps to create a new lightbox are as follows:
+1: Create a new molecule file within the 10-lightbox folder titled appropriately for your new lightbox
+2: Copy everything in this file.
+3: Paste this structure within your new lightbox file
+4: Add your lightbox specific content within the lightboxContent div of this code structure, everything else should stay the same }}
+
 <a href="#" class="lightboxTriggerLink" data-reveal-id="{{dataRevealId}}">{{lightboxTriggerLinkText}}</a>
 <div id="{{dataRevealId}}" class="{{neededClass}} lightboxWrapper" data-reveal aria-hidden="true" role="dialog">
     <div class="row">
@@ -8,7 +14,7 @@
                 </svg>
             </a>
             <div class="lightboxContent white">
-                {{!different lightbox variation fills go in here.}}
+                {{! Add your specific lightbox content here, you shouldn't have to touch the other lines of code wihtin this file.}}
             </div>
         </div>
     </div>
