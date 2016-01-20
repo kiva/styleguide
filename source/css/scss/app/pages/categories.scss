@@ -1,5 +1,6 @@
 .category-card {
 	@include preserve-3d;
+	overflow: hidden;
 	position: relative;
 	width: 100%;
 	padding-bottom: 56.17%;
