@@ -1,4 +1,4 @@
-<a href="#" class="lightboxLink" data-reveal-id="{{dataRevealId}}">{{lightboxLinkText}}</a>
+<a href="#" class="lightboxTriggerLink" data-reveal-id="{{dataRevealId}}">{{lightboxTriggerLinkText}}</a>
 <div id="{{dataRevealId}}" class="{{neededClass}} lightboxWrapper" data-reveal aria-hidden="true" role="dialog">
     <div class="row">
         <div class="columns small-12">
@@ -8,6 +8,9 @@
                 </svg>
             </a>
             <div class="lightboxContent white">
+				{{!The content within this div is the only change from the copy and pasted lightbox atom. If you need to
+				 make another other changes to this lightbox they need to be made to every lightbox file within the
+				 Molecules/10-lightbox folder. }}
                 <p class="featured">{{{descriptionTitle}}}</p>
                 <p>{{{descriptionText}}}</p>
             </div>

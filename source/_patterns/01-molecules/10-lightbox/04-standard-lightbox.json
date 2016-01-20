@@ -2,7 +2,7 @@
   	"_comment": "the needed class in this file is passed through only in styleguide, on the Kiva Main side it's supplied when alightbox is constructed on the page.",
   	"neededClass": "reveal-modal-bg",
 
-  	"lightboxLinkText": "This is a link for a lightbox.",
+  	"lightboxTriggerLinkText": "This is a link for a lightbox.",
 	"dataRevealId": "standard-lightbox",
   	"descriptionTitle": "Repayment Term",
   	"descriptionText": "A repayment term is the period over which a loan can be rapid by the borrower."
