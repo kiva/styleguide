@@ -46,13 +46,13 @@
 
 	'use strict';
 
-	__webpack_require__(7);
+	__webpack_require__(8);
 
 	var header = __webpack_require__(5);
-	var filters = __webpack_require__(12);
-	var imagesizes = __webpack_require__(13);
+	var filters = __webpack_require__(13);
+	var imagesizes = __webpack_require__(14);
 	var accordion = __webpack_require__(6);
-	var videoResizing = __webpack_require__(14);
+	var videoResizing = __webpack_require__(7);
 	var borrowerPage = __webpack_require__(15);
 	var categories = __webpack_require__(16);
 
@@ -8320,18 +8320,30 @@
 /* 7 */
 /***/ function(module, exports, __webpack_require__) {
 
+	var $ = __webpack_require__(2);
+
+	module.exports = function () {
+	    'use strict';
+
+	    $('.loan-image-wrap').fitVids();
+	};
+
+/***/ },
+/* 8 */
+/***/ function(module, exports, __webpack_require__) {
+
 	__webpack_require__(2);
 	__webpack_require__(3);
 
 	__webpack_require__(4);
 
-	__webpack_require__(8);
 	__webpack_require__(9);
 	__webpack_require__(10);
 	__webpack_require__(11);
+	__webpack_require__(12);
 
 /***/ },
-/* 8 */
+/* 9 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(__webpack_provided_window_dot_jQuery) {/*! noUiSlider - 7.0.10 - 2014-12-27 14:50:46 */
@@ -10652,7 +10664,7 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(2)))
 
 /***/ },
-/* 9 */
+/* 10 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;var require;var require;/* WEBPACK VAR INJECTION */(function($) {/*!
@@ -16940,7 +16952,7 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(2)))
 
 /***/ },
-/* 10 */
+/* 11 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*
@@ -19588,7 +19600,7 @@
 
 
 /***/ },
-/* 11 */
+/* 12 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(__webpack_provided_window_dot_jQuery) {/*global jQuery */
@@ -19662,7 +19674,7 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(2)))
 
 /***/ },
-/* 12 */
+/* 13 */
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = function() {
@@ -19744,7 +19756,7 @@
 
 
 /***/ },
-/* 13 */
+/* 14 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var $ = __webpack_require__(2);
@@ -19801,18 +19813,6 @@
 
 	};
 
-
-/***/ },
-/* 14 */
-/***/ function(module, exports, __webpack_require__) {
-
-	var $ = __webpack_require__(2);
-
-	module.exports = function () {
-	    'use strict';
-
-	    $('.loan-image-wrap').fitVids();
-	};
 
 /***/ },
 /* 15 */
