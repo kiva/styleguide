@@ -1,8 +1,9 @@
-{{!This is the structure that should be used for all lightboxes. Steps to create a new lightbox are as follows:
-1: Create a new molecule file within the 10-lightbox folder titled appropriately for your new lightbox
+{{!This is the structure that should be used for all lightboxes.
+Steps to create a new lightbox are as follows:
+1: Create a new molecule file within the Molecule/10-lightbox folder titled appropriately for your new lightbox
 2: Copy everything in this file.
 3: Paste this structure within your new lightbox file
-4: Add your lightbox specific content within the lightboxContent div of this code structure, everything else should stay the same }}
+4: Add your lightbox specific content within the lightbox-content div of this code structure, everything else should stay the same }}
 
 <a href="#" class="lightbox-trigger-link" data-reveal-id="{{dataRevealId}}">{{lightboxTriggerLinkText}}</a>
 <div id="{{dataRevealId}}" class="{{neededClass}} lightbox-wrapper" data-reveal aria-hidden="true" role="dialog">
