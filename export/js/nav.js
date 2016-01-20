@@ -1486,8 +1486,7 @@ define("Styleguide", ["jquery"], function(__WEBPACK_EXTERNAL_MODULE_2__) { retur
 
 
 	/*** EXPORTS FROM exports-loader ***/
-	module.exports = window.Modernizr
-	}.call(window));
+	module.exports = window.Modernizr}.call(window));
 
 /***/ },
 /* 4 */
@@ -8117,13 +8116,15 @@ define("Styleguide", ["jquery"], function(__WEBPACK_EXTERNAL_MODULE_2__) { retur
 				.trigger('hide');
 		});
 
-		var typeahead_menu_repositioning = function () {
-			var offset = $search_box.offset();
-			$('.top-nav-search-menu').css({
-				top: (offset.top + $search_box.outerHeight()) + 'px',
-				left: offset.left + 'px',
-				width: $search_box.outerWidth() + 'px'
-			});
+		var typeahead_menu_repositioning = function() {
+			if ($search_box) {
+				var offset = $search_box.offset();
+				$('.top-nav-search-menu').css({
+					top: (offset.top + $search_box.outerHeight()) + 'px',
+					left: offset.left + 'px',
+					width: $search_box.outerWidth() + 'px'
+				});
+			}
 		};
 
 		$search_box.on('typeahead:open', typeahead_menu_repositioning);
