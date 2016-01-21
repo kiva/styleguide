@@ -31,23 +31,26 @@
 		<span><a href="#" class="hide-for-small filter-links filter-clear-button clear-touch">Clear all</a></span>
 		<span><a href="#" class="hide-for-small filter-links save-search-button clear-touch"
 				 data-reveal-id="save-search-modal">Save search</a></span>
-		<div id="save-search-modal" class="reveal-modal" data-reveal>
-			<div class="row">
-				<form class="save-search-form">
-					<div class="columns small-7">
-						<input type="text" name="save-search-text">
-					</div>
-					<div class="columns small-4">
-						<button class="button submit-save-search">Save Search</button>
-					</div>
-					<div class="columns small-offset-1"></div>
-				</form>
-			</div>
+	</div>
+{{/is-category-page}}
+
+<div id="save-search-modal" class="reveal-modal" data-reveal>
+	<div class="row">
+		<div class="columns small-12">
 			<a class="close-reveal-modal" aria-label="Close">
 				<svg class="icon icon-x">
 					<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-x"></use>
 				</svg>
 			</a>
+			<div class="lightbox-content white">
+				<div class="columns small-7">
+					<input type="text" name="save-search-text">
+				</div>
+				<div class="columns small-4">
+					<button class="button submit-save-search">Save Search</button>
+				</div>
+				<div class="columns small-offset-1"></div>
+			</div>
 		</div>
 	</div>
-{{/is-category-page}}
+</div>
