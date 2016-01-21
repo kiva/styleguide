@@ -35,19 +35,24 @@
 		}
 		max-width: none;
 
+		.row {
+			display: flex;
+			flex-flow: row wrap;
+		}
+
 		.line-break {
 			width: 100%;
 		}
 		.left-content {
 			@media #{$large-up} {
-				min-height: 80rem;
+				flex-basis: 58.3%;
 				background-color: $kiva-bg-darkgray;
 				border-right: 1px solid $gray;
 			}
 		}
 
 		.right-content {
-			min-height: 80rem;
+			flex-basis: 41.7%;
 			background-color: $kiva-stroke-gray;
 		}
 	}
