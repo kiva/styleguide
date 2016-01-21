@@ -1,0 +1,40 @@
+{
+  "repayments": [
+    {
+      "month": "September 2015",
+      "expectedRepayment": "$84.00",
+      "actualRepayment": "Available Sep 1",
+      "comments": null
+    },
+    {
+      "month": "October 2015",
+      "expectedRepayment": "$48.00",
+      "actualRepayment": "Available Oct 1",
+      "comments": null
+    },
+    {
+      "month": "November 2015",
+      "expectedRepayment": "$60.00",
+      "actualRepayment": "Available Nov 1",
+      "comments": "A random comment on this repayment."
+    },
+    {
+      "month": "December 2015",
+      "expectedRepayment": "$48.00",
+      "actualRepayment": "Available Dec 1",
+      "comments": null
+    },
+    {
+      "month": "January 2015",
+      "expectedRepayment": "$48.00",
+      "actualRepayment": "Available Jan 1",
+      "comments": null
+    },
+    {
+      "month": "February 2015",
+      "expectedRepayment": "$12.00",
+      "actualRepayment": "Available Feb 1",
+      "comments": null
+    }
+  ]
+}

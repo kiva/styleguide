@@ -1,0 +1,39 @@
+<h2><a href="#" class="black-underlined" data-reveal-id="repayment-schedule">Repayment Schedule</a></h2>
+<div id="repayment-schedule" class="reveal-modal" data-reveal aria-hidden="true" role="dialog">
+    <div class="row">
+        <div class="columns small-12">
+            <a class="close-reveal-modal" aria-label="Close">
+                <svg class="icon icon-x">
+                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-x"></use>
+                </svg>
+            </a>
+            <div class="lightbox-content white repayment-schedule-lightbox">
+                <p class="featured">Repayment Schedule</p>
+                <div class="show-advanced">
+                    <a href="https://www.google.com/">Show Advanced</a>
+                </div>
+                <table class="simple-repayment-schedule responsive" role="grid" summary="Schedule of expected and actual repayments for this loan.">
+                    <thead>
+                    <tr>
+                        <th id="months" class="shrink">&nbsp;</th>
+                        <th id="expected-repayments" class="text-right shrink">Expected Repayments</th>
+                        <th id="actual-repayments" class="text-right shrink">Actual Repayments</th>
+                        <th id="comments" class="expand">Comments</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    {{#repayments}}
+                        <tr>
+                            <td headers="months" class="shrink"><strong>{{month}}</strong></td>
+                            <td headers="expected-repayments" class="text-right shrink">{{expectedRepayment}}</td>
+                            <td headers="actual-repayments" class="text-right shrink">{{actualRepayment}}</td>
+                            <td headers="comments" class="expand">{{comments}}</td>
+                        </tr>
+                    {{/repayments}}
+                    </tbody>
+
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
