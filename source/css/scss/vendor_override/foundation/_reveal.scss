@@ -44,9 +44,9 @@ div.reveal-modal-bg {
 
 			.white-background-box {
 				background-color: $white;
-				padding: rem-calc(20);
 				width: 95%;
 				margin: auto auto;
+				padding: rem-calc(65) rem-calc(20) rem-calc(65) rem-calc(20);
 			}
 		}
 	}
