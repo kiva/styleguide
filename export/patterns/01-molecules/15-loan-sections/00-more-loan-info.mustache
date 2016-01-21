@@ -1,5 +1,37 @@
-<div class="more-loan-info">
-    <p>
-        {{loan-info}}
-    </p>
-</div>
+<section class="more-loan-info">
+    <h2 class="ac-title ac-container" data-kv-accordion aria-controls="ac-more-loan-info-body" aria-expanded="true">
+        More about this loan
+        <span class="ac-dropdown-icon">
+            <svg class="icon icon-large-chevron">
+                <use xlink:href="#icon-large-chevron"></use>
+            </svg>
+        </span>
+    </h2>
+    <div class="ac-body" id="ac-more-loan-info-body" aria-hidden="false">
+        {{#fieldPartnerName}}
+            <div class="override-styling-from-db">
+                {{{moreInfoAboutLoan}}}
+            </div>
+            {{#moreAboutFieldPartner}}
+                <h3>About {{fieldPartnerName}}:</h3>
+                {{#paragraphs}}
+                    <p>{{{.}}}</p>
+                {{/paragraphs}}
+            {{/moreAboutFieldPartner}}
+            {{#dualStatementNote}}
+                <h3>Important Note About This Loan</h3>
+                <p>{{{dualStatementNote}}}</p>
+            {{/dualStatementNote}}
+        {{/fieldPartnerName}}
+        {{^fieldPartnerName}}
+            <h3>Business Description</h3>
+            {{#directBusinessDescription}}
+                <p>{{{.}}}</p>
+            {{/directBusinessDescription}}
+            <h3>What is the purpose of this loan?</h3>
+            {{#directLoanPurpose}}
+                <p>{{{.}}}</p>
+            {{/directLoanPurpose}}
+        {{/fieldPartnerName}}
+    </div>
+</section>

@@ -322,6 +322,14 @@
 		margin: 0;
 		color: #D8D8C8;
 	}
+
+	.checkbox-facet, .country-facet {
+		font-size: 0.8em;
+	}
+
+	.country-label-disabled {
+		color: $light-gray;
+	}
 }
 
 #save-search-modal {

@@ -1,19 +1,24 @@
-{{!To make an element show a lightbox your triggers DATA-REVEAL-ID and the modal's ID need to match}}
-<a href="#" data-reveal-id="{{lightbox.modal-reveal-id}}">{{lightbox.modal-trigger-content}}</a>
+<a href="#" class="lightbox-trigger-link" data-reveal-id="video-lightbox">{{lightboxTriggerLinkText}}</a>
+<div id="video-lightbox" class="reveal-modal" data-reveal aria-hidden="true" role="dialog">
+	<div class="row">
+		<div class="columns small-12">
+			<a class="close-reveal-modal" aria-label="Close">
+				<svg class="icon icon-x">
+					<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-x"></use>
+				</svg>
+			</a>
+			<div class="lightbox-content white">
+				{{!The content within this div is the only change from the copy and pasted lightbox atom. If you need to
+				 make changes to this lightbox outside of this div, those changes need to be made to every lightbox file within the
+				 Molecules/10-lightbox folder. }}
+				<h1 class="white">{{lightbox.video.youtube.modal-title}}</h1>
 
-<section class="videoLightbox">
-    <div id="{{lightbox.modal-reveal-id}}" class="reveal-modal" data-reveal aria-labelledby="modalTitle" aria-hidden="true" role="video">
+        		<div class="flex-video widescreen vimeo">
+            		<iframe width="{{lightbox.video.youtube.width}}" height="{{lightbox.video.youtube.height}}" src="{{lightbox.video.youtube.src}}" frameborder="{{lightbox.video.youtube.frameborder}}" allowfullscreen></iframe>
+        		</div>
 
-        <h1 id="modalTitle" class="white">{{lightbox.video.youtube.modal-title}}</h1>
+    		</div>
+		</div>
+	</div>
+</div>
 
-        <div class="flex-video widescreen vimeo">
-            <iframe width="{{lightbox.video.youtube.width}}" height="{{lightbox.video.youtube.height}}" src="{{lightbox.video.youtube.src}}" frameborder="{{lightbox.video.youtube.frameborder}}" allowfullscreen></iframe>
-        </div>
-
-        <a class="close-reveal-modal" aria-label="Close">
-            <svg class="icon icon-x">
-                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-x"></use>
-            </svg>
-        </a>
-    </div>
-</section>
