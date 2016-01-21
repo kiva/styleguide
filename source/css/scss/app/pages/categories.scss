@@ -22,6 +22,7 @@
 	&.search-card {
 		background-color: $kiva-accent-blue;
 		z-index: 100;
+		overflow: visible;
 
 		.color-card-center {
 			padding: 5% 0.5rem 0;
