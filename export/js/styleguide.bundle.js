@@ -67,7 +67,8 @@
 			open_method: 'move'
 		}
 		, reveal: {
-			root_element: '.reveal-modal-bg'
+			root_element: '.reveal-modal-bg',
+			close_on_background_click: false
 		}
 	});
 
