@@ -323,14 +323,8 @@
 		color: #D8D8C8;
 	}
 
-	.checkbox-facet {
-	  font-size: 0.8em;
-	  color: $kiva-text-light;
-	}
-
-	.country-facet {
+	.checkbox-facet, .country-facet {
 		font-size: 0.8em;
-		color: $light-gray;
 	}
 
 	.country-label-disabled {
