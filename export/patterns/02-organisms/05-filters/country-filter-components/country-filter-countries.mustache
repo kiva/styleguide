@@ -2,5 +2,5 @@
 <label for="filter-country-{{code}}">
     <span class="f16 {{code}}"></span>
 	<span class="{{^facet}}country-label-disabled{{/facet}}">{{name}}</span>
-	<span class="country-facet">{{#facet}}({{facet}}){{/facet}}{{^facet}}(0){{/facet}}</span>
+	<span class="country-facet {{^facet}}country-label-disabled{{/facet}}">{{#facet}}({{facet}}){{/facet}}{{^facet}}(0){{/facet}}</span>
 </label>
