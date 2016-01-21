@@ -46,18 +46,18 @@
 
 	'use strict';
 
-	__webpack_require__(8);
+	__webpack_require__(7);
 
 	var header = __webpack_require__(5);
 	var filters = __webpack_require__(13);
 	var imagesizes = __webpack_require__(14);
 	var accordion = __webpack_require__(6);
-	var videoResizing = __webpack_require__(7);
-	var borrowerPage = __webpack_require__(15);
-	var categories = __webpack_require__(16);
+	var videoResizing = __webpack_require__(15);
+	var borrowerPage = __webpack_require__(16);
+	var categories = __webpack_require__(17);
 
 	var $ = __webpack_require__(2);
-	var FastClick = __webpack_require__(17);
+	var FastClick = __webpack_require__(18);
 
 	$(document).foundation({
 		equalizer: {
@@ -1516,7 +1516,8 @@
 
 
 	/*** EXPORTS FROM exports-loader ***/
-	module.exports = window.Modernizr}.call(window));
+	module.exports = window.Modernizr
+	}.call(window));
 
 /***/ },
 /* 4 */
@@ -8323,30 +8324,19 @@
 /* 7 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var $ = __webpack_require__(2);
-
-	module.exports = function () {
-	    'use strict';
-
-	    $('.loan-image-wrap').fitVids();
-	};
-
-/***/ },
-/* 8 */
-/***/ function(module, exports, __webpack_require__) {
-
 	__webpack_require__(2);
 	__webpack_require__(3);
 
 	__webpack_require__(4);
 
+	__webpack_require__(8);
 	__webpack_require__(9);
 	__webpack_require__(10);
 	__webpack_require__(11);
 	__webpack_require__(12);
 
 /***/ },
-/* 9 */
+/* 8 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(__webpack_provided_window_dot_jQuery) {/*! noUiSlider - 7.0.10 - 2014-12-27 14:50:46 */
@@ -10667,7 +10657,7 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(2)))
 
 /***/ },
-/* 10 */
+/* 9 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;var require;var require;/* WEBPACK VAR INJECTION */(function($) {/*!
@@ -16955,7 +16945,7 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(2)))
 
 /***/ },
-/* 11 */
+/* 10 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*
@@ -19603,7 +19593,7 @@
 
 
 /***/ },
-/* 12 */
+/* 11 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(__webpack_provided_window_dot_jQuery) {/*global jQuery */
@@ -19673,6 +19663,80 @@
 	  };
 	// Works with either jQuery or Zepto
 	})( __webpack_provided_window_dot_jQuery || window.Zepto );
+
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(2)))
+
+/***/ },
+/* 12 */
+/***/ function(module, exports, __webpack_require__) {
+
+	/* WEBPACK VAR INJECTION */(function($) {$(document).ready(function() {
+	  var switched = false;
+	  var updateTables = function() {
+	    if (($(window).width() < 767) && !switched ){
+	      switched = true;
+	      $("table.responsive").each(function(i, element) {
+	        splitTable($(element));
+	      });
+	      return true;
+	    }
+	    else if (switched && ($(window).width() > 767)) {
+	      switched = false;
+	      $("table.responsive").each(function(i, element) {
+	        unsplitTable($(element));
+	      });
+	    }
+	  };
+	   
+	  $(window).load(updateTables);
+	  $(window).on("redraw",function(){switched=false;updateTables();}); // An event to listen for
+	  $(window).on("resize", updateTables);
+	   
+		
+		function splitTable(original)
+		{
+			original.wrap("<div class='table-wrapper' />");
+			
+			var copy = original.clone();
+			copy.find("td:not(:first-child), th:not(:first-child)").css("display", "none");
+			copy.removeClass("responsive");
+			
+			original.closest(".table-wrapper").append(copy);
+			copy.wrap("<div class='pinned' />");
+			original.wrap("<div class='scrollable' />");
+
+	    setCellHeights(original, copy);
+		}
+		
+		function unsplitTable(original) {
+	    original.closest(".table-wrapper").find(".pinned").remove();
+	    original.unwrap();
+	    original.unwrap();
+		}
+
+	  function setCellHeights(original, copy) {
+	    var tr = original.find('tr'),
+	        tr_copy = copy.find('tr'),
+	        heights = [];
+
+	    tr.each(function (index) {
+	      var self = $(this),
+	          tx = self.find('th, td');
+
+	      tx.each(function () {
+	        var height = $(this).outerHeight(true);
+	        heights[index] = heights[index] || 0;
+	        if (height > heights[index]) heights[index] = height;
+	      });
+
+	    });
+
+	    tr_copy.each(function (index) {
+	      $(this).height(heights[index]);
+	    });
+	  }
+
+	});
 
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(2)))
 
@@ -19826,6 +19890,18 @@
 	module.exports = function () {
 	    'use strict';
 
+	    $('.loan-image-wrap').fitVids();
+	};
+
+/***/ },
+/* 16 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var $ = __webpack_require__(2);
+
+	module.exports = function () {
+	    'use strict';
+
 	    // for the lenders teams section to expand upon click
 	    $('.lender-count').click(function () {
 	        // grab label object
@@ -19839,7 +19915,7 @@
 	};
 
 /***/ },
-/* 16 */
+/* 17 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var $ = __webpack_require__(2);
@@ -19863,7 +19939,7 @@
 	};
 
 /***/ },
-/* 17 */
+/* 18 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_RESULT__;;(function () {
