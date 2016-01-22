@@ -5,7 +5,8 @@
 		width: 90%;
 		margin: auto;
 		padding: 0.6rem 0;
-		color: $gray;
+		border: 0;
+		border-top: 1px solid $gray;
 		@media #{$large-up}{
 			width: 100%;
 		}
@@ -35,7 +36,7 @@
 		}
 		max-width: none;
 
-		.row {
+		> .row {
 			display: flex;
 			flex-flow: row wrap;
 		}
@@ -52,8 +53,12 @@
 		}
 
 		.right-content {
-			flex-basis: 41.7%;
-			background-color: $kiva-stroke-gray;
+			display: none;
+			@media #{$large-up} {
+				display: block;
+				flex-basis: 41.6%;
+				background-color: $kiva-stroke-gray;
+			}
 		}
 	}
 }
