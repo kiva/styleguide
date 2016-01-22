@@ -138,6 +138,21 @@
       margin: 0em 0.6666666667rem;
     }
   }
+  .filter-keywords-clear-button{
+    padding: 0;
+    right: 18px;
+    position: absolute;
+    top: 6px;
+    height: 15px;
+    &:hover{
+      background: transparent;
+    }
+    .icon-x {
+      width: 15px;
+      height: 15px;
+      stroke: $kiva-text-light;
+    }
+  }
 
   .filter-slider {
     color: $green;
