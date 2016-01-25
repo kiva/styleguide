@@ -1,0 +1,15 @@
+<section class="comments section">
+    <div class="comments-container" id="comments-container">
+        <h2 class="section-title">Comments & Updates (4)</h2>
+        {{> molecules-comment-form }}
+        <table class="comment-list small-12 columns">
+            <tbody>
+            {{# listItems.five }}
+                {{> molecules-single-comment }}
+            {{/ listItems.five }}
+            </tbody>
+        </table>
+
+    </div>
+    {{> molecules-pagination }}
+</section>
