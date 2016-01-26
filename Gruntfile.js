@@ -34,10 +34,7 @@ module.exports = function(grunt) {
                 }
             }
             , vendorCss: {
-                src: [
-					'bower_components/nouislider/distribute/jquery.nouislider.min.css',
-					'bower_components/responsive-tables/responsive-tables.css'
-				]
+                src: ['bower_components/nouislider/distribute/jquery.nouislider.min.css']
                 , dest: 'bower_components/_vendor.scss'
             }
         }
