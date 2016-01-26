@@ -1,0 +1,48 @@
+.leadership{
+	$vert-margin:rem-calc(32);
+	$avatar-size:rem-calc(200);
+	$padding: rem-calc(20);
+	
+	h1 {
+		margin-top: $vert-margin;
+		margin-bottom: $vert-margin;
+	}
+	
+	.bod h1{
+		margin-bottom: 0;
+	}
+	
+	h2{
+		font-weight: bold;
+		text-align: center;
+		@media #{$large-up} {
+            text-align: left;
+        }
+	}
+	
+	.mgmt-team{
+		margin-bottom: $padding*2;
+	}
+	
+	.avatar{
+		text-align: center;
+		@media #{$large-up} {
+            text-align: left;
+        }
+	}
+	.avatar img{
+		border-radius: 50%;
+		width: $avatar-size;
+		height: $avatar-size;
+	}
+	.board{
+		padding: $padding 0;
+		
+		&:nth-child(2n) {		
+			background-color: $platinum;
+		}
+	}
+	.board .row{
+		padding: 0 1rem;
+	}
+}
