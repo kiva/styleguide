@@ -13,6 +13,4 @@ module.exports = function () {
             teamsLabel.trigger('click');
         }
     });
-
-    $('.repayment-schedule-wrapper').on('touchstart', function(event){});
 };
