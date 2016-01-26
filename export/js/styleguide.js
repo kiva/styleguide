@@ -19837,8 +19837,6 @@ define("Styleguide", ["jquery"], function(__WEBPACK_EXTERNAL_MODULE_2__) { retur
 	            teamsLabel.trigger('click');
 	        }
 	    });
-
-	    $('.repayment-schedule-wrapper').on('touchstart', function(event){});
 	};
 
 /***/ },
