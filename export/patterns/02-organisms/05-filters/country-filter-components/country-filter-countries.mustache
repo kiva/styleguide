@@ -1,5 +1,6 @@
 <input type="checkbox" name="country[]" id="filter-country-{{code}}" value="{{code}}" class="countryCheckbox" {{#checked}}checked="checked"{{/checked}}/>
 <label for="filter-country-{{code}}">
     <span class="f16 {{code}}"></span>
-	{{name}}
+	<span class="{{^facet}}country-label-disabled{{/facet}}">{{name}}</span>
+	<span class="country-facet {{^facet}}country-label-disabled{{/facet}}">{{#facet}}({{facet}}){{/facet}}{{^facet}}(0){{/facet}}</span>
 </label>

@@ -9,10 +9,14 @@
     </h2>
     <div class="ac-body" id="ac-more-loan-info-body" aria-hidden="false">
         {{#fieldPartnerName}}
-            {{{moreInfoAboutLoan}}}
-            <h3>About {{fieldPartnerName}}:</h3>
+            <div class="override-styling-from-db">
+                {{{moreInfoAboutLoan}}}
+            </div>
             {{#moreAboutFieldPartner}}
-                <p>{{{.}}}</p>
+                <h3>About {{fieldPartnerName}}:</h3>
+                {{#paragraphs}}
+                    <p>{{{.}}}</p>
+                {{/paragraphs}}
             {{/moreAboutFieldPartner}}
             {{#dualStatementNote}}
                 <h3>Important Note About This Loan</h3>

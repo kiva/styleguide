@@ -5,7 +5,9 @@
 		width: 90%;
 		margin: auto;
 		padding: 0.6rem 0;
-		@media #{$medium-up}{
+		border: 0;
+		border-top: 1px solid $gray;
+		@media #{$large-up}{
 			width: 100%;
 		}
 	}
@@ -20,39 +22,43 @@
 		}
 	}
 
-	@media #{$medium-up} {
+	@media #{$large-up} {
 		.loan-story, .loan-details {
 			padding-top: 1rem;
 		}
 	}
 
 	.borrower-profile-pieces {
-		@media #{$medium-up}{
+		@media #{$large-up}{
 			background: linear-gradient(90deg, #efefef 50%, #d8d8d8 50%);
-			border-top: 1px solid $kiva-text-medium;
-			border-bottom: 1px solid $kiva-text-medium;
+			border-top: 1px solid $gray;
+			border-bottom: 1px solid $gray;
 		}
 		max-width: none;
+
+		> .row {
+			display: flex;
+			flex-flow: row wrap;
+		}
 
 		.line-break {
 			width: 100%;
 		}
 		.left-content {
-			@media #{$medium-up}{
-				float: left;
-				border-right: 1px solid $kiva-text-medium;
+			@media #{$large-up} {
+				flex-basis: 58.3%;
 				background-color: $kiva-bg-darkgray;
+				border-right: 1px solid $gray;
 			}
 		}
+
 		.right-content {
-			@media #{$medium-up}{
+			display: none;
+			@media #{$large-up} {
+				display: block;
+				flex-basis: 41.5%;
 				background-color: $kiva-stroke-gray;
 			}
-		}
-		.left-content, .right-content {
-			padding-left: 1rem;
-			padding-right: 1rem;
-			display: inline-block;
 		}
 	}
 }

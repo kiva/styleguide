@@ -3,16 +3,17 @@
 		<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-x"></use>
 	</svg>
 </a>
+<div class="lightbox-content">
+	<div class="white-background-box">
+		<div id="country-list">
+			{{#regions}}
+				<section class="region-name">
+					{{> 02-organisms/05-filters/country-filter-components/country-filter-regions}}
+				</section>
+			{{/regions}}
+		</div>
 
+		<a href="#" id="filter-country-submit" class="button smaller right">Done</a>
 
-<div id="country-list">
-	{{#regions}}
-		<section class="region-name">
-			{{> 02-organisms/05-filters/country-filter-components/country-filter-regions}}
-		</section>
-	{{/regions}}
+	</div>
 </div>
-
-<a href="##" id="filter-country-submit" class="button smaller right">Done</a>
-
-

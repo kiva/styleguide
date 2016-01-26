@@ -28,6 +28,37 @@
 	<div class="secondary-nav filter-loan-count">
 		<span id="filtered_loan_count"></span>
 		loans
-		<span><a href="#" class="filter-clear-button clear-touch hide-for-small">Clear all</a></span>
+		<span><a href="#" class="hide-for-small filter-links filter-clear-button clear-touch">Clear all</a></span>
+		<span><a href="#" class="hide-for-small filter-links save-search-button clear-touch"
+				 data-reveal-id="save-search-modal">Save search</a></span>
 	</div>
 {{/is-category-page}}
+
+<div id="save-search-modal" class="reveal-modal" data-reveal>
+	<div class="row">
+		<div class="columns small-12">
+			<a class="close-reveal-modal" aria-label="Close">
+				<svg class="icon icon-x">
+					<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-x"></use>
+				</svg>
+			</a>
+			<div class="lightbox-content white">
+				<div class="row">
+					<div class="columns small-7">
+						<input type="text" name="save-search-text">
+					</div>
+					<div class="columns small-4">
+						<button class="button submit-save-search">Save Search</button>
+					</div>
+					<div class="columns small-offset-1"></div>
+				</div>
+				<div class="row">
+					<div class="columns small-12">
+						<input type="checkbox" name="save-search-alert">
+						<span style="color: black">Email me when new loans become available.</span>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

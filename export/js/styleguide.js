@@ -67,7 +67,8 @@ define("Styleguide", ["jquery"], function(__WEBPACK_EXTERNAL_MODULE_2__) { retur
 			open_method: 'move'
 		}
 		, reveal: {
-			root_element: '.reveal-modal-bg'
+			root_element: '.reveal-modal-bg',
+			close_on_background_click: false
 		}
 	});
 
@@ -8146,13 +8147,15 @@ define("Styleguide", ["jquery"], function(__WEBPACK_EXTERNAL_MODULE_2__) { retur
 				.trigger('hide');
 		});
 
-		var typeahead_menu_repositioning = function () {
-			var offset = $search_box.offset();
-			$('.top-nav-search-menu').css({
-				top: (offset.top + $search_box.outerHeight()) + 'px',
-				left: offset.left + 'px',
-				width: $search_box.outerWidth() + 'px'
-			});
+		var typeahead_menu_repositioning = function() {
+			if ($search_box) {
+				var offset = $search_box.offset();
+				$('.top-nav-search-menu').css({
+					top: (offset.top + $search_box.outerHeight()) + 'px',
+					left: offset.left + 'px',
+					width: $search_box.outerWidth() + 'px'
+				});
+			}
 		};
 
 		$search_box.on('typeahead:open', typeahead_menu_repositioning);
