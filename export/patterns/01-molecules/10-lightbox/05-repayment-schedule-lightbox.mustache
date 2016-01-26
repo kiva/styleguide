@@ -12,27 +12,29 @@
                 <div class="show-advanced">
                     <a href="https://www.google.com/">Show Advanced</a>
                 </div>
-                <table class="simple-repayment-schedule responsive" role="grid" summary="Schedule of expected and actual repayments for this loan.">
-                    <thead>
+                <div class="repayment-schedule-wrapper">
+                    <table class="simple-repayment-schedule" role="grid" summary="Schedule of expected and actual repayments for this loan.">
+                        <thead>
                         <tr>
                             <th id="months" class="shrink">&nbsp;</th>
                             <th id="expected-repayments" class="text-right shrink"><a href="https://www.kiva.org/help/paymentSchedule#payment_schedule_expected_payments">Expected Repayments</a></th>
                             <th id="actual-repayments" class="text-right shrink"><a href="https://www.kiva.org/help/paymentSchedule#payment_schedule_actual_payments">Actual Repayments</a></th>
                             <th id="comments" class="expand"><a href="https://www.kiva.org/help/paymentSchedule#payment_schedule_comments">Comments</a></th>
                         </tr>
-                    </thead>
-                    <tbody>
-                    {{#repayments}}
-                        <tr>
-                            <td headers="months" class="shrink"><strong>{{month}}</strong></td>
-                            <td headers="expected-repayments" class="text-right shrink">{{expectedRepayment}}</td>
-                            <td headers="actual-repayments" class="text-right shrink">{{actualRepayment}}</td>
-                            <td headers="comments" class="expand">{{comments}}</td>
-                        </tr>
-                    {{/repayments}}
-                    </tbody>
+                        </thead>
+                        <tbody>
+                        {{#repayments}}
+                            <tr>
+                                <td headers="months" class="shrink"><strong>{{month}}</strong></td>
+                                <td headers="expected-repayments" class="text-right shrink">{{expectedRepayment}}</td>
+                                <td headers="actual-repayments" class="text-right shrink">{{actualRepayment}}</td>
+                                <td headers="comments" class="expand">{{comments}}</td>
+                            </tr>
+                        {{/repayments}}
+                        </tbody>
+                    </table>
+                </div>
 
-                </table>
             </div>
         </div>
     </div>
