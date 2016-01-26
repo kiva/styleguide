@@ -15,9 +15,9 @@
 	h2{
 		font-weight: bold;
 		text-align: center;
-		@media #{$large-up} {
-            text-align: left;
-        }
+		@media #{$large-up}	{
+			text-align: left;
+		}
 	}
 	
 	.mgmt-team{
@@ -27,8 +27,8 @@
 	.avatar{
 		text-align: center;
 		@media #{$large-up} {
-            text-align: left;
-        }
+			text-align: left;
+		}
 	}
 	.avatar img{
 		border-radius: 50%;
