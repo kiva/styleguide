@@ -1,0 +1,16 @@
+table {
+	width: 100%;
+
+	tr:nth-of-type(even) {
+		background-color: $kiva-bg-lightgray;
+	}
+	th {
+		background-color: $platinum;
+	}
+	td.shrink {
+		white-space:nowrap
+	}
+	td.expand {
+		width: 99%
+	}
+}

@@ -87,4 +87,12 @@ $light-blue-gray: #DBE3E5;
 	&.icon-pdf {
 		fill: #C31B00;
 	}
+
+    &.icon-checkbox-bad {
+        fill: $kiva-accent-red;
+    }
+
+    &.icon-checkbox-good {
+        fill: $kiva-green;
+    }
 }

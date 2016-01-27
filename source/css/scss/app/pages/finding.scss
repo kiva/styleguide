@@ -8,7 +8,7 @@
 	margin-left: $padding;
 	padding: 0;
 
-	&+.select2-container {
+	& + .select2-container {
 		width: calc(100% - #{$padding*2});
 		margin-left: $padding;
 
@@ -70,43 +70,43 @@
 		padding-left: 0;
 		padding-right: 0;
 		color: $kiva-text-dark;
-	    float: left;
-	    background: transparent;
+		float: left;
+		background: transparent;
 
 		@media #{$large-up} {
 			margin-left: 0;
 		}
 	}
 
-    .filter-menu-sort {
+	.filter-menu-sort {
 		float: right;
-		margin-top:-2px;
+		margin-top: -2px;
 	}
 
-    .filter-menu-sort-text {
-		float:left;
+	.filter-menu-sort-text {
+		float: left;
 		padding-top: 0.3rem;
-		font-weight:bold;
-		font-size:0.7rem;
+		font-weight: bold;
+		font-size: 0.7rem;
 
 		@media #{$medium-up} {
 			font-size: 0.9em;
 			margin-top: 0.1rem;
 		}
-    }
-
-    .filter-menu-sort-dropdown {
-	  float:right;
-	  margin: 0 0.5555555556rem 0 0;
 	}
 
-    .filter-dropdown {
-		height:26.2px;
-		border-color:#333;
-		font-weight:bold;
-		font-size:0.6666666667rem;
-		width:120px;
-		padding:0 0.5rem;
+	.filter-menu-sort-dropdown {
+		float: right;
+		margin: 0 0.5555555556rem 0 0;
+	}
+
+	.filter-dropdown {
+		height: 26.2px;
+		border-color: #333;
+		font-weight: bold;
+		font-size: 0.6666666667rem;
+		width: 120px;
+		padding: 0 0.5rem;
 
 		@media #{$medium-up} {
 			font-size: 0.8888888889rem;
@@ -114,9 +114,9 @@
 			width: 150px;
 			margin-top: 0.1rem;
 		}
-    }
+	}
 
-    .filter-loan-count{
+	.filter-loan-count {
 		float: left;
 		font-weight: bold;
 		color: #999;
@@ -138,26 +138,12 @@
 }
 
 a.filter-menu-button:visited {
-  color: #000;
+	color: #000;
 }
 
 .control-region, .results-region {
 	//padding-left: rem-calc(20);
 	max-width: rem-calc(1300);
-}
-
-.loancards-list {
-	@media #{$screen} and (min-width: 1230px) {
-		@include block-grid(3);
-	}
-
-	@media #{$screen} and (min-width: 1550px) {
-		@include block-grid(4);
-	}
-
-	@media #{$large-up} {
-		margin: 0 rem-calc(10);
-	}
 }
 
 .inner-wrap {
@@ -176,12 +162,6 @@ a.filter-menu-button:visited {
 		width: calc(100% + #{$menu-base-width});
 		-webkit-transform: $transform;
 		transform: $transform;
-	}
-
-	@media #{$xxlarge-up} {
-		-webkit-transform: none;
-		transform: none;
-		width: 100%;
 	}
 
 	.left-off-canvas-menu {
@@ -217,4 +197,60 @@ a.filter-menu-button:visited {
 .move-right > .inner-wrap {
 	-webkit-transform: none;
 	transform: none;
+}
+
+.hide-filters-for-xxlarge-up {
+	.control-region, .results-region {
+		text-align: left;
+	}
+
+	.loancards-list {
+		@media #{$xxlarge-up} {
+			@include block-grid(3);
+		}
+
+		@media #{$screen} and (min-width: 1300px) {
+			@include block-grid(4);
+		}
+
+		@media #{$large-up} {
+			margin: 0 rem-calc(10);
+		}
+	}
+
+	.inner-wrap {
+		text-align: center;
+	}
+}
+
+.show-filters-for-xxlarge-up {
+	.control-region {
+		.filter-menu-button {
+			@media #{$xxlarge-up} {
+				display: none;
+			}
+		}
+	}
+
+	.loancards-list {
+		@media #{$screen} and (min-width: 1230px) {
+			@include block-grid(3);
+		}
+
+		@media #{$screen} and (min-width: 1550px) {
+			@include block-grid(4);
+		}
+
+		@media #{$large-up} {
+			margin: 0 rem-calc(10);
+		}
+	}
+
+	.inner-wrap {
+		@media #{$xxlarge-up} {
+			-webkit-transform: none;
+			transform: none;
+			width: 100%;
+		}
+	}
 }
