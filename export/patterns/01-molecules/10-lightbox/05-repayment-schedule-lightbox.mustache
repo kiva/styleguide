@@ -28,7 +28,19 @@
                                 <td headers="months" class="shrink"><strong>{{month}}</strong></td>
                                 <td headers="expected-repayments" class="text-right shrink">{{expectedRepayment}}</td>
                                 <td headers="actual-repayments" class="text-right shrink">{{actualRepayment}}</td>
-                                <td headers="comments" class="expand">{{comments}}</td>
+                                <td headers="comments" class="expand {{#repaymentReceived}}success{{/repaymentReceived}}{{#isDelinquent}}fail{{/isDelinquent}}">
+                                    {{#repaymentReceived}}
+                                        Repayment Received
+                                    {{/repaymentReceived}}
+                                    {{^repaymentReceived}}
+                                        {{#isDelinquent}}
+                                            Delinquent
+                                        {{/isDelinquent}}
+                                        {{^isDelinquent}}
+                                            {{comments}}
+                                        {{/isDelinquent}}
+                                    {{/repaymentReceived}}
+                                </td>
                             </tr>
                         {{/repayments}}
                         </tbody>
