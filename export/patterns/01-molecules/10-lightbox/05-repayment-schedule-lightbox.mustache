@@ -28,12 +28,22 @@
                                 <td headers="months" class="shrink"><strong>{{month}}</strong></td>
                                 <td headers="expected-repayments" class="text-right shrink">{{expectedRepayment}}</td>
                                 <td headers="actual-repayments" class="text-right shrink">{{actualRepayment}}</td>
-                                <td headers="comments" class="expand {{#repaymentReceived}}success{{/repaymentReceived}}{{#isDelinquent}}fail{{/isDelinquent}}">
+                                <td headers="comments" class="expand">
                                     {{#repaymentReceived}}
+                                        <span class="icon-wrapper">
+                                            <svg class="icon icon-checkbox-good">
+                                                <use xlink:href="#icon-checkbox-good"></use>
+                                            </svg>
+                                        </span>
                                         Repayment Received
                                     {{/repaymentReceived}}
                                     {{^repaymentReceived}}
                                         {{#isDelinquent}}
+                                            <span class="icon-wrapper">
+                                                <svg class="icon icon-checkbox-bad">
+                                                    <use xlink:href="#icon-checkbox-bad"></use>
+                                                </svg>
+                                            </span>
                                             Delinquent
                                         {{/isDelinquent}}
                                         {{^isDelinquent}}
