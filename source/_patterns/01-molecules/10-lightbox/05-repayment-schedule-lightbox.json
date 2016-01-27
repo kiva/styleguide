@@ -3,38 +3,58 @@
     {
       "month": "September 2015",
       "expectedRepayment": "$84.00",
-      "actualRepayment": "Available Sep 1",
-      "comments": null
+      "actualRepayment": "$84.00",
+      "comments": null,
+      "repaymentReceived": true,
+      "isDelinquent": false
     },
     {
       "month": "October 2015",
       "expectedRepayment": "$48.00",
-      "actualRepayment": "Available Oct 1",
-      "comments": null
+      "actualRepayment": "$48.00",
+      "comments": null,
+      "repaymentReceived": true,
+      "isDelinquent": false
     },
     {
       "month": "November 2015",
       "expectedRepayment": "$60.00",
-      "actualRepayment": "Available Nov 1",
-      "comments": "A random comment on this repayment."
+      "actualRepayment": "$0.00",
+      "comments": "Field Partner behind in repayment",
+      "repaymentReceived": false,
+      "isDelinquent": true
     },
     {
       "month": "December 2015",
       "expectedRepayment": "$48.00",
-      "actualRepayment": "Available Dec 1",
-      "comments": null
+      "actualRepayment": "$0.00",
+      "comments": "Field Partner behind in repayment",
+      "repaymentReceived": false,
+      "isDelinquent": true
     },
     {
       "month": "January 2015",
       "expectedRepayment": "$48.00",
       "actualRepayment": "Available Jan 1",
-      "comments": null
+      "comments": null,
+      "repaymentReceived": false,
+      "isDelinquent": false
     },
     {
       "month": "February 2015",
       "expectedRepayment": "$12.00",
       "actualRepayment": "Available Feb 1",
-      "comments": null
+      "comments": null,
+      "repaymentReceived": false,
+      "isDelinquent": false
+    },
+    {
+      "month": "March 2015",
+      "expectedRepayment": "$12.00",
+      "actualRepayment": "Available Feb 1",
+      "comments": "A random comment about this repayment.",
+      "repaymentReceived": false,
+      "isDelinquent": false
     }
   ]
 }

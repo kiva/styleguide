@@ -7,5 +7,17 @@
 	.repayment-schedule-wrapper {
 		white-space: nowrap;
 		overflow-x: scroll;
+
+		.simple-repayment-schedule {
+			.fail {
+				background: url(../../../../images/checkbox_bad.jpg) no-repeat 0.5rem center;
+				padding-left: 2rem;
+			}
+
+			.success {
+				background: url(../../../../images/checkbox_good.jpg) no-repeat 0.5rem center;
+				padding-left: 2rem;
+			}
+		}
 	}
 }
