@@ -127,6 +127,10 @@
 		}
 	}
 
+	.filter-links {
+		visibility: visible;
+	}
+
 	.category-description {
 		@include small-text();
 
