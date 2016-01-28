@@ -1,6 +1,25 @@
 .repayment-schedule-lightbox {
+	a:visited {
+		color: $kiva-accent-blue;
+	}
+
 	.show-advanced, .hide-advanced {
 		margin-top: 2rem;
 		margin-bottom: 1rem;
+	}
+
+	.repayment-schedule-wrapper {
+		white-space: nowrap;
+		overflow-x: scroll;
+
+		.simple-repayment-schedule {
+			.icon-checkbox-good, .icon-checkbox-bad {
+				display: inline-block;
+				vertical-align: middle;
+				height: 1rem;
+				width: 1rem;
+				margin-right: 0.25rem;
+			}
+		}
 	}
 }

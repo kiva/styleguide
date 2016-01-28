@@ -1,6 +1,6 @@
 {
   "name": "styleguide",
-  "version": "1.0.516",
+  "version": "1.0.538",
   "homepage": "styleguide.kiva.org",
   "authors": [
     "uglymunky <gabriel@uglymunky.com>",
@@ -38,7 +38,6 @@
     "select2": "~4.0.1",
     "slick.js": "~1.5.8",
     "typeahead.js": "~0.11.1",
-    "fitvids": "~1.1.0",
-    "responsive-tables": "git@github.com:zurb/responsive-tables"
+    "fitvids": "~1.1.0"
   }
 }

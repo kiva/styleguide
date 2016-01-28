@@ -49,15 +49,15 @@ define("Styleguide", ["jquery"], function(__WEBPACK_EXTERNAL_MODULE_2__) { retur
 	__webpack_require__(7);
 
 	var header = __webpack_require__(5);
-	var filters = __webpack_require__(13);
-	var imagesizes = __webpack_require__(14);
+	var filters = __webpack_require__(12);
+	var imagesizes = __webpack_require__(13);
 	var accordion = __webpack_require__(6);
-	var videoResizing = __webpack_require__(15);
-	var borrowerPage = __webpack_require__(16);
-	var categories = __webpack_require__(17);
+	var videoResizing = __webpack_require__(14);
+	var borrowerPage = __webpack_require__(15);
+	var categories = __webpack_require__(16);
 
 	var $ = __webpack_require__(2);
-	var FastClick = __webpack_require__(18);
+	var FastClick = __webpack_require__(17);
 
 	$(document).foundation({
 		equalizer: {
@@ -8333,7 +8333,6 @@ define("Styleguide", ["jquery"], function(__WEBPACK_EXTERNAL_MODULE_2__) { retur
 	__webpack_require__(9);
 	__webpack_require__(10);
 	__webpack_require__(11);
-	__webpack_require__(12);
 
 /***/ },
 /* 8 */
@@ -19670,80 +19669,6 @@ define("Styleguide", ["jquery"], function(__WEBPACK_EXTERNAL_MODULE_2__) { retur
 /* 12 */
 /***/ function(module, exports, __webpack_require__) {
 
-	/* WEBPACK VAR INJECTION */(function($) {$(document).ready(function() {
-	  var switched = false;
-	  var updateTables = function() {
-	    if (($(window).width() < 767) && !switched ){
-	      switched = true;
-	      $("table.responsive").each(function(i, element) {
-	        splitTable($(element));
-	      });
-	      return true;
-	    }
-	    else if (switched && ($(window).width() > 767)) {
-	      switched = false;
-	      $("table.responsive").each(function(i, element) {
-	        unsplitTable($(element));
-	      });
-	    }
-	  };
-	   
-	  $(window).load(updateTables);
-	  $(window).on("redraw",function(){switched=false;updateTables();}); // An event to listen for
-	  $(window).on("resize", updateTables);
-	   
-		
-		function splitTable(original)
-		{
-			original.wrap("<div class='table-wrapper' />");
-			
-			var copy = original.clone();
-			copy.find("td:not(:first-child), th:not(:first-child)").css("display", "none");
-			copy.removeClass("responsive");
-			
-			original.closest(".table-wrapper").append(copy);
-			copy.wrap("<div class='pinned' />");
-			original.wrap("<div class='scrollable' />");
-
-	    setCellHeights(original, copy);
-		}
-		
-		function unsplitTable(original) {
-	    original.closest(".table-wrapper").find(".pinned").remove();
-	    original.unwrap();
-	    original.unwrap();
-		}
-
-	  function setCellHeights(original, copy) {
-	    var tr = original.find('tr'),
-	        tr_copy = copy.find('tr'),
-	        heights = [];
-
-	    tr.each(function (index) {
-	      var self = $(this),
-	          tx = self.find('th, td');
-
-	      tx.each(function () {
-	        var height = $(this).outerHeight(true);
-	        heights[index] = heights[index] || 0;
-	        if (height > heights[index]) heights[index] = height;
-	      });
-
-	    });
-
-	    tr_copy.each(function (index) {
-	      $(this).height(heights[index]);
-	    });
-	  }
-
-	});
-
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(2)))
-
-/***/ },
-/* 13 */
-/***/ function(module, exports, __webpack_require__) {
-
 	module.exports = function() {
 		'use strict';
 
@@ -19823,7 +19748,7 @@ define("Styleguide", ["jquery"], function(__WEBPACK_EXTERNAL_MODULE_2__) { retur
 
 
 /***/ },
-/* 14 */
+/* 13 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var $ = __webpack_require__(2);
@@ -19882,7 +19807,7 @@ define("Styleguide", ["jquery"], function(__WEBPACK_EXTERNAL_MODULE_2__) { retur
 
 
 /***/ },
-/* 15 */
+/* 14 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var $ = __webpack_require__(2);
@@ -19894,7 +19819,7 @@ define("Styleguide", ["jquery"], function(__WEBPACK_EXTERNAL_MODULE_2__) { retur
 	};
 
 /***/ },
-/* 16 */
+/* 15 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var $ = __webpack_require__(2);
@@ -19915,7 +19840,7 @@ define("Styleguide", ["jquery"], function(__WEBPACK_EXTERNAL_MODULE_2__) { retur
 	};
 
 /***/ },
-/* 17 */
+/* 16 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var $ = __webpack_require__(2);
@@ -19939,7 +19864,7 @@ define("Styleguide", ["jquery"], function(__WEBPACK_EXTERNAL_MODULE_2__) { retur
 	};
 
 /***/ },
-/* 18 */
+/* 17 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_RESULT__;;(function () {
