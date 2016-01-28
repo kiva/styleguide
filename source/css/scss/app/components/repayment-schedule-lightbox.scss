@@ -18,4 +18,9 @@
 			}
 		}
 	}
+
+	.repayment-schedule-wrapper::-webkit-scrollbar {
+		opacity: 0;
+		filter: alpha(opacity=0);
+	}
 }
