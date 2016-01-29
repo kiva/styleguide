@@ -14,11 +14,17 @@
         <div class="trustee-data">
             <div id="trustee-type" class="datum">
                 <a class="black-underlined" data-reveal-id="trustee-type-lightbox">Trustee Type:</a>
-                <strong>{{trusteeType}}</strong>
+                <strong>
+                    {{#trusteeType}}{{trusteeType}}{{/trusteeType}}
+                    {{^trusteeType}}N/A{{/trusteeType}}
+                </strong>
             </div>
             <div id="tier" class="datum">
                 <a class="black-underlined" data-reveal-id="tier-lightbox">Tier:</a>
-                <strong>{{tier}}</strong>
+                <strong>
+                    {{#tier}}{{tier}}{{/tier}}
+                    {{^tier}}N/A{{/tier}}
+                </strong>
             </div>
             <div id="location" class="datum">
                 <a class="black-underlined" data-reveal-id="location-lightbox">Location:</a>
@@ -26,39 +32,66 @@
             </div>
             <div id="on-zip-since" class="datum">
                 <a class="black-underlined" data-reveal-id="on-zip-since-lightbox">Time on Kiva:</a>
-                <strong>{{onZipSince}}</strong>
+                <strong>
+                    {{#onZipSince}}{{onZipSince}}{{/onZipSince}}
+                    {{^onZipSince}}N/A{{/onZipSince}}
+                </strong>
             </div>
             <div id="loans-endorsed" class="datum">
                 <a class="black-underlined" data-reveal-id="loans-endorsed-lightbox">Kiva Borrowers:</a>
-                <strong>{{loansEndorsedTotal}}</strong>
+                <strong>
+                    {{#loansEndorsedTotal}}{{loansEndorsedTotal}}{{/loansEndorsedTotal}}
+                    {{^loansEndorsedTotal}}N/A{{/loansEndorsedTotal}}
+                </strong>
             </div>
             <div id="total-value" class="datum">
                 <a class="black-underlined" data-reveal-id="total-value-lightbox">Total Loans:</a>
-                <strong>{{totalValue}}</strong>
+                <strong>
+                    {{#totalValue}}{{totalValue}}{{/totalValue}}
+                    {{^totalValue}}N/A{{/totalValue}}
+                </strong>
             </div>
             <div id="fundraising-or-raised" class="datum">
                 <a class="black-underlined" data-reveal-id="fundraising-or-raised-lightbox">Fundraising/Raised:</a>
-                <strong>{{fundraisingOrRaisedTotal}}</strong>
+                <strong>
+                    {{#fundraisingOrRaisedTotal}}{{fundraisingOrRaisedTotal}}{{/fundraisingOrRaisedTotal}}
+                    {{^fundraisingOrRaisedTotal}}N/A{{/fundraisingOrRaisedTotal}}
+                </strong>
             </div>
             <div id="paying-on-time" class="datum">
                 <a class="black-underlined" data-reveal-id="paying-on-time-lightbox">Paying on Time:</a>
-                <strong>{{payingOnTimeTotal}}</strong>
+                <strong>
+                    {{#payingOnTimeTotal}}{{payingOnTimeTotal}}{{/payingOnTimeTotal}}
+                    {{^payingOnTimeTotal}}Not enough data{{/payingOnTimeTotal}}
+                </strong>
             </div>
             <div id="paying-back-late" class="datum">
                 <a class="black-underlined" data-reveal-id="paying-back-late-lightbox">Paying Back Late:</a>
-                <strong>{{payingBackLateTotal}}</strong>
+                <strong>
+                    {{#payingBackLateTotal}}{{payingBackLateTotal}}{{/payingBackLateTotal}}
+                    {{^payingBackLateTotal}}Not enough data{{/payingBackLateTotal}}
+                </strong>
             </div>
             <div id="repaid-in-full" class="datum">
                 <a class="black-underlined" data-reveal-id="repaid-in-full-lightbox">Repaid in Full:</a>
-                <strong>{{repaidInFullTotal}}</strong>
+                <strong>
+                    {{#repaidInFullTotal}}{{repaidInFullTotal}}{{/repaidInFullTotal}}
+                    {{^repaidInFullTotal}}Not enough data{{/repaidInFullTotal}}
+                </strong>
             </div>
             <div id="defaulted" class="datum">
                 <a class="black-underlined" data-reveal-id="defaulted-lightbox">Defaulted:</a>
-                <strong>{{defaultedTotal}}</strong>
+                <strong>
+                    {{#defaultedTotal}}{{defaultedTotal}}{{/defaultedTotal}}
+                    {{^defaultedTotal}}Not enough data{{/defaultedTotal}}
+                </strong>
             </div>
             <div id="repayment-rate" class="datum">
                 <a class="black-underlined" data-reveal-id="repayment-rate-lightbox">Repayment Rate:</a>
-                <strong>{{repaymentRate}}</strong>
+                <strong>
+                    {{#repaymentRate}}{{repaymentRate}}{{/repaymentRate}}
+                    {{^repaymentRate}}Not enough data{{/repaymentRate}}
+                </strong>
             </div>
             {{#trusteeDataHelpText}}
                 {{> molecules-standard-lightbox}}
