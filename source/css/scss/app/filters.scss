@@ -132,13 +132,13 @@
 		border: 1px solid $charcoal;
 		width: 12.5rem;
 		margin: 0 0.6666666667rem 0.3333333333rem;
+		padding-right: 24px;
 
 		@media #{$medium-up} {
 			width: 225px;
 			margin: 0em 0.6666666667rem;
 		}
 	}
-
 	.filter-slider {
 		color: $green;
 		border: 0px;
@@ -329,6 +329,23 @@
 
 	.country-label-disabled {
 		color: $light-gray;
+	}
+
+	.filter-keywords-clear-button{
+		display: none;
+		padding: 0;
+		right: 18px;
+		position: absolute;
+		top: 6px;
+		height: 15px;
+		&:hover{
+			background: transparent;
+		}
+		.icon-x {
+			width: 15px;
+			height: 15px;
+			stroke: $kiva-text-light;
+		}
 	}
 }
 
