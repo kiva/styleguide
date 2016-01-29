@@ -1,0 +1,52 @@
+{{#is-patternlab}}
+	<a href="#" data-reveal-id="save-search-modal">trigger me!</a>
+{{/is-patternlab}}
+
+<div id="save-search-modal" class="reveal-modal" data-reveal aria-hidden="true" role="dialog">
+	<div class="row">
+		<div class="columns small-12">
+			<a class="close-reveal-modal" aria-label="Close">
+				<svg class="icon icon-x">
+					<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-x"></use>
+				</svg>
+			</a>
+			<div class="lightbox-content white">
+				<h2 class="save-search-header">Save this search</h2>
+				<div class="row">
+					<div class="small-10 columns">
+						<p>
+							With one click you can find the loans you're looking for directly from the "Lend"
+							drop down menu at the top of the page. You can also choose to receive an email
+							when new loans that fit your criteria become available.
+						</p>
+					</div>
+				</div>
+				<div class="row">
+					<div class="small-12 large-8 columns">
+						<label for="save-search-text">
+							Name this saved search
+						</label>
+					</div>
+				</div>
+				<div class="row">
+					<div class="columns small-12 large-8">
+						<input id="save-search-text" type="text" name="save-search-text">
+					</div>
+				</div>
+				<div class="row">
+					<div class="columns small-1">
+						<input type="checkbox" name="save-search-alert">
+					</div>
+					<div class="columns small-10 large-7 left">
+						<span>Email me when new loans become available.</span>
+					</div>
+				</div>
+				<div class="row">
+					<div class="columns medium-12 large-8">
+						<button class="button submit-save-search">Create Saved Search</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
