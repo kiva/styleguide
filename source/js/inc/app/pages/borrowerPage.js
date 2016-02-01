@@ -13,4 +13,11 @@ module.exports = function () {
             teamsLabel.trigger('click');
         }
     });
+
+    $('#show-advanced-toggle, #hide-advanced-toggle').click(function() {
+        $('.show-advanced').toggle();
+        $('.hide-advanced').toggle();
+        $('.simple-repayment-schedule').toggle();
+        $('.advanced-repayment-schedule').toggle();
+    });
 };
