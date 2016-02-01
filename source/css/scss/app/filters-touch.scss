@@ -86,6 +86,9 @@
 			border: 1px solid $charcoal;
 			width: 12.5rem;
 			margin: 0 0.6666666667rem 0.3333333333rem;
+			&::-ms-clear {
+				display: none;
+			}
 		}
 
 		#misc-filters-container {
