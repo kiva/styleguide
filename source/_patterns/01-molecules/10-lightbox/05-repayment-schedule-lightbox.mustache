@@ -27,7 +27,14 @@
                             <tr>
                                 <td headers="months" class="shrink"><strong>{{month}}</strong></td>
                                 <td headers="expected-repayments" class="text-right shrink">{{expectedRepayment}}</td>
-                                <td headers="actual-repayments" class="text-right shrink">{{actualRepayment}}</td>
+                                <td headers="actual-repayments" class="text-right shrink">
+                                    {{#isDelinquent}}
+                                        $0.00
+                                    {{/isDelinquent}}
+                                    {{^isDelinquent}}
+                                        {{actualRepayment}}
+                                    {{/isDelinquent}}
+                                </td>
                                 <td headers="comments" class="expand">
                                     {{#repaymentReceived}}
                                         <svg class="icon icon-checkbox-good">
