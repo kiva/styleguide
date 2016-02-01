@@ -58,10 +58,65 @@
                         </tbody>
                     </table>
 
-                    <table class="advanced-repayment-schedule responsive" style="display:none;" role="grid" summary="Schedule of expected and actual repayments for this loan.">
+                    <table class="advanced-repayment-schedule" style="display:none;" role="grid" summary="Schedule of expected and actual repayments for this loan.">
                         <thead>
+                            <tr>
+                                <th id="months" class="shrink">&nbsp;</th>
+                                <th id="expected-repayments" colspan="2"  class="text-left shrink"><a target="_blank" href="https://www.kiva.org/help/paymentSchedule#payment_schedule_expected_payments">Expected Repayments</a></th>
+                                <th id="actual-repayments" colspan="2" class="text-left shrink"><a target="_blank" href="https://www.kiva.org/help/paymentSchedule#payment_schedule_actual_payments">Actual Repayments</a></th>
+                                <th id="comments" class="expand"><a target="_blank" href="https://www.kiva.org/help/paymentSchedule#payment_schedule_comments">Comments</a></th>
+                            </tr>
                         </thead>
                         <tbody>
+                            {{#repayments}}
+                                <tr class="period">
+                                    <th colspan="5">{{month}}</th>
+                                    <th class="status success">
+                                        {{#repaymentReceived}}
+                                            <svg class="icon icon-checkbox-good">
+                                                <use xlink:href="#icon-checkbox-good"></use>
+                                            </svg>
+                                            Repayment Received
+                                        {{/repaymentReceived}}
+                                        {{^repaymentReceived}}
+                                            {{#isDelinquent}}
+                                                <svg class="icon icon-checkbox-bad">
+                                                    <use xlink:href="#icon-checkbox-bad"></use>
+                                                </svg>
+                                                Delinquent
+                                            {{/isDelinquent}}
+                                            {{^isDelinquent}}
+                                                {{comments}}
+                                            {{/isDelinquent}}
+                                        {{/repaymentReceived}}
+                                    </th>
+                                </tr>
+                                {{#paymentsFromBorrowerToPartner}}
+                                    <tr>
+                                        {{#showB2FPMessage}}<td rowspan="{{numberOfExpectedBorrowerPayments}}">From Borrower to Field Partner</td>{{/showB2FPMessage}}
+                                        <td>{{expectedDate}}</td>
+                                        <td>{{expectedAmount}}</td>
+                                        <td>{{actualDate}}</td>
+                                        <td>{{actualAmount}}</td>
+                                        <td>&nbsp;</td>
+                                    </tr>
+                                {{/paymentsFromBorrowerToPartner}}
+                                <tr>
+                                    <td>From Field Partner to Lenders</td>
+                                    <td>{{month}}</td>
+                                    <td>{{expectedRepayment}}</td>
+                                    <td>
+                                        {{#repaymentReceived}}
+                                            {{month}}
+                                        {{/repaymentReceived}}
+                                        {{^repaymentReceived}}
+                                            Available {{expectedRepayDate}}
+                                        {{/repaymentReceived}}
+                                    </td>
+                                    <td>{{actualRepayment}}</td>
+                                    <td>&nbsp;</td>
+                                </tr>
+                            {{/repayments}}
                         </tbody>
                     </table>
                 </div>

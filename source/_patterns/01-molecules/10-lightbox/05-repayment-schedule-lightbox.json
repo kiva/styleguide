@@ -1,60 +1,214 @@
 {
   "repayments": [
     {
-      "month": "September 2015",
-      "expectedRepayment": "$84.00",
-      "actualRepayment": "$84.00",
+      "month": "January 2016",
+      "expectedRepayDate": "Jan 2016",
+      "expectedRepayment": "$677.02",
+      "actualRepayDate": "Jan 2016",
+      "actualRepayment": "$677.02",
       "comments": null,
       "repaymentReceived": true,
-      "isDelinquent": false
+      "isDelinquent": false,
+      "paymentsFromBorrowerToPartner": [
+        {
+          "showB2FPMessage": true,
+          "numberOfExpectedBorrowerPayments": 3,
+          "expectedDate": "Nov, 2, 2015",
+          "expectedAmount": "849.57 BRL",
+          "actualDate": "Nov 30, 2015",
+          "actualAmount": "2,572.44 BRL",
+          "comment": null
+        },
+        {
+          "showB2FPMessage": false,
+          "numberOfExpectedBorrowerPayments": 3,
+          "expectedDate": "Nov 16, 2015",
+          "expectedAmount": "857.45 BRL",
+          "actualDate": null,
+          "actualAmount": null,
+          "comment": null
+        },
+        {
+          "showB2FPMessage": false,
+          "numberOfExpectedBorrowerPayments": 3,
+          "expectedDate": "Nov 30, 2015",
+          "expectedAmount": "865.42 BRL",
+          "actualDate": null,
+          "actualAmount": null,
+          "comment": null
+        }
+      ]
     },
     {
-      "month": "October 2015",
-      "expectedRepayment": "$48.00",
-      "actualRepayment": "$48.00",
+      "month": "February 2016",
+      "expectedRepayDate": "Feb 2016",
+      "expectedRepayment": "$461.89",
+      "actualRepayDate": "Feb 2016",
+      "actualRepayment": "$461.89",
       "comments": null,
       "repaymentReceived": true,
-      "isDelinquent": false
+      "isDelinquent": false,
+      "paymentsFromBorrowerToPartner": [
+        {
+          "showB2FPMessage": true,
+          "numberOfExpectedBorrowerPayments": 2,
+          "expectedDate": "Dec 14, 2015",
+          "expectedAmount": "873.45 BRL",
+          "actualDate": "Dec 31, 2015",
+          "actualAmount": "1,755.01 BRL",
+          "comment": null
+        },
+        {
+          "showB2FPMessage": false,
+          "numberOfExpectedBorrowerPayments": 2,
+          "expectedDate": "Dec 28, 2015",
+          "expectedAmount": "881.56 BRL",
+          "actualDate": null,
+          "actualAmount": null,
+          "comment": null
+        }
+      ]
     },
     {
-      "month": "November 2015",
-      "expectedRepayment": "$60.00",
-      "actualRepayment": "$0.00",
+      "month": "March 2016",
+      "expectedRepayDate": "Mar 2016",
+      "expectedRepayment": "$470.51",
+      "actualRepayDate": "Available Mar 1",
+      "actualRepayment": null,
       "comments": "Field Partner behind in repayment",
       "repaymentReceived": false,
-      "isDelinquent": true
+      "isDelinquent": true,
+      "paymentsFromBorrowerToPartner": [
+        {
+          "showB2FPMessage": true,
+          "numberOfExpectedBorrowerPayments": 2,
+          "expectedDate": "Jan 11, 2016",
+          "expectedAmount": "889.75 BRL",
+          "actualDate": null,
+          "actualAmount": null,
+          "comment": null
+        },
+        {
+          "showB2FPMessage": false,
+          "numberOfExpectedBorrowerPayments": 2,
+          "expectedDate": "Jan 25, 2016",
+          "expectedAmount": "898.00 BRL",
+          "actualDate": null,
+          "actualAmount": null,
+          "comment": null
+        }
+      ]
     },
     {
-      "month": "December 2015",
-      "expectedRepayment": "$48.00",
-      "actualRepayment": "$0.00",
+      "month": "April 2016",
+      "expectedRepayDate": "Apr 2016",
+      "expectedRepayment": "$479.28",
+      "actualRepayDate": "Available Apr 1",
+      "actualRepayment": null,
       "comments": "Field Partner behind in repayment",
       "repaymentReceived": false,
-      "isDelinquent": true
+      "isDelinquent": true,
+      "paymentsFromBorrowerToPartner": [
+        {
+          "showB2FPMessage": true,
+          "numberOfExpectedBorrowerPayments": 2,
+          "expectedDate": "Feb 8, 2016",
+          "expectedAmount": "906.35 BRL",
+          "actualDate": null,
+          "actualAmount": null,
+          "comment": null
+        },
+        {
+          "showB2FPMessage": false,
+          "numberOfExpectedBorrowerPayments": 2,
+          "expectedDate": "Feb 22, 2016",
+          "expectedAmount": "914.75 BRL",
+          "actualDate": null,
+          "actualAmount": null,
+          "comment": null
+        }
+      ]
     },
     {
-      "month": "January 2015",
-      "expectedRepayment": "$48.00",
-      "actualRepayment": "Available Jan 1",
+      "month": "May 2016",
+      "expectedRepayDate": "May 2016",
+      "expectedRepayment": "$488.22",
+      "actualRepayDate": "Available May 1",
+      "actualRepayment": null,
       "comments": null,
       "repaymentReceived": false,
-      "isDelinquent": false
+      "isDelinquent": false,
+      "paymentsFromBorrowerToPartner": [
+        {
+          "showB2FPMessage": true,
+          "numberOfExpectedBorrowerPayments": 2,
+          "expectedDate": "Mar 7, 2016",
+          "expectedAmount": "923.25 BRL",
+          "actualDate": null,
+          "actualAmount": null,
+          "comment": null
+        },
+        {
+          "showB2FPMessage": false,
+          "numberOfExpectedBorrowerPayments": 2,
+          "expectedDate": "Mar 21, 2016",
+          "expectedAmount": "931.82 BRL",
+          "actualDate": null,
+          "actualAmount": null,
+          "comment": null
+        }
+      ]
     },
     {
-      "month": "February 2015",
-      "expectedRepayment": "$12.00",
-      "actualRepayment": "Available Feb 1",
+      "month": "June 2016",
+      "expectedRepayDate": "Jun 2016",
+      "expectedRepayment": "$497.32",
+      "actualRepayDate": "Available Jun 1",
+      "actualRepayment": null,
       "comments": null,
       "repaymentReceived": false,
-      "isDelinquent": false
+      "isDelinquent": false,
+      "paymentsFromBorrowerToPartner": [
+        {
+          "showB2FPMessage": true,
+          "numberOfExpectedBorrowerPayments": 2,
+          "expectedDate": "Apr 4, 2016",
+          "expectedAmount": "940.47 BRL",
+          "actualDate": null,
+          "actualAmount": null,
+          "comment": null
+        },
+        {
+          "showB2FPMessage": false,
+          "numberOfExpectedBorrowerPayments": 2,
+          "expectedDate": "Apr 18, 2016",
+          "expectedAmount": "949.21 BRL",
+          "actualDate": null,
+          "actualAmount": null,
+          "comment": null
+        }
+      ]
     },
     {
-      "month": "March 2015",
-      "expectedRepayment": "$12.00",
-      "actualRepayment": "Available Feb 1",
+      "month": "July 2016",
+      "expectedRepayDate": "Jul 2016",
+      "expectedRepayment": "$250.76",
+      "actualRepayDate": "Available Jul 1",
+      "actualRepayment": null,
       "comments": "A random comment about this repayment.",
       "repaymentReceived": false,
-      "isDelinquent": false
+      "isDelinquent": false,
+      "paymentsFromBorrowerToPartner": [
+        {
+          "showB2FPMessage": true,
+          "numberOfExpectedBorrowerPayments": 1,
+          "expectedDate": "May 2, 2016",
+          "expectedAmount": "952.79 BRL",
+          "actualDate": null,
+          "actualAmount": null,
+          "comment": null
+        }
+      ]
     }
   ]
 }
