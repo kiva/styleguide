@@ -16,64 +16,64 @@
   "borrowerOrGroupName": "David",
   "trusteeDataHelpText": [
     {
-      "data_reveal_id": "trustee-type-lightbox"
-      ,"description_title": "Trustee type"
-      ,"description_text": "Trustee type description text."
+      "dataRevealId": "trustee-type-lightbox"
+      ,"descriptionTitle": "Trustee type"
+      ,"descriptionText": "Trustee type description text."
     },
     {
-      "data_reveal_id": "tier-lightbox"
-      ,"description_title": "Tier"
-      ,"description_text": "Tier description text."
+      "dataRevealId": "trustee-tier-lightbox"
+      ,"descriptionTitle": "Tier"
+      ,"descriptionText": "Tier description text."
     },
     {
-      "data_reveal_id": "location-lightbox"
-      ,"description_title": "Location"
-      ,"description_text": "Location description text."
+      "dataRevealId": "trustee-location-lightbox"
+      ,"descriptionTitle": "Location"
+      ,"descriptionText": "Location description text."
     },
     {
-      "data_reveal_id": "on-zip-since-lightbox"
-      ,"description_title": "On Zip Since"
-      ,"description_text": "On Zip Since description text."
+      "data_reveal_id": "trustee-on-zip-since-lightbox"
+      ,"descriptionTitle": "On Zip Since"
+      ,"descriptionText": "On Zip Since description text."
     },
     {
-      "data_reveal_id": "loans-endorsed-lightbox"
-      ,"description_title": "Loans Endorsed"
-      ,"description_text": "Loans Endorsed description text."
+      "dataRevealId": "trustee-loans-endorsed-lightbox"
+      ,"descriptionTitle": "Loans Endorsed"
+      ,"descriptionText": "Loans Endorsed description text."
     },
     {
-      "data_reveal_id": "total-value-lightbox"
-      ,"description_title": "Total Value"
-      ,"description_text": "Total Value description text."
+      "dataRevealId": "trustee-total-value-lightbox"
+      ,"descriptionTitle": "Total Value"
+      ,"descriptionText": "Total Value description text."
     },
     {
-      "data_reveal_id": "fundraising-or-raised-lightbox"
-      ,"description_title": "Fundraising/Raised"
-      ,"description_text": "Fundraising/Raised description text."
+      "dataRevealId": "trustee-fundraising-or-raised-lightbox"
+      ,"descriptionTitle": "Fundraising/Raised"
+      ,"descriptionText": "Fundraising/Raised description text."
     },
     {
-      "data_reveal_id": "paying-on-time-lightbox"
-      ,"description_title": "Paying on Time"
-      ,"description_text": "Paying on Time description text."
+      "dataRevealId": "trustee-paying-on-time-lightbox"
+      ,"descriptionTitle": "Paying on Time"
+      ,"descriptionText": "Paying on Time description text."
     },
     {
-      "data_reveal_id": "paying-back-late-lightbox"
+      "dataRevealId": "trustee-paying-back-late-lightbox"
       ,"description_title": "Paying Back Late"
-      ,"description_text": "Paying Back Late description text."
+      ,"descriptionText": "Paying Back Late description text."
     },
     {
-      "data_reveal_id": "repaid-in-full-lightbox"
-      ,"description_title": "Repaid in Full"
-      ,"description_text": "Repaid in Full description text."
+      "dataRevealId": "trustee-repaid-in-full-lightbox"
+      ,"descriptionTitle": "Repaid in Full"
+      ,"descriptionText": "Repaid in Full description text."
     },
     {
-      "data_reveal_id": "defaulted-lightbox"
-      ,"description_title": "Defaulted"
-      ,"description_text": "Defaulted description text."
+      "dataRevealId": "trustee-defaulted-lightbox"
+      ,"descriptionTitle": "Defaulted"
+      ,"descriptionText": "Defaulted description text."
     },
     {
-      "data_reveal_id": "repayment-rate-lightbox"
-      ,"description_title": "Repayment Rate"
-      ,"description_text": "Repayment Rate description text."
+      "dataRevealId": "trustee-repayment-rate-lightbox"
+      ,"descriptionTitle": "Repayment Rate"
+      ,"descriptionText": "Repayment Rate description text."
     }
   ]
 }

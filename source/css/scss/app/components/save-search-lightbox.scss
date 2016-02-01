@@ -1,0 +1,15 @@
+#save-search-modal {
+	.save-search-header {
+		color: $white;
+	}
+	label {
+		color: $white;
+		margin-bottom: 10px;
+	}
+	.submit-save-search {
+		width: 100%;
+		@media #{$medium-up} {
+			font-size: 1.15rem;
+		}
+	}
+}

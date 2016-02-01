@@ -1,0 +1,6 @@
+{
+  	"lightboxTriggerLinkText": "This is a link for the help text lightbox.",
+  	"dataRevealId": "help-text-lightbox",
+  	"descriptionTitle": "A Help Text Title",
+  	"descriptionText": "The description for this this help text title. The title and description usually come from the Salesforce descriptions used by the CS team."
+}
