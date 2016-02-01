@@ -34,12 +34,14 @@
                                     <td headers="months" class="shrink"><strong>{{month}}</strong></td>
                                     <td headers="expected-repayments" class="text-right shrink">{{expectedRepayment}}</td>
                                     <td headers="actual-repayments" class="text-right shrink">
-                                        {{#isDelinquent}}
-                                            $0.00
-                                        {{/isDelinquent}}
-                                        {{^isDelinquent}}
+                                        {{#actualRepayment}}
                                             {{actualRepayment}}
-                                        {{/isDelinquent}}
+                                        {{/actualRepayment}}
+                                        {{^actualRepayment}}
+                                            {{^isDelinquent}}
+                                                $0.00
+                                            {{/isDelinquent}}
+                                        {{/actualRepayment}}
                                     </td>
                                     <td headers="comments" class="expand">
                                         {{#repaymentReceived}}
@@ -110,7 +112,7 @@
                                 {{/paymentsFromBorrowerToPartner}}
                                 <tr>
                                     <td>From Field Partner to Lenders</td>
-                                    <td>{{month}}</td>
+                                    <td>{{expectedRepayDate}}</td>
                                     <td>{{expectedRepayment}}</td>
                                     <td>
                                         {{#repaymentReceived}}
@@ -121,14 +123,24 @@
                                         {{/repaymentReceived}}
                                     </td>
                                     <td>
-                                        {{#isDelinquent}}
-                                            $0.00
-                                        {{/isDelinquent}}
-                                        {{^isDelinquent}}
+                                        {{#actualRepayment}}
                                             {{actualRepayment}}
-                                        {{/isDelinquent}}
+                                        {{/actualRepayment}}
+                                        {{^actualRepayment}}
+                                            {{^isDelinquent}}
+                                                $0.00
+                                            {{/isDelinquent}}
+                                        {{/actualRepayment}}
                                     </td>
-                                    <td>&nbsp;</td>
+                                    <td>
+                                        {{#comments}}
+                                            {{comments}}<br>
+                                        {{/comments}}
+                                        {{#currencyLossLenders}}
+                                            {{currencyLossLenders}} lost to currency devaluation <a href="https://www.kiva.org/help/currencyExchangeLoss?business_id=950791&period=201602#ExplanationOfCurrencyExchangeLossToLendersOnThisRepayment">more »</a>
+                                        {{/currencyLossLenders}}
+                                        &nbsp;
+                                    </td>
                                 </tr>
                             {{/repayments}}
                         </tbody>

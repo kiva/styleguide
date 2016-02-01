@@ -9,6 +9,7 @@
       "comments": null,
       "repaymentReceived": true,
       "isDelinquent": false,
+      "currencyLossLenders": "$8.59",
       "paymentsFromBorrowerToPartner": [
         {
           "showB2FPMessage": true,
@@ -16,8 +17,7 @@
           "expectedDate": "Nov, 2, 2015",
           "expectedAmount": "849.57 BRL",
           "actualDate": "Nov 30, 2015",
-          "actualAmount": "2,572.44 BRL",
-          "comment": null
+          "actualAmount": "2,572.44 BRL"
         },
         {
           "showB2FPMessage": false,
@@ -25,8 +25,7 @@
           "expectedDate": "Nov 16, 2015",
           "expectedAmount": "857.45 BRL",
           "actualDate": null,
-          "actualAmount": null,
-          "comment": null
+          "actualAmount": null
         },
         {
           "showB2FPMessage": false,
@@ -34,8 +33,7 @@
           "expectedDate": "Nov 30, 2015",
           "expectedAmount": "865.42 BRL",
           "actualDate": null,
-          "actualAmount": null,
-          "comment": null
+          "actualAmount": null
         }
       ]
     },
@@ -55,8 +53,7 @@
           "expectedDate": "Dec 14, 2015",
           "expectedAmount": "873.45 BRL",
           "actualDate": "Dec 31, 2015",
-          "actualAmount": "1,755.01 BRL",
-          "comment": null
+          "actualAmount": "1,755.01 BRL"
         },
         {
           "showB2FPMessage": false,
@@ -64,8 +61,7 @@
           "expectedDate": "Dec 28, 2015",
           "expectedAmount": "881.56 BRL",
           "actualDate": null,
-          "actualAmount": null,
-          "comment": null
+          "actualAmount": null
         }
       ]
     },
@@ -85,8 +81,7 @@
           "expectedDate": "Jan 11, 2016",
           "expectedAmount": "889.75 BRL",
           "actualDate": null,
-          "actualAmount": null,
-          "comment": null
+          "actualAmount": null
         },
         {
           "showB2FPMessage": false,
@@ -94,8 +89,7 @@
           "expectedDate": "Jan 25, 2016",
           "expectedAmount": "898.00 BRL",
           "actualDate": null,
-          "actualAmount": null,
-          "comment": null
+          "actualAmount": null
         }
       ]
     },
@@ -115,8 +109,7 @@
           "expectedDate": "Feb 8, 2016",
           "expectedAmount": "906.35 BRL",
           "actualDate": null,
-          "actualAmount": null,
-          "comment": null
+          "actualAmount": null
         },
         {
           "showB2FPMessage": false,
@@ -124,8 +117,7 @@
           "expectedDate": "Feb 22, 2016",
           "expectedAmount": "914.75 BRL",
           "actualDate": null,
-          "actualAmount": null,
-          "comment": null
+          "actualAmount": null
         }
       ]
     },
@@ -145,8 +137,7 @@
           "expectedDate": "Mar 7, 2016",
           "expectedAmount": "923.25 BRL",
           "actualDate": null,
-          "actualAmount": null,
-          "comment": null
+          "actualAmount": null
         },
         {
           "showB2FPMessage": false,
@@ -154,8 +145,7 @@
           "expectedDate": "Mar 21, 2016",
           "expectedAmount": "931.82 BRL",
           "actualDate": null,
-          "actualAmount": null,
-          "comment": null
+          "actualAmount": null
         }
       ]
     },
@@ -175,8 +165,7 @@
           "expectedDate": "Apr 4, 2016",
           "expectedAmount": "940.47 BRL",
           "actualDate": null,
-          "actualAmount": null,
-          "comment": null
+          "actualAmount": null
         },
         {
           "showB2FPMessage": false,
@@ -184,8 +173,7 @@
           "expectedDate": "Apr 18, 2016",
           "expectedAmount": "949.21 BRL",
           "actualDate": null,
-          "actualAmount": null,
-          "comment": null
+          "actualAmount": null
         }
       ]
     },
@@ -205,8 +193,7 @@
           "expectedDate": "May 2, 2016",
           "expectedAmount": "952.79 BRL",
           "actualDate": null,
-          "actualAmount": null,
-          "comment": null
+          "actualAmount": null
         }
       ]
     }
