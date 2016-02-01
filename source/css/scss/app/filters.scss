@@ -336,12 +336,15 @@
 		padding: 0;
 		right: 18px;
 		position: absolute;
-		top: 6px;
+		top: 10px;
 		height: 15px;
+		width:15px;
+		z-index: 999;
 		&:hover{
 			background: transparent;
 		}
 		.icon-x {
+			display: block;
 			width: 15px;
 			height: 15px;
 			stroke: $kiva-text-light;
