@@ -1,4 +1,5 @@
 {
+  "isDualStatementLoan" : false,
   "repayments": [
     {
       "month": "January 2016",
