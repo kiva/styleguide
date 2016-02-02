@@ -10,13 +10,15 @@
             <div class="lightbox-content white repayment-schedule-lightbox">
                 <p class="featured">Repayment Schedule</p>
 
-                <div class="show-advanced">
-                    <a href="javascript:void(0);" id="show-advanced-toggle">Show Advanced</a>
-                </div>
+                {{^isDualStatementLoan}}
+                    <div class="show-advanced">
+                        <a href="javascript:void(0);" id="show-advanced-toggle">Show Advanced</a>
+                    </div>
 
-                <div class="hide-advanced" style="display:none;">
-                    <a href="javascript:void(0);" id="hide-advanced-toggle">Hide Advanced</a>
-                </div>
+                    <div class="hide-advanced" style="display:none;">
+                        <a href="javascript:void(0);" id="hide-advanced-toggle">Hide Advanced</a>
+                    </div>
+                {{/isDualStatementLoan}}
 
                 <div class="repayment-schedule-wrapper">
                     <table class="simple-repayment-schedule" role="grid" summary="Schedule of expected and actual repayments for this loan.">
@@ -67,16 +69,17 @@
                         </tbody>
                     </table>
 
-                    <table class="advanced-repayment-schedule" style="display:none;" role="grid" summary="Schedule of expected and actual repayments for this loan.">
-                        <thead>
+                    {{^isDualStatementLoan}}
+                        <table class="advanced-repayment-schedule" style="display:none;" role="grid" summary="Schedule of expected and actual repayments for this loan.">
+                            <thead>
                             <tr>
                                 <th id="months" class="shrink">&nbsp;</th>
                                 <th id="expected-repayments" colspan="2"  class="text-left shrink"><a target="_blank" href="https://www.kiva.org/help/paymentSchedule#payment_schedule_expected_payments">Expected Repayments</a></th>
                                 <th id="actual-repayments" colspan="2" class="text-left shrink"><a target="_blank" href="https://www.kiva.org/help/paymentSchedule#payment_schedule_actual_payments">Actual Repayments</a></th>
                                 <th id="comments" class="expand"><a target="_blank" href="https://www.kiva.org/help/paymentSchedule#payment_schedule_comments">Comments</a></th>
                             </tr>
-                        </thead>
-                        <tbody>
+                            </thead>
+                            <tbody>
                             {{#repayments}}
                                 <tr class="period">
                                     <th colspan="5">{{month}}</th>
@@ -138,8 +141,9 @@
                                     </td>
                                 </tr>
                             {{/repayments}}
-                        </tbody>
-                    </table>
+                            </tbody>
+                        </table>
+                    {{/isDualStatementLoan}}
                 </div>
             </div>
         </div>
