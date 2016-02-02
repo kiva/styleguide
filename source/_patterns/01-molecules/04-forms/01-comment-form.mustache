@@ -1,52 +1,57 @@
 <form method="post" action="{{ url }}" class="comment-form">
-	<fieldset>
-		<div class="field-container">
-			<label for="comment-name">Name</label>
-			<input id="comment-name" type="text" placeholder="Enter Your Name" />
-		</div>
-		<div class="field-container">
-			<label for="comment-email">Email</label>
-			<input id="comment-email" type="email" placeholder="Your email address" />
-		</div>
-		<div class="field-container">
-			<label for="comment-url">URL</label>
-			<input id="comment-url" type="url" placeholder="Website if you got one" />
-		</div>
-		<div class="field-container">
-			<label for="comment-field">Comment</label>
-			<textarea id="comment-field" rows="5" placeholder="Write you comment here"></textarea>
-		</div>
-	</fieldset>
-    <div class="small-12 columns show-for-medium-down">
+    <fieldset>
+        <div class="field-container">
+            <label for="comment-name">Name</label>
+            <input id="comment-name" type="text" placeholder="Enter Your Name" />
+        </div>
+        <div class="field-container">
+            <label for="comment-email">Email</label>
+            <input id="comment-email" type="email" placeholder="Your email address" />
+        </div>
+        <div class="field-container">
+            <label for="comment-url">URL</label>
+            <input id="comment-url" type="url" placeholder="Website if you got one" />
+        </div>
+        <div class="field-container">
+            <label for="comment-field">Comment</label>
+            <textarea id="comment-field" rows="5" placeholder="Write you comment here"></textarea>
+        </div>
+    </fieldset>
+    <div class="row  hide-for-large-up">
         <div class="small-3 columns">
             <a href="#" class="button setting smaller">comment</a>
         </div>
         <div class="small-6 columns right">
-             <h6> <small><a href="#">Kiva conversation guidelines</a></small></h6>
+            <h6> <small><a href="#">Kiva conversation guidelines</a></small></h6>
 
         </div>
     </div>
-    <div class="small-12 columns show-for-medium-down">
+    <div class="row   hide-for-large-up">
         <div class="small-3 columns">
             <a href="#" class="button setting smaller">subscribe</a>
         </div>
         <div class="small-6 columns right">
-            <h6><small>to be notified of replies</small></h6?
+            <h6><small>to be notified of replies</small></h6>
         </div>
     </div>
-    <div class="large-12 columns">
-    <div class="large-3 columns show-for-medium-up">
-        <a href="#" class="button setting">comment</a>
-    </div>
-    <div class="large-9 columns">
-        <a href="#" class="button setting">subscribe</a>
+    <div class="row">
+        <div class="large-3 columns show-for-large-up">
+            <a href="#" class="button setting">comment</a>
+        </div>
+        <div class="large-3 show-for-large-up columns">
+            <a href="#" class="button setting">subscribe</a>
 
-        <h6><small>to be notified of replies</small></h6>
-    </div>
-    <div class="large-3 columns">
 
-        <a href="#">Kiva conversation guidelines</a>
+        </div>
+        <div class="large-3 show-for-large-up columns">
 
+            <h6><small>to be notified of replies</small></h6>
+
+        </div>
+        <div class="large-3 show-for-large-up columns ">
+
+            <a href="#" class="guidelines-link-large"> Kiva conversation guidelines</a>
+
+        </div>
     </div>
-</div>
 </form>
