@@ -114,14 +114,9 @@
                                     <td>From Field Partner to Lenders</td>
                                     <td>{{expectedRepayDate}}</td>
                                     <td>{{expectedRepayment}}</td>
-                                    <td>
-                                        {{#repaymentReceived}}
-                                            {{month}}
-                                        {{/repaymentReceived}}
-                                        {{^repaymentReceived}}
-                                            Available {{expectedRepayDate}}
-                                        {{/repaymentReceived}}
-                                    </td>
+                                    {{#repaymentReceived}}
+                                        <td>{{month}}</td>
+                                    {{/repaymentReceived}}
                                     <td>
                                         {{#actualRepayment}}
                                             {{actualRepayment}}

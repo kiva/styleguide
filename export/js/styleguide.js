@@ -74,12 +74,20 @@ define("Styleguide", ["jquery"], function(__WEBPACK_EXTERNAL_MODULE_2__) { retur
 
 	//Blocking scrolling on the body of a page when a lightbox opens
 	$(document).on('open.fndtn.reveal', '[data-reveal]', function () {
-		$('body').css('overflow', 'hidden');
+		$('html, body').css({
+			position: 'relative'
+			, overflow: 'hidden'
+			, height: '100%'
+		});
 	});
 
 	//Allowing scrolling on the body of a page when a lightbox is closed
 	$(document).on('close.fndtn.reveal', '[data-reveal]', function () {
-		$('body').css('overflow', 'auto');
+		$('html, body').css({
+			position: 'static'
+			, overflow: 'visible'
+			, height: 'auto'
+		});
 	});
 
 	FastClick.attach(document.body);
