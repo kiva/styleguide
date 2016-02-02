@@ -27,9 +27,9 @@
                         <thead>
                             <tr>
                                 {{#isDirectLoan}}
-                                    <th id="total-amount-due" class="shrink">Total Amount Due</th>
+                                    <th id="total-amount-due" class="text-right shrink">Total Amount Due</th>
                                     <th id="amount-paid" class="text-right shrink">Amount Paid</th>
-                                    <th id="due-from-borrower" class="text-right shrink">Due From Borrower</th>
+                                    <th id="due-date-from-borrower" class="shrink">Due From Borrower</th>
                                     <th id="status" class="expand">Status</th>
                                 {{/isDirectLoan}}
                                 {{^isDirectLoan}}
@@ -41,41 +41,53 @@
                             </tr>
                         </thead>
                         <tbody>
-                            {{#partnerRepayments}}
-                                <tr>
-                                    <td headers="months" class="shrink"><strong>{{month}}</strong></td>
-                                    <td headers="expected-repayments" class="text-right shrink">{{expectedRepayment}}</td>
-                                    <td headers="actual-repayments" class="text-right shrink">
-                                        {{#actualRepayment}}
-                                            {{actualRepayment}}
-                                        {{/actualRepayment}}
-                                        {{^actualRepayment}}
-                                            {{^isDelinquent}}
-                                                $0.00
-                                            {{/isDelinquent}}
-                                        {{/actualRepayment}}
-                                    </td>
-                                    <td headers="comments" class="expand">
-                                        {{#repaymentReceived}}
-                                            <svg class="icon icon-checkbox-good">
-                                                <use xlink:href="#icon-checkbox-good"></use>
-                                            </svg>
-                                            Repayment Received
-                                        {{/repaymentReceived}}
-                                        {{^repaymentReceived}}
-                                            {{#isDelinquent}}
-                                                <svg class="icon icon-checkbox-bad">
-                                                    <use xlink:href="#icon-checkbox-bad"></use>
+                            {{#isDirectLoan}}
+                                {{#directRepayments}}
+                                    <tr>
+                                        <td headers="total-amount-due" class="text-right shrink">{{totalAmountDue}}</td>
+                                        <td headers="amount-paid" class="text-right shrink">{{amountPaid}}</td>
+                                        <td headers="due-date-from-borrower" class="shrink">{{dueDateFromBorrower}}</td>
+                                        <td headers="status" class="expand">{{status}}</td>
+                                    </tr>
+                                {{/directRepayments}}
+                            {{/isDirectLoan}}
+                            {{^isDirectLoan}}
+                                {{#partnerRepayments}}
+                                    <tr>
+                                        <td headers="months" class="shrink"><strong>{{month}}</strong></td>
+                                        <td headers="expected-repayments" class="text-right shrink">{{expectedRepayment}}</td>
+                                        <td headers="actual-repayments" class="text-right shrink">
+                                            {{#actualRepayment}}
+                                                {{actualRepayment}}
+                                            {{/actualRepayment}}
+                                            {{^actualRepayment}}
+                                                {{^isDelinquent}}
+                                                    $0.00
+                                                {{/isDelinquent}}
+                                            {{/actualRepayment}}
+                                        </td>
+                                        <td headers="comments" class="expand">
+                                            {{#repaymentReceived}}
+                                                <svg class="icon icon-checkbox-good">
+                                                    <use xlink:href="#icon-checkbox-good"></use>
                                                 </svg>
-                                                Delinquent
-                                            {{/isDelinquent}}
-                                            {{^isDelinquent}}
-                                                {{comments}}
-                                            {{/isDelinquent}}
-                                        {{/repaymentReceived}}
-                                    </td>
-                                </tr>
-                            {{/partnerRepayments}}
+                                                Repayment Received
+                                            {{/repaymentReceived}}
+                                            {{^repaymentReceived}}
+                                                {{#isDelinquent}}
+                                                    <svg class="icon icon-checkbox-bad">
+                                                        <use xlink:href="#icon-checkbox-bad"></use>
+                                                    </svg>
+                                                    Delinquent
+                                                {{/isDelinquent}}
+                                                {{^isDelinquent}}
+                                                    {{comments}}
+                                                {{/isDelinquent}}
+                                            {{/repaymentReceived}}
+                                        </td>
+                                    </tr>
+                                {{/partnerRepayments}}
+                            {{/isDirectLoan}}
                         </tbody>
                     </table>
 
