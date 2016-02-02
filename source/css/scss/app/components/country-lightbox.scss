@@ -1,0 +1,18 @@
+#countrySelectModal {
+	.white-background-box {
+		position: relative;
+
+		#filter-country-submit {
+			line-height: inherit;
+			position: absolute;
+			bottom: -20px;
+			width: 100%;
+			left: 0;
+			@media #{large-up} {
+				position: relative;
+				width: initial;
+				bottom: initial;
+			}
+		}
+	}
+}
