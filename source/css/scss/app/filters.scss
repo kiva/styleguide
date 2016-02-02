@@ -334,16 +334,15 @@
 		color: $light-gray;
 	}
 
-	.filter-keywords-clear-button{
+	.filter-keywords-clear-button {
 		display: none;
 		padding: 0;
 		right: 18px;
 		position: absolute;
 		top: 10px;
 		height: 15px;
-		width:15px;
-		z-index: 999;
-		&:hover{
+		width: 15px;
+		&:hover {
 			background: transparent;
 		}
 		.icon-x {
@@ -477,4 +476,8 @@ a.close-reveal-modal .icon.icon-x {
 	height: 0.8rem;
 	width: 0.8rem;
 	margin-right: 5px;
+}
+
+#filter-keywords-search-box-container {
+	position: relative;
 }
