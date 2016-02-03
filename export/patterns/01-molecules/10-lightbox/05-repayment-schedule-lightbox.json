@@ -4,7 +4,6 @@
   "directRepayments": [],
   "partnerRepayments": [
     {
-      "month": "January 2016",
       "expectedRepayDate": "Jan 2016",
       "expectedRepayment": "$677.02",
       "actualRepayDate": "Jan 2016",
@@ -41,7 +40,6 @@
       ]
     },
     {
-      "month": "February 2016",
       "expectedRepayDate": "Feb 2016",
       "expectedRepayment": "$461.89",
       "actualRepayDate": "Feb 2016",
@@ -69,11 +67,10 @@
       ]
     },
     {
-      "month": "March 2016",
       "expectedRepayDate": "Mar 2016",
       "expectedRepayment": "$470.51",
-      "actualRepayDate": "Available Mar 1",
-      "actualRepayment": null,
+      "actualRepayDate": null,
+      "actualRepayment": "$0.00",
       "comments": "Field Partner behind in repayment",
       "repaymentReceived": false,
       "isDelinquent": true,
@@ -97,11 +94,10 @@
       ]
     },
     {
-      "month": "April 2016",
       "expectedRepayDate": "Apr 2016",
       "expectedRepayment": "$479.28",
-      "actualRepayDate": "Available Apr 1",
-      "actualRepayment": null,
+      "actualRepayDate": null,
+      "actualRepayment": "$0.00",
       "comments": "Field Partner behind in repayment",
       "repaymentReceived": false,
       "isDelinquent": true,
@@ -125,11 +121,10 @@
       ]
     },
     {
-      "month": "May 2016",
       "expectedRepayDate": "May 2016",
       "expectedRepayment": "$488.22",
-      "actualRepayDate": "Available May 1",
-      "actualRepayment": null,
+      "actualRepayDate": null,
+      "actualRepayment": "Available May 1",
       "comments": null,
       "repaymentReceived": false,
       "isDelinquent": false,
@@ -153,11 +148,10 @@
       ]
     },
     {
-      "month": "June 2016",
       "expectedRepayDate": "Jun 2016",
       "expectedRepayment": "$497.32",
-      "actualRepayDate": "Available Jun 1",
-      "actualRepayment": null,
+      "actualRepayDate": null,
+      "actualRepayment": "Available Jun 1",
       "comments": null,
       "repaymentReceived": false,
       "isDelinquent": false,
@@ -181,12 +175,11 @@
       ]
     },
     {
-      "month": "July 2016",
       "expectedRepayDate": "Jul 2016",
       "expectedRepayment": "$250.76",
-      "actualRepayDate": "Available Jul 1",
-      "actualRepayment": null,
-      "comments": "A random comment about this repayment.",
+      "actualRepayDate": null,
+      "actualRepayment": "Available Jul 1",
+      "comments": null,
       "repaymentReceived": false,
       "isDelinquent": false,
       "paymentsFromBorrowerToPartner": [
