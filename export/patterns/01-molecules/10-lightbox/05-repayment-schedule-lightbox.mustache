@@ -33,9 +33,9 @@
                                     <th id="status" class="expand">Status</th>
                                 {{/isDirectLoan}}
                                 {{^isDirectLoan}}
-                                    <th id="months" class="shrink">&nbsp;</th>
-                                    <th id="expected-repayments" class="text-right shrink"><a target="_blank" href="https://www.kiva.org/help/paymentSchedule#payment_schedule_expected_payments">Expected Repayments</a></th>
-                                    <th id="actual-repayments" class="text-right shrink"><a target="_blank" href="https://www.kiva.org/help/paymentSchedule#payment_schedule_actual_payments">Actual Repayments</a></th>
+                                    <th id="expected-repayment-dates" class="shrink">&nbsp;</th>
+                                    <th id="expected-repayments" class="text-right shrink"><a target="_blank" href="https://www.kiva.org/help/paymentSchedule#payment_schedule_expected_payments">Expected</a></th>
+                                    <th id="actual-repayments" class="text-right shrink"><a target="_blank" href="https://www.kiva.org/help/paymentSchedule#payment_schedule_actual_payments">Actual</a></th>
                                     <th id="comments" class="expand"><a target="_blank" href="https://www.kiva.org/help/paymentSchedule#payment_schedule_comments">Comments</a></th>
                                 {{/isDirectLoan}}
                             </tr>
@@ -54,18 +54,9 @@
                             {{^isDirectLoan}}
                                 {{#partnerRepayments}}
                                     <tr>
-                                        <td headers="months" class="shrink"><strong>{{month}}</strong></td>
+                                        <td headers="expected-repayment-dates" class="shrink"><strong>{{expectedRepayDate}}</strong></td>
                                         <td headers="expected-repayments" class="text-right shrink">{{expectedRepayment}}</td>
-                                        <td headers="actual-repayments" class="text-right shrink">
-                                            {{#actualRepayment}}
-                                                {{actualRepayment}}
-                                            {{/actualRepayment}}
-                                            {{^actualRepayment}}
-                                                {{^isDelinquent}}
-                                                    $0.00
-                                                {{/isDelinquent}}
-                                            {{/actualRepayment}}
-                                        </td>
+                                        <td headers="actual-repayments" class="text-right shrink">{{actualRepayment}}</td>
                                         <td headers="comments" class="expand">
                                             {{#repaymentReceived}}
                                                 <svg class="icon icon-checkbox-good">
@@ -93,19 +84,19 @@
 
                     {{^isDirectLoan}}
                         {{^isDualStatementLoan}}
-                            <table class="advanced-repayment-schedule" style="display:none;" role="grid" summary="Schedule of expected and actual repayments for this loan.">
+                            <table class="advanced-repayment-schedule" style="display:none;" role="grid" summary="Advanced schedule of expected and actual repayments for this loan.">
                                 <thead>
                                 <tr>
                                     <th id="months" class="shrink">&nbsp;</th>
-                                    <th id="expected-repayments" colspan="2"  class="text-left shrink"><a target="_blank" href="https://www.kiva.org/help/paymentSchedule#payment_schedule_expected_payments">Expected Repayments</a></th>
-                                    <th id="actual-repayments" colspan="2" class="text-left shrink"><a target="_blank" href="https://www.kiva.org/help/paymentSchedule#payment_schedule_actual_payments">Actual Repayments</a></th>
+                                    <th id="expected-repayments" colspan="2"  class="text-left shrink"><a target="_blank" href="https://www.kiva.org/help/paymentSchedule#payment_schedule_expected_payments">Expected</a></th>
+                                    <th id="actual-repayments" colspan="2" class="text-left shrink"><a target="_blank" href="https://www.kiva.org/help/paymentSchedule#payment_schedule_actual_payments">Actual</a></th>
                                     <th id="comments" class="expand"><a target="_blank" href="https://www.kiva.org/help/paymentSchedule#payment_schedule_comments">Comments</a></th>
                                 </tr>
                                 </thead>
                                 <tbody>
                                 {{#partnerRepayments}}
                                     <tr class="period">
-                                        <th colspan="5">{{month}}</th>
+                                        <th colspan="5">{{expectedRepayDate}}</th>
                                         <th class="status success">
                                             {{#repaymentReceived}}
                                                 <svg class="icon icon-checkbox-good">
@@ -141,18 +132,14 @@
                                         <td>{{expectedRepayDate}}</td>
                                         <td>{{expectedRepayment}}</td>
                                         {{#repaymentReceived}}
-                                            <td>{{month}}</td>
+                                            <td>{{expectedRepayDate}}</td>
                                         {{/repaymentReceived}}
-                                        <td>
-                                            {{#actualRepayment}}
-                                                {{actualRepayment}}
-                                            {{/actualRepayment}}
-                                            {{^actualRepayment}}
-                                                {{^isDelinquent}}
-                                                    $0.00
-                                                {{/isDelinquent}}
-                                            {{/actualRepayment}}
-                                        </td>
+                                        {{^repaymentReceived}}
+                                            {{#isDelinquent}}
+                                                <td>{{expectedRepayDate}}</td>
+                                            {{/isDelinquent}}
+                                        {{/repaymentReceived}}
+                                        <td>{{actualRepayment}}</td>
                                         <td>
                                             {{#comments}}
                                                 {{comments}}<br>
