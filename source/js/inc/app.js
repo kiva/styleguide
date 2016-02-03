@@ -9,6 +9,7 @@ var accordion = require('./app/accordion');
 var videoResizing = require('./app/videoResizing');
 var borrowerPage = require('./app/pages/borrowerPage');
 var categories = require('./app/pages/categories');
+var saveSearchLightbox = require('./app/saveSearchLightbox');
 
 var $ = require('jquery');
 var FastClick = require('fastclick');
@@ -53,3 +54,4 @@ accordion();
 videoResizing();
 borrowerPage();
 categories();
+saveSearchLightbox();
