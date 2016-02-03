@@ -55,9 +55,10 @@
 	var videoResizing = __webpack_require__(14);
 	var borrowerPage = __webpack_require__(15);
 	var categories = __webpack_require__(16);
+	var saveSearchLightbox = __webpack_require__(17);
 
 	var $ = __webpack_require__(2);
-	var FastClick = __webpack_require__(17);
+	var FastClick = __webpack_require__(18);
 
 	$(document).foundation({
 		equalizer: {
@@ -99,7 +100,7 @@
 	videoResizing();
 	borrowerPage();
 	categories();
-
+	saveSearchLightbox();
 
 /***/ },
 /* 1 */,
@@ -1524,7 +1525,8 @@
 
 
 	/*** EXPORTS FROM exports-loader ***/
-	module.exports = window.Modernizr}.call(window));
+	module.exports = window.Modernizr
+	}.call(window));
 
 /***/ },
 /* 4 */
@@ -19879,6 +19881,23 @@
 
 /***/ },
 /* 17 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var $ = __webpack_require__(2);
+
+	module.exports = function () {
+		'use strict';
+		
+		$(document).on('opened.fndtn.reveal', '[data-reveal]', function () {
+			var saveSearchInput = $('#save-search-text');
+			if (saveSearchInput.length) {
+				saveSearchInput.focus();
+			}
+		});
+	};
+
+/***/ },
+/* 18 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_RESULT__;;(function () {

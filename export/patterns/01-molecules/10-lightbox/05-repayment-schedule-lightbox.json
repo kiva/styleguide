@@ -1,6 +1,8 @@
 {
   "isDualStatementLoan" : false,
-  "repayments": [
+  "isDirectLoan": false,
+  "directRepayments": [],
+  "partnerRepayments": [
     {
       "month": "January 2016",
       "expectedRepayDate": "Jan 2016",
