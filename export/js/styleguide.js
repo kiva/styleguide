@@ -1525,8 +1525,7 @@ define("Styleguide", ["jquery"], function(__WEBPACK_EXTERNAL_MODULE_2__) { retur
 
 
 	/*** EXPORTS FROM exports-loader ***/
-	module.exports = window.Modernizr
-	}.call(window));
+	module.exports = window.Modernizr}.call(window));
 
 /***/ },
 /* 4 */
@@ -19692,17 +19691,31 @@ define("Styleguide", ["jquery"], function(__WEBPACK_EXTERNAL_MODULE_2__) { retur
 		// init the multi-select for partners
 		$partners_filter.select2({
 			templateResult: function(result, container) {
+				// add 'needsclick' class to select2 results for iOS/Safari to prevent fastclick from attaching itself
 				$(container).addClass('needsclick');
 				return result.text;
 			}
 		});
+
+		// search results may be changing size, so remove any set height caused by kv-accordion
 		$partners_filter.on('select2:select select2:unselect', function() {
 			if($partners_ul.css('height') !== 'auto') {
 				$partners_ul.css('height', 'auto');
 			}
 		});
+
+		// close the search results when the accordion closes
 		$partners_ul.on('hide', function() {
-			$partners_filter.select2('close');
+			setTimeout(function(){
+				$partners_filter.select2('close');
+			}, 0);
+		});
+
+		// close the search results when focus lost
+		$('.select2 input').on('blur', function() {
+			setTimeout(function(){
+				$partners_filter.select2('close');
+			}, 0);
 		});
 
 
