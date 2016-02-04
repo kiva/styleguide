@@ -19708,13 +19708,7 @@ define("Styleguide", ["jquery"], function(__WEBPACK_EXTERNAL_MODULE_2__) { retur
 		// close the search results when the accordion closes
 		$partners_ul.on('hide', function() {
 			setTimeout(function(){
-				$partners_filter.select2('close');
-			}, 0);
-		});
-
-		// close the search results when focus lost
-		$('.select2 input').on('blur', function() {
-			setTimeout(function(){
+				console.log('accordion hid. closing...');
 				$partners_filter.select2('close');
 			}, 0);
 		});
