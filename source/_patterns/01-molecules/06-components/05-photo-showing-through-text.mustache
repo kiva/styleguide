@@ -1,22 +1,3 @@
-<!-- this is just a hack demo without media queries for
- the background image file - see the about page for a
-  more fully realized example -->
-
-<style>
-	.photo-behind-text {
-		color: #333;
-		-webkit-text-fill-color: transparent;
-		background: -webkit-linear-gradient(transparent, transparent),
-		url({{img.behind-text.src}}-lg-std.jpg) repeat;
-		background: -o-linear-gradient(transparent, transparent);
-		-webkit-background-clip: text;
-		background-size: cover;
-	}
-</style>
-
-
-
-<h1 class="huge text-center photo-behind-text">
+<h1 class="huge text-center photo-headline" data-interchange="[{{img.behind-text.src}}-sm-std.jpg, (default)], [{{img.behind-text.src}}-med-std.jpg, (medium)], [{{img.behind-text.src}}-lg-std.jpg, (large)]">
 	{{headline.short}}
 </h1>
-
