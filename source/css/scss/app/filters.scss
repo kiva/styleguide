@@ -133,9 +133,6 @@
 		width: 12.5rem;
 		margin: 0 0.6666666667rem 0.3333333333rem;
 		padding-right: 24px;
-		&::-ms-clear {
-			display: none;
-		}
 
 		@media #{$medium-up} {
 			width: 225px;
