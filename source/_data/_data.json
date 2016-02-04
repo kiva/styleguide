@@ -57,7 +57,7 @@
 			"alt": "full width image"
 		},
 		"behind-text": {
-			"src": "http://cms.kiva.org.s3.amazonaws.com/page/images/unique-lg-std.jpg",
+			"src": "http://cms.kiva.org.s3.amazonaws.com/page/images/unique",
 			"alt": "transparent text with image behind"
 		},
 		"category": {
