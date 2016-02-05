@@ -55,10 +55,11 @@
 	var videoResizing = __webpack_require__(14);
 	var borrowerPage = __webpack_require__(15);
 	var categories = __webpack_require__(16);
-	var saveSearchLightbox = __webpack_require__(17);
+	var lightbox = __webpack_require__(17);
+	var saveSearchLightbox = __webpack_require__(18);
 
 	var $ = __webpack_require__(2);
-	var FastClick = __webpack_require__(18);
+	var FastClick = __webpack_require__(19);
 
 	$(document).foundation({
 		equalizer: {
@@ -73,24 +74,6 @@
 		}
 	});
 
-	//Blocking scrolling on the body of a page when a lightbox opens
-	$(document).on('open.fndtn.reveal', '[data-reveal]', function () {
-		$('html, body').css({
-			position: 'relative'
-			, overflow: 'hidden'
-			, height: '100%'
-		});
-	});
-
-	//Allowing scrolling on the body of a page when a lightbox is closed
-	$(document).on('close.fndtn.reveal', '[data-reveal]', function () {
-		$('html, body').css({
-			position: 'static'
-			, overflow: 'visible'
-			, height: 'auto'
-		});
-	});
-
 	FastClick.attach(document.body);
 
 	header();
@@ -100,6 +83,7 @@
 	videoResizing();
 	borrowerPage();
 	categories();
+	lightbox();
 	saveSearchLightbox();
 
 /***/ },
@@ -19890,6 +19874,27 @@
 /* 17 */
 /***/ function(module, exports, __webpack_require__) {
 
+	module.exports = function() {
+		'use strict';
+
+		var $ = __webpack_require__(2);
+		var $body = $('body');
+
+		//Blocking scrolling on the body of a page when a lightbox opens
+		$(document).on('open.fndtn.reveal', '[data-reveal]', function () {
+			$body.css('overflow', 'hidden');
+		});
+
+		//Allowing scrolling on the body of a page when a lightbox is closed
+		$(document).on('close.fndtn.reveal', '[data-reveal]', function () {
+			$body.css('overflow', 'visible');
+		});
+	};
+
+/***/ },
+/* 18 */
+/***/ function(module, exports, __webpack_require__) {
+
 	var $ = __webpack_require__(2);
 
 	module.exports = function () {
@@ -19904,7 +19909,7 @@
 	};
 
 /***/ },
-/* 18 */
+/* 19 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_RESULT__;;(function () {
