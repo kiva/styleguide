@@ -9,57 +9,153 @@
             </a>
             <div class="lightbox-content white repayment-schedule-lightbox">
                 <p class="featured">Repayment Schedule</p>
-                <div class="show-advanced">
-                    <a href="https://www.google.com/">Show Advanced</a>
-                </div>
+
+                {{^isDirectLoan}}
+                    {{^isDualStatementLoan}}
+                        <div class="show-advanced">
+                            <a href="javascript:void(0);" id="show-advanced-toggle">Show Advanced</a>
+                        </div>
+
+                        <div class="hide-advanced" style="display:none;">
+                            <a href="javascript:void(0);" id="hide-advanced-toggle">Hide Advanced</a>
+                        </div>
+                    {{/isDualStatementLoan}}
+                {{/isDirectLoan}}
+
                 <div class="repayment-schedule-wrapper">
                     <table class="simple-repayment-schedule" role="grid" summary="Schedule of expected and actual repayments for this loan.">
                         <thead>
-                        <tr>
-                            <th id="months" class="shrink">&nbsp;</th>
-                            <th id="expected-repayments" class="text-right shrink"><a target="_blank" href="https://www.kiva.org/help/paymentSchedule#payment_schedule_expected_payments">Expected Repayments</a></th>
-                            <th id="actual-repayments" class="text-right shrink"><a target="_blank" href="https://www.kiva.org/help/paymentSchedule#payment_schedule_actual_payments">Actual Repayments</a></th>
-                            <th id="comments" class="expand"><a target="_blank" href="https://www.kiva.org/help/paymentSchedule#payment_schedule_comments">Comments</a></th>
-                        </tr>
+                            <tr>
+                                {{#isDirectLoan}}
+                                    <th id="total-amount-due" class="text-right shrink">Total Amount Due</th>
+                                    <th id="amount-paid" class="text-right shrink">Amount Paid</th>
+                                    <th id="due-date-from-borrower" class="shrink">Due From Borrower</th>
+                                    <th id="status" class="expand">Status</th>
+                                {{/isDirectLoan}}
+                                {{^isDirectLoan}}
+                                    <th id="expected-repayment-dates" class="shrink">&nbsp;</th>
+                                    <th id="expected-repayments" class="text-right shrink"><a target="_blank" href="https://www.kiva.org/help/paymentSchedule#payment_schedule_expected_payments">Expected</a></th>
+                                    <th id="actual-repayments" class="text-right shrink"><a target="_blank" href="https://www.kiva.org/help/paymentSchedule#payment_schedule_actual_payments">Actual</a></th>
+                                    <th id="comments" class="expand"><a target="_blank" href="https://www.kiva.org/help/paymentSchedule#payment_schedule_comments">Comments</a></th>
+                                {{/isDirectLoan}}
+                            </tr>
                         </thead>
                         <tbody>
-                        {{#repayments}}
-                            <tr>
-                                <td headers="months" class="shrink"><strong>{{month}}</strong></td>
-                                <td headers="expected-repayments" class="text-right shrink">{{expectedRepayment}}</td>
-                                <td headers="actual-repayments" class="text-right shrink">
-                                    {{#isDelinquent}}
-                                        $0.00
-                                    {{/isDelinquent}}
-                                    {{^isDelinquent}}
-                                        {{actualRepayment}}
-                                    {{/isDelinquent}}
-                                </td>
-                                <td headers="comments" class="expand">
-                                    {{#repaymentReceived}}
-                                        <svg class="icon icon-checkbox-good">
-                                            <use xlink:href="#icon-checkbox-good"></use>
-                                        </svg>
-                                        Repayment Received
-                                    {{/repaymentReceived}}
-                                    {{^repaymentReceived}}
-                                        {{#isDelinquent}}
-                                            <svg class="icon icon-checkbox-bad">
-                                                <use xlink:href="#icon-checkbox-bad"></use>
-                                            </svg>
-                                            Delinquent
-                                        {{/isDelinquent}}
-                                        {{^isDelinquent}}
-                                            {{comments}}
-                                        {{/isDelinquent}}
-                                    {{/repaymentReceived}}
-                                </td>
-                            </tr>
-                        {{/repayments}}
+                            {{#isDirectLoan}}
+                                {{#directRepayments}}
+                                    <tr>
+                                        <td headers="total-amount-due" class="text-right shrink">{{totalAmountDue}}</td>
+                                        <td headers="amount-paid" class="text-right shrink">{{amountPaid}}</td>
+                                        <td headers="due-date-from-borrower" class="shrink">{{dueDateFromBorrower}}</td>
+                                        <td headers="status" class="expand">{{status}}</td>
+                                    </tr>
+                                {{/directRepayments}}
+                            {{/isDirectLoan}}
+                            {{^isDirectLoan}}
+                                {{#partnerRepayments}}
+                                    <tr>
+                                        <td headers="expected-repayment-dates" class="shrink"><strong>{{expectedRepayDate}}</strong></td>
+                                        <td headers="expected-repayments" class="text-right shrink">{{expectedRepayment}}</td>
+                                        <td headers="actual-repayments" class="text-right shrink">{{actualRepayment}}</td>
+                                        <td headers="comments" class="expand">
+                                            {{#repaymentReceived}}
+                                                <svg class="icon icon-checkbox-good">
+                                                    <use xlink:href="#icon-checkbox-good"></use>
+                                                </svg>
+                                                Repayment Received
+                                            {{/repaymentReceived}}
+                                            {{^repaymentReceived}}
+                                                {{#isDelinquent}}
+                                                    <svg class="icon icon-checkbox-bad">
+                                                        <use xlink:href="#icon-checkbox-bad"></use>
+                                                    </svg>
+                                                    Delinquent
+                                                {{/isDelinquent}}
+                                                {{^isDelinquent}}
+                                                    {{comments}}
+                                                {{/isDelinquent}}
+                                            {{/repaymentReceived}}
+                                        </td>
+                                    </tr>
+                                {{/partnerRepayments}}
+                            {{/isDirectLoan}}
                         </tbody>
                     </table>
-                </div>
 
+                    {{^isDirectLoan}}
+                        {{^isDualStatementLoan}}
+                            <table class="advanced-repayment-schedule" style="display:none;" role="grid" summary="Advanced schedule of expected and actual repayments for this loan.">
+                                <thead>
+                                <tr>
+                                    <th id="months" class="shrink">&nbsp;</th>
+                                    <th id="expected-repayments" colspan="2"  class="text-left shrink"><a target="_blank" href="https://www.kiva.org/help/paymentSchedule#payment_schedule_expected_payments">Expected</a></th>
+                                    <th id="actual-repayments" colspan="2" class="text-left shrink"><a target="_blank" href="https://www.kiva.org/help/paymentSchedule#payment_schedule_actual_payments">Actual</a></th>
+                                    <th id="comments" class="expand"><a target="_blank" href="https://www.kiva.org/help/paymentSchedule#payment_schedule_comments">Comments</a></th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                {{#partnerRepayments}}
+                                    <tr class="period">
+                                        <th colspan="5">{{expectedRepayDate}}</th>
+                                        <th class="status success">
+                                            {{#repaymentReceived}}
+                                                <svg class="icon icon-checkbox-good">
+                                                    <use xlink:href="#icon-checkbox-good"></use>
+                                                </svg>
+                                                Repayment Received
+                                            {{/repaymentReceived}}
+                                            {{^repaymentReceived}}
+                                                {{#isDelinquent}}
+                                                    <svg class="icon icon-checkbox-bad">
+                                                        <use xlink:href="#icon-checkbox-bad"></use>
+                                                    </svg>
+                                                    Delinquent
+                                                {{/isDelinquent}}
+                                                {{^isDelinquent}}
+                                                    {{comments}}
+                                                {{/isDelinquent}}
+                                            {{/repaymentReceived}}
+                                        </th>
+                                    </tr>
+                                    {{#paymentsFromBorrowerToPartner}}
+                                        <tr>
+                                            {{#showB2FPMessage}}<td rowspan="{{numberOfExpectedBorrowerPayments}}">From Borrower to Field Partner</td>{{/showB2FPMessage}}
+                                            <td>{{expectedDate}}</td>
+                                            <td>{{expectedAmount}}</td>
+                                            <td>{{actualDate}}</td>
+                                            <td>{{actualAmount}}</td>
+                                            <td>&nbsp;</td>
+                                        </tr>
+                                    {{/paymentsFromBorrowerToPartner}}
+                                    <tr>
+                                        <td>From Field Partner to Lenders</td>
+                                        <td>{{expectedRepayDate}}</td>
+                                        <td>{{expectedRepayment}}</td>
+                                        {{#repaymentReceived}}
+                                            <td>{{expectedRepayDate}}</td>
+                                        {{/repaymentReceived}}
+                                        {{^repaymentReceived}}
+                                            {{#isDelinquent}}
+                                                <td>{{expectedRepayDate}}</td>
+                                            {{/isDelinquent}}
+                                        {{/repaymentReceived}}
+                                        <td>{{actualRepayment}}</td>
+                                        <td>
+                                            {{#comments}}
+                                                {{comments}}<br>
+                                            {{/comments}}
+                                            {{#currencyLossLenders}}
+                                                {{currencyLossLenders}} lost to currency devaluation <a target="_blank" href="https://www.kiva.org/help/currencyExchangeLoss?business_id=950791&period=201602#ExplanationOfCurrencyExchangeLossToLendersOnThisRepayment">more »</a>
+                                            {{/currencyLossLenders}}
+                                            &nbsp;
+                                        </td>
+                                    </tr>
+                                {{/partnerRepayments}}
+                                </tbody>
+                            </table>
+                        {{/isDualStatementLoan}}
+                    {{/isDirectLoan}}
+                </div>
             </div>
         </div>
     </div>

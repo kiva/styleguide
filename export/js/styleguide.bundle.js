@@ -55,9 +55,10 @@
 	var videoResizing = __webpack_require__(14);
 	var borrowerPage = __webpack_require__(15);
 	var categories = __webpack_require__(16);
+	var saveSearchLightbox = __webpack_require__(17);
 
 	var $ = __webpack_require__(2);
-	var FastClick = __webpack_require__(17);
+	var FastClick = __webpack_require__(18);
 
 	$(document).foundation({
 		equalizer: {
@@ -74,12 +75,20 @@
 
 	//Blocking scrolling on the body of a page when a lightbox opens
 	$(document).on('open.fndtn.reveal', '[data-reveal]', function () {
-		$('body').css('overflow', 'hidden');
+		$('html, body').css({
+			position: 'relative'
+			, overflow: 'hidden'
+			, height: '100%'
+		});
 	});
 
 	//Allowing scrolling on the body of a page when a lightbox is closed
 	$(document).on('close.fndtn.reveal', '[data-reveal]', function () {
-		$('body').css('overflow', 'auto');
+		$('html, body').css({
+			position: 'static'
+			, overflow: 'visible'
+			, height: 'auto'
+		});
 	});
 
 	FastClick.attach(document.body);
@@ -91,7 +100,7 @@
 	videoResizing();
 	borrowerPage();
 	categories();
-
+	saveSearchLightbox();
 
 /***/ },
 /* 1 */,
@@ -19683,17 +19692,25 @@
 		// init the multi-select for partners
 		$partners_filter.select2({
 			templateResult: function(result, container) {
+				// add 'needsclick' class to select2 results for iOS/Safari to prevent fastclick from attaching itself
 				$(container).addClass('needsclick');
 				return result.text;
 			}
 		});
+
+		// search results may be changing size, so remove any set height caused by kv-accordion
 		$partners_filter.on('select2:select select2:unselect', function() {
 			if($partners_ul.css('height') !== 'auto') {
 				$partners_ul.css('height', 'auto');
 			}
 		});
+
+		// close the search results when the accordion closes
 		$partners_ul.on('hide', function() {
-			$partners_filter.select2('close');
+			setTimeout(function(){
+				console.log('accordion hid. closing...');
+				$partners_filter.select2('close');
+			}, 0);
 		});
 
 
@@ -19837,6 +19854,13 @@
 	            teamsLabel.trigger('click');
 	        }
 	    });
+
+	    $('#show-advanced-toggle, #hide-advanced-toggle').click(function() {
+	        $('.show-advanced').toggle();
+	        $('.hide-advanced').toggle();
+	        $('.simple-repayment-schedule').toggle();
+	        $('.advanced-repayment-schedule').toggle();
+	    });
 	};
 
 /***/ },
@@ -19865,6 +19889,23 @@
 
 /***/ },
 /* 17 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var $ = __webpack_require__(2);
+
+	module.exports = function () {
+		'use strict';
+		
+		$(document).on('opened.fndtn.reveal', '[data-reveal]', function () {
+			var saveSearchInput = $('#save-search-text');
+			if (saveSearchInput.length) {
+				saveSearchInput.focus();
+			}
+		});
+	};
+
+/***/ },
+/* 18 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_RESULT__;;(function () {

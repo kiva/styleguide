@@ -12,17 +12,25 @@ module.exports = function() {
 	// init the multi-select for partners
 	$partners_filter.select2({
 		templateResult: function(result, container) {
+			// add 'needsclick' class to select2 results for iOS/Safari to prevent fastclick from attaching itself
 			$(container).addClass('needsclick');
 			return result.text;
 		}
 	});
+
+	// search results may be changing size, so remove any set height caused by kv-accordion
 	$partners_filter.on('select2:select select2:unselect', function() {
 		if($partners_ul.css('height') !== 'auto') {
 			$partners_ul.css('height', 'auto');
 		}
 	});
+
+	// close the search results when the accordion closes
 	$partners_ul.on('hide', function() {
-		$partners_filter.select2('close');
+		setTimeout(function(){
+			console.log('accordion hid. closing...');
+			$partners_filter.select2('close');
+		}, 0);
 	});
 
 

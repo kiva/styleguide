@@ -1,14 +1,13 @@
 <h3 class="filter">Keywords</h3>
-<ul id="filter-keywords-search-box-container" class="button-group toggle filter-button-group-ul-alt">
+<div id="filter-keywords-search-box-container" class="button-group toggle filter-button-group-ul-alt">
 	{{#keywords_filter}}
-		<div style="position: relative;">
-			<a class="filter-keywords-clear-button" href="#">
-				<svg class="icon icon-x">
-					<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-x"></use>
-				</svg>
-			</a>
-		</div>
 		<input id="filter-keywords-search-box" name="filter-keywords-search-box"
 			   class="filter filter-keywords-search-box" type="text" placeholder="Borrower name, description">
+		<a class="filter-keywords-clear-button" href="#">
+			<svg class="icon icon-x">
+				<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-x"></use>
+				<rect x="0" y="0" width="15" height="15" stroke="black" stroke-width="0" fill="none"></rect>
+			</svg>
+		</a>
 	{{/keywords_filter}}
-</ul>
+</div>

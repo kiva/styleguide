@@ -222,9 +222,22 @@
 		position: relative
 	}
 
-	.trustee-image {
-		padding-bottom: 1rem;
-		width: 11rem;
+	.trustee-iconography {
+		padding-bottom: 0.5rem;
+		text-align: center;
+
+		.trustee-image {
+			padding-bottom: 0.5rem;
+			max-height: 12rem;
+		}
+
+		@media #{$medium-up}{
+			text-align: left;
+
+			.trustee-image {
+				max-height: 8rem;
+			}
+		}
 	}
 
 	.trustee-data {
@@ -589,3 +602,13 @@
 	margin-bottom: 10px;
 }
 
+.loan-use {
+	text-align: center;
+	max-width: 60%;
+	margin: 0 auto;
+
+	@media #{$small-only} {
+		text-align: left;
+		max-width: 100%;
+	}
+}

@@ -158,42 +158,6 @@ div.about-video-wrapper {
 			height: rem-calc(120);
 		}
 	}
-
-	.photo-headline {
-		margin-top: 2rem;
-		padding: 0 2rem;
-		color: $kiva-text-dark;
-
-		@media #{$small-only} {
-			background: -webkit-linear-gradient(transparent, transparent),
-			url(http://cms.kiva.org.s3.amazonaws.com/page/images/unique-sm-std.jpg) no-repeat;
-			-webkit-background-clip: text;
-			background: -o-linear-gradient(transparent, transparent);
-			-webkit-text-fill-color: transparent;
-			background-size: cover;
-			background-position: center;
-		}
-
-		@media #{$medium-only} {
-			background: -webkit-linear-gradient(transparent, transparent),
-			url(http://cms.kiva.org.s3.amazonaws.com/page/images/unique-med-std.jpg) no-repeat;
-			-webkit-background-clip: text;
-			background: -o-linear-gradient(transparent, transparent);
-			-webkit-text-fill-color: transparent;
-			background-size: cover;
-			background-position: center;
-		}
-
-		@media #{$large-up} {
-			background: -webkit-linear-gradient(transparent, transparent),
-			url(http://cms.kiva.org.s3.amazonaws.com/page/images/unique-lg-std.jpg) no-repeat;
-			-webkit-background-clip: text;
-			background: -o-linear-gradient(transparent, transparent);
-			-webkit-text-fill-color: transparent;
-			background-size: cover;
-			background-position: center;
-		}
-	}
 }
 
 .aboutStatsContainer {

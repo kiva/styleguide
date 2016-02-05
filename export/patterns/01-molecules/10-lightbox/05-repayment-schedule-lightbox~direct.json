@@ -1,0 +1,73 @@
+{
+  "isDualStatementLoan": false,
+  "isDirectLoan": true,
+  "directRepayments": [
+    {
+      "totalAmountDue": "$208.33",
+      "amountPaid": "$203.33",
+      "dueDateFromBorrower": "Dec 10, 2015",
+      "status": "Partial Payment"
+    },
+    {
+      "totalAmountDue": "$208.33",
+      "amountPaid": "$0.00",
+      "dueDateFromBorrower": "Jan 10, 2015",
+      "status": "Not Paid"
+    },
+    {
+      "totalAmountDue": "$208.33",
+      "amountPaid": "$0.00",
+      "dueDateFromBorrower": "Feb 10, 2015",
+      "status": "Not Paid"
+    },
+    {
+      "totalAmountDue": "$208.33",
+      "amountPaid": "$0.00",
+      "dueDateFromBorrower": "Mar 10, 2015",
+      "status": "Not Paid"
+    },
+    {
+      "totalAmountDue": "$208.33",
+      "amountPaid": "$0.00",
+      "dueDateFromBorrower": "Apr 10, 2015",
+      "status": "Not Paid"
+    },
+    {
+      "totalAmountDue": "$208.33",
+      "amountPaid": "$0.00",
+      "dueDateFromBorrower": "May 10, 2015",
+      "status": "Not Paid"
+    },
+    {
+      "totalAmountDue": "$208.33",
+      "amountPaid": "$0.00",
+      "dueDateFromBorrower": "Jun 10, 2015",
+      "status": "Not Paid"
+    },
+    {
+      "totalAmountDue": "$208.33",
+      "amountPaid": "$0.00",
+      "dueDateFromBorrower": "Jul 10, 2015",
+      "status": "Not Paid"
+    },
+    {
+      "totalAmountDue": "$208.33",
+      "amountPaid": "$0.00",
+      "dueDateFromBorrower": "Aug 10, 2015",
+      "status": "Not Paid"
+    },
+    {
+      "totalAmountDue": "$208.33",
+      "amountPaid": "$0.00",
+      "dueDateFromBorrower": "Sep 10, 2015",
+      "status": "Not Paid"
+    },
+    {
+      "totalAmountDue": "$208.33",
+      "amountPaid": "$0.00",
+      "dueDateFromBorrower": "Oct 10, 2015",
+      "status": "Not Paid"
+    }
+  ],
+  "partnerRepayments": []
+}

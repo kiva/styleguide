@@ -331,17 +331,19 @@
 		color: $light-gray;
 	}
 
-	.filter-keywords-clear-button{
+	.filter-keywords-clear-button {
 		display: none;
 		padding: 0;
 		right: 18px;
 		position: absolute;
-		top: 6px;
+		top: 10px;
 		height: 15px;
-		&:hover{
+		width: 15px;
+		&:hover {
 			background: transparent;
 		}
 		.icon-x {
+			display: block;
 			width: 15px;
 			height: 15px;
 			stroke: $kiva-text-light;
@@ -471,4 +473,8 @@ a.close-reveal-modal .icon.icon-x {
 	height: 0.8rem;
 	width: 0.8rem;
 	margin-right: 5px;
+}
+
+#filter-keywords-search-box-container {
+	position: relative;
 }

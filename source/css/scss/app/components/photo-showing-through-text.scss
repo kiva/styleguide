@@ -1,0 +1,12 @@
+.photo-headline {
+	margin-top: 2rem;
+	padding: 0 2rem;
+	color: $kiva-text-dark;
+	background: -o-linear-gradient(transparent, transparent);
+	background: -webkit-linear-gradient(transparent, transparent);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
