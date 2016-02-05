@@ -9,6 +9,7 @@ var accordion = require('./app/accordion');
 var videoResizing = require('./app/videoResizing');
 var borrowerPage = require('./app/pages/borrowerPage');
 var categories = require('./app/pages/categories');
+var lightbox = require('./app/lightbox');
 var saveSearchLightbox = require('./app/saveSearchLightbox');
 
 var $ = require('jquery');
@@ -27,24 +28,6 @@ $(document).foundation({
 	}
 });
 
-//Blocking scrolling on the body of a page when a lightbox opens
-$(document).on('open.fndtn.reveal', '[data-reveal]', function () {
-	$('html, body').css({
-		position: 'relative'
-		, overflow: 'hidden'
-		, height: '100%'
-	});
-});
-
-//Allowing scrolling on the body of a page when a lightbox is closed
-$(document).on('close.fndtn.reveal', '[data-reveal]', function () {
-	$('html, body').css({
-		position: 'static'
-		, overflow: 'visible'
-		, height: 'auto'
-	});
-});
-
 FastClick.attach(document.body);
 
 header();
@@ -54,4 +37,5 @@ accordion();
 videoResizing();
 borrowerPage();
 categories();
+lightbox();
 saveSearchLightbox();
