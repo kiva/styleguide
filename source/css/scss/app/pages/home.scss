@@ -48,6 +48,8 @@
 
 	.hp-slideshow-next-arrow {
 		right: 0;
+		width: rem-calc(50);
+		overflow: hidden;  // fixes an unwanted right margin
 
 		.icon {
 			transform: rotate(90deg);
