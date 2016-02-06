@@ -1,35 +1,48 @@
 .loan-lifecycle-wrapper {
-	background: url("//www-kiva-org.global.ssl.fastly.net/cms/kiva-works-sm-std.jpg") no-repeat center center fixed;
+	background: url("//www.kiva.org/cms/page/images/kiva-works-sm-std.jpg") no-repeat;
 	min-height: 100%;
 	min-width: 100%;
 	background-size: cover;
 	top: 0;
 
 	.how-kiva-works-title {
-		top:60px;
-		line-height: 30px;
-		text-align: center;
-		padding-bottom: 20px;
+		top: rem-calc(60);
+		line-height: rem-calc(30);
+		padding-bottom: rem-calc(20);
+		max-width: rem-calc(675);
+		margin: 0 auto;
+		padding: rem-calc(30) rem-calc(5);
+
+		h1 {
+			margin: 0;
+		}
 	}
+
 	.text-frame {
-		border: white 5px solid;
+		border: white rem-calc(5) solid;
 		margin: auto;
-		text-align: center;
-		margin: 10px 80px 10px 80px;
+		width: 55%;
+		max-width: rem-calc(350);
+		min-width: rem-calc(225);
 
 		.text-step {
 			margin: auto;
 
-			&.text-step-one {
-				padding: 20px 50px;
+			&.step-1 {
+				padding: rem-calc(20) rem-calc(25);
 			}
 
-			&.text-step-two {
-				padding: 20px 10px;
+			&.step-2 {
+				padding: rem-calc(20) rem-calc(10);
+				max-width: rem-calc(250);
 			}
 
-			&.text-step-three {
-				padding: 80px 10px 20px 10px;
+			&.step-3 {
+				padding: rem-calc(80) rem-calc(10) rem-calc(20) rem-calc(10);
+
+				@media #{$small-only} {
+					padding: rem-calc(60) rem-calc(10) rem-calc(20) rem-calc(10);
+				}
 			}
 		}
 	}
@@ -39,103 +52,153 @@
 	}
 
 	.dotted-line {
-		height: 140px;
+		height: rem-calc(140);
 		width: 0;
-		border-left: white 5px dashed;
+		border-left: white rem-calc(5) dashed;
 		margin: 0 auto;
 	}
 
-	.loan-disbursal-container {
-		margin: 10px 20px 10px 20px;
-		border: white 3px solid;
-		background-color: rgba(0,0,0,0.80);
+	.loan-disbursal-wrapper {
+		padding: 0 rem-calc(15);
 
-		.dotted-line {
-			height: 75px;
-		}
-
-		.icon-choose {
-			color: $white;
-			fill: $black;
-			display: block;
-			margin: -3px auto;
-			width: 150px;
-		}
-
-		.text-frame-icon-overlay {
-			border: white 5px solid;
-			margin: auto;
-			text-align: center;
-			margin: -75px 80px 0 80px;
-		};
-
-		.fundraising-period-container {
-			background-color: $kiva-green;
-			text-align: center;
-			margin: 0 80px 100px 80px;
-			height: 100%;
-
-			.fundraising-period-text-wrapper {
-
-				.fundraising-period-title {
-					font-weight: bold;
-				}
-			}
-
-			.icon-lend {
-				color: $white;
-				fill: $kiva-green;
-				display: inline-block;
-				margin: 0 auto;
-				width: 150px;
-			}
+		.loan-disbursal-container {
+			border: white rem-calc(3) solid;
+			background-color: rgba(0,0,0,0.80);
+			max-width: rem-calc(500);
+			margin: 0 auto;
 
 			.dotted-line {
-				height: 250px;
+				height: rem-calc(75);
 			}
 
-			.text-frame {
-				margin: 10px 0 0 0;
+			.icon-choose {
+				color: $white;
+				fill: $black;
+				display: block;
+				margin: rem-calc(-3) auto;
+				width: rem-calc(130);
+
+					@media #{$small-only} {
+						width: rem-calc(80);
+						height: rem-calc(80);
+					}
 			}
-			.text-step-four {
-				padding: 30px 10px;
-			}
-			.text-step-five {
-				padding: 20px 10px;
-				max-width: 120px;
+
+			.text-frame-icon-overlay {
+				border: white rem-calc(5) solid;
+				margin: auto;
+				width: 67.5%;
+				margin-top: rem-calc(-75);
+
+				@media #{$small-only} {
+					margin-top: rem-calc(-40);
+				}
+			};
+
+			.fundraising-period-container {
+				background-color: $kiva-green;
+				margin: 0 auto rem-calc(100) auto;
+				height: 100%;
+				width: 67.5%;
+				max-width: rem-calc(334);
+				min-width: rem-calc(225);
+
+				@media #{$small-only} {
+					margin-bottom: rem-calc(20);
+				}
+
+				.fundraising-period-text-wrapper {
+
+					.fundraising-period-title {
+						font-weight: bold;
+					}
+				}
+
+				.icon-lend {
+					color: $white;
+					fill: $kiva-green;
+					display: inline-block;
+					margin: 0 auto;
+					width: rem-calc(130);
+
+						@media #{$small-only} {
+							width: rem-calc(80);
+							height: rem-calc(80);
+						}
+				}
+
+				.dotted-line {
+					height: rem-calc(250);
+				}
+
+				.text-frame {
+					margin: 0 auto;
+					width: 100%;
+				}
+				.step-4 {
+					padding: rem-calc(30) rem-calc(10);
+				}
+				.step-5{
+					padding: rem-calc(20) rem-calc(10);
+					max-width: rem-calc(120);
+				}
 			}
 		}
 	}
 
 	.text-frame-icon-overlay {
-		border: white 5px solid;
+		border: white rem-calc(5) solid;
 		margin: auto;
-		text-align: center;
-		margin: -75px 80px 0 80px;
+		width: 55%;
+		margin-top: rem-calc(-75);
+		max-width: rem-calc(350);
+		min-width: rem-calc(225);
+
+		@media #{$small-only} {
+			margin-top: rem-calc(-40);
+		}
 	};
 
 	.icon-repaid {
 		color: $white;
-		fill: $kiva-text-medium;
+		fill: $kiva-text-dark;
 		display: block;
-		margin: -3px auto;
-		width: 150px;
+		margin: rem-calc(-3) auto;
+		width: rem-calc(130);
+
+			@media #{$small-only} {
+				width: rem-calc(80);
+				height: rem-calc(80);
+			}
 	}
 
-	.text-step-six {
-		padding: 80px 10px 20px 10px;
+	.step-6 {
+		padding: rem-calc(80) rem-calc(10) rem-calc(20) rem-calc(10);
+
+		@media #{$small-only} {
+			padding: rem-calc(60) rem-calc(10) rem-calc(20) rem-calc(10);
+		}
 	}
 
 	.icon-repeat {
 		color: $white;
-		fill: $kiva-text-medium;
+		fill: $kiva-text-dark;
 		display: block;
-		margin: -3px auto;
-		width: 150px;
+		margin: rem-calc(-3) auto;
+		width: rem-calc(130);
+
+			@media #{$small-only} {
+				width: rem-calc(80);
+				height: rem-calc(80);
+			}
 	}
 
-	.text-step-seven {
-		padding: 80px 10px 20px 10px;
+	.step-7 {
+		padding: rem-calc(80) rem-calc(10) rem-calc(20) rem-calc(10);
+
+		@media #{$small-only} {
+			padding: rem-calc(60) rem-calc(10) rem-calc(20) rem-calc(10);
+		}
 	}
 
 
