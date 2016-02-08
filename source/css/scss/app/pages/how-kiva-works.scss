@@ -159,7 +159,7 @@
 		}
 	};
 
-	.icon-repaid {
+	.icon-repaid, .icon-repeat {
 		color: $white;
 		fill: $kiva-text-dark;
 		display: block;
@@ -172,34 +172,11 @@
 			}
 	}
 
-	.step-6 {
+	.step-6, .step-7 {
 		padding: rem-calc(80) rem-calc(10) rem-calc(20) rem-calc(10);
 
 		@media #{$small-only} {
 			padding: rem-calc(60) rem-calc(10) rem-calc(20) rem-calc(10);
 		}
 	}
-
-	.icon-repeat {
-		color: $white;
-		fill: $kiva-text-dark;
-		display: block;
-		margin: rem-calc(-3) auto;
-		width: rem-calc(130);
-
-			@media #{$small-only} {
-				width: rem-calc(80);
-				height: rem-calc(80);
-			}
-	}
-
-	.step-7 {
-		padding: rem-calc(80) rem-calc(10) rem-calc(20) rem-calc(10);
-
-		@media #{$small-only} {
-			padding: rem-calc(60) rem-calc(10) rem-calc(20) rem-calc(10);
-		}
-	}
-
-
 }
