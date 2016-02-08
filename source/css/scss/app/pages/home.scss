@@ -48,6 +48,8 @@
 
 	.hp-slideshow-next-arrow {
 		right: 0;
+		width: rem-calc(50);
+		overflow: hidden;  // fixes an unwanted right margin
 
 		.icon {
 			transform: rotate(90deg);
@@ -217,4 +219,47 @@
 .home-page-categories-wrapper
 	.category-link-grid {
 		display: none;
+}
+
+.home-stats-wrapper {
+	background: $dark-green;
+	.home-stats {
+		text-align: center;
+		font-weight: bold;
+		padding-top: rem-calc(30);
+		padding-bottom: rem-calc(10);
+		.stat {
+			padding-left: rem-calc(5);
+			padding-right: rem-calc(5);
+			.data-point {
+				font-size: rem-calc(34);
+				color: $white;
+				padding-bottom: rem-calc(10);
+				line-height: 100%;
+				&.big-number {
+					@media #{$small-up} {
+						font-size: rem-calc(60);
+					}
+					@media #{$large-up} {
+						font-size: rem-calc(34);
+					}
+				}
+			}
+			.icon {
+				color: $white;
+				height: 1.2rem;
+				width: 1.2rem;
+				fill: $dark-green;
+			}
+			.description {
+				font-size: rem-calc(15);
+				line-height: 110%;
+				color: $kiva-green;
+
+				&.top-row {
+					padding-bottom: rem-calc(30);
+				}
+			}
+		}
+	}
 }
