@@ -46,19 +46,20 @@ define("Styleguide", ["jquery"], function(__WEBPACK_EXTERNAL_MODULE_2__) { retur
 
 	'use strict';
 
-	__webpack_require__(7);
+	__webpack_require__(8);
 
 	var header = __webpack_require__(5);
-	var filters = __webpack_require__(12);
-	var imagesizes = __webpack_require__(13);
+	var filters = __webpack_require__(13);
+	var imagesizes = __webpack_require__(14);
 	var accordion = __webpack_require__(6);
-	var videoResizing = __webpack_require__(14);
-	var borrowerPage = __webpack_require__(15);
+	var videoResizing = __webpack_require__(15);
+	var borrowerPage = __webpack_require__(7);
 	var categories = __webpack_require__(16);
-	var saveSearchLightbox = __webpack_require__(17);
+	var lightbox = __webpack_require__(17);
+	var saveSearchLightbox = __webpack_require__(18);
 
 	var $ = __webpack_require__(2);
-	var FastClick = __webpack_require__(18);
+	var FastClick = __webpack_require__(19);
 
 	$(document).foundation({
 		equalizer: {
@@ -73,24 +74,6 @@ define("Styleguide", ["jquery"], function(__WEBPACK_EXTERNAL_MODULE_2__) { retur
 		}
 	});
 
-	//Blocking scrolling on the body of a page when a lightbox opens
-	$(document).on('open.fndtn.reveal', '[data-reveal]', function () {
-		$('html, body').css({
-			position: 'relative'
-			, overflow: 'hidden'
-			, height: '100%'
-		});
-	});
-
-	//Allowing scrolling on the body of a page when a lightbox is closed
-	$(document).on('close.fndtn.reveal', '[data-reveal]', function () {
-		$('html, body').css({
-			position: 'static'
-			, overflow: 'visible'
-			, height: 'auto'
-		});
-	});
-
 	FastClick.attach(document.body);
 
 	header();
@@ -100,6 +83,7 @@ define("Styleguide", ["jquery"], function(__WEBPACK_EXTERNAL_MODULE_2__) { retur
 	videoResizing();
 	borrowerPage();
 	categories();
+	lightbox();
 	saveSearchLightbox();
 
 /***/ },
@@ -1525,8 +1509,7 @@ define("Styleguide", ["jquery"], function(__WEBPACK_EXTERNAL_MODULE_2__) { retur
 
 
 	/*** EXPORTS FROM exports-loader ***/
-	module.exports = window.Modernizr
-	}.call(window));
+	module.exports = window.Modernizr}.call(window));
 
 /***/ },
 /* 4 */
@@ -8333,18 +8316,46 @@ define("Styleguide", ["jquery"], function(__WEBPACK_EXTERNAL_MODULE_2__) { retur
 /* 7 */
 /***/ function(module, exports, __webpack_require__) {
 
+	var $ = __webpack_require__(2);
+
+	module.exports = function () {
+	    'use strict';
+
+	    // for the lenders teams section to expand upon click
+	    $('.lender-count').click(function () {
+	        // grab label object
+	        var teamsLabel = $('#ac-lenders-teams-label');
+
+	        // trigger click on label object if it isn't expanded
+	        if (teamsLabel.attr('aria-expanded') === 'false') {
+	            teamsLabel.trigger('click');
+	        }
+	    });
+
+	    $('#show-advanced-toggle, #hide-advanced-toggle').click(function() {
+	        $('.show-advanced').toggle();
+	        $('.hide-advanced').toggle();
+	        $('.simple-repayment-schedule').toggle();
+	        $('.advanced-repayment-schedule').toggle();
+	    });
+	};
+
+/***/ },
+/* 8 */
+/***/ function(module, exports, __webpack_require__) {
+
 	__webpack_require__(2);
 	__webpack_require__(3);
 
 	__webpack_require__(4);
 
-	__webpack_require__(8);
 	__webpack_require__(9);
 	__webpack_require__(10);
 	__webpack_require__(11);
+	__webpack_require__(12);
 
 /***/ },
-/* 8 */
+/* 9 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(__webpack_provided_window_dot_jQuery) {/*! noUiSlider - 7.0.10 - 2014-12-27 14:50:46 */
@@ -10665,7 +10676,7 @@ define("Styleguide", ["jquery"], function(__WEBPACK_EXTERNAL_MODULE_2__) { retur
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(2)))
 
 /***/ },
-/* 9 */
+/* 10 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;var require;var require;/* WEBPACK VAR INJECTION */(function($) {/*!
@@ -16953,7 +16964,7 @@ define("Styleguide", ["jquery"], function(__WEBPACK_EXTERNAL_MODULE_2__) { retur
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(2)))
 
 /***/ },
-/* 10 */
+/* 11 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*
@@ -19601,7 +19612,7 @@ define("Styleguide", ["jquery"], function(__WEBPACK_EXTERNAL_MODULE_2__) { retur
 
 
 /***/ },
-/* 11 */
+/* 12 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(__webpack_provided_window_dot_jQuery) {/*global jQuery */
@@ -19675,7 +19686,7 @@ define("Styleguide", ["jquery"], function(__WEBPACK_EXTERNAL_MODULE_2__) { retur
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(2)))
 
 /***/ },
-/* 12 */
+/* 13 */
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = function() {
@@ -19708,13 +19719,7 @@ define("Styleguide", ["jquery"], function(__WEBPACK_EXTERNAL_MODULE_2__) { retur
 		// close the search results when the accordion closes
 		$partners_ul.on('hide', function() {
 			setTimeout(function(){
-				$partners_filter.select2('close');
-			}, 0);
-		});
-
-		// close the search results when focus lost
-		$('.select2 input').on('blur', function() {
-			setTimeout(function(){
+				console.log('accordion hid. closing...');
 				$partners_filter.select2('close');
 			}, 0);
 		});
@@ -19771,7 +19776,7 @@ define("Styleguide", ["jquery"], function(__WEBPACK_EXTERNAL_MODULE_2__) { retur
 
 
 /***/ },
-/* 13 */
+/* 14 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var $ = __webpack_require__(2);
@@ -19830,18 +19835,6 @@ define("Styleguide", ["jquery"], function(__WEBPACK_EXTERNAL_MODULE_2__) { retur
 
 
 /***/ },
-/* 14 */
-/***/ function(module, exports, __webpack_require__) {
-
-	var $ = __webpack_require__(2);
-
-	module.exports = function () {
-	    'use strict';
-
-	    $('.loan-image-wrap').fitVids();
-	};
-
-/***/ },
 /* 15 */
 /***/ function(module, exports, __webpack_require__) {
 
@@ -19850,23 +19843,7 @@ define("Styleguide", ["jquery"], function(__WEBPACK_EXTERNAL_MODULE_2__) { retur
 	module.exports = function () {
 	    'use strict';
 
-	    // for the lenders teams section to expand upon click
-	    $('.lender-count').click(function () {
-	        // grab label object
-	        var teamsLabel = $('#ac-lenders-teams-label');
-
-	        // trigger click on label object if it isn't expanded
-	        if (teamsLabel.attr('aria-expanded') === 'false') {
-	            teamsLabel.trigger('click');
-	        }
-	    });
-
-	    $('#show-advanced-toggle, #hide-advanced-toggle').click(function() {
-	        $('.show-advanced').toggle();
-	        $('.hide-advanced').toggle();
-	        $('.simple-repayment-schedule').toggle();
-	        $('.advanced-repayment-schedule').toggle();
-	    });
+	    $('.loan-image-wrap').fitVids();
 	};
 
 /***/ },
@@ -19897,6 +19874,27 @@ define("Styleguide", ["jquery"], function(__WEBPACK_EXTERNAL_MODULE_2__) { retur
 /* 17 */
 /***/ function(module, exports, __webpack_require__) {
 
+	module.exports = function() {
+		'use strict';
+
+		var $ = __webpack_require__(2);
+		var $body = $('body');
+
+		//Blocking scrolling on the body of a page when a lightbox opens
+		$(document).on('open.fndtn.reveal', '[data-reveal]', function () {
+			$body.css('overflow', 'hidden');
+		});
+
+		//Allowing scrolling on the body of a page when a lightbox is closed
+		$(document).on('close.fndtn.reveal', '[data-reveal]', function () {
+			$body.css('overflow', 'visible');
+		});
+	};
+
+/***/ },
+/* 18 */
+/***/ function(module, exports, __webpack_require__) {
+
 	var $ = __webpack_require__(2);
 
 	module.exports = function () {
@@ -19911,7 +19909,7 @@ define("Styleguide", ["jquery"], function(__WEBPACK_EXTERNAL_MODULE_2__) { retur
 	};
 
 /***/ },
-/* 18 */
+/* 19 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_RESULT__;;(function () {
