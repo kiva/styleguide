@@ -159,7 +159,8 @@
 		}
 	};
 
-	.icon-repaid, .icon-repeat {
+	.icon-repaid,
+	.icon-repeat {
 		color: $white;
 		fill: $kiva-text-dark;
 		display: block;
@@ -172,7 +173,8 @@
 			}
 	}
 
-	.step-6, .step-7 {
+	.step-6,
+	.step-7 {
 		padding: rem-calc(80) rem-calc(10) rem-calc(20) rem-calc(10);
 
 		@media #{$small-only} {
