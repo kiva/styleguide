@@ -1,12 +1,31 @@
+//shared styling with plain grey text for non-compliant browsers
 .photo-headline {
 	margin-top: 2rem;
 	padding: 0 2rem;
 	color: $kiva-text-dark;
 	background: -o-linear-gradient(transparent, transparent);
-	background: -webkit-linear-gradient(transparent, transparent);
-	-webkit-background-clip: text;
-	-webkit-text-fill-color: transparent;
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
+}
+
+//specify background images per each use case
+.photo-headline-example {
+	.photo-headline {
+		@media #{$small-only} {
+			background: -webkit-linear-gradient(transparent, transparent), url(https://www.kiva.org/cms/page/images/start-sm-std.jpg);
+			-webkit-background-clip: text;
+			-webkit-text-fill-color: transparent;
+		}
+		@media #{$medium-only} {
+			background: -webkit-linear-gradient(transparent, transparent), url(https://www.kiva.org/cms/page/images/start-med-std.jpg);
+			-webkit-background-clip: text;
+			-webkit-text-fill-color: transparent;
+		}
+		@media #{$large-up} {
+			background: -webkit-linear-gradient(transparent, transparent), url(https://www.kiva.org/cms/page/images/start-lg-std.jpg);
+			-webkit-background-clip: text;
+			-webkit-text-fill-color: transparent;
+		}
+	}
 }
