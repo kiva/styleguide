@@ -64,7 +64,7 @@
         }
     }
 
-    img {
+    img, .circle-avatar {
         margin-top: -$header-height-small/16;
 
         @media #{$large-up} {
