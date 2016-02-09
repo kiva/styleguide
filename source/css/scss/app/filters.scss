@@ -11,9 +11,11 @@
 	.medium-notouch {
 		visibility: hidden;
 		height: 0;
+		margin: 0;
 		@media #{$medium-up} {
 			visibility: visible;
 			height: auto;
+			margin: rem-calc(15);
 		}
 	}
 
@@ -125,6 +127,14 @@
 	.interact {
 		color: $charcoal;
 		font-weight: normal;
+	}
+
+	.expandable-filter {
+		padding: 17.2px 12px;
+		margin: 0;
+		@media #{$medium-up} {
+			display: none;
+		}
 	}
 
 	.filter-keywords-search-box {
@@ -283,7 +293,6 @@
 
 	.filter-button-group-ul {
 		background: #f5f5f5;
-		margin-top: 16px;
 		-webkit-box-shadow: inset 0px 1px 1px rgba(50, 50, 50, 0.75);
 		-moz-box-shadow: inset 0px 1px 1px rgba(50, 50, 50, 0.75);
 		box-shadow: inset 0px 1px 1px rgba(50, 50, 50, 0.75);
@@ -306,6 +315,10 @@
 		@media #{$medium-up} {
 			padding: 0;
 		}
+	}
+
+	.no-padding-top {
+		padding-top: 0;
 	}
 
 	.icon-globe {
