@@ -1,6 +1,10 @@
 {
   "isDualStatementLoan": false,
   "isDirectLoan": true,
+  "isDisbursed": true,
+  "loanAmount": "$10,000.00",
+  "monthlyInstallmentAmount": "$1,000.00",
+  "repaymentTerm": 10,
   "directRepayments": [
     {
       "totalAmountDue": "$208.33",
