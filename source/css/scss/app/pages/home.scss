@@ -518,9 +518,27 @@ $hiw-half-tap-button-size-small: $hiw-tap-button-size-small / 2;
 	}
 }
 
-.home-page-categories-wrapper
+.home-page-categories-wrapper {
 	.category-link-grid {
 		display: none;
+	}
+	.photo-headline {
+		@media #{$small-only} {
+			background: -webkit-linear-gradient(transparent, transparent), url(https://www.kiva.org/cms/page/images/start-sm-std.jpg);
+			-webkit-background-clip: text;
+			-webkit-text-fill-color: transparent;
+		}
+		@media #{$medium-only} {
+			background: -webkit-linear-gradient(transparent, transparent), url(https://www.kiva.org/cms/page/images/start-med-std.jpg);
+			-webkit-background-clip: text;
+			-webkit-text-fill-color: transparent;
+		}
+		@media #{$large-up} {
+			background: -webkit-linear-gradient(transparent, transparent), url(https://www.kiva.org/cms/page/images/start-lg-std.jpg);
+			-webkit-background-clip: text;
+			-webkit-text-fill-color: transparent;
+		}
+	}
 }
 
 .home-stats-wrapper {

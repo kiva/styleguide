@@ -1,0 +1,190 @@
+.loan-lifecycle-wrapper {
+	background: url("//www.kiva.org/cms/page/images/kiva-works-sm-std.jpg") no-repeat;
+	min-height: 100%;
+	min-width: 100%;
+	background-size: cover;
+
+	.how-kiva-works-title {
+		top: rem-calc(60);
+		line-height: rem-calc(30);
+		padding-bottom: rem-calc(20);
+		max-width: rem-calc(675);
+		margin: 0 auto;
+		padding: rem-calc(30) rem-calc(5);
+
+		h1 {
+			margin: 0;
+		}
+	}
+
+	.text-frame {
+		border: white rem-calc(5) solid;
+		margin: auto;
+		width: 55%;
+		max-width: rem-calc(350);
+		min-width: rem-calc(225);
+		min-height: rem-calc(120);
+
+		.text-step {
+			margin: auto;
+
+			&.step-1 {
+				padding: rem-calc(43) rem-calc(25);
+			}
+
+			&.step-2 {
+				padding: rem-calc(20) rem-calc(10);
+				max-width: rem-calc(250);
+			}
+
+			&.step-3 {
+				padding: rem-calc(60) rem-calc(10) rem-calc(20) rem-calc(10);
+
+				@media #{$medium-up} {
+					padding: rem-calc(80) rem-calc(10) rem-calc(20) rem-calc(10);
+				}
+			}
+		}
+	}
+
+	.text-box {
+		background-color: $white;
+	}
+
+	.dotted-line {
+		height: rem-calc(140);
+		width: 0;
+		border-left: white rem-calc(5) dashed;
+		margin: 0 auto;
+	}
+
+	.loan-disbursal-wrapper {
+		padding: 0 rem-calc(15);
+
+		.loan-disbursal-container {
+			border: white rem-calc(3) solid;
+			background-color: rgba(0,0,0,0.80);
+			max-width: rem-calc(500);
+			margin: 0 auto;
+
+			.dotted-line {
+				height: rem-calc(75);
+			}
+
+			.icon-choose {
+				color: $white;
+				fill: $black;
+				display: block;
+				margin: rem-calc(-3) auto;
+				width: rem-calc(80);
+				height: rem-calc(80);
+
+					@media #{$medium-up} {
+						width: rem-calc(130);
+						height: rem-calc(130);
+					}
+			}
+
+			.text-frame-icon-overlay {
+				border: white rem-calc(5) solid;
+				margin: auto;
+				width: 67.5%;
+				margin-top: rem-calc(-40);
+				min-height: rem-calc(120);
+
+				@media #{$medium-up} {
+					margin-top: rem-calc(-75);
+				}
+			};
+
+			.fundraising-period-container {
+				background-color: $kiva-green;
+				margin: 0 auto rem-calc(20) auto;
+				height: 100%;
+				width: 67.5%;
+				max-width: rem-calc(334);
+				min-width: rem-calc(225);
+				min-height: rem-calc(120);
+
+				@media #{$medium-up} {
+					margin-bottom: rem-calc(100);
+				}
+
+				.fundraising-period-text-wrapper {
+
+					.fundraising-period-title {
+						font-weight: bold;
+					}
+				}
+
+				.icon-lend {
+					color: $white;
+					fill: $kiva-green;
+					display: inline-block;
+					margin: 0 auto;
+					width: rem-calc(80);
+					height: rem-calc(80);
+
+						@media #{$medium-up} {
+							width: rem-calc(130);
+							height: rem-calc(130);
+						}
+				}
+
+				.dotted-line {
+					height: rem-calc(250);
+				}
+
+				.text-frame {
+					margin: 0 auto;
+					width: 100%;
+				}
+				.step-4 {
+					padding: rem-calc(30) rem-calc(10);
+				}
+				.step-5{
+					padding: rem-calc(31) rem-calc(10);
+					max-width: rem-calc(120);
+				}
+			}
+		}
+	}
+
+	.text-frame-icon-overlay {
+		border: white rem-calc(5) solid;
+		margin: auto;
+		width: 55%;
+		margin-top: rem-calc(-40);
+		max-width: rem-calc(350);
+		min-width: rem-calc(225);
+		min-height: rem-calc(120);
+
+		@media #{$medium-up} {
+			margin-top: rem-calc(-75);
+		}
+	};
+
+	.icon-repaid,
+	.icon-repeat {
+		color: $white;
+		fill: $kiva-text-dark;
+		display: block;
+		width: rem-calc(80);
+		height: rem-calc(80);
+		margin: rem-calc(-3) auto;
+
+			@media #{$medium-up} {
+				width: rem-calc(130);
+				height: rem-calc(130);
+			}
+	}
+
+	.step-6,
+	.step-7 {
+		padding: rem-calc(60) rem-calc(10) rem-calc(20) rem-calc(10);
+
+		@media #{$medium-up} {
+			padding: rem-calc(85) rem-calc(10) rem-calc(20) rem-calc(10);
+		}
+	}
+}

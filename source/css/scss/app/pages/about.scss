@@ -158,6 +158,23 @@ div.about-video-wrapper {
 			height: rem-calc(120);
 		}
 	}
+	.photo-headline {
+		@media #{$small-only} {
+			background: -webkit-linear-gradient(transparent, transparent), url(https://www.kiva.org/cms/page/images/unique-sm-std.jpg);
+			-webkit-background-clip: text;
+			-webkit-text-fill-color: transparent;
+		}
+		@media #{$medium-only} {
+			background: -webkit-linear-gradient(transparent, transparent), url(https://www.kiva.org/cms/page/images/unique-med-std.jpg);
+			-webkit-background-clip: text;
+			-webkit-text-fill-color: transparent;
+		}
+		@media #{$large-up} {
+			background: -webkit-linear-gradient(transparent, transparent), url(https://www.kiva.org/cms/page/images/unique-lg-std.jpg);
+			-webkit-background-clip: text;
+			-webkit-text-fill-color: transparent;
+		}
+	}
 }
 
 .aboutStatsContainer {
