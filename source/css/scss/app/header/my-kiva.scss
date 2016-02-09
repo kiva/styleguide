@@ -1,22 +1,30 @@
 .my-kiva {
-    &.header-button {
-        text-align: right;
-    }
+	&.header-button {
+		text-align: right;
+	}
 
-    img {
-        height: 0.78125 * $header-height-small;
-        border-radius: 50%;
-        margin-left: 0.3rem;
-        margin-right: 0.3rem;
-    }
+	.circle-avatar {
+		width: 0.78125 * $header-height-small;
+		height: 0.78125 * $header-height-small;
+		margin-left: 0.3rem;
+		margin-right: 0.3rem;
+		display: inline-block;
+		border-radius:50%;
+		background-position-y: center;
+		background-position-x: center;
+		background-repeat: no-repeat;
+		background-size: cover;
+	}
 }
 
 @media #{$large-up} {
-    .my-kiva {
-        img {
-            height: 0.78125 * $header-height;
-            margin-left: 0.5rem;
-            margin-right: 0;
-        }
-    }
+	.my-kiva {
+		.circle-avatar {
+			width: 0.78125 * $header-height;
+			height: 0.78125 * $header-height;
+			margin-left: 0.5rem;
+			margin-right: 0;
+			vertical-align: middle;
+		}
+	}
 }
