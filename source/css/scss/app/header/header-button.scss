@@ -1,74 +1,74 @@
 .header-button {
-    display:block;
-    padding:0;
-    line-height: $header-height-small;
-    background-color: $kiva-green;
-    white-space: nowrap;
-    text-align: center;
+	display:block;
+	padding:0;
+	line-height: $header-height-small;
+	background-color: $kiva-green;
+	white-space: nowrap;
+	text-align: center;
 
-    @media #{$large-up} {
-        padding:0 $header-height/4;
-        line-height: $header-height;
-    }
+	@media #{$large-up} {
+		padding:0 $header-height/4;
+		line-height: $header-height;
+	}
 
-    &:link, &:visited, &:hover, &:active {
-        color: $white;
-        text-decoration: none;
+	&:link, &:visited, &:hover, &:active {
+		color: $white;
+		text-decoration: none;
 
-        .icon {
-            fill: $white;
-        }
-    }
+		.icon {
+			fill: $white;
+		}
+	}
 
-    &[data-dropdown] .icon {
-        width: 0.5rem;
-        height: 0.5rem;
+	&[data-dropdown] .icon {
+		width: 0.5rem;
+		height: 0.5rem;
 
-        $transition: 400ms ease;
-        $transform: rotate(180deg);
+		$transition: 400ms ease;
+		$transform: rotate(180deg);
 
-        -webkit-transition: -webkit-transform $transition;
-        transition: transform $transition;
+		-webkit-transition: -webkit-transform $transition;
+		transition: transform $transition;
 
-        -webkit-transform: $transform;
-        -ms-transform: $transform;
-        transform: $transform;
+		-webkit-transform: $transform;
+		-ms-transform: $transform;
+		transform: $transform;
 
-        @media #{$medium-up} {
-            width: 0.75rem;
-            height: 0.75rem;
-        }
-    }
+		@media #{$medium-up} {
+			width: 0.75rem;
+			height: 0.75rem;
+		}
+	}
 
-    &[aria-expanded="true"]{
-        color: $kiva-darkgreen;
+	&[aria-expanded="true"]{
+		color: $kiva-darkgreen;
 
-        .icon {
-            fill: $kiva-darkgreen;
+		.icon {
+			fill: $kiva-darkgreen;
 
-            $transform: rotate(0deg);
+			$transform: rotate(0deg);
 
-            -webkit-transform: $transform;
-            -ms-transform: $transform;
-            transform: $transform;
-        }
-    }
+			-webkit-transform: $transform;
+			-ms-transform: $transform;
+			transform: $transform;
+		}
+	}
 
-    .icon {
-        width: $top-nav-font-size - $top-nav-font-reduction;
-        height: $top-nav-line-height - $top-nav-font-reduction;
+	.icon {
+		width: $top-nav-font-size - $top-nav-font-reduction;
+		height: $top-nav-line-height - $top-nav-font-reduction;
 
-        @media #{$large-up} {
-            width: $top-nav-font-size;
-            height: $top-nav-line-height;
-        }
-    }
+		@media #{$large-up} {
+			width: $top-nav-font-size;
+			height: $top-nav-line-height;
+		}
+	}
 
-    img, .circle-avatar {
-        margin-top: -$header-height-small/16;
+	img, .circle-avatar {
+		margin-top: -$header-height-small/16;
 
-        @media #{$large-up} {
-            margin-top: -$header-height/16;
-        }
-    }
+		@media #{$large-up} {
+			margin-top: -$header-height/16;
+		}
+	}
 }
