@@ -10,6 +10,39 @@
             <div class="lightbox-content white repayment-schedule-lightbox">
                 <p class="featured">Repayment Schedule</p>
 
+                {{#isDirectLoan}}
+                    {{#isDisbursed}}
+                        <div class="repayment-schedule-wrapper">
+                            <table class="simple-repayment-schedule" role="grid" summary="Schedule of expected and actual repayments for this loan.">
+                                <thead>
+                                <tr>
+                                    <th id="total-amount-due" class="text-right shrink">Total Amount Due</th>
+                                    <th id="amount-paid" class="text-right shrink">Amount Paid</th>
+                                    <th id="due-date-from-borrower" class="shrink">Due From Borrower</th>
+                                    <th id="status" class="expand">Status</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                {{#directRepayments}}
+                                    <tr>
+                                        <td headers="total-amount-due" class="text-right shrink">{{totalAmountDue}}</td>
+                                        <td headers="amount-paid" class="text-right shrink">{{amountPaid}}</td>
+                                        <td headers="due-date-from-borrower" class="shrink">{{dueDateFromBorrower}}</td>
+                                        <td headers="status" class="expand">{{status}}</td>
+                                    </tr>
+                                {{/directRepayments}}
+                                </tbody>
+                            </table>
+                        </div>
+                    {{/isDisbursed}}
+                    {{^isDisbursed}}
+                        <div class="loan-not-disbursed-text">
+                            <p>This borrower’s loan is for {{loanAmount}}.</p>
+                            <p>Repayments on this loan will be made in monthly installments of {{monthlyInstallmentAmount}} over a period of {{repaymentTerm}} months. After the funds are disbursed, the borrower will have the standard 1 month plus an additional 6 months grace period before the first payment is due. The detailed repayment schedule will be published here at the time that the funds for this loan are disbursed.</p>
+                            <p>Disbursement and repayments will be made via PayPal, a web-based payment system. Repayments made on delinquent loans will be applied toward the oldest payment due until the loan becomes current.</p>
+                        </div>
+                    {{/isDisbursed}}
+                {{/isDirectLoan}}
                 {{^isDirectLoan}}
                     {{^isDualStatementLoan}}
                         <div class="show-advanced">
@@ -20,38 +53,18 @@
                             <a href="javascript:void(0);" id="hide-advanced-toggle">Hide Advanced</a>
                         </div>
                     {{/isDualStatementLoan}}
-                {{/isDirectLoan}}
 
-                <div class="repayment-schedule-wrapper">
-                    <table class="simple-repayment-schedule" role="grid" summary="Schedule of expected and actual repayments for this loan.">
-                        <thead>
+                    <div class="repayment-schedule-wrapper">
+                        <table class="simple-repayment-schedule" role="grid" summary="Schedule of expected and actual repayments for this loan.">
+                            <thead>
                             <tr>
-                                {{#isDirectLoan}}
-                                    <th id="total-amount-due" class="text-right shrink">Total Amount Due</th>
-                                    <th id="amount-paid" class="text-right shrink">Amount Paid</th>
-                                    <th id="due-date-from-borrower" class="shrink">Due From Borrower</th>
-                                    <th id="status" class="expand">Status</th>
-                                {{/isDirectLoan}}
-                                {{^isDirectLoan}}
-                                    <th id="expected-repayment-dates" class="shrink">&nbsp;</th>
-                                    <th id="expected-repayments" class="text-right shrink"><a target="_blank" href="https://www.kiva.org/help/paymentSchedule#payment_schedule_expected_payments">Expected</a></th>
-                                    <th id="actual-repayments" class="text-right shrink"><a target="_blank" href="https://www.kiva.org/help/paymentSchedule#payment_schedule_actual_payments">Actual</a></th>
-                                    <th id="comments" class="expand"><a target="_blank" href="https://www.kiva.org/help/paymentSchedule#payment_schedule_comments">Comments</a></th>
-                                {{/isDirectLoan}}
+                                <th id="expected-repayment-dates" class="shrink">&nbsp;</th>
+                                <th id="expected-repayments" class="text-right shrink"><a target="_blank" href="https://www.kiva.org/help/paymentSchedule#payment_schedule_expected_payments">Expected</a></th>
+                                <th id="actual-repayments" class="text-right shrink"><a target="_blank" href="https://www.kiva.org/help/paymentSchedule#payment_schedule_actual_payments">Actual</a></th>
+                                <th id="comments" class="expand"><a target="_blank" href="https://www.kiva.org/help/paymentSchedule#payment_schedule_comments">Comments</a></th>
                             </tr>
-                        </thead>
-                        <tbody>
-                            {{#isDirectLoan}}
-                                {{#directRepayments}}
-                                    <tr>
-                                        <td headers="total-amount-due" class="text-right shrink">{{totalAmountDue}}</td>
-                                        <td headers="amount-paid" class="text-right shrink">{{amountPaid}}</td>
-                                        <td headers="due-date-from-borrower" class="shrink">{{dueDateFromBorrower}}</td>
-                                        <td headers="status" class="expand">{{status}}</td>
-                                    </tr>
-                                {{/directRepayments}}
-                            {{/isDirectLoan}}
-                            {{^isDirectLoan}}
+                            </thead>
+                            <tbody>
                                 {{#partnerRepayments}}
                                     <tr>
                                         <td headers="expected-repayment-dates" class="shrink"><strong>{{expectedRepayDate}}</strong></td>
@@ -78,11 +91,9 @@
                                         </td>
                                     </tr>
                                 {{/partnerRepayments}}
-                            {{/isDirectLoan}}
-                        </tbody>
-                    </table>
+                            </tbody>
+                        </table>
 
-                    {{^isDirectLoan}}
                         {{^isDualStatementLoan}}
                             <table class="advanced-repayment-schedule" style="display:none;" role="grid" summary="Advanced schedule of expected and actual repayments for this loan.">
                                 <thead>
@@ -154,8 +165,8 @@
                                 </tbody>
                             </table>
                         {{/isDualStatementLoan}}
-                    {{/isDirectLoan}}
-                </div>
+                    </div>
+                {{/isDirectLoan}}
             </div>
         </div>
     </div>
