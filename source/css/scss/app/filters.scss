@@ -15,6 +15,7 @@
 		@media #{$medium-up} {
 			visibility: visible;
 			height: auto;
+			margin: rem-calc(15);
 		}
 	}
 
@@ -131,6 +132,9 @@
 	.expandable-filter {
 		padding: 17.2px 12px;
 		margin: 0;
+		@media #{$medium-up} {
+			display: none;
+		}
 	}
 
 	.filter-keywords-search-box {

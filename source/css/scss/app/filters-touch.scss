@@ -8,6 +8,9 @@
 		visibility: hidden;
 		height: 0;
 		margin: 0;
+		@media #{$medium-up} {
+			margin: rem-calc(15);
+		}
 	}
 
 	.large-touch {
@@ -39,6 +42,9 @@
 	.expandable-filter {
 		padding: 17.2px 12px;
 		margin: 0;
+		@media #{$medium-up} {
+			display: none;
+		}
 	}
 }
 
