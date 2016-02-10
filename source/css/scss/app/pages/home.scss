@@ -222,6 +222,18 @@ $hiw-half-icon-size-small: $hiw-icon-size-small / 2;
 $hiw-half-icon-size-large: $hiw-icon-size-large / 2;
 $hiw-half-tap-button-size-small: $hiw-tap-button-size-small / 2;
 
+@keyframes tapPulse {
+	0% {
+		background-color: $kiva-darkgreen;
+	}
+	60% {
+		background-color: lighten($kiva-darkgreen, 8%);
+	}
+	100% {
+		background-color: $kiva-darkgreen;
+	}
+}
+
 .hp-how-it-works-wrapper {
 	width: 100%;
 	background-color: $kiva-green;
@@ -399,7 +411,7 @@ $hiw-half-tap-button-size-small: $hiw-tap-button-size-small / 2;
 		}
 
 		.icon-curved-arrow.arrow-2 {
-			top: 39.5vw;
+			top: 38.45vw;
 			right: -3vw;
 			transform: rotate(10deg);
 
@@ -412,7 +424,7 @@ $hiw-half-tap-button-size-small: $hiw-tap-button-size-small / 2;
 
 		.icon-curved-arrow.arrow-3 {
 			bottom: -3vw;
-			left: -1vw;
+			left: 0;
 			transform: rotate(103deg);
 
 			@media #{$large-up} {
@@ -423,7 +435,7 @@ $hiw-half-tap-button-size-small: $hiw-tap-button-size-small / 2;
 		}
 
 		.icon-curved-arrow.arrow-4 {
-			top: -1vw;
+			top: -0.25vw;
 			left: -3vw;
 			transform: rotate(193deg);
 
@@ -445,7 +457,8 @@ $hiw-half-tap-button-size-small: $hiw-tap-button-size-small / 2;
 			border-radius: $hiw-half-tap-button-size-small;
 			border: 3px solid white;
 			color: $white;
-			background-color: $kiva-darkgreen;
+			// background-color is set by animation
+			animation: tapPulse 3s linear infinite;
 		}
 	}
 
@@ -480,6 +493,11 @@ $hiw-half-tap-button-size-small: $hiw-tap-button-size-small / 2;
 	, div.small-step-4 {
 		margin: 0 auto;
 		width: 80vw;
+		min-height: rem-calc(100);
+
+		@media #{$medium-range} {
+			min-height: rem-calc(72);
+		}
 
 		p.featured + p {
 			font-size: $small-font-size;
@@ -546,23 +564,29 @@ $hiw-half-tap-button-size-small: $hiw-tap-button-size-small / 2;
 
 	.home-stats {
 		text-align: center;
-		font-weight: bold;
-		padding-top: rem-calc(30);
+		font-weight: $font-weight-bold;
 		padding-bottom: rem-calc(10);
+		@media #{$small-up} {
+			padding-top: rem-calc(20);
+		}
+		@media #{$large-up} {
+			padding-top: rem-calc(30);
+		}
 		.stat {
 			padding-left: rem-calc(5);
 			padding-right: rem-calc(5);
 			.data-point {
-				font-size: rem-calc(34);
 				color: $white;
 				padding-bottom: rem-calc(10);
-				line-height: 100%;
-				&.big-number {
-					@media #{$small-up} {
-						font-size: rem-calc(60);
+				white-space: nowrap;
+				&.growing-statistic {
+					@media #{$small-only} {
+						font-size: $small-statistic-font-size;
+						line-height: $small-statistic-line-height;
 					}
-					@media #{$large-up} {
-						font-size: rem-calc(34);
+					@media #{$medium-up} {
+						font-size: $medium-statistic-font-size;
+						line-height: $medium-statistic-line-height;
 					}
 				}
 			}
@@ -573,7 +597,7 @@ $hiw-half-tap-button-size-small: $hiw-tap-button-size-small / 2;
 				fill: $dark-green;
 			}
 			.description {
-				font-size: rem-calc(15);
+				font-size: $small-font-size;
 				line-height: 110%;
 				color: $kiva-green;
 
