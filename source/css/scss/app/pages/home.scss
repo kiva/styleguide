@@ -556,13 +556,13 @@ $hiw-half-tap-button-size-small: $hiw-tap-button-size-small / 2;
 				color: $white;
 				padding-bottom: rem-calc(10);
 				&.growing-statistic {
-					@media #{$small-up} {
-						font-size: $medium-statistic-font-size;
-						line-height: $medium-statistic-line-height;
-					}
-					@media #{$large-up} {
+					@media #{$small-only} {
 						font-size: $small-statistic-font-size;
 						line-height: $small-statistic-line-height;
+					}
+					@media #{$medium-up} {
+						font-size: $medium-statistic-font-size;
+						line-height: $medium-statistic-line-height;
 					}
 				}
 			}
