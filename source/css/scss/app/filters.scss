@@ -13,6 +13,7 @@
 		height: 0;
 		margin: 0;
 		@media #{$medium-up} {
+			display: block;
 			visibility: visible;
 			height: auto;
 			margin: rem-calc(15);
@@ -75,12 +76,10 @@
 		min-height: 44px;
 		cursor: pointer;
 		border-bottom: 1px solid #D8D8C8;
-		padding-top: 10px;
+		padding: 10px 0;
 		@media #{$medium-up} {
-			margin: 0 0 1.666666666rem 0;
 			min-height: initial;
 			border: 0;
-			padding-top: 0;
 		}
 	}
 
@@ -132,9 +131,7 @@
 	.expandable-filter {
 		padding: 17.2px 12px;
 		margin: 0;
-		@media #{$medium-up} {
-			display: none;
-		}
+		visibility: visible;
 	}
 
 	.filter-keywords-search-box {
@@ -185,9 +182,6 @@
 
 	#misc-filters-container {
 		margin-bottom: 0em;
-		@media #{$medium-up} {
-			margin-bottom: 1em;
-		}
 	}
 
 	.borrower-filter-box {
@@ -296,10 +290,8 @@
 		-webkit-box-shadow: inset 0px 1px 1px rgba(50, 50, 50, 0.75);
 		-moz-box-shadow: inset 0px 1px 1px rgba(50, 50, 50, 0.75);
 		box-shadow: inset 0px 1px 1px rgba(50, 50, 50, 0.75);
-		@media #{$medium-up} {
+		@media #{$large-up} {
 			background: #fff;
-			margin-top: 0px;
-			margin-top: -10px;
 			-webkit-box-shadow: inset 0px 0px 0px rgba(50, 50, 50, 0.75);
 			-moz-box-shadow: inset 0px 0px 0px rgba(50, 50, 50, 0.75);
 			box-shadow: inset 0px 0px 0px rgba(50, 50, 50, 0.75);
@@ -312,9 +304,6 @@
 
 	.extra-padding-bottom {
 		padding-bottom: 10px;
-		@media #{$medium-up} {
-			padding: 0;
-		}
 	}
 
 	.no-padding-top {

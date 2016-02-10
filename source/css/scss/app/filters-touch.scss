@@ -8,9 +8,7 @@
 		visibility: hidden;
 		height: 0;
 		margin: 0;
-		@media #{$medium-up} {
-			margin: rem-calc(15);
-		}
+		display: none;
 	}
 
 	.large-touch {
@@ -21,6 +19,7 @@
 	.button_box {
 		padding-top: 10px;
 	}
+
 
 	.filter-header {
 		margin: 0.5em 0;
@@ -37,14 +36,6 @@
 		min-height: 44px;
 		cursor: pointer;
 		border-bottom: 1px solid #D8D8C8;
-	}
-
-	.expandable-filter {
-		padding: 17.2px 12px;
-		margin: 0;
-		@media #{$medium-up} {
-			display: none;
-		}
 	}
 }
 
@@ -83,7 +74,7 @@
 			min-height: 44px;
 			cursor: pointer;
 			border-bottom: 1px solid #D8D8C8;
-			padding-top: 10px;
+			padding-top: 0;
 		}
 
 		h3 {
