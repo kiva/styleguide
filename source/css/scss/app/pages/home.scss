@@ -555,6 +555,7 @@ $hiw-half-tap-button-size-small: $hiw-tap-button-size-small / 2;
 			.data-point {
 				color: $white;
 				padding-bottom: rem-calc(10);
+				white-space: nowrap;
 				&.growing-statistic {
 					@media #{$small-only} {
 						font-size: $small-statistic-font-size;
