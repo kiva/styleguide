@@ -132,6 +132,9 @@
 		padding: 17.2px 12px;
 		margin: 0;
 		visibility: visible;
+		@media #{$medium-up} {
+			display: none;
+		}
 	}
 
 	.filter-keywords-search-box {

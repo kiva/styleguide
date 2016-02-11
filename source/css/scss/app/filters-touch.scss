@@ -1,4 +1,11 @@
 .touch .filter {
+
+	.expandable-filter {
+		@media #{$medium-up} {
+			display: block !important;
+		}
+	}
+
 	.small-touch {
 		visibility: visible;
 		height: auto;
