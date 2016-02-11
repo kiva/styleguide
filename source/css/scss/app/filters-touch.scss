@@ -37,9 +37,11 @@
 	}
 
 	.filter-component {
+		margin: 0;
 		min-height: 44px;
 		cursor: pointer;
 		border-bottom: 1px solid #D8D8C8;
+		padding-bottom:0;
 	}
 
 	.filter-clear-button {
@@ -72,19 +74,10 @@
 		vertical-align: middle;
 	}
 
-	.filter-component {
-		margin: 0;
-		min-height: 44px;
-		cursor: pointer;
-		border-bottom: 1px solid #D8D8C8;
-		padding-top: 0;
-	}
-
 	h3 {
 		font-size: 0.8em;
 		font-weight: bold;
 		color: $gray;
-		margin: 0.5em 0.6666666667rem;
 	}
 
 	.filter-keywords-search-box {

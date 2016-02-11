@@ -76,10 +76,11 @@
 		min-height: 44px;
 		cursor: pointer;
 		border-bottom: 1px solid #D8D8C8;
-		padding: 10px 0;
+		padding: 0;
 		@media #{$medium-up} {
 			min-height: initial;
 			border: 0;
+			padding: rem-calc(10) 0;
 		}
 	}
 
@@ -293,7 +294,7 @@
 		-webkit-box-shadow: inset 0px 1px 1px rgba(50, 50, 50, 0.75);
 		-moz-box-shadow: inset 0px 1px 1px rgba(50, 50, 50, 0.75);
 		box-shadow: inset 0px 1px 1px rgba(50, 50, 50, 0.75);
-		@media #{$large-up} {
+		@media #{$medium-up} {
 			background: #fff;
 			-webkit-box-shadow: inset 0px 0px 0px rgba(50, 50, 50, 0.75);
 			-moz-box-shadow: inset 0px 0px 0px rgba(50, 50, 50, 0.75);
