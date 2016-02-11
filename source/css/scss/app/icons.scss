@@ -53,8 +53,9 @@ $light-blue-gray: #DBE3E5;
     &.icon-pinterest,
     &.icon-twitter,
     &.icon-youtube,
-    &.icon-linkedIn {
-        color: $light-gray;
+    &.icon-linkedIn,
+	&.icon-instagram {
+        color: $gray;
     }
 
     &.icon-boundaries,
@@ -98,5 +99,42 @@ $light-blue-gray: #DBE3E5;
 
 	&.icon-curved-arrow {
 		fill: $kiva-darkgreen;
+	}
+}
+
+// Note: :hover and :active CSS for the social media icons
+// can't be applied on the icon SVG elements themselves,
+// they must be applied on the element wrapping the SVG.
+// Add one of the following classes to the wrapping
+// element to get the :hover and :active state coloring:
+
+.icon-facebook {
+	&:hover svg, &:active svg {
+		color: $facebook-hover-color;
+	}
+}
+.icon-pinterest {
+	&:hover svg, &:active svg {
+		color: $pinterest-hover-color;
+	}
+}
+.icon-twitter {
+	&:hover svg, &:active svg {
+		color: $twitter-hover-color;
+	}
+}
+.icon-youtube {
+	&:hover svg, &:active svg {
+		color: $youtube-hover-color;
+	}
+}
+.icon-linkedIn {
+	&:hover svg, &:active svg {
+		color: $linkedin-hover-color;
+	}
+}
+.icon-instagram  {
+	&:hover svg, &:active svg {
+		color: $instagram-hover-color;
 	}
 }
