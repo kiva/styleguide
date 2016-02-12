@@ -17,8 +17,8 @@
                 <div class="data-point featured">{{avgAnnualIncome}}</div>
             </div>
             <div class="stat small-12 large-6 columns">
-                <div class="description black-underlined">Fund lent in {{countryName}} using Kiva:</div>
-                <div class="data-point featured">{{fundsLentInCountry}}</div>
+                <div class="description black-underlined">Funds lent in {{countryName}} using Kiva:</div>
+                <div class="data-point featured">{{#fundsLentInCountry}}{{fundsLentInCountry}}{{/fundsLentInCountry}}{{^fundsLentInCountry}}&nbsp;{{/fundsLentInCountry}}</div>
             </div>
             <div class="stat small-12 large-6 columns">
                 <div class="description black-underlined">{{currencyFullName}} ({{currencyCode}}) = $1:</div>
@@ -26,7 +26,7 @@
             </div>
 
             <div class="stat small-12 large-6 columns">
-                <div class="description black-underlined">{{ofCountryLabel}} loans currently fundraising:</div>
+                <div class="description black-underlined">{{countryName}} loans currently fundraising:</div>
                 <div class="data-point featured">{{numLoansFundraising}}</div>
             </div>
         </div>
