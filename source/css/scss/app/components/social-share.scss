@@ -1,0 +1,42 @@
+.social-media-list-wrapper {
+	margin: 1.5rem auto;
+
+	.follow-us {
+		margin-bottom: rem-calc(10);
+		color: $kiva-green;
+		font-weight: bold;
+	}
+
+	.social-media-icon-list {
+		max-width: 90vw;
+		margin: 0 auto;
+
+		@media #{$large-up} {
+			max-width: 50vw;
+		}
+
+		li {
+			width: 18vw;
+			margin: 0;
+
+			@media #{$large-up} {
+				width: 10vw;
+			}
+		}
+
+		svg
+		, a {
+			width: 15vw;
+			max-width: rem-calc(90);
+			height: 15vw;
+			margin: 0 auto;
+
+			@media #{$large-up} {
+				width: 7vw;
+				height: 7vw;
+			}
+		}
+	}
+}
+
+
