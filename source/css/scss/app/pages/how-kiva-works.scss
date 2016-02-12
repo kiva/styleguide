@@ -188,3 +188,59 @@
 		}
 	}
 }
+.page-wrap {
+	background-color: black;
+	min-height: 100%;
+	min-width: 100%;
+	background-size: cover;
+	padding-bottom: 50px;
+
+	.faq-wrapper {
+		width:90%;
+		max-width: 800px;
+		margin: 0 auto;
+
+		.faq-title {
+			border-top: 1px solid $white;
+			padding: 10px 0;
+			margin: 0;
+		}
+
+		.ac-container {
+
+			.ac-title {
+				border-top: 1px solid $white;
+				padding: 5px 30px 5px 0;
+
+				&.last {
+					border-bottom: 1px solid $white;
+				}
+
+				.icon-small-chevron {
+					stroke: $white;
+					margin-left: 10px;
+				}
+			}
+		}
+	}
+
+	.help-center-link {
+		padding: 10px 0 80px 0;
+	}
+
+	.start-lending-text {
+		padding-bottom: 25px;
+	}
+
+	.choose-borrower-frame {
+		border: 1px solid white;
+		margin: 0 auto;
+		width: 225px;
+
+
+		.choose-borrower-text {
+			margin: auto auto;
+			padding: 20px 0;
+		}
+	}
+}
