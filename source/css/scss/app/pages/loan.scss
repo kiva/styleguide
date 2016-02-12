@@ -285,6 +285,42 @@
 	}
 }
 
+.country-info {
+	.ac-body {
+		margin-top: 1rem;
+	}
+
+	.ac-title {
+		position: relative
+	}
+
+	.country-map {
+		padding-bottom: 1rem;
+		padding-top: 1rem;
+	}
+
+	.country-stats {
+		padding-bottom: 1rem;
+		text-align: center;
+		@media #{$large-up}{
+			text-align: left;
+			padding-bottom: 0.5rem;
+		}
+
+		.stat {
+			padding-left: 0;
+			.description {
+				font-weight: bold;
+			}
+			.data-point {
+				color: $kiva-green;
+				font-weight: bold;
+				padding-bottom: rem-calc(10);
+			}
+		}
+	}
+}
+
 .loan-details {
 	.ac-body {
 		margin-top: 1rem;
