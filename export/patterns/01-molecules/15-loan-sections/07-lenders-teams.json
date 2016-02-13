@@ -1,24 +1,56 @@
 {
-  "lenderCount": 2,
+  "lenderCount": 7,
   "teamCount": 5,
-  "teams": [
-    {
-      "imgUrl": "/images/borrower1.jpg",
-      "tooltip": "team 1"
-    },
-    {
-      "imgUrl": "/images/borrower1.jpg",
-      "tooltip": "team 2"
-    }
-  ],
   "lenders": [
-    {
-      "imgUrl": "/images/borrower1.jpg",
-      "tooltip": "lender 1"
-    },
-    {
-      "imgUrl": "/images/borrower1.jpg",
-      "tooltip": "lender 2"
-    }
+	{
+	  "imgUrl": "/images/borrower3.jpg",
+	  "lenderUrl": "https://www.kiva.org/lender/toke8071"
+	},
+	{
+	  "imgUrl": "/images/borrower1.jpg",
+	  "lenderUrl": "https://www.kiva.org/lender/spicey"
+	},
+	{
+	  "imgUrl": "/images/borrower3.jpg",
+	  "lenderUrl": "https://www.kiva.org/lender/toke8071"
+	},
+	{
+	  "imgUrl": "/images/borrower1.jpg",
+	  "lenderUrl": "https://www.kiva.org/lender/spicey"
+	},
+	{
+	  "imgUrl": "/images/borrower3.jpg",
+	  "lenderUrl": "https://www.kiva.org/lender/toke8071"
+	},
+	{
+	  "imgUrl": "/images/borrower1.jpg",
+	  "lenderUrl": "https://www.kiva.org/lender/spicey"
+	},
+	{
+	  "imgUrl": "/images/borrower3.jpg",
+	  "lenderUrl": "https://www.kiva.org/lender/toke8071"
+	}
+  ],
+  "teams": [
+	{
+	  "imgUrl": "/images/borrower2.jpg",
+	  "teamUrl": "https://www.kiva.org/team/braincrave"
+	},
+	{
+	  "imgUrl": "/images/borrower2.jpg",
+	  "teamUrl": "https://www.kiva.org/team/in_memory_of_paul_lambert"
+	},
+	{
+	  "imgUrl": "/images/borrower2.jpg",
+	  "teamUrl": "https://www.kiva.org/team/braincrave"
+	},
+	{
+	  "imgUrl": "/images/borrower2.jpg",
+	  "teamUrl": "https://www.kiva.org/team/in_memory_of_paul_lambert"
+	},
+	{
+	  "imgUrl": "/images/borrower2.jpg",
+	  "teamUrl": "https://www.kiva.org/team/braincrave"
+	}
   ]
 }
