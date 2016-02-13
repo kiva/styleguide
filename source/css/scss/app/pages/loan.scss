@@ -296,7 +296,14 @@
 
 	.country-map {
 		padding-bottom: 1rem;
-		padding-top: 1rem;
+		padding-left: 1rem;
+		marging-right: 0;
+		height: 16rem;
+		width: 100%;
+
+		#mapPane {
+			height: 100%;
+		}
 	}
 
 	.country-stats {
