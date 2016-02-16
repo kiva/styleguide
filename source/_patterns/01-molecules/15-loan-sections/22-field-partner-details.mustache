@@ -1,0 +1,94 @@
+<section class="field-partner-details">
+    <h2 class="ac-title ac-container" data-kv-accordion aria-controls="ac-field-partner-details-body" aria-expanded="true">
+        Field Partner
+        <span class="ac-dropdown-icon">
+            <svg class="icon icon-large-chevron">
+                <use xlink:href="#icon-large-chevron"></use>
+            </svg>
+        </span>
+    </h2>
+    <div class="ac-body" id="ac-field-partner-details-body" aria-hidden="false">
+        <div class="field-partner-iconography">
+            <img class="field-partner-image" src="{{partnerImgLink}}" alt="Field Partner image">
+        </div>
+        <p><strong>Why Kiva works with this partner:</strong></p>
+        <div class="why-we-work-with-them">
+           {{#whyWeWorkWithThemDescription}}
+               <p>{{.}}</p>
+           {{/whyWeWorkWithThemDescription}}
+        </div>
+        <div class="field-partner-data">
+            <div id="due-diligence-type" class="datum">
+                <a class="black-underlined" data-reveal-id="due-diligence-type-lightbox">Field Partner due diligence type:</a>
+                <strong>
+                    {{dueDiligenceType}}
+                </strong>
+            </div>
+            <div id="partner-time-on-kiva" class="datum">
+                <a class="black-underlined" data-reveal-id="partner-time-on-kiva-lightbox">Time on Kiva:</a>
+                <strong>
+                    {{timeOnKiva}}
+                </strong>
+            </div>
+            <div id="partner-num-borrowers" class="datum">
+                <a class="black-underlined" data-reveal-id="partner-num-borrowers-lightbox">Kiva borrowers:</a>
+                <strong>
+                    {{numberOfBorrowers}}
+                </strong>
+            </div>
+            <div id="partner-total-lent" class="datum">
+                <a class="black-underlined" data-reveal-id="partner-total-lent-lightbox">Total loans:</a>
+                <strong>
+                    {{totalLoans}}
+                </strong>
+            </div>
+            <div id="partner-avg-cost-to-borrower" class="datum">
+                <a class="black-underlined" data-reveal-id="partner-avg-cost-to-borrower-lightbox">Average Cost to Borrower:</a>
+                <strong>
+                    {{avgCostToBorrower}}
+                </strong>
+            </div>
+            <div id="partner-profitability" class="datum">
+                <a class="black-underlined" data-reveal-id="partner-profitability-lightbox">Profitability (Return on Assets):</a>
+                <strong>
+                    {{profitability}}
+                </strong>
+            </div>
+            <div id="partner-avg-loan-size" class="datum">
+                <a class="black-underlined" data-reveal-id="partner-avg-loan-size-lightbox">Average Loan Size (% of Per Capita Income):</a>
+                <strong>
+                    {{avgLoanSize}}
+                </strong>
+            </div>
+            <div id="partner-delinquency-rate" class="datum">
+                <a class="black-underlined" data-reveal-id="partner-delinquency-rate-lightbox">Delinquency Rate:</a>
+                <strong>
+                    {{delinquencyRate}}
+                </strong>
+            </div>
+            <div id="partner-loans-at-risk-rate" class="datum">
+                <a class="black-underlined" data-reveal-id="partner-loans-at-risk-rate-lightbox">Loans at Risk Rate:</a>
+                <strong>
+                    {{loansAtRiskRate}}
+                </strong>
+            </div>
+            <div id="partner-default-rate" class="datum">
+                <a class="black-underlined" data-reveal-id="partner-default-rate-lightbox">Default Rate:</a>
+                <strong>
+                    {{defaultRate}}
+                </strong>
+            </div>
+            <div id="partner-currency-loss-rate" class="datum">
+                <a class="black-underlined" data-reveal-id="partner-currency-loss-rate-lightbox">Currency Exchange Loss Rate:</a>
+                <strong>
+                    {{currencyLossRate}}
+                </strong>
+            </div>
+            {{#fieldPartnerDataHelpText}}
+                {{> 01-molecules/10-lightbox/04-help-text-lightbox}}
+            {{/fieldPartnerDataHelpText}}
+        </div>
+        <div class="more-on-field-partner"><a class="black-underlined" href="{{partnerLink}}">More on this Field Partner</a></div>
+        <div class="learn-more"><a class="black-underlined" href="{{learnAboutPartnersLink}}">Learn more about Field Partners</a></div>
+    </div>
+</section>
