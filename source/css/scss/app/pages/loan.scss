@@ -363,23 +363,6 @@
 
 }
 
-.lenders-teams {
-	.ac-title {
-		font-size: 1rem;
-	}
-	.photos {
-		display: inline;
-		img {
-			background-repeat: no-repeat;
-			border-radius: 50%;
-			width: 50px;
-		}
-	}
-	.photos:nth-child(2) {
-		padding-left: 5px;
-	}
-}
-
 .lend-action, .lend-action.row {
 	margin: 0;
 	.lend-button-wrapper {
