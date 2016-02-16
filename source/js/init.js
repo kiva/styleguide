@@ -476,8 +476,8 @@
 
 	//How Kiva Works page faq link (closes one accordion and opens another)
 	$('.accordion-collapse').click(function() {
-		$('.acc-6').click();
-		$('.acc-9').click();
+		$('.accordion-anchor-6').click();
+		$('.accordion-anchor-9').click();
 	});
 
 	loadSvgIcons();
