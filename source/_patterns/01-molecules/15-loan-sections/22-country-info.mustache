@@ -1,0 +1,45 @@
+<section class="country-info">
+    <h2 class="ac-title ac-container" data-kv-accordion aria-controls="ac-country-info-body" aria-expanded="true">
+        Country Information
+        <span class="ac-dropdown-icon">
+            <svg class="icon icon-large-chevron">
+                <use xlink:href="#icon-large-chevron"></use>
+            </svg>
+        </span>
+    </h2>
+    <div class="ac-body" id="ac-country-info-body" aria-hidden="false">
+        <div class="country-map row">
+            <div id="mapPane"></div>
+        </div>
+        <div class="country-stats row">
+            {{#fieldPartnerLoanStats}}
+                <div class="stat small-12 large-6 columns">
+                    <div class="description black-underlined">Average annual income (USD):</div>
+                    <div class="data-point featured">{{avgAnnualIncome}}</div>
+                </div>
+                <div class="stat small-12 large-6 columns">
+                    <div class="description black-underlined">Funds lent in {{countryName}} using Kiva:</div>
+                    <div class="data-point featured">{{#fundsLentInCountry}}{{fundsLentInCountry}}{{/fundsLentInCountry}}{{^fundsLentInCountry}}&nbsp;{{/fundsLentInCountry}}</div>
+                </div>
+                <div class="stat small-12 large-6 columns">
+                    <div class="description black-underlined">{{currencyFullName}} ({{currencyCode}}) = $1:</div>
+                    <div class="data-point featured">{{exchangeRate}}</div>
+                </div>
+                <div class="stat small-12 large-6 columns">
+                    <div class="description black-underlined">{{countryName}} loans currently fundraising:</div>
+                    <div class="data-point featured">{{numLoansFundraising}}</div>
+                </div>
+            {{/fieldPartnerLoanStats}}
+            {{#directLoanStats}}
+                <div class="stat small-12 large-6 columns">
+                    <div class="description black-underlined">Loans to Ethnic Minorities:</div>
+                    <div class="data-point featured">{{percentLoansToMinorities}}</div>
+                </div>
+                <div class="stat small-12 large-6 columns">
+                    <div class="description black-underlined">Comments Per Loan:</div>
+                    <div class="data-point featured">{{commentsPerLoan}}</div>
+                </div>
+            {{/directLoanStats}}
+        </div>
+    </div>
+</section>
