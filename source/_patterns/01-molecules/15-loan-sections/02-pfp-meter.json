@@ -5,5 +5,10 @@
   "daysLeft": 12,
   "amountRaised": 175,
   "amountNeeded": 1300,
-  "amountRaisedPercent": 14
+  "amountRaisedPercent": 14,
+  "inPFPHelpText": {
+    "dataRevealId": "in-pfp-explain-lightbox",
+    "descriptionTitle": "Direct loan private fundraising period",
+    "descriptionText": "This loan is currently in its private fundraising period on Kiva. All direct loans must go through this period, where the borrower is required to tap into their own networks to recruit support of their loan prior to the loan being posted to the public Kiva website. This innovation makes borrowers accountable to helping get their loans funded and acts as social underwriting on the loan, while also helping Kiva reach new lenders and expand our markets. "
+  }
 }

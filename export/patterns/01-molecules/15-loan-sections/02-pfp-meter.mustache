@@ -10,10 +10,11 @@
     <div class="fundraising-meter progress">
         <span class="meter" style="width: {{lenderCountPercent}}%"></span>
     </div>
-    <p class="black-underlined">
-        {{daysLeft}} days left to reach {{lenderCountNeeded}} lenders.
+    <p>
+        <a class="black-underlined" data-reveal-id="in-pfp-explain-lightbox">
+            {{daysLeft}} days left to reach {{lenderCountNeeded}} lenders.
+        </a>
     </p>
-
     <div class="amount-raised">
         <div>
             ${{amountRaised}} of ${{amountNeeded}} raised so far.
@@ -24,4 +25,7 @@
         </div>
     </div>
 
+    {{#inPFPHelpText}}
+        {{> 01-molecules/10-lightbox/04-help-text-lightbox}}
+    {{/inPFPHelpText}}
 </div>
