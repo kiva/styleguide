@@ -44,12 +44,6 @@
 		padding-bottom:0;
 	}
 
-	.filter-clear-button {
-		.clear-touch {
-			display: none;
-		}
-	}
-
 	input[type=checkbox] + label {
 		margin: 0;
 	}
@@ -136,9 +130,6 @@
 	}
 
 	.filter-links {
-		.clear-touch {
-			display: none;
-		}
 		font-size: 0.7em;
 		visibility: hidden;
 		margin-left: 10px;
@@ -151,9 +142,6 @@
 	}
 
 	.filter-clear-button {
-		.clear-touch {
-			display: none;
-		}
 		font-size: 0.7em;
 		visibility: hidden;
 		margin-left: 10px;
@@ -166,4 +154,10 @@
 		display: block;
 	}
 
+}
+
+.touch {
+	.desktop-clear-button {
+		display: none;
+	}
 }
