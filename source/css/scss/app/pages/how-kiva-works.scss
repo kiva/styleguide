@@ -188,59 +188,55 @@
 		}
 	}
 }
-.page-wrap {
-	background-color: black;
+
+.faq-wrapper {
+	width:90%;
+	max-width: rem-calc(800);;
+	margin: 0 auto;
 	min-height: 100%;
 	min-width: 100%;
 	background-size: cover;
-	padding-bottom: 50px;
+	padding-bottom: rem-calc(50);
+	background-color: black;
 
-	.faq-wrapper {
-		width:90%;
-		max-width: 800px;
-		margin: 0 auto;
+	.faq-title {
+		border-top: rem-calc(1) solid $white;
+		padding: rem-calc(10) 0;
+		margin: 0;
+	}
 
-		.faq-title {
-			border-top: 1px solid $white;
-			padding: 10px 0;
+	.accordion-container {
+
+		.ac-title {
+			border-top: rem-calc(1) solid $white;
+			padding: rem-calc(5) rem-calc(30) rem-calc(5) 0;
 			margin: 0;
-		}
 
-		.ac-container {
-
-			.ac-title {
-				border-top: 1px solid $white;
-				padding: 5px 30px 5px 0;
-
-				&.last {
-					border-bottom: 1px solid $white;
-				}
-
-				.icon-small-chevron {
-					stroke: $white;
-					margin-left: 10px;
-				}
+			.icon-small-chevron {
+				stroke: $white;
+				margin-left: rem-calc(10);
 			}
 		}
 	}
+}
 
-	.help-center-link {
-		padding: 10px 0 80px 0;
-	}
+.help-center-link {
+	border-top: rem-calc(1) solid $white;
+	padding: rem-calc(10) 0 rem-calc(80) 0;
+}
 
-	.start-lending-text {
-		padding-bottom: 25px;
-	}
+.start-lending-text {
+	padding-bottom: rem-calc(25);
+}
 
-	.choose-borrower-frame {
-		border: 1px solid white;
-		margin: 0 auto;
-		width: 225px;
+.choose-borrower-frame {
+	border: rem-calc(1) solid white;
+	margin: 0 auto;
+	width: rem-calc(225);
 
 
-		.choose-borrower-text {
-			margin: auto auto;
-			padding: 20px 0;
-		}
+	.choose-borrower-text {
+		margin: auto auto;
+		padding: rem-calc(20) 0;
 	}
 }
