@@ -4,53 +4,53 @@
   "lenders": [
 	{
 	  "imgUrl": "/images/borrower3.jpg",
-	  "lenderUrl": "https://www.kiva.org/lender/toke8071"
+	  "lenderName": "toke8071"
 	},
 	{
 	  "imgUrl": "/images/borrower1.jpg",
-	  "lenderUrl": "https://www.kiva.org/lender/spicey"
+	  "lenderName": "spicey"
 	},
 	{
 	  "imgUrl": "/images/borrower3.jpg",
-	  "lenderUrl": "https://www.kiva.org/lender/toke8071"
+	  "lenderName": "toke8071"
 	},
 	{
 	  "imgUrl": "/images/borrower1.jpg",
-	  "lenderUrl": "https://www.kiva.org/lender/spicey"
+	  "lenderName": "spicey"
 	},
 	{
 	  "imgUrl": "/images/borrower3.jpg",
-	  "lenderUrl": "https://www.kiva.org/lender/toke8071"
+	  "lenderName": "toke8071"
 	},
 	{
 	  "imgUrl": "/images/borrower1.jpg",
-	  "lenderUrl": "https://www.kiva.org/lender/spicey"
+	  "lenderName": "spicey"
 	},
 	{
 	  "imgUrl": "/images/borrower3.jpg",
-	  "lenderUrl": "https://www.kiva.org/lender/toke8071"
+	  "lenderName": "toke8071"
 	}
   ],
   "teams": [
 	{
 	  "imgUrl": "/images/borrower2.jpg",
-	  "teamUrl": "https://www.kiva.org/team/braincrave"
+	  "teamName": "braincrave"
 	},
 	{
 	  "imgUrl": "/images/borrower2.jpg",
-	  "teamUrl": "https://www.kiva.org/team/in_memory_of_paul_lambert"
+	  "teamName": "in_memory_of_paul_lambert"
 	},
 	{
 	  "imgUrl": "/images/borrower2.jpg",
-	  "teamUrl": "https://www.kiva.org/team/braincrave"
+	  "teamName": "braincrave"
 	},
 	{
 	  "imgUrl": "/images/borrower2.jpg",
-	  "teamUrl": "https://www.kiva.org/team/in_memory_of_paul_lambert"
+	  "teamName": "in_memory_of_paul_lambert"
 	},
 	{
 	  "imgUrl": "/images/borrower2.jpg",
-	  "teamUrl": "https://www.kiva.org/team/braincrave"
+	  "teamName": "braincrave"
 	}
   ]
 }
