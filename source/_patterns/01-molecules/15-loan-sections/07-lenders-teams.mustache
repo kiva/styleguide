@@ -10,12 +10,12 @@
     <article class="ac-body" id="ac-lenders-teams-body" aria-hidden="false">
         {{#lenders}}
             <span class="my-kiva">
-                <a href="{{lenderUrl}}" class="circle-avatar" style="background-image:url({{imgUrl}})"></a>
+                <a data-tooltip aria-haspopup="true" data-options="show_on:medium;" title="{{lenderName}}" href="https://www.kiva.org/lender/{{lenderName}}" class="circle-avatar" style="background-image:url({{imgUrl}})"></a>
             </span>
         {{/lenders}}
         {{#teams}}
             <span class="my-kiva">
-                <a href="{{teamUrl}}" class="circle-avatar" style="background-image:url({{imgUrl}})"></a>
+                <a data-tooltip aria-haspopup="true" data-options="show_on:medium;" title="{{teamName}}" href="https://www.kiva.org/team/{{teamName}}" class="circle-avatar" style="background-image:url({{imgUrl}})"></a>
             </span>
         {{/teams}}
     </article>
