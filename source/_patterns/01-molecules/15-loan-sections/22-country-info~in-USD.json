@@ -7,7 +7,7 @@
     "currencyCode": "KES",
     "exchangeRate": 95.1,
     "numLoansFundraising": 1123,
-    "inUSD": false
+    "inUSD": true
   },
   "directLoanStats" : null
 }

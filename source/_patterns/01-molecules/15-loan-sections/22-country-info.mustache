@@ -21,10 +21,18 @@
                     <div class="description black-underlined">Funds lent in {{countryName}} using Kiva:</div>
                     <div class="data-point featured">{{#fundsLentInCountry}}{{fundsLentInCountry}}{{/fundsLentInCountry}}{{^fundsLentInCountry}}&nbsp;{{/fundsLentInCountry}}</div>
                 </div>
-                <div class="stat small-12 large-6 columns">
-                    <div class="description black-underlined">{{currencyFullName}} ({{currencyCode}}) = $1:</div>
-                    <div class="data-point featured">{{exchangeRate}}</div>
-                </div>
+                {{#inUSD}}
+                    <div class="stat small-12 large-6 columns">
+                        <div class="description black-underlined">Loan transacted in USD</div>
+                        <div class="data-point featured">US Dollars</div>
+                    </div>
+                {{/inUSD}}
+                {{^inUSD}}
+                    <div class="stat small-12 large-6 columns">
+                        <div class="description black-underlined">{{currencyFullName}} ({{currencyCode}}) = $1:</div>
+                        <div class="data-point featured">{{exchangeRate}}</div>
+                    </div>
+                {{/inUSD}}
                 <div class="stat small-12 large-6 columns">
                     <div class="description black-underlined">{{countryName}} loans currently fundraising:</div>
                     <div class="data-point featured">{{numLoansFundraising}}</div>
