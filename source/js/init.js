@@ -474,11 +474,17 @@
 	});
 
 
-	//How Kiva Works page faq link (closes one accordion and opens another)
+	//How Kiva Works page faq link (closes one accordion and opens another and brings question to top of view)
 	$('.accordion-collapse').click(function() {
-		$('.accordion-anchor-6').click();
-		$('.accordion-anchor-9').click();
+		$('.anchor6').click();
+		$('.anchor9').click();
+		setTimeout(function() {
+			$('.anchor9')[0].scrollIntoView({
+				behavior: 'smooth'
+			});
+		}, 500);
 	});
+
 
 	loadSvgIcons();
 

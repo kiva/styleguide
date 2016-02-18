@@ -5,7 +5,7 @@
 	<section class="accordion-container">
 		{{#faqs}}
 			<div>
-				<p class="ac-title ac-container white" data-kv-accordion aria-controls="{{id}}" aria-expanded="false">
+				<p class="ac-title ac-container white {{anchor-name}}" name="{{anchor-name}}" data-kv-accordion aria-controls="{{id}}" aria-expanded="false">
 					{{question}}
 					<span class="ac-dropdown-icon">
 						<svg class="icon icon-small-chevron">
