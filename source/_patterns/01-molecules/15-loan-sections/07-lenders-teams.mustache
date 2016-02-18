@@ -9,19 +9,17 @@
     </h2>
     <article class="ac-body" id="ac-lenders-teams-body" aria-hidden="false">
         {{#lenders}}
-            <span class="my-kiva">
-                {{#isAnonymous}}
-                    <div data-tooltip aria-haspopup="true" data-options="disable_for_touch:true; show_on: large" title="Anonymous" class="circle-avatar" style="background-image:url({{imgUrl}})"></div>
-                {{/isAnonymous}}
-                {{^isAnonymous}}
-                    {{#displayTooltip}}
-                        <a data-tooltip aria-haspopup="true" data-options="disable_for_touch:true; show_on: large" title="{{firstName}}<br>{{location}}" href="https://www.kiva.org/lender/{{id}}" class="circle-avatar" style="background-image:url({{imgUrl}})"></a>
-                    {{/displayTooltip}}
-                    {{^displayTooltip}}
-                        <div class="circle-avatar" style="background-image:url({{imgUrl}})"></div>
-                    {{/displayTooltip}}
-                {{/isAnonymous}}
-            </span>
+            {{#isAnonymous}}
+                <span data-tooltip aria-haspopup="true" data-options="disable_for_touch:true; show_on: large" title="Anonymous" class="circle-avatar" style="background-image:url({{imgUrl}})"></span>
+            {{/isAnonymous}}
+            {{^isAnonymous}}
+                {{#displayTooltip}}
+                    <a data-tooltip aria-haspopup="true" data-options="disable_for_touch:true; show_on: large" title="{{firstName}}<br>{{location}}" href="https://www.kiva.org/lender/{{id}}" class="circle-avatar" style="background-image:url({{imgUrl}})"></a>
+                {{/displayTooltip}}
+                {{^displayTooltip}}
+                    <span class="circle-avatar" style="background-image:url({{imgUrl}})"></span>
+                {{/displayTooltip}}
+            {{/isAnonymous}}
         {{/lenders}}
         {{#teams}}
             <span class="my-kiva">
