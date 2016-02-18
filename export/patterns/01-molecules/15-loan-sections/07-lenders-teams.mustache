@@ -10,12 +10,17 @@
     <article class="ac-body" id="ac-lenders-teams-body" aria-hidden="false">
         {{#lenders}}
             <span class="my-kiva">
-                {{#displayTooltip}}
-                    <a data-tooltip aria-haspopup="true" data-options="show_on:medium;" title="{{firstName}}<br>{{location}}" href="https://www.kiva.org/lender/{{id}}" class="circle-avatar" style="background-image:url({{imgUrl}})"></a>
-                {{/displayTooltip}}
-                {{^displayTooltip}}
-                    <div class="circle-avatar" style="background-image:url({{imgUrl}})"></div>
-                {{/displayTooltip}}
+                {{#isAnonymous}}
+                    <div data-tooltip aria-haspopup="true" data-options="show_on:medium;" title="Anonymous" class="circle-avatar" style="background-image:url({{imgUrl}})"></div>
+                {{/isAnonymous}}
+                {{^isAnonymous}}
+                    {{#displayTooltip}}
+                        <a data-tooltip aria-haspopup="true" data-options="show_on:medium;" title="{{firstName}}<br>{{location}}" href="https://www.kiva.org/lender/{{id}}" class="circle-avatar" style="background-image:url({{imgUrl}})"></a>
+                    {{/displayTooltip}}
+                    {{^displayTooltip}}
+                        <div class="circle-avatar" style="background-image:url({{imgUrl}})"></div>
+                    {{/displayTooltip}}
+                {{/isAnonymous}}
             </span>
         {{/lenders}}
         {{#teams}}
