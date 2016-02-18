@@ -1,29 +1,34 @@
 <div class="faq-wrapper">
-	<div>
-		<h2 class="faq-title white">Frequently asked questions</h2>
-	</div>
-	<section class="accordion-container">
-		{{#faqs}}
-			<div>
-				<p class="ac-title ac-container white {{anchor-name}}" name="{{anchor-name}}" data-kv-accordion aria-controls="{{id}}" aria-expanded="false">
-					{{question}}
-					<span class="ac-dropdown-icon">
-						<svg class="icon icon-small-chevron">
-							<use xlink:href="#icon-small-chevron"></use>
-						</svg>
-					</span>
-				</p>
-				<article class="ac-body" id="{{id}}" aria-hidden="true">
-						<span>
-							<p class='small-text white'>{{{answer}}}</p>
-						</span>
-				</article>
-			</div>
-		{{/faqs}}
-		<div class="help-center-link white">
-			<a href="http://www.kiva.org/help">Learn more in the help center</a>
+	<div class="faq-container">
+		<div>
+			<h2 class="faq-title white">Frequently asked questions</h2>
 		</div>
-	</section>
+		<section class="accordion-container">
+			{{#faqs}}
+				<div>
+					<p class="ac-title ac-container white {{anchor-name}}" name="{{anchor-name}}" data-kv-accordion aria-controls="{{id}}" aria-expanded="false">
+						{{question}}
+						<span class="ac-dropdown-icon">
+							<svg class="icon icon-small-chevron">
+								<use xlink:href="#icon-small-chevron"></use>
+							</svg>
+						</span>
+					</p>
+					<article class="ac-body" id="{{id}}" aria-hidden="true">
+							<span>
+								<p class='small-text white'>{{{answer}}}</p>
+							</span>
+					</article>
+				</div>
+			{{/faqs}}
+			<div class="help-center-link white">
+				<a href="http://www.kiva.org/help">Learn more in the help center</a>
+			</div>
+		</section>
+
+	</div>
+
+
 	<div class="white text-center">
 		<p class="start-lending-text featured">Start lending!</p>
 		<a href="http://www.kiva.org/finding">
