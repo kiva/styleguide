@@ -14,7 +14,7 @@
             {{/isAnonymous}}
             {{^isAnonymous}}
                 {{#displayTooltip}}
-                    <a data-tooltip aria-haspopup="true" data-options="disable_for_touch:true; show_on: large" title="{{firstName}}<br>{{location}}" href="https://www.kiva.org/lender/{{id}}" class="circle-avatar" style="background-image:url({{imgUrl}})"></a>
+                    <a href="https://www.kiva.org/lender/{{id}}"><span data-tooltip aria-haspopup="true" data-options="disable_for_touch:true; show_on: large" title="{{firstName}}<br>{{location}}"  class="circle-avatar" style="background-image:url({{imgUrl}})"></span></a>
                 {{/displayTooltip}}
                 {{^displayTooltip}}
                     <span class="circle-avatar" style="background-image:url({{imgUrl}})"></span>
@@ -22,14 +22,12 @@
             {{/isAnonymous}}
         {{/lenders}}
         {{#teams}}
-            <span class="my-kiva">
-                {{#displayTooltip}}
-                    <a data-tooltip aria-haspopup="true" data-options="show_on:medium;" title="{{teamName}}<br>{{teamType}}<br>{{numLenders}} of {{numTeamMembers}} members" href="https://www.kiva.org/team/{{id}}" class="circle-avatar" style="background-image:url({{imgUrl}})"></a>
-                {{/displayTooltip}}
-                {{^displayTooltip}}
-                    <div class="circle-avatar" style="background-image:url({{imgUrl}})"></div>
-                {{/displayTooltip}}
-            </span>
+            {{#displayTooltip}}
+                <a data-tooltip aria-haspopup="true" data-options="show_on:medium;" title="{{teamName}}<br>{{teamType}}<br>{{numLenders}} of {{numTeamMembers}} members" href="https://www.kiva.org/team/{{id}}" class="circle-avatar" style="background-image:url({{imgUrl}})"></a>
+            {{/displayTooltip}}
+            {{^displayTooltip}}
+                <div class="circle-avatar" style="background-image:url({{imgUrl}})"></div>
+            {{/displayTooltip}}
         {{/teams}}
     </article>
 </section>
