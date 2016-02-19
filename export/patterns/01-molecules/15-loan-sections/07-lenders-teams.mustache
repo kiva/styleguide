@@ -23,10 +23,10 @@
         {{/lenders}}
         {{#teams}}
             {{#displayTooltip}}
-                <a data-tooltip aria-haspopup="true" data-options="show_on:medium;" title="{{teamName}}<br>{{teamType}}<br>{{numLenders}} of {{numTeamMembers}} members" href="https://www.kiva.org/team/{{id}}" class="circle-avatar" style="background-image:url({{imgUrl}})"></a>
+                <a href="https://www.kiva.org/team/{{id}}"><span data-tooltip aria-haspopup="true" data-options="show_on:medium;" title="{{teamName}}<br>{{teamType}}<br>{{numLenders}} of {{numTeamMembers}} members"  class="circle-avatar" style="background-image:url({{imgUrl}})"></span></a>
             {{/displayTooltip}}
             {{^displayTooltip}}
-                <div class="circle-avatar" style="background-image:url({{imgUrl}})"></div>
+                <span class="circle-avatar" style="background-image:url({{imgUrl}})"></span>
             {{/displayTooltip}}
         {{/teams}}
     </article>
