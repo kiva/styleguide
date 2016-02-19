@@ -240,16 +240,27 @@
 		padding-bottom: 0.5rem;
 		text-align: center;
 
-		.trustee-image {
+		.trustee-image-wrapper {
 			padding-bottom: 0.5rem;
-			max-height: 12rem;
+			height: 12rem;
+			overflow: hidden;
+
+			.trustee-image {
+				height: 100%;
+			}
 		}
 
 		@media #{$medium-up}{
 			text-align: left;
 
-			.trustee-image {
-				max-height: 8rem;
+			.trustee-image-wrapper {
+				padding-bottom: 0.5rem;
+				height: 8rem;
+				overflow: hidden;
+
+				.trustee-image {
+					height: 100%;
+				}
 			}
 		}
 	}
