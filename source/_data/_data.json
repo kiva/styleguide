@@ -313,6 +313,8 @@
 		],
 		"count": 17
 	},
+	"countries_unlent_count": 60,
+	"total_countries_count": 80,
 	"regions": [
 		{
 			"name": "North America",
