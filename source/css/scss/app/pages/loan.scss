@@ -216,6 +216,10 @@
 .lenders-teams {
 	.ac-body {
 		margin-top: 1rem;
+
+		.circle-avatar {
+			margin-top: 0.5rem;
+		}
 	}
 
 	.ac-title {
@@ -283,16 +287,27 @@
 		padding-bottom: 0.5rem;
 		text-align: center;
 
-		.trustee-image {
+		.trustee-image-wrapper {
 			padding-bottom: 0.5rem;
-			max-height: 12rem;
+			height: 12rem;
+			overflow: hidden;
+
+			.trustee-image {
+				height: 100%;
+			}
 		}
 
 		@media #{$medium-up}{
 			text-align: left;
 
-			.trustee-image {
-				max-height: 8rem;
+			.trustee-image-wrapper {
+				padding-bottom: 0.5rem;
+				height: 8rem;
+				overflow: hidden;
+
+				.trustee-image {
+					height: 100%;
+				}
 			}
 		}
 	}
@@ -339,6 +354,47 @@
 
 	.override-styling-from-db {
 		margin-bottom: 1rem;
+	}
+}
+
+.country-info {
+	.ac-body {
+		margin-top: 1rem;
+	}
+
+	.ac-title {
+		position: relative
+	}
+
+	.country-map {
+		padding-bottom: 1rem;
+		padding-left: 1rem;
+		height: 16rem;
+		width: 100%;
+
+		#mapPane {
+			height: 100%;
+		}
+	}
+
+	.country-stats {
+		padding-bottom: 1rem;
+		text-align: center;
+		@media #{$large-up}{
+			text-align: left;
+			padding-bottom: 0.5rem;
+		}
+
+		.stat {
+			.description {
+				font-weight: bold;
+			}
+			.data-point {
+				color: $kiva-green;
+				font-weight: bold;
+				padding-bottom: rem-calc(10);
+			}
+		}
 	}
 }
 
@@ -408,23 +464,6 @@
 		}
 	}
 
-}
-
-.lenders-teams {
-	.ac-title {
-		font-size: 1rem;
-	}
-	.photos {
-		display: inline;
-		img {
-			background-repeat: no-repeat;
-			border-radius: 50%;
-			width: 50px;
-		}
-	}
-	.photos:nth-child(2) {
-		padding-left: 5px;
-	}
 }
 
 .lend-action, .lend-action.row {
@@ -669,4 +708,32 @@
 		text-align: left;
 		max-width: 100%;
 	}
+}
+
+// fund-a-loan bar at top
+.full-width-green-bar {
+	background-color: $kiva-darkgreen;
+	color: $kiva-accent-green;
+
+	@media #{$x-small-only} {
+		font-size: $small-font-size;
+	}
+}
+
+.fund-a-loan-bar {
+	cursor: pointer;
+}
+
+.question-icon {
+	display: inline-block;
+	height: 1.5rem;
+	width: 1.5rem;
+	line-height: 1.5rem;
+	border: 1px solid transparent;
+	border-radius: 0.75rem;
+	margin: 0.25rem 0 0.25rem 0.25rem;
+	font-weight: $font-weight-bold;
+	text-align: center;
+	color: $kiva-darkgreen;
+	background-color: $kiva-accent-green;
 }

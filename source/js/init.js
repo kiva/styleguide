@@ -473,6 +473,18 @@
 		}
 	});
 
+
+	//How Kiva Works page faq link (closes one accordion and opens another and brings question to top of view)
+	$('.accordion-collapse-and-open').click(function() {
+		$('[aria-controls="ac-6"]').click();
+		$('[aria-controls="ac-9"]').click();
+		setTimeout(function() {
+			$('[aria-controls="ac-9"]')[0].scrollIntoView({
+				behavior: 'smooth'
+			});
+		}, 500);
+	});
+
 	loadSvgIcons();
 
 })(this, jQuery);

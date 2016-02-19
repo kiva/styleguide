@@ -3,54 +3,107 @@
   "teamCount": 5,
   "lenders": [
 	{
-	  "imgUrl": "/images/borrower3.jpg",
-	  "lenderUrl": "https://www.kiva.org/lender/toke8071"
+	  "imgUrl": "/images/default_lender.png",
+	  "id": null,
+	  "firstName": null,
+	  "location": null,
+	  "displayTooltip": false,
+	  "isAnonymous": true
 	},
 	{
 	  "imgUrl": "/images/borrower1.jpg",
-	  "lenderUrl": "https://www.kiva.org/lender/spicey"
+	  "id": "spicey",
+	  "firstName": "Kimberly",
+	  "location": "Los Angeles, CA",
+	  "displayTooltip": false,
+	  "isAnonymous": false
 	},
 	{
 	  "imgUrl": "/images/borrower3.jpg",
-	  "lenderUrl": "https://www.kiva.org/lender/toke8071"
+	  "id": "toke8071",
+	  "firstName": "Jen",
+	  "location": "San Francisco, CA",
+	  "displayTooltip": true,
+	  "isAnonymous": false
 	},
 	{
 	  "imgUrl": "/images/borrower1.jpg",
-	  "lenderUrl": "https://www.kiva.org/lender/spicey"
+	  "id": "spicey",
+	  "firstName": "Zahid",
+	  "location": "Los Angeles, CA",
+	  "displayTooltip": true,
+	  "isAnonymous": false
 	},
 	{
 	  "imgUrl": "/images/borrower3.jpg",
-	  "lenderUrl": "https://www.kiva.org/lender/toke8071"
+	  "id": "toke8071",
+	  "firstName": "Kevin",
+	  "location": "New York, NY",
+	  "displayTooltip": true,
+	  "isAnonymous": false
 	},
 	{
 	  "imgUrl": "/images/borrower1.jpg",
-	  "lenderUrl": "https://www.kiva.org/lender/spicey"
+	  "id": "spicey",
+	  "firstName": "Steve",
+	  "location": "Los Angeles, CA",
+	  "displayTooltip": true,
+	  "isAnonymous": false
 	},
 	{
 	  "imgUrl": "/images/borrower3.jpg",
-	  "lenderUrl": "https://www.kiva.org/lender/toke8071"
+	  "id": "toke8071",
+	  "firstName": "Josh",
+	  "location": "San Francisco, CA",
+	  "displayTooltip": true,
+	  "isAnonymous": false
 	}
   ],
   "teams": [
 	{
 	  "imgUrl": "/images/borrower2.jpg",
-	  "teamUrl": "https://www.kiva.org/team/braincrave"
+	  "id": "braincrave",
+	  "teamName": "Braincrave",
+	  "teamType": "Engineering Organizations",
+	  "numLenders": 1,
+	  "numTeamMembers": 35,
+	  "displayTooltip": true
 	},
 	{
 	  "imgUrl": "/images/borrower2.jpg",
-	  "teamUrl": "https://www.kiva.org/team/in_memory_of_paul_lambert"
+	  "id": "in_memory_of_paul_lambert",
+	  "teamName": "Braincrave",
+	  "teamType": "Engineering Organizations",
+	  "numLenders": 1,
+	  "numTeamMembers": 35,
+	  "displayTooltip": false
 	},
 	{
 	  "imgUrl": "/images/borrower2.jpg",
-	  "teamUrl": "https://www.kiva.org/team/braincrave"
+	  "id": "braincrave",
+	  "teamName": "Team Europe",
+	  "teamType": "Local Area",
+	  "numLenders": 1,
+	  "numTeamMembers": 5632,
+	  "displayTooltip": true
 	},
 	{
 	  "imgUrl": "/images/borrower2.jpg",
-	  "teamUrl": "https://www.kiva.org/team/in_memory_of_paul_lambert"
+	  "id": "in_memory_of_paul_lambert",
+	  "teamName": "In Memory of Paul Lambert",
+	  "teamType": "Group",
+	  "numLenders": 2,
+	  "numTeamMembers": 35,
+	  "displayTooltip": true
 	},
 	{
 	  "imgUrl": "/images/borrower2.jpg",
-	  "teamUrl": "https://www.kiva.org/team/braincrave"
+	  "id": "braincrave",
+	  "teamName": "Braincrave",
+	  "teamType": "Engineering Organizations",
+	  "numLenders": 1,
+	  "numTeamMembers": 35,
+	  "displayTooltip": true
 	}
   ]
 }
