@@ -189,15 +189,14 @@
 	}
 }
 
-.faq-wrapper {
+.faq-section {
 	min-width: 100%;
 	background-color: black;
-	padding: 0 20px 50px 20px;
+	padding: 0 rem-calc(20) rem-calc(50) rem-calc(20);
 
 	.faq-container {
-		max-width: 800px;
+		max-width: rem-calc(800);
 		margin: 0 auto;
-
 
 		.faq-title {
 			border-top: rem-calc(1) solid $white;
@@ -211,13 +210,24 @@
 				border-top: rem-calc(1) solid $white;
 				padding: rem-calc(5) 0 rem-calc(5) 0;
 				margin: 0;
+				position: relative;
+				cursor: pointer;
 
-			.ac-dropdown-icon {
-				float: right;
-			}
-				.icon-small-chevron {
-					stroke: $white;
-					position: static;
+				.question-wrap {
+					margin: 0;
+					max-width: 80vw;
+				}
+
+				.ac-dropdown-icon {
+					float: right;
+
+
+					.icon-small-chevron {
+						stroke: $white;
+						position: absolute;
+						top: rem-calc(5);
+						right: 0;
+					}
 				}
 			}
 		}
@@ -226,11 +236,6 @@
 			border-top: rem-calc(1) solid $white;
 			padding: rem-calc(10) 0 rem-calc(80) 0;
 		}
-
-	}
-
-	.start-lending-text {
-		padding-bottom: rem-calc(25);
 	}
 
 	.choose-borrower-frame {
@@ -238,9 +243,19 @@
 		margin: 0 auto;
 		width: rem-calc(225);
 
+		:hover {
+			background-color: #FFF;
+			opacity: 0.8;
+			text-decoration: none;
+		}
+
 		.choose-borrower-text {
 			margin: auto auto;
 			padding: rem-calc(20) 0;
 		}
+	}
+
+	.choose-borrower-frame:hover .choose-borrower-text {
+		color: $kiva-text-dark;
 	}
 }
