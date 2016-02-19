@@ -1,35 +1,36 @@
-<div class="faq-section">
-	<div class="faq-container">
-		<h2 class="faq-title white">Frequently asked questions</h2>
-		<section class="accordion-container">
-			{{#faqs}}
-				<div class="ac-title ac-container white" data-kv-accordion aria-controls="{{id}}" aria-expanded="false">
-					<p class="question-wrap">
-						{{question}}
-					</p>
-						<span class="ac-dropdown-icon">
-							<svg class="icon icon-small-chevron">
-								<use xlink:href="#icon-small-chevron"></use>
-							</svg>
-						</span>
-
-				</div>
-					<article class="ac-body" id="{{id}}" aria-hidden="true">
-							<span>
-								<p class='small-text white'>{{{answer}}}</p>
+	<div class="faq-section">
+		<div class="faq-container">
+			<h2 class="faq-title white">Frequently asked questions</h2>
+			<section class="accordion-container">
+				{{#faqs}}
+					<div class="ac-title ac-container white" data-kv-accordion aria-controls="{{id}}" aria-expanded="false">
+						<p class="question-wrap">
+							{{question}}
+						</p>
+							<span class="ac-dropdown-icon">
+								<svg class="icon icon-small-chevron">
+									<use xlink:href="#icon-small-chevron"></use>
+								</svg>
 							</span>
-					</article>
 
-			{{/faqs}}
-			<div class="help-center-link white">
-				<a href="http://www.kiva.org/help">Learn more in the help center</a>
+					</div>
+						<article class="ac-body" id="{{id}}" aria-hidden="true">
+								<span>
+									<p class='small-text white'>{{{answer}}}</p>
+								</span>
+						</article>
+
+				{{/faqs}}
+				<div class="help-center-link white">
+					<a href="http://www.kiva.org/help">Learn more in the help center</a>
+				</div>
+			</section>
+		</div>
+		<div class="white text-center">
+			<p class="start-lending-text featured">Start lending!</p>
+			<div class="choose-borrower-frame" href="http://www.kiva.org/finding">
+				<p class="choose-borrower-text white">Choose a borrower</p>
 			</div>
-		</section>
-	</div>
-	<div class="white text-center">
-		<p class="start-lending-text featured">Start lending!</p>
-		<div class="choose-borrower-frame" href="http://www.kiva.org/finding">
-			<p class="choose-borrower-text white">Choose a borrower</p>
 		</div>
 	</div>
 </div>
