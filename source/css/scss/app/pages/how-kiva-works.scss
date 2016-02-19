@@ -1,4 +1,4 @@
-.loan-lifecycle-wrapper {
+.loan-lifecycle-wrapper{
 	background: url("//www.kiva.org/cms/page/images/kiva-works-sm-std.jpg") no-repeat;
 	min-height: 100%;
 	min-width: 100%;
@@ -187,75 +187,75 @@
 			padding: rem-calc(85) rem-calc(10) rem-calc(20) rem-calc(10);
 		}
 	}
-}
 
-.faq-section {
-	min-width: 100%;
-	background-color: black;
-	padding: 0 rem-calc(20) rem-calc(50) rem-calc(20);
 
-	.faq-container {
-		max-width: rem-calc(800);
-		margin: 0 auto;
+	.faq-section {
+		min-width: 100%;
+		padding: rem-calc(75) rem-calc(20) rem-calc(100) rem-calc(20);
 
-		.faq-title {
-			border-top: rem-calc(1) solid $white;
-			padding: rem-calc(10) 0;
-			margin: 0;
-		}
+		.faq-container {
+			max-width: rem-calc(800);
+			margin: 0 auto;
 
-		.accordion-container {
-
-			.ac-title {
+			.faq-title {
 				border-top: rem-calc(1) solid $white;
-				padding: rem-calc(5) 0 rem-calc(5) 0;
+				padding: rem-calc(10) 0;
 				margin: 0;
-				position: relative;
-				cursor: pointer;
+			}
 
-				.question-wrap {
+			.accordion-container {
+
+				.ac-title {
+					border-top: rem-calc(1) solid $white;
+					padding: rem-calc(5) 0 rem-calc(5) 0;
 					margin: 0;
-					max-width: 80vw;
-				}
+					position: relative;
+					cursor: pointer;
 
-				.ac-dropdown-icon {
-					float: right;
+					.question-wrap {
+						margin: 0;
+						max-width: 80vw;
+					}
+
+					.ac-dropdown-icon {
+						float: right;
 
 
-					.icon-small-chevron {
-						stroke: $white;
-						position: absolute;
-						top: rem-calc(5);
-						right: 0;
+						.icon-small-chevron {
+							stroke: $white;
+							position: absolute;
+							top: rem-calc(5);
+							right: 0;
+						}
 					}
 				}
 			}
+
+			.help-center-link {
+				border-top: rem-calc(1) solid $white;
+				padding: rem-calc(10) 0 rem-calc(80) 0;
+			}
 		}
 
-		.help-center-link {
-			border-top: rem-calc(1) solid $white;
-			padding: rem-calc(10) 0 rem-calc(80) 0;
+		.choose-borrower-frame {
+			border: rem-calc(1) solid white;
+			margin: 0 auto;
+			width: rem-calc(225);
+
+			:hover {
+				background-color: #FFF;
+				opacity: 0.8;
+				text-decoration: none;
+			}
+
+			.choose-borrower-text {
+				margin: auto auto;
+				padding: rem-calc(20) 0;
+			}
 		}
-	}
 
-	.choose-borrower-frame {
-		border: rem-calc(1) solid white;
-		margin: 0 auto;
-		width: rem-calc(225);
-
-		:hover {
-			background-color: #FFF;
-			opacity: 0.8;
-			text-decoration: none;
+		.choose-borrower-frame:hover .choose-borrower-text {
+			color: $kiva-text-dark;
 		}
-
-		.choose-borrower-text {
-			margin: auto auto;
-			padding: rem-calc(20) 0;
-		}
-	}
-
-	.choose-borrower-frame:hover .choose-borrower-text {
-		color: $kiva-text-dark;
 	}
 }
