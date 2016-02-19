@@ -5,6 +5,11 @@
 </a>
 <div class="lightbox-content">
 	<div class="white-background-box">
+		{{#countries_unlent_count}}
+			<span class="small-text kiva-gray">You have lent to {{countries_unlent_count}} of {{total_countries_count}} Kiva Countries!</span>
+			<br/>
+			<a href="#" id="countries-unlent">Find one you have not lent to</a>
+		{{/countries_unlent_count}}
 		<div id="country-list">
 			{{#regions}}
 				<section class="region-name">
