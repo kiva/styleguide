@@ -240,16 +240,27 @@
 		padding-bottom: 0.5rem;
 		text-align: center;
 
-		.field-partner-image {
+		.field-partner-image-wrapper {
 			padding-bottom: 0.5rem;
-			max-height: 12rem;
+			height: 12rem;
+			overflow: hidden;
+
+			.field-partner-image {
+				height: 100%;
+			}
 		}
 
 		@media #{$medium-up}{
 			text-align: left;
 
-			.field-partner-image {
-				max-height: 8rem;
+			.field-partner-image-wrapper {
+				padding-bottom: 0.5rem;
+				height: 8rem;
+				overflow: hidden;
+
+				.field-partner-image {
+					height: 100%;
+				}
 			}
 		}
 	}
