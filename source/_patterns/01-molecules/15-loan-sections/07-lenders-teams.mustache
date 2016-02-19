@@ -23,7 +23,7 @@
         {{/lenders}}
         {{#teams}}
             {{#displayTooltip}}
-                <a href="https://www.kiva.org/team/{{id}}"><span data-tooltip aria-haspopup="true" data-options="show_on:medium;" title="{{teamName}}<br>{{teamType}}<br>{{numLenders}} of {{numTeamMembers}} members"  class="circle-avatar" style="background-image:url({{imgUrl}})"></span></a>
+                <a href="https://www.kiva.org/lender/{{id}}"><span data-tooltip aria-haspopup="true" data-options="disable_for_touch:true; show_on: large" title="{{teamName}}<br>{{teamType}}<br>{{numLenders}} of {{numTeamMembers}} members"  class="circle-avatar" style="background-image:url({{imgUrl}})"></span></a>
             {{/displayTooltip}}
             {{^displayTooltip}}
                 <span class="circle-avatar" style="background-image:url({{imgUrl}})"></span>
