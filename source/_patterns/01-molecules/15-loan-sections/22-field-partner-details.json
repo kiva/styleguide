@@ -1,10 +1,7 @@
 {
   "partnerImgLink": "https://s3.amazonaws.com/media.zip.kiva.org/images/1441/thumb/cover_sketch_6.JPG",
   "partnerLink": "http://www.kiva.org/partners/81",
-  "whyWeWorkWithThemDescription": [
-    "VisionFund Kenya has a national footprint in Kenya, but focuses its operations on underserved areas in the country. The organization provides a diverse range of [products including agricultural loans, business loans, education loans and more. These loans are offered both on an individual and group basis to ensure flexibility and access.",
-    "VisionFund Kenya is one of the few large microfinance institutions in Kenya that operates in very rural areas and offers products designed specifically for the people who live there. Kiva funding is helping the institution reach more underserved clients develop new innovative products to serve them. "
-  ],
+  "whyWeWorkWithThemDescription": "VisionFund Kenya has a national footprint in Kenya, but focuses its operations on underserved areas in the country. The organization provides a diverse range of [products including agricultural loans, business loans, education loans and more. These loans are offered both on an individual and group basis to ensure flexibility and access.<br>VisionFund Kenya is one of the few large microfinance institutions in Kenya that operates in very rural areas and offers products designed specifically for the people who live there. Kiva funding is helping the institution reach more underserved clients develop new innovative products to serve them. ",
   "dueDiligenceType": "Full Due Diligence",
   "timeOnKiva": "72 months",
   "numberOfBorrowers": "22399",
@@ -16,7 +13,6 @@
   "loansAtRiskRate": "9.01%",
   "defaultRate": "0.47%",
   "currencyLossRate": "0.02%",
-  "learnAboutPartnersLink": "https://www.kiva.org/partners",
   "fieldPartnerDataHelpText": [
     {
       "dataRevealId": "due-diligence-type-lightbox",
