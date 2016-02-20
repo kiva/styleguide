@@ -94,6 +94,12 @@
 								<a href="#" data-kv-toggle aria-controls="lend-menu-searches-section" aria-expanded="false" class="tertiary-link">Saved Searches</a>
 							</li>
 						{{/has_saved_searches}}
+						{{^has_saved_searches}}
+							<li id="lend-menu-searches-li">
+								<span class="tertiary-link disabled">Saved Searches</span>
+								<a href="#" data-kv-toggle aria-controls="lend-menu-searches-section" aria-expanded="false" class="tertiary-link" style="display: none;">Saved Searches</a>
+							</li>
+						{{/has_saved_searches}}
 	                    {{#countries_unlent_href}}
 	                    	<li><a href="{{countries_unlent_href}}">Countries I Have Not Lent To</a></li>
 	                    {{/countries_unlent_href}}
@@ -115,7 +121,6 @@
 				</ul>
             </div>
 		{{/regions}}
-        {{#has_saved_searches}}
             <div id="lend-menu-searches-section" aria-hidden="true" class="tertiary-list column-section">
                 <div class="section-title">Saved Searches</div>
                 <ul>
@@ -124,6 +129,5 @@
                     {{/saved_searches}}
                 </ul>
             </div>
-        {{/has_saved_searches}}
 	</div>
 </div>

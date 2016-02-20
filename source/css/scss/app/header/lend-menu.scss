@@ -238,6 +238,16 @@
         background-color: $level-two-background;
     }
 
+    .tertiary-link.disabled{
+        color: $selected-color;
+        text-decoration: none;
+        white-space: nowrap;
+        padding: 0 1.5rem;
+        display: block;
+        line-height: 1.5rem;
+        margin: 0;
+    }
+
     .tertiary-list {
         overflow: hidden;
         width: 0;
