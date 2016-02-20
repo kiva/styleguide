@@ -237,6 +237,10 @@
 			}
 		}
 
+		.choose-borrower:hover {
+			text-decoration: none;
+		}
+
 		.choose-borrower-frame {
 			border: rem-calc(1) solid white;
 			margin: 0 auto;
@@ -245,7 +249,6 @@
 			:hover {
 				background-color: #FFF;
 				opacity: 0.8;
-				text-decoration: none;
 			}
 
 			.choose-borrower-text {
