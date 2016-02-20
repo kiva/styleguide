@@ -476,10 +476,10 @@
 
 	//How Kiva Works page faq link (closes one accordion and opens another and brings question to top of view)
 	$('.accordion-collapse-and-open').click(function() {
-		$('[aria-controls="ac-6"]').click();
-		$('[aria-controls="ac-9"]').click();
+		$('[aria-controls="faq-do-borrowers-pay-interest"]').click();
+		$('[aria-controls="faq-direct-vs-partner-loans"]').click();
 		setTimeout(function() {
-			$('[aria-controls="ac-9"]')[0].scrollIntoView({
+			$('[aria-controls="faq-direct-vs-partner-loans"]')[0].scrollIntoView({
 				behavior: 'smooth'
 			});
 		}, 500);
