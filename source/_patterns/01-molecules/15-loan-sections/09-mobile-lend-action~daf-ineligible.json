@@ -14,9 +14,9 @@
     }
   ],
   "freeTrialEligible": false,
-  "alreadyLent": true,
+  "alreadyLent": false,
   "inBasket": false,
-  "showDAFIneligibility": false,
+  "showDAFIneligibility": true,
   "lendActionHelpText": {
     "dataRevealId": "daf-ineligible-lightbox",
     "descriptionTitle": "Shoot! This loan is ineligible.",

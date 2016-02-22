@@ -14,7 +14,7 @@
     }
   ],
   "freeTrialEligible": false,
-  "alreadyLent": true,
+  "alreadyLent": false,
   "inBasket": false,
   "showDAFIneligibility": false,
   "lendActionHelpText": {
