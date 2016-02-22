@@ -15,5 +15,11 @@
   ],
   "freeTrialEligible": true,
   "alreadyLent": false,
-  "inBasket": false
+  "inBasket": false,
+  "dafIneligible": false,
+  "lendActionHelpText": {
+    "dataRevealId": "daf-ineligible-lightbox",
+    "descriptionTitle": "Shoot! This loan is ineligible.",
+    "descriptionText": "Not all loans are eligible for promotions. Unfortunately, funds from this promotion can only be applied to certain loans. You can still support this loan using your own funds by clicking \"Lend $25\", or you can find an eligible loan <a href=\"https://www.kiva.org/lend\">here</a>."
+  }
 }

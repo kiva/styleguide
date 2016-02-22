@@ -3,6 +3,9 @@
         {{#alreadyLent}}
             <div id="already-supported-message" class="columns small-12">You've supported this loan</div>
         {{/alreadyLent}}
+        {{#dafIneligible}}
+            <div class="columns small-12 not-eligible-message">Not eligible for promotion. <a class="black-underlined" data-reveal-id="daf-ineligible-lightbox">Learn more</a></div>
+        {{/dafIneligible}}
         {{^inBasket}}
             <div class="lend-button-wrapper columns small-4 lend-values-button">
                 <button data-dropdown="lend-button-dropdown" aria-controls="lend-button-dropdown"
@@ -32,4 +35,8 @@
 
         {{/inBasket}}
     </div>
+
+    {{#lendActionHelpText}}
+        {{> 01-molecules/10-lightbox/04-help-text-lightbox}}
+    {{/lendActionHelpText}}
 {{/amountInBasket}}
