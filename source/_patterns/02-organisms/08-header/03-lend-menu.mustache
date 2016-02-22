@@ -34,7 +34,7 @@
 	                <ul id="lend-menu-personalized-panel" aria-hidden="true">
 						<li class="favorites-href"><a href="{{favorites_href}}">Favorites</a></li>
 						{{#has_saved_searches}}
-                            <li>
+                            <li class="lend-menu-searches-li-mobile">
 								<a href="#" data-kv-accordion aria-controls="lend-menu-searches-panel" aria-expanded="false" class="section-title">Saved Searches<svg class="icon icon-small-chevron-mobile"><use xlink:href="#icon-small-chevron-mobile" /></svg></a>
 								<ul id="lend-menu-searches-panel" aria-hidden="true">
 									{{#saved_searches}}
@@ -94,7 +94,7 @@
 					<ul>
 						<li class="favorites-href"><a href="{{favorites_href}}">Favorites</a></li>
 						{{#has_saved_searches}}
-							<li>
+							<li class="lend-menu-searches-li-desktop">
 								<a href="#" data-kv-toggle aria-controls="lend-menu-searches-section" aria-expanded="false" class="tertiary-link">Saved Searches</a>
 							</li>
 						{{/has_saved_searches}}
@@ -125,7 +125,7 @@
 				</ul>
             </div>
 		{{/regions}}
-            <div id="lend-menu-searches-section" aria-hidden="true" class="tertiary-list column-section">
+            <div id="lend-menu-searches-section" aria-hidden="true" class="tertiary-list column-section lend-menu-searches-li-desktop">
                 <div class="section-title">Saved Searches</div>
                 <ul>
                     {{#saved_searches}}
