@@ -1,0 +1,30 @@
+{
+  "lightboxTriggerLinkText": "Trigger text for a How Kiva Works step lightbox.",
+  "steps": [
+	{
+	  "dataRevealId": "applies-for-a-loan",
+	  "descriptionTitle": "A borrower applies for a loan",
+	  "descriptionText": "Kiva loans are facilitated through two models, <a class=' '>partner and direct</a>, that enable us to reach the greatest number of people around the world.</br>For partner loans, borrowers apply to a local Field Partner, which manages the loan on the ground. For direct loans, borrowers apply through the <a href='http://borrow.kiva.org'>Kiva website."
+	},
+	{
+	  "dataRevealId": "underwriting-and-approval-process",
+	  "descriptionTitle": "The loan goes through the underwriting and approval process",
+	  "descriptionText": "Partner loans are facilitated by local nonprofits or lending institutions, which approve the borrower’s loan request. Kiva does due diligence and ongoing monitoring for each of these Field Partners.</br>Direct loans are approved through “social underwriting,” where trustworthiness is determined by friends & family lending a portion of the loan request, or by a Kiva approved Trustee vouching for the borrower."
+	},
+	{
+	  "dataRevealId": "loan-disbursal-period",
+	  "descriptionTitle": "Loan disbursal period",
+	  "descriptionText": "Disbursal refers to when the borrower can access the money— the timing of this can vary. For most Field Partner loans, the money is pre-disbursed, so the borrower can access the funds right away. For direct loans, the money is disbursed only after the loan has been fully crowdfunded on the Kiva website."
+	},
+	{
+	  "dataRevealId": "posted-to-kiva",
+	  "descriptionTitle": "The loan is posted to Kiva for lenders to support",
+	  "descriptionText": "Depending on the type of loan, a Field Partner or borrower uploads the loan details into the system. Our worldwide network of volunteers then helps to edit and translate loans before they go live on the website for lenders to crowdfund."
+	},
+	{
+	  "dataRevealId": "borrower-repays-the-loan",
+	  "descriptionTitle": "Borrower repays the loan",
+	  "descriptionText": "Expanded: Lenders receive repayments over time, based on the given repayment schedule and the borrower’s ability to repay. The repayments go into the lenders’ Kiva accounts."
+	}
+  ]
+}
