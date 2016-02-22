@@ -227,6 +227,68 @@
 	}
 }
 
+.field-partner-details {
+	.ac-body {
+		margin-top: 1rem;
+	}
+
+	.ac-title {
+		position: relative
+	}
+
+	.field-partner-iconography {
+		padding-bottom: 0.5rem;
+		text-align: center;
+
+		.field-partner-image-wrapper {
+			padding-bottom: 0.5rem;
+			height: 12rem;
+			overflow: hidden;
+
+			.field-partner-image {
+				height: 100%;
+			}
+		}
+
+		@media #{$medium-up}{
+			text-align: left;
+
+			.field-partner-image-wrapper {
+				padding-bottom: 0.5rem;
+				height: 8rem;
+				overflow: hidden;
+
+				.field-partner-image {
+					height: 100%;
+				}
+			}
+		}
+	}
+
+	.why-we-work-with-them {
+		padding-bottom: 1rem;
+	}
+
+	.field-partner-data {
+		.black-underlined {
+			display: inline-block;
+		}
+		.bold {
+			font-weight: bold;
+			padding-left: 0.3rem;
+		}
+		.datum {
+			strong {
+				display: inline-block;
+			}
+		}
+	}
+
+	.more-on-field-partner {
+		padding-top: 1rem;
+	}
+}
+
 .trustee-details {
 	.ac-body {
 		margin-top: 1rem;
