@@ -1,4 +1,4 @@
-.free-trial-lightbox {
+.decision-point-lightbox {
 	outline: 0;
 	background: rgba(0, 0, 0, 0);
 
@@ -8,9 +8,9 @@
 		outline: 0;
 		padding: 0 rem-calc(12);
 
-		&.free-trial-agree{
+		&.main-option {
 			border: solid 1px #26b6e8;
-			width: 35%;
+			width: 75%;
 			margin-right: 5%;
 
 			@media #{$large-up} {
@@ -19,13 +19,13 @@
 			}
 		}
 
-		&.free-trial-decline{
+		&.alternative-option {
 			background: transparent;
 			border: solid 1px #FFFFFF;
-			width: 60%;
+			width: 75%;
 
 			@media #{$large-up} {
-				width: 16rem;
+				width: 18rem;
 			}
 		}
 	}
