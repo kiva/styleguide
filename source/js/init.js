@@ -477,7 +477,9 @@
 	//How Kiva Works page inpage link from one of the steps to one of the FAQs
 	$('.accordion-anchor-and-open').click(function() {
 		$('.close-reveal-modal').click();
-		$('[aria-controls="faq-direct-vs-partner-loans"]').click();
+		if ($('[aria-controls="faq-direct-vs-partner-loans"]').attr('aria-expanded') == 'false') {
+			$('[aria-controls="faq-direct-vs-partner-loans"]').click();
+		}
 		setTimeout(function() {
 			$('[aria-controls="faq-direct-vs-partner-loans"]')[0].scrollIntoView({
 				behavior: 'smooth'
