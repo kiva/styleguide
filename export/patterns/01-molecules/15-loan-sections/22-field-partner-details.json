@@ -68,6 +68,11 @@
       "dataRevealId": "partner-currency-loss-rate-lightbox",
       "descriptionTitle": "Currency Loss Rate",
       "descriptionText": "Currency Loss Rate description text."
+    },
+    {
+      "dataRevealId": "partner-learn-more-lightbox",
+      "descriptionTitle": "What is a field partner?",
+      "descriptionText": "Field partner description text."
     }
   ]
 }

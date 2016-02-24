@@ -32,7 +32,14 @@
 	            <li>
 	                <a href="#" data-kv-accordion aria-controls="lend-menu-personalized-panel" aria-expanded="false" class="section-title">Personalized<svg class="icon icon-small-chevron-mobile"><use xlink:href="#icon-small-chevron-mobile" /></svg></a>
 	                <ul id="lend-menu-personalized-panel" aria-hidden="true">
-						<li class="favorites-href"><a href="{{favorites_href}}">Favorites</a></li>
+						{{#has_favorites}}
+							<li class="favorites-href-in-nav"><a href="{{favorites_href}}">Favorites</a></li>
+							<li class="no-favorites-href-in-nav hide"><a href="#" class="disabled">Favorites</a></li>
+						{{/has_favorites}}
+						{{^has_favorites}}
+							<li class="no-favorites-href-in-nav"><a href="#" class="disabled">Favorites</a></li>
+							<li class="favorites-href-in-nav hide"><a href="{{favorites_href}}">Favorites</a></li>
+						{{/has_favorites}}
 						{{#has_saved_searches}}
                             <li class="lend-menu-searches-li-mobile">
 								<a href="#" data-kv-accordion aria-controls="lend-menu-searches-panel" aria-expanded="false" class="section-title">Saved Searches<svg class="icon icon-small-chevron-mobile"><use xlink:href="#icon-small-chevron-mobile" /></svg></a>
@@ -92,7 +99,14 @@
 				{{#has_personalized}}
 					<div class="section-title">Personalized</div>
 					<ul>
-						<li class="favorites-href"><a href="{{favorites_href}}">Favorites</a></li>
+						{{#has_favorites}}
+							<li class="favorites-href-in-nav"><a href="{{favorites_href}}">Favorites</a></li>
+							<li class="no-favorites-href-in-nav hide"><a href="#" class="disabled">Favorites</a></li>
+						{{/has_favorites}}
+						{{^has_favorites}}
+							<li class="no-favorites-href-in-nav"><a href="#" class="disabled">Favorites</a></li>
+							<li class="favorites-href-in-nav hide"><a href="{{favorites_href}}">Favorites</a></li>
+						{{/has_favorites}}
 						{{#has_saved_searches}}
 							<li class="lend-menu-searches-li-desktop">
 								<a href="#" data-kv-toggle aria-controls="lend-menu-searches-section" aria-expanded="false" class="tertiary-link">Saved Searches</a>
@@ -100,7 +114,7 @@
 						{{/has_saved_searches}}
 						{{^has_saved_searches}}
 							<li class="lend-menu-searches-li-desktop">
-								<span class="tertiary-link disabled">Saved Searches</span>
+								<a class="tertiary-link disabled">Saved Searches</a>
 								<a href="#" data-kv-toggle aria-controls="lend-menu-searches-section" aria-expanded="false" class="tertiary-link" style="display: none;">Saved Searches</a>
 							</li>
 						{{/has_saved_searches}}

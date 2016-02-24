@@ -1,4 +1,4 @@
-&.header-button {
+.my-kiva.header-button {
 	text-align: right;
 }
 
@@ -13,6 +13,7 @@
 	background-position-x: center;
 	background-repeat: no-repeat;
 	background-size: cover;
+	vertical-align: middle;
 }
 
 @media #{$large-up} {
@@ -21,6 +22,5 @@
 		height: 0.78125 * $header-height;
 		margin-left: 0.5rem;
 		margin-right: 0;
-		vertical-align: middle;
 	}
 }

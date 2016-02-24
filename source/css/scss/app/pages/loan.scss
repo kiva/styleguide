@@ -60,52 +60,63 @@
 	}
 }
 
-.is-special {
-	.ac-body {
+.why-special {
+	position: relative;
+	.ac-title-text {
+		margin-right: rem-calc(30);
+	}
+	.icon-label {
+		float: left;
+	}
+	.icon {
+		width: rem-calc(30);
+		height: rem-calc(30);
+	}
+	.icon-large-chevron {
+		position: absolute;
+		top: 0;
+	}
+	.endorser {
+		@include clearfix;
+		margin-top: rem-calc(15);
+		margin-bottom: rem-calc(15);
+		p {
+			margin-bottom: 0;
+		}
+		.profile-photo, .name-and-title {
+			@media #{$small-up} {
+				text-align: center;
+			}
+			@media #{$large-up} {
+				display: inline-block;
+				float: left;
+				text-align: left;
+			}
+		}
+		.circle-avatar {
+			margin-left: 0;
+			width: 0.78125 * $header-height;
+			height: 0.78125 * $header-height;
+			@media #{$large-up} {
+				margin-right: rem-calc(20);
+				margin-top: rem-calc(-2);
+			}
+		}
+	}
+	.endorsement {
 		margin-top: 1rem;
-	}
-	label {
-		font-size: 1rem;
-	}
-	.kivan {
-		position: relative;
-		@media #{$medium-up} {
-			display: inline-block;
+		text-align: center;
+		font-size: 2rem;
+		@media #{$medium-only} {
+			margin-left: 2rem;
+			margin-right: 2rem;
 		}
-		.profile-photo {
-			padding-top: 1rem;
-			text-align: center;
-			@media #{$medium-up}{
-				display: inline;
-			}
-			img {
-				background-repeat: no-repeat;
-				border-radius: 50%;
-				width: 100px;
-				@media #{$medium-up} {
-					width: 50px;
-				}
-			}
+		@media #{$large-up} {
+			text-align: left;
+			margin-right: 1rem;
 		}
-		.show-for-medium-up {
-			vertical-align: middle;
-			div {
-				display: block;
-				padding-left: 1rem;
-			}
-		}
-		.show-for-small-only {
-			text-align: center;
-			margin: 0 auto;
-		}
-	}
-	.green-bolded {
-		text-align: left;
-		max-width: 75%;
-		@media #{$small-only} {
-			text-align: center;
+		@media #{$xxlarge-up} {
 			max-width: 85%;
-			margin: 0 auto;
 		}
 	}
 }
