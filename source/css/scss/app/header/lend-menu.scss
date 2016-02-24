@@ -62,6 +62,13 @@
             text-decoration: none;
         }
 
+        &.disabled{
+            color: $kiva-stroke-gray;
+            &:hover{
+                color: $kiva-stroke-gray;
+            }
+        }
+
         &[aria-expanded="false"] .open {
             display: none;
         }
