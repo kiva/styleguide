@@ -1,6 +1,6 @@
 {
   "triggerLinkText": "This is a link for a DAF ineligible lightbox.",
-  "lightboxId": "daf-ineligible-lightbox",
+  "lightboxId": "daf-ineligible-decision-lightbox",
   "title": "Shoot! This loan is ineligible.",
   "message": "Not all loans are eligible for promotions. If you would like to make a loan to this borrower anyway, you will have to use your own money.",
   "mainOptionButtonText": "Lend Anyway",
