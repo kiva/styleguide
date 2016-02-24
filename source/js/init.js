@@ -473,25 +473,30 @@
 		}
 	});
 
+	var $acLoans = $('[aria-controls="faq-direct-vs-partner-loans"]');
+	var closeReveal = $('.close-reveal-modal');
 
 	//How Kiva Works page inpage link from one of the steps to one of the FAQs
 	$('.accordion-anchor-and-open').click(function() {
-		$('.close-reveal-modal').click();
-		$('[aria-controls="faq-direct-vs-partner-loans"]').click();
+		closeReveal.click();
+		if ($acLoans.attr('aria-expanded') == 'false') {
+			$acLoans.click();
+		}
 		setTimeout(function() {
-			$('[aria-controls="faq-direct-vs-partner-loans"]')[0].scrollIntoView({
+			$acLoans[0].scrollIntoView({
 				behavior: 'smooth'
 			});
 		}, 500);
 	});
-
-
+	
 	//How Kiva Works page faq link (closes one accordion and opens another and brings question to top of view)
 	$('.accordion-collapse-and-open').click(function() {
-		$('[aria-controls="faq-do-borrowers-pay-interest"]').click();
-		$('[aria-controls="faq-direct-vs-partner-loans"]').click();
+
+		if ($acLoans.attr('aria-expanded') == 'false') {
+			$acLoans.click();
+		}
 		setTimeout(function() {
-			$('[aria-controls="faq-direct-vs-partner-loans"]')[0].scrollIntoView({
+			$acLoans[0].scrollIntoView({
 				behavior: 'smooth'
 			});
 		}, 500);
