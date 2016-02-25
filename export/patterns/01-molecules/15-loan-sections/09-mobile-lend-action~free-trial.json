@@ -17,9 +17,17 @@
   "alreadyLent": false,
   "inBasket": false,
   "showDAFIneligibility": false,
-  "lendActionHelpText": {
-    "dataRevealId": "daf-ineligible-lightbox",
-    "descriptionTitle": "Shoot! This loan is ineligible.",
-    "descriptionText": "Not all loans are eligible for promotions. Unfortunately, funds from this promotion can only be applied to certain loans. You can still support this loan using your own funds by clicking \"Lend $25\", or you can find an eligible loan <a href=\"https://www.kiva.org/lend\">here</a>."
-  }
+  "showFreeTrialIneligibility": false,
+  "lendActionHelpText":[
+    {
+      "dataRevealId": "daf-ineligible-lightbox",
+      "descriptionTitle": "Shoot! This loan is ineligible.",
+      "descriptionText": "Not all loans are eligible for promotions. Unfortunately, funds from this promotion can only be applied to certain loans. You can still support this loan using your own funds by clicking \"Lend $25\", or you can find an eligible loan <a href=\"https://www.kiva.org/lend\">here</a>."
+    },
+    {
+      "dataRevealId": "free-trial-ineligible-lightbox",
+      "descriptionTitle": "Why can't I make this loan with my Free Trial?",
+      "descriptionText": "Free Trials cannot be used to make loans during their private fundraising period on Kiva. If you'd like to make a free loan, please select a different loan to support."
+    }
+  ]
 }
