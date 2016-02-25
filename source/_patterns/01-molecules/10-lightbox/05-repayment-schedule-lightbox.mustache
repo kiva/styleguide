@@ -131,7 +131,7 @@
                                     </tr>
                                     {{#paymentsFromBorrowerToPartner}}
                                         <tr>
-                                            {{#showB2FPMessage}}<td rowspan="{{numberOfExpectedBorrowerPayments}}">From Borrower to Field Partner</td>{{/showB2FPMessage}}
+                                            <td>{{#showB2FPMessage}}From Borrower to Field Partner{{/showB2FPMessage}}{{^showB2FPMessage}}&nbsp;{{/showB2FPMessage}}</td>
                                             <td>{{expectedDate}}</td>
                                             <td>{{expectedAmount}}</td>
                                             <td>{{actualDate}}</td>
@@ -150,11 +150,19 @@
                                             {{#isDelinquent}}
                                                 <td>{{expectedRepayDate}}</td>
                                             {{/isDelinquent}}
+                                            {{^isDelinquent}}
+                                                <td>&nbsp;</td>
+                                            {{/isDelinquent}}
                                         {{/repaymentReceived}}
                                         <td>{{actualRepayment}}</td>
                                         <td>
                                             {{#comments}}
-                                                {{comments}}<br>
+                                                {{comments}}
+                                            {{/comments}}
+                                            {{#comments}}
+                                                {{#currencyLossLenders}}
+                                                    <br>
+                                                {{/currencyLossLenders}}
                                             {{/comments}}
                                             {{#currencyLossLenders}}
                                                 {{currencyLossLenders}} lost to currency devaluation <a target="_blank" href="https://www.kiva.org/help/currencyExchangeLoss?business_id=950791&period=201602#ExplanationOfCurrencyExchangeLossToLendersOnThisRepayment">more »</a>
