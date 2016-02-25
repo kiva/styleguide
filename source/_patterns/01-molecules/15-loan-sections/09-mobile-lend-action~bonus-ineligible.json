@@ -16,9 +16,9 @@
   "freeTrialEligible": false,
   "alreadyLent": false,
   "inBasket": false,
-  "showDAFIneligibility": true,
+  "showDAFIneligibility": false,
   "showFreeTrialIneligibility": false,
-  "showBonusIneligibility": false,
+  "showBonusIneligibility": true,
   "lendActionHelpText":[
     {
       "dataRevealId": "daf-ineligible-lightbox",
