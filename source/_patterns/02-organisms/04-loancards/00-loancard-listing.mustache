@@ -1,5 +1,5 @@
 <div class="loan-card">
-    <a class="borrower-img-wrap" href="{{borrower_url}}" style="background-image: url({{image.url}});">
+    <a class="borrower-img-wrap" href="{{borrower_url}}" data-interchange="[{{image.url}}, (default)], [{{image.retina_url}}, (retina)]">
         {{#show_loan_length}}
             <div class="loan-message">{{loan_length}}</div>
         {{/show_loan_length}}
