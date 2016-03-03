@@ -509,6 +509,29 @@
 	}
 
 	.lend-values-button {
+
+		[aria-expanded="false"] {
+			.icon {
+				$transform: rotate(180deg);
+
+				-webkit-transform: $transform;
+				-ms-transform: $transform;
+				transform: $transform;
+
+			}
+		}
+
+		[aria-expanded="true"] {
+			.icon {
+				$transform: rotate(0deg);
+
+				-webkit-transform: $transform;
+				-ms-transform: $transform;
+				transform: $transform;
+
+			}
+		}
+
 		.lend-action-button {
 			padding-right: 0.3rem;
 			padding-left: 0.3rem;
@@ -518,10 +541,12 @@
 				border-width: 0.4rem;
 			}
 			.icon {
+				$transition: 0.3s ease-in-out;
+				-webkit-transition: -webkit-transform $transition;
+				transition: transform $transition;
 				height: 0.75rem;
 				fill: white;
 				width: 0.75rem;
-				transform: rotate(180deg);
 			}
 		}
 	}
