@@ -565,12 +565,13 @@ $hiw-half-tap-button-size-small: $hiw-tap-button-size-small / 2;
 	.home-stats {
 		text-align: center;
 		font-weight: $font-weight-bold;
-		padding-bottom: rem-calc(10);
 		@media #{$small-up} {
 			padding-top: rem-calc(20);
+			padding-bottom: rem-calc(20);
 		}
 		@media #{$large-up} {
 			padding-top: rem-calc(30);
+			padding-bottom: rem-calc(30);
 		}
 		.stat {
 			padding-left: rem-calc(5);
