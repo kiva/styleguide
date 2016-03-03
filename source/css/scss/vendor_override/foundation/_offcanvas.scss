@@ -73,3 +73,13 @@ ul.off-canvas-list li a:hover {
 .filter-slider-item {
     margin: 1.5rem 0;
 }
+
+.move-right .exit-off-canvas {
+	background: rgba(0, 0, 0, 0.7);
+
+	@media #{$medium-up} {
+		&:hover {
+			background: rgba(0, 0, 0, 0.7);
+		}
+	}
+}
