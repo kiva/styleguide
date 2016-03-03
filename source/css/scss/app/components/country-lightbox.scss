@@ -14,5 +14,23 @@
 				bottom: initial;
 			}
 		}
+
+		@media #{$small-only} {
+			.region-name {
+				line-height:2.5rem;
+			}
+
+			.country {
+				border-bottom: 1px solid $kiva-stroke-gray;
+
+				&:first-of-type {
+					border-top: 1px solid $kiva-stroke-gray;
+				}
+
+				.country-name {
+					font-size: 1rem;
+				}
+			}
+		}
 	}
 }
