@@ -46,14 +46,14 @@ define("Styleguide", ["jquery"], function(__WEBPACK_EXTERNAL_MODULE_2__) { retur
 
 	'use strict';
 
-	__webpack_require__(8);
+	__webpack_require__(7);
 
 	var header = __webpack_require__(5);
-	var filters = __webpack_require__(13);
-	var imagesizes = __webpack_require__(14);
+	var filters = __webpack_require__(12);
+	var imagesizes = __webpack_require__(13);
 	var accordion = __webpack_require__(6);
-	var videoResizing = __webpack_require__(15);
-	var borrowerPage = __webpack_require__(7);
+	var videoResizing = __webpack_require__(14);
+	var borrowerPage = __webpack_require__(15);
 	var categories = __webpack_require__(16);
 	var lightbox = __webpack_require__(17);
 	var saveSearchLightbox = __webpack_require__(18);
@@ -1509,7 +1509,8 @@ define("Styleguide", ["jquery"], function(__WEBPACK_EXTERNAL_MODULE_2__) { retur
 
 
 	/*** EXPORTS FROM exports-loader ***/
-	module.exports = window.Modernizr}.call(window));
+	module.exports = window.Modernizr
+	}.call(window));
 
 /***/ },
 /* 4 */
@@ -8316,46 +8317,18 @@ define("Styleguide", ["jquery"], function(__WEBPACK_EXTERNAL_MODULE_2__) { retur
 /* 7 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var $ = __webpack_require__(2);
-
-	module.exports = function () {
-	    'use strict';
-
-	    // for the lenders teams section to expand upon click
-	    $('.lender-count').click(function () {
-	        // grab label object
-	        var teamsLabel = $('#ac-lenders-teams-label');
-
-	        // trigger click on label object if it isn't expanded
-	        if (teamsLabel.attr('aria-expanded') === 'false') {
-	            teamsLabel.trigger('click');
-	        }
-	    });
-
-	    $('#show-advanced-toggle, #hide-advanced-toggle').click(function() {
-	        $('.show-advanced').toggle();
-	        $('.hide-advanced').toggle();
-	        $('.simple-repayment-schedule').toggle();
-	        $('.advanced-repayment-schedule').toggle();
-	    });
-	};
-
-/***/ },
-/* 8 */
-/***/ function(module, exports, __webpack_require__) {
-
 	__webpack_require__(2);
 	__webpack_require__(3);
 
 	__webpack_require__(4);
 
+	__webpack_require__(8);
 	__webpack_require__(9);
 	__webpack_require__(10);
 	__webpack_require__(11);
-	__webpack_require__(12);
 
 /***/ },
-/* 9 */
+/* 8 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(__webpack_provided_window_dot_jQuery) {/*! noUiSlider - 7.0.10 - 2014-12-27 14:50:46 */
@@ -10676,7 +10649,7 @@ define("Styleguide", ["jquery"], function(__WEBPACK_EXTERNAL_MODULE_2__) { retur
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(2)))
 
 /***/ },
-/* 10 */
+/* 9 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;var require;var require;/* WEBPACK VAR INJECTION */(function($) {/*!
@@ -16964,7 +16937,7 @@ define("Styleguide", ["jquery"], function(__WEBPACK_EXTERNAL_MODULE_2__) { retur
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(2)))
 
 /***/ },
-/* 11 */
+/* 10 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*
@@ -16975,7 +16948,7 @@ define("Styleguide", ["jquery"], function(__WEBPACK_EXTERNAL_MODULE_2__) { retur
 	|___/_|_|\___|_|\_(_)/ |___/
 	                   |__/
 
-	 Version: 1.5.8
+	 Version: 1.5.9
 	  Author: Ken Wheeler
 	 Website: http://kenwheeler.github.io
 	    Docs: http://kenwheeler.github.io/slick
@@ -17050,6 +17023,7 @@ define("Styleguide", ["jquery"], function(__WEBPACK_EXTERNAL_MODULE_2__) { retur
 	                touchMove: true,
 	                touchThreshold: 5,
 	                useCSS: true,
+	                useTransform: false,
 	                variableWidth: false,
 	                vertical: false,
 	                verticalSwiping: false,
@@ -17468,8 +17442,6 @@ define("Styleguide", ["jquery"], function(__WEBPACK_EXTERNAL_MODULE_2__) { retur
 	                .attr('data-slick-index', index)
 	                .data('originalStyling', $(element).attr('style') || '');
 	        });
-
-	        _.$slidesCache = _.$slides;
 
 	        _.$slider.addClass('slick-slider');
 
@@ -17936,6 +17908,8 @@ define("Styleguide", ["jquery"], function(__WEBPACK_EXTERNAL_MODULE_2__) { retur
 
 	        if (filter !== null) {
 
+	            _.$slidesCache = _.$slides;
+
 	            _.unload();
 
 	            _.$slideTrack.children(this.options.slide).detach();
@@ -17966,7 +17940,7 @@ define("Styleguide", ["jquery"], function(__WEBPACK_EXTERNAL_MODULE_2__) { retur
 	        if (_.options.infinite === true) {
 	            while (breakPoint < _.slideCount) {
 	                ++pagerQty;
-	                breakPoint = counter + _.options.slidesToShow;
+	                breakPoint = counter + _.options.slidesToScroll;
 	                counter += _.options.slidesToScroll <= _.options.slidesToShow ? _.options.slidesToScroll : _.options.slidesToShow;
 	            }
 	        } else if (_.options.centerMode === true) {
@@ -17974,7 +17948,7 @@ define("Styleguide", ["jquery"], function(__WEBPACK_EXTERNAL_MODULE_2__) { retur
 	        } else {
 	            while (breakPoint < _.slideCount) {
 	                ++pagerQty;
-	                breakPoint = counter + _.options.slidesToShow;
+	                breakPoint = counter + _.options.slidesToScroll;
 	                counter += _.options.slidesToScroll <= _.options.slidesToShow ? _.options.slidesToScroll : _.options.slidesToShow;
 	            }
 	        }
@@ -18043,15 +18017,33 @@ define("Styleguide", ["jquery"], function(__WEBPACK_EXTERNAL_MODULE_2__) { retur
 	                targetSlide = _.$slideTrack.children('.slick-slide').eq(slideIndex + _.options.slidesToShow);
 	            }
 
-	            targetLeft = targetSlide[0] ? targetSlide[0].offsetLeft * -1 : 0;
+	            if (_.options.rtl === true) {
+	                if (targetSlide[0]) {
+	                    targetLeft = (_.$slideTrack.width() - targetSlide[0].offsetLeft - targetSlide.width()) * -1;
+	                } else {
+	                    targetLeft =  0;
+	                }
+	            } else {
+	                targetLeft = targetSlide[0] ? targetSlide[0].offsetLeft * -1 : 0;
+	            }
 
 	            if (_.options.centerMode === true) {
-	                if (_.options.infinite === false) {
+	                if (_.slideCount <= _.options.slidesToShow || _.options.infinite === false) {
 	                    targetSlide = _.$slideTrack.children('.slick-slide').eq(slideIndex);
 	                } else {
 	                    targetSlide = _.$slideTrack.children('.slick-slide').eq(slideIndex + _.options.slidesToShow + 1);
 	                }
-	                targetLeft = targetSlide[0] ? targetSlide[0].offsetLeft * -1 : 0;
+
+	                if (_.options.rtl === true) {
+	                    if (targetSlide[0]) {
+	                        targetLeft = (_.$slideTrack.width() - targetSlide[0].offsetLeft - targetSlide.width()) * -1;
+	                    } else {
+	                        targetLeft =  0;
+	                    }
+	                } else {
+	                    targetLeft = targetSlide[0] ? targetSlide[0].offsetLeft * -1 : 0;
+	                }
+
 	                targetLeft += (_.$list.width() - targetSlide.outerWidth()) / 2;
 	            }
 	        }
@@ -18463,6 +18455,7 @@ define("Styleguide", ["jquery"], function(__WEBPACK_EXTERNAL_MODULE_2__) { retur
 
 	        if (imgCount > 0) {
 	            targetImage = $('img[data-lazy]', _.$slider).first();
+	            targetImage.attr('src', null);
 	            targetImage.attr('src', targetImage.attr('data-lazy')).removeClass('slick-loading').load(function() {
 	                    targetImage.removeAttr('data-lazy');
 	                    _.progressiveLazyLoad();
@@ -18481,8 +18474,22 @@ define("Styleguide", ["jquery"], function(__WEBPACK_EXTERNAL_MODULE_2__) { retur
 
 	    Slick.prototype.refresh = function( initializing ) {
 
-	        var _ = this,
-	            currentSlide = _.currentSlide;
+	        var _ = this, currentSlide, firstVisible;
+
+	        firstVisible = _.slideCount - _.options.slidesToShow;
+
+	        // check that the new breakpoint can actually accept the
+	        // "current slide" as the current slide, otherwise we need
+	        // to set it to the closest possible value.
+	        if ( !_.options.infinite ) {
+	            if ( _.slideCount <= _.options.slidesToShow ) {
+	                _.currentSlide = 0;
+	            } else if ( _.currentSlide > firstVisible ) {
+	                _.currentSlide = firstVisible;
+	            }
+	        }
+
+	         currentSlide = _.currentSlide;
 
 	        _.destroy(true);
 
@@ -18861,8 +18868,7 @@ define("Styleguide", ["jquery"], function(__WEBPACK_EXTERNAL_MODULE_2__) { retur
 	            _.transformType = 'transform';
 	            _.transitionType = 'transition';
 	        }
-	        _.transformsEnabled = (_.animType !== null && _.animType !== false);
-
+	        _.transformsEnabled = _.options.useTransform && (_.animType !== null && _.animType !== false);
 	    };
 
 
@@ -19557,18 +19563,13 @@ define("Styleguide", ["jquery"], function(__WEBPACK_EXTERNAL_MODULE_2__) { retur
 	    };
 
 	    Slick.prototype.activateADA = function() {
-	        var _ = this,
-	        _isSlideOnFocus =_.$slider.find('*').is(':focus');
-	        // _isSlideOnFocus = _.$slides.is(':focus') || _.$slides.find('*').is(':focus');
+	        var _ = this;
 
 	        _.$slideTrack.find('.slick-active').attr({
-	            'aria-hidden': 'false',
-	            'tabindex': '0'
+	            'aria-hidden': 'false'
 	        }).find('a, input, button, select').attr({
 	            'tabindex': '0'
 	        });
-
-	        (_isSlideOnFocus) &&  _.$slideTrack.find('.slick-active').focus();
 
 	    };
 
@@ -19596,9 +19597,9 @@ define("Styleguide", ["jquery"], function(__WEBPACK_EXTERNAL_MODULE_2__) { retur
 	            opt = arguments[0],
 	            args = Array.prototype.slice.call(arguments, 1),
 	            l = _.length,
-	            i = 0,
+	            i,
 	            ret;
-	        for (i; i < l; i++) {
+	        for (i = 0; i < l; i++) {
 	            if (typeof opt == 'object' || typeof opt == 'undefined')
 	                _[i].slick = new Slick(_[i], opt);
 	            else
@@ -19612,7 +19613,7 @@ define("Styleguide", ["jquery"], function(__WEBPACK_EXTERNAL_MODULE_2__) { retur
 
 
 /***/ },
-/* 12 */
+/* 11 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(__webpack_provided_window_dot_jQuery) {/*global jQuery */
@@ -19686,7 +19687,7 @@ define("Styleguide", ["jquery"], function(__WEBPACK_EXTERNAL_MODULE_2__) { retur
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(2)))
 
 /***/ },
-/* 13 */
+/* 12 */
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = function() {
@@ -19776,7 +19777,7 @@ define("Styleguide", ["jquery"], function(__WEBPACK_EXTERNAL_MODULE_2__) { retur
 
 
 /***/ },
-/* 14 */
+/* 13 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var $ = __webpack_require__(2);
@@ -19835,7 +19836,7 @@ define("Styleguide", ["jquery"], function(__WEBPACK_EXTERNAL_MODULE_2__) { retur
 
 
 /***/ },
-/* 15 */
+/* 14 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var $ = __webpack_require__(2);
@@ -19844,6 +19845,34 @@ define("Styleguide", ["jquery"], function(__WEBPACK_EXTERNAL_MODULE_2__) { retur
 	    'use strict';
 
 	    $('.loan-image-wrap').fitVids();
+	};
+
+/***/ },
+/* 15 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var $ = __webpack_require__(2);
+
+	module.exports = function () {
+	    'use strict';
+
+	    // for the lenders teams section to expand upon click
+	    $('.lender-count').click(function () {
+	        // grab label object
+	        var teamsLabel = $('#ac-lenders-teams-label');
+
+	        // trigger click on label object if it isn't expanded
+	        if (teamsLabel.attr('aria-expanded') === 'false') {
+	            teamsLabel.trigger('click');
+	        }
+	    });
+
+	    $('#show-advanced-toggle, #hide-advanced-toggle').click(function() {
+	        $('.show-advanced').toggle();
+	        $('.hide-advanced').toggle();
+	        $('.simple-repayment-schedule').toggle();
+	        $('.advanced-repayment-schedule').toggle();
+	    });
 	};
 
 /***/ },
