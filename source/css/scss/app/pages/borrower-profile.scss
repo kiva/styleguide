@@ -1,5 +1,6 @@
 .borrower-profile-wrapper {
 	padding-top: 1rem;
+	background: white;
 
 	.line-break {
 		width: 100%;
@@ -31,7 +32,7 @@
 
 	.borrower-profile-pieces {
 		@media #{$large-up}{
-			background: linear-gradient(90deg, #efefef 50%, #d8d8d8 50%);
+			background: linear-gradient(90deg, $kiva-bg-lightgray 50%, $kiva-bg-darkgray 50%);
 			border-top: 1px solid $gray;
 			border-bottom: 1px solid $gray;
 		}
@@ -45,7 +46,7 @@
 		.left-content {
 			@media #{$large-up} {
 				flex-basis: 58.3%;
-				background-color: $kiva-bg-darkgray;
+				background-color: $kiva-bg-lightgray;
 				border-right: 1px solid $gray;
 			}
 		}
@@ -55,7 +56,7 @@
 			@media #{$large-up} {
 				display: block;
 				flex-basis: 41.5%;
-				background-color: $kiva-stroke-gray;
+				background-color: $kiva-bg-darkgray;
 			}
 		}
 
