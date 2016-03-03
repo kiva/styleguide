@@ -1,0 +1,44 @@
+{{#is_regular}}
+	<div class="bottom-bar">
+		<a class="half-width button lend-button" href="#">Lend {{#free_trial}}Free {{/free_trial}}$25</a>
+		<a class="half-width button" href="{{borrower_url}}">Read More</a>
+	</div>
+{{/is_regular}}
+{{#is_lent_to}}
+	<div class="bottom-bar show-short">
+		<a class="success button" href="{{borrower_url}}">
+			<svg class="icon">
+				<use xlink:href="#icon-confirmation" />
+			</svg>
+			<span>You've supported this loan</span>
+		</a>
+	</div>
+	<div class="bottom-bar hide-for-touch">
+		<a class="button" href="{{borrower_url}}">Lend Again</a>
+	</div>
+{{/is_lent_to}}
+{{#is_adding}}
+	<div class="bottom-bar no-hide">
+		<div class="message">
+			<img class="loader" src="{{img.loader.src}}">Adding to basket
+		</div>
+	</div>
+{{/is_adding}}
+{{#is_in_basket}}
+	<div class="bottom-bar show-short">
+		<a class="success button" href="{{basket_url}}">
+			<svg class="icon">
+				<use xlink:href="#icon-confirmation" />
+			</svg>
+			<span>{{amount_in_basket}} in basket</span>
+		</a>
+	</div>
+	<div class="bottom-bar hide-for-touch">
+		<a class="success button" href="{{basket_url}}">
+			<svg class="icon">
+				<use xlink:href="#icon-confirmation" />
+			</svg>
+			<span>Proceed to checkout</span>
+		</a>
+	</div>
+{{/is_in_basket}}
