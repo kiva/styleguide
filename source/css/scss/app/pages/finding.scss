@@ -190,11 +190,7 @@ a.filter-menu-button:visited {
 	}
 
 	.exit-off-canvas {
-		left: $menu-width;
-
-		@media #{$large-up} {
-			left: $menu-base-width;
-		}
+		left: $menu-base-width;
 	}
 }
 
