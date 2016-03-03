@@ -93,6 +93,8 @@ $loan-card-meter-height: $loan-card-footer-height/2;
     }
 
     &:hover {
+		box-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+
         .bottom-bar {
             height: $loan-card-footer-height;
         }
