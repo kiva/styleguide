@@ -30,12 +30,13 @@ div.reveal-modal-bg {
 
 		.flex-video {
 			margin-top: rem-calc(30);
+
+			.iframe {
+				border: none;
+			}
 		}
 
 		a.close-reveal-modal {
-			//float: right;
-			//padding-top: rem-calc(20);
-			//padding-right: rem-calc(20);
 			top: 0;
 			right: 0;
 
