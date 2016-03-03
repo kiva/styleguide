@@ -33,9 +33,11 @@ div.reveal-modal-bg {
 		}
 
 		a.close-reveal-modal {
-			float: right;
-			padding-top: rem-calc(20);
-			padding-right: rem-calc(20);
+			//float: right;
+			//padding-top: rem-calc(20);
+			//padding-right: rem-calc(20);
+			top: 0;
+			right: 0;
 
 			.icon.icon-x {
 				height: rem-calc(40);
@@ -45,7 +47,7 @@ div.reveal-modal-bg {
 		}
 
 		div.lightbox-content {
-			padding-top: rem-calc(70);
+			padding-top: rem-calc(45);
 
 			.white-background-box {
 				background-color: $white;
