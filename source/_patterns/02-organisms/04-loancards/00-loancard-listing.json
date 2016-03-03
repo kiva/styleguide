@@ -8,7 +8,8 @@
 		}
 	}
 	, "image": {
-		"url": "http://placehold.it/480x300"
+		"url": "http://placehold.it/480x300.jpg"
+		, "retina_url": "http://placehold.it/960x600.jpg"
 	}
 	, "progress": {
 		"percent": 42
