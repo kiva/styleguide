@@ -62,6 +62,9 @@
 
 		.ac-title {
 			cursor: pointer;
+			.icon-large-chevron{
+				stroke-width: rem-calc(7px);
+			}
 		}
 	}
 }
