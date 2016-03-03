@@ -12,7 +12,9 @@ div.reveal-modal-bg {
 		background: none;
 		box-shadow: none;
 		z-index: 1505;
-		margin-bottom: rem-calc(100);
+		//margin-bottom: rem-calc(100);
+		padding: 0;
+		max-width: none;
 
 		&.toback {
 			z-index: 1506;
@@ -20,6 +22,10 @@ div.reveal-modal-bg {
 
 		&.open {
 			top: rem-calc(0) !important;
+		}
+
+		.row {
+			padding: rem-calc(30);
 		}
 
 		.flex-video {
