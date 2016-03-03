@@ -5,7 +5,7 @@
 			{{#bonus}}
 				<div style="font-weight: normal;">Select a borrower to </br>
 					<span style="font-weight: bold;">
-						<a href="{{lend_href}}">Lend your {{bonus.amount}} {{bonus.label}}</a>
+						<a class="dark_green_bg_link" href="{{lend_href}}">lend your {{bonus.amount}} {{bonus.label}}</a>
 					</span>
 				</div>
 			{{/bonus}}
@@ -69,11 +69,11 @@
 	{{/is-visitor}}
 {{! This is the Promo/Bonus banner that is shown in the medium screen state}}
 	{{#bonus}}
-		<div class="hide-for-xxlarge-up hide-for-small-only pronus"><span style="font-weight: normal;">Select a borrower to <span style="font-weight: bold;"><a href="{{lend_href}}">Lend your {{bonus.amount}} {{bonus.label}}</a></span></span></div>
+		<div class="hide-for-xxlarge-up hide-for-small-only pronus"><span style="font-weight: normal;">Select a borrower to <span style="font-weight: bold;"><a class="dark_green_bg_link"  href="{{lend_href}}">lend your {{bonus.amount}} {{bonus.label}}</a></span></span></div>
 	{{/bonus}}
 {{! This is the Promo/Bonus banner that is shown in the small screen state}}
 	{{#bonus}}
-		<div class="show-for-small-only small-centered columns pronus"><div style="font-weight: normal;">Select a borrower to </br><span style="font-weight: bold;"><a href="{{lend_href}}">Lend your {{bonus.amount}} {{bonus.label}}</a></span></div></div>
+		<div class="show-for-small-only small-centered columns pronus"><div style="font-weight: normal;">Select a borrower to </br><span style="font-weight: bold;"><a class="dark_green_bg_link"  href="{{lend_href}}">lend your {{bonus.amount}} {{bonus.label}}</a></span></div></div>
 	{{/bonus}}
 
 </div>
