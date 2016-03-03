@@ -1,6 +1,7 @@
 .tt-menu {
     $spacing: 0.4rem;
 
+	cursor: pointer;
     background-color: $white;
     border: rem-calc(1) solid $iron;
     padding: $spacing;
