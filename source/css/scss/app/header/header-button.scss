@@ -72,3 +72,34 @@
 		}
 	}
 }
+
+.header-logo {
+	display:block;
+	padding: rem-calc(10) 0 rem-calc(8) 0;
+	background-color: $kiva-green;
+	white-space: nowrap;
+	text-align: center;
+
+	@media #{$large-up} {
+		padding:rem-calc(14) $header-height/4;
+	}
+
+	&:link, &:visited, &:hover, &:active {
+		color: $white;
+		text-decoration: none;
+
+		.icon {
+			fill: $white;
+		}
+	}
+
+	.icon {
+		height: rem-calc(24);
+		width: rem-calc(56);
+
+		@media #{$large-up} {
+			height: rem-calc(28);
+			width: rem-calc(67);
+		}
+	}
+}
