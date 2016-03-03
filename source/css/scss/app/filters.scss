@@ -1,3 +1,9 @@
+.no-touch .filters-menu-list {
+	@media #{$medium-up} {
+		padding-top: rem-calc(30);
+	}
+}
+
 .filter {
 	.small-touch {
 		visibility: visible;
