@@ -1,7 +1,7 @@
 <div id="lend-dropdown" class="f-dropdown content" data-dropdown-content aria-hidden="true" aria-autoclose="false" tabindex="-1">
     <ul class="lend-menu-small hide-for-large-up">
         <li>
-            <a href="#" data-kv-accordion aria-controls="lend-menu-category-panel" aria-expanded="false" class="section-title">Category<svg class="icon icon-small-chevron-mobile"><use xlink:href="#icon-small-chevron-mobile" /></svg></a>
+            <a href="#" data-kv-accordion aria-controls="lend-menu-category-panel" aria-expanded="false" class="section-title">Categories<svg class="icon icon-small-chevron-mobile"><use xlink:href="#icon-small-chevron-mobile" /></svg></a>
             <ul id="lend-menu-category-panel" aria-hidden="true">
 				{{#categories.list}}
                     <li><a href="{{href}}">{{name}}</a></li>
@@ -10,7 +10,7 @@
             </ul>
         </li>
         <li>
-            <a href="#" data-kv-accordion aria-controls="lend-menu-countries-panel" aria-expanded="false" class="section-title">Countries<svg class="icon icon-small-chevron-mobile"><use xlink:href="#icon-small-chevron-mobile" /></svg></a>
+            <a href="#" data-kv-accordion aria-controls="lend-menu-countries-panel" aria-expanded="false" class="section-title">Regions<svg class="icon icon-small-chevron-mobile"><use xlink:href="#icon-small-chevron-mobile" /></svg></a>
             <ul id="lend-menu-countries-panel" aria-hidden="true">
 				{{#regions}}
                     <li>
@@ -30,7 +30,7 @@
 		{{^is-visitor}}
 			{{#has_personalized}}
 	            <li>
-	                <a href="#" data-kv-accordion aria-controls="lend-menu-personalized-panel" aria-expanded="false" class="section-title">Personalized<svg class="icon icon-small-chevron-mobile"><use xlink:href="#icon-small-chevron-mobile" /></svg></a>
+	                <a href="#" data-kv-accordion aria-controls="lend-menu-personalized-panel" aria-expanded="false" class="section-title">My Kiva<svg class="icon icon-small-chevron-mobile"><use xlink:href="#icon-small-chevron-mobile" /></svg></a>
 	                <ul id="lend-menu-personalized-panel" aria-hidden="true">
 						{{#has_favorites}}
 							<li class="favorites-href-in-nav"><a href="{{favorites_href}}">Favorites</a></li>
@@ -42,7 +42,7 @@
 						{{/has_favorites}}
 						{{#has_saved_searches}}
                             <li class="lend-menu-searches-li-mobile">
-								<a href="#" data-kv-accordion aria-controls="lend-menu-searches-panel" aria-expanded="false" class="section-title">Saved Searches<svg class="icon icon-small-chevron-mobile"><use xlink:href="#icon-small-chevron-mobile" /></svg></a>
+								<a href="#" data-kv-accordion aria-controls="lend-menu-searches-panel" aria-expanded="false" class="section-title">Saved searches<svg class="icon icon-small-chevron-mobile"><use xlink:href="#icon-small-chevron-mobile" /></svg></a>
 								<ul id="lend-menu-searches-panel" aria-hidden="true">
 									{{#saved_searches}}
 										<li><a href="{{href}}">{{name}}</a></li>
@@ -52,14 +52,14 @@
 						{{/has_saved_searches}}
 						{{^has_saved_searches}}
 							<li class="lend-menu-searches-li-mobile">
-								<a href="#" class="section-title disabled">Saved Searches</a>
-								<a href="#" data-kv-accordion aria-controls="lend-menu-searches-panel" aria-expanded="false" class="section-title" style="display: none;">Saved Searches<svg class="icon icon-small-chevron-mobile"><use xlink:href="#icon-small-chevron-mobile" /></svg></a>
+								<a href="#" class="section-title disabled">Saved searches</a>
+								<a href="#" data-kv-accordion aria-controls="lend-menu-searches-panel" aria-expanded="false" class="section-title" style="display: none;">Saved searches<svg class="icon icon-small-chevron-mobile"><use xlink:href="#icon-small-chevron-mobile" /></svg></a>
 								<ul id="lend-menu-searches-panel" aria-hidden="true">
 								</ul>
 							</li>
 						{{/has_saved_searches}}
 	                    {{#countries_unlent_href}}
-	                    	<li><a href="{{countries_unlent_href}}">Countries I Have Not Lent To</a></li>
+	                    	<li><a href="{{countries_unlent_href}}">Countries I haven't lent to</a></li>
 	                    {{/countries_unlent_href}}
 	                </ul>
 	            </li>
@@ -68,7 +68,7 @@
     </ul>
 	<div class="lend-menu-large show-for-large-up">
 		<div class="column-section list-length-{{categories.count}}">
-			<div class="section-title">Category</div>
+			<div class="section-title">Categories</div>
 			<div class="column-list-container">
 				<ul class="column-list">
 					{{#categories.list}}
@@ -87,7 +87,7 @@
 			</a>
 		</div>
         <div class="column-section">
-			<div class="section-title">Countries</div>
+			<div class="section-title">Regions</div>
 			<ul>
 				{{#regions}}
                     <li>
@@ -97,7 +97,7 @@
 			</ul>
 			{{^is-visitor}}
 				{{#has_personalized}}
-					<div class="section-title">Personalized</div>
+					<div class="section-title">My Kiva</div>
 					<ul>
 						{{#has_favorites}}
 							<li class="favorites-href-in-nav"><a href="{{favorites_href}}">Favorites</a></li>
@@ -109,17 +109,17 @@
 						{{/has_favorites}}
 						{{#has_saved_searches}}
 							<li class="lend-menu-searches-li-desktop">
-								<a href="#" data-kv-toggle aria-controls="lend-menu-searches-section" aria-expanded="false" class="tertiary-link">Saved Searches</a>
+								<a href="#" data-kv-toggle aria-controls="lend-menu-searches-section" aria-expanded="false" class="tertiary-link">Saved searches</a>
 							</li>
 						{{/has_saved_searches}}
 						{{^has_saved_searches}}
 							<li class="lend-menu-searches-li-desktop">
-								<a href="#" class="tertiary-link disabled">Saved Searches</a>
-								<a href="#" data-kv-toggle aria-controls="lend-menu-searches-section" aria-expanded="false" class="tertiary-link" style="display: none;">Saved Searches</a>
+								<a href="#" class="tertiary-link disabled">Saved searches</a>
+								<a href="#" data-kv-toggle aria-controls="lend-menu-searches-section" aria-expanded="false" class="tertiary-link" style="display: none;">Saved searches</a>
 							</li>
 						{{/has_saved_searches}}
 	                    {{#countries_unlent_href}}
-	                    	<li><a href="{{countries_unlent_href}}">Countries I Have Not Lent To</a></li>
+	                    	<li><a href="{{countries_unlent_href}}">Countries I haven't lent to</a></li>
 	                    {{/countries_unlent_href}}
 					</ul>
 				{{/has_personalized}}
@@ -140,7 +140,7 @@
             </div>
 		{{/regions}}
             <div id="lend-menu-searches-section" aria-hidden="true" class="tertiary-list column-section lend-menu-searches-li-desktop">
-                <div class="section-title">Saved Searches</div>
+                <div class="section-title">Saved searches</div>
                 <ul>
                     {{#saved_searches}}
                         <li><a href="{{href}}">{{name}}</a></li>
