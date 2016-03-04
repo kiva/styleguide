@@ -48,6 +48,17 @@
 		}
 
 		.left-content {
+			padding-left: 0;
+			padding-right: 0;
+			section {
+				padding-left: 1rem;
+				padding-right: 1rem;
+
+				&.loan-tags {
+					padding-left: 0;
+					padding-right: 0;
+				}
+			}
 			@media #{$large-up} {
 				flex-basis: 58.3%;
 				background-color: $kiva-bg-lightgray;
