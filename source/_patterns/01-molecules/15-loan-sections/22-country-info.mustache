@@ -14,11 +14,11 @@
         <div class="country-stats row">
             {{#fieldPartnerLoanStats}}
                 <div class="stat small-12 large-6 columns">
-                    <div class="description black-underlined">Average annual income (USD):</div>
+                    <div class="description"><span class="black-underlined">Average annual income (USD)</span>:</div>
                     <div class="data-point featured">{{avgAnnualIncome}}</div>
                 </div>
                 <div class="stat small-12 large-6 columns">
-                    <div class="description black-underlined">Funds lent in {{countryName}}:</div>
+                    <div class="description"><span class="black-underlined">Funds lent in {{countryName}}</span>:</div>
                     <div class="data-point featured">{{#fundsLentInCountry}}{{fundsLentInCountry}}{{/fundsLentInCountry}}{{^fundsLentInCountry}}&nbsp;{{/fundsLentInCountry}}</div>
                 </div>
                 {{#inUSD}}
@@ -29,22 +29,22 @@
                 {{/inUSD}}
                 {{^inUSD}}
                     <div class="stat small-12 large-6 columns">
-                        <div class="description black-underlined">{{currencyFullName}} ({{currencyCode}}) = $1:</div>
+                        <div class="description"><span class="black-underlined">{{currencyFullName}} ({{currencyCode}}) = $1</span>:</div>
                         <div class="data-point featured">{{exchangeRate}}</div>
                     </div>
                 {{/inUSD}}
                 <div class="stat small-12 large-6 columns">
-                    <div class="description black-underlined">Loans currently fundraising:</div>
+                    <div class="description"><span class="black-underlined">Loans currently fundraising</span>:</div>
                     <div class="data-point featured">{{numLoansFundraising}}</div>
                 </div>
             {{/fieldPartnerLoanStats}}
             {{#directLoanStats}}
                 <div class="stat small-12 large-6 columns">
-                    <div class="description black-underlined">Loans to Ethnic Minorities:</div>
+                    <div class="description"><span class="black-underlined">Loans to ethnic minorities</span>:</div>
                     <div class="data-point featured">{{percentLoansToMinorities}}</div>
                 </div>
                 <div class="stat small-12 large-6 columns">
-                    <div class="description black-underlined">Comments Per Loan:</div>
+                    <div class="description"><span class="black-underlined">Comments per loan</span>:</div>
                     <div class="data-point featured">{{commentsPerLoan}}</div>
                 </div>
             {{/directLoanStats}}
