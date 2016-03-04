@@ -1,4 +1,4 @@
-<h2><a href="#" class="black-underlined" data-reveal-id="repayment-schedule-tables">Repayment Schedule</a></h2>
+<h2><a href="#" class="black-underlined" data-reveal-id="repayment-schedule-tables">Repayment schedule</a></h2>
 <div id="repayment-schedule-tables" class="reveal-modal" data-reveal aria-hidden="true" role="dialog">
     <div class="row">
         <div class="columns small-12">
@@ -8,7 +8,7 @@
                 </svg>
             </a>
             <div class="lightbox-content white repayment-schedule-lightbox">
-                <p class="featured">Repayment Schedule</p>
+                <p class="featured">Repayment schedule</p>
 
                 {{#isDirectLoan}}
                     {{#isDisbursed}}
@@ -16,9 +16,9 @@
                             <table class="simple-repayment-schedule" role="grid" summary="Schedule of expected and actual repayments for this loan.">
                                 <thead>
                                 <tr>
-                                    <th id="total-amount-due" class="text-right shrink">Total Amount Due</th>
-                                    <th id="amount-paid" class="text-right shrink">Amount Paid</th>
-                                    <th id="due-date-from-borrower" class="shrink">Due From Borrower</th>
+                                    <th id="total-amount-due" class="text-right shrink">Total amount due</th>
+                                    <th id="amount-paid" class="text-right shrink">Amount paid</th>
+                                    <th id="due-date-from-borrower" class="shrink">Due from borrower</th>
                                     <th id="status" class="expand">Status</th>
                                 </tr>
                                 </thead>
@@ -47,11 +47,11 @@
                 {{^isDirectLoan}}
                     {{^isDualStatementLoan}}
                         <div class="show-advanced">
-                            <a href="javascript:void(0);" id="show-advanced-toggle">Show Advanced</a>
+                            <a href="javascript:void(0);" id="show-advanced-toggle">Show advanced</a>
                         </div>
 
                         <div class="hide-advanced" style="display:none;">
-                            <a href="javascript:void(0);" id="hide-advanced-toggle">Hide Advanced</a>
+                            <a href="javascript:void(0);" id="hide-advanced-toggle">Hide advanced</a>
                         </div>
                     {{/isDualStatementLoan}}
 
@@ -76,7 +76,7 @@
                                                 <svg class="icon icon-checkbox-good">
                                                     <use xlink:href="#icon-checkbox-good"></use>
                                                 </svg>
-                                                Repayment Received
+                                                Repayment received
                                             {{/repaymentReceived}}
                                             {{^repaymentReceived}}
                                                 {{#isDelinquent}}
@@ -114,7 +114,7 @@
                                                 <svg class="icon icon-checkbox-good">
                                                     <use xlink:href="#icon-checkbox-good"></use>
                                                 </svg>
-                                                Repayment Received
+                                                Repayment received
                                             {{/repaymentReceived}}
                                             {{^repaymentReceived}}
                                                 {{#isDelinquent}}
@@ -131,7 +131,7 @@
                                     </tr>
                                     {{#paymentsFromBorrowerToPartner}}
                                         <tr>
-                                            <td>{{#showB2FPMessage}}From Borrower to Field Partner{{/showB2FPMessage}}{{^showB2FPMessage}}&nbsp;{{/showB2FPMessage}}</td>
+                                            <td>{{#showB2FPMessage}}From borrower to Field Partner{{/showB2FPMessage}}{{^showB2FPMessage}}&nbsp;{{/showB2FPMessage}}</td>
                                             <td>{{expectedDate}}</td>
                                             <td>{{expectedAmount}}</td>
                                             <td>{{actualDate}}</td>
@@ -140,7 +140,7 @@
                                         </tr>
                                     {{/paymentsFromBorrowerToPartner}}
                                     <tr>
-                                        <td>From Field Partner to Lenders</td>
+                                        <td>From Field Partner to lenders</td>
                                         <td>{{expectedRepayDate}}</td>
                                         <td>{{expectedRepayment}}</td>
                                         {{#repaymentReceived}}
