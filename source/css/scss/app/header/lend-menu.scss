@@ -30,9 +30,10 @@
 
             &.disabled{
                 text-decoration: none;
-                color: $kiva-stroke-gray;
+                color: $gray;
                 &:hover {
-                    color: $kiva-stroke-gray;
+                    color: $gray;
+                    cursor: text;
                 }
             }
         }
