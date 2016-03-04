@@ -788,13 +788,16 @@
 
 .fund-a-loan-bar {
 	cursor: pointer;
+	&:hover{
+		text-decoration: underline;
+	}
 }
 
 .question-icon {
 	display: inline-block;
-	height: 1.5rem;
-	width: 1.5rem;
-	line-height: 1.5rem;
+	height: rem-calc(25px);
+	width: rem-calc(25px);
+	line-height: rem-calc(25px);
 	border: 1px solid transparent;
 	border-radius: 0.75rem;
 	margin: 0.25rem 0 0.25rem 0.25rem;
