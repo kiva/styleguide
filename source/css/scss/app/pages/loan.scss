@@ -151,6 +151,9 @@
 		.inline {
 			display: inline-block;
 		}
+		h2 {
+			margin-top: 0;
+		}
 	}
 	.raised-info {
 		margin: 0;
@@ -788,7 +791,7 @@
 
 .fund-a-loan-bar {
 	cursor: pointer;
-	&:hover{
+	&:hover {
 		text-decoration: underline;
 	}
 }
