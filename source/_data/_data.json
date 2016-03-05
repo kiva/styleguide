@@ -976,12 +976,19 @@
 			"value": "XX"
 		},
 		{
-			"name": "Exclude Loans with currency risk",
+			"name": "Exclude Loans w/ ",
+			"lightbox_link": "currency risk",
+			"mc_url": "glossary/ForexCurrencyExchangeLoss",
 			"value": "XX"
 		},
 		{
 			"name": "Exclude Non-Rated Partners",
 			"value": "XX"
+		},
+		{
+			"is_a_link": true,
+			"lightbox_link": "Learn more about Currency Risk",
+			"mc_url": "glossary/ForexCurrencyExchangeLoss"
 		}
 	],
 	"loans": [
