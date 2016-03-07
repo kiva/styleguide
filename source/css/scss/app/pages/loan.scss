@@ -580,6 +580,9 @@
 			top: 16px;
 			fill: white;
 		}
+		&:hover{
+			background-color: #488443;
+		}
 	}
 	.green-button {
 		background-color: $kiva-navdivider-green;
