@@ -1,6 +1,18 @@
-.no-touch .filters-menu-list {
+.no-touch .filter {
 	@media #{$medium-up} {
-		padding-top: rem-calc(30);
+		.filters-menu-list {
+			padding-top: rem-calc(30);
+		}
+
+		#misc-filters-container {
+			.small-touch {
+				display: none;
+			}
+
+			label a {
+				display: inline-block;
+			}
+		}
 	}
 }
 
@@ -191,7 +203,25 @@
 	}
 
 	#misc-filters-container {
-		margin-bottom: 0em;
+		margin-bottom: 0;
+
+		li > a {
+			font-size: 0.8rem;
+			line-height: rem-calc(44);
+			margin-left: rem-calc(-35);
+			color: $kiva-textlink;
+
+			&:hover {
+				color: $kiva-textlink-hover;
+				background: none;
+			}
+		}
+
+		label a {
+			padding: 0;
+			margin: 0;
+			display: none;
+		}
 	}
 
 	.borrower-filter-box {
