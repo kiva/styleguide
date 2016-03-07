@@ -18,6 +18,7 @@
   "inBasket": false,
   "showDAFIneligibility": true,
   "showFreeTrialIneligibility": false,
+  "showBonusIneligibility": false,
   "lendActionHelpText":[
     {
       "dataRevealId": "daf-ineligible-lightbox",
@@ -28,6 +29,11 @@
       "dataRevealId": "free-trial-ineligible-lightbox",
       "descriptionTitle": "Why can't I make this loan with my Free Trial?",
       "descriptionText": "Free Trials cannot be used to make loans during their private fundraising period on Kiva. If you'd like to make a free loan, please select a different loan to support."
+    },
+    {
+      "dataRevealId": "bonus-ineligible-lightbox",
+      "descriptionTitle": "Why can't I use my bonus to make this loan?",
+      "descriptionText": "Bonus funds cannot be applied to loans with repayment terms over 21 months or with a Field Partner Risk rating below 3 stars. To learn more, please follow this link."
     }
   ]
 }
