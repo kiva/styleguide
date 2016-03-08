@@ -23,7 +23,5 @@ module.exports = function () {
 
     $('.show-more-lenders-teams, .hide-more-lenders-teams').click(function() {
         $('.show-more-lenders-teams').toggle();
-    })
-
-
+    });
 };
