@@ -46,4 +46,16 @@
             Show all lenders and teams
         </p>
     </article>
+    <div class="spillover-lenders" style="display: none;">
+        {{#spilloverLenders}}
+            <li>
+                {{#displayTooltip}}
+                    <a href="https://www.kiva.org/lender/{{id}}"><span data-tooltip aria-haspopup="true" data-options="disable_for_touch:true; show_on: large" title="{{firstName}}<br>{{location}}"  class="circle-avatar" style="background-image:url({{imgUrl}})"></span></a>
+                {{/displayTooltip}}
+                {{^displayTooltip}}
+                    <span class="circle-avatar" style="background-image:url({{imgUrl}})"></span>
+                {{/displayTooltip}}
+            </li>
+        {{/spilloverLenders}}
+    </div>
 </section>
