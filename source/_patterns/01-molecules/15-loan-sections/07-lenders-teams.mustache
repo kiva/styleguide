@@ -8,26 +8,34 @@
         </span>
     </h2>
     <article class="ac-body" id="ac-lenders-teams-body" aria-hidden="false">
-        {{#lenders}}
-            {{#isAnonymous}}
-                <span data-tooltip aria-haspopup="true" data-options="disable_for_touch:true; show_on: large" title="Anonymous" class="circle-avatar" style="background-image:url({{imgUrl}})"></span>
-            {{/isAnonymous}}
-            {{^isAnonymous}}
-                {{#displayTooltip}}
-                    <a href="https://www.kiva.org/lender/{{id}}"><span data-tooltip aria-haspopup="true" data-options="disable_for_touch:true; show_on: large" title="{{firstName}}<br>{{location}}"  class="circle-avatar" style="background-image:url({{imgUrl}})"></span></a>
-                {{/displayTooltip}}
-                {{^displayTooltip}}
-                    <span class="circle-avatar" style="background-image:url({{imgUrl}})"></span>
-                {{/displayTooltip}}
-            {{/isAnonymous}}
-        {{/lenders}}
-        {{#teams}}
-            {{#displayTooltip}}
-                <a href="https://www.kiva.org/team/{{id}}"><span data-tooltip aria-haspopup="true" data-options="disable_for_touch:true; show_on: large" title="{{teamName}}<br>{{teamType}}<br>{{numLenders}} of {{numTeamMembers}} members"  class="circle-avatar" style="background-image:url({{imgUrl}})"></span></a>
-            {{/displayTooltip}}
-            {{^displayTooltip}}
-                <span class="circle-avatar" style="background-image:url({{imgUrl}})"></span>
-            {{/displayTooltip}}
-        {{/teams}}
+        <ul class="lenders small-block-grid-4 medium-block-grid-6 large-block-grid-6">
+            {{#lenders}}
+                <li>
+                    {{#isAnonymous}}
+                        <span data-tooltip aria-haspopup="true" data-options="disable_for_touch:true; show_on: large" title="Anonymous" class="circle-avatar" style="background-image:url({{imgUrl}})"></span>
+                    {{/isAnonymous}}
+                    {{^isAnonymous}}
+                        {{#displayTooltip}}
+                            <a href="https://www.kiva.org/lender/{{id}}"><span data-tooltip aria-haspopup="true" data-options="disable_for_touch:true; show_on: large" title="{{firstName}}<br>{{location}}"  class="circle-avatar" style="background-image:url({{imgUrl}})"></span></a>
+                        {{/displayTooltip}}
+                        {{^displayTooltip}}
+                            <span class="circle-avatar" style="background-image:url({{imgUrl}})"></span>
+                        {{/displayTooltip}}
+                    {{/isAnonymous}}
+                </li>
+            {{/lenders}}
+        </ul>
+        <ul class="teams small-block-grid-4 medium-block-grid-6 large-block-grid-6">
+            {{#teams}}
+                <li>
+                    {{#displayTooltip}}
+                        <a href="https://www.kiva.org/team/{{id}}"><span data-tooltip aria-haspopup="true" data-options="disable_for_touch:true; show_on: large" title="{{teamName}}<br>{{teamType}}<br>{{numLenders}} of {{numTeamMembers}} members"  class="circle-avatar" style="background-image:url({{imgUrl}})"></span></a>
+                    {{/displayTooltip}}
+                    {{^displayTooltip}}
+                        <span class="circle-avatar" style="background-image:url({{imgUrl}})"></span>
+                    {{/displayTooltip}}
+                </li>
+            {{/teams}}
+        </ul>
     </article>
 </section>
