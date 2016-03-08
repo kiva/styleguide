@@ -1,6 +1,6 @@
 <section class="lenders-teams" id="lenders-teams">
     <h2 class="ac-title ac-container" data-kv-accordion aria-controls="ac-lenders-teams-body" aria-expanded="true">
-        Lenders ({{lenderCount}}) and lending teams ({{teamCount}})
+        Lenders ({{lenderCount}})
         <span class="ac-dropdown-icon">
             <svg class="icon icon-large-chevron">
                 <use xlink:href="#icon-large-chevron"></use>
@@ -23,6 +23,7 @@
         {{#numAnonymousLenders}}
             <div class="anonymous-lender-message text-center">+ {{numAnonymousLenders}} anonymous lenders</div>
         {{/numAnonymousLenders}}
+        <strong>Contributing teams ({{teamCount}})</strong>
         <ul class="teams small-block-grid-4 medium-block-grid-6 large-block-grid-6">
             {{#teams}}
                 <li>
