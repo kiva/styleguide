@@ -209,7 +209,10 @@
 		}
 	}
 	.country-text {
-		max-width: 84%;
+		max-width: 79%;
+		@media #{$medium-up}{
+			max-width: 84%;
+		}
 		vertical-align: middle;
 		display: inline-block;
 		div {
