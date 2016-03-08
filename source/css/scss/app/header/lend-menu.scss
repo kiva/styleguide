@@ -64,9 +64,10 @@
         }
 
         &.disabled{
-            color: $kiva-stroke-gray;
-            &:hover{
-                color: $kiva-stroke-gray;
+            text-decoration: none;
+            color: $gray;
+            &:hover {
+                color: $gray;
             }
         }
 
