@@ -20,4 +20,10 @@ module.exports = function () {
         $('.simple-repayment-schedule').toggle();
         $('.advanced-repayment-schedule').toggle();
     });
+
+    $('.show-more-lenders-teams, .hide-more-lenders-teams').click(function() {
+        $('.show-more-lenders-teams').toggle();
+    })
+
+
 };
