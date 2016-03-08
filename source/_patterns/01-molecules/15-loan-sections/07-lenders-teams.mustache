@@ -8,7 +8,7 @@
         </span>
     </h2>
     <article class="ac-body" id="ac-lenders-teams-body" aria-hidden="false">
-        <ul class="lenders small-block-grid-4 medium-block-grid-6 large-block-grid-6">
+        <ul class="lenders small-block-grid-5 medium-block-grid-5 large-block-grid-5">
             {{#lenders}}
                 <li>
                     {{#displayTooltip}}
@@ -20,16 +20,13 @@
                 </li>
             {{/lenders}}
         </ul>
-        {{#numAnonymousLenders}}
-            <div class="anonymous-lender-message text-center">+ {{numAnonymousLenders}} anonymous lenders</div>
-        {{/numAnonymousLenders}}
 
-        <p class="ac-title black-underlined text-center show-more-lenders-teams" data-kv-accordion aria-controls="ac-more-lenders-teams-body" aria-expanded="false">
-            Show all lenders and teams
-        </p>
         <div class="ac-body" id="ac-more-lenders-teams-body" aria-hidden="true">
+            {{#numAnonymousLenders}}
+                <div class="anonymous-lender-message text-center">+ {{numAnonymousLenders}} anonymous lenders</div>
+            {{/numAnonymousLenders}}
             <strong>Contributing teams ({{teamCount}})</strong>
-            <ul class="teams small-block-grid-4 medium-block-grid-6 large-block-grid-6">
+            <ul class="teams small-block-grid-5 medium-block-grid-5 large-block-grid-5">
                 {{#teams}}
                     <li>
                         {{#displayTooltip}}
@@ -45,5 +42,8 @@
                 Hide
             </p>
         </div>
+        <p class="ac-title black-underlined text-center show-more-lenders-teams" data-kv-accordion aria-controls="ac-more-lenders-teams-body" aria-expanded="false">
+            Show all lenders and teams
+        </p>
     </article>
 </section>
