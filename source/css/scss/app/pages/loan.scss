@@ -805,11 +805,12 @@
 	}
 }
 
+.no-touch .fund-a-loan-bar:hover{
+	text-decoration: underline;
+}
+
 .fund-a-loan-bar {
 	cursor: pointer;
-	&:hover {
-		text-decoration: underline;
-	}
 }
 
 .question-icon {
