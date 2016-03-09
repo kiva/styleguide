@@ -8,6 +8,10 @@
 .black-underlined {
 	text-decoration: underline;
 	color: $charcoal;
+
+	a:visited {
+		color: $charcoal;
+	}
 }
 
 .loan-story {
