@@ -82,8 +82,10 @@
 		margin-right: 1rem;
 		.selected-tags {
 			margin-bottom: 1rem;
-			span {
-				white-space: nowrap;
+			span:last-child {
+				.divider {
+					display: none;
+				}
 			}
 		}
 		.tag-toggler {

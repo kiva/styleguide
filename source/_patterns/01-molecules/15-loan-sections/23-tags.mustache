@@ -13,7 +13,10 @@
 		<div class="tag-info">
 			<div class="selected-tags">
 				{{#applied_tag_selections}}
-					<span {{#userSelected}}class="user-selected-tag-{{id}}"{{/userSelected}}><a href={{href}}>{{name}}</a> | </span>
+					<span {{#userSelected}}class="selected-tag user-selected-tag-{{id}}"{{/userSelected}}>
+						<a href={{href}}>{{name}}</a>
+						<span class="divider"> | </span>
+					</span>
 				{{/applied_tag_selections}}
 			</div>
 
