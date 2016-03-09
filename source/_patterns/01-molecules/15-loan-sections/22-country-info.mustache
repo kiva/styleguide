@@ -13,40 +13,45 @@
         </div>
         <div class="country-stats row">
             {{#fieldPartnerLoanStats}}
-                <div class="stat small-12 large-6 columns">
-                    <div class="description">Average annual income (USD):</div>
-                    <div class="data-point featured">{{avgAnnualIncome}}</div>
-                </div>
-                <div class="stat small-12 large-6 columns">
-                    <div class="description">Funds lent in {{countryName}}:</div>
-                    <div class="data-point featured">{{#fundsLentInCountry}}{{fundsLentInCountry}}{{/fundsLentInCountry}}{{^fundsLentInCountry}}&nbsp;{{/fundsLentInCountry}}</div>
-                </div>
-                {{#inUSD}}
-                    <div class="stat small-12 large-6 columns">
-                        <div class="description">Loan transacted in USD</div>
-                        <div class="data-point featured">U.S. dollars</div>
-                    </div>
-                {{/inUSD}}
-                {{^inUSD}}
-                    <div class="stat small-12 large-6 columns">
-                        <div class="description">{{currencyFullName}} ({{currencyCode}}) = $1:</div>
-                        <div class="data-point featured">{{exchangeRate}}</div>
-                    </div>
-                {{/inUSD}}
-                <div class="stat small-12 large-6 columns">
-                    <div class="description">Loans currently fundraising:</div>
-                    <div class="data-point featured">{{numLoansFundraising}}</div>
-                </div>
+                <ul class="small-block-grid-1 medium-block-grid-1 large-block-grid-2">
+                    <li>
+                        <strong>Average annual income (USD):</strong>
+                        <div class="data-point featured">{{avgAnnualIncome}}</div>
+                    </li>
+                    <li>
+                        <strong>Funds lent in {{countryName}}:</strong>
+                        <div class="data-point featured">{{#fundsLentInCountry}}{{fundsLentInCountry}}{{/fundsLentInCountry}}{{^fundsLentInCountry}}&nbsp;{{/fundsLentInCountry}}</div>
+                    </li>
+                    {{#inUSD}}
+                        <li>
+                            <strong>Loan transacted in USD</strong>
+                            <div class="data-point featured">U.S. dollars</div>
+                        </li>
+                    {{/inUSD}}
+                    {{^inUSD}}
+                        <li>
+                            <strong>{{currencyFullName}} ({{currencyCode}}) = $1:</strong>
+                            <div class="data-point featured">{{exchangeRate}}</div>
+                        </li>
+                    {{/inUSD}}
+                    <li>
+                        <strong>Loans currently fundraising:</strong>
+                        <div class="data-point featured">{{numLoansFundraising}}</div>
+                    </li>
+                </ul>
             {{/fieldPartnerLoanStats}}
             {{#directLoanStats}}
-                <div class="stat small-12 large-6 columns">
-                    <div class="description">Loans to ethnic minorities:</div>
-                    <div class="data-point featured">{{percentLoansToMinorities}}</div>
-                </div>
-                <div class="stat small-12 large-6 columns">
-                    <div class="description">Comments per loan:</div>
-                    <div class="data-point featured">{{commentsPerLoan}}</div>
-                </div>
+                <ul class="small-block-grid-1 medium-block-grid-1 large-block-grid-2">
+                    <li>
+                        <strong>Loans to ethnic minorities:</strong>
+                        <div class="data-point featured">{{percentLoansToMinorities}}</div>
+                    </li>
+                    <li>
+                        <strong>Comments per loan:</strong>
+                        <div class="data-point featured">{{commentsPerLoan}}</div>
+                    </li>
+                </ul>
+
             {{/directLoanStats}}
         </div>
     </div>
