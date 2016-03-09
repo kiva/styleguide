@@ -232,7 +232,28 @@
 		margin-top: 1rem;
 
 		.circle-avatar {
-			margin-top: 0.5rem;
+			width: 3.5rem;
+			height: 3.5rem;
+
+			@media #{$medium}{
+				margin-bottom: 0.5rem;
+				width: 4.5rem;
+				height: 4.5rem;
+			}
+
+			@media #{$large-up}{
+				margin-bottom: 0.5rem;
+				width: 5.5rem;
+				height: 5.5rem;
+			}
+		}
+
+		.anonymous-lender-message {
+			margin-bottom: 1rem;
+		}
+
+		.teams {
+			margin-top: 1rem;
 		}
 	}
 

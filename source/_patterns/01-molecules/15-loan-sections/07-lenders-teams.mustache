@@ -1,6 +1,6 @@
 <section class="lenders-teams" id="lenders-teams">
     <h2 class="ac-title ac-container" data-kv-accordion aria-controls="ac-lenders-teams-body" aria-expanded="true">
-        Lenders ({{lenderCount}}) and lending teams ({{teamCount}})
+        Lenders ({{lenderCount}})
         <span class="ac-dropdown-icon">
             <svg class="icon icon-large-chevron">
                 <use xlink:href="#icon-large-chevron"></use>
@@ -8,26 +8,54 @@
         </span>
     </h2>
     <article class="ac-body" id="ac-lenders-teams-body" aria-hidden="false">
-        {{#lenders}}
-            {{#isAnonymous}}
-                <span data-tooltip aria-haspopup="true" data-options="disable_for_touch:true; show_on: large" title="Anonymous" class="circle-avatar" style="background-image:url({{imgUrl}})"></span>
-            {{/isAnonymous}}
-            {{^isAnonymous}}
+        <ul class="lenders small-block-grid-5 medium-block-grid-5 large-block-grid-5">
+            {{#lenders}}
+                <li>
+                    {{#displayTooltip}}
+                        <a href="https://www.kiva.org/lender/{{id}}"><span data-tooltip aria-haspopup="true" data-options="disable_for_touch:true; show_on: large" title="{{firstName}}<br>{{location}}"  class="circle-avatar" style="background-image:url({{imgUrl}})"></span></a>
+                    {{/displayTooltip}}
+                    {{^displayTooltip}}
+                        <span class="circle-avatar" style="background-image:url({{imgUrl}})"></span>
+                    {{/displayTooltip}}
+                </li>
+            {{/lenders}}
+        </ul>
+
+        <div class="ac-body" id="ac-more-lenders-teams-body" aria-hidden="true">
+            {{#numAnonymousLenders}}
+                <div class="anonymous-lender-message text-center">+ {{numAnonymousLenders}} anonymous lenders</div>
+            {{/numAnonymousLenders}}
+            <strong>Contributing teams ({{teamCount}})</strong>
+            <ul class="teams small-block-grid-5 medium-block-grid-5 large-block-grid-5">
+                {{#teams}}
+                    <li>
+                        {{#displayTooltip}}
+                            <a href="https://www.kiva.org/team/{{id}}"><span data-tooltip aria-haspopup="true" data-options="disable_for_touch:true; show_on: large" title="{{teamName}}<br>{{teamType}}<br>{{numLenders}} of {{numTeamMembers}} members"  class="circle-avatar" style="background-image:url({{imgUrl}})"></span></a>
+                        {{/displayTooltip}}
+                        {{^displayTooltip}}
+                            <span class="circle-avatar" style="background-image:url({{imgUrl}})"></span>
+                        {{/displayTooltip}}
+                    </li>
+                {{/teams}}
+            </ul>
+            <p class="ac-title black-underlined text-center hide-more-lenders-teams" data-kv-accordion aria-controls="ac-more-lenders-teams-body" aria-expanded="false">
+                Hide
+            </p>
+        </div>
+        <p class="ac-title black-underlined text-center show-more-lenders-teams" data-kv-accordion aria-controls="ac-more-lenders-teams-body" aria-expanded="false">
+            Show all lenders and teams
+        </p>
+    </article>
+    <div class="spillover-lenders" style="display: none;">
+        {{#spilloverLenders}}
+            <li>
                 {{#displayTooltip}}
                     <a href="https://www.kiva.org/lender/{{id}}"><span data-tooltip aria-haspopup="true" data-options="disable_for_touch:true; show_on: large" title="{{firstName}}<br>{{location}}"  class="circle-avatar" style="background-image:url({{imgUrl}})"></span></a>
                 {{/displayTooltip}}
                 {{^displayTooltip}}
                     <span class="circle-avatar" style="background-image:url({{imgUrl}})"></span>
                 {{/displayTooltip}}
-            {{/isAnonymous}}
-        {{/lenders}}
-        {{#teams}}
-            {{#displayTooltip}}
-                <a href="https://www.kiva.org/team/{{id}}"><span data-tooltip aria-haspopup="true" data-options="disable_for_touch:true; show_on: large" title="{{teamName}}<br>{{teamType}}<br>{{numLenders}} of {{numTeamMembers}} members"  class="circle-avatar" style="background-image:url({{imgUrl}})"></span></a>
-            {{/displayTooltip}}
-            {{^displayTooltip}}
-                <span class="circle-avatar" style="background-image:url({{imgUrl}})"></span>
-            {{/displayTooltip}}
-        {{/teams}}
-    </article>
+            </li>
+        {{/spilloverLenders}}
+    </div>
 </section>
