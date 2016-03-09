@@ -64,21 +64,110 @@
 	}
 }
 
+.loan-tags {
+	padding-left: 0;
+	padding-right: 0;
+	.ac-title {
+		position: relative;
+		.ac-title-text {
+			padding-left: 1rem;
+		}
+		.icon-large-chevron {
+			top: 0;
+		}
+	}
+	.tag-info {
+		margin-bottom: 1rem;
+		margin-left: 1rem;
+		margin-right: 1rem;
+		.selected-tags {
+			margin-bottom: 1rem;
+			span {
+				white-space: nowrap;
+			}
+		}
+		.tag-toggler {
+			text-decoration: underline;
+		}
+		.tag-directions {
+			display: none;
+		}
+	}
+
+	.all-tags {
+		@media #{$xlarge-up} {
+			padding-left: 1rem;
+			padding-right: 1rem;
+		}
+		display: none;
+		ul {
+			list-style-type: none;
+			margin: 0;
+			li{
+				&:nth-of-type(odd) {
+					background-color: $kiva-bg-darkgray;
+					@media #{$xlarge-up} {
+						background-color: initial;
+					}
+				}
+				input {
+					display: none;
+					&:checked + label {
+						.icon {
+							fill: $kiva-green;
+						}
+						&:after {
+							display: block;
+						}
+					}
+					@media #{$xlarge-up} {
+						display: block;
+						float: left;
+						margin-top: rem-calc(25);
+						margin-right: rem-calc(5);
+					}
+				}
+				label {
+					display: flex;
+					.checkmark-container {
+						margin-top: auto;
+						margin-bottom: auto;
+						margin-left: rem-calc(10);
+						margin-right: rem-calc(20);
+						.icon {
+							fill: $light-gray;
+							width: rem-calc(44);
+							height: rem-calc(44);
+						}
+					}
+					.name-and-description {
+						padding-top: 1rem;
+						padding-bottom: 1rem;
+						p {
+							margin-bottom: 0;
+						}
+						.name {
+							font-weight: bold;
+							text-decoration: underline;
+						}
+						.description {
+							@media #{$xlarge-up} {
+								margin-left: rem-calc(-18);
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
 .why-special {
-	position: relative;
-	.ac-title-text {
-		margin-right: rem-calc(30);
+	.ac-title {
+		position: relative;
 	}
 	.icon-label {
 		float: left;
-	}
-	.icon {
-		width: rem-calc(30);
-		height: rem-calc(30);
-	}
-	.icon-large-chevron {
-		position: absolute;
-		top: 0;
 	}
 	.endorser {
 		@include clearfix;

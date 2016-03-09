@@ -9,6 +9,9 @@
 		.icon {
 			position: absolute;
 			right: 1px;
+			&.loan-tags-dropdown {
+				right: 1rem;
+			}
 			margin-top: .2rem;
 			height: 1rem;
 			width: rem-calc(25);
