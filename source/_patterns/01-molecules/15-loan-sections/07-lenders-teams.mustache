@@ -42,9 +42,11 @@
                 Hide
             </p>
         </div>
-        <p class="ac-title black-underlined text-center show-more-lenders-teams" data-kv-accordion aria-controls="ac-more-lenders-teams-body" aria-expanded="false">
-            Show all lenders and teams
-        </p>
+        {{#showSpilloverMessage}}
+            <p class="ac-title black-underlined text-center show-more-lenders-teams" data-kv-accordion aria-controls="ac-more-lenders-teams-body" aria-expanded="false">
+                Show all lenders and teams
+            </p>
+        {{/showSpilloverMessage}}
     </article>
     <div class="spillover-lenders" style="display: none;">
         {{#spilloverLenders}}

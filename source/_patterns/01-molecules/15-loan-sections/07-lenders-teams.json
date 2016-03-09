@@ -2,6 +2,7 @@
   "lenderCount": 7,
   "teamCount": 5,
   "numAnonymousLenders": 1,
+  "showSpilloverMessage": true,
   "lenders": [
 	{
 	  "imgUrl": "/images/borrower1.jpg",
