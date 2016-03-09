@@ -1509,8 +1509,7 @@ define("Styleguide", ["jquery"], function(__WEBPACK_EXTERNAL_MODULE_2__) { retur
 
 
 	/*** EXPORTS FROM exports-loader ***/
-	module.exports = window.Modernizr
-	}.call(window));
+	module.exports = window.Modernizr}.call(window));
 
 /***/ },
 /* 4 */
@@ -19826,18 +19825,18 @@ define("Styleguide", ["jquery"], function(__WEBPACK_EXTERNAL_MODULE_2__) { retur
 	var $ = __webpack_require__(2);
 
 	module.exports = function () {
-	    'use strict';
+		'use strict';
 
-	    // for the lenders teams section to expand upon click
-	    $('.lender-count').click(function () {
-	        // grab label object
-	        var teamsLabel = $('#ac-lenders-teams-label');
+		// for the lenders teams section to expand upon click
+		$('.lender-count').click(function () {
+			// grab label object
+			var teamsLabel = $('#ac-lenders-teams-label');
 
-	        // trigger click on label object if it isn't expanded
-	        if (teamsLabel.attr('aria-expanded') === 'false') {
-	            teamsLabel.trigger('click');
-	        }
-	    });
+			// trigger click on label object if it isn't expanded
+			if (teamsLabel.attr('aria-expanded') === 'false') {
+				teamsLabel.trigger('click');
+			}
+		});
 
 	    $('#show-advanced-toggle, #hide-advanced-toggle').click(function() {
 	        $('.show-advanced').toggle();
@@ -19855,6 +19854,22 @@ define("Styleguide", ["jquery"], function(__WEBPACK_EXTERNAL_MODULE_2__) { retur
 	        $('.show-more-lenders-teams').toggle();
 	        $('.lenders li:nth-child(n+11)').remove();
 	    });
+
+		// button to reveal or hide the loan tag options
+		var tagToggler = $('.tag-toggler');
+		tagToggler.click(function () {
+			$('.tag-directions').toggle();
+			$('.all-tags').toggle();
+			if (tagToggler.text() != 'Close') {
+				tagToggler.text('Close');
+			}
+			else if ($('.selected-tags').children().size() > 0) {
+				tagToggler.text('Add more tags');
+			}
+			else {
+				tagToggler.text('Add tags');
+			}
+		});
 	};
 
 /***/ },
