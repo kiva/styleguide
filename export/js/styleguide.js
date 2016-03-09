@@ -46,14 +46,14 @@ define("Styleguide", ["jquery"], function(__WEBPACK_EXTERNAL_MODULE_2__) { retur
 
 	'use strict';
 
-	__webpack_require__(7);
+	__webpack_require__(8);
 
 	var header = __webpack_require__(5);
-	var filters = __webpack_require__(12);
-	var imagesizes = __webpack_require__(13);
+	var filters = __webpack_require__(13);
+	var imagesizes = __webpack_require__(14);
 	var accordion = __webpack_require__(6);
-	var videoResizing = __webpack_require__(14);
-	var borrowerPage = __webpack_require__(15);
+	var videoResizing = __webpack_require__(15);
+	var borrowerPage = __webpack_require__(7);
 	var categories = __webpack_require__(16);
 	var lightbox = __webpack_require__(17);
 	var saveSearchLightbox = __webpack_require__(18);
@@ -8316,18 +8316,56 @@ define("Styleguide", ["jquery"], function(__WEBPACK_EXTERNAL_MODULE_2__) { retur
 /* 7 */
 /***/ function(module, exports, __webpack_require__) {
 
+	var $ = __webpack_require__(2);
+
+	module.exports = function () {
+	    'use strict';
+
+	    // for the lenders teams section to expand upon click
+	    $('.lender-count').click(function () {
+	        // grab label object
+	        var teamsLabel = $('#ac-lenders-teams-label');
+
+	        // trigger click on label object if it isn't expanded
+	        if (teamsLabel.attr('aria-expanded') === 'false') {
+	            teamsLabel.trigger('click');
+	        }
+	    });
+
+	    $('#show-advanced-toggle, #hide-advanced-toggle').click(function() {
+	        $('.show-advanced').toggle();
+	        $('.hide-advanced').toggle();
+	        $('.simple-repayment-schedule').toggle();
+	        $('.advanced-repayment-schedule').toggle();
+	    });
+
+	    $('.show-more-lenders-teams').click(function() {
+	        $('.lenders').append($('.spillover-lenders li').clone(true));
+	        $('.show-more-lenders-teams').toggle();
+	    });
+
+	    $('.hide-more-lenders-teams').click(function() {
+	        $('.show-more-lenders-teams').toggle();
+	        $('.lenders li:nth-child(n+11)').remove();
+	    });
+	};
+
+/***/ },
+/* 8 */
+/***/ function(module, exports, __webpack_require__) {
+
 	__webpack_require__(2);
 	__webpack_require__(3);
 
 	__webpack_require__(4);
 
-	__webpack_require__(8);
 	__webpack_require__(9);
 	__webpack_require__(10);
 	__webpack_require__(11);
+	__webpack_require__(12);
 
 /***/ },
-/* 8 */
+/* 9 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(__webpack_provided_window_dot_jQuery) {/*! noUiSlider - 7.0.10 - 2014-12-27 14:50:46 */
@@ -10648,7 +10686,7 @@ define("Styleguide", ["jquery"], function(__WEBPACK_EXTERNAL_MODULE_2__) { retur
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(2)))
 
 /***/ },
-/* 9 */
+/* 10 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;var require;var require;/* WEBPACK VAR INJECTION */(function($) {/*!
@@ -16936,7 +16974,7 @@ define("Styleguide", ["jquery"], function(__WEBPACK_EXTERNAL_MODULE_2__) { retur
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(2)))
 
 /***/ },
-/* 10 */
+/* 11 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*
@@ -19584,7 +19622,7 @@ define("Styleguide", ["jquery"], function(__WEBPACK_EXTERNAL_MODULE_2__) { retur
 
 
 /***/ },
-/* 11 */
+/* 12 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(__webpack_provided_window_dot_jQuery) {/*global jQuery */
@@ -19658,7 +19696,7 @@ define("Styleguide", ["jquery"], function(__WEBPACK_EXTERNAL_MODULE_2__) { retur
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(2)))
 
 /***/ },
-/* 12 */
+/* 13 */
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = function() {
@@ -19748,7 +19786,7 @@ define("Styleguide", ["jquery"], function(__WEBPACK_EXTERNAL_MODULE_2__) { retur
 
 
 /***/ },
-/* 13 */
+/* 14 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var $ = __webpack_require__(2);
@@ -19807,18 +19845,6 @@ define("Styleguide", ["jquery"], function(__WEBPACK_EXTERNAL_MODULE_2__) { retur
 
 
 /***/ },
-/* 14 */
-/***/ function(module, exports, __webpack_require__) {
-
-	var $ = __webpack_require__(2);
-
-	module.exports = function () {
-	    'use strict';
-
-	    $('.loan-image-wrap').fitVids();
-	};
-
-/***/ },
 /* 15 */
 /***/ function(module, exports, __webpack_require__) {
 
@@ -19827,33 +19853,7 @@ define("Styleguide", ["jquery"], function(__WEBPACK_EXTERNAL_MODULE_2__) { retur
 	module.exports = function () {
 	    'use strict';
 
-	    // for the lenders teams section to expand upon click
-	    $('.lender-count').click(function () {
-	        // grab label object
-	        var teamsLabel = $('#ac-lenders-teams-label');
-
-	        // trigger click on label object if it isn't expanded
-	        if (teamsLabel.attr('aria-expanded') === 'false') {
-	            teamsLabel.trigger('click');
-	        }
-	    });
-
-	    $('#show-advanced-toggle, #hide-advanced-toggle').click(function() {
-	        $('.show-advanced').toggle();
-	        $('.hide-advanced').toggle();
-	        $('.simple-repayment-schedule').toggle();
-	        $('.advanced-repayment-schedule').toggle();
-	    });
-
-	    $('.show-more-lenders-teams').click(function() {
-	        $('.lenders').append($('.spillover-lenders li').clone(true));
-	        $('.show-more-lenders-teams').toggle();
-	    });
-
-	    $('.hide-more-lenders-teams').click(function() {
-	        $('.show-more-lenders-teams').toggle();
-	        $('.lenders li:nth-child(n+11)').remove();
-	    });
+	    $('.loan-image-wrap').fitVids();
 	};
 
 /***/ },
