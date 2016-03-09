@@ -232,19 +232,14 @@
 		margin-top: 1rem;
 
 		.circle-avatar {
-			width: 3.5rem;
-			height: 3.5rem;
+			width: 3rem;
+			height: 3rem;
+			margin-right: 0;
+			margin-left: 0;
 
-			@media #{$medium}{
-				margin-bottom: 0.5rem;
+			@media #{$large}{
 				width: 4.5rem;
 				height: 4.5rem;
-			}
-
-			@media #{$large-up}{
-				margin-bottom: 0.5rem;
-				width: 5.5rem;
-				height: 5.5rem;
 			}
 		}
 
