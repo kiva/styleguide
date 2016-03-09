@@ -19844,6 +19844,16 @@ define("Styleguide", ["jquery"], function(__WEBPACK_EXTERNAL_MODULE_2__) { retur
 	        $('.simple-repayment-schedule').toggle();
 	        $('.advanced-repayment-schedule').toggle();
 	    });
+
+	    $('.show-more-lenders-teams').click(function() {
+	        $('.lenders').append($('.spillover-lenders li').clone(true));
+	        $('.show-more-lenders-teams').toggle();
+	    });
+
+	    $('.hide-more-lenders-teams').click(function() {
+	        $('.show-more-lenders-teams').toggle();
+	        $('.lenders li:nth-child(n+11)').remove();
+	    });
 	};
 
 /***/ },

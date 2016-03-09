@@ -8,6 +8,10 @@
 .black-underlined {
 	text-decoration: underline;
 	color: $charcoal;
+
+	a:visited {
+		color: $charcoal;
+	}
 }
 
 .loan-story {
@@ -222,7 +226,23 @@
 		margin-top: 1rem;
 
 		.circle-avatar {
-			margin-top: 0.5rem;
+			width: 3rem;
+			height: 3rem;
+			margin-right: 0;
+			margin-left: 0;
+
+			@media #{$large}{
+				width: 4.5rem;
+				height: 4.5rem;
+			}
+		}
+
+		.anonymous-lender-message {
+			margin-bottom: 1rem;
+		}
+
+		.teams {
+			margin-top: 1rem;
 		}
 	}
 
