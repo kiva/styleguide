@@ -1,8 +1,9 @@
-.loan-lifecycle-wrapper{
-	background: url("//www.kiva.org/cms/page/images/kiva-works-sm-standard.jpg") no-repeat;
+.loan-lifecycle-wrapper {
+	background: url("//www.kiva.org/cms/page/images/kiva-works-sm-std.jpg") no-repeat;
 	min-height: 100%;
 	min-width: 100%;
 	background-size: cover;
+	padding-bottom: 100px;
 
 	.how-kiva-works-title {
 		top: rem-calc(60);
@@ -64,7 +65,7 @@
 
 		.loan-disbursal-container {
 			border: white rem-calc(3) solid;
-			background-color: rgba(0,0,0,0.80);
+			background-color: rgba(0, 0, 0, 0.80);
 			max-width: rem-calc(500);
 			margin: 0 auto;
 
@@ -80,10 +81,10 @@
 				width: rem-calc(80);
 				height: rem-calc(80);
 
-					@media #{$medium-up} {
-						width: rem-calc(130);
-						height: rem-calc(130);
-					}
+				@media #{$medium-up} {
+					width: rem-calc(130);
+					height: rem-calc(130);
+				}
 			}
 
 			.text-frame-icon-overlay {
@@ -96,7 +97,8 @@
 				@media #{$medium-up} {
 					margin-top: rem-calc(-75);
 				}
-			};
+			}
+		;
 
 			.fundraising-period-container {
 				background-color: $kiva-green;
@@ -126,10 +128,10 @@
 					width: rem-calc(80);
 					height: rem-calc(80);
 
-						@media #{$medium-up} {
-							width: rem-calc(130);
-							height: rem-calc(130);
-						}
+					@media #{$medium-up} {
+						width: rem-calc(130);
+						height: rem-calc(130);
+					}
 				}
 
 				.dotted-line {
@@ -143,7 +145,7 @@
 				.step-4 {
 					padding: rem-calc(30) rem-calc(10);
 				}
-				.step-5{
+				.step-5 {
 					padding: rem-calc(31) rem-calc(10);
 					max-width: rem-calc(120);
 				}
@@ -163,7 +165,8 @@
 		@media #{$medium-up} {
 			margin-top: rem-calc(-75);
 		}
-	};
+	}
+;
 
 	.icon-repaid,
 	.icon-repeat {
@@ -174,10 +177,10 @@
 		height: rem-calc(80);
 		margin: rem-calc(-3) auto;
 
-			@media #{$medium-up} {
-				width: rem-calc(130);
-				height: rem-calc(130);
-			}
+		@media #{$medium-up} {
+			width: rem-calc(130);
+			height: rem-calc(130);
+		}
 	}
 
 	.step-6,
@@ -188,11 +191,13 @@
 			padding: rem-calc(85) rem-calc(10) rem-calc(20) rem-calc(10);
 		}
 	}
-
+}
 
 	.faq-section {
 		min-width: 100%;
 		padding: rem-calc(75) rem-calc(20) rem-calc(100) rem-calc(20);
+		background-color: black;
+		box-shadow: 0 -10px 80px 50px #000;
 
 		.faq-container {
 			max-width: rem-calc(800);
@@ -230,6 +235,13 @@
 						}
 					}
 				}
+
+				.ac-body p {
+
+					@media #{$large-up} {
+						font-size: 18px;
+					}
+				}
 			}
 
 			.help-center-link {
@@ -262,4 +274,4 @@
 			color: $kiva-text-dark;
 		}
 	}
-}
+
