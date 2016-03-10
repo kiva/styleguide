@@ -522,9 +522,11 @@
 	.country-stats {
 		padding-bottom: 1rem;
 		text-align: center;
+		margin-left: 0.5rem;
+		margin-right: -0.5rem;
 
 		ul li {
-			padding: 0 0.5rem 0 0.5rem;
+			padding: 0;
 
 			.data-point {
 				color: $kiva-green;
