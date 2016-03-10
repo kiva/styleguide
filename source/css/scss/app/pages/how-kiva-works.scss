@@ -26,6 +26,7 @@
 		max-width: rem-calc(350);
 		min-width: rem-calc(225);
 		min-height: rem-calc(120);
+		cursor: pointer;
 
 		.text-step {
 			margin: auto;
@@ -51,6 +52,7 @@
 
 	.text-box {
 		background-color: $white;
+		cursor: pointer;
 	}
 
 	.dotted-line {
@@ -93,6 +95,7 @@
 				width: 67.5%;
 				margin-top: rem-calc(-40);
 				min-height: rem-calc(120);
+				cursor: pointer;
 
 				@media #{$medium-up} {
 					margin-top: rem-calc(-75);
@@ -141,6 +144,7 @@
 				.text-frame {
 					margin: 0 auto;
 					width: 100%;
+					cursor: auto;
 				}
 				.step-4 {
 					padding: rem-calc(30) rem-calc(10);
@@ -161,10 +165,15 @@
 		max-width: rem-calc(350);
 		min-width: rem-calc(225);
 		min-height: rem-calc(120);
+		cursor: pointer;
 
 		@media #{$medium-up} {
 			margin-top: rem-calc(-75);
 		}
+	}
+
+	.no-select {
+		cursor: auto;
 	}
 ;
 
