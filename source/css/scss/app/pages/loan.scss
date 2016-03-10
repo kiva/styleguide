@@ -132,6 +132,7 @@
 				label {
 					display: flex;
 					.checkmark-container {
+						pointer-events: none;
 						margin-top: auto;
 						margin-bottom: auto;
 						margin-left: rem-calc(10);
@@ -143,6 +144,7 @@
 						}
 					}
 					.name-and-description {
+						pointer-events: none;
 						padding-top: 1rem;
 						padding-bottom: 1rem;
 						p {
