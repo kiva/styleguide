@@ -288,7 +288,6 @@ module.exports = function(grunt) {
 					loaders: [
 						{ test: /modernizr/, loader: 'imports?this=>window!exports?window.Modernizr' }
 						, { test: /foundation/, loader: 'exports?window.Foundation'}
-						//, { test: /lazyload/, loader: 'imports?this=>window!exports?window.lazyload' }
 					]
 				}
 				, plugins: [
