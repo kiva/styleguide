@@ -23,6 +23,10 @@ module.exports = function () {
 
     $('.show-more-lenders-teams').click(function() {
         $('.lenders').append($('.spillover-lenders li').clone(true));
+
+		$('.lenders li a span').lazyload({
+			threshold : 200
+		});
         $('.show-more-lenders-teams').toggle();
     });
 
@@ -30,6 +34,10 @@ module.exports = function () {
         $('.show-more-lenders-teams').toggle();
         $('.lenders li:nth-child(n+11)').remove();
     });
+
+	$('.teams li a span').lazyload({
+		threshold : 200
+	});
 
 	// button to reveal or hide the loan tag options
 	var tagToggler = $('.tag-toggler');

@@ -274,6 +274,7 @@ module.exports = function(grunt) {
 						, select2: 'select2/dist/js/select2.full.js'
                         , slick: 'slick.js/slick/slick.js'
 						, fitvids: 'fitvids/jquery.fitvids.js'
+						, lazyload: 'jquery.lazyload/jquery.lazyload.js'
 					}
 				}
 				, entry: {
@@ -287,6 +288,7 @@ module.exports = function(grunt) {
 					loaders: [
 						{ test: /modernizr/, loader: 'imports?this=>window!exports?window.Modernizr' }
 						, { test: /foundation/, loader: 'exports?window.Foundation'}
+						//, { test: /lazyload/, loader: 'imports?this=>window!exports?window.lazyload' }
 					]
 				}
 				, plugins: [
