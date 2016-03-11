@@ -34,7 +34,19 @@
 			{{/loggedIn}}
 		</div>
 
-		<div class="all-tags row">
+		<div class="all-tags show-for-touch">
+			<ul class="tag-options">
+				{{#left_tags}}
+					{{> 01-molecules/06-components/07-tag-item-touch}}
+				{{/left_tags}}
+			</ul>
+			<ul class="tag-options">
+				{{#right_tags}}
+					{{> 01-molecules/06-components/07-tag-item-touch}}
+				{{/right_tags}}
+			</ul>
+		</div>
+		<div class="all-tags hide-for-touch row">
 			<ul class="tag-options small-12 xlarge-6 columns">
 				{{#left_tags}}
 					{{> 01-molecules/06-components/07-tag-item}}

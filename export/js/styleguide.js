@@ -1509,8 +1509,7 @@ define("Styleguide", ["jquery"], function(__WEBPACK_EXTERNAL_MODULE_2__) { retur
 
 
 	/*** EXPORTS FROM exports-loader ***/
-	module.exports = window.Modernizr
-	}.call(window));
+	module.exports = window.Modernizr}.call(window));
 
 /***/ },
 /* 4 */
@@ -19860,15 +19859,18 @@ define("Styleguide", ["jquery"], function(__WEBPACK_EXTERNAL_MODULE_2__) { retur
 		var tagToggler = $('.tag-toggler');
 		tagToggler.click(function () {
 			$('.tag-directions').toggle();
-			$('.all-tags').toggle();
+			var allTags = $('.all-tags');
 			if (tagToggler.text() != 'Close') {
 				tagToggler.text('Close');
+				allTags.css('height', 'auto');
 			}
 			else if ($('.selected-tags').children().size() > 0) {
 				tagToggler.text('Add more tags');
+				allTags.css('height', 0);
 			}
 			else {
 				tagToggler.text('Add tags');
+				allTags.css('height', 0);
 			}
 		});
 	};
