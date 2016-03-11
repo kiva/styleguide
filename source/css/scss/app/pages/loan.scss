@@ -81,6 +81,9 @@
 		margin-left: 1rem;
 		margin-right: 1rem;
 		.selected-tags {
+			a:visited {
+				color: $kiva-textlink;
+			}
 			margin-bottom: 1rem;
 			span:last-child {
 				.divider {
