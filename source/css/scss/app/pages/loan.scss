@@ -157,12 +157,12 @@
 				ul {
 					li {
 						&:nth-of-type(odd) {
-							background-color: initial;
+							background-color: transparent;
 						}
 						input {
 							display: block;
 							float: left;
-							margin-top: rem-calc(25);
+							margin-top: rem-calc(23);
 							margin-right: rem-calc(5);
 						}
 						label {
