@@ -7,10 +7,10 @@
 		float: left;
 		outline: 0;
 		padding: 0 rem-calc(12);
+		width: 100%;
 
 		&.main-option {
 			border: solid 1px #26b6e8;
-			width: 75%;
 			margin-right: 5%;
 
 			@media #{$large-up} {
@@ -22,7 +22,6 @@
 		&.alternative-option {
 			background: transparent;
 			border: solid 1px #FFFFFF;
-			width: 75%;
 
 			@media #{$large-up} {
 				width: 18rem;
