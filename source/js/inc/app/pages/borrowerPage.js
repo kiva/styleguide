@@ -35,15 +35,18 @@ module.exports = function () {
 	var tagToggler = $('.tag-toggler');
 	tagToggler.click(function () {
 		$('.tag-directions').toggle();
-		$('.all-tags').toggle();
+		var allTags = $('.all-tags');
 		if (tagToggler.text() != 'Close') {
 			tagToggler.text('Close');
+			allTags.css('height', 'auto');
 		}
 		else if ($('.selected-tags').children().size() > 0) {
 			tagToggler.text('Add more tags');
+			allTags.css('height', 0);
 		}
 		else {
 			tagToggler.text('Add tags');
+			allTags.css('height', 0);
 		}
 	});
 };

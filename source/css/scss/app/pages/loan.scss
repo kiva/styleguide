@@ -97,20 +97,14 @@
 	}
 
 	.all-tags {
-		@media #{$xlarge-up} {
-			padding-left: 1rem;
-			padding-right: 1rem;
-		}
-		display: none;
+		height: 0;
+		overflow: hidden;
 		ul {
 			list-style-type: none;
 			margin: 0;
 			li{
 				&:nth-of-type(odd) {
 					background-color: $kiva-bg-darkgray;
-					@media #{$xlarge-up} {
-						background-color: initial;
-					}
 				}
 				input {
 					display: none;
@@ -121,12 +115,6 @@
 						&:after {
 							display: block;
 						}
-					}
-					@media #{$xlarge-up} {
-						display: block;
-						float: left;
-						margin-top: rem-calc(25);
-						margin-right: rem-calc(5);
 					}
 				}
 				label {
@@ -155,8 +143,30 @@
 							font-weight: bold;
 							text-decoration: underline;
 						}
-						.description {
-							@media #{$xlarge-up} {
+					}
+				}
+			}
+		}
+		&.hide-for-touch {
+			@media #{$xlarge-up} {
+				padding-left: 1rem;
+				padding-right: 1rem;
+				ul {
+					li {
+						&:nth-of-type(odd) {
+							background-color: initial;
+						}
+						input {
+							display: block;
+							float: left;
+							margin-top: rem-calc(25);
+							margin-right: rem-calc(5);
+						}
+						label {
+							.checkmark-container {
+								display: none;
+							}
+							.description {
 								margin-left: rem-calc(-18);
 							}
 						}
