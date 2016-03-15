@@ -286,11 +286,20 @@ $paragraph-line-height: $body-line-height;
 p {
 	font-size: $paragraph-font-size;
 	line-height: $paragraph-line-height;
+	
+	ul {
+		margin-bottom: 0;
+		
+		li {
+			padding-bottom: rem-calc(30);
+		}
+	}
 }
-
 h1 {
 	font-size: $headline-font-size - $headline-font-size-small-reduction;
 	font-weight: $font-weight-bold;
+	margin-top: rem-calc(30);
+	margin-bottom: rem-calc(30);
 
 	.normal {
 		font-weight: $font-weight-normal;
