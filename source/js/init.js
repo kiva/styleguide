@@ -482,11 +482,9 @@
 		if ($acLoans.attr('aria-expanded') == 'false') {
 			$acLoans.click();
 		}
-		setTimeout(function() {
-			$acLoans[0].scrollIntoView({
-				behavior: 'smooth'
-			});
-		}, 500);
+		$('html, body').animate({
+			scrollTop: $('.faq-direct-vs-partner-loans').offset().top
+		}, 1000);
 	});
 	
 	//How Kiva Works page faq link (closes one accordion and opens another and brings question to top of view)
@@ -495,11 +493,9 @@
 		if ($acLoans.attr('aria-expanded') == 'false') {
 			$acLoans.click();
 		}
-		setTimeout(function() {
-			$acLoans[0].scrollIntoView({
-				behavior: 'smooth'
-			});
-		}, 500);
+		$('html, body').animate({
+			scrollTop: $('.faq-direct-vs-partner-loans').offset().top
+		}, 1000);
 	});
 
 	loadSvgIcons();
