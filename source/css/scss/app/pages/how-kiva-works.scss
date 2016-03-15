@@ -3,7 +3,7 @@
 	min-height: 100%;
 	min-width: 100%;
 	background-size: cover;
-	padding-bottom: 100px;
+	padding-bottom: rem-calc(100);
 
 	.how-kiva-works-title {
 		top: rem-calc(60);
@@ -15,7 +15,7 @@
 
 		h1 {
 			margin: 0;
-			padding: 0 12px;
+			padding: 0 rem-calc(12);
 		}
 	}
 
@@ -211,11 +211,12 @@
 		color: $kiva-textlink;
 	}
 }
+
 .faq-section {
 	min-width: 100%;
 	padding: rem-calc(75) rem-calc(20) rem-calc(100) rem-calc(20);
 	background-color: black;
-	box-shadow: 0 -10px 80px 50px #000;
+	box-shadow: 0 rem-calc(-10) rem-calc(80) rem-calc(50) #000;
 
 	.faq-container {
 		max-width: rem-calc(800);
@@ -261,7 +262,7 @@
 			.ac-body p {
 
 				@media #{$large-up} {
-					font-size: 18px;
+					font-size: rem-calc(18);
 				}
 			}
 		}
