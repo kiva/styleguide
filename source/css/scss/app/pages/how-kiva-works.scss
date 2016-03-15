@@ -205,95 +205,95 @@
 		}
 	}
 }
+
 .reveal-modal-bg {
 	a:visited {
 		color: $kiva-textlink;
 	}
 }
+.faq-section {
+	min-width: 100%;
+	padding: rem-calc(75) rem-calc(20) rem-calc(100) rem-calc(20);
+	background-color: black;
+	box-shadow: 0 -10px 80px 50px #000;
 
-	.faq-section {
-		min-width: 100%;
-		padding: rem-calc(75) rem-calc(20) rem-calc(100) rem-calc(20);
-		background-color: black;
-		box-shadow: 0 -10px 80px 50px #000;
+	.faq-container {
+		max-width: rem-calc(800);
+		margin: 0 auto;
 
-		.faq-container {
-			max-width: rem-calc(800);
-			margin: 0 auto;
+		a:visited {
+			color: $kiva-textlink;
+		}
 
-			a:visited {
-				color: $kiva-textlink;
-			}
+		.faq-title {
+			border-top: rem-calc(1) solid $white;
+			padding: rem-calc(10) 0;
+			margin: 0;
+		}
 
-			.faq-title {
+		.accordion-container {
+
+			.ac-title {
 				border-top: rem-calc(1) solid $white;
-				padding: rem-calc(10) 0;
+				padding: rem-calc(5) 0 rem-calc(5) 0;
 				margin: 0;
-			}
+				position: relative;
+				cursor: pointer;
 
-			.accordion-container {
-
-				.ac-title {
-					border-top: rem-calc(1) solid $white;
-					padding: rem-calc(5) 0 rem-calc(5) 0;
+				.question-wrap {
 					margin: 0;
-					position: relative;
-					cursor: pointer;
-
-					.question-wrap {
-						margin: 0;
-						max-width: 80vw;
-					}
-
-					.ac-dropdown-icon {
-						float: right;
-
-
-						.icon-small-chevron {
-							stroke: $white;
-							position: absolute;
-							top: rem-calc(5);
-							right: 0;
-						}
-					}
+					max-width: 80vw;
 				}
 
-				.ac-body p {
+				.ac-dropdown-icon {
+					float: right;
 
-					@media #{$large-up} {
-						font-size: 18px;
+
+					.icon-small-chevron {
+						stroke: $white;
+						position: absolute;
+						top: rem-calc(5);
+						right: 0;
 					}
 				}
 			}
 
-			.help-center-link {
-				border-top: rem-calc(1) solid $white;
-				padding: rem-calc(10) 0 rem-calc(80) 0;
+			.ac-body p {
+
+				@media #{$large-up} {
+					font-size: 18px;
+				}
 			}
 		}
 
-		.choose-borrower:hover {
-			text-decoration: none;
-		}
-
-		.choose-borrower-frame {
-			border: rem-calc(1) solid white;
-			margin: 0 auto;
-			width: rem-calc(225);
-
-			:hover {
-				background-color: #FFF;
-				opacity: 0.8;
-			}
-
-			.choose-borrower-text {
-				margin: auto auto;
-				padding: rem-calc(20) 0;
-			}
-		}
-
-		.choose-borrower-frame:hover .choose-borrower-text {
-			color: $kiva-text-dark;
+		.help-center-link {
+			border-top: rem-calc(1) solid $white;
+			padding: rem-calc(10) 0 rem-calc(80) 0;
 		}
 	}
+
+	.choose-borrower:hover {
+		text-decoration: none;
+	}
+
+	.choose-borrower-frame {
+		border: rem-calc(1) solid white;
+		margin: 0 auto;
+		width: rem-calc(225);
+
+		:hover {
+			background-color: #FFF;
+			opacity: 0.8;
+		}
+
+		.choose-borrower-text {
+			margin: auto auto;
+			padding: rem-calc(20) 0;
+		}
+	}
+
+	.choose-borrower-frame:hover .choose-borrower-text {
+		color: $kiva-text-dark;
+	}
+}
 
