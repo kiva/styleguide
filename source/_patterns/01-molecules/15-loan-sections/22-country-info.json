@@ -9,5 +9,6 @@
     "numLoansFundraising": 1123,
     "inUSD": false
   },
-  "directLoanStats" : null
+  "directLoanStats" : null,
+  "isFieldPartnerLoan": false
 }
