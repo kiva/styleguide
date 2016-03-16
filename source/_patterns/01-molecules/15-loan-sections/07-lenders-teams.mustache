@@ -25,9 +25,14 @@
         </ul>
 
         <div class="ac-body" id="ac-more-lenders-body" aria-hidden="true">
-            {{#numAnonymousLenders}}
-                <div class="anonymous-lender-message text-center">+ {{numAnonymousLenders}} anonymous lenders</div>
-            {{/numAnonymousLenders}}
+            {{#beyondLenderCutoffCount}}
+                <div class="beyond-cutoff-message text-center">+ {{beyondLenderCutoffCount}} more lenders</div>
+            {{/beyondLenderCutoffCount}}
+            {{^beyondLenderCutoffCount}}
+                {{#numAnonymousLenders}}
+                    <div class="anonymous-lender-message text-center">+ {{numAnonymousLenders}} anonymous lenders</div>
+                {{/numAnonymousLenders}}
+            {{/beyondLenderCutoffCount}}
             <p class="ac-title black-underlined text-center hide-more-lenders" data-kv-accordion aria-controls="ac-more-lenders-body" aria-expanded="false">
                 Hide
             </p>
@@ -55,6 +60,9 @@
         </ul>
 
         <div class="ac-body" id="ac-more-teams-body" aria-hidden="true">
+            {{#beyondTeamCutoffCount}}
+                <div class="beyond-cutoff-message text-center">+ {{beyondTeamCutoffCount}} more teams</div>
+            {{/beyondTeamCutoffCount}}
             <p class="ac-title black-underlined text-center hide-more-teams" data-kv-accordion aria-controls="ac-more-teams-body" aria-expanded="false">
                 Hide
             </p>

@@ -1,6 +1,8 @@
 {
   "lenderCount": 7,
   "teamCount": 5,
+  "beyondLenderCutoffCount": 5,
+  "beyondTeamCutoffCount": 2,
   "numAnonymousLenders": 1,
   "showSpilloverMessageForLenders": true,
   "showSpilloverMessageForTeams": true,
