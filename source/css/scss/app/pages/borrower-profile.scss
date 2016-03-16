@@ -64,7 +64,8 @@
 				}
 			}
 			@media #{$large-up} {
-				flex-basis: 58.3%;
+				flex-basis: auto;
+				width: 58.3%;
 				background-color: $kiva-bg-lightgray;
 				border-right: 1px solid $gray;
 			}
@@ -74,7 +75,8 @@
 			display: none;
 			@media #{$large-up} {
 				display: block;
-				flex-basis: 41.5%;
+				flex-basis: auto;
+				width: 41.5%;
 				background-color: $kiva-bg-darkgray;
 			}
 		}
