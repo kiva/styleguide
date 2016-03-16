@@ -37,22 +37,32 @@ module.exports = function () {
 
 			// ...and set the height immediately after so it animates
 			window.setTimeout(function() {
-				$target.css('height', height + 'px');
+				$target.css({
+					'height': height + 'px',
+					'-webkit-transition': '' // reset fix for iOS bug
+				});
 			}, 0);
 		}
 		else {
-			// if the heihgt hasn't been set yet, measure and set it
+			// if the height hasn't been set yet, measure and set it
 			if($target[0].style.height.length === 0 || $target[0].style.height === 'auto') {
 				$target.css('height', $target.height() + 'px');
 			}
 
 			// set the height to 0 immediately after so it animates
 			window.setTimeout(function() {
-				$target.css('height', 0);
+				$target.css({
+					'height': 0,
+					'-webkit-transition': '' // reset fix for iOS bug
+				});
 			}, 0);
 		}
 
-		$targets.filter($target.parents()).css('height', 'auto');
+		// set any parent accordions height to auto so that they expand as well
+		$targets.filter($target.parents()).css({
+			'height': 'auto',
+			'-webkit-transition': 'none' // handle iOS safari bug that animates height:auto as height:0
+		});
 
 		$this.attr('aria-expanded', !hiding);
 		$target.attr('aria-hidden', hiding)
@@ -63,7 +73,10 @@ module.exports = function () {
 		$targets.each(function() {
 			var $this = $(this);
 			if($this.attr('aria-hidden') === 'false' && !($('html').hasClass('touch'))) {
-				$this.css('height', 'auto');
+				$this.css({
+					'height': 'auto',
+					'-webkit-transition': 'none' // handle iOS safari bug that animates height:auto as height:0
+				});
 			}
 		});
 	}, 200));
