@@ -349,15 +349,15 @@
 			}
 		}
 
-		.anonymous-lender-message {
+		.anonymous-lender-message, .beyond-cutoff-message {
 			margin-bottom: 1rem;
 		}
 
-		.teams {
+		.lenders, .teams {
 			margin-top: 1rem;
 		}
 
-		#ac-more-lenders-teams-body {
+		#ac-more-lenders-body, #ac-more-teams-body {
 			margin-top: 0;
 		}
 	}
