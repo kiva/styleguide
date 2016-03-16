@@ -1,8 +1,11 @@
 {
   "lenderCount": 7,
   "teamCount": 5,
+  "beyondLenderCutoffCount": 5,
+  "beyondTeamCutoffCount": 2,
   "numAnonymousLenders": 1,
-  "showSpilloverMessage": true,
+  "showSpilloverMessageForLenders": true,
+  "showSpilloverMessageForTeams": true,
   "lenders": [
 	{
 	  "imgUrl": "/images/borrower1.jpg",
@@ -113,6 +116,98 @@
 	}
   ],
   "teams": [
+	{
+	  "imgUrl": "/images/borrower2.jpg",
+	  "id": "braincrave",
+	  "teamName": "Braincrave",
+	  "teamType": "Engineering Organizations",
+	  "numLenders": 1,
+	  "numTeamMembers": 35,
+	  "displayTooltip": true
+	},
+	{
+	  "imgUrl": "/images/borrower2.jpg",
+	  "id": "in_memory_of_paul_lambert",
+	  "teamName": "Braincrave",
+	  "teamType": "Engineering Organizations",
+	  "numLenders": 1,
+	  "numTeamMembers": 35,
+	  "displayTooltip": false
+	},
+	{
+	  "imgUrl": "/images/borrower2.jpg",
+	  "id": "braincrave",
+	  "teamName": "Team Europe",
+	  "teamType": "Local Area",
+	  "numLenders": 1,
+	  "numTeamMembers": 5632,
+	  "displayTooltip": true
+	},
+	{
+	  "imgUrl": "/images/borrower2.jpg",
+	  "id": "in_memory_of_paul_lambert",
+	  "teamName": "In Memory of Paul Lambert",
+	  "teamType": "Group",
+	  "numLenders": 2,
+	  "numTeamMembers": 35,
+	  "displayTooltip": true
+	},
+	{
+	  "imgUrl": "/images/borrower2.jpg",
+	  "id": "braincrave",
+	  "teamName": "Braincrave",
+	  "teamType": "Engineering Organizations",
+	  "numLenders": 1,
+	  "numTeamMembers": 35,
+	  "displayTooltip": true
+	},
+	{
+	  "imgUrl": "/images/borrower2.jpg",
+	  "id": "braincrave",
+	  "teamName": "Braincrave",
+	  "teamType": "Engineering Organizations",
+	  "numLenders": 1,
+	  "numTeamMembers": 35,
+	  "displayTooltip": true
+	},
+	{
+	  "imgUrl": "/images/borrower2.jpg",
+	  "id": "in_memory_of_paul_lambert",
+	  "teamName": "Braincrave",
+	  "teamType": "Engineering Organizations",
+	  "numLenders": 1,
+	  "numTeamMembers": 35,
+	  "displayTooltip": false
+	},
+	{
+	  "imgUrl": "/images/borrower2.jpg",
+	  "id": "braincrave",
+	  "teamName": "Team Europe",
+	  "teamType": "Local Area",
+	  "numLenders": 1,
+	  "numTeamMembers": 5632,
+	  "displayTooltip": true
+	},
+	{
+	  "imgUrl": "/images/borrower2.jpg",
+	  "id": "in_memory_of_paul_lambert",
+	  "teamName": "In Memory of Paul Lambert",
+	  "teamType": "Group",
+	  "numLenders": 2,
+	  "numTeamMembers": 35,
+	  "displayTooltip": true
+	},
+	{
+	  "imgUrl": "/images/borrower2.jpg",
+	  "id": "braincrave",
+	  "teamName": "Braincrave",
+	  "teamType": "Engineering Organizations",
+	  "numLenders": 1,
+	  "numTeamMembers": 35,
+	  "displayTooltip": true
+	}
+  ],
+  "spilloverTeams": [
 	{
 	  "imgUrl": "/images/borrower2.jpg",
 	  "id": "braincrave",

@@ -1,6 +1,6 @@
 <section class="lenders-teams" id="lenders-teams">
     <h2 class="ac-title ac-container" data-kv-accordion aria-controls="ac-lenders-teams-body" aria-expanded="true">
-        Lenders ({{lenderCount}})
+        Lenders and lending teams
         <span class="ac-dropdown-icon">
             <svg class="icon icon-large-chevron">
                 <use xlink:href="#icon-large-chevron"></use>
@@ -8,6 +8,9 @@
         </span>
     </h2>
     <article class="ac-body" id="ac-lenders-teams-body" aria-hidden="false">
+        {{! ------------------------- Lenders section -------------------------------- }}
+
+        <strong>Contributing lenders ({{lenderCount}})</strong>
         <ul class="lenders small-block-grid-5 medium-block-grid-5 large-block-grid-5">
             {{#lenders}}
                 <li>
@@ -21,32 +24,55 @@
             {{/lenders}}
         </ul>
 
-        <div class="ac-body" id="ac-more-lenders-teams-body" aria-hidden="true">
-            {{#numAnonymousLenders}}
-                <div class="anonymous-lender-message text-center">+ {{numAnonymousLenders}} anonymous lenders</div>
-            {{/numAnonymousLenders}}
-            <strong>Contributing teams ({{teamCount}})</strong>
-            <ul class="teams small-block-grid-5 medium-block-grid-5 large-block-grid-5">
-                {{#teams}}
-                    <li>
-                        {{#displayTooltip}}
-                            <a href="https://www.kiva.org/team/{{id}}"><span class="lazy circle-avatar" data-original="{{imgUrl}}" data-tooltip aria-haspopup="true" data-options="disable_for_touch:true; show_on: large" title="{{teamName}}<br>{{teamType}}<br>{{numLenders}} of {{numTeamMembers}} members"></span></a>
-                        {{/displayTooltip}}
-                        {{^displayTooltip}}
-                            <span class="lazy circle-avatar" data-original="{{imgUrl}}"></span>
-                        {{/displayTooltip}}
-                    </li>
-                {{/teams}}
-            </ul>
-            <p class="ac-title black-underlined text-center hide-more-lenders-teams" data-kv-accordion aria-controls="ac-more-lenders-teams-body" aria-expanded="false">
+        <div class="ac-body" id="ac-more-lenders-body" aria-hidden="true">
+            {{#beyondLenderCutoffCount}}
+                <div class="beyond-cutoff-message text-center">+ {{beyondLenderCutoffCount}} more lenders</div>
+            {{/beyondLenderCutoffCount}}
+            {{^beyondLenderCutoffCount}}
+                {{#numAnonymousLenders}}
+                    <div class="anonymous-lender-message text-center">+ {{numAnonymousLenders}} anonymous lenders</div>
+                {{/numAnonymousLenders}}
+            {{/beyondLenderCutoffCount}}
+            <p class="ac-title black-underlined text-center hide-more-lenders" data-kv-accordion aria-controls="ac-more-lenders-body" aria-expanded="false">
                 Hide
             </p>
         </div>
-        {{#showSpilloverMessage}}
-            <p class="ac-title black-underlined text-center show-more-lenders-teams" data-kv-accordion aria-controls="ac-more-lenders-teams-body" aria-expanded="false">
-                Show all lenders and teams
+        {{#showSpilloverMessageForLenders}}
+            <p class="ac-title black-underlined text-center show-more-lenders" data-kv-accordion aria-controls="ac-more-lenders-body" aria-expanded="false">
+                Show all lenders
             </p>
-        {{/showSpilloverMessage}}
+        {{/showSpilloverMessageForLenders}}
+
+        {{! ------------------------- Teams section -------------------------------- }}
+
+        <strong>Contributing teams ({{teamCount}})</strong>
+        <ul class="teams small-block-grid-5 medium-block-grid-5 large-block-grid-5">
+            {{#teams}}
+                <li>
+                    {{#displayTooltip}}
+                        <a href="https://www.kiva.org/lender/{{id}}"><span data-tooltip aria-haspopup="true" data-options="disable_for_touch:true; show_on: large" title="{{teamName}}<br>{{teamType}}<br>{{numLenders}} of {{numTeamMembers}} members" class="circle-avatar" style="background-image:url({{imgUrl}})"></span></a>
+                    {{/displayTooltip}}
+                    {{^displayTooltip}}
+                        <span class="circle-avatar" style="background-image:url({{imgUrl}})"></span>
+                    {{/displayTooltip}}
+                </li>
+            {{/teams}}
+        </ul>
+
+        <div class="ac-body" id="ac-more-teams-body" aria-hidden="true">
+            {{#beyondTeamCutoffCount}}
+                <div class="beyond-cutoff-message text-center">+ {{beyondTeamCutoffCount}} more teams</div>
+            {{/beyondTeamCutoffCount}}
+            <p class="ac-title black-underlined text-center hide-more-teams" data-kv-accordion aria-controls="ac-more-teams-body" aria-expanded="false">
+                Hide
+            </p>
+        </div>
+        {{#showSpilloverMessageForTeams}}
+            <p class="ac-title black-underlined text-center show-more-teams" data-kv-accordion aria-controls="ac-more-teams-body" aria-expanded="false">
+                Show all teams
+            </p>
+        {{/showSpilloverMessageForTeams}}
+
     </article>
     <div class="spillover-lenders" style="display: none;">
         {{#spilloverLenders}}
@@ -59,5 +85,17 @@
                 {{/displayTooltip}}
             </li>
         {{/spilloverLenders}}
+    </div>
+    <div class="spillover-teams" style="display: none;">
+        {{#spilloverTeams}}
+            <li>
+                {{#displayTooltip}}
+                    <a href="https://www.kiva.org/team/{{id}}"><span class="lazy circle-avatar" data-original="{{imgUrl}}" data-tooltip aria-haspopup="true" data-options="disable_for_touch:true; show_on: large" title="{{teamName}}<br>{{teamType}}<br>{{numLenders}} of {{numTeamMembers}} members"></span></a>
+                {{/displayTooltip}}
+                {{^displayTooltip}}
+                    <span class="lazy circle-avatar" data-original="{{imgUrl}}"></span>
+                {{/displayTooltip}}
+            </li>
+        {{/spilloverTeams}}
     </div>
 </section>
