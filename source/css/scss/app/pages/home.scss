@@ -26,6 +26,7 @@
 
 		.icon {
 			stroke: darken($white, 10%);
+			pointer-events: all;
 		}
 
 		&:hover {
