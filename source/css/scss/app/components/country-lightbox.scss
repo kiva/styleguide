@@ -1,19 +1,17 @@
-#countrySelectModal {
+#country-select-lightbox {
+
 	.white-background-box {
 		position: relative;
-
-		#filter-country-submit {
-			line-height: inherit;
-			position: absolute;
-			bottom: -20px;
-			width: 100%;
-			left: 0;
-			@media #{large-up} {
-				position: relative;
-				width: initial;
-				bottom: initial;
-			}
 		}
+
+	#filter-country-submit {
+		width: 100%;
+		bottom: -20px;
+		position: fixed;
+		max-width: none;
+		line-height: inherit;
+		z-index: 1200;
+		left: 0;
 
 		@media #{$small-only} {
 			.region-name {
