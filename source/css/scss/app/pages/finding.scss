@@ -40,6 +40,10 @@
 	$border: rem-calc(1) solid $iron;
 	border-right: $border;
 	border-bottom: $border;
+
+	.country-filter-text:hover {
+		text-decoration: underline;
+	}
 }
 
 .control-region {
