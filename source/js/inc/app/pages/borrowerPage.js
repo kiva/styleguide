@@ -22,6 +22,10 @@ module.exports = function () {
     $('.hide-more-lenders').click(function() {
         $('.show-more-lenders').toggle();
         $('.lenders li:nth-child(n+11)').remove();
+
+		$('html, body').animate({
+			scrollTop: $('.lenders-title').offset().top
+		}, 1000);
     });
 
 	$('.show-more-teams').click(function() {
@@ -36,6 +40,10 @@ module.exports = function () {
 	$('.hide-more-teams').click(function() {
 		$('.show-more-teams').toggle();
 		$('.teams li:nth-child(n+11)').remove();
+
+		$('html, body').animate({
+			scrollTop: $('.teams-title').offset().top
+		}, 1000);
 	});
 
 	// button to reveal or hide the loan tag options
