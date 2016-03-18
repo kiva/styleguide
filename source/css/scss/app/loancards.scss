@@ -180,8 +180,10 @@ $loan-card-meter-height: $loan-card-footer-height/2;
     }
 
     .button.success {
-        &, &:hover, &:active, &:visited, &:focus {
-            background-color: $kiva-navdivider-green;
+		background-color: $kiva-navdivider-green;
+
+		&:hover, &:active {
+            background-color: $kiva-icon-green;
         }
     }
 
