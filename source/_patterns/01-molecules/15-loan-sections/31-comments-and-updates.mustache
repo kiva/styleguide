@@ -1,0 +1,32 @@
+<section class="comments-and-updates">
+    <h2 class="ac-title ac-container" data-kv-accordion aria-controls="ac-comments-and-updates-body" aria-expanded="false">
+        Comments &amp; Updates ({{commentsCount}})
+        <span class="ac-dropdown-icon">
+            <svg class="icon icon-large-chevron">
+                <use xlink:href="#icon-large-chevron"></use>
+            </svg>
+        </span>
+    </h2>
+    <div class="ac-body" id="ac-comments-and-updates-body" aria-hidden="true">
+        <div class="comments-container">
+            <form method="post" action="{{url}}" class="comment-form">
+                <fieldset>
+                    <div class="field-container">
+                        <label for="comment-field" style="display:none;">Comment</label>
+                        <textarea id="comment-field" rows="8"></textarea>
+                    </div>
+                </fieldset>
+            </form>
+            <span class="show-for-large-up convo-guideline-url"><a href="{{conversationGuidelinesUrl}}">Kiva conversation guidelines</a></span>
+            <span class="comment-submit-block">
+                <button class="button setting comment-submit">Comment</button>
+                <span class="hide-for-large-up"><a href="{{conversationGuidelinesUrl}}">Kiva conversation guidelines</a></span>
+            </span>
+            <span class="subscribe-block">
+                <button class="button setting comment-subscribe">Subscribe</button>
+                <span>to be notified of replies</span>
+            </span>
+        </div>
+        {{!-- > molecules-pagination --}}
+    </div>
+</section>

@@ -943,3 +943,32 @@
 	color: $kiva-darkgreen;
 	background-color: $kiva-accent-green;
 }
+
+.comments-and-updates {
+	#ac-comments-and-updates-body .comments-container {
+		.comment-form fieldset {
+			border-style: none;
+			margin-top: 0;
+			margin-bottom: 0;
+		}
+
+		.subscribe-block{
+			display: block;
+			@media #{$large-up} {
+				display: inline;
+			}
+		}
+
+		.convo-guideline-url {
+			@media #{$large-up} {
+				float: right;
+				margin-top: 0.3rem;
+				margin-right: 1.2rem;
+			}
+		}
+
+		.comment-submit-block, .subscribe-block {
+			margin-left: 1.2rem;
+		}
+	}
+}
