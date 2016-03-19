@@ -943,3 +943,105 @@
 	color: $kiva-darkgreen;
 	background-color: $kiva-accent-green;
 }
+
+.comments-and-updates {
+	#ac-comments-and-updates-body {
+		.comment-form fieldset {
+			border-style: none;
+			margin-top: 0;
+			margin-bottom: 0;
+		}
+
+		.subscribe-block {
+			display: block;
+			@media #{$large-up} {
+				display: inline;
+			}
+		}
+
+		.convo-guideline-url {
+			@media #{$large-up} {
+				float: right;
+				margin-top: 0.4rem;
+				margin-right: 1.2rem;
+			}
+		}
+
+		.comment-submit-block {
+			margin-left: 1.2rem;
+		}
+
+		.subscribe-block {
+			margin-left: 1.2rem;
+			@media #{$large-up} {
+				margin-left: 0.5rem;
+			}
+		}
+
+		.updates {
+			margin-left: 0;
+			margin-right: 0;
+
+			@media #{$large-up} {
+				margin-left: 1.2rem;
+				margin-right: 1.2rem;
+			}
+		}
+
+		.comments {
+			margin-left: 0;
+			margin-right: 0;
+
+			@media #{$large-up} {
+				margin-left: 1.2rem;
+				margin-right: 1.2rem;
+			}
+
+			.comment {
+				display: block;
+				margin-left: 0;
+				padding: 1rem 0.5rem 1rem 0.5rem;
+
+				&:nth-of-type(odd) {
+					background-color: $kiva-bg-darkgray;
+				}
+
+				.commenter-image {
+					margin-left: 0;
+				}
+
+				.borrower-image {
+					float: right;
+				}
+
+				.non-borrower-image {
+					float: left;
+				}
+
+				.comment-header {
+					color: $kiva-text-light;
+				}
+
+				.comment-content {
+					.comment-text {
+						margin-bottom: 0.5rem;
+					}
+				}
+
+				.borrower-text {
+					div {
+						margin-right: 5rem;
+						margin-left: 1rem;
+					}
+				}
+
+				.non-borrower-text {
+					div {
+						margin-right: 1rem;
+						margin-left: 5rem;
+					}
+				}
+			}
+		}
+	}
+}

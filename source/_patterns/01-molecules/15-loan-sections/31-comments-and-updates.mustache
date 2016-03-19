@@ -1,0 +1,59 @@
+<section class="comments-and-updates">
+	<h2 class="ac-title ac-container" data-kv-accordion aria-controls="ac-comments-and-updates-body" aria-expanded="false">
+		Comments &amp; Updates ({{commentsCount}})
+		<span class="ac-dropdown-icon">
+			<svg class="icon icon-large-chevron">
+				<use xlink:href="#icon-large-chevron"></use>
+			</svg>
+		</span>
+	</h2>
+	<div class="ac-body" id="ac-comments-and-updates-body" aria-hidden="true">
+		<form method="post" action="{{url}}" class="comment-form">
+			<fieldset>
+				<div class="field-container">
+					<label for="comment-field" style="display:none;">Comment</label>
+					<textarea id="comment-field" rows="8"></textarea>
+				</div>
+			</fieldset>
+		</form>
+		<small class="show-for-large-up convo-guideline-url"><a href="{{conversationGuidelinesUrl}}">Kiva conversation guidelines</a></small>
+		<span class="comment-submit-block">
+			<button class="button setting comment-submit">Comment</button>
+			<small class="hide-for-large-up"><a href="{{conversationGuidelinesUrl}}">Kiva conversation guidelines</a></small>
+		</span>
+		<span class="subscribe-block">
+			<button class="button setting comment-subscribe">Subscribe</button>
+			<small>to be notified of replies</small>
+		</span>
+        <ul class="updates inline-list">
+            {{#updates}}
+                <li class="update">
+                    <a href="{{url}}">Update - {{title}}</a>
+                    Posted by {{authorName}} from {{authorLocation}},<br>{{date}}
+                </li>
+            {{/updates}}
+        </ul>
+		<ul class="comments inline-list">
+			{{#comments}}
+				<li class="comment">
+                    {{#isBorrower}}
+                        <a class="commenter-image borrower-image" href="{{commenterProfileUrl}}"><span class="circle-avatar" data-tooltip aria-haspopup="true" data-options="disable_for_touch:true;" title="{{commenterFirstName}}<br>{{commenterLocation}}" style="background-image:url({{commenterImgUrl}})"></span></a>
+                        <div class="comment-content borrower-text">
+                            <div class="comment-header ">{{commenterFirstName}}, {{commenterRole}} | {{commentTimestamp}}</div>
+                            <div class="comment-text">{{{commentText}}}</div>
+                            <div class="comment-actions"><a href="#">Reply</a> | <a href="#">Flag as inappropriate</a></div>
+                        </div>
+                    {{/isBorrower}}
+                    {{^isBorrower}}
+                        <a class="commenter-image non-borrower-image" href="{{commenterProfileUrl}}"><span class="circle-avatar" data-tooltip aria-haspopup="true" data-options="disable_for_touch:true;" title="{{commenterFirstName}}<br>{{commenterLocation}}" style="background-image:url({{commenterImgUrl}})"></span></a>
+                        <div class="comment-content non-borrower-text">
+                            <div class="comment-header">{{commenterFirstName}}, {{commenterRole}} | {{commentTimestamp}}</div>
+                            <div class="comment-text">{{{commentText}}}</div>
+                            <div class="comment-actions"><a href="#">Reply</a> | <a href="#">Flag as inappropriate</a></div>
+                        </div>
+                    {{/isBorrower}}
+				</li>
+			{{/comments}}
+		</ul>
+	</div>
+</section>
