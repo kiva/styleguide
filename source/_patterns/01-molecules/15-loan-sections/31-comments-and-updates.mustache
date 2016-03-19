@@ -25,7 +25,15 @@
 			<button class="button setting comment-subscribe">Subscribe</button>
 			<span>to be notified of replies</span>
 		</span>
-		<ul class="comment-list inline-list">
+        <ul class="updates inline-list">
+            {{#updates}}
+                <li class="update">
+                    <a href="{{url}}">Update - {{title}}</a>
+                    Posted by {{authorName}} from {{authorLocation}},<br>{{date}}
+                </li>
+            {{/updates}}
+        </ul>
+		<ul class="comments inline-list">
 			{{#comments}}
 				<li class="comment">
                     {{#isBorrower}}

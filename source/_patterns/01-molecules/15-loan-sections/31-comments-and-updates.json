@@ -32,5 +32,14 @@
       "commentText": "Dear Alexis,<br>Thank you for the news you share with Kiva's friends. And thank you mainly for your work in Bolivia. Thank you friends!<br>-John",
       "isBorrower": true
     }
+  ],
+  "updates" : [
+    {
+      "title": "Thank you for your loan",
+      "url": "https://www.kiva.org/lender/spicey",
+      "authorName": "Alex Guild",
+      "authorLocation": "La Paz, Bolivia",
+      "date": "June 2, 2015"
+    }
   ]
 }
