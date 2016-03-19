@@ -952,7 +952,7 @@
 			margin-bottom: 0;
 		}
 
-		.subscribe-block{
+		.subscribe-block {
 			display: block;
 			@media #{$large-up} {
 				display: inline;
@@ -962,13 +962,20 @@
 		.convo-guideline-url {
 			@media #{$large-up} {
 				float: right;
-				margin-top: 0.3rem;
+				margin-top: 0.4rem;
 				margin-right: 1.2rem;
 			}
 		}
 
-		.comment-submit-block, .subscribe-block {
+		.comment-submit-block {
 			margin-left: 1.2rem;
+		}
+
+		.subscribe-block {
+			margin-left: 1.2rem;
+			@media #{$large-up} {
+				margin-left: 0.5rem;
+			}
 		}
 
 		.updates {
