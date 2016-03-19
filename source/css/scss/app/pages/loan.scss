@@ -945,7 +945,7 @@
 }
 
 .comments-and-updates {
-	#ac-comments-and-updates-body .comments-container {
+	#ac-comments-and-updates-body {
 		.comment-form fieldset {
 			border-style: none;
 			margin-top: 0;
@@ -969,6 +969,57 @@
 
 		.comment-submit-block, .subscribe-block {
 			margin-left: 1.2rem;
+		}
+
+		.comment-list {
+			.comment {
+				display: block;
+				margin-left: 0;
+				padding: 1rem 0.5rem 1rem 0.5rem;
+
+				&:nth-of-type(odd) {
+					background-color: $kiva-bg-darkgray;
+				}
+
+				.commenter-image {
+					margin-left: 0;
+				}
+
+				.borrower-image {
+					float: right;
+				}
+
+				.non-borrower-image {
+					float: left;
+				}
+
+				.comment-header {
+					color: $kiva-text-light;
+				}
+
+				.comment-content {
+					.comment-text {
+						margin-bottom: 0.5rem;
+					}
+				}
+
+				.borrower-text {
+					div {
+						margin-right: 5rem;
+						margin-left: 1rem;
+					}
+				}
+
+				.non-borrower-text {
+					div {
+						margin-right: 1rem;
+						margin-left: 5rem;
+					}
+				}
+			}
+
+			margin-left: 1.2rem;
+			margin-right: 1.2rem;
 		}
 	}
 }
