@@ -2,7 +2,7 @@
 
 	.white-background-box {
 		position: relative;
-		}
+	}
 
 	#filter-country-submit {
 		width: 100%;
@@ -12,22 +12,22 @@
 		line-height: inherit;
 		z-index: 1200;
 		left: 0;
+	}
 
-		@media #{$small-only} {
-			.region-name {
-				line-height:2.5rem;
+	@media #{$small-only} {
+		.region-name {
+			line-height:2.5rem;
+		}
+
+		.country {
+			border-bottom: 1px solid $kiva-stroke-gray;
+
+			&:first-of-type {
+				border-top: 1px solid $kiva-stroke-gray;
 			}
 
-			.country {
-				border-bottom: 1px solid $kiva-stroke-gray;
-
-				&:first-of-type {
-					border-top: 1px solid $kiva-stroke-gray;
-				}
-
-				.country-name {
-					font-size: 1rem;
-				}
+			.country-name {
+				font-size: 1rem;
 			}
 		}
 	}
