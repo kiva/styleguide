@@ -1,8 +1,10 @@
 <section class="comments-and-updates">
 	<h2 class="ac-title ac-container" data-kv-accordion aria-controls="ac-comments-and-updates-body" aria-expanded="false">
-		Comments &amp; Updates ({{commentsCount}})
+		<div class="ac-title-text">
+			Comments &amp; Updates ({{commentsCount}})
+		</div>
 		<span class="ac-dropdown-icon">
-			<svg class="icon icon-large-chevron">
+			<svg class="icon icon-large-chevron loan-tags-dropdown">
 				<use xlink:href="#icon-large-chevron"></use>
 			</svg>
 		</span>
@@ -16,10 +18,18 @@
 				</div>
 			</fieldset>
 		</form>
-		<small class="show-for-large-up convo-guideline-url"><a href="{{conversationGuidelinesUrl}}">Kiva conversation guidelines</a></small>
+		<small class="show-for-large-up convo-guideline-url">
+			<a class="black-underlined" data-reveal-id="conversation-guidelines-lightbox">
+				Kiva conversation guidelines
+			</a>
+		</small>
 		<span class="comment-submit-block">
 			<button class="button setting comment-submit">Comment</button>
-			<small class="hide-for-large-up"><a href="{{conversationGuidelinesUrl}}">Kiva conversation guidelines</a></small>
+			<small class="hide-for-large-up">
+				<a class="black-underlined" data-reveal-id="conversation-guidelines-lightbox">
+					Kiva conversation guidelines
+				</a>
+			</small>
 		</span>
 		<span class="subscribe-block">
 			<button class="button setting comment-subscribe">Subscribe</button>
@@ -56,4 +66,8 @@
 			{{/comments}}
 		</ul>
 	</div>
+
+	{{#conversationGuidelinesHelpText}}
+		{{> 01-molecules/10-lightbox/04-help-text-lightbox}}
+	{{/conversationGuidelinesHelpText}}
 </section>

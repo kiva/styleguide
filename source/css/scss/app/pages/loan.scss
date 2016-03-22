@@ -945,18 +945,31 @@
 }
 
 .comments-and-updates {
-	#ac-comments-and-updates-body {
+	.ac-title {
+		position: relative;
+		.ac-title-text {
+			padding-left: 1rem;
+		}
+		.icon-large-chevron {
+			top: 0;
+		}
+	}
+
+	.ac-body {
 		.comment-form fieldset {
 			border-style: none;
-			margin-top: 0;
-			margin-bottom: 0;
 		}
 
 		.subscribe-block {
 			display: block;
+			padding-left: 1rem;
 			@media #{$large-up} {
 				display: inline;
 			}
+		}
+
+		.comment-submit-block {
+			padding-left: 1rem;
 		}
 
 		.convo-guideline-url {
@@ -967,40 +980,20 @@
 			}
 		}
 
-		.comment-submit-block {
-			margin-left: 1.2rem;
-		}
-
-		.subscribe-block {
-			margin-left: 1.2rem;
-			@media #{$large-up} {
-				margin-left: 0.5rem;
-			}
-		}
-
-		.updates {
-			margin-left: 0;
-			margin-right: 0;
-
-			@media #{$large-up} {
-				margin-left: 1.2rem;
-				margin-right: 1.2rem;
-			}
-		}
-
 		.comments {
-			margin-left: 0;
-			margin-right: 0;
-
 			@media #{$large-up} {
-				margin-left: 1.2rem;
-				margin-right: 1.2rem;
+				padding-left: 1rem;
+				padding-right: 1rem;
 			}
 
 			.comment {
 				display: block;
-				margin-left: 0;
-				padding: 1rem 0.5rem 1rem 0.5rem;
+				padding-top: 0.5rem;
+				padding-bottom: 0.5rem;
+
+				@media #{$large-up} {
+					padding: 1rem 0.5rem 1rem 0.5rem;
+				}
 
 				&:nth-of-type(odd) {
 					background-color: $kiva-bg-darkgray;
@@ -1012,10 +1005,24 @@
 
 				.borrower-image {
 					float: right;
+					margin-right: 1rem;
+					.circle-avatar {
+						margin-right: 0;
+					}
+					@media #{$large-up} {
+						margin-right: 0.5rem;
+					}
 				}
 
 				.non-borrower-image {
 					float: left;
+					margin-left: 1rem;
+					.circle-avatar {
+						margin-left: 0;
+					}
+					@media #{$large-up} {
+						margin-left: 0.5rem;
+					}
 				}
 
 				.comment-header {
