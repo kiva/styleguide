@@ -13,7 +13,7 @@ $filter-menu-base-width: rem-calc(251);
 	background-color: rgba(0, 0, 0, 0.8);
 	pointer-events: none;
 	opacity: 0;
-	transition: opacity 250ms ease;
+	transition: opacity 100ms ease;
 
 	&.loading {
 		opacity: 1;
