@@ -1,5 +1,45 @@
+$filter-menu-base-width: rem-calc(251);
+
 .triple-state-buttons, .quintuple-state-buttons {
 	margin: 0 rem-calc(12) rem-calc(6);
+}
+
+.loading-overlay {
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background-color: rgba(0, 0, 0, 0.8);
+	pointer-events: none;
+	opacity: 0;
+	transition: opacity 250ms ease;
+
+	&.loading {
+		opacity: 1;
+	}
+
+	.loading-spinner {
+		position: fixed;
+		top: 50%;
+		right: 50%;
+		transform: translate(50%, -50%);
+		width: 3rem;
+		height: 3rem;
+		transition: right 500ms ease;
+
+		@media #{$xxlarge-up} {
+			right: calc((100% - #{$filter-menu-base-width})/2);
+		}
+
+		.line {
+			background-color: $white;
+		}
+	}
+}
+
+.move-right .loading-overlay .loading-spinner {
+	right: calc((100% - #{$filter-menu-base-width})/2);
 }
 
 #partnersFilter {
@@ -157,7 +197,7 @@ a.filter-menu-button:visited {
 
 .inner-wrap {
 	$menu-margin: rem-calc(20);
-	$menu-base-width: rem-calc(251);
+	$menu-base-width: $filter-menu-base-width;
 	$menu-width: rem-calc(251) + $menu-margin;
 	$transform: translate3d(-$menu-width, 0, 0);
 
