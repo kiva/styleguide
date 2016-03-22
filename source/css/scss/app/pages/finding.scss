@@ -254,3 +254,21 @@ a.filter-menu-button:visited {
 		}
 	}
 }
+
+.no-results-text {
+	left: 40%;
+	@media #{$large-up} {
+		left: 40%;
+	}
+	padding: 20px;
+	&.fixed {
+		position: fixed;
+		top: 200px;
+		bottom: auto;
+	}
+	&.absolute {
+		position: absolute;
+		top: auto;
+		bottom: 0;
+	}
+}
