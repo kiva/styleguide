@@ -38,6 +38,7 @@
 }
 
 .left-off-canvas-menu {
+	z-index: 1002;
 	background: #fff;
 	box-shadow: -2px 0 2px rgba(0, 0, 0, 0.2), 2px 0 2px rgba(0, 0, 0, 0.2);
 }
@@ -76,6 +77,7 @@ ul.off-canvas-list li a:hover {
 }
 
 .move-right .exit-off-canvas {
+	z-index: 1000;
 	background: rgba(0, 0, 0, 0.7);
 
 	@media #{$medium-up} {
