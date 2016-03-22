@@ -38,8 +38,16 @@ $filter-menu-base-width: rem-calc(251);
 	}
 }
 
-.move-right .loading-overlay .loading-spinner {
-	right: calc((100% - #{$filter-menu-base-width})/2);
+.move-right .loading-overlay {
+	background: none;
+
+	@media #{$large-up} {
+		background-color: rgba(0, 0, 0, 0.8);
+	}
+
+	.loading-spinner {
+		right: calc((100% - #{$filter-menu-base-width}) / 2);
+	}
 }
 
 #partnersFilter {
