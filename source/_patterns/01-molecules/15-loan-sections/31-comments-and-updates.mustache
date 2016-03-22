@@ -51,7 +51,10 @@
                         <div class="comment-content borrower-text">
                             <div class="comment-header ">{{commenterFirstName}}, {{commenterRole}} | {{commentTimestamp}}</div>
                             <div class="comment-text">{{{commentText}}}</div>
-                            <div class="comment-actions"><a href="#">Reply</a> | <a href="#">Flag as inappropriate</a></div>
+                            <div class="comment-actions"><a href="#">Reply</a> | 
+								{{^isAdmin}}<a href="#">Flag as inappropriate</a>{{/isAdmin}}
+								{{#isAdmin}}<a href="#">Delete</a>{{/isAdmin}}
+                            </div>
                         </div>
                     {{/isBorrower}}
                     {{^isBorrower}}
@@ -59,7 +62,9 @@
                         <div class="comment-content non-borrower-text">
                             <div class="comment-header">{{commenterFirstName}}, {{commenterRole}} | {{commentTimestamp}}</div>
                             <div class="comment-text">{{{commentText}}}</div>
-                            <div class="comment-actions"><a href="#">Reply</a> | <a href="#">Flag as inappropriate</a></div>
+                            <div class="comment-actions"><a href="#">Reply</a> |
+                                {{^isAdmin}}<a href="#">Flag as inappropriate</a>{{/isAdmin}}
+								{{#isAdmin}}<a href="#">Delete</a>{{/isAdmin}}</div>
                         </div>
                     {{/isBorrower}}
 				</li>
