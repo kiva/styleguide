@@ -4,17 +4,17 @@
 
 	$num-lines: 8;
 	$length: 0.7s;
-	$line-width: 0.15;
+	$line-width: 0.2;
 	$line-length: 0.6;
 	$dist-from-center: 35%;
 
 	position: relative;
+	display: inline-block;
 	width: $loader-width;
 	height: $loader-width;
 
 	.line {
 		position: absolute;
-		opacity: 0;
 		width: $line-width * 50%;
 		height: $line-length * 50%;
 		background: $line-bg-color;
