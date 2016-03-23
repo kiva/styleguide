@@ -45,29 +45,7 @@
         </ul>
 		<ul class="comments inline-list">
 			{{#comments}}
-				<li class="comment">
-                    {{#isBorrower}}
-                        <a class="commenter-image borrower-image" href="{{commenterProfileUrl}}"><span class="circle-avatar" data-tooltip aria-haspopup="true" data-options="disable_for_touch:true;" title="{{commenterFirstName}}<br>{{commenterLocation}}" style="background-image:url({{commenterImgUrl}})"></span></a>
-                        <div class="comment-content borrower-text">
-                            <div class="comment-header ">{{commenterFirstName}}, {{commenterRole}} | {{commentTimestamp}}</div>
-                            <div class="comment-text">{{{commentText}}}</div>
-                            <div class="comment-actions"><a href="#">Reply</a> | 
-								{{^isAdmin}}<a href="#">Flag as inappropriate</a>{{/isAdmin}}
-								{{#isAdmin}}<a href="#">Delete</a>{{/isAdmin}}
-                            </div>
-                        </div>
-                    {{/isBorrower}}
-                    {{^isBorrower}}
-                        <a class="commenter-image non-borrower-image" href="{{commenterProfileUrl}}"><span class="circle-avatar" data-tooltip aria-haspopup="true" data-options="disable_for_touch:true;" title="{{commenterFirstName}}<br>{{commenterLocation}}" style="background-image:url({{commenterImgUrl}})"></span></a>
-                        <div class="comment-content non-borrower-text">
-                            <div class="comment-header">{{commenterFirstName}}, {{commenterRole}} | {{commentTimestamp}}</div>
-                            <div class="comment-text">{{{commentText}}}</div>
-                            <div class="comment-actions"><a href="#">Reply</a> |
-                                {{^isAdmin}}<a href="#">Flag as inappropriate</a>{{/isAdmin}}
-								{{#isAdmin}}<a href="#">Delete</a>{{/isAdmin}}</div>
-                        </div>
-                    {{/isBorrower}}
-				</li>
+                {{> 01-molecules/06-components/08-loan-comment}}
 			{{/comments}}
 		</ul>
 	</div>
