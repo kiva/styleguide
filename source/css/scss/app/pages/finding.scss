@@ -11,12 +11,11 @@ $filter-menu-base-width: rem-calc(251);
 	bottom: 0;
 	left: 0;
 	z-index: 1001;
-	background-color: rgba(0, 0, 0, 0.8);
 	pointer-events: none;
 	opacity: 0;
 	transition: opacity 100ms ease;
 
-	&.loading {
+	.loading & {
 		opacity: 1;
 	}
 
@@ -29,25 +28,25 @@ $filter-menu-base-width: rem-calc(251);
 		height: 3rem;
 		transition: right 500ms ease;
 
-		@media #{$xxlarge-up} {
-			right: calc((100% - #{$filter-menu-base-width})/2);
+		.line {
+			background-color: $black;
 		}
 
-		.line {
-			background-color: $white;
+		@media #{$xxlarge-up} {
+			right: calc((100% - #{$filter-menu-base-width})/2);
 		}
 	}
 }
 
-.move-right .loading-overlay {
-	background: none;
+.move-right .loading-overlay .loading-spinner {
+	right: calc((100% - #{$filter-menu-base-width}) / 2);
 
-	@media #{$large-up} {
-		background-color: rgba(0, 0, 0, 0.8);
-	}
+	.line {
+		background-color: $white;
 
-	.loading-spinner {
-		right: calc((100% - #{$filter-menu-base-width}) / 2);
+		@media #{$large-up} {
+			background-color: $black;
+		}
 	}
 }
 
