@@ -1,5 +1,5 @@
 {
-  "isAdmin": false,
+  "isAdmin": true,
   "commentsCount": 4,
   "conversationGuidelinesHelpText": {
     "dataRevealId": "conversation-guidelines-lightbox",
