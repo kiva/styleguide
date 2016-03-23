@@ -7,7 +7,7 @@
 
 .black-underlined {
 	text-decoration: underline;
-	color: $charcoal;
+	color: $charcoal !important;
 
 	a:visited {
 		color: $charcoal  !important;
