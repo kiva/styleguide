@@ -7,11 +7,15 @@
 
 .black-underlined {
 	text-decoration: underline;
-	color: $charcoal;
+	color: $charcoal !important;
 
 	a:visited {
 		color: $charcoal  !important;
 	}
+}
+
+.black-underlined:hover {
+	color: $sky-blue !important;
 }
 
 .loan-story {
@@ -990,6 +994,7 @@
 				display: block;
 				padding-top: 0.5rem;
 				padding-bottom: 0.5rem;
+				width: 96%;
 
 				@media #{$large-up} {
 					padding: 1rem 0.5rem 1rem 0.5rem;

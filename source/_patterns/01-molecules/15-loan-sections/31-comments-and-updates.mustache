@@ -1,7 +1,7 @@
 <section class="comments-and-updates">
 	<h2 class="ac-title ac-container" data-kv-accordion aria-controls="ac-comments-and-updates-body" aria-expanded="false">
 		<div class="ac-title-text">
-			Comments &amp; Updates ({{commentsCount}})
+			Comments &amp; Updates (<span class="comments-and-updates-count">{{commentsAndUpdatesCount}}</span>)
 		</div>
 		<span class="ac-dropdown-icon">
 			<svg class="icon icon-large-chevron loan-tags-dropdown">
@@ -10,31 +10,34 @@
 		</span>
 	</h2>
 	<div class="ac-body" id="ac-comments-and-updates-body" aria-hidden="true">
-		<form method="post" action="{{url}}" class="comment-form">
-			<fieldset>
-				<div class="field-container">
-					<label for="comment-field" style="display:none;">Comment</label>
-					<textarea id="comment-field" rows="8"></textarea>
-				</div>
-			</fieldset>
-		</form>
-		<small class="show-for-large-up convo-guideline-url">
-			<a class="black-underlined" data-reveal-id="conversation-guidelines-lightbox">
-				Kiva conversation guidelines
-			</a>
-		</small>
+        {{#allowCommenting}}
+            <form method="post" action="{{url}}" class="comment-form">
+                <fieldset>
+                    <div class="field-container">
+                        <label for="comment-field" style="display:none;">Comment</label>
+                        <textarea id="comment-field" rows="8"></textarea>
+                    </div>
+                </fieldset>
+            </form>
+            <small class="show-for-large-up convo-guideline-url">
+                <a class="black-underlined" data-reveal-id="conversation-guidelines-lightbox">
+                    Kiva conversation guidelines
+                </a>
+            </small>
 		<span class="comment-submit-block">
 			<button class="button setting comment-submit">Comment</button>
 			<small class="hide-for-large-up">
-				<a class="black-underlined" data-reveal-id="conversation-guidelines-lightbox">
-					Kiva conversation guidelines
-				</a>
-			</small>
+                <a class="black-underlined" data-reveal-id="conversation-guidelines-lightbox">
+                    Kiva conversation guidelines
+                </a>
+            </small>
 		</span>
 		<span class="subscribe-block">
 			<button class="button setting comment-subscribe">Subscribe</button>
 			<small>to be notified of replies</small>
 		</span>
+        {{/allowCommenting}}
+
         <ul class="updates inline-list">
             {{#updates}}
                 <li class="update">
@@ -45,27 +48,26 @@
         </ul>
 		<ul class="comments inline-list">
 			{{#comments}}
-				<li class="comment">
-                    {{#isBorrower}}
-                        <a class="commenter-image borrower-image" href="{{commenterProfileUrl}}"><span class="circle-avatar" data-tooltip aria-haspopup="true" data-options="disable_for_touch:true;" title="{{commenterFirstName}}<br>{{commenterLocation}}" style="background-image:url({{commenterImgUrl}})"></span></a>
-                        <div class="comment-content borrower-text">
-                            <div class="comment-header ">{{commenterFirstName}}, {{commenterRole}} | {{commentTimestamp}}</div>
-                            <div class="comment-text">{{{commentText}}}</div>
-                            <div class="comment-actions"><a href="#">Reply</a> | <a href="#">Flag as inappropriate</a></div>
-                        </div>
-                    {{/isBorrower}}
-                    {{^isBorrower}}
-                        <a class="commenter-image non-borrower-image" href="{{commenterProfileUrl}}"><span class="circle-avatar" data-tooltip aria-haspopup="true" data-options="disable_for_touch:true;" title="{{commenterFirstName}}<br>{{commenterLocation}}" style="background-image:url({{commenterImgUrl}})"></span></a>
-                        <div class="comment-content non-borrower-text">
-                            <div class="comment-header">{{commenterFirstName}}, {{commenterRole}} | {{commentTimestamp}}</div>
-                            <div class="comment-text">{{{commentText}}}</div>
-                            <div class="comment-actions"><a href="#">Reply</a> | <a href="#">Flag as inappropriate</a></div>
-                        </div>
-                    {{/isBorrower}}
-				</li>
+                {{> 01-molecules/06-components/08-loan-comment}}
 			{{/comments}}
 		</ul>
+
+        <div class="ac-body" id="ac-more-comments-body" aria-hidden="true">
+            <p class="ac-title black-underlined text-center hide-more-comments" data-kv-accordion aria-controls="ac-more-comments-body" aria-expanded="false">
+                Hide
+            </p>
+        </div>
+        {{#showSpilloverMessageForComments}}
+            <p class="ac-title black-underlined text-center show-more-comments" data-kv-accordion aria-controls="ac-more-comments-body" aria-expanded="false">
+                Show all comments
+            </p>
+        {{/showSpilloverMessageForComments}}
 	</div>
+    <ul class="spillover-comments inline-list" style="display: none;">
+        {{#spilloverComments}}
+            {{> 01-molecules/06-components/08-loan-comment}}
+        {{/spilloverComments}}
+    </ul>
 
 	{{#conversationGuidelinesHelpText}}
 		{{> 01-molecules/10-lightbox/04-help-text-lightbox}}

@@ -46,6 +46,20 @@ module.exports = function () {
 		}, 1000);
 	});
 
+	$('.show-more-comments').click(function() {
+		$('.comments').append($('.spillover-comments li').clone(true));
+		$('.show-more-comments').toggle();
+	});
+
+	$('.hide-more-comments').click(function() {
+		$('.show-more-comments').toggle();
+		$('.comments li:nth-child(n+16)').remove();
+
+		$('html, body').animate({
+			scrollTop: $('.show-more-comments').offset().top
+		}, 1000);
+	});
+
 	// button to reveal or hide the loan tag options
 	var tagToggler = $('.tag-toggler');
 	tagToggler.click(function () {
