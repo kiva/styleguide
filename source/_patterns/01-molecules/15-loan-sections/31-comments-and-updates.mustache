@@ -1,7 +1,7 @@
 <section class="comments-and-updates">
 	<h2 class="ac-title ac-container" data-kv-accordion aria-controls="ac-comments-and-updates-body" aria-expanded="false">
 		<div class="ac-title-text">
-			Comments &amp; Updates (<span class="comment-count">{{commentsCount}}</span>)
+			Comments &amp; Updates (<span class="comments-and-updates-count">{{commentsAndUpdatesCount}}</span>)
 		</div>
 		<span class="ac-dropdown-icon">
 			<svg class="icon icon-large-chevron loan-tags-dropdown">
@@ -51,7 +51,23 @@
                 {{> 01-molecules/06-components/08-loan-comment}}
 			{{/comments}}
 		</ul>
+
+        <div class="ac-body" id="ac-more-comments-body" aria-hidden="true">
+            <p class="ac-title black-underlined text-center hide-more-comments" data-kv-accordion aria-controls="ac-more-comments-body" aria-expanded="false">
+                Hide
+            </p>
+        </div>
+        {{#showSpilloverMessageForComments}}
+            <p class="ac-title black-underlined text-center show-more-comments" data-kv-accordion aria-controls="ac-more-comments-body" aria-expanded="false">
+                Show all comments
+            </p>
+        {{/showSpilloverMessageForComments}}
 	</div>
+    <ul class="spillover-comments inline-list" style="display: none;">
+        {{#spilloverComments}}
+            {{> 01-molecules/06-components/08-loan-comment}}
+        {{/spilloverComments}}
+    </ul>
 
 	{{#conversationGuidelinesHelpText}}
 		{{> 01-molecules/10-lightbox/04-help-text-lightbox}}
