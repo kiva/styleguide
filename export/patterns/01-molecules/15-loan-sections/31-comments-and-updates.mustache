@@ -10,31 +10,34 @@
 		</span>
 	</h2>
 	<div class="ac-body" id="ac-comments-and-updates-body" aria-hidden="true">
-		<form method="post" action="{{url}}" class="comment-form">
-			<fieldset>
-				<div class="field-container">
-					<label for="comment-field" style="display:none;">Comment</label>
-					<textarea id="comment-field" rows="8"></textarea>
-				</div>
-			</fieldset>
-		</form>
-		<small class="show-for-large-up convo-guideline-url">
-			<a class="black-underlined" data-reveal-id="conversation-guidelines-lightbox">
-				Kiva conversation guidelines
-			</a>
-		</small>
+        {{#allowCommenting}}
+            <form method="post" action="{{url}}" class="comment-form">
+                <fieldset>
+                    <div class="field-container">
+                        <label for="comment-field" style="display:none;">Comment</label>
+                        <textarea id="comment-field" rows="8"></textarea>
+                    </div>
+                </fieldset>
+            </form>
+            <small class="show-for-large-up convo-guideline-url">
+                <a class="black-underlined" data-reveal-id="conversation-guidelines-lightbox">
+                    Kiva conversation guidelines
+                </a>
+            </small>
 		<span class="comment-submit-block">
 			<button class="button setting comment-submit">Comment</button>
 			<small class="hide-for-large-up">
-				<a class="black-underlined" data-reveal-id="conversation-guidelines-lightbox">
-					Kiva conversation guidelines
-				</a>
-			</small>
+                <a class="black-underlined" data-reveal-id="conversation-guidelines-lightbox">
+                    Kiva conversation guidelines
+                </a>
+            </small>
 		</span>
 		<span class="subscribe-block">
 			<button class="button setting comment-subscribe">Subscribe</button>
 			<small>to be notified of replies</small>
 		</span>
+        {{/allowCommenting}}
+
         <ul class="updates inline-list">
             {{#updates}}
                 <li class="update">
