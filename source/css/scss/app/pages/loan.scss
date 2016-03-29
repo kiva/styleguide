@@ -962,26 +962,21 @@
 	.ac-body {
 		.comment-form fieldset {
 			border-style: none;
+			margin-bottom: 0;
 		}
 
-		.subscribe-block {
-			display: block;
-			padding-left: 1rem;
-			@media #{$large-up} {
-				display: inline;
-			}
-		}
-
-		.comment-submit-block {
+		.comment-submit-block, .subscribe-block, .unsubscribe-block {
 			padding-left: 1rem;
 		}
 
-		.convo-guideline-url {
-			@media #{$large-up} {
-				float: right;
-				margin-top: 0.4rem;
-				margin-right: 1.2rem;
-			}
+		.comment-submit, .comment-subscribe, .comment-unsubscribe {
+			width: 30%;
+			margin-right: 0.5rem;
+		}
+
+		.updates {
+			padding-left: 1rem;
+			padding-right: 1rem;
 		}
 
 		.comments {

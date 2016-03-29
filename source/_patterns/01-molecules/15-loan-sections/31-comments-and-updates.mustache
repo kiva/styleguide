@@ -19,27 +19,18 @@
                     </div>
                 </fieldset>
             </form>
-            <small class="show-for-large-up convo-guideline-url">
-                <a class="black-underlined" data-reveal-id="conversation-guidelines-lightbox">
-                    Kiva conversation guidelines
-                </a>
-            </small>
-            <span class="comment-submit-block">
+            <div class="comment-submit-block">
                 <button class="button setting comment-submit">Comment</button>
-                <small class="hide-for-large-up">
-                    <a class="black-underlined" data-reveal-id="conversation-guidelines-lightbox">
-                        Kiva conversation guidelines
-                    </a>
-                </small>
-            </span>
-            <span class="subscribe-block" {{#isSubscribed}}style="display: none"{{/isSubscribed}}>
+                <small><a class="black-underlined" data-reveal-id="conversation-guidelines-lightbox">Kiva conversation guidelines</a></small>
+            </div>
+            <div class="subscribe-block" {{#isSubscribed}}style="display: none"{{/isSubscribed}}>
                 <button class="button setting comment-subscribe">Subscribe</button>
                 <small>to be notified of replies</small>
-            </span>
-            <span class="unsubscribe-block" {{^isSubscribed}}style="display: none"{{/isSubscribed}}>
+            </div>
+            <div class="unsubscribe-block" {{^isSubscribed}}style="display: none"{{/isSubscribed}}>
                 <button class="button setting comment-unsubscribe">Unsubscribe</button>
                 <small>to not be notified of replies</small>
-            </span>
+            </div>
         {{/allowCommenting}}
 
         <ul class="updates inline-list">
