@@ -7,8 +7,10 @@
   },
   "conversationGuidelinesUrl": "",
   "allowCommenting": false,
+  "showSpilloverMessageForComments": false,
   "comments": [
     {
+      "commentId": 1,
       "commenterProfileUrl": "https://www.kiva.org/lender/spicey",
       "commenterImgUrl": "/images/borrower3.jpg",
       "commenterFirstName": "Claire",
@@ -19,6 +21,7 @@
       "isAdmin": true
     },
     {
+      "commentId": 2,
       "commenterProfileUrl": "https://www.kiva.org/lender/spicey",
       "commenterImgUrl": "/images/borrower3.jpg",
       "commenterFirstName": "Elaine",
@@ -29,6 +32,7 @@
       "isAdmin": true
     },
     {
+      "commentId": 3,
       "commenterProfileUrl": "https://www.kiva.org/lender/spicey",
       "commenterImgUrl": "/images/borrower3.jpg",
       "commenterFirstName": "John",
@@ -39,6 +43,7 @@
       "isAdmin": true
     }
   ],
+  "spilloverComments": [],
   "updates" : [
     {
       "title": "Thank you for your loan",
