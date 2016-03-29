@@ -8,6 +8,7 @@
   "conversationGuidelinesUrl": "",
   "allowCommenting": false,
   "showSpilloverMessageForComments": false,
+  "isSubscribed": false,
   "comments": [
     {
       "commentId": 1,
