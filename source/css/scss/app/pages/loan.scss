@@ -949,13 +949,20 @@
 }
 
 .comments-and-updates {
+	padding-left: 0;
+	padding-right: 0;
+
 	.ac-title {
 		position: relative;
-		.ac-title-text {
-			padding-left: 1rem;
+		display: flex;
+
+		h2 {
+			width: 80%;
+			margin-left: 1rem;
 		}
-		.icon-large-chevron {
-			top: 0;
+
+		.ac-dropdown-icon {
+			padding-top: 0.5rem;
 		}
 	}
 
@@ -970,7 +977,6 @@
 		}
 
 		.comment-submit, .comment-subscribe, .comment-unsubscribe {
-			width: 30%;
 			margin-right: 0.5rem;
 		}
 

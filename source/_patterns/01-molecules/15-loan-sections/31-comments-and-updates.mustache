@@ -1,14 +1,12 @@
 <section class="comments-and-updates">
-	<h2 class="ac-title ac-container" data-kv-accordion aria-controls="ac-comments-and-updates-body" aria-expanded="false">
-		<div class="ac-title-text">
-			Comments &amp; Updates (<span class="comments-and-updates-count">{{commentsAndUpdatesCount}}</span>)
-		</div>
-		<span class="ac-dropdown-icon">
+	<div class="ac-title ac-container" data-kv-accordion aria-controls="ac-comments-and-updates-body" aria-expanded="false">
+		<h2>Comments &amp; Updates (<span class="comments-and-updates-count">{{commentsAndUpdatesCount}}</span>)</h2>
+		<div class="ac-dropdown-icon">
 			<svg class="icon icon-large-chevron loan-tags-dropdown">
 				<use xlink:href="#icon-large-chevron"></use>
 			</svg>
-		</span>
-	</h2>
+		</div>
+	</div>
 	<div class="ac-body" id="ac-comments-and-updates-body" aria-hidden="true">
         {{#allowCommenting}}
             <form method="post" action="{{url}}" class="comment-form">
