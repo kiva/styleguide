@@ -970,14 +970,24 @@
 		.comment-form fieldset {
 			border-style: none;
 			margin-bottom: 0;
+			margin-top: 0;
 		}
 
 		.comment-submit-block, .subscribe-block, .unsubscribe-block {
 			padding-left: 1rem;
 		}
 
+		.subscribe-block, .unsubscribe-block {
+			padding-top: 2rem;
+			padding-bottom: 2rem;
+			margin-top: 0;
+			margin-bottom: 0;
+		}
+
 		.comment-submit, .comment-subscribe, .comment-unsubscribe {
 			margin-right: 0.5rem;
+			float: left;
+			width: 9rem;
 		}
 
 		.updates {
