@@ -1,24 +1,11 @@
 <li class="comment" id="comment-{{commentId}}">
-    {{#isBorrower}}
-        <a class="commenter-image borrower-image" href="{{commenterProfileUrl}}"><span class="circle-avatar" data-tooltip aria-haspopup="true" data-options="disable_for_touch:true;" title="{{commenterFirstName}}<br>{{commenterLocation}}" style="background-image:url({{commenterImgUrl}})"></span></a>
-        <div class="comment-content borrower-text">
-            <div class="comment-header ">{{commenterFirstName}}, {{#isBorrower}}Borrower{{/isBorrower}}{{^isBorrower}}Lender{{/isBorrower}} | {{commentTimestamp}}</div>
-            <div class="comment-text">{{{commentText}}}</div>
-            <div class="comment-actions"><a href="#">Reply</a> |
-                {{#isAdmin}}<a class="delete-comment" id="{{commentId}}" href="#">Delete</a>{{/isAdmin}}
-                {{^isAdmin}}<a href="">Flag as inappropriate</a>{{/isAdmin}}
-            </div>
+    <a {{#isBorrower}}class="commenter-image borrower-image"{{/isBorrower}}{{^isBorrower}}class="commenter-image non-borrower-image"{{/isBorrower}} href="{{commenterProfileUrl}}"><span class="circle-avatar" data-tooltip aria-haspopup="true" data-options="disable_for_touch:true;" title="{{commenterFirstName}}<br>{{commenterLocation}}" style="background-image:url({{commenterImgUrl}})"></span></a>
+    <div {{#isBorrower}}class="comment-content borrower-text"{{/isBorrower}}{{^isBorrower}}class="comment-content non-borrower-text"{{/isBorrower}}>
+        <div class="comment-header">{{commenterFirstName}}{{#commenterRole}}, {{commenterRole}}{{/commenterRole}} | {{commentTimestamp}}</div>
+        <div class="comment-text">{{{commentText}}}</div>
+        <div class="comment-actions"><a href="#">Reply</a> |
+            {{#isAdmin}}<a class="delete-comment" id="{{commentId}}" href="#">Delete</a>{{/isAdmin}}
+            {{^isAdmin}}<a href="">Flag as inappropriate</a>{{/isAdmin}}
         </div>
-    {{/isBorrower}}
-    {{^isBorrower}}
-        <a class="commenter-image non-borrower-image" href="{{commenterProfileUrl}}"><span class="circle-avatar" data-tooltip aria-haspopup="true" data-options="disable_for_touch:true;" title="{{commenterFirstName}}<br>{{commenterLocation}}" style="background-image:url({{commenterImgUrl}})"></span></a>
-        <div class="comment-content non-borrower-text">
-            <div class="comment-header">{{commenterFirstName}}{{#commenterRole}}, {{commenterRole}}{{/commenterRole}} | {{commentTimestamp}}</div>
-            <div class="comment-text">{{{commentText}}}</div>
-            <div class="comment-actions"><a href="#">Reply</a> |
-                {{#isAdmin}}<a class="delete-comment" id="{{commentId}}" href="#">Delete</a>{{/isAdmin}}
-                {{^isAdmin}}<a href="">Flag as inappropriate</a>{{/isAdmin}}
-            </div>
-        </div>
-    {{/isBorrower}}
+    </div>
 </li>
