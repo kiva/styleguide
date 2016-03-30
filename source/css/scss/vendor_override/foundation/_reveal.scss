@@ -1,7 +1,7 @@
 // Kiva overrides to default Foundation _reveal.scss
 div.reveal-modal-bg {
 	background-color: rgba(0,0,0,0.92);
-	overflow: scroll;
+	overflow-y: scroll;
 	-webkit-overflow-scrolling: touch;
 	z-index: 1504;
 
