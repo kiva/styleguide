@@ -13,9 +13,19 @@
         </span>
     </h2>
     <div class="ac-body" id="ac-loan-story-body" aria-hidden="false">
+
         {{#storyDescription}}
             <section class="loan-description">
-                <p>{{{.}}}</p>
+				{{#anonymize}}
+					<p>
+						<a data-reveal-id="anonymous-description-lightbox">
+							For the borrower's privacy, this loan has been made anonymous. Learn More.
+						</a>
+					</p>
+				{{/anonymize}}
+				{{^anonymize}}
+					<p>{{{.}}}</p>
+				{{/anonymize}}
             </section>
         {{/storyDescription}}
 
@@ -52,4 +62,8 @@
             </section>
         {{/translation}}
     </div>
+
+	{{#anonymize}}
+		{{> 01-molecules/10-lightbox/04-help-text-lightbox}}
+	{{/anonymize}}
 </section>
