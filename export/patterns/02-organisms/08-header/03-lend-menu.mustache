@@ -33,12 +33,12 @@
 	                <a href="#" data-kv-accordion aria-controls="lend-menu-personalized-panel" aria-expanded="false" class="section-title">My Kiva<svg class="icon icon-small-chevron-mobile"><use xlink:href="#icon-small-chevron-mobile" /></svg></a>
 	                <ul id="lend-menu-personalized-panel" aria-hidden="true">
 						{{#has_favorites}}
-							<li class="favorites-href-in-nav"><a href="{{favorites_href}}">Favorites</a></li>
-							<li class="no-favorites-href-in-nav hide"><a href="#" class="disabled">Favorites</a></li>
+							<li class="favorites-href-in-nav"><a href="{{favorites_href}}">Starred loans</a></li>
+							<li class="no-favorites-href-in-nav hide"><a href="#" class="disabled">Starred loans</a></li>
 						{{/has_favorites}}
 						{{^has_favorites}}
-							<li class="no-favorites-href-in-nav"><a href="#" class="disabled">Favorites</a></li>
-							<li class="favorites-href-in-nav hide"><a href="{{favorites_href}}">Favorites</a></li>
+							<li class="no-favorites-href-in-nav"><a href="#" class="disabled">Starred loans</a></li>
+							<li class="favorites-href-in-nav hide"><a href="{{favorites_href}}">Starred loans</a></li>
 						{{/has_favorites}}
 						{{#has_saved_searches}}
                             <li class="lend-menu-searches-li-mobile">
