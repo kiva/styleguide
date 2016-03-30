@@ -500,10 +500,11 @@
 
 .filters-done-button {
 	position: absolute;
-	right: 1px;
+	right: rem-calc(1);
 	top: 0;
-	margin-top: 10px;
-	margin-right: 10px;
+	margin-top: rem-calc(10);
+	margin-right: rem-calc(15);
+	font-size: .7rem;
 	@media #{$medium-up} {
 		display: none;
 	}
