@@ -44,7 +44,7 @@
 .about-zip {
 	position: relative;
 	.ac-title-text {
-		margin-right: 26px;
+		margin-right: rem-calc(26);
 	}
 	.ac-body {
 		margin-top: 2rem;
@@ -59,8 +59,8 @@
 		display: inline;
 	}
 	.icon {
-		width: 30px;
-		height: 30px;
+		width: rem-calc(30);
+		height: rem-calc(30);
 	}
 	.icon-large-chevron {
 		position: absolute;
@@ -319,7 +319,7 @@
 	.country-image {
 		padding-left: 0;
 		padding-right: 0;
-		top: rem-calc(3px);
+		top: rem-calc(3);
 	}
 	.country-text {
 		padding-right: 0;
@@ -594,7 +594,7 @@
 			color: $kiva-text-light;
 			fill: $kiva-text-light;
 			@media #{$medium-up}{
-				width: 54.8px;
+				width: rem-calc(54.8);
 			}
 		}
 	}
@@ -610,7 +610,7 @@
 		.risk-rating {
 			.icon {
 				height: 1rem;
-				width: 18px;
+				width: rem-calc(18);
 				fill: transparent;
 			}
 			.empty-star {
@@ -685,12 +685,12 @@
 		}
 	}
 	.lend-now-button {
-		padding-left: 5px;
+		padding-left: rem-calc(5);
 	}
 
 	.f-dropdown {
 		margin-top: 0;
-		max-width: 450px;
+		max-width: rem-calc(450);
 		border-top: none;
 		li a {
 			font-size: 1rem;
@@ -700,18 +700,19 @@
 	.proceed-to-checkout-button {
 		outline: none;
 		width: 100%;
-		padding-right: 0;
+		padding: 0;
 		font-size: 1.155556rem;
+		white-space:nowrap;
+
 		@media #{$xxlarge-up}{
 			font-size: 1.5555555556rem;
 		}
 
 		.icon {
-			width: 33px;
-			height: 33px;
-			position: absolute;
-			left: 10px;
-			top: 16px;
+			width: rem-calc(33);
+			height: rem-calc(33);
+			position: relative;
+			top: rem-calc(7);
 			fill: white;
 		}
 		&:hover{
@@ -728,8 +729,8 @@
 
 	#already-supported-message {
 		text-align: center;
-		padding-top: 10px;
-		padding-bottom: 10px;
+		padding-top: rem-calc(10);
+		padding-bottom: rem-calc(10);
 	}
 
 	.not-eligible-message {
@@ -766,7 +767,7 @@
 	.basket-buttons .columns {
 		padding: 0;
 		&:nth-child(2) {
-			padding: 0 1px;
+			padding: 0 rem-calc(1);
 		}
 	}
 	#already-supported-message-mobile {
@@ -790,7 +791,7 @@
 	}
 	.footer-basket-amount {
 		color: $white;
-		padding-top: 6px;
+		padding-top: rem-calc(6);
 	}
 
 	.lend-button-wrapper {
@@ -811,12 +812,12 @@
 
 		.icon {
 			z-index: 999;
-			width: 33px;
-			height: 33px;
+			width: rem-calc(33);
+			height: rem-calc(33);
 			position: absolute;
-			left: 10px;
+			left: rem-calc(10);
 			fill: white;
-			top: 10px;
+			top: rem-calc(10);
 		}
 	}
 
@@ -829,16 +830,16 @@
 			border: 0;
 			background: $kiva-accent-blue;
 			outline: none;
-			text-shadow: 0px 0px 0px $white;
+			text-shadow: 0 0 0 $white;
 			color: transparent;
-			font-size: 18px;
+			font-size: rem-calc(18);
 			font-weight: bold;
 			@media #{$medium-up} {
 				padding-left: 15%;
 			}
 		}
 		.lend-arrow {
-			width: 21px;
+			width: rem-calc(21);
 			fill: $white;
 			right: 3%;
 			top: 44%;
@@ -857,7 +858,7 @@
 	color: $white;
 	font-size: 1.556rem;
 	font-family: PostGrotesk, Arial, Helvetica, sans-serif;
-	line-height: 65px;
+	line-height: rem-calc(65);
 	padding: 0;
 	text-align: center;
 
@@ -897,12 +898,12 @@
 
 .browse-more-loans {
 	text-align: center;
-	margin-bottom: 10px;
+	margin-bottom: rem-calc(10);
 }
 
 .value-in-basket {
 	text-align: center;
-	margin-bottom: 10px;
+	margin-bottom: rem-calc(10);
 }
 
 .loan-use {
@@ -936,10 +937,10 @@
 
 .question-icon {
 	display: inline-block;
-	height: rem-calc(25px);
-	width: rem-calc(25px);
-	line-height: rem-calc(25px);
-	border: 1px solid transparent;
+	height: rem-calc(25);
+	width: rem-calc(25);
+	line-height: rem-calc(25);
+	border: rem-calc(1) solid transparent;
 	border-radius: 0.75rem;
 	margin: 0.25rem 0 0.25rem 0.25rem;
 	font-weight: $font-weight-bold;
