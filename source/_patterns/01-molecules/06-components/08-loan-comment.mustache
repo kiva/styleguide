@@ -10,7 +10,7 @@
         <div class="comment-text">{{{commentText}}}</div>
         <div class="comment-actions"><a href="#">Reply</a> |
             {{#isAdmin}}<a class="delete-comment" id="{{commentId}}" href="#">Delete</a>{{/isAdmin}}
-            {{^isAdmin}}<a href="">Flag as inappropriate</a>{{/isAdmin}}
+            {{#canFlag}}<a class="flag-comment" id="{{commentId}}" href="#">Flag as inappropriate</a>{{/canFlag}}
         </div>
     </div>
 </li>
