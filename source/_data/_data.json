@@ -1010,35 +1010,12 @@
 				"message": "$1,800 to go"
 			},
 			"is_regular": true,
-			"is_funded": false,
-			"is_lent_to": false,
-			"is_adding": false,
-			"is_in_basket": false
-		},
-		{
-			"name": "Senia Del Carmen",
-			"use": "A portion of Tuzamurane Group's $6,800 loan helps a member to buy more sorghum for sale.",
-			"location": {
-				"country": {
-					"name": "Argentina",
-					"iso_code": "ar"
-				}
-			},
-			"image": {
-				"url": "http://placehold.it/480x300.jpg",
-				"retina_url": "http://placehold.it/960x600.jpg"
-			},
-			"progress": {
-				"percent": 42,
-				"message": "$1,800 to go"
-			},
-			"is_regular": true,
-			"is_funded": false,
+			"is_ended": false,
 			"is_lent_to": false,
 			"is_adding": false,
 			"is_in_basket": false,
-			"expiring_soon": true,
-			"expiring_message": "Only 1 day left!"
+			"is_expiring_soon": true,
+			"expiring_soon_message": "Only 1 day left!"
 		},
 		{
 			"name": "Emprendedoras Group",
@@ -1058,7 +1035,7 @@
 				"message": "$1,800 to go"
 			},
 			"is_regular": false,
-			"is_funded": false,
+			"is_ended": false,
 			"is_lent_to": false,
 			"is_adding": true,
 			"is_in_basket": false
@@ -1081,7 +1058,7 @@
 				"message": "$1,800 to go"
 			},
 			"is_regular": false,
-			"is_funded": false,
+			"is_ended": false,
 			"is_lent_to": false,
 			"is_adding": false,
 			"is_in_basket": true,
@@ -1105,11 +1082,11 @@
 				"message": "$1,800 to go"
 			},
 			"is_regular": false,
-			"is_funded": false,
+			"is_ended": false,
 			"is_lent_to": true,
 			"is_adding": false,
 			"is_in_basket": false,
-			"expiring_soon": true,
+			"is_expiring_soon": true,
 			"show_loan_length": true,
 			"loan_length": "12 months"
 		},
@@ -1131,7 +1108,30 @@
 				"message": "Funded"
 			},
 			"is_regular": false,
-			"is_funded": true,
+			"is_ended": true,
+			"is_lent_to": false,
+			"is_adding": false,
+			"is_in_basket": false
+		},
+		{
+			"name": "Senia Del Carmen",
+			"use": "A portion of Tuzamurane Group's $6,800 loan helps a member to buy more sorghum for sale.",
+			"location": {
+				"country": {
+					"name": "Argentina",
+					"iso_code": "ar"
+				}
+			},
+			"image": {
+				"url": "http://placehold.it/480x300.jpg",
+				"retina_url": "http://placehold.it/960x600.jpg"
+			},
+			"progress": {
+				"percent": 0,
+				"message": "Expired"
+			},
+			"is_regular": false,
+			"is_ended": true,
 			"is_lent_to": false,
 			"is_adding": false,
 			"is_in_basket": false
