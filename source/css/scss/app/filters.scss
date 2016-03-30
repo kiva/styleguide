@@ -391,6 +391,13 @@
 			stroke: $kiva-text-light;
 		}
 	}
+	.button.view-results-button {
+		width: 100%;
+		height: $button-height-sm;
+		line-height: $button-height-sm;
+		font-size: $button-font-sm;
+		margin: 0;
+	}
 }
 
 .filter-button-group-ul {
@@ -491,17 +498,12 @@
 	vertical-align: middle;
 }
 
-.filters-close-icon {
+.filters-done-button {
 	position: absolute;
 	right: 1px;
 	top: 0;
 	margin-top: 10px;
 	margin-right: 10px;
-	.icon.icon-x {
-		stroke: $kiva-green;
-		height: 15px;
-		width: 15px;
-	}
 	@media #{$medium-up} {
 		display: none;
 	}
