@@ -949,39 +949,50 @@
 }
 
 .comments-and-updates {
-	.ac-title {
+	padding-left: 0;
+	padding-right: 0;
+
+	.comments-and-updates-title {
 		position: relative;
-		.ac-title-text {
-			padding-left: 1rem;
+		display: flex;
+
+		h2 {
+			width: 80%;
+			margin-left: 1rem;
 		}
-		.icon-large-chevron {
-			top: 0;
+
+		.ac-dropdown-icon {
+			padding-top: 0.5rem;
 		}
 	}
 
 	.ac-body {
 		.comment-form fieldset {
 			border-style: none;
+			margin-bottom: 0;
+			margin-top: 0;
 		}
 
-		.subscribe-block {
-			display: block;
-			padding-left: 1rem;
-			@media #{$large-up} {
-				display: inline;
-			}
-		}
-
-		.comment-submit-block {
+		.comment-submit-block, .subscribe-block, .unsubscribe-block {
 			padding-left: 1rem;
 		}
 
-		.convo-guideline-url {
-			@media #{$large-up} {
-				float: right;
-				margin-top: 0.4rem;
-				margin-right: 1.2rem;
-			}
+		.subscribe-block, .unsubscribe-block {
+			padding-top: 2rem;
+			padding-bottom: 2rem;
+			margin-top: 0;
+			margin-bottom: 0;
+		}
+
+		.comment-submit, .comment-subscribe, .comment-unsubscribe {
+			margin-right: 0.5rem;
+			float: left;
+			width: 9rem;
+		}
+
+		.updates {
+			padding-left: 1rem;
+			padding-right: 1rem;
 		}
 
 		.comments {

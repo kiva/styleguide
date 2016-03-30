@@ -1010,6 +1010,7 @@
 				"message": "$1,800 to go"
 			},
 			"is_regular": true,
+			"is_funded": false,
 			"is_lent_to": false,
 			"is_adding": false,
 			"is_in_basket": false
@@ -1032,6 +1033,7 @@
 				"message": "$1,800 to go"
 			},
 			"is_regular": true,
+			"is_funded": false,
 			"is_lent_to": false,
 			"is_adding": false,
 			"is_in_basket": false,
@@ -1056,6 +1058,7 @@
 				"message": "$1,800 to go"
 			},
 			"is_regular": false,
+			"is_funded": false,
 			"is_lent_to": false,
 			"is_adding": true,
 			"is_in_basket": false
@@ -1078,6 +1081,7 @@
 				"message": "$1,800 to go"
 			},
 			"is_regular": false,
+			"is_funded": false,
 			"is_lent_to": false,
 			"is_adding": false,
 			"is_in_basket": true,
@@ -1101,6 +1105,7 @@
 				"message": "$1,800 to go"
 			},
 			"is_regular": false,
+			"is_funded": false,
 			"is_lent_to": true,
 			"is_adding": false,
 			"is_in_basket": false,
@@ -1122,11 +1127,11 @@
 				"retina_url": "http://placehold.it/960x600.jpg"
 			},
 			"progress": {
-				"percent": 68,
-				"message": "68% repaid",
-				"repaying": true
+				"percent": 100,
+				"message": "Funded"
 			},
-			"is_regular": true,
+			"is_regular": false,
+			"is_funded": true,
 			"is_lent_to": false,
 			"is_adding": false,
 			"is_in_basket": false

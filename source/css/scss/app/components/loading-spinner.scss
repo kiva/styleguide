@@ -18,7 +18,7 @@
 		width: $line-width * 50%;
 		height: $line-length * 50%;
 		background: $line-bg-color;
-		animation: fade $length linear infinite running;
+		animation: fade $length linear infinite;
 	}
 
 	@for $num from 1 through $num-lines {

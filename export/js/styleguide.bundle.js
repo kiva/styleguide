@@ -20158,6 +20158,7 @@
 			if (tagToggler.text() != 'Close') {
 				tagToggler.text('Close');
 				allTags.css('height', 'auto');
+				$('#ac-loan-tags-body').css('height', 'auto');
 			}
 			else if ($('.selected-tags').children().size() > 0) {
 				tagToggler.text('Add more tags');
