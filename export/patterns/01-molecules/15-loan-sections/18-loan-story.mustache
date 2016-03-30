@@ -1,5 +1,5 @@
 <section class="loan-story">
-    <h2 class="ac-title ac-container" data-kv-accordion aria-controls="ac-loan-story-body" aria-expanded="false">
+    <h2 class="ac-title ac-container" data-kv-accordion aria-controls="ac-loan-story-body" aria-expanded="true">
         {{#previousLoanDetails}}
             Update on {{borrowerOrGroupName}}
         {{/previousLoanDetails}}
@@ -12,7 +12,7 @@
             </svg>
         </span>
     </h2>
-    <div class="ac-body" id="ac-loan-story-body" aria-hidden="true">
+    <div class="ac-body" id="ac-loan-story-body" aria-hidden="false">
         {{#storyDescription}}
             <section class="loan-description">
                 <p>{{{.}}}</p>
