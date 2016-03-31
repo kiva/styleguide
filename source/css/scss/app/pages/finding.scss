@@ -245,6 +245,27 @@ a.filter-menu-button:visited {
 	.exit-off-canvas {
 		left: $menu-base-width;
 	}
+
+	.results-overlay-text {
+		color: white;
+		text-align: center;
+		position: fixed;
+		top: 50%;
+		right: calc((100% - #{$filter-menu-base-width}) / 2);
+		transform: translate(50%, -50%);
+		max-width: calc(100% - #{$filter-menu-base-width});
+		.loan-count {
+			font-weight: bold;
+			line-height: 100%;
+		}
+		.small {
+			line-height: 110%;
+			opacity: .8;
+		}
+		.loading & {
+			display: none;
+		}
+	}
 }
 
 .move-right > .inner-wrap {

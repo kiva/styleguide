@@ -13,7 +13,14 @@
 		<!-- lightbox -->
 		{{> 01-molecules/10-lightbox/08-save-search-lightbox }}
 
-        <a class="exit-off-canvas hide-for-large-up" href="#"></a>
+        <a class="exit-off-canvas hide-for-large-up" href="#">
+			<div class="results-overlay-text">
+				<p class="loan-count">
+					<span class="count"></span> loans
+				</p>
+				<p><small>Tap to view results</small></p>
+			</div>
+		</a>
     </div>
 	<!-- loading overlay -->
 	{{> 01-molecules/13-lend/00-loading-overlay }}
