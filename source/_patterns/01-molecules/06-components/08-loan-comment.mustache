@@ -8,7 +8,7 @@
             {{commenterFirstName}}{{#commenterRole}}, {{commenterRole}}{{/commenterRole}}<br>{{commentTimestamp}}
         </div>
         <div class="comment-text">{{{commentText}}}</div>
-        <div class="comment-actions"><a href="#">Reply</a> |
+        <div class="comment-actions">
             {{#isAdmin}}<a class="delete-comment" id="{{commentId}}" href="#">Delete</a>{{/isAdmin}}
             {{^isAdmin}}<a href="">Flag as inappropriate</a>{{/isAdmin}}
         </div>
