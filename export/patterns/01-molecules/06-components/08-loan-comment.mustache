@@ -9,8 +9,8 @@
         </div>
         <div class="comment-text">{{{commentText}}}</div>
         <div class="comment-actions">
-            {{#isAdmin}}<a class="delete-comment" id="{{commentId}}" href="#">Delete</a>{{/isAdmin}}
-            {{^isAdmin}}<a href="">Flag as inappropriate</a>{{/isAdmin}}
+            {{#isLoggedInUserAdmin}}<a class="delete-comment" id="{{commentId}}" href="#">Delete</a>{{/isLoggedInUserAdmin}}
+            {{^isLoggedInUserAdmin}}<a href="">Flag as inappropriate</a>{{/isLoggedInUserAdmin}}
         </div>
     </div>
 </li>

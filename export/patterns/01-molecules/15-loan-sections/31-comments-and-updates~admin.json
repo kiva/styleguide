@@ -1,4 +1,5 @@
 {
+  "isLoggedInUserAdmin": true,
   "commentsAndUpdatesCount": 4,
   "conversationGuidelinesHelpText": {
     "dataRevealId": "conversation-guidelines-lightbox",
@@ -15,11 +16,10 @@
       "commenterImgUrl": "/images/borrower3.jpg",
       "commenterFirstName": "Claire",
       "commenterLocation": "New York, NY",
-      "commenterRole": "Kiva Staff",
+      "commenterRole": null,
       "commentTimestamp": "June 2, 2015 4:41 pm PDT",
       "commentText": "I had a dream to make my organization, nevertheless I didn't have got enough of money to do this. Thank goodness my friend advised to use the personal loans.",
-      "isBorrower": false,
-      "isAdmin": true
+      "isBorrower": false
     },
     {
       "commentId": 2,
@@ -30,8 +30,7 @@
       "commenterRole": "Kiva Staff",
       "commentTimestamp": "June 4, 2015 9:41 pm",
       "commentText": "Having lived in Bolivia and knowing the difficulties of the people of the country, I am delighted to hear about IMPRO and its support. Thank you for the update. I feel lucky to be able to have a small part of Kiva in order to help our Bolivian brothers and sisters.",
-      "isBorrower": false,
-      "isAdmin": true
+      "isBorrower": false
     },
     {
       "commentId": 3,
@@ -39,11 +38,10 @@
       "commenterImgUrl": "/images/borrower3.jpg",
       "commenterFirstName": "John",
       "commenterLocation": "Queens, NY",
-      "commenterRole": "Kiva Staff",
+      "commenterRole": null,
       "commentTimestamp": "June 8, 2015 6:11 pm",
       "commentText": "Dear Alexis,<br>Thank you for the news you share with Kiva's friends. And thank you mainly for your work in Bolivia. Thank you friends!<br>-John",
-      "isBorrower": true,
-      "isAdmin": true
+      "isBorrower": true
     }
   ],
   "spilloverComments": [],
