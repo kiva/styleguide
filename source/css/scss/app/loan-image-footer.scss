@@ -39,11 +39,6 @@
 		opacity: 1;
 	}
 
-	.favorite-link:hover .icon-star{
-		color: $vivid-yellow;
-		opacity: .8;
-	}
-
 	.icon-star {
 		background-color: $charcoal;
 		color: $white;
@@ -53,12 +48,5 @@
 		padding: rem-calc(8);
 		opacity: .5;
 		vertical-align: bottom;
-	}
-}
-
-.touch {
-	.loan-image-footer {
-		.favorite-link:hover .icon-star{
-		}
 	}
 }
