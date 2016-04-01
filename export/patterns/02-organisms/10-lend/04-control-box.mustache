@@ -24,7 +24,9 @@
 
 </div>
 <div class="secondary-nav filter-loan-count {{#is-category-page}}hide{{/is-category-page}}">
-	{{loan-count}} loans
+	{{#loan-count}}
+		{{.}} loans
+	{{/loan-count}}
 	{{#show-clear}}<span class="desktop-clear-button"><a href="#" class="hide-for-small filter-links filter-clear-button clear-touch">Clear filters</a></span>{{/show-clear}}
 	{{#show-save-search}}<span><a href="#" class="hide-for-small filter-links save-search-button clear-touch"
 			 data-reveal-id="save-search-modal">Save this search</a></span>{{/show-save-search}}

@@ -1,24 +1,29 @@
 <div class="current-status-meter">
-    <div class="amount-raised">
-        <h2 class="green-bolded inline">
-            {{amountRaisedPercent}}%
-        </h2>
+	<h2 class="green-bolded inline">
+		{{#status}}
+			{{.}}
+		{{/status}}
+	</h2>
+	<div class="amount-raised">
+		<h2 class="green-bolded inline">
+			{{meterAmountPercent}}%
+		</h2>
 
-        <div class="inline">funded, ${{amountLeft}} to go</div>
-    </div>
+		<div class="inline">funded, ${{amountLeft}} to go</div>
+	</div>
 
-    <div class="fundraising-meter progress">
-        <span class="meter" style="width: {{amountRaisedPercent}}%"></span>
-    </div>
+	<div class="fundraising-meter progress">
+		<span class="meter" style="width: {{amountRaisedPercent}}%"></span>
+	</div>
 
-    <div class="raised-info row">
-        <div class="loan-total">
-            Total loan: ${{totalLoanAmount}}
-        </div>
-        {{#lenderCount}}
-            <a href="#lenders-teams" class="lender-count black-underlined">
-                Powered by {{lenderCount}} lenders
-            </a>
-        {{/lenderCount}}
-    </div>
+	<div class="raised-info row">
+		<div class="loan-total">
+			Total loan: ${{totalLoanAmount}}
+		</div>
+		{{#lenderCount}}
+			<a href="#lenders-teams" class="lender-count black-underlined">
+				Powered by {{lenderCount}} lenders
+			</a>
+		{{/lenderCount}}
+	</div>
 </div>
