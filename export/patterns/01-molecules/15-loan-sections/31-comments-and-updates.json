@@ -1,5 +1,6 @@
 {
   "isLoggedInUserAdmin": false,
+  "allowSubscribing": true,
   "commentsAndUpdatesCount": 19,
   "conversationGuidelinesHelpText": {
     "dataRevealId": "conversation-guidelines-lightbox",
