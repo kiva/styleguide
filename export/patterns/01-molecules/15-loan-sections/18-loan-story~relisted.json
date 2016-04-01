@@ -19,10 +19,14 @@
       "pictured": false
     }
   ],
-  "previousLoanDetails": {
-    "previousLoanLink": "http://www.kiva.org/lend/991638",
-    "previousLoanDescriptionBlurb": "John applied for his second loan of KES 25,000 from Vision Fund Kenya to buy a brown dairy cow so that he can increase the amount of chocolate milk he supplies and thereby earn more income. He plans to use part of the chocolate milk to make chocolate bars and the rest will be served with chocolate "
-  },
+  "showPreviousLoanDetails": true,
+  "showAllPreviousLoanDetails": true,
+  "previousLoanDescription": "John applied for his second loan of KES 25,000 from Vision Fund Kenya to buy a brown dairy cow so that he can increase the amount of chocolate milk he supplies and thereby earn more income. He plans to use part of the chocolate milk to make chocolate bars and the rest will be served with chocolate ",
+  "allPreviousLoanDescriptions" : [
+    "Another loan John's took out before that we will talk about now.",
+    "Another another loan John's took out before that we will talk about now.",
+    "Another another another loan John's took out before that we will talk about now."
+  ],
   "translation": {
     "language": "Spanish",
     "reviewerName": "Tayah Wheeland",
