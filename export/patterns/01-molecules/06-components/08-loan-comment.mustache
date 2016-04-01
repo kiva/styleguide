@@ -10,7 +10,9 @@
         <div class="comment-text">{{{commentText}}}</div>
         <div class="comment-actions">
             {{#isLoggedInUserAdmin}}<a class="delete-comment" id="{{commentId}}" href="#">Delete</a>{{/isLoggedInUserAdmin}}
-            {{^isLoggedInUserAdmin}}<a href="">Flag as inappropriate</a>{{/isLoggedInUserAdmin}}
+			{{#canFlag}}<a class="flag-comment" id="{{commentId}}" data-reveal-id="flag-comment-lightbox-{{commentId}}" href="#">Flag as inappropriate</a>{{/canFlag}}
+			{{#timeFlagged}}<span class="flagged">Flagged on {{timeFlagged}}</span>{{/timeFlagged}}
+			{{> 01-molecules/10-lightbox/10-flag-comment-lightbox}}
         </div>
     </div>
 </li>
