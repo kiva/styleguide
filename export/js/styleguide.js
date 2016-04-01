@@ -1512,7 +1512,8 @@ define("Styleguide", ["jquery"], function(__WEBPACK_EXTERNAL_MODULE_2__) { retur
 
 
 	/*** EXPORTS FROM exports-loader ***/
-	module.exports = window.Modernizr}.call(window));
+	module.exports = window.Modernizr
+	}.call(window));
 
 /***/ },
 /* 4 */
@@ -20148,6 +20149,21 @@ define("Styleguide", ["jquery"], function(__WEBPACK_EXTERNAL_MODULE_2__) { retur
 			$('html, body').animate({
 				scrollTop: $('.show-more-comments').offset().top
 			}, 1000);
+		});
+
+		$('.show-previous-loan-details').click(function() {
+			$('.show-previous-loan-details').toggle();
+		});
+
+		$('.hide-previous-loan-details').click(function() {
+			$('.show-previous-loan-details').toggle();
+			$('html, body').animate({
+				scrollTop: $('.loan-story').offset().top
+			}, 1000);
+		});
+
+		$('.show-all-previous-loan-details').click(function() {
+			$('.show-all-previous-loan-details').toggle();
 		});
 
 		// button to reveal or hide the loan tag options

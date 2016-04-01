@@ -7,6 +7,10 @@
   ],
   "borrowersList": "Sarah, John, Anna*",
   "previousLoanDetails": null,
+  "showPreviousLoanDetails": false,
+  "showAllPreviousLoanDetails": false,
+  "previousLoanDescription": null,
+  "allPreviousLoanDescriptions" : [],
   "translation": {
     "language": "Spanish",
     "reviewerName": "Tayah Wheeland",

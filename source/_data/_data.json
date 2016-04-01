@@ -1058,7 +1058,7 @@
 				"message": "$1,800 to go"
 			},
 			"is_regular": false,
-			"is_ended": false,
+			"is_ended": true,
 			"is_lent_to": false,
 			"is_adding": false,
 			"is_in_basket": true,
