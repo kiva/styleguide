@@ -60,6 +60,21 @@ module.exports = function () {
 		}, 1000);
 	});
 
+	$('.show-previous-loan-details').click(function() {
+		$('.show-previous-loan-details').toggle();
+	});
+
+	$('.hide-previous-loan-details').click(function() {
+		$('.show-previous-loan-details').toggle();
+		$('html, body').animate({
+			scrollTop: $('.loan-story').offset().top
+		}, 1000);
+	});
+
+	$('.show-all-previous-loan-details').click(function() {
+		$('.show-all-previous-loan-details').toggle();
+	});
+
 	// button to reveal or hide the loan tag options
 	var tagToggler = $('.tag-toggler');
 	tagToggler.click(function () {
