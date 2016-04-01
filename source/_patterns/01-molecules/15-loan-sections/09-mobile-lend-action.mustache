@@ -1,4 +1,5 @@
-{{^amountInBasket}}
+{{^is_ended}}
+	{{^amountInBasket}}
     <div class="mobile-lend-action show-for-medium-down row mobile-lend-action-default">
         {{#alreadyLent}}
             <div id="already-supported-message-mobile" class="columns small-12">You've supported this loan</div>
@@ -41,4 +42,5 @@
     {{#lendActionHelpText}}
         {{> 01-molecules/10-lightbox/04-help-text-lightbox}}
     {{/lendActionHelpText}}
-{{/amountInBasket}}
+	{{/amountInBasket}}
+{{/is_ended}}
