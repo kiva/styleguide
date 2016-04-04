@@ -28,10 +28,12 @@
 				list-style: disc;
 			}
 		}
+
+		&.irs-filings {
+			margin-bottom: 0;
+		}
 	}
-	#archive{
-		width: rem-calc(200);
-	}
+
 	.pdf-version{
 		margin-left: rem-calc(20);
 	}
@@ -42,6 +44,20 @@
 				
 		cite a{
 			color:$kiva-textlink;
+		}
+	}
+
+	.archives-title {
+		max-width: 500px;
+		border-bottom: 1px solid #d8d8d8;
+		cursor: pointer;
+
+		.ac-dropdown-icon {
+			float: right;
+		}
+		.ac-dropdown-icon .icon {
+			position: relative;
+			right: 0;
 		}
 	}
 }
