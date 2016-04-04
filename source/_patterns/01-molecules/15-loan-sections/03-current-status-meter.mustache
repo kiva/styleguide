@@ -1,13 +1,15 @@
 <div class="current-status-meter">
 	<h2 class="green-bolded inline">
 		{{#status}}
-			{{.}}
+			{{status}}
 		{{/status}}
 	</h2>
 	<div class="amount-raised">
-		<h2 class="green-bolded inline">
-			{{meterAmountPercent}}%
-		</h2>
+		{{#meterAmountPercent}}
+			<h2 class="green-bolded inline">
+				{{meterAmountPercent}}%
+			</h2>
+		{{/meterAmountPercent}}
 
 		<div class="inline">funded, ${{amountLeft}} to go</div>
 	</div>
