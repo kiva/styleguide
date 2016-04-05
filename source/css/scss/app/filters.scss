@@ -142,6 +142,16 @@
 		}
 	}
 
+	small {
+		color: $gray;
+		margin: -0.5rem 0.8rem 0;
+		display: block;
+
+		a {
+			padding: 0 !important;
+		}
+	}
+
 	.interact {
 		color: $charcoal;
 		font-weight: normal;
