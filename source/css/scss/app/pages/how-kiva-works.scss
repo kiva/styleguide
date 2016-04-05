@@ -279,12 +279,13 @@
 	}
 
 	.choose-borrower-frame {
-		border: rem-calc(1) solid #26b6e8;
+		border: rem-calc(1) solid $kiva-accent-blue;
 		margin: 0 auto;
 		width: rem-calc(225);
 
 		:hover {
-			background-color: #26b6e8;
+			color: $kiva-textlink-hovered;
+			background-color: $kiva-accent-blue;
 			opacity: 0.8;
 		}
 
