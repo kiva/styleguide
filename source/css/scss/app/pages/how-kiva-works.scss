@@ -279,14 +279,8 @@
 	}
 
 	.choose-borrower-frame {
-		border: rem-calc(1) solid white;
 		margin: 0 auto;
 		width: rem-calc(225);
-
-		:hover {
-			background-color: #FFF;
-			opacity: 0.8;
-		}
 
 		.choose-borrower-text {
 			margin: auto auto;
@@ -295,7 +289,6 @@
 	}
 
 	.choose-borrower-frame:hover .choose-borrower-text {
-		color: $kiva-text-dark;
+		color: $white;
 	}
 }
-
