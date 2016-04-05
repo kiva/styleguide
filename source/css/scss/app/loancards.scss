@@ -8,6 +8,18 @@ $loan-card-meter-height: $loan-card-footer-height/2;
     max-width: rem-calc(480);
     margin: auto;
 
+	.loading & {
+		opacity: 0.2;
+	}
+
+	.move-right.loading & {
+		opacity: 1;
+
+		@media #{$large-up} {
+			opacity: 0.2;
+		}
+	}
+
 	.borrower-img-wrap {
         position: relative;
         display: block;
@@ -186,8 +198,10 @@ $loan-card-meter-height: $loan-card-footer-height/2;
     }
 
     .button.success {
-        &, &:hover, &:active, &:visited, &:focus {
-            background-color: $kiva-navdivider-green;
+		background-color: $kiva-navdivider-green;
+
+		&:hover, &:active {
+            background-color: $kiva-icon-green;
         }
     }
 

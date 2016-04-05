@@ -23,15 +23,13 @@
     </div>
 
     <div class="borrower-footer-wrap">
-        <div class="fundraising-meter progress {{#progress.repaying}}repaying{{/progress.repaying}}">
+        <div class="fundraising-meter progress">
             <span class="meter" style="width:{{progress.percent}}%"></span>
             <span class="caption">{{progress.message}}</span>
         </div>
 
-        {{^progress.repaying}}
-			<div class="bottom-bar-region">
-				{{> molecules-bottom-bar }}
-			</div>
-        {{/progress.repaying}}
+		<div class="bottom-bar-region">
+			{{> molecules-bottom-bar }}
+		</div>
     </div>
 </div>

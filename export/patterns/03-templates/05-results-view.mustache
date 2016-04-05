@@ -1,4 +1,4 @@
-<div class="off-canvas-wrap {{#is-category-page}}hide-filters-for-xxlarge-up{{/is-category-page}}{{^is-category-page}}show-filters-for-xxlarge-up{{/is-category-page}}" data-offcanvas>
+<div class="off-canvas-wrap {{#is-category-page}}hide-filters-for-xxlarge-up{{/is-category-page}}{{^is-category-page}}show-filters-for-xxlarge-up{{/is-category-page}} {{#is-loading}}loading{{/is-loading}}" data-offcanvas>
     <div class="inner-wrap">
 
         <!-- filters -->
@@ -15,4 +15,6 @@
 
         <a class="exit-off-canvas hide-for-large-up" href="#"></a>
     </div>
+	<!-- loading overlay -->
+	{{> 01-molecules/13-lend/00-loading-overlay }}
 </div>

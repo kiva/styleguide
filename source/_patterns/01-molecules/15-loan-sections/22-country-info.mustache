@@ -12,47 +12,32 @@
             <div id="mapPane"></div>
         </div>
         <div class="country-stats">
-            {{#fieldPartnerLoanStats}}
-                <ul class="small-block-grid-1 medium-block-grid-1 large-block-grid-2">
+            <ul class="small-block-grid-1 medium-block-grid-1 large-block-grid-2">
+                <li>
+                    <strong>Average annual income (USD):</strong>
+                    <div class="data-point featured">{{avgAnnualIncome}}</div>
+                </li>
+                <li>
+                    <strong>Funds lent in {{countryName}}:</strong>
+                    <div class="data-point featured">{{#fundsLentInCountry}}{{fundsLentInCountry}}{{/fundsLentInCountry}}{{^fundsLentInCountry}}&nbsp;{{/fundsLentInCountry}}</div>
+                </li>
+                {{#inUSD}}
                     <li>
-                        <strong>Average annual income (USD):</strong>
-                        <div class="data-point featured">{{avgAnnualIncome}}</div>
+                        <strong>Loan transacted in USD</strong>
+                        <div class="data-point featured">U.S. dollars</div>
                     </li>
+                {{/inUSD}}
+                {{^inUSD}}
                     <li>
-                        <strong>Funds lent in {{countryName}}:</strong>
-                        <div class="data-point featured">{{#fundsLentInCountry}}{{fundsLentInCountry}}{{/fundsLentInCountry}}{{^fundsLentInCountry}}&nbsp;{{/fundsLentInCountry}}</div>
+                        <strong>{{currencyFullName}} ({{currencyCode}}) = $1:</strong>
+                        <div class="data-point featured">{{exchangeRate}}</div>
                     </li>
-                    {{#inUSD}}
-                        <li>
-                            <strong>Loan transacted in USD</strong>
-                            <div class="data-point featured">U.S. dollars</div>
-                        </li>
-                    {{/inUSD}}
-                    {{^inUSD}}
-                        <li>
-                            <strong>{{currencyFullName}} ({{currencyCode}}) = $1:</strong>
-                            <div class="data-point featured">{{exchangeRate}}</div>
-                        </li>
-                    {{/inUSD}}
-                    <li>
-                        <strong>Loans currently fundraising:</strong>
-                        <div class="data-point featured">{{numLoansFundraising}}</div>
-                    </li>
-                </ul>
-            {{/fieldPartnerLoanStats}}
-            {{#directLoanStats}}
-                <ul class="small-block-grid-1 medium-block-grid-1 large-block-grid-2">
-                    <li>
-                        <strong>Loans to ethnic minorities:</strong>
-                        <div class="data-point featured">{{percentLoansToMinorities}}</div>
-                    </li>
-                    <li>
-                        <strong>Comments per loan:</strong>
-                        <div class="data-point featured">{{commentsPerLoan}}</div>
-                    </li>
-                </ul>
-
-            {{/directLoanStats}}
+                {{/inUSD}}
+                <li>
+                    <strong>Loans currently fundraising:</strong>
+                    <div class="data-point featured">{{numLoansFundraising}}</div>
+                </li>
+            </ul>
         </div>
     </div>
 </section>

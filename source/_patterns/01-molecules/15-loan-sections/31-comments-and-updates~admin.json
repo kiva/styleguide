@@ -1,0 +1,58 @@
+{
+  "isLoggedInUserAdmin": true,
+  "allowSubscribing": false,
+  "commentsAndUpdatesCount": 4,
+  "conversationGuidelinesHelpText": {
+    "dataRevealId": "conversation-guidelines-lightbox",
+    "descriptionTitle": "What are lender comments?",
+    "descriptionText": "Lender comments were designed to encourage conversation between Kiva lenders about specific loans and are viewable by anyone visiting Kiva. Comments on a loan can only be made by lenders who've supported that loan and should abide by Kiva's Community Guidelines: kiva.org/kiva-community-guidelines<br><br>By posting a comment you'll automatically be subscribed to email notifications of future comments on that loan, however you can always unsubscribe in your email settings. "
+  },
+  "allowCommenting": false,
+  "showSpilloverMessageForComments": false,
+  "isSubscribed": false,
+  "comments": [
+    {
+      "commentId": 1,
+      "commenterProfileUrl": "https://www.kiva.org/lender/spicey",
+      "commenterImgUrl": "/images/borrower3.jpg",
+      "commenterFirstName": "Claire",
+      "commenterLocation": "New York, NY",
+      "commenterRole": null,
+      "commentTimestamp": "June 2, 2015 4:41 pm PDT",
+      "commentText": "I had a dream to make my organization, nevertheless I didn't have got enough of money to do this. Thank goodness my friend advised to use the personal loans.",
+      "isBorrower": false
+    },
+    {
+      "commentId": 2,
+      "commenterProfileUrl": "https://www.kiva.org/lender/spicey",
+      "commenterImgUrl": "/images/borrower3.jpg",
+      "commenterFirstName": "Elaine",
+      "commenterLocation": "Brooklyn, NY",
+      "commenterRole": "Kiva Staff",
+      "commentTimestamp": "June 4, 2015 9:41 pm",
+      "commentText": "Having lived in Bolivia and knowing the difficulties of the people of the country, I am delighted to hear about IMPRO and its support. Thank you for the update. I feel lucky to be able to have a small part of Kiva in order to help our Bolivian brothers and sisters.",
+      "isBorrower": false
+    },
+    {
+      "commentId": 3,
+      "commenterProfileUrl": "https://www.kiva.org/lender/spicey",
+      "commenterImgUrl": "/images/borrower3.jpg",
+      "commenterFirstName": "John",
+      "commenterLocation": "Queens, NY",
+      "commenterRole": null,
+      "commentTimestamp": "June 8, 2015 6:11 pm",
+      "commentText": "Dear Alexis,<br>Thank you for the news you share with Kiva's friends. And thank you mainly for your work in Bolivia. Thank you friends!<br>-John",
+      "isBorrower": true
+    }
+  ],
+  "spilloverComments": [],
+  "updates" : [
+    {
+      "title": "Thank you for your loan",
+      "url": "https://www.kiva.org/lender/spicey",
+      "authorName": "Alex Guild",
+      "authorLocation": "La Paz, Bolivia",
+      "date": "June 2, 2015"
+    }
+  ]
+}

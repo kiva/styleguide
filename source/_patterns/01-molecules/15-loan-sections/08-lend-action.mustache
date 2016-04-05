@@ -1,4 +1,10 @@
-{{^amountInBasket}}
+{{#is_ended}}
+	<div class="show-for-large-up lend-action">
+		<a href="{{lend_href}}" class="button secondary find-new-loan">Find a new loan</a>
+	</div>
+{{/is_ended}}
+{{^is_ended}}
+	{{^amountInBasket}}
     <div class="show-for-large-up row lend-action">
         {{#alreadyLent}}
             <div id="already-supported-message" class="columns small-12">You've supported this loan</div>
@@ -45,4 +51,5 @@
     {{#lendActionHelpText}}
         {{> 01-molecules/10-lightbox/04-help-text-lightbox}}
     {{/lendActionHelpText}}
-{{/amountInBasket}}
+	{{/amountInBasket}}
+{{/is_ended}}
