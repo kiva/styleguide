@@ -62,6 +62,10 @@
 					padding-left: 0;
 					padding-right: 0;
 				}
+
+				&.loan-description, &.all-previous-loan-details, &.previous-loan-details {
+					padding-left: 0;
+				}
 			}
 			@media #{$large-up} {
 				flex-basis: auto;

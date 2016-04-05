@@ -1,5 +1,5 @@
 <section class="loan-story">
-    <h2 class="ac-title ac-container" data-kv-accordion aria-controls="ac-loan-story-body" aria-expanded="false">
+    <h2 class="ac-title ac-container" data-kv-accordion aria-controls="ac-loan-story-body" aria-expanded="true">
         {{#previousLoanDetails}}
             Update on {{borrowerOrGroupName}}
         {{/previousLoanDetails}}
@@ -12,10 +12,20 @@
             </svg>
         </span>
     </h2>
-    <div class="ac-body" id="ac-loan-story-body" aria-hidden="true">
+    <div class="ac-body" id="ac-loan-story-body" aria-hidden="false">
+
         {{#storyDescription}}
             <section class="loan-description">
-                <p>{{{.}}}</p>
+				{{#anonymize}}
+					<p>
+						<a data-reveal-id="anonymous-description-lightbox">
+							For the borrower's privacy, this loan has been made anonymous. Learn More.
+						</a>
+					</p>
+				{{/anonymize}}
+				{{^anonymize}}
+					<p>{{{.}}}</p>
+				{{/anonymize}}
             </section>
         {{/storyDescription}}
 
@@ -26,12 +36,32 @@
             </p>
         {{/borrowersList}}
 
-        {{#previousLoanDetails}}
+        <div class="ac-body" id="ac-previous-loan-details-body" aria-hidden="true">
             <section class="previous-loan-details">
                 <h2>Previous loan details</h2>
-                <p>{{{previousLoanDescriptionBlurb}}} ... <a href="{{previousLoanLink}}">More from {{borrowerOrGroupName}}'s previous loan »</a></p>
+                <p>{{{previousLoanDescription}}}</p>
+                <div class="ac-body" id="ac-all-previous-loan-details-body" aria-hidden="true">
+                    <section class="all-previous-loan-details">
+                        {{#allPreviousLoanDescriptions}}
+                            <p>{{{.}}}</p>
+                        {{/allPreviousLoanDescriptions}}
+                    </section>
+                </div>
+                {{#showAllPreviousLoanDetails}}
+                    <p class="ac-title black-underlined text-center show-all-previous-loan-details" data-kv-accordion aria-controls="ac-all-previous-loan-details-body" aria-expanded="false">
+                        Show all previous loans
+                    </p>
+                {{/showAllPreviousLoanDetails}}
             </section>
-        {{/previousLoanDetails}}
+            <p class="ac-title black-underlined text-center hide-previous-loan-details" data-kv-accordion aria-controls="ac-previous-loan-details-body" aria-expanded="false">
+                Hide
+            </p>
+        </div>
+        {{#showPreviousLoanDetails}}
+            <p class="ac-title black-underlined text-center show-previous-loan-details" data-kv-accordion aria-controls="ac-previous-loan-details-body" aria-expanded="false">
+                Show previous loan details
+            </p>
+        {{/showPreviousLoanDetails}}
 
         {{#translation}}
             <section class="loan-translation ac-container">
@@ -52,4 +82,8 @@
             </section>
         {{/translation}}
     </div>
+
+	{{#anonymize}}
+		{{> 01-molecules/10-lightbox/04-help-text-lightbox}}
+	{{/anonymize}}
 </section>

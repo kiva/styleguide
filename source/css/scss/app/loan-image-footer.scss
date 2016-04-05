@@ -29,6 +29,7 @@
 	}
 
 	.favorite-link {
+		background-image: url("about:blank");
 		position: absolute;
 		bottom: 0;
 		right: 0;
@@ -37,11 +38,6 @@
 	.favorite-link.is-favorite .icon-star {
 		color: $vivid-yellow;
 		opacity: 1;
-	}
-
-	.favorite-link:hover .icon-star{
-		color: $vivid-yellow;
-		opacity: .8;
 	}
 
 	.icon-star {

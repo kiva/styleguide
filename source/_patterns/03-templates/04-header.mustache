@@ -27,7 +27,7 @@
 					<a data-dropdown="about-dropdown" aria-controls="about-dropdown" aria-expanded="false" class="header-button" href="#">About <svg class="icon"><use xlink:href="#icon-triangle" /></svg></a>
 				</div>
 				<div id="top-basket-button" class="show-for-large-up large-4 columns">
-					<a class="header-button" href="{{basket_href}}"><span class="amount {{^basket.item_count}}hide{{/basket.item_count}}">{{basket.item_count}}</span> Basket</a>
+					<a class="header-button {{#is_free_trial_eligible}}hidden{{/is_free_trial_eligible}}" href="{{basket_href}}"><span class="amount {{^basket.item_count}}hide{{/basket.item_count}}">{{basket.item_count}}</span> Basket</a>
 				</div>
 				<div class="small-6 large-4 columns">
 					<a class="header-button" href="{{login_href}}">Sign in</a>
@@ -37,7 +37,7 @@
 		{{^is-visitor}}
 			<div class="small-3-8ths xxlarge-2 columns header-column right-side">
 				<div id="top-basket-button" class="show-for-large-up large-6 columns">
-					<a class="header-button" href="{{basket_href}}"><span class="amount {{^basket.item_count}}hide{{/basket.item_count}}">{{basket.item_count}}</span> Basket</a>
+					<a class="header-button {{#is_free_trial_eligible}}hidden{{/is_free_trial_eligible}}" href="{{basket_href}}"><span class="amount {{^basket.item_count}}hide{{/basket.item_count}}">{{basket.item_count}}</span> Basket</a>
 				</div>
 				<div class="small-12 large-6 columns">
 					<a data-dropdown="my-kiva-dropdown" aria-controls="my-kiva-dropdown" aria-expanded="false" class="header-button my-kiva" href="#">
@@ -78,4 +78,4 @@
 
 </div>
 
-<div id="mobile-basket-button" class="basket-bar {{#basket.item_count}}hide-for-large-up{{/basket.item_count}}{{^basket.item_count}}hide{{/basket.item_count}}"><a href="{{basket_href}}">Basket (<span class="basket-item-count">{{basket.item_count}}</span>)</a></div>
+<div id="mobile-basket-button" class="basket-bar {{#basket.item_count}}hide-for-large-up{{/basket.item_count}}{{^basket.item_count}}hide{{/basket.item_count}}"><a href="{{basket_href}}" class="button">Basket (<span class="basket-item-count">{{basket.item_count}}</span>)</a></div>

@@ -42,3 +42,14 @@
 		</a>
 	</div>
 {{/is_in_basket}}
+{{#is_ended}}
+	{{^is_lent_to}}
+		{{^is_adding}}
+			{{^is_in_basket}}
+				<div class="bottom-bar">
+					<a class="button" href="{{borrower_url}}">Learn more</a>
+				</div>
+			{{/is_in_basket}}
+		{{/is_adding}}
+	{{/is_lent_to}}
+{{/is_ended}}
