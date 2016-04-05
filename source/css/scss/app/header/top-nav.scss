@@ -27,18 +27,24 @@
     }
 
     .logo-area .header-button {
-        padding: 0 0.3rem;
-        img {
-            max-height: rem-calc(20);
+		$vertical-offset: 0.19rem;
 
-            @media #{$small-only} {
-                margin-top: rem-calc(-8);
-            }
+		line-height: 0;
+        padding: 0 0.3rem $vertical-offset;
 
-            @media #{$medium-up} {
-                max-height: rem-calc(32);
-            }
-        }
+		@media #{$large-up} {
+			padding: 0 rem-calc(16) $vertical-offset;
+		}
+
+		.icon {
+			width: 3.3rem;
+			height: $header-height-small;
+			margin-top: -$vertical-offset;
+
+			@media #{$large-up} {
+				height: $header-height;
+			}
+		}
     }
 
     .amount {
@@ -114,18 +120,6 @@
 		@media #{$small-only} {
 			line-height: rem-calc(21);
 		}
-    }
-
-    @media #{$large-up} {
-        .logo-area {
-            text-align: left;
-            .header-button {
-                padding: 0 rem-calc(16);
-                img {
-                    max-height: none;
-                }
-            }
-        }
     }
 }
 
