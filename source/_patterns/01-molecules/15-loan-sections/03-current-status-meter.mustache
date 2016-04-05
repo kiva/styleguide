@@ -14,9 +14,11 @@
 		<div class="inline">funded, ${{amountLeft}} to go</div>
 	</div>
 
-	<div class="fundraising-meter progress">
-		<span class="meter" style="width: {{amountRaisedPercent}}%"></span>
-	</div>
+	{{#meterAmountPercent}}
+		<div class="fundraising-meter progress">
+			<span class="meter" style="width: {{meterAmountPercent}}%"></span>
+		</div>
+	{{/meterAmountPercent}}
 
 	<div class="raised-info row">
 		<div class="loan-total">
