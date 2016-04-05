@@ -294,13 +294,15 @@
 			height: auto;
 			margin-left: 5px;
 			border-bottom: 0px;
-			margin-bottom: -5px;
+			margin-bottom: 8.5px;
 			display: block;
 		}
 	}
 
 	input[type=checkbox] {
-		margin: 0;
+		margin-right: rem-calc(8);
+		margin-bottom: 0;
+		float: left;
 		@media #{$small-only} {
 			display: none;
 		}
@@ -327,12 +329,10 @@
 		font-size: 0.8em;
 		color: $charcoal;
 		border: 0px;
-		display: inline;
-		@media #{$small-only} {
-			display: table-cell;
-			text-transform: none;
-			vertical-align: middle;
-		}
+		line-height:100%;
+		display: table-cell;
+		text-transform: none;
+		vertical-align: middle;
 	}
 
 	.filter-button-group-ul {
