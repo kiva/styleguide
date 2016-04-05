@@ -47,6 +47,7 @@
 //Custom styles for the 3 types of messages (Confirmation, Warning & Error messages)
 	&.message-text-confirmation {
 		background-color: $kiva-bg-lightgray;
+		border-bottom: 1px solid $kiva-text-dark ;
 
 		.icon.icon-confirmation {
 			fill: $kiva-green;
