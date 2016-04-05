@@ -279,12 +279,12 @@
 	}
 
 	.choose-borrower-frame {
-		border: rem-calc(1) solid white;
+		border: rem-calc(1) solid #26b6e8;
 		margin: 0 auto;
 		width: rem-calc(225);
 
 		:hover {
-			background-color: #FFF;
+			background-color: #26b6e8;
 			opacity: 0.8;
 		}
 
