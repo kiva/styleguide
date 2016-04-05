@@ -1,24 +1,22 @@
 <div class="current-status-meter">
-	<h2 class="green-bolded inline">
-		{{#status}}
+	{{#status}}
+		<h2 class="green-bolded inline">
 			{{status}}
-		{{/status}}
-	</h2>
-	<div class="amount-raised">
-		{{#meterAmountPercent}}
+		</h2>
+	{{/status}}
+
+	{{#showRaisedInfo}}
+		<div class="amount-raised">
 			<h2 class="green-bolded inline">
 				{{meterAmountPercent}}%
 			</h2>
-		{{/meterAmountPercent}}
+			<div class="inline">{{raisedVerb}}, ${{amountLeft}} to go</div>
+		</div>
 
-		<div class="inline">funded, ${{amountLeft}} to go</div>
-	</div>
-
-	{{#meterAmountPercent}}
 		<div class="fundraising-meter progress">
 			<span class="meter" style="width: {{meterAmountPercent}}%"></span>
 		</div>
-	{{/meterAmountPercent}}
+	{{/showRaisedInfo}}
 
 	<div class="raised-info row">
 		<div class="loan-total">
