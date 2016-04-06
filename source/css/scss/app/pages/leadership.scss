@@ -27,8 +27,8 @@
 	}
 	.avatar img{
 		border-radius: 50%;
-		width: $avatar-size;
-		height: $avatar-size;
+		width: 100%;
+		max-width: $avatar-size;
 	}
 	.board{
 		padding: $padding 0;
