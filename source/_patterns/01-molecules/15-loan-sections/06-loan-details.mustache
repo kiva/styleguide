@@ -24,12 +24,12 @@
             </div>
             <div id="disbursed-date" class="stat">
                 <a class="black-underlined" data-reveal-id="disbursed-date-lightbox">Disbursed date</a>:
-                {{#disbursedDate}}
-                    <strong>{{disbursedDate}}</strong>
-                {{/disbursedDate}}
-                {{^disbursedDate}}
+                {{#disbursalDate}}
+                    <strong>{{disbursalDate}}</strong>
+                {{/disbursalDate}}
+                {{^disbursalDate}}
                     <strong>Disbursed after fully funded on Kiva.</strong>
-                {{/disbursedDate}}
+                {{/disbursalDate}}
             </div>
             <div id="currency-exchange-loss" class="stat">
                 <a class="black-underlined" data-reveal-id="currency-exchange-loss-lightbox">Currency exchange loss</a>:
