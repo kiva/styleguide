@@ -88,6 +88,47 @@
                     <strong>N/A</strong>
                 </div>
             {{/fieldPartner}}
+
+			{{#expiredDate}}
+				<div id="expired-date" class="stat">
+					<span>Expired:</span>
+					<span>{{expiredDate}}</span>
+				</div>
+			{{/expiredDate}}
+
+			{{#refundedDate}}
+				{{^expiredDate}}
+					<div id="refunded-date" class="stat">
+						<span>Refunded:</span>
+						<span>{{refundedDate}}</span>
+					</div>
+				{{/expiredDate}}
+			{{/refundedDate}}
+
+			{{#defaultedDate}}
+				{{^refundedDate}}
+					{{^expiredDate}}
+						<div id="defaulted-date" class="stat">
+							<span>Defaulted:</span>
+							<span>{{defaultedDate}}</span>
+						</div>
+					{{/expiredDate}}
+				{{/refundedDate}}
+			{{/defaultedDate}}
+
+			{{#endedDate}}
+				{{^refundedDate}}
+					{{^expiredDate}}
+						{{^defaultedDate}}
+							<div id="ended-date" class="stat">
+								<span>Ended:</span>
+								<span>{{endedDate}}</span>
+							</div>
+						{{/defaultedDate}}
+					{{/expiredDate}}
+				{{/refundedDate}}
+			{{/endedDate}}
+
 			{{#loanDetailsHelpText}}
 				{{> 01-molecules/10-lightbox/04-help-text-lightbox}}
 			{{/loanDetailsHelpText}}
