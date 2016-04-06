@@ -137,19 +137,8 @@
     width: 100%;
 	height: 2.444rem;
 	margin-bottom: 0;
-
-    text-align: center;
-    font-size: 1.8rem;
-    font-weight: bold;
-    background-color: $kiva-accent-blue;
+	font-size: 1.1666666667rem !important;
 	z-index:1111;
-
-    a {
-        color: $white;
-        line-height: rem-calc(64);
-        width: 100%;
-        display: block;
-    }
 }
 
 
