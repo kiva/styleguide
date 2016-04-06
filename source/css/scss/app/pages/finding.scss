@@ -151,6 +151,10 @@ $filter-menu-base-width: rem-calc(251);
 	.filter-menu-sort-dropdown {
 		float: right;
 		margin: 0 0.5555555556rem 0 0;
+
+		#filter-loan-sort-dropdown {
+			cursor: pointer;
+		}
 	}
 
 	.filter-dropdown {
