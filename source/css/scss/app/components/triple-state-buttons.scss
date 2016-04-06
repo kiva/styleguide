@@ -15,8 +15,8 @@
         color: $kiva-text-dark;
 
         &:hover{
-            color:$white !important;
-            background: $kiva-green ;
+            color:$kiva-green;
+            border: rem-calc(1) solid $kiva-green ;
         }
 
         &:nth-of-type(even) {
@@ -45,8 +45,8 @@
             font-weight: bold;
 
             &:hover{
-                color: $white;
-                background-color: $graphic-green;
+                color: $white !important;
+                border: rem-calc(1) solid $kiva-green ;
             }
         }
 
