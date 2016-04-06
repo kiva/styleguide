@@ -105,6 +105,17 @@
 				{{/expiredDate}}
 			{{/refundedDate}}
 
+			{{#defaultedDate}}
+				{{^refundedDate}}
+					{{^expiredDate}}
+						<div id="defaulted-date" class="stat">
+							<span>Defaulted:</span>
+							<span>{{defaultedDate}}</span>
+						</div>
+					{{/expiredDate}}
+				{{/refundedDate}}
+			{{/defaultedDate}}
+
 			{{#endedDate}}
 				{{^refundedDate}}
 					{{^expiredDate}}
@@ -117,17 +128,6 @@
 					{{/expiredDate}}
 				{{/refundedDate}}
 			{{/endedDate}}
-
-			{{#defaultedDate}}
-				{{^refundedDate}}
-					{{^expiredDate}}
-						<div id="defaulted-date" class="stat">
-							<span>Defaulted:</span>
-							<span>{{defaultedDate}}</span>
-						</div>
-					{{/expiredDate}}
-				{{/refundedDate}}
-			{{/defaultedDate}}
 
 			{{#loanDetailsHelpText}}
 				{{> 01-molecules/10-lightbox/04-help-text-lightbox}}
