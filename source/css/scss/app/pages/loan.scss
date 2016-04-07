@@ -27,7 +27,7 @@
 	}
 
 	.ac-body {
-		margin-top: 2rem;
+		margin-top: 1rem;
 	}
 
 	.ac-title {
@@ -38,6 +38,16 @@
 		p {
 			margin-bottom: 0;
 		}
+	}
+
+	.icon {
+		width: rem-calc(30);
+		height: rem-calc(30);
+	}
+
+	.icon-large-chevron {
+		position: absolute;
+		top: 0.333333rem !important;
 	}
 }
 
@@ -64,7 +74,7 @@
 	}
 	.icon-large-chevron {
 		position: absolute;
-		top: 0;
+		top: 0.333333rem !important;
 	}
 }
 
@@ -77,7 +87,7 @@
 			padding-left: 1rem;
 		}
 		.icon-large-chevron {
-			top: 0;
+			top: 0.333333rem !important;
 		}
 	}
 	.tag-info {
@@ -183,6 +193,16 @@
 			}
 		}
 	}
+
+	.icon {
+		width: rem-calc(30);
+		height: rem-calc(30);
+	}
+
+	.icon-large-chevron {
+		position: absolute;
+		top: 0.333333rem !important;
+	}
 }
 
 .why-special {
@@ -234,6 +254,16 @@
 		@media #{$xxlarge-up} {
 			max-width: 85%;
 		}
+	}
+
+	.icon {
+		width: rem-calc(30);
+		height: rem-calc(30);
+	}
+
+	.icon-large-chevron {
+		position: absolute;
+		top: 0.333333rem !important;
 	}
 }
 
@@ -370,6 +400,16 @@
 	.ac-title {
 		position: relative
 	}
+
+	.icon {
+		width: rem-calc(30);
+		height: rem-calc(30);
+	}
+
+	.icon-large-chevron {
+		position: absolute;
+		top: 0.333333rem !important;
+	}
 }
 
 .field-partner-details {
@@ -432,6 +472,16 @@
 	.more-on-field-partner {
 		padding-top: 1rem;
 	}
+
+	.icon {
+		width: rem-calc(30);
+		height: rem-calc(30);
+	}
+
+	.icon-large-chevron {
+		position: absolute;
+		top: 0.333333rem !important;
+	}
 }
 
 .trustee-details {
@@ -490,6 +540,16 @@
 	.why-endorse {
 		padding-top: 1rem;
 	}
+
+	.icon {
+		width: rem-calc(30);
+		height: rem-calc(30);
+	}
+
+	.icon-large-chevron {
+		position: absolute;
+		top: 0.333333rem !important;
+	}
 }
 
 .more-loan-info {
@@ -514,6 +574,16 @@
 
 	.override-styling-from-db {
 		margin-bottom: 1rem;
+	}
+
+	.icon {
+		width: rem-calc(30);
+		height: rem-calc(30);
+	}
+
+	.icon-large-chevron {
+		position: absolute;
+		top: 0.333333rem !important;
 	}
 }
 
@@ -557,6 +627,16 @@
 			}
 		}
 	}
+
+	.icon {
+		width: rem-calc(30);
+		height: rem-calc(30);
+	}
+
+	.icon-large-chevron {
+		position: absolute;
+		top: 0.333333rem !important;
+	}
 }
 
 .loan-details {
@@ -569,6 +649,7 @@
 	}
 
 	.loan-term {
+		padding-top: 0.1rem;
 		padding-bottom: 1rem;
 		text-align: center;
 
@@ -625,6 +706,15 @@
 		}
 	}
 
+	.icon {
+		width: rem-calc(30);
+		height: rem-calc(30);
+	}
+
+	.icon-large-chevron {
+		position: absolute;
+		top: 0.333333rem !important;
+	}
 }
 
 .lend-action, .lend-action.row {
@@ -1076,5 +1166,15 @@
 				}
 			}
 		}
+	}
+
+	.icon {
+		width: rem-calc(30);
+		height: rem-calc(30);
+	}
+
+	.icon-large-chevron {
+		position: absolute;
+		top: 0.333333rem !important;
 	}
 }
