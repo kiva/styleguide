@@ -7,7 +7,7 @@
 	}
 	label {
 		color: $white;
-		margin-bottom: 10px;
+		margin-bottom: rem-calc(10);
 	}
 	.submit-save-search {
 		width: 100%;
@@ -16,16 +16,26 @@
 		}
 	}
 	[for=save-search-alert]{
-		display: inline;
+		display: block;
 	}
 
 	.save-search-alert-box{
-		margin: 10px 0;
+		margin: rem-calc(10) 0;
 	}
 
 	.lightbox-content {
 		.inner {
 			padding: 0;
+		}
+
+		.save-search-alert-label {
+			display: block;
+			text-indent: rem-calc(-22);
+			padding-left: rem-calc(22);
+
+			.save-search-alert-checkbox{
+				margin-right: rem-calc(5);
+			}
 		}
 	}
 }
