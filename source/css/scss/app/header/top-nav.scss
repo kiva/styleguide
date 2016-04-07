@@ -27,7 +27,7 @@
     }
 
     .logo-area .header-button {
-		$vertical-offset: 0.19rem;
+		$vertical-offset: 3px;
 
 		line-height: 0;
         padding: 0 0.3rem $vertical-offset;
@@ -37,7 +37,7 @@
 		}
 
 		.icon {
-			width: 3.3rem;
+			width: 57px;
 			height: $header-height-small;
 			margin-top: -$vertical-offset;
 
