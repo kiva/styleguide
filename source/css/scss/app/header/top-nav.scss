@@ -132,13 +132,17 @@
 }
 
 .basket-bar {
-    position: fixed;
-    bottom: 0;
-    width: 100%;
+	position: fixed;
+	bottom: 0;
 	height: 2.444rem;
-	margin-bottom: 0;
-	font-size: 1.1666666667rem !important;
+	width: 100%;
 	z-index:1111;
+
+	a {
+		font-size: 1.1666666667rem !important;
+		width: 100%;
+		display: block;
+	}
 }
 
 
