@@ -48,26 +48,8 @@ div.reveal-modal-bg {
 		}
 
 		a.country-close-reveal-modal {
-
-			@media #{$xxlarge-only} {
-				margin: 95%;
-			}
-
-			@media #{$xlarge-only} {
-				margin: 92%;
-			}
-
-			@media #{$large-only} {
-				margin: 90%;
-			}
-
-			@media #{$medium-only} {
-				margin: 85%;
-			}
-
-			@media #{$small-only} {
-				margin: 80%;
-			}
+			float: right;
+			padding: 0 rem-calc(10) rem-calc(10) 100%;
 
 			.icon.icon-x {
 				height: rem-calc(40);
