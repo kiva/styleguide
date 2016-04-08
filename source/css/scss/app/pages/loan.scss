@@ -597,10 +597,13 @@
 	}
 
 	.country-map {
-		padding-bottom: 1rem;
-		padding-left: 1rem;
+		margin-left: 0;
+		margin-right: 0;
+		margin-bottom: 1rem;
+		padding-left: 0;
 		height: 16rem;
 		width: 100%;
+		background-color: $kiva-accent-green;
 
 		#mapPane {
 			height: 100%;
