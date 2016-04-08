@@ -94,4 +94,18 @@ module.exports = function () {
 			allTags.css('height', 0);
 		}
 	});
+
+	$('.borrower-profile-wrapper .lender-count').click(function(){
+		var lendersAccordion = $('[aria-controls="ac-lenders-teams-body"]');
+		if (lendersAccordion.attr('aria-expanded') === 'false'){
+			lendersAccordion.click();
+		}
+	});
+
+	$('.borrower-profile-wrapper .country-text a').click(function(){
+		var countryAccordion = $('[aria-controls="ac-country-info-body"]');
+		if (countryAccordion.attr('aria-expanded') === 'false'){
+			countryAccordion.click();
+		}
+	});
 };
