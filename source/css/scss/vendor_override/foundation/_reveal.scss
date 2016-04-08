@@ -47,6 +47,17 @@ div.reveal-modal-bg {
 			}
 		}
 
+		a.country-close-reveal-modal {
+			float: right;
+			padding: 0 rem-calc(10) rem-calc(10) 100%;
+
+			.icon.icon-x {
+				height: rem-calc(40);
+				width: rem-calc(40);
+				stroke: $kiva-green;
+			}
+		}
+
 		div.lightbox-content {
 			padding-top: rem-calc(45);
 
@@ -54,7 +65,7 @@ div.reveal-modal-bg {
 				background-color: $white;
 				width: 95%;
 				margin: auto auto;
-				padding: rem-calc(65) rem-calc(20) rem-calc(65) rem-calc(20);
+				padding: rem-calc(30) rem-calc(20) rem-calc(30) rem-calc(20);
 			}
 		}
 	}
