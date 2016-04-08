@@ -29,6 +29,10 @@ $footer-top-bottom-padding: rem-calc(40);
 
 .siteFooter-group {
 	margin-bottom: rem-calc(60);
+
+	h1 {
+		margin-top: 0;
+	}
 }
 
 .siteFooter-group:last-of-type {
