@@ -145,11 +145,11 @@ div.about-video-wrapper {
 
 	.unique-title-text {
 		@media #{$large-only} {
-			height: 72px;
+			height: rem-calc(72);
 		}
 
 		@media #{$xlarge-only} {
-			height: 72px;
+			height: rem-calc(72);
 		}
 	}
 
