@@ -14,6 +14,11 @@
         border: rem-calc(1) solid $kiva-text-dark;
         color: $kiva-text-dark;
 
+        &:hover{
+            color:$kiva-green;
+            border: rem-calc(1) solid $kiva-green ;
+        }
+
         &:nth-of-type(even) {
             border-left: none;
         }
@@ -38,6 +43,11 @@
             color: $white;
             background-color: $kiva-green;
             font-weight: bold;
+
+            &:hover{
+                color: $white !important;
+                border: rem-calc(1) solid $kiva-green ;
+            }
         }
 
         &.ts-left:checked ~ label.ts-floater,
