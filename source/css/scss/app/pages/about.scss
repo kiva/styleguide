@@ -143,8 +143,14 @@ div.about-video-wrapper {
 		line-height: rem-calc(30);
 	}
 
-	@media #{small} {
-		margin-bottom: 1rem;
+	.unique-title-text {
+		@media #{$large-only} {
+			height: 72px;
+		}
+
+		@media #{$xlarge-only} {
+			height: 72px;
+		}
 	}
 
 	svg {
