@@ -47,6 +47,35 @@ div.reveal-modal-bg {
 			}
 		}
 
+		a.country-close-reveal-modal {
+
+			@media #{$xxlarge-only} {
+				margin: 95%;
+			}
+
+			@media #{$xlarge-only} {
+				margin: 92%;
+			}
+
+			@media #{$large-only} {
+				margin: 90%;
+			}
+
+			@media #{$medium-only} {
+				margin: 85%;
+			}
+
+			@media #{$small-only} {
+				margin: 80%;
+			}
+
+			.icon.icon-x {
+				height: rem-calc(40);
+				width: rem-calc(40);
+				stroke: $kiva-green;
+			}
+		}
+
 		div.lightbox-content {
 			padding-top: rem-calc(45);
 
@@ -54,7 +83,7 @@ div.reveal-modal-bg {
 				background-color: $white;
 				width: 95%;
 				margin: auto auto;
-				padding: rem-calc(65) rem-calc(20) rem-calc(65) rem-calc(20);
+				padding: rem-calc(30) rem-calc(20) rem-calc(30) rem-calc(20);
 			}
 		}
 	}
