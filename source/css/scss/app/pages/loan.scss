@@ -1010,13 +1010,17 @@
 }
 
 .loan-use {
-	text-align: center;
-	max-width: 60%;
-	margin: 0 auto;
+	text-align: left;
+	max-width: 100%;
 
-	@media #{$small-only} {
-		text-align: left;
-		max-width: 100%;
+	@media #{$medium-up} {
+		text-align: center;
+		max-width: 60%;
+		margin: 0 auto;
+
+		h2 {
+			margin-bottom: 1.25rem;
+		}
 	}
 }
 
