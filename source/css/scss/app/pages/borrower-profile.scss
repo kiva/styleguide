@@ -52,8 +52,6 @@
 		}
 
 		.left-content {
-			padding-left: 0;
-			padding-right: 0;
 			section {
 				padding-left: 1rem;
 				padding-right: 1rem;
@@ -67,6 +65,12 @@
 					padding-left: 0;
 				}
 			}
+
+			@media #{$small-only}{
+				padding-left: 0;
+				padding-right: 0;
+			}
+
 			@media #{$large-up} {
 				flex-basis: auto;
 				width: 58.3%;
