@@ -1512,8 +1512,7 @@ define("Styleguide", ["jquery"], function(__WEBPACK_EXTERNAL_MODULE_2__) { retur
 
 
 	/*** EXPORTS FROM exports-loader ***/
-	module.exports = window.Modernizr
-	}.call(window));
+	module.exports = window.Modernizr}.call(window));
 
 /***/ },
 /* 4 */
@@ -20183,6 +20182,20 @@ define("Styleguide", ["jquery"], function(__WEBPACK_EXTERNAL_MODULE_2__) { retur
 			else {
 				tagToggler.text('Add tags');
 				allTags.css('height', 0);
+			}
+		});
+
+		$('.borrower-profile-wrapper .lender-count').click(function(){
+			var lendersAccordion = $('[aria-controls="ac-lenders-teams-body"]');
+			if (lendersAccordion.attr('aria-expanded') === 'false'){
+				lendersAccordion.click();
+			}
+		});
+
+		$('.borrower-profile-wrapper .country-text a').click(function(){
+			var countryAccordion = $('[aria-controls="ac-country-info-body"]');
+			if (countryAccordion.attr('aria-expanded') === 'false'){
+				countryAccordion.click();
 			}
 		});
 	};
