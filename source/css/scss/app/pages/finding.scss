@@ -12,11 +12,10 @@ $filter-menu-base-width: rem-calc(251);
 	left: 0;
 	z-index: 1001;
 	pointer-events: none;
-	opacity: 0;
-	transition: opacity 100ms ease;
+	display: none;
 
 	.loading & {
-		opacity: 1;
+		display: block;
 	}
 
 	.loading-spinner {
