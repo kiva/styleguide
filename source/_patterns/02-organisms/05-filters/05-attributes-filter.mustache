@@ -1,4 +1,7 @@
-<h3 class="filter medium-notouch">Attributes</h3>
+<h3 class="filter medium-notouch">
+	Attributes
+	<div class="subtext">Specific features of the loan or the population it serves.</div>
+</h3>
 
 <div class="filter-component-container">
 	<h3 id="attributes-accordion-selector" data-kv-accordion class="interact ac-container small-touch expandable-filter" aria-controls="filter-attributes-ul" aria-expanded="true">
@@ -11,6 +14,9 @@
 	</h3>
 
 	<ul id="filter-attributes-ul" class="button-group toggle filter-button-group-ul" data-toggle="buttons-radio" aria-hidden="false">
+		<li class="subtext checkbox-input small-touch">
+			Specific features of the loan or the population it serves.
+		</li>
 		{{#attributes}}
 			<li class="filter checkbox-input">
 				{{> 02-organisms/05-filters/24-checkbox-item}}
