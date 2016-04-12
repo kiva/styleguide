@@ -1,6 +1,6 @@
 <div class="lend-action show-for-large-up">
     <div class="proceed-to-checkout">
-        <div class="browse-more-loans" style="display: none;">
+        <div kvtrackevent="Borrower Profile|click-Browse more" class="browse-more-loans" style="display: none;">
             <a href="#">Browse more loans</a>
         </div>
         {{#amountInBasket}}
@@ -10,7 +10,7 @@
         {{/amountInBasket}}
 
 
-        <button class="button green-button proceed-to-checkout-button" {{^amountInBasket}}style="display: none;"{{/amountInBasket}}>
+        <button kvtrackevent="Lending|click-Proceed to checkout" class="button green-button proceed-to-checkout-button" {{^amountInBasket}}style="display: none;"{{/amountInBasket}}>
             <svg class="icon icon-confirmation">
                 <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-confirmation"></use>
             </svg>
