@@ -42,7 +42,7 @@
 						{{/has_favorites}}
 						{{#has_saved_searches}}
                             <li class="lend-menu-searches-li-mobile">
-								<a href="#" data-kv-accordion aria-controls="lend-menu-searches-panel" aria-expanded="false" class="section-title">Saved searches<svg class="icon icon-small-chevron-mobile"><use xlink:href="#icon-small-chevron-mobile" /></svg></a>
+								<a kvtrackevent="TopNav|click-Lend-SavedSearch" href="#" data-kv-accordion aria-controls="lend-menu-searches-panel" aria-expanded="false" class="section-title">Saved searches<svg class="icon icon-small-chevron-mobile"><use xlink:href="#icon-small-chevron-mobile" /></svg></a>
 								<ul id="lend-menu-searches-panel" aria-hidden="true">
 									{{#saved_searches}}
 										<li><a href="{{href}}">{{name}}</a></li>
@@ -115,7 +115,7 @@
 						{{^has_saved_searches}}
 							<li class="lend-menu-searches-li-desktop">
 								<a href="#" class="tertiary-link disabled">Saved searches</a>
-								<a href="#" data-kv-toggle aria-controls="lend-menu-searches-section" aria-expanded="false" class="tertiary-link" style="display: none;">Saved searches</a>
+								<a kvtrackevent="TopNav|click-Lend-SavedSearch" href="#" data-kv-toggle aria-controls="lend-menu-searches-section" aria-expanded="false" class="tertiary-link" style="display: none;">Saved searches</a>
 							</li>
 						{{/has_saved_searches}}
 	                    {{#countries_unlent_href}}
