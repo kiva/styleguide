@@ -27,7 +27,7 @@
     }
 
     .logo-area .header-button {
-		$vertical-offset: 3px;
+		$vertical-offset: rem-calc(3);
 
 		line-height: 0;
         padding: 0 0.3rem $vertical-offset;
@@ -37,7 +37,7 @@
 		}
 
 		.icon {
-			width: 57px;
+			width: rem-calc(57);
 			height: $header-height-small;
 			margin-top: -$vertical-offset;
 
@@ -110,7 +110,7 @@
         font-size: 0.8rem;
         text-align: center;
         background-color: $kiva-green;
-		border-top: 1px solid $kiva-navdivider-green;
+		border-top: rem-calc(1) solid $kiva-navdivider-green;
 		height: rem-calc(45);
 		line-height: rem-calc(45);
 		color: $dark-green;
@@ -137,6 +137,7 @@
 	height: 2.444rem;
 	width: 100%;
 	z-index:1111;
+	transition: bottom 500ms ease;
 
 	a {
 		font-size: 1.1666666667rem !important;
@@ -145,6 +146,9 @@
 	}
 }
 
+.basket-bar.hide-for-large-up.off-screen {
+	bottom: rem-calc(-45);
+}
 
 @media #{$small-only}, #{$medium-only} {
     .top-nav {
