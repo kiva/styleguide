@@ -10,29 +10,30 @@
         cursor: pointer;
 
         margin: 0;
-        padding: 0.4rem;
+		padding: 0;
+        line-height: rem-calc(35);
         border: rem-calc(1) solid $kiva-text-dark;
         color: $kiva-text-dark;
 
         &:hover{
-            color:$kiva-green;
-            border: rem-calc(1) solid $kiva-green ;
+            color: $kiva-green;
+            border-color: $kiva-green;
         }
 
         &:nth-of-type(even) {
             border-left: none;
         }
 
-        &:nth-of-type(n+3) {
-            border-top: none;
-        }
-
         &.ts-floater, &.qs-floater {
             display: none;
             position: absolute;
-            border: rem-calc(1) solid $charcoal;
+            border-color: $charcoal;
         }
     }
+
+	label.qs-label:nth-of-type(3n), label.qs-label:nth-of-type(4n) {
+		border-top: none;
+	}
 
     input {
         display: none;
@@ -45,8 +46,7 @@
             font-weight: bold;
 
             &:hover{
-                color: $white !important;
-                border: rem-calc(1) solid $kiva-green ;
+                color: $white;
             }
         }
 
