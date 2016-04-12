@@ -1,4 +1,7 @@
-<h3 class="filter medium-notouch">Sectors</h3>
+<h3 class="filter medium-notouch">
+	Sectors
+	<div class="subtext">Type of business or activity the loan supports.</div>
+</h3>
 
 <div class="filter-component-container">
     <h3 id="sectors-accordion-selector" data-kv-accordion class="interact ac-container small-touch expandable-filter" aria-controls="filter-sectors-ul" aria-expanded="true">
@@ -11,11 +14,15 @@
     </h3>
 
     <ul id="filter-sectors-ul" class="button-group toggle filter-button-group-ul" data-toggle="buttons-radio" aria-hidden="false">
+		<li class="subtext checkbox-input">
+			<span class="small-touch">
+				Type of business or activity the loan supports.
+			</span>
+		</li>
 		{{#filters}}
             <li class="filter checkbox-input">
 				{{> 02-organisms/05-filters/24-checkbox-item}}
             </li>
 		{{/filters}}
     </ul>
-
 </div>
