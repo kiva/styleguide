@@ -55,7 +55,7 @@
 	{{#is-visitor}}
 		<ul id="about-dropdown" class="f-dropdown dropdown-list" data-dropdown-content aria-hidden="true" tabindex="-1">
 			{{#about-nav.links}}
-				<li><a href="{{href}}">{{label}}</a></li>
+				<li><a kvtrackevent="TopNav|click-About-{{label}}" href="{{href}}">{{label}}</a></li>
 			{{/about-nav.links}}
 		</ul>
 	{{/is-visitor}}
