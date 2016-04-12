@@ -6,7 +6,7 @@
 {{/is_matched}}
 
 {{#can_favorite}}
-    <a data-tooltip aria-haspopup="true" title="Star this loan to find it quickly later. You can view and manage your starred loans in the ‘Lend’ tab above." href="#" class="has-tip tip-left favorite-link{{#is_favorite}} is-favorite{{/is_favorite}}">
+    <a kvtrackevent="Lending|click-Favorite star|Loan card" data-tooltip aria-haspopup="true" title="Star this loan to find it quickly later. You can view and manage your starred loans in the ‘Lend’ tab above." href="#" class="has-tip tip-left favorite-link{{#is_favorite}} is-favorite{{/is_favorite}}">
 		<svg class="icon icon-star"><use xlink:href="#icon-star"/></svg>
 	</a>
 {{/can_favorite}}
