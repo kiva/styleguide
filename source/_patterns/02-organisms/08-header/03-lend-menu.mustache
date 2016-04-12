@@ -4,7 +4,7 @@
             <a href="#" data-kv-accordion aria-controls="lend-menu-category-panel" aria-expanded="false" class="section-title">Categories<svg class="icon icon-small-chevron-mobile"><use xlink:href="#icon-small-chevron-mobile" /></svg></a>
             <ul id="lend-menu-category-panel" aria-hidden="true">
 				{{#categories.list}}
-                    <li><a kvtrackevent="TopNav|click-Lend-Category|{{name}}" href="{{href}}">{{name}}</a></li>
+                    <li><a kvtrackevent="TopNav|click-Lend-Category|{{name}}|{{@index}}" href="{{href}}">{{name}}</a></li>
 				{{/categories.list}}
                 <li><a href="{{categories_href}}">All categories</a></li>
             </ul>
@@ -72,7 +72,7 @@
 			<div class="column-list-container">
 				<ul class="column-list">
 					{{#categories.list}}
-                        <li><a kvtrackevent="TopNav|click-Lend-Category|{{name}}" href="{{href}}">{{name}}</a></li>
+                        <li><a kvtrackevent="TopNav|click-Lend-Category|{{name}}|{{@index}}" href="{{href}}">{{name}}</a></li>
 					{{/categories.list}}
                     <li class="bottom"><a href="{{lend_href}}">All loans</a></li>
 					<li class="bottom"><a href="{{categories_href}}">All categories</a></li>
