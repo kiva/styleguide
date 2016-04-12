@@ -482,12 +482,14 @@
 .csscolumns #countrySelectModal #country-list {
 	@media #{$large-up} {
 		@include column-count(2);
-		padding-left: 3rem;
+		padding-left: 1.5rem;
+		padding-right: 1.5rem;
 	}
 
 	@media #{$xxlarge-up} {
 		@include column-count(3);
-		padding-left: 10rem;
+		padding-left: 4rem;
+		padding-right: 4rem;
 	}
 
 	.region-name {
