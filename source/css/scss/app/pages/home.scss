@@ -261,6 +261,9 @@ $hiw-half-tap-button-size-small: $hiw-tap-button-size-small / 2;
 		height: 1.5rem;
 		width: 1.5rem;
 		stroke: $white;
+		#lend & {
+			visibility: hidden;
+		}
 	}
 
 	.how-it-works-content-wrapper {
