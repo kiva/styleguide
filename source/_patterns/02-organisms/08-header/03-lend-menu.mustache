@@ -25,7 +25,7 @@
             </ul>
         </li>
         <li>
-            <a href="{{lend_href}}">All loans</a>
+            <a kvtrackevent="TopNav|click-Lend-All_Loans" href="{{lend_href}}">All loans</a>
         </li>
 		{{^is-visitor}}
 			{{#has_personalized}}
@@ -100,12 +100,12 @@
 					<div class="section-title">My Kiva</div>
 					<ul>
 						{{#has_favorites}}
-							<li class="favorites-href-in-nav"><a href="{{favorites_href}}">Favorites</a></li>
-							<li class="no-favorites-href-in-nav hide"><a href="#" class="disabled">Favorites</a></li>
+							<li class="favorites-href-in-nav"><a href="{{favorites_href}}">Starred loans</a></li>
+							<li class="no-favorites-href-in-nav hide"><a href="#" class="disabled">Starred loans</a></li>
 						{{/has_favorites}}
 						{{^has_favorites}}
-							<li class="no-favorites-href-in-nav"><a href="#" class="disabled">Favorites</a></li>
-							<li class="favorites-href-in-nav hide"><a href="{{favorites_href}}">Favorites</a></li>
+							<li class="no-favorites-href-in-nav"><a href="#" class="disabled">Starred loans</a></li>
+							<li class="favorites-href-in-nav hide"><a href="{{favorites_href}}">Starred loans</a></li>
 						{{/has_favorites}}
 						{{#has_saved_searches}}
 							<li class="lend-menu-searches-li-desktop">
