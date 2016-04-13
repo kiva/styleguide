@@ -913,14 +913,23 @@
 			font-size: 1.5555555556rem;
 		}
 
-		.icon {
-			z-index: 999;
-			width: rem-calc(33);
-			height: rem-calc(33);
-			position: absolute;
-			left: rem-calc(10);
-			fill: white;
-			top: rem-calc(10);
+		.icon-confirmation-wrapper {
+			display: inline-block;
+			vertical-align: middle;
+			padding-top: rem-calc(9);
+			margin-right: rem-calc(5);
+			.icon {
+				z-index: 999;
+				width: rem-calc(33);
+				height: rem-calc(33);
+				fill: white;
+			}
+		}
+
+		.basket-amount {
+			display: inline-block;
+			vertical-align: middle;
+			margin-bottom: rem-calc(10);
 		}
 	}
 
