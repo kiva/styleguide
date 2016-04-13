@@ -304,6 +304,7 @@
 		}
 	}
 	.raised-info {
+		padding-bottom: rem-calc(30);
 		margin: 0;
 		div, .lender-count {
 			padding: 0;
@@ -349,14 +350,20 @@
 	}
 
 	padding-bottom: 1rem;
-	.country-image {
-		padding-left: 0;
-		padding-right: 0;
-		top: rem-calc(3);
+
+	.country-info-wrapper {
+		padding-bottom: rem-calc(30);
+
+		.country-image {
+			padding-left: 0;
+			padding-right: 0;
+			top: rem-calc(3);
+		}
+		.country-text {
+			padding-right: 0;
+		}
 	}
-	.country-text {
-		padding-right: 0;
-	}
+
 	.borrower-name {
 		font-weight: bold;
 		@media #{$medium-up} {
