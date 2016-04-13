@@ -340,7 +340,10 @@
 			$images.css('transition', 'opacity 2s ease-in-out');
 			$images.css('position', 'relative');
 			$images.css('opacity', 1);
-			loanFigure.css('padding-bottom', '');
+			loanFigure.css({
+				'padding-bottom': '',
+				'background': 'none'
+			});
 		}).slick({
 			mobileFirst: true
 			, prevArrow: '.carousel-prev'
