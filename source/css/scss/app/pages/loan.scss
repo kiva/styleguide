@@ -732,6 +732,9 @@
 
 .lend-action, .lend-action.row {
 	margin: 0;
+	position: absolute;
+	bottom: 0;
+	right: 0;
 	.lend-button-wrapper {
 		display: inline;
 		padding: 0;
