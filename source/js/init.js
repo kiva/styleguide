@@ -504,4 +504,13 @@
 
 	loadSvgIcons();
 
+	// init the multi-select for partners
+	$('#partnersFilter').select2({
+		templateResult: function(result, container) {
+			// add 'needsclick' class to select2 results for iOS/Safari to prevent fastclick from attaching itself
+			$(container).addClass('needsclick');
+			return result.text;
+		}
+	});
+
 })(this, jQuery);
