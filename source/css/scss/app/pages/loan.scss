@@ -731,6 +731,7 @@
 }
 
 .lend-action, .lend-action.row {
+	width: 40%;
 	margin: 0;
 	position: absolute;
 	bottom: 0;
@@ -816,6 +817,7 @@
 		width: 100%;
 		padding: 0;
 		font-size: 1.155556rem;
+		margin-bottom: 0;
 		white-space:nowrap;
 
 		@media #{$xxlarge-up}{
