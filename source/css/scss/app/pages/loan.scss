@@ -53,25 +53,32 @@
 
 .about-zip {
 	position: relative;
+
 	.ac-title-text {
 		margin-right: rem-calc(26);
 	}
+
 	.ac-body {
 		margin-top: 2rem;
 	}
+
 	.ac-title {
 		position: relative;
 	}
+
 	.icon-label {
 		float: left;
 	}
+
 	.inline-list {
 		display: inline;
 	}
+
 	.icon {
 		width: rem-calc(30);
 		height: rem-calc(30);
 	}
+
 	.icon-large-chevron {
 		position: absolute;
 		top: 0.333333rem !important;
@@ -85,17 +92,21 @@
 
 	.ac-title {
 		position: relative;
+
 		.ac-title-text {
 			padding-left: 1rem;
 		}
+
 		.icon-large-chevron {
 			top: 0.333333rem !important;
 		}
 	}
+
 	.tag-info {
 		margin-bottom: 1rem;
 		margin-left: 1rem;
 		margin-right: 1rem;
+
 		.selected-tags {
 			a:visited {
 				color: $kiva-textlink;
@@ -245,14 +256,17 @@
 		margin-top: 1rem;
 		text-align: center;
 		font-size: 2rem;
+
 		@media #{$medium-only} {
 			margin-left: 2rem;
 			margin-right: 2rem;
 		}
+
 		@media #{$large-up} {
 			text-align: left;
 			margin-right: 1rem;
 		}
+
 		@media #{$xxlarge-up} {
 			max-width: 85%;
 		}
@@ -304,6 +318,7 @@
 		}
 	}
 	.raised-info {
+		padding-bottom: rem-calc(15);
 		margin: 0;
 		div, .lender-count {
 			padding: 0;
@@ -327,7 +342,6 @@
 }
 
 .loan-gist {
-
 	/*
 	 * Let's target IE to respect aspect ratios and sizes for img tags containing SVG files
 	 *
@@ -349,16 +363,34 @@
 	}
 
 	padding-bottom: 1rem;
-	.country-image {
-		padding-left: 0;
-		padding-right: 0;
-		top: rem-calc(3);
+
+	.country-info-wrapper {
+		padding-bottom: rem-calc(30);
+
+		@media #{$medium-down} {
+			font-size: rem-calc(14);
+		}
+
+		.country-image {
+			min-width: rem-calc(50);
+			padding-left: 0;
+			padding-right: 0;
+			top: rem-calc(3);
+		}
+		.country-text {
+			padding-right: rem-calc(5);
+			position: absolute;
+			left: rem-calc(60);
+
+			@media #{$medium-only} {
+				left: rem-calc(45);
+			}
+		}
 	}
-	.country-text {
-		padding-right: 0;
-	}
+
 	.borrower-name {
 		font-weight: bold;
+		margin-bottom: rem-calc(5);
 		@media #{$medium-up} {
 			font-weight: normal;
 		}
@@ -723,7 +755,11 @@
 }
 
 .lend-action, .lend-action.row {
+	width: 40%;
 	margin: 0;
+	position: absolute;
+	bottom: 0;
+	right: 0;
 	.lend-button-wrapper {
 		display: inline;
 		padding: 0;
@@ -785,7 +821,7 @@
 	}
 
 	.find-new-loan {
-		border-width: 1px;
+		border-width: rem-calc(1);
 		width: 100%;
 		padding: 0;
 		margin: 0;
@@ -805,6 +841,7 @@
 		width: 100%;
 		padding: 0;
 		font-size: 1.155556rem;
+		margin-bottom: 0;
 		white-space:nowrap;
 
 		@media #{$xxlarge-up}{

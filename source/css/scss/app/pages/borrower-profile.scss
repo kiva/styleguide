@@ -3,7 +3,7 @@
 	background: white;
 
 	iframe {
-		max-width: 500px;
+		max-width: rem-calc(500);
 	}
 
 	.loan-image-footer {
@@ -16,6 +16,7 @@
 		padding: 0.6rem 0;
 		border: 0;
 		border-top: 1px solid $gray;
+
 		@media #{$large-up}{
 			width: 100%;
 		}
@@ -25,11 +26,17 @@
 		padding-left: 0;
 		padding-right: 0;
 	}
+
 	.row {
+		position: relative;
 		padding-bottom: 0;
 		.line-break {
 			margin-top: 1rem;
 		}
+	}
+
+	.loan-image-info-row {
+		min-height: rem-calc(350);
 	}
 
 	@media #{$large-up} {
@@ -92,7 +99,7 @@
 		.ac-title {
 			cursor: pointer;
 			.icon-large-chevron{
-				stroke-width: rem-calc(7px);
+				stroke-width: rem-calc(7);
 			}
 		}
 	}
