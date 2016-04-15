@@ -380,17 +380,10 @@
 		.country-text {
 			padding-right: rem-calc(5);
 			position: absolute;
-
-			@media #{$large-up} {
-				left: rem-calc(60);
-			}
+			left: rem-calc(60);
 
 			@media #{$medium-only} {
 				left: rem-calc(45);
-			}
-
-			@media #{$small-only} {
-				left: rem-calc(60);
 			}
 		}
 	}
