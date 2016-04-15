@@ -15,7 +15,7 @@
 		margin: auto;
 		padding: 0.6rem 0;
 		border: 0;
-		border-top: rem-calc(1) solid $gray;
+		border-top: 1px solid $gray;
 
 		@media #{$large-up}{
 			width: 100%;
@@ -48,8 +48,8 @@
 	.borrower-profile-pieces {
 		@media #{$large-up}{
 			background: linear-gradient(90deg, $kiva-bg-lightgray 50%, $kiva-bg-darkgray 50%);
-			border-top: rem-calc(1) solid $gray;
-			border-bottom: rem-calc(1) solid $gray;
+			border-top: 1px solid $gray;
+			border-bottom: 1px solid $gray;
 		}
 		max-width: none;
 
@@ -82,7 +82,7 @@
 				flex-basis: auto;
 				width: 58.3%;
 				background-color: $kiva-bg-lightgray;
-				border-right: rem-calc(1) solid $gray;
+				border-right: 1px solid $gray;
 			}
 		}
 
