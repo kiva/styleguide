@@ -3,7 +3,7 @@
 	background: white;
 
 	iframe {
-		max-width: 500px;
+		max-width: rem-calc(500);
 	}
 
 	.loan-image-footer {
@@ -15,7 +15,8 @@
 		margin: auto;
 		padding: 0.6rem 0;
 		border: 0;
-		border-top: 1px solid $gray;
+		border-top: rem-calc(1) solid $gray;
+
 		@media #{$large-up}{
 			width: 100%;
 		}
@@ -25,12 +26,17 @@
 		padding-left: 0;
 		padding-right: 0;
 	}
+
 	.row {
 		position: relative;
 		padding-bottom: 0;
 		.line-break {
 			margin-top: 1rem;
 		}
+	}
+
+	.loan-image-info-row {
+		min-height: rem-calc(350);
 	}
 
 	@media #{$large-up} {
@@ -42,8 +48,8 @@
 	.borrower-profile-pieces {
 		@media #{$large-up}{
 			background: linear-gradient(90deg, $kiva-bg-lightgray 50%, $kiva-bg-darkgray 50%);
-			border-top: 1px solid $gray;
-			border-bottom: 1px solid $gray;
+			border-top: rem-calc(1) solid $gray;
+			border-bottom: rem-calc(1) solid $gray;
 		}
 		max-width: none;
 
@@ -76,7 +82,7 @@
 				flex-basis: auto;
 				width: 58.3%;
 				background-color: $kiva-bg-lightgray;
-				border-right: 1px solid $gray;
+				border-right: rem-calc(1) solid $gray;
 			}
 		}
 
@@ -93,7 +99,7 @@
 		.ac-title {
 			cursor: pointer;
 			.icon-large-chevron{
-				stroke-width: rem-calc(7px);
+				stroke-width: rem-calc(7);
 			}
 		}
 	}
