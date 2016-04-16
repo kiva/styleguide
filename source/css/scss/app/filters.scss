@@ -466,10 +466,6 @@
 	}
 }
 
-.filters_countries {
-	background: $white;
-}
-
 .noUi-handle-lower div, .noUi-handle-upper div {
 	position: absolute;
 	color: $jumbo;
@@ -477,40 +473,6 @@
 	text-align: center;
 	width: 18px;
 	font-size: 0.8em;
-}
-
-#countrySelectModal {
-	a.close-reveal-modal {
-		float: right;
-		padding: 0 rem-calc(10) rem-calc(10) 100%;
-	}
-
-	#country-list {
-		.csscolumns & {
-			@media #{$large-up} {
-				@include column-count(2);
-				padding-left: 1.5rem;
-				padding-right: 1.5rem;
-			}
-
-			@media #{$xxlarge-up} {
-				@include column-count(3);
-				padding-left: 4rem;
-				padding-right: 4rem;
-			}
-
-			.region-name {
-				@include column-break();
-				padding-top: 1rem;
-			}
-		}
-
-		.no-csscolumns & {
-			width: 14rem;
-			margin: 0 auto;
-			padding-left: 3rem;
-		}
-	}
 }
 
 .mobile-filters {
