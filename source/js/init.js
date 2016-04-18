@@ -340,6 +340,10 @@
 			$images.css('transition', 'opacity 2s ease-in-out');
 			$images.css('position', 'relative');
 			$images.css('opacity', 1);
+			loanFigure.css({
+				'padding-bottom': '',
+				'background': 'none'
+			});
 		}).slick({
 			mobileFirst: true
 			, prevArrow: '.carousel-prev'
@@ -499,5 +503,14 @@
 	});
 
 	loadSvgIcons();
+
+	// init the multi-select for partners
+	$('#partnersFilter').select2({
+		templateResult: function(result, container) {
+			// add 'needsclick' class to select2 results for iOS/Safari to prevent fastclick from attaching itself
+			$(container).addClass('needsclick');
+			return result.text;
+		}
+	});
 
 })(this, jQuery);

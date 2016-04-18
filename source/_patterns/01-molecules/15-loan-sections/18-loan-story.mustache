@@ -24,7 +24,7 @@
 					</p>
 				{{/anonymize}}
 				{{^anonymize}}
-					<p>{{.}}</p>
+					<p>{{{.}}}</p>
 				{{/anonymize}}
 			</section>
 		{{/storyDescription}}
@@ -41,6 +41,7 @@
 				<section class="previous-loan-details">
 					<h2>Previous loan details</h2>
 					<p>{{{previousLoanDescription}}}</p>
+					<a href="{{previousLoanUrl}}">More from {{borrowerOrGroupName}}'s previous loan »</a>
 					<div class="ac-body" id="ac-all-previous-loan-details-body" aria-hidden="true">
 						<section class="all-previous-loan-details">
 							{{#allPreviousLoanDescriptions}}

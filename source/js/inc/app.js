@@ -27,6 +27,10 @@ $(document).ready(function() {
 			root_element: '.reveal-modal-bg',
 			close_on_background_click: false
 		}
+		, tooltip: {
+			disable_for_touch: true,
+			hover_delay: 650
+		}
 	});
 
 	FastClick.attach(document.body);

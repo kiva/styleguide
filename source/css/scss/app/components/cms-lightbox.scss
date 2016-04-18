@@ -4,6 +4,10 @@
 		margin: 1.5rem auto;
 		position: static;
 		color: $button-font-color;
-		font-size: $button-font-med;
+		font-size: $button-font-sm;
+
+		@media #{$large-up} {
+			font-size: $button-font-med;
+		}
 	}
 }

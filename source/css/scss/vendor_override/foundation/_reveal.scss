@@ -4,70 +4,69 @@ div.reveal-modal-bg {
 	overflow-y: scroll;
 	-webkit-overflow-scrolling: touch;
 	z-index: 1504;
+}
 
-	.reveal-modal {
-		outline: none;
-		border: none;
-		border-radius: 0;
-		background: none;
-		box-shadow: none;
-		z-index: 1505;
-		//margin-bottom: rem-calc(100);
-		padding: 0;
-		max-width: none;
+.reveal-modal {
+	outline: none;
+	border: none;
+	border-radius: 0;
+	background: none;
+	box-shadow: none;
+	z-index: 1505;
+	//margin-bottom: rem-calc(100);
+	padding: 0;
+	max-width: none;
 
-		&.toback {
-			z-index: 1506;
+	&.toback {
+		z-index: 1506;
+	}
+
+	&.open {
+		top: rem-calc(0) !important;
+	}
+
+	.row {
+		padding: rem-calc(30);
+	}
+
+	.flex-video {
+		margin-top: rem-calc(30);
+
+		.iframe {
+			border: none;
 		}
+	}
 
-		&.open {
-			top: rem-calc(0) !important;
+	a.close-reveal-modal {
+		top: 0;
+		right: 0;
+
+		.icon.icon-x {
+			height: rem-calc(40);
+			width: rem-calc(40);
+			stroke: $kiva-green;
 		}
+	}
 
-		.row {
-			padding: rem-calc(30);
+	a.country-close-reveal-modal {
+		float: right;
+		padding: 0 rem-calc(10) rem-calc(10) 100%;
+
+		.icon.icon-x {
+			height: rem-calc(40);
+			width: rem-calc(40);
+			stroke: $kiva-green;
 		}
+	}
 
-		.flex-video {
-			margin-top: rem-calc(30);
+	div.lightbox-content {
+		padding-top: rem-calc(45);
 
-			.iframe {
-				border: none;
-			}
-		}
-
-		a.close-reveal-modal {
-			top: 0;
-			right: 0;
-
-			.icon.icon-x {
-				height: rem-calc(40);
-				width: rem-calc(40);
-				stroke: $kiva-green;
-			}
-		}
-
-		a.country-close-reveal-modal {
-			float: right;
-			padding: 0 rem-calc(10) rem-calc(10) 100%;
-
-			.icon.icon-x {
-				height: rem-calc(40);
-				width: rem-calc(40);
-				stroke: $kiva-green;
-			}
-		}
-
-		div.lightbox-content {
-			padding-top: rem-calc(45);
-
-			.white-background-box {
-				background-color: $white;
-				width: 95%;
-				margin: auto auto;
-				padding: rem-calc(30) rem-calc(20) rem-calc(30) rem-calc(20);
-			}
+		.white-background-box {
+			background-color: $white;
+			width: 95%;
+			margin: auto auto;
+			padding: rem-calc(30) rem-calc(20) rem-calc(30) rem-calc(20);
 		}
 	}
 }
-
