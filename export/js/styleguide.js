@@ -74,7 +74,8 @@ define("Styleguide", ["jquery"], function(__WEBPACK_EXTERNAL_MODULE_2__) { retur
 				close_on_background_click: false
 			}
 			, tooltip: {
-				disable_for_touch: true
+				disable_for_touch: true,
+				hover_delay: 650
 			}
 		});
 
