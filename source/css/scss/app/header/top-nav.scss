@@ -143,6 +143,10 @@
 		font-size: 1.1666666667rem !important;
 		width: 100%;
 		display: block;
+        &.button {
+           height: rem-calc(44);
+           line-height: rem-calc(44);
+        }
 	}
 }
 
