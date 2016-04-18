@@ -6,14 +6,14 @@
 {{/is_matched}}
 
 {{#can_favorite}}
-	<div class="show-for-large-up">
+	{{^is_touch}}
 		<a data-tooltip aria-haspopup="true" title="Star this loan to find it quickly later. You can view and manage your starred loans in the ‘Lend’ tab above." href="#" class="has-tip tip-left favorite-link{{#is_favorite}} is-favorite{{/is_favorite}}">
 			<svg class="icon icon-star"><use xlink:href="#icon-star"/></svg>
 		</a>
-	</div>
-	<div class="show-for-medium-down">
+	{{/is_touch}}
+	{{#is_touch}}
 		<a title="Star this loan to find it quickly later. You can view and manage your starred loans in the ‘Lend’ tab above." href="#" class="has-tip tip-left favorite-link{{#is_favorite}} is-favorite{{/is_favorite}}">
 			<svg class="icon icon-star"><use xlink:href="#icon-star"/></svg>
 		</a>
-	</div>
+	{{/is_touch}}
 {{/can_favorite}}
