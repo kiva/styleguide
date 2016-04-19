@@ -18,11 +18,6 @@
 		z-index: 1200;
 		left: 0;
 		color: $white;
-
-		@media #{$medium-up} {
-			left: 12%;
-			width: 76%;
-		}
 	}
 
 	a.close-reveal-modal {
