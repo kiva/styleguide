@@ -213,6 +213,7 @@ a.filter-menu-button:visited {
 	$transform: translate3d(-$menu-width, 0, 0);
 
 	width: calc(100% + #{$menu-width});
+	max-width: 90rem;
 	-webkit-transform: $transform;
 	transform: $transform;
 
@@ -342,13 +343,13 @@ a.filter-menu-button:visited {
 }
 
 .no-results-text {
-	padding: 20px;
+	padding: rem-calc(20);
 	@media #{$large-up} {
 		transform: translate(-50%);
 		&.fixed {
 			left: calc((100% - #{$filter-menu-base-width}) / 2 + #{$filter-menu-base-width});
 			position: fixed;
-			top: 200px;
+			top: rem-calc(200);
 			bottom: auto;
 		}
 		&.absolute {
