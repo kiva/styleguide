@@ -1,5 +1,4 @@
 .borrower-profile-wrapper {
-	padding-top: 1rem;
 	background: white;
 
 	iframe {
@@ -11,13 +10,13 @@
 	}
 
 	.line-break {
-		width: 100%;
-		margin: auto;
+		margin: auto rem-calc(15);
 		padding: 0.6rem 0;
 		border: 0;
 		border-top: 1px solid $gray;
 
 		@media #{$large-up}{
+			margin: auto;
 			width: 100%;
 		}
 	}
@@ -32,11 +31,19 @@
 		padding-bottom: 0;
 		.line-break {
 			margin-top: 1rem;
+
+			@media #{$medium-up} {
+				margin: auto;
+			}
 		}
 	}
 
 	.loan-image-info-row {
 		min-height: rem-calc(350);
+	}
+
+	@media #{$medium-up} {
+		padding-top: 1rem;
 	}
 
 	@media #{$large-up} {
@@ -97,6 +104,7 @@
 		}
 
 		.ac-title {
+			padding-right: 1.75rem;
 			cursor: pointer;
 			.icon-large-chevron{
 				stroke-width: rem-calc(7);

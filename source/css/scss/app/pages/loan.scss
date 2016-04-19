@@ -298,6 +298,12 @@
 }
 
 .current-status-meter {
+	margin-top: rem-calc(15);
+
+	@media #{$medium-up} {
+		margin-top: 0;
+	}
+
 	.lender-count {
 		@media #{$small-only}{
 			div {
