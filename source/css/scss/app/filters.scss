@@ -55,12 +55,12 @@
 	}
 
 	.filter-distribution-icon {
-		margin-left: 200px;
-		margin-top: 10px;
+		margin-left: rem-calc(200);
+		margin-top: rem-calc(10);
 		border: 1px solid $charcoal;
-		padding: 1px 5px;
-		width: 25px;
-		height: 25px;
+		padding: rem-calc(1) rem-calc(5);
+		width: rem-calc(25);
+		height: rem-calc(25);
 	}
 
 	.filter-distribution-icon a {
@@ -68,10 +68,10 @@
 	}
 
 	.button_box {
-		padding-left: 60px;
+		padding-left: rem-calc(60);
 
 		@media #{$small-only} {
-			padding-top: 10px;
+			padding-top: rem-calc(10);
 		}
 	}
 
@@ -85,13 +85,13 @@
 
 	.filter-header-title {
 		@media #{$small-only} {
-			margin-left: -30px;
+			margin-left: rem-calc(-30);
 		}
 	}
 
 	.filter-component {
 		margin: 0;
-		min-height: 44px;
+		min-height: rem-calc(44);
 		cursor: pointer;
 		border-bottom: 1px solid #D8D8C8;
 		padding: 0;
@@ -104,19 +104,19 @@
 
 	.filter-component input {
 		@media #{small-only} {
-			width: 260px;
+			width: rem-calc(260);
 		}
 	}
 
 	.mobile-apply-filters-button {
 		display: block;
-		width: 286px;
+		width: rem-calc(286);
 		background: #25a7e2;
 		color: $white;
 		margin: auto;
 		text-align: center;
 		border: 0;
-		height: 40px;
+		height: rem-calc(40);
 	}
 
 	.mobile-filter-sub-menu {
@@ -138,11 +138,11 @@
 		@media #{$medium-up} {
 			font-size: 1em;
 			color: $gray;
-			margin: 0em 0.6666666667rem 0.555555555rem 0.6666666667rem;
+			margin: 0 0.6666666667rem 0.555555555rem 0.6666666667rem;
 		}
 
 		.subtext{
-			line-height: 18px;
+			line-height: rem-calc(18);
 			font-weight: normal;
 			font-size: 0.7rem;
 
@@ -171,7 +171,7 @@
 	}
 
 	.expandable-filter {
-		padding: 17.2px 12px;
+		padding: rem-calc(17.2) rem-calc(12);
 		margin: 0;
 		visibility: visible;
 		@media #{$medium-up} {
@@ -184,16 +184,16 @@
 		border: 1px solid $charcoal;
 		width: 12.5rem;
 		margin: 0 0.6666666667rem 0.3333333333rem;
-		padding-right: 24px;
+		padding-right: rem-calc(24);
 
 		@media #{$medium-up} {
-			width: 225px;
-			margin: 0em 0.6666666667rem;
+			width: rem-calc(225);
+			margin: 0 0.6666666667rem;
 		}
 	}
 	.filter-slider {
 		color: $green;
-		border: 0px;
+		border: 0;
 		padding: 0.2777777777rem 1rem 0 1rem;
 	}
 
@@ -204,16 +204,16 @@
 
 	.filter-slider-inner {
 		margin: 0.2777777777rem 0.5rem;
-		width: 205px;
+		width: rem-calc(205);
 	}
 
 	.country-filter-box, .country-filter-box a {
-		padding: 0em 0.3rem;
+		padding: 0 0.3rem;
 		color: $sky-blue;
 	}
 
 	.partner_filter_text {
-		margin-left: 5px;
+		margin-left: rem-calc(5);
 		color: $sky-blue;
 	}
 
@@ -253,13 +253,13 @@
 		text-align: center;
 		display: inline-table;
 		vertical-align: middle;
-		width: 143px;
-		height: 35px;
-		margin-top: 5px;
+		width: rem-calc(143);
+		height: rem-calc(35);
+		margin-top: rem-calc(5);
 
 		@media #{$medium-up} {
-			width: 105px;
-			height: 25px;
+			width: rem-calc(105);
+			height: rem-calc(25);
 		}
 	}
 
@@ -267,17 +267,17 @@
 		position: relative;
 		border: 1px solid $charcoal;
 		text-align: center;
-		border-left: 0px;
+		border-left: 0;
 		display: inline-table;
 		vertical-align: middle;
-		width: 143px;
-		height: 35px;
-		margin-left: -5px;
-		margin-top: 5px;
+		width: rem-calc(143);
+		height: rem-calc(35);
+		margin-left: rem-calc(-5);
+		margin-top: rem-calc(5);
 
 		@media #{$medium-up} {
-			width: 105px;
-			height: 25px;
+			width: rem-calc(105);
+			height: rem-calc(25);
 		}
 	}
 
@@ -286,7 +286,7 @@
 	}
 
 	.borrower-label {
-		border: 0px;
+		border: 0;
 		display: table-cell;
 		vertical-align: middle;
 
@@ -296,18 +296,17 @@
 	}
 
 	.checkbox-input {
-		padding-left: 35px;
-		display: block;
-		height: 44px;
+		padding-left: rem-calc(35);
+		height: rem-calc(44);
 		display: inline-table;
-		width: 240px;
+		width: rem-calc(240);
 		border-bottom: 1px solid #D8D8C8;
 		@media #{$medium-up} {
-			padding-left: 13px;
+			padding-left: rem-calc(13);
 			height: auto;
-			margin-left: 5px;
-			border-bottom: 0px;
-			margin-bottom: 8.5px;
+			margin-left: rem-calc(5);
+			border-bottom: 0;
+			margin-bottom: rem-calc(8.5);
 			display: block;
 		}
 	}
@@ -326,22 +325,22 @@
 			&:before {
 				content: '';
 				display: inline-block;
-				width: 6px;
-				height: 12px;
-				border: solid $kiva-green 2px;
+				width: rem-calc(6);
+				height: rem-calc(12);
+				border: solid $kiva-green;
 				border-width: 0 2px 2px 0;
 				transform: rotate(45deg);
-				margin-right: 10px;
-				margin-left: -18px;
+				margin-right: rem-calc(10);
+				margin-left: rem-calc(-18);
 			}
 		}
 	}
 
 	.checkbox-input-span {
-		margin-left: 3px;
+		margin-left: rem-calc(3);
 		font-size: 0.8em;
 		color: $charcoal;
-		border: 0px;
+		border: 0;
 		line-height:100%;
 		display: table-cell;
 		text-transform: none;
@@ -350,20 +349,16 @@
 
 	.filter-button-group-ul {
 		background: #f5f5f5;
-		-webkit-box-shadow: inset 0px 1px 1px rgba(50, 50, 50, 0.75);
-		-moz-box-shadow: inset 0px 1px 1px rgba(50, 50, 50, 0.75);
-		box-shadow: inset 0px 1px 1px rgba(50, 50, 50, 0.75);
+		box-shadow: inset 0 rem-calc(1) rem-calc(1) rgba(50, 50, 50, 0.75);
 		@media #{$medium-up} {
 			background: #fff;
-			-webkit-box-shadow: inset 0px 0px 0px rgba(50, 50, 50, 0.75);
-			-moz-box-shadow: inset 0px 0px 0px rgba(50, 50, 50, 0.75);
-			box-shadow: inset 0px 0px 0px rgba(50, 50, 50, 0.75);
+			box-shadow: none;
 		}
 
 		.subtext {
 			font-size: 0.7rem;
 			color: $gray;
-			padding-left: 12px;
+			padding-left: rem-calc(12);
 			display: none;
 
 			@media #{$small-only} {
@@ -391,7 +386,7 @@
 	}
 
 	.extra-padding-bottom {
-		padding-bottom: 10px;
+		padding-bottom: rem-calc(10);
 	}
 
 	.no-padding-top {
@@ -399,13 +394,13 @@
 	}
 
 	.icon-globe {
-		width: 25px;
-		height: 25px;
+		width: rem-calc(25);
+		height: rem-calc(25);
 		vertical-align: middle;
 	}
 
 	.icon-large-chevron {
-		margin-right: 12px;
+		margin-right: rem-calc(12);
 	}
 
 	hr {
@@ -424,18 +419,18 @@
 	.filter-keywords-clear-button {
 		display: none;
 		padding: 0;
-		right: 18px;
+		right: rem-calc(18);
 		position: absolute;
-		top: 10px;
-		height: 15px;
-		width: 15px;
+		top: rem-calc(10);
+		height: rem-calc(15);
+		width: rem-calc(15);
 		&:hover {
 			background: transparent;
 		}
 		.icon-x {
 			display: block;
-			width: 15px;
-			height: 15px;
+			width: rem-calc(15);
+			height: rem-calc(15);
 			stroke: $kiva-text-light;
 		}
 	}
@@ -449,7 +444,7 @@
 }
 
 .filter-button-group-ul {
-	padding: 0em;
+	padding: 0;
 
 	@media #{$medium-up} {
 		padding: 0;
@@ -459,7 +454,7 @@
 .filter-button-group-ul-bottom {
 	margin-top: 0.5em;
 	line-height: 1em;
-	padding: 0em 0.7rem;
+	padding: 0 0.7rem;
 
 	@media #{$medium-up} {
 		padding: 0;
@@ -473,9 +468,9 @@
 .noUi-handle-lower div, .noUi-handle-upper div {
 	position: absolute;
 	color: $jumbo;
-	bottom: -25px;
+	bottom: rem-calc(-25);
 	text-align: center;
-	width: 18px;
+	width: rem-calc(18);
 	font-size: 0.8em;
 }
 
@@ -508,25 +503,25 @@
 }
 
 .left-off-canvas-toggle {
-	margin: 10px 5px;
+	margin: rem-calc(10) rem-calc(5);
 }
 
 .filter-links {
 	font-size: 0.7em;
 	visibility: hidden;
-	margin-left: 10px;
+	margin-left: rem-calc(10);
 	float: left;
 	&.save-search-button {
 		margin-left: 0;
 		float: none;
-		font-size: 18px;
+		font-size: rem-calc(18);
 	}
 }
 
 @media #{$medium-up}{
 	.filter-links, .filter-links.save-search-button {
 		font-size: 0.77777778rem;
-		margin-left: 14px;
+		margin-left: rem-calc(14);
 		float: none;
 	}
 }
@@ -534,13 +529,13 @@
 #filter-loan-status-dropdown {
 	box-sizing: content-box;
 	border: 1px solid $charcoal;
-	width: 210px;
+	width: rem-calc(210);
 	margin: 0 0.6666666667rem 0.3333333333rem;
-	height: 18px;
+	height: rem-calc(18);
 	color: $charcoal;
 
 	@media #{$medium-up} {
-		margin: 0em 0.6666666667rem;
+		margin: 0 0.6666666667rem;
 	}
 }
 
@@ -567,7 +562,7 @@ a.close-reveal-modal {
 a.close-reveal-modal .icon.icon-x {
 	height: 0.8rem;
 	width: 0.8rem;
-	margin-right: 5px;
+	margin-right: rem-calc(5);
 }
 
 #filter-keywords-search-box-container {
