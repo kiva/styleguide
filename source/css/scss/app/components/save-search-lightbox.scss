@@ -33,8 +33,12 @@
 			text-indent: rem-calc(-22);
 			padding-left: rem-calc(22);
 
-			.save-search-alert-checkbox{
+			.save-search-alert-checkbox {
 				margin-right: rem-calc(5);
+
+				@media #{$small-only} {
+					vertical-align: middle;
+				}
 			}
 		}
 	}
