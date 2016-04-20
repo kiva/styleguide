@@ -241,6 +241,10 @@ $hiw-half-tap-button-size-small: $hiw-tap-button-size-small / 2;
 	background-color: $kiva-green;
 	padding-bottom: 1rem;
 
+	#lend & {
+		position: relative;
+	}
+
 	@media #{$large-up} {
 		padding-bottom: 2rem;
 	}
@@ -548,7 +552,7 @@ $hiw-half-tap-button-size-small: $hiw-tap-button-size-small / 2;
 			position: absolute;
 			height: rem-calc(25);
 			width: rem-calc(25);
-			top: rem-calc(10);
+			top: rem-calc(20);
 			right: rem-calc(10);
 		}
 	}
