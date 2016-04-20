@@ -362,11 +362,9 @@
 		margin: 0 auto;
 	}
 
-	padding-bottom: 1rem;
+	padding-bottom: 4rem;
 
 	.country-info-wrapper {
-		padding-bottom: rem-calc(30);
-
 		@media #{$medium-down} {
 			font-size: rem-calc(14);
 		}
