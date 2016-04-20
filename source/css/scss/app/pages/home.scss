@@ -544,16 +544,18 @@ $hiw-half-tap-button-size-small: $hiw-tap-button-size-small / 2;
 		}
 	}
 
-	.icon-x {
+	.close-icon {
 		display: none;
 		#lend & {
 			display: block;
-			stroke: $kiva-accent-green;
 			position: absolute;
-			height: rem-calc(25);
-			width: rem-calc(25);
 			top: rem-calc(20);
 			right: rem-calc(10);
+		}
+		.icon-x {
+			stroke: $kiva-accent-green;
+			height: rem-calc(25);
+			width: rem-calc(25);
 		}
 	}
 }
