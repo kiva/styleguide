@@ -32,7 +32,9 @@ $filter-menu-base-width: rem-calc(251);
 		}
 
 		@media #{$xxlarge-up} {
-			right: calc((100% - #{$filter-menu-base-width})/2);
+			.off-canvas-wrap:not(.hide-filters-for-xxlarge-up) & {
+				right: calc((100% - #{$filter-menu-base-width}) / 2);
+			}
 		}
 	}
 }
