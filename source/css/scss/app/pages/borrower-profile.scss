@@ -17,7 +17,6 @@
 
 		@media #{$large-up}{
 			margin: auto;
-			width: 100%;
 		}
 	}
 
@@ -30,16 +29,26 @@
 		position: relative;
 		padding-bottom: 0;
 		.line-break {
-			margin-top: 1rem;
+			margin: 1rem rem-calc(15) 0;
 
-			@media #{$medium-up} {
-				margin: auto;
+			@media #{$xxlarge-up} {
+				margin-left: 0;
 			}
 		}
 	}
 
 	.loan-image-info-row {
 		min-height: rem-calc(350);
+
+		.right-content {
+			@media #{$medium-up} {
+				padding-left: 1.5rem;
+			}
+
+			@media #{$xxlarge-up} {
+				padding-right: 0;
+			}
+		}
 	}
 
 	@media #{$medium-up} {
@@ -66,6 +75,8 @@
 		}
 
 		.left-content {
+			padding: 0;
+
 			section {
 				padding-left: 1rem;
 				padding-right: 1rem;
@@ -76,6 +87,10 @@
 				}
 
 				&.loan-description, &.all-previous-loan-details, &.previous-loan-details {
+					padding-left: 0;
+				}
+
+				@media #{$xxlarge-up} {
 					padding-left: 0;
 				}
 			}
@@ -100,6 +115,15 @@
 				flex-basis: auto;
 				width: 41.5%;
 				background-color: $kiva-bg-darkgray;
+			}
+
+			@media #{$xxlarge-up} {
+				padding-right: 0;
+			}
+
+			.line-break {
+				margin-left: 0;
+				margin-right: 0;
 			}
 		}
 
