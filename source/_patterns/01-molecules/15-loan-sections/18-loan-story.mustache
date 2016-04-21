@@ -1,17 +1,19 @@
 <section class="loan-story">
-	<h2 class="ac-title ac-container" data-kv-accordion aria-controls="ac-loan-story-body" aria-expanded="true">
-		{{#previousLoanDetails}}
-			Update on {{borrowerOrGroupName}}
-		{{/previousLoanDetails}}
-		{{^previousLoanDetails}}
-			{{borrowerOrGroupName}}'s story
-		{{/previousLoanDetails}}
-		<span class="ac-dropdown-icon">
-            <svg class="icon icon-large-chevron">
-				<use xlink:href="#icon-large-chevron"></use>
-			</svg>
-        </span>
-	</h2>
+	<div class="ac-title ac-container" data-kv-accordion aria-controls="ac-loan-story-body" aria-expanded="true">
+		<h2>
+			{{#previousLoanDetails}}
+				Update on {{borrowerOrGroupName}}
+			{{/previousLoanDetails}}
+			{{^previousLoanDetails}}
+				{{borrowerOrGroupName}}'s story
+			{{/previousLoanDetails}}
+			<span class="ac-dropdown-icon">
+				<svg class="icon icon-large-chevron">
+					<use xlink:href="#icon-large-chevron"></use>
+				</svg>
+			</span>
+		</h2>
+	</div>
 	<div class="ac-body" id="ac-loan-story-body" aria-hidden="false">
 
 		{{#storyDescription}}
