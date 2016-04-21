@@ -1,8 +1,11 @@
 .ac-container {
-	.ac-title {
+	&.ac-title {
 		margin: 0;
 		display: block;
 		position: relative;
+		h2 {
+			width: 90%;
+		}
 	}
 	.ac-dropdown-icon {
 		display: inline;
