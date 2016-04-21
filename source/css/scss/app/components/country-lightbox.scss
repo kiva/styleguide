@@ -27,9 +27,6 @@
 
 	#country-list {
 		.csscolumns & {
-			padding-left: rem-calc(20);
-			padding-right: rem-calc(20);
-
 			@media #{$large-up} {
 				@include column-count(2);
 			}
