@@ -241,10 +241,10 @@ a.filter-menu-button:visited {
 
 	.control-region, .results-region {
 		display: inline-block;
-		width: calc(100% - #{$menu-width});
+		width: calc(100% - 15.1rem); // 15.1rem = fudgy $menu-width
 
 		@media #{$large-up} {
-			width: calc(100% - #{$menu-base-width});
+			width: calc(100% - 14rem); // 14rem = fudgy $menu-base-width
 		}
 	}
 
