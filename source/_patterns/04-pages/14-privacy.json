@@ -1,0 +1,17 @@
+{
+	"main-title": "Privacy",
+	"page-title": "Privacy Policy",
+	
+	"has-bar-sub-links": true,
+	"bar-sub-links": [
+		{
+			"sub-title": "Terms of Use",
+			"sub-active": true
+		},
+		{
+			"sub-title": "Privacy Policy"
+		}
+		
+	
+	]
+}

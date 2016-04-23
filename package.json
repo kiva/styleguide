@@ -1,6 +1,6 @@
 {
   "name": "styleguide",
-  "version": "1.0.811",
+  "version": "1.0.795",
   "description": "Based on PatternLab and Foundation - [Pattern Lab Website](http://patternlab.io/) - [About Pattern Lab](http://patternlab.io/about.html) - [Documentation](http://patternlab.io/docs/index.html) - [Demo](http://demo.patternlab.io/)",
   "main": "Gruntfile.js",
   "devDependencies": {
@@ -17,7 +17,7 @@
     "grunt-githooks": "^0.3.1",
     "grunt-postcss": "^0.6.0",
     "grunt-release": "^0.13.0",
-    "grunt-sass": "~0.18.1",
+    "grunt-sass": "~1.1.0",
     "grunt-shell": "~1.1.2",
     "grunt-svgmin": "^2.0.1",
     "grunt-svgstore": "^0.5.0",
