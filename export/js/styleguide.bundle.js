@@ -8147,7 +8147,7 @@
 		});
 
 		var typeahead_menu_repositioning = function() {
-			if ($search_box) {
+			if ($search_box.length) {
 				var offset = $search_box.offset();
 				$('.top-nav-search-menu').css({
 					top: (offset.top + $search_box.outerHeight()) + 'px',
