@@ -18,13 +18,13 @@
 			</a>
 		</div>
 		<div class="small-3 large-2 xxlarge-1 columns header-column">
-			<a kvtrackevent="TopNav|click-Lend" data-dropdown="lend-dropdown" aria-controls="lend-dropdown" aria-expanded="false" class="header-button" href="{{lend_href}}">Lend <svg class="icon"><use xlink:href="#icon-triangle" /></svg></a>
+			<a kvtrackevent="TopNav|click-Lend" data-dropdown="lend-dropdown" data-options="is_hover:true;" aria-controls="lend-dropdown" aria-expanded="false" class="header-button" href="{{lend_href}}">Lend <svg class="icon"><use xlink:href="#icon-triangle" /></svg></a>
 		</div>
 		{{> 02-organisms/08-header/01-search-button}}
 		{{#is-visitor}}
 			<div class="small-6 xxlarge-3 columns header-column right-side">
 				<div class="small-6 large-4 columns">
-					<a kvtrackevent="TopNav|click-About" data-dropdown="about-dropdown" aria-controls="about-dropdown" aria-expanded="false" class="header-button" href="#">About <svg class="icon"><use xlink:href="#icon-triangle" /></svg></a>
+					<a kvtrackevent="TopNav|click-About" data-dropdown="about-dropdown" data-options="is_hover:true;" aria-controls="about-dropdown" aria-expanded="false" class="header-button" href="{{about_href}}">About <svg class="icon"><use xlink:href="#icon-triangle" /></svg></a>
 				</div>
 				<div id="top-basket-button" class="show-for-large-up large-4 columns">
 					<a class="header-button {{#is_free_trial_eligible}}hidden{{/is_free_trial_eligible}}" href="{{basket_href}}"><span class="amount {{^basket.item_count}}hide{{/basket.item_count}}">{{basket.item_count}}</span> Basket</a>
@@ -40,7 +40,7 @@
 					<a class="header-button {{#is_free_trial_eligible}}hidden{{/is_free_trial_eligible}}" href="{{basket_href}}"><span class="amount {{^basket.item_count}}hide{{/basket.item_count}}">{{basket.item_count}}</span> Basket</a>
 				</div>
 				<div class="small-12 large-6 columns">
-					<a kvtrackevent="TopNav|click-Portfolio" data-dropdown="my-kiva-dropdown" aria-controls="my-kiva-dropdown" aria-expanded="false" class="header-button my-kiva" href="#">
+					<a kvtrackevent="TopNav|click-Portfolio" data-dropdown="my-kiva-dropdown" data-options="is_hover:true;" aria-controls="my-kiva-dropdown" aria-expanded="false" class="header-button my-kiva" href="{{my_kiva_href}}">
 						<span class="amount">{{balance}}</span>
 						<span class="circle-avatar" style="background-image:url({{profile_picture_href}})"></span>
 					</a>
