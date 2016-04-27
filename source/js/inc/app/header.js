@@ -124,6 +124,6 @@ module.exports = function () {
 
 		// lend-menu-small
 		$('.lend-menu-small li>a').attr('aria-expanded', false);
-		$('.lend-menu-small ul').attr('aria-hidden', true);
+		$('.lend-menu-small ul').attr('aria-hidden', true).css('height', 0);
 	});
 };
