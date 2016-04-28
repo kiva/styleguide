@@ -115,8 +115,7 @@ module.exports = function () {
 	});
 
 	// Resets lend-menu-large and lend-menu-small
-	$('[data-dropdown=lend-dropdown]').click(function (e) {
-		e.preventDefault();
+	$('#lend-dropdown').on('closed.fndtn.dropdown', function () {
 		//lend-menu-large
 		$category_section.removeClass('slide-left');
 		$close_section.attr('aria-hidden', true);
@@ -125,6 +124,6 @@ module.exports = function () {
 
 		// lend-menu-small
 		$('.lend-menu-small li>a').attr('aria-expanded', false);
-		$('.lend-menu-small ul').attr('aria-hidden', true);
+		$('.lend-menu-small ul').attr('aria-hidden', true).css('height', 0);
 	});
 };
