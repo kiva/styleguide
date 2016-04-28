@@ -464,6 +464,10 @@
 	var $top_nav_menu = $('.top-nav-search-menu').detach();
 	$('.top-nav').append($top_nav_menu);
 
+	$('#search-form').on('show', function () {
+		$('#search-box').focus();
+	});
+
 	//var $category_menu = $('.category-search-menu').detach();
 	//$('.category-card-grid').append($category_menu);
 
