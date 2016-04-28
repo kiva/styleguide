@@ -12,6 +12,21 @@
 			"sub-active": true
 		}
 		
-	
-	]
-}
+	],
+
+	"drop-links": [
+        {
+            "title": "Privacy",
+            "sub-links": [
+               
+                {
+                    "sub-title": "Terms of Use",
+                    "sub-active": true
+                },
+                {
+                    "sub-title": "Privacy Policy"
+                }
+              ]  
+        }
+        ]
+	}
