@@ -5,13 +5,31 @@
 	"has-bar-sub-links": true,
 	"bar-sub-links": [
 		{
-			"sub-title": "Terms of Use"
+			"sub-title": "Terms of Use",
+		    "sub-active": true
 		},
 		{
-			"sub-title": "Privacy Policy",
-			"sub-active": true
+			"sub-title": "Privacy Policy"
+		}
+	],
+
+
+	"drop-links": [
+		{
+			"title": "Privacy",
+			"sub-links": [
+				{
+					"sub-title": "Privacy",
+					"sub-active": true
+				},
+				
+				{
+					"sub-title": "Terms of Use"
+				},
+				{
+					"sub-title": "Privacy Policy"
+				}
+				
+			]
 		}
 		
-	
-	]
-}
