@@ -8157,7 +8157,13 @@
 			}
 		};
 
-		$search_box.on('typeahead:open', typeahead_menu_repositioning);
+		// REDO-1768: For some reason this event fires inconsistently across different pages.
+		// As a workaround, let's re-run the repositioning a second time when the open animation finishes
+		$search_box.on('typeahead:open', function() {
+			typeahead_menu_repositioning();
+
+			window.setTimeout(typeahead_menu_repositioning, 500);
+		});
 
 
 		var close_button_visibility = function () {
