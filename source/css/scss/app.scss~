@@ -86,7 +86,7 @@
 @import 'app/filters-touch';
 @import 'app/loancards';
 @import 'app/paging';
-@import 'app/headline-group-2';
+@import 'app/healine-group-2;
 
 @import 'app/pages/home';
 @import 'app/pages/about';
