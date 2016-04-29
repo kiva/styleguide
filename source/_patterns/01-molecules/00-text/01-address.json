@@ -1,0 +1,11 @@
+{
+	"company-name": "Company Name",
+	"street-address": "1234 Main St.",
+	"locality": "Anywhere",
+	"postal-code" : "101010",
+	"state": "California",
+	"abbr": "CA",
+	"country-name": "U.S.A",
+	"tel": "+1.888.123.4567"
+
+}
