@@ -30,6 +30,7 @@ sudo apache2ctl restart
 On your Mac, edit /private/etc/hosts and add to the existing localhost line styleguide-vm.kiva.org
 For example: 192.168.56.11 localhost dev-vm-01.kiva.org admin-vm.kiva.org styleguide-vm.kiva.org
 You can then navigate to your VM installation of the styleguide with http://styleguide-vm.kiva.org
+(instructions from [Confluence page](https://confluence.kiva.org/pages/viewpage.action?pageId=25174074))
 
 
 ## About Pattern Lab
