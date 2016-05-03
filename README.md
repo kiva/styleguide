@@ -1,6 +1,37 @@
 ## Our styleguide
 - http://styleguide.kiva.org/
 
+### VM Setup
+First, in your VM /kiva directory or a web accessible directory in your environment
+```shell
+git clone git@github.com:kiva/styleguide.git
+cd styleguide
+npm install -d
+```
+Then, in your VM /etc/apache2/sites-available directory create a file called styleguide and insert the following
+```
+## styleguide
+<VirtualHost *:80>
+        ServerName styleguide
+        ServerAlias styleguide-vm.kiva.org styleguide-vm
+        DocumentRoot /kiva/styleguide/public
+        DirectoryIndex index.html
+        Options -Indexes
+        AddType application/x-httpd-php .php
+        FileETag none
+</VirtualHost>
+```
+Finally, run:
+```shell
+sudo a2ensite styleguide
+sudo apache2ctl restart
+```
+### Mac Setup
+On your Mac, edit /private/etc/hosts and add to the existing localhost line styleguide-vm.kiva.org
+For example: 192.168.56.11 localhost dev-vm-01.kiva.org admin-vm.kiva.org styleguide-vm.kiva.org
+You can then navigate to your VM installation of the styleguide with http://styleguide-vm.kiva.org
+
+
 ## About Pattern Lab
 - [Pattern Lab Website](http://patternlab.io/)
 - [About Pattern Lab](http://patternlab.io/about.html)
