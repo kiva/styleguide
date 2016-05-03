@@ -384,6 +384,10 @@
 
 	@media #{$large-up} {
 		padding-bottom: 4rem;
+
+		&.notice-visible {
+			padding-bottom: 8rem;
+		}
 	}
 
 	.country-info-wrapper {
