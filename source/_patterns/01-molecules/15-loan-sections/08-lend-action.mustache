@@ -5,7 +5,7 @@
 {{/is_ended}}
 {{^is_ended}}
 	{{^amountInBasket}}
-    <div class="show-for-large-up row lend-action">
+    <div class="show-for-large-up row lend-action {{#noticeVisible}}notice-visible{{/noticeVisible}}">
         {{#alreadyLent}}
             <div id="already-supported-message" class="columns small-12">You've supported this loan</div>
         {{/alreadyLent}}
