@@ -385,9 +385,17 @@
 	@media #{$large-up} {
 		padding-bottom: 4rem;
 
-		&.notice-visible {
-			padding-bottom: 8rem;
+		&.already-lent-visible {
+			padding-bottom: 7rem;
 		}
+	}
+
+	&.notice-visible {
+		padding-bottom: 2rem;
+	}
+
+	&.notice-visible.already-lent-visible {
+		padding-bottom: 1rem;
 	}
 
 	.country-info-wrapper {
@@ -784,6 +792,12 @@
 	position: absolute;
 	bottom: 0;
 	right: 0;
+	float: right;
+
+	&.notice-visible {
+		position: relative;
+	}
+
 	.lend-button-wrapper {
 		display: inline;
 		padding: 0;
@@ -902,7 +916,6 @@
 		padding-top: 0.5rem;
 		padding-bottom: 0.5rem;
 		background-color: $kiva-alert-yellow;
-		margin-top: 0.5rem;
 		margin-bottom: 0.5rem;
 	}
 }
