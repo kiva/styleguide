@@ -8,7 +8,8 @@
 	"has-bar-sub-links": true,
 	"bar-sub-links": [
 		{
-			"sub-title": "Terms of Use"
+			"sub-title": "Terms of Use",
+             "url": "https://www.kiva.org/legal/terms"
 		},
 		{
 			"sub-title": "Privacy Policy",
@@ -24,7 +25,6 @@
                
                 {
                     "sub-title": "Terms of Use"
-                    
                 },
                 {
                     "sub-title": "Privacy Policy",
