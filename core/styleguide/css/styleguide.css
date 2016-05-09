@@ -490,8 +490,7 @@ span.sg-pattern-state:before {
     .sg-pattern-head a:hover {
       color: #222; }
 
-.sg-element-description
-, .sg-element-group-description {
+.sg-element-description, .sg-element-group-description {
   margin: 2px;
   font-family: "HelveticaNeue", "Helvetica", "Arial", sans-serif;
   font-size: 70%;
