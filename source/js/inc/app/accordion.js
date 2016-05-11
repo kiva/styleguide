@@ -13,9 +13,9 @@ module.exports = function () {
 		return prev + (i===0 ? '' : ', ') + '#' + $(curr).attr('aria-controls');
 	}, ''));
 	
-	var linkName = ""; // jshint ignore:line
+	var linkName = '';
 
-	$("a[href*='#ac-']").click(function(){ // jshint ignore:line
+	$('a[href*="#ac-"]').click(function(){ 
 		var href = $(this).attr('href');
 		var accordionHeader = $(href).parent();
 		$('html, body').animate({
