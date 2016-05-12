@@ -12,10 +12,8 @@ module.exports = function () {
 	var $targets = $($accordions.get().reduce(function(prev, curr, i) {
 		return prev + (i===0 ? '' : ', ') + '#' + $(curr).attr('aria-controls');
 	}, ''));
-	
-	var linkName = '';
-
-	$('a[href*="#ac-"]').click(function(){ 
+		
+	$('a[href*="#ac-"]').click(function(){
 		var href = $(this).attr('href');
 		var accordionHeader = $(href).parent();
 		$('html, body').animate({
