@@ -1,0 +1,85 @@
+{
+	"page-header": "Kiva Terms of Use Agreement",
+	"page-subheader": "(Last updated 2/24/2014)*",
+	"italicized-line": "*Changes from the prior version will generally be highlighted below for at least one month.",
+	"main-title": "Terms of Use",
+	"page-title": "Terms of Use",
+	"has-bar-sub-links": true,
+	"bar-sub-links": [
+		{
+			"sub-title": "Privacy Policy",
+			"url":"#"
+		},
+		{
+			"sub-title": " Terms of Use",
+			"sub-active": true,
+			"url":"#"
+		}
+		
+	],
+	"drop-links": [
+        {
+            "title": "Privacy",
+            "sub-links": [
+               
+                {
+                    "sub-title": "Privacy Policy",
+                    "url":"#"
+                    
+                },
+                {
+                    "sub-title": "Terms of Use",
+                    "sub-active": true,
+                    "url":"#"
+                }
+              ]  
+        }
+	],
+	"terms-links": [
+		{
+			"accordion-title": "1. Participation in the Program",
+			"url":"#ac-participation"
+		},
+		{
+			"accordion-title": "2. Proprietary Rights",
+			"url": "#ac-proprietary-rights"
+		},
+		{
+			"accordion-title": "3. Acceptable Use",
+			"url": "#ac-Acceptable-Use"
+		},
+		{
+			"accordion-title": "4. Disclaimers" ,
+			"url": "#ac-Disclaimers"
+		},
+		{
+			"accordion-title": "5. Limitation of Liability",
+			"url": "#ac-Limitation"
+		},
+		{
+			"accordion-title":"6. Disputes with other Field Partners, Borrowers",
+			"url": "#ac-Disputes"
+		},
+		{
+			"accordion-title":"7. Governing Law; Resolution of Disputes; Arbitration and Waivers",
+			"url": "#ac-Governing-Law"
+		},
+		{
+			"accordion-title":"8. Indemnity",
+			"url":"#ac-Indemnity"
+		},
+		{
+			"accordion-title":"9. Term; Termination ",
+			"url":"#ac-Termination"
+		},
+		{
+			"accordion-title":"10. Kiva Resources; Independent Kiva Events",
+			"url":"#ac-Resources"
+		},
+		{
+			"accordion-title":"11. Entire Agreement; Severability ",
+			"url":"#ac-Agreement"
+		}
+
+	]
+}
