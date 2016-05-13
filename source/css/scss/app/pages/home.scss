@@ -504,9 +504,10 @@ $hiw-half-tap-button-size-small: $hiw-tap-button-size-small / 2;
 		width: 80vw;
 		min-height: rem-calc(100);
 
-		@media #{$medium-range} {
+		@media #{$medium-down} {
 			min-height: rem-calc(72);
-		}
+		};
+
 
 		p.featured + p {
 			font-size: $small-font-size;
