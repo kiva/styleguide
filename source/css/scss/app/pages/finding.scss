@@ -367,3 +367,23 @@ a.filter-menu-button:visited {
 		}
 	}
 }
+
+.filter-indicator {
+	@include small-text();
+	display: inline-block;
+	margin-top: rem-calc(5);
+	margin-right: rem-calc(4);
+	padding-right: rem-calc(4);
+	background-color: $kiva-filter-indicator-bg;
+	border: 1px solid $kiva-filter-indicator;
+	color: $kiva-filter-indicator;
+
+	.close-control {
+		cursor: pointer;
+		position: relative;
+		top: -1px;
+		margin-left: rem-calc(4);
+		padding-right: rem-calc(2);
+		font-size: $small-font-size - 2;
+	}
+}
