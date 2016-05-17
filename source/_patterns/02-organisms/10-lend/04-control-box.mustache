@@ -25,12 +25,16 @@
 </div>
 <div class="secondary-nav filter-loan-count {{#is-category-page}}hide{{/is-category-page}}">
 	{{#loan-count}}
-		{{loan-count}} loans
+		{{loan-count}} loans{{#show-selected}} for {{/show-selected}}
 	{{/loan-count}}
 
-	{{#filter-list}}
-		matching {{filter-list}}
-	{{/filter-list}}
+	<ul class="selected-filters">
+		{{#selected-filters}}
+			<li>
+				{{> molecules-selected-filter }}
+			</li>
+		{{/selected-filters}}
+	</ul>
 
 	{{#show-clear}}<span class="desktop-clear-button"><a href="#" class="hide-for-small filter-links filter-clear-button clear-touch">Clear filters</a></span>{{/show-clear}}
 	{{#show-save-search}}<span><a href="#" class="hide-for-small filter-links save-search-button clear-touch"

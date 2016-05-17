@@ -368,6 +368,16 @@ a.filter-menu-button:visited {
 	}
 }
 
+.selected-filters {
+	list-style: none;
+	display: inline-block;
+	margin: 0 0.5rem;
+
+	li {
+		display: inline-block;
+	}
+}
+
 .filter-indicator {
 	@include small-text();
 	display: inline-block;
@@ -381,9 +391,7 @@ a.filter-menu-button:visited {
 	.close-control {
 		cursor: pointer;
 		position: relative;
-		top: -1px;
 		margin-left: rem-calc(4);
 		padding-right: rem-calc(2);
-		font-size: $small-font-size - 2;
 	}
 }
