@@ -25,18 +25,21 @@
 </div>
 <div class="secondary-nav filter-loan-count {{#is-category-page}}hide{{/is-category-page}}">
 	{{#loan-count}}
-		{{loan-count}} loans{{#show-selected}} for {{/show-selected}}
+		{{loan-count}} loans
 	{{/loan-count}}
-
-	<ul class="selected-filters">
-		{{#selected-filters}}
-			<li>
-				{{> molecules-selected-filter }}
-			</li>
-		{{/selected-filters}}
-	</ul>
 
 	{{#show-clear}}<span class="desktop-clear-button"><a href="#" class="hide-for-small filter-links filter-clear-button clear-touch">Clear filters</a></span>{{/show-clear}}
 	{{#show-save-search}}<span><a href="#" class="hide-for-small filter-links save-search-button clear-touch"
 			 data-reveal-id="save-search-modal">Save this search</a></span>{{/show-save-search}}
+
+	<div class="selected-filters-box {{^show-selected}}hide{{/show-selected}} {{#selected-expanded}}expanded{{/selected-expanded}}">
+		<a class="control" href="#">{{^selected-expanded}}+ more{{/selected-expanded}}{{#selected-expanded}}less{{/selected-expanded}}</a>
+		<ul class="selected-filters">
+			{{#selected-filters}}
+				<li>
+					{{> molecules-selected-filter }}
+				</li>
+			{{/selected-filters}}
+		</ul>
+	</div>
 </div>
