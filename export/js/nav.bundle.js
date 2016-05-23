@@ -8237,11 +8237,25 @@
 		var $targets = $($accordions.get().reduce(function(prev, curr, i) {
 			return prev + (i===0 ? '' : ', ') + '#' + $(curr).attr('aria-controls');
 		}, ''));
-
+			
+		$('a[href*="#ac-"]').click(function(){
+			var href = $(this).attr('href');
+			var accordionHeader = $(href).parent();
+			$('html, body').animate({
+	        	scrollTop: $(accordionHeader).offset().top
+	    	}, 1000);
+			accordionFunction(href);
+		});
 
 		$accordions.click(function() {
-			var $this = $(this);
-			var $target = $('#'+$this.attr('aria-controls'));
+			var element = $(this);
+			var href = $('#'+element.attr('aria-controls'));
+			accordionFunction(href,element);
+		});
+		
+		function accordionFunction(name,element) {
+			var $this = element || $(this);
+			var $target = $(name);
 			var is_hidden = $target.attr('aria-hidden') === 'true';
 			var hiding = !is_hidden;
 
@@ -8292,7 +8306,7 @@
 			$this.attr('aria-expanded', !hiding);
 			$target.attr('aria-hidden', hiding)
 				.trigger(hiding ? 'hide' : 'show');
-		});
+		}
 
 		$(window).on('resize', Foundation.utils.throttle(function() {
 			$targets.each(function() {
@@ -8306,6 +8320,7 @@
 			});
 		}, 200));
 	};
+
 
 /***/ }
 /******/ ]);
