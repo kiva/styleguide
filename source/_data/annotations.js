@@ -44,5 +44,11 @@ var comments = {
 			"title": "Responsive Line Breaks",
 			"comment": "<p>The SCSS for responsive line breaks is found in _utils.scss</p>"
 		},
+		{
+			"el": ".tertiary-nav",
+			"title": "Tertiary navigation",
+			"comment": "<p>These appear a bit too far to the left so that " +
+			"they will align properly with the logo when used on a page</p>"
+		}
 	]
 };
