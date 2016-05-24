@@ -413,10 +413,7 @@
 	}
 	// END HOME PAGE CAROUSEL
 
-	
-	
-	// KIVA LABS CAROUSEL====================
-	
+	// KIVA LABS CAROUSEL==========
 	if ($('#labs-slideshow')) {
 		var slickOpts = {
 			slide: '.labs-slide',
@@ -433,12 +430,7 @@
 		// Init the slick
 		$('#labs-slideshow').slick(slickOpts);
 	}
-	
-	
 	/// kiva labs end carousel========
-	
-	
-	
 	
 	function loadSvgIcons() {
 		return $.get('/images/icons.svg', function(data) {

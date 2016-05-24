@@ -1,6 +1,5 @@
  {
 	 "headline": {
-
         "medium": "Welcome to Kiva Labs."
     },
     "textOverImageNameSpaceClass": "about-headline-wrapper",
@@ -30,7 +29,6 @@
            "title": "Due diligence"
        }
    ],
-   
    "has-bar-sub-links": true,
    "bar-sub-links": [
        {
@@ -59,8 +57,7 @@
                    "sub-title": "Kiva Live"
                },
                {
-                   "sub-title": "Success Stories"
-                   
+                   "sub-title": "Success Stories"                  
                },
                {
                    "sub-title": "Social Performance"
@@ -88,11 +85,9 @@
    ],
    "basket" : {
        "item_count": 0
-   },
-   
+   },   
 		"photo-credit-link": "http//http://www.internews.eu/",
 		"photo-credit": "Internews Europe",
-   
     "challenges":    [
        {
        "name": "Financing Agriculture",
@@ -101,7 +96,6 @@
        "href": "/labs/financingagriculture",
         "caption": "Creating flexible financing to help small farmers overcome uncertainties."
        },
-
        {
        "name": "Closing the Energy Gap",
        "src": "https://www-kiva-org.global.ssl.fastly.net/cms/page/images/closing-the-energy-gap-std.jpg",
@@ -109,7 +103,6 @@
        "href": "/labs/closingtheenergygap",
         "caption": "Financing renewables to replace expensive, dirty and dangerous sources of energy."
        },
-
        {
        "name": "Access to Education",
        "src": "https://www-kiva-org.global.ssl.fastly.net/cms/page/images/access-to-education-std.jpg",
@@ -117,7 +110,6 @@
        "href": "/labs/accesstoeducation",
        "caption": "Loans for students with promising futures but no credit history."
        },
-
        {
        "name": "Leveraging Mobile Tech",
        "src": "https://www-kiva-org.global.ssl.fastly.net/cms/page/images/leveraging-mobile-tech-std.jpg",
@@ -125,8 +117,7 @@
        "href": "/labs/leveragingmobiletech",
        "caption": "Lowering costs and expanding access with mobile-based  business models."
        }
-   ],
-    
+   ], 
     "lightbox": {
     "video": {
       "youtube": {
@@ -137,6 +128,5 @@
         "frameborder": "2rem"
       }
     }
-  }
-    
+  }   
 }
