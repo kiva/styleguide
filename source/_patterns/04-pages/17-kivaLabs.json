@@ -51,13 +51,13 @@
            "sub-links": [
                {
                    "sub-title": "Labs",
-                   "sub-active": true  
+                   "sub-active": true
                },
                {
                    "sub-title": "Kiva Live"
                },
                {
-                   "sub-title": "Success Stories"                  
+                   "sub-title": "Success Stories"
                },
                {
                    "sub-title": "Social Performance"
@@ -85,9 +85,10 @@
    ],
    "basket" : {
        "item_count": 0
-   },   
+   },
 		"photo-credit-link": "http//http://www.internews.eu/",
 		"photo-credit": "Internews Europe",
+		"chevron-title": "Choose a challenge",
     "challenges":    [
        {
        "name": "Financing Agriculture",
@@ -117,7 +118,7 @@
        "href": "/labs/leveragingmobiletech",
        "caption": "Lowering costs and expanding access with mobile-based  business models."
        }
-   ], 
+   ],
     "lightbox": {
     "video": {
       "youtube": {
@@ -128,5 +129,5 @@
         "frameborder": "2rem"
       }
     }
-  }   
+  }
 }
