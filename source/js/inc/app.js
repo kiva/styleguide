@@ -11,6 +11,7 @@ var borrowerPage = require('./app/pages/borrowerPage');
 var categories = require('./app/pages/categories');
 var lightbox = require('./app/lightbox');
 var saveSearchLightbox = require('./app/saveSearchLightbox');
+var kivalabs = require('./app/pages/kivalabs');
 
 var $ = require('jquery');
 var FastClick = require('fastclick');
@@ -44,4 +45,6 @@ $(document).ready(function() {
 	categories();
 	lightbox();
 	saveSearchLightbox();
+	kivalabs();
+	
 });

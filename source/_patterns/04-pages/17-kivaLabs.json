@@ -1,0 +1,142 @@
+ {
+	 "headline": {
+
+        "medium": "Welcome to Kiva Labs."
+    },
+    "textOverImageNameSpaceClass": "about-headline-wrapper",
+    "main-title": "Impact",
+    "page-title": "Impact",
+    "bar-links": [
+       {
+           "title": "About us"
+       },
+       {
+           "title": "Get to know us"
+       },
+       {
+           "title": "How Kiva works"
+       },
+       {
+           "title": "Where Kiva works"
+       },
+       {
+           "title": "Impact",
+           "active": true
+       },
+       {
+           "title": "Press"
+       },
+       {
+           "title": "Due diligence"
+       }
+   ],
+   
+   "has-bar-sub-links": true,
+   "bar-sub-links": [
+       {
+           "sub-title": "Labs",
+           "sub-active": true
+       },
+       {
+           "sub-title": "Kiva Live"
+       },
+       {
+           "sub-title": "Success Stories"
+       },
+       {
+           "sub-title": "Social Performance"
+       }
+   ],
+   "drop-links": [
+       {
+           "title": "Impact",
+           "sub-links": [
+               {
+                   "sub-title": "Labs",
+                   "sub-active": true  
+               },
+               {
+                   "sub-title": "Kiva Live"
+               },
+               {
+                   "sub-title": "Success Stories"
+                   
+               },
+               {
+                   "sub-title": "Social Performance"
+               }
+           ]
+       },
+       {
+           "title": "About us"
+       },
+       {
+           "title": "Get to know us"
+       },
+       {
+           "title": "How Kiva works"
+       },
+       {
+           "title": "Where Kiva works"
+       },
+       {
+           "title": "Press Center"
+       },
+       {
+           "title": "Due diligence"
+       }
+   ],
+   "basket" : {
+       "item_count": 0
+   },
+   
+		"photo-credit-link": "http//http://www.internews.eu/",
+		"photo-credit": "Internews Europe",
+   
+    "challenges":    [
+       {
+       "name": "Financing Agriculture",
+       "src": "https://www-kiva-org.global.ssl.fastly.net/cms/page/images/financing-agriculture-std.jpg",
+       "retina-src": "https://www-kiva-org.global.ssl.fastly.net/cms/page/images/financing-agriculture-retina.jpg",
+       "href": "/labs/financingagriculture",
+        "caption": "Creating flexible financing to help small farmers overcome uncertainties."
+       },
+
+       {
+       "name": "Closing the Energy Gap",
+       "src": "https://www-kiva-org.global.ssl.fastly.net/cms/page/images/closing-the-energy-gap-std.jpg",
+       "retina-src": "https://www-kiva-org.global.ssl.fastly.net/cms/page/images/closing-the-energy-gap-retina.jpg",
+       "href": "/labs/closingtheenergygap",
+        "caption": "Financing renewables to replace expensive, dirty and dangerous sources of energy."
+       },
+
+       {
+       "name": "Access to Education",
+       "src": "https://www-kiva-org.global.ssl.fastly.net/cms/page/images/access-to-education-std.jpg",
+       "retina-src": "https://www-kiva-org.global.ssl.fastly.net/cms/page/images/access-to-education-retina.jpg",
+       "href": "/labs/accesstoeducation",
+       "caption": "Loans for students with promising futures but no credit history."
+       },
+
+       {
+       "name": "Leveraging Mobile Tech",
+       "src": "https://www-kiva-org.global.ssl.fastly.net/cms/page/images/leveraging-mobile-tech-std.jpg",
+       "retina-src": "https://www-kiva-org.global.ssl.fastly.net/cms/page/images/leveraging-mobile-tech-retina.jpg",
+       "href": "/labs/leveragingmobiletech",
+       "caption": "Lowering costs and expanding access with mobile-based  business models."
+       }
+   ],
+    
+    "lightbox": {
+    "video": {
+      "youtube": {
+        "src": "//www.youtube.com/embed/v2vetkuQivw?controls=0",
+        "modal-title": "Beyond Charity, rethinking how we give.",
+        "height": "100%",
+        "width": "100%",
+        "frameborder": "2rem"
+      }
+    }
+  }
+    
+}
