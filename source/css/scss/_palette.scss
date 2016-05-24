@@ -28,6 +28,7 @@ $light-green: #a9d14c; // rgb(169, 209, 76)
 $blue: #26b6e8; // rgb(38, 182, 232)
 $sky-blue: #22a9d8; // rgb(34, 169, 216)
 $faded-blue: #6698a9; // rgb(102, 152, 169)
+$pale-blue: #d2f0f8;
 $highlight-blue: #0d8ebb; // rgb(13, 142, 187)
 $red: #9C021A; // rgb(156, 2, 26)
 $vivid-yellow: #F8E71C; //rgb(248, 231, 28)
@@ -63,6 +64,8 @@ $kiva-text-light: $gray;
 $kiva-textlink: $sky-blue;
 $kiva-textlink-visited: $faded-blue;
 $kiva-textlink-hover: $highlight-blue;
+$kiva-filter-indicator: $blue;
+$kiva-filter-indicator-bg: $pale-blue;
 
 .white {
 	color: $white;
