@@ -1,0 +1,26 @@
+<div class="small-12  xlarge-6  columns full-screen-video">
+		<a href="#" data-reveal-id="kiva-labs-video">
+			<div class="kiva-labs-video">
+				<img id="video" src="{{screenshot-image}}" />
+					<div class="button-wrapper">
+						<div id="kivalabsPlayButton" class="play-button">
+							<svg class="icon icon-triangle">
+								<use xlink:href="#icon-triangle"></use>
+							</svg>
+						</div>
+					</div>
+			</div>
+		</a>
+		<div id="kiva-labs-video" class="reveal-modal" data-reveal aria-			  	hidden="true" role="video">
+            <a id="kivalabsStopButton" class="close-reveal-modal" aria-		      label="Close">
+                <svg class="icon icon-x">
+                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-x"></use>
+                </svg>
+            </a>
+            <div class="lightbox-content white">
+                <div class="flex-video widescreen vimeo">
+                    <iframe id="kivalabsYoutubeVideo" width="{{lightbox.video.youtube.width}}" height="{{lightbox.video.youtube.height}}" src="{{lightbox.video.youtube.src}}" frameborder="{{lightbox.video.youtube.frameborder}}" allowfullscreen></iframe>
+                </div>
+            </div>
+    	 </div>
+ </div>
