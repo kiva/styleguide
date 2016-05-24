@@ -12,6 +12,7 @@ var categories = require('./app/pages/categories');
 var lightbox = require('./app/lightbox');
 var saveSearchLightbox = require('./app/saveSearchLightbox');
 var kivalabs = require('./app/pages/kivalabs');
+var autoplayVideo = require('./app/autoplay-video');
 
 var $ = require('jquery');
 var FastClick = require('fastclick');
@@ -46,5 +47,6 @@ $(document).ready(function() {
 	lightbox();
 	saveSearchLightbox();
 	kivalabs();
-	
+	autoplayVideo();
+
 });
