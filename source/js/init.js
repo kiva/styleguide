@@ -390,6 +390,10 @@
 	}
 	// END BORROWER PAGE CAROUSEL
 
+	
+	// END CAROUSEL MOLECULE FUNCTION
+	
+	
 	// HOME PAGE CAROUSEL ======================================
 	if ($('#hp-slideshow')) {
 		var slickOpts = {
@@ -409,6 +413,25 @@
 	}
 	// END HOME PAGE CAROUSEL
 
+	// KIVA LABS CAROUSEL==========
+	if ($('#labs-slideshow')) {
+		var slickOpts = {
+			slide: '.labs-slide',
+			slidesToShow: 1,
+			slidesToScroll: 1,
+			mobileFirst: true,
+			dots: true,
+			arrows: true,
+			prevArrow: $('.labs-slideshow-prev-arrow'),
+			nextArrow: $('.labs-slideshow-next-arrow'),
+			autoplay: true,
+			autoplaySpeed: 5000
+		};
+		// Init the slick
+		$('#labs-slideshow').slick(slickOpts);
+	}
+	/// kiva labs end carousel========
+	
 	function loadSvgIcons() {
 		return $.get('/images/icons.svg', function(data) {
 			var div = document.createElement('div');
