@@ -16,11 +16,6 @@
   "currencyLossRate": "0.02%",
   "fieldPartnerDataHelpText": [
     {
-      "dataRevealId": "due-diligence-type-lightbox",
-      "descriptionTitle": "Due Diligence Type",
-      "descriptionText": "Due Diligence Type description text."
-    },
-    {
       "dataRevealId": "partner-time-on-kiva-lightbox",
       "descriptionTitle": "Time on Kiva",
       "descriptionText": "Time on Kiva description text."

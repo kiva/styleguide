@@ -4,7 +4,7 @@
             <a href="#" data-kv-accordion aria-controls="lend-menu-category-panel" aria-expanded="false" class="section-title">Categories<svg class="icon icon-small-chevron-mobile"><use xlink:href="#icon-small-chevron-mobile" /></svg></a>
             <ul id="lend-menu-category-panel" aria-hidden="true">
 				{{#categories.list}}
-                    <li><a href="{{href}}">{{name}}</a></li>
+                    <li><a kvtrackevent="TopNav|click-Lend-Category|{{name}}|{{index}}" href="{{href}}">{{name}}</a></li>
 				{{/categories.list}}
                 <li><a href="{{categories_href}}">All categories</a></li>
             </ul>
@@ -17,7 +17,7 @@
                         <a href="#" data-kv-accordion aria-controls="lend-menu-{{id}}-panel" aria-expanded="false" class="section-title">{{name}}<svg class="icon icon-small-chevron-mobile"><use xlink:href="#icon-small-chevron-mobile" /></svg></a>
                         <ul id="lend-menu-{{id}}-panel" aria-hidden="true">
 							{{#countries}}
-								<li><a href="{{#facet}}{{href}}{{/facet}}{{^facet}}#{{/facet}}" {{^facet}}class="disabled"{{/facet}}><span class="f16 {{code}}"></span>{{name}} {{#facet}}({{facet}}){{/facet}}{{^facet}}(0){{/facet}}</a></li>
+								<li><a kvtrackevent="TopNav|click-Lend-Country|{{name}}" href="{{#facet}}{{href}}{{/facet}}{{^facet}}#{{/facet}}" {{^facet}}class="disabled"{{/facet}}><span class="f16 {{code}}"></span>{{name}} {{#facet}}({{facet}}){{/facet}}{{^facet}}(0){{/facet}}</a></li>
 							{{/countries}}
                         </ul>
                     </li>
@@ -25,7 +25,7 @@
             </ul>
         </li>
         <li>
-            <a href="{{lend_href}}">All loans</a>
+            <a kvtrackevent="TopNav|click-Lend-All_Loans" href="{{lend_href}}">All loans</a>
         </li>
 		{{^is-visitor}}
 			{{#has_personalized}}
@@ -33,16 +33,16 @@
 	                <a href="#" data-kv-accordion aria-controls="lend-menu-personalized-panel" aria-expanded="false" class="section-title">My Kiva<svg class="icon icon-small-chevron-mobile"><use xlink:href="#icon-small-chevron-mobile" /></svg></a>
 	                <ul id="lend-menu-personalized-panel" aria-hidden="true">
 						{{#has_favorites}}
-							<li class="favorites-href-in-nav"><a href="{{favorites_href}}">Starred loans</a></li>
-							<li class="no-favorites-href-in-nav hide"><a href="#" class="disabled">Starred loans</a></li>
+							<li class="favorites-href-in-nav"><a kvtrackevent="TopNav|click-Lend-Favorites" href="{{favorites_href}}">Starred loans</a></li>
+							<li class="no-favorites-href-in-nav hide"><a kvtrackevent="TopNav|click-Lend-Favorites" href="#" class="disabled">Starred loans</a></li>
 						{{/has_favorites}}
 						{{^has_favorites}}
-							<li class="no-favorites-href-in-nav"><a href="#" class="disabled">Starred loans</a></li>
-							<li class="favorites-href-in-nav hide"><a href="{{favorites_href}}">Starred loans</a></li>
+							<li class="no-favorites-href-in-nav"><a kvtrackevent="TopNav|click-Lend-Favorites" href="#" class="disabled">Starred loans</a></li>
+							<li class="favorites-href-in-nav hide"><a kvtrackevent="TopNav|click-Lend-Favorites" href="{{favorites_href}}">Starred loans</a></li>
 						{{/has_favorites}}
 						{{#has_saved_searches}}
                             <li class="lend-menu-searches-li-mobile">
-								<a href="#" data-kv-accordion aria-controls="lend-menu-searches-panel" aria-expanded="false" class="section-title">Saved searches<svg class="icon icon-small-chevron-mobile"><use xlink:href="#icon-small-chevron-mobile" /></svg></a>
+								<a kvtrackevent="TopNav|click-Lend-SavedSearch" href="#" data-kv-accordion aria-controls="lend-menu-searches-panel" aria-expanded="false" class="section-title">Saved searches<svg class="icon icon-small-chevron-mobile"><use xlink:href="#icon-small-chevron-mobile" /></svg></a>
 								<ul id="lend-menu-searches-panel" aria-hidden="true">
 									{{#saved_searches}}
 										<li><a href="{{href}}">{{name}}</a></li>
@@ -59,7 +59,7 @@
 							</li>
 						{{/has_saved_searches}}
 	                    {{#countries_unlent_href}}
-	                    	<li><a href="{{countries_unlent_href}}">Countries I haven't lent to</a></li>
+	                    	<li><a kvtrackevent="TopNav|click-Lend-Countries_Not_Lent" href="{{countries_unlent_href}}">Countries I haven't lent to</a></li>
 	                    {{/countries_unlent_href}}
 	                </ul>
 	            </li>
@@ -72,10 +72,10 @@
 			<div class="column-list-container">
 				<ul class="column-list">
 					{{#categories.list}}
-                        <li><a href="{{href}}">{{name}}</a></li>
+                        <li><a kvtrackevent="TopNav|click-Lend-Category|{{name}}|{{index}}" href="{{href}}">{{name}}</a></li>
 					{{/categories.list}}
-                    <li class="bottom"><a href="{{lend_href}}">All loans</a></li>
-					<li class="bottom"><a href="{{categories_href}}">All categories</a></li>
+                    <li class="bottom"><a kvtrackevent="TopNav|click-Lend-All_Loans" href="{{lend_href}}">All loans</a></li>
+					<li class="bottom"><a kvtrackevent="TopNav|click-Lend-All_Categories" href="{{categories_href}}">All categories</a></li>
 				</ul>
 			</div>
 		</div>
@@ -100,12 +100,12 @@
 					<div class="section-title">My Kiva</div>
 					<ul>
 						{{#has_favorites}}
-							<li class="favorites-href-in-nav"><a href="{{favorites_href}}">Starred loans</a></li>
-							<li class="no-favorites-href-in-nav hide"><a href="#" class="disabled">Starred loans</a></li>
+							<li class="favorites-href-in-nav"><a kvtrackevent="TopNav|click-Lend-Favorites" href="{{favorites_href}}">Starred loans</a></li>
+							<li class="no-favorites-href-in-nav hide"><a kvtrackevent="TopNav|click-Lend-Favorites" href="#" class="disabled">Starred loans</a></li>
 						{{/has_favorites}}
 						{{^has_favorites}}
-							<li class="no-favorites-href-in-nav"><a href="#" class="disabled">Starred loans</a></li>
-							<li class="favorites-href-in-nav hide"><a href="{{favorites_href}}">Starred loans</a></li>
+							<li class="no-favorites-href-in-nav"><a kvtrackevent="TopNav|click-Lend-Favorites" href="#" class="disabled">Starred loans</a></li>
+							<li class="favorites-href-in-nav hide"><a kvtrackevent="TopNav|click-Lend-Favorites" href="{{favorites_href}}">Starred loans</a></li>
 						{{/has_favorites}}
 						{{#has_saved_searches}}
 							<li class="lend-menu-searches-li-desktop">
@@ -115,11 +115,11 @@
 						{{^has_saved_searches}}
 							<li class="lend-menu-searches-li-desktop">
 								<a href="#" class="tertiary-link disabled">Saved searches</a>
-								<a href="#" data-kv-toggle aria-controls="lend-menu-searches-section" aria-expanded="false" class="tertiary-link" style="display: none;">Saved searches</a>
+								<a kvtrackevent="TopNav|click-Lend-SavedSearch" href="#" data-kv-toggle aria-controls="lend-menu-searches-section" aria-expanded="false" class="tertiary-link" style="display: none;">Saved searches</a>
 							</li>
 						{{/has_saved_searches}}
 	                    {{#countries_unlent_href}}
-	                    	<li><a href="{{countries_unlent_href}}">Countries I haven't lent to</a></li>
+	                    	<li><a kvtrackevent="TopNav|click-Lend-Countries_Not_Lent" href="{{countries_unlent_href}}">Countries I haven't lent to</a></li>
 	                    {{/countries_unlent_href}}
 					</ul>
 				{{/has_personalized}}
@@ -131,7 +131,7 @@
 				<ul>
 					{{#countries}}
 						<li>
-							<a href="{{#facet}}{{href}}{{/facet}}{{^facet}}#{{/facet}}" {{^facet}}class="disabled"{{/facet}}><span class="f16 {{code}}"></span>
+							<a kvtrackevent="TopNav|click-Lend-Country|{{name}}" href="{{#facet}}{{href}}{{/facet}}{{^facet}}#{{/facet}}" {{^facet}}class="disabled"{{/facet}}><span class="f16 {{code}}"></span>
 								{{name}}
 								{{#facet}}({{facet}}){{/facet}}{{^facet}}(0){{/facet}}</a>
 						</li>

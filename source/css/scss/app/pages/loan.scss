@@ -95,6 +95,10 @@
 
 		.ac-title-text {
 			padding-left: 1rem;
+
+			@media #{$xxlarge-up} {
+				padding-left: 0;
+			}
 		}
 
 		.icon-large-chevron {
@@ -106,6 +110,10 @@
 		margin-bottom: 1rem;
 		margin-left: 1rem;
 		margin-right: 1rem;
+
+		@media #{$xxlarge-up} {
+			margin-left: 0;
+		}
 
 		.selected-tags {
 			a:visited {
@@ -204,6 +212,10 @@
 					}
 				}
 			}
+
+			@media #{$xxlarge-up} {
+				padding-left: 0;
+			}
 		}
 	}
 
@@ -298,6 +310,12 @@
 }
 
 .current-status-meter {
+	margin-top: 1.25rem;
+
+	@media #{$medium-up} {
+		margin-top: 0;
+	}
+
 	.lender-count {
 		@media #{$small-only}{
 			div {
@@ -362,11 +380,25 @@
 		margin: 0 auto;
 	}
 
-	padding-bottom: 1rem;
+	padding-bottom: 2rem;
+
+	@media #{$large-up} {
+		padding-bottom: 4rem;
+
+		&.already-lent-visible {
+			padding-bottom: 7rem;
+		}
+	}
+
+	&.notice-visible {
+		padding-bottom: 2rem;
+	}
+
+	&.notice-visible.already-lent-visible {
+		padding-bottom: 1rem;
+	}
 
 	.country-info-wrapper {
-		padding-bottom: rem-calc(30);
-
 		@media #{$medium-down} {
 			font-size: rem-calc(14);
 		}
@@ -390,7 +422,7 @@
 
 	.borrower-name {
 		font-weight: bold;
-		margin-bottom: rem-calc(5);
+		margin-bottom: 1rem;
 		@media #{$medium-up} {
 			font-weight: normal;
 		}
@@ -755,11 +787,17 @@
 }
 
 .lend-action, .lend-action.row {
-	width: 40%;
+	width: calc(40% - #{rem-calc(12)});
 	margin: 0;
 	position: absolute;
 	bottom: 0;
 	right: 0;
+	float: right;
+
+	&.notice-visible {
+		position: relative;
+	}
+
 	.lend-button-wrapper {
 		display: inline;
 		padding: 0;
@@ -878,7 +916,6 @@
 		padding-top: 0.5rem;
 		padding-bottom: 0.5rem;
 		background-color: $kiva-alert-yellow;
-		margin-top: 0.5rem;
 		margin-bottom: 0.5rem;
 	}
 }
@@ -1061,7 +1098,7 @@
 
 	@media #{$medium-up} {
 		text-align: center;
-		max-width: 60%;
+		max-width: 80%;
 		margin: 0 auto;
 
 		h2 {
@@ -1113,6 +1150,10 @@
 		h2 {
 			width: 80%;
 			margin-left: 1rem;
+
+			@media #{$xxlarge-up} {
+				margin-left: 0;
+			}
 		}
 
 		.ac-dropdown-icon {
@@ -1125,6 +1166,10 @@
 			border-style: none;
 			margin-bottom: 0;
 			margin-top: 0;
+
+			@media #{$xxlarge-up} {
+				padding-left: 0;
+			}
 		}
 
 		.comment-submit-block, .subscribe-block, .unsubscribe-block {
@@ -1132,6 +1177,10 @@
 			padding-bottom: 2rem;
 			margin-top: 0;
 			margin-bottom: 0;
+
+			@media #{$xxlarge-up} {
+				padding-left: 0;
+			}
 		}
 
 		.comment-submit, .comment-subscribe, .comment-unsubscribe {
@@ -1143,12 +1192,20 @@
 		.updates {
 			padding-left: 1rem;
 			padding-right: 1rem;
+
+			@media #{$xxlarge-up} {
+				padding-left: 0;
+			}
 		}
 
 		.comments {
 			@media #{$large-up} {
 				padding-left: 1rem;
 				padding-right: 1rem;
+			}
+
+			@media #{$xxlarge-up} {
+				padding-left: 0;
 			}
 
 			.comment {

@@ -1,4 +1,4 @@
-<h2><a href="#" class="black-underlined" data-reveal-id="repayment-schedule-tables">Repayment schedule</a></h2>
+<h2><a kvtrackevent="Borrower Profile|click-repayment schedule" href="#" class="black-underlined" data-reveal-id="repayment-schedule-tables">Repayment schedule</a></h2>
 <div id="repayment-schedule-tables" class="reveal-modal" data-reveal aria-hidden="true" role="dialog">
     <div class="row">
         <div class="columns small-12">
@@ -100,8 +100,10 @@
                                 <thead>
                                 <tr>
                                     <th id="months" class="shrink">&nbsp;</th>
-                                    <th id="expected-repayments" colspan="2"  class="text-left shrink">Expected</th>
-                                    <th id="actual-repayments" colspan="2" class="text-left shrink">Actual</th>
+                                    <th id="expected-repayments" colspan="1"  class="text-left shrink">Expected</th>
+                                    <th id="expected-repayments-amount" colspan="1"  class="text-left shrink">Amount</th>
+                                    <th id="actual-repayments" colspan="1" class="text-left shrink">Actual</th>
+                                    <th id="actual-repayments-received" colspan="1" class="text-left shrink">Received</th>
                                     <th id="comments" class="expand">Comments</th>
                                 </tr>
                                 </thead>
@@ -149,9 +151,6 @@
                                         {{^repaymentReceived}}
                                             {{#isDelinquent}}
                                                 <td>{{expectedRepayDate}}</td>
-                                            {{/isDelinquent}}
-                                            {{^isDelinquent}}
-                                                <td>&nbsp;</td>
                                             {{/isDelinquent}}
                                         {{/repaymentReceived}}
                                         <td>{{actualRepayment}}</td>

@@ -8117,7 +8117,7 @@
 		});
 
 		var typeahead_menu_repositioning = function() {
-			if ($search_box) {
+			if ($search_box.length) {
 				var offset = $search_box.offset();
 				$('.top-nav-search-menu').css({
 					top: (offset.top + $search_box.outerHeight()) + 'px',
@@ -8127,7 +8127,13 @@
 			}
 		};
 
-		$search_box.on('typeahead:open', typeahead_menu_repositioning);
+		// REDO-1768: For some reason this event fires inconsistently across different pages.
+		// As a workaround, let's re-run the repositioning a second time when the open animation finishes
+		$search_box.on('typeahead:open', function() {
+			typeahead_menu_repositioning();
+
+			window.setTimeout(typeahead_menu_repositioning, 500);
+		});
 
 
 		var close_button_visibility = function () {
@@ -8200,8 +8206,7 @@
 		});
 
 		// Resets lend-menu-large and lend-menu-small
-		$('[data-dropdown=lend-dropdown]').click(function (e) {
-			e.preventDefault();
+		$('#lend-dropdown').on('closed.fndtn.dropdown', function () {
 			//lend-menu-large
 			$category_section.removeClass('slide-left');
 			$close_section.attr('aria-hidden', true);
@@ -8210,7 +8215,7 @@
 
 			// lend-menu-small
 			$('.lend-menu-small li>a').attr('aria-expanded', false);
-			$('.lend-menu-small ul').attr('aria-hidden', true);
+			$('.lend-menu-small ul').attr('aria-hidden', true).css('height', 0);
 		});
 	};
 
@@ -8232,11 +8237,25 @@
 		var $targets = $($accordions.get().reduce(function(prev, curr, i) {
 			return prev + (i===0 ? '' : ', ') + '#' + $(curr).attr('aria-controls');
 		}, ''));
-
+			
+		$('a[href*="#ac-"]').click(function(){
+			var href = $(this).attr('href');
+			var accordionHeader = $(href).parent();
+			$('html, body').animate({
+	        	scrollTop: $(accordionHeader).offset().top
+	    	}, 1000);
+			accordionFunction(href);
+		});
 
 		$accordions.click(function() {
-			var $this = $(this);
-			var $target = $('#'+$this.attr('aria-controls'));
+			var element = $(this);
+			var href = $('#'+element.attr('aria-controls'));
+			accordionFunction(href,element);
+		});
+		
+		function accordionFunction(name,element) {
+			var $this = element || $(this);
+			var $target = $(name);
 			var is_hidden = $target.attr('aria-hidden') === 'true';
 			var hiding = !is_hidden;
 
@@ -8287,7 +8306,7 @@
 			$this.attr('aria-expanded', !hiding);
 			$target.attr('aria-hidden', hiding)
 				.trigger(hiding ? 'hide' : 'show');
-		});
+		}
 
 		$(window).on('resize', Foundation.utils.throttle(function() {
 			$targets.each(function() {
@@ -8301,6 +8320,7 @@
 			});
 		}, 200));
 	};
+
 
 /***/ }
 /******/ ]);

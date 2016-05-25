@@ -1,5 +1,4 @@
 .borrower-profile-wrapper {
-	padding-top: 1rem;
 	background: white;
 
 	iframe {
@@ -11,14 +10,13 @@
 	}
 
 	.line-break {
-		width: 100%;
-		margin: auto;
+		margin: auto rem-calc(15);
 		padding: 0.6rem 0;
 		border: 0;
 		border-top: 1px solid $gray;
 
 		@media #{$large-up}{
-			width: 100%;
+			margin: auto;
 		}
 	}
 
@@ -31,12 +29,30 @@
 		position: relative;
 		padding-bottom: 0;
 		.line-break {
-			margin-top: 1rem;
+			margin: 1rem rem-calc(15) 0;
+
+			@media #{$xxlarge-up} {
+				margin-left: 0;
+			}
 		}
 	}
 
 	.loan-image-info-row {
 		min-height: rem-calc(350);
+
+		.right-content {
+			@media #{$medium-up} {
+				padding-left: 1.5rem;
+			}
+
+			@media #{$xxlarge-up} {
+				padding-right: 0;
+			}
+		}
+	}
+
+	@media #{$medium-up} {
+		padding-top: 1rem;
 	}
 
 	@media #{$large-up} {
@@ -59,6 +75,8 @@
 		}
 
 		.left-content {
+			padding: 0;
+
 			section {
 				padding-left: 1rem;
 				padding-right: 1rem;
@@ -69,6 +87,10 @@
 				}
 
 				&.loan-description, &.all-previous-loan-details, &.previous-loan-details {
+					padding-left: 0;
+				}
+
+				@media #{$xxlarge-up} {
 					padding-left: 0;
 				}
 			}
@@ -94,9 +116,19 @@
 				width: 41.5%;
 				background-color: $kiva-bg-darkgray;
 			}
+
+			@media #{$xxlarge-up} {
+				padding-right: 0;
+			}
+
+			.line-break {
+				margin-left: 0;
+				margin-right: 0;
+			}
 		}
 
 		.ac-title {
+			padding-right: 1.75rem;
 			cursor: pointer;
 			.icon-large-chevron{
 				stroke-width: rem-calc(7);

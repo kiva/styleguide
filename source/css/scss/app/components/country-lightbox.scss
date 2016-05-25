@@ -1,17 +1,66 @@
 #countrySelectModal {
 
+	.lightbox-content {
+		padding-top: 0;
+	}
+
 	.white-background-box {
 		position: relative;
+		padding: 4rem rem-calc(20);
 	}
 
 	#filter-country-submit {
 		width: 100%;
-		bottom: -20px;
+		bottom: rem-calc(-20);
 		position: fixed;
 		max-width: none;
 		line-height: inherit;
 		z-index: 1200;
 		left: 0;
+		color: $white;
+	}
+
+	a.close-reveal-modal {
+		float: right;
+		padding: rem-calc(20);
+	}
+
+	#country-list {
+		.csscolumns & {
+			@media #{$large-up} {
+				@include column-count(2);
+			}
+
+			@media #{$xxlarge-up} {
+				@include column-count(3);
+			}
+
+			.region-name {
+				@include column-break();
+				padding-top: 1rem;
+			}
+		}
+
+		.no-csscolumns & {
+			width: 14rem;
+			margin: 0 auto;
+			padding-left: 3rem;
+		}
+	}
+
+	.checkbox-input {
+		&:first-of-type {
+			margin-top: rem-calc(7);
+		}
+
+		input {
+			margin-top: rem-calc(3);
+			margin-right: 0;
+		}
+
+		label {
+			vertical-align: middle;
+		}
 	}
 
 	@media #{$small-only} {
