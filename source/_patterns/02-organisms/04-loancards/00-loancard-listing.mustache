@@ -1,5 +1,5 @@
 <div class="loan-card">
-    <a class="borrower-img-wrap" href="{{borrower_url}}" data-interchange="[{{image.url}}, (default)], [{{image.retina_url}}, (retina)]">
+    <a class="borrower-img-wrap" kvtrackevent="Lending|click-Read more|Photo" href="{{borrower_url}}" data-interchange="[{{image.url}}, (default)], [{{image.retina_url}}, (retina)]">
         {{#show_loan_length}}
             <div class="loan-message">{{loan_length}}</div>
         {{/show_loan_length}}
@@ -14,7 +14,7 @@
 	</div>
 
     <div class="borrower-details-wrap" data-equalizer-watch style="height:{{height}};">
-        <a href="{{borrower_url}}">{{name}}</a>
+        <a kvtrackevent="Lending|click-Read more|Name" href="{{borrower_url}}">{{name}}</a>
         <div class="country">
 			<span class="f16 {{location.country.iso_code}}"></span>{{location.country.name}}
         </div>

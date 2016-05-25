@@ -1,0 +1,38 @@
+{
+	"page-header": "Privacy Policy",
+	"page-subheader": "(Last updated 11/4/2014)*",
+	"italicized-line": "*Changes from the prior version will generally be highlighted below for at least one month.",
+	"main-title": "Privacy",
+	"page-title": "Privacy Policy",
+	
+	"has-bar-sub-links": true,
+	"bar-sub-links": [
+		{
+			"sub-title": "Terms of Use",
+             "url": "https://www.kiva.org/legal/terms"
+		},
+		{
+			"sub-title": "Privacy Policy",
+			"sub-active": true
+		}
+		
+	],
+
+	"drop-links": [
+        {
+            "title": "Privacy",
+            "sub-links": [
+               
+                {
+                    "sub-title": "Terms of Use"
+                },
+                {
+                    "sub-title": "Privacy Policy",
+                    "sub-active": true
+                    
+                }
+              ]  
+        }
+        ]
+	}
+
