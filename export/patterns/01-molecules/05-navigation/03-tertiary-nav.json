@@ -1,0 +1,31 @@
+{
+	"bar-sub-links": [
+		{
+			"url": "",
+			"sub-title": "Press center",
+			"sub-active": true,
+			"new-window": false
+		},
+
+		{
+			"url": "https://www.kiva.org/press-releases",
+			"sub-title": "Press releases",
+			"sub-active": false,
+			"new-window": false
+		},
+
+		{
+			"url": "http://brandfolder.com/kiva/media-resources",
+			"sub-title": "Media resources",
+			"sub-active": false,
+			"new-window": true
+		},
+
+		{
+			"url": "http://brandfolder.com/kiva/brand-guidelines",
+			"sub-title": "Brand guidelines",
+			"sub-active": false,
+			"new-window": true
+		}
+	]
+}
