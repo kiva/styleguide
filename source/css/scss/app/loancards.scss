@@ -7,6 +7,7 @@ $loan-card-meter-height: $loan-card-footer-height/2;
     min-width: rem-calc(300);
     max-width: rem-calc(480);
     margin: auto;
+	background-color: $white;
 
 	.loading & {
 		opacity: 0.2;

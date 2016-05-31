@@ -1,5 +1,9 @@
 $filter-menu-base-width: rem-calc(251);
 
+.off-canvas-wrap {
+	background-color: $kiva-bg-lightgray;
+}
+
 .triple-state-buttons, .quintuple-state-buttons {
 	margin: 0 rem-calc(12) rem-calc(6);
 }
