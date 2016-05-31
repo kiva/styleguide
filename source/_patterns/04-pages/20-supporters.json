@@ -2,9 +2,6 @@
 	"heading1": "Our supporters",
 	"main-title": "Finances",
 	"page-title": "Finances",
-	
-	"main-title": "About",
-	"page-title": "About Us",
 	"bar-links": [
 		{
 			"title": "About us"
@@ -48,13 +45,8 @@
 
 	"drop-links": [
         {
-            "title": "Privacy",
+            "title": "Finances",
             "sub-links": [
-               
-               {
-			"sub-title": "Finances",
-			"url":"#"
-		},
 		{
 			"sub-title": "Supporters ",
 			"sub-active": true,
