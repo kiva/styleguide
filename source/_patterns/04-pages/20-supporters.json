@@ -3,6 +3,35 @@
 	"main-title": "Finances",
 	"page-title": "Finances",
 	
+	"main-title": "About",
+	"page-title": "About Us",
+	"bar-links": [
+		{
+			"title": "About us"
+		},
+		{
+			"title": "How Kiva works"
+		},
+		{
+			"title": "Where Kiva works"
+		},
+		{
+			"title": "Impact"
+		},
+		{
+			"title": "Leadership"
+		},
+		{
+			"title": "Finances",
+		    "active": true
+		},
+		{
+			"title": "Press"
+		},
+		{
+			"title": "Due diligence"
+		}
+	],
 	"has-bar-sub-links": true,
 	"bar-sub-links": [
 		{
