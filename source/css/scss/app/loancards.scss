@@ -21,6 +21,35 @@ $loan-card-meter-height: $loan-card-footer-height/2;
 		}
 	}
 
+	.image-edit-buttons {
+		position: absolute;
+		z-index: 1;
+		display: none;
+
+		a {
+			display: inline-block;
+			float: left;
+			padding: 0.25rem;
+			line-height: 0;
+			background-color: $kiva-text-dark;
+			opacity: 0.5;
+
+			&:hover {
+				opacity: 1;
+			}
+
+			.icon {
+				fill: $white;
+				width: 1.5rem;
+				height: 1.5rem;
+			}
+
+			.icon-edit {
+				transform: translate(6%,-10%);
+			}
+		}
+	}
+
 	.borrower-img-wrap {
         position: relative;
         display: block;
@@ -107,6 +136,10 @@ $loan-card-meter-height: $loan-card-footer-height/2;
 
     &:hover {
 		box-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+
+		.image-edit-buttons {
+			display: block;
+		}
 
         .bottom-bar {
             height: $loan-card-footer-height;

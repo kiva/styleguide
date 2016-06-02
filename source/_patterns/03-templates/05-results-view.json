@@ -6,6 +6,7 @@
 	"show-selected": true,
 	"show-clear": true,
 	"show-save-search": true,
+	"is_admin": true,
 	"selected-filters": [
 		{"label":"Men"},
 		{"label":"Group"},
