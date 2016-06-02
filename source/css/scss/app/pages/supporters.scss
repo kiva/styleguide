@@ -1,4 +1,18 @@
 img.logos {
     display: block;
     margin: 0 auto;
+    padding-bottom:1rem;
+}
+
+img.sidebysidelogos {
+	
+	padding-right: 1rem;
+	padding-bottom: 1rem
+}
+
+.title {
+	text-align:center;
+	@media #{$medium-up}	{
+			text-align: left;
+		}
 }

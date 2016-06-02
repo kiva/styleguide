@@ -54,6 +54,439 @@
 		}
             ]  
         }
-        ]
-	}
+        ],
+	"corporations-5millonup": [
+		{
+			"logo-std":"https://www-kiva-org.global.ssl.fastly.net/cms/styles/supporter_logo/s3/supporter/logo/hp-foundation_stacked-color_0.png?itok=jV3G2nXZ",
+			"logo-retina":"https://www-kiva-org.global.ssl.fastly.net/cms/styles/supporter_logo/s3/supporter/logo/hp-foundation_stacked-color_0.png?itok=jV3G2nXZ",
+			"logo-default":"https://www-kiva-org.global.ssl.fastly.net/cms/styles/supporter_logo/s3/supporter/logo/hp-foundation_stacked-color_0.png?itok=jV3G2nXZ",
+			"url":"http://www8.hp.com/us/en/hp-information/global-citizenship/index.html",
+			"alt":"Hp",
+			"description":"The HP Foundation is proud to partner with Kiva on an innovative 5-year partnership called Matter to a Million. This pioneering program is a unique opportunity for HP employees globally to support thousands of entrepreneurs around the world. "
+		}
+],
+	"corporations-1millonup": [
+		{
+		
+			"logo-std":"https://www-kiva-org.global.ssl.fastly.net/cms/styles/supporter_logo/s3/supporter/logo/pepsico-foundation-logo-26508.jpg",
+			"logo-retina":"https://www-kiva-org.global.ssl.fastly.net/cms/styles/supporter_logo/s3/supporter/logo/pepsico-foundation-logo-26508.jpg",
+			"logo-default":"https://www-kiva-org.global.ssl.fastly.net/cms/styles/supporter_logo/s3/supporter/logo/pepsico-foundation-logo-26508.jpg",
+			"url":"http://www.pepsico.com/Purpose/Global-Citizenship",
+			"alt":"PepsiCo",
+			"description":"The PepsiCo Foundation is a proud supporter of Kiva and the empowerment of women around the world. Through a global PepsiCo employee engagement partnership and a revolving matching fund for women, the PepsiCo Foundation is making positive impact at scale."
+		},
+		{
+		
+			"logo-std":"https://www-kiva-org.global.ssl.fastly.net/cms/styles/supporter_logo/s3/supporter/logo/db_logo_blue_centered.jpg",
+			"logo-retina":"https://www-kiva-org.global.ssl.fastly.net/cms/styles/supporter_logo/s3/supporter/logo/db_logo_blue_centered.jpg",
+			"logo-default":"https://www-kiva-org.global.ssl.fastly.net/cms/styles/supporter_logo/s3/supporter/logo/db_logo_blue_centered.jpg",
+			"url":"https://www.dev.kiva.org/about/finances/supporters/corporations",
+			"alt":"Deutshe Bank",
+			"description":"For more than 20 years, Deutsche Bank has been a leader and trusted partner in the field of social finance. We are proud to support Kiva through our US employee engagement campaign as well as by providing matching loan funds for Kiva Zip NYC."
+		},
+		{
+		
+			"logo-std":"https://www-kiva-org.global.ssl.fastly.net/cms/styles/supporter_logo/s3/supporter/logo/pearsonlogo_primary_blk_rgb.jpg?itok=Tk-w34JZ",
+			"logo-retina":"https://www-kiva-org.global.ssl.fastly.net/cms/styles/supporter_logo/s3/supporter/logo/pearsonlogo_primary_blk_rgb.jpg?itok=Tk-w34JZ",
+			"logo-default":"https://www-kiva-org.global.ssl.fastly.net/cms/styles/supporter_logo/s3/supporter/logo/pearsonlogo_primary_blk_rgb.jpg?itok=Tk-w34JZ",
+			"url":"https://www.pearson.com/social-impact.html",
+			"alt":"Pearson",
+			"description":"Pearson, the world's largest education company, is proud to partner with Kiva through our global employee engagement campaign, the formation of a Kiva lending team, as well as matching loan funds for education partners."
+		},
+		{
+		
+			"logo-std":"https://www-kiva-org.global.ssl.fastly.net/cms/styles/supporter_logo/s3/supporter/logo/metlife_foundation_stk_rgb_1.jpg?itok=qEqni7J2",
+			"logo-retina":"https://www-kiva-org.global.ssl.fastly.net/cms/styles/supporter_logo/s3/supporter/logo/metlife_foundation_stk_rgb_1.jpg?itok=qEqni7J2",
+			"logo-default":"https://www-kiva-org.global.ssl.fastly.net/cms/styles/supporter_logo/s3/supporter/logo/metlife_foundation_stk_rgb_1.jpg?itok=qEqni7J2",
+			"url":"https://www.metlife.com/about/corporate-responsibility/metlife-foundation/index.html?WT.mc_id=vu1013",
+			"alt":"MetLife",
+			"description":"MetLife Foundation, which has a global focus on financial inclusion, is supporting the launch of Kiva Zip NYC and matching loans to Kiva Zip NYC borrowers over three years. "
+		},
+		{
+		
+			"logo-std":"https://www-kiva-org.global.ssl.fastly.net/cms/styles/supporter_logo/s3/supporter/logo/engara.jpg?itok=YE2pMjHH",
+			"logo-retina":"https://www-kiva-org.global.ssl.fastly.net/cms/styles/supporter_logo/s3/supporter/logo/engara.jpg?itok=YE2pMjHH",
+			"logo-default":"https://www-kiva-org.global.ssl.fastly.net/cms/styles/supporter_logo/s3/supporter/logo/engara.jpg?itok=YE2pMjHH",
+			"url":"https://www.dev.kiva.org/about/finances/supporters/corporations",
+			"alt":"Grameen-Jameel Microfinance Ltd",
+			"description":"Grameen-Jameel Microfinance Ltd. is the first social business in the Middle East and North Africa (MENA), focusing to alleviate poverty in the region. Their $1M contribution is an important step in a long-term alliance to raise awareness, drive action, and empower entrepreneurs in the Middle East and beyond. "
+		},
+		{
+		
+			"logo-std":"https://www-kiva-org.global.ssl.fastly.net/cms/styles/supporter_logo/s3/supporter/logo/google.org__0.png?itok=fKFZER1o",
+			"logo-retina":"https://www-kiva-org.global.ssl.fastly.net/cms/styles/supporter_logo/s3/supporter/logo/google.org__0.png?itok=fKFZER1o",
+			"logo-default":"https://www-kiva-org.global.ssl.fastly.net/cms/styles/supporter_logo/s3/supporter/logo/google.org__0.png?itok=fKFZER1o",
+			"url":"http://www.google.com/giving/global-impact-awards/",
+			"alt":"Google",
+			"description":"Google awarded Kiva a Global Impact Award for flexible microfinance to reach millions more people through its Kiva Labs initiative. "
+		},
+		{
+		
+			"logo-std":"https://www-kiva-org.global.ssl.fastly.net/cms/styles/supporter_logo/s3/supporter/logo/c1_ifg_v_color_0.jpg?itok=c3pwCTzz",
+			"logo-retina":"https://www-kiva-org.global.ssl.fastly.net/cms/styles/supporter_logo/s3/supporter/logo/c1_ifg_v_color_0.jpg?itok=c3pwCTzz",
+			"logo-default":"https://www-kiva-org.global.ssl.fastly.net/cms/styles/supporter_logo/s3/supporter/logo/c1_ifg_v_color_0.jpg?itok=c3pwCTzz",
+			"url":"http://www.capitaloneinvestingforgood.com/",
+			"alt":"Capital One",
+			"description":"Capital One is proud to support Kiva with generous grants to expand access to capital to borrowers in D.C., Richmond, and San Francisco, along with matching loans to small businesses across the United States."
+		},
+		{
+		
+			"logo-std":"https://www-kiva-org.global.ssl.fastly.net/cms/styles/supporter_logo/s3/supporter/logo/rn_logo_1.jpg?itok=alebzfUf",
+			"logo-retina":"https://www-kiva-org.global.ssl.fastly.net/cms/styles/supporter_logo/s3/supporter/logo/rn_logo_1.jpg?itok=alebzfUf",
+			"logo-default":"https://www-kiva-org.global.ssl.fastly.net/cms/styles/supporter_logo/s3/supporter/logo/rn_logo_1.jpg?itok=alebzfUf",
+			"url":"http://www.e-rewards.com/global_home.do;jsessionid=8B2584FF7ED8524D432C2F7E1E77997F",
+			"alt":"Research Now",
+			"description":"Research Now is proud to support Kiva through a promotional loan fund for employees, clients and survey respondents, the formation of a Kiva lending team, as well as providing operational support to help Kiva scale. "
+		},
+		{
+		
+			"logo-std":"https://www-kiva-org.global.ssl.fastly.net/cms/styles/supporter_logo/s3/supporter/logo/logo_moodys_0.gif?itok=ma5VVq5j",
+			"logo-retina":"https://www-kiva-org.global.ssl.fastly.net/cms/styles/supporter_logo/s3/supporter/logo/logo_moodys_0.gif?itok=ma5VVq5j",
+			"logo-default":"https://www-kiva-org.global.ssl.fastly.net/cms/styles/supporter_logo/s3/supporter/logo/logo_moodys_0.gif?itok=ma5VVq5j",
+			"url":"http://v3.moodys.com/Pages/atc.aspx",
+			"alt":"Moodys",
+			"description":"Moody's is applying its experience in credit ratings and credit risk management to help Kiva's Field Partners enhance their lending practices and bring greater transparency to Kiva's online microfinance marketplace."
+		}		
+
+],
+	"corporations-500kup": [
+		
+		{
+		
+			"logo-std":"https://www-kiva-org.global.ssl.fastly.net/cms/styles/supporter_logo/s3/supporter/logo/2015_fossilfoundation-logo-web-350px.jpg?itok=sMZaLqbO",
+			"logo-retina":"https://www-kiva-org.global.ssl.fastly.net/cms/styles/supporter_logo/s3/supporter/logo/2015_fossilfoundation-logo-web-350px.jpg?itok=sMZaLqbO",
+			"logo-default":"https://www-kiva-org.global.ssl.fastly.net/cms/styles/supporter_logo/s3/supporter/logo/2015_fossilfoundation-logo-web-350px.jpg?itok=sMZaLqbO",
+			"url":"www.fossilfoundation.org",
+			"alt":"Fossil Foundation",
+			"description":"The Fossil Foundation invests in social entrepreneurs whose innovations unleash the potential of underserved young people. Fossil is proud to support Kiva through a promotional loan fund for employees, the formation of a Kiva lending team, as well as providing operational support to help Kiva scale. "
+		},
+		{
+		
+			"logo-std":"https://www-kiva-org.global.ssl.fastly.net/cms/styles/supporter_logo/s3/supporter/logo/psf_logo_green_stacked.jpg?itok=xfKkJH4k",
+			"logo-retina":"https://www-kiva-org.global.ssl.fastly.net/cms/styles/supporter_logo/s3/supporter/logo/psf_logo_green_stacked.jpg?itok=xfKkJH4k",
+			"logo-default":"https://www-kiva-org.global.ssl.fastly.net/cms/styles/supporter_logo/s3/supporter/logo/psf_logo_green_stacked.jpg?itok=xfKkJH4k",
+			"url":"http://pershingsquarefoundation.org/",
+			"alt":"Pershing Square Foundation",
+			"description":"The Pershing Square Foundation supports exceptional leaders and innovative organizations that tackle important social issues and deliver scalable and sustainable impact. In 2014, the Foundation provided a grant and a matching loan fund to help launch Kiva Zip New York City. "
+		},
+		{
+		
+			"logo-std":"https://www-kiva-org.global.ssl.fastly.net/cms/styles/supporter_logo/s3/supporter/logo/logo-cisco-foundation.png?itok=LxV8RjzM",
+			"logo-retina":"https://www-kiva-org.global.ssl.fastly.net/cms/styles/supporter_logo/s3/supporter/logo/logo-cisco-foundation.png?itok=LxV8RjzM",
+			"logo-default":"https://www-kiva-org.global.ssl.fastly.net/cms/styles/supporter_logo/s3/supporter/logo/logo-cisco-foundation.png?itok=LxV8RjzM",
+			"url":"http://csr.cisco.com/pages/cisco-foundation",
+			"alt":"Cisco",
+			"description":"The Cisco Foundation is a proud supporter of Kiva's efforts to catalyze access to new populations and the development of innovative flexibe credit products adapted to the unique needs of microfinance clients though the Kiva Labs initiative."
+		},
+		{
+		
+			"logo-std":"https://www-kiva-org.global.ssl.fastly.net/cms/styles/supporter_logo/s3/supporter/logo/citi_logo_0_0.png?itok=5r6ibbex",
+			"logo-retina":"https://www-kiva-org.global.ssl.fastly.net/cms/styles/supporter_logo/s3/supporter/logo/citi_logo_0_0.png?itok=5r6ibbex",
+			"logo-default":"https://www-kiva-org.global.ssl.fastly.net/cms/styles/supporter_logo/s3/supporter/logo/citi_logo_0_0.png?itok=5r6ibbex",
+			"url":"http://www.citi.com/citi/microfinance/",
+			"alt":"Citi",
+			"description":"Citi is the founding sponsor of Kiva U, a movement of students and educators to become global citizens changing the world through microfinance."
+		},
+		{
+		
+			"logo-std":"https://www-kiva-org.global.ssl.fastly.net/cms/styles/supporter_logo/s3/supporter/logo/tripadvisorlogo.jpg?itok=dGdhEje8",
+			"logo-retina":"https://www-kiva-org.global.ssl.fastly.net/cms/styles/supporter_logo/s3/supporter/logo/tripadvisorlogo.jpg?itok=dGdhEje8",
+			"logo-default":"https://www-kiva-org.global.ssl.fastly.net/cms/styles/supporter_logo/s3/supporter/logo/tripadvisorlogo.jpg?itok=dGdhEje8",
+			"url":"http://www.tripadvisor.com/",
+			"alt":"TripAdvisor",
+			"description":"TripAdvisor launched a reviewer engagement program in 2013. When people wrote a review in one of the countries where Kiva operates, they received a free $25 Kiva Card. TripAdvisor also gave every employee a $25 Kiva Card."
+		},
+		{
+		
+			"logo-std":"https://www-kiva-org.global.ssl.fastly.net/cms/styles/supporter_logo/s3/supporter/logo/logo_dermalogica_0.jpg?itok=s8reApWI",
+			"logo-retina":"https://www-kiva-org.global.ssl.fastly.net/cms/styles/supporter_logo/s3/supporter/logo/logo_dermalogica_0.jpg?itok=s8reApWI",
+			"logo-default":"https://www-kiva-org.global.ssl.fastly.net/cms/styles/supporter_logo/s3/supporter/logo/logo_dermalogica_0.jpg?itok=s8reApWI",
+			"url":"http://dermalogica.com/",
+			"alt":"Dermalogica",
+			"description":"Dermalogica joined Kiva in launching the joinFITE campaign. joinFITE.org is the first global open microlending platform designed to engage innovative technology and consumer action online, offline, and through novel strategic partnerships."
+		}
+
+	],
+"corporations-250kup": [
+		{
+			"logo-std":"https://www-kiva-org.global.ssl.fastly.net/cms/styles/supporter_logo/s3/supporter/logo/mke_logo.jpg?itok=-1ppRmKa",
+			"logo-retina":"https://www-kiva-org.global.ssl.fastly.net/cms/styles/supporter_logo/s3/supporter/logo/mke_logo.jpg?itok=-1ppRmKa",
+			"logo-default":"https://www-kiva-org.global.ssl.fastly.net/cms/styles/supporter_logo/s3/supporter/logo/mke_logo.jpg?itok=-1ppRmKa",
+			"url":"https://www.dev.kiva.org/about/finances/supporters/corporations",
+			"alt":"MayBank"
+		}
+	],
+"corporations-100kup": [
+		{
+			"logo-std":"https://www-kiva-org.global.ssl.fastly.net/cms/styles/supporter_logo/s3/supporter/logo/chevron-logo3_0.gif?itok=SCsazpyG",
+			"logo-retina":"https://www-kiva-org.global.ssl.fastly.net/cms/styles/supporter_logo/s3/supporter/logo/chevron-logo3_0.gif?itok=SCsazpyG",
+			"logo-default":"https://www-kiva-org.global.ssl.fastly.net/cms/styles/supporter_logo/s3/supporter/logo/chevron-logo3_0.gif?itok=SCsazpyG",
+			"url":"http://www.chevron.com/CA",
+			"alt":"chevron"
+		},
+		{
+		
+			"logo-std":"https://www-kiva-org.global.ssl.fastly.net/cms/styles/supporter_logo/s3/supporter/logo/logo_keen_0.png?itok=Zs6DhTrg",
+			"logo-retina":"https://www-kiva-org.global.ssl.fastly.net/cms/styles/supporter_logo/s3/supporter/logo/logo_keen_0.png?itok=Zs6DhTrg",
+			"logo-default":"https://www-kiva-org.global.ssl.fastly.net/cms/styles/supporter_logo/s3/supporter/logo/logo_keen_0.png?itok=Zs6DhTrg",
+			"url":"http://www.keenfootwear.com/",
+			"alt":"Keen Footware"
+		},
+		{
+		
+			"logo-std":"https://www-kiva-org.global.ssl.fastly.net/cms/styles/supporter_logo/s3/supporter/logo/yelp-high-res-logo-1.jpg?itok=eja4y2yA",
+			"logo-retina":"https://www-kiva-org.global.ssl.fastly.net/cms/styles/supporter_logo/s3/supporter/logo/yelp-high-res-logo-1.jpg?itok=eja4y2yA",
+			"logo-default":"https://www-kiva-org.global.ssl.fastly.net/cms/styles/supporter_logo/s3/supporter/logo/yelp-high-res-logo-1.jpg?itok=eja4y2yA",
+			"url":"http://www.yelpfoundation.org/",
+			"alt":"Yelp"
+		},
+		{
+		
+			"logo-std":"https://www-kiva-org.global.ssl.fastly.net/cms/styles/supporter_logo/s3/supporter/logo/caf_logo_color_horizontal__copy_0.jpg?itok=eeIyxqIl",
+			"logo-retina":"https://www-kiva-org.global.ssl.fastly.net/cms/styles/supporter_logo/s3/supporter/logo/caf_logo_color_horizontal__copy_0.jpg?itok=eeIyxqIl",
+			"logo-default":"https://www-kiva-org.global.ssl.fastly.net/cms/styles/supporter_logo/s3/supporter/logo/caf_logo_color_horizontal__copy_0.jpg?itok=eeIyxqIl",
+			"url":"http://www.caf.com/",
+			"alt":"CAF"
+		},
+		{
+		
+			"logo-std":"https://www-kiva-org.global.ssl.fastly.net/cms/styles/supporter_logo/s3/supporter/logo/vita_coco_logo.jpg?itok=V_H7jQGc",
+			"logo-retina":"https://www-kiva-org.global.ssl.fastly.net/cms/styles/supporter_logo/s3/supporter/logo/vita_coco_logo.jpg?itok=V_H7jQGc",
+			"logo-default":"https://www-kiva-org.global.ssl.fastly.net/cms/styles/supporter_logo/s3/supporter/logo/vita_coco_logo.jpg?itok=V_H7jQGc",
+			"url":"http://vitacoco.com/",
+			"alt":"vitacoco"
+		},
+		{
+		
+			"logo-std":"https://www-kiva-org.global.ssl.fastly.net/cms/styles/supporter_logo/s3/supporter/logo/s0801572_enl.jpg?itok=vA-eXNjf",
+			"logo-retina":"https://www-kiva-org.global.ssl.fastly.net/cms/styles/supporter_logo/s3/supporter/logo/s0801572_enl.jpg?itok=vA-eXNjf",
+			"logo-default":"https://www-kiva-org.global.ssl.fastly.net/cms/styles/supporter_logo/s3/supporter/logo/s0801572_enl.jpg?itok=vA-eXNjf",
+			"url":"http://www.staplesfoundation.org/",
+			"alt":"staplesfoundation"
+		},
+		{
+		
+			"logo-std":"https://www-kiva-org.global.ssl.fastly.net/cms/styles/supporter_logo/s3/supporter/logo/kabbage_logo_vert.png?itok=8p8ZHEt2",
+			"logo-retina":"https://www-kiva-org.global.ssl.fastly.net/cms/styles/supporter_logo/s3/supporter/logo/kabbage_logo_vert.png?itok=8p8ZHEt2",
+			"logo-default":"https://www-kiva-org.global.ssl.fastly.net/cms/styles/supporter_logo/s3/supporter/logo/kabbage_logo_vert.png?itok=8p8ZHEt2",
+			"url":"https://www.kabbage.com/",
+			"alt":"Kabbage"
+		},
+		{
+		
+			"logo-std":"https://www-kiva-org.global.ssl.fastly.net/cms/styles/supporter_logo/s3/supporter/logo/gdlogo-1b-transparent.png?itok=V1awDWPr",
+			"logo-retina":"https://www-kiva-org.global.ssl.fastly.net/cms/styles/supporter_logo/s3/supporter/logo/gdlogo-1b-transparent.png?itok=V1awDWPr",
+			"logo-default":"https://www-kiva-org.global.ssl.fastly.net/cms/styles/supporter_logo/s3/supporter/logo/gdlogo-1b-transparent.png?itok=V1awDWPr",
+			"url":"http://godaddycares.com/",
+			"alt":"Godaddy Cares"
+		}
+	],
+"corporations-100kup": [
+		{
+			"logo-std":"https://www-kiva-org.global.ssl.fastly.net/cms/styles/supporter_logo/s3/supporter/logo/intuit_0.jpg?itok=gy3RUGHN",
+			"logo-retina":"https://www-kiva-org.global.ssl.fastly.net/cms/styles/supporter_logo/s3/supporter/logo/intuit_0.jpg?itok=gy3RUGHN",
+			"logo-default":"https://www-kiva-org.global.ssl.fastly.net/cms/styles/supporter_logo/s3/supporter/logo/intuit_0.jpg?itok=gy3RUGHN",
+			"url":"http://www.intuit.com/",
+			"alt":"Intuit"
+		},
+		{
+			"logo-std":"https://www-kiva-org.global.ssl.fastly.net/cms/styles/supporter_logo/s3/supporter/logo/QBE_V_21.6mm_RGB_Pos.jpg?itok=MHLEGj8k",
+			"logo-retina":"https://www-kiva-org.global.ssl.fastly.net/cms/styles/supporter_logo/s3/supporter/logo/QBE_V_21.6mm_RGB_Pos.jpg?itok=MHLEGj8k",
+			"logo-default":"https://www-kiva-org.global.ssl.fastly.net/cms/styles/supporter_logo/s3/supporter/logo/QBE_V_21.6mm_RGB_Pos.jpg?itok=MHLEGj8k",
+			"url":"http://www.group.qbe.com/Insurance.html",
+			"alt":"QBE"
+		},
+		{
+			"logo-std":"https://www-kiva-org.global.ssl.fastly.net/cms/styles/supporter_logo/s3/supporter/logo/ianmartingroup_logo_0_1.jpg?itok=RhjX-h4C",
+			"logo-retina":"https://www-kiva-org.global.ssl.fastly.net/cms/styles/supporter_logo/s3/supporter/logo/ianmartingroup_logo_0_1.jpg?itok=RhjX-h4C",
+			"logo-default":"https://www-kiva-org.global.ssl.fastly.net/cms/styles/supporter_logo/s3/supporter/logo/ianmartingroup_logo_0_1.jpg?itok=RhjX-h4C",
+			"url":"http://www.ianmartin.com/",
+			"alt":"ianmartingroup_logo"
+		},
+		{
+			"logo-std":"https://www-kiva-org.global.ssl.fastly.net/cms/styles/supporter_logo/s3/supporter/logo/syb-logo_since1904.jpg?itok=uag1a-Bd",
+			"logo-retina":"https://www-kiva-org.global.ssl.fastly.net/cms/styles/supporter_logo/s3/supporter/logo/syb-logo_since1904.jpg?itok=uag1a-Bd",
+			"logo-default":"https://www-kiva-org.global.ssl.fastly.net/cms/styles/supporter_logo/s3/supporter/logo/syb-logo_since1904.jpg?itok=uag1a-Bd",
+			"url":"https://www.syb.com/",
+			"alt":"syb"
+		},
+		{
+			"logo-std":"https://www-kiva-org.global.ssl.fastly.net/cms/styles/supporter_logo/s3/supporter/logo/pnc_logo_0.png?itok=YYq9Ci_N",
+			"logo-retina":"https://www-kiva-org.global.ssl.fastly.net/cms/styles/supporter_logo/s3/supporter/logo/pnc_logo_0.png?itok=YYq9Ci_N",
+			"logo-default":"https://www-kiva-org.global.ssl.fastly.net/cms/styles/supporter_logo/s3/supporter/logo/pnc_logo_0.png?itok=YYq9Ci_N",
+			"url":"https://www.dev.kiva.org/about/finances/supporters/corporations",
+			"alt":"PNC"
+		},
+		{
+			"logo-std":"https://www-kiva-org.global.ssl.fastly.net/cms/styles/supporter_logo/s3/supporter/logo/medc_logo_4c_0.png?itok=SKaudjjN",
+			"logo-retina":"https://www-kiva-org.global.ssl.fastly.net/cms/styles/supporter_logo/s3/supporter/logo/medc_logo_4c_0.png?itok=SKaudjjN",
+			"logo-default":"https://www-kiva-org.global.ssl.fastly.net/cms/styles/supporter_logo/s3/supporter/logo/medc_logo_4c_0.png?itok=SKaudjjN",
+			"url":"https://www.dev.kiva.org/about/finances/supporters/corporations",
+			"alt":"medc_logo"
+		},
+		{
+			"logo-std":"https://www-kiva-org.global.ssl.fastly.net/cms/styles/supporter_logo/s3/supporter/logo/chegg-foundation-wordsstacked-f07d001.png?itok=LjkmHEar",
+			"logo-retina":"https://www-kiva-org.global.ssl.fastly.net/cms/styles/supporter_logo/s3/supporter/logo/chegg-foundation-wordsstacked-f07d001.png?itok=LjkmHEar",
+			"logo-default":"https://www-kiva-org.global.ssl.fastly.net/cms/styles/supporter_logo/s3/supporter/logo/chegg-foundation-wordsstacked-f07d001.png?itok=LjkmHEar",
+			"url":"http://cheggfoundation.org/",
+			"alt":"Chegg Foundation"
+		},
+		{
+			"logo-std":"https://www-kiva-org.global.ssl.fastly.net/cms/styles/supporter_logo/s3/supporter/logo/unnamed.png?itok=ncEsBi14",
+			"logo-retina":"https://www-kiva-org.global.ssl.fastly.net/cms/styles/supporter_logo/s3/supporter/logo/unnamed.png?itok=ncEsBi14",
+			"logo-default":"https://www-kiva-org.global.ssl.fastly.net/cms/styles/supporter_logo/s3/supporter/logo/unnamed.png?itok=ncEsBi14",
+			"url":"https://www.tillamook.com/co-op/",
+			"alt":"tillamook"
+		},
+		{
+			"logo-std":"https://www-kiva-org.global.ssl.fastly.net/cms/styles/supporter_logo/s3/supporter/logo/logoanimated200.gif?itok=FZtUbjNr",
+			"logo-retina":"https://www-kiva-org.global.ssl.fastly.net/cms/styles/supporter_logo/s3/supporter/logo/logoanimated200.gif?itok=FZtUbjNr",
+			"logo-default":"https://www-kiva-org.global.ssl.fastly.net/cms/styles/supporter_logo/s3/supporter/logo/logoanimated200.gif?itok=FZtUbjNr",
+			"url":"www.2sic.li",
+			"alt":"2sic"
+		},
+		{
+			"logo-std":"https://www-kiva-org.global.ssl.fastly.net/cms/styles/supporter_logo/s3/supporter/logo/ksco_foundation_logo207557.png?itok=AYzAVcit",
+			"logo-retina":"https://www-kiva-org.global.ssl.fastly.net/cms/styles/supporter_logo/s3/supporter/logo/ksco_foundation_logo207557.png?itok=AYzAVcit",
+			"logo-default":"https://www-kiva-org.global.ssl.fastly.net/cms/styles/supporter_logo/s3/supporter/logo/ksco_foundation_logo207557.png?itok=AYzAVcit",
+			"url":"https://www.katespadeandcompany.com/web/guest/foundation",
+			"alt":"ksco_foundation_logo"
+		}
+	],
+"institutions-1millonup": [
+		{
+			"logo-std":"https://www-kiva-org.global.ssl.fastly.net/cms/styles/supporter_logo/s3/supporter/logo/diller-vonfurstenberg_logo_0.jpg?itok=QSOsX6LR",
+			"logo-retina":"https://www-kiva-org.global.ssl.fastly.net/cms/styles/supporter_logo/s3/supporter/logo/diller-vonfurstenberg_logo_0.jpg?itok=QSOsX6LR",
+			"logo-default":"https://www-kiva-org.global.ssl.fastly.net/cms/styles/supporter_logo/s3/supporter/logo/diller-vonfurstenberg_logo_0.jpg?itok=QSOsX6LR",
+			"url":"https://www.dev.kiva.org/about/finances/supporters/institutions",
+			"alt":"The Diller-von Furstenberg Family",
+			"description":"The Diller-von Furstenberg Family Foundation aims to positively impact the world by improving people's lives and strengthening communities. The Foundation is proud to partner with Kiva on their Loan Matching program to help provide people with opportunities for which they would not otherwise have access."
+		},
+		{
+			"logo-std":"https://www-kiva-org.global.ssl.fastly.net/cms/styles/supporter_logo/s3/supporter/logo/logo_omidyar_network_2_0.png?itok=zSc_3EkM",
+			"logo-retina":"https://www-kiva-org.global.ssl.fastly.net/cms/styles/supporter_logo/s3/supporter/logo/logo_omidyar_network_2_0.png?itok=zSc_3EkM",
+			"logo-default":"https://www-kiva-org.global.ssl.fastly.net/cms/styles/supporter_logo/s3/supporter/logo/logo_omidyar_network_2_0.png?itok=zSc_3EkM",
+			"url":"http://www.omidyar.com/",
+			"alt":"Omidyar Network",
+			"description":"Omidyar Network awarded a $5 million grant over 5 years, earmarked for developing Kiva's technology platform, expanding its network of field partners, and supporting due diligence and monitoring capabilities across Kiva's growing portfolio. As part of this grant, Omidyar Network matches up to $3.6 million of online and offline donations from individual Kiva supporters. "
+		},
+		{
+			"logo-std":"https://www-kiva-org.global.ssl.fastly.net/cms/styles/supporter_logo/s3/supporter/logo/skoll_0_1.gif?itok=VFFBVeus",
+			"logo-retina":"https://www-kiva-org.global.ssl.fastly.net/cms/styles/supporter_logo/s3/supporter/logo/skoll_0_1.gif?itok=VFFBVeus",
+			"logo-default":"https://www-kiva-org.global.ssl.fastly.net/cms/styles/supporter_logo/s3/supporter/logo/skoll_0_1.gif?itok=VFFBVeus",
+			"url":"http://skoll.org/",
+			"alt":"Skoll logo",
+			"description":"The Skoll Foundation, founded by Silicon Valley entrepreneur Jeff Skoll in 1999, invests in, connects and celebrates social entrepreneurs and the innovators who help them solve the world's most pressing problems. For details visit www.skollfoundation.org."
+		}
+	],
+"institutions-250kup": [
+		{
+			"logo-std":"https://www-kiva-org.global.ssl.fastly.net/cms/styles/supporter_logo/s3/supporter/logo/silatech_logo-withtagline.sm_.png?itok=bozmi5UP",
+			"logo-retina":"https://www-kiva-org.global.ssl.fastly.net/cms/styles/supporter_logo/s3/supporter/logo/silatech_logo-withtagline.sm_.png?itok=bozmi5UP",
+			"logo-default":"https://www-kiva-org.global.ssl.fastly.net/cms/styles/supporter_logo/s3/supporter/logo/silatech_logo-withtagline.sm_.png?itok=bozmi5UP",
+			"url":"http://www.silatech.com/",
+			"alt":"silatech logo"
+		}
+	],
+"institutions-100kup": [
+		{
+			"logo-std":"https://www-kiva-org.global.ssl.fastly.net/cms/styles/supporter_logo/s3/supporter/logo/raf-logocolor_1.jpg?itok=T2TLYGII",
+			"logo-retina":"https://www-kiva-org.global.ssl.fastly.net/cms/styles/supporter_logo/s3/supporter/logo/raf-logocolor_1.jpg?itok=T2TLYGII",
+			"logo-default":"https://www-kiva-org.global.ssl.fastly.net/cms/styles/supporter_logo/s3/supporter/logo/raf-logocolor_1.jpg?itok=T2TLYGII",
+			"url":"http://ritaallenfoundation.org/",
+			"alt":"ritaallenfoundation logo"
+		},
+		{
+			"logo-std":"https://www-kiva-org.global.ssl.fastly.net/cms/styles/supporter_logo/s3/supporter/logo/logo-the-mulago-foundation_0.png?itok=fh8ubNFU",
+			"logo-retina":"https://www-kiva-org.global.ssl.fastly.net/cms/styles/supporter_logo/s3/supporter/logo/logo-the-mulago-foundation_0.png?itok=fh8ubNFU",
+			"logo-default":"https://www-kiva-org.global.ssl.fastly.net/cms/styles/supporter_logo/s3/supporter/logo/logo-the-mulago-foundation_0.png?itok=fh8ubNFU",
+			"url":"http://rainerfellows.org/the-fellows/michelle-kreger/",
+			"alt":"the-mulago-foundation logo"
+		},
+		{
+			"logo-std":"https://www-kiva-org.global.ssl.fastly.net/cms/styles/supporter_logo/s3/supporter/logo/hillman_foundation.png?itok=2k-2w7bV",
+			"logo-retina":"https://www-kiva-org.global.ssl.fastly.net/cms/styles/supporter_logo/s3/supporter/logo/hillman_foundation.png?itok=2k-2w7bV",
+			"logo-default":"https://www-kiva-org.global.ssl.fastly.net/cms/styles/supporter_logo/s3/supporter/logo/hillman_foundation.png?itok=2k-2w7bV",
+			"url":"http://hillmanfamilyfoundations.org/foundations/henry-l-hillman-foundation/",
+			"alt":"hillmanfamilyfoundations logo"
+		},
+		{
+			"logo-std":"https://www-kiva-org.global.ssl.fastly.net/cms/styles/supporter_logo/s3/supporter/logo/rkmellonlogo_0.png?itok=mf_OyFri",
+			"logo-retina":"https://www-kiva-org.global.ssl.fastly.net/cms/styles/supporter_logo/s3/supporter/logo/rkmellonlogo_0.png?itok=mf_OyFri",
+			"logo-default":"https://www-kiva-org.global.ssl.fastly.net/cms/styles/supporter_logo/s3/supporter/logo/rkmellonlogo_0.png?itok=mf_OyFri",
+			"url":"http://foundationcenter.org/grantmaker/rkmellon/",
+			"alt":"rkmellon logo"
+		},
+		{
+			"logo-std":"https://www-kiva-org.global.ssl.fastly.net/cms/styles/supporter_logo/s3/supporter/logo/iabf_main_logo_color_1_0.jpg?itok=ccPyKvHB",
+			"logo-retina":"https://www-kiva-org.global.ssl.fastly.net/cms/styles/supporter_logo/s3/supporter/logo/iabf_main_logo_color_1_0.jpg?itok=ccPyKvHB",
+			"logo-default":"https://www-kiva-org.global.ssl.fastly.net/cms/styles/supporter_logo/s3/supporter/logo/iabf_main_logo_color_1_0.jpg?itok=ccPyKvHB",
+			"url":"https://www.dev.kiva.org/about/finances/supporters/institutions",
+			"alt":"iabf logo"
+		},
+		{
+			"logo-std":"https://www-kiva-org.global.ssl.fastly.net/cms/styles/supporter_logo/s3/supporter/logo/screen_shot_2015-08-10_at_12.07.png?itok=AtkQZSyF",
+			"logo-retina":"https://www-kiva-org.global.ssl.fastly.net/cms/styles/supporter_logo/s3/supporter/logo/screen_shot_2015-08-10_at_12.07.png?itok=AtkQZSyF",
+			"logo-default":"https://www-kiva-org.global.ssl.fastly.net/cms/styles/supporter_logo/s3/supporter/logo/screen_shot_2015-08-10_at_12.07.png?itok=AtkQZSyF",
+			"url":"http://www.thestepsfoundation.org/",
+			"alt":"thestepsfoundation logo"
+		}
+	],
+"services-1milup":[
+		{
+			"logo-std":"https://www-kiva-org.global.ssl.fastly.net/cms/styles/supporter_logo/s3/supporter/logo/ernstyoung_logo_0.gif?itok=PkOoX1Yz",
+			"logo-retina":"https://www-kiva-org.global.ssl.fastly.net/cms/styles/supporter_logo/s3/supporter/logo/ernstyoung_logo_0.gif?itok=PkOoX1Yz",
+			"logo-default":"https://www-kiva-org.global.ssl.fastly.net/cms/styles/supporter_logo/s3/supporter/logo/ernstyoung_logo_0.gif?itok=PkOoX1Yz",
+			"url":"http://www.ey.com/",
+			"alt":"Ernst & Young Logo",
+			"description":"As part of its overall commitment to entrepreneurship and corporate responsibility, Ernst & Young awarded an in-kind donation of $1 million dollars of professional services to Kiva.org.  Ernst & Young LLP professionals from its Advisory and Assurance service lines are contributing their time to Kiva.org in support of projects designed to assist Kiva evaluate financial data and improve its controls. "
+		},
+		{
+			"logo-std":"https://www-kiva-org.global.ssl.fastly.net/cms/styles/supporter_logo/s3/supporter/logo/paypal_logo_0.gif?itok=P9mxY7uK",
+			"logo-retina":"https://www-kiva-org.global.ssl.fastly.net/cms/styles/supporter_logo/s3/supporter/logo/paypal_logo_0.gif?itok=P9mxY7uK",
+			"logo-default":"https://www-kiva-org.global.ssl.fastly.net/cms/styles/supporter_logo/s3/supporter/logo/paypal_logo_0.gif?itok=P9mxY7uK",
+			"url":"http://www.paypal.com/",
+			"alt":"paypal",
+			"description":"PayPal is a proud supporter of Kiva's mission and organization. As an official partner, PayPal provides Kiva with access to technology, research, workplace resources and employee volunteers. Additionally, Kiva uses PayPal's innovative payment solutions to securely and seamlessly collect and distribute funds around the globe."
+		},
+		{
+			"logo-std":"https://www-kiva-org.global.ssl.fastly.net/cms/styles/supporter_logo/s3/supporter/logo/google.org_.png?itok=Z0lpZ3eO",
+			"logo-retina":"https://www-kiva-org.global.ssl.fastly.net/cms/styles/supporter_logo/s3/supporter/logo/google.org_.png?itok=Z0lpZ3eO",
+			"logo-default":"https://www-kiva-org.global.ssl.fastly.net/cms/styles/supporter_logo/s3/supporter/logo/google.org_.png?itok=Z0lpZ3eO",
+			"url":"http://www.google.org/",
+			"alt":"Google logo",
+			"description":"Kiva is a Google Grants recipient, receiving free advertising through Google Adwords. This partnership allows Kiva to attract new lenders by promoting the website at the moment an internet user is looking for more information on poverty alleviation, and is invaluable to Kiva's continuing success. "
+		}
+
+
+
+	],
+"services-250kup":[
+		{
+			"logo-std":"https://www-kiva-org.global.ssl.fastly.net/cms/styles/supporter_logo/s3/supporter/logo/logo-ipa.png?itok=onBccrZO",
+			"logo-retina":"https://www-kiva-org.global.ssl.fastly.net/cms/styles/supporter_logo/s3/supporter/logo/logo-ipa.png?itok=onBccrZO",
+			"logo-default":"https://www-kiva-org.global.ssl.fastly.net/cms/styles/supporter_logo/s3/supporter/logo/logo-ipa.png?itok=onBccrZO",
+			"url":"http://www.poverty-action.org/",
+			"alt":"IPA logo",
+			"description":"Innovations for Poverty Action (IPA) applies rigorous research techniques to develop and test solutions to real-world problems faced by the poor in developing countries."
+		}
+	],
+"services-100kup":[
+		{
+			"logo-std":"https://www-kiva-org.global.ssl.fastly.net/cms/styles/supporter_logo/s3/supporter/logo/cisco.logo__0_0.gif?itok=5OB5-TNT",
+			"logo-retina":"https://www-kiva-org.global.ssl.fastly.net/cms/styles/supporter_logo/s3/supporter/logo/cisco.logo__0_0.gif?itok=5OB5-TNT",
+			"logo-default":"https://www-kiva-org.global.ssl.fastly.net/cms/styles/supporter_logo/s3/supporter/logo/cisco.logo__0_0.gif?itok=5OB5-TNT",
+			"url":"http://www.cisco.com/",
+			"alt":"Cisco Logo"
+		},
+		{
+			"logo-std":"https://www-kiva-org.global.ssl.fastly.net/cms/styles/supporter_logo/s3/supporter/logo/yahoo_logo_0_1.gif?itok=LVJu6wWb",
+			"logo-retina":"https://www-kiva-org.global.ssl.fastly.net/cms/styles/supporter_logo/s3/supporter/logo/yahoo_logo_0_1.gif?itok=LVJu6wWb",
+			"logo-default":"https://www-kiva-org.global.ssl.fastly.net/cms/styles/supporter_logo/s3/supporter/logo/yahoo_logo_0_1.gif?itok=LVJu6wWb",
+			"url":"http://yahoo.com/",
+			"alt":"Yahoo logo"
+		}
+	]
+}
+
 
