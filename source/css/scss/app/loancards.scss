@@ -48,6 +48,18 @@ $loan-card-meter-height: $loan-card-footer-height/2;
 				transform: translate(6%,-10%);
 			}
 		}
+
+		a.loading {
+			.icon-refresh {
+				animation: spin 1s linear infinite;
+			}
+
+			@keyframes spin {
+				100% {
+					transform: rotate(-360deg);
+				}
+			}
+		}
 	}
 
 	.borrower-img-wrap {
