@@ -1,0 +1,159 @@
+{
+    "headline": {
+            "medium": "Traditional sources of energy are pricey and toxic. Renewables bring change and economic opportunity."
+        },
+        "textOverImageNameSpaceClass": "eneryGap-headline-wrapper",
+        "img": {
+            "full-width" : {
+                "src": "http://cms.kiva.org.s3.amazonaws.com/page/images/about-top",
+                "alt" : "Closing the energy gap"
+            }
+        },
+    "main-title": "Impact",
+    "page-title": "Impact",
+    "bar-links": [
+       {
+           "title": "About us"
+
+       },
+       {
+           "title": "Get to know us"
+       },
+       {
+           "title": "How Kiva works"
+       },
+       {
+           "title": "Where Kiva works"
+       },
+       {
+           "title": "Impact",
+           "active": true
+       },
+       {
+           "title": "Press"
+       },
+       {
+           "title": "Due diligence"
+       }
+    ],
+
+    "has-bar-sub-links": true,
+    "bar-sub-links": [
+       {
+           "sub-title": "Labs"
+       },
+       {
+           "sub-title": "Kiva Live"
+       },
+       {
+           "sub-title": "Success Stories",
+           "sub-active": true
+       },
+       {
+           "sub-title": "Social Performance"
+       }
+    ],
+    "drop-links": [
+       {
+           "title": "Impact",
+           "sub-links": [
+               {
+                   "sub-title": "Labs"
+               },
+               {
+                   "sub-title": "Kiva Live"
+               },
+               {
+                   "sub-title": "Success Stories",
+                   "sub-active": true
+               },
+               {
+                   "sub-title": "Social Performance"
+               }
+           ]
+       },
+       {
+           "title": "About us"
+       },
+       {
+           "title": "Get to know us"
+       },
+       {
+           "title": "How Kiva works"
+       },
+       {
+           "title": "Where Kiva works"
+       },
+       {
+           "title": "Press Center"
+       },
+       {
+           "title": "Due diligence"
+       }
+    ],
+
+    "basket" : {
+       "item_count": 0
+    },
+
+    "sources-modal":  [
+    {
+        "click-text": "Sources",
+        "modal-headline": "Data Sources for Infographic",
+        "source-citation": "FAO Statistical Yearbook 2012 »",
+        "link": "http://www.fao.org/docrep/015/i2490e/i2490e01a.pdf"
+    },
+    {
+        "source-citation": "FAO: Stemming post-harvest waste crucial to African food security »",
+        "link": "http://www.fao.org/news/story/en/item/79444/icode/"
+    },
+    {
+        "source-citation": "Microcredit and Agriculture: Challenges, Successes and Prospects »",
+        "link": "https://www.incofin.com/sites/default/files/attachments/publications/Microfinance%20and%20agriculture.pdf"
+    },
+    {
+        "source-citation": "Climate Change and Developing Country Agriculture: An Overview of Expected Impacts, Adaptation and Mitigation Challenges, and Funding Requirements »",
+        "link": "http://ictsd.org/downloads/2012/03/climate-change-and-developing-country-agriculture.pdf"
+    }
+],
+
+        "image_ratio": 50,
+        "category-title": "Our Approach",
+        "category-description": "",
+
+    "chevron-title": "Choose a challenge",
+    "challenges":    [
+       {
+       "name": "Financing Agriculture",
+       "src": "https://www-kiva-org.global.ssl.fastly.net/cms/page/images/financing-agriculture-std.jpg",
+       "retina-src": "https://www-kiva-org.global.ssl.fastly.net/cms/page/images/financing-agriculture-retina.jpg",
+       "href": "/labs/financingagriculture",
+        "caption": "Creating flexible financing to help small farmers overcome uncertainties.",
+        "translucency": ""
+       },
+       {
+       "name": "Closing the Energy Gap",
+       "src": "https://www-kiva-org.global.ssl.fastly.net/cms/page/images/closing-the-energy-gap-std.jpg",
+       "retina-src": "https://www-kiva-org.global.ssl.fastly.net/cms/page/images/closing-the-energy-gap-retina.jpg",
+       "href": "/labs/closingtheenergygap",
+        "caption": "Financing renewables to replace expensive, dirty and dangerous sources of energy.",
+        "translucency": "active-page"
+       },
+       {
+       "name": "Access to Education",
+       "src": "https://www-kiva-org.global.ssl.fastly.net/cms/page/images/access-to-education-std.jpg",
+       "retina-src": "https://www-kiva-org.global.ssl.fastly.net/cms/page/images/access-to-education-retina.jpg",
+       "href": "/labs/accesstoeducation",
+       "caption": "Loans for students with promising futures but no credit history.",
+       "translucency": " "
+       },
+       {
+       "name": "Leveraging Mobile Tech",
+       "src": "https://www-kiva-org.global.ssl.fastly.net/cms/page/images/leveraging-mobile-tech-std.jpg",
+       "retina-src": "https://www-kiva-org.global.ssl.fastly.net/cms/page/images/leveraging-mobile-tech-retina.jpg",
+       "href": "/labs/leveragingmobiletech",
+       "caption": "Lowering costs and expanding access with mobile-based  business models.",
+       "translucency": " "
+       }
+   ]
+}
