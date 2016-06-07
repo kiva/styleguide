@@ -23,12 +23,16 @@
     border-right: 1px solid #d8d8d8;
     border-left: 1px solid #d8d8d8;
     box-sizing: border-box;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
 }
 
 #side-border{
     border-right: 1px solid #d8d8d8;
     border-left: 1px solid #d8d8d8;
     box-sizing: border-box;
+    padding-top: 1rem;
+    padding-bottom: 1rem;;
 }
 
 #bottom-side-border{
@@ -36,6 +40,13 @@
     border-right: 1px solid #d8d8d8;
     border-left: 1px solid #d8d8d8;
     box-sizing: border-box;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+.agriculture img {
+    margin-top: 2rem;
+    width: 50%;
 }
 
 //Various div background colors
@@ -124,9 +135,10 @@
 
 //opacity on category-card-hover is needed so that category-card on active page will not darken on hover
 .active-page {
-   img {
-       opacity: 0.6;
-   }
+  opacity: 0.6;
+}
+
+.active-page img {
    .category-card-overlay:hover {
        background-color: transparent !important;
    }
