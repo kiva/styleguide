@@ -96,10 +96,11 @@
        "item_count": 0
     },
 
+    "modal-headline": "Data Sources for Infographic",
     "sources-modal":  [
     {
         "click-text": "Sources",
-        "modal-headline": "Data Sources for Infographic",
+
         "source-citation": "FAO Statistical Yearbook 2012 »",
         "link": "http://www.fao.org/docrep/015/i2490e/i2490e01a.pdf"
     },

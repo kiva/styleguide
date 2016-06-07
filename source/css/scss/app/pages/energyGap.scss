@@ -3,6 +3,16 @@
     color:  #fff;
 }
 
+.headline-style {
+  border-bottom: 3px solid #d8d8d8;
+}
+
+@media #{$small-only} {
+    .small-only-margin {
+          margin: 1rem;
+    }
+}
+
 // Affects row of  boxes with percentages
 .no-margin {
     margin: 0;
@@ -52,6 +62,10 @@
     @media #{$xlarge-up} {
         margin-top: 1.75rem;
     }
+}
+
+.tweak-left-chevron {
+    left: 0.8333rem !important;
 }
 
 .tweak-right-chevron {
