@@ -1,6 +1,6 @@
 
-<section>
-    <h2 class="ac-title ac-container" data-kv-accordion aria-controls="ac-corporations" aria-expanded="false">
+<section >
+    <h2 class="heading ac-title ac-container" data-kv-accordion aria-controls="ac-corporations" aria-expanded="true">
         Corporations
         <span class="ac-dropdown-icon">
             <svg class="icon icon-large-chevron">
@@ -8,52 +8,52 @@
             </svg>
         </span>
     </h2>
-    <div class="ac-body" id="ac-corporations" aria-hidden="true">
+    <div class="ac-body" id="ac-corporations" aria-hidden="false">
         <p class="title"><strong>Support of $5 million or more</strong></p>
             {{#corporations-5millonup}}
-            <div class="row ">
-            <div class="small-12 large-2 columns">
+            <div class="row logos">
+            <div class="small-12 medium-2 columns">
             <a href="{{url}}">
                 <img class="logos" data-interchange="[{{logo-default}}, (default)],[{{logo-retina}}, (retina)] " alt="{{alt}}">
                 <noscript><img src="{{logo-std}}" alt="{{alt}}"></noscript>
                 </a>
             </div>
-            <div class="small-12 large-10 columns">
-                <p>{{description}}</p>
+            <div class="small-12 medium-10 columns" >
+              <p>{{description1}}<strong>{{alt}}</strong>{{description}}</p>
             </div>
         </div> 
             {{/corporations-5millonup}}
         <p class="title"><strong>Support of $1 million or more</strong></p>
             {{#corporations-1millonup}}
-        <div class="row ">
-            <div class="small-12 large-2 columns">
+        <div class="row logos">
+            <div class="small-12 medium-2 columns">
             <a href="{{url}}">
                 <img class="logos" data-interchange="[{{logo-default}}, (default)],[{{logo-retina}}, (retina)] " alt="{{alt}}">
                 <noscript><img src="{{logo-std}}" alt="{{alt}}"></noscript>
                 </a>
             </div>
-            <div class="small-12 large-10 columns">
-                <p>{{description}}</p>
+            <div class="small-12 medium-10 columns">
+                <p>{{description1}}<strong>{{alt}}</strong>{{description}}</p>
             </div>
         </div> 
             {{/corporations-1millonup}}
     <p class="title"><strong>Support of $500,000 to $1 million</strong></p>
     {{#corporations-500kup}}
-        <div class="row ">
-            <div class="small-12 large-2 columns">
+        <div class="row logos">
+            <div class="small-12 medium-2 columns">
                 <a href="{{url}}">
                     <img class="logos" data-interchange="[{{logo-default}}, (default)],[{{logo-retina}}, (retina)] " alt="{{alt}}">
                     <noscript><img src="{{logo-std}}" alt="{{alt}}"></noscript>
                 </a>
             </div>
-            <div class="small-12 large-10 columns">
-                <p>{{description}}</p>
+            <div class="small-12 medium-10 columns">
+                <p>{{description1}}<strong>{{alt}}</strong>{{description}}</p>
             </div>
         </div> 
     {{/corporations-500kup}}
     <p class="title"><strong>Support of $250k to $500k</strong></p>
  {{#corporations-250kup}}
-        <div class="row ">
+        <div class="row logos">
             <div class="small-12 large-12 columns">
                 <a href="{{url}}">
                 <img class="sidebysidelogos" data-interchange="[{{logo-default}}, (default)],[{{logo-retina}}, (retina)] " alt="{{alt}}">
@@ -63,7 +63,7 @@
         </div>
 {{/corporations-250kup}}
 <p class="title"><strong>Support of $100k to $250k</strong></p>
-        <div class="row ">
+        <div class="row logos">
             <div class="small-12 large-12 columns">
             {{#corporations-100kup}}
                 <a href="{{url}}">
@@ -74,7 +74,7 @@
             </div>
         </div>
 <p class="title"><strong>Support of $50,00 to $100,000</strong></p>
-        <div class="row ">
+        <div class="row logos">
             <div class="small-12 large-12 columns">
             {{#corporations-50kup}}
                 <a href="{{url}}">
@@ -87,7 +87,7 @@
 </section>
 <hr>
 <section>
-    <h2 class="ac-title ac-container" data-kv-accordion aria-controls="ac-Institutions" aria-expanded="false">
+    <h2 class="heading ac-title ac-container" data-kv-accordion aria-controls="ac-Institutions" aria-expanded="false">
         Institutions
         <span class="ac-dropdown-icon">
             <svg class="icon icon-large-chevron">
@@ -98,20 +98,20 @@
     <div class="ac-body" id="ac-Institutions" aria-hidden="true">
        <p class="title"><strong>Support of $1 million or more</strong></p>
          {{#institutions-1millonup}}
-            <div class="row ">
-            <div class="small-12 large-2 columns">
+            <div class="row logos">
+            <div class="small-12 medium-2 columns">
             <a href="{{url}}">
                 <img class="logos" data-interchange="[{{logo-default}}, (default)],[{{logo-retina}}, (retina)] " alt="{{alt}}">
                 <noscript><img src="{{logo-std}}" alt="{{alt}}"></noscript>
                 </a>
             </div>
-            <div class="small-12 large-10 columns">
-                <p>{{description}}</p>
+            <div class="small-12 medium-10 columns">
+                <p>{{description1}}<strong>{{alt}}</strong>{{description}}</p>
             </div>
         </div> 
             {{/institutions-1millonup}}
         <p class="title"><strong>Support of $250,000 to $500,000</strong></p>
-         <div class="row ">
+         <div class="row logos ">
             <div class="small-12 large-12 columns">
             {{#institutions-250kup}}
                 <a href="{{url}}">
@@ -122,7 +122,7 @@
             </div>
         </div>
         <p class="title"><strong>Support of $100k to $250k</strong></p>
-         <div class="row ">
+         <div class="row logos">
             <div class="small-12 large-12 columns">
             {{#institutions-100kup}}
                 <a href="{{url}}">
@@ -133,7 +133,7 @@
             </div>
         </div>
         <p class="title"><strong>Support of $50k to $100k</strong></p>
-         <div class="row ">
+         <div class="row logos">
             <div class="small-12 large-12 columns">
 
             {{#institutions-50kup}}
@@ -147,8 +147,8 @@
     </div>
 </section>
 <hr>
-<section>
-    <h2 class="ac-title ac-container" data-kv-accordion aria-controls="ac-Services" aria-expanded="false">
+<section class="services" >
+    <h2 class="heading ac-title ac-container" data-kv-accordion aria-controls="ac-Services" aria-expanded="false">
         Services
         <span class="ac-dropdown-icon">
             <svg class="icon icon-large-chevron">
@@ -159,34 +159,34 @@
     <div class="ac-body" id="ac-Services" aria-hidden="true">
        <p class="title"><strong>Support of $1 million or more</strong></p>
          {{#services-1milup}}
-        <div class="row ">
-            <div class="small-12 large-2 columns">
+        <div class="row logos">
+            <div class="small-12 medium-2 columns">
                 <a href="{{url}}">
                     <img class="logos" data-interchange="[{{logo-default}}, (default)],[{{logo-retina}}, (retina)] " alt="{{alt}}">
                     <noscript><img src="{{logo-std}}" alt="{{alt}}"></noscript>
                 </a>
             </div>
-            <div class="small-12 large-10 columns">
-                <p>{{description}}</p>
+            <div class="small-12 medium-10 columns">
+                <p>{{description1}}<strong>{{alt}}</strong>{{description}}</p>
             </div>
         </div> 
      {{/services-1milup}}      
         <p class="title"><strong>Support of $250,000 to $500,000</strong></p>
         {{#services-250kup}}
-        <div class="row ">
-            <div class="small-12 large-2 columns">
+        <div class="row logos">
+            <div class="small-12 medium-2 columns">
                 <a href="{{url}}">
                     <img class="logos" data-interchange="[{{logo-default}}, (default)],[{{logo-retina}}, (retina)] " alt="{{alt}}">
                     <noscript><img src="{{logo-std}}" alt="{{alt}}"></noscript>
                 </a>
             </div>
-            <div class="small-12 large-10 columns">
-                <p>{{description}}</p>
+            <div class="small-12 medium-10 columns">
+                <p>{{description1}}<strong>{{alt}}</strong>{{description}}</p>
             </div>
         </div> 
         {{/services-250kup}}
         <p class="title"><strong>Support of $100,000 to $250,000</strong></p>
-          <div class="row ">
+          <div class="row logos">
             <div class="small-12 large-12 columns">
              {{#services-100kup}}
                 <a href="{{url}}">

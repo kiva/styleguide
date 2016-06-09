@@ -1,8 +1,4 @@
-img.logos {
-    display: block;
-    margin: 0 auto;
-    padding-bottom:1rem;
-}
+
 
 img.sidebysidelogos {
 	
@@ -11,8 +7,35 @@ img.sidebysidelogos {
 }
 
 .title {
+	padding-top: .5rem;
 	text-align:center;
 	@media #{$medium-up}	{
 			text-align: left;
 		}
+}
+
+
+.services {
+	
+	padding-bottom: 2rem;
+}
+
+.heading {
+	
+	padding-bottom: .8rem;
+
+}
+
+.introparagraph {
+	
+	padding-bottom: 4rem;
+}
+
+.logos {
+    display: table;
+}
+.logos .columns {
+    display: table-cell;
+    vertical-align: middle;
+    float: none !important
 }
