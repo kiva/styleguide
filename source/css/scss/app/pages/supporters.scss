@@ -1,17 +1,17 @@
-img.logos {
+img {
+  &.logos {
     display: block;
     margin: 0 auto;
-    padding-bottom:1rem;
-
-}
-
-img.sidebysidelogos {
-	
-	padding-right: 1rem;
-	padding-bottom: 1rem
+    padding-bottom: 1rem;
+  }
+  &.sidebysidelogos {
+    padding-right: 1rem;
+    padding-bottom: 1rem;
+  }
 }
 
 .title {
+	padding-top:1rem;
 	text-align:center;
 	@media #{$medium-up}	{
 			text-align: left;
@@ -32,7 +32,7 @@ img.sidebysidelogos {
 
 .introparagraph {
 	
-	padding-bottom: 4rem;
+	padding-bottom: 1rem;
 }
 
 @media #{$medium-up} {
