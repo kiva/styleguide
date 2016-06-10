@@ -323,20 +323,6 @@ module.exports = function(grunt) {
 				}
 			}
 
-			, ugly_bundle_js: {
-				entry: {
-					styleguide: '../../public/styleguide/js/styleguide'
-				}
-				, output: {
-					path: 'export/js'
-					, filename: '[name].bundle.min.js'
-					, chunkFilename: '[id].bundle.min.js'
-				}
-				, plugins: [
-					new webpack.optimize.UglifyJsPlugin()
-				]
-			}
-
 			, ugly_bundle: {
 				entry: {
 					nav: './inc/nav'
@@ -394,7 +380,7 @@ module.exports = function(grunt) {
 
 	grunt.registerTask('init', ['copy:init', 'githooks']);
 	grunt.registerTask('compile', ['concat:vendorCss', 'sass:compile', 'postcss:dist', 'shell:compile', 'svgmin', 'svgstore:compile', 'copy:js', 'webpack:compile']);
-	grunt.registerTask('export', ['clean:export', 'sass:export', 'sass:export_min', 'postcss:export', 'svgmin', 'svgstore:export', 'webpack:bundle', 'webpack:ugly_bundle', 'webpack:ugly_bundle_js', 'webpack:module', 'copy:export', 'gitadd:export']);
+	grunt.registerTask('export', ['clean:export', 'sass:export', 'sass:export_min', 'postcss:export', 'svgmin', 'svgstore:export', 'webpack:bundle', 'webpack:ugly_bundle', 'webpack:module', 'copy:export', 'gitadd:export']);
 	grunt.registerTask('default', 'compile');
     grunt.registerTask('test', ['jshint']);
 
