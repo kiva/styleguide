@@ -329,8 +329,8 @@ module.exports = function(grunt) {
 				}
 				, output: {
 					path: 'export/js'
-					, filename: '[name].min.js'
-					, chunkFilename: '[id].min.js'
+					, filename: '[name].bundle.min.js'
+					, chunkFilename: '[id].bundle.min.js'
 				}
 				, plugins: [
 					new webpack.optimize.UglifyJsPlugin()
