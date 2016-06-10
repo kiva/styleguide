@@ -92,6 +92,8 @@ $row-width: rem-calc(990); // NOTE: this is also set in _grid.scss
 @import "fonts";
 // We use these to define default font stacks
 $font-family-sans-serif: "PostGrotesk", Arial, Helvetica, sans-serif;
+$paragraph-font-weight: 300;
+
 
 // Kiva custom palette is in _palette.scss
 @import "palette";
