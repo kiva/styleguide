@@ -336,12 +336,14 @@
 		}
 	}
 	.raised-info {
-		padding-bottom: rem-calc(15);
+		padding-bottom: rem-calc(9);
 		margin: 0;
 		div, .lender-count {
 			padding: 0;
 		}
 		@media #{$small-only}{
+			padding-bottom: 0;
+			
 			.lender-count {
 				float: right;
 			}
@@ -425,6 +427,9 @@
 		margin: 0;
 		@media #{$medium-up} {
 			font-weight: normal;
+			font-size: rem-calc(34);
+			line-height: rem-calc(38);
+			padding-bottom: 0.5rem;
 		}
 	}
 }
