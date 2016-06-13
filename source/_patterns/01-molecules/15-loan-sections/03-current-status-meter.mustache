@@ -10,9 +10,13 @@
 			<h2 class="green-bolded inline">
 				{{meterAmountPercent}}%
 			</h2>
-			<div class="inline">{{raisedVerb}}, ${{amountLeft}} to go</div>
+			<div class="inline">{{raisedVerb}}</div>
 		</div>
-
+        <div class="goal-stats">
+            <div class="days-left-stat">{{daysLeft}} {{#oneDayLeft}}day{{/oneDayLeft}}{{^oneDayLeft}}days{{/oneDayLeft}} left</div>
+            <div class="amount-to-go-stat">${{amountLeft}} to go</div>
+            <div style="clear: both;"></div>
+        </div>
 		<div class="fundraising-meter progress">
 			<span class="meter" style="width: {{meterAmountPercent}}%"></span>
 		</div>
