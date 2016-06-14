@@ -21,6 +21,9 @@
 	}
 
 	a.close-reveal-modal {
+		// override global values for the close control here
+		position: absolute;
+		top: 0;
 		float: right;
 		padding: rem-calc(20);
 	}
