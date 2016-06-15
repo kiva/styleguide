@@ -5,5 +5,9 @@
   "amountRaisedPercent": 72,
   "lenderCount": 5,
   "meterAmountPercent": 28,
-  "status": "Paying Back"
+  "status": "Paying Back",
+  "showRaisedInfo": true,
+  "raisedVerb": "funded",
+  "daysLeft": 0,
+  "oneDayLeft": false
 }
