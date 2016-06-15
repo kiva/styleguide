@@ -330,10 +330,23 @@
 	.amount-raised {
 		.inline {
 			display: inline-block;
+			color: $kiva-green;
 		}
 		h2 {
 			margin-top: 0;
 		}
+	}
+	.goal-stats {
+		.days-left-stat {
+			float: left;
+		}
+
+		.amount-to-go-stat {
+			float: right;
+		}
+
+		margin-top: -0.25rem;
+		margin-bottom: 0.25rem;
 	}
 	.raised-info {
 		padding-bottom: rem-calc(9);

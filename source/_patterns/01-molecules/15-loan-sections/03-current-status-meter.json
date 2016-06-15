@@ -1,0 +1,13 @@
+{
+  "amountRaised": "5,325",
+  "amountLeft": "4,675",
+  "totalLoanAmount": "10,000",
+  "amountRaisedPercent": 53,
+  "lenderCount": 55,
+  "meterAmountPercent": 53,
+  "status": null,
+  "showRaisedInfo": true,
+  "raisedVerb": "funded",
+  "daysLeft": 30,
+  "oneDayLeft": false
+}
