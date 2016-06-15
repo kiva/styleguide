@@ -1,4 +1,10 @@
 <div class="loan-card">
+	{{#is_admin}}
+		<div class="image-edit-buttons">
+			<a class="edit" href="{{image.edit_url}}" target="_blank"><svg class="icon icon-edit"><use xlink:href="#icon-edit"/></svg></a>
+			<a class="refresh" href="#"><svg class="icon icon-refresh"><use xlink:href="#icon-refresh"/></svg></a>
+		</div>
+	{{/is_admin}}
     <a class="borrower-img-wrap" kvtrackevent="Lending|click-Read more|Photo" href="{{borrower_url}}" data-interchange="[{{image.url}}, (default)], [{{image.retina_url}}, (retina)]">
         {{#show_loan_length}}
             <div class="loan-message">{{loan_length}}</div>
