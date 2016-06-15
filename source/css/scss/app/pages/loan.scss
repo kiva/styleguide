@@ -410,15 +410,15 @@
 			top: rem-calc(3);
 
 			img {
-				height: rem-calc(48.17);
-				width: rem-calc(64.23);
-				@media #{$medium-down} {
+				height: rem-calc(46.23);
+				width: rem-calc(61.66);
+				@media #{$medium-up} {
 					height: rem-calc(37.5);
 					width: rem-calc(50);
 				}
-				@media #{$small} {
-					height: rem-calc(46.23);
-					width: rem-calc(61.66);
+				@media #{$large-up} {
+					height: rem-calc(48.17);
+					width: rem-calc(64.23);
 				}
 			}
 		}
