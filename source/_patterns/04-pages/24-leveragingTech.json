@@ -121,6 +121,44 @@
         "image_ratio": 50,
         "category-title": "Our Approach",
         "category-description": "",
+        "intro-headline":"The Challenge - Leveraging Mobile Tech",
+        "intro-paragraph":"Mobile penetration in developing countries is nearly 80%, but this technology has yet to be fully leveraged to improve the lives of the poor on a macro scale. End users remain unaware of the potential, and companies and organizations putting mobile devices to use for social good face serious financial constraints..",
+        "graphic-at-small":"/images/leveragingTech/small_graphic.svg",
+        "graphic-at-large":"/images/leveragingTech/large_graphic.svg",
+        "sidebar-photo":"/images/leveragingTech/leveragingTech_small.svg",
+   "sidebar-photo-href":"http://",
+   "sidebar-photo-link":"Paul",
+   "sidebar-photo-caption":"was one of the first Zoona mobile money agents to grow his business with a Kiva loan.",
+    "lend-link":"https://www.kiva.org/lend?sector=1",
+    "lend-link2":"https://www.kiva.org/lend?sector=15",
+   "lend-button-text-large":"Make a loan on Kiva",
+   "loan-counter-paragraph":"There are 28 Labs Mobile loans currently fundraising on Kiva.",
+   "loan-headline":"Make a Labs Mobile loan",
+   "lend-button-text-small":"Find a loan on Kiva",
+   "learn-more-title":"Learn More",
+   "learn-more":  [
+       {
+          "learn-more-href":"http://siteresources.worldbank.org/EXTINFORMATIONANDCOMMUNICATIONANDTECHNOLOGIES/Resources/IC4D-2012-Report.pdf", 
+          "learn-more-link":"Maximizing Mobile (World Bank)"
+       },
+    {
+          "learn-more-href":" http://siteresources.worldbank.org/EXTINFORMATIONANDCOMMUNICATIONANDTECHNOLOGIES/Resources/282822-1346223280837/MainReport.pdf", 
+          "learn-more-link":"The Transformational use of ICT in Africa (World Bank & African Development Bank"
+       },
+       {
+          "learn-more-href":"http://siteresources.worldbank.org/INFORMATIONANDCOMMUNICATIONANDTECHNOLOGIES/Resources/MobileApplications_for_ARD.pdf", 
+          "learn-more-link":"Mobile Applications for Agriculture and Rural Development (World Bank)"
+       },
+        {
+          "learn-more-href":"https://www.kiva.org/cms/financing_higher_edu_africa.pdf", 
+          "learn-more-link":"Mobile Usage at the Base of the Pyramid in Kenya (World Bank)"
+       },
+       {
+          "learn-more-href":"http://www.ictinagriculture.org/sites/ictinagriculture.org/files/mbop_kenyasa_web.pdf", 
+          "learn-more-link":"Mobile Usage at the Base of the Pyramid in South Africa(World Bank)"
+       }
+   ],
+
 
     "chevron-title": "Choose a challenge",
     "challenges":    [

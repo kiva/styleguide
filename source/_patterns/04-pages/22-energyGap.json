@@ -121,7 +121,43 @@
         "image_ratio": 50,
         "category-title": "Our Approach",
         "category-description": "",
-
+        "intro-headline":"The Challenge -Closing the Energy Gap",
+        "intro-paragraph":"Off the grid, the vast majority of people depend on kerosene, diesel, charcoal and burning wood for light and heat — all sources of energy that have been used for generations. But these sources are also expensive, dirty and dangerous. Indoor air pollution from household cooking fires has even been cited as the leading environmental cause of death in the world. This is an area with incredible potential for change, but there are high barriers.",
+        "graphic-at-small":"/images/energyGap/small_graphic.svg",
+        "graphic-at-large":"/images/energyGap/large_graphic.svg",
+        "sidebar-photo":"/images/energyGap/energyGap_small.svg",
+   "sidebar-photo-href":"http://sistemabiobolsa.com/?lang=en",
+   "sidebar-photo-link":"Sistema Biobolsa",
+   "sidebar-photo-caption":"Biodigesters made by",
+    "lend-link":"https://www.kiva.org/lend?sector=1",
+    "lend-link2":"https://www.kiva.org/lend?sector=1",
+   "lend-button-text-large":"Make a loan on Kiva",
+   "loan-counter-paragraph":"There are 1 Labs Clean Energy loans currently fundraising on Kiva.",
+   "loan-headline":"Make a Labs Clean Energy Loan",
+   "lend-button-text-small":"Find a loan on Kiva",
+   "learn-more-title":"Learn More",
+   "learn-more":  [
+       {
+          "learn-more-href":"http://www.nber.org/papers/w18033", 
+          "learn-more-link":"Up in Smoke: The Influence of Household Behavior on Long Run Impact of Improved Cooking Stoves (MIT)"
+       },
+    {
+          "learn-more-href":" http://www.un.org/womenwatch/feature/climate_change/downloads/Women_and_Climate_Change_Factsheet.pdf", 
+          "learn-more-link":"Women, gender equality and climate Change (UN WomenWatch)"
+       },
+       {
+          "learn-more-href":"http://policy.practicalaction.org/policy-themes/energy/poor-peoples-energy-outlook/poor-peoples-energy-outlook-2012", 
+          "learn-more-link":"Poor People's Energy Outlook 2012 (Practical Action)"
+       },
+        {
+          "learn-more-href":"http://cleancookstoves.org/resources_files/intra-household-externalities.pdf ", 
+          "learn-more-link":"Intra-household Externalities and Low Demand for a New Technology"
+       },
+       {
+          "learn-more-href":"https://www.researchgate.net/publication/46496305_Calabashes_for_kilowatt-hours_Rural_energy_and_market_failure ", 
+          "learn-more-link":"Calabashes for Kilowatt-hours: Rural Energy and Market Failure (Energy Policy)"
+       }
+   ],
     "chevron-title": "Choose a challenge",
     "challenges":    [
        {
