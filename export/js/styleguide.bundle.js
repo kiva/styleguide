@@ -1516,7 +1516,8 @@
 
 
 	/*** EXPORTS FROM exports-loader ***/
-	module.exports = window.Modernizr}.call(window));
+	module.exports = window.Modernizr
+	}.call(window));
 
 /***/ },
 /* 4 */
