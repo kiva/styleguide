@@ -1,0 +1,39 @@
+
+
+//Various div background colors
+.no-background {
+    background: #fff;
+}
+
+@media  #{$xlarge-up} {
+    .ghost-background {
+        background: #fafafa;
+        border-top: 2px solid #d8d8d8;
+        border-right: 1px solid #d8d8d8;
+        border-bottom: 2px solid #d8d8d8;
+        margin-bottom: 1rem;
+    }
+
+    .platinum-background {
+        background:  #efefef;
+        border-top:  2px solid #d8d8d8;
+        border-left:  1px solid #d8d8d8;
+         border-bottom: 2px solid #d8d8d8;
+        margin-bottom: 1rem;
+    }
+}
+
+//Main accordion and learn more accordion
+#padding-xlarge-view {
+    @media #{$xlarge-up} {
+        margin-top: 1.75rem;
+    }
+}
+
+.tweak-right-chevron {
+    right: 0.8333rem !important;
+}
+
+
+
+

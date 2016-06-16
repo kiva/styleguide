@@ -1,0 +1,27 @@
+<div>
+    <hr>
+    <section>
+            <h2 class="ac-title ac-container " data-kv-accordion aria-controls="ac-learnMore" aria-expanded="true">
+                {{learn-more-title}}
+                <span class="ac-dropdown-icon">
+                    <svg class="icon icon-large-chevron tweak-right-chevron">
+                        <use xlink:href="#icon-large-chevron"></use>
+                    </svg>
+                </span>
+            </h2>
+            <article class="ac-body" id="ac-learnMore" aria-hidden="false">
+                <div class="accordion" >
+                    <ul id="learn-more-list">
+                        {{#learn-more}}
+                        <li  class="small-text">
+                            <a href="{{learn-more-href}}" class="acc-handle">{{learn-more-link}}</a>
+                            <div class="acc-panel">
+                            </div>
+                        </li>
+                        {{/learn-more}}
+                    </ul>
+                </div>
+            </article>
+            <hr>
+    </section>
+</div>
