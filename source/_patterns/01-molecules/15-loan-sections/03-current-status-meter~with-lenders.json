@@ -8,6 +8,6 @@
   "status": "Paying Back",
   "showRaisedInfo": true,
   "raisedVerb": "funded",
-  "daysLeft": 0,
-  "oneDayLeft": false
+  "isExpiringSoon": false,
+  "loanLengthMessage": null
 }

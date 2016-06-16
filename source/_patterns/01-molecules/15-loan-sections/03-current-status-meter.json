@@ -8,6 +8,6 @@
   "status": null,
   "showRaisedInfo": true,
   "raisedVerb": "funded",
-  "daysLeft": 30,
-  "oneDayLeft": false
+  "isExpiringSoon": false,
+  "loanLengthMessage": "25 days left"
 }
