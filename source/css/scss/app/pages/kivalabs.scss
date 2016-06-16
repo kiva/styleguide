@@ -1,0 +1,325 @@
+//This css for intro paragraph ul
+ul.labs-indent {
+	margin-left: 2.9rem;
+}
+
+.labs-list-item {
+	margin-bottom: 1rem;
+}
+
+//Labs-carousel-styling
+.labs-slideshow-wrapper {
+	position: relative;
+	margin: 0;
+
+	.icon-small-chevron {
+		width: rem-calc(80);
+		height: rem-calc(80);
+		margin-top: rem-calc(-40);
+		position: absolute;
+		top: 50%;
+	}
+
+	.icon-small-chevron:hover {
+		cursor: pointer;
+	}
+
+	.labs-slideshow-arrow {
+		background-color: transparent;
+		display: none;
+		position: absolute;
+		top: 0;
+		width: rem-calc(80);
+		height: 100%;
+		margin-top: 0;
+		transform: rotate(180deg);
+
+		.icon {
+			stroke: darken($white, 10%);
+			pointer-events: all;
+			cursor: pointer;
+		}
+
+		&:hover {
+			cursor: pointer;
+
+			.icon {
+				stroke: $white;
+			}
+		}
+	}
+
+	.labs-slideshow-prev-arrow {
+		left: 0;
+
+		.icon {
+			transform: rotate(270deg);
+			margin-left: rem-calc(10);
+		}
+	}
+
+	.labs-slideshow-next-arrow {
+		right: 0;
+		width: rem-calc(50);
+		overflow: hidden;  // fixes an unwanted right margin
+
+		.icon {
+			transform: rotate(90deg);
+			margin-left: rem-calc(-10);
+		}
+	}
+
+	.slick-prev,
+	.slick-next {
+		display: inline;
+		cursor: pointer;
+	}
+
+	.slick-dots {
+		@extend %width-100;
+		@extend %margin-padding-0;
+		position: absolute;
+		bottom: rem-calc(10);
+		display: block;
+		padding: 0;
+		list-style: none;
+		text-align: center;
+
+		@media #{$medium-down} {
+			display: none !important;
+		}
+	}
+
+	.slick-dots li {
+		position: relative;
+		display: inline-block;
+		width: rem-calc(16);
+		height: rem-calc(16);
+		margin: 0 rem-calc(7);
+		padding: 0;
+		cursor: pointer;
+	}
+
+	.slick-dots li button {
+		font-size: 0;
+		line-height: 0;
+		display: block;
+		width: rem-calc(18);
+		height: rem-calc(18);
+		padding: 0;
+		cursor: pointer;
+		color: transparent;
+		border: rem-calc(2) solid $white;
+		border-radius: rem-calc(18);
+		outline: none;
+		background-color: black;
+		opacity: 0.5
+	}
+
+	.slick-dots li button:hover,
+	.slick-dots li button:focus {
+		outline: none;
+	}
+
+	.slick-dots li.slick-active button {
+		background-color: $white;
+		opacity: 1
+	}
+}
+
+.labs-slide {
+	// this section is to avoid FOUC on before slideshow is initialized
+	display: none;
+
+	&:first-of-type {
+		display: block;
+	}
+
+	&.slick-slide {
+		display: block;
+	}
+}
+
+.labs-element-wrapper {
+	width: 100%;
+    height: 50%;  // added this for height adj//
+	@media #{$large-up} {
+		width: 100%;
+		float: center;
+	}
+}
+
+.labs-element {
+	width: 100%;
+	height: 0;
+	position: relative;
+	padding-bottom: 62.5%;
+
+	@media  #{$large-up} {
+		padding-bottom: 80.16%;
+	}
+
+	@media  #{$wxga-up} {
+		padding-bottom: 62.5%;
+	}
+
+	img {
+		width: 100%;
+		position: absolute;
+	}
+
+	.slide-overlay-short, .slide-overlay-long, .slide-overlay-very-short {
+		margin: 0;
+		padding: 0 rem-calc(60);
+		font-weight: bold;
+
+		@media #{$small-only} {
+			padding: 0 rem-calc(40);
+		}
+	}
+
+	.attribution {
+		margin-top: rem-calc(9);
+	}
+
+	.attribution-left, .attribution-right {
+		@extend %margin-padding-0;
+		position: absolute;
+		top: 66%;
+
+		@media #{$medium-only} {
+			top: 74%;
+		}
+
+		@media #{$large-up} {
+			top: 80%;
+		}
+	}
+
+	.attribution-left {
+		width: 100%;
+		text-align: center;
+
+		@media #{$large-up} {
+			text-align: left;
+			left: 5%;
+		}
+
+	}
+
+	.attribution-right {
+		width: 100%;
+		text-align: center;
+
+		@media #{$large-up} {
+			text-align: right;
+			width: 95%;
+		}
+	}
+
+	.attribution-detail {
+		font-weight: $font-weight-normal;
+	}
+}
+
+#photocredit {
+color: #666;
+}
+
+// Labs video section
+
+	div.kiva-labs-video {
+	position: relative;
+	cursor: pointer;
+	height: 100%;
+
+	a:hover {
+		text-decoration: none;
+	}
+
+	.button-wrapper {
+		margin: -1.5rem 0 0 -2rem;
+		left: 50%;
+		position: absolute;
+		top: 50%;
+	}
+
+	.play-button {
+		position: relative;
+		width: 4rem;
+		padding: rem-calc(8);
+		text-align: center;
+		background-color: rgba(0,0,0,0.7);
+		color: white;
+
+		&:hover {
+			background-color: rgba(0,0,0,1);
+		}
+
+
+		svg.icon-triangle {
+			width: rem-calc(16);
+			height: rem-calc(14);
+			fill: #fff;
+			-webkit-transform: rotate(90deg);
+			-moz-transform: rotate(90deg);
+			transform: rotate(90deg);
+
+			@media #{$xlarge-up} {
+				width: rem-calc(24);
+				height: rem-calc(22);
+			}
+		}
+	}
+}
+
+.full-screen-video {
+	padding: 0;
+	margin-bottom: 1rem;
+}
+
+#video {
+    display: block;
+    width:  100%;
+		@media #{$xlarge-up} {
+				padding: 0 0.5rem;
+    }
+}
+
+.labsframe {
+	padding:  0 1rem;
+}
+
+//Choose a challenge
+
+.kivalabs-category-card {
+	width: 100%;
+	@media #{$large-up} {
+		width: 96%;
+	}
+	margin: 0 auto 3.0rem;
+}
+
+.kivalabs-category-card img {
+	width: 100%;
+}
+
+// Supported by and Partners section
+
+
+#mulago {
+
+	margin-bottom: 2.75rem;
+}
+
+#cisco {
+		padding-top: 1rem;
+}
+
+#google {
+	padding-top: 1.75rem;
+}
+
+#ipa {
+	padding-top: .5rem;
+}
