@@ -1,13 +1,11 @@
 
 
 //Various div background colors
-.no-background {
-    background: #fff;
-}
+
 
 @media  #{$xlarge-up} {
-    .ghost-background {
-        background: #fafafa;
+    .dark-ghost-background {
+        background: #efefef;
         border-top: 2px solid #d8d8d8;
         border-right: 1px solid #d8d8d8;
         border-bottom: 2px solid #d8d8d8;
@@ -15,7 +13,7 @@
     }
 
     .platinum-background {
-        background:  #efefef;
+        background:  #dcdcdc;
         border-top:  2px solid #d8d8d8;
         border-left:  1px solid #d8d8d8;
          border-bottom: 2px solid #d8d8d8;
@@ -26,7 +24,7 @@
 //Main accordion and learn more accordion
 #padding-xlarge-view {
     @media #{$xlarge-up} {
-        margin-top: 1.75rem;
+     margin-top:1.75rem;   
     }
 }
 
@@ -34,6 +32,13 @@
     right: 0.8333rem !important;
 }
 
+.page-padding{ @media #{$xlarge-up} {  
+     padding-left:3rem;
+     padding-right:2rem; 
+    }
 
+
+    
+}
 
 
