@@ -86,6 +86,7 @@
 @import 'app/filters-touch';
 @import 'app/loancards';
 @import 'app/paging';
+@import 'app/heading-with-subheaders';
 
 
 @import 'app/pages/home';
@@ -101,11 +102,8 @@
 @import 'app/pages/press-releases';
 @import 'app/pages/site-map';
 @import 'app/pages/due-diligence';
-
-
 @import 'app/pages/terms';
 @import 'app/pages/privacy';
-
 @import 'app/pages/kivalabs';
 
 
@@ -134,9 +132,4 @@
 @import 'app/components/photo-showing-through-text';
 @import 'app/components/social-share';
 @import 'app/components/text-on-background-image';
-@import 'app/components/source-modal';
-@import 'app/components/sidebar-photo-with-caption';
-@import 'app/components/loan-counter';
-@import 'app/components/learn-more-link-list';
-@import 'app/components/full-width-graphic-div';
-@import 'app/components/card-grid-4-up';
+@import 'app/components/autoplay-video-with-lightbox';

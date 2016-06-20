@@ -226,66 +226,6 @@ ul.labs-indent {
 color: #666;
 }
 
-// Labs video section
-
-	div.kiva-labs-video {
-	position: relative;
-	cursor: pointer;
-	height: 100%;
-
-	a:hover {
-		text-decoration: none;
-	}
-
-	.button-wrapper {
-		margin: -1.5rem 0 0 -2rem;
-		left: 50%;
-		position: absolute;
-		top: 50%;
-	}
-
-	.play-button {
-		position: relative;
-		width: 4rem;
-		padding: rem-calc(8);
-		text-align: center;
-		background-color: rgba(0,0,0,0.7);
-		color: white;
-
-		&:hover {
-			background-color: rgba(0,0,0,1);
-		}
-
-
-		svg.icon-triangle {
-			width: rem-calc(16);
-			height: rem-calc(14);
-			fill: #fff;
-			-webkit-transform: rotate(90deg);
-			-moz-transform: rotate(90deg);
-			transform: rotate(90deg);
-
-			@media #{$xlarge-up} {
-				width: rem-calc(24);
-				height: rem-calc(22);
-			}
-		}
-	}
-}
-
-.full-screen-video {
-	padding: 0;
-	margin-bottom: 1rem;
-}
-
-#video {
-    display: block;
-    width:  100%;
-		@media #{$xlarge-up} {
-				padding: 0 0.5rem;
-    }
-}
-
 .labsframe {
 	padding:  0 1rem;
 }
