@@ -1,0 +1,50 @@
+img {
+  &.logos {
+    display: block;
+    margin: 0 auto;
+    padding-bottom: 1rem;
+  }
+  &.sidebysidelogos {
+    padding-right: 1rem;
+    padding-bottom: 1rem;
+  }
+}
+
+.title {
+	padding-top:1rem;
+	text-align:center;
+	@media #{$medium-up}	{
+			text-align: left;
+		}
+}
+
+
+.services {
+	
+	padding-bottom: 2rem;
+}
+
+.heading {
+	
+	padding-bottom: .8rem;
+
+}
+
+.introparagraph {
+	
+	padding-bottom: 1rem;
+}
+
+@media #{$medium-up} {
+.logos .columns {
+    display: table-cell;
+    vertical-align: middle;
+    float: none !important
+}
+}
+
+@media #{$medium-up} {
+		.logos {
+			    display: table;
+		}
+	}
