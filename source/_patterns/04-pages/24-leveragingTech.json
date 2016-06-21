@@ -1,0 +1,198 @@
+{
+    "headline": {
+            "medium": "Mobile has the ability to connect people and bring down costs. But access is limited."
+        },
+        "textOverImageNameSpaceClass": "leveragingTech-headline-wrapper",
+        "img": {
+            "full-width" : {
+                "src": "http://cms.kiva.org.s3.amazonaws.com/page/images/about-top",
+                "alt" : "Access to Education"
+            }
+        },
+    "main-title": "Impact",
+    "page-title": "Impact",
+    "bar-links": [
+       {
+           "title": "About us"
+
+       },
+       {
+           "title": "Get to know us"
+       },
+       {
+           "title": "How Kiva works"
+       },
+       {
+           "title": "Where Kiva works"
+       },
+       {
+           "title": "Impact",
+           "active": true
+       },
+       {
+           "title": "Press"
+       },
+       {
+           "title": "Due diligence"
+       }
+    ],
+
+    "has-bar-sub-links": true,
+    "bar-sub-links": [
+       {
+           "sub-title": "Labs"
+       },
+       {
+           "sub-title": "Kiva Live"
+       },
+       {
+           "sub-title": "Success Stories",
+           "sub-active": true
+       },
+       {
+           "sub-title": "Social Performance"
+       }
+    ],
+    "drop-links": [
+       {
+           "title": "Impact",
+           "sub-links": [
+               {
+                   "sub-title": "Labs"
+               },
+               {
+                   "sub-title": "Kiva Live"
+               },
+               {
+                   "sub-title": "Success Stories",
+                   "sub-active": true
+               },
+               {
+                   "sub-title": "Social Performance"
+               }
+           ]
+       },
+       {
+           "title": "About us"
+       },
+       {
+           "title": "Get to know us"
+       },
+       {
+           "title": "How Kiva works"
+       },
+       {
+           "title": "Where Kiva works"
+       },
+       {
+           "title": "Press Center"
+       },
+       {
+           "title": "Due diligence"
+       }
+    ],
+
+    "basket" : {
+       "item_count": 0
+    },
+
+    "modal-headline": "Data Sources for Infographic",
+    "sources-modal":  [
+    {
+        "click-text": "Sources",
+
+        "source-citation": "FAO Statistical Yearbook 2012 »",
+        "link": "http://www.fao.org/docrep/015/i2490e/i2490e01a.pdf"
+    },
+    {
+        "source-citation": "FAO: Stemming post-harvest waste crucial to African food security »",
+        "link": "http://www.fao.org/news/story/en/item/79444/icode/"
+    },
+    {
+        "source-citation": "Microcredit and Agriculture: Challenges, Successes and Prospects »",
+        "link": "https://www.incofin.com/sites/default/files/attachments/publications/Microfinance%20and%20agriculture.pdf"
+    },
+    {
+        "source-citation": "Climate Change and Developing Country Agriculture: An Overview of Expected Impacts, Adaptation and Mitigation Challenges, and Funding Requirements »",
+        "link": "http://ictsd.org/downloads/2012/03/climate-change-and-developing-country-agriculture.pdf"
+    }
+],
+
+        "image_ratio": 50,
+        "category-title": "Our Approach",
+        "category-description": "",
+        "intro-headline":"The Challenge - Leveraging Mobile Tech",
+        "intro-paragraph":"Mobile penetration in developing countries is nearly 80%, but this technology has yet to be fully leveraged to improve the lives of the poor on a macro scale.",
+        "graphic-at-small":"/images/leveragingTech/small_graphic.svg",
+        "graphic-at-large":"/images/leveragingTech/large_graphic.svg",
+        "sidebar-photo":"/images/leveragingTech/photo.svg",
+        "sidebar-photo-href":"http://",
+        "sidebar-photo-link":"Paul",
+        "sidebar-photo-caption":"was one of the first Zoona mobile money agents to grow his business with a Kiva loan.",
+    "lend-link":"https://www.kiva.org/lend?sector=1",
+    "lend-link2":"https://www.kiva.org/lend?sector=15",
+   "lend-button-text-large":"Make a loan on Kiva",
+   "loan-counter-paragraph":"There are 28 Labs Mobile loans currently fundraising on Kiva.",
+   "loan-headline":"Make a Labs Mobile loan",
+   "lend-button-text-small":"Find a loan on Kiva",
+   "learn-more-title":"Learn More",
+   "learn-more":  [
+       {
+          "learn-more-href":"http://siteresources.worldbank.org/EXTINFORMATIONANDCOMMUNICATIONANDTECHNOLOGIES/Resources/IC4D-2012-Report.pdf", 
+          "learn-more-link":"Maximizing Mobile (World Bank)"
+       },
+    {
+          "learn-more-href":" http://siteresources.worldbank.org/EXTINFORMATIONANDCOMMUNICATIONANDTECHNOLOGIES/Resources/282822-1346223280837/MainReport.pdf", 
+          "learn-more-link":"The Transformational use of ICT in Africa (World Bank & African Development Bank"
+       },
+       {
+          "learn-more-href":"http://siteresources.worldbank.org/INFORMATIONANDCOMMUNICATIONANDTECHNOLOGIES/Resources/MobileApplications_for_ARD.pdf", 
+          "learn-more-link":"Mobile Applications for Agriculture and Rural Development (World Bank)"
+       },
+        {
+          "learn-more-href":"https://www.kiva.org/cms/financing_higher_edu_africa.pdf", 
+          "learn-more-link":"Mobile Usage at the Base of the Pyramid in Kenya (World Bank)"
+       },
+       {
+          "learn-more-href":"http://www.ictinagriculture.org/sites/ictinagriculture.org/files/mbop_kenyasa_web.pdf", 
+          "learn-more-link":"Mobile Usage at the Base of the Pyramid in South Africa(World Bank)"
+       }
+   ],
+
+
+    "chevron-title": "Choose a challenge",
+    "challenges":    [
+       {
+       "name": "Financing Agriculture",
+       "src": "https://www-kiva-org.global.ssl.fastly.net/cms/page/images/financing-agriculture-std.jpg",
+       "retina-src": "https://www-kiva-org.global.ssl.fastly.net/cms/page/images/financing-agriculture-retina.jpg",
+       "href": "/labs/financingagriculture",
+        "caption": "Creating flexible financing to help small farmers overcome uncertainties.",
+        "translucency": ""
+       },
+       {
+       "name": "Closing the Energy Gap",
+       "src": "https://www-kiva-org.global.ssl.fastly.net/cms/page/images/closing-the-energy-gap-std.jpg",
+       "retina-src": "https://www-kiva-org.global.ssl.fastly.net/cms/page/images/closing-the-energy-gap-retina.jpg",
+       "href": "/labs/closingtheenergygap",
+        "caption": "Financing renewables to replace expensive, dirty and dangerous sources of energy.",
+        "translucency": " "
+       },
+       {
+       "name": "Access to Education",
+       "src": "https://www-kiva-org.global.ssl.fastly.net/cms/page/images/access-to-education-std.jpg",
+       "retina-src": "https://www-kiva-org.global.ssl.fastly.net/cms/page/images/access-to-education-retina.jpg",
+       "href": "/labs/accesstoeducation",
+       "caption": "Loans for students with promising futures but no credit history.",
+       "translucency": " "
+       },
+       {
+       "name": "Leveraging Mobile Tech",
+       "src": "https://www-kiva-org.global.ssl.fastly.net/cms/page/images/leveraging-mobile-tech-std.jpg",
+       "retina-src": "https://www-kiva-org.global.ssl.fastly.net/cms/page/images/leveraging-mobile-tech-retina.jpg",
+       "href": "/labs/leveragingmobiletech",
+       "caption": "Lowering costs and expanding access with mobile-based  business models.",
+       "translucency": " active-page"
+       }
+   ]
+}

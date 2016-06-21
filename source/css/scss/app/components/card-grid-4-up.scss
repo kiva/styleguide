@@ -1,0 +1,25 @@
+//Choose a challenge
+.category-card-4-up {
+    width: 100%;
+    @media #{$large-up} {
+        width: 96%;
+    }
+    margin: 0 auto 3.0rem;
+}
+
+.category-card-4-up img {
+    width: 100%;
+}
+
+//opacity on category-card-hover is needed so that category-card on active page will not darken on hover
+.active-page {
+   img {
+       opacity: 0.6;
+   }
+   .category-card-overlay:hover {
+       background-color: transparent !important;
+   }
+   .category-card:hover > .category-card-overlay .category-image {
+       opacity: 0.6;
+   }
+}

@@ -1,0 +1,197 @@
+{
+    "headline": {
+            "medium": "Demand for education is higher than ever. Financing options aren't keeping up."
+        },
+        "textOverImageNameSpaceClass": "accessEducation-headline-wrapper",
+        "img": {
+            "full-width" : {
+                "src": "http://cms.kiva.org.s3.amazonaws.com/page/images/about-top",
+                "alt" : "Access to Education"
+            }
+        },
+    "main-title": "Impact",
+    "page-title": "Impact",
+    "bar-links": [
+       {
+           "title": "About us"
+
+       },
+       {
+           "title": "Get to know us"
+       },
+       {
+           "title": "How Kiva works"
+       },
+       {
+           "title": "Where Kiva works"
+       },
+       {
+           "title": "Impact",
+           "active": true
+       },
+       {
+           "title": "Press"
+       },
+       {
+           "title": "Due diligence"
+       }
+    ],
+
+    "has-bar-sub-links": true,
+    "bar-sub-links": [
+       {
+           "sub-title": "Labs"
+       },
+       {
+           "sub-title": "Kiva Live"
+       },
+       {
+           "sub-title": "Success Stories",
+           "sub-active": true
+       },
+       {
+           "sub-title": "Social Performance"
+       }
+    ],
+    "drop-links": [
+       {
+           "title": "Impact",
+           "sub-links": [
+               {
+                   "sub-title": "Labs"
+               },
+               {
+                   "sub-title": "Kiva Live"
+               },
+               {
+                   "sub-title": "Success Stories",
+                   "sub-active": true
+               },
+               {
+                   "sub-title": "Social Performance"
+               }
+           ]
+       },
+       {
+           "title": "About us"
+       },
+       {
+           "title": "Get to know us"
+       },
+       {
+           "title": "How Kiva works"
+       },
+       {
+           "title": "Where Kiva works"
+       },
+       {
+           "title": "Press Center"
+       },
+       {
+           "title": "Due diligence"
+       }
+    ],
+
+    "basket" : {
+       "item_count": 0
+    },
+
+    "modal-headline": "Data Sources for Infographic",
+    "sources-modal":  [
+    {
+        "click-text": "Sources",
+
+        "source-citation": "FAO Statistical Yearbook 2012 »",
+        "link": "http://www.fao.org/docrep/015/i2490e/i2490e01a.pdf"
+    },
+    {
+        "source-citation": "FAO: Stemming post-harvest waste crucial to African food security »",
+        "link": "http://www.fao.org/news/story/en/item/79444/icode/"
+    },
+    {
+        "source-citation": "Microcredit and Agriculture: Challenges, Successes and Prospects »",
+        "link": "https://www.incofin.com/sites/default/files/attachments/publications/Microfinance%20and%20agriculture.pdf"
+    },
+    {
+        "source-citation": "Climate Change and Developing Country Agriculture: An Overview of Expected Impacts, Adaptation and Mitigation Challenges, and Funding Requirements »",
+        "link": "http://ictsd.org/downloads/2012/03/climate-change-and-developing-country-agriculture.pdf"
+    }
+],
+
+        "image_ratio": 50,
+        "category-title": "Our Approach",
+        "category-description": "",
+         "intro-headline":"The Challenge - Access to Education",
+        "intro-paragraph":"Higher education is expensive. Most students cannot afford school without grants or scholarships, both of which are scarce – especially in developing countries. The good news is that more students are prepared for and interested in pursuing advanced degrees than ever before. The bad news is that financing education on credit is hard.",
+        "graphic-at-small":"/images/accessEducation/small_graphic.svg",
+        "graphic-at-large":"/images/accessEducation/large_graphic.svg",
+        "sidebar-photo":"/images/accessEducation/photo.svg",
+   "sidebar-photo-href":"http://",
+   "sidebar-photo-link":"Rosemary",
+   "sidebar-photo-caption":"was one of the first students to fund part of her tuition through a Kiva loan.",
+    "lend-link":"https://www.kiva.org/lend?sector=1",
+    "lend-link2":"https://www.kiva.org/lend?sector=15",
+   "lend-button-text-large":"Make a loan on Kiva",
+   "loan-counter-paragraph":"There are 0 Labs Education loans currently fundraising on Kiva.",
+   "loan-headline":"Make a Labs Education Loan",
+   "lend-button-text-small":"Find a loan on Kiva",
+   "learn-more-title":"Learn More",
+   "learn-more":  [
+       {
+          "learn-more-href":"http://jae.oxfordjournals.org/content/20/suppl_3/iii133.abstract", 
+          "learn-more-link":"Making Higher Education Finance Work for Africa(Journal of African Economics)"
+       },
+    {
+          "learn-more-href":" http://www.uis.unesco.org/Library/Documents/trends-global-higher-education-2009-world-conference-en.pdf", 
+          "learn-more-link":"Trends in Global Higher Education (UNESCO)"
+       },
+       {
+          "learn-more-href":"https://www.kiva.org/cms/eduloan-paper-v2.4.pdf", 
+          "learn-more-link":"Student loans: Liquidity constraints & higher education in South Africa (Agence Française de Développement)(Practical Action)"
+       },
+        {
+          "learn-more-href":"https://www.kiva.org/cms/financing_higher_edu_africa.pdf", 
+          "learn-more-link":"Financing Higher Education in Africa (World Bank)"
+       },
+       {
+          "learn-more-href":"http://unesco.amu.edu.pl/pdf/Worldwide_Trends_in_Higher_Education_Finance_Cost-Sharing_%20Student%20Loans.pdf", 
+          "learn-more-link":"Worldwide Trends in Higher Education Finance(UNESCO)"
+       }
+   ],
+
+    "chevron-title": "Choose a challenge",
+    "challenges":    [
+       {
+       "name": "Financing Agriculture",
+       "src": "https://www-kiva-org.global.ssl.fastly.net/cms/page/images/financing-agriculture-std.jpg",
+       "retina-src": "https://www-kiva-org.global.ssl.fastly.net/cms/page/images/financing-agriculture-retina.jpg",
+       "href": "/labs/financingagriculture",
+        "caption": "Creating flexible financing to help small farmers overcome uncertainties.",
+        "translucency": ""
+       },
+       {
+       "name": "Closing the Energy Gap",
+       "src": "https://www-kiva-org.global.ssl.fastly.net/cms/page/images/closing-the-energy-gap-std.jpg",
+       "retina-src": "https://www-kiva-org.global.ssl.fastly.net/cms/page/images/closing-the-energy-gap-retina.jpg",
+       "href": "/labs/closingtheenergygap",
+        "caption": "Financing renewables to replace expensive, dirty and dangerous sources of energy.",
+        "translucency": " "
+       },
+       {
+       "name": "Access to Education",
+       "src": "https://www-kiva-org.global.ssl.fastly.net/cms/page/images/access-to-education-std.jpg",
+       "retina-src": "https://www-kiva-org.global.ssl.fastly.net/cms/page/images/access-to-education-retina.jpg",
+       "href": "/labs/accesstoeducation",
+       "caption": "Loans for students with promising futures but no credit history.",
+       "translucency": "active-page"
+       },
+       {
+       "name": "Leveraging Mobile Tech",
+       "src": "https://www-kiva-org.global.ssl.fastly.net/cms/page/images/leveraging-mobile-tech-std.jpg",
+       "retina-src": "https://www-kiva-org.global.ssl.fastly.net/cms/page/images/leveraging-mobile-tech-retina.jpg",
+       "href": "/labs/leveragingmobiletech",
+       "caption": "Lowering costs and expanding access with mobile-based  business models.",
+       "translucency": " "
+       }
+   ]
+}

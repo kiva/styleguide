@@ -1,0 +1,16 @@
+//Photo with caption
+.sidebar-full-width-image {
+   background: #dcdcdc;
+   padding-bottom: 1rem;
+}
+
+.sidebar-full-width-image img{
+    width: 100%;
+   
+   padding-bottom: 1rem;
+    @media #{$xlarge-up} {
+        padding-top: 2rem;
+        
+        padding-right: 2rem;
+    }
+}

@@ -1,0 +1,200 @@
+{
+    "headline": {
+            "medium": "Small farmers face major uncertainties. Their livelihoods hang in the balance."
+        },
+        "textOverImageNameSpaceClass": "agriculture-headline-wrapper",
+        "img": {
+            "full-width" : {
+                "src": "http://cms.kiva.org.s3.amazonaws.com/page/images/about-top",
+                "alt" : "Farmers in a field"
+            }
+        },
+    "main-title": "Impact",
+    "page-title": "Impact",
+    "bar-links": [
+       {
+           "title": "About us"
+
+       },
+       {
+           "title": "Get to know us"
+       },
+       {
+           "title": "How Kiva works"
+       },
+       {
+           "title": "Where Kiva works"
+       },
+       {
+           "title": "Impact",
+           "active": true
+       },
+       {
+           "title": "Press"
+       },
+       {
+           "title": "Due diligence"
+       }
+    ],
+
+    "has-bar-sub-links": true,
+    "bar-sub-links": [
+       {
+           "sub-title": "Labs"
+       },
+       {
+           "sub-title": "Kiva Live"
+       },
+       {
+           "sub-title": "Success Stories",
+           "sub-active": true
+       },
+       {
+           "sub-title": "Social Performance"
+       }
+    ],
+    "drop-links": [
+       {
+           "title": "Impact",
+           "sub-links": [
+               {
+                   "sub-title": "Labs"
+               },
+               {
+                   "sub-title": "Kiva Live"
+               },
+               {
+                   "sub-title": "Success Stories",
+                   "sub-active": true
+               },
+               {
+                   "sub-title": "Social Performance"
+               }
+           ]
+       },
+       {
+           "title": "About us"
+       },
+       {
+           "title": "Get to know us"
+       },
+       {
+           "title": "How Kiva works"
+       },
+       {
+           "title": "Where Kiva works"
+       },
+       {
+           "title": "Press Center"
+       },
+       {
+           "title": "Due diligence"
+       }
+    ],
+
+    "basket" : {
+       "item_count": 0
+    },
+
+    "modal-headline": "Data Sources for Infographic",
+    "sources-modal":  [
+    {
+        "click-text": "Sources",
+        "source-citation": "FAO Statistical Yearbook 2012 »",
+        "link": "http://www.fao.org/docrep/015/i2490e/i2490e01a.pdf"
+    },
+    {
+        "source-citation": "FAO: Stemming post-harvest waste crucial to African food security »",
+        "link": "http://www.fao.org/news/story/en/item/79444/icode/"
+    },
+    {
+        "source-citation": "Microcredit and Agriculture: Challenges, Successes and Prospects »",
+        "link": "https://www.incofin.com/sites/default/files/attachments/publications/Microfinance%20and%20agriculture.pdf"
+    },
+    {
+        "source-citation": "Climate Change and Developing Country Agriculture: An Overview of Expected Impacts, Adaptation and Mitigation Challenges, and Funding Requirements »",
+        "link": "http://ictsd.org/downloads/2012/03/climate-change-and-developing-country-agriculture.pdf"
+    }
+],
+
+        "image_ratio": 50,
+        "category-title": "Our Approach",
+        "category-description": "",
+        "intro-headline":"The Challenge - Financing Agriculture",
+        "intro-paragraph":"Agriculture is inherently risky. Farmers have to contend with unpredictable weather, pests, and market prices. At the beginning of a season there’s no way to know what crop yields will be. And since most farmers need to borrow money to afford inputs like seeds and fertilizers, there’s no guarantee that they’ll be able to repay regularly or as agreed. This leaves millions of farmers in a bind every year, facing livelihood-threatening obstacles.",
+    "graphic-at-small":"/images/financingAG/small_graphic.svg",
+   "graphic-at-large":"/images/financingAG/large_graphic.svg",
+   "sidebar-photo":"/images/financingAG/photo.svg",
+   "sidebar-photo-link":"Maya Mountain Cacao",
+   "sidebar-photo-href":"http://www.mayamountaincacao.com",
+   "sidebar-photo-caption":"Farmers Maria and Santiago dry their    cacao beans at the central processing house.",
+   "lend-link":"https://www.kiva.org/lend?sector=1",
+   "lend-link2":"https://www.kiva.org/lend?sector=1",
+   "lend-button-text-large":"Make a loan on Kiva",
+   "loan-counter-paragraph":"There are 178 Labs Agriculture loans currently fundraising on Kiva.",
+   "loan-headline":"Make a Labs Agriculture Loan",
+   "lend-button-text-small":"Find a loan on Kiva",
+   "learn-more-title":"Learn More",
+   "learn-more":  [
+       {
+          "learn-more-href":"https://www.kiva.org/cms/un_fao_2012_the_state_of_food_and_agriculture.pdf", 
+          "learn-more-link":"The State of Food and Agriculture (FAO)"
+       },
+    {
+          "learn-more-href":"https://www.kiva.org/cms/2012_un_state_of_the_worlds_forests.pdf", 
+          "learn-more-link":"The State of the Worlds Forests (FAO)"
+       },
+       {
+          "learn-more-href":"https://www.kiva.org/cms/fao_2012_growing_greener_cities_in_africa.pdf", 
+          "learn-more-link":"Growing Greener Cities in Africa (FAO)"
+       },
+        {
+          "learn-more-href":"https://www.kiva.org/cms/un_2012_food_and_agriculture_the_future_of_sustainability.pdf", 
+          "learn-more-link":"Food and Agriculture: The Future of Sustainability(DESA)"
+       },
+       {
+          "learn-more-href":"https://www.kiva.org/cms/2012_ifpri_strategies_and_priorities_for_african_agriculture.pdf", 
+          "learn-more-link":"Strategies and Priorities for African Agriculture (IFPRI)"
+       }
+   ],
+
+
+
+
+
+    "chevron-title": "Choose a challenge",
+    "challenges":    [
+       {
+       "name": "Financing Agriculture",
+       "src": "https://www-kiva-org.global.ssl.fastly.net/cms/page/images/financing-agriculture-std.jpg",
+       "retina-src": "https://www-kiva-org.global.ssl.fastly.net/cms/page/images/financing-agriculture-retina.jpg",
+       "href": "/labs/financingagriculture",
+        "caption": "Creating flexible financing to help small farmers overcome uncertainties.",
+        "translucency": "active-page"
+       },
+       {
+       "name": "Closing the Energy Gap",
+       "src": "https://www-kiva-org.global.ssl.fastly.net/cms/page/images/closing-the-energy-gap-std.jpg",
+       "retina-src": "https://www-kiva-org.global.ssl.fastly.net/cms/page/images/closing-the-energy-gap-retina.jpg",
+       "href": "/labs/closingtheenergygap",
+        "caption": "Financing renewables to replace expensive, dirty and dangerous sources of energy.",
+        "translucency": " "
+       },
+       {
+       "name": "Access to Education",
+       "src": "https://www-kiva-org.global.ssl.fastly.net/cms/page/images/access-to-education-std.jpg",
+       "retina-src": "https://www-kiva-org.global.ssl.fastly.net/cms/page/images/access-to-education-retina.jpg",
+       "href": "/labs/accesstoeducation",
+       "caption": "Loans for students with promising futures but no credit history.",
+       "translucency": " "
+       },
+       {
+       "name": "Leveraging Mobile Tech",
+       "src": "https://www-kiva-org.global.ssl.fastly.net/cms/page/images/leveraging-mobile-tech-std.jpg",
+       "retina-src": "https://www-kiva-org.global.ssl.fastly.net/cms/page/images/leveraging-mobile-tech-retina.jpg",
+       "href": "/labs/leveragingmobiletech",
+       "caption": "Lowering costs and expanding access with mobile-based  business models.",
+       "translucency": " "
+       }
+   ]
+}
