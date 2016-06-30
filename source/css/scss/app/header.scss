@@ -1,13 +1,4 @@
-// shared vars
-$header-height: rem-calc(64);
-$header-height-small: rem-calc(45);
-
-$selected-color: #a9a9a9;
-$level-one-background: $white;
-$level-two-background: #f5f5f5;
-$level-three-background: #e6e6e6;
-
-// imports - alphabetical for clarity
+@import 'header/variables';
 @import 'header/dropdown-list';
 @import 'header/header-button';
 @import 'header/lend-menu';
