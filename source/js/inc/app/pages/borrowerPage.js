@@ -10,42 +10,6 @@ module.exports = function () {
         $('.advanced-repayment-schedule').toggle();
     });
 
-    $('.show-more-lenders').click(function() {
-        $('.lenders').append($('.spillover-lenders li').clone(true));
-
-		$('.lenders li a span').lazyload({
-			threshold : 200
-		});
-        $('.show-more-lenders').toggle();
-    });
-
-    $('.hide-more-lenders').click(function() {
-        $('.show-more-lenders').toggle();
-        $('.lenders li:nth-child(n+11)').remove();
-
-		$('html, body').animate({
-			scrollTop: $('.lenders-title').offset().top
-		}, 1000);
-    });
-
-	$('.show-more-teams').click(function() {
-		$('.teams').append($('.spillover-teams li').clone(true));
-
-		$('.teams li a span').lazyload({
-			threshold : 200
-		});
-		$('.show-more-teams').toggle();
-	});
-
-	$('.hide-more-teams').click(function() {
-		$('.show-more-teams').toggle();
-		$('.teams li:nth-child(n+11)').remove();
-
-		$('html, body').animate({
-			scrollTop: $('.teams-title').offset().top
-		}, 1000);
-	});
-
 	$('.show-more-comments').click(function() {
 		$('.comments').append($('.spillover-comments li').clone(true));
 		$('.show-more-comments').toggle();
