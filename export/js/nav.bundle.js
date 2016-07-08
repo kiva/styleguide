@@ -8232,26 +8232,7 @@
 
 		'use strict';
 
-		var $accordions = $('[data-kv-accordion]');
-
-		var $targets = $($accordions.get().reduce(function(prev, curr, i) {
-			return prev + (i===0 ? '' : ', ') + '#' + $(curr).attr('aria-controls');
-		}, ''));
-			
-		$('a[href*="#ac-"]').click(function(){
-			var href = $(this).attr('href');
-			var accordionHeader = $(href).parent();
-			$('html, body').animate({
-	        	scrollTop: $(accordionHeader).offset().top
-	    	}, 1000);
-			accordionFunction(href);
-		});
-
-		$accordions.click(function() {
-			var element = $(this);
-			var href = $('#'+element.attr('aria-controls'));
-			accordionFunction(href,element);
-		});
+		var $accordions, $targets;
 		
 		function accordionFunction(name,element) {
 			var $this = element || $(this);
@@ -8308,6 +8289,33 @@
 				.trigger(hiding ? 'hide' : 'show');
 		}
 
+		function reflow() {
+			$accordions = $('[data-kv-accordion]');
+
+			$targets = $($accordions.get().reduce(function(prev, curr, i) {
+				return prev + (i===0 ? '' : ', ') + '#' + $(curr).attr('aria-controls');
+			}, ''));
+
+			$('a[href*="#ac-"]').off('click').click(function(){
+				var href = $(this).attr('href');
+				var accordionHeader = $(href).parent();
+				$('html, body').animate({
+					scrollTop: $(accordionHeader).offset().top
+				}, 1000);
+				accordionFunction(href);
+			});
+
+			$accordions.off('click').click(function() {
+				var element = $(this);
+				var href = $('#'+element.attr('aria-controls'));
+				accordionFunction(href,element);
+			});
+		}
+
+		window.kvAccordion = {
+			reflow: reflow
+		};
+
 		$(window).on('resize', Foundation.utils.throttle(function() {
 			$targets.each(function() {
 				var $this = $(this);
@@ -8319,6 +8327,9 @@
 				}
 			});
 		}, 200));
+
+		// Start intital process
+		reflow();
 	};
 
 
