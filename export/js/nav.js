@@ -8232,7 +8232,7 @@ define("Styleguide", ["jquery"], function(__WEBPACK_EXTERNAL_MODULE_2__) { retur
 
 		'use strict';
 
-		var $accordions, $targets;
+		var $accordions, $targets, namespace = 'kv-accordion';
 		
 		function accordionFunction(name,element) {
 			var $this = element || $(this);
@@ -8296,7 +8296,7 @@ define("Styleguide", ["jquery"], function(__WEBPACK_EXTERNAL_MODULE_2__) { retur
 				return prev + (i===0 ? '' : ', ') + '#' + $(curr).attr('aria-controls');
 			}, ''));
 
-			$('a[href*="#ac-"]').off('click').click(function(){
+			$('a[href*="#ac-"]').off('click.'+namespace).on('click.'+namespace, function(){
 				var href = $(this).attr('href');
 				var accordionHeader = $(href).parent();
 				$('html, body').animate({
@@ -8305,7 +8305,7 @@ define("Styleguide", ["jquery"], function(__WEBPACK_EXTERNAL_MODULE_2__) { retur
 				accordionFunction(href);
 			});
 
-			$accordions.off('click').click(function() {
+			$accordions.off('click.'+namespace).on('click.'+namespace, function() {
 				var element = $(this);
 				var href = $('#'+element.attr('aria-controls'));
 				accordionFunction(href,element);
