@@ -1,3 +1,5 @@
+@import './variables';
+
 .lend-menu-small, .lend-menu-large {
     & *[aria-hidden="true"] {
         display: none;

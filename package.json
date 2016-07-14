@@ -5,8 +5,10 @@
   "main": "Gruntfile.js",
   "devDependencies": {
     "autoprefixer": "^6.0.3",
+    "bower": "^1.7.9",
     "exports-loader": "^0.6.2",
-    "grunt": "~0.4.5",
+    "grunt": "^0.4.5",
+    "grunt-cli": "^1.2.0",
     "grunt-contrib-clean": "^0.6.0",
     "grunt-contrib-concat": "^0.5.1",
     "grunt-contrib-copy": "~0.8.0",
@@ -28,7 +30,8 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "prepublish": "bower install --config.interactive=false && grunt init && grunt compile"
+    "postinstall": "bower install --config.interactive=false && npm run build",
+    "build": "grunt init compile"
   },
   "repository": {
     "type": "git",

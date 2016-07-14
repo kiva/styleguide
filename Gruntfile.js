@@ -89,13 +89,6 @@ module.exports = function(grunt) {
 		}
 
 
-        , githooks: {
-            all: {
-                'pre-push': 'test'
-            }
-        }
-
-
         , jshint: {
             options: {
                 jshintrc: '.jshintrc'
@@ -363,12 +356,12 @@ module.exports = function(grunt) {
     // vendor: concat into vendor.scss, then compile into styles.scss
 
 	grunt.loadNpmTasks('grunt-contrib-clean');
-    grunt.loadNpmTasks('grunt-contrib-concat');
+  grunt.loadNpmTasks('grunt-contrib-concat');
 	grunt.loadNpmTasks('grunt-contrib-copy');
-    grunt.loadNpmTasks('grunt-contrib-jshint');
-    grunt.loadNpmTasks('grunt-contrib-watch');
+  grunt.loadNpmTasks('grunt-contrib-jshint');
+  grunt.loadNpmTasks('grunt-contrib-watch');
 	grunt.loadNpmTasks('grunt-git');
-    grunt.loadNpmTasks('grunt-githooks');
+  grunt.loadNpmTasks('grunt-githooks');
 	grunt.loadNpmTasks('grunt-sass');
 	grunt.loadNpmTasks('grunt-shell');
 	grunt.loadNpmTasks('grunt-svgmin');
@@ -378,10 +371,9 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks('grunt-postcss');
 	// @todo add livereload?
 
-	grunt.registerTask('init', ['copy:init', 'githooks']);
+	grunt.registerTask('init', ['copy:init']);
 	grunt.registerTask('compile', ['concat:vendorCss', 'sass:compile', 'postcss:dist', 'shell:compile', 'svgmin', 'svgstore:compile', 'copy:js', 'webpack:compile']);
 	grunt.registerTask('export', ['clean:export', 'sass:export', 'sass:export_min', 'postcss:export', 'svgmin', 'svgstore:export', 'webpack:bundle', 'webpack:ugly_bundle', 'webpack:module', 'copy:export', 'gitadd:export']);
 	grunt.registerTask('default', 'compile');
-    grunt.registerTask('test', ['jshint']);
-
+  grunt.registerTask('test', ['jshint']);
 };
