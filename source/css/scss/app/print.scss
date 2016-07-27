@@ -14,11 +14,11 @@
 
 @media print {
 
-	* {
-		color: black; // black prints faster
+	body,p,span,h1,h2,h3,h4,h5,h6,pre,blockquote,strong,b,.black-underlined {
+		color: black !important; // black prints faster
 	}
 
-	body {
+	html, body {
 		font-size: 14px; // up the density for paper
 	}
 
@@ -48,7 +48,7 @@
 	}
 
 	// hide all of these elements
-	.top-nav,
+	.top-nav .columns:not(.logo-area),
 	.siteFooter,
 	.fund-a-loan-bar,
 	#ac-how-it-works,
@@ -75,6 +75,46 @@
 
 		& + hr {
 			display: none;
+		}
+	}
+
+	// don't break inside these sections
+	section.why-special,
+	section.loan-details,
+	section.country-info,
+	section.repayment-schedule {
+		page-break-inside: avoid;
+	}
+
+	// show the logo
+	.top-nav {
+		background: none;
+
+		.logo-area .header-button {
+			border: none;
+			background: none;
+
+			.icon {
+				fill: $kiva-green;
+				width: 6rem;
+				height: 4rem;
+			}
+		}
+	}
+
+	// force this color
+	.green-bolded {
+		color: $kiva-green !important;
+	}
+
+	// fix display of borrower image
+	figure.loan-figure {
+		.slick-list {
+			height: auto !important;
+		}
+		.slick-track,
+		.loan-image-wrap {
+			width: 100% !important;
 		}
 	}
 
@@ -107,28 +147,17 @@
 		line-height: 2rem;
 	}
 	.endorser {
-		.profile-photo {
-			display: inline-block;
-		}
-		.name-and-title {
-			display: inline-block;
-			vertical-align: middle;
-			.hide-for-large-up {
-				display: none;
-			}
-			br.lu {
-				display: inline;
-			}
-		}
+		display: none;
 	}
 
 	.loan-details .loan-term .icon-recycle {
 		width: 3.0444rem;
-		fill: #000;
-		color: #000;
 	}
 
 	// show the repayment schedule inline
+	.repayment-schedule h2 a {
+		text-decoration: none;
+	}
 	#repayment-schedule-tables {
 		display: block !important;
 		visibility: visible !important;
@@ -151,14 +180,5 @@
 	// hide the line-break before the repayment schedule
 	.loan-tags + .hide-for-large-up > hr {
 		display: none;
-	}
-
-	/* page break rules */
-	.ac-title {
-		page-break-after: avoid;
-	}
-
-	.country-map {
-		page-break-inside: avoid;
 	}
 }
