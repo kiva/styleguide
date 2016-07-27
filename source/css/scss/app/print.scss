@@ -14,6 +14,11 @@
 
 @media print {
 
+	* {
+		-webkit-transition: none !important;
+		transition: none !important;
+	}
+
 	body,p,span,h1,h2,h3,h4,h5,h6,pre,blockquote,strong,b,.black-underlined {
 		color: black !important; // black prints faster
 	}
@@ -52,17 +57,18 @@
 	.siteFooter,
 	.fund-a-loan-bar,
 	#ac-how-it-works,
+	.loan-image-footer,
 	.lend-action,
 	.mobile-lend-action,
 	.ac-container .ac-dropdown-icon,
 	.padding-pillow,
 	.pageWrap:after {
-		display: none;
+		display: none !important;
 	}
 
 	// expand all sections
-	.ac-body[aria-hidden="true"], [data-kv-accordion] + *[aria-hidden="true"] {
-		height: auto;
+	.ac-body, [data-kv-accordion] + * {
+		height: auto !important;
 	}
 
 	// hide these specific sections
@@ -70,7 +76,8 @@
 	.lenders-teams,
 	.comments-and-updates,
 	.loan-tags,
-	.field-partner-image-wrapper {
+	.field-partner-image-wrapper,
+	.trustee-image-wrapper {
 		display: none;
 
 		& + hr {
@@ -81,6 +88,7 @@
 	// don't break inside these sections
 	section.why-special,
 	section.loan-details,
+	section.about-zip,
 	section.country-info,
 	section.repayment-schedule {
 		page-break-inside: avoid;
@@ -150,8 +158,32 @@
 		display: none;
 	}
 
+	// resize loan-details icon
 	.loan-details .loan-term .icon-recycle {
 		width: 3.0444rem;
+	}
+
+	// show social media links
+	.about-zip .icon {
+		width: auto;
+		height: auto;
+		float: none;
+	}
+	.icons.socialmedia {
+		display: block;
+		margin: 0;
+
+		li:not(:last-child) {
+			margin-bottom: 0.5rem;
+		}
+
+		a svg {
+			vertical-align: middle;
+		}
+
+		a[href]:after {
+			content: attr(href);
+		}
 	}
 
 	// show the repayment schedule inline
@@ -178,6 +210,7 @@
 	}
 
 	// hide the line-break before the repayment schedule
+	.comments-and-updates + .hide-for-large-up > hr,
 	.loan-tags + .hide-for-large-up > hr {
 		display: none;
 	}
