@@ -29,40 +29,38 @@
 		</p>
 
 		{{#hasSocialMedia}}
-			<p>
-				<span class="icon-label">Follow:</span>
-				<ul class="icons socialmedia inline-list">
-					{{#facebookUrl}}
-					<li class="icon">
-						<a href="{{facebookUrl}}" target="_blank" class="icon-facebook">
-							<svg class="icon icon-facebook" width="30" height="30">
-								<use xlink:href="#icon-facebook"/>
-							</svg>
-						</a>
-					</li>
-					{{/facebookUrl}}
+			<span class="icon-label">Follow:</span>
+			<ul class="icons socialmedia inline-list">
+				{{#facebookUrl}}
+				<li class="icon">
+					<a href="{{facebookUrl}}" target="_blank" class="icon-facebook">
+						<svg class="icon icon-facebook" width="30" height="30">
+							<use xlink:href="#icon-facebook"/>
+						</svg>
+					</a>
+				</li>
+				{{/facebookUrl}}
 
-					{{#twitterUrl}}
-					<li class="icon">
-						<a href="{{twitterUrl}}" target="_blank" class="icon-twitter">
-							<svg class="icon icon-twitter" width="30" height="30">
-								<use xlink:href="#icon-twitter"/>
-							</svg>
-						</a>
-					</li>
-					{{/twitterUrl}}
+				{{#twitterUrl}}
+				<li class="icon">
+					<a href="{{twitterUrl}}" target="_blank" class="icon-twitter">
+						<svg class="icon icon-twitter" width="30" height="30">
+							<use xlink:href="#icon-twitter"/>
+						</svg>
+					</a>
+				</li>
+				{{/twitterUrl}}
 
-					{{#linkedInUrl}}
-					<li class="icon">
-						<a href="{{linkedInUrl}}" target="_blank" class="icon-linkedIn">
-							<svg class="icon icon-linkedIn" width="30" height="30">
-								<use xlink:href="#icon-linkedIn"/>
-							</svg>
-						</a>
-					</li>
-					{{/linkedInUrl}}
-				</ul>
-			</p>
+				{{#linkedInUrl}}
+				<li class="icon">
+					<a href="{{linkedInUrl}}" target="_blank" class="icon-linkedIn">
+						<svg class="icon icon-linkedIn" width="30" height="30">
+							<use xlink:href="#icon-linkedIn"/>
+						</svg>
+					</a>
+				</li>
+				{{/linkedInUrl}}
+			</ul>
 		{{/hasSocialMedia}}
 	</div>
 </section>

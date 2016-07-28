@@ -1,0 +1,217 @@
+@import '../palette';
+
+@mixin printable-bg($color) {
+	// Webkit support (Chrome/Safari)
+	-webkit-print-color-adjust: exact;
+	background-color: $color !important;
+
+	// this should work for most browsers
+	box-shadow: inset 0 0 0 1000px $color !important;
+
+	// IE 8/9 support
+	-ms-filter: "progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#{$color}', endColorstr='#{$color}')";
+}
+
+@media print {
+
+	* {
+		-webkit-transition: none !important;
+		transition: none !important;
+	}
+
+	body,p,span,h1,h2,h3,h4,h5,h6,pre,blockquote,strong,b,.black-underlined {
+		color: black !important; // black prints faster
+	}
+
+	html, body {
+		font-size: 14px; // up the density for paper
+	}
+
+	// print grid
+	@for $i from 1 through $total-columns {
+		.print-#{$i} {
+			width: $i/$total-columns * 100%;
+		}
+	}
+
+	// print block-grid
+	@include block-grid-html-classes($size:print, $include-spacing:false);
+
+	// table styling
+	table {
+		thead {
+			@include printable-bg($table-head-bg);
+		}
+		tr:nth-of-type(even) {
+			@include printable-bg($table-even-row-bg);
+		}
+	}
+
+	// don't limit row width
+	.row {
+		max-width: none;
+	}
+
+	// hide all of these elements
+	.top-nav .columns:not(.logo-area),
+	.siteFooter,
+	.fund-a-loan-bar,
+	#ac-how-it-works,
+	.loan-image-footer,
+	.lend-action,
+	.mobile-lend-action,
+	.ac-container .ac-dropdown-icon,
+	.padding-pillow,
+	.pageWrap:after {
+		display: none !important;
+	}
+
+	// expand all sections
+	.ac-body, [data-kv-accordion] + * {
+		height: auto !important;
+	}
+
+	// hide these specific sections
+	#ac-previous-loan-details-body,
+	.lenders-teams,
+	.comments-and-updates,
+	.loan-tags,
+	.field-partner-image-wrapper,
+	.trustee-image-wrapper {
+		display: none;
+
+		& + hr {
+			display: none;
+		}
+	}
+
+	// don't break inside these sections
+	section.why-special,
+	section.loan-details,
+	section.about-zip,
+	section.country-info,
+	section.repayment-schedule {
+		page-break-inside: avoid;
+	}
+
+	// show the logo
+	.top-nav {
+		background: none;
+
+		.logo-area .header-button {
+			border: none;
+			background: none;
+
+			.icon {
+				fill: $kiva-green;
+				width: 6rem;
+				height: 4rem;
+			}
+		}
+	}
+
+	// force this color
+	.green-bolded {
+		color: $kiva-green !important;
+	}
+
+	// fix display of borrower image
+	figure.loan-figure {
+		.slick-list {
+			height: auto !important;
+		}
+		.slick-track,
+		.loan-image-wrap {
+			width: 100% !important;
+		}
+	}
+
+	// force display of fundraising meter
+	.fundraising-meter {
+		@include printable-bg($kiva-bg-darkgray);
+
+		.meter {
+			@include printable-bg($kiva-green);
+		}
+
+		&.repaying .meter {
+			@include printable-bg($gray);
+		}
+	}
+
+	// resize the country flag image
+	.country-image {
+		width: 3.75rem;
+	}
+
+	// Firefox doesn't like display:flex when printing
+	.borrower-profile-wrapper .borrower-profile-pieces > .row {
+		display: block;
+	}
+
+	// why-special & endorsement adjustments
+	.green-bolded.endorsement {
+		font-size: 1.5rem;
+		line-height: 2rem;
+	}
+	.endorser {
+		display: none;
+	}
+
+	// resize loan-details icon
+	.loan-details .loan-term .icon-recycle {
+		width: 3.0444rem;
+	}
+
+	// show social media links
+	.about-zip .icon {
+		width: auto;
+		height: auto;
+		float: none;
+	}
+	.icons.socialmedia {
+		display: block;
+		margin: 0;
+
+		li:not(:last-child) {
+			margin-bottom: 0.5rem;
+		}
+
+		a svg {
+			vertical-align: middle;
+		}
+
+		a[href]:after {
+			content: attr(href);
+		}
+	}
+
+	// show the repayment schedule inline
+	.repayment-schedule h2 a {
+		text-decoration: none;
+	}
+	#repayment-schedule-tables {
+		display: block !important;
+		visibility: visible !important;
+		position: relative !important;
+
+		> .row {
+			padding: 0;
+			margin: 0;
+		}
+
+		.repayment-schedule-lightbox {
+			padding-top: 1rem;
+		}
+
+		.close-reveal-modal, .featured, .show-advanced, .hide-advanced {
+			display: none;
+		}
+	}
+
+	// hide the line-break before the repayment schedule
+	.comments-and-updates + .hide-for-large-up > hr,
+	.loan-tags + .hide-for-large-up > hr {
+		display: none;
+	}
+}
