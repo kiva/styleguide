@@ -130,12 +130,22 @@
 	.fundraising-meter {
 		@include printable-bg($kiva-bg-darkgray);
 
+		// make it work in IE 10/11 & Edge
+		border: none;
+		border-bottom: rem-calc(25) solid $kiva-bg-darkgray;
+
 		.meter {
 			@include printable-bg($kiva-green);
+
+			// make it work in IE 10/11 & Edge
+			border: none;
+			border-bottom: rem-calc(25) solid $kiva-green;
 		}
 
 		&.repaying .meter {
 			@include printable-bg($gray);
+
+			border-color: $gray;
 		}
 	}
 
