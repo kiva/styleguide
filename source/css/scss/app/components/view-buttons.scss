@@ -1,0 +1,40 @@
+@import '../../palette';
+
+.view-buttons {
+	input {
+		display: none;
+
+		&:checked + label {
+			background-color: $kiva-text-dark;
+
+			.icon-list {
+				stroke: $white;
+			}
+
+			.icon-grid {
+				fill: $white;
+			}
+		}
+	}
+
+	input + label {
+		margin: 0;
+		line-height: 0;
+		padding: 0.4rem 0.8rem;
+		float: left;
+		border: 1px solid $kiva-text-dark;
+
+		&:first-of-type {
+			border-right: none;
+		}
+
+		&:last-of-type {
+			border-left: none;
+		}
+	}
+
+	svg {
+		width: rem-calc(19);
+		height: rem-calc(19);
+	}
+}
