@@ -8,6 +8,7 @@ module.exports = function () {
 	var $close_search = $('#close-search');
 	var $search_form = $('#search-form');
 	var $search_box = $('#search-box');
+	var is_touch = $('html').hasClass('touch');
 
 	$search_toggle.click(function (e) {
 		e.preventDefault();
@@ -115,7 +116,7 @@ module.exports = function () {
 	});
 
 	// when not touchscreen, close lend dropdown when lend button itself is clicked
-	if (! $('body').hasClass('touchscreen')) {
+	if (! is_touch) {
 		$('[data-dropdown="lend-dropdown"]').click(function () {
 			Foundation.libs.dropdown.close($('#lend-dropdown'));
 		});
@@ -140,14 +141,14 @@ module.exports = function () {
 	});
 
 	// when not touchscreen, close about dropdown when about button itself is clicked
-	if (! $('body').hasClass('touchscreen')) {
+	if (! is_touch) {
 		$('[data-dropdown="about-dropdown"]').click(function () {
 			Foundation.libs.dropdown.close($('#about-dropdown'));
 		});
 	}
 
 	// when not touchscreen, close my-kiva dropdown when my-kiva button itself is clicked
-	if (! $('body').hasClass('touchscreen')) {
+	if (! is_touch) {
 		$('[data-dropdown="my-kiva-dropdown"]').click(function () {
 			Foundation.libs.dropdown.close($('#my-kiva-dropdown'));
 		});
