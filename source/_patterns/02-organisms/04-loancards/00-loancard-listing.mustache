@@ -1,25 +1,27 @@
-<div class="loan-card">
+<div class="loan-card row">
+	<div class="borrower-image-wrap small-12 columns">
 	{{#is_admin}}
 		<div class="image-edit-buttons">
 			<a class="edit" href="{{image.edit_url}}" target="_blank"><svg class="icon icon-edit"><use xlink:href="#icon-edit"/></svg></a>
 			<a class="refresh" href="#"><svg class="icon icon-refresh"><use xlink:href="#icon-refresh"/></svg></a>
 		</div>
 	{{/is_admin}}
-    <a class="borrower-img-wrap" kvtrackevent="Lending|click-Read more|Photo" href="{{borrower_url}}" data-interchange="[{{image.url}}, (default)], [{{image.retina_url}}, (retina)]">
-        {{#show_loan_length}}
-            <div class="loan-message">{{loan_length}}</div>
-        {{/show_loan_length}}
-        {{^show_loan_length}}
-            {{#is_expiring_soon}}
-                <div class="loan-message urgent">{{expiring_soon_message}}</div>
-            {{/is_expiring_soon}}
-        {{/show_loan_length}}
-    </a>
-	<div class="loan-image-footer">
-    	{{> molecules-loan-image-footer}}
+		<a class="borrower-image" kvtrackevent="Lending|click-Read more|Photo" href="{{borrower_url}}" data-interchange="[{{image.url}}, (default)], [{{image.retina_url}}, (retina)]">
+			{{#show_loan_length}}
+				<div class="loan-message">{{loan_length}}</div>
+			{{/show_loan_length}}
+			{{^show_loan_length}}
+				{{#is_expiring_soon}}
+					<div class="loan-message urgent">{{expiring_soon_message}}</div>
+				{{/is_expiring_soon}}
+			{{/show_loan_length}}
+		</a>
+		<div class="loan-image-footer">
+			{{> molecules-loan-image-footer}}
+		</div>
 	</div>
 
-    <div class="borrower-details-wrap" data-equalizer-watch style="height:{{height}};">
+    <div class="borrower-details-wrap small-12 columns" data-equalizer-watch style="height:{{height}};">
         <a kvtrackevent="Lending|click-Read more|Name" href="{{borrower_url}}">{{name}}</a>
         <div class="country">
 			<span class="f16 {{location.country.iso_code}}"></span>{{location_label}}
@@ -28,7 +30,11 @@
 		<p class="small-text">{{use}}</p>
     </div>
 
-    <div class="borrower-footer-wrap">
+
+	<div class="borrower-partner-trustee small-12 xlarge-2 columns">{{partnerName}}{{trusteeName}}</div>
+	<div class="borrower-loan-length small-12 xlarge-1 columns">{{lenderRepaymentTerm}} months</div>
+
+    <div class="borrower-footer-wrap small-12 {{#list_view}}xlarge-3{{/list_view}} columns">
         <div class="fundraising-meter progress">
             <span class="meter" style="width:{{progress.percent}}%"></span>
             <span class="caption">{{progress.message}}</span>

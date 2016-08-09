@@ -1001,6 +1001,7 @@
 					"iso_code": "hn"
 				}
 			},
+			"location_label": "Honduras",
 			"image": {
 				"url": "http://placehold.it/480x300.jpg",
 				"retina_url": "http://placehold.it/960x600.jpg"
@@ -1009,6 +1010,8 @@
 				"percent": 42,
 				"message": "$1,800 to go"
 			},
+			"partnerName": "Apoyo Integral",
+			"lenderRepaymentTerm": 12,
 			"is_regular": true,
 			"is_ended": false,
 			"is_lent_to": false,
@@ -1026,6 +1029,7 @@
 					"iso_code": "ba"
 				}
 			},
+			"location_label": "Bosnia and Herzegovina",
 			"image": {
 				"url": "http://placehold.it/480x300.jpg",
 				"retina_url": "http://placehold.it/960x600.jpg"
@@ -1034,6 +1038,8 @@
 				"percent": 42,
 				"message": "$1,800 to go"
 			},
+			"partnerName": "Apoyo Integral",
+			"lenderRepaymentTerm": 12,
 			"is_regular": false,
 			"is_ended": false,
 			"is_lent_to": false,
@@ -1049,6 +1055,7 @@
 					"iso_code": "za"
 				}
 			},
+			"location_label": "South Africa",
 			"image": {
 				"url": "http://placehold.it/480x300.jpg",
 				"retina_url": "http://placehold.it/960x600.jpg"
@@ -1057,6 +1064,8 @@
 				"percent": 42,
 				"message": "$1,800 to go"
 			},
+			"partnerName": "Apoyo Integral",
+			"lenderRepaymentTerm": 12,
 			"is_regular": false,
 			"is_ended": true,
 			"is_lent_to": false,
@@ -1073,6 +1082,7 @@
 					"iso_code": "as"
 				}
 			},
+			"location_label": "American Samoa",
 			"image": {
 				"url": "http://placehold.it/480x300.jpg",
 				"retina_url": "http://placehold.it/960x600.jpg"
@@ -1081,6 +1091,8 @@
 				"percent": 42,
 				"message": "$1,800 to go"
 			},
+			"partnerName": "Apoyo Integral",
+			"lenderRepaymentTerm": 12,
 			"is_regular": false,
 			"is_ended": false,
 			"is_lent_to": true,
@@ -1099,6 +1111,7 @@
 					"iso_code": "bi"
 				}
 			},
+			"location_label": "Burundi",
 			"image": {
 				"url": "http://placehold.it/480x300.jpg",
 				"retina_url": "http://placehold.it/960x600.jpg"
@@ -1107,6 +1120,8 @@
 				"percent": 100,
 				"message": "Funded"
 			},
+			"partnerName": "Apoyo Integral",
+			"lenderRepaymentTerm": 12,
 			"is_regular": false,
 			"is_ended": true,
 			"is_lent_to": false,
@@ -1122,6 +1137,7 @@
 					"iso_code": "ar"
 				}
 			},
+			"location_label": "Argentina",
 			"image": {
 				"url": "http://placehold.it/480x300.jpg",
 				"retina_url": "http://placehold.it/960x600.jpg"
@@ -1130,6 +1146,8 @@
 				"percent": 0,
 				"message": "Expired"
 			},
+			"trusteeName": "Borrowers Network",
+			"lenderRepaymentTerm": 36,
 			"is_regular": false,
 			"is_ended": true,
 			"is_lent_to": false,

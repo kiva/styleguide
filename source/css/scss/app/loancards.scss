@@ -1,13 +1,38 @@
+@import '../settings';
+@import '../palette';
+
 $loan-card-footer-height: 3rem;
 $loan-card-meter-height: $loan-card-footer-height/2;
+$list-break-point: $xlarge-up;
+
+.list-view .loancards-list {
+	@media #{$list-break-point} {
+		@include block-grid(1);
+
+		li {
+			padding-bottom: 0;
+
+			&:nth-child(2n) .loan-card {
+				background-color: $kiva-bg-darkgray;
+
+				.fundraising-meter {
+					background-color: $white;
+				}
+			}
+		}
+	}
+}
 
 .loan-card {
 	height: 100%;
 	position: relative;
     min-width: rem-calc(300);
     max-width: rem-calc(480);
-    margin: auto;
 	background-color: $white;
+
+	&.row {
+		margin: auto;
+	}
 
 	.loading & {
 		opacity: 0.2;
@@ -19,6 +44,46 @@ $loan-card-meter-height: $loan-card-footer-height/2;
 		@media #{$large-up} {
 			opacity: 0.2;
 		}
+	}
+
+	.borrower-partner-trustee, .borrower-loan-length {
+		display: none;
+	}
+
+	.list-view & {
+		.borrower-partner-trustee, .borrower-loan-length {
+			display: block;
+		}
+
+		@media #{$list-break-point} {
+			max-width: $row-width;
+			background-color: $kiva-bg-lightgray;
+			padding: 1rem;
+
+			.borrower-image-wrap {
+				width: (100% / 6);
+			}
+
+			.borrower-details-wrap {
+				width: (100% / 3);
+			}
+
+			.borrower-partner-trustee {
+				width: (100% / 6);
+			}
+
+			.borrower-loan-length {
+				width: (100% / 12);
+			}
+
+			.borrower-footer-wrap {
+				width: (100% / 4);
+			}
+		}
+	}
+
+	.columns {
+		padding: 0;
 	}
 
 	.image-edit-buttons {
@@ -62,13 +127,19 @@ $loan-card-meter-height: $loan-card-footer-height/2;
 		}
 	}
 
-	.borrower-img-wrap {
+	.borrower-image {
         position: relative;
         display: block;
 		width: 100%;
 		padding-bottom: 62.5%;
         background-size: cover;
 		background-color: $kiva-bg-darkgray;
+
+		@media #{$list-break-point} {
+			.list-view & {
+				padding-bottom:100%;
+			}
+		}
 
         .loan-message {
             position: absolute;
@@ -136,8 +207,8 @@ $loan-card-meter-height: $loan-card-footer-height/2;
     }
 
     .borrower-footer-wrap {
-        width: 100%;
         overflow: hidden;
+		position: static;
 
         .fundraising-meter {
             height: $loan-card-meter-height;
@@ -196,6 +267,22 @@ $loan-card-meter-height: $loan-card-footer-height/2;
     -webkit-transition: $transition;
     transition: $transition;
 
+	@media #{$list-break-point} {
+		.list-view & {
+			position: static;
+			height: $loan-card-footer-height;
+
+			&.show-short .button, &.show-short .button:hover {
+				background: none;
+				color: $kiva-text-dark;
+
+				.icon {
+					fill: $kiva-green;
+				}
+			}
+		}
+	}
+
     .button, .message {
         height: $loan-card-footer-height;
         line-height: $loan-card-footer-height;
@@ -219,6 +306,16 @@ $loan-card-meter-height: $loan-card-footer-height/2;
                 border-right: rem-calc(1) solid $white;
             }
         }
+
+		@media #{$list-break-point} {
+			.list-view &:nth-child(1) {
+				width: 100%;
+			}
+
+			.list-view &:nth-child(2) {
+				display: none;
+			}
+		}
 
         .icon {
             fill: $white;
