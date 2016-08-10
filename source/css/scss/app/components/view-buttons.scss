@@ -1,11 +1,21 @@
+@import '../../settings';
 @import '../../palette';
+@import '../../vendor_override/foundation/buttons';
 
 .view-buttons {
+	$height: $setting-button-height - $setting-button-height-reduction;
+	$larger-height: $setting-button-height;
+
 	input {
 		display: none;
 
 		&:checked + label {
+			display: none;
 			background-color: $kiva-text-dark;
+
+			@media #{$medium-up} {
+				display: block;
+			}
 
 			.icon-list {
 				stroke: $white;
@@ -20,21 +30,28 @@
 	input + label {
 		margin: 0;
 		line-height: 0;
-		padding: 0.4rem 0.8rem;
+		height: $height;
+		width: $height * 1.25;
+		text-align: center;
 		float: left;
 		border: 1px solid $kiva-text-dark;
 
-		&:first-of-type {
-			border-right: none;
-		}
+		@media #{$medium-up} {
+			height: $larger-height;
+			width: $larger-height * 1.25;
 
-		&:last-of-type {
-			border-left: none;
+			&:first-of-type {
+				border-right: none;
+			}
+
+			&:last-of-type {
+				border-left: none;
+			}
 		}
 	}
 
 	svg {
-		width: rem-calc(19);
-		height: rem-calc(19);
+		width: 50%;
+		height: 100%;
 	}
 }
