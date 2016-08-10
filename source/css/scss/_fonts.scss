@@ -13,3 +13,13 @@
 .book {
 	font-weight: 300;
 }
+
+::selection {
+	background-color: #49953f;
+	color: #fff;
+}
+
+::-moz-selection {
+	background-color: #49953f;
+	color: #fff;
+}
