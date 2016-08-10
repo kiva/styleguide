@@ -1486,7 +1486,8 @@ define("Styleguide", ["jquery"], function(__WEBPACK_EXTERNAL_MODULE_2__) { retur
 
 
 	/*** EXPORTS FROM exports-loader ***/
-	module.exports = window.Modernizr}.call(window));
+	module.exports = window.Modernizr;
+	}.call(window));
 
 /***/ },
 /* 4 */
@@ -8076,7 +8077,7 @@ define("Styleguide", ["jquery"], function(__WEBPACK_EXTERNAL_MODULE_2__) { retur
 
 
 	/*** EXPORTS FROM exports-loader ***/
-	module.exports = window.Foundation
+	module.exports = window.Foundation;
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(2)))
 
 /***/ },
@@ -8093,6 +8094,7 @@ define("Styleguide", ["jquery"], function(__WEBPACK_EXTERNAL_MODULE_2__) { retur
 		var $close_search = $('#close-search');
 		var $search_form = $('#search-form');
 		var $search_box = $('#search-box');
+		var is_touch = $('html').hasClass('touch');
 
 		$search_toggle.click(function (e) {
 			e.preventDefault();
@@ -8199,17 +8201,17 @@ define("Styleguide", ["jquery"], function(__WEBPACK_EXTERNAL_MODULE_2__) { retur
 				.trigger(hidden ? 'hide' : 'show');
 		});
 
-		// when not mobile, close lend dropdown when lend button itself is clicked
-		if (! $('body').hasClass('touchscreen')) {
+		// when not touchscreen, close lend dropdown when lend button itself is clicked
+		if (! is_touch) {
 			$('[data-dropdown="lend-dropdown"]').click(function () {
 				Foundation.libs.dropdown.close($('#lend-dropdown'));
 			});
 		}
 
 		// close window when normal links clicked
-			$('#lend-dropdown a:not([data-kv-toggle],[href="#"])').click(function () {
-				Foundation.libs.dropdown.close($('#lend-dropdown'));
-			});
+		$('#lend-dropdown a:not([data-kv-toggle],[href="#"])').click(function () {
+			Foundation.libs.dropdown.close($('#lend-dropdown'));
+		});
 
 		// Resets lend-menu-large and lend-menu-small
 		$('#lend-dropdown').on('closed.fndtn.dropdown', function () {
@@ -8224,15 +8226,15 @@ define("Styleguide", ["jquery"], function(__WEBPACK_EXTERNAL_MODULE_2__) { retur
 			$('.lend-menu-small ul').attr('aria-hidden', true).css('height', 0);
 		});
 
-		// when not mobile, close about dropdown when about button itself is clicked
-		if (! $('body').hasClass('touchscreen')) {
+		// when not touchscreen, close about dropdown when about button itself is clicked
+		if (! is_touch) {
 			$('[data-dropdown="about-dropdown"]').click(function () {
 				Foundation.libs.dropdown.close($('#about-dropdown'));
 			});
 		}
 
-		// when not mobile, close my-kiva dropdown when my-kiva button itself is clicked
-		if (! $('body').hasClass('touchscreen')) {
+		// when not touchscreen, close my-kiva dropdown when my-kiva button itself is clicked
+		if (! is_touch) {
 			$('[data-dropdown="my-kiva-dropdown"]').click(function () {
 				Foundation.libs.dropdown.close($('#my-kiva-dropdown'));
 			});
