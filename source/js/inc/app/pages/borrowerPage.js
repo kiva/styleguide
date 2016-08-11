@@ -15,8 +15,8 @@ module.exports = function () {
 		, 'ac-lenders-teams-body': 'expanded'
 		, 'ac-country-info-body': window.Foundation.utils.is_large_up() ? 'expanded' : 'collapsed'
 		, 'ac-comments-and-updates-body': 'collapsed'
-		,; 'ac-loan-tags-body': 'collapsed'
-	}
+		, 'ac-loan-tags-body': 'collapsed'
+	};
 
     $('#show-advanced-toggle, #hide-advanced-toggle').click(function() {
         $('.show-advanced').toggle();
