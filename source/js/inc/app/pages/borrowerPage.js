@@ -4,7 +4,7 @@ module.exports = function () {
 	'use strict';
 
 	/* Array of collapsible panels on borrower page with default states */
-	const COLLAPSIBLE_PANELS = {
+	var COLLAPSIBLE_PANELS = {
 		'ac-loan-story-body': 'expanded'
 		, 'ac-loan-details-body': 'expanded'
 		, 'ac-loan-details-body-right': 'expanded'
