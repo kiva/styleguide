@@ -1,9 +1,42 @@
 @import '../settings';
 @import '../palette';
+@import '../vendor_override/foundation/type';
 
 $loan-card-footer-height: 3rem;
 $loan-card-meter-height: $loan-card-footer-height/2;
-$list-break-point: $xlarge-up;
+$list-break-point: $xga-up;
+$list-loan-card-buttons-width: rem-calc(210);
+$list-loan-card-buttons-half-width: $list-loan-card-buttons-width / 2;
+
+.list-view-header {
+	display: none;
+	width: 100%;
+	padding: 0.5rem 1rem;
+	background-color: $kiva-bg-darkgray;
+	border-bottom: 1px solid $kiva-stroke-gray;
+
+	@media #{$list-break-point} {
+		.list-view & {
+			display: table;
+		}
+	}
+
+	> div {
+		float: left;
+	}
+
+	.loan-country {
+		width: 46%;
+	}
+
+	.partner-trustee {
+		width: calc(30% - #{$list-loan-card-buttons-half-width});
+	}
+
+	.loan-length {
+		width: calc(24% - #{$list-loan-card-buttons-half-width});
+	}
+}
 
 .list-view .loancards-list {
 	@media #{$list-break-point} {
@@ -51,39 +84,56 @@ $list-break-point: $xlarge-up;
 	}
 
 	.list-view & {
+
 		.borrower-partner-trustee, .borrower-loan-length {
 			display: block;
 		}
 
 		@media #{$list-break-point} {
-			max-width: $row-width;
+			$image-width: rem-calc(150);
+
 			background-color: $kiva-bg-lightgray;
+			border-bottom: 1px solid $kiva-stroke-gray;
 			padding: 1rem;
 
 			.borrower-image-wrap {
-				width: (100% / 6);
+				width: $image-width;
 			}
 
 			.borrower-details-wrap {
-				width: (100% / 3);
+				width: calc(46% - #{$image-width});
 			}
 
 			.borrower-partner-trustee {
-				width: (100% / 6);
+				width: calc(30% - #{$list-loan-card-buttons-half-width});
 			}
 
 			.borrower-loan-length {
-				width: (100% / 12);
+				width: calc(24% - #{$list-loan-card-buttons-half-width});
 			}
 
 			.borrower-footer-wrap {
-				width: (100% / 4);
+				width: $list-loan-card-buttons-width;
+			}
+
+			&:hover {
+				box-shadow: none;
 			}
 		}
 	}
 
 	.columns {
 		padding: 0;
+	}
+
+	.loan-message {
+		font-size: $small-font-size;
+		line-height: $small-line-height;
+		color: $kiva-text-dark;
+
+		&.urgent {
+			color: $red;
+		}
 	}
 
 	.image-edit-buttons {
@@ -135,26 +185,23 @@ $list-break-point: $xlarge-up;
         background-size: cover;
 		background-color: $kiva-bg-darkgray;
 
-		@media #{$list-break-point} {
-			.list-view & {
-				padding-bottom:100%;
-			}
-		}
-
         .loan-message {
             position: absolute;
             right: 0;
             top: 0;
             padding: 0 0.25rem;
-            font-size: $small-font-size;
-            line-height: $small-line-height;
             background-color: rgba(255, 255, 255, 0.8);
-            color: $kiva-text-dark;
-
-            &.urgent {
-                color: $red;
-            }
         }
+
+		@media #{$list-break-point} {
+			.list-view & {
+				padding-bottom:100%;
+
+				.loan-message {
+					display:none;
+				}
+			}
+		}
 	}
 
 	.loan-image-footer {
@@ -170,6 +217,12 @@ $list-break-point: $xlarge-up;
             font-size: $small-font-size;
             height: $loan-image-footer-height;
             padding-right: $loan-image-footer-height;
+
+			@media #{$list-break-point} {
+				.list-view & {
+					display: none;
+				}
+			}
 
             span {
                 line-height: $loan-image-footer-height;
@@ -188,6 +241,18 @@ $list-break-point: $xlarge-up;
         border-left: $border;
         border-right: $border;
 
+		@media #{$list-break-point} {
+			.list-view & {
+				border: none;
+				height: auto !important;
+
+				a {
+					font-size: $section-head-font-size;
+					line-height: 1;
+				}
+			}
+		}
+
         a, a:visited {
             color: $kiva-textlink;
         }
@@ -204,17 +269,56 @@ $list-break-point: $xlarge-up;
         span.f16 {
             margin-right: 0.25rem;
         }
+
+		@media #{$list-break-point} {
+			.list-view & {
+				display: block;
+			}
+		}
     }
 
     .borrower-footer-wrap {
         overflow: hidden;
 		position: static;
+		$loan-image-footer-height: 1.5rem;
+
+		@media #{$list-break-point} {
+			.list-view & {
+				overflow: visible;
+			}
+		}
 
         .fundraising-meter {
             height: $loan-card-meter-height;
             width: 100%;
             margin: 0;
         }
+
+		.icon-match {
+			position: absolute;
+			left: 0;
+			height: $loan-image-footer-height;
+			width: $loan-image-footer-height;
+		}
+
+		.matching-message {
+			position: relative;
+			margin-top: 1rem;
+			font-size: $small-font-size;
+			padding-left: $loan-image-footer-height + 0.25rem;
+			display: none;
+
+			@media #{$list-break-point} {
+				.list-view & {
+					display: block;
+				}
+			}
+
+			span {
+				display: inline-block;
+				line-height: 1.3;
+			}
+		}
     }
 
     &:hover {
@@ -262,6 +366,7 @@ $list-break-point: $xlarge-up;
 
 .bottom-bar {
     width: 100%;
+	$message-height: 1.75rem;
 
     $transition: height 200ms ease-out;
     -webkit-transition: $transition;
@@ -272,13 +377,34 @@ $list-break-point: $xlarge-up;
 			position: static;
 			height: $loan-card-footer-height;
 
-			&.show-short .button, &.show-short .button:hover {
-				background: none;
-				color: $kiva-text-dark;
+			&.ended {
+				display: none;
+			}
 
-				.icon {
-					fill: $kiva-green;
+			&:first-child {
+				margin-top: $message-height;
+			}
+
+			&.show-short {
+				margin-top: 0 - $message-height;
+				height: $message-height;
+
+				.button, .button:hover {
+					height: $message-height;
+					line-height: $message-height;
+					background: none;
+					color: $kiva-text-dark;
+
+					.icon {
+						height: $message-height;
+						fill: $kiva-green;
+					}
 				}
+			}
+
+
+			.button, .message {
+				font-size: $body-font-size;
 			}
 		}
 	}

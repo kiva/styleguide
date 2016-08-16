@@ -1,9 +1,3 @@
-{{#is_regular}}
-	<div class="bottom-bar">
-		<a kvtrackevent="Lending|Add to basket|Loan card" class="half-width button lend-button" href="#">Lend {{#free_trial}}Free {{/free_trial}}$25</a>
-		<a kvtrackevent="Lending|click-Read more|Story" class="half-width button" href="{{borrower_url}}">Learn more</a>
-	</div>
-{{/is_regular}}
 {{#is_lent_to}}
 	<div class="bottom-bar show-short">
 		<a class="success button" href="{{borrower_url}}">
@@ -13,9 +7,19 @@
 			<span>You've supported this loan</span>
 		</a>
 	</div>
-	<div class="bottom-bar hide-for-touch">
-		<a class="button" href="{{borrower_url}}">Lend Again</a>
+{{/is_lent_to}}
+{{#is_regular}}
+	<div class="bottom-bar">
+		<a kvtrackevent="Lending|Add to basket|Loan card" class="half-width button lend-button" href="#">Lend {{#free_trial}}Free {{/free_trial}}$25</a>
+		<a kvtrackevent="Lending|click-Read more|Story" class="half-width button" href="{{borrower_url}}">Learn more</a>
 	</div>
+{{/is_regular}}
+{{#is_lent_to}}
+	{{^is_ended}}
+		<div class="bottom-bar hide-for-touch">
+			<a class="button" href="{{borrower_url}}">Lend Again</a>
+		</div>
+	{{/is_ended}}
 {{/is_lent_to}}
 {{#is_adding}}
 	<div class="bottom-bar no-hide">
@@ -43,13 +47,11 @@
 	</div>
 {{/is_in_basket}}
 {{#is_ended}}
-	{{^is_lent_to}}
-		{{^is_adding}}
-			{{^is_in_basket}}
-				<div class="bottom-bar">
-					<a class="button" href="{{borrower_url}}">Learn more</a>
-				</div>
-			{{/is_in_basket}}
-		{{/is_adding}}
-	{{/is_lent_to}}
+	{{^is_adding}}
+		{{^is_in_basket}}
+			<div class="bottom-bar ended">
+				<a class="button" href="{{borrower_url}}">Learn more</a>
+			</div>
+		{{/is_in_basket}}
+	{{/is_adding}}
 {{/is_ended}}

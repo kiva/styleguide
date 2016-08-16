@@ -28,13 +28,16 @@
         </div>
 
 		<p class="small-text">{{use}}</p>
+		{{#is_expiring_soon}}
+			<div class="loan-message urgent">{{expiring_soon_message}}</div>
+		{{/is_expiring_soon}}
     </div>
 
 
-	<div class="borrower-partner-trustee small-12 xlarge-2 columns">{{partnerName}}{{trusteeName}}</div>
-	<div class="borrower-loan-length small-12 xlarge-1 columns">{{lenderRepaymentTerm}} months</div>
+	<div class="borrower-partner-trustee small-12 columns">{{partnerName}}{{trusteeName}}</div>
+	<div class="borrower-loan-length small-12 columns">{{lenderRepaymentTerm}} months</div>
 
-    <div class="borrower-footer-wrap small-12 {{#list_view}}xlarge-3{{/list_view}} columns">
+    <div class="borrower-footer-wrap small-12 columns">
         <div class="fundraising-meter progress">
             <span class="meter" style="width:{{progress.percent}}%"></span>
             <span class="caption">{{progress.message}}</span>
@@ -43,5 +46,12 @@
 		<div class="bottom-bar-region">
 			{{> molecules-bottom-bar }}
 		</div>
+
+		{{#is_matched}}
+			<div class="matching-message">
+				<svg class="icon icon-match"><use xlink:href="#icon-match"/></svg>
+				<span data-tooltip aria-haspopup="true" title="{{matching_text}}">{{matching_text}}</span>
+			</div>
+		{{/is_matched}}
     </div>
 </div>

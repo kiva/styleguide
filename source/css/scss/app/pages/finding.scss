@@ -128,7 +128,7 @@ $filter-menu-base-width: rem-calc(251);
 	}
 
 	.filter-menu-button {
-		width: 5rem;
+		width: 3.5rem;
 		margin: 0 0 0 rem-calc(10);
 		padding-left: 0;
 		padding-right: 0;
@@ -136,13 +136,30 @@ $filter-menu-base-width: rem-calc(251);
 		float: left;
 		background: transparent;
 
+		@media #{$medium-up} {
+			width: 5rem;
+		}
+
 		@media #{$large-up} {
 			margin-left: 0;
+		}
+		
+		svg {
+			display: none;
+
+			@media #{$medium-up} {
+				display: inline;
+			}
 		}
 	}
 
 	.view-buttons {
 		float: right;
+		margin-right: 0.75rem;
+
+		@media #{$medium-up} {
+			margin-right: 2rem;
+		}
 	}
 
 	.filter-menu-sort {
