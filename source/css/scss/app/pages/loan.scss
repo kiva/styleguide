@@ -953,8 +953,8 @@
 		margin-bottom: 0;
 		display: inline-block;
 		font-size: 1rem;
-		height: 2.8rem;
-		line-height: 2.8rem;
+		height: rem-calc(66);
+		line-height: rem-calc(66);
 		width: 100%;
 		#basket-text {
 			font-size: 0.6rem;
@@ -1032,7 +1032,7 @@
 	.lend-values-select-wrapper {
 		padding: 0;
 		.lend-values-select {
-			height: 2.8rem;
+			height: rem-calc(66);
 			margin: 0;
 			padding-left: 7%;
 			border: 0;

@@ -14,7 +14,8 @@
 		bottom: rem-calc(-20);
 		position: fixed;
 		max-width: none;
-		line-height: inherit;
+		height: rem-calc(66);
+		line-height: rem-calc(44);
 		z-index: 1200;
 		left: 0;
 		color: $white;
