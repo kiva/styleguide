@@ -6,7 +6,7 @@
 			<a class="refresh" href="#"><svg class="icon icon-refresh"><use xlink:href="#icon-refresh"/></svg></a>
 		</div>
 	{{/is_admin}}
-		<a class="borrower-image" kvtrackevent="Lending|click-Read more|Photo" href="{{borrower_url}}" data-interchange="[{{image.url}}, (default)], [{{image.retina_url}}, (retina)]">
+		<a class="borrower-image" kvtrackevent="Lending|click-Read more|Photo" href="{{borrower_url}}" data-interchange="{{#image.sizes}}[{{url}}, ({{size}})],{{/image.sizes}}">
 			{{#show_loan_length}}
 				<div class="loan-message">{{loan_length}}</div>
 			{{/show_loan_length}}

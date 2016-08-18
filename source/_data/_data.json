@@ -1003,8 +1003,16 @@
 			},
 			"location_label": "Honduras",
 			"image": {
-				"url": "http://placehold.it/480x300.jpg",
-				"retina_url": "http://placehold.it/960x600.jpg"
+				"sizes": [
+					{
+						"url": "http://placehold.it/480x300.jpg",
+						"size": "default"
+					},
+					{
+						"url": "http://placehold.it/960x600.jpg",
+						"size": "retina"
+					}
+				]
 			},
 			"progress": {
 				"percent": 42,
@@ -1031,8 +1039,16 @@
 			},
 			"location_label": "Bosnia and Herzegovina",
 			"image": {
-				"url": "http://placehold.it/480x300.jpg",
-				"retina_url": "http://placehold.it/960x600.jpg"
+				"sizes": [
+					{
+						"url": "http://placehold.it/480x300.jpg",
+						"size": "default"
+					},
+					{
+						"url": "http://placehold.it/960x600.jpg",
+						"size": "retina"
+					}
+				]
 			},
 			"progress": {
 				"percent": 42,
@@ -1057,8 +1073,16 @@
 			},
 			"location_label": "South Africa",
 			"image": {
-				"url": "http://placehold.it/480x300.jpg",
-				"retina_url": "http://placehold.it/960x600.jpg"
+				"sizes": [
+					{
+						"url": "http://placehold.it/480x300.jpg",
+						"size": "default"
+					},
+					{
+						"url": "http://placehold.it/960x600.jpg",
+						"size": "retina"
+					}
+				]
 			},
 			"progress": {
 				"percent": 42,
@@ -1084,8 +1108,16 @@
 			},
 			"location_label": "American Samoa",
 			"image": {
-				"url": "http://placehold.it/480x300.jpg",
-				"retina_url": "http://placehold.it/960x600.jpg"
+				"sizes": [
+					{
+						"url": "http://placehold.it/480x300.jpg",
+						"size": "default"
+					},
+					{
+						"url": "http://placehold.it/960x600.jpg",
+						"size": "retina"
+					}
+				]
 			},
 			"progress": {
 				"percent": 42,
@@ -1113,8 +1145,16 @@
 			},
 			"location_label": "Burundi",
 			"image": {
-				"url": "http://placehold.it/480x300.jpg",
-				"retina_url": "http://placehold.it/960x600.jpg"
+				"sizes": [
+					{
+						"url": "http://placehold.it/480x300.jpg",
+						"size": "default"
+					},
+					{
+						"url": "http://placehold.it/960x600.jpg",
+						"size": "retina"
+					}
+				]
 			},
 			"progress": {
 				"percent": 100,
@@ -1139,8 +1179,16 @@
 			},
 			"location_label": "Argentina",
 			"image": {
-				"url": "http://placehold.it/480x300.jpg",
-				"retina_url": "http://placehold.it/960x600.jpg"
+				"sizes": [
+					{
+						"url": "http://placehold.it/480x300.jpg",
+						"size": "default"
+					},
+					{
+						"url": "http://placehold.it/960x600.jpg",
+						"size": "retina"
+					}
+				]
 			},
 			"progress": {
 				"percent": 0,
