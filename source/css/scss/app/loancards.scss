@@ -41,6 +41,8 @@ $list-loan-card-buttons-half-width: $list-loan-card-buttons-width / 2;
 .list-view .loancards-list {
 	@media #{$list-break-point} {
 		@include block-grid(1);
+		
+		margin-bottom: rem-calc(20);
 
 		li {
 			padding-bottom: 0;
