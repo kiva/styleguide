@@ -134,7 +134,7 @@
 .basket-bar {
 	position: fixed;
 	bottom: 0;
-	height: 2.444rem;
+	height: rem-calc(66);
 	width: 100%;
 	z-index:1111;
 	transition: bottom 500ms ease;
@@ -144,14 +144,14 @@
 		width: 100%;
 		display: block;
         &.button {
-           height: rem-calc(44);
-           line-height: rem-calc(44);
+           height: rem-calc(66);
+           line-height: rem-calc(66);
         }
 	}
 }
 
 .basket-bar.hide-for-large-up.off-screen {
-	bottom: rem-calc(-45);
+	bottom: rem-calc(-67);
 }
 
 @media #{$small-only}, #{$medium-only} {
