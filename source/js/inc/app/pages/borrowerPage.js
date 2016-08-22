@@ -13,10 +13,14 @@ module.exports = function () {
 		, 'ac-field-partner-details-body-right': 'collapsed'
 		, 'ac-more-loan-info-body': 'collapsed'
 		, 'ac-lenders-teams-body': 'expanded'
-		, 'ac-country-info-body': window.Foundation.utils.is_large_up() ? 'expanded' : 'collapsed'
+		, 'ac-country-info-body': 'collapsed'
 		, 'ac-comments-and-updates-body': 'collapsed'
 		, 'ac-loan-tags-body': 'collapsed'
-	};
+		, 'ac-about-zip-body': 'expanded' // direct only
+		, 'ac-trustee-info-body': 'collapsed'  // direct only
+		, 'ac-trustee-info-body-right': 'collapsed'  // direct only
+	}
+		, isLocalStorageAvailable = Modernizr.localstorage;
 
     $('#show-advanced-toggle, #hide-advanced-toggle').click(function() {
         $('.show-advanced').toggle();
@@ -90,7 +94,7 @@ module.exports = function () {
 
 	/* handle clicks that expand or collapse content panels  */
 	$('.ac-title').click(function(event){
-		if (localStorage && event.hasOwnProperty('originalEvent')) {
+		if (isLocalStorageAvailable && event.hasOwnProperty('originalEvent')) {
 			// we only want to respond to actual user clicks
 			var panel = $(this).attr('aria-controls')
 				, panelState = $(this).attr('aria-expanded') === 'true' ? 'collapsed':'expanded';
@@ -105,6 +109,10 @@ module.exports = function () {
 	function updatePanelStates(panel, panelState) {
 		var panelStates = {}
 			, storedPanelStates;
+
+		if (! isLocalStorageAvailable) {
+			return;
+		}
 
 		try {
 			storedPanelStates = $.parseJSON(localStorage.getItem('borrowerPanelStates'));
