@@ -1,4 +1,4 @@
-<div class="loan-card row">
+<div class="loan-card row" data-equalizer-watch>
 	<div class="borrower-image-wrap small-12 columns">
 	{{#is_admin}}
 		<div class="image-edit-buttons">
@@ -21,7 +21,7 @@
 		</div>
 	</div>
 
-    <div class="borrower-details-wrap small-12 columns" data-equalizer-watch style="height:{{height}};">
+    <div class="borrower-details-wrap small-12 columns" style="height:{{height}};">
         <a kvtrackevent="Lending|click-Read more|Name" href="{{borrower_url}}">{{name}}</a>
         <div class="country">
 			<span class="f16 {{location.country.iso_code}}"></span>{{location_label}}
@@ -34,24 +34,40 @@
     </div>
 
 
-	<div class="borrower-partner-trustee small-12 columns">{{partnerName}}{{trusteeName}}</div>
-	<div class="borrower-loan-length small-12 columns">{{lenderRepaymentTerm}} months</div>
+	<div class="borrower-partner-trustee small-12 columns small-text">
+		{{#partnerName}}
+			<span>Field partner</span>
+			<p class="small-text">{{partnerName}}</p>
+		{{/partnerName}}
+		{{#trusteeName}}
+			<span>Trustee</span>
+			<p class="small-text">{{trusteeName}}</p>
+		{{/trusteeName}}
+	</div>
+	<div class="borrower-loan-length small-12 columns small-text">
+		<span>Loan length</span>
+		<p class="small-text">{{lenderRepaymentTerm}} months</p>
+	</div>
 
-    <div class="borrower-footer-wrap small-12 columns">
-        <div class="fundraising-meter progress">
-            <span class="meter" style="width:{{progress.percent}}%"></span>
-            <span class="caption">{{progress.message}}</span>
-        </div>
-
-		<div class="bottom-bar-region">
-			{{> molecules-bottom-bar }}
-		</div>
-
-		{{#is_matched}}
-			<div class="matching-message">
-				<svg class="icon icon-match"><use xlink:href="#icon-match"/></svg>
-				<span data-tooltip aria-haspopup="true" title="{{matching_text}}">{{matching_text}}</span>
+    <div class="borrower-footer-wrap small-12 columns {{#is_ended}}vertical-centering{{/is_ended}}">
+		<div class="floater">
+			<div class="fundraising-meter progress">
+				<span class="meter" style="width:{{progress.percent}}%"></span>
+				<span class="caption">{{progress.message}}</span>
 			</div>
-		{{/is_matched}}
+
+			<div class="bottom-bar-region">
+				{{> molecules-bottom-bar }}
+			</div>
+
+			{{#is_matched}}
+				{{^is_ended}}
+					<div class="matching-message">
+						<svg class="icon icon-match"><use xlink:href="#icon-match"/></svg>
+						<span data-tooltip aria-haspopup="true" title="{{matching_text}}">{{matching_text}}</span>
+					</div>
+				{{/is_ended}}
+			{{/is_matched}}
+		</div>
     </div>
 </div>

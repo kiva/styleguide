@@ -1018,7 +1018,7 @@
 				"percent": 42,
 				"message": "$1,800 to go"
 			},
-			"partnerName": "Apoyo Integral",
+			"partnerName": "Nor Horizon Universal Credit Organization Limited Liability Company",
 			"lenderRepaymentTerm": 12,
 			"is_regular": true,
 			"is_ended": false,
@@ -1164,7 +1164,7 @@
 			"lenderRepaymentTerm": 12,
 			"is_regular": false,
 			"is_ended": true,
-			"is_lent_to": false,
+			"is_lent_to": true,
 			"is_adding": false,
 			"is_in_basket": false
 		},

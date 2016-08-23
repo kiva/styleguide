@@ -327,19 +327,23 @@ a.filter-menu-button:visited {
 	.inner-wrap {
 		text-align: center;
 	}
+
+	.loancards-list {
+		@media #{$large-up} {
+			margin: 0 rem-calc(10);
+		}
+	}
 }
 
 .hide-filters-for-xxlarge-up:not(.list-view) {
 	.loancards-list {
 		@media #{$xxlarge-up} {
 			@include block-grid(3);
+			margin: 0 rem-calc(10);
 		}
 
 		@media #{$screen} and (min-width: 1300px) {
 			@include block-grid(4);
-		}
-
-		@media #{$large-up} {
 			margin: 0 rem-calc(10);
 		}
 	}
@@ -361,19 +365,23 @@ a.filter-menu-button:visited {
 			width: 100%;
 		}
 	}
+
+	.loancards-list {
+		@media #{$large-up} {
+			margin: 0 rem-calc(10);
+		}
+	}
 }
 
 .show-filters-for-xxlarge-up:not(.list-view) {
 	.loancards-list {
 		@media #{$screen} and (min-width: 1230px) {
 			@include block-grid(3);
+			margin: 0 rem-calc(10);
 		}
 
 		@media #{$screen} and (min-width: 1550px) {
 			@include block-grid(4);
-		}
-
-		@media #{$large-up} {
 			margin: 0 rem-calc(10);
 		}
 	}
