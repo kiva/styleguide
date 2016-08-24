@@ -1191,14 +1191,15 @@
 				]
 			},
 			"progress": {
-				"percent": 0,
-				"message": "Expired"
+				"percent": 100,
+				"message": "Expired",
+				"color": "transparent"
 			},
 			"trusteeName": "Borrowers Network",
 			"lenderRepaymentTerm": 36,
 			"is_regular": false,
 			"is_ended": true,
-			"is_lent_to": false,
+			"is_lent_to": true,
 			"is_adding": false,
 			"is_in_basket": false
 		}

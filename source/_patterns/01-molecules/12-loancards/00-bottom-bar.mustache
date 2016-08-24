@@ -1,5 +1,5 @@
 {{#is_lent_to}}
-	<div class="bottom-bar show-short">
+	<div class="bottom-bar show-short {{#is_ended}}lent-to-list-view{{/is_ended}}">
 		<a class="success button" href="{{borrower_url}}">
 			<svg class="icon">
 				<use xlink:href="#icon-confirmation" />

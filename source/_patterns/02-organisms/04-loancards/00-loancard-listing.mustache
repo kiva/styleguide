@@ -52,7 +52,7 @@
     <div class="borrower-footer-wrap small-12 columns {{#is_ended}}vertical-centering{{/is_ended}}">
 		<div class="floater">
 			<div class="fundraising-meter progress">
-				<span class="meter" style="width:{{progress.percent}}%"></span>
+				<span class="meter" style="width:{{progress.percent}}%;{{#progress.color}}background-color:{{progress.color}};{{/progress.color}}"></span>
 				<span class="caption">{{progress.message}}</span>
 			</div>
 

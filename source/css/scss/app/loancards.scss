@@ -442,7 +442,7 @@ $list-loan-card-buttons-half-width: $list-loan-card-buttons-width / 2;
     }
 }
 
-.no-touch .loan-card .borrower-footer-wrap{
+.no-touch .borrower-footer-wrap{
 	height: 0;
 
 	.fundraising-meter {
@@ -489,17 +489,25 @@ $list-loan-card-buttons-half-width: $list-loan-card-buttons-width / 2;
     -webkit-transition: $transition;
     transition: $transition;
 
+	&.lent-to-list-view {
+		display: none;
+	}
+
 	@media #{$list-break-point} {
 		.list-view & {
 			position: static;
 			height: $loan-card-footer-height;
+
+			&.lent-to-list-view {
+				display: block;
+			}
 
 			&.hide-for-touch {
 				display: block !important;
 			}
 
 			&.ended {
-				display: none !important;
+				display: none;
 			}
 
 			&:first-child {
