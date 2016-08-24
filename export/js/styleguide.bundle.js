@@ -8393,6 +8393,25 @@
 	module.exports = function () {
 		'use strict';
 
+		/* Array of collapsible panels on borrower page with default states */
+		var COLLAPSIBLE_PANELS = {
+			'ac-loan-story-body': 'expanded'
+			, 'ac-loan-details-body': 'expanded'
+			, 'ac-loan-details-body-right': 'expanded'
+			, 'ac-why-special-body': 'expanded'
+			, 'ac-field-partner-details-body': 'collapsed'
+			, 'ac-field-partner-details-body-right': 'collapsed'
+			, 'ac-more-loan-info-body': 'collapsed'
+			, 'ac-lenders-teams-body': 'expanded'
+			, 'ac-country-info-body': 'collapsed'
+			, 'ac-comments-and-updates-body': 'collapsed'
+			, 'ac-loan-tags-body': 'collapsed'
+			, 'ac-about-zip-body': 'expanded' // direct only
+			, 'ac-trustee-info-body': 'collapsed'  // direct only
+			, 'ac-trustee-info-body-right': 'collapsed'  // direct only
+		}
+			, isLocalStorageAvailable = Modernizr.localstorage;
+
 	    $('#show-advanced-toggle, #hide-advanced-toggle').click(function() {
 	        $('.show-advanced').toggle();
 	        $('.hide-advanced').toggle();
@@ -8462,6 +8481,51 @@
 				countryAccordion.click();
 			}
 		});
+
+		/* handle clicks that expand or collapse content panels  */
+		$('.ac-title').click(function(event){
+			if (isLocalStorageAvailable && event.hasOwnProperty('originalEvent')) {
+				// we only want to respond to actual user clicks
+				var panel = $(this).attr('aria-controls')
+					, panelState = $(this).attr('aria-expanded') === 'true' ? 'collapsed':'expanded';
+					// seems backward because 'aria-expanded' is evaluated before click takes effect
+
+				updatePanelStates(panel, panelState);
+			}
+		});
+
+		/* when a panel is expanded or collapsed, if new state is not default state
+		 * then record new state in local storage to make it sticky */
+		function updatePanelStates(panel, panelState) {
+			var panelStates = {}
+				, storedPanelStates;
+
+			if (! isLocalStorageAvailable) {
+				return;
+			}
+
+			try {
+				storedPanelStates = $.parseJSON(localStorage.getItem('borrowerPanelStates'));
+				if (null === storedPanelStates) {
+					storedPanelStates = {};
+				}
+			} catch(e) {
+				storedPanelStates = {};
+			}
+
+			if (Object.keys(storedPanelStates).length) {
+				panelStates = storedPanelStates;
+			}
+
+			if(panel in COLLAPSIBLE_PANELS) {
+				if (COLLAPSIBLE_PANELS[panel] !== panelState) {
+					panelStates[panel] = panelState;
+				} else {
+					delete panelStates[panel];
+				}
+				localStorage.setItem('borrowerPanelStates', JSON.stringify(panelStates));
+			}
+		}
 	};
 
 /***/ },
