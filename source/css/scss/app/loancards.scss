@@ -5,9 +5,13 @@
 $loan-card-footer-height: 3rem;
 $loan-card-meter-height: $loan-card-footer-height/2;
 $loan-card-border: 1px solid $kiva-stroke-gray;
-$list-break-point: '#{$screen} and (min-width:1200px)';
+$list-break-point: $xlarge-up;
+$list-loan-card-section-spacing: 0.75rem;
 $list-loan-card-buttons-width: rem-calc(210);
-$list-loan-card-image-width: rem-calc(150);
+$list-loan-card-buttons-height: 2.5rem;
+$list-loan-card-image-width: rem-calc(100);
+$list-loan-card-image-width-larger: rem-calc(150);
+$list-loan-card-image-break-point: '#{$screen} and (min-width: 1200px)';
 $list-loan-card-buttons-half-width: $list-loan-card-buttons-width / 2;
 
 .list-view-header {
@@ -33,10 +37,12 @@ $list-loan-card-buttons-half-width: $list-loan-card-buttons-width / 2;
 
 	.partner-trustee {
 		width: calc(30% - #{$list-loan-card-buttons-half-width});
+		padding-right: $list-loan-card-section-spacing;
 	}
 
 	.loan-length {
 		width: calc(24% - #{$list-loan-card-buttons-half-width});
+		padding-right: $list-loan-card-section-spacing;
 	}
 }
 
@@ -98,7 +104,8 @@ $list-loan-card-buttons-half-width: $list-loan-card-buttons-width / 2;
 		span {
 			display: block;
 			color: $kiva-text-medium;
-			font-size: rem-calc(12);
+			font-size: $x-small-font-size;
+			line-height: $x-small-line-height;
 		}
 	}
 
@@ -121,15 +128,11 @@ $list-loan-card-buttons-half-width: $list-loan-card-buttons-width / 2;
 
 			.borrower-partner-trustee, .borrower-loan-length {
 				border: none;
-				padding: 0;
+				padding: 0 $list-loan-card-section-spacing 0 0;
 
 				span {
 					display: none;
 				}
-			}
-
-			.borrower-partner-trustee {
-				padding-right: 0.5rem;
 			}
 
 			.borrower-image-wrap {
@@ -138,6 +141,7 @@ $list-loan-card-buttons-half-width: $list-loan-card-buttons-width / 2;
 
 			.borrower-details-wrap {
 				width: calc(46% - #{$list-loan-card-image-width});
+				padding-right: $list-loan-card-section-spacing;
 			}
 
 			.borrower-partner-trustee {
@@ -154,6 +158,16 @@ $list-loan-card-buttons-half-width: $list-loan-card-buttons-width / 2;
 
 			&:hover {
 				box-shadow: none;
+			}
+		}
+
+		@media #{$list-loan-card-image-break-point} {
+			.borrower-image-wrap {
+				width: $list-loan-card-image-width-larger;
+			}
+
+			.borrower-details-wrap {
+				width: calc(46% - #{$list-loan-card-image-width-larger});
 			}
 		}
 	}
@@ -281,11 +295,6 @@ $list-loan-card-buttons-half-width: $list-loan-card-buttons-width / 2;
 			@media #{$list-break-point} {
 				border: none;
 
-				a {
-					font-size: $section-head-font-size;
-					line-height: 1;
-				}
-
 				.loan-message {
 					display: block;
 				}
@@ -312,6 +321,17 @@ $list-loan-card-buttons-half-width: $list-loan-card-buttons-width / 2;
 		@media #{$list-break-point} {
 			.list-view & {
 				display: block;
+				position: relative;
+				padding-left: 1.1rem;
+				white-space: normal;
+				line-height: 1.25rem;
+				padding-bottom: 0.25rem;
+
+				span {
+					position: absolute;
+					top: 0.15rem;
+					left: 0;
+				}
 			}
 		}
     }
@@ -363,6 +383,12 @@ $list-loan-card-buttons-half-width: $list-loan-card-buttons-width / 2;
 				.fundraising-meter {
 					position: relative;
 				}
+			}
+		}
+
+		@media #{$list-loan-card-image-break-point} {
+			.list-view &.vertical-centering {
+				padding-bottom: $list-loan-card-image-width-larger;
 			}
 		}
 
@@ -457,6 +483,16 @@ $list-loan-card-buttons-half-width: $list-loan-card-buttons-width / 2;
 				margin-top: $message-height;
 			}
 
+			.button, .message {
+				font-size: $body-font-size;
+				height: $list-loan-card-buttons-height;
+				line-height: $list-loan-card-buttons-height;
+
+				.icon {
+					height: $list-loan-card-buttons-height;
+				}
+			}
+
 			&.show-short {
 				margin-top: 0 - $message-height;
 				height: $message-height;
@@ -472,11 +508,6 @@ $list-loan-card-buttons-half-width: $list-loan-card-buttons-width / 2;
 						fill: $kiva-green;
 					}
 				}
-			}
-
-
-			.button, .message {
-				font-size: $body-font-size;
 			}
 		}
 	}
