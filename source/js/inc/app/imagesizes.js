@@ -24,6 +24,8 @@ module.exports = function () {
 			,
 			'xxlarge': 'only screen and (min-width: 1441px)' /* 1441px */
 			,
+			'list-view': 'only screen and (min-width: 1200px)' /* 1200px */
+			,
 			'small-only-retina': 'only screen and (max-width: 480px) and (-webkit-min-device-pixel-ratio: 2)'
 			+ ', only screen and (max-width: 480px) and (min-resolution: 192dpi)'
 			,
@@ -47,6 +49,9 @@ module.exports = function () {
 			,
 			'xxlarge-retina': 'only screen and (min-width: 1441px) and (-webkit-min-device-pixel-ratio: 2)' /* 1441px */
 			+ ', only screen and (min-width: 1441px) and (min-resolution: 192dpi)'
+			,
+			'list-view-retina': 'only screen and (min-width: 1200px) and (-webkit-min-device-pixel-ratio: 2)' /* 1200px */
+			+ ', only screen and (min-width: 1200px) and (min-resolution: 192dpi)'
 		}
 	});
 
