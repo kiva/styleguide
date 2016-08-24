@@ -339,6 +339,7 @@ $list-loan-card-buttons-half-width: $list-loan-card-buttons-width / 2;
     .borrower-footer-wrap {
         overflow: hidden;
 		position: static;
+		height: 1.5 * $loan-card-footer-height;
 		$loan-image-footer-height: 1.5rem;
 
 		&:before {
@@ -356,13 +357,22 @@ $list-loan-card-buttons-half-width: $list-loan-card-buttons-width / 2;
 			height: $loan-card-meter-height;
 			width: 100%;
 			margin: 0;
+		}
+
+		.floater {
 			position: absolute;
+			width: 100%;
 			bottom: 0;
 		}
 
 		@media #{$list-break-point} {
 			.list-view & {
 				overflow: visible;
+				height: auto;
+
+				.floater {
+					position: static;
+				}
 
 				&.vertical-centering {
 					position: relative;
@@ -372,7 +382,7 @@ $list-loan-card-buttons-half-width: $list-loan-card-buttons-width / 2;
 						position: absolute;
 						top: 50%;
 						transform: translateY(-50%);
-						width: 100%;
+						bottom: auto;
 					}
 				}
 
@@ -432,6 +442,15 @@ $list-loan-card-buttons-half-width: $list-loan-card-buttons-width / 2;
     }
 }
 
+.no-touch .loan-card .borrower-footer-wrap{
+	height: 0;
+
+	.fundraising-meter {
+		position: absolute;
+		bottom: 0;
+	}
+}
+
 .no-touch .bottom-bar {
     position: absolute;
     bottom: 0;
@@ -475,8 +494,12 @@ $list-loan-card-buttons-half-width: $list-loan-card-buttons-width / 2;
 			position: static;
 			height: $loan-card-footer-height;
 
+			&.hide-for-touch {
+				display: block !important;
+			}
+
 			&.ended {
-				display: none;
+				display: none !important;
 			}
 
 			&:first-child {
@@ -495,17 +518,20 @@ $list-loan-card-buttons-half-width: $list-loan-card-buttons-width / 2;
 
 			&.show-short {
 				margin-top: 0 - $message-height;
+				margin-bottom: 1rem;
 				height: $message-height;
 
 				.button, .button:hover {
 					height: $message-height;
 					line-height: $message-height;
+					font-size: $small-font-size;
 					background: none;
 					color: $kiva-text-dark;
 
 					.icon {
 						height: $message-height;
 						fill: $kiva-green;
+						width: rem-calc(14);
 					}
 				}
 			}
