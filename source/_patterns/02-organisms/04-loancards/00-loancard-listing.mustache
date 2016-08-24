@@ -1,4 +1,4 @@
-<div class="loan-card row" data-equalizer-watch>
+<div class="loan-card row" data-equalizer-watch style="height:{{height}};">
 	<div class="borrower-image-wrap small-12 columns">
 	{{#is_admin}}
 		<div class="image-edit-buttons">
@@ -21,7 +21,7 @@
 		</div>
 	</div>
 
-    <div class="borrower-details-wrap small-12 columns" style="height:{{height}};">
+    <div class="borrower-details-wrap small-12 columns">
         <a kvtrackevent="Lending|click-Read more|Name" href="{{borrower_url}}">{{name}}</a>
         <div class="country">
 			<span class="f16 {{location.country.iso_code}}"></span>{{location_label}}
