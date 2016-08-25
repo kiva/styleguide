@@ -1,6 +1,9 @@
 // Kiva overrides to default Foundation _type.scss
 
 // custom font sizes and line height
+$x-small-font-size				: rem-calc(12);
+$x-small-line-height			: rem-calc(18);
+
 $small-font-size				: rem-calc(14);
 $small-line-height				: rem-calc(20);
 $small-font-color				: $kiva-text-dark;

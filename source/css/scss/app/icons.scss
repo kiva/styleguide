@@ -18,6 +18,7 @@ $light-blue-gray: #DBE3E5;
     &.icon-sort,
 	&.icon-edit,
 	&.icon-refresh,
+	&.icon-grid,
     &.icon-tags-checkmark {
         fill: $kiva-text-dark;
     }
@@ -28,6 +29,7 @@ $light-blue-gray: #DBE3E5;
     &.icon-small-chevron,
     &.icon-small-chevron-mobile,
     &.icon-x,
+	&.icon-list,
     &.icon-filter {
         stroke: $kiva-text-dark;
     }
