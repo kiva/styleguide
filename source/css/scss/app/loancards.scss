@@ -525,8 +525,7 @@ $list-loan-card-buttons-half-width: $list-loan-card-buttons-width / 2;
 			}
 
 			&.show-short {
-				margin-top: 0 - $message-height;
-				margin-bottom: 1rem;
+				margin-top: 0;
 				height: $message-height;
 
 				.button, .button:hover {
