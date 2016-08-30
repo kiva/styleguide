@@ -365,6 +365,7 @@ $list-loan-card-buttons-half-width: $list-loan-card-buttons-width / 2;
 			position: absolute;
 			width: 100%;
 			bottom: 0;
+			z-index: 1;
 		}
 
 		@media #{$list-break-point} {
