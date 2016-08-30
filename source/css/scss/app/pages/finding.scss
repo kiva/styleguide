@@ -474,3 +474,13 @@ a.filter-menu-button:visited {
 		pointer-events: auto;
 	}
 }
+
+.loancards-list li {
+	margin-bottom: rem-calc(20);
+	border-bottom: 1px solid $kiva-text-medium;
+
+	@media #{$large-up} {
+		margin-bottom: 0;
+		border-bottom: none;
+	}
+}
