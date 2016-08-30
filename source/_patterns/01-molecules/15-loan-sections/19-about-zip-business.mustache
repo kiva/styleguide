@@ -2,7 +2,7 @@
 	<div class="ac-title ac-container" data-kv-accordion aria-controls="ac-about-zip-body" aria-expanded="true">
 		<h2>
 			<div class="ac-title-text">
-				About {{businessName}}
+				About {{direct_loan.businessName}}
 			</div>
 			<span class="ac-dropdown-icon">
 				<svg class="icon icon-large-chevron">
@@ -13,54 +13,54 @@
 	</div>
 	<div class="ac-body" id="ac-about-zip-body" aria-hidden="false">
 		<p>
-		{{#industry}}
-			Industry: {{industry}}
+		{{#direct_loan.industry}}
+			Industry: {{direct_loan.industry}}
 			<br>
-		{{/industry}}
+		{{/direct_loan.industry}}
 
-		{{#yearsInBusiness}}
-			Years in operation: {{yearsInBusiness}}
+		{{#direct_loan.yearsInBusiness}}
+			Years in operation: {{direct_loan.yearsInBusiness}}
 			<br>
-		{{/yearsInBusiness}}
+		{{/direct_loan.yearsInBusiness}}
 
-		{{#websiteUrl}}
-			Website: <a href="{{websiteUrl}}" target="_blank">{{displayUrl}}</a></p>
-		{{/websiteUrl}}
+		{{#direct_loan.websiteUrl}}
+			Website: <a href="{{direct_loan.websiteUrl}}" target="_blank">{{direct_loan.displayUrl}}</a></p>
+		{{/direct_loan.websiteUrl}}
 		</p>
 
-		{{#hasSocialMedia}}
+		{{#direct_loan.hasSocialMedia}}
 			<span class="icon-label">Follow:</span>
 			<ul class="icons socialmedia inline-list">
-				{{#facebookUrl}}
+				{{#direct_loan.facebookUrl}}
 				<li class="icon">
-					<a href="{{facebookUrl}}" target="_blank" class="icon-facebook">
+					<a href="{{direct_loan.facebookUrl}}" target="_blank" class="icon-facebook">
 						<svg class="icon icon-facebook" width="30" height="30">
 							<use xlink:href="#icon-facebook"/>
 						</svg>
 					</a>
 				</li>
-				{{/facebookUrl}}
+				{{/direct_loan.facebookUrl}}
 
-				{{#twitterUrl}}
+				{{#direct_loan.twitterUrl}}
 				<li class="icon">
-					<a href="{{twitterUrl}}" target="_blank" class="icon-twitter">
+					<a href="{{direct_loan.twitterUrl}}" target="_blank" class="icon-twitter">
 						<svg class="icon icon-twitter" width="30" height="30">
 							<use xlink:href="#icon-twitter"/>
 						</svg>
 					</a>
 				</li>
-				{{/twitterUrl}}
+				{{/direct_loan.twitterUrl}}
 
-				{{#linkedInUrl}}
+				{{#direct_loan.linkedInUrl}}
 				<li class="icon">
-					<a href="{{linkedInUrl}}" target="_blank" class="icon-linkedIn">
+					<a href="{{direct_loan.linkedInUrl}}" target="_blank" class="icon-linkedIn">
 						<svg class="icon icon-linkedIn" width="30" height="30">
 							<use xlink:href="#icon-linkedIn"/>
 						</svg>
 					</a>
 				</li>
-				{{/linkedInUrl}}
+				{{/direct_loan.linkedInUrl}}
 			</ul>
-		{{/hasSocialMedia}}
+		{{/direct_loan.hasSocialMedia}}
 	</div>
 </section>

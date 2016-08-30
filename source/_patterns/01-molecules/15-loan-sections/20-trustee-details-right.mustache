@@ -1,0 +1,113 @@
+<section class="trustee-details">
+	<div class="ac-title ac-container" data-kv-accordion aria-controls="ac-trustee-info-body-right" aria-expanded="false">
+		<h2>
+			Trustee
+            <span class="ac-dropdown-icon">
+                <svg class="icon icon-large-chevron">
+                    <use xlink:href="#icon-large-chevron"></use>
+                </svg>
+            </span>
+		</h2>
+	</div>
+	<div class="ac-body" id="ac-trustee-info-body-right" aria-hidden="true">
+		<div class="trustee-iconography">
+			<div class="trustee-image-wrapper">
+				<img class="trustee-image" src="{{trustee_info.trusteeImgLink}}" alt="Trustee image">
+			</div>
+			<h3><a target="_blank" href="{{trustee_info.trusteeLink}}">{{trustee_info.trusteeName}}</a></h3>
+		</div>
+		<div class="trustee-data">
+			<div id="trustee-type" class="datum">
+				<a class="black-underlined" data-reveal-id="trustee-type-lightbox">Trustee type</a>:
+				<strong>
+					{{#trustee_info.trusteeType}}{{trustee_info.trusteeType}}{{/trustee_info.trusteeType}}
+					{{^trustee_info.trusteeType}}N/A{{/trustee_info.trusteeType}}
+				</strong>
+			</div>
+			<div id="tier" class="datum">
+				<a class="black-underlined" data-reveal-id="trustee-tier-lightbox">Tier</a>:
+				<strong>
+					{{#trustee_info.tier}}{{trustee_info.tier}}{{/trustee_info.tier}}
+					{{^trustee_info.tier}}N/A{{/trustee_info.tier}}
+				</strong>
+			</div>
+			<div id="location" class="datum">
+				<a class="black-underlined" data-reveal-id="trustee-location-lightbox">Location</a>:
+				<strong>{{trustee_info.location}}</strong>
+			</div>
+			<div id="on-zip-since" class="datum">
+				<a class="black-underlined" data-reveal-id="trustee-on-zip-since-lightbox">Time on Kiva</a>:
+				<strong>
+					{{#trustee_info.onZipSince}}{{trustee_info.onZipSince}}{{/trustee_info.onZipSince}}
+					{{^trustee_info.onZipSince}}N/A{{/trustee_info.onZipSince}}
+				</strong>
+			</div>
+			<div id="loans-endorsed" class="datum">
+				<a class="black-underlined" data-reveal-id="trustee-loans-endorsed-lightbox">Kiva borrowers</a>:
+				<strong>
+					{{#trustee_info.loansEndorsedTotal}}{{trustee_info.loansEndorsedTotal}}{{/trustee_info.loansEndorsedTotal}}
+					{{^trustee_info.loansEndorsedTotal}}N/A{{/trustee_info.loansEndorsedTotal}}
+				</strong>
+			</div>
+			<div id="total-value" class="datum">
+				<a class="black-underlined" data-reveal-id="trustee-total-value-lightbox">Total loans</a>:
+				<strong>
+					{{#trustee_info.totalValue}}{{trustee_info.totalValue}}{{/trustee_info.totalValue}}
+					{{^trustee_info.totalValue}}N/A{{/trustee_info.totalValue}}
+				</strong>
+			</div>
+			<div id="fundraising-or-raised" class="datum">
+				<a class="black-underlined" data-reveal-id="trustee-fundraising-or-raised-lightbox">Fundraising/raised</a>:
+				<strong>
+					{{#trustee_info.fundraisingOrRaisedTotal}}{{trustee_info.fundraisingOrRaisedTotal}}{{/trustee_info.fundraisingOrRaisedTotal}}
+					{{^trustee_info.fundraisingOrRaisedTotal}}N/A{{/trustee_info.fundraisingOrRaisedTotal}}
+				</strong>
+			</div>
+			<div id="paying-on-time" class="datum">
+				<a class="black-underlined" data-reveal-id="trustee-paying-on-time-lightbox">Paying on time</a>:
+				<strong>
+					{{#trustee_info.payingOnTimeTotal}}{{trustee_info.payingOnTimeTotal}}{{/trustee_info.payingOnTimeTotal}}
+					{{^trustee_info.payingOnTimeTotal}}Not enough data{{/trustee_info.payingOnTimeTotal}}
+				</strong>
+			</div>
+			<div id="paying-back-late" class="datum">
+				<a class="black-underlined" data-reveal-id="trustee-paying-back-late-lightbox">Paying back late</a>:
+				<strong>
+					{{#trustee_info.payingBackLateTotal}}{{trustee_info.payingBackLateTotal}}{{/trustee_info.payingBackLateTotal}}
+					{{^trustee_info.payingBackLateTotal}}Not enough data{{/trustee_info.payingBackLateTotal}}
+				</strong>
+			</div>
+			<div id="repaid-in-full" class="datum">
+				<a class="black-underlined" data-reveal-id="trustee-repaid-in-full-lightbox">Repaid in full</a>:
+				<strong>
+					{{#trustee_info.repaidInFullTotal}}{{trustee_info.repaidInFullTotal}}{{/trustee_info.repaidInFullTotal}}
+					{{^trustee_info.repaidInFullTotal}}Not enough data{{/trustee_info.repaidInFullTotal}}
+				</strong>
+			</div>
+			<div id="defaulted" class="datum">
+				<a class="black-underlined" data-reveal-id="trustee-defaulted-lightbox">Defaulted</a>:
+				<strong>
+					{{#trustee_info.defaultedTotal}}{{trustee_info.defaultedTotal}}{{/trustee_info.defaultedTotal}}
+					{{^trustee_info.defaultedTotal}}Not enough data{{/trustee_info.defaultedTotal}}
+				</strong>
+			</div>
+			<div id="repayment-rate" class="datum">
+				<a class="black-underlined" data-reveal-id="trustee-repayment-rate-lightbox">Repayment rate</a>:
+				<strong>
+					{{#trustee_info.repaymentRate}}{{trustee_info.repaymentRate}}{{/trustee_info.repaymentRate}}
+					{{^trustee_info.repaymentRate}}Not enough data{{/trustee_info.repaymentRate}}
+				</strong>
+			</div>
+
+			{{#trustee_info.trusteeDataHelpText}}
+				{{> 01-molecules/10-lightbox/04-help-text-lightbox}}
+			{{/trustee_info.trusteeDataHelpText}}
+		</div>
+		{{#trustee_info.whyEndorse}}
+			<div class="why-endorse">
+				<h3>Why are you endorsing {{trustee_info.borrowerOrGroupName}}?</h3>
+				<p>{{{trustee_info.whyEndorse}}}</p>
+			</div>
+		{{/trustee_info.whyEndorse}}
+	</div>
+</section>

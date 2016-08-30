@@ -1,5 +1,5 @@
 <section class="field-partner-details">
-    <div class="ac-title ac-container" data-kv-accordion aria-controls="ac-field-partner-details-body{{#right-content}}-right{{/right-content}}" aria-expanded="false">
+    <div class="ac-title ac-container" data-kv-accordion aria-controls="ac-field-partner-details-body" aria-expanded="false">
         <h2>
             Field Partner
             <span class="ac-dropdown-icon">
@@ -7,84 +7,84 @@
                     <use xlink:href="#icon-large-chevron"></use>
                 </svg>
             </span>
-        <h2>
+        </h2>
     </div>
-    <div class="ac-body" id="ac-field-partner-details-body{{#right-content}}-right{{/right-content}}" aria-hidden="true">
+    <div class="ac-body" id="ac-field-partner-details-body" aria-hidden="true">
         <div class="field-partner-iconography">
             <div class="field-partner-image-wrapper">
-                <img class="field-partner-image" src="{{partnerImgLink}}" alt="Field Partner image">
+                <img class="field-partner-image" src="{{field_partner_info.partnerImgLink}}" alt="Field Partner image">
             </div>
         </div>
         <p><strong>Why Kiva works with this partner:</strong></p>
         <div class="why-we-work-with-them">
-            {{{whyWeWorkWithThemDescription}}}
+            {{{field_partner_info.whyWeWorkWithThemDescription}}}
         </div>
         <div class="field-partner-data">
             <div id="partner-time-on-kiva" class="datum">
                 <a class="black-underlined" data-reveal-id="partner-time-on-kiva-lightbox">Time on Kiva</a>:
                 <strong>
-                    {{timeOnKiva}}
+                    {{field_partner_info.timeOnKiva}}
                 </strong>
             </div>
             <div id="partner-num-borrowers" class="datum">
                 <a class="black-underlined" data-reveal-id="partner-num-borrowers-lightbox">Kiva borrowers</a>:
                 <strong>
-                    {{numberOfBorrowers}}
+                    {{field_partner_info.numberOfBorrowers}}
                 </strong>
             </div>
             <div id="partner-total-lent" class="datum">
                 <a class="black-underlined" data-reveal-id="partner-total-lent-lightbox">Total loans</a>:
                 <strong>
-                    {{totalLoans}}
+                    {{field_partner_info.totalLoans}}
                 </strong>
             </div>
             <div id="partner-avg-cost-to-borrower" class="datum">
                 <a class="black-underlined" data-reveal-id="partner-avg-cost-to-borrower-lightbox">Average cost to borrower</a>:
                 <strong>
-                    {{avgCostToBorrower}}
+                    {{field_partner_info.avgCostToBorrower}}
                 </strong>
             </div>
             <div id="partner-profitability" class="datum">
                 <a class="black-underlined" data-reveal-id="partner-profitability-lightbox">Profitability (return on assets)</a>:
                 <strong>
-                    {{profitability}}
+                    {{field_partner_info.profitability}}
                 </strong>
             </div>
             <div id="partner-avg-loan-size" class="datum">
                 <a class="black-underlined" data-reveal-id="partner-avg-loan-size-lightbox">Average loan size (% of per capita income)</a>:
                 <strong>
-                    {{avgLoanSize}}
+                    {{field_partner_info.avgLoanSize}}
                 </strong>
             </div>
             <div id="partner-delinquency-rate" class="datum">
                 <a class="black-underlined" data-reveal-id="partner-delinquency-rate-lightbox">Delinquency rate</a>:
                 <strong>
-                    {{delinquencyRate}}
+                    {{field_partner_info.delinquencyRate}}
                 </strong>
             </div>
             <div id="partner-loans-at-risk-rate" class="datum">
                 <a class="black-underlined" data-reveal-id="partner-loans-at-risk-rate-lightbox">Loans at risk rate</a>:
                 <strong>
-                    {{loansAtRiskRate}}
+                    {{field_partner_info.loansAtRiskRate}}
                 </strong>
             </div>
             <div id="partner-default-rate" class="datum">
                 <a class="black-underlined" data-reveal-id="partner-default-rate-lightbox">Default rate</a>:
                 <strong>
-                    {{defaultRate}}
+                    {{field_partner_info.defaultRate}}
                 </strong>
             </div>
             <div id="partner-currency-loss-rate" class="datum">
                 <a class="black-underlined" data-reveal-id="partner-currency-loss-rate-lightbox">Currency exchange loss rate</a>:
                 <strong>
-                    {{currencyLossRate}}
+                    {{field_partner_info.currencyLossRate}}
                 </strong>
             </div>
-            {{#fieldPartnerDataHelpText}}
+            {{#field_partner_info.fieldPartnerDataHelpText}}
                 {{> 01-molecules/10-lightbox/04-help-text-lightbox}}
-            {{/fieldPartnerDataHelpText}}
+            {{/field_partner_info.fieldPartnerDataHelpText}}
         </div>
-        <div class="more-on-field-partner"><a href="{{partnerLink}}">More about {{partnerName}}</a></div>
+        <div class="more-on-field-partner"><a href="{{field_partner_info.partnerLink}}">More about {{field_partner_info.partnerName}}</a></div>
         <div class="learn-more"><a class="black-underlined" data-reveal-id="partner-learn-more-lightbox">What is a Field Partner</a>?</div>
     </div>
 </section>
