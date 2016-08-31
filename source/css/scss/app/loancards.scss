@@ -441,10 +441,17 @@ $list-loan-card-buttons-half-width: $list-loan-card-buttons-width / 2;
 
 .no-touch .borrower-footer-wrap{
 	height: 0;
+	margin-top: $loan-card-footer-height / 2;
 
 	.fundraising-meter {
 		position: absolute;
 		bottom: 0;
+	}
+}
+
+.no-touch .list-view .borrower-footer-wrap {
+	@media #{$list-break-point} {
+		margin-top: 0;
 	}
 }
 
