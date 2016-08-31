@@ -116,10 +116,6 @@ $list-loan-card-buttons-half-width: $list-loan-card-buttons-width / 2;
 			display: block;
 		}
 
-		.borrower-loan-length {
-			margin-bottom: $loan-card-footer-height / 2;
-		}
-
 		@media #{$list-break-point} {
 			max-width: none;
 			height: auto !important;
@@ -288,11 +284,9 @@ $list-loan-card-buttons-half-width: $list-loan-card-buttons-width / 2;
 
 	.borrower-details-wrap {
 		padding: 0 0.5rem;
-		margin-bottom: $loan-card-footer-height / 2;
 		z-index: 1;
 
 		.list-view & {
-			margin-bottom: 0;
 
 			@media #{$list-break-point} {
 				border: none;
