@@ -181,7 +181,6 @@
 
 	.filter-keywords-search-box {
 		color: $charcoal;
-		border: 1px solid $charcoal;
 		width: 12.5rem;
 		margin: 0 0.6666666667rem 0.3333333333rem;
 		padding-right: rem-calc(24);
@@ -207,9 +206,13 @@
 		width: rem-calc(205);
 	}
 
-	.country-filter-box, .country-filter-box a {
-		padding: 0 0.3rem;
-		color: $sky-blue;
+	.country-filter-box {
+		margin: 0 rem-calc(12);
+
+		a {
+			padding: 0;
+			color: $sky-blue;
+		}
 	}
 
 	.partner_filter_text {
@@ -441,6 +444,43 @@
 		font-size: $button-font-sm;
 		margin: 0;
 	}
+}
+
+#location-search-form {
+	.icon {
+		position: absolute;
+		height: rem-calc(37);
+		left: 1rem;
+		z-index: 100;
+		fill: $kiva-text-medium;
+	}
+
+	.search-box {
+		color: $charcoal;
+		width: 100%;
+		margin: 0;
+		padding-left: 2rem;
+	}
+
+	.no-results {
+		display: none;
+	}
+
+	&.empty .no-results {
+		display: inline;
+	}
+
+	.twitter-typeahead {
+		width: 100%;
+	}
+
+	.submit {
+		display: none;
+	}
+}
+
+.location-search-menu {
+	width: 12.5rem;
 }
 
 .filter-button-group-ul {
