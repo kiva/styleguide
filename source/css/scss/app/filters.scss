@@ -475,13 +475,15 @@
 	}
 
 	.submit {
-		visibility: hidden;
 		position: absolute;
+		left: -9999px;
+		width: 1px;
+		height: 1px;
 	}
 }
 
 .location-search-menu {
-	width: 12.5rem;
+	width: calc(12.5rem + 1px);
 }
 
 .filter-button-group-ul {
