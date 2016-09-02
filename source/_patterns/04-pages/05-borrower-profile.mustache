@@ -117,14 +117,14 @@
 			</div>
 
 			<div class="right-content columns">
-				{{> 01-molecules/15-loan-sections/06-loan-details-right.mustache}}
+				{{> 01-molecules/15-loan-sections/06-loan-details.mustache}}
 				{{#is_direct_loan}}
 					<hr class="line-break"/>
-					{{> 01-molecules/15-loan-sections/20-trustee-details-right.mustache}}
+					{{> 01-molecules/15-loan-sections/20-trustee-details.mustache}}
 				{{/is_direct_loan}}
 				{{^is_direct_loan}}
 					<hr class="line-break"/>
-					{{> 01-molecules/15-loan-sections/22-field-partner-details-right.mustache}}
+					{{> 01-molecules/15-loan-sections/22-field-partner-details.mustache}}
 				{{/is_direct_loan}}
 
 				{{#has_repayment_schedule_context}}
