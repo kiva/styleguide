@@ -1,0 +1,78 @@
+//colors
+//$kiva-darkgreen: #236133;
+//$kiva-text-dark: #333;
+//$white: white;
+
+//@extend-elements
+//original selectors
+//.arrow-steps ul li.arrow:after, .arrow-steps ul li.arrow:before
+%extend_arrow_around {
+	left: 100%;
+	top: 50%;
+	border: solid transparent;
+	content: " ";
+	height: 0;
+	width: 0;
+	position: absolute;
+	pointer-events: none;
+}
+
+.arrow-steps {
+	margin-top: 1rem;
+	margin-left: -1rem;
+	ul li {
+		display: inline-block;
+		height: 32px;
+		margin-left: -4px;
+		padding-left: 2rem;
+		padding-right: 1rem;
+		line-height: 30px;
+		background: transparent;
+		text-align: center;
+		color: $kiva-darkgreen;
+		position: relative;
+		border-top: 1px solid $kiva-text-dark;
+		border-bottom: 1px solid $kiva-text-dark;
+		font-size: 18px;
+		a {
+			color: $kiva-darkgreen;
+		}
+		&:last-of-type {
+			border-right: 1px solid $kiva-text-dark;
+		}
+		&.active {
+			background-color: $kiva-darkgreen;
+			color: $white;
+			border-bottom: 1px solid $kiva-darkgreen;
+			a {
+				color: $white;
+			}
+		}
+		&.arrow {
+			&:after {
+				width: 0;
+				height: 0;
+				border-style: solid;
+				border-color: rgba(255, 255, 255, 0);
+				border-left-color: $white;
+				border-width: 15px;
+				margin-top: -15px;
+				@extend %extend_arrow_around;
+			}
+			&:before {
+				@extend %extend_arrow_around;
+				border-color: rgba(51, 51, 51, 0);
+				border-left-color: $kiva-text-dark;
+				border-width: 16px;
+				margin-top: -16px;
+			}
+			&.active:after {
+				width: 0;
+				height: 0;
+				border-style: solid;
+				border-width: 15px 0 15px 15px;
+				border-color: transparent transparent transparent $kiva-darkgreen;
+			}
+		}
+	}
+}
