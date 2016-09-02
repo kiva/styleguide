@@ -1,81 +1,83 @@
 {
-  "trusteeName": "Tenderloin Economic Development Project",
-  "trusteeLink": "https://zip.kiva.org/trustees/4569",
-  "trusteeImgLink": "https://s3.amazonaws.com/media.zip.kiva.org/images/1441/thumb/cover_sketch_6.JPG",
-  "trusteeType": "non-profit",
-  "tier": "Third Tier Trustee",
-  "location": "San Francisco, CA",
-  "onZipSince": "June 26, 2014 (15 months)",
-  "loansEndorsedTotal": 795,
-  "totalValue": "$2,584,725",
-  "fundraisingOrRaisedTotal": 139,
-  "payingOnTimeTotal": 294,
-  "payingBackLateTotal": 50,
-  "repaidInFullTotal": 9,
-  "defaultedTotal": 1,
-  "repaymentRate": "90%",
-  "whyEndorse": "David is a very thoughtful, customer-oriented, and hard-working entrepreneur. Having worked in the restaurant industry for many years, he has developed customer service skills including patience and hospitality that he can apply to his current business, which guarantees his customer a memora...",
-  "borrowerOrGroupName": "David",
-  "trusteeDataHelpText": [
-    {
-      "dataRevealId": "trustee-type-lightbox"
-      ,"descriptionTitle": "Trustee type"
-      ,"descriptionText": "Trustee type description text."
-    },
-    {
-      "dataRevealId": "trustee-tier-lightbox"
-      ,"descriptionTitle": "Tier"
-      ,"descriptionText": "Tier description text."
-    },
-    {
-      "dataRevealId": "trustee-location-lightbox"
-      ,"descriptionTitle": "Location"
-      ,"descriptionText": "Location description text."
-    },
-    {
-      "data_reveal_id": "trustee-on-zip-since-lightbox"
-      ,"descriptionTitle": "On Zip Since"
-      ,"descriptionText": "On Zip Since description text."
-    },
-    {
-      "dataRevealId": "trustee-loans-endorsed-lightbox"
-      ,"descriptionTitle": "Loans Endorsed"
-      ,"descriptionText": "Loans Endorsed description text."
-    },
-    {
-      "dataRevealId": "trustee-total-value-lightbox"
-      ,"descriptionTitle": "Total Value"
-      ,"descriptionText": "Total Value description text."
-    },
-    {
-      "dataRevealId": "trustee-fundraising-or-raised-lightbox"
-      ,"descriptionTitle": "Fundraising/Raised"
-      ,"descriptionText": "Fundraising/Raised description text."
-    },
-    {
-      "dataRevealId": "trustee-paying-on-time-lightbox"
-      ,"descriptionTitle": "Paying on Time"
-      ,"descriptionText": "Paying on Time description text."
-    },
-    {
-      "dataRevealId": "trustee-paying-back-late-lightbox"
-      ,"description_title": "Paying Back Late"
-      ,"descriptionText": "Paying Back Late description text."
-    },
-    {
-      "dataRevealId": "trustee-repaid-in-full-lightbox"
-      ,"descriptionTitle": "Repaid in Full"
-      ,"descriptionText": "Repaid in Full description text."
-    },
-    {
-      "dataRevealId": "trustee-defaulted-lightbox"
-      ,"descriptionTitle": "Defaulted"
-      ,"descriptionText": "Defaulted description text."
-    },
-    {
-      "dataRevealId": "trustee-repayment-rate-lightbox"
-      ,"descriptionTitle": "Repayment Rate"
-      ,"descriptionText": "Repayment Rate description text."
-    }
-  ]
+  "trustee": {
+    "trusteeName": "Tenderloin Economic Development Project",
+    "trusteeLink": "https://zip.kiva.org/trustees/4569",
+    "trusteeImgLink": "https://s3.amazonaws.com/media.zip.kiva.org/images/1441/thumb/cover_sketch_6.JPG",
+    "trusteeType": "non-profit",
+    "tier": "Third Tier Trustee",
+    "location": "San Francisco, CA",
+    "onZipSince": "June 26, 2014 (15 months)",
+    "loansEndorsedTotal": 795,
+    "totalValue": "$2,584,725",
+    "fundraisingOrRaisedTotal": 139,
+    "payingOnTimeTotal": 294,
+    "payingBackLateTotal": 50,
+    "repaidInFullTotal": 9,
+    "defaultedTotal": 1,
+    "repaymentRate": "90%",
+    "whyEndorse": "David is a very thoughtful, customer-oriented, and hard-working entrepreneur. Having worked in the restaurant industry for many years, he has developed customer service skills including patience and hospitality that he can apply to his current business, which guarantees his customer a memora...",
+    "borrowerOrGroupName": "David",
+    "trusteeDataHelpText": [
+      {
+        "dataRevealId": "trustee-type-lightbox",
+        "descriptionTitle": "Trustee type",
+        "descriptionText": "Trustee type description text."
+      },
+      {
+        "dataRevealId": "trustee-tier-lightbox",
+        "descriptionTitle": "Tier",
+        "descriptionText": "Tier description text."
+      },
+      {
+        "dataRevealId": "trustee-location-lightbox",
+        "descriptionTitle": "Location",
+        "descriptionText": "Location description text."
+      },
+      {
+        "data_reveal_id": "trustee-on-zip-since-lightbox",
+        "descriptionTitle": "On Zip Since",
+        "descriptionText": "On Zip Since description text."
+      },
+      {
+        "dataRevealId": "trustee-loans-endorsed-lightbox",
+        "descriptionTitle": "Loans Endorsed",
+        "descriptionText": "Loans Endorsed description text."
+      },
+      {
+        "dataRevealId": "trustee-total-value-lightbox",
+        "descriptionTitle": "Total Value",
+        "descriptionText": "Total Value description text."
+      },
+      {
+        "dataRevealId": "trustee-fundraising-or-raised-lightbox",
+        "descriptionTitle": "Fundraising/Raised",
+        "descriptionText": "Fundraising/Raised description text."
+      },
+      {
+        "dataRevealId": "trustee-paying-on-time-lightbox",
+        "descriptionTitle": "Paying on Time",
+        "descriptionText": "Paying on Time description text."
+      },
+      {
+        "dataRevealId": "trustee-paying-back-late-lightbox",
+        "description_title": "Paying Back Late",
+        "descriptionText": "Paying Back Late description text."
+      },
+      {
+        "dataRevealId": "trustee-repaid-in-full-lightbox",
+        "descriptionTitle": "Repaid in Full",
+        "descriptionText": "Repaid in Full description text."
+      },
+      {
+        "dataRevealId": "trustee-defaulted-lightbox",
+        "descriptionTitle": "Defaulted",
+        "descriptionText": "Defaulted description text."
+      },
+      {
+        "dataRevealId": "trustee-repayment-rate-lightbox",
+        "descriptionTitle": "Repayment Rate",
+        "descriptionText": "Repayment Rate description text."
+      }
+    ]
+  }
 }
