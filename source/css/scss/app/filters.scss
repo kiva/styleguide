@@ -475,7 +475,8 @@
 	}
 
 	.submit {
-		display: none;
+		visibility: hidden;
+		position: absolute;
 	}
 }
 
