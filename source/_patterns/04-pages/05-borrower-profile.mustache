@@ -1,49 +1,139 @@
-<div class="pageWrap">
-    {{> templates-header}}
+<div class="borrower-profile-wrapper">
+	<div class="row loan-image-info-row">
+		<div class="small-12 medium-7 print-7 columns loan-figure left-content">
+			{{> 01-molecules/30-loans/10-loan-figure.mustache}}
+		</div>
 
-    <div class="borrower-profile-wrapper">
-        <div class="row loan-image-info-row">
-            <div class="small-12 medium-7 print-7 columns loan-figure left-content">
-                {{> molecules-loan-figure-multiple-photos}}
-            </div>
-            <div class="small-12 medium-5 print-5 columns right-content">
-                {{#inPfp}}
-                    {{> molecules-pfp-meter}}
-                {{/inPfp}}
-                {{^inPfp}}
-                    {{> molecules-current-status-meter}}
-                {{/inPfp}}
-                {{> molecules-loan-gist}}
+		<div class="small-12 medium-5 print-5 columns right-content">
+			{{#in_pfp}}
+				{{> 01-molecules/15-loan-sections/02-pfp-meter.mustache}}
+			{{/in_pfp}}
+			{{^in_pfp}}
+				{{> 01-molecules/15-loan-sections/03-current-status-meter.mustache}}
+			{{/in_pfp}}
 
-            </div>
-			{{> molecules-lend-action}}
-        </div>
+			{{> 01-molecules/15-loan-sections/05-loan-gist.mustache}}
 
-        <hr class="line-break"/>
+		</div>
+		{{> 01-molecules/15-loan-sections/08-lend-action.mustache}}
+		{{> 01-molecules/15-loan-sections/13-proceed-to-checkout-action.mustache}}
+		{{> 01-molecules/15-loan-sections/10-adding-to-basket-action.mustache}}
+	</div>
 
-        <div class="row">
-            <div class="small-12 columns">
-                {{> molecules-loan-use}}
-            </div>
-        </div>
 
-        <div class="show-for-small-down">
-            <hr class="line-break"/>
-        </div>
+	<hr class="line-break"/>
 
-        <div class="borrower-profile-pieces small-12 row">
-            <div class="left-content medium-7">
-                {{> molecules-loan-story}}
-            </div>
-            <div class="right-content medium-5">
-                {{> molecules-loan-details}}
-            </div>
-            <div class="left-content medium-7">
-                {{> molecules-lenders-teams-wrapper}}
-            </div>
-        </div>
-    </div>
+	<div class="row">
+		<div class="small-12 columns">
+			{{> 01-molecules/15-loan-sections/21-loan-use.mustache}}
+		</div>
+	</div>
+
+	<div class="borrower-profile-pieces">
+		<div class="row">
+			<div class="left-content columns">
+				<hr class="line-break hide-for-large-up"/>
+				{{> 01-molecules/15-loan-sections/18-loan-story.mustache}}
+
+				{{#has_special_endorsement}}
+					<hr class="line-break"/>
+					{{> 01-molecules/15-loan-sections/01-why-special.mustache}}
+				{{/has_special_endorsement}}
+
+				{{#has_extra_loan_info}}
+					<hr class="line-break"/>
+					{{> 01-molecules/15-loan-sections/00-more-loan-info}}
+				{{/has_extra_loan_info}}
+
+				<div class="hide-for-large-up">
+					<hr class="line-break"/>
+					{{> 01-molecules/15-loan-sections/06-loan-details.mustache}}
+				</div>
+
+				{{#is_direct_loan}}
+					<hr class="line-break"/>
+					{{> 01-molecules/15-loan-sections/19-about-zip-business}}
+				{{/is_direct_loan}}
+
+				<!-- Teams and Lenders -->
+				<hr class="line-break"/>
+				<section class="lenders-teams" id="lenders-teams">
+					<div class="ac-title ac-container" data-kv-accordion aria-controls="ac-lenders-teams-body" aria-expanded="true">
+						<h2>
+							Lenders and lending teams
+							<span class="ac-dropdown-icon">
+								<svg class="icon icon-large-chevron">
+									<use xlink:href="#icon-large-chevron"></use>
+								</svg>
+							</span>
+						</h2>
+					</div>
+				</section>
+
+				<!-- Google Map -->
+				<hr class="line-break"/>
+				<section class="country-info" id="country-section">
+					<div class="ac-title ac-container" data-kv-accordion aria-controls="ac-country-info-body" aria-expanded="false">
+						<h2>
+							Country information
+							<span class="ac-dropdown-icon">
+								<svg class="icon icon-large-chevron">
+									<use xlink:href="#icon-large-chevron"></use>
+								</svg>
+							</span>
+						</h2>
+					</div>
+				</section>
+
+				{{#is_direct_loan}}
+					<div class="hide-for-large-up">
+						<hr class="line-break"/>
+						{{> 01-molecules/15-loan-sections/20-trustee-details}}
+					</div>
+				{{/is_direct_loan}}
+				{{^is_direct_loan}}
+					<div class="hide-for-large-up">
+						<hr class="line-break"/>
+						{{> 01-molecules/15-loan-sections/22-field-partner-details.mustache}}
+					</div>
+				{{/is_direct_loan}}
+
+				{{#comments_context}}
+				<hr class="line-break"/>
+					{{> 01-molecules/15-loan-sections/31-comments-and-updates.mustache}}
+				{{/comments_context}}
+
+				{{#show_tags}}
+					<hr class="line-break"/>
+					{{> 01-molecules/15-loan-sections/23-tags.mustache}}
+				{{/show_tags}}
+
+				<div class="hide-for-large-up">
+					{{#repayment_schedule_context}}
+						<hr class="line-break"/>
+						{{> 01-molecules/15-loan-sections/24-repayment-schedule.mustache}}
+					{{/repayment_schedule_context}}
+				</div>
+			</div>
+
+			<div class="right-content columns">
+				{{#right_context}}
+					{{> 01-molecules/15-loan-sections/06-loan-details.mustache}}
+					{{#is_direct_loan}}
+						<hr class="line-break"/>
+						{{> 01-molecules/15-loan-sections/20-trustee-details.mustache}}
+					{{/is_direct_loan}}
+					{{^is_direct_loan}}
+						<hr class="line-break"/>
+						{{> 01-molecules/15-loan-sections/22-field-partner-details.mustache}}
+					{{/is_direct_loan}}
+
+					{{#has_repayment_schedule_context}}
+						<hr class="line-break"/>
+						{{> 01-molecules/15-loan-sections/24-repayment-schedule.mustache}}
+					{{/has_repayment_schedule_context}}
+				{{/right_context}}
+			</div>
+		</div>
+	</div>
 </div>
-
-{{> organisms-footer}}
-{{> molecules-mobile-lend-action}}

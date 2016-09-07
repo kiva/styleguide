@@ -1,8 +1,8 @@
 <div class="loan-gist {{#noticeVisible}}notice-visible{{/noticeVisible}} {{#alreadyLentVisible}}already-lent-visible{{/alreadyLentVisible}}">
     <h1 class="borrower-name">{{borrowerOrGroupName}}</h1>
-    {{#isDirectLoan}}
+    {{#is_direct_loan}}
         <h2 class="featured">{{businessName}}</h2>
-    {{/isDirectLoan}}
+    {{/is_direct_loan}}
     <div class="country-info-wrapper row">
         <div class="country-image columns small-2">
             <img class="" src="{{flagURL}}" alt="{{countryName}}">

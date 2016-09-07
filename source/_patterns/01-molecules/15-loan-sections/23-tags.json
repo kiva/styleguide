@@ -16,6 +16,6 @@
 	{"id:": 5, "name": "#Schooling", "description": " Loans used by students and teachers, and people expanding their business to pay for children's education", "userSelected": true},
 	{"id:": 6, "name": "#Orphan", "description": "Borrower is responsible for dependents who were orphaned", "userSelected": true}
   ],
-  "loggedIn": true,
+  "user_logged_in": true,
   "hasTags": true
 }

@@ -1,4 +1,6 @@
 {
   "skipHeader": true,
-  "whyEndorse": false
+  "trustee": {
+    "whyEndorse": false
+  }
 }

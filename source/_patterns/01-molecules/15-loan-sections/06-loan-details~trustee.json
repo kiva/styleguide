@@ -5,7 +5,7 @@
   "disbursalDate": "April 6, 2015",
   "currencyExchangeLossScenario": "N/A",
   "fieldPartner": null,
-  "trustee": "Trustee Fund Kenya",
+  "trusteeName": "Trustee Fund Kenya",
   "borrowerPayingInterest": false,
   "riskRatingStars": [],
   "loanDetailsHelpText": [
