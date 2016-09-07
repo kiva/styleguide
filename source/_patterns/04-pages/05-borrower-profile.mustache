@@ -117,21 +117,22 @@
 			</div>
 
 			<div class="right-content columns">
-				{{> 01-molecules/15-loan-sections/06-loan-details.mustache}}
-				{{#is_direct_loan}}
-					<hr class="line-break"/>
-					{{> 01-molecules/15-loan-sections/20-trustee-details.mustache}}
-				{{/is_direct_loan}}
-				{{^is_direct_loan}}
-					<hr class="line-break"/>
-					{{> 01-molecules/15-loan-sections/22-field-partner-details.mustache}}
-				{{/is_direct_loan}}
+				{{#right_context}}
+					{{> 01-molecules/15-loan-sections/06-loan-details.mustache}}
+					{{#is_direct_loan}}
+						<hr class="line-break"/>
+						{{> 01-molecules/15-loan-sections/20-trustee-details.mustache}}
+					{{/is_direct_loan}}
+					{{^is_direct_loan}}
+						<hr class="line-break"/>
+						{{> 01-molecules/15-loan-sections/22-field-partner-details.mustache}}
+					{{/is_direct_loan}}
 
-				{{#has_repayment_schedule_context}}
-					<hr class="line-break"/>
-					{{> 01-molecules/15-loan-sections/24-repayment-schedule.mustache}}
-				{{/has_repayment_schedule_context}}
-
+					{{#has_repayment_schedule_context}}
+						<hr class="line-break"/>
+						{{> 01-molecules/15-loan-sections/24-repayment-schedule.mustache}}
+					{{/has_repayment_schedule_context}}
+				{{/right_context}}
 			</div>
 		</div>
 	</div>

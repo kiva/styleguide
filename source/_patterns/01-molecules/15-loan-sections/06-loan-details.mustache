@@ -1,5 +1,5 @@
 <section class="loan-details">
-    <div class="ac-title ac-container" data-kv-accordion aria-controls="ac-loan-details-body" aria-expanded="true">
+    <div class="ac-title ac-container" data-kv-accordion aria-controls="ac-loan-details-body{{#right}}-right{{/right}}" aria-expanded="true">
         <h2>
             Loan details
             <span class="ac-dropdown-icon">
@@ -9,7 +9,7 @@
             </span>
         </h2>
     </div>
-    <div class="ac-body" id="ac-loan-details-body" aria-hidden="false">
+    <div class="ac-body" id="ac-loan-details-body{{#right}}-right{{/right}}" aria-hidden="false">
         <div class="loan-term print-5 columns">
             <svg class="icon icon-recycle"><use xlink:href="#icon-recycle"></use></svg>
 			<h2><a kvtrackevent="Borrower Profile|click-loan details" href="#" id="repayment-term" class="black-underlined" data-reveal-id="repayment-term-lightbox">Loan length</a>:</h2>
