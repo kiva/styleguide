@@ -1,6 +1,6 @@
 {
   "isDualStatementLoan": false,
-  "isDirectLoan": true,
+  "is_direct_loan": true,
   "isDisbursed": true,
   "loanAmount": "$10,000.00",
   "monthlyInstallmentAmount": "$1,000.00",

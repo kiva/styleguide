@@ -26,14 +26,14 @@
 				Loan tags help lenders find loans that match certain areas of interest.
 			</p>
 
-			{{#loggedIn}}
+			{{#user_logged_in}}
 				<p>
 					<span class="tag-directions">Select the tags below to add up to 5 of your own tags for this loan.</span>
 					<span class="tag-toggler">
 						Add {{#hasTags}}more {{/hasTags}}tags
 					</span>
 				</p>
-			{{/loggedIn}}
+			{{/user_logged_in}}
 		</div>
 
 		<div class="all-tags show-for-touch">

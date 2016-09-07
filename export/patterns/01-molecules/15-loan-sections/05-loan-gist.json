@@ -4,6 +4,6 @@
   "countryName": "Pakistan",
   "city": "Lahore",
   "typeName": "Agriculture",
-  "isDirectLoan": false,
+  "is_direct_loan": false,
   "businessName": "The Tunduru Group"
 }

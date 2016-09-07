@@ -1,7 +1,7 @@
 <a id="loanComments"></a>  <!-- anchor tag allowing direct navigation to this section -->
 <section class="comments-and-updates">
 	<div class="ac-title ac-container comments-and-updates-title" data-kv-accordion aria-controls="ac-comments-and-updates-body" aria-expanded="false">
-		<h2>Comments &amp; Updates (<span class="comments-and-updates-count">{{commentsAndUpdatesCount}}</span>)</h2>
+		<h2>Comments &amp; Updates (<span class="comments-and-updates-count">{{comments_info.commentsAndUpdatesCount}}</span>)</h2>
 		<div class="ac-dropdown-icon">
 			<svg class="icon icon-large-chevron loan-tags-dropdown">
 				<use xlink:href="#icon-large-chevron"></use>
@@ -9,7 +9,7 @@
 		</div>
 	</div>
 	<div class="ac-body" id="ac-comments-and-updates-body" aria-hidden="true">
-        {{#allowCommenting}}
+        {{#comments_info.allowCommenting}}
             <form method="post" action="{{url}}" class="comment-form">
                 <fieldset>
                     <div class="field-container">
@@ -22,30 +22,30 @@
                 <button class="button setting comment-submit">Comment</button>
                 <small><a class="black-underlined" data-reveal-id="conversation-guidelines-lightbox">Kiva conversation guidelines</a></small>
             </div>
-            {{#allowSubscribing}}
-                <div class="subscribe-block" {{#isSubscribed}}style="display: none"{{/isSubscribed}}>
+            {{#comments_info.allowSubscribing}}
+                <div class="subscribe-block" {{#comments_info.isSubscribed}}style="display: none"{{/comments_info.isSubscribed}}>
                     <button class="button setting comment-subscribe">Subscribe</button>
                     <small>to be notified of replies</small>
                 </div>
-                <div class="unsubscribe-block" {{^isSubscribed}}style="display: none"{{/isSubscribed}}>
+                <div class="unsubscribe-block" {{^comments_info.isSubscribed}}style="display: none"{{/comments_info.isSubscribed}}>
                     <button class="button setting comment-unsubscribe">Unsubscribe</button>
                     <small>to not be notified of replies</small>
                 </div>
-            {{/allowSubscribing}}
-        {{/allowCommenting}}
+            {{/comments_info.allowSubscribing}}
+        {{/comments_info.allowCommenting}}
 
         <ul class="updates inline-list">
-            {{#updates}}
+            {{#comments_info.updates}}
                 <li class="update">
                     <a href="{{url}}">Update - {{title}}</a>
                     Posted by {{authorName}} from {{authorLocation}}, {{date}}
                 </li>
-            {{/updates}}
+            {{/comments_info.updates}}
         </ul>
 		<ul class="comments inline-list">
-			{{#comments}}
+			{{#comments_info.comments}}
                 {{> 01-molecules/06-components/08-loan-comment}}
-			{{/comments}}
+			{{/comments_info.comments}}
 		</ul>
 
         <div class="ac-body" id="ac-more-comments-body" aria-hidden="true">
@@ -53,19 +53,19 @@
                 Hide
             </p>
         </div>
-        {{#showSpilloverMessageForComments}}
+        {{#comments_info.showSpilloverMessageForComments}}
             <p class="ac-title black-underlined text-center show-more-comments" data-kv-accordion aria-controls="ac-more-comments-body" aria-expanded="false">
                 Show all comments
             </p>
-        {{/showSpilloverMessageForComments}}
+        {{/comments_info.showSpilloverMessageForComments}}
 	</div>
     <ul class="spillover-comments inline-list" style="display: none;">
-        {{#spilloverComments}}
+        {{#comments_info.spilloverComments}}
             {{> 01-molecules/06-components/08-loan-comment}}
-        {{/spilloverComments}}
+        {{/comments_info.spilloverComments}}
     </ul>
 
-	{{#conversationGuidelinesHelpText}}
+	{{#comments_info.conversationGuidelinesHelpText}}
 		{{> 01-molecules/10-lightbox/04-help-text-lightbox}}
-	{{/conversationGuidelinesHelpText}}
+	{{/comments_info.conversationGuidelinesHelpText}}
 </section>

@@ -10,7 +10,7 @@
             <div class="lightbox-content white repayment-schedule-lightbox">
                 <p class="featured">Repayment schedule</p>
 
-                {{#isDirectLoan}}
+                {{#is_direct_loan}}
                     {{#isDisbursed}}
                         <div class="repayment-schedule-wrapper">
                             <table class="simple-repayment-schedule" role="grid" summary="Schedule of expected and actual repayments for this loan.">
@@ -43,8 +43,8 @@
                             <p>Disbursement and repayments will be made via PayPal, a web-based payment system. Repayments made on delinquent loans will be applied toward the oldest payment due until the loan becomes current.</p>
                         </div>
                     {{/isDisbursed}}
-                {{/isDirectLoan}}
-                {{^isDirectLoan}}
+                {{/is_direct_loan}}
+                {{^is_direct_loan}}
                     {{^isDualStatementLoan}}
                         <div class="show-advanced">
                             <a href="javascript:void(0);" id="show-advanced-toggle">Show advanced</a>
@@ -174,7 +174,7 @@
                             </table>
                         {{/isDualStatementLoan}}
                     </div>
-                {{/isDirectLoan}}
+                {{/is_direct_loan}}
             </div>
         </div>
     </div>
