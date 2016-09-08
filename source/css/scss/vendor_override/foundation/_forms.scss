@@ -32,3 +32,11 @@ $placeholder-font-style: italic;
     color: $placeholder-color;
     font-style: $placeholder-font-style;
 }
+
+
+input[type="submit"].hidden-submit {
+	position: absolute;
+	left: -9999px;
+	width: 1px;
+	height: 1px;
+}
