@@ -1,23 +1,45 @@
-<form>
-	<label>Name<input type="text" name="queryString" {{#queryString}}value="{{queryString}}"{{/queryString}}>
-	</label>
+<div class="row trustee-filters">
+	<form>
+		<div class="tf-item">
+			<input type="checkbox" name="fundRaisingOnly" {{#fundRaisingOnly}}checked="checked"{{/fundRaisingOnly}}>
+			<label>Fund-Raising Only</label>
+		</div>
 
-	<label>
-		<input type="checkbox" name="fundRaisingOnly" {{#fundRaisingOnly}}checked="checked"{{/fundRaisingOnly}}>
-		only trustees with funding loans
-	</label>
+		<div class="tf-item">
+			<label>Sort</label>
+			<select name="sortBy">
+				{{#trusteeSortOptions}}
+					<option value="{{value}}" {{#selected}}selected="selected"{{/selected}}>{{label}}</option>
+				{{/trusteeSortOptions}}
+			</select>
+		</div>
 
-	<label>Trustee Type<select name="type">
-		{{#trusteeTypeOptions}}
-			<option value="{{value}}" {{#selected}}selected="selected"{{/selected}}>{{label}}</option>
-		{{/trusteeTypeOptions}}
-	</select></label>
+		<div class="tf-item">
+			<label>Location</label>
+			<select name="location">
+				{{#trusteeLocationOptions}}
+					<option value="{{value}}" {{#selected}}selected="selected"{{/selected}}>{{label}}</option>
+				{{/trusteeLocationOptions}}
+			</select>
+		</div>
 
-	<label>Location<select name="location">
-		{{#trusteeLocationOptions}}
-			<option value="{{value}}" {{#selected}}selected="selected"{{/selected}}>{{label}}</option>
-		{{/trusteeLocationOptions}}
-	</select></label>
 
-</form>
+		<div class="tf-item">
+			<label>Type</label>
+			<select name="type">
+				{{#trusteeTypeOptions}}
+					<option value="{{value}}" {{#selected}}selected="selected"{{/selected}}>{{label}}</option>
+				{{/trusteeTypeOptions}}
+			</select>
+		</div>
+
+
+		<div class="tf-item">
+			<label>Name</label>
+			<input type="text" name="queryString" {{#queryString}}value="{{queryString}}"{{/queryString}}>
+		</div>
+
+	</form>
+</div>
+
 
