@@ -1,0 +1,23 @@
+<form>
+	<label>Name<input type="text" name="queryString" {{#queryString}}value="{{queryString}}"{{/queryString}}>
+	</label>
+
+	<label>
+		<input type="checkbox" name="fundRaisingOnly" {{#fundRaisingOnly}}checked="checked"{{/fundRaisingOnly}}>
+		only trustees with funding loans
+	</label>
+
+	<label>Trustee Type<select name="type">
+		{{#trusteeTypeOptions}}
+			<option value="{{value}}" {{#selected}}selected="selected"{{/selected}}>{{label}}</option>
+		{{/trusteeTypeOptions}}
+	</select></label>
+
+	<label>Location<select name="location">
+		{{#trusteeLocationOptions}}
+			<option value="{{value}}" {{#selected}}selected="selected"{{/selected}}>{{label}}</option>
+		{{/trusteeLocationOptions}}
+	</select></label>
+
+</form>
+
