@@ -1,7 +1,35 @@
-<div class="row">
+<div class="trustee-listing-row row">
 
-	<div class="small-12 large-3 columns">picture</div>
-	<div class="small-12 large-5 columns">name/location</div>
-	<div class="small-12 large-4 columns">description</div>
+	<div class="small-12 large-2 columns image">
+		<a href="{{profileHref}}"><img alt="[Image]" width="100" height="100" src="{{imageThumb}}"></a>
+	</div>
+	<div class="small-12 large-7 columns name-location">
+		<a href="{{profileHref}}">{{title}}</a><br/>
+		<p class="small-text">
+			{{#contactRecord}}<b>{{city}}, {{state}}</b><br/>{{/contactRecord}}
+			{{! timeOnKiva - e.g. 32 month(s) }}
+			{{#timeOnKiva}}<em>{{timeOnKiva}} on Kiva</em><br/>{{/timeOnKiva}}
+			{{organizationType}}
+		</p>
+		{{! story = whyInterested truncated 300 characters}}
+		<p class="small-text">{{story}}</p>
+	</div>
+
+	<div class="small-12 large-3 columns stats">
+		{{#stats}}
+			<span class="small-text">
+				{{#repaymentRate}}
+					{{! repaymentRate should have % already appended }}
+					<span class="big-stat">{{repaymentRate}}</span>
+					repayment rate<br/>
+				{{/repaymentRate}}
+				{{#totalValue}}{{totalValue}} in {{numLoansEndorsedTotal}} loan(s)<br/>{{/totalValue}}
+				{{#numFundraisingLoans}}
+					<a href="{{fundraisingLoansHref}}">{{numFundraisingLoans}} loan(s)</a>
+					fundraising now!
+				{{/numFundraisingLoans}}
+			</span>
+		{{/stats}}
+	</div>
 
 </div>

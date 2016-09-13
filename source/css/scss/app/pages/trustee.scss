@@ -36,6 +36,7 @@
 
 }
 
+
 .trustee-filters {
 	padding: .5rem;
 	background-color: #74b446;
@@ -58,12 +59,16 @@
 			margin: 0.25rem;
 			vertical-align: middle;
 		}
-
 	}
 }
 
+.trustee-listing-row {
+	.stats {
+		margin-top: 0.25rem;
+	}
 
-
-
-
+	.big-stat {
+		font-size: 2rem;
+	}
+}
 
