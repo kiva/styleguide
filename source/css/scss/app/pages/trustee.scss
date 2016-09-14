@@ -39,7 +39,7 @@
 
 .trustee-filters {
 	padding: .5rem;
-	background-color: #74b446;
+	background-color: $kiva-green;
 	.tf-item {
 		display: inline-block;
 		white-space: nowrap;
@@ -72,15 +72,22 @@
 	}
 }
 
-.results-region {
+.trustee-results-region {
 	.result-count {
 		text-align: right;
 		color: $kiva-text-medium;
 	}
+	.trustee-listing-row {
+		border-bottom: 1px solid $kiva-stroke-gray;
+		margin-bottom: 1rem;
+		padding-bottom: 1rem;
+	}
 }
 
-.become-a-trustee {
-	margin-top: -4rem;
+@media #{$medium-up} {
+	.become-a-trustee {
+		margin-top: -4rem;
+	}
 }
 
 .trustee-listing-row {
