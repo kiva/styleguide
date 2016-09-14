@@ -1,0 +1,41 @@
+<h2><a href="#" class="black-underlined" data-reveal-id="credit-summary-table">Credit summary</a></h2>
+<div id="credit-summary-table" class="reveal-modal" data-reveal aria-hidden="true" role="dialog">
+    <div class="row">
+        <div class="columns small-12">
+            <a class="close-reveal-modal" aria-label="Close">
+                <svg class="icon icon-x">
+                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-x"></use>
+                </svg>
+            </a>
+            <div class="lightbox-content white credit-summary-lightbox">
+                <p class="featured">Credit summary</p>
+                <p>Please note, summary data may be up to one hour old.</p>
+
+                <div class="credit-summary-wrapper">
+                    <table class="credit-summary" role="grid" summary="Credit summary for the logged in lender.">
+                        <thead>
+                            <tr>
+                                <th id="creditsDescriptor" class="text-left shrink">Credits</th>
+                                <th id="amount" class="text-right shrink">Amount</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td headers="creditsDescriptor" class="text-left shrink">Deposits</td>
+                                <td headers="amount" class="text-right shrink">{{totalDeposits}}</td>
+                            </tr>
+                            <tr>
+                                <td headers="creditsDescriptor" class="text-left shrink">Direct loan refunds</td>
+                                <td headers="amount" class="text-right shrink">{{directLoanRefunds}}</td>
+                            </tr>
+                            <tr>
+                                <td headers="creditsDescriptor" class="text-left shrink">Direct loan repayments</td>
+                                <td headers="amount" class="text-right shrink">{{directLoanRepayments}}</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
