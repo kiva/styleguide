@@ -1,8 +1,6 @@
 .DS_Store
 .idea
 public/*
-export/
-core/
 source/css/styles.css
 source/css/*.css.map
 source/dep
