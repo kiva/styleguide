@@ -24,8 +24,6 @@
 			margin-bottom: .5rem;
 		}
 	}
-
-
 }
 
 .trustee-application {
@@ -37,3 +35,77 @@
 	}
 
 }
+
+
+.trustee-filters {
+	padding: .5rem;
+	background-color: $kiva-green;
+	.tf-item {
+		display: inline-block;
+		white-space: nowrap;
+		text-align: right;
+		float: left;
+		width: 100%;
+		@media #{$medium-up} {
+			width: 50%;
+		}
+		@media #{$large-up} {
+			width: (100%/3);
+		}
+		@media #{$xxlarge-up} {
+			width: auto;
+		}
+		label {
+			display: inline-block;
+			color: #fff;
+			line-height: 2rem;
+		}
+
+		input[type="text"], select {
+			display: inline-block;
+			width: 8rem;
+			height: 1.9rem;
+			line-height: 0.9rem;
+			margin: 0.25rem;
+			vertical-align: middle;
+		}
+	}
+}
+
+.trustee-results-region {
+	.result-count {
+		text-align: right;
+		color: $kiva-text-medium;
+	}
+	.trustee-listing-row {
+		border-bottom: 1px solid $kiva-stroke-gray;
+		margin-bottom: 1rem;
+		padding-bottom: 1rem;
+	}
+}
+
+@media #{$medium-up} {
+	.become-a-trustee {
+		margin-top: -4rem;
+	}
+}
+
+.trustee-listing-row {
+	.stats {
+		margin-top: 0.25rem;
+	}
+	.big-stat {
+		font-size: 2rem;
+	}
+	.image {
+		text-align: center;
+		margin-top: 2rem;
+		@media #{$medium-up} {
+			margin-top: 0;
+		}
+	}
+	img {
+		max-height: 8rem;
+	}
+}
+
