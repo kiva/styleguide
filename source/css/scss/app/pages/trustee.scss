@@ -39,7 +39,7 @@
 
 .trustee-filters {
 	padding: .5rem;
-	background-color: $kiva-green;
+	background-color: $kiva-bg-darkgray;
 	.tf-item {
 		display: inline-block;
 		white-space: nowrap;
@@ -57,7 +57,7 @@
 		}
 		label {
 			display: inline-block;
-			color: #fff;
+			color: $kiva-text-dark;
 			line-height: 2rem;
 		}
 
@@ -76,6 +76,7 @@
 	.result-count {
 		text-align: right;
 		color: $kiva-text-medium;
+		margin-top: 1rem;
 	}
 	.trustee-listing-row {
 		border-bottom: 1px solid $kiva-stroke-gray;
@@ -95,7 +96,7 @@
 		margin-top: 0.25rem;
 	}
 	.big-stat {
-		font-size: 2rem;
+		@extend .medium-statistic;
 	}
 	.image {
 		text-align: center;
@@ -104,6 +105,19 @@
 			margin-top: 0;
 		}
 	}
+	.story {
+		margin: 1rem;
+		@media #{$medium-up} {
+			margin: 0;
+		}
+	}
+	.name-location, .stats {
+		text-align: center;
+		@media #{$medium-up} {
+			text-align: left;
+		}
+	}
+
 	img {
 		max-height: 8rem;
 	}
