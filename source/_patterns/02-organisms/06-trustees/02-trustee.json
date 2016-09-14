@@ -1,7 +1,7 @@
 {
 	"id": 294,
 	"title": "Northern Virginia Family Service",
-	"imageThumb": "https:\/\/s3.amazonaws.com\/media.zip.kiva.org\/images\/4790\/thumb\/teal_full.JPG",
+	"imageSmall": "https:\/\/s3.amazonaws.com\/media.zip.kiva.org\/images\/4790\/small\/teal_full.JPG",
 	"organizationName": "Northern Virginia Family Service",
 	"organizationType": "Non-Profit",
 	"contactRecord": {
@@ -18,7 +18,7 @@
 	"stats": {
 		"totalValue": "$2,584,725",
 		"numLoansEndorsedTotal": 19,
-		"repaymentRate": "90%",
+		"prettyRepaymentRate": "90%",
 		"numFundraisingLoans": 1
 	}
 }

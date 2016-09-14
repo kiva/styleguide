@@ -42,9 +42,19 @@
 	background-color: #74b446;
 	.tf-item {
 		display: inline-block;
-		float: right;
 		white-space: nowrap;
-
+		text-align: right;
+		float: left;
+		width: 100%;
+		@media #{$medium-up} {
+			width: 50%;
+		}
+		@media #{$large-up} {
+			width: (100%/3);
+		}
+		@media #{$xxlarge-up} {
+			width: auto;
+		}
 		label {
 			display: inline-block;
 			color: #fff;
@@ -62,13 +72,33 @@
 	}
 }
 
+.results-region {
+	.result-count {
+		text-align: right;
+		color: $kiva-text-medium;
+	}
+}
+
+.become-a-trustee {
+	margin-top: -4rem;
+}
+
 .trustee-listing-row {
 	.stats {
 		margin-top: 0.25rem;
 	}
-
 	.big-stat {
 		font-size: 2rem;
+	}
+	.image {
+		text-align: center;
+		margin-top: 2rem;
+		@media #{$medium-up} {
+			margin-top: 0;
+		}
+	}
+	img {
+		max-height: 8rem;
 	}
 }
 
