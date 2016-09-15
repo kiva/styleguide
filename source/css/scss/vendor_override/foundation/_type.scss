@@ -35,6 +35,9 @@ $page-title-line-height-reduction	: rem-calc(12);
 $section-head-font-size			: rem-calc(28);
 $section-head-line-height		: rem-calc(36);
 
+$section-head-font-size-reduction	: rem-calc(6);
+$section-head-line-height-reduction	: rem-calc(6);
+
 $feature-font-size				: $section-head-font-size;
 $feature-line-height			: $section-head-line-height;
 $feature-font-size-reduction 	: rem-calc(6);
@@ -269,6 +272,11 @@ $paragraph-line-height: $body-line-height;
 	line-height: $small-statistic-line-height;
 }
 
+.small-statistic-bold {
+	@extend .small-statistic;
+	font-weight: bold;
+}
+
 .medium-statistic {
 	font-size: $medium-statistic-font-size;
 	line-height: $medium-statistic-line-height;
@@ -320,6 +328,16 @@ h1 {
 h2 {
 	font-size: $section-head-font-size;
 	line-height: $section-head-line-height;
+}
+
+h2.scalable {
+	font-size: $section-head-font-size - $section-head-font-size-reduction;
+	line-height: $section-head-line-height = $section-head-line-height-reduction;
+
+	@media #{$medium-up} {
+		font-size: $section-head-font-size;
+		line-height: $section-head-line-height;
+	}
 }
 
 .top-nav {
