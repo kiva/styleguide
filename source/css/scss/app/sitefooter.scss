@@ -16,6 +16,11 @@ $footer-top-bottom-padding: rem-calc(40);
 		color: $light-green;
 		font-size: $small-font-size;
 		line-height: $small-line-height;
+
+		&:visited
+		, &:active {
+			color: $light-green;
+		}
 	}
 
 	h1 {
