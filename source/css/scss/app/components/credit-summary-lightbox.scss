@@ -1,0 +1,27 @@
+.credit-summary-lightbox {
+	.credit-summary-wrapper {
+		white-space: nowrap;
+		overflow-x: scroll;
+		background-color: $white;
+		width: 35rem;
+		margin: auto;
+
+		.credit-summary-credits, .credit-summary-debits {
+			border-style: none;
+		}
+
+		.totalCredit, .totalDebit, .creditSummaryTotal {
+			font-size: 1.5555555556rem;
+			background-color: $white;
+			padding-bottom: 2rem;
+		}
+
+		.totalCredit {
+			color: $kiva-green;
+		}
+
+		.totalDebit {
+			color: $kiva-accent-red;
+		}
+	}
+}
