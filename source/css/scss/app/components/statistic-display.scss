@@ -1,0 +1,15 @@
+.statistic-display {
+	text-align: center;
+
+	@media #{$large-up}{
+		text-align: left;
+
+		.statistic-link {
+			margin-left: 8rem;
+			position: absolute;
+			top: 1.5rem;
+			margin-top: 0;
+			transform: translate(0, -50%);
+		}
+	}
+}
