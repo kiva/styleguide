@@ -1,19 +1,25 @@
-<div class="row">
-	<div class="columns large-12">
-		<p class="page-title black">Lender name</p>
-	</div>
-</div>
+<div class="portfolio-main">
+    <div class="row">
+        <div class="columns large-12">
+            <div class="impact lender-name">Jane Simons</div>
+        </div>
+    </div>
 
-<div class="row bottom-rule">
-	<div class="columns small-6 large-4">
-		loans amount
-	</div>
+    <div class="row bottom-rule">
+        <div class="columns small-6 large-4">
+            {{#outstandingLoansStat}}
+                {{> 01-molecules/06-components/10-statistic-display}}
+            {{/outstandingLoansStat}}
+        </div>
 
-	<div class="columns small-6 large-4">
-		credit amount
-	</div>
+        <div class="columns small-6 large-4">
+            {{#availableKivaCreditStat}}
+                {{> 01-molecules/06-components/10-statistic-display}}
+            {{/availableKivaCreditStat}}
+        </div>
 
-	<div class="columns small-12 large-4">
-		relend button
-	</div>
+        <div class="columns small-11 large-4">
+            <a href="{{findALoanUrl}}" class="button findALoanButton">{{findALoanText}}</a>
+        </div>
+    </div>
 </div>

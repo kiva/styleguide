@@ -5,5 +5,17 @@
 }
 
 .portfolio-main {
+	.lender-name {
+		margin-bottom: 1rem;
+	}
 
+	.findALoanButton {
+		width: 90%;
+		margin-top: 2rem;
+
+		@media #{$large-up} {
+			width: 100%;
+			margin-top: 0;
+		}
+	}
 }
