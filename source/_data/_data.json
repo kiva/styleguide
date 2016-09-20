@@ -4957,5 +4957,20 @@
 			]
 		}
 	],
-	"keywords_filter": true
+	"keywords_filter": true,
+	"total_deposits": "4,500",
+	"total_lent": "6,600",
+	"total-deposits-help-text": {
+		"lightboxTriggerLinkText": "Total deposits",
+		"dataRevealId": "total-deposits-lightbox",
+		"descriptionTitle": "Total Deposits Explanation",
+		"descriptionText": "The text for total deposits explanation"
+	},
+	"total-lent-help-text": {
+		"lightboxTriggerLinkText": "Total amount lent",
+		"dataRevealId": "total-lent-lightbox",
+		"descriptionTitle": "Total Amount Lent Explanation",
+		"descriptionText": "The text for total amount lent explanation"
+	}
+
 }

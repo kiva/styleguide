@@ -18,4 +18,69 @@
 			margin-top: 0;
 		}
 	}
+
+}
+
+.deposited-lent-widget {
+	margin: 2rem auto;
+	width: 225px;
+	height: 225px;
+	position: relative;
+	text-align: center;
+
+	@media #{$large-up} {
+		width: 180px;
+		height: 200px;
+	}
+
+	.icon.icon-recycle {
+		position: absolute;
+		top: 0;
+		left: 0;
+		height: 225px;
+		width: 225px;
+		fill: transparent;
+		opacity: 0.25;
+
+		@media #{$large-up} {
+			top: 10px;
+			height: 180px;
+			width: 180px;
+		}
+	}
+
+	.statistic {
+		line-height: 1rem;
+		padding: 0;
+		margin: 0;
+	}
+
+	.small-statistic-legend {
+		font-size: $small-font-size;
+		font-weight: $font-weight-bold;
+		margin: 0;
+		padding: 0;
+	}
+
+	.deposited-amount, .lent-amount {
+		position: absolute;
+		left: 0;
+		width: 100%;
+		text-align: center;
+	}
+	.deposited-amount {
+		top: 0;
+
+		.small-statistic-legend {
+			margin-bottom: rem-calc(8);
+		}
+	}
+
+	.lent-amount {
+		bottom: 0;
+
+		.small-statistic-legend {
+			margin-top: rem-calc(8);
+		}
+	}
 }
