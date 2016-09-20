@@ -1,15 +1,15 @@
 <div class="portfolio-main">
     <div class="row">
         <div class="columns large-12">
-            <div class="impact lender-name">Jane Simons</div>
+            <div class="impact lender-name">{{lenderName}}</div>
         </div>
     </div>
 
     <div class="row bottom-rule">
         <div class="columns small-6 large-4">
-            {{#outstandingLoansStat}}
+            {{#outstandingBalanceStat}}
                 {{> 01-molecules/06-components/10-statistic-display}}
-            {{/outstandingLoansStat}}
+            {{/outstandingBalanceStat}}
         </div>
 
         <div class="columns small-6 large-4">
