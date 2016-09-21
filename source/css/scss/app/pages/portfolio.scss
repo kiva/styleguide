@@ -84,3 +84,22 @@
 		}
 	}
 }
+
+.attribution-title {
+	margin-bottom: 0.75rem;
+}
+
+.team-attribution-display {
+	.attribution-data, .team-image {
+		float: left;
+	}
+
+	.team-image {
+		clear: left;
+	}
+
+	.attribution-data {
+		margin-left: 0.5rem;
+		margin-bottom: 1rem;
+	}
+}
