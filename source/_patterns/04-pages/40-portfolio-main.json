@@ -74,6 +74,11 @@
 		"linkText": "Details",
 		"linkUrl": "http://www.google.com"
 	},
+	"freeCreditStat": {
+		"statisticValue": "$25.00",
+		"statisticLabel": "Free credit",
+		"linkText": ""
+	},
 	"findALoanUrl": "http://www.google.com",
 	"findALoanText": "Relend credit"
 }

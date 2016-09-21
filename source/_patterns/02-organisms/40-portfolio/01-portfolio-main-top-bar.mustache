@@ -6,19 +6,25 @@
     </div>
 
     <div class="row bottom-rule">
-        <div class="columns small-6 large-4">
+        <div class="columns small-6 large-3">
             {{#outstandingBalanceStat}}
                 {{> 01-molecules/06-components/10-statistic-display}}
             {{/outstandingBalanceStat}}
         </div>
 
-        <div class="columns small-6 large-4">
+        <div class="columns small-6 large-3">
             {{#availableKivaCreditStat}}
                 {{> 01-molecules/06-components/10-statistic-display}}
             {{/availableKivaCreditStat}}
         </div>
 
-        <div class="columns small-11 large-4">
+        <div class="columns small-12 large-3 free-credit-stat">
+            {{#freeCreditStat}}
+                {{> 01-molecules/06-components/10-statistic-display}}
+            {{/freeCreditStat}}
+        </div>
+
+        <div class="columns small-11 large-3">
             <a href="{{findALoanUrl}}" class="button findALoanButton">{{findALoanText}}</a>
         </div>
     </div>
