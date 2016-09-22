@@ -103,12 +103,20 @@
 			"image": {
 				"sizes": [
 					{
-						"url": "http://placehold.it/160x160.jpg",
+						"url": "http://placehold.it/215x215.jpg",
 						"size": "default"
 					},
 					{
-						"url": "http://placehold.it/320x320.jpg",
+						"url": "http://placehold.it/430x430.jpg",
 						"size": "retina"
+					},
+					{
+						"url": "http://placehold.it/164x164.jpg",
+						"size": "large"
+					},
+					{
+						"url": "http://placehold.it/328x328.jpg",
+						"size": "large-retina"
 					}
 				]
 			},
@@ -127,17 +135,25 @@
 			"image": {
 				"sizes": [
 					{
-						"url": "http://placehold.it/160x160.jpg",
+						"url": "http://placehold.it/215x215.jpg",
 						"size": "default"
 					},
 					{
-						"url": "http://placehold.it/320x320.jpg",
+						"url": "http://placehold.it/430x430.jpg",
 						"size": "retina"
+					},
+					{
+						"url": "http://placehold.it/164x164.jpg",
+						"size": "large"
+					},
+					{
+						"url": "http://placehold.it/328x328.jpg",
+						"size": "large-retina"
 					}
 				]
 			},
 			"dedication": {
-				"message": "Dedicated to Some Person",
+				"recipient": "Some Person with a long name",
 				"url": "#"
 			},
 			"progress": {
@@ -155,12 +171,20 @@
 			"image": {
 				"sizes": [
 					{
-						"url": "http://placehold.it/160x160.jpg",
+						"url": "http://placehold.it/215x215.jpg",
 						"size": "default"
 					},
 					{
-						"url": "http://placehold.it/320x320.jpg",
+						"url": "http://placehold.it/430x430.jpg",
 						"size": "retina"
+					},
+					{
+						"url": "http://placehold.it/164x164.jpg",
+						"size": "large"
+					},
+					{
+						"url": "http://placehold.it/328x328.jpg",
+						"size": "large-retina"
 					}
 				]
 			},
@@ -180,12 +204,20 @@
 			"image": {
 				"sizes": [
 					{
-						"url": "http://placehold.it/160x160.jpg",
+						"url": "http://placehold.it/215x215.jpg",
 						"size": "default"
 					},
 					{
-						"url": "http://placehold.it/320x320.jpg",
+						"url": "http://placehold.it/430x430.jpg",
 						"size": "retina"
+					},
+					{
+						"url": "http://placehold.it/164x164.jpg",
+						"size": "large"
+					},
+					{
+						"url": "http://placehold.it/328x328.jpg",
+						"size": "large-retina"
 					}
 				]
 			},
@@ -205,12 +237,20 @@
 			"image": {
 				"sizes": [
 					{
-						"url": "http://placehold.it/160x160.jpg",
+						"url": "http://placehold.it/215x215.jpg",
 						"size": "default"
 					},
 					{
-						"url": "http://placehold.it/320x320.jpg",
+						"url": "http://placehold.it/430x430.jpg",
 						"size": "retina"
+					},
+					{
+						"url": "http://placehold.it/164x164.jpg",
+						"size": "large"
+					},
+					{
+						"url": "http://placehold.it/328x328.jpg",
+						"size": "large-retina"
 					}
 				]
 			},
@@ -230,12 +270,20 @@
 			"image": {
 				"sizes": [
 					{
-						"url": "http://placehold.it/160x160.jpg",
+						"url": "http://placehold.it/215x215.jpg",
 						"size": "default"
 					},
 					{
-						"url": "http://placehold.it/320x320.jpg",
+						"url": "http://placehold.it/430x430.jpg",
 						"size": "retina"
+					},
+					{
+						"url": "http://placehold.it/164x164.jpg",
+						"size": "large"
+					},
+					{
+						"url": "http://placehold.it/328x328.jpg",
+						"size": "large-retina"
 					}
 				]
 			},

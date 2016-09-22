@@ -44,6 +44,26 @@
 			width: $icon-dim;
 			height: $icon-dim;
 		}
+
+		span {
+			display: block;
+			overflow: hidden;
+			text-overflow: ellipsis;
+			white-space: nowrap;
+		}
+
+		@media #{$large-only} {
+			padding-left: $icon-spacing;
+
+			.icon {
+				display: none;
+			}
+		}
+	}
+
+	.spacer {
+		width: 100%;
+		height: $meter-height;
 	}
 
 	.status, .name, .activity, .country {
@@ -52,6 +72,7 @@
 		display: block;
 		width: 100%;
 		margin: 0;
+		font-weight: 300;
 		overflow: hidden;
 		text-overflow: ellipsis;
 		white-space: nowrap;
@@ -62,6 +83,7 @@
 	}
 
 	.country span {
+		vertical-align: text-top;
 		margin-right: 0.25rem;
 	}
 }
