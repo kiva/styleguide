@@ -1,0 +1,22 @@
+{
+  "teams": [
+    {
+      "photoUrl" : "../../images/borrower1.jpg",
+      "teamName": "Friends of Bob Harris",
+      "attributionAmount": "$100",
+      "teamProfileUrl": "http://www.google.com"
+    },
+    {
+      "photoUrl" : "../../images/borrower1.jpg",
+      "teamName": "In memory of Paul Lambert",
+      "attributionAmount": "$75",
+      "teamProfileUrl": "http://www.google.com"
+    },
+    {
+      "photoUrl" : "../../images/borrower1.jpg",
+      "teamName": "Kiva Jews",
+      "attributionAmount": "$75",
+      "teamProfileUrl": "http://www.google.com"
+    }
+  ]
+}

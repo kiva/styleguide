@@ -61,5 +61,39 @@
 		{
 			"sub-title": "Bonus history"
 		}
+	],
+	"lenderName" : "Jane Simons",
+	"outstandingBalanceStat": {
+		"statisticValue": "$120.23",
+		"statisticLabel": "Outstanding loans",
+		"linkText": ""
+	},
+	"availableKivaCreditStat": {
+		"statisticValue": "$26.75",
+		"statisticLabel": "Available Kiva credit",
+		"linkText": "Details",
+		"linkUrl": "http://www.google.com"
+	},
+	"findALoanUrl": "http://www.google.com",
+	"findALoanText": "Relend credit",
+	"teams": [
+		{
+			"photoUrl" : "../../images/borrower1.jpg",
+			"teamName": "Friends of Bob Harris",
+			"attributionAmount": "$100",
+			"teamProfileUrl": "http://www.google.com"
+		},
+		{
+			"photoUrl" : "../../images/borrower1.jpg",
+			"teamName": "In memory of Paul Lambert",
+			"attributionAmount": "$75",
+			"teamProfileUrl": "http://www.google.com"
+		},
+		{
+			"photoUrl" : "../../images/borrower1.jpg",
+			"teamName": "Kiva Jews",
+			"attributionAmount": "$75",
+			"teamProfileUrl": "http://www.google.com"
+		}
 	]
 }
