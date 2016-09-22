@@ -1,3 +1,11 @@
-<h2 class="scalable">Recent loans</h2>
+<div class="recent-loans">
+	<h2 class="scalable">Recent loans</h2>
 
-<div>grid of portfolio-size loan cards</div>
+	<ul class="loan-grid small-block-grid-2 large-block-grid-4">
+		{{#loans}}
+			<li>
+				{{> 01-molecules/12-loancards/01-mini-loan-card }}
+			</li>
+		{{/loans}}
+	</ul>
+</div>
