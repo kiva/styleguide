@@ -2,6 +2,7 @@
 	.bottom-rule {
 		border-bottom: 1px solid $kiva-stroke-gray;
 		margin-bottom: 1rem;
+		padding-bottom: 1rem;
 	}
 }
 
@@ -13,10 +14,12 @@
 	.findALoanButton {
 		width: 90%;
 		margin-top: 2rem;
+		margin-left: 1.3333rem;
 
 		@media #{$large-up} {
 			width: 100%;
 			margin-top: 0;
+			margin-left: 0;
 		}
 	}
 
@@ -26,6 +29,10 @@
 
 	.statistics-bar .row {
 		padding-bottom: 2rem;
+	}
+
+	.extra-stat-row {
+		margin-top: 1rem;
 	}
 }
 

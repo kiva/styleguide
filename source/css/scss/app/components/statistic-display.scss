@@ -12,24 +12,6 @@
 
 	@media #{$large-up}{
 		text-align: left;
-		
-		.statistic-link {
-			margin-left: 7rem;
-			position: absolute;
-			top: 1rem;
-			margin-top: 0;
-			transform: translate(0, -50%);
-		}
-	}
-}
-
-.free-credit-stat {
-	margin-top: 1rem;
-
-	@media #{$large-up}{
-		margin-top: 0;
-		margin-left: 1rem;
-		margin-right: -1rem;
 
 		.statistic-link-large
 		, .statistic-additional-text-large{
