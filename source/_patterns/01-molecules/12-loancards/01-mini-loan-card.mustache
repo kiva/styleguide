@@ -15,10 +15,10 @@
 		{{#progress}}
 			{{> 01-molecules/08-meters/fundraising-meter }}
 		{{/progress}}
+		{{^progress}}
+			<div class="spacer"></div>
+		{{/progress}}
 	{{/dedication}}
-	{{^progress}}
-		<div class="spacer"></div>
-	{{/progress}}
 	<div class="status">{{status}}</div>
 	<a class="name">{{name}}</a>
 	<div class="activity">{{activity}}</div>
