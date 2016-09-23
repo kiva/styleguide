@@ -1,3 +1,7 @@
+@import '../../settings';
+@import '../../palette';
+@import '../../vendor_override/foundation/type';
+
 .portfolio {
 	.bottom-rule {
 		border-bottom: 1px solid $kiva-stroke-gray;
@@ -11,7 +15,37 @@
 	.statistics-bar .row {
 		padding-bottom: 2rem;
 	}
+}
 
+.recent-loans {
+	h2 a {
+		font-size: $body-font-size;
+		margin-left: 0.75rem;
+	}
+
+	.icon-toggle {
+		input:checked + label {
+			.icon {
+				fill: $white;
+			}
+		}
+
+		.icon-map {
+			width: 60%;
+		}
+	}
+
+	.map-pane {
+		position: relative;
+		overflow: hidden;
+		height: rem-calc(500);
+
+		.geo-chart {
+			position: absolute;
+			left: 0;
+			bottom: 0;
+		}
+	}
 }
 
 .deposited-lent-widget {
