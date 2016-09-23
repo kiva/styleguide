@@ -93,6 +93,7 @@ button, a.button, .button {
 
 button.secondary, .button.secondary {
 	border-color: $kiva-text-dark;
+	border-width: 1px;
 
 	&:visited {
 		color: $kiva-text-dark;

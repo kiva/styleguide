@@ -19,6 +19,14 @@
 		}
 	}
 
+	.statistics-bar {
+		padding-top: 2rem;
+	}
+
+	.statistics-bar .row {
+		padding-bottom: 2rem;
+	}
+
 }
 
 .deposited-lent-widget {
@@ -90,16 +98,14 @@
 }
 
 .team-attribution-display {
-	.attribution-data, .team-image {
+	display: block;
+
+	.team-image {
 		float: left;
 	}
 
-	.team-image {
-		clear: left;
-	}
-
 	.attribution-data {
-		margin-left: 0.5rem;
+		margin-left: 4.5rem;
 		margin-bottom: 1rem;
 	}
 }

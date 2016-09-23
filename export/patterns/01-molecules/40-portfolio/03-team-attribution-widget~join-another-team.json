@@ -11,14 +11,8 @@
       "teamName": "In memory of Paul Lambert",
       "attributionAmount": "$75",
       "teamProfileUrl": "http://www.google.com"
-    },
-    {
-      "photoUrl" : "../../images/borrower1.jpg",
-      "teamName": "Kiva Jews",
-      "attributionAmount": "$75",
-      "teamProfileUrl": "http://www.google.com"
     }
   ],
   "joinTeamUrl": "https://www.kiva.org/teams",
-  "showJoinAnotherTeamButton": false
+  "showJoinAnotherTeamButton": true
 }

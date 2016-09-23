@@ -4971,6 +4971,36 @@
 		"dataRevealId": "total-lent-lightbox",
 		"descriptionTitle": "Total Amount Lent Explanation",
 		"descriptionText": "The text for total amount lent explanation"
+	},
+	"statisticValue": "$0.46",
+	"statisticLabel": "Avg donation per $25 lent",
+	"statisticLinkText": "Details >>",
+	"statisticLinkUrl": "http://www.google.com",
+	"statisticAdditionalText": "99%",
+	"statisticIconName": "icon-line-graph",
+	"loans-statistic": {
+		"statisticValue": "163",
+		"statisticLabel": "Loans made",
+		"statisticLinkUrl": "http://www.google.com",
+		"statisticAdditionalText": "99%",
+		"statisticIconName": "icon-line-graph"
+	},
+	"countries-statistic": {
+		"statisticValue": "10 of 84",
+		"statisticLabel": "Countries you've supported",
+		"statisticLinkText": "Details",
+		"statisticLinkUrl": "http://www.google.com"
+	},
+	"donations-statistic": {
+		"statisticValue": "$0.46",
+		"statisticLabel": "Avg donation per $25 lent",
+		"statisticLinkText": "Details",
+		"statisticLinkUrl": "http://www.google.com"
+	},
+	"invitations-statistic": {
+		"statisticValue": "$111",
+		"statisticLabel": "Loans by your invitees",
+		"statisticLinkText": "Invite a friend",
+		"statisticLinkUrl": "http://www.google.com"
 	}
-
 }

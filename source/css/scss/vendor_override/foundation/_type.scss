@@ -296,6 +296,17 @@ $paragraph-line-height: $body-line-height;
 	}
 }
 
+.statistic-label {
+	font-size: $small-font-size;
+	line-height: $small-font-size;
+	font-weight: bold;
+
+	@media #{$large-up} {
+		font-size: $body-font-size;
+		line-height: $body-font-size;
+	}
+}
+
 .huge-statistic {
 	font-size: $huge-statistic-font-size - $huge-statistic-font-small-reduction;
 	line-height: $huge-statistic-line-height - $huge-statistic-font-small-reduction;
