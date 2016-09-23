@@ -83,12 +83,10 @@
 }
 
 .team-attribution-display {
-	.attribution-data, .team-image {
-		float: left;
-	}
+	display: block;
 
 	.team-image {
-		clear: left;
+		float: left;
 	}
 
 	.attribution-data {
