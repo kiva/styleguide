@@ -16,7 +16,7 @@
 		.statistic-link-large
 		, .statistic-additional-text-large{
 			display: inline-block;
-			margin-left: 10px;
+			margin-left: rem-calc(10);
 			transform: translate(0, -30%);
 		}
 	}
