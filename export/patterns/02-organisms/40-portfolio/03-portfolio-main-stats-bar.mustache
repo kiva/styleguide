@@ -1,19 +1,29 @@
-<div class="row bottom-rule">
-	<div class="columns large-6">
-		loans stat
+<div class="statistics-bar bottom-rule">
+	<div class="row">
+		<div class="columns small-6">
+			{{#loans-statistic}}
+				{{> 01-molecules/06-components/11-statistic-display-with-icon-and-text}}
+			{{/loans-statistic}}
+		</div>
+
+		<div class="columns small-6">
+			{{#countries-statistic}}
+				{{> 01-molecules/06-components/10-statistic-display}}
+			{{/countries-statistic}}
+		</div>
 	</div>
 
-	<div class="columns large-6">
-		countries stat
-	</div>
-</div>
+	<div class="row">
+		<div class="columns small-6">
+			{{#donations-statistic}}
+				{{> 01-molecules/06-components/10-statistic-display}}
+			{{/donations-statistic}}
+		</div>
 
-<div class="row">
-	<div class="columns large-6">
-		donations stat
-	</div>
-
-	<div class="columns large-6">
-		invitees stat
+		<div class="columns small-6">
+			{{#invitations-statistic}}
+				{{> 01-molecules/06-components/10-statistic-display}}
+			{{/invitations-statistic}}
+		</div>
 	</div>
 </div>

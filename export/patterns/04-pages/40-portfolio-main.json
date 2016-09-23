@@ -95,5 +95,203 @@
 			"attributionAmount": "$75",
 			"teamProfileUrl": "http://www.google.com"
 		}
+	],
+	"loans": [
+		{
+			"activity": "Farming",
+			"status": "Fundraising",
+			"image": {
+				"sizes": [
+					{
+						"url": "http://placehold.it/215x215.jpg",
+						"size": "default"
+					},
+					{
+						"url": "http://placehold.it/430x430.jpg",
+						"size": "retina"
+					},
+					{
+						"url": "http://placehold.it/164x164.jpg",
+						"size": "large"
+					},
+					{
+						"url": "http://placehold.it/328x328.jpg",
+						"size": "large-retina"
+					}
+				]
+			},
+			"progress": {
+				"percent": 68,
+				"message": "68% funded"
+			},
+			"country": {
+				"name": "Honduras",
+				"iso_code": "hn"
+			}
+		},
+		{
+			"activity": "Education",
+			"status": "Paying back",
+			"image": {
+				"sizes": [
+					{
+						"url": "http://placehold.it/215x215.jpg",
+						"size": "default"
+					},
+					{
+						"url": "http://placehold.it/430x430.jpg",
+						"size": "retina"
+					},
+					{
+						"url": "http://placehold.it/164x164.jpg",
+						"size": "large"
+					},
+					{
+						"url": "http://placehold.it/328x328.jpg",
+						"size": "large-retina"
+					}
+				]
+			},
+			"dedication": {
+				"recipient": "Some Person with a long name",
+				"url": "#"
+			},
+			"progress": {
+				"percent": 80,
+				"message": "80% repaid"
+			},
+			"country": {
+				"name": "Bosnia and Herzegovina",
+				"iso_code": "ba"
+			}
+		},
+		{
+			"activity": "Construction",
+			"status": "Paying back",
+			"image": {
+				"sizes": [
+					{
+						"url": "http://placehold.it/215x215.jpg",
+						"size": "default"
+					},
+					{
+						"url": "http://placehold.it/430x430.jpg",
+						"size": "retina"
+					},
+					{
+						"url": "http://placehold.it/164x164.jpg",
+						"size": "large"
+					},
+					{
+						"url": "http://placehold.it/328x328.jpg",
+						"size": "large-retina"
+					}
+				]
+			},
+			"progress": {
+				"percent": 0,
+				"message": "0% repaid",
+				"repaying": true
+			},
+			"country": {
+				"name": "South Africa",
+				"iso_code": "za"
+			}
+		},
+		{
+			"activity": "Drinking water",
+			"status": "Paying back delinquent",
+			"image": {
+				"sizes": [
+					{
+						"url": "http://placehold.it/215x215.jpg",
+						"size": "default"
+					},
+					{
+						"url": "http://placehold.it/430x430.jpg",
+						"size": "retina"
+					},
+					{
+						"url": "http://placehold.it/164x164.jpg",
+						"size": "large"
+					},
+					{
+						"url": "http://placehold.it/328x328.jpg",
+						"size": "large-retina"
+					}
+				]
+			},
+			"progress": {
+				"percent": 20,
+				"message": "20% repaid",
+				"repaying": true
+			},
+			"country": {
+				"name": "American Samoa",
+				"iso_code": "as"
+			}
+		},
+		{
+			"activity": "Dairy",
+			"status": "Repaid",
+			"image": {
+				"sizes": [
+					{
+						"url": "http://placehold.it/215x215.jpg",
+						"size": "default"
+					},
+					{
+						"url": "http://placehold.it/430x430.jpg",
+						"size": "retina"
+					},
+					{
+						"url": "http://placehold.it/164x164.jpg",
+						"size": "large"
+					},
+					{
+						"url": "http://placehold.it/328x328.jpg",
+						"size": "large-retina"
+					}
+				]
+			},
+			"progress": {
+				"percent": 100,
+				"message": "100% repaid",
+				"repaying": true
+			},
+			"country": {
+				"name": "Burundi",
+				"iso_code": "bi"
+			}
+		},
+		{
+			"activity": "Farming",
+			"status": "Expired",
+			"image": {
+				"sizes": [
+					{
+						"url": "http://placehold.it/215x215.jpg",
+						"size": "default"
+					},
+					{
+						"url": "http://placehold.it/430x430.jpg",
+						"size": "retina"
+					},
+					{
+						"url": "http://placehold.it/164x164.jpg",
+						"size": "large"
+					},
+					{
+						"url": "http://placehold.it/328x328.jpg",
+						"size": "large-retina"
+					}
+				]
+			},
+			"progress": false,
+			"country": {
+				"name": "Argentina",
+				"iso_code": "ar"
+			}
+		}
 	]
 }
