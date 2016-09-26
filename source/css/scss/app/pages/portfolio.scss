@@ -1,0 +1,131 @@
+.portfolio {
+	.bottom-rule {
+		border-bottom: 1px solid $kiva-stroke-gray;
+		margin-bottom: 1rem;
+		padding-bottom: 1rem;
+	}
+}
+
+.portfolio-main {
+	.lender-name {
+		margin-bottom: 1rem;
+	}
+
+	.findALoanButton {
+		width: 90%;
+		margin-top: 2rem;
+		margin-left: 1.3333rem;
+
+		@media #{$large-up} {
+			width: 100%;
+			margin-top: 0;
+			margin-left: 0;
+		}
+	}
+
+	.statistics-bar {
+		padding-top: 2rem;
+	}
+
+	.statistics-bar .row {
+		padding-bottom: 2rem;
+	}
+
+	.extra-stat-row {
+		margin-top: 1rem;
+	}
+}
+
+.deposited-lent-widget {
+	margin: 2rem auto;
+	width: 225px;
+	height: 225px;
+	position: relative;
+	text-align: center;
+
+	@media #{$large-up} {
+		width: 180px;
+		height: 200px;
+	}
+
+	.icon.icon-recycle {
+		position: absolute;
+		top: 0;
+		left: 0;
+		height: 225px;
+		width: 225px;
+		fill: transparent;
+		opacity: 0.25;
+
+		@media #{$large-up} {
+			top: 10px;
+			height: 180px;
+			width: 180px;
+		}
+	}
+
+	.statistic {
+		line-height: 1rem;
+		padding: 0;
+		margin: 0;
+	}
+
+	.small-statistic-legend {
+		font-size: $small-font-size;
+		font-weight: $font-weight-bold;
+		margin: 0;
+		padding: 0;
+	}
+
+	.deposited-amount, .lent-amount {
+		position: absolute;
+		left: 0;
+		width: 100%;
+		text-align: center;
+	}
+	.deposited-amount {
+		top: 0;
+
+		.small-statistic-legend {
+			margin-bottom: rem-calc(8);
+		}
+	}
+
+	.lent-amount {
+		bottom: 0;
+
+		.small-statistic-legend {
+			margin-top: rem-calc(8);
+		}
+	}
+}
+
+.teams-title, .teams-subtitle {
+	text-align: center;
+
+	@media #{$large-up} {
+		text-align: left;
+	}
+}
+
+.teams-subtitle {
+	margin-bottom: 0.75rem;
+}
+
+.team-attribution-display {
+	display: block;
+
+	.team-image {
+		float: left;
+		margin-left: 0;
+	}
+
+	.attribution-data {
+		margin-left: 2.5rem;
+		margin-bottom: 1rem;
+
+		@media #{$large-up} {
+			margin-left: 3.5rem;
+		}
+	}
+}

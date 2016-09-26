@@ -85,6 +85,7 @@
 @import 'app/filters';
 @import 'app/filters-touch';
 @import 'app/loancards';
+@import 'app/mini-loan-cards';
 @import 'app/paging';
 @import 'app/heading-with-subheaders';
 
@@ -104,6 +105,7 @@
 @import 'app/pages/terms';
 @import 'app/pages/privacy';
 @import 'app/pages/trustee';
+@import 'app/pages/portfolio';
 
 @import 'app/components/animated-accordion';
 @import 'app/components/arrow-steps';
@@ -121,5 +123,7 @@
 @import 'app/components/social-share';
 @import 'app/components/text-on-background-image';
 @import 'app/components/view-buttons';
+@import 'app/components/statistic-display';
+
 
 @import 'app/print';

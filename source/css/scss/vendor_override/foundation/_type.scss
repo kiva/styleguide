@@ -35,6 +35,9 @@ $page-title-line-height-reduction	: rem-calc(12);
 $section-head-font-size			: rem-calc(28);
 $section-head-line-height		: rem-calc(36);
 
+$section-head-font-size-reduction	: rem-calc(6);
+$section-head-line-height-reduction	: rem-calc(6);
+
 $feature-font-size				: $section-head-font-size;
 $feature-line-height			: $section-head-line-height;
 $feature-font-size-reduction 	: rem-calc(6);
@@ -73,8 +76,10 @@ $huge-headline-line-height-reduction	: rem-calc(28);
 $small-statistic-font-size: rem-calc(28);
 $small-statistic-line-height: rem-calc(28);
 
-$statistic-font-size			: rem-calc(48);
-$statistic-line-height			: rem-calc(56);
+$statistic-font-size			: rem-calc(36);
+$statistic-line-height			: rem-calc(36);
+$statistic-font-size-reduction: rem-calc(8);
+$statistic-line-height-reduction: rem-calc(8);
 
 $medium-statistic-font-size: rem-calc(36);
 $medium-statistic-line-height: rem-calc(36);
@@ -269,14 +274,37 @@ $paragraph-line-height: $body-line-height;
 	line-height: $small-statistic-line-height;
 }
 
+.small-statistic-bold {
+	@extend .small-statistic;
+	font-weight: bold;
+}
+
 .medium-statistic {
 	font-size: $medium-statistic-font-size;
 	line-height: $medium-statistic-line-height;
 }
 
 .statistic {
-	font-size: $statistic-font-size;
-	line-height: $statistic-line-height;
+	@extend .kiva-green;
+	font-size: $statistic-font-size - $statistic-font-size-reduction;
+	line-height: $statistic-line-height - $statistic-line-height-reduction;
+	font-weight: bold;
+
+	@media #{$large-up} {
+		font-size: $statistic-font-size;
+		line-height: $statistic-line-height;
+	}
+}
+
+.statistic-label {
+	font-size: $small-font-size;
+	line-height: $small-font-size;
+	font-weight: bold;
+
+	@media #{$large-up} {
+		font-size: $body-font-size;
+		line-height: $body-font-size;
+	}
 }
 
 .huge-statistic {
@@ -320,6 +348,16 @@ h1 {
 h2 {
 	font-size: $section-head-font-size;
 	line-height: $section-head-line-height;
+}
+
+h2.scalable {
+	font-size: $section-head-font-size - $section-head-font-size-reduction;
+	line-height: $section-head-line-height = $section-head-line-height-reduction;
+
+	@media #{$medium-up} {
+		font-size: $section-head-font-size;
+		line-height: $section-head-line-height;
+	}
 }
 
 .top-nav {

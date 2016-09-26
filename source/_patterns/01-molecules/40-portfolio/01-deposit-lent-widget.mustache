@@ -1,0 +1,21 @@
+<div class="deposited-lent-widget">
+	<svg class="icon icon-recycle">
+		<use xlink:href="#icon-recycle"/>
+	</svg>
+	<div class="deposited-amount">
+		<div class="small-statistic-legend">
+			{{#total-deposits-help-text}}
+				{{> 01-molecules/10-lightbox/04-help-text-lightbox}}
+			{{/total-deposits-help-text}}
+		</div>
+		<div class="statistic">${{total_deposits}}</div>
+	</div>
+	<div class="lent-amount">
+		<div class="statistic">${{total_lent}}</div>
+		<div class="small-statistic-legend">
+			{{#total-lent-help-text}}
+				{{> 01-molecules/10-lightbox/04-help-text-lightbox}}
+			{{/total-lent-help-text}}
+		</div>
+	</div>
+</div>

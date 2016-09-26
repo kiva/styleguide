@@ -1,3 +1,4 @@
-<div class="fundraising-meter progress">
-    <span class="meter"></span>
+<div class="fundraising-meter progress {{#repaying}}repaying{{/repaying}}">
+	<span class="meter" style="width:{{percent}}%;"></span>
+	<span class="caption">{{message}}</span>
 </div>

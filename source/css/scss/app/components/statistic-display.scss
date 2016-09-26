@@ -1,0 +1,46 @@
+@import '../../settings';
+
+.statistic-display {
+	text-align: center;
+
+	.statistic-link-large
+	, .statistic-additional-text-large {
+		// standard Foundation visibility class doesn't work
+		// here due to inheritance issue with display: value
+		display: none;
+	}
+
+	@media #{$large-up}{
+		text-align: left;
+
+		.statistic-link-large
+		, .statistic-additional-text-large{
+			display: inline-block;
+			margin-left: rem-calc(10);
+			transform: translate(0, -30%);
+		}
+	}
+
+	.statistic-label {
+		margin-bottom: 3px;
+	}
+
+	.icon {
+		height: 1rem;
+		width: 1rem;
+		vertical-align: text-top;
+		margin-right: rem-calc(4);
+	}
+
+	.statistic-link
+	, .statistic-link-large
+	, .statistic-additional-text
+	, .statistic-additional-text-large {
+		@extend .small-text;
+	}
+
+	.statistic-additional-text
+	, .statistic-additional-text-large {
+		color: $kiva-text-light;
+	}
+}
