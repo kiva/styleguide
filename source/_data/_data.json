@@ -4978,6 +4978,10 @@
 	"statisticLinkUrl": "http://www.google.com",
 	"statisticAdditionalText": "99%",
 	"statisticIconName": "icon-line-graph",
+	"statisticHelpText" : {
+		"dataRevealId": "some-reveal-id",
+		"lightboxTriggerLinkText": "click for more"
+	},
 	"loans-statistic": {
 		"statisticValue": "163",
 		"statisticLabel": "Loans made",
@@ -5002,5 +5006,41 @@
 		"statisticLabel": "Loans by your invitees",
 		"statisticLinkText": "Invite a friend",
 		"statisticLinkUrl": "http://www.google.com"
-	}
+	},
+	"portfolio-countries-lent-to": [
+		{
+			"name": "Bolivia",
+			"code": "bo"
+		},
+		{
+			"name": "Brazil",
+			"code": "br"
+		},
+		{
+			"name": "Chile",
+			"code": "cl"
+		},
+		{
+			"name": "Colombia",
+			"code": "co"
+		}
+	],
+	"portfolio-countries-remaining": [
+		{
+			"name": "Ecuador",
+			"code": "ec"
+		},
+		{
+			"name": "Paraguay",
+			"code": "py"
+		},
+		{
+			"name": "Peru",
+			"code": "pe"
+		},
+		{
+			"name": "Suriname",
+			"code": "sr"
+		}
+	]
 }
