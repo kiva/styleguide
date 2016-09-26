@@ -66,18 +66,18 @@
 	"outstandingBalanceStat": {
 		"statisticValue": "$120.23",
 		"statisticLabel": "Outstanding loans",
-		"linkText": ""
+		"statisticLinkText": null
 	},
 	"availableKivaCreditStat": {
 		"statisticValue": "$26.75",
 		"statisticLabel": "Available Kiva credit",
-		"linkText": "Details",
-		"linkUrl": "http://www.google.com"
+		"statisticLinkText": "Details",
+		"statisticLinkUrl": "http://www.google.com"
 	},
 	"freeCreditStat": {
 		"statisticValue": "$25.00",
 		"statisticLabel": "Free credit",
-		"linkText": ""
+		"statisticLinkText": null
 	},
 	"findALoanUrl": "http://www.google.com",
 	"findALoanText": "Relend credit",
