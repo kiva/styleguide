@@ -4978,10 +4978,8 @@
 	"statisticLinkUrl": "http://www.google.com",
 	"statisticAdditionalText": "99%",
 	"statisticIconName": "icon-line-graph",
-	"statisticHelpText" : {
-		"dataRevealId": "some-reveal-id",
-		"lightboxTriggerLinkText": "click for more"
-	},
+	"lightboxTriggerLinkText": "Click here for more",
+	"dataRevealId": "some-data-reveal-id",
 	"loans-statistic": {
 		"statisticValue": "163",
 		"statisticLabel": "Loans made",
@@ -4998,8 +4996,8 @@
 	"donations-statistic": {
 		"statisticValue": "$0.46",
 		"statisticLabel": "Avg donation per $25 lent",
-		"statisticLinkText": "Details",
-		"statisticLinkUrl": "http://www.google.com"
+		"lightboxTriggerLinkText": "Details",
+		"dataRevealId": "impact-donation-details"
 	},
 	"invitations-statistic": {
 		"statisticValue": "$111",
