@@ -1,3 +1,5 @@
+@import '../settings';
+@import '../palette';
 @import '../vendor_override/foundation/type';
 
 .mini-loan-card {
@@ -57,6 +59,30 @@
 
 			.icon {
 				display: none;
+			}
+		}
+	}
+
+	.fully-repaid {
+		width: 100%;
+		background-color: $kiva-green;
+		text-align: center;
+
+		.wrapper {
+			display: inline-block;
+			position: relative;
+			padding-left: 1.1rem;
+			color: $white;
+			font-size: $small-font-size;
+			line-height: $meter-height;
+
+			.icon {
+				position: absolute;
+				top: -2%;
+				left: 0;
+				width: 0.9rem;
+				height: $meter-height;
+				fill: $white;
 			}
 		}
 	}
