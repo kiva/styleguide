@@ -295,5 +295,10 @@
 				"iso_code": "ar"
 			}
 		}
-	]
+	],
+	"map_grid_toggle": {
+		"left_icon": "map",
+		"right_icon": "grid",
+		"left_checked": false
+	}
 }

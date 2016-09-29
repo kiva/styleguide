@@ -1,0 +1,44 @@
+@import '../../settings';
+@import '../../palette';
+@import '../../vendor_override/foundation/buttons';
+
+.icon-toggle {
+	$height: $setting-button-height - $setting-button-height-reduction;
+	$larger-height: $setting-button-height;
+
+	input {
+		display: none;
+
+		&:checked + label {
+			background-color: $kiva-text-dark;
+		}
+	}
+
+	input + label {
+		margin: 0;
+		line-height: 0;
+		height: $height;
+		width: $height * 1.25;
+		text-align: center;
+		float: left;
+		border: 1px solid $kiva-text-dark;
+
+		@media #{$medium-up} {
+			height: $larger-height;
+			width: $larger-height * 1.25;
+
+			&:first-of-type {
+				border-right: none;
+			}
+
+			&:last-of-type {
+				border-left: none;
+			}
+		}
+	}
+
+	svg {
+		width: 50%;
+		height: 100%;
+	}
+}
