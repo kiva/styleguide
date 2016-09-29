@@ -6,38 +6,30 @@
     </div>
 
     <div class="row">
-        <div class="columns small-6 large-3">
-            {{#outstandingBalanceStat}}
+        {{#outstandingBalanceStat}}
+            <div class="columns small-6 {{#freeCreditStat}}large-4{{/freeCreditStat}}{{^freeCreditStat}}large-6{{/freeCreditStat}}">
                 {{> 01-molecules/06-components/10-statistic-display}}
-            {{/outstandingBalanceStat}}
-        </div>
-
-        <div class="columns small-6 large-4">
-            {{#availableKivaCreditStat}}
-                {{> 01-molecules/06-components/10-statistic-display}}
-            {{/availableKivaCreditStat}}
-        </div>
-
-        <div class="row hide-for-large-up">
-            <div class="columns extra-stat-row small-12">
-                {{#freeCreditStat}}
-                    {{> 01-molecules/06-components/10-statistic-display}}
-                {{/freeCreditStat}}
             </div>
-        </div>
+        {{/outstandingBalanceStat}}
 
-        <div class="columns large-5 show-for-large-up">
+        {{#availableKivaCreditStat}}
+            <div class="columns small-6 {{#freeCreditStat}}large-4{{/freeCreditStat}}{{^freeCreditStat}}large-6{{/freeCreditStat}}">
+                {{> 01-molecules/06-components/10-statistic-display}}
+            </div>
+        {{/availableKivaCreditStat}}
+
+        {{#freeCreditStat}}
+            <div class="columns small-12 large-4">
+                {{> 01-molecules/06-components/10-statistic-display}}
+            </div>
+        {{/freeCreditStat}}
+    </div>
+
+    <div class="row">
+        <div class="columns small-12 large-12 bottom-rule">
             <a href="{{findALoanUrl}}" class="button findALoanButton">{{findALoanText}}</a>
         </div>
     </div>
-    <div class="row extra-stat-row show-for-large-up bottom-rule">
-        <div class="columns large-3">
-            {{#freeCreditStat}}
-                {{> 01-molecules/06-components/10-statistic-display}}
-            {{/freeCreditStat}}
-        </div>
-    </div>
-    <div class="columns small-12 hide-for-large-up bottom-rule">
-        <a href="{{findALoanUrl}}" class="button findALoanButton">{{findALoanText}}</a>
-    </div>
+
+
 </div>
