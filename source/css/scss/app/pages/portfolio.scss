@@ -18,12 +18,19 @@
 }
 
 .recent-loans {
+	margin-top: 1rem;
+	position: relative;
+
 	h2 a {
 		font-size: $body-font-size;
 		margin-left: 0.75rem;
 	}
 
 	.icon-toggle {
+		position: absolute;
+		right: 0;
+		top: 0.2rem;
+
 		input:checked + label {
 			.icon {
 				fill: $white;
@@ -36,14 +43,21 @@
 	}
 
 	.map-pane {
+		display: none;
 		position: relative;
 		overflow: hidden;
-		height: rem-calc(500);
+		padding-bottom: 53%;
 
 		.geo-chart {
 			position: absolute;
 			left: 0;
 			bottom: 0;
+			width: 100%;
+			height: 119%;
+		}
+
+		svg {
+			pointer-events: all;
 		}
 	}
 }
