@@ -5,17 +5,41 @@
 .portfolio {
 	.bottom-rule {
 		border-bottom: 1px solid $kiva-stroke-gray;
+		margin-bottom: 1rem;
+		padding-bottom: 1rem;
 	}
 }
 
 .portfolio-main {
+	.lender-name {
+		margin-bottom: 1rem;
+	}
+
+	.findALoanButton {
+		width: 90%;
+		margin-top: 2rem;
+		margin-left: 1.3333rem;
+
+		@media #{$large-up} {
+			width: 100%;
+			margin-top: 0;
+			margin-left: 0;
+		}
+	}
+
 	.statistics-bar {
 		padding-top: 2rem;
 	}
+
 	.statistics-bar .row {
 		padding-bottom: 2rem;
 	}
+
+	.extra-stat-row {
+		margin-top: 1rem;
+	}
 }
+
 
 .recent-loans {
 	margin-top: 1rem;
@@ -126,7 +150,15 @@
 	}
 }
 
-.attribution-title {
+.teams-title, .teams-subtitle {
+	text-align: center;
+
+	@media #{$large-up} {
+		text-align: left;
+	}
+}
+
+.teams-subtitle {
 	margin-bottom: 0.75rem;
 }
 
@@ -135,10 +167,15 @@
 
 	.team-image {
 		float: left;
+		margin-left: 0;
 	}
 
 	.attribution-data {
-		margin-left: 4.5rem;
+		margin-left: 2.5rem;
 		margin-bottom: 1rem;
+
+		@media #{$large-up} {
+			margin-left: 3.5rem;
+		}
 	}
 }

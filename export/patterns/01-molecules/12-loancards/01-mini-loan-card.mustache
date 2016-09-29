@@ -15,12 +15,24 @@
 		{{#progress}}
 			{{> 01-molecules/08-meters/fundraising-meter }}
 		{{/progress}}
+		{{^progress}}
+			{{#fully_repaid}}
+				<div class="fully-repaid">
+					<div class="wrapper">
+						<svg class="icon icon-tags-checkmark">
+							<use xlink:href="#icon-tags-checkmark"/>
+						</svg>
+						100% repaid!
+					</div>
+				</div>
+			{{/fully_repaid}}
+			{{^fully_repaid}}
+				<div class="spacer"></div>
+			{{/fully_repaid}}
+		{{/progress}}
 	{{/dedication}}
-	{{^progress}}
-		<div class="spacer"></div>
-	{{/progress}}
 	<div class="status">{{status}}</div>
-	<a class="name">{{name}}</a>
+	<a class="name" href="{{url}}">{{name}}</a>
 	<div class="activity">{{activity}}</div>
 	<div class="country">
 		<span class="f16 {{country.iso_code}}"></span>{{country.name}}
