@@ -3,6 +3,10 @@
 @import '../../vendor_override/foundation/type';
 
 .portfolio {
+	h2 {
+		color: $kiva-green;
+	}
+
 	.bottom-rule {
 		border-bottom: 1px solid $kiva-stroke-gray;
 		margin-bottom: 1rem;
