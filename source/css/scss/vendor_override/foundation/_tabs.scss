@@ -16,6 +16,7 @@
 			line-height: rem-calc(32);
 			padding: 0 .5rem;
 			font-weight: $font-weight-bold;
+			outline: none;
 
 			@media #{$medium-up} {
 				font-size: $tabs-navigation-font-size;
