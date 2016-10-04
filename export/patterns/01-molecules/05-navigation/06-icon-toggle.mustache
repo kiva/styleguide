@@ -1,0 +1,14 @@
+<div class="icon-toggle">
+	<input type="radio" id="icon-toggle-{{left_icon}}" name="icon-toggle" value="{{left_icon}}" {{#left_checked}}checked="checked"{{/left_checked}}/>
+	<label for="icon-toggle-{{left_icon}}">
+		<svg class="icon icon-{{left_icon}}">
+			<use xlink:href="#icon-{{left_icon}}"/>
+		</svg>
+	</label>
+	<input type="radio" id="icon-toggle-{{right_icon}}" name="icon-toggle" value="{{right_icon}}" {{^left_checked}}checked="checked"{{/left_checked}} />
+	<label for="icon-toggle-{{right_icon}}">
+		<svg class="icon icon-{{right_icon}}">
+			<use xlink:href="#icon-{{right_icon}}"/>
+		</svg>
+	</label>
+</div>

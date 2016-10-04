@@ -1,0 +1,18 @@
+<div class="statistic-display">
+	<div>
+		<span class="statistic kiva-green">{{statisticValue}}</span>
+
+		{{! large-screen help link }}
+			<span class="statistic-link-large">
+				<a href="#" data-reveal-id="{{dataRevealId}}">{{lightboxTriggerLinkText}}</a>
+			</span>
+	</div>
+
+	<div class="statistic-label">{{statisticLabel}}</div>
+
+	{{! small-screen help text }}
+	<div class="statistic-link hide-for-large-up">
+			{{! duplicate of reveal link from lightbox included above }}
+			<a href="#" data-reveal-id="{{dataRevealId}}">{{lightboxTriggerLinkText}}</a>
+	</div>
+</div>

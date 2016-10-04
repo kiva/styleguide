@@ -1,4 +1,12 @@
+@import '../../settings';
+@import '../../palette';
+@import '../../vendor_override/foundation/type';
+
 .portfolio {
+	h2 {
+		color: $kiva-green;
+	}
+
 	.bottom-rule {
 		border-bottom: 1px solid $kiva-stroke-gray;
 		margin-bottom: 1rem;
@@ -9,18 +17,22 @@
 .portfolio-main {
 	.lender-name {
 		margin-bottom: 1rem;
+		margin-top: 1.6666666rem;
 	}
 
 	.findALoanButton {
 		width: 90%;
-		margin-top: 2rem;
+		margin-top: 1rem;
 		margin-left: 1.3333rem;
 
 		@media #{$large-up} {
-			width: 100%;
-			margin-top: 0;
-			margin-left: 0;
+			width: 40%;
+			margin-left: 12rem;
 		}
+	}
+	
+	.statistic-display {
+		text-align: center;
 	}
 
 	.statistics-bar {
@@ -33,6 +45,52 @@
 
 	.extra-stat-row {
 		margin-top: 1rem;
+	}
+}
+
+
+.recent-loans {
+	margin-top: 1rem;
+	position: relative;
+
+	h2 a {
+		font-size: $body-font-size;
+		margin-left: 0.75rem;
+	}
+
+	.icon-toggle {
+		position: absolute;
+		right: 0;
+		top: 0.2rem;
+
+		input:checked + label {
+			.icon {
+				fill: $white;
+			}
+		}
+
+		.icon-map {
+			width: 60%;
+		}
+	}
+
+	.map-pane {
+		display: none;
+		position: relative;
+		overflow: hidden;
+		padding-bottom: 53%;
+
+		.geo-chart {
+			position: absolute;
+			left: 0;
+			bottom: 0;
+			width: 100%;
+			height: 119%;
+		}
+
+		svg {
+			pointer-events: all;
+		}
 	}
 }
 
@@ -110,6 +168,12 @@
 
 .teams-subtitle {
 	margin-bottom: 0.75rem;
+}
+
+.team-attributions {
+	.button {
+		color: #333 !important;
+	}
 }
 
 .team-attribution-display {
