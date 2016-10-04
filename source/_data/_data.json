@@ -5005,6 +5005,12 @@
 		"statisticLinkText": "Invite a friend",
 		"statisticLinkUrl": "http://www.google.com"
 	},
+	"availableKivaCreditStat": {
+		"statisticValue": "$26.75",
+		"statisticLabel": "Available Kiva credit",
+		"lightboxTriggerLinkText": "Details",
+		"dataRevealId": "credit-summary-table"
+	},
 	"portfolio-countries-lent-to": [
 		{
 			"name": "Bolivia",
@@ -5040,5 +5046,30 @@
 			"name": "Suriname",
 			"code": "sr"
 		}
-	]
+	],
+	"totalDeposits": "4,499.84",
+	"directLoanRefunds": "25.00",
+	"directLoanRepayments": "231.40",
+	"fundpoolMatches": "25.00",
+	"giftExpirations": "25.00",
+	"loanExpirations": "150.00",
+	"loanRefunds": "44.50",
+	"loanRepayments": "6,388.02",
+	"zipDeposits": "85.82",
+	"zipKivaCreditTransfers": "28.66",
+	"zipLoanRepaymentCrFromOpses": "0.01",
+	"zipLoanRoundupRefunds": "4.96",
+	"totalCredits": "11,508.21",
+	"directLoanPurchases": "380.00",
+	"directLoanRepaymentCurrencyLosses": "0.35",
+	"donations": "95.69",
+	"fundpoolRepayments": "25.00",
+	"giftExpirationDonations": "25.00",
+	"giftPurchases": "75.00",
+	"loanPurchases": "6,850.00",
+	"loanRepaymentCurrencyLosses": "35.61",
+	"withdrawalRequests": "3,934.37",
+	"zipCreditsSent": "28.66",
+	"totalDebits": "11,449.68",
+	"availableKivaCredit": "58.53"
 }
