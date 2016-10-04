@@ -5,7 +5,6 @@
 
 	dd,
 	.tab-title {
-		margin-right: 0;
 
 		@media #{$large-up} {
 			margin-right: 1rem;
@@ -13,8 +12,8 @@
 
 		a {
 			font-size: $tabs-navigation-font-size - $tabs-navigation-font-size-reduction;
-			height: rem-calc(34);
-			line-height: rem-calc(34);
+			height: rem-calc(32);
+			line-height: rem-calc(32);
 			padding: 0 .5rem;
 			font-weight: $font-weight-bold;
 
@@ -32,20 +31,10 @@
 			color: $tabs-navigation-active-font-color;
 			border: 1px solid $blue;
 			cursor: default;
+
+			&:hover {
+				text-decoration: none;
+			}
 		}
 	}
-}
-
-.tabs-content {
-
-	> .content {
-	}
-
-
-}
-
-@media #{$medium-up} {
-	.tabs {
-	}
-
 }
