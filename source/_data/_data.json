@@ -5065,7 +5065,7 @@
 		{
 			"name": "Direct loan repayments",
 			"amount": "27.31"
-		}
+		},
 		{
 			"name": "Loan repayments",
 			"amount": "475.98"
@@ -5073,5 +5073,31 @@
 	],
 	"totalCredits": "505.02",
 	"totalDebits": "-209.12",
-	"availableKivaCredit": "295.90"
+	"availableKivaCredit": "295.90",
+	"tab-set": [
+		{
+			"id": "tab-1",
+			"title": "Gender",
+			"is-active": true,
+			"content": "First tab content"
+		},
+		{
+			"id": "tab-2",
+			"title": "Country",
+			"is-active": false,
+			"content": "Second tab content"
+		},
+		{
+			"id": "tab-3",
+			"title": "Sector",
+			"is-active": false,
+			"content": "Third tab content"
+		},
+		{
+			"id": "tab-4",
+			"title": "Field Partner",
+			"is-active": false,
+			"content": "Fourth tab content"
+		}
+	]
 }
