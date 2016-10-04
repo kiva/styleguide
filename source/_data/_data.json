@@ -5040,5 +5040,31 @@
 			"name": "Suriname",
 			"code": "sr"
 		}
+	],
+	"tab-set": [
+		{
+			"id": "tab-1",
+			"title": "Gender",
+			"is-active": true,
+			"content": "First tab content"
+		},
+		{
+			"id": "tab-2",
+			"title": "Country",
+			"is-active": false,
+			"content": "Second tab content"
+		},
+		{
+			"id": "tab-3",
+			"title": "Sector",
+			"is-active": false,
+			"content": "Third tab content"
+		},
+		{
+			"id": "tab-4",
+			"title": "Field Partner",
+			"is-active": false,
+			"content": "Fourth tab content"
+		}
 	]
 }
