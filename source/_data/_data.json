@@ -5005,6 +5005,12 @@
 		"statisticLinkText": "Invite a friend",
 		"statisticLinkUrl": "http://www.google.com"
 	},
+	"availableKivaCreditStat": {
+		"statisticValue": "$26.75",
+		"statisticLabel": "Available Kiva credit",
+		"lightboxTriggerLinkText": "Details",
+		"dataRevealId": "credit-summary-table"
+	},
 	"portfolio-countries-lent-to": [
 		{
 			"name": "Bolivia",
@@ -5041,6 +5047,33 @@
 			"code": "sr"
 		}
 	],
+	"creditSummaryDebits": [
+		{
+			"name": "Loan purchases",
+			"amount": "-200.00"
+		},
+		{
+			"name": "Loan repayment currency losses",
+			"amount": "-9.12"
+		}
+	],
+	"creditSummaryCredits": [
+		{
+			"name": "Deposits",
+			"amount": "1.73"
+		},
+		{
+			"name": "Direct loan repayments",
+			"amount": "27.31"
+		},
+		{
+			"name": "Loan repayments",
+			"amount": "475.98"
+		}
+	],
+	"totalCredits": "505.02",
+	"totalDebits": "-209.12",
+	"availableKivaCredit": "295.90",
 	"tab-set": [
 		{
 			"id": "tab-1",
