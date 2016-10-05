@@ -5050,11 +5050,11 @@
 	"creditSummaryDebits": [
 		{
 			"name": "Loan purchases",
-			"amount": "-200.00"
+			"amount": "($200.00)"
 		},
 		{
 			"name": "Loan repayment currency losses",
-			"amount": "-9.12"
+			"amount": "($9.12)"
 		}
 	],
 	"creditSummaryCredits": [
@@ -5071,8 +5071,8 @@
 			"amount": "475.98"
 		}
 	],
-	"totalCredits": "505.02",
-	"totalDebits": "-209.12",
+	"totalCredits": "$505.02",
+	"totalDebits": "($209.12)",
 	"availableKivaCredit": "295.90",
 	"tab-set": [
 		{
