@@ -1,0 +1,63 @@
+<h2><a href="#" class="black-underlined" data-reveal-id="credit-summary-table">Credit summary</a></h2>
+<div id="credit-summary-table" class="reveal-modal" data-reveal aria-hidden="true" role="dialog">
+    <div class="row">
+        <div class="columns small-12">
+            <a class="close-reveal-modal" aria-label="Close">
+                <svg class="icon icon-x">
+                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-x"></use>
+                </svg>
+            </a>
+            <div class="lightbox-content white credit-summary-lightbox">
+                <p class="featured">Credit summary</p>
+                <p>Please note, summary data may be up to one hour old.</p>
+
+                <div class="credit-summary-wrapper">
+                    <table class="credit-summary-credits" role="grid" summary="Credit summary for the logged in lender (credits).">
+                        <thead>
+                            <tr>
+                                <th id="creditsDescriptor" class="text-left shrink">Credits</th>
+                                <th id="amount" class="text-right shrink">Amount</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {{#creditSummaryCredits}}
+                                <tr>
+                                    <td headers="creditsDescriptor" class="text-left shrink">{{name}}</td>
+                                    <td headers="amount" class="text-right shrink">${{amount}}</td>
+                                </tr>
+                            {{/creditSummaryCredits}}
+                            <tr>
+                                <td headers="creditsDescriptor" class="text-left shrink totalCredit">Total credits</td>
+                                <td headers="amount" class="text-right shrink totalCredit">${{totalCredits}}</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <table class="credit-summary-debits" role="grid" summary="Credit summary for the logged in lender (debits).">
+                        <thead>
+                            <tr>
+                                <th id="debitsDescriptor" class="text-left shrink">Debits</th>
+                                <th id="amount" class="text-right shrink">Amount</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {{#creditSummaryDebits}}
+                                <tr>
+                                    <td headers="debitsDescriptor" class="text-left shrink">{{name}}</td>
+                                    <td headers="amount" class="text-right shrink">${{amount}}</td>
+                                </tr>
+                            {{/creditSummaryDebits}}
+                            <tr>
+                                <td headers="debitsDescriptor" class="text-left shrink totalDebit">Total debits</td>
+                                <td headers="amount" class="text-right shrink totalDebit">(${{totalDebits}})</td>
+                            </tr>
+                            <tr>
+                                <td headers="debitsDescriptor" class="text-left shrink creditSummaryTotal">Available Kiva credit</td>
+                                <td headers="amount" class="text-right shrink creditSummaryTotal">(${{availableKivaCredit}})</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

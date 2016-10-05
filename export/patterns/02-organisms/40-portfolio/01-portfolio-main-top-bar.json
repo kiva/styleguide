@@ -8,8 +8,8 @@
   "availableKivaCreditStat": {
     "statisticValue": "$26.75",
     "statisticLabel": "Available Kiva credit",
-    "statisticLinkText": "Details",
-    "statisticLinkUrl": "http://www.google.com"
+    "lightboxTriggerLinkText": "Details",
+    "dataRevealId": "credit-summary-table"
   },
   "findALoanUrl": "http://www.google.com",
   "findALoanText": "Relend credit"
