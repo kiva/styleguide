@@ -11,7 +11,7 @@
 		}
 
 		.totalCredit, .totalDebit, .creditSummaryTotal {
-			font-size: 1.5555555556rem;
+			font-size: $section-head-font-size;
 			background-color: $white;
 			padding-bottom: 2rem;
 		}
