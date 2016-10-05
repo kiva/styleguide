@@ -352,7 +352,7 @@ h2 {
 
 h2.scalable {
 	font-size: $section-head-font-size - $section-head-font-size-reduction;
-	line-height: $section-head-line-height = $section-head-line-height-reduction;
+	line-height: $section-head-line-height - $section-head-line-height-reduction;
 
 	@media #{$medium-up} {
 		font-size: $section-head-font-size;
