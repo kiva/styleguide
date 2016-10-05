@@ -12,7 +12,7 @@
                 <p>Please note, summary data may be up to one hour old.</p>
 
                 <div class="credit-summary-wrapper">
-                    <table class="credit-summary-credits" role="grid" summary="Credit summary for the logged in lender (credits).">
+                    <table class="credit-summary" role="grid" summary="Credit summary for the logged in lender (credits).">
                         <thead>
                             <tr>
                                 <th id="creditsDescriptor" class="text-left shrink">Credits</th>
@@ -30,16 +30,6 @@
                                 <td headers="creditsDescriptor" class="text-left shrink totalCredit">Total credits</td>
                                 <td headers="amount" class="text-right shrink totalCredit">${{totalCredits}}</td>
                             </tr>
-                        </tbody>
-                    </table>
-                    <table class="credit-summary-debits" role="grid" summary="Credit summary for the logged in lender (debits).">
-                        <thead>
-                            <tr>
-                                <th id="debitsDescriptor" class="text-left shrink">Debits</th>
-                                <th id="amount" class="text-right shrink">Amount</th>
-                            </tr>
-                        </thead>
-                        <tbody>
                             {{#creditSummaryDebits}}
                                 <tr>
                                     <td headers="debitsDescriptor" class="text-left shrink">{{name}}</td>
