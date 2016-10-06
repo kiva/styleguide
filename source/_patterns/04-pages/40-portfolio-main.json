@@ -300,5 +300,6 @@
 		"left_icon": "map",
 		"right_icon": "grid",
 		"left_checked": false
-	}
+	},
+	"show_recent_loans": true
 }
