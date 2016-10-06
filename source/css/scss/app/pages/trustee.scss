@@ -123,3 +123,53 @@
 	}
 }
 
+/* organism */
+.trustee-dashboard-main {
+	.trustee-name {
+		margin-bottom: 1rem;
+	}
+}
+
+/* organism */
+.search-borrower-bar {
+	background-color: $kiva-bg-darkgray;
+	padding: 1rem;
+}
+
+/* organism */
+.borrower-network-listing {
+	.header-bar {
+		background-color: $kiva-bg-darkgray;
+		padding: 0.5rem;
+	}
+	.item-bar {
+		padding: 0.5rem;
+	}
+}
+
+/* organism */
+.pending-endorsements {
+	.item-bar {
+		padding: 1rem;
+	}
+}
+
+/* organism */
+.trustee-impact-stats {
+	.statistic-display {
+		padding: 1rem;
+	}
+}
+
+/* molecule */
+.trustee-borrower-actions {
+	vertical-align: center;
+	a {
+		display: block;
+		margin: 0.25rem;
+		@extend .text-center;
+	}
+	a.button {
+		padding: 0;
+	}
+}

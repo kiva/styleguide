@@ -1,0 +1,50 @@
+{
+	"main-title": "Portfolio",
+	"page-title": "Portfolio",
+	"bar-links": [
+		{
+			"title": "Portfolio"
+		},
+		{
+			"title": "My Teams"
+		},
+		{
+			"title": "Settings"
+		},
+		{
+			"title": "Borrow"
+		},
+		{
+			"title": "Trustee Dashboard",
+			"active": true
+		}
+	],
+	"has-bar-sub-links": true,
+	"bar-sub-links": [
+		{
+			"sub-title": "Trustee Dashboard"
+		},
+		{
+			"sub-title": "Your borrower network",
+			"sub-active": true
+		},
+		{
+			"sub-title": "Invite borrowers"
+		},
+		{
+			"sub-title": "Trustee resources"
+		},
+		{
+			"sub-title": "Public Trustee profile"
+		}
+	],
+	
+	"invitedAndEndorsedBorrowersStat": {
+		"statisticValue": "3",
+		"statisticLabel": "Invited and endorsed borrowers",
+		"statisticLinkText": "View all"
+	},
+	"totalFunded":"$300.23"
+
+}
+
