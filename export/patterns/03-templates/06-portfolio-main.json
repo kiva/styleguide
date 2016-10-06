@@ -1,21 +1,22 @@
 {
-  "lenderName" : "Jane Simons",
-  "outstandingBalanceStat": {
-    "statisticValue": "$120.23",
-    "statisticLabel": "Outstanding loans",
-    "statisticLinkText": ""
-  },
-  "availableKivaCreditStat": {
-    "statisticValue": "$26.75",
-    "statisticLabel": "Available Kiva credit",
-    "lightboxTriggerLinkText": "Details",
-    "dataRevealId": "credit-summary-table"
-  },
-  "freeCreditStat": {
-    "statisticValue": "$25.00",
-    "statisticLabel": "Free credit",
-    "statisticLinkText": ""
-  },
-  "findALoanUrl": "http://www.google.com",
-  "findALoanText": "Relend credit"
+	"lenderName": "Jane Simons",
+	"outstandingBalanceStat": {
+		"statisticValue": "$120.23",
+		"statisticLabel": "Outstanding loans",
+		"statisticLinkText": ""
+	},
+	"availableKivaCreditStat": {
+		"statisticValue": "$26.75",
+		"statisticLabel": "Available Kiva credit",
+		"lightboxTriggerLinkText": "Details",
+		"dataRevealId": "credit-summary-table"
+	},
+	"freeCreditStat": {
+		"statisticValue": "$25.00",
+		"statisticLabel": "Free credit",
+		"statisticLinkText": ""
+	},
+	"findALoanUrl": "http://www.google.com",
+	"findALoanText": "Relend credit",
+	"show_recent_loans": true
 }
