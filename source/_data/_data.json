@@ -5138,12 +5138,18 @@
 		"repayment-rate-statistic": {
 			"statisticValue": "81%",
 			"statisticLabel": "Repayment rate",
-			"statisticAdditionalText": "Trustee avg: 85%"
+			"statisticAdditionalText_hidden": "Trustee avg: 85%",
+			"statisticAdditionalText": "",
+			"statisticIconName_hidden": "icon-line-graph",
+			"statisticIconName": ""
 		},
 		"funds-disbursed-statistic": {
 			"statisticValue": "$195,225",
 			"statisticLabel": "Funds disbursed to borrowers you endorsed",
-			"statisticAdditionalText": "Trustee avg: $24,000"
+			"statisticAdditionalText_hidden": "Trustee avg: $24,000",
+			"statisticAdditionalText": "",
+			"statisticIconName_hidden": "icon-line-graph",
+			"statisticIconName": ""
 		},
 		"actively-funding-count-statistic": {
 			"statisticValue": "2",
