@@ -5132,7 +5132,8 @@
 		"borrower-count-statistic": {
 			"statisticValue": "3",
 			"statisticLabel": "Invited and endorsed borrowers",
-			"statisticLinkText": "View all >>"
+			"statisticLinkText": "View all >>",
+			"statisticLinkUrl": "/patterns/04-pages-50-trustee-dashboard-52-borrower-network/04-pages-50-trustee-dashboard-52-borrower-network.html"
 		},
 		"repayment-rate-statistic": {
 			"statisticValue": "81%",
@@ -5176,7 +5177,8 @@
 				"previewProfileUrl":"#",
 				"showEndorseButton":true
 			},
-			"isPending":true
+			"isPending":true,
+			"story":"to earn a new certification in business entrepreneurship"
 		},
 		{
 			"id": 1833,
