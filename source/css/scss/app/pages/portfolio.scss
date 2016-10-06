@@ -173,6 +173,13 @@
 .team-attributions {
 	.button {
 		color: #333 !important;
+		width: 90%;
+		margin-left: 5%;
+
+		@media #{$large-up} {
+			margin-left: 0;
+			width: 60%;
+		}
 	}
 }
 
