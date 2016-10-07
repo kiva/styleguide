@@ -1486,8 +1486,7 @@
 
 
 	/*** EXPORTS FROM exports-loader ***/
-	module.exports = window.Modernizr;
-	}.call(window));
+	module.exports = window.Modernizr}.call(window));
 
 /***/ },
 /* 4 */
@@ -8077,7 +8076,7 @@
 
 
 	/*** EXPORTS FROM exports-loader ***/
-	module.exports = window.Foundation;
+	module.exports = window.Foundation
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(2)))
 
 /***/ },
