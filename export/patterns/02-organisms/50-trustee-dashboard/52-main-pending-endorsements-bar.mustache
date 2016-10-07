@@ -1,0 +1,33 @@
+<div class="pending-endorsements">
+	<div class="row">
+		<div class="columns large-12">
+			<h2 class="scalable">Pending Endorsements</h2>
+			<p>These borrowers used your invite link and are pending your endorsement.</p>
+		</div>
+	</div>
+	{{#trustee-borrowers}}
+		{{#isPending}}
+			<div class="row item-bar">
+				<div class="columns large-2 medium-12 small-12">
+					{{#imageHref}}
+						<img src="{{imageHref}}">
+					{{/imageHref}}
+				</div>
+				<div class="columns large-6 medium-12 small-12">
+					<a href="{{profileUrl}}"><strong>{{borrowerName}}</strong></a><br/>
+					{{#businessName}}{{businessName}}<br/>{{/businessName}}
+					{{#showAmount}}
+						${{loanAmount.amount}} / {{borrowerRepaymentTerm}} month loan<br/>
+					{{/showAmount}}
+					A loan of ${{loanAmount.amount}} helped {{story}}.
+
+				</div>
+				<div class="columns large-4 medium-12 small-12">
+					{{#trusteeActions}}
+						{{> 01-molecules/50-trustee-dashboard/01-trustee-borrower-actions}}
+					{{/trusteeActions}}
+				</div>
+			</div>
+		{{/isPending}}
+	{{/trustee-borrowers}}
+</div>
