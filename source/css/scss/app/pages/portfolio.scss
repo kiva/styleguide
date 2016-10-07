@@ -179,14 +179,19 @@
 }
 
 .team-attributions {
+	.attribution-title {
+		margin-top: 1rem;
+		margin-bottom: 1rem;
+	}
+
 	.button {
 		color: #333 !important;
-		width: 90%;
+		min-width: 90%;
 		margin-left: 5%;
 
 		@media #{$large-up} {
 			margin-left: 0;
-			width: 60%;
+			min-width: 60%;
 		}
 	}
 }
