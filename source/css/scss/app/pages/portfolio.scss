@@ -213,3 +213,39 @@
 		}
 	}
 }
+
+.distribution-charts {
+	.no-js & section.content {
+		display: none;
+	}
+
+	span {
+		display: block;
+		width: 100%;
+		text-align: center;
+		padding-bottom: 0.5rem;
+
+		@media #{$large-up} {
+			text-align: left;
+		}
+	}
+
+	.pie-chart {
+		width: 100%;
+
+		svg {
+			pointer-events: all;
+		}
+
+		@media #{$large-up} {
+			width: 70%;
+		}
+	}
+
+	.loading-spinner {
+		display: block;
+		margin: 2rem auto;
+		width: 3rem;
+		height: 3rem;
+	}
+}
