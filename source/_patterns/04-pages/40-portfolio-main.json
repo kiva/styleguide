@@ -301,5 +301,5 @@
 		"right_icon": "grid",
 		"left_checked": false
 	},
-	"show_recent_loans": true
+	"has_loans": true
 }
