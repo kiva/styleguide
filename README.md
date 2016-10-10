@@ -8,17 +8,20 @@ git clone git@github.com:kiva/styleguide.git
 cd styleguide
 npm install -d
 ```
-Then, in your VM /etc/apache2/sites-available directory create a file called styleguide and insert the following
+Then, in your VM /etc/apache2/sites-available directory create a file called styleguide.conf and insert the following
 ```
 ## styleguide
 <VirtualHost *:80>
-        ServerName styleguide
-        ServerAlias styleguide-vm.kiva.org styleguide-vm
-        DocumentRoot /kiva/styleguide/public
-        DirectoryIndex index.html
-        Options -Indexes
-        AddType application/x-httpd-php .php
-        FileETag none
+	ServerName styleguide
+	ServerAlias styleguide-vm.kiva.org styleguide-vm
+	DocumentRoot /kiva/styleguide/public
+	<Directory "/kiva/styleguide/public">
+		Require all granted
+	</Directory>
+	DirectoryIndex index.html
+	Options -Indexes
+	AddType application/x-httpd-php .php
+	FileETag none
 </VirtualHost>
 ```
 Finally, run:
