@@ -1,0 +1,33 @@
+<div class="borrower-network-listing">
+
+	<div class="row header-bar">
+		<div class="columns large-6 medium-4 small-4">Borrower</div>
+		<div class="columns large-3 medium-4 small-4">Status</div>
+		<div class="columns large-3 medium-4 small-4"></div>
+	</div>
+
+	{{#trustee-borrowers}}
+		<div class="row item-bar">
+			<div class="columns large-2 medium-12 small-12 hidden-for-medium-down">
+				{{#imageHref}}
+					<img src="{{imageHref}}">
+				{{/imageHref}}
+			</div>
+			<div class="columns large-4 medium-4 small-4">
+				<a href="{{profileUrl}}"><strong>{{borrowerName}}</strong>{{#businessName}} | {{businessName}}{{/businessName}}</a><br/>
+				${{loanAmount.amount}} / {{borrowerRepaymentTerm}} month loan<br/>
+			</div>
+			<div class="columns large-3 medium-4 small-4">
+				{{#loanStatus}}
+					{{> 01-molecules/50-trustee-dashboard/02-trustee-loan-status}}
+				{{/loanStatus}}
+			</div>
+			<div class="columns large-3 medium-4 small-4">
+				{{#trusteeActions}}
+					{{> 01-molecules/50-trustee-dashboard/01-trustee-borrower-actions}}
+				{{/trusteeActions}}
+			</div>
+		</div>
+	{{/trustee-borrowers}}
+
+</div>

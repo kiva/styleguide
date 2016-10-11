@@ -18,5 +18,5 @@
 	},
 	"findALoanUrl": "http://www.google.com",
 	"findALoanText": "Relend credit",
-	"show_recent_loans": true
+	"has_loans": true
 }

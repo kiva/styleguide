@@ -5120,5 +5120,131 @@
 			"loanUpdateCreator": "John Smith",
 			"loanUpdateTime": "August 11, 2015"
 		}
+	],
+	"trustee-data" : "------------------------- goes here ----------------- ",
+	"trustee" : {
+		"id": 294,
+		"title": "Northern Virginia Family Service",
+		"imageSmall": "https:\/\/s3.amazonaws.com\/media.zip.kiva.org\/images\/4790\/small\/teal_full.JPG",
+		"organizationName": "Northern Virginia Family Service",
+		"organizationType": "Non-Profit",
+		"contactRecord": {
+			"city": "Falls Church",
+			"state": "VA",
+			"country": "United States"
+		},
+		"memberSince": "2013-01-09T22:11:51Z",
+		"whyInterested": "Becoming a trustee will allow the Small Business Program to further its mission to support the economic success of potential and existing entrepreneurs. We are leaders in entrepreneurship education, business plan development, and small business support, catering to the local low-income Hispanic entrepreneurs. We know that Kiva Zip will add to the opportunities that we offer aspiring and existing small business owners.",
+		"story": "Becoming a trustee will allow the Small Business Program to further its mission to support the economic success of potential and existing entrepreneurs. We are leaders in entrepreneurship education, business plan development, and small business support, catering to the local low-income Hispanic e...",
+		"profileHref": "/trustees/294",
+		"fundraisingLoansHref":"/lend?q=j:{\"trusteeId\":294}",
+		"timeOnKiva": "33 months",
+		"stats": {
+			"totalValue": "$2,584,725",
+			"numLoansEndorsedTotal": 19,
+			"prettyRepaymentRate": "90%",
+			"numFundraisingLoans": 1
+		}
+	},
+	"trustee-stats" : {
+		"borrower-count-statistic": {
+			"statisticValue": "3",
+			"statisticLabel": "Invited and endorsed borrowers",
+			"statisticLinkText": "View all >>",
+			"statisticLinkUrl": "/patterns/04-pages-50-trustee-dashboard-52-borrower-network/04-pages-50-trustee-dashboard-52-borrower-network.html"
+		},
+		"repayment-rate-statistic": {
+			"statisticValue": "81%",
+			"statisticLabel": "Repayment rate",
+			"statisticAdditionalText_hidden": "Trustee avg: 85%",
+			"statisticAdditionalText": "",
+			"statisticIconName_hidden": "icon-line-graph",
+			"statisticIconName": ""
+		},
+		"funds-disbursed-statistic": {
+			"statisticValue": "$195,225",
+			"statisticLabel": "Funds disbursed to borrowers you endorsed",
+			"statisticAdditionalText_hidden": "Trustee avg: $24,000",
+			"statisticAdditionalText": "",
+			"statisticIconName_hidden": "icon-line-graph",
+			"statisticIconName": ""
+		},
+		"actively-funding-count-statistic": {
+			"statisticValue": "2",
+			"statisticLabel": "Borrowers actively fundraising",
+			"statisticLinkText": "View all >>"
+		},
+		"fully-funded-count-statistic": {
+			"statisticValue": "20",
+			"statisticLabel": "Borrowers fully funded",
+			"statisticLinkText": "View all >>"
+		},
+		"totalFunded":"$300.23"
+	},
+	"trustee-borrowers": [
+		{
+			"id": 3332,
+			"statuses": {
+				"280": "invited"
+			},
+			"borrowerName": "Rupen",
+			"loanAmount": {
+				"amount": "5000.00",
+				"currency": "USD"
+			},
+			"profileUrl":"#",
+			"imageHref":"https://www-kiva-org-3.global.ssl.fastly.net/img/s100/82553162feb4581150b456fdfd54599c.jpg",
+			"borrowerRepaymentTerm": 24,
+			"loanStatus": "open",
+			"trusteeActions": {
+				"previewProfileUrl":"#",
+				"showEndorseButton":true
+			},
+			"isPending":true,
+			"story":"to earn a new certification in business entrepreneurship"
+		},
+		{
+			"id": 1833,
+			"statuses": {
+				"1552": "complete",
+				"280": "approved"
+			},
+			"borrowerName": "Nicole",
+			"businessName": "Spoil Me Rotten Dog Biscuit Co.",
+			"loanAmount": {
+				"amount": "10000.00",
+				"currency": "USD"
+			},
+			"profileUrl":"#",
+			"imageHref":"https://www-kiva-org-3.global.ssl.fastly.net/img/s100/82553162feb4581150b456fdfd54599c.jpg",
+			"borrowerRepaymentTerm": 37,
+			"loanStatus": "fundRaising",
+			"trusteeActions": {
+				"copyInviteUrl":"#",
+				"editEndorsementUrl":"#",
+				"commentLoanUrl":"#"
+			}
+		},
+		{
+			"id": 5836,
+			"statuses": {
+				"1552": "complete",
+				"280": "approved"
+			},
+			"borrowerName": "Michael And Leah",
+			"businessName": "DC Vegan Catering",
+			"loanAmount": {
+				"amount": "5000.00",
+				"currency": "USD"
+			},
+			"profileUrl":"#",
+			"imageHref":"https://www-kiva-org-3.global.ssl.fastly.net/img/s100/82553162feb4581150b456fdfd54599c.jpg",
+			"borrowerRepaymentTerm": 25,
+			"loanStatus": "payingBack",
+			"trusteeActions": {
+				"commentLoanUrl":"#",
+				"repaymentScheduleUrl":"#"
+			}
+		}
 	]
 }

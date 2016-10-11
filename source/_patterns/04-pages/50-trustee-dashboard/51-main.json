@@ -1,0 +1,43 @@
+{
+	"main-title": "Portfolio",
+	"page-title": "Portfolio",
+	"bar-links": [
+		{
+			"title": "Portfolio"
+		},
+		{
+			"title": "My Teams"
+		},
+		{
+			"title": "Settings"
+		},
+		{
+			"title": "Borrow"
+		},
+		{
+			"title": "Trustee Dashboard",
+			"active": true
+		}
+	],
+	"has-bar-sub-links": true,
+	"bar-sub-links": [
+		{
+			"sub-title": "Trustee Dashboard",
+			"sub-active": true,
+			"url":"/patterns/04-pages-50-trustee-dashboard-51-main/04-pages-50-trustee-dashboard-51-main.html"
+		},
+		{
+			"sub-title": "Your borrower network",
+			"url":"/patterns/04-pages-50-trustee-dashboard-52-borrower-network/04-pages-50-trustee-dashboard-52-borrower-network.html"
+		},
+		{
+			"sub-title": "Invite borrowers"
+		},
+		{
+			"sub-title": "Trustee resources"
+		},
+		{
+			"sub-title": "Public Trustee profile"
+		}
+	]
+}
