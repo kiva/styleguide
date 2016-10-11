@@ -102,6 +102,17 @@
 	}
 }
 
+.recent-updates {
+	margin-top: 1rem;
+	position: relative;
+
+	h2 a {
+		font-size: $body-font-size;
+		margin-left: 20.5rem;
+		margin-top: -1.75rem;
+	}
+}
+
 .deposited-lent-widget {
 	margin: 2rem auto;
 	width: 225px;
@@ -218,7 +229,7 @@
 
 	.loan-update-image {
 		margin-left: 35%;
-		width: 30%;
+		width: 25%;
 
 		@media #{$large-up} {
 			margin-left: 0;
@@ -229,7 +240,7 @@
 
 	.loan-update-info {
 		@media #{$large-up} {
-			margin-left: 14rem;
+			margin-left: 17rem;
 		}
 
 		.loan-update-label {
