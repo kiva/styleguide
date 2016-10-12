@@ -5100,7 +5100,7 @@
 			"content": "Fourth tab content"
 		}
 	],
-	"all_loans_url": "http://www.google.com",
+	"all_updates_url": "http://www.google.com",
 	"recent_updates": [
 		{
 			"loanUpdateImageLink": "../../images/borrower1.jpg",
