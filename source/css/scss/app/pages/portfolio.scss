@@ -102,6 +102,17 @@
 	}
 }
 
+.recent-updates {
+	margin-top: 1rem;
+	position: relative;
+
+	h2 a {
+		font-size: $body-font-size;
+		margin-left: 20.5rem;
+		margin-top: -1.75rem;
+	}
+}
+
 .deposited-lent-widget {
 	margin: 2rem auto;
 	width: 225px;
@@ -210,6 +221,46 @@
 
 		@media #{$large-up} {
 			margin-left: 3.5rem;
+		}
+	}
+}
+
+.loan-update {
+
+	.loan-update-image {
+		margin-left: 35%;
+		width: 25%;
+
+		@media #{$large-up} {
+			margin-left: 0;
+			margin-right: 1rem;
+			float: left;
+		}
+	}
+
+	.loan-update-info {
+		@media #{$large-up} {
+			margin-left: 17rem;
+		}
+
+		.loan-update-label {
+			text-align: center;
+			color: $kiva-text-light;
+			margin-top: 0.5rem;
+			margin-bottom: 0.5rem;
+
+			@media #{$large-up} {
+				text-align: left;
+			}
+		}
+
+		.loan-update-timestamp {
+			margin-top: 0.5rem;
+
+			@media #{$large-up} {
+				margin-top: 2rem;
+				text-align: right;
+			}
 		}
 	}
 }

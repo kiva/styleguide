@@ -5100,9 +5100,28 @@
 			"content": "Fourth tab content"
 		}
 	],
-
+	"all_loans_url": "http://www.google.com",
+	"recent_updates": [
+		{
+			"loanUpdateImageLink": "../../images/borrower1.jpg",
+			"loanUpdateLink": "http://www.google.com",
+			"loanUpdateTitle": "Mabel De La Concepcion is taking out another loan on Kiva",
+			"loanUpdateLocation": "Nicaragua",
+			"loanUpdateText": "We wanted to let you know that Mabel De La Concepcion has another loan posted on Kiva! Here's the description of their new loan. The Vecinos Unidos association is composed of eight members who are the responsible mothers and fathers of ten children, all minors. They are from MalPaisillo, in the northern part of the region, a place characterized be being hardworking, responsible, and having the ...",
+			"loanUpdateCreator": "John Smith",
+			"loanUpdateTime": "August 18, 2015"
+		},
+		{
+			"loanUpdateImageLink": "../../images/borrower1.jpg",
+			"loanUpdateLink": "http://www.google.com",
+			"loanUpdateTitle": "Molyne is moving forward",
+			"loanUpdateLocation": "Haiti",
+			"loanUpdateText": "Molyne offers Haitian food to staffers, church groups and schools. The loan has helped her buy a new freezer, two stoves and food stuffs. The business walls were repaired out of her profit. Molyne also bought a generator to cope with the frequent power failure in her community. Molyne has just opened a drinking water service to improve the community life conditions. Molyne now has 3 employees...",
+			"loanUpdateCreator": "John Smith",
+			"loanUpdateTime": "August 11, 2015"
+		}
+	],
 	"trustee-data" : "------------------------- goes here ----------------- ",
-
 	"trustee" : {
 		"id": 294,
 		"title": "Northern Virginia Family Service",
@@ -5127,7 +5146,6 @@
 			"numFundraisingLoans": 1
 		}
 	},
-
 	"trustee-stats" : {
 		"borrower-count-statistic": {
 			"statisticValue": "3",
@@ -5163,7 +5181,6 @@
 		},
 		"totalFunded":"$300.23"
 	},
-
 	"trustee-borrowers": [
 		{
 			"id": 3332,
