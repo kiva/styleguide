@@ -97,7 +97,7 @@
 		}
 
 		svg {
-			pointer-events: all;
+			pointer-events: auto;
 		}
 	}
 }
@@ -234,7 +234,7 @@
 		width: 100%;
 
 		svg {
-			pointer-events: all;
+			pointer-events: auto;
 		}
 
 		@media #{$large-up} {
