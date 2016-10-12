@@ -5192,6 +5192,7 @@
 				"amount": "5000.00",
 				"currency": "USD"
 			},
+			"loanAmountPretty": "$5,000",
 			"profileUrl":"#",
 			"imageHref":"https://www-kiva-org-3.global.ssl.fastly.net/img/s100/82553162feb4581150b456fdfd54599c.jpg",
 			"borrowerRepaymentTerm": 24,
@@ -5215,6 +5216,7 @@
 				"amount": "10000.00",
 				"currency": "USD"
 			},
+			"loanAmountPretty": "$10,000",
 			"profileUrl":"#",
 			"imageHref":"https://www-kiva-org-3.global.ssl.fastly.net/img/s100/82553162feb4581150b456fdfd54599c.jpg",
 			"borrowerRepaymentTerm": 37,
@@ -5237,6 +5239,7 @@
 				"amount": "5000.00",
 				"currency": "USD"
 			},
+			"loanAmountPretty": "$5,000",
 			"profileUrl":"#",
 			"imageHref":"https://www-kiva-org-3.global.ssl.fastly.net/img/s100/82553162feb4581150b456fdfd54599c.jpg",
 			"borrowerRepaymentTerm": 25,
