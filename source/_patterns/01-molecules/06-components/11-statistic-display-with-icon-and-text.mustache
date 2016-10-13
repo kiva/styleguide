@@ -1,32 +1,10 @@
 <div class="statistic-display">
 	<div>
 		<span class="statistic kiva-green">{{statisticValue}}</span>
-
-		{{! large-screen additional text }}
-		{{#statisticAdditionalText}}
-			<span class="statistic-additional-text-large">
-				{{#statisticLinkUrl}}
-					<a href="{{statisticLinkUrl}}">
-				{{/statisticLinkUrl}}
-
-					<svg class="icon {{statisticIconName}}">
-						<use xlink:href="#{{statisticIconName}}"/>
-					</svg>
-
-				{{#statisticLinkUrl}}
-					</a>
-				{{/statisticLinkUrl}}
-
-				{{statisticAdditionalText}}
-			</span>
-		{{/statisticAdditionalText}}
-
 	</div>
 	<div class="statistic-label">{{statisticLabel}}</div>
-
-	{{! small-screen additional text }}
 	{{#statisticAdditionalText}}
-		<div class="statistic-additional-text hide-for-large-up">
+		<div class="statistic-additional-text">
 			{{#statisticIconName}}
 				<a href="{{iconUrl}}">
 					<svg class="icon {{statisticIconName}}">
