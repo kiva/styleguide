@@ -293,6 +293,23 @@
 		}
 	}
 
+	.distribution-table {
+		width: 100%;
+		text-align: center;
+
+		table {
+			border: none;
+		}
+
+		td:last-child {
+			text-align: right;
+		}
+
+		@media #{$large-up} {
+			width: 70%;
+		}
+	}
+
 	.loading-spinner {
 		display: block;
 		margin: 2rem auto;
