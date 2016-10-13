@@ -77,7 +77,8 @@
 	"freeCreditStat": {
 		"statisticValue": "$25.00",
 		"statisticLabel": "Free credit",
-		"statisticLinkText": null
+		"statisticLinkText": "Expires Oct 10",
+		"statisticLinkUrl": "https://www.kiva.org/portfolio/credit/bonus-history"
 	},
 	"findALoanUrl": "http://www.google.com",
 	"findALoanText": "Relend credit",
