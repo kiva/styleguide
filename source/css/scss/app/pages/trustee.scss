@@ -155,6 +155,17 @@
 	}
 }
 
+
+
+.dashboard-main, .borrower-network {
+	.borrower-item-row {
+		&:nth-child(even) {
+			background-color: $kiva-bg-darkgray;
+		}
+	}
+}
+
+
 /* organism */
 .trustee-impact-stats {
 	.statistic-display {
@@ -174,3 +185,4 @@
 		padding: 0;
 	}
 }
+

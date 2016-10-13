@@ -5,13 +5,13 @@
 		{{/imageHref}}
 	</div>
 	<div class="columns large-4 medium-4 small-4">
-		<a href="{{profileUrl}}"><strong>{{borrowerName}}</strong>{{#businessName}} | {{businessName}}{{/businessName}}</a><br/>
+		<a href="{{profileUrl}}"><strong>{{borrowerName}}</strong></a><br/>
+		{{#businessName}}{{businessName}}<br/>{{/businessName}}
 		{{loanAmountPretty}} / {{borrowerRepaymentTerm}} month loan<br/>
+		{{#city}}{{#region}}{{city}}, {{region}}{{/region}}{{/city}}
 	</div>
 	<div class="columns large-3 medium-4 small-4">
-		{{#loanStatus}}
-			{{> 01-molecules/50-trustee-dashboard/02-trustee-loan-status}}
-		{{/loanStatus}}
+		{{loanStatus}}
 	</div>
 	<div class="columns large-3 medium-4 small-4">
 		{{#trusteeActions}}
