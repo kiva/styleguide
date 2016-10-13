@@ -301,5 +301,16 @@
 		"right_icon": "grid",
 		"left_checked": false
 	},
-	"has_loans": true
+	"has_loans": true,
+	"show_distribution_table": true,
+	"distribution-rows": [
+		{
+			"label": "Female",
+			"percent": "50%"
+		},
+		{
+			"label": "Male",
+			"percent": "50%"
+		}
+	]
 }
