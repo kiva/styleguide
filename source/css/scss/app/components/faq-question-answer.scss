@@ -5,8 +5,8 @@
 	}
 
 	&.ac-title {
-		border-top: 0.0555555556rem solid black;
-		padding: 0.2777777778rem 0 0.2777777778rem 0;
+		border-top: rem-calc(1px) solid black;
+		padding: rem-calc(5px) rem-calc(5px);
 		cursor: pointer;
 	}
 }
