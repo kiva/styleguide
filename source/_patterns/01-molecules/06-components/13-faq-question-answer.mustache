@@ -1,16 +1,14 @@
-{{#faqs}}
-	<div class="ac-container ac-title" data-kv-accordion aria-controls="{{id}}" aria-expanded="false">
-		<p class="question-wrap">{{question}}</p>
-		<span class="ac-dropdown-icon">
-			<svg class="icon icon-small-chevron">
-				<use xlink:href="#icon-small-chevron"></use>
-			</svg>
-		</span>
-	</div>
+<div class="ac-container ac-title" data-kv-accordion aria-controls="{{id}}" aria-expanded="false">
+	<p class="question-wrap">{{question}}</p>
+	<span class="ac-dropdown-icon">
+		<svg class="icon icon-small-chevron">
+			<use xlink:href="#icon-small-chevron"></use>
+		</svg>
+	</span>
+</div>
 
-	<article class="ac-body" id="{{id}}" aria-hidden="true">
-		<span>
-			<p class='small-text'>{{{answer}}}</p>
-		</span>
-	</article>
-{{/faqs}}
+<article class="ac-body" id="{{id}}" aria-hidden="true">
+	<span>
+		<p class='small-text'>{{{answer}}}</p>
+	</span>
+</article>
