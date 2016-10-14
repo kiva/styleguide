@@ -3,5 +3,7 @@
 		<span class="statistic kiva-green">{{statisticValue}}</span>
 	</div>
 	<div class="statistic-label">{{statisticLabel}}</div>
-    <div class="statistic-link"><a href="{{statisticLinkUrl}}">{{statisticLinkText}}</a></div>
+    {{#statisticLinkText}}
+        <div class="statistic-link"><a href="{{statisticLinkUrl}}">{{statisticLinkText}}</a></div>
+    {{/statisticLinkText}}
 </div>
