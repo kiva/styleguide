@@ -2,7 +2,7 @@
 	"bonus": false,
 	"holiday_mode": {
 		"href": "#",
-		"short_message": "Give a Kiva gift.",
-		"long_message": "Make spirits bright this holiday season."
+		"call_to_action": "Give a Kiva gift.",
+		"message": "Make spirits bright this holiday season."
 	}
 }
