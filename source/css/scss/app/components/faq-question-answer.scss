@@ -1,0 +1,12 @@
+.ac-container {
+	.question-wrap {
+		display: inline;
+		font-weight: bold;
+	}
+
+	&.ac-title {
+		border-top: 0.0555555556rem solid black;
+		padding: 0.2777777778rem 0 0.2777777778rem 0;
+		cursor: pointer;
+	}
+}
