@@ -26,7 +26,7 @@ $setting-button-background-color: $white;
 $setting-button-border-color: $kiva-text-dark;
 
 button, a.button, .button {
-	font-size: $button-font-med - $button-font-med-reduction;
+	font-size: $button-font-sm;
 	font-weight: $font-weight-bold;
 	height: $button-height-med - $button-height-med-reduction;
 	line-height: $button-height-med - $button-height-med-reduction;
