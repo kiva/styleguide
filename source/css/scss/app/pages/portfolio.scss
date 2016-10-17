@@ -317,3 +317,25 @@
 		height: 3rem;
 	}
 }
+
+.loan-count-graph-wrapper {
+	position: relative;
+	width: 100%;
+	padding-bottom: 75%;
+
+	@media #{$large-up} {
+		padding-bottom: 60%;
+	}
+
+	.loan-count-graph {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		opacity: 0;
+		transition: opacity 200ms;
+
+		svg {
+			pointer-events: auto;
+		}
+	}
+}
