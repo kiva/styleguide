@@ -1,0 +1,53 @@
+{
+	"main-title": "Partner with us",
+	"page-title": "Our partners",
+	"bar-links": [
+		{
+			"title": "Partner with us",
+			"active": true
+		}
+	],
+	"has-bar-sub-links": true,
+	"bar-sub-links": [
+		{
+			"sub-title": "Partner with us"
+		},
+		{
+			"sub-title": "Grants"
+		},
+		{
+			"sub-title": "Loan matching"
+		},
+		{
+			"sub-title": "Employee and customer engagement"
+		},
+		{
+			"sub-title": "Our partners",
+			"sub-active": true
+		}
+
+	],
+	"drop-links": [
+		{
+			"title": "Partner with us",
+			"sub-links": [
+				{
+					"sub-title": "Partner with us"
+				},
+				{
+					"sub-title": "Grants"
+				},
+				{
+					"sub-title": "Loan matching"
+				},
+				{
+					"sub-title": "Employee and customer engagement"
+				},
+				{
+					"sub-title": "Our partners",
+					"sub-active": true
+				}
+			]
+		}
+	]
+}

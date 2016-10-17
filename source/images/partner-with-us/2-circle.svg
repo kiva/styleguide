@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="19px" height="19px" viewBox="0 0 19 19" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 40.2 (33826) - http://www.bohemiancoding.com/sketch -->
+    <title>check mark</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Loan-matching---desktop-(1)-Copy-3" transform="translate(-377.000000, -1101.000000)">
+            <g id="Content" transform="translate(377.000000, 150.000000)">
+                <g id="How-it-works-content" transform="translate(0.000000, 563.000000)">
+                    <g id="Badge-appears-on-qualifying-loans" transform="translate(0.000000, 388.000000)">
+                        <g id="check-mark">
+                            <path d="M9.5,19 C14.7467051,19 19,14.7467051 19,9.5 C19,4.25329488 14.7467051,0 9.5,0 C4.25329488,0 0,4.25329488 0,9.5 C0,14.7467051 4.25329488,19 9.5,19 Z" id="Oval-4" fill="#5E9D43"></path>
+                            <text id="2" font-family="Arial-BoldMT, Arial" font-size="14" font-weight="bold" fill="#FFFFFF">
+                                <tspan x="6.10693359" y="14.5">2</tspan>
+                            </text>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
