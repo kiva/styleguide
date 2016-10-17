@@ -7,15 +7,11 @@
 
 	&.ac-title {
 		border-top: rem-calc(1px) solid black;
-		padding: rem-calc(5px) rem-calc(5px);
+		padding: rem-calc(5px) 0;
 		cursor: pointer;
 	}
 }
 //these styles apply to the 02-organisms/13-faq/00-faq.mustache file
-.ac-body {
-	padding: 0 rem-calc(5px);
-}
-
 .faq-title {
 	border-top: rem-calc(1px) solid black;
 	padding: rem-calc(10px) 0;
