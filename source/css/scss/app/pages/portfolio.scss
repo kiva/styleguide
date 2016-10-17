@@ -255,6 +255,20 @@
 			}
 		}
 
+		.loan-update-title {
+			padding-bottom: 0.4rem;
+			text-align: center;
+			display: block;
+
+			@media #{$large-up} {
+				text-align: left;
+			}
+		}
+
+		.loan-update-content {
+			font-weight: 300;
+		}
+
 		.loan-update-timestamp {
 			margin-top: 0.5rem;
 
