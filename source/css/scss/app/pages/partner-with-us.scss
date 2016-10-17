@@ -1,0 +1,73 @@
+.partner-with-us{
+	$padding: rem-calc(20);
+	p, ul{
+		font-weight: 300;
+	}
+	p.impact{
+		font-weight: bold;
+	}
+	h2{
+		color: $green;
+	}
+	.maxframe{
+		max-width: 55rem;
+	}
+	#intro{
+		padding-top: $padding*2;
+		padding-bottom: $padding*2;
+	}
+	.program{
+		text-align: center;
+	}
+	.program p{
+		text-align: left;
+	}
+	svg.icon-match{
+		height: rem-calc(56);
+		width: rem-calc(54);
+	}
+	svg.icon-grants{
+		height: rem-calc(56);
+		width: rem-calc(59);
+	}
+	svg.icon-corporate-engagement{
+		height: rem-calc(56);
+		width: rem-calc(61);
+	}
+	#our-partners{
+		background: $platinum;
+		text-align: center;
+		padding: $padding 0;
+		margin: $padding 0 $padding*2 0;
+	}
+	.program h2, #our-partners h2{
+		font-size: 1.1666666667rem;
+		line-height: 1rem;
+		color: $charcoal;
+		margin-top: $padding;
+	}
+	#partner-logos img{
+		padding-top: $padding;
+		width: 6.94444444rem;
+	}
+	#our-partners p{
+		padding-top: $padding;
+	}
+	h2.faq-title{
+		color: $charcoal;
+		border-top: 1px solid $light-gray;
+		margin-top: $padding*4;
+		padding-top: $padding/2;
+	}
+	.question-wrap{
+		display: block;
+		border-top: 1px solid $light-gray;
+		font-weight: bold;
+		padding: 1.2777777778rem 0 0.2777777778rem 0;
+		cursor: pointer;
+	}
+	.ac-container .ac-dropdown-icon .icon{
+		position: absolute;
+		right: 1.11111111rem;
+	}
+}

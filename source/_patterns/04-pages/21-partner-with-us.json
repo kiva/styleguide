@@ -1,0 +1,70 @@
+{
+	"main-title": "Partner with us",
+	"page-title": "Partner with us",
+	"bar-links": [
+		{
+			"title": "Partner with us",
+			"active": true
+		}
+	],
+	"has-bar-sub-links": true,
+	"bar-sub-links": [
+		{
+			"sub-title": "Partner with us",
+			"sub-active": true
+		},
+		{
+			"sub-title": "Grants"
+		},
+		{
+			"sub-title": "Loan matching"
+		},
+		{
+			"sub-title": "Employee and customer engagement"
+		},
+		{
+			"sub-title": "Our partners"
+		}
+	],
+	"drop-links": [
+		{
+			"title": "Partner with us",
+			"sub-links": [
+				{
+					"sub-title": "Grants",
+					"sub-active": true
+				},
+				{
+					"sub-title": "Loan matching"
+				},
+				{
+					"sub-title": "Employee and customer engagement"
+				},
+				{
+					"sub-title": "Our partners"
+				}
+			]
+		}
+	],
+	"headline": {
+		"medium": "Partner with us"
+	},
+	"img": {
+		"full-width" : {
+			"alt" : "Photo of hands and a leaf",
+			"src" : "//cms.kiva.org.s3.amazonaws.com/page/images/partner-with-us-hero"
+		}
+	},
+	"faqs": [
+	  {
+		  "id": "involved",
+		  "question": "How can I get my employees involved?",
+		  "answer": "There are a number of ways to get your employees involved. <a href='/gifts/kiva-cards'>Purchase Kiva Cards</a> to get them started lending, or <a href='/teams'>create a company lending team</a> to track the collective impact."
+	  },
+	  {
+		  "id": "less-10k",
+		  "question": "How can my business support Kiva for less than $10,000 minimum?",
+		  "answer": "Create a Kiva lender account in the name of your business and get started making loans. Share your company's support by linking directly to your public lender page, and let your community see all the borrowers you have supported on Kiva. <a href='/register'>Register here</a>."
+	  }
+	]
+}
