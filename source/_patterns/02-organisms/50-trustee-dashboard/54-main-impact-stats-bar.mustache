@@ -1,0 +1,31 @@
+<div class="row trustee-impact-stats">
+
+	<div class="columns small-12">
+		<h2>My Trustee impact</h2>
+	</div>
+
+	{{#trustee-stats.repayment-rate-statistic}}
+		<div class="columns small-6">
+			{{> 01-molecules/06-components/10-statistic-display}}
+		</div>
+	{{/trustee-stats.repayment-rate-statistic}}
+
+	{{#trustee-stats.funds-disbursed-statistic}}
+		<div class="columns small-6">
+			{{> 01-molecules/06-components/10-statistic-display}}
+		</div>
+	{{/trustee-stats.funds-disbursed-statistic}}
+
+	{{#trustee-stats.actively-funding-count-statistic}}
+		<div class="columns small-6">
+			{{> 01-molecules/06-components/10-statistic-display}}
+		</div>
+	{{/trustee-stats.actively-funding-count-statistic}}
+
+	{{#trustee-stats.fully-funded-count-statistic}}
+		<div class="columns small-6">
+			{{> 01-molecules/06-components/10-statistic-display}}
+		</div>
+	{{/trustee-stats.fully-funded-count-statistic}}
+
+</div>

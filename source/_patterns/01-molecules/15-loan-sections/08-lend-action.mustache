@@ -1,13 +1,28 @@
-{{^amountInBasket}}
-    <div class="show-for-large-up row lend-action">
+{{#is_ended}}
+	<div class="show-for-large-up lend-action">
+		<a href="{{lend_href}}" class="button secondary find-new-loan">Find a new loan</a>
+	</div>
+{{/is_ended}}
+{{^is_ended}}
+	{{^amountInBasket}}
+    <div class="show-for-large-up row lend-action {{#noticeVisible}}notice-visible{{/noticeVisible}}">
         {{#alreadyLent}}
             <div id="already-supported-message" class="columns small-12">You've supported this loan</div>
         {{/alreadyLent}}
+        {{#showDAFIneligibility}}
+            <div class="columns small-12 not-eligible-message">Not eligible for promotion. <a class="black-underlined" data-reveal-id="daf-ineligible-lightbox">Learn more</a></div>
+        {{/showDAFIneligibility}}
+        {{#showFreeTrialIneligibility}}
+            <div class="columns small-12 not-eligible-message">Not eligible for Free Trial. <a class="black-underlined" data-reveal-id="free-trial-ineligible-lightbox">Learn more</a></div>
+        {{/showFreeTrialIneligibility}}
+        {{#showBonusIneligibility}}
+            <div class="columns small-12 not-eligible-message">Not eligible for Bonus Credit. <a class="black-underlined" data-reveal-id="bonus-ineligible-lightbox">Learn more</a></div>
+        {{/showBonusIneligibility}}
         {{^inBasket}}
             <div class="lend-button-wrapper columns small-4 lend-values-button">
-                <button data-dropdown="lend-button-dropdown" aria-controls="lend-button-dropdown"
+                <button id="lend-button-amount-selector" data-dropdown="lend-button-dropdown" aria-controls="lend-button-dropdown"
                         aria-expanded="false"
-                        class="button lend-action-button loan-amount-button">
+                        class="button secondary lend-action-button loan-amount-button">
                     <span class="loan-amount-text">{{#freeTrialEligible}}Free {{/freeTrialEligible}}$25</span>
                     <svg class="icon icon-triangle">
                         <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-triangle"></use>
@@ -23,8 +38,8 @@
                 </ul>
             </div>
             <div class="lend-button-wrapper columns small-8 lend-now-button">
-                <button class="button lend-action-button lend-button">
-                    Lend Now
+                <button kvtrackevent="Lending|Add to basket" class="button lend-action-button lend-button">
+                    Lend now
                 </button>
             </div>
         {{/inBasket}}
@@ -32,4 +47,9 @@
 
         {{/inBasket}}
     </div>
-{{/amountInBasket}}
+
+    {{#lendActionHelpText}}
+        {{> 01-molecules/10-lightbox/04-help-text-lightbox}}
+    {{/lendActionHelpText}}
+	{{/amountInBasket}}
+{{/is_ended}}

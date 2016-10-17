@@ -1,0 +1,61 @@
+{
+	"main-title": "Due Diligence",
+	"page-title": "The Risks of Lending",
+	"bar-links": [
+		{
+			"title": "About us"
+		},
+		{
+			"title": "How Kiva works"
+		},
+		{
+			"title": "Where Kiva works"
+		},
+		{
+			"title": "Impact"
+		},
+		{
+			"title": "Leadership"
+		},
+		{
+			"title": "Finances"
+		},
+		{
+			"title": "Press"
+		},
+		{
+			"title": "Due diligence",
+			"active": true
+		}
+	],
+	"has-bar-sub-links": true,
+	"bar-sub-links": [
+		{
+			"sub-title": "The Risks of Lending",
+			"sub-active": true
+		},
+		{
+			"sub-title": "Due Diligence for Partner Loans"
+		},
+		{
+			"sub-title": "Due Diligence for Direct Loans"
+		}
+	],
+	"drop-links": [
+		{
+			"title": "Due Diligence",
+			"sub-links": [
+				{
+					"sub-title": "The Risks of Lending",
+					"sub-active": true
+				},
+				{
+					"sub-title": "Due Diligence for Partner Loans"
+				},
+				{
+					"sub-title": "Due Diligence for Direct Loans"
+				}
+			]
+		}
+	]
+}

@@ -1,0 +1,17 @@
+#countries-lent-to-lightbox p {
+	font-weight:normal;
+}
+
+.country-list-heading {
+	margin-bottom: 0.5rem;
+	font-weight: bold;
+}
+
+.portfolio-countries-list {
+	@include column-count(1);
+	margin-bottom: 2rem;
+
+	@media #{$xxlarge-up} {
+		@include column-count(2);
+	}
+}

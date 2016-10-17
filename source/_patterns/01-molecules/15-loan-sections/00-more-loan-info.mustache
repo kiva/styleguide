@@ -1,13 +1,15 @@
 <section class="more-loan-info">
-    <h2 class="ac-title ac-container" data-kv-accordion aria-controls="ac-more-loan-info-body" aria-expanded="true">
-        More about this loan
-        <span class="ac-dropdown-icon">
-            <svg class="icon icon-large-chevron">
-                <use xlink:href="#icon-large-chevron"></use>
-            </svg>
-        </span>
-    </h2>
-    <div class="ac-body" id="ac-more-loan-info-body" aria-hidden="false">
+    <div class="ac-title ac-container" data-kv-accordion aria-controls="ac-more-loan-info-body" aria-expanded="false">
+        <h2>
+            More about this loan
+            <span class="ac-dropdown-icon">
+                <svg class="icon icon-large-chevron">
+                    <use xlink:href="#icon-large-chevron"></use>
+                </svg>
+            </span>
+        </h2>
+    </div>
+    <div class="ac-body" id="ac-more-loan-info-body" aria-hidden="true">
         {{#fieldPartnerName}}
             <div class="override-styling-from-db">
                 {{{moreInfoAboutLoan}}}

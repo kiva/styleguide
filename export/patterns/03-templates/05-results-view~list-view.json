@@ -1,0 +1,20 @@
+{
+	"can_favorite": true,
+	"is_matched": true,
+	"matching_text": "Matching by Someone with a really really long name",
+	"loan-count": "1,423",
+	"show-selected": true,
+	"show-clear": true,
+	"show-save-search": true,
+	"is_admin": true,
+	"list_view": true,
+	"selected-filters": [
+		{"label":"Men"},
+		{"label":"Group"},
+		{"label":"Arts"},
+		{"label":"Entertainment"},
+		{"label":"Water and Sanitation"},
+		{"label":"Animals"},
+		{"label":"Job Creation"}
+	]
+}

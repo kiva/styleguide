@@ -28,8 +28,10 @@ $light-green: #a9d14c; // rgb(169, 209, 76)
 $blue: #26b6e8; // rgb(38, 182, 232)
 $sky-blue: #22a9d8; // rgb(34, 169, 216)
 $faded-blue: #6698a9; // rgb(102, 152, 169)
+$pale-blue: #d2f0f8;
 $highlight-blue: #0d8ebb; // rgb(13, 142, 187)
 $red: #9C021A; // rgb(156, 2, 26)
+$vivid-yellow: #F8E71C; //rgb(248, 231, 28)
 $platinum: #efefef; // rgb(239, 239, 239)
 $light-gray: #d8d8d8; // rgb(216, 216, 216)
 $charcoal: #333; // rgb(51, 51, 51)
@@ -42,7 +44,7 @@ $pinterest-hover-color:	#bd081c;
 $twitter-hover-color:	#55acee;
 $youtube-hover-color:	#cd201f;
 $linkedin-hover-color:	#0077b5;
-$instagram-hover-color:	#3f729b;
+$instagram-hover-color:	#0a0b09;
 
 // Kiva functional color names
 $kiva-green: $green;
@@ -50,6 +52,7 @@ $kiva-darkgreen: $dark-green;
 $kiva-accent-green: $light-green;
 $kiva-accent-blue: $blue;
 $kiva-accent-red: $red;
+$kiva-alert-yellow: $vivid-yellow;
 $kiva-icon-green: $graphic-green;
 $kiva-navdivider-green: $divider-green;
 $kiva-bg-lightgray: $ghost;
@@ -61,6 +64,21 @@ $kiva-text-light: $gray;
 $kiva-textlink: $sky-blue;
 $kiva-textlink-visited: $faded-blue;
 $kiva-textlink-hover: $highlight-blue;
+$kiva-filter-indicator: $blue;
+$kiva-filter-indicator-bg: $pale-blue;
+
+// graph and chart element colors
+$graph-green: #63a541;
+$graph-blue: #0d8ebb;
+$graph-purple: #5141a5;
+$graph-red: #9c021a;
+$graph-med-gray: #666666;
+$graph-yellow: #f8e71c;
+$graph-dark-green: #236133;
+$graph-pale-blue: #d2f0f8;
+$graph-magenta: #a54195;
+$graph-light-gray: #d8d8d8;
+
 
 .white {
 	color: $white;
@@ -68,6 +86,10 @@ $kiva-textlink-hover: $highlight-blue;
 
 .white-bg {
 	background-color: $white;
+}
+
+.kiva-gray{
+	color: $kiva-text-light;
 }
 
 .kiva-green {

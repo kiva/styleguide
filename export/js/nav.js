@@ -1486,7 +1486,8 @@ define("Styleguide", ["jquery"], function(__WEBPACK_EXTERNAL_MODULE_2__) { retur
 
 
 	/*** EXPORTS FROM exports-loader ***/
-	module.exports = window.Modernizr}.call(window));
+	module.exports = window.Modernizr;
+	}.call(window));
 
 /***/ },
 /* 4 */
@@ -8076,7 +8077,7 @@ define("Styleguide", ["jquery"], function(__WEBPACK_EXTERNAL_MODULE_2__) { retur
 
 
 	/*** EXPORTS FROM exports-loader ***/
-	module.exports = window.Foundation
+	module.exports = window.Foundation;
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(2)))
 
 /***/ },
@@ -8093,6 +8094,7 @@ define("Styleguide", ["jquery"], function(__WEBPACK_EXTERNAL_MODULE_2__) { retur
 		var $close_search = $('#close-search');
 		var $search_form = $('#search-form');
 		var $search_box = $('#search-box');
+		var is_touch = $('html').hasClass('touch');
 
 		$search_toggle.click(function (e) {
 			e.preventDefault();
@@ -8117,7 +8119,7 @@ define("Styleguide", ["jquery"], function(__WEBPACK_EXTERNAL_MODULE_2__) { retur
 		});
 
 		var typeahead_menu_repositioning = function() {
-			if ($search_box) {
+			if ($search_box.length) {
 				var offset = $search_box.offset();
 				$('.top-nav-search-menu').css({
 					top: (offset.top + $search_box.outerHeight()) + 'px',
@@ -8127,7 +8129,13 @@ define("Styleguide", ["jquery"], function(__WEBPACK_EXTERNAL_MODULE_2__) { retur
 			}
 		};
 
-		$search_box.on('typeahead:open', typeahead_menu_repositioning);
+		// REDO-1768: For some reason this event fires inconsistently across different pages.
+		// As a workaround, let's re-run the repositioning a second time when the open animation finishes
+		$search_box.on('typeahead:open', function() {
+			typeahead_menu_repositioning();
+
+			window.setTimeout(typeahead_menu_repositioning, 500);
+		});
 
 
 		var close_button_visibility = function () {
@@ -8193,6 +8201,12 @@ define("Styleguide", ["jquery"], function(__WEBPACK_EXTERNAL_MODULE_2__) { retur
 				.trigger(hidden ? 'hide' : 'show');
 		});
 
+		// when not touchscreen, close lend dropdown when lend button itself is clicked
+		if (! is_touch) {
+			$('[data-dropdown="lend-dropdown"]').click(function () {
+				Foundation.libs.dropdown.close($('#lend-dropdown'));
+			});
+		}
 
 		// close window when normal links clicked
 		$('#lend-dropdown a:not([data-kv-toggle],[href="#"])').click(function () {
@@ -8200,8 +8214,7 @@ define("Styleguide", ["jquery"], function(__WEBPACK_EXTERNAL_MODULE_2__) { retur
 		});
 
 		// Resets lend-menu-large and lend-menu-small
-		$('[data-dropdown=lend-dropdown]').click(function (e) {
-			e.preventDefault();
+		$('#lend-dropdown').on('closed.fndtn.dropdown', function () {
 			//lend-menu-large
 			$category_section.removeClass('slide-left');
 			$close_section.attr('aria-hidden', true);
@@ -8210,8 +8223,22 @@ define("Styleguide", ["jquery"], function(__WEBPACK_EXTERNAL_MODULE_2__) { retur
 
 			// lend-menu-small
 			$('.lend-menu-small li>a').attr('aria-expanded', false);
-			$('.lend-menu-small ul').attr('aria-hidden', true);
+			$('.lend-menu-small ul').attr('aria-hidden', true).css('height', 0);
 		});
+
+		// when not touchscreen, close about dropdown when about button itself is clicked
+		if (! is_touch) {
+			$('[data-dropdown="about-dropdown"]').click(function () {
+				Foundation.libs.dropdown.close($('#about-dropdown'));
+			});
+		}
+
+		// when not touchscreen, close my-kiva dropdown when my-kiva button itself is clicked
+		if (! is_touch) {
+			$('[data-dropdown="my-kiva-dropdown"]').click(function () {
+				Foundation.libs.dropdown.close($('#my-kiva-dropdown'));
+			});
+		}
 	};
 
 /***/ },
@@ -8227,16 +8254,11 @@ define("Styleguide", ["jquery"], function(__WEBPACK_EXTERNAL_MODULE_2__) { retur
 
 		'use strict';
 
-		var $accordions = $('[data-kv-accordion]');
-
-		var $targets = $($accordions.get().reduce(function(prev, curr, i) {
-			return prev + (i===0 ? '' : ', ') + '#' + $(curr).attr('aria-controls');
-		}, ''));
-
-
-		$accordions.click(function() {
-			var $this = $(this);
-			var $target = $('#'+$this.attr('aria-controls'));
+		var $accordions, $targets, namespace = 'kv-accordion';
+		
+		function accordionFunction(name,element) {
+			var $this = element || $(this);
+			var $target = $(name);
 			var is_hidden = $target.attr('aria-hidden') === 'true';
 			var hiding = !is_hidden;
 
@@ -8257,37 +8279,81 @@ define("Styleguide", ["jquery"], function(__WEBPACK_EXTERNAL_MODULE_2__) { retur
 
 				// ...and set the height immediately after so it animates
 				window.setTimeout(function() {
-					$target.css('height', height + 'px');
+					$target.css({
+						'height': height + 'px',
+						'-webkit-transition': '' // reset fix for iOS bug
+					});
 				}, 0);
 			}
 			else {
-				// if the heihgt hasn't been set yet, measure and set it
+				// if the height hasn't been set yet, measure and set it
 				if($target[0].style.height.length === 0 || $target[0].style.height === 'auto') {
 					$target.css('height', $target.height() + 'px');
 				}
 
 				// set the height to 0 immediately after so it animates
 				window.setTimeout(function() {
-					$target.css('height', 0);
+					$target.css({
+						'height': 0,
+						'-webkit-transition': '' // reset fix for iOS bug
+					});
 				}, 0);
 			}
 
-			$targets.filter($target.parents()).css('height', 'auto');
+			// set any parent accordions height to auto so that they expand as well
+			$targets.filter($target.parents()).css({
+				'height': 'auto',
+				'-webkit-transition': 'none' // handle iOS safari bug that animates height:auto as height:0
+			});
 
 			$this.attr('aria-expanded', !hiding);
 			$target.attr('aria-hidden', hiding)
 				.trigger(hiding ? 'hide' : 'show');
-		});
+		}
+
+		function reflow() {
+			$accordions = $('[data-kv-accordion]');
+
+			$targets = $($accordions.get().reduce(function(prev, curr, i) {
+				return prev + (i===0 ? '' : ', ') + '#' + $(curr).attr('aria-controls');
+			}, ''));
+
+			$('a[href*="#ac-"]').off('click.'+namespace).on('click.'+namespace, function(){
+				var href = $(this).attr('href');
+				var accordionHeader = $(href).parent();
+				$('html, body').animate({
+					scrollTop: $(accordionHeader).offset().top
+				}, 1000);
+				accordionFunction(href);
+			});
+
+			$accordions.off('click.'+namespace).on('click.'+namespace, function() {
+				var element = $(this);
+				var href = $('#'+element.attr('aria-controls'));
+				accordionFunction(href,element);
+			});
+		}
+
+		window.kvAccordion = {
+			reflow: reflow
+		};
 
 		$(window).on('resize', Foundation.utils.throttle(function() {
 			$targets.each(function() {
 				var $this = $(this);
 				if($this.attr('aria-hidden') === 'false' && !($('html').hasClass('touch'))) {
-					$this.css('height', 'auto');
+					$this.css({
+						'height': 'auto',
+						'-webkit-transition': 'none' // handle iOS safari bug that animates height:auto as height:0
+					});
 				}
 			});
 		}, 200));
+
+		// Start intital process
+		reflow();
 	};
+
 
 /***/ }
 /******/ ])});;

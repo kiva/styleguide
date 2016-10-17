@@ -71,4 +71,8 @@
 			margin-top: -$header-height/16;
 		}
 	}
+
+	&.hidden {
+		display: none;
+	}
 }

@@ -15,7 +15,12 @@ $light-blue-gray: #DBE3E5;
     &.icon-triangle,
     &.icon-globe,
     &.icon-handshake,
-    &.icon-sort {
+    &.icon-sort,
+	&.icon-edit,
+	&.icon-refresh,
+	&.icon-grid,
+	&.icon-map,
+    &.icon-tags-checkmark {
         fill: $kiva-text-dark;
     }
 
@@ -25,6 +30,7 @@ $light-blue-gray: #DBE3E5;
     &.icon-small-chevron,
     &.icon-small-chevron-mobile,
     &.icon-x,
+	&.icon-list,
     &.icon-filter {
         stroke: $kiva-text-dark;
     }
@@ -99,6 +105,10 @@ $light-blue-gray: #DBE3E5;
 
 	&.icon-curved-arrow {
 		fill: $kiva-darkgreen;
+	}
+
+	&.icon-new-kiva-logo {
+		fill: $kiva-green;
 	}
 }
 

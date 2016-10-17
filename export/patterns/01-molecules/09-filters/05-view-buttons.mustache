@@ -1,0 +1,14 @@
+<div class="view-buttons">
+	<input type="radio" id="view-buttons-list" name="view-buttons" value="list" {{#list_view}}checked="checked"{{/list_view}}/>
+	<label for="view-buttons-list">
+		<svg class="icon icon-list">
+			<use xlink:href="#icon-list"/>
+		</svg>
+	</label>
+	<input type="radio" id="view-buttons-grid" name="view-buttons" value="grid" {{^list_view}}checked="checked"{{/list_view}} />
+	<label for="view-buttons-grid">
+		<svg class="icon icon-grid">
+			<use xlink:href="#icon-grid"/>
+		</svg>
+	</label>
+</div>

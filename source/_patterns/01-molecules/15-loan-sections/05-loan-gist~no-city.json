@@ -3,5 +3,6 @@
   "countryISOCode": "pk",
   "countryName": "Pakistan",
   "city": "",
-  "typeName": "Agriculture"
+  "typeName": "Agriculture",
+  "is_direct_loan": false
 }

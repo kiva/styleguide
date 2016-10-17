@@ -1,0 +1,13 @@
+<div class="tabs-content distribution-charts">
+	{{#tab-set}}
+		<section role="tabpanel" aria-hidden="{{#is-active}}false{{/is-active}}{{^is-active}}true{{/is-active}}" class="content {{#is-active}}active{{/is-active}}" id="{{id}}">
+			<span>{{content-title}}</span>
+			<div class="pie-chart">
+				{{> 01-molecules/03-media/01-loading-spinner }}
+			</div>
+			{{#show_distribution_table}}
+				{{> 02-organisms/40-portfolio/08-distribution-table }}
+			{{/show_distribution_table}}
+		</section>
+	{{/tab-set}}
+</div>

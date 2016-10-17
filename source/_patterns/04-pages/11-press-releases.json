@@ -1,0 +1,85 @@
+{
+	"main-title": "Press",
+	"page-title": "Press Releases",
+	"bar-links": [
+		{
+			"title": "About us"
+		},
+		{
+			"title": "How Kiva works"
+		},
+		{
+			"title": "Where Kiva works"
+		},
+		{
+			"title": "Impact"
+		},
+		{
+			"title": "Leadership"
+		},
+		{
+			"title": "Finances"
+		},
+		{
+			"title": "Press",
+			"active": true
+		},
+		{
+			"title": "Due diligence"
+		}
+	],
+	"has-bar-sub-links": true,
+	"bar-sub-links": [
+		{
+			"sub-title": "Press Center"
+		},
+		{
+			"sub-title": "Press Releases",
+			"sub-active": true
+		},
+		{
+			"sub-title": "Media Resources"
+		},
+		{
+			"sub-title": "Brand Guidelines"
+		}
+	],
+	"drop-links": [
+		{
+			"title": "Press",
+			"sub-links": [
+				{
+					"sub-title": "Press Center"
+				},
+				{
+					"sub-title": "Press Releases",
+					"sub-active": true
+				},
+				{
+					"sub-title": "Media Resources"
+				},
+				{
+					"sub-title": "Brand Guidelines"
+				}
+			]
+		},
+		{
+			"title": "About us"
+		},
+		{
+			"title": "How Kiva works"
+		},
+		{
+			"title": "Where Kiva works"
+		},
+		{
+			"title": "Impact"
+		},
+		{
+			"title": "Leadership"
+		},
+		{
+			"title": "Due diligence"
+		}
+	]
+}

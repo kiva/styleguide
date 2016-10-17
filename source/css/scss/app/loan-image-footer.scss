@@ -29,28 +29,26 @@
 	}
 
 	.favorite-link {
+		background-image: url("about:blank");
 		position: absolute;
 		bottom: 0;
 		right: 0;
+		border: none;
 	}
 
 	.favorite-link.is-favorite .icon-star {
-		color: $kiva-accent-green;
-		opacity: .8;
-	}
-
-	.favorite-link:hover .icon-star{
-		opacity: .7;
+		color: $vivid-yellow;
+		opacity: 1;
 	}
 
 	.icon-star {
-		background-color: $black;
+		background-color: $charcoal;
 		color: $white;
 		fill: none;
 		height: $loan-image-footer-height;
 		width: $loan-image-footer-height;
 		padding: rem-calc(8);
-		opacity: .6;
+		opacity: .5;
 		vertical-align: bottom;
 	}
 }

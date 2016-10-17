@@ -1,75 +1,88 @@
 .right-off-canvas-menu ul.filters-menu-list li.has-submenu > a:before {
-  content: none;
+	content: none;
 }
 
 .right-off-canvas-menu ul.filters-menu-list li.has-submenu > a:after {
-  @include icon-double-arrows($position: right);
+	@include icon-double-arrows($position: right);
 }
 
 .right-submenu .back > a:after {
-  content: none;
+	content: none;
 }
 
 .right-submenu .back > a:before {
-  @include icon-double-arrows($position: left);
+	@include icon-double-arrows($position: left);
 }
 
 .filters-menu-list {
-  .paired-button-group {
-    li {
-      width: 50%
-    }
-  }
+	.paired-button-group {
+		li {
+			width: 50%
+		}
+	}
 }
 
 .button-group > li {
-  margin: 0;
+	margin: 0;
 }
 
 .button-group > li .button {
-  background: #fff;
-  text-decoration: none;
+	background: #fff;
+	text-decoration: none;
 }
 
 .filter-slider {
-  margin-bottom: rem-calc(20);
-  padding-top: rem-calc(10);
-  padding-bottom: rem-calc(10);
+	margin-bottom: rem-calc(20);
+	padding-top: rem-calc(10);
+	padding-bottom: rem-calc(10);
 }
 
 .left-off-canvas-menu {
-  background: #fff;
-  box-shadow: -2px 0 2px rgba(0,0,0,0.2),2px 0 2px rgba(0,0,0,0.2);
+	z-index: 1002;
+	background: #fff;
+	box-shadow: -2px 0 2px rgba(0, 0, 0, 0.2), 2px 0 2px rgba(0, 0, 0, 0.2);
 }
 
 ul.off-canvas-list li label {
-    background: transparent;
-    padding: 0;
-    font-size: $small-font-size;
-    font-weight: normal;
-    text-transform: none;
+	background: transparent;
+	padding: 0;
+	font-size: $small-font-size;
+	font-weight: normal;
+	text-transform: none;
 }
 
 ul.off-canvas-list li a {
-  color: $charcoal;
-  border: 0;
-  padding: 0 0.6666666667rem;
+	color: $charcoal;
+	border: 0;
+	padding: 0 0.6666666667rem;
+	display: inline-block;
 }
 
 ul.off-canvas-list li a:hover {
-  background: $white;
-  text-decoration: none;
+	background: $white;
+	text-decoration: none;
 }
 
 .noUi-handle-lower div, .noUi-handle-upper div {
-    position: absolute;
-    color: $jumbo;
-    bottom: rem-calc(-25);
-    text-align: center;
-    width: rem-calc(18);
-    font-size: 0.8rem;
+	position: absolute;
+	color: $jumbo;
+	bottom: rem-calc(-25);
+	text-align: center;
+	width: rem-calc(18);
+	font-size: 0.8rem;
 }
 
 .filter-slider-item {
-    margin: 1.5rem 0;
+	margin: 1.5rem 0;
+}
+
+.move-right .exit-off-canvas {
+	z-index: 1000;
+	background: rgba(0, 0, 0, 0.7);
+
+	@media #{$medium-up} {
+		&:hover {
+			background: rgba(0, 0, 0, 0.7);
+		}
+	}
 }

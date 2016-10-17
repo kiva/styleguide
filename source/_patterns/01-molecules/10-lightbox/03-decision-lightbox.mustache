@@ -1,0 +1,24 @@
+{{#is-patternlab}}
+	<a href="#" data-reveal-id="{{lightboxId}}">{{triggerLinkText}}</a>
+{{/is-patternlab}}
+
+<div id="{{lightboxId}}" class="reveal-modal decision-point-lightbox" data-reveal aria-hidden="true" role="dialog">
+	<div class="row">
+		<div class="columns small-12">
+			<a class="close-reveal-modal" aria-label="Close">
+				<svg class="icon icon-x">
+					<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-x"></use>
+				</svg>
+			</a>
+			<div class="lightbox-content white">
+				{{!The content within this div is the only change from the copy and pasted lightbox atom. If you need to
+				 make changes to this lightbox outside of this div, those changes need to be made to every lightbox file within the
+				 Molecules/10-lightbox folder. }}
+				<h1 class="white">{{title}}</h1>
+				<p class="featured white">{{message}}</p>
+				<a href="#" class="button expand main-option">{{mainOptionButtonText}}</a>
+				<a href="#" class="button expand transparent alternative-option">{{alternativeOptionButtonText}}</a>
+			</div>
+		</div>
+	</div>
+</div>

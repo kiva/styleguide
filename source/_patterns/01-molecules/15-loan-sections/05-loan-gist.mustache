@@ -1,12 +1,14 @@
-<div class="loan-gist">
-    <h2 class="borrower-name">{{borrowerOrGroupName}}</h2>
-
-    <div>
-        <div class="country-image">
-            <img class="" src="../../images/flags/{{countryISOCode}}.svg" alt="{{countryName}}">
+<div class="loan-gist {{#noticeVisible}}notice-visible{{/noticeVisible}} {{#alreadyLentVisible}}already-lent-visible{{/alreadyLentVisible}}">
+    <h1 class="borrower-name">{{borrowerOrGroupName}}</h1>
+    {{#is_direct_loan}}
+        <h2 class="featured">{{businessName}}</h2>
+    {{/is_direct_loan}}
+    <div class="country-info-wrapper row">
+        <div class="country-image columns small-2">
+            <img class="" src="{{flagURL}}" alt="{{countryName}}">
         </div>
-        <div class="country-text">
-            <a href="#country-section" class="black-underlined">{{city}}{{#city}}, {{/city}}{{countryName}}</a> / {{typeName}}
+        <div class="country-text columns small-10">
+            <a href="#country-section" class="black-underlined">{{city}}{{#city}}, {{/city}}{{countryName}}</a> / <span class="typeName">{{typeName}}</span>
         </div>
     </div>
 </div>

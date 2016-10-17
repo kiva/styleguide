@@ -1,0 +1,10 @@
+{
+  "avgAnnualIncome" : "$1,800",
+  "countryName" : "Kenya",
+  "fundsLentInCountry": "$40,596,775",
+  "currencyFullName": "Kenyan Shillings",
+  "currencyCode": "KES",
+  "exchangeRate": 95.1,
+  "numLoansFundraising": 1123,
+  "inUSD": true
+}

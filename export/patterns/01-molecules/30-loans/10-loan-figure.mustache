@@ -1,37 +1,36 @@
-<figure class="loan-figure">
-    <div class="loan-figure-carousel">
+<figure class="loan-figure" style="padding-bottom:{{image_ratio}}%;">
+	<div class="loan-figure-carousel">
 
-        {{#figures}}
-            {{#youtube-video-id}}
+		{{#figures}}
+			{{#youtube-video-id}}
 
-                <div class="loan-image-wrap">
-                    <iframe class="" width="560" height="315" src="https://www.youtube.com/embed/{{youtube-video-id}}"
-                            frameborder="0" allowfullscreen></iframe>
-                </div>
-            {{/youtube-video-id}}
+				<div class="loan-image-wrap">
+					<iframe class="" width="560" height="315" src="https://www.youtube.com/embed/{{youtube-video-id}}"
+							frameborder="0" allowfullscreen></iframe>
+				</div>
+			{{/youtube-video-id}}
 
-            {{^youtube-video-id}}
-                <div class="loan-image-wrap">
-                    <img src="{{url}}" class="loan-image" alt="{{alt}}">
-                </div>
-            {{/youtube-video-id}}
-        {{/figures}}
-    </div>
+			{{^youtube-video-id}}
+				<div class="loan-image-wrap">
+					<img src="{{url}}" class="loan-image" alt="{{alt}}">
+				</div>
+			{{/youtube-video-id}}
+		{{/figures}}
+	</div>
 
-    <div class="carousel-prev carousel-nav">
-        <svg class="icon-small-chevron icon">
-            <use xlink:href="#icon-small-chevron"/>
-        </svg>
-    </div>
+	<div kvtrackevent="Borrower Profile|click-view multiple photos" class="carousel-prev carousel-nav">
+		<svg class="icon-small-chevron icon">
+			<use xlink:href="#icon-small-chevron"/>
+		</svg>
+	</div>
 
-    <div class="carousel-next carousel-nav">
-        <svg class="icon-small-chevron icon">
-            <use xlink:href="#icon-small-chevron"/>
-        </svg>
-    </div>
-    {{#show_loan_expiration}}
-        <div class="loan-message {{#is_expiring_soon}}urgent{{/is_expiring_soon}}">{{loan_length}}</div>
-    {{/show_loan_expiration}}
-    {{> 01-molecules/30-loans/11-loan-image-footer}}
+	<div kvtrackevent="Borrower Profile|click-view multiple photos" class="carousel-next carousel-nav">
+		<svg class="icon-small-chevron icon">
+			<use xlink:href="#icon-small-chevron"/>
+		</svg>
+	</div>
+	<div class="loan-image-footer">
+		{{> 01-molecules/30-loans/11-loan-image-footer}}
+	</div>
 </figure>
 

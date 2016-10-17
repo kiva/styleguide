@@ -1,0 +1,188 @@
+
+.trustee-profile {
+
+	margin-top: 1rem;
+
+	.summary {
+		dd {
+			margin-bottom: .5rem;
+		}
+		dt {
+			margin-bottom: 0;
+		}
+	}
+
+	.q-and-a {
+		dl {
+			line-height: 1rem;
+		}
+		dl dd {
+			margin-bottom: 1rem;
+		}
+		dt {
+			margin-top: 1rem;
+			margin-bottom: .5rem;
+		}
+	}
+}
+
+.trustee-application {
+
+	margin-top: 1rem;
+
+	.button.setting, .button.setting:visited {
+		color: $kiva-text-dark;
+	}
+
+}
+
+
+.trustee-filters {
+	padding: .5rem;
+	background-color: $kiva-bg-darkgray;
+	.tf-item {
+		display: inline-block;
+		white-space: nowrap;
+		text-align: right;
+		float: left;
+		width: 100%;
+		@media #{$medium-up} {
+			width: 50%;
+		}
+		@media #{$large-up} {
+			width: (100%/3);
+		}
+		@media #{$xxlarge-up} {
+			width: auto;
+		}
+		label {
+			display: inline-block;
+			color: $kiva-text-dark;
+			line-height: 2rem;
+		}
+
+		input[type="text"], select {
+			display: inline-block;
+			width: 8rem;
+			height: 1.9rem;
+			line-height: 0.9rem;
+			margin: 0.25rem;
+			vertical-align: middle;
+		}
+	}
+}
+
+.trustee-results-region {
+	.result-count {
+		text-align: right;
+		color: $kiva-text-medium;
+		margin-top: 1rem;
+	}
+	.trustee-listing-row {
+		border-bottom: 1px solid $kiva-stroke-gray;
+		margin-bottom: 1rem;
+		padding-bottom: 1rem;
+	}
+}
+
+@media #{$medium-up} {
+	.become-a-trustee {
+		margin-top: -4rem;
+	}
+}
+
+.trustee-listing-row {
+	.stats {
+		margin-top: 0.25rem;
+	}
+	.big-stat {
+		@extend .medium-statistic;
+	}
+	.image {
+		text-align: center;
+		margin-top: 2rem;
+		@media #{$medium-up} {
+			margin-top: 0;
+		}
+	}
+	.story {
+		margin: 1rem;
+		@media #{$medium-up} {
+			margin: 0;
+		}
+	}
+	.name-location, .stats {
+		text-align: center;
+		@media #{$medium-up} {
+			text-align: left;
+		}
+	}
+
+	img {
+		max-height: 8rem;
+	}
+}
+
+/* organism */
+.trustee-dashboard-main {
+	.trustee-name {
+		margin-bottom: 1rem;
+	}
+	margin-bottom: 3rem;
+}
+
+/* organism */
+.search-borrower-bar {
+	background-color: $kiva-bg-darkgray;
+	padding: 1rem;
+}
+
+/* organism */
+.borrower-network-listing {
+	.header-bar {
+		background-color: $kiva-bg-darkgray;
+		padding: 0.5rem;
+	}
+	.item-bar {
+		padding: 0.5rem;
+	}
+}
+
+/* organism */
+.pending-endorsements {
+	.item-bar {
+		padding: 1rem;
+	}
+}
+
+
+
+.dashboard-main, .borrower-network {
+	.borrower-item-row {
+		&:nth-child(even) {
+			background-color: $kiva-bg-darkgray;
+		}
+	}
+}
+
+
+/* organism */
+.trustee-impact-stats {
+	.statistic-display {
+		padding: 1rem;
+	}
+}
+
+/* molecule */
+.trustee-borrower-actions {
+	vertical-align: center;
+	a {
+		display: block;
+		margin: 0.25rem;
+		@extend .text-center;
+	}
+	a.button {
+		padding: 0;
+	}
+}
+

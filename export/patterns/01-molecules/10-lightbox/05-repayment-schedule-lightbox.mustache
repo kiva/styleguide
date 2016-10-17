@@ -1,4 +1,4 @@
-<h2><a href="#" class="black-underlined" data-reveal-id="repayment-schedule-tables">Repayment Schedule</a></h2>
+<h2><a kvtrackevent="Borrower Profile|click-repayment schedule" href="#" class="black-underlined" data-reveal-id="repayment-schedule-tables">Repayment schedule</a></h2>
 <div id="repayment-schedule-tables" class="reveal-modal" data-reveal aria-hidden="true" role="dialog">
     <div class="row">
         <div class="columns small-12">
@@ -8,17 +8,17 @@
                 </svg>
             </a>
             <div class="lightbox-content white repayment-schedule-lightbox">
-                <p class="featured">Repayment Schedule</p>
+                <p class="featured">Repayment schedule</p>
 
-                {{#isDirectLoan}}
+                {{#is_direct_loan}}
                     {{#isDisbursed}}
                         <div class="repayment-schedule-wrapper">
                             <table class="simple-repayment-schedule" role="grid" summary="Schedule of expected and actual repayments for this loan.">
                                 <thead>
                                 <tr>
-                                    <th id="total-amount-due" class="text-right shrink">Total Amount Due</th>
-                                    <th id="amount-paid" class="text-right shrink">Amount Paid</th>
-                                    <th id="due-date-from-borrower" class="shrink">Due From Borrower</th>
+                                    <th id="total-amount-due" class="text-right shrink">Total amount due</th>
+                                    <th id="amount-paid" class="text-right shrink">Amount paid</th>
+                                    <th id="due-date-from-borrower" class="shrink">Due from borrower</th>
                                     <th id="status" class="expand">Status</th>
                                 </tr>
                                 </thead>
@@ -34,23 +34,24 @@
                                 </tbody>
                             </table>
                         </div>
+                        <p>Disbursement and repayments on this loan will be made via PayPal, a web-based payment system. Repayments made on delinquent loans will be applied towards the oldest outstanding balance until repayments are caught up.</p>
                     {{/isDisbursed}}
                     {{^isDisbursed}}
                         <div class="loan-not-disbursed-text">
                             <p>This borrower’s loan is for {{loanAmount}}.</p>
-                            <p>Repayments on this loan will be made in monthly installments of {{monthlyInstallmentAmount}} over a period of {{repaymentTerm}} months. After the funds are disbursed, the borrower will have the standard 1 month plus an additional 6 months grace period before the first payment is due. The detailed repayment schedule will be published here at the time that the funds for this loan are disbursed.</p>
+                            <p>Repayments on this loan will be made in monthly installments of {{monthlyInstallmentAmount}} over a period of {{repaymentTerm}} months. After the funds are disbursed, the borrower will have the standard 1 month before the first payment is due, and may have an additional grace period per the terms outlined in their loan agreement. The detailed repayment schedule will be published here at the time that the funds for this loan are disbursed.</p>
                             <p>Disbursement and repayments will be made via PayPal, a web-based payment system. Repayments made on delinquent loans will be applied toward the oldest payment due until the loan becomes current.</p>
                         </div>
                     {{/isDisbursed}}
-                {{/isDirectLoan}}
-                {{^isDirectLoan}}
+                {{/is_direct_loan}}
+                {{^is_direct_loan}}
                     {{^isDualStatementLoan}}
                         <div class="show-advanced">
-                            <a href="javascript:void(0);" id="show-advanced-toggle">Show Advanced</a>
+                            <a href="javascript:void(0);" id="show-advanced-toggle">Show advanced</a>
                         </div>
 
                         <div class="hide-advanced" style="display:none;">
-                            <a href="javascript:void(0);" id="hide-advanced-toggle">Hide Advanced</a>
+                            <a href="javascript:void(0);" id="hide-advanced-toggle">Hide advanced</a>
                         </div>
                     {{/isDualStatementLoan}}
 
@@ -59,9 +60,9 @@
                             <thead>
                             <tr>
                                 <th id="expected-repayment-dates" class="shrink">&nbsp;</th>
-                                <th id="expected-repayments" class="text-right shrink"><a target="_blank" href="https://www.kiva.org/help/paymentSchedule#payment_schedule_expected_payments">Expected</a></th>
-                                <th id="actual-repayments" class="text-right shrink"><a target="_blank" href="https://www.kiva.org/help/paymentSchedule#payment_schedule_actual_payments">Actual</a></th>
-                                <th id="comments" class="expand"><a target="_blank" href="https://www.kiva.org/help/paymentSchedule#payment_schedule_comments">Comments</a></th>
+                                <th id="expected-repayments" class="text-right shrink">Expected</th>
+                                <th id="actual-repayments" class="text-right shrink">Actual</th>
+                                <th id="comments" class="expand">Comments</th>
                             </tr>
                             </thead>
                             <tbody>
@@ -75,7 +76,7 @@
                                                 <svg class="icon icon-checkbox-good">
                                                     <use xlink:href="#icon-checkbox-good"></use>
                                                 </svg>
-                                                Repayment Received
+                                                Repayment received
                                             {{/repaymentReceived}}
                                             {{^repaymentReceived}}
                                                 {{#isDelinquent}}
@@ -99,9 +100,11 @@
                                 <thead>
                                 <tr>
                                     <th id="months" class="shrink">&nbsp;</th>
-                                    <th id="expected-repayments" colspan="2"  class="text-left shrink"><a target="_blank" href="https://www.kiva.org/help/paymentSchedule#payment_schedule_expected_payments">Expected</a></th>
-                                    <th id="actual-repayments" colspan="2" class="text-left shrink"><a target="_blank" href="https://www.kiva.org/help/paymentSchedule#payment_schedule_actual_payments">Actual</a></th>
-                                    <th id="comments" class="expand"><a target="_blank" href="https://www.kiva.org/help/paymentSchedule#payment_schedule_comments">Comments</a></th>
+                                    <th id="expected-repayments" colspan="1"  class="text-left shrink">Expected</th>
+                                    <th id="expected-repayments-amount" colspan="1"  class="text-left shrink">Amount</th>
+                                    <th id="actual-repayments" colspan="1" class="text-left shrink">Actual</th>
+                                    <th id="actual-repayments-received" colspan="1" class="text-left shrink">Received</th>
+                                    <th id="comments" class="expand">Comments</th>
                                 </tr>
                                 </thead>
                                 <tbody>
@@ -113,7 +116,7 @@
                                                 <svg class="icon icon-checkbox-good">
                                                     <use xlink:href="#icon-checkbox-good"></use>
                                                 </svg>
-                                                Repayment Received
+                                                Repayment received
                                             {{/repaymentReceived}}
                                             {{^repaymentReceived}}
                                                 {{#isDelinquent}}
@@ -130,7 +133,7 @@
                                     </tr>
                                     {{#paymentsFromBorrowerToPartner}}
                                         <tr>
-                                            {{#showB2FPMessage}}<td rowspan="{{numberOfExpectedBorrowerPayments}}">From Borrower to Field Partner</td>{{/showB2FPMessage}}
+                                            <td>{{#showB2FPMessage}}From borrower to Field Partner{{/showB2FPMessage}}{{^showB2FPMessage}}&nbsp;{{/showB2FPMessage}}</td>
                                             <td>{{expectedDate}}</td>
                                             <td>{{expectedAmount}}</td>
                                             <td>{{actualDate}}</td>
@@ -139,7 +142,7 @@
                                         </tr>
                                     {{/paymentsFromBorrowerToPartner}}
                                     <tr>
-                                        <td>From Field Partner to Lenders</td>
+                                        <td>From Field Partner to lenders</td>
                                         <td>{{expectedRepayDate}}</td>
                                         <td>{{expectedRepayment}}</td>
                                         {{#repaymentReceived}}
@@ -153,10 +156,15 @@
                                         <td>{{actualRepayment}}</td>
                                         <td>
                                             {{#comments}}
-                                                {{comments}}<br>
+                                                {{comments}}
+                                            {{/comments}}
+                                            {{#comments}}
+                                                {{#currencyLossLenders}}
+                                                    <br>
+                                                {{/currencyLossLenders}}
                                             {{/comments}}
                                             {{#currencyLossLenders}}
-                                                {{currencyLossLenders}} lost to currency devaluation <a target="_blank" href="https://www.kiva.org/help/currencyExchangeLoss?business_id=950791&period=201602#ExplanationOfCurrencyExchangeLossToLendersOnThisRepayment">more »</a>
+                                                {{currencyLossLenders}} lost to currency devaluation
                                             {{/currencyLossLenders}}
                                             &nbsp;
                                         </td>
@@ -166,7 +174,7 @@
                             </table>
                         {{/isDualStatementLoan}}
                     </div>
-                {{/isDirectLoan}}
+                {{/is_direct_loan}}
             </div>
         </div>
     </div>

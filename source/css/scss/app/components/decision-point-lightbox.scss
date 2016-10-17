@@ -1,0 +1,31 @@
+.decision-point-lightbox {
+	outline: 0;
+	background: rgba(0, 0, 0, 0);
+
+	.button{
+		display: inline-block;
+		float: left;
+		outline: 0;
+		padding: 0 rem-calc(12);
+		width: 100%;
+
+		&.main-option {
+			border: solid 1px #26b6e8;
+			margin-right: 5%;
+
+			@media #{$large-up} {
+				width: 12rem;
+				margin-right: rem-calc(20);
+			}
+		}
+
+		&.alternative-option {
+			background: transparent;
+			border: solid 1px #FFFFFF;
+
+			@media #{$large-up} {
+				width: 18rem;
+			}
+		}
+	}
+}

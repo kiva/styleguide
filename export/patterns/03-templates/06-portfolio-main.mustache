@@ -1,0 +1,12 @@
+<div class="small-12 large-9 columns portfolio portfolio-main">
+	{{> 02-organisms/40-portfolio/01-portfolio-main-top-bar}}
+	{{> 02-organisms/40-portfolio/02-portfolio-main-second-bar}}
+	{{> 02-organisms/40-portfolio/03-portfolio-main-stats-bar}}
+	{{#has_loans}}
+		{{> 02-organisms/40-portfolio/04-portfolio-main-loans-bar}}
+		{{> 02-organisms/40-portfolio/05-portfolio-main-updates-bar}}
+		{{> 02-organisms/40-portfolio/06-portfolio-main-distribution-bar}}
+	{{/has_loans}}
+</div>
+
+<div class="spacer" style="clear:both"></div>

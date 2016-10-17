@@ -1,0 +1,19 @@
+<div class="recent-loans">
+	<h2 class="scalable">Recent loans <a href="{{all_loans_url}}">See all</a></h2>
+
+	{{#map_grid_toggle}}
+		{{> 01-molecules/05-navigation/06-icon-toggle }}
+	{{/map_grid_toggle}}
+
+	<ul class="loan-grid small-block-grid-2 medium-block-grid-3 large-block-grid-4">
+		{{#loans}}
+			<li>
+				{{> 01-molecules/12-loancards/01-mini-loan-card }}
+			</li>
+		{{/loans}}
+	</ul>
+
+	<div class="map-pane">
+		<div class="geo-chart"></div>
+	</div>
+</div>

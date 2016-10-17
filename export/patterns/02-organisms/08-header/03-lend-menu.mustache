@@ -1,23 +1,23 @@
 <div id="lend-dropdown" class="f-dropdown content" data-dropdown-content aria-hidden="true" aria-autoclose="false" tabindex="-1">
     <ul class="lend-menu-small hide-for-large-up">
         <li>
-            <a href="#" data-kv-accordion aria-controls="lend-menu-category-panel" aria-expanded="false" class="section-title">Category<svg class="icon icon-small-chevron-mobile"><use xlink:href="#icon-small-chevron-mobile" /></svg></a>
+            <a href="#" data-kv-accordion aria-controls="lend-menu-category-panel" aria-expanded="false" class="section-title">Categories<svg class="icon icon-small-chevron-mobile"><use xlink:href="#icon-small-chevron-mobile" /></svg></a>
             <ul id="lend-menu-category-panel" aria-hidden="true">
 				{{#categories.list}}
-                    <li><a href="{{href}}">{{name}}</a></li>
+                    <li><a kvtrackevent="TopNav|click-Lend-Category|{{name}}|{{index}}" href="{{href}}">{{name}}</a></li>
 				{{/categories.list}}
-                <li><a href="{{categories_href}}">All Categories</a></li>
+                <li><a href="{{categories_href}}">All categories</a></li>
             </ul>
         </li>
         <li>
-            <a href="#" data-kv-accordion aria-controls="lend-menu-countries-panel" aria-expanded="false" class="section-title">Countries<svg class="icon icon-small-chevron-mobile"><use xlink:href="#icon-small-chevron-mobile" /></svg></a>
+            <a href="#" data-kv-accordion aria-controls="lend-menu-countries-panel" aria-expanded="false" class="section-title">Regions<svg class="icon icon-small-chevron-mobile"><use xlink:href="#icon-small-chevron-mobile" /></svg></a>
             <ul id="lend-menu-countries-panel" aria-hidden="true">
 				{{#regions}}
                     <li>
                         <a href="#" data-kv-accordion aria-controls="lend-menu-{{id}}-panel" aria-expanded="false" class="section-title">{{name}}<svg class="icon icon-small-chevron-mobile"><use xlink:href="#icon-small-chevron-mobile" /></svg></a>
                         <ul id="lend-menu-{{id}}-panel" aria-hidden="true">
 							{{#countries}}
-								<li><a href="{{#facet}}{{href}}{{/facet}}{{^facet}}#{{/facet}}" {{^facet}}class="disabled"{{/facet}}><span class="f16 {{code}}"></span>{{name}} {{#facet}}({{facet}}){{/facet}}{{^facet}}(0){{/facet}}</a></li>
+								<li><a kvtrackevent="TopNav|click-Lend-Country|{{name}}" href="{{#facet}}{{href}}{{/facet}}{{^facet}}#{{/facet}}" {{^facet}}class="disabled"{{/facet}}><span class="f16 {{code}}"></span>{{name}} {{#facet}}({{facet}}){{/facet}}{{^facet}}(0){{/facet}}</a></li>
 							{{/countries}}
                         </ul>
                     </li>
@@ -25,19 +25,24 @@
             </ul>
         </li>
         <li>
-            <a href="{{lend_href}}">All Loans</a>
+            <a kvtrackevent="TopNav|click-Lend-All_Loans" href="{{lend_href}}">All loans</a>
         </li>
 		{{^is-visitor}}
 			{{#has_personalized}}
 	            <li>
-	                <a href="#" data-kv-accordion aria-controls="lend-menu-personalized-panel" aria-expanded="false" class="section-title">Personalized<svg class="icon icon-small-chevron-mobile"><use xlink:href="#icon-small-chevron-mobile" /></svg></a>
+	                <a href="#" data-kv-accordion aria-controls="lend-menu-personalized-panel" aria-expanded="false" class="section-title">My Kiva<svg class="icon icon-small-chevron-mobile"><use xlink:href="#icon-small-chevron-mobile" /></svg></a>
 	                <ul id="lend-menu-personalized-panel" aria-hidden="true">
-                        {{#favorites_href}}
-                            <li><a href="{{favorites_href}}">Favorites</a></li>
-                        {{/favorites_href}}
+						{{#has_favorites}}
+							<li class="favorites-href-in-nav"><a kvtrackevent="TopNav|click-Lend-Favorites" href="{{favorites_href}}">Starred loans</a></li>
+							<li class="no-favorites-href-in-nav hide"><a kvtrackevent="TopNav|click-Lend-Favorites" href="#" class="disabled">Starred loans</a></li>
+						{{/has_favorites}}
+						{{^has_favorites}}
+							<li class="no-favorites-href-in-nav"><a kvtrackevent="TopNav|click-Lend-Favorites" href="#" class="disabled">Starred loans</a></li>
+							<li class="favorites-href-in-nav hide"><a kvtrackevent="TopNav|click-Lend-Favorites" href="{{favorites_href}}">Starred loans</a></li>
+						{{/has_favorites}}
 						{{#has_saved_searches}}
-                            <li>
-								<a href="#" data-kv-accordion aria-controls="lend-menu-searches-panel" aria-expanded="false" class="section-title">Saved Searches<svg class="icon icon-small-chevron-mobile"><use xlink:href="#icon-small-chevron-mobile" /></a>
+                            <li class="lend-menu-searches-li-mobile">
+								<a kvtrackevent="TopNav|click-Lend-SavedSearch" href="#" data-kv-accordion aria-controls="lend-menu-searches-panel" aria-expanded="false" class="section-title">Saved searches<svg class="icon icon-small-chevron-mobile"><use xlink:href="#icon-small-chevron-mobile" /></svg></a>
 								<ul id="lend-menu-searches-panel" aria-hidden="true">
 									{{#saved_searches}}
 										<li><a href="{{href}}">{{name}}</a></li>
@@ -45,8 +50,16 @@
 								</ul>
 							</li>
 						{{/has_saved_searches}}
+						{{^has_saved_searches}}
+							<li class="lend-menu-searches-li-mobile">
+								<a href="#" class="section-title disabled">Saved searches</a>
+								<a href="#" data-kv-accordion aria-controls="lend-menu-searches-panel" aria-expanded="false" class="section-title" style="display: none;">Saved searches<svg class="icon icon-small-chevron-mobile"><use xlink:href="#icon-small-chevron-mobile" /></svg></a>
+								<ul id="lend-menu-searches-panel" aria-hidden="true">
+								</ul>
+							</li>
+						{{/has_saved_searches}}
 	                    {{#countries_unlent_href}}
-	                    	<li><a href="{{countries_unlent_href}}">Countries I Have Not Lent To</a></li>
+	                    	<li><a kvtrackevent="TopNav|click-Lend-Countries_Not_Lent" href="{{countries_unlent_href}}">Countries I haven't lent to</a></li>
 	                    {{/countries_unlent_href}}
 	                </ul>
 	            </li>
@@ -55,14 +68,14 @@
     </ul>
 	<div class="lend-menu-large show-for-large-up">
 		<div class="column-section list-length-{{categories.count}}">
-			<div class="section-title">Category</div>
+			<div class="section-title">Categories</div>
 			<div class="column-list-container">
 				<ul class="column-list">
 					{{#categories.list}}
-                        <li><a href="{{href}}">{{name}}</a></li>
+                        <li><a kvtrackevent="TopNav|click-Lend-Category|{{name}}|{{index}}" href="{{href}}">{{name}}</a></li>
 					{{/categories.list}}
-                    <li class="bottom"><a href="{{lend_href}}">All Loans</a></li>
-					<li class="bottom"><a href="{{categories_href}}">All Categories</a></li>
+                    <li class="bottom"><a kvtrackevent="TopNav|click-Lend-All_Loans" href="{{lend_href}}">All loans</a></li>
+					<li class="bottom"><a kvtrackevent="TopNav|click-Lend-All_Categories" href="{{categories_href}}">All categories</a></li>
 				</ul>
 			</div>
 		</div>
@@ -74,7 +87,7 @@
 			</a>
 		</div>
         <div class="column-section">
-			<div class="section-title">Countries</div>
+			<div class="section-title">Regions</div>
 			<ul>
 				{{#regions}}
                     <li>
@@ -84,18 +97,29 @@
 			</ul>
 			{{^is-visitor}}
 				{{#has_personalized}}
-					<div class="section-title">Personalized</div>
+					<div class="section-title">My Kiva</div>
 					<ul>
-                        {{#favorites_href}}
-                            <li><a href="{{favorites_href}}">Favorites</a></li>
-                        {{/favorites_href}}
+						{{#has_favorites}}
+							<li class="favorites-href-in-nav"><a kvtrackevent="TopNav|click-Lend-Favorites" href="{{favorites_href}}">Starred loans</a></li>
+							<li class="no-favorites-href-in-nav hide"><a kvtrackevent="TopNav|click-Lend-Favorites" href="#" class="disabled">Starred loans</a></li>
+						{{/has_favorites}}
+						{{^has_favorites}}
+							<li class="no-favorites-href-in-nav"><a kvtrackevent="TopNav|click-Lend-Favorites" href="#" class="disabled">Starred loans</a></li>
+							<li class="favorites-href-in-nav hide"><a kvtrackevent="TopNav|click-Lend-Favorites" href="{{favorites_href}}">Starred loans</a></li>
+						{{/has_favorites}}
 						{{#has_saved_searches}}
-							<li>
-								<a href="#" data-kv-toggle aria-controls="lend-menu-searches-section" aria-expanded="false" class="tertiary-link">Saved Searches</a>
+							<li class="lend-menu-searches-li-desktop">
+								<a href="#" data-kv-toggle aria-controls="lend-menu-searches-section" aria-expanded="false" class="tertiary-link">Saved searches</a>
+							</li>
+						{{/has_saved_searches}}
+						{{^has_saved_searches}}
+							<li class="lend-menu-searches-li-desktop">
+								<a href="#" class="tertiary-link disabled">Saved searches</a>
+								<a kvtrackevent="TopNav|click-Lend-SavedSearch" href="#" data-kv-toggle aria-controls="lend-menu-searches-section" aria-expanded="false" class="tertiary-link" style="display: none;">Saved searches</a>
 							</li>
 						{{/has_saved_searches}}
 	                    {{#countries_unlent_href}}
-	                    	<li><a href="{{countries_unlent_href}}">Countries I Have Not Lent To</a></li>
+	                    	<li><a kvtrackevent="TopNav|click-Lend-Countries_Not_Lent" href="{{countries_unlent_href}}">Countries I haven't lent to</a></li>
 	                    {{/countries_unlent_href}}
 					</ul>
 				{{/has_personalized}}
@@ -107,7 +131,7 @@
 				<ul>
 					{{#countries}}
 						<li>
-							<a href="{{#facet}}{{href}}{{/facet}}{{^facet}}#{{/facet}}" {{^facet}}class="disabled"{{/facet}}><span class="f16 {{code}}"></span>
+							<a kvtrackevent="TopNav|click-Lend-Country|{{name}}" href="{{#facet}}{{href}}{{/facet}}{{^facet}}#{{/facet}}" {{^facet}}class="disabled"{{/facet}}><span class="f16 {{code}}"></span>
 								{{name}}
 								{{#facet}}({{facet}}){{/facet}}{{^facet}}(0){{/facet}}</a>
 						</li>
@@ -115,15 +139,13 @@
 				</ul>
             </div>
 		{{/regions}}
-        {{#has_saved_searches}}
-            <div id="lend-menu-searches-section" aria-hidden="true" class="tertiary-list column-section">
-                <div class="section-title">Saved Searches</div>
+            <div id="lend-menu-searches-section" aria-hidden="true" class="tertiary-list column-section lend-menu-searches-li-desktop">
+                <div class="section-title">Saved searches</div>
                 <ul>
                     {{#saved_searches}}
                         <li><a href="{{href}}">{{name}}</a></li>
                     {{/saved_searches}}
                 </ul>
             </div>
-        {{/has_saved_searches}}
 	</div>
 </div>

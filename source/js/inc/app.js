@@ -15,27 +15,33 @@ var saveSearchLightbox = require('./app/saveSearchLightbox');
 var $ = require('jquery');
 var FastClick = require('fastclick');
 
-$(document).foundation({
-	equalizer: {
-		equalize_on_stack: true
-	}
-	, offcanvas : {
-		open_method: 'move'
-	}
-	, reveal: {
-		root_element: '.reveal-modal-bg',
-		close_on_background_click: false
-	}
+$(document).ready(function() {
+	$(document).foundation({
+		equalizer: {
+			equalize_on_stack: true
+		}
+		, offcanvas : {
+			open_method: 'move'
+		}
+		, reveal: {
+			root_element: '.reveal-modal-bg',
+			close_on_background_click: false
+		}
+		, tooltip: {
+			disable_for_touch: true,
+			hover_delay: 650
+		}
+	});
+
+	FastClick.attach(document.body);
+
+	header();
+	filters();
+	imagesizes();
+	accordion();
+	videoResizing();
+	borrowerPage();
+	categories();
+	lightbox();
+	saveSearchLightbox();
 });
-
-FastClick.attach(document.body);
-
-header();
-filters();
-imagesizes();
-accordion();
-videoResizing();
-borrowerPage();
-categories();
-lightbox();
-saveSearchLightbox();

@@ -1,0 +1,29 @@
+@import '../../settings';
+
+.statistic-display {
+	text-align: center;
+
+	@media #{$large-up}{
+		text-align: left;
+	}
+
+	.statistic-label {
+		margin-bottom: 3px;
+	}
+
+	.icon {
+		height: 1rem;
+		width: 1rem;
+		vertical-align: text-top;
+		margin-right: rem-calc(4);
+	}
+
+	.statistic-link
+	, .statistic-additional-text {
+		@extend .small-text;
+	}
+
+	.statistic-additional-text {
+		color: $kiva-text-light;
+	}
+}

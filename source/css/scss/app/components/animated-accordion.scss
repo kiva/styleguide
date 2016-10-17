@@ -1,14 +1,20 @@
 .ac-container {
-	.ac-title {
+	&.ac-title {
 		margin: 0;
 		display: block;
 		position: relative;
+		h2 {
+			width: 90%;
+		}
 	}
 	.ac-dropdown-icon {
 		display: inline;
 		.icon {
 			position: absolute;
 			right: 1px;
+			&.loan-tags-dropdown {
+				right: 1rem;
+			}
 			margin-top: .2rem;
 			height: 1rem;
 			width: rem-calc(25);

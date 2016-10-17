@@ -1,6 +1,7 @@
 .loan-figure {
 	position: relative;
 	margin: 0;
+	background-color: $kiva-bg-darkgray;
 	.loan-message {
 		visibility: hidden;
 		position: absolute;
@@ -9,7 +10,7 @@
 		padding: 2px 6.75px;
 		font-size: 18px;
 		line-height: $small-line-height;
-		background-color: rgba(255, 255, 255, 0.5);
+		background-color: rgba(255, 255, 255, 0.8);
 		color: $kiva-text-dark;
 
 		&.urgent {
@@ -22,6 +23,7 @@
 
 		img {
 			margin: 0 auto;
+			max-height: rem-calc(460);
 		}
 
 		.icon-youtube {

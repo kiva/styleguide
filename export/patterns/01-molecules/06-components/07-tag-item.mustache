@@ -1,0 +1,18 @@
+<li class="tag">
+	<input type="checkbox" name='{{name}}' class='loan-tag-{{id}}' id='loan-tag-{{id}}' value='{{id}}' {{#userSelected}}checked{{/userSelected}}/>
+	<label for='loan-tag-{{id}}'>
+		<div class="checkmark-container">
+			<svg class="icon icon-tags-checkmark">
+				<use xlink:href="#icon-tags-checkmark"></use>
+			</svg>
+		</div>
+		<div class="name-and-description">
+			<p class="name">
+				{{name}}
+			</p>
+			<p class="description">
+				{{description}}
+			</p>
+		</div>
+	</label>
+</li>

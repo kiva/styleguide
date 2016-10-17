@@ -1,0 +1,9 @@
+{
+	"previewProfileUrl":false,
+	"viewProfileUrl":false,
+	"showEndorseButton":false,
+	"copyInviteUrl":false,
+	"editEndorsementUrl":false,
+	"commentLoanUrl":"#",
+	"repaymentScheduleUrl":"#"
+}

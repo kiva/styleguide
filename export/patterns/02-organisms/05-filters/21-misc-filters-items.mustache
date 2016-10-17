@@ -1,2 +1,7 @@
-<input type="checkbox" id="misc-{{value}}" name="{{value}}" value="{{value}}" />
-<label for="misc-{{value}}" class="filter checkbox-input-span">{{name}}</label>
+{{#is_a_link}}
+	<a class="small-touch" href="#">{{lightbox_link}}</a>
+{{/is_a_link}}
+{{^is_a_link}}
+	<input type="checkbox" id="misc-{{value}}" name="{{value}}" value="{{value}}" />
+	<label for="misc-{{value}}" class="filter checkbox-input-span">{{name}}{{#lightbox_link}}<span class="small-touch">{{lightbox_link}}</span><a class="black-underlined" href="#">{{lightbox_link}}</a>{{/lightbox_link}}</label>
+{{/is_a_link}}

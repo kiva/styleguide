@@ -1,10 +1,15 @@
-<a class="close-reveal-modal" aria-label="Close">
-	<svg class="icon icon-x">
-		<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-x"></use>
-	</svg>
-</a>
 <div class="lightbox-content">
 	<div class="white-background-box">
+		<a class="close-reveal-modal" aria-label="Close">
+			<svg class="icon icon-x">
+				<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-x"></use>
+			</svg>
+		</a>
+		{{#logged_in}}
+			<span class="small-text kiva-gray">You have lent to {{countries_unlent_count}} of {{total_countries_count}} countries where Kiva works</span>
+			<br/>
+			<a href="#" id="countries-unlent">Find a loan in a new country</a>
+		{{/logged_in}}
 		<div id="country-list">
 			{{#regions}}
 				<section class="region-name">
@@ -12,8 +17,6 @@
 				</section>
 			{{/regions}}
 		</div>
-
-		<a href="#" id="filter-country-submit" class="button smaller right">Done</a>
-
 	</div>
+		<a href="#" id="filter-country-submit" class="button smaller right">Done</a>
 </div>

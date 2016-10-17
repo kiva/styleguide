@@ -1,0 +1,19 @@
+<div class="borrower-network-listing">
+
+	<div class="row header-bar">
+		<div class="columns large-6 medium-4 small-4">Borrower</div>
+		<div class="columns large-3 medium-4 small-4">Status</div>
+		<div class="columns large-3 medium-4 small-4"></div>
+	</div>
+
+	<div class="trustee-borrowers-results-region">
+		{{#trustee-borrowers}}
+			<div class="borrower-item-row">
+				{{> 02-organisms/50-trustee-dashboard/63-borrower-network-listing-item}}
+			</div>
+		{{/trustee-borrowers}}
+	</div>
+
+	{{> 02-organisms/10-lend/03-paging}}
+
+</div>

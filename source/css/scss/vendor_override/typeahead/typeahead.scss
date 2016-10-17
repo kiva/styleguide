@@ -12,11 +12,14 @@
     }
 
     .tt-suggestion {
+		cursor: pointer;
         padding: $spacing $spacing $spacing 1rem;
+		line-height: 1.2;
 
-        @media #{$large-up} {
-            padding: 0.1rem 0.1rem 0.1rem 1rem;
-        }
+		&:hover {
+			color: $white;
+			background-color: $kiva-accent-blue;
+		}
     }
 
     .tt-suggestion:first-of-type {

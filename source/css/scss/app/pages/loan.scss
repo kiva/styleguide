@@ -7,7 +7,15 @@
 
 .black-underlined {
 	text-decoration: underline;
-	color: $charcoal;
+	color: $charcoal !important;
+
+	a:visited {
+		color: $charcoal  !important;
+	}
+}
+
+.black-underlined:hover {
+	color: $sky-blue !important;
 }
 
 .loan-story {
@@ -19,7 +27,7 @@
 	}
 
 	.ac-body {
-		margin-top: 2rem;
+		margin-top: 1rem;
 	}
 
 	.ac-title {
@@ -31,82 +39,259 @@
 			margin-bottom: 0;
 		}
 	}
+
+	.icon {
+		width: rem-calc(30);
+		height: rem-calc(30);
+	}
+
+	.icon-large-chevron {
+		position: absolute;
+		top: 0.333333rem !important;
+	}
 }
 
 .about-zip {
 	position: relative;
+
 	.ac-title-text {
-		margin-right: 26px;
+		margin-right: rem-calc(26);
 	}
+
 	.ac-body {
 		margin-top: 2rem;
 	}
+
+	.ac-title {
+		position: relative;
+	}
+
+	.icon-label {
+		float: left;
+	}
+
+	.inline-list {
+		display: inline;
+	}
+
+	.icon {
+		width: rem-calc(30);
+		height: rem-calc(30);
+	}
+
+	.icon-large-chevron {
+		position: absolute;
+		top: 0.333333rem !important;
+	}
+}
+
+.loan-tags {
+	padding-left: 0;
+	padding-right: 0;
+	margin-bottom: 1rem;
+
+	.ac-title {
+		position: relative;
+
+		.ac-title-text {
+			padding-left: 1rem;
+
+			@media #{$xxlarge-up} {
+				padding-left: 0;
+			}
+		}
+
+		.icon-large-chevron {
+			top: 0.333333rem !important;
+		}
+	}
+
+	.tag-info {
+		margin-bottom: 1rem;
+		margin-left: 1rem;
+		margin-right: 1rem;
+
+		@media #{$xxlarge-up} {
+			margin-left: 0;
+		}
+
+		.selected-tags {
+			a:visited {
+				color: $kiva-textlink;
+			}
+			margin-bottom: 1rem;
+			span:last-child {
+				.divider {
+					display: none;
+				}
+			}
+		}
+		.tag-toggler {
+			text-decoration: underline;
+			cursor: pointer;
+		}
+		.tag-directions {
+			display: none;
+		}
+	}
+
+	.all-tags {
+		height: 0;
+		overflow: hidden;
+		ul {
+			list-style-type: none;
+			margin: 0;
+			li{
+				&:nth-of-type(odd) {
+					background-color: $kiva-bg-darkgray;
+				}
+				input {
+					display: none;
+					&:checked + label {
+						.icon {
+							fill: $kiva-green;
+						}
+						&:after {
+							display: block;
+						}
+					}
+				}
+				label {
+					display: flex;
+					.checkmark-container {
+						pointer-events: none;
+						margin-top: auto;
+						margin-bottom: auto;
+						margin-left: rem-calc(10);
+						margin-right: rem-calc(20);
+						.icon {
+							fill: $light-gray;
+							width: rem-calc(44);
+							height: rem-calc(44);
+						}
+					}
+					.name-and-description {
+						width: 100%;
+						pointer-events: none;
+						padding-top: 1rem;
+						padding-bottom: 1rem;
+						p {
+							margin-bottom: 0;
+						}
+						.name {
+							font-weight: bold;
+							text-decoration: underline;
+						}
+					}
+				}
+			}
+		}
+		&.hide-for-touch {
+			@media #{$xlarge-up} {
+				padding-left: 1rem;
+				padding-right: 1rem;
+				ul {
+					li {
+						&:nth-of-type(odd) {
+							background-color: transparent;
+						}
+						input {
+							display: block;
+							float: left;
+							margin-top: rem-calc(23);
+							margin-right: rem-calc(5);
+						}
+						label {
+							.checkmark-container {
+								display: none;
+							}
+							.description {
+								margin-left: rem-calc(-18);
+							}
+						}
+					}
+				}
+			}
+
+			@media #{$xxlarge-up} {
+				padding-left: 0;
+			}
+		}
+	}
+
+	.icon {
+		width: rem-calc(30);
+		height: rem-calc(30);
+	}
+
+	.icon-large-chevron {
+		position: absolute;
+		top: 0.333333rem !important;
+	}
+}
+
+.why-special {
 	.ac-title {
 		position: relative;
 	}
 	.icon-label {
 		float: left;
 	}
-	.inline-list {
-		display: inline;
+	.endorser {
+		@include clearfix;
+		margin-top: rem-calc(15);
+		margin-bottom: rem-calc(15);
+		p {
+			margin-bottom: 0;
+		}
+		.profile-photo, .name-and-title {
+			@media #{$small-up} {
+				text-align: center;
+			}
+			@media #{$large-up} {
+				display: inline-block;
+				float: left;
+				text-align: left;
+			}
+		}
+		.circle-avatar {
+			margin-left: 0;
+			width: 0.78125 * $header-height;
+			height: 0.78125 * $header-height;
+			@media #{$large-up} {
+				margin-right: rem-calc(20);
+				margin-top: rem-calc(-2);
+			}
+		}
 	}
+	.endorsement {
+		margin-top: 1rem;
+		text-align: center;
+		font-size: 2rem;
+
+		@media #{$medium-only} {
+			margin-left: 2rem;
+			margin-right: 2rem;
+		}
+
+		@media #{$large-up} {
+			text-align: left;
+			margin-right: 1rem;
+		}
+
+		@media #{$xxlarge-up} {
+			max-width: 85%;
+		}
+	}
+
 	.icon {
-		width: 30px;
-		height: 30px;
+		width: rem-calc(30);
+		height: rem-calc(30);
 	}
+
 	.icon-large-chevron {
 		position: absolute;
-		top: 0;
-	}
-}
-
-.is-special {
-	.ac-body {
-		margin-top: 1rem;
-	}
-	label {
-		font-size: 1rem;
-	}
-	.kivan {
-		position: relative;
-		@media #{$medium-up} {
-			display: inline-block;
-		}
-		.profile-photo {
-			padding-top: 1rem;
-			text-align: center;
-			@media #{$medium-up}{
-				display: inline;
-			}
-			img {
-				background-repeat: no-repeat;
-				border-radius: 50%;
-				width: 100px;
-				@media #{$medium-up} {
-					width: 50px;
-				}
-			}
-		}
-		.show-for-medium-up {
-			vertical-align: middle;
-			div {
-				display: block;
-				padding-left: 1rem;
-			}
-		}
-		.show-for-small-only {
-			text-align: center;
-			margin: 0 auto;
-		}
-	}
-	.green-bolded {
-		text-align: left;
-		max-width: 75%;
-		@media #{$small-only} {
-			text-align: center;
-			max-width: 85%;
-			margin: 0 auto;
-		}
+		top: 0.333333rem !important;
 	}
 }
 
@@ -125,6 +310,12 @@
 }
 
 .current-status-meter {
+	margin-top: 1.25rem;
+
+	@media #{$medium-up} {
+		margin-top: 0;
+	}
+
 	.lender-count {
 		@media #{$small-only}{
 			div {
@@ -139,17 +330,37 @@
 	.amount-raised {
 		.inline {
 			display: inline-block;
+			color: $kiva-green;
+		}
+		h2 {
+			margin-top: 0;
 		}
 	}
+	.goal-stats {
+		.days-left-stat {
+			float: left;
+		}
+
+		.urgent {
+			color: $red;
+		}
+
+		.amount-to-go-stat {
+			float: right;
+		}
+
+		margin-top: -0.25rem;
+		margin-bottom: 0.25rem;
+	}
 	.raised-info {
+		padding-bottom: rem-calc(9);
 		margin: 0;
 		div, .lender-count {
 			padding: 0;
 		}
-		.lender-count {
-			color: $charcoal;
-		}
 		@media #{$small-only}{
+			padding-bottom: 0;
+			
 			.lender-count {
 				float: right;
 			}
@@ -168,7 +379,6 @@
 }
 
 .loan-gist {
-
 	/*
 	 * Let's target IE to respect aspect ratios and sizes for img tags containing SVG files
 	 *
@@ -185,30 +395,58 @@
 			width: 100%;
 		}
 	}
+	.row {
+		margin: 0 auto;
+	}
 
-	padding-bottom: 1rem;
-	.country-image {
-		display: inline-block;
-		max-width: 3rem;
-		height: 2.25rem;
-		img {
-			max-width: 100%;
-			height: 100%;
-			width: 100%;
+	padding-bottom: 2rem;
+
+	@media #{$large-up} {
+		padding-bottom: 4rem;
+
+		&.already-lent-visible {
+			padding-bottom: 7rem;
 		}
 	}
-	.country-text {
-		width: 70%;
-		vertical-align: middle;
-		display: inline-block;
-		div {
-			display: inline;
+
+	&.notice-visible {
+		padding-bottom: 2rem;
+	}
+
+	&.notice-visible.already-lent-visible {
+		padding-bottom: 1rem;
+	}
+
+	.country-info-wrapper {
+		@media #{$medium-down} {
+			font-size: rem-calc(14);
+		}
+
+		.country-image {
+			min-width: rem-calc(50);
+			padding-left: 0;
+			padding-right: 0;
+			top: rem-calc(3);
+		}
+		.country-text {
+			padding-right: rem-calc(5);
+			position: absolute;
+			left: rem-calc(60);
+
+			@media #{$medium-only} {
+				left: rem-calc(45);
+			}
 		}
 	}
+
 	.borrower-name {
 		font-weight: bold;
+		margin: 0;
 		@media #{$medium-up} {
 			font-weight: normal;
+			font-size: rem-calc(34);
+			line-height: rem-calc(38);
+			padding-bottom: 0.5rem;
 		}
 	}
 }
@@ -216,16 +454,121 @@
 .lenders-teams {
 	.ac-body {
 		margin-top: 1rem;
+		padding-right: 4vw;
 
-		.my-kiva {
-			.circle-avatar {
-				margin-top: 0.5rem;
+		@media #{$large-up}{
+			padding-right: 2vw;
+		}
+
+		.circle-avatar {
+			width: 15vw;
+			height: 15vw;
+
+			@media #{$large-up}{
+				width: 8vw;
+				height: 8vw;
+				max-width: 5rem;
+				max-height: 5rem;
 			}
+		}
+
+		.anonymous-lender-message, .beyond-cutoff-message {
+			margin-bottom: 1rem;
+		}
+
+		.lenders, .teams {
+			margin-top: 1rem;
+		}
+
+		#ac-more-lenders-body, #ac-more-teams-body {
+			margin-top: 0;
 		}
 	}
 
 	.ac-title {
 		position: relative
+	}
+
+	.icon {
+		width: rem-calc(30);
+		height: rem-calc(30);
+	}
+
+	.icon-large-chevron {
+		position: absolute;
+		top: 0.333333rem !important;
+	}
+}
+
+.field-partner-details {
+	.ac-body {
+		margin-top: 1rem;
+	}
+
+	.ac-title {
+		position: relative
+	}
+
+	.field-partner-iconography {
+		padding-bottom: 0.5rem;
+		text-align: center;
+
+		.field-partner-image-wrapper {
+			padding-bottom: 0.5rem;
+			height: 12rem;
+			overflow: hidden;
+
+			.field-partner-image {
+				height: 100%;
+			}
+		}
+
+		@media #{$medium-up}{
+			text-align: left;
+
+			.field-partner-image-wrapper {
+				padding-bottom: 0.5rem;
+				height: 8rem;
+				overflow: hidden;
+
+				.field-partner-image {
+					height: 100%;
+				}
+			}
+		}
+	}
+
+	.why-we-work-with-them {
+		padding-bottom: 1rem;
+	}
+
+	.field-partner-data {
+		.black-underlined {
+			display: inline-block;
+		}
+		.bold {
+			font-weight: bold;
+			padding-left: 0.3rem;
+		}
+		.datum {
+			strong {
+				display: inline-block;
+			}
+		}
+	}
+
+	.more-on-field-partner {
+		padding-top: 1rem;
+	}
+
+	.icon {
+		width: rem-calc(30);
+		height: rem-calc(30);
+	}
+
+	.icon-large-chevron {
+		position: absolute;
+		top: 0.333333rem !important;
 	}
 }
 
@@ -242,16 +585,27 @@
 		padding-bottom: 0.5rem;
 		text-align: center;
 
-		.trustee-image {
+		.trustee-image-wrapper {
 			padding-bottom: 0.5rem;
-			max-height: 12rem;
+			height: 12rem;
+			overflow: hidden;
+
+			.trustee-image {
+				height: 100%;
+			}
 		}
 
 		@media #{$medium-up}{
 			text-align: left;
 
-			.trustee-image {
-				max-height: 8rem;
+			.trustee-image-wrapper {
+				padding-bottom: 0.5rem;
+				height: 8rem;
+				overflow: hidden;
+
+				.trustee-image {
+					height: 100%;
+				}
 			}
 		}
 	}
@@ -273,6 +627,16 @@
 
 	.why-endorse {
 		padding-top: 1rem;
+	}
+
+	.icon {
+		width: rem-calc(30);
+		height: rem-calc(30);
+	}
+
+	.icon-large-chevron {
+		position: absolute;
+		top: 0.333333rem !important;
 	}
 }
 
@@ -299,6 +663,16 @@
 	.override-styling-from-db {
 		margin-bottom: 1rem;
 	}
+
+	.icon {
+		width: rem-calc(30);
+		height: rem-calc(30);
+	}
+
+	.icon-large-chevron {
+		position: absolute;
+		top: 0.333333rem !important;
+	}
 }
 
 .country-info {
@@ -311,10 +685,13 @@
 	}
 
 	.country-map {
-		padding-bottom: 1rem;
-		padding-left: 1rem;
+		margin-left: 0;
+		margin-right: 0;
+		margin-bottom: 1rem;
+		padding-left: 0;
 		height: 16rem;
 		width: 100%;
+		background-color: $kiva-accent-green;
 
 		#mapPane {
 			height: 100%;
@@ -324,21 +701,32 @@
 	.country-stats {
 		padding-bottom: 1rem;
 		text-align: center;
-		@media #{$large-up}{
-			text-align: left;
-			padding-bottom: 0.5rem;
-		}
+		margin-left: 0.5rem;
+		margin-right: -0.5rem;
 
-		.stat {
-			.description {
-				font-weight: bold;
-			}
+		ul li {
+			padding: 0;
+
 			.data-point {
 				color: $kiva-green;
 				font-weight: bold;
 				padding-bottom: rem-calc(10);
 			}
+
+			@media #{$large-up}{
+				text-align: left;
+			}
 		}
+	}
+
+	.icon {
+		width: rem-calc(30);
+		height: rem-calc(30);
+	}
+
+	.icon-large-chevron {
+		position: absolute;
+		top: 0.333333rem !important;
 	}
 }
 
@@ -352,6 +740,7 @@
 	}
 
 	.loan-term {
+		padding-top: 0.1rem;
 		padding-bottom: 1rem;
 		text-align: center;
 
@@ -378,7 +767,7 @@
 			color: $kiva-text-light;
 			fill: $kiva-text-light;
 			@media #{$medium-up}{
-				width: 54.8px;
+				width: rem-calc(54.8);
 			}
 		}
 	}
@@ -394,7 +783,7 @@
 		.risk-rating {
 			.icon {
 				height: 1rem;
-				width: 18px;
+				width: rem-calc(18);
 				fill: transparent;
 			}
 			.empty-star {
@@ -408,13 +797,41 @@
 		}
 	}
 
+	.icon {
+		width: rem-calc(30);
+		height: rem-calc(30);
+	}
+
+	.icon-large-chevron {
+		position: absolute;
+		top: 0.333333rem !important;
+	}
 }
 
 .lend-action, .lend-action.row {
+	width: calc(40% - #{rem-calc(12)});
 	margin: 0;
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	float: right;
+
+	&.notice-visible {
+		position: relative;
+	}
+
 	.lend-button-wrapper {
 		display: inline;
 		padding: 0;
+
+		button#lend-button-amount-selector {
+			border: 1px solid $setting-button-border-color;
+
+			&:hover, &:active {
+				color: $kiva-text-light;
+				border-color: $kiva-text-light;
+			}
+		}
 
 		.lend-action-button {
 			padding: 0;
@@ -427,6 +844,29 @@
 	}
 
 	.lend-values-button {
+
+		[aria-expanded="false"] {
+			.icon {
+				$transform: rotate(180deg);
+
+				-webkit-transform: $transform;
+				-ms-transform: $transform;
+				transform: $transform;
+
+			}
+		}
+
+		[aria-expanded="true"] {
+			.icon {
+				$transform: rotate(0deg);
+
+				-webkit-transform: $transform;
+				-ms-transform: $transform;
+				transform: $transform;
+
+			}
+		}
+
 		.lend-action-button {
 			padding-right: 0.3rem;
 			padding-left: 0.3rem;
@@ -436,20 +876,33 @@
 				border-width: 0.4rem;
 			}
 			.icon {
+				$transition: 0.3s ease-in-out;
+				-webkit-transition: -webkit-transform $transition;
+				transition: transform $transition;
 				height: 0.75rem;
-				fill: white;
+				fill: $kiva-text-dark;
 				width: 0.75rem;
-				transform: rotate(180deg);
 			}
+			&:hover .icon, &:active .icon {
+				fill: $kiva-text-light;
+			}
+
 		}
 	}
 	.lend-now-button {
-		padding-left: 5px;
+		padding-left: rem-calc(5);
+	}
+
+	.find-new-loan {
+		border-width: rem-calc(1);
+		width: 100%;
+		padding: 0;
+		margin: 0;
 	}
 
 	.f-dropdown {
 		margin-top: 0;
-		max-width: 450px;
+		max-width: rem-calc(450);
 		border-top: none;
 		li a {
 			font-size: 1rem;
@@ -459,19 +912,24 @@
 	.proceed-to-checkout-button {
 		outline: none;
 		width: 100%;
-		padding-right: 0;
+		padding: 0;
 		font-size: 1.155556rem;
+		margin-bottom: 0;
+		white-space:nowrap;
+
 		@media #{$xxlarge-up}{
 			font-size: 1.5555555556rem;
 		}
 
 		.icon {
-			width: 33px;
-			height: 33px;
-			position: absolute;
-			left: 10px;
-			top: 16px;
+			width: rem-calc(33);
+			height: rem-calc(33);
+			position: relative;
+			top: rem-calc(7);
 			fill: white;
+		}
+		&:hover{
+			background-color: #488443;
 		}
 	}
 	.green-button {
@@ -484,8 +942,16 @@
 
 	#already-supported-message {
 		text-align: center;
-		padding-top: 10px;
-		padding-bottom: 10px;
+		padding-top: rem-calc(10);
+		padding-bottom: rem-calc(10);
+	}
+
+	.not-eligible-message {
+		text-align: center;
+		padding-top: 0.5rem;
+		padding-bottom: 0.5rem;
+		background-color: $kiva-alert-yellow;
+		margin-bottom: 0.5rem;
 	}
 }
 
@@ -495,13 +961,14 @@
 	bottom: 0;
 	z-index: 1200;
 	background-color: $white;
+	box-shadow: 0px -1px 3px 0px rgba(51,51,51,0.3);
 
 	.button {
 		margin-bottom: 0;
 		display: inline-block;
 		font-size: 1rem;
-		height: 2.8rem;
-		line-height: 2.8rem;
+		height: rem-calc(66);
+		line-height: rem-calc(66);
 		width: 100%;
 		#basket-text {
 			font-size: 0.6rem;
@@ -513,12 +980,21 @@
 	.basket-buttons .columns {
 		padding: 0;
 		&:nth-child(2) {
-			padding: 0 1px;
+			padding: 0 rem-calc(1) 0 0;
 		}
 	}
 	#already-supported-message-mobile {
 		text-align: center;
 		background-color: $kiva-stroke-gray;
+	}
+
+	.not-eligible-message-mobile {
+		text-align: center;
+		background-color: $kiva-alert-yellow;;
+		padding-top: 0.5rem;
+		padding-bottom: 0.5rem;
+		margin-top: 0.5rem;
+		margin-bottom: 0.5rem;
 	}
 
 	.lend-action-button {
@@ -528,7 +1004,7 @@
 	}
 	.footer-basket-amount {
 		color: $white;
-		padding-top: 6px;
+		padding-top: rem-calc(6);
 	}
 
 	.lend-button-wrapper {
@@ -547,37 +1023,46 @@
 			font-size: 1.5555555556rem;
 		}
 
-		.icon {
-			z-index: 999;
-			width: 33px;
-			height: 33px;
-			position: absolute;
-			left: 10px;
-			fill: white;
-			top: 10px;
+		.icon-confirmation-wrapper {
+			display: inline-block;
+			vertical-align: middle;
+			padding-top: rem-calc(9);
+			margin-right: rem-calc(5);
+			.icon {
+				z-index: 999;
+				width: rem-calc(33);
+				height: rem-calc(33);
+				fill: white;
+			}
+		}
+
+		.basket-amount {
+			display: inline-block;
+			vertical-align: middle;
+			margin-bottom: rem-calc(10);
 		}
 	}
 
 	.lend-values-select-wrapper {
 		padding: 0;
 		.lend-values-select {
-			height: 2.8rem;
+			height: rem-calc(66);
 			margin: 0;
 			padding-left: 7%;
-			border: 0;
-			background: $kiva-accent-blue;
+			border: 1px solid $kiva-text-dark;
+			background: $white;
 			outline: none;
-			text-shadow: 0px 0px 0px $white;
-			color: transparent;
-			font-size: 18px;
+			text-shadow: 0 0 0 $white;
+			color: $kiva-text-dark;
+			font-size: rem-calc(18);
 			font-weight: bold;
 			@media #{$medium-up} {
 				padding-left: 15%;
 			}
 		}
 		.lend-arrow {
-			width: 21px;
-			fill: $white;
+			width: rem-calc(21);
+			fill: $kiva-text-dark;
 			right: 3%;
 			top: 44%;
 			height: 16%;
@@ -595,7 +1080,7 @@
 	color: $white;
 	font-size: 1.556rem;
 	font-family: PostGrotesk, Arial, Helvetica, sans-serif;
-	line-height: 65px;
+	line-height: rem-calc(65);
 	padding: 0;
 	text-align: center;
 
@@ -635,21 +1120,209 @@
 
 .browse-more-loans {
 	text-align: center;
-	margin-bottom: 10px;
+	margin-bottom: rem-calc(10);
 }
 
 .value-in-basket {
 	text-align: center;
-	margin-bottom: 10px;
+	margin-bottom: rem-calc(10);
 }
 
 .loan-use {
-	text-align: center;
-	max-width: 60%;
-	margin: 0 auto;
+	text-align: left;
+	max-width: 100%;
 
-	@media #{$small-only} {
-		text-align: left;
-		max-width: 100%;
+	@media #{$medium-up} {
+		text-align: center;
+		max-width: 80%;
+		margin: 0 auto;
+
+		h2 {
+			margin-bottom: 1.25rem;
+		}
+	}
+}
+
+// fund-a-loan bar at top
+.full-width-green-bar {
+	background-color: $kiva-darkgreen;
+	color: $kiva-accent-green;
+
+	@media #{$x-small-only} {
+		font-size: $small-font-size;
+	}
+}
+
+.no-touch .fund-a-loan-bar:hover{
+	text-decoration: underline;
+}
+
+.fund-a-loan-bar {
+	cursor: pointer;
+}
+
+.question-icon {
+	display: inline-block;
+	height: rem-calc(25);
+	width: rem-calc(25);
+	line-height: rem-calc(25);
+	border: rem-calc(1) solid transparent;
+	border-radius: 0.75rem;
+	margin: 0.25rem 0 0.25rem 0.25rem;
+	font-weight: $font-weight-bold;
+	text-align: center;
+	color: $kiva-darkgreen;
+	background-color: $kiva-accent-green;
+}
+
+.comments-and-updates {
+	padding-left: 0;
+	padding-right: 0;
+
+	.comments-and-updates-title {
+		position: relative;
+		display: flex;
+
+		h2 {
+			width: 80%;
+			margin-left: 1rem;
+
+			@media #{$xxlarge-up} {
+				margin-left: 0;
+			}
+		}
+
+		.ac-dropdown-icon {
+			padding-top: 0.5rem;
+		}
+	}
+
+	.ac-body {
+		.comment-form fieldset {
+			border-style: none;
+			margin-bottom: 0;
+			margin-top: 0;
+
+			@media #{$xxlarge-up} {
+				padding-left: 0;
+			}
+		}
+
+		.comment-submit-block, .subscribe-block, .unsubscribe-block {
+			padding-left: 1rem;
+			padding-bottom: 2rem;
+			margin-top: 0;
+			margin-bottom: 0;
+
+			@media #{$xxlarge-up} {
+				padding-left: 0;
+			}
+		}
+
+		.comment-submit, .comment-subscribe, .comment-unsubscribe {
+			margin-right: 0.5rem;
+			float: left;
+			width: 9rem;
+		}
+
+		.updates {
+			padding-left: 1rem;
+			padding-right: 1rem;
+
+			@media #{$xxlarge-up} {
+				padding-left: 0;
+			}
+		}
+
+		.comments {
+			@media #{$large-up} {
+				padding-left: 1rem;
+				padding-right: 1rem;
+			}
+
+			@media #{$xxlarge-up} {
+				padding-left: 0;
+			}
+
+			.comment {
+				display: block;
+				padding-top: 0.5rem;
+				padding-bottom: 0.5rem;
+				width: 96%;
+
+				@media #{$large-up} {
+					padding: 1rem 0.5rem 1rem 0.5rem;
+				}
+
+				&:nth-of-type(odd) {
+					background-color: $kiva-bg-darkgray;
+				}
+
+				.commenter-image {
+					margin-left: 0;
+				}
+
+				.borrower-image {
+					float: right;
+					margin-right: 1rem;
+					.circle-avatar {
+						margin-right: 0;
+					}
+					@media #{$large-up} {
+						margin-right: 0.5rem;
+					}
+				}
+
+				.non-borrower-image {
+					float: left;
+					margin-left: 1rem;
+					.circle-avatar {
+						margin-left: 0;
+					}
+					@media #{$large-up} {
+						margin-left: 0.5rem;
+					}
+				}
+
+				.comment-header {
+					color: $kiva-text-light;
+				}
+
+				.comment-content {
+					.comment-text {
+						margin-bottom: 0.5rem;
+						word-wrap: break-word;
+					}
+				}
+
+				.borrower-text {
+					div {
+						margin-right: 5rem;
+						margin-left: 1rem;
+					}
+				}
+
+				.non-borrower-text {
+					div {
+						margin-right: 1rem;
+						margin-left: 5rem;
+					}
+				}
+
+				.flagged {
+					color: $kiva-accent-red;
+				}
+			}
+		}
+	}
+
+	.icon {
+		width: rem-calc(30);
+		height: rem-calc(30);
+	}
+
+	.icon-large-chevron {
+		position: absolute;
+		top: 0.333333rem !important;
 	}
 }

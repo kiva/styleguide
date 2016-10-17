@@ -6,7 +6,7 @@ $button-bg-hover: $kiva-textlink-hover;
 
 $button-font-med: rem-calc(28);
 $button-font-med-reduction: rem-calc(14);
-$button-font-sm: rem-calc(18);
+$button-font-sm: rem-calc(24);
 $button-font-weight: $font-weight-bold;
 
 $button-height-med: rem-calc(64);
@@ -25,8 +25,11 @@ $setting-button-text-color: $kiva-text-dark;
 $setting-button-background-color: $white;
 $setting-button-border-color: $kiva-text-dark;
 
+$secondary-button-font-sm: rem-calc(14);
+$secondary-button-font-med: rem-calc(18);
+
 button, a.button, .button {
-	font-size: $button-font-med - $button-font-med-reduction;
+	font-size: $button-font-sm;
 	font-weight: $font-weight-bold;
 	height: $button-height-med - $button-height-med-reduction;
 	line-height: $button-height-med - $button-height-med-reduction;
@@ -93,6 +96,8 @@ button, a.button, .button {
 
 button.secondary, .button.secondary {
 	border-color: $kiva-text-dark;
+	border-width: 1px;
+	font-size: $secondary-button-font-sm;
 
 	&:visited {
 		color: $kiva-text-dark;
@@ -111,5 +116,9 @@ button.secondary, .button.secondary {
 			border-color: $kiva-text-light;
 			color: $kiva-text-light;
 		}
+	}
+
+	@media #{$medium-up} {
+		font-size: $secondary-button-font-med;
 	}
 }

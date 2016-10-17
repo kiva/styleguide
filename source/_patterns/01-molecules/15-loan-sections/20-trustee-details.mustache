@@ -1,109 +1,119 @@
 <section class="trustee-details">
-    <h2 class="ac-title ac-container" data-kv-accordion aria-controls="ac-trustee-info-body{{#right-content}}-right{{/right-content}}" aria-expanded="true">
-        Trustee
-        <span class="ac-dropdown-icon">
-            <svg class="icon icon-large-chevron">
-                <use xlink:href="#icon-large-chevron"></use>
-            </svg>
-        </span>
-    </h2>
-    <div class="ac-body" id="ac-trustee-info-body{{#right-content}}-right{{/right-content}}" aria-hidden="false">
-        <div class="trustee-iconography">
-            <img class="trustee-image" src="{{trusteeImgLink}}" alt="Trustee image">
-            <h3><a target="_blank" href="{{trusteeLink}}">{{trusteeName}}</a></h3>
-        </div>
+
+	{{^skipHeader}}
+    <div class="ac-title ac-container" data-kv-accordion aria-controls="ac-trustee-info-body{{#right}}-right{{/right}}" aria-expanded="false">
+        <h2>
+            Trustee
+            <span class="ac-dropdown-icon">
+                <svg class="icon icon-large-chevron">
+                    <use xlink:href="#icon-large-chevron"></use>
+                </svg>
+            </span>
+        </h2>
+    </div>
+	<div class="ac-body" id="ac-trustee-info-body{{#right}}-right{{/right}}" aria-hidden="true">
+		<div class="trustee-iconography">
+			<div class="trustee-image-wrapper">
+				<img class="trustee-image" src="{{trustee.trusteeImgLink}}" alt="Trustee image">
+			</div>
+			<h3><a target="_blank" href="{{trustee.trusteeLink}}">{{trustee.trusteeName}}</a></h3>
+		</div>
+	{{/skipHeader}}
+	{{#skipHeader}}
+	<div class="ac-body" id="ac-trustee-info-body" aria-hidden="false">
+	{{/skipHeader}}
         <div class="trustee-data">
             <div id="trustee-type" class="datum">
-                <a class="black-underlined" data-reveal-id="trustee-type-lightbox">Trustee Type:</a>
+                <a class="black-underlined" data-reveal-id="trustee-type-lightbox">Trustee type</a>:
                 <strong>
-                    {{#trusteeType}}{{trusteeType}}{{/trusteeType}}
-                    {{^trusteeType}}N/A{{/trusteeType}}
+                    {{#trustee.trusteeType}}{{trustee.trusteeType}}{{/trustee.trusteeType}}
+                    {{^trustee.trusteeType}}N/A{{/trustee.trusteeType}}
                 </strong>
             </div>
             <div id="tier" class="datum">
-                <a class="black-underlined" data-reveal-id="trustee-tier-lightbox">Tier:</a>
+                <a class="black-underlined" data-reveal-id="trustee-tier-lightbox">Tier</a>:
                 <strong>
-                    {{#tier}}{{tier}}{{/tier}}
-                    {{^tier}}N/A{{/tier}}
+                    {{#trustee.tier}}{{trustee.tier}}{{/trustee.tier}}
+                    {{^trustee.tier}}N/A{{/trustee.tier}}
                 </strong>
             </div>
             <div id="location" class="datum">
-                <a class="black-underlined" data-reveal-id="trustee-location-lightbox">Location:</a>
-                <strong>{{location}}</strong>
+                <a class="black-underlined" data-reveal-id="trustee-location-lightbox">Location</a>:
+                <strong>{{trustee.location}}</strong>
             </div>
             <div id="on-zip-since" class="datum">
-                <a class="black-underlined" data-reveal-id="trustee-on-zip-since-lightbox">Time on Kiva:</a>
+                <a class="black-underlined" data-reveal-id="trustee-on-zip-since-lightbox">Time on Kiva</a>:
                 <strong>
-                    {{#onZipSince}}{{onZipSince}}{{/onZipSince}}
-                    {{^onZipSince}}N/A{{/onZipSince}}
+                    {{#trustee.onZipSince}}{{trustee.onZipSince}}{{/trustee.onZipSince}}
+                    {{^trustee.onZipSince}}N/A{{/trustee.onZipSince}}
                 </strong>
             </div>
             <div id="loans-endorsed" class="datum">
-                <a class="black-underlined" data-reveal-id="trustee-loans-endorsed-lightbox">Kiva Borrowers:</a>
+                <a class="black-underlined" data-reveal-id="trustee-loans-endorsed-lightbox">Kiva borrowers</a>:
                 <strong>
-                    {{#loansEndorsedTotal}}{{loansEndorsedTotal}}{{/loansEndorsedTotal}}
-                    {{^loansEndorsedTotal}}N/A{{/loansEndorsedTotal}}
+                    {{#trustee.loansEndorsedTotal}}{{trustee.loansEndorsedTotal}}{{/trustee.loansEndorsedTotal}}
+                    {{^trustee.loansEndorsedTotal}}N/A{{/trustee.loansEndorsedTotal}}
                 </strong>
             </div>
             <div id="total-value" class="datum">
-                <a class="black-underlined" data-reveal-id="trustee-total-value-lightbox">Total Loans:</a>
+                <a class="black-underlined" data-reveal-id="trustee-total-value-lightbox">Total loans</a>:
                 <strong>
-                    {{#totalValue}}{{totalValue}}{{/totalValue}}
-                    {{^totalValue}}N/A{{/totalValue}}
+                    {{#trustee.totalValue}}{{trustee.totalValue}}{{/trustee.totalValue}}
+                    {{^trustee.totalValue}}N/A{{/trustee.totalValue}}
                 </strong>
             </div>
             <div id="fundraising-or-raised" class="datum">
-                <a class="black-underlined" data-reveal-id="trustee-fundraising-or-raised-lightbox">Fundraising/Raised:</a>
+                <a class="black-underlined" data-reveal-id="trustee-fundraising-or-raised-lightbox">Fundraising/raised</a>:
                 <strong>
-                    {{#fundraisingOrRaisedTotal}}{{fundraisingOrRaisedTotal}}{{/fundraisingOrRaisedTotal}}
-                    {{^fundraisingOrRaisedTotal}}N/A{{/fundraisingOrRaisedTotal}}
+                    {{#trustee.fundraisingOrRaisedTotal}}{{trustee.fundraisingOrRaisedTotal}}{{/trustee.fundraisingOrRaisedTotal}}
+                    {{^trustee.fundraisingOrRaisedTotal}}N/A{{/trustee.fundraisingOrRaisedTotal}}
                 </strong>
             </div>
             <div id="paying-on-time" class="datum">
-                <a class="black-underlined" data-reveal-id="trustee-paying-on-time-lightbox">Paying on Time:</a>
+                <a class="black-underlined" data-reveal-id="trustee-paying-on-time-lightbox">Paying on time</a>:
                 <strong>
-                    {{#payingOnTimeTotal}}{{payingOnTimeTotal}}{{/payingOnTimeTotal}}
-                    {{^payingOnTimeTotal}}Not enough data{{/payingOnTimeTotal}}
+                    {{#trustee.payingOnTimeTotal}}{{trustee.payingOnTimeTotal}}{{/trustee.payingOnTimeTotal}}
+                    {{^trustee.payingOnTimeTotal}}Not enough data{{/trustee.payingOnTimeTotal}}
                 </strong>
             </div>
             <div id="paying-back-late" class="datum">
-                <a class="black-underlined" data-reveal-id="trustee-paying-back-late-lightbox">Paying Back Late:</a>
+                <a class="black-underlined" data-reveal-id="trustee-paying-back-late-lightbox">Paying back late</a>:
                 <strong>
-                    {{#payingBackLateTotal}}{{payingBackLateTotal}}{{/payingBackLateTotal}}
-                    {{^payingBackLateTotal}}Not enough data{{/payingBackLateTotal}}
+                    {{#trustee.payingBackLateTotal}}{{trustee.payingBackLateTotal}}{{/trustee.payingBackLateTotal}}
+                    {{^trustee.payingBackLateTotal}}Not enough data{{/trustee.payingBackLateTotal}}
                 </strong>
             </div>
             <div id="repaid-in-full" class="datum">
-                <a class="black-underlined" data-reveal-id="trustee-repaid-in-full-lightbox">Repaid in Full:</a>
+                <a class="black-underlined" data-reveal-id="trustee-repaid-in-full-lightbox">Repaid in full</a>:
                 <strong>
-                    {{#repaidInFullTotal}}{{repaidInFullTotal}}{{/repaidInFullTotal}}
-                    {{^repaidInFullTotal}}Not enough data{{/repaidInFullTotal}}
+                    {{#trustee.repaidInFullTotal}}{{trustee.repaidInFullTotal}}{{/trustee.repaidInFullTotal}}
+                    {{^trustee.repaidInFullTotal}}Not enough data{{/trustee.repaidInFullTotal}}
                 </strong>
             </div>
             <div id="defaulted" class="datum">
-                <a class="black-underlined" data-reveal-id="trustee-defaulted-lightbox">Defaulted:</a>
+                <a class="black-underlined" data-reveal-id="trustee-defaulted-lightbox">Defaulted</a>:
                 <strong>
-                    {{#defaultedTotal}}{{defaultedTotal}}{{/defaultedTotal}}
-                    {{^defaultedTotal}}Not enough data{{/defaultedTotal}}
+                    {{#trustee.defaultedTotal}}{{trustee.defaultedTotal}}{{/trustee.defaultedTotal}}
+                    {{^trustee.defaultedTotal}}Not enough data{{/trustee.defaultedTotal}}
                 </strong>
             </div>
             <div id="repayment-rate" class="datum">
-                <a class="black-underlined" data-reveal-id="trustee-repayment-rate-lightbox">Repayment Rate:</a>
+                <a class="black-underlined" data-reveal-id="trustee-repayment-rate-lightbox">Repayment rate</a>:
                 <strong>
-                    {{#repaymentRate}}{{repaymentRate}}{{/repaymentRate}}
-                    {{^repaymentRate}}Not enough data{{/repaymentRate}}
+                    {{#trustee.repaymentRate}}{{trustee.repaymentRate}}{{/trustee.repaymentRate}}
+                    {{^trustee.repaymentRate}}Not enough data{{/trustee.repaymentRate}}
                 </strong>
             </div>
 
-            {{#trusteeDataHelpText}}
-                {{> 01-molecules/10-lightbox/04-help-text-lightbox}}
-            {{/trusteeDataHelpText}}
-        </div>
-        {{#whyEndorse}}
-            <div class="why-endorse">
-                <h3>Why are you endorsing {{borrowerOrGroupName}}?</h3>
-                <p>{{{whyEndorse}}}</p>
-            </div>
-        {{/whyEndorse}}
-    </div>
+			{{#trustee.trusteeDataHelpText}}
+				{{> 01-molecules/10-lightbox/04-help-text-lightbox}}
+			{{/trustee.trusteeDataHelpText}}
+		</div>
+		{{#trustee.whyEndorse}}
+			<div class="why-endorse">
+				<h3>Why are you endorsing {{borrowerOrGroupName}}?</h3>
+				<p>{{{trustee.whyEndorse}}}</p>
+			</div>
+		{{/trustee.whyEndorse}}
+	</div>
 </section>

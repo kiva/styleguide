@@ -3,5 +3,9 @@
   "amountLeft": 75,
   "totalLoanAmount": 275,
   "amountRaisedPercent": 50,
-  "lenders": null
+  "lenders": null,
+  "showRaisedInfo": true,
+  "raisedVerb": "funded",
+  "isExpiringSoon": true,
+  "loanLengthMessage": "1 day left"
 }

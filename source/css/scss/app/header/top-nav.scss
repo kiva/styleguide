@@ -27,18 +27,24 @@
     }
 
     .logo-area .header-button {
-        padding: 0 0.3rem;
-        img {
-            max-height: rem-calc(20);
+		$vertical-offset: rem-calc(3);
 
-            @media #{$small-only} {
-                margin-top: rem-calc(-8);
-            }
+		line-height: 0;
+        padding: 0 0.3rem $vertical-offset;
 
-            @media #{$medium-up} {
-                max-height: rem-calc(32);
-            }
-        }
+		@media #{$large-up} {
+			padding: 0 rem-calc(16) $vertical-offset;
+		}
+
+		.icon {
+			width: rem-calc(57);
+			height: $header-height-small;
+			margin-top: -$vertical-offset;
+
+			@media #{$large-up} {
+				height: $header-height;
+			}
+		}
     }
 
     .amount {
@@ -89,7 +95,7 @@
         max-width: none;
         margin-top: 0;
         border-top: none;
-	    z-index: 1002;
+	    z-index: 1112;
 
         &:after {
             display: none;
@@ -104,7 +110,7 @@
         font-size: 0.8rem;
         text-align: center;
         background-color: $kiva-green;
-		border-top: 1px solid $kiva-navdivider-green;
+		border-top: rem-calc(1) solid $kiva-navdivider-green;
 		height: rem-calc(45);
 		line-height: rem-calc(45);
 		color: $dark-green;
@@ -114,18 +120,6 @@
 		@media #{$small-only} {
 			line-height: rem-calc(21);
 		}
-    }
-
-    @media #{$large-up} {
-        .logo-area {
-            text-align: left;
-            .header-button {
-                padding: 0 rem-calc(16);
-                img {
-                    max-height: none;
-                }
-            }
-        }
     }
 }
 
@@ -138,24 +132,28 @@
 }
 
 .basket-bar {
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-
-    text-align: center;
-    font-size: 1.8rem;
-    font-weight: bold;
-    background-color: $kiva-accent-blue;
+	position: fixed;
+	bottom: 0;
+	height: rem-calc(66);
+	width: 100%;
 	z-index:1111;
+	box-shadow: 0px -1px 3px 0px rgba(51,51,51,0.3);
+	transition: bottom 500ms ease;
 
-    a {
-        color: $white;
-        line-height: rem-calc(64);
-        width: 100%;
-        display: block;
-    }
+	a {
+		font-size: 1.1666666667rem !important;
+		width: 100%;
+		display: block;
+        &.button {
+           height: rem-calc(66);
+           line-height: rem-calc(66);
+        }
+	}
 }
 
+.basket-bar.hide-for-large-up.off-screen {
+	bottom: rem-calc(-67);
+}
 
 @media #{$small-only}, #{$medium-only} {
     .top-nav {

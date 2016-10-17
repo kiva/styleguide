@@ -46,45 +46,52 @@
 
 	'use strict';
 
-	__webpack_require__(8);
+	__webpack_require__(7);
 
 	var header = __webpack_require__(5);
 	var filters = __webpack_require__(13);
 	var imagesizes = __webpack_require__(14);
 	var accordion = __webpack_require__(6);
 	var videoResizing = __webpack_require__(15);
-	var borrowerPage = __webpack_require__(7);
-	var categories = __webpack_require__(16);
-	var lightbox = __webpack_require__(17);
-	var saveSearchLightbox = __webpack_require__(18);
+	var borrowerPage = __webpack_require__(16);
+	var categories = __webpack_require__(17);
+	var lightbox = __webpack_require__(18);
+	var saveSearchLightbox = __webpack_require__(19);
 
 	var $ = __webpack_require__(2);
-	var FastClick = __webpack_require__(19);
+	var FastClick = __webpack_require__(20);
 
-	$(document).foundation({
-		equalizer: {
-			equalize_on_stack: true
-		}
-		, offcanvas : {
-			open_method: 'move'
-		}
-		, reveal: {
-			root_element: '.reveal-modal-bg',
-			close_on_background_click: false
-		}
+	$(document).ready(function() {
+		$(document).foundation({
+			equalizer: {
+				equalize_on_stack: true
+			}
+			, offcanvas : {
+				open_method: 'move'
+			}
+			, reveal: {
+				root_element: '.reveal-modal-bg',
+				close_on_background_click: false
+			}
+			, tooltip: {
+				disable_for_touch: true,
+				hover_delay: 650
+			}
+		});
+
+		FastClick.attach(document.body);
+
+		header();
+		filters();
+		imagesizes();
+		accordion();
+		videoResizing();
+		borrowerPage();
+		categories();
+		lightbox();
+		saveSearchLightbox();
 	});
 
-	FastClick.attach(document.body);
-
-	header();
-	filters();
-	imagesizes();
-	accordion();
-	videoResizing();
-	borrowerPage();
-	categories();
-	lightbox();
-	saveSearchLightbox();
 
 /***/ },
 /* 1 */,
@@ -1509,7 +1516,8 @@
 
 
 	/*** EXPORTS FROM exports-loader ***/
-	module.exports = window.Modernizr}.call(window));
+	module.exports = window.Modernizr;
+	}.call(window));
 
 /***/ },
 /* 4 */
@@ -8099,7 +8107,7 @@
 
 
 	/*** EXPORTS FROM exports-loader ***/
-	module.exports = window.Foundation
+	module.exports = window.Foundation;
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(2)))
 
 /***/ },
@@ -8116,6 +8124,7 @@
 		var $close_search = $('#close-search');
 		var $search_form = $('#search-form');
 		var $search_box = $('#search-box');
+		var is_touch = $('html').hasClass('touch');
 
 		$search_toggle.click(function (e) {
 			e.preventDefault();
@@ -8140,7 +8149,7 @@
 		});
 
 		var typeahead_menu_repositioning = function() {
-			if ($search_box) {
+			if ($search_box.length) {
 				var offset = $search_box.offset();
 				$('.top-nav-search-menu').css({
 					top: (offset.top + $search_box.outerHeight()) + 'px',
@@ -8150,7 +8159,13 @@
 			}
 		};
 
-		$search_box.on('typeahead:open', typeahead_menu_repositioning);
+		// REDO-1768: For some reason this event fires inconsistently across different pages.
+		// As a workaround, let's re-run the repositioning a second time when the open animation finishes
+		$search_box.on('typeahead:open', function() {
+			typeahead_menu_repositioning();
+
+			window.setTimeout(typeahead_menu_repositioning, 500);
+		});
 
 
 		var close_button_visibility = function () {
@@ -8216,6 +8231,12 @@
 				.trigger(hidden ? 'hide' : 'show');
 		});
 
+		// when not touchscreen, close lend dropdown when lend button itself is clicked
+		if (! is_touch) {
+			$('[data-dropdown="lend-dropdown"]').click(function () {
+				Foundation.libs.dropdown.close($('#lend-dropdown'));
+			});
+		}
 
 		// close window when normal links clicked
 		$('#lend-dropdown a:not([data-kv-toggle],[href="#"])').click(function () {
@@ -8223,8 +8244,7 @@
 		});
 
 		// Resets lend-menu-large and lend-menu-small
-		$('[data-dropdown=lend-dropdown]').click(function (e) {
-			e.preventDefault();
+		$('#lend-dropdown').on('closed.fndtn.dropdown', function () {
 			//lend-menu-large
 			$category_section.removeClass('slide-left');
 			$close_section.attr('aria-hidden', true);
@@ -8233,8 +8253,22 @@
 
 			// lend-menu-small
 			$('.lend-menu-small li>a').attr('aria-expanded', false);
-			$('.lend-menu-small ul').attr('aria-hidden', true);
+			$('.lend-menu-small ul').attr('aria-hidden', true).css('height', 0);
 		});
+
+		// when not touchscreen, close about dropdown when about button itself is clicked
+		if (! is_touch) {
+			$('[data-dropdown="about-dropdown"]').click(function () {
+				Foundation.libs.dropdown.close($('#about-dropdown'));
+			});
+		}
+
+		// when not touchscreen, close my-kiva dropdown when my-kiva button itself is clicked
+		if (! is_touch) {
+			$('[data-dropdown="my-kiva-dropdown"]').click(function () {
+				Foundation.libs.dropdown.close($('#my-kiva-dropdown'));
+			});
+		}
 	};
 
 /***/ },
@@ -8250,16 +8284,11 @@
 
 		'use strict';
 
-		var $accordions = $('[data-kv-accordion]');
-
-		var $targets = $($accordions.get().reduce(function(prev, curr, i) {
-			return prev + (i===0 ? '' : ', ') + '#' + $(curr).attr('aria-controls');
-		}, ''));
-
-
-		$accordions.click(function() {
-			var $this = $(this);
-			var $target = $('#'+$this.attr('aria-controls'));
+		var $accordions, $targets, namespace = 'kv-accordion';
+		
+		function accordionFunction(name,element) {
+			var $this = element || $(this);
+			var $target = $(name);
 			var is_hidden = $target.attr('aria-hidden') === 'true';
 			var hiding = !is_hidden;
 
@@ -8280,68 +8309,84 @@
 
 				// ...and set the height immediately after so it animates
 				window.setTimeout(function() {
-					$target.css('height', height + 'px');
+					$target.css({
+						'height': height + 'px',
+						'-webkit-transition': '' // reset fix for iOS bug
+					});
 				}, 0);
 			}
 			else {
-				// if the heihgt hasn't been set yet, measure and set it
+				// if the height hasn't been set yet, measure and set it
 				if($target[0].style.height.length === 0 || $target[0].style.height === 'auto') {
 					$target.css('height', $target.height() + 'px');
 				}
 
 				// set the height to 0 immediately after so it animates
 				window.setTimeout(function() {
-					$target.css('height', 0);
+					$target.css({
+						'height': 0,
+						'-webkit-transition': '' // reset fix for iOS bug
+					});
 				}, 0);
 			}
 
-			$targets.filter($target.parents()).css('height', 'auto');
+			// set any parent accordions height to auto so that they expand as well
+			$targets.filter($target.parents()).css({
+				'height': 'auto',
+				'-webkit-transition': 'none' // handle iOS safari bug that animates height:auto as height:0
+			});
 
 			$this.attr('aria-expanded', !hiding);
 			$target.attr('aria-hidden', hiding)
 				.trigger(hiding ? 'hide' : 'show');
-		});
+		}
+
+		function reflow() {
+			$accordions = $('[data-kv-accordion]');
+
+			$targets = $($accordions.get().reduce(function(prev, curr, i) {
+				return prev + (i===0 ? '' : ', ') + '#' + $(curr).attr('aria-controls');
+			}, ''));
+
+			$('a[href*="#ac-"]').off('click.'+namespace).on('click.'+namespace, function(){
+				var href = $(this).attr('href');
+				var accordionHeader = $(href).parent();
+				$('html, body').animate({
+					scrollTop: $(accordionHeader).offset().top
+				}, 1000);
+				accordionFunction(href);
+			});
+
+			$accordions.off('click.'+namespace).on('click.'+namespace, function() {
+				var element = $(this);
+				var href = $('#'+element.attr('aria-controls'));
+				accordionFunction(href,element);
+			});
+		}
+
+		window.kvAccordion = {
+			reflow: reflow
+		};
 
 		$(window).on('resize', Foundation.utils.throttle(function() {
 			$targets.each(function() {
 				var $this = $(this);
 				if($this.attr('aria-hidden') === 'false' && !($('html').hasClass('touch'))) {
-					$this.css('height', 'auto');
+					$this.css({
+						'height': 'auto',
+						'-webkit-transition': 'none' // handle iOS safari bug that animates height:auto as height:0
+					});
 				}
 			});
 		}, 200));
+
+		// Start intital process
+		reflow();
 	};
+
 
 /***/ },
 /* 7 */
-/***/ function(module, exports, __webpack_require__) {
-
-	var $ = __webpack_require__(2);
-
-	module.exports = function () {
-	    'use strict';
-
-	    // for the lenders teams section to expand upon click
-	    $('.lender-count').click(function () {
-	        // grab label object
-	        var teamsLabel = $('#ac-lenders-teams-label');
-
-	        // trigger click on label object if it isn't expanded
-	        if (teamsLabel.attr('aria-expanded') === 'false') {
-	            teamsLabel.trigger('click');
-	        }
-	    });
-
-	    $('#show-advanced-toggle, #hide-advanced-toggle').click(function() {
-	        $('.show-advanced').toggle();
-	        $('.hide-advanced').toggle();
-	        $('.simple-repayment-schedule').toggle();
-	        $('.advanced-repayment-schedule').toggle();
-	    });
-	};
-
-/***/ },
-/* 8 */
 /***/ function(module, exports, __webpack_require__) {
 
 	__webpack_require__(2);
@@ -8349,13 +8394,14 @@
 
 	__webpack_require__(4);
 
+	__webpack_require__(8);
 	__webpack_require__(9);
 	__webpack_require__(10);
 	__webpack_require__(11);
 	__webpack_require__(12);
 
 /***/ },
-/* 9 */
+/* 8 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(__webpack_provided_window_dot_jQuery) {/*! noUiSlider - 7.0.10 - 2014-12-27 14:50:46 */
@@ -10676,11 +10722,11 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(2)))
 
 /***/ },
-/* 10 */
+/* 9 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;var require;var require;/* WEBPACK VAR INJECTION */(function($) {/*!
-	 * Select2 4.0.1
+	 * Select2 4.0.3
 	 * https://select2.github.io
 	 *
 	 * Released under the MIT license
@@ -11287,8 +11333,22 @@
 
 	  Observable.prototype.trigger = function (event) {
 	    var slice = Array.prototype.slice;
+	    var params = slice.call(arguments, 1);
 
 	    this.listeners = this.listeners || {};
+
+	    // Params should always come in as an array
+	    if (params == null) {
+	      params = [];
+	    }
+
+	    // If there are no arguments to the event, use a temporary object
+	    if (params.length === 0) {
+	      params.push({});
+	    }
+
+	    // Set the `_type` of the first object to the event
+	    params[0]._type = event;
 
 	    if (event in this.listeners) {
 	      this.invoke(this.listeners[event], slice.call(arguments, 1));
@@ -11523,6 +11583,25 @@
 	    return sorter(data);
 	  };
 
+	  Results.prototype.highlightFirstItem = function () {
+	    var $options = this.$results
+	      .find('.select2-results__option[aria-selected]');
+
+	    var $selected = $options.filter('[aria-selected=true]');
+
+	    // Check if there are any selected options
+	    if ($selected.length > 0) {
+	      // If there are selected options, highlight the first
+	      $selected.first().trigger('mouseenter');
+	    } else {
+	      // If there are no selected options, highlight the first option
+	      // in the dropdown
+	      $options.first().trigger('mouseenter');
+	    }
+
+	    this.ensureHighlightVisible();
+	  };
+
 	  Results.prototype.setClasses = function () {
 	    var self = this;
 
@@ -11550,17 +11629,6 @@
 	        }
 	      });
 
-	      var $selected = $options.filter('[aria-selected=true]');
-
-	      // Check if there are any selected options
-	      if ($selected.length > 0) {
-	        // If there are selected options, highlight the first
-	        $selected.first().trigger('mouseenter');
-	      } else {
-	        // If there are no selected options, highlight the first option
-	        // in the dropdown
-	        $options.first().trigger('mouseenter');
-	      }
 	    });
 	  };
 
@@ -11671,6 +11739,7 @@
 
 	      if (container.isOpen()) {
 	        self.setClasses();
+	        self.highlightFirstItem();
 	      }
 	    });
 
@@ -11693,6 +11762,7 @@
 	      }
 
 	      self.setClasses();
+	      self.highlightFirstItem();
 	    });
 
 	    container.on('unselect', function () {
@@ -11701,6 +11771,7 @@
 	      }
 
 	      self.setClasses();
+	      self.highlightFirstItem();
 	    });
 
 	    container.on('open', function () {
@@ -11823,11 +11894,7 @@
 	      this.$results.on('mousewheel', function (e) {
 	        var top = self.$results.scrollTop();
 
-	        var bottom = (
-	          self.$results.get(0).scrollHeight -
-	          self.$results.scrollTop() +
-	          e.deltaY
-	        );
+	        var bottom = self.$results.get(0).scrollHeight - top + e.deltaY;
 
 	        var isAtTop = e.deltaY > 0 && top - e.deltaY <= 0;
 	        var isAtBottom = e.deltaY < 0 && bottom <= self.$results.height();
@@ -12180,6 +12247,12 @@
 
 	    this.$selection.on('blur', function (evt) {
 	      // User exits the container
+	    });
+
+	    container.on('focus', function (evt) {
+	      if (!container.isOpen()) {
+	        self.$selection.focus();
+	      }
 	    });
 
 	    container.on('selection:update', function (params) {
@@ -14013,7 +14086,7 @@
 	        var $existingOption = $existing.filter(onlyItem(item));
 
 	        var existingData = this.item($existingOption);
-	        var newData = $.extend(true, {}, existingData, item);
+	        var newData = $.extend(true, {}, item, existingData);
 
 	        var $newOption = this.option(newData);
 
@@ -14121,13 +14194,21 @@
 
 	        callback(results);
 	      }, function () {
-	        // TODO: Handle AJAX errors
+	        // Attempt to detect if a request was aborted
+	        // Only works if the transport exposes a status property
+	        if ($request.status && $request.status === '0') {
+	          return;
+	        }
+
+	        self.trigger('results:message', {
+	          message: 'errorLoading'
+	        });
 	      });
 
 	      self._request = $request;
 	    }
 
-	    if (this.ajaxOptions.delay && params.term !== '') {
+	    if (this.ajaxOptions.delay && params.term != null) {
 	      if (this._queryTimeout) {
 	        window.clearTimeout(this._queryTimeout);
 	      }
@@ -14151,6 +14232,12 @@
 
 	    if (createTag !== undefined) {
 	      this.createTag = createTag;
+	    }
+
+	    var insertTag = options.get('insertTag');
+
+	    if (insertTag !== undefined) {
+	        this.insertTag = insertTag;
 	    }
 
 	    decorated.call(this, $element, options);
@@ -14284,6 +14371,29 @@
 	  Tokenizer.prototype.query = function (decorated, params, callback) {
 	    var self = this;
 
+	    function createAndSelect (data) {
+	      // Normalize the data object so we can use it for checks
+	      var item = self._normalizeItem(data);
+
+	      // Check if the data object already exists as a tag
+	      // Select it if it doesn't
+	      var $existingOptions = self.$element.find('option').filter(function () {
+	        return $(this).val() === item.id;
+	      });
+
+	      // If an existing option wasn't found for it, create the option
+	      if (!$existingOptions.length) {
+	        var $option = self.option(item);
+	        $option.attr('data-select2-tag', true);
+
+	        self._removeOldTags();
+	        self.addOptions([$option]);
+	      }
+
+	      // Select the item, now that we know there is an option for it
+	      select(item);
+	    }
+
 	    function select (data) {
 	      self.trigger('select', {
 	        data: data
@@ -14292,7 +14402,7 @@
 
 	    params.term = params.term || '';
 
-	    var tokenData = this.tokenizer(params, this.options, select);
+	    var tokenData = this.tokenizer(params, this.options, createAndSelect);
 
 	    if (tokenData.term !== params.term) {
 	      // Replace the search term if we have the search box
@@ -14555,6 +14665,12 @@
 	      self.$search.attr('tabindex', -1);
 
 	      self.$search.val('');
+	    });
+
+	    container.on('focus', function () {
+	      if (container.isOpen()) {
+	        self.$search.focus();
+	      }
 	    });
 
 	    container.on('results:all', function (params) {
@@ -14852,7 +14968,6 @@
 
 	    var newDirection = null;
 
-	    var position = this.$container.position();
 	    var offset = this.$container.offset();
 
 	    offset.bottom = offset.top + this.$container.outerHeight(false);
@@ -14881,13 +14996,19 @@
 	      top: container.bottom
 	    };
 
-	    // Fix positioning with static parents
-	    if (this.$dropdownParent[0].style.position !== 'static') {
-	      var parentOffset = this.$dropdownParent.offset();
+	    // Determine what the parent element is to use for calciulating the offset
+	    var $offsetParent = this.$dropdownParent;
 
-	      css.top -= parentOffset.top;
-	      css.left -= parentOffset.left;
+	    // For statically positoned elements, we need to get the element
+	    // that is determining the offset
+	    if ($offsetParent.css('position') === 'static') {
+	      $offsetParent = $offsetParent.offsetParent();
 	    }
+
+	    var parentOffset = $offsetParent.offset();
+
+	    css.top -= parentOffset.top;
+	    css.left -= parentOffset.left;
 
 	    if (!isCurrentlyAbove && !isCurrentlyBelow) {
 	      newDirection = 'below';
@@ -14901,7 +15022,7 @@
 
 	    if (newDirection == 'above' ||
 	      (isCurrentlyAbove && newDirection !== 'below')) {
-	      css.top = container.top - dropdown.height;
+	      css.top = container.top - parentOffset.top - dropdown.height;
 	    }
 
 	    if (newDirection != null) {
@@ -14923,6 +15044,7 @@
 
 	    if (this.options.get('dropdownAutoWidth')) {
 	      css.minWidth = css.width;
+	      css.position = 'relative';
 	      css.width = 'auto';
 	    }
 
@@ -14989,12 +15111,22 @@
 
 	    decorated.call(this, container, $container);
 
-	    container.on('close', function () {
-	      self._handleSelectOnClose();
+	    container.on('close', function (params) {
+	      self._handleSelectOnClose(params);
 	    });
 	  };
 
-	  SelectOnClose.prototype._handleSelectOnClose = function () {
+	  SelectOnClose.prototype._handleSelectOnClose = function (_, params) {
+	    if (params && params.originalSelect2Event != null) {
+	      var event = params.originalSelect2Event;
+
+	      // Don't select an item if the close event was triggered from a select or
+	      // unselect event
+	      if (event._type === 'select' || event._type === 'unselect') {
+	        return;
+	      }
+	    }
+
 	    var $highlightedResults = this.getHighlightedResults();
 
 	    // Only select highlighted results
@@ -15047,7 +15179,10 @@
 	      return;
 	    }
 
-	    this.trigger('close', {});
+	    this.trigger('close', {
+	      originalEvent: originalEvent,
+	      originalSelect2Event: evt
+	    });
 	  };
 
 	  return CloseOnSelect;
@@ -15155,7 +15290,7 @@
 	  }
 
 	  Defaults.prototype.apply = function (options) {
-	    options = $.extend({}, this.defaults, options);
+	    options = $.extend(true, {}, this.defaults, options);
 
 	    if (options.dataAdapter == null) {
 	      if (options.ajax != null) {
@@ -15719,6 +15854,7 @@
 	      id = Utils.generateChars(4);
 	    }
 
+	    id = id.replace(/(:|\.|\[|\]|,)/g, '');
 	    id = 'select2-' + id;
 
 	    return id;
@@ -15800,10 +15936,15 @@
 	      });
 	    });
 
-	    this._sync = Utils.bind(this._syncAttributes, this);
+	    this.$element.on('focus.select2', function (evt) {
+	      self.trigger('focus', evt);
+	    });
+
+	    this._syncA = Utils.bind(this._syncAttributes, this);
+	    this._syncS = Utils.bind(this._syncSubtree, this);
 
 	    if (this.$element[0].attachEvent) {
-	      this.$element[0].attachEvent('onpropertychange', this._sync);
+	      this.$element[0].attachEvent('onpropertychange', this._syncA);
 	    }
 
 	    var observer = window.MutationObserver ||
@@ -15813,14 +15954,30 @@
 
 	    if (observer != null) {
 	      this._observer = new observer(function (mutations) {
-	        $.each(mutations, self._sync);
+	        $.each(mutations, self._syncA);
+	        $.each(mutations, self._syncS);
 	      });
 	      this._observer.observe(this.$element[0], {
 	        attributes: true,
+	        childList: true,
 	        subtree: false
 	      });
 	    } else if (this.$element[0].addEventListener) {
-	      this.$element[0].addEventListener('DOMAttrModified', self._sync, false);
+	      this.$element[0].addEventListener(
+	        'DOMAttrModified',
+	        self._syncA,
+	        false
+	      );
+	      this.$element[0].addEventListener(
+	        'DOMNodeInserted',
+	        self._syncS,
+	        false
+	      );
+	      this.$element[0].addEventListener(
+	        'DOMNodeRemoved',
+	        self._syncS,
+	        false
+	      );
 	    }
 	  };
 
@@ -15962,6 +16119,46 @@
 	      this.trigger('disable', {});
 	    } else {
 	      this.trigger('enable', {});
+	    }
+	  };
+
+	  Select2.prototype._syncSubtree = function (evt, mutations) {
+	    var changed = false;
+	    var self = this;
+
+	    // Ignore any mutation events raised for elements that aren't options or
+	    // optgroups. This handles the case when the select element is destroyed
+	    if (
+	      evt && evt.target && (
+	        evt.target.nodeName !== 'OPTION' && evt.target.nodeName !== 'OPTGROUP'
+	      )
+	    ) {
+	      return;
+	    }
+
+	    if (!mutations) {
+	      // If mutation events aren't supported, then we can only assume that the
+	      // change affected the selections
+	      changed = true;
+	    } else if (mutations.addedNodes && mutations.addedNodes.length > 0) {
+	      for (var n = 0; n < mutations.addedNodes.length; n++) {
+	        var node = mutations.addedNodes[n];
+
+	        if (node.selected) {
+	          changed = true;
+	        }
+	      }
+	    } else if (mutations.removedNodes && mutations.removedNodes.length > 0) {
+	      changed = true;
+	    }
+
+	    // Only re-pull the data if we think there is a change
+	    if (changed) {
+	      this.dataAdapter.current(function (currentData) {
+	        self.trigger('selection:update', {
+	          data: currentData
+	        });
+	      });
 	    }
 	  };
 
@@ -16111,7 +16308,7 @@
 	    this.$container.remove();
 
 	    if (this.$element[0].detachEvent) {
-	      this.$element[0].detachEvent('onpropertychange', this._sync);
+	      this.$element[0].detachEvent('onpropertychange', this._syncA);
 	    }
 
 	    if (this._observer != null) {
@@ -16119,10 +16316,15 @@
 	      this._observer = null;
 	    } else if (this.$element[0].removeEventListener) {
 	      this.$element[0]
-	        .removeEventListener('DOMAttrModified', this._sync, false);
+	        .removeEventListener('DOMAttrModified', this._syncA, false);
+	      this.$element[0]
+	        .removeEventListener('DOMNodeInserted', this._syncS, false);
+	      this.$element[0]
+	        .removeEventListener('DOMNodeRemoved', this._syncS, false);
 	    }
 
-	    this._sync = null;
+	    this._syncA = null;
+	    this._syncS = null;
 
 	    this.$element.off('.select2');
 	    this.$element.attr('tabindex', this.$element.data('old-tabindex'));
@@ -16906,6 +17108,7 @@
 	        return this;
 	      } else if (typeof options === 'string') {
 	        var ret;
+	        var args = Array.prototype.slice.call(arguments, 1);
 
 	        this.each(function () {
 	          var instance = $(this).data('select2');
@@ -16916,8 +17119,6 @@
 	              'element that is not using Select2.'
 	            );
 	          }
-
-	          var args = Array.prototype.slice.call(arguments, 1);
 
 	          ret = instance[options].apply(instance, args);
 	        });
@@ -16964,7 +17165,7 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(2)))
 
 /***/ },
-/* 11 */
+/* 10 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*
@@ -16975,7 +17176,7 @@
 	|___/_|_|\___|_|\_(_)/ |___/
 	                   |__/
 
-	 Version: 1.5.8
+	 Version: 1.5.9
 	  Author: Ken Wheeler
 	 Website: http://kenwheeler.github.io
 	    Docs: http://kenwheeler.github.io/slick
@@ -17050,6 +17251,7 @@
 	                touchMove: true,
 	                touchThreshold: 5,
 	                useCSS: true,
+	                useTransform: false,
 	                variableWidth: false,
 	                vertical: false,
 	                verticalSwiping: false,
@@ -17468,8 +17670,6 @@
 	                .attr('data-slick-index', index)
 	                .data('originalStyling', $(element).attr('style') || '');
 	        });
-
-	        _.$slidesCache = _.$slides;
 
 	        _.$slider.addClass('slick-slider');
 
@@ -17936,6 +18136,8 @@
 
 	        if (filter !== null) {
 
+	            _.$slidesCache = _.$slides;
+
 	            _.unload();
 
 	            _.$slideTrack.children(this.options.slide).detach();
@@ -17966,7 +18168,7 @@
 	        if (_.options.infinite === true) {
 	            while (breakPoint < _.slideCount) {
 	                ++pagerQty;
-	                breakPoint = counter + _.options.slidesToShow;
+	                breakPoint = counter + _.options.slidesToScroll;
 	                counter += _.options.slidesToScroll <= _.options.slidesToShow ? _.options.slidesToScroll : _.options.slidesToShow;
 	            }
 	        } else if (_.options.centerMode === true) {
@@ -17974,7 +18176,7 @@
 	        } else {
 	            while (breakPoint < _.slideCount) {
 	                ++pagerQty;
-	                breakPoint = counter + _.options.slidesToShow;
+	                breakPoint = counter + _.options.slidesToScroll;
 	                counter += _.options.slidesToScroll <= _.options.slidesToShow ? _.options.slidesToScroll : _.options.slidesToShow;
 	            }
 	        }
@@ -18043,15 +18245,33 @@
 	                targetSlide = _.$slideTrack.children('.slick-slide').eq(slideIndex + _.options.slidesToShow);
 	            }
 
-	            targetLeft = targetSlide[0] ? targetSlide[0].offsetLeft * -1 : 0;
+	            if (_.options.rtl === true) {
+	                if (targetSlide[0]) {
+	                    targetLeft = (_.$slideTrack.width() - targetSlide[0].offsetLeft - targetSlide.width()) * -1;
+	                } else {
+	                    targetLeft =  0;
+	                }
+	            } else {
+	                targetLeft = targetSlide[0] ? targetSlide[0].offsetLeft * -1 : 0;
+	            }
 
 	            if (_.options.centerMode === true) {
-	                if (_.options.infinite === false) {
+	                if (_.slideCount <= _.options.slidesToShow || _.options.infinite === false) {
 	                    targetSlide = _.$slideTrack.children('.slick-slide').eq(slideIndex);
 	                } else {
 	                    targetSlide = _.$slideTrack.children('.slick-slide').eq(slideIndex + _.options.slidesToShow + 1);
 	                }
-	                targetLeft = targetSlide[0] ? targetSlide[0].offsetLeft * -1 : 0;
+
+	                if (_.options.rtl === true) {
+	                    if (targetSlide[0]) {
+	                        targetLeft = (_.$slideTrack.width() - targetSlide[0].offsetLeft - targetSlide.width()) * -1;
+	                    } else {
+	                        targetLeft =  0;
+	                    }
+	                } else {
+	                    targetLeft = targetSlide[0] ? targetSlide[0].offsetLeft * -1 : 0;
+	                }
+
 	                targetLeft += (_.$list.width() - targetSlide.outerWidth()) / 2;
 	            }
 	        }
@@ -18463,6 +18683,7 @@
 
 	        if (imgCount > 0) {
 	            targetImage = $('img[data-lazy]', _.$slider).first();
+	            targetImage.attr('src', null);
 	            targetImage.attr('src', targetImage.attr('data-lazy')).removeClass('slick-loading').load(function() {
 	                    targetImage.removeAttr('data-lazy');
 	                    _.progressiveLazyLoad();
@@ -18481,8 +18702,22 @@
 
 	    Slick.prototype.refresh = function( initializing ) {
 
-	        var _ = this,
-	            currentSlide = _.currentSlide;
+	        var _ = this, currentSlide, firstVisible;
+
+	        firstVisible = _.slideCount - _.options.slidesToShow;
+
+	        // check that the new breakpoint can actually accept the
+	        // "current slide" as the current slide, otherwise we need
+	        // to set it to the closest possible value.
+	        if ( !_.options.infinite ) {
+	            if ( _.slideCount <= _.options.slidesToShow ) {
+	                _.currentSlide = 0;
+	            } else if ( _.currentSlide > firstVisible ) {
+	                _.currentSlide = firstVisible;
+	            }
+	        }
+
+	         currentSlide = _.currentSlide;
 
 	        _.destroy(true);
 
@@ -18861,8 +19096,7 @@
 	            _.transformType = 'transform';
 	            _.transitionType = 'transition';
 	        }
-	        _.transformsEnabled = (_.animType !== null && _.animType !== false);
-
+	        _.transformsEnabled = _.options.useTransform && (_.animType !== null && _.animType !== false);
 	    };
 
 
@@ -19557,18 +19791,13 @@
 	    };
 
 	    Slick.prototype.activateADA = function() {
-	        var _ = this,
-	        _isSlideOnFocus =_.$slider.find('*').is(':focus');
-	        // _isSlideOnFocus = _.$slides.is(':focus') || _.$slides.find('*').is(':focus');
+	        var _ = this;
 
 	        _.$slideTrack.find('.slick-active').attr({
-	            'aria-hidden': 'false',
-	            'tabindex': '0'
+	            'aria-hidden': 'false'
 	        }).find('a, input, button, select').attr({
 	            'tabindex': '0'
 	        });
-
-	        (_isSlideOnFocus) &&  _.$slideTrack.find('.slick-active').focus();
 
 	    };
 
@@ -19596,9 +19825,9 @@
 	            opt = arguments[0],
 	            args = Array.prototype.slice.call(arguments, 1),
 	            l = _.length,
-	            i = 0,
+	            i,
 	            ret;
-	        for (i; i < l; i++) {
+	        for (i = 0; i < l; i++) {
 	            if (typeof opt == 'object' || typeof opt == 'undefined')
 	                _[i].slick = new Slick(_[i], opt);
 	            else
@@ -19612,7 +19841,7 @@
 
 
 /***/ },
-/* 12 */
+/* 11 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(__webpack_provided_window_dot_jQuery) {/*global jQuery */
@@ -19686,6 +19915,255 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(2)))
 
 /***/ },
+/* 12 */
+/***/ function(module, exports, __webpack_require__) {
+
+	/* WEBPACK VAR INJECTION */(function(jQuery) {/*!
+	 * Lazy Load - jQuery plugin for lazy loading images
+	 *
+	 * Copyright (c) 2007-2015 Mika Tuupola
+	 *
+	 * Licensed under the MIT license:
+	 *   http://www.opensource.org/licenses/mit-license.php
+	 *
+	 * Project home:
+	 *   http://www.appelsiini.net/projects/lazyload
+	 *
+	 * Version:  1.9.7
+	 *
+	 */
+
+	(function($, window, document, undefined) {
+	    var $window = $(window);
+
+	    $.fn.lazyload = function(options) {
+	        var elements = this;
+	        var $container;
+	        var settings = {
+	            threshold       : 0,
+	            failure_limit   : 0,
+	            event           : "scroll",
+	            effect          : "show",
+	            container       : window,
+	            data_attribute  : "original",
+	            skip_invisible  : false,
+	            appear          : null,
+	            load            : null,
+	            placeholder     : "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC"
+	        };
+
+	        function update() {
+	            var counter = 0;
+
+	            elements.each(function() {
+	                var $this = $(this);
+	                if (settings.skip_invisible && !$this.is(":visible")) {
+	                    return;
+	                }
+	                if ($.abovethetop(this, settings) ||
+	                    $.leftofbegin(this, settings)) {
+	                        /* Nothing. */
+	                } else if (!$.belowthefold(this, settings) &&
+	                    !$.rightoffold(this, settings)) {
+	                        $this.trigger("appear");
+	                        /* if we found an image we'll load, reset the counter */
+	                        counter = 0;
+	                } else {
+	                    if (++counter > settings.failure_limit) {
+	                        return false;
+	                    }
+	                }
+	            });
+
+	        }
+
+	        if(options) {
+	            /* Maintain BC for a couple of versions. */
+	            if (undefined !== options.failurelimit) {
+	                options.failure_limit = options.failurelimit;
+	                delete options.failurelimit;
+	            }
+	            if (undefined !== options.effectspeed) {
+	                options.effect_speed = options.effectspeed;
+	                delete options.effectspeed;
+	            }
+
+	            $.extend(settings, options);
+	        }
+
+	        /* Cache container as jQuery as object. */
+	        $container = (settings.container === undefined ||
+	                      settings.container === window) ? $window : $(settings.container);
+
+	        /* Fire one scroll event per scroll. Not one scroll event per image. */
+	        if (0 === settings.event.indexOf("scroll")) {
+	            $container.bind(settings.event, function() {
+	                return update();
+	            });
+	        }
+
+	        this.each(function() {
+	            var self = this;
+	            var $self = $(self);
+
+	            self.loaded = false;
+
+	            /* If no src attribute given use data:uri. */
+	            if ($self.attr("src") === undefined || $self.attr("src") === false) {
+	                if ($self.is("img")) {
+	                    $self.attr("src", settings.placeholder);
+	                }
+	            }
+
+	            /* When appear is triggered load original image. */
+	            $self.one("appear", function() {
+	                if (!this.loaded) {
+	                    if (settings.appear) {
+	                        var elements_left = elements.length;
+	                        settings.appear.call(self, elements_left, settings);
+	                    }
+	                    $("<img />")
+	                        .bind("load", function() {
+
+	                            var original = $self.attr("data-" + settings.data_attribute);
+	                            $self.hide();
+	                            if ($self.is("img")) {
+	                                $self.attr("src", original);
+	                            } else {
+	                                $self.css("background-image", "url('" + original + "')");
+	                            }
+	                            $self[settings.effect](settings.effect_speed);
+
+	                            self.loaded = true;
+
+	                            /* Remove image from array so it is not looped next time. */
+	                            var temp = $.grep(elements, function(element) {
+	                                return !element.loaded;
+	                            });
+	                            elements = $(temp);
+
+	                            if (settings.load) {
+	                                var elements_left = elements.length;
+	                                settings.load.call(self, elements_left, settings);
+	                            }
+	                        })
+	                        .attr("src", $self.attr("data-" + settings.data_attribute));
+	                }
+	            });
+
+	            /* When wanted event is triggered load original image */
+	            /* by triggering appear.                              */
+	            if (0 !== settings.event.indexOf("scroll")) {
+	                $self.bind(settings.event, function() {
+	                    if (!self.loaded) {
+	                        $self.trigger("appear");
+	                    }
+	                });
+	            }
+	        });
+
+	        /* Check if something appears when window is resized. */
+	        $window.bind("resize", function() {
+	            update();
+	        });
+
+	        /* With IOS5 force loading images when navigating with back button. */
+	        /* Non optimal workaround. */
+	        if ((/(?:iphone|ipod|ipad).*os 5/gi).test(navigator.appVersion)) {
+	            $window.bind("pageshow", function(event) {
+	                if (event.originalEvent && event.originalEvent.persisted) {
+	                    elements.each(function() {
+	                        $(this).trigger("appear");
+	                    });
+	                }
+	            });
+	        }
+
+	        /* Force initial check if images should appear. */
+	        $(document).ready(function() {
+	            update();
+	        });
+
+	        return this;
+	    };
+
+	    /* Convenience methods in jQuery namespace.           */
+	    /* Use as  $.belowthefold(element, {threshold : 100, container : window}) */
+
+	    $.belowthefold = function(element, settings) {
+	        var fold;
+
+	        if (settings.container === undefined || settings.container === window) {
+	            fold = (window.innerHeight ? window.innerHeight : $window.height()) + $window.scrollTop();
+	        } else {
+	            fold = $(settings.container).offset().top + $(settings.container).height();
+	        }
+
+	        return fold <= $(element).offset().top - settings.threshold;
+	    };
+
+	    $.rightoffold = function(element, settings) {
+	        var fold;
+
+	        if (settings.container === undefined || settings.container === window) {
+	            fold = $window.width() + $window.scrollLeft();
+	        } else {
+	            fold = $(settings.container).offset().left + $(settings.container).width();
+	        }
+
+	        return fold <= $(element).offset().left - settings.threshold;
+	    };
+
+	    $.abovethetop = function(element, settings) {
+	        var fold;
+
+	        if (settings.container === undefined || settings.container === window) {
+	            fold = $window.scrollTop();
+	        } else {
+	            fold = $(settings.container).offset().top;
+	        }
+
+	        return fold >= $(element).offset().top + settings.threshold  + $(element).height();
+	    };
+
+	    $.leftofbegin = function(element, settings) {
+	        var fold;
+
+	        if (settings.container === undefined || settings.container === window) {
+	            fold = $window.scrollLeft();
+	        } else {
+	            fold = $(settings.container).offset().left;
+	        }
+
+	        return fold >= $(element).offset().left + settings.threshold + $(element).width();
+	    };
+
+	    $.inviewport = function(element, settings) {
+	         return !$.rightoffold(element, settings) && !$.leftofbegin(element, settings) &&
+	                !$.belowthefold(element, settings) && !$.abovethetop(element, settings);
+	     };
+
+	    /* Custom selectors for your convenience.   */
+	    /* Use as $("img:below-the-fold").something() or */
+	    /* $("img").filter(":below-the-fold").something() which is faster */
+
+	    $.extend($.expr[":"], {
+	        "below-the-fold" : function(a) { return $.belowthefold(a, {threshold : 0}); },
+	        "above-the-top"  : function(a) { return !$.belowthefold(a, {threshold : 0}); },
+	        "right-of-screen": function(a) { return $.rightoffold(a, {threshold : 0}); },
+	        "left-of-screen" : function(a) { return !$.rightoffold(a, {threshold : 0}); },
+	        "in-viewport"    : function(a) { return $.inviewport(a, {threshold : 0}); },
+	        /* Maintain BC for couple of versions. */
+	        "above-the-fold" : function(a) { return !$.belowthefold(a, {threshold : 0}); },
+	        "right-of-fold"  : function(a) { return $.rightoffold(a, {threshold : 0}); },
+	        "left-of-fold"   : function(a) { return !$.rightoffold(a, {threshold : 0}); }
+	    });
+
+	})(jQuery, window, document);
+
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(2)))
+
+/***/ },
 /* 13 */
 /***/ function(module, exports, __webpack_require__) {
 
@@ -19699,15 +20177,6 @@
 		var $expandable_filter_selector = $('.expandable-filter');
 		var is_touch = $('html').hasClass('touch');
 		var currently_mobile = false;
-
-		// init the multi-select for partners
-		$partners_filter.select2({
-			templateResult: function(result, container) {
-				// add 'needsclick' class to select2 results for iOS/Safari to prevent fastclick from attaching itself
-				$(container).addClass('needsclick');
-				return result.text;
-			}
-		});
 
 		// search results may be changing size, so remove any set height caused by kv-accordion
 		$partners_filter.on('select2:select select2:unselect', function() {
@@ -19799,11 +20268,15 @@
 				,
 				'large-only': 'only screen and (min-width: 681px) and (max-width: 1024px)' /* 681px, 1024px */
 				,
+				'xlarge-proper': 'only screen and (min-width: 761px)' /* 761px */
+				,
 				'xlarge': 'only screen and (min-width: 1025px)' /* 1025px */
 				,
 				'xlarge-only': 'only screen and (min-width: 1025px) and (max-width: 1440px)' /* 1024px, 1440px */
 				,
 				'xxlarge': 'only screen and (min-width: 1441px)' /* 1441px */
+				,
+				'list-view': 'only screen and (min-width: 1200px)' /* 1200px */
 				,
 				'small-only-retina': 'only screen and (max-width: 480px) and (-webkit-min-device-pixel-ratio: 2)'
 				+ ', only screen and (max-width: 480px) and (min-resolution: 192dpi)'
@@ -19820,6 +20293,9 @@
 				'large-only-retina': 'only screen and (min-width: 681px) and (max-width: 1024px) and (-webkit-min-device-pixel-ratio: 2)' /* 681px, 1024px */
 				+ ', only screen and (min-width: 681px) and (max-width: 1024px) and (min-resolution: 192dpi)'
 				,
+				'xlarge-retina-proper': 'only screen and (min-width: 761px) and (-webkit-min-device-pixel-ratio: 2)' /* 1025px */
+				+ ', only screen and (min-width: 761px) and (min-resolution: 192dpi)'
+				,
 				'xlarge-retina': 'only screen and (min-width: 1025px) and (-webkit-min-device-pixel-ratio: 2)' /* 1025px */
 				+ ', only screen and (min-width: 1025px) and (min-resolution: 192dpi)'
 				,
@@ -19828,6 +20304,9 @@
 				,
 				'xxlarge-retina': 'only screen and (min-width: 1441px) and (-webkit-min-device-pixel-ratio: 2)' /* 1441px */
 				+ ', only screen and (min-width: 1441px) and (min-resolution: 192dpi)'
+				,
+				'list-view-retina': 'only screen and (min-width: 1200px) and (-webkit-min-device-pixel-ratio: 2)' /* 1200px */
+				+ ', only screen and (min-width: 1200px) and (min-resolution: 192dpi)'
 			}
 		});
 
@@ -19851,6 +20330,150 @@
 /***/ function(module, exports, __webpack_require__) {
 
 	var $ = __webpack_require__(2);
+
+	module.exports = function () {
+		'use strict';
+
+		/* Array of collapsible panels on borrower page with default states */
+		var COLLAPSIBLE_PANELS = {
+			'ac-loan-story-body': 'expanded'
+			, 'ac-loan-details-body': 'expanded'
+			, 'ac-loan-details-body-right': 'expanded'
+			, 'ac-why-special-body': 'expanded'
+			, 'ac-field-partner-details-body': 'collapsed'
+			, 'ac-field-partner-details-body-right': 'collapsed'
+			, 'ac-more-loan-info-body': 'collapsed'
+			, 'ac-lenders-teams-body': 'expanded'
+			, 'ac-country-info-body': 'collapsed'
+			, 'ac-comments-and-updates-body': 'collapsed'
+			, 'ac-loan-tags-body': 'collapsed'
+			, 'ac-about-zip-body': 'expanded' // direct only
+			, 'ac-trustee-info-body': 'collapsed'  // direct only
+			, 'ac-trustee-info-body-right': 'collapsed'  // direct only
+		}
+			, isLocalStorageAvailable = Modernizr.localstorage;
+
+	    $('#show-advanced-toggle, #hide-advanced-toggle').click(function() {
+	        $('.show-advanced').toggle();
+	        $('.hide-advanced').toggle();
+	        $('.simple-repayment-schedule').toggle();
+	        $('.advanced-repayment-schedule').toggle();
+	    });
+
+		$('.show-more-comments').click(function() {
+			$('.comments').append($('.spillover-comments li').clone(true));
+			$('.show-more-comments').toggle();
+		});
+
+		$('.hide-more-comments').click(function() {
+			$('.show-more-comments').toggle();
+			$('.comments li:nth-child(n+16)').remove();
+
+			$('html, body').animate({
+				scrollTop: $('.show-more-comments').offset().top
+			}, 1000);
+		});
+
+		$('.show-previous-loan-details').click(function() {
+			$('.show-previous-loan-details').toggle();
+		});
+
+		$('.hide-previous-loan-details').click(function() {
+			$('.show-previous-loan-details').toggle();
+			$('html, body').animate({
+				scrollTop: $('.loan-story').offset().top
+			}, 1000);
+		});
+
+		$('.show-all-previous-loan-details').click(function() {
+			$('.show-all-previous-loan-details').toggle();
+		});
+
+		// button to reveal or hide the loan tag options
+		var tagToggler = $('.tag-toggler');
+		tagToggler.click(function () {
+			$('.tag-directions').toggle();
+			var allTags = $('.all-tags');
+			if (tagToggler.text() != 'Close') {
+				tagToggler.text('Close');
+				allTags.css('height', 'auto');
+				$('#ac-loan-tags-body').css('height', 'auto');
+			}
+			else if ($('.selected-tags').children().size() > 0) {
+				tagToggler.text('Add more tags');
+				allTags.css('height', 0);
+			}
+			else {
+				tagToggler.text('Add tags');
+				allTags.css('height', 0);
+			}
+		});
+
+		$('.borrower-profile-wrapper .lender-count').click(function(){
+			var lendersAccordion = $('[aria-controls="ac-lenders-teams-body"]');
+			if (lendersAccordion.attr('aria-expanded') === 'false'){
+				lendersAccordion.click();
+			}
+		});
+
+		$('.borrower-profile-wrapper .country-text a').click(function(){
+			var countryAccordion = $('[aria-controls="ac-country-info-body"]');
+			if (countryAccordion.attr('aria-expanded') === 'false'){
+				countryAccordion.click();
+			}
+		});
+
+		/* handle clicks that expand or collapse content panels  */
+		$('.ac-title').click(function(event){
+			if (isLocalStorageAvailable && event.hasOwnProperty('originalEvent')) {
+				// we only want to respond to actual user clicks
+				var panel = $(this).attr('aria-controls')
+					, panelState = $(this).attr('aria-expanded') === 'true' ? 'collapsed':'expanded';
+					// seems backward because 'aria-expanded' is evaluated before click takes effect
+
+				updatePanelStates(panel, panelState);
+			}
+		});
+
+		/* when a panel is expanded or collapsed, if new state is not default state
+		 * then record new state in local storage to make it sticky */
+		function updatePanelStates(panel, panelState) {
+			var panelStates = {}
+				, storedPanelStates;
+
+			if (! isLocalStorageAvailable) {
+				return;
+			}
+
+			try {
+				storedPanelStates = $.parseJSON(localStorage.getItem('borrowerPanelStates'));
+				if (null === storedPanelStates) {
+					storedPanelStates = {};
+				}
+			} catch(e) {
+				storedPanelStates = {};
+			}
+
+			if (Object.keys(storedPanelStates).length) {
+				panelStates = storedPanelStates;
+			}
+
+			if(panel in COLLAPSIBLE_PANELS) {
+				if (COLLAPSIBLE_PANELS[panel] !== panelState) {
+					panelStates[panel] = panelState;
+				} else {
+					delete panelStates[panel];
+				}
+				localStorage.setItem('borrowerPanelStates', JSON.stringify(panelStates));
+			}
+		}
+	};
+
+/***/ },
+/* 17 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var $ = __webpack_require__(2);
 	var Foundation = __webpack_require__(4);
 
 	module.exports = function() {
@@ -19871,7 +20494,7 @@
 	};
 
 /***/ },
-/* 17 */
+/* 18 */
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = function() {
@@ -19892,7 +20515,7 @@
 	};
 
 /***/ },
-/* 18 */
+/* 19 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var $ = __webpack_require__(2);
@@ -19909,7 +20532,7 @@
 	};
 
 /***/ },
-/* 19 */
+/* 20 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_RESULT__;;(function () {

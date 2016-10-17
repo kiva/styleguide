@@ -16,6 +16,11 @@ $footer-top-bottom-padding: rem-calc(40);
 		color: $light-green;
 		font-size: $small-font-size;
 		line-height: $small-line-height;
+
+		&:visited
+		, &:active {
+			color: $light-green;
+		}
 	}
 
 	h1 {
@@ -29,6 +34,10 @@ $footer-top-bottom-padding: rem-calc(40);
 
 .siteFooter-group {
 	margin-bottom: rem-calc(60);
+
+	h1 {
+		margin-top: 0;
+	}
 }
 
 .siteFooter-group:last-of-type {
@@ -38,6 +47,7 @@ $footer-top-bottom-padding: rem-calc(40);
 }
 
 .siteFooter-statement-group {
+	margin-top: rem-calc(1);
 	margin-bottom: 12%;
 }
 

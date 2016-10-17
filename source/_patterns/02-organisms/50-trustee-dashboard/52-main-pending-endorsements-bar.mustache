@@ -1,0 +1,18 @@
+<div class="pending-endorsements">
+	<div class="row">
+		<div class="columns large-12">
+			<h2 class="scalable">Pending Endorsements</h2>
+			<p>These borrowers used your invite link and are pending your endorsement.</p>
+		</div>
+	</div>
+	<div class="pending-endorsements-results-region">
+		{{#trustee-borrowers}}
+			{{#isPending}}
+			<div class="borrower-item-row">
+				{{> 02-organisms/50-trustee-dashboard/63-borrower-network-listing-item}}
+			</div>
+			{{/isPending}}
+		{{/trustee-borrowers}}
+	</div>
+
+</div>

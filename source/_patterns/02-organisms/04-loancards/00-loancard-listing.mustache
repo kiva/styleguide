@@ -1,76 +1,73 @@
-<div class="loan-card">
-    <a class="borrower-img-wrap" href="{{borrower_url}}" style="background-image: url({{image.url}});">
-        {{#show_loan_length}}
-            <div class="loan-message">{{loan_length}}</div>
-        {{/show_loan_length}}
-        {{^show_loan_length}}
-            {{#is_expiring_soon}}
-                <div class="loan-message urgent">{{expiring_soon_message}}</div>
-            {{/is_expiring_soon}}
-        {{/show_loan_length}}
-    </a>
-    {{> molecules-loan-image-footer}}
+<div class="loan-card row" data-equalizer-watch style="height:{{height}};">
+	<div class="borrower-image-wrap small-12 columns">
+	{{#is_admin}}
+		<div class="image-edit-buttons">
+			<a class="edit" href="{{image.edit_url}}" target="_blank"><svg class="icon icon-edit"><use xlink:href="#icon-edit"/></svg></a>
+			<a class="refresh" href="#"><svg class="icon icon-refresh"><use xlink:href="#icon-refresh"/></svg></a>
+		</div>
+	{{/is_admin}}
+		<a class="borrower-image" kvtrackevent="Lending|click-Read more|Photo" href="{{borrower_url}}" data-interchange="{{#image.sizes}}[{{url}}, ({{size}})],{{/image.sizes}}">
+			{{#show_loan_length}}
+				<div class="loan-message">{{loan_length}}</div>
+			{{/show_loan_length}}
+			{{^show_loan_length}}
+				{{#is_expiring_soon}}
+					<div class="loan-message urgent">{{expiring_soon_message}}</div>
+				{{/is_expiring_soon}}
+			{{/show_loan_length}}
+		</a>
+		<div class="loan-image-footer">
+			{{> molecules-loan-image-footer}}
+		</div>
+	</div>
 
-    <div class="borrower-details-wrap" data-equalizer-watch style="height:{{height}};">
-        <a href="{{borrower_url}}">{{name}}</a>
+    <div class="borrower-details-wrap small-12 columns">
+        <a kvtrackevent="Lending|click-Read more|Name" href="{{borrower_url}}">{{name}}</a>
         <div class="country">
-			<span class="f16 {{location.country.iso_code}}"></span>{{location.country.name}}
+			<span class="f16 {{location.country.iso_code}}"></span>{{location_label}}
         </div>
 
 		<p class="small-text">{{use}}</p>
+		{{#is_expiring_soon}}
+			<div class="loan-message urgent">{{expiring_soon_message}}</div>
+		{{/is_expiring_soon}}
     </div>
 
-    <div class="borrower-footer-wrap">
-        <div class="fundraising-meter progress {{#progress.repaying}}repaying{{/progress.repaying}}">
-            <span class="meter" style="width:{{progress.percent}}%"></span>
-            <span class="caption">{{progress.message}}</span>
-        </div>
 
-        {{^progress.repaying}}
-            {{#is_regular}}
-                <div class="bottom-bar">
-                    <a class="half-width button lend-button" href="#">Lend {{#free_trial}}Free {{/free_trial}}$25</a>
-                    <a class="half-width button" href="{{borrower_url}}">Read More</a>
-                </div>
-            {{/is_regular}}
-            {{#is_lent_to}}
-                <div class="bottom-bar show-short">
-                    <a class="success button" href="{{borrower_url}}">
-                        <svg class="icon">
-                            <use xlink:href="#icon-confirmation" />
-                        </svg>
-                        <span>You've supported this loan</span>
-                    </a>
-                </div>
-                <div class="bottom-bar hide-for-touch">
-                    <a class="button" href="{{borrower_url}}">Lend Again</a>
-                </div>
-            {{/is_lent_to}}
-            {{#is_adding}}
-                <div class="bottom-bar no-hide">
-                    <div class="message">
-                        <img class="loader" src="{{img.loader.src}}">Adding to basket
-                    </div>
-                </div>
-            {{/is_adding}}
-            {{#is_in_basket}}
-                <div class="bottom-bar show-short">
-                    <a class="success button" href="{{basket_url}}">
-                        <svg class="icon">
-                            <use xlink:href="#icon-confirmation" />
-                        </svg>
-                        <span>{{amount_in_basket}} in basket</span>
-                    </a>
-                </div>
-                <div class="bottom-bar hide-for-touch">
-                    <a class="success button" href="{{basket_url}}">
-                        <svg class="icon">
-                            <use xlink:href="#icon-confirmation" />
-                        </svg>
-                        <span>Proceed to checkout</span>
-                    </a>
-                </div>
-            {{/is_in_basket}}
-        {{/progress.repaying}}
+	<div class="borrower-partner-trustee small-12 columns small-text">
+		{{#partnerName}}
+			<span>Field Partner</span>
+			<p class="small-text">{{partnerName}}</p>
+		{{/partnerName}}
+		{{#trusteeName}}
+			<span>Trustee</span>
+			<p class="small-text">{{trusteeName}}</p>
+		{{/trusteeName}}
+	</div>
+	<div class="borrower-loan-length small-12 columns small-text">
+		<span>Loan length</span>
+		<p class="small-text">{{lenderRepaymentTerm}} months</p>
+	</div>
+
+    <div class="borrower-footer-wrap small-12 columns {{#is_ended}}vertical-centering{{/is_ended}}">
+		<div class="floater">
+			<div class="fundraising-meter progress">
+				<span class="meter" style="width:{{progress.percent}}%;"></span>
+				<span class="caption">{{progress.message}}</span>
+			</div>
+
+			<div class="bottom-bar-region">
+				{{> molecules-bottom-bar }}
+			</div>
+
+			{{#is_matched}}
+				{{^is_ended}}
+					<div class="matching-message">
+						<svg class="icon icon-match"><use xlink:href="#icon-match"/></svg>
+						<span data-tooltip aria-haspopup="true" title="{{matching_text}}">{{matching_text}}</span>
+					</div>
+				{{/is_ended}}
+			{{/is_matched}}
+		</div>
     </div>
 </div>

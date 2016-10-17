@@ -1,0 +1,64 @@
+<section class="loan-tags">
+	<div class="ac-title ac-container" data-kv-accordion aria-controls="ac-loan-tags-body" aria-expanded="false">
+		<h2>
+			<div class="ac-title-text">
+				Tags
+			</div>
+			<span class="ac-dropdown-icon">
+				<svg class="icon icon-large-chevron loan-tags-dropdown">
+					<use xlink:href="#icon-large-chevron"></use>
+				</svg>
+			</span>
+		</h2>
+	</div>
+	<div class="ac-body" id="ac-loan-tags-body" aria-hidden="true">
+		<div class="tag-info">
+			<div class="selected-tags">
+				{{#applied_tag_selections}}
+					<span {{#userSelected}}class="selected-tag user-selected-tag-{{id}}"{{/userSelected}}>
+						<a href={{href}}>{{name}}</a>
+						<span class="divider"> | </span>
+					</span>
+				{{/applied_tag_selections}}
+			</div>
+
+			<p>
+				Loan tags help lenders find loans that match certain areas of interest.
+			</p>
+
+			{{#user_logged_in}}
+				<p>
+					<span class="tag-directions">Select the tags below to add up to 5 of your own tags for this loan.</span>
+					<span class="tag-toggler">
+						Add {{#hasTags}}more {{/hasTags}}tags
+					</span>
+				</p>
+			{{/user_logged_in}}
+		</div>
+
+		<div class="all-tags show-for-touch">
+			<ul class="tag-options">
+				{{#left_tags}}
+					{{> 01-molecules/06-components/07-tag-item-touch}}
+				{{/left_tags}}
+			</ul>
+			<ul class="tag-options">
+				{{#right_tags}}
+					{{> 01-molecules/06-components/07-tag-item-touch}}
+				{{/right_tags}}
+			</ul>
+		</div>
+		<div class="all-tags hide-for-touch row">
+			<ul class="tag-options small-12 xlarge-6 columns">
+				{{#left_tags}}
+					{{> 01-molecules/06-components/07-tag-item}}
+				{{/left_tags}}
+			</ul>
+			<ul class="tag-options small-12 xlarge-6 columns">
+				{{#right_tags}}
+					{{> 01-molecules/06-components/07-tag-item}}
+				{{/right_tags}}
+			</ul>
+		</div>
+	</div>
+</section>

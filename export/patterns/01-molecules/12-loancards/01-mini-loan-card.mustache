@@ -1,0 +1,40 @@
+<div class="mini-loan-card">
+	<a class="image" href="{{url}}">
+		<img alt="Photo of {{name}}" src="" data-interchange="{{#image.sizes}}[{{url}}, ({{size}})],{{/image.sizes}}">
+	</a>
+	{{#dedication}}
+		<a class="dedication" href="{{url}}">
+			<svg class="icon icon-dedicate-heart">
+				<use xlink:href="#icon-dedicate-heart"/>
+			</svg>
+			<span>Dedicated to</span>
+			<span>{{recipient}}</span>
+		</a>
+	{{/dedication}}
+	{{^dedication}}
+		{{#progress}}
+			{{> 01-molecules/08-meters/fundraising-meter }}
+		{{/progress}}
+		{{^progress}}
+			{{#fully_repaid}}
+				<div class="fully-repaid">
+					<div class="wrapper">
+						<svg class="icon icon-tags-checkmark">
+							<use xlink:href="#icon-tags-checkmark"/>
+						</svg>
+						100% repaid!
+					</div>
+				</div>
+			{{/fully_repaid}}
+			{{^fully_repaid}}
+				<div class="spacer"></div>
+			{{/fully_repaid}}
+		{{/progress}}
+	{{/dedication}}
+	<div class="status">{{status}}</div>
+	<a class="name" href="{{url}}">{{name}}</a>
+	<div class="activity">{{activity}}</div>
+	<div class="country">
+		<span class="f16 {{country.iso_code}}"></span>{{country.name}}
+	</div>
+</div>

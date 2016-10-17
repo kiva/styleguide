@@ -3,5 +3,7 @@
   "countryISOCode": "pk",
   "countryName": "Pakistan",
   "city": "Lahore",
-  "typeName": "Agriculture"
+  "typeName": "Agriculture",
+  "is_direct_loan": false,
+  "businessName": "The Tunduru Group"
 }

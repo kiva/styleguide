@@ -1,8 +1,9 @@
 .loan-lifecycle-wrapper {
-	background: url("//www.kiva.org/cms/page/images/kiva-works-sm-std.jpg") no-repeat;
+	background: url("//www.kiva.org/cms/page/images/kiva-works-med-std.jpg") no-repeat;
 	min-height: 100%;
 	min-width: 100%;
 	background-size: cover;
+	padding-bottom: rem-calc(100);
 
 	.how-kiva-works-title {
 		top: rem-calc(60);
@@ -14,6 +15,7 @@
 
 		h1 {
 			margin: 0;
+			padding: 0 rem-calc(12);
 		}
 	}
 
@@ -24,9 +26,14 @@
 		max-width: rem-calc(350);
 		min-width: rem-calc(225);
 		min-height: rem-calc(120);
+		cursor: pointer;
 
 		.text-step {
 			margin: auto;
+
+			a:visited {
+				color: $kiva-textlink;
+			}
 
 			&.step-1 {
 				padding: rem-calc(43) rem-calc(25);
@@ -49,6 +56,7 @@
 
 	.text-box {
 		background-color: $white;
+		cursor: pointer;
 	}
 
 	.dotted-line {
@@ -63,7 +71,7 @@
 
 		.loan-disbursal-container {
 			border: white rem-calc(3) solid;
-			background-color: rgba(0,0,0,0.80);
+			background-color: rgba(0, 0, 0, 0.80);
 			max-width: rem-calc(500);
 			margin: 0 auto;
 
@@ -79,10 +87,10 @@
 				width: rem-calc(80);
 				height: rem-calc(80);
 
-					@media #{$medium-up} {
-						width: rem-calc(130);
-						height: rem-calc(130);
-					}
+				@media #{$medium-up} {
+					width: rem-calc(130);
+					height: rem-calc(130);
+				}
 			}
 
 			.text-frame-icon-overlay {
@@ -91,11 +99,13 @@
 				width: 67.5%;
 				margin-top: rem-calc(-40);
 				min-height: rem-calc(120);
+				cursor: pointer;
 
 				@media #{$medium-up} {
 					margin-top: rem-calc(-75);
 				}
-			};
+			}
+		;
 
 			.fundraising-period-container {
 				background-color: $kiva-green;
@@ -125,10 +135,10 @@
 					width: rem-calc(80);
 					height: rem-calc(80);
 
-						@media #{$medium-up} {
-							width: rem-calc(130);
-							height: rem-calc(130);
-						}
+					@media #{$medium-up} {
+						width: rem-calc(130);
+						height: rem-calc(130);
+					}
 				}
 
 				.dotted-line {
@@ -138,11 +148,12 @@
 				.text-frame {
 					margin: 0 auto;
 					width: 100%;
+					cursor: auto;
 				}
 				.step-4 {
 					padding: rem-calc(30) rem-calc(10);
 				}
-				.step-5{
+				.step-5 {
 					padding: rem-calc(31) rem-calc(10);
 					max-width: rem-calc(120);
 				}
@@ -158,11 +169,17 @@
 		max-width: rem-calc(350);
 		min-width: rem-calc(225);
 		min-height: rem-calc(120);
+		cursor: pointer;
 
 		@media #{$medium-up} {
 			margin-top: rem-calc(-75);
 		}
-	};
+	}
+
+	.no-select {
+		cursor: auto;
+	}
+;
 
 	.icon-repaid,
 	.icon-repeat {
@@ -173,10 +190,10 @@
 		height: rem-calc(80);
 		margin: rem-calc(-3) auto;
 
-			@media #{$medium-up} {
-				width: rem-calc(130);
-				height: rem-calc(130);
-			}
+		@media #{$medium-up} {
+			width: rem-calc(130);
+			height: rem-calc(130);
+		}
 	}
 
 	.step-6,
@@ -188,3 +205,91 @@
 		}
 	}
 }
+
+.reveal-modal-bg {
+	a:visited {
+		color: $kiva-textlink;
+	}
+}
+
+.faq-section {
+	min-width: 100%;
+	padding: rem-calc(75) rem-calc(20) rem-calc(100) rem-calc(20);
+	background-color: black;
+	box-shadow: 0 rem-calc(-10) rem-calc(80) rem-calc(50) #000;
+
+	.faq-container {
+		max-width: rem-calc(800);
+		margin: 0 auto;
+
+		a:visited {
+			color: $kiva-textlink;
+		}
+
+		.faq-title {
+			border-top: rem-calc(1) solid $white;
+			padding: rem-calc(10) 0;
+			margin: 0;
+		}
+
+		.accordion-container {
+
+			.ac-title {
+				border-top: rem-calc(1) solid $white;
+				padding: rem-calc(5) 0 rem-calc(5) 0;
+				margin: 0;
+				position: relative;
+				cursor: pointer;
+
+				.question-wrap {
+					margin: 0;
+					max-width: 78vw;
+					font-weight: bold;
+				}
+
+				.ac-dropdown-icon {
+					float: right;
+
+
+					.icon-small-chevron {
+						stroke: $white;
+						position: absolute;
+						top: rem-calc(5);
+						right: 0;
+					}
+				}
+			}
+
+			.ac-body p {
+
+				@media #{$large-up} {
+					font-size: rem-calc(18);
+				}
+			}
+		}
+
+		.help-center-link {
+			border-top: rem-calc(1) solid $white;
+			padding: rem-calc(10) 0 rem-calc(80) 0;
+		}
+	}
+
+	.choose-borrower:hover {
+		text-decoration: none;
+	}
+
+	.choose-borrower-frame {
+		margin: 0 auto;
+		width: rem-calc(225);
+
+		.choose-borrower-text {
+			margin: auto auto;
+			padding: rem-calc(20) 0;
+		}
+	}
+
+	.choose-borrower-frame:hover .choose-borrower-text {
+		color: $white;
+	}
+}
+

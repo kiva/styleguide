@@ -8,3 +8,13 @@ a.modal-link:hover {
   color: $dark-green;
   text-decoration: underline;
 }
+
+a.dark_green_bg_link {
+	color: $white;
+	text-decoration: underline;
+
+	&:visited
+	, &:active {
+		color: $white;
+	}
+}

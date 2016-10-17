@@ -1,0 +1,17 @@
+<div class="team-attributions">
+    <div class="teams-title"><strong>Teams</strong></div>
+    {{#teams.0}}
+        <div class="teams-subtitle">Most loans attributed</div>
+        {{#teams}}
+            {{> 01-molecules/40-portfolio/02-single-team-display}}
+        {{/teams}}
+        {{#showJoinAnotherTeamButton}}
+            <a href="{{joinTeamUrl}}" class="button secondary">Join another team</a>
+        {{/showJoinAnotherTeamButton}}
+    {{/teams.0}}
+    {{^teams.0}}
+        <div class="attribution-title">Not a member of any team yet.</div>
+        <a href="{{joinTeamUrl}}" class="button secondary">Join a team</a>
+    {{/teams.0}}
+
+</div>

@@ -16,6 +16,11 @@
 	}
 	ul{
 		margin-left: 0;
+
+		&.tertiary-nav {
+			margin-left: -1.1111111rem;
+		}
+
 		li{
 			list-style: none;
 		}
@@ -28,10 +33,12 @@
 				list-style: disc;
 			}
 		}
+
+		&.irs-filings {
+			margin-bottom: 0;
+		}
 	}
-	#archive{
-		width: rem-calc(200);
-	}
+
 	.pdf-version{
 		margin-left: rem-calc(20);
 	}
@@ -42,6 +49,22 @@
 				
 		cite a{
 			color:$kiva-textlink;
+		}
+	}
+
+	.archives-title {
+		max-width: 500px;
+		margin-top: 8px;
+		border-top: 1px solid #d8d8d8;
+		border-bottom: 1px solid #d8d8d8;
+		cursor: pointer;
+
+		.ac-dropdown-icon {
+			float: right;
+		}
+		.ac-dropdown-icon .icon {
+			position: relative;
+			right: 0;
 		}
 	}
 }

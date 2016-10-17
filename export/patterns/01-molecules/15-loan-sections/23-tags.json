@@ -1,0 +1,21 @@
+{
+  "left_tags": [
+	{"id:": 1, "name": "#Animals", "description": "Loans to purchase, feed, raise, sell, or build shelter for animals"},
+	{"id:": 2, "name": "#Widowed", "description": "Loan description says that the borrower's spouse has died"},
+	{"id:": 3, "name": "#SingleParent", "description": "A parent without a spouse or partner, who’s responsible for raising children"},
+	{"id:": 4, "name": "#Fabrics", "description": "Photos with beautiful fabrics, or loans for fabrics, sewing, weaving, embroidery, etc.", "userSelected": true}
+  ],
+  "right_tags": [
+	{"id:": 5, "name": "#Schooling", "description": " Loans used by students and teachers, and people expanding their business to pay for children's education", "userSelected": true},
+	{"id:": 6, "name": "#Orphan", "description": "Borrower is responsible for dependents who were orphaned", "userSelected": true},
+	{"id:": 7, "name": "#Trees ", "description": "Loans for planting, growing or sustaining trees"},
+	{"id:": 8, "name": "#Technology", "description": "Loans to buy, sell or use modern technology (cell phones, computers, solar power, etc.) "}
+  ],
+  "applied_tag_selections": [
+	{"id:": 4, "name": "#Fabrics", "description": "Photos with beautiful fabrics, or loans for fabrics, sewing, weaving, embroidery, etc.", "userSelected": true},
+	{"id:": 5, "name": "#Schooling", "description": " Loans used by students and teachers, and people expanding their business to pay for children's education", "userSelected": true},
+	{"id:": 6, "name": "#Orphan", "description": "Borrower is responsible for dependents who were orphaned", "userSelected": true}
+  ],
+  "user_logged_in": true,
+  "hasTags": true
+}

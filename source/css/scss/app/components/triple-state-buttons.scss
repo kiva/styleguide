@@ -1,71 +1,81 @@
 .triple-state-buttons, .quintuple-state-buttons {
-    position: relative;
-    background-color: $white;
+	position: relative;
+	background-color: $white;
 
-    label.ts-label, label.qs-label {
-        box-sizing: border-box;
-        width: 50%;
-        text-align: center;
-        float: left;
-        cursor: pointer;
+	label.ts-label, label.qs-label {
+		box-sizing: border-box;
+		width: 50%;
+		text-align: center;
+		float: left;
+		cursor: pointer;
 
-        margin: 0;
-        padding: 0.4rem;
-        border: rem-calc(1) solid $kiva-text-dark;
-        color: $kiva-text-dark;
+		margin: 0;
+		padding: 0;
+		line-height: rem-calc(35);
+		border: rem-calc(1) solid $kiva-text-dark;
+		color: $kiva-text-dark;
 
-        &:nth-of-type(even) {
-            border-left: none;
-        }
+		&:hover {
+			color: $kiva-green;
+			border-color: $kiva-green;
+		}
 
-        &:nth-of-type(n+3) {
-            border-top: none;
-        }
+		&:nth-of-type(even) {
+			border-left: none;
+		}
 
-        &.ts-floater, &.qs-floater {
-            display: none;
-            position: absolute;
-            border: rem-calc(1) solid $charcoal;
-        }
-    }
+		&.ts-floater, &.qs-floater {
+			display: none;
+			position: absolute;
+			border-color: $charcoal;
+		}
+	}
 
-    input {
-        display: none;
+	label.qs-label:nth-of-type(3n), label.qs-label:nth-of-type(4n) {
+		border-top: none;
+	}
 
-        &:checked + label.ts-label,
-        &:checked + label.qs-label {
-            border-color: $kiva-green;
-            color: $white;
-            background-color: $kiva-green;
-            font-weight: bold;
-        }
+	input {
+		display: none;
 
-        &.ts-left:checked ~ label.ts-floater,
-        &.qs-left-top:checked ~ label.qs-floater {
-            display: block;
-            left: 0;
-            top: 0;
-        }
+		&:checked + label.ts-label,
+		&:checked + label.qs-label {
+			border-color: $kiva-green;
+			color: $white;
+			background-color: $kiva-green;
+			font-weight: bold;
 
-        &.ts-right:checked ~ label.ts-floater,
-        &.qs-right-top:checked ~ label.qs-floater {
-            display: block;
-            right: 0;
-            top: 0;
-            border-left: none;
-        }
+			&:hover {
+				color: $white;
+			}
+		}
 
-        &.qs-left-bottom:checked ~ label.qs-floater {
-            display: block;
-            left: 0;
-            bottom: 0;
-        }
+		&.ts-left:checked ~ label.ts-floater,
+		&.qs-left-top:checked ~ label.qs-floater {
+			display: block;
+			left: 0;
+			top: 0;
+		}
 
-        &.qs-right-bottom:checked ~ label.qs-floater {
-            display: block;
-            right: 0;
-            bottom: 0;
-            border-left: none;
-        }
-    }
+		&.ts-right:checked ~ label.ts-floater,
+		&.qs-right-top:checked ~ label.qs-floater {
+			display: block;
+			right: 0;
+			top: 0;
+			border-left: none;
+		}
+
+		&.qs-left-bottom:checked ~ label.qs-floater {
+			display: block;
+			left: 0;
+			bottom: 0;
+		}
+
+		&.qs-right-bottom:checked ~ label.qs-floater {
+			display: block;
+			right: 0;
+			bottom: 0;
+			border-left: none;
+		}
+	}
 }

@@ -1,0 +1,41 @@
+.tabs {
+	border-top: 1px solid $kiva-stroke-gray;
+	border-bottom: 1px solid $kiva-stroke-gray;
+	padding: rem-calc(3) 0;
+
+	dd,
+	.tab-title {
+
+		@media #{$large-up} {
+			margin-right: 1rem;
+		}
+
+		a {
+			font-size: $tabs-navigation-font-size - $tabs-navigation-font-size-reduction;
+			height: rem-calc(32);
+			line-height: rem-calc(32);
+			padding: 0 rem-calc(7);
+			font-weight: $font-weight-bold;
+			outline: none;
+
+			@media #{$medium-up} {
+				font-size: $tabs-navigation-font-size;
+				height: rem-calc(36);
+				line-height: rem-calc(36);
+				padding: 0 rem-calc(14);
+			}
+
+		}
+
+		&.active > a {
+			background-color: $tabs-navigation-active-bg-color;
+			color: $tabs-navigation-active-font-color;
+			border: 1px solid $blue;
+			cursor: default;
+
+			&:hover {
+				text-decoration: none;
+			}
+		}
+	}
+}

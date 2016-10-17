@@ -1,0 +1,44 @@
+<section class="why-special">
+    <div class="ac-title ac-container" data-kv-accordion aria-controls="ac-why-special-body" aria-expanded="true">
+		<h2>
+			This loan is special because:
+			<span class="ac-dropdown-icon">
+				<svg class="icon icon-large-chevron">
+					<use xlink:href="#icon-large-chevron"></use>
+				</svg>
+			</span>
+		</h2>
+    </div>
+	<div class="ac-body" id="ac-why-special-body" aria-hidden="false">
+		<div class="green-bolded endorsement">
+			{{whySpecial}}
+		</div>
+
+		<div class="endorser">
+			{{#endorserImgUrl}}
+			<div class="profile-photo">
+				<div class="circle-avatar" style="background-image: url({{endorserImgUrl}}); content: url({{endorserImgUrl}});"></div>
+			</div>
+			{{/endorserImgUrl}}
+
+			<div class="name-and-title">
+				<p>
+					{{#endorserName}}
+						<p class="hide-for-large-up">
+							{{endorserName}}, Kiva staff</p>
+						<p class="show-for-large-up">
+							{{endorserName}}
+							<br class="lu">
+							Kiva staff
+						</p>
+					{{/endorserName}}
+					{{^endorserName}}
+						{{#showEndorser}}
+							Kiva staff
+						{{/showEndorser}}
+					{{/endorserName}}
+				</p>
+			</div>
+		</div>
+	</div>
+</section>

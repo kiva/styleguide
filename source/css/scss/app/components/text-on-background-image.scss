@@ -1,0 +1,22 @@
+.text-on-background-image {
+	background-size: cover;
+	.wrapper {
+		display: table;
+		width: 100%;
+		.container {
+			display: table-row;
+			.content {
+				display: table-cell;
+				padding: rem-calc(30);
+				text-align: center;
+				vertical-align: middle;
+				@media #{$medium-up} {
+					height: rem-calc(250);
+				}
+				p {
+					margin-bottom: 0;
+				}
+			}
+		}
+	}
+}

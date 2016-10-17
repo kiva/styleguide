@@ -1,4 +1,5 @@
 {
+  "anonymize": false,
   "borrowerOrGroupName": "John Group",
   "storyDescription": [
     "John applied for his first loan of KES 25,000 from Vision Fund Kenya to buy a dairy cow so that he can increase the amount of milk he supplies and thereby earn more income. He plans to use part of his profit to repay the loan and to expand his agricultural business.",
@@ -6,7 +7,11 @@
   ],
   "borrowersList": "Sarah, John, Anna*",
   "previousLoanDetails": null,
-  "translation": {
+  "showPreviousLoanDetails": false,
+  "showAllPreviousLoanDetails": false,
+  "previousLoanDescription": null,
+  "allPreviousLoanDescriptions" : [],
+  "storyTranslation": {
     "language": "Spanish",
     "reviewerName": "Tayah Wheeland",
     "reviewerLink": "<a href=\"http://www.kiva.org/about/translationFAQ\">Kiva Volunteer</a>",

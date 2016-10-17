@@ -340,6 +340,10 @@
 			$images.css('transition', 'opacity 2s ease-in-out');
 			$images.css('position', 'relative');
 			$images.css('opacity', 1);
+			loanFigure.css({
+				'padding-bottom': '',
+				'background': 'none'
+			});
 		}).slick({
 			mobileFirst: true
 			, prevArrow: '.carousel-prev'
@@ -460,6 +464,10 @@
 	var $top_nav_menu = $('.top-nav-search-menu').detach();
 	$('.top-nav').append($top_nav_menu);
 
+	$('#search-form').on('show', function () {
+		$('#search-box').focus();
+	});
+
 	//var $category_menu = $('.category-search-menu').detach();
 	//$('.category-card-grid').append($category_menu);
 
@@ -473,6 +481,40 @@
 		}
 	});
 
+	var $acLoans = $('[aria-controls="faq-direct-vs-partner-loans"]');
+	var closeReveal = $('.close-reveal-modal');
+
+	//How Kiva Works page inpage link from one of the steps to one of the FAQs
+	$('.accordion-anchor-and-open').click(function() {
+		closeReveal.click();
+		if ($acLoans.attr('aria-expanded') == 'false') {
+			$acLoans.click();
+		}
+		$('html, body').animate({
+			scrollTop: $('.faq-direct-vs-partner-loans').offset().top
+		}, 1000);
+	});
+	
+	//How Kiva Works page faq link (closes one accordion and opens another and brings question to top of view)
+	$('.accordion-collapse-and-open').click(function() {
+
+		if ($acLoans.attr('aria-expanded') == 'false') {
+			$acLoans.click();
+		}
+		$('html, body').animate({
+			scrollTop: $('.faq-direct-vs-partner-loans').offset().top
+		}, 1000);
+	});
+
 	loadSvgIcons();
+
+	// init the multi-select for partners
+	$('#partnersFilter').select2({
+		templateResult: function(result, container) {
+			// add 'needsclick' class to select2 results for iOS/Safari to prevent fastclick from attaching itself
+			$(container).addClass('needsclick');
+			return result.text;
+		}
+	});
 
 })(this, jQuery);

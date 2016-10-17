@@ -30,9 +30,10 @@
 
             &.disabled{
                 text-decoration: none;
-                color: $kiva-stroke-gray;
+                color: $gray;
                 &:hover {
-                    color: $kiva-stroke-gray;
+                    color: $gray;
+                    cursor: text;
                 }
             }
         }
@@ -60,6 +61,14 @@
         &.section-title {
             color: $kiva-text-dark;
             text-decoration: none;
+        }
+
+        &.disabled{
+            text-decoration: none;
+            color: $gray;
+            &:hover {
+                color: $gray;
+            }
         }
 
         &[aria-expanded="false"] .open {
@@ -154,6 +163,11 @@
         &:first-of-type {
             margin-top: 0;
         }
+
+    }
+
+    .disabled {
+        color: $selected-color;
     }
 
     .column-section {

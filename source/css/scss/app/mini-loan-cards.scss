@@ -1,0 +1,115 @@
+@import '../settings';
+@import '../palette';
+@import '../vendor_override/foundation/type';
+
+.mini-loan-card {
+	$meter-height: 2rem;
+
+	.image {
+		display: block;
+		width: 100%;
+		padding-bottom: 100%;
+		position: relative;
+
+		img {
+			position: absolute;
+			width: 100%;
+		}
+	}
+
+	.fundraising-meter {
+		margin-bottom: 0;
+		height: $meter-height;
+
+		.caption {
+			font-size: $small-font-size;
+			line-height: $meter-height;
+		}
+	}
+
+	.dedication {
+		$icon-spacing: 0.25rem;
+		$icon-dim: $meter-height - (2 * $icon-spacing);
+
+		display: block;
+		position: relative;
+		width: 100%;
+		height: $meter-height;
+		padding-left: $icon-dim + $icon-spacing;
+		font-size: $small-font-size;
+		line-height: $meter-height / 2;
+
+		.icon {
+			position: absolute;
+			left: 0;
+			top: $icon-spacing;
+			width: $icon-dim;
+			height: $icon-dim;
+		}
+
+		span {
+			display: block;
+			overflow: hidden;
+			text-overflow: ellipsis;
+			white-space: nowrap;
+		}
+
+		@media #{$large-only} {
+			padding-left: $icon-spacing;
+
+			.icon {
+				display: none;
+			}
+		}
+	}
+
+	.fully-repaid {
+		width: 100%;
+		background-color: $kiva-green;
+		text-align: center;
+
+		.wrapper {
+			display: inline-block;
+			position: relative;
+			padding-left: 1.1rem;
+			color: $white;
+			font-size: $small-font-size;
+			line-height: $meter-height;
+
+			.icon {
+				position: absolute;
+				top: -2%;
+				left: 0;
+				width: 0.9rem;
+				height: $meter-height;
+				fill: $white;
+			}
+		}
+	}
+
+	.spacer {
+		width: 100%;
+		height: $meter-height;
+	}
+
+	.status, .name, .activity, .country {
+		@extend .small-text;
+
+		display: block;
+		width: 100%;
+		margin: 0;
+		font-weight: 300;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		white-space: nowrap;
+	}
+
+	.status {
+		margin-top: 0.35rem;
+	}
+
+	.country span {
+		vertical-align: text-top;
+		margin-right: 0.25rem;
+	}
+}

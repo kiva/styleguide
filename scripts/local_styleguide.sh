@@ -9,6 +9,8 @@ if [ "$flag" == "--unlink" ] || [ "$flag" == "-u" ]; then
     git checkout -f styleguide/
     echo "Resetting your export folder"
     cd /kiva/styleguide
+    git reset
+    rm -rf export
     git checkout HEAD export
 elif [ "$flag" == "--compile" ] || [ "$flag" == "-c" ]; then
     echo "Exporting your files for use in Kiva Main"

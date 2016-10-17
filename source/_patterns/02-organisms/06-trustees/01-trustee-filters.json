@@ -1,0 +1,21 @@
+{
+	"queryString":"Store",
+	"trusteeLocationOptions": [
+		{"label":"Kenya","value":"2"},
+		{"label":"United States","value":"1"},
+		{"label":" - AK","value":"AK"},
+		{"label":" - TX","value":"TX","selected":true},
+		{"label":" - VT","value":"VT"}
+	],
+	"fundRaisingOnly":true,
+	"trusteeTypeOptions": [
+		{"label":"Individual","value":"individual"},
+		{"label":"Organization","value":"organization","selected":true}
+	],
+	"trusteeSortOptions": [
+		{"label":"Loan Count","value":"loanCount"},
+		{"label":"Repayment Rate","value":"repaymentRate","selected":true},
+		{"label":"Time on Kiva","value":"memberSince"},
+		{"label":"Total $ Endorsed","value":"totalLoanValue"}
+	]
+}

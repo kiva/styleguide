@@ -1,0 +1,8 @@
+{
+  "triggerLinkText": "This is a link for a Free Trial lightbox.",
+  "lightboxId": "free-trial-decision-lightbox",
+  "title": "You are opting out of using Free Trial.",
+  "message": "You have selected to not use your Free Trial and will be prompted to pay for this loan using your own money.",
+  "mainOptionButtonText": "Lend Anyway",
+  "alternativeOptionButtonText": "Find an Eligible Loan"
+}

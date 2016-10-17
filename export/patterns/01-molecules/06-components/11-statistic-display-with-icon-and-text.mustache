@@ -1,0 +1,18 @@
+<div class="statistic-display">
+	<div>
+		<span class="statistic kiva-green">{{statisticValue}}</span>
+	</div>
+	<div class="statistic-label">{{statisticLabel}}</div>
+	{{#statisticAdditionalText}}
+		<div class="statistic-additional-text">
+			{{#statisticIconName}}
+				<a href="{{iconUrl}}">
+					<svg class="icon {{statisticIconName}}">
+						<use xlink:href="#{{statisticIconName}}"/>
+					</svg>
+				</a>
+			{{/statisticIconName}}
+			{{statisticAdditionalText}}
+		</div>
+	{{/statisticAdditionalText}}
+</div>

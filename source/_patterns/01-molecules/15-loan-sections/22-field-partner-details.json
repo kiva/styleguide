@@ -1,0 +1,76 @@
+{
+  "field_partner_info": {
+    "partnerImgLink": "https://s3.amazonaws.com/media.zip.kiva.org/images/1441/thumb/cover_sketch_6.JPG",
+    "partnerLink": "http://www.kiva.org/partners/81",
+    "partnerName": "NYC Network of Trust",
+    "whyWeWorkWithThemDescription": "VisionFund Kenya has a national footprint in Kenya, but focuses its operations on underserved areas in the country. The organization provides a diverse range of [products including agricultural loans, business loans, education loans and more. These loans are offered both on an individual and group basis to ensure flexibility and access.<br>VisionFund Kenya is one of the few large microfinance institutions in Kenya that operates in very rural areas and offers products designed specifically for the people who live there. Kiva funding is helping the institution reach more underserved clients develop new innovative products to serve them. ",
+    "dueDiligenceType": "Full Due Diligence",
+    "timeOnKiva": "72 months",
+    "numberOfBorrowers": "22399",
+    "totalLoans": "$9,825,150",
+    "avgCostToBorrower": "41% PY",
+    "profitability": "-6.1%",
+    "avgLoanSize": "34.90%",
+    "delinquencyRate": "2.51%",
+    "loansAtRiskRate": "9.01%",
+    "defaultRate": "0.47%",
+    "currencyLossRate": "0.02%",
+    "fieldPartnerDataHelpText": [
+      {
+        "dataRevealId": "partner-time-on-kiva-lightbox",
+        "descriptionTitle": "Time on Kiva",
+        "descriptionText": "Time on Kiva description text."
+      },
+      {
+        "dataRevealId": "partner-num-borrowers-lightbox",
+        "descriptionTitle": "Number of Borrowers",
+        "descriptionText": "Number of Borrowers text."
+      },
+      {
+        "dataRevealId": "partner-total-lent-lightbox",
+        "descriptionTitle": "Total Lent",
+        "descriptionText": "Total Lent description text."
+      },
+      {
+        "dataRevealId": "partner-avg-cost-to-borrower-lightbox",
+        "descriptionTitle": "Average cost to borrower",
+        "descriptionText": "Average cost to borrower description text."
+      },
+      {
+        "dataRevealId": "partner-profitability-lightbox",
+        "descriptionTitle": "Profitability",
+        "descriptionText": "Profitability description text."
+      },
+      {
+        "dataRevealId": "partner-avg-loan-size-lightbox",
+        "descriptionTitle": "Average loan size",
+        "descriptionText": "Average loan size description text."
+      },
+      {
+        "dataRevealId": "partner-delinquency-rate-lightbox",
+        "descriptionTitle": "Delinquency Rate",
+        "descriptionText": "Delinquency Rate description text."
+      },
+      {
+        "dataRevealId": "partner-loans-at-risk-rate-lightbox",
+        "descriptionTitle": "Loans at Risk Rate",
+        "descriptionText": "Loans at Risk Rate description text."
+      },
+      {
+        "dataRevealId": "partner-default-rate-lightbox",
+        "descriptionTitle": "Default Rate",
+        "descriptionText": "Default Rate description text."
+      },
+      {
+        "dataRevealId": "partner-currency-loss-rate-lightbox",
+        "descriptionTitle": "Currency Loss Rate",
+        "descriptionText": "Currency Loss Rate description text."
+      },
+      {
+        "dataRevealId": "partner-learn-more-lightbox",
+        "descriptionTitle": "What is a field partner?",
+        "descriptionText": "Field partner description text."
+      }
+    ]
+  }
+}

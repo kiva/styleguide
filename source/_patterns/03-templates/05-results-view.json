@@ -1,140 +1,19 @@
 {
-	"can_favorite": true
-	, "is_matched": true
-	, "matching_text": "Matching by Someone with a really really long name"
-	, "loans": [
-		{
-			"name": "Cynthia"
-			, "use": "A loan of $575 helps Sau to buy a chainsaw, banana tubes (seedlings), taro roots (seedlings), a wheelbarrow, a water tank, gloves, a rake, a shovel, and chemicals."
-			, "location": {
-				"country" : {
-					"name": "Honduras"
-					, "iso_code": "hn"
-				}
-			}
-			, "image": {
-				"url": "http://placehold.it/480x300"
-			}
-			, "progress": {
-				"percent": 42
-				, "message": "$1,800 to go"
-			}
-			, "is_regular": true
-			, "is_lent_to": false
-			, "is_adding": false
-			, "is_in_basket": false
-		}
-		, {
-			"name": "Senia Del Carmen"
-			, "use": "A portion of Tuzamurane Group's $6,800 loan helps a member to buy more sorghum for sale."
-			, "location": {
-				"country" : {
-					"name": "Argentina"
-					, "iso_code": "ar"
-				}
-			}
-			, "image": {
-				"url": "http://placehold.it/480x300"
-			}
-			, "progress": {
-				"percent": 42
-				, "message": "$1,800 to go"
-			}
-			, "is_regular": true
-			, "is_lent_to": false
-			, "is_adding": false
-			, "is_in_basket": false
-			, "expiring_soon": true
-			, "expiring_message": "Only 1 day left!"
-		}
-		, {
-			"name": "Emprendedoras Group"
-			, "use": "A loan of $575 helps Intissar to pay her children’s educational fees."
-			, "location": {
-				"country" : {
-					"name": "Bosnia and Herzegovina"
-					, "iso_code": "ba"
-				}
-			}
-			, "image": {
-				"url": "http://placehold.it/480x300"
-			}
-			, "progress": {
-				"percent": 42
-				, "message": "$1,800 to go"
-			}
-			, "is_regular": false
-			, "is_lent_to": false
-			, "is_adding": true
-			, "is_in_basket": false
-		}
-		, {
-			"name": "Lillian"
-			, "use": "A loan of $600 helps Narciso to buy supplies for agricultural work and carpentry tools."
-			, "location": {
-				"country" : {
-					"name": "South Africa"
-					, "iso_code": "za"
-				}
-			}
-			, "image": {
-				"url": "http://placehold.it/480x300"
-			}
-			, "progress": {
-				"percent": 42
-				, "message": "$1,800 to go"
-			}
-			, "is_regular": false
-			, "is_lent_to": false
-			, "is_adding": false
-			, "is_in_basket": true
-			, "amount_in_basket": "$50"
-		}
-		, {
-			"name": "Mirian Yamileh"
-			, "use": "A portion of Sareoun's Group's $225 loan helps a member to buy a water filter to provide safe drinking water for their family."
-			, "location": {
-				"country" : {
-					"name": "American Samoa"
-					, "iso_code": "as"
-				}
-			}
-			, "image": {
-				"url": "http://placehold.it/480x300"
-			}
-			, "progress": {
-				"percent": 42
-				, "message": "$1,800 to go"
-			}
-			, "is_regular": false
-			, "is_lent_to": true
-			, "is_adding": false
-			, "is_in_basket": false
-			, "expiring_soon": true
-			, "show_loan_length": true
-			, "loan_length": "12 months"
-		}
-		, {
-			"name": "Estebana Sofia"
-			, "use": "A loan of $225 helps Ganga to purchase a dairy cow for starting her milk-selling business."
-			, "location": {
-				"country" : {
-					"name": "Burundi"
-					, "iso_code": "bi"
-				}
-			}
-			, "image": {
-				"url": "http://placehold.it/480x300"
-			}
-			, "progress": {
-				"percent": 68
-				, "message": "68% repaid"
-				, "repaying": true
-			}
-			, "is_regular": true
-			, "is_lent_to": false
-			, "is_adding": false
-			, "is_in_basket": false
-		}
+	"can_favorite": true,
+	"is_matched": true,
+	"matching_text": "Matching by Someone with a really really long name",
+	"loan-count": "1,423",
+	"show-selected": true,
+	"show-clear": true,
+	"show-save-search": true,
+	"is_admin": true,
+	"selected-filters": [
+		{"label":"Men"},
+		{"label":"Group"},
+		{"label":"Arts"},
+		{"label":"Entertainment"},
+		{"label":"Water and Sanitation"},
+		{"label":"Animals"},
+		{"label":"Job Creation"}
 	]
 }
