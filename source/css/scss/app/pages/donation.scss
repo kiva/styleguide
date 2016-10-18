@@ -1,5 +1,24 @@
+.donationIntroText {
+	padding: 20px 0;
+}
+
 .donation-intro-text {
-	@media #{$small-only} {
-		text-align: center;
+	text-align: center;
+
+	@media #{$large-up} {
+		text-align: left;
 	}
+}
+
+.donationSideBar {
+	padding-top: 20px;
+}
+
+.donationFaq {
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+
+.donationFooter {
+	display: inline-block;
 }
