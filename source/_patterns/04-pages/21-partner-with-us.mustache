@@ -42,7 +42,7 @@
 	</div>
 	<div class="row maxframe">
 		<div class="small-12 large-10 columns">
-			<h2>Other ways to support us</h2>
+			<h2 class="green">Other ways to support us</h2>
 			<p>Want to make a difference with Kiva, but you’re looking to make a contribution of less than $10,000?  Here’s a few ways you can get involved:</p>
 			<ul>
 				<li>Make an impact by <a href="/register">becoming a Kiva Lender</a></li>
@@ -50,7 +50,15 @@
 				<li>Give the <a href="/teams">gift of Kiva Cards</a></li>
 				<li><a href="/donate">Donate to Kiva</a>. 100% of every dollar loaned on Kiva goes to fund borrowers, so your donations to Kiva's operating expenses are vital to our success. </li>
 			</ul>
-			{{> 02-organisms/13-faq/00-faq}}
+			<div class="faq-container">
+				<h2 class="faq-title">Frequently asked questions</h2>
+				<section class="accordion-container">
+					{{#faqs}}
+						{{> 01-molecules/06-components/13-faq-question-answer}}
+					{{/faqs}}
+					<div class="ac-title ac-container"></div>
+				</section>
+			</div>
 		</div>
 	</div>
 </div>
