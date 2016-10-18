@@ -115,6 +115,34 @@
 		background-color: $white;
 		opacity: 1
 	}
+
+	//Styles for the holiday homepage Kiva Card up-sell slide
+	.hp-slide.holiday-slide {
+		.hp-element.text-over-image {
+
+			.hp-holiday-slide-button-wrapper {
+				display: inherit;
+				text-align: center;
+				margin-top: 40px;
+
+				.hp-holiday-slide-button {
+					margin: 0 auto;
+
+					@media #{$large-only} {
+						font-size: rem-calc(24px);
+						height: rem-calc(44px);
+						line-height: rem-calc(44px);
+					}
+
+					@media #{$xlarge-only} {
+						font-size: rem-calc(24px);
+						height: rem-calc(44px);
+						line-height: rem-calc(44px);
+					}
+				}
+			}
+		}
+	}
 }
 
 .hp-slide {
