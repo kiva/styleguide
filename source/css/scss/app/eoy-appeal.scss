@@ -1,0 +1,74 @@
+.eoy-appeal-wrapper {
+	background-color: $kiva-alert-yellow;
+
+	.eoy-appeal {
+		padding-left: rem-calc(10);
+		padding-right: rem-calc(10);
+
+		.eoy-header {
+			h2 {
+				position: relative;
+				padding-right: rem-calc(40);
+				@media #{$xlarge-up} {
+					padding-left: rem-calc(130);
+				}
+
+				.icon-large-chevron {
+					stroke-width: rem-calc(7);
+					position: absolute;
+					top: rem-calc(7);
+					right: 0;
+					height: rem-calc(25);
+					width: rem-calc(25);
+				}
+			}
+			&[aria-expanded="true"] {
+				.icon-large-chevron {
+					$transform: rotate(-180deg);
+					-webkit-transform: $transform;
+					-ms-transform: $transform;
+					transform: $transform;
+				}
+			}
+		}
+
+
+		.eoy-body {
+			.circle-avatar {
+				float: left;
+				margin-left: 0;
+				margin-right: rem-calc(10);
+				width: rem-calc(120);
+				height: rem-calc(120);
+			}
+
+			.message {
+				overflow: hidden;
+				.closing {
+					margin-top: rem-calc(10);
+				}
+			}
+
+			.donation-buttons {
+				margin-top: rem-calc(10);
+				@media #{$xlarge-up} {
+					padding-left: rem-calc(130);
+				}
+
+				.item {
+					width: 100%;
+					padding: 0;
+					margin: 0;
+				}
+
+				.custom-amount {
+					input {
+						margin: 0;
+						font-size: $button-font-sm;
+						height: $button-height-sm;
+					}
+				}
+			}
+		}
+	}
+}
