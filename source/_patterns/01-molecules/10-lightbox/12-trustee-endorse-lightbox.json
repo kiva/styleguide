@@ -1,0 +1,29 @@
+
+{
+	"trustee-borrower" : {
+		"id": 1833,
+		"statuses": {
+			"1552": "complete",
+			"280": "approved"
+		},
+		"borrowerName": "Nicole",
+		"businessName": "Spoil Me Rotten Dog Biscuit Co.",
+		"loanAmount": {
+			"amount": "10000.00",
+			"currency": "USD"
+		},
+		"loanAmountPretty": "$10,000",
+		"profileUrl":"#",
+		"imageHref":"https://www-kiva-org-3.global.ssl.fastly.net/img/s100/82553162feb4581150b456fdfd54599c.jpg",
+		"borrowerRepaymentTerm": 37,
+		"loanStatus": "fundRaising",
+		"city": "San Francisco",
+		"region":"CA",
+		"description":"to help hire a new pet-spoiling biscuit consultant",
+		"trusteeActions": {
+			"copyInviteUrl":"#",
+			"editEndorsementUrl":"#",
+			"commentLoanUrl":"#"
+		}
+	}
+}
