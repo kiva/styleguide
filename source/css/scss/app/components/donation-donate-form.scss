@@ -1,0 +1,29 @@
+.donation-page-form {
+	li {
+		height: rem-calc(50px);
+		padding: rem-calc(10px) rem-calc(5px);
+		margin-bottom: rem-calc(10px);
+	}
+	.amountButton {
+		width: 100%;
+		height: rem-calc(50px);
+		padding-top: rem-calc(10px);
+		font-size: 0.8888888889rem;
+	}
+
+	.amountButton:hover,
+	.amountButton:active {
+		background-color: $kiva-green;
+		border-color: black;
+		color: black;
+	}
+
+	.amountInput {
+		width: 100%;
+		height: rem-calc(50px);
+	}
+
+	.donateMonthlyCheckbox {
+		padding-top: rem-calc(10px);
+	}
+}

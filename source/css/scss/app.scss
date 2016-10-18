@@ -46,7 +46,6 @@
 @import 'foundation/components/type';
 @import 'foundation/components/offcanvas';
 @import 'foundation/components/visibility';
-
 // Kiva customizations to Foundation defaults
 @import 'vendor_override/foundation/type';
 @import 'vendor_override/foundation/forms';
@@ -129,3 +128,4 @@
 @import 'app/components/statistic-display';
 @import 'app/components/icon-toggle';
 @import 'app/components/faq-question-answer';
+@import 'app/components/donation-donate-form';
