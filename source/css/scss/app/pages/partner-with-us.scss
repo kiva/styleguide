@@ -6,15 +6,15 @@
 	p.impact{
 		font-weight: bold;
 	}
-	h2{
-		color: $green;
-	}
 	.maxframe{
 		max-width: 55rem;
 	}
 	#intro{
 		padding-top: $padding*2;
 		padding-bottom: $padding*2;
+	}
+	.green{
+		color: $green;
 	}
 	.program{
 		text-align: center;
@@ -53,21 +53,7 @@
 	#our-partners p{
 		padding-top: $padding;
 	}
-	h2.faq-title{
-		color: $charcoal;
-		border-top: 1px solid $light-gray;
-		margin-top: $padding*4;
-		padding-top: $padding/2;
-	}
-	.question-wrap{
-		display: block;
-		border-top: 1px solid $light-gray;
-		font-weight: bold;
-		padding: 1.2777777778rem 0 0.2777777778rem 0;
-		cursor: pointer;
-	}
-	.ac-container .ac-dropdown-icon .icon{
-		position: absolute;
-		right: 1.11111111rem;
+	.faq-container{
+		margin: $padding*2 0;
 	}
 }
