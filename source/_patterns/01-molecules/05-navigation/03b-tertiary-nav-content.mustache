@@ -1,0 +1,11 @@
+<ul class="tertiary-nav">
+	{{#bar-sub-links}}
+		<li>
+			<a href="{{url}}"
+			   {{#sub-active}}class="active"{{/sub-active}}
+				{{#new-window}}target="_blank"{{/new-window}}
+			>{{sub-title}}
+			</a>
+		</li>
+	{{/bar-sub-links}}
+</ul>

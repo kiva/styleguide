@@ -3,22 +3,8 @@
 .statistic-display {
 	text-align: center;
 
-	.statistic-link-large
-	, .statistic-additional-text-large {
-		// standard Foundation visibility class doesn't work
-		// here due to inheritance issue with display: value
-		display: none;
-	}
-
 	@media #{$large-up}{
 		text-align: left;
-
-		.statistic-link-large
-		, .statistic-additional-text-large{
-			display: inline-block;
-			margin-left: rem-calc(10);
-			transform: translate(0, -30%);
-		}
 	}
 
 	.statistic-label {
@@ -33,14 +19,11 @@
 	}
 
 	.statistic-link
-	, .statistic-link-large
-	, .statistic-additional-text
-	, .statistic-additional-text-large {
+	, .statistic-additional-text {
 		@extend .small-text;
 	}
 
-	.statistic-additional-text
-	, .statistic-additional-text-large {
+	.statistic-additional-text {
 		color: $kiva-text-light;
 	}
 }

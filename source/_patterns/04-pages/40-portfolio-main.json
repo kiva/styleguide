@@ -75,9 +75,10 @@
 		"dataRevealId": "credit-summary-table"
 	},
 	"freeCreditStat": {
-		"statisticValue": "$25.00",
+		"statisticValue": "+$25.00",
 		"statisticLabel": "Free credit",
-		"statisticLinkText": null
+		"statisticLinkText": "Expires Oct 10",
+		"statisticLinkUrl": "https://www.kiva.org/portfolio/credit/bonus-history"
 	},
 	"findALoanUrl": "http://www.google.com",
 	"findALoanText": "Relend credit",
@@ -301,5 +302,16 @@
 		"right_icon": "grid",
 		"left_checked": false
 	},
-	"has_loans": true
+	"has_loans": true,
+	"show_distribution_table": true,
+	"distribution-rows": [
+		{
+			"label": "Female",
+			"percent": "50%"
+		},
+		{
+			"label": "Male",
+			"percent": "50%"
+		}
+	]
 }
