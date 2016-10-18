@@ -4,7 +4,7 @@
 		padding: rem-calc(10px) rem-calc(5px);
 		margin-bottom: rem-calc(10px);
 	}
-	.amountButton {
+	[role="button"]  {
 		width: 100%;
 		height: rem-calc(50px);
 		padding-top: rem-calc(10px);
@@ -12,10 +12,11 @@
 	}
 
 	.amountButton:hover,
-	.amountButton:active {
+	.amountButton:active,
+	[role="button"][aria-pressed="true"] {
 		background-color: $kiva-green;
-		border-color: black;
-		color: black;
+		border-color: white;
+		color: white;
 	}
 
 	.amountInput {
