@@ -14,17 +14,15 @@
 				<p class="inactive-account-settings-header featured">We need you to set your preferences!</p>
                 <p>We noticed that you don’t have an inactivity setting enabled, and need you to select one of the following options for how to handle your funds, should your account become inactive* in the future.</p>
                 <p>If my account becomes inactive:</p>
-                <form>
-                    <label class="save-search-alert-label" for="remainingCreditOptions">
-                        <input type="radio" name="remainingCreditOptions" id="remainingCreditOptions" value="donateToKiva">
-                        Donate my remaining credit to Kiva’s operating expenses
-                    </label>
-                    <label class="remainingCreditOptionsLabel" for="remainingCreditOptions">
-                        <input type="radio" name="remainingCreditOptions" id="remainingCreditOptions" value="ReturnToPaypal">
-                        Return my remaining credit to my PayPal account
-                    </label>
+                <form id="inactive-account-settings-form">
+                    <input type="radio" name="remainingCreditOptions" id="remainingCreditOptions" value="donateToKiva">
+                    <label class="save-search-alert-label" for="remainingCreditOptions">Donate my remaining credit to Kiva’s operating expenses</label>
+                    <br/>
+                    <input type="radio" name="remainingCreditOptions" id="remainingCreditOptions" value="ReturnToPaypal">
+                    <label class="remainingCreditOptionsLabel" for="remainingCreditOptions">Return my remaining credit to my PayPal account</label>
+                    <button type="submit" class="button save-my-settings">Save my settings</button>
                 </form>
-                <button class="button save-my-settings">Save my settings</button>
+                <p>* Please note: If you don’t select an inactivity setting, Kiva may be required by law to turn your account credit over to the state government as abandoned property when your account becomes inactive. Your Kiva account will only become inactive if you haven’t signed in or had any activity for 2 years.</p>
 			</div>
 		</div>
 	</div>
