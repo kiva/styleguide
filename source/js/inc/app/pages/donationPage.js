@@ -31,4 +31,4 @@ module.exports = function () {
 	//   If monthly donation box is not checked: direct user to /basket with donation about selected or entered inside of their basket
 
 
-}
+};
