@@ -1,0 +1,32 @@
+{{#trustee-borrower}}
+	<div class="row inner">
+		<div class="columns large-4 medium-4 hidden-for-medium-down">
+			{{#imageHref}}
+				<img src="{{imageHref}}">
+			{{/imageHref}}
+		</div>
+		<div class="columns large-8 medium-12 small-12">
+			<a href="{{profileUrl}}"><strong>{{borrowerName}}</strong></a><br/>
+			{{#businessName}}{{businessName}}<br/>{{/businessName}}
+			{{#city}}{{#region}}{{city}}, {{region}}<br/>{{/region}}{{/city}}
+			A loan of {{loanAmountPretty}} helped {{description}}.
+		</div>
+	</div>
+	<div class="row inner">
+		<div class="columns small-12">
+			Why are you endorsing {{borrowerName}}? (required)<br/>
+			We suggest a paragraph or two focusing on how you
+			know the borrower and why you think this business
+			has a chance to be successful.<br/>
+			<textarea name="whyEndorse" class="why-endorse"></textarea>
+		</div>
+	</div>
+	<div class="row inner">
+		<div class="columns large-8 medium-12 small-12">
+			<button class="button endorsement-action-publish">Publish Endorsement</button>
+		</div>
+		<div class="columns large-4 medium-12 small-12">
+			<button class="button endorsement-action-cancel">Cancel</button>
+		</div>
+	</div>
+{{/trustee-borrower}}
