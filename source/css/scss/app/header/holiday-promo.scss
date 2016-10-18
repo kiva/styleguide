@@ -6,7 +6,20 @@
 	}
 	.content {
 		display: inline-block;
-		margin-left: rem-calc(10);
+		margin-left: rem-calc(5);
+	}
+
+	svg {
+		$origin: 50% 50%;
+		$rotation: rotate(-10deg);
+
+		-webkit-transform-origin: $origin;
+		-ms-transform-origin: $origin;
+		transform-origin: $origin;
+
+		-webkit-transform: $rotation;
+		-ms-transform: $rotation;
+		transform: $rotation;
 	}
 	&.hide-for-xlarge-up {
 		font-size: $small-font-size;
@@ -19,7 +32,9 @@
 		}
 		svg {
 			height: rem-calc(30);
-			width: rem-calc(30);
+			width: rem-calc(40);
+			margin-top: rem-calc(3);
+			fill: $kiva-accent-green;
 		}
 		a {
 			color: $kiva-accent-green;
@@ -35,12 +50,10 @@
 			}
 		}
 		svg {
-			height: 2rem;
-			width: 2rem;
-			margin-bottom: rem-calc(-2);
-			@media #{$large-up} {
-				margin-bottom: rem-calc(-9);
-			}
+			height: rem-calc(40);
+			width: rem-calc(40);
+			fill: $kiva-darkgreen;
+			margin-bottom: rem-calc(-13);
 		}
 		a {
 			color: $kiva-darkgreen;
