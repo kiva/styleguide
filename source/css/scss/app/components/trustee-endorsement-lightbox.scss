@@ -1,0 +1,16 @@
+.trustee-endorse-lightbox {
+	.button {
+		width: 100%;
+		@media #{$medium-down} {
+			font-size: 1rem;
+		}
+	}
+	.img {
+		width: 100%;
+	}
+
+	.why-endorse {
+		width: 100%;
+		height: 6rem;
+	}
+}
