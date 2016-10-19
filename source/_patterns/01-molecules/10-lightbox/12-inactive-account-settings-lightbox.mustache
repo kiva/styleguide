@@ -1,0 +1,38 @@
+{{#is-patternlab}}
+	<a href="#" data-reveal-id="inactive-account-settings-modal">trigger me!</a>
+{{/is-patternlab}}
+
+<div id="inactive-account-settings-modal" class="reveal-modal" data-reveal aria-hidden="true" role="dialog">
+	<div class="row">
+		<div class="columns small-12">
+			<a class="close-reveal-modal" aria-label="Close">
+				<svg class="icon icon-x">
+					<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-x"></use>
+				</svg>
+            </a>
+			<div class="lightbox-content inactive-account-settings white" id="inactivity_content">
+				<p class="inactive-account-settings-header featured">We need you to set your preferences!</p>
+                <p>We noticed that you don’t have an inactivity setting enabled, and need you to select one of the following options for how to handle your funds, should your account become inactive* in the future.</p>
+                <p>If my account becomes inactive:</p>
+
+                <form id="inactivity_form">
+                    <input type="radio" name='inactivity_setting' value="kiva" />
+                    <label>Donate my remaining credit to Kiva’s operating expenses</label>
+                    <br/>
+                    <input type="radio" name='inactivity_setting' value="email_address" />
+                    <label>Return my remaining credit to my PayPal account</label>
+
+                    <div id="email_input">
+                        <label>Paypal email address:</label>
+                        <input type="email" name="paypal_email_address">
+                    </div>
+
+                    <div class="submit">
+                        <button type="submit" class="button save-my-settings">Save my settings</button>
+                    </div>
+                </form>
+                <p class="small-text">* Please note: If you don’t select an inactivity setting, Kiva may be required by law to turn your account credit over to the state government as abandoned property when your account becomes inactive. Your Kiva account will only become inactive if you haven’t signed in or had any activity for 2 years.</p>
+			</div>
+		</div>
+	</div>
+</div>
