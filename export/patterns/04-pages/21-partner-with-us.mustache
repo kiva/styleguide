@@ -1,0 +1,66 @@
+<div class="pageWrap partner-with-us">
+	{{> templates-header}}
+
+	{{> 01-molecules/06-components/04-white-text-on-full-width-image:partner-with-us-headline-wrapper}}
+	<div class="row">
+			<div class="small-12 columns" id="intro">
+				<p class="featured"><b>Kiva’s corporate and foundation partners are key to our success!</b> Whether it’s a grant to support our most innovative work, or a customized program to engage your customers and employees – we’re interested in exploring partnership opportunities with you. Contact us at <a href="mailto:development@kiva.org">development@kiva.org</a> to learn more.</p>
+			</div>
+			<div class="small-12 large-4 columns program">
+					<svg class="icon icon-grants">
+						<use xlink:href="#icon-grants" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
+					</svg>
+				<h2><a href="grants">Grants</a></h2>
+				<p>At Kiva, we rely on grants and donations to further our mission and create real impact in the field of microfinance both across the globe and here in the U.S. With your generous support of one of our key initiatives, Kiva can reach new populations, test new innovative loan products and expand our knowledge in the field.<br><br><a href="grants">Learn more</a></p>
+			</div>
+			<div class="small-12 large-4 columns program">
+					<svg class="icon icon-match">
+						<use xlink:href="#icon-match" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
+					</svg>
+				<h2><a href="loan-matching">Loan matching</a></h2>
+				<p>Double your impact on Kiva by matching loans dollar for dollar! As a loan matcher, you can choose to match all loans or select loans that fit your philanthropic goals. As the loans are repaid, you can withdraw the funds or relend them again and again, multiplying your impact.<br><br><a href="loan-matching">Learn more</a></p>
+			</div>
+			<div class="small-12 large-4 columns program">
+					<svg class="icon icon-corporate-engagement">
+						<use xlink:href="#icon-corporate-engagement" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
+					</svg>
+				<h2><a href="engagement">Employee and customer engagement</a></h2>
+				<p>Fortune 500 companies and leading foundations have partnered with Kiva to engage employees and customers. A one-time investment with Kiva can create multi-year programming that amplifies your impact.<br><br><a href="engagement">Learn more</a></p>
+			</div>
+	</div>
+	<div id="our-partners">
+		<h2>Our partners include</h2>
+		<div class="row" id="partner-logos">
+			<div class="small-12 medium-4 large-2 columns"><img src="//cms.kiva.org.s3.amazonaws.com/page/images/mastercard-foundation.svg" alt="The MasterCard Foundation"></div>
+			<div class="small-12 medium-4 large-2 columns"><img src="//cms.kiva.org.s3.amazonaws.com/page/images/hp-foundation.svg" alt="HP Foundation"></div>
+			<div class="small-12 medium-4 large-2 columns"><img src="//cms.kiva.org.s3.amazonaws.com/page/images/google-org.svg" alt="Google.org"></div>
+			<div class="small-12 medium-4 large-2 columns"><img src="//cms.kiva.org.s3.amazonaws.com/page/images/metlife-foundation.svg" alt="MetLife Foundation"></div>
+			<div class="small-12 medium-4 large-2 columns"><img src="//cms.kiva.org.s3.amazonaws.com/page/images/capital-one.svg" alt="CapitalOne"></div>
+			<div class="small-12 medium-4 large-2 columns"><img src="//cms.kiva.org.s3.amazonaws.com/page/images/pepsico-foundation.svg" alt="Pepsico Foundation"></div>
+		</div>
+		<p><a href="partners" class="black-underlined">See all partners</a></p>
+	</div>
+	<div class="row">
+		<div class="small-12 large-10 columns">
+			<h2 class="kiva-green">Other ways to support us</h2>
+			<p>Want to make a difference with Kiva, but you’re looking to make a contribution of less than $10,000?  Here’s a few ways you can get involved:</p>
+			<ul>
+				<li>Make an impact by <a href="/register">becoming a Kiva Lender</a></li>
+				<li>Create a company <a href="/teams">Lending Team</a></li>
+				<li>Give the <a href="/teams">gift of Kiva Cards</a></li>
+				<li><a href="/donate">Donate to Kiva</a>. 100% of every dollar loaned on Kiva goes to fund borrowers, so your donations to Kiva's operating expenses are vital to our success. </li>
+			</ul>
+			<div class="faq-container">
+				<h2 class="faq-title">Frequently asked questions</h2>
+				<section class="accordion-container">
+					{{#faqs}}
+						{{> 01-molecules/06-components/13-faq-question-answer}}
+					{{/faqs}}
+					<div class="ac-title ac-container"></div>
+				</section>
+			</div>
+		</div>
+	</div>
+</div>
+
+{{> organisms-footer}}
