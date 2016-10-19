@@ -1,11 +1,12 @@
 .inactive-account-settings {
+	#inactivity_form {
+		label {
+			color: $white;
+		}
 
-	.save-search-alert-label, .remainingCreditOptionsLabel {
-		color: $white;
-	}
-
-	.save-my-settings {
-		margin-top: 1rem;
-		margin-bottom: 1rem;
+		.save-my-settings {
+			margin-top: 1rem;
+			margin-bottom: 1rem;
+		}
 	}
 }
