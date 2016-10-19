@@ -8,5 +8,13 @@
 			margin-top: 1rem;
 			margin-bottom: 1rem;
 		}
+
+		#email_input {
+			display: none;
+		}
+
+		.return-to-paypal:checked ~ #email_input {
+			display: block;
+		}
 	}
 }
