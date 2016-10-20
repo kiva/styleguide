@@ -1,8 +1,9 @@
 <div kvtrackevent="Home|click-Slideshow" class="hp-slideshow-wrapper">
     <div id="hp-slideshow">
-
-	<!--This slide is only going to be shown over in kiva/main when the holiday mode switch has been turned to active
-	I'm going to insert the {if $is_holiday_mode_active} over in kiva/main land. -->
+		
+	{{#holidayModeActive}}
+		<!--This holidayModeActive flag will be replaced by the smarty variable {if $is_holiday_mode_active} once code is
+		brought into the CMS.-->
 		<div class="hp-slide holiday-slide">
 			<div class="hp-element-wrapper">
 				<div class="hp-element text-over-image">
@@ -52,6 +53,7 @@
 				</div>
 			</div>
 		</div>
+	{{/holidayModeActive}}
 
 		<div class="hp-slide">
 			<div class="hp-element-wrapper">
