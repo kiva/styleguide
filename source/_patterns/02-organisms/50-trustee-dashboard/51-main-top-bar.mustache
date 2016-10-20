@@ -1,31 +1,28 @@
-<div class="trustee-dashboard-main">
-	<div class="row">
-		<div class="columns large-12">
-			<div class="impact trustee-name">{{trustee.title}}</div>
-		</div>
+<div class="trustee-dashboard-main row">
+	<div class="columns large-12">
+		<h1 class="impact trustee-name">{{trustee.title}}</h1>
 	</div>
 
-	<div class="row">
-		<div class="columns large-4 small-6">
-			{{#trustee.imageSmall}}
-				<a href="#"><img alt="Image for {{trustee.title}}" src="{{trustee.imageSmall}}"></a>
-			{{/trustee.imageSmall}}
-		</div>
-		<div class="columns large-4 small-6">
-			{{#trustee-stats.borrower-count-statistic}}
-				{{> 01-molecules/06-components/10-statistic-display}}
-			{{/trustee-stats.borrower-count-statistic}}
-		</div>
-		<div class="columns large-4 small-12">
-			Invite Borrowers
-			<p>
-				<a href="#" class="button setting">
-					<!-- sg-icon sg-icon-link foundation icon font -->
-					<svg class="icon icon-globe">
-						<use xlink:href="#icon-globe"/>
-					</svg>
-					Copy link</a>
-			</p>
-		</div>
+	<div class="columns large-4 small-6">
+		{{#trustee.imageSmall}}
+			<a href="#"><img alt="Image for {{trustee.title}}" src="{{trustee.imageSmall}}"></a>
+		{{/trustee.imageSmall}}
+	</div>
+	<div class="columns large-4 small-6">
+		{{#trustee-stats.borrower-count-statistic}}
+			{{> 01-molecules/06-components/10-statistic-display}}
+		{{/trustee-stats.borrower-count-statistic}}
+	</div>
+	<div class="columns large-4 small-12">
+		Invite Borrowers
+		<p>
+			<a href="#" class="button setting">
+				<!-- sg-icon sg-icon-link foundation icon font -->
+				<svg class="icon icon-globe">
+					<use xlink:href="#icon-globe"/>
+				</svg>
+				Copy link
+			</a>
+		</p>
 	</div>
 </div>
