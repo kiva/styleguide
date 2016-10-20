@@ -2,6 +2,13 @@
 	#inactivity_form {
 		label {
 			color: $white;
+			margin: 0 0 0.25rem 0;
+			max-width: calc(100% - 1.5rem);
+			vertical-align: top;
+		}
+
+		input[type="radio"] {
+			margin-right: 0.25rem;
 		}
 
 		.save-my-settings {
