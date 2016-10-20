@@ -5255,5 +5255,7 @@
 				"repaymentScheduleUrl":"#"
 			}
 		}
-	]
+	],
+
+	 "holidayModeActive": false
 }
