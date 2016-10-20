@@ -1,13 +1,13 @@
-.partner-with-us{
-	$top-padding:rem-calc(32);
+.partner-with-us {
+	$top-padding: rem-calc(32);
 
-//MULTIPLE PAGES
-	.cite-picture{
-		width:rem-calc(49);
-		padding-right:0;
+	//MULTIPLE PAGES
+	.cite-picture {
+		width: rem-calc(49);
+		padding-right: 0;
 	}
-	.cite-name{
-		padding-left:0;
+	.cite-name {
+		padding-left: 0;
 		@media #{$small-only}{
 			padding-left: 1em;
 		}
@@ -15,88 +15,75 @@
 			padding-left: .5em
 		}
 	}
-
 	h2 {
-		color:$kiva-green;
+		color: $kiva-green;
 		margin-top: $top-padding;
 		margin-bottom: 1rem;
 	}
-
 	hr {
 		margin: rem-calc(40) 0;
 	}
-
 	.checklist ul {
 		list-style-position: outside;
 		list-style: none;
-		padding:0;
+		padding: 0;
 	}
-
 	.checklist li:before {
-		content:'';
-		display:inline-block;
-		height:.8rem;
-		width:.8rem;
+		content: '';
+		display: inline-block;
+		height: .8rem;
+		width: .8rem;
 		position: absolute;
 		left: .8rem;
 		margin-top: .4rem;
-		background-image:url('/images/partner-with-us/check.svg');
-		background-size:contain;
-		background-repeat:no-repeat;
+		background-image: url('//www-kiva-org.global.ssl.fastly.net/cms/page/images/check.svg');
+		background-size: contain;
+		background-repeat: no-repeat;
 		list-style-position: outside;
 	}
-
-	blockquote{
+	blockquote {
 		border: none;
 		padding: 0;
 		margin: 1.5rem 0 .5rem 0;
 		font-style: italic;
 	}
-
-	cite{
-
-		p{
+	cite {
+		p {
 			font-size: .8rem;
 			line-height: 1rem;
 		}
-
-		a{
-			color:$kiva-textlink;
+		a {
+			color: $kiva-textlink;
 		}
 	}
-
-	.testimonials{
+	.testimonials {
 		.row {
-			margin-bottom:rem-calc(25);
+			margin-bottom: rem-calc(25);
 		}
-
 		.small-collapse, .medium-collapse {
 			padding: 0 rem-calc(15);
 		}
-
 		.name-title {
 			@media #{$large-up}{
-				padding-left:.8rem;
+				padding-left: .8rem;
 			}
 		}
 	}
-
-	.checklist li{
+	.checklist li {
 		margin-left: .8rem;
 	}
-
 	.how-it-works {
 		.bottom-buffer {
-			margin-bottom:rem-calc(80);
+			margin-bottom: rem-calc(80);
 		}
-		.cite{
-			font-size:.8rem;
-			font-style:italic;
-			line-height:1.4rem;
-			margin-top:rem-calc(20);
+		.cite {
+			font-size: .8rem;
+			font-style: italic;
+			line-height: 1.4rem;
+			margin-top: rem-calc(20);
 		}
-		.numberbtn{
-			background:#63a541;
+		.numberbtn {
+			background: #63a541;
 			border-radius: 0.7rem;
 			-moz-border-radius: 0.7rem;
 			-webkit-border-radius: 0.7rem;
@@ -107,143 +94,139 @@
 			margin-right: rem-calc(10);
 			text-align: center;
 			width: 1.4rem;
-			font-size:rem-calc(16);
+			font-size: rem-calc(16);
 		}
 		h3 {
 			margin: rem-calc(4) 0 rem-calc(22) 0;
-			line-height:1rem;
-			font-size:rem-calc(22);
+			line-height: 1rem;
+			font-size: rem-calc(22);
 		}
 	}
-
-//GRANTS PAGE
-	.grants-left-col-centered{
-		 text-align: center;
+	.col-centered {
+		text-align: center;
 	}
 
-	.grants-right-col-buffer{
+	//GRANTS PAGE
+	.grants-right-col-buffer {
 		@media #{$large-up}{
-			padding-left:em-calc(40);
+			padding-left: em-calc(40);
 		}
 	}
-
-	.medium-statistic-bold{
-		color:$kiva-text-medium;
-		font-size:rem-calc(36);
-		font-weight:bold;
+	.medium-statistic-bold {
+		color: $kiva-text-medium;
+		font-size: rem-calc(36);
+		font-weight: bold;
 	}
-	.small-statistic{
-		color:$kiva-text-medium;
-		font-size:rem-calc(23);
-		line-height:rem-calc(23);
+	.small-statistic {
+		color: $kiva-text-medium;
+		font-size: rem-calc(23);
+		line-height: rem-calc(23);
 	}
 
-//EMPLOYEE AND CUSTOMER ENGAGEMENT
-	.bottom-no-buffer{
+	//EMPLOYEE AND CUSTOMER ENGAGEMENT
+	.bottom-no-buffer {
 		padding: rem-calc(15);
 	}
-
-	.bottom{
+	.bottom {
 		h3 {
-			padding-top:rem-calc(90);
+			padding-top: rem-calc(90);
 		}
 	}
-.how-it-works {
-	.graphic-padding{
-		padding: 0 rem-calc(30) 0 rem-calc(25);
+	.how-it-works {
+		.graphic-padding {
+			padding: 0 rem-calc(30) 0 rem-calc(25);
+		}
+		.top-pad {
+			padding-top: rem-calc(25);
+		}
 	}
 
-	.top-pad{
-		padding-top: rem-calc(25);
-	}
-}
-
-//OUR PARTNERS
-	.small-block-grid-1, .small-block-grid-2, .medium-block-grid-1, .medium-block-grid-2, .medium-block-grid-3, .medium-block-grid-4, {
+	//OUR PARTNERS
+	.logo-list {
 		padding: rem-calc(20);
-		li {padding:rem-calc(25);}
 		img {
 			display: block;
 			margin-left: auto;
 			margin-right: auto;
-			vertical-align:middle;
+			vertical-align: middle;
 		}
 	}
-	.small-block-grid-3{
-		padding: rem-calc(20);
-		li {padding:rem-calc(22);}
-		img {
-			display: block;
-			margin-left: auto;
-			margin-right: auto;
-			vertical-align:middle;
+	.small-block-grid-1, .small-block-grid-2, .medium-block-grid-1, .medium-block-grid-2, .medium-block-grid-3, .medium-block-grid-4 {
+		li {
+			padding: rem-calc(25);
 		}
 	}
-
+	.small-block-grid-3 {
+		li {
+			padding: rem-calc(22);
+		}
+	}
 	.medium-block-grid-5 {
-		padding: rem-calc(20);
-		li {padding:rem-calc(15);}
-		img {
-			display: block;
-			margin-left: auto;
-			margin-right: auto;
-			vertical-align:middle;
+		li {
+			padding: rem-calc(15);
 		}
 	}
 
 	$padding: rem-calc(20);
-	p, ul{
+	p, ul {
 		font-weight: 300;
 	}
-	p.impact{
+	p.impact {
 		font-weight: bold;
 	}
-	.maxframe{
+	.maxframe {
 		max-width: 55rem;
 	}
-	#intro{
+	#intro {
 		padding-top: $padding*2;
 		padding-bottom: $padding*2;
 	}
-	.program{
+	.program {
 		text-align: center;
 	}
-	.program p{
+	.program p {
 		text-align: left;
 	}
-	svg.icon-match{
+	svg.icon-match {
 		height: rem-calc(56);
 		width: rem-calc(54);
 	}
-	svg.icon-grants{
+	svg.icon-grants {
 		height: rem-calc(56);
 		width: rem-calc(59);
 	}
-	svg.icon-corporate-engagement{
+	svg.icon-corporate-engagement {
 		height: rem-calc(56);
 		width: rem-calc(61);
 	}
-	#our-partners{
+	#our-partners {
 		background: $platinum;
 		text-align: center;
 		padding: $padding 0;
 		margin: $padding 0 $padding*2 0;
 	}
-	.program h2, #our-partners h2{
+	.program h2, #our-partners h2 {
 		font-size: 1.1666666667rem;
 		line-height: 1rem;
 		color: $charcoal;
 		margin-top: $padding;
 	}
-	#partner-logos img{
+	#partner-logos img {
 		padding-top: $padding;
 		width: 6.94444444rem;
 	}
-	#our-partners p{
+	#our-partners p {
 		padding-top: $padding;
 	}
 
-	.faq-container{
+	.faq-container {
 		margin: $padding*2 0;
+
+		.ac-title {
+			cursor: pointer;
+		}
+		.hr-bottom {
+			margin-bottom: 45px;
+		}
 	}
 }
