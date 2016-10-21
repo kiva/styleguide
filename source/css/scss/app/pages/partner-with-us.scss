@@ -1,4 +1,5 @@
 .partner-with-us{
+	$top-padding:rem-calc(32);
 	$padding: rem-calc(20);
 	p, ul{
 		font-weight: 300;
@@ -52,5 +53,178 @@
 	}
 	.faq-container{
 		margin: $padding*2 0;
+	}
+
+	//MULTIPLE PAGES
+	.cite-picture{
+		width:rem-calc(49);
+		padding-right:0;
+	}
+	.cite-name{
+		padding-left:0;
+		@media #{$small-only}{
+			padding-left: 1em;
+		}
+		@media #{$large-only}{
+			padding-left: .5em
+		}
+	}
+	h2 {
+		color:$kiva-green;
+		margin-top: $top-padding;
+		margin-bottom: 1rem;
+	}
+	hr {
+		margin: rem-calc(40) 0;
+	}
+	.checklist ul {
+		list-style-position: outside;
+		list-style: none;
+		padding:0;
+	}
+	.checklist li:before {
+		content:'';
+		display:inline-block;
+		height:.8rem;
+		width:.8rem;
+		position: absolute;
+		left: .8rem;
+		margin-top: .4rem;
+		background-image:url('//www-kiva-org.global.ssl.fastly.net/cms/page/images/check.svg');
+		background-size:contain;
+		background-repeat:no-repeat;
+		list-style-position: outside;
+	}
+	blockquote{
+		border: none;
+		padding: 0;
+		margin: 1.5rem 0 .5rem 0;
+		font-style: italic;
+	}
+	cite{
+		p{
+			font-size: .8rem;
+			line-height: 1rem;
+		}
+		a{
+			color:$kiva-textlink;
+		}
+	}
+	.testimonials{
+		.row {
+			margin-bottom:rem-calc(25);
+		}
+		.small-collapse, .medium-collapse {
+			padding: 0 rem-calc(15);
+		}
+		.name-title {
+			@media #{$large-up}{
+				padding-left:.8rem;
+			}
+		}
+	}
+	.checklist li{
+		margin-left: .8rem;
+	}
+	.how-it-works {
+		.bottom-buffer {
+			margin-bottom:rem-calc(80);
+		}
+		.cite{
+			font-size:.8rem;
+			font-style:italic;
+			line-height:1.4rem;
+			margin-top:rem-calc(20);
+		}
+		.numberbtn{
+			background:#63a541;
+			border-radius: 0.7rem;
+			-moz-border-radius: 0.7rem;
+			-webkit-border-radius: 0.7rem;
+			color: #ffffff;
+			display: inline-block;
+			font-weight: bold;
+			line-height: 1.4rem;
+			margin-right: rem-calc(10);
+			text-align: center;
+			width: 1.4rem;
+			font-size:rem-calc(16);
+		}
+		h3 {
+			margin: rem-calc(4) 0 rem-calc(22) 0;
+			line-height:1rem;
+			font-size:rem-calc(22);
+		}
+	}
+	.col-centered{
+		text-align: center;
+	}
+
+
+	//GRANTS PAGE
+	.grants-right-col-buffer{
+		@media #{$large-up}{
+			padding-left:em-calc(40);
+		}
+	}
+	.medium-statistic-bold{
+		color:$kiva-text-medium;
+		font-size:rem-calc(36);
+		font-weight:bold;
+	}
+	.small-statistic{
+		color:$kiva-text-medium;
+		font-size:rem-calc(23);
+		line-height:rem-calc(23);
+	}
+
+	//EMPLOYEE AND CUSTOMER ENGAGEMENT
+	.bottom-no-buffer{
+		padding: rem-calc(15);
+	}
+	.bottom{
+		h3 {
+			padding-top:rem-calc(90);
+		}
+	}
+	.how-it-works {
+		.graphic-padding{
+			padding: 0 rem-calc(30) 0 rem-calc(25);
+		}
+		.top-pad{
+			padding-top: rem-calc(25);
+		}
+	}
+
+	//OUR PARTNERS
+	.logo-list{
+		padding: rem-calc(20);
+		img {
+			display: block;
+			margin-left: auto;
+			margin-right: auto;
+			vertical-align:middle;
+		}
+	}
+	.small-block-grid-1, .small-block-grid-2, .medium-block-grid-1, .medium-block-grid-2, .medium-block-grid-3, .medium-block-grid-4{
+		li {
+			padding:rem-calc(25);
+		}
+	}
+	.small-block-grid-3{
+		li {
+			padding:rem-calc(22);
+		}
+	}
+	.medium-block-grid-5 {
+		li {
+			padding:rem-calc(15);
+		}
+	}
+	.ac-title {
+		cursor:pointer;
+	}
+	.hr-bottom{
+		margin-bottom:45px;
 	}
 }
