@@ -35,7 +35,9 @@
 			{{#borrowersList}}
 				<p>
 					{{borrowersList}}<br>
-					*not pictured
+					{{#showNotPicturedMessage}}
+						*not pictured
+					{{/showNotPicturedMessage}}
 				</p>
 			{{/borrowersList}}
 

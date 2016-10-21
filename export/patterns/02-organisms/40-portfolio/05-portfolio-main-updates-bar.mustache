@@ -1,3 +1,7 @@
-<h2>Recent updates for my loans</h2>
+<div class="recent-updates">
+    <h2 class="scalable">Recent updates for my loans <a href="{{all_updates_url}}">See all</a></h2>
 
-<div>grid of update cards</div>
+    {{#recent_updates}}
+        {{> 01-molecules/40-portfolio/04-loan-update }}
+    {{/recent_updates}}
+</div>

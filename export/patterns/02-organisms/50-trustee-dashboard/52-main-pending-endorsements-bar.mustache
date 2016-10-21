@@ -5,29 +5,14 @@
 			<p>These borrowers used your invite link and are pending your endorsement.</p>
 		</div>
 	</div>
-	{{#trustee-borrowers}}
-		{{#isPending}}
-			<div class="row item-bar">
-				<div class="columns large-2 medium-12 small-12">
-					{{#imageHref}}
-						<img src="{{imageHref}}">
-					{{/imageHref}}
-				</div>
-				<div class="columns large-6 medium-12 small-12">
-					<a href="{{profileUrl}}"><strong>{{borrowerName}}</strong></a><br/>
-					{{#businessName}}{{businessName}}<br/>{{/businessName}}
-					{{#showAmount}}
-						${{loanAmount.amount}} / {{borrowerRepaymentTerm}} month loan<br/>
-					{{/showAmount}}
-					A loan of ${{loanAmount.amount}} helped {{story}}.
-
-				</div>
-				<div class="columns large-4 medium-12 small-12">
-					{{#trusteeActions}}
-						{{> 01-molecules/50-trustee-dashboard/01-trustee-borrower-actions}}
-					{{/trusteeActions}}
-				</div>
+	<div class="pending-endorsements-results-region">
+		{{#trustee-borrowers}}
+			{{#isPending}}
+			<div class="borrower-item-row">
+				{{> 02-organisms/50-trustee-dashboard/63-borrower-network-listing-item}}
 			</div>
-		{{/isPending}}
-	{{/trustee-borrowers}}
+			{{/isPending}}
+		{{/trustee-borrowers}}
+	</div>
+
 </div>

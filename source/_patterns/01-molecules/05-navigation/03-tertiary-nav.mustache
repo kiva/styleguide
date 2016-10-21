@@ -1,15 +1,4 @@
 <!-- @todo = refactor so that active isn't wrapped in <a> tag (scss too) -->
-
-<div class="show-for-large-up large-3 columns">
-	<ul class="tertiary-nav">
-		{{#bar-sub-links}}
-			<li>
-				<a href="{{url}}"
-					{{#sub-active}}class="active"{{/sub-active}}
-					{{#new-window}}target="_blank"{{/new-window}}
-				>{{sub-title}}
-				</a>
-			</li>
-		{{/bar-sub-links}}
-	</ul>
+<div class="show-for-large-up large-3 columns tertiary-nav-region">
+	{{> 01-molecules/05-navigation/03b-tertiary-nav-content}}
 </div>

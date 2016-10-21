@@ -7,7 +7,6 @@
 .credit-summary-lightbox {
 
 	.credit-summary-wrapper {
-		white-space: nowrap;
 		overflow-x: scroll;
 		background-color: $white;
 
@@ -16,9 +15,16 @@
 		}
 
 		.totalCredit, .totalDebit, .creditSummaryTotal {
-			font-size: $section-head-font-size;
+			font-size: $section-head-font-size - $section-head-font-size-reduction;
+			line-height: $section-head-line-height - $section-head-line-height-reduction;
 			background-color: $white;
-			padding-bottom: 2rem;
+			padding-bottom: 1rem;
+
+			@media #{$large-up} {
+				font-size: $section-head-font-size;
+				line-height: $section-head-line-height;
+				padding-bottom: 2rem;
+			}
 		}
 
 		.totalCredit {

@@ -1,0 +1,27 @@
+.inactive-account-settings {
+	#inactivity_form {
+		label {
+			color: $white;
+			margin: 0 0 0.25rem 0;
+			max-width: calc(100% - 1.5rem);
+			vertical-align: top;
+		}
+
+		input[type="radio"] {
+			margin-right: 0.25rem;
+		}
+
+		.save-my-settings {
+			margin-top: 1rem;
+			margin-bottom: 1rem;
+		}
+
+		#email_input {
+			display: none;
+		}
+
+		.return-to-paypal:checked ~ #email_input {
+			display: block;
+		}
+	}
+}

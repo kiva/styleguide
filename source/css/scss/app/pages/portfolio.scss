@@ -45,10 +45,14 @@
 
 	.statistics-bar {
 		padding-top: 2rem;
-	}
 
-	.statistics-bar .row {
-		padding-bottom: 2rem;
+		.row {
+			padding-bottom: 2rem;
+		}
+
+		svg {
+			pointer-events: auto;
+		}
 	}
 
 	.extra-stat-row {
@@ -97,8 +101,62 @@
 		}
 
 		svg {
-			pointer-events: all;
+			pointer-events: auto;
 		}
+	}
+}
+
+.loan-update {
+	margin-bottom: 2.222222rem !important;
+
+	.loan-update-image {
+		text-align: center;
+	}
+
+	.loan-update-info {
+		.loan-update-label {
+			text-align: center;
+			color: $kiva-text-light;
+			margin-top: 0.5rem;
+			margin-bottom: 0.5rem;
+
+			@media #{$large-up} {
+				text-align: left;
+			}
+		}
+
+		.loan-update-title {
+			padding-bottom: 0.4rem;
+			text-align: center;
+			display: block;
+
+			@media #{$large-up} {
+				text-align: left;
+			}
+		}
+
+		.loan-update-content {
+			font-weight: 300;
+		}
+
+		.loan-update-timestamp {
+			margin-top: 0.5rem;
+
+			@media #{$large-up} {
+				margin-top: 2rem;
+				text-align: right;
+			}
+		}
+	}
+}
+
+.recent-updates {
+	margin-top: 1rem;
+	position: relative;
+
+	h2 a {
+		font-size: $body-font-size;
+		margin-left: 0.75rem;
 	}
 }
 
@@ -234,7 +292,24 @@
 		width: 100%;
 
 		svg {
-			pointer-events: all;
+			pointer-events: auto;
+		}
+
+		@media #{$large-up} {
+			width: 70%;
+		}
+	}
+
+	.distribution-table {
+		width: 100%;
+		text-align: center;
+
+		table {
+			border: none;
+		}
+
+		td:last-child {
+			text-align: right;
 		}
 
 		@media #{$large-up} {
@@ -247,5 +322,27 @@
 		margin: 2rem auto;
 		width: 3rem;
 		height: 3rem;
+	}
+}
+
+.loan-count-graph-wrapper {
+	position: relative;
+	width: 100%;
+	padding-bottom: 75%;
+
+	@media #{$large-up} {
+		padding-bottom: 60%;
+	}
+
+	.loan-count-graph {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		opacity: 0;
+		transition: opacity 200ms;
+
+		svg {
+			pointer-events: auto;
+		}
 	}
 }

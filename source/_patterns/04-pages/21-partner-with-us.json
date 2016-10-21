@@ -1,0 +1,90 @@
+{
+	"main-title": "Partner with us",
+	"page-title": "Partner with us",
+	"bar-links": [
+		{
+			"title": "Partner with us",
+			"active": true
+		}
+	],
+	"has-bar-sub-links": true,
+	"bar-sub-links": [
+		{
+			"sub-title": "Partner with us",
+			"sub-active": true
+		},
+		{
+			"sub-title": "Grants"
+		},
+		{
+			"sub-title": "Loan matching"
+		},
+		{
+			"sub-title": "Employee and customer engagement"
+		},
+		{
+			"sub-title": "Our partners"
+		}
+	],
+	"drop-links": [
+		{
+			"title": "Partner with us",
+			"sub-links": [
+				{
+					"sub-title": "Grants",
+					"sub-active": true
+				},
+				{
+					"sub-title": "Loan matching"
+				},
+				{
+					"sub-title": "Employee and customer engagement"
+				},
+				{
+					"sub-title": "Our partners"
+				}
+			]
+		}
+	],
+	"headline": {
+		"medium": "Partner with us"
+	},
+	"img": {
+		"full-width" : {
+			"alt" : "Photo of hands and a leaf",
+			"src" : "//cms.kiva.org.s3.amazonaws.com/page/images/partner-with-us-hero"
+		}
+	},
+	"faqs": [
+	  {
+		  "id": "involved",
+		  "question": "How can I get my employees involved?",
+		  "answer": "There are a number of ways to get your employees involved. <a href='/gifts/kiva-cards'>Purchase Kiva Cards</a> to get them started lending, or <a href='/teams'>create a company lending team</a> to track the collective impact."
+	  },
+	  {
+		  "id": "less-10k",
+		  "question": "How can my business support Kiva for less than $10,000 minimum?",
+		  "answer": "Create a Kiva lender account in the name of your business and get started making loans. Share your company's support by linking directly to your public lender page, and let your community see all the borrowers you have supported on Kiva. <a href='/register'>Register here</a>."
+	  },
+	  {
+		  "id": "match",
+		  "question": "How can my corporation match employees' donations to Kiva's operating costs?",
+		  "answer": "Many corporations support the causes that matter most to their employees by matching their donations. Ask your Human Resources department for the paperwork to ensure that your donation to Kiva is matched. Want to encourage your company to offer employee matching for Kiva? Find out how. <a href='/about/supportus/contactus?topic=matching'>Contact us</a>."
+	  },
+	  {
+		  "id": "other-ways",
+		  "question": "Are there other ways to donate to Kiva besides online?",
+		  "answer": "To make a donation to Kiva's operational expenses via check, please make your check payable to 'Kiva Microfunds' and mail it with your return address to:<br><br>Kiva Attn: Chief Development Officer<br>875 Howard Street, Suite 340<br>San Francisco, CA 94103<br><br>If you would prefer to make a gift of stock, or send your donation via wire, please contact us at <a href='mailto:development@kiva.org'>development@kiva.org</a> and we will send you instructions.<br><br><a href='/help/solution/how_do_i_include_kiva_in_my_will_trust_or_estate_planning'>Click here to learn more about estate planning</a>, or contact us at <a href='mailto:development@kiva.org'>development@kiva.org</a> for more information.</p>"
+	  },
+	  {
+		  "id": "logo",
+		  "question": "Can I use your logo on my business website?",
+		  "answer": "For promotion of Kiva we encourage the use of our <a href='https://brandfolder.com/s/of0683-g796x4-5urymi'>Kiva Supporters logo</a> on your company's website. We allow use of our official logo for supporters who've contributed $10,000 or more in the past year, <a href='/about/supportus/contactus?topic=other'>please contact us for permission</a>."
+	  },
+	  {
+		  "id": "DAF",
+		  "question": "Is an international donor-advised fund (DAF) available?",
+		  "answer": "TDB."
+	  }
+	]
+}
