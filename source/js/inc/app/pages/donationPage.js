@@ -10,7 +10,7 @@ module.exports = function () {
 	//4-
 
 	$( function() {
-		$("#donation-buttons").selectable();
+		$('#donation-buttons').selectable();
 	});
 
 	//Donate button
