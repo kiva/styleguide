@@ -1,25 +1,30 @@
-<div class="donation-page-form small-12  large-6 columns">
-	<ul class="small-block-grid-3">
+<form class="donation-page-form small-12  large-6 columns" action="" method="post" name="">
+	<ul id="donation-buttons" class="small-block-grid-3">
 		<li>
-			<span class="button setting amountButton amount1" role="button">$10</span>
+			<input id="amount-1" type="radio"/>
+			<label class="button setting amount-button" for="amount-1">$10</label>
 		</li>
 		<li>
-			<span class="button setting amountButton amount2" role="button">$20</span>
+			<input id="amount-2" type="radio"/>
+			<label class="button setting amount-button" for="amount-2">$20</label>
 		</li>
 		<li>
-			<span class="button setting amountButton amount3" role="button">$50</span>
+			<input id="amount-3" type="radio" checked/>
+			<label class="button setting amount-button" for="amount-3">$50</label>
 		</li>
 		<li>
-			<span class="button setting amountButton amount4" role="button">$100</span>
+			<input id="amount-4" type="radio"/>
+			<label class="button setting amount-button" for="amount-4">$100</label>
 		</li>
 		<li>
-			<span class="button setting amountButton amount5" role="button">$200</span>
+			<input id="amount-5" type="radio"/>
+			<label class="button setting amount-button" for="amount-5">$200</label>
 		</li>
 		<li>
-			<input class="setting amountInput" placeholder="$ other"/>
+			<input class="setting amount-input" type="input" name="amount-6" placeholder="$ other"/>
 		</li>
 	</ul>
-	<label class="donateMonthlyCheckbox" for="checkbox">
+	<label class="donate-monthly-checkbox" for="checkbox">
 		<input id="checkbox" name="checkbox" type="checkbox"> Make this a monthly donation.</label>
 	<button class="small-12">Donate</button>
-</div>
+</form>

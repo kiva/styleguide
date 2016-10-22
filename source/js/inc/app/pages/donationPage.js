@@ -9,21 +9,8 @@ module.exports = function () {
 	//3- I need to figure out how to do the input field
 	//4-
 
-	//selecting a donation amount button
-	/*$('.amountButton')(function(e)  {
-		e.preventDefault();
-		$(this).toggleClass('active');
-		/!*$('.amountButton').addClass('.selected');*!/
-	});
-*/
-	$('.amountButton').on('click', function () {
-		$(this).addClass('.selected');
-
-		/*
-		$('.top_menu span').removeClass('active');
-		$(this).addClass('active');
-*/
-
+	$( function() {
+		$("#donation-buttons").selectable();
 	});
 
 	//Donate button
