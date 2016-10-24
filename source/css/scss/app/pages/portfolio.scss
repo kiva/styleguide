@@ -346,3 +346,31 @@
 		}
 	}
 }
+
+.loan-stats-section {
+	li img {
+		width: 1.5rem;
+	}
+
+	h2 {
+		margin-bottom: 1rem;
+	}
+
+	.sub-title {
+		margin-bottom: 0.5rem;
+	}
+
+	.section-title {
+		color: $kiva-green;
+	}
+
+	.lent-count {
+		background-color: $dark-green;
+		color: $white;
+		margin-left: 2rem;
+		padding-left: 1rem;
+		padding-right: 1rem;
+		padding-top: 0.25rem;
+		padding-bottom: 0.25rem;
+	}
+}
