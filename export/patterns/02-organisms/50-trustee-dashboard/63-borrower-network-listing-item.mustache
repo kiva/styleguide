@@ -5,7 +5,9 @@
 		{{/imageHref}}
 	</div>
 	<div class="columns large-4 medium-4 small-4">
-		<a href="{{profileUrl}}"><strong>{{borrowerName}}</strong></a><br/>
+		{{#profileUrl}}<a href="{{profileUrl}}">{{/profileUrl}}
+		<strong>{{borrowerName}}</strong>
+		{{#profileUrl}}</a>{{/profileUrl}}<br/>
 		{{#businessName}}{{businessName}}<br/>{{/businessName}}
 		{{loanAmountPretty}} / {{borrowerRepaymentTerm}} month loan<br/>
 		{{#city}}{{#region}}{{city}}, {{region}}{{/region}}{{/city}}
