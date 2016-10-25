@@ -33,4 +33,42 @@
             </ul>
         </div>
     </div>
+
+    <div class="ac-body" id="ac-more-{{sectionLabel}}-body" aria-hidden="true">
+        <div class="row">
+            <div class="small-6 large-6 columns">
+                <ul class="small-block-grid-1 medium-block-grid-2">
+                    {{#spilloverSectionListLentTo}}
+                        <li>
+                            <img src="{{iconURL}}">
+                            <a href="{{labelLink}}">{{label}}</a>
+                        </li>
+                    {{/spilloverSectionListLentTo}}
+                </ul>
+            </div>
+            <div class="small-6 large-6 columns">
+                <ul class="small-block-grid-1 medium-block-grid-2">
+                    {{#spilloverSectionListNotLentTo}}
+                        <li>
+                            <img src="{{iconURL}}">
+                            <a href="{{labelLink}}">{{label}}</a>
+                        </li>
+                    {{/spilloverSectionListNotLentTo}}
+                </ul>
+            </div>
+        </div>
+        <p class="ac-title text-center hide-more-loan-stats" data-kv-accordion aria-controls="ac-more-{{sectionLabel}}-body" aria-expanded="false">
+            Hide
+        </p>
+    </div>
+
+    {{#showSpilloverMessageForSection}}
+        <p class="ac-title text-center show-more-loan-stats" data-kv-accordion aria-controls="ac-more-{{sectionLabel}}-body" aria-expanded="false">
+            Show more
+        </p>
+    {{/showSpilloverMessageForSection}}
+
+    <div class="lend-link-btn">
+        <a href="{{lendingLink}}" class="button secondary">Lend to a new {{sectionLabel}}</a>
+    </div>
 </div>
