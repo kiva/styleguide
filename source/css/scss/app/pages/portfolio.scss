@@ -384,4 +384,19 @@
 	.lend-link-btn {
 		text-align: center;
 	}
+
+	.icon-wrapper {
+		font-size: 1.5rem;
+		display: inline-flex;
+		margin-left: 0.5rem;
+		color: $green;
+
+		.icon-confirmation {
+			fill: $green;
+			width: 3rem;
+			height: 3rem;
+			margin-right: 0.5rem;
+		}
+	}
+
 }

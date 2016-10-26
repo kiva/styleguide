@@ -30,6 +30,14 @@
                         <a href="{{labelLink}}">{{label}}</a>
                     </li>
                 {{/sectionListNotLentTo}}
+                {{^sectionListNotLentTo}}
+                    <span class="icon-wrapper">
+                        <svg class="icon icon-confirmation">
+                            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-confirmation"></use>
+                        </svg>
+                        Great job!
+                    </span>
+                {{/sectionListNotLentTo}}
             </ul>
         </div>
     </div>
