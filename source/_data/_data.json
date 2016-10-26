@@ -5257,5 +5257,6 @@
 		}
 	],
 
-	 "holidayModeActive": false
+	 "holidayModeActive": false,
+	 "kivaLogoUrl": "http://www.kiva.org"
 }
