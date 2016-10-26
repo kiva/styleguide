@@ -1,5 +1,5 @@
 <div class="loan-stats-section">
-    <h2 class="row">
+    <h2 class="row section-header">
         <span class="section-title">{{sectionTitle}}</span>
         <span class="lent-count">{{numLentTo}}/{{totalNum}}</span>
     </h2>
@@ -63,12 +63,12 @@
     </div>
 
     {{#showSpilloverMessageForSection}}
-        <p class="ac-title text-center show-more-loan-stats" data-kv-accordion aria-controls="ac-more-{{sectionLabel}}-body" aria-expanded="false">
+        <p class="row ac-title text-center show-more-loan-stats" data-kv-accordion aria-controls="ac-more-{{sectionLabel}}-body" aria-expanded="false">
             Show more
         </p>
     {{/showSpilloverMessageForSection}}
 
-    <div class="lend-link-btn">
+    <div class="row bottom-rule lend-link-btn">
         <a href="{{lendingLink}}" class="button secondary">Lend to a new {{sectionLabel}}</a>
     </div>
 </div>
