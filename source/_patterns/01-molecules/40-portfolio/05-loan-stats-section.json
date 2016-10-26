@@ -1,13 +1,13 @@
 {
   "sectionTitle": "Countries",
   "sectionLabel": "country",
+  "buttonLabel": "country",
   "lendingLink": "http://www.google.com",
   "showSpilloverMessageForSection": true,
   "numLentTo": "28",
   "totalNum": "85",
   "sectionListLentTo": [
     {
-      "iconURL": "https://www-dev-kiva-org-0.global.ssl.fastly.net/images/flags/rw.svg",
       "label": "India",
       "labelLink": "http://www.google.com"
     },

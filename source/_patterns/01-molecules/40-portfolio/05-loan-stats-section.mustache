@@ -16,7 +16,14 @@
             <ul class="small-block-grid-1 medium-block-grid-2">
                 {{#sectionListLentTo}}
                     <li>
-                        <img src="{{iconURL}}">
+                        {{#iconURL}}
+                            <img src="{{iconURL}}">
+                        {{/iconURL}}
+                        {{^iconURL}}
+                            <svg class="icon icon-leaf">
+                                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-leaf"></use>
+                            </svg>
+                        {{/iconURL}}
                         <a href="{{labelLink}}">{{label}}</a>
                     </li>
                 {{/sectionListLentTo}}
@@ -26,7 +33,14 @@
             <ul class="small-block-grid-1 medium-block-grid-2">
                 {{#sectionListNotLentTo}}
                     <li>
-                        <img src="{{iconURL}}">
+                        {{#iconURL}}
+                            <img src="{{iconURL}}">
+                        {{/iconURL}}
+                        {{^iconURL}}
+                            <svg class="icon icon-leaf">
+                                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-leaf"></use>
+                            </svg>
+                        {{/iconURL}}
                         <a href="{{labelLink}}">{{label}}</a>
                     </li>
                 {{/sectionListNotLentTo}}
@@ -48,7 +62,14 @@
                 <ul class="small-block-grid-1 medium-block-grid-2">
                     {{#spilloverSectionListLentTo}}
                         <li>
-                            <img src="{{iconURL}}">
+                            {{#iconURL}}
+                                <img src="{{iconURL}}">
+                            {{/iconURL}}
+                            {{^iconURL}}
+                                <svg class="icon icon-leaf">
+                                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-leaf"></use>
+                                </svg>
+                            {{/iconURL}}
                             <a href="{{labelLink}}">{{label}}</a>
                         </li>
                     {{/spilloverSectionListLentTo}}
@@ -58,7 +79,14 @@
                 <ul class="small-block-grid-1 medium-block-grid-2">
                     {{#spilloverSectionListNotLentTo}}
                         <li>
-                            <img src="{{iconURL}}">
+                            {{#iconURL}}
+                                <img src="{{iconURL}}">
+                            {{/iconURL}}
+                            {{^iconURL}}
+                                <svg class="icon icon-leaf">
+                                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-leaf"></use>
+                                </svg>
+                            {{/iconURL}}
                             <a href="{{labelLink}}">{{label}}</a>
                         </li>
                     {{/spilloverSectionListNotLentTo}}
@@ -77,6 +105,6 @@
     {{/showSpilloverMessageForSection}}
 
     <div class="row bottom-rule lend-link-btn">
-        <a href="{{lendingLink}}" class="button secondary">Lend to a new {{sectionLabel}}</a>
+        <a href="{{lendingLink}}" class="button secondary">Lend to a new {{buttonLabel}}</a>
     </div>
 </div>
