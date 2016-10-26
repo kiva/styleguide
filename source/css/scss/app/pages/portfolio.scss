@@ -376,6 +376,10 @@
 		}
 	}
 
+	li {
+		padding-bottom: 0.25rem;;
+	}
+
 	.show-more-loan-stats {
 		margin-top: 0.5rem;
 		margin-bottom: 0.5rem;
@@ -383,6 +387,11 @@
 
 	.lend-link-btn {
 		text-align: center;
+	}
+
+	.icon-leaf {
+		width: 1.5rem;
+		height: 1rem;
 	}
 
 	.icon-wrapper {
