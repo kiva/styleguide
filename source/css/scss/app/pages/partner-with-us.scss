@@ -1,6 +1,7 @@
 .partner-with-us{
 	$top-padding:rem-calc(32);
 	$padding: rem-calc(20);
+
 	p, ul{
 		font-weight: 300;
 	}
@@ -160,7 +161,20 @@
 		text-align: center;
 	}
 
+	// PARTNER-WITH-US PAGE
+	.partner-with-us-headline-wrapper {
+		position: relative;
+		padding-bottom: 85.93%;
 
+		@media #{$large-up} {
+			padding-bottom: 43.03%;
+		}
+	}
+
+	.partner-with-us-headline-wrapper > img {
+		position: absolute;
+		width: 100%;
+	}
 	//GRANTS PAGE
 	.grants-right-col-buffer{
 		@media #{$large-up}{
