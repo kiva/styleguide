@@ -35,7 +35,8 @@ $light-blue-gray: #DBE3E5;
         stroke: $kiva-text-dark;
     }
 
-    &.icon-distribution {
+    &.icon-distribution,
+	&.icon-kiva-promise {
         color: $kiva-text-dark;
     }
 
