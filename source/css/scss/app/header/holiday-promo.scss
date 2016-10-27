@@ -21,7 +21,7 @@
 		-ms-transform: $rotation;
 		transform: $rotation;
 	}
-	&.hide-for-xlarge-up {
+	&.hide-for-xxlarge-up {
 		font-size: $small-font-size;
 		font-weight: bold;
 		background-color: $kiva-darkgreen;
@@ -45,7 +45,7 @@
 		}
 	}
 
-	&.show-for-xlarge-up {
+	&.show-for-xxlarge-up {
 		margin-top: rem-calc(11);
 		.content {
 			@media #{$xxlarge-up} {
@@ -54,10 +54,10 @@
 			}
 		}
 		svg {
-			height: rem-calc(40);
-			width: rem-calc(40);
+			height: rem-calc(45);
+			width: rem-calc(45);
 			fill: $kiva-darkgreen;
-			margin-bottom: rem-calc(-13);
+			margin-bottom: rem-calc(-8);
 		}
 		a {
 			color: $kiva-darkgreen;
