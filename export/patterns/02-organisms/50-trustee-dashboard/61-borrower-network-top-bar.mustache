@@ -1,19 +1,13 @@
-<div class="trustee-dashboard-network">
-
-	<div class="row">
-		<div class="columns small-12">
-			<div class="impact">Your Borrower Network</div>
-		</div>
+<div class="trustee-dashboard-network row">
+	<div class="columns small-12">
+		<h1 class="impact">Your Borrower Network</h1>
 	</div>
 
-	<div class="row">
-		<div class="columns small-12">
-			{{#invitedAndEndorsedBorrowersStat}}
-				{{statisticValue}}
-			{{/invitedAndEndorsedBorrowersStat}}
-			invited and endorsed borrowers have received
-			{{totalFunded}} in funding.
-		</div>
+	<div class="columns small-12">
+		{{#invitedAndEndorsedBorrowersStat}}
+			{{statisticValue}}
+		{{/invitedAndEndorsedBorrowersStat}}
+		invited or endorsed borrowers have received
+		{{totalFunded}} in funding.
 	</div>
-
 </div>
