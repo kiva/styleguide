@@ -108,10 +108,14 @@ $link-spacing: rem-calc(16);
 
 ul.tertiary-nav {
     list-style: none;
-    margin: 0.4rem 0 0.4rem -1.1111111rem;
+    margin: rem-calc(16) 0 rem-calc(7) -1.1111111rem;
+	line-height: $body-font-size * 1.2;
+
+	li {
+		margin-bottom: rem-calc(14);
+	}
 
     li a {
-        line-height: 2rem;
 
 		&:visited {
 			color: $kiva-textlink;

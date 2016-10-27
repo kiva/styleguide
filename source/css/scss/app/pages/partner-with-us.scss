@@ -1,5 +1,60 @@
-.partner-with-us {
-	$top-padding: rem-calc(32);
+.partner-with-us{
+	$top-padding:rem-calc(32);
+	$padding: rem-calc(20);
+
+	p, ul{
+		font-weight: 300;
+	}
+	p.impact{
+		font-weight: bold;
+	}
+	.maxframe{
+		max-width: 55rem;
+	}
+	#intro{
+		padding-top: $padding*2;
+		padding-bottom: $padding*2;
+	}
+	.program{
+		text-align: center;
+	}
+	.program p{
+		text-align: left;
+	}
+	svg.icon-match{
+		height: rem-calc(56);
+		width: rem-calc(54);
+	}
+	svg.icon-grants{
+		height: rem-calc(56);
+		width: rem-calc(59);
+	}
+	svg.icon-corporate-engagement{
+		height: rem-calc(56);
+		width: rem-calc(61);
+	}
+	#our-partners{
+		background: $platinum;
+		text-align: center;
+		padding: $padding 0;
+		margin: $padding 0 $padding*2 0;
+	}
+	.program h2, #our-partners h2{
+		font-size: 1.1666666667rem;
+		line-height: 1rem;
+		color: $charcoal;
+		margin-top: $padding;
+	}
+	#partner-logos img{
+		padding-top: $padding;
+		width: 6.94444444rem;
+	}
+	#our-partners p{
+		padding-top: $padding;
+	}
+	.faq-container{
+		margin: $padding*2 0;
+	}
 
 	//MULTIPLE PAGES
 	.cite-picture {
@@ -104,6 +159,21 @@
 	}
 	.col-centered {
 		text-align: center;
+	}
+
+	// PARTNER-WITH-US PAGE
+	.partner-with-us-headline-wrapper {
+		position: relative;
+		padding-bottom: 85.93%;
+
+		@media #{$large-up} {
+			padding-bottom: 43.03%;
+		}
+	}
+
+	.partner-with-us-headline-wrapper > img {
+		position: absolute;
+		width: 100%;
 	}
 
 	//GRANTS PAGE
