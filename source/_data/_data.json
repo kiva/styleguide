@@ -5258,5 +5258,12 @@
 	],
 
 	 "holidayModeActive": false,
-	 "kivaLogoUrl": "http://www.kiva.org"
+	 "kivaLogoUrl": "http://www.kiva.org",
+	 "sampleTable": [
+		{
+		"tableHeading": "Table header",
+		"tableValue": "Value",
+		"tableRowName": "Row name"
+		}
+	 ]
 }
