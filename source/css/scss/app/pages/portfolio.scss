@@ -346,3 +346,66 @@
 		}
 	}
 }
+
+.loan-stats-section {
+	li img {
+		width: 1.5rem;
+	}
+
+	h2 {
+		margin-bottom: 1rem;
+	}
+
+	.sub-title {
+		margin-bottom: 0.5rem;
+	}
+
+	.section-header {
+		margin-top: 2rem;
+		margin-bottom: 1.5rem;
+
+		.section-title {
+			color: $kiva-green;
+		}
+
+		.lent-count {
+			background-color: $dark-green;
+			color: $white;
+			margin-left: 2rem;
+			padding: 0.25rem 1rem 0.25rem 1rem;
+		}
+	}
+
+	li {
+		padding-bottom: 0.25rem;;
+	}
+
+	.show-more-loan-stats {
+		margin-top: 0.5rem;
+		margin-bottom: 0.5rem;
+	}
+
+	.lend-link-btn {
+		text-align: center;
+	}
+
+	.icon-leaf {
+		width: 1.5rem;
+		height: 1rem;
+	}
+
+	.icon-wrapper {
+		font-size: 1.5rem;
+		display: inline-flex;
+		margin-left: 0.5rem;
+		color: $green;
+
+		.icon-confirmation {
+			fill: $green;
+			width: 3rem;
+			height: 3rem;
+			margin-right: 0.5rem;
+		}
+	}
+
+}
