@@ -28,7 +28,11 @@
 		padding-top: rem-calc(3);
 		padding-bottom: rem-calc(3);
 		.content {
+			vertical-align: top;
 			text-align: left;
+			@media #{$medium-up} {
+				margin-top: rem-calc(9);
+			}
 		}
 		svg {
 			height: rem-calc(30);
