@@ -2,7 +2,6 @@ $link-spacing: rem-calc(16);
 
 .secondary-nav-bar {
     background-color: $kiva-darkgreen;
-    border-top: 1px solid $kiva-green;
 
     ul {
         list-style: none;
@@ -57,10 +56,15 @@ $link-spacing: rem-calc(16);
             }
         }
     }
+    .holiday_mode & {
+        border-top: 1px solid $kiva-navdivider-green;
+        @media #{$xxlarge-up} {
+            border-top: none;
+        }
+    }
 }
 
 .secondary-nav-dropdown {
-    border-top: 1px solid $kiva-green;
     & > a {
         display: block;
         width: 100%;
@@ -103,6 +107,12 @@ $link-spacing: rem-calc(16);
 
         &:before, &:after {
             display: none;
+        }
+    }
+    .holiday_mode & {
+        border-top: 1px solid $kiva-navdivider-green;
+        @media #{$xxlarge-up} {
+            border-top: none;
         }
     }
 }

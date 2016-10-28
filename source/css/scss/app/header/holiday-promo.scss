@@ -20,6 +20,8 @@
 		-webkit-transform: $rotation;
 		-ms-transform: $rotation;
 		transform: $rotation;
+
+		overflow: visible;
 	}
 	&.hide-for-xxlarge-up {
 		font-size: $small-font-size;
