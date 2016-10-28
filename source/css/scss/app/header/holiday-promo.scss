@@ -1,0 +1,68 @@
+.holiday-promo {
+	text-align: center;
+	a {
+		display: block;
+		text-decoration: none;
+	}
+	.content {
+		display: inline-block;
+		margin-left: rem-calc(5);
+	}
+
+	svg {
+		$origin: 50% 50%;
+		$rotation: rotate(-10deg);
+
+		-webkit-transform-origin: $origin;
+		-ms-transform-origin: $origin;
+		transform-origin: $origin;
+
+		-webkit-transform: $rotation;
+		-ms-transform: $rotation;
+		transform: $rotation;
+
+		overflow: visible;
+	}
+	&.hide-for-xxlarge-up {
+		font-size: $small-font-size;
+		font-weight: bold;
+		background-color: $kiva-darkgreen;
+		padding-top: rem-calc(3);
+		padding-bottom: rem-calc(3);
+		.content {
+			vertical-align: top;
+			text-align: left;
+			@media #{$medium-up} {
+				margin-top: rem-calc(9);
+			}
+		}
+		svg {
+			height: rem-calc(30);
+			width: rem-calc(40);
+			margin-top: rem-calc(3);
+			fill: $kiva-accent-green;
+		}
+		a {
+			color: $kiva-accent-green;
+		}
+	}
+
+	&.show-for-xxlarge-up {
+		margin-top: rem-calc(11);
+		.content {
+			@media #{$xxlarge-up} {
+				font-size: $small-font-size;
+				font-weight: bold;
+			}
+		}
+		svg {
+			height: rem-calc(45);
+			width: rem-calc(45);
+			fill: $kiva-darkgreen;
+			margin-bottom: rem-calc(-8);
+		}
+		a {
+			color: $kiva-darkgreen;
+		}
+	}
+}

@@ -48,6 +48,11 @@
 			</div>
 		{{/is-visitor}}
 		{{> 02-organisms/08-header/02-search-box}}
+		{{^bonus}}
+			{{#holiday_mode}}
+				{{> 02-organisms/08-header/04-holiday-promo}}
+			{{/holiday_mode}}
+		{{/bonus}}
 	</div>
 
 	{{> 02-organisms/08-header/03-lend-menu}}
@@ -74,6 +79,11 @@
 {{! This is the Promo/Bonus banner that is shown in the small screen state}}
 	{{#bonus}}
 		<div class="show-for-small-only small-centered columns pronus"><div style="font-weight: normal;">Select a borrower to </br><span style="font-weight: bold;"><a class="dark_green_bg_link"  href="{{bonus.href}}">lend your {{bonus.amount}} {{bonus.label}}</a></span></div></div>
+	{{/bonus}}
+	{{^bonus}}
+		{{#holiday_mode}}
+			{{> 02-organisms/08-header/05-holiday-promo-small}}
+		{{/holiday_mode}}
 	{{/bonus}}
 
 </div>
