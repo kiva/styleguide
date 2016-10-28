@@ -4,15 +4,15 @@
 	 style="enable-background:new 0 0 46 46;" xml:space="preserve">
 <title>Facebook</title>
 <desc>Created with Sketch.</desc>
-<g id="Page-1" sketch:type="MSPage">
+<g id="Page-1" sketch:type="MSPage" stroke-width="1" fill-rule="evenodd">
 	<g id="Yelp" sketch:type="MSLayerGroup">
-		<circle id="Oval-1" sketch:type="MSShapeGroup" class="st0" cx="22.8" cy="22.6" r="22">
+		<circle id="Oval-1" stroke="currentColor" sketch:type="MSShapeGroup" class="st0" cx="22.8" cy="22.6" r="22">
 		</circle>
 	</g>
 </g>
 <g>
 	<g>
-		<g>
+		<g fill="currentColor">
 			<path class="st1" d="M12,22c-0.5,0.8-0.7,3.2-0.5,4.9c0.1,0.5,0.2,1,0.3,1.3c0.2,0.4,0.5,0.6,0.9,0.6c0.2,0,0.4,0,4.9-1.5
 				c0,0,2-0.6,2-0.6c0.5-0.1,0.8-0.6,0.9-1.2c0-0.6-0.3-1.1-0.8-1.3l-1.4-0.6c-4.8-2-5.1-2.1-5.3-2.1C12.5,21.4,12.2,21.6,12,22z"/>
 			<path class="st1" d="M22.8,36.9c0.1-0.2,0.1-0.4,0.1-5.1c0,0,0-2.1,0-2.1c0-0.5-0.3-1-0.8-1.2c-0.6-0.2-1.2-0.1-1.5,0.3
