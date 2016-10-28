@@ -123,10 +123,19 @@
 			.hp-holiday-slide-button-wrapper {
 				display: inherit;
 				text-align: center;
-				margin-top: rem-calc(40);
 
 				.hp-holiday-slide-button {
 					margin: 0 auto;
+					margin-top: 45%;
+					background-color: #A22626;
+
+					&:hover {
+						background-color: #8C1F1F;
+					}
+
+					@media #{$large-up} {
+						margin-top: 55%;
+					}
 
 					@media #{$large-only} {
 						font-size: $slide-overlay-attribution-font-size;
