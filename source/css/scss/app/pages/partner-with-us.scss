@@ -166,6 +166,10 @@
 		position: relative;
 		padding-bottom: 85.93%;
 
+		@media #{$medium-only} {
+			padding-bottom: 54.66%;
+		}
+
 		@media #{$large-up} {
 			padding-bottom: 43.03%;
 		}
