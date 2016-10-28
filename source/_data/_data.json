@@ -5197,6 +5197,7 @@
 			"imageHref":"https://www-kiva-org-3.global.ssl.fastly.net/img/s100/82553162feb4581150b456fdfd54599c.jpg",
 			"borrowerRepaymentTerm": 24,
 			"loanStatus": "open",
+			"loanStatusPretty": "Open",
 			"trusteeActions": {
 				"previewProfileUrl":"#",
 				"showEndorseButton":true
@@ -5221,6 +5222,7 @@
 			"imageHref":"https://www-kiva-org-3.global.ssl.fastly.net/img/s100/82553162feb4581150b456fdfd54599c.jpg",
 			"borrowerRepaymentTerm": 37,
 			"loanStatus": "fundRaising",
+			"loanStatusPretty": "Fund Raising",
 			"city": "San Francisco",
 			"region":"CA",
 			"description":"to help hire a new pet-spoiling biscuit consultant",
@@ -5247,6 +5249,7 @@
 			"imageHref":"https://www-kiva-org-3.global.ssl.fastly.net/img/s100/82553162feb4581150b456fdfd54599c.jpg",
 			"borrowerRepaymentTerm": 25,
 			"loanStatus": "payingBack",
+			"loanStatusPretty": "Paying Back",
 			"city": "Washington",
 			"region":"DC",
 			"description":"to buy veggies for her signature veggie dishes",
