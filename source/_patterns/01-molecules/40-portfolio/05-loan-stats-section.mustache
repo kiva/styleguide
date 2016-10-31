@@ -16,14 +16,21 @@
             <ul class="small-block-grid-1 medium-block-grid-2">
                 {{#sectionListLentTo}}
                     <li>
-                        {{#iconURL}}
-                            <img src="{{iconURL}}">
-                        {{/iconURL}}
-                        {{^iconURL}}
-                            <svg class="icon icon-leaf">
-                                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-leaf"></use>
-                            </svg>
-                        {{/iconURL}}
+                        <span class="collection-icon">
+                            {{#iconURL}}
+                                <img src="{{iconURL}}">
+                            {{/iconURL}}
+                            {{^iconURL}}
+                                {{#countryCode}}
+                                    <span class="f16 {{countryCode}}"></span>
+                                {{/countryCode}}
+                                {{^countryCode}}
+                                    <svg class="icon icon-leaf">
+                                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-leaf"></use>
+                                    </svg>
+                                {{/countryCode}}
+                            {{/iconURL}}
+                        </span>
                         <a href="{{labelLink}}">{{label}}</a>
                     </li>
                 {{/sectionListLentTo}}
@@ -37,9 +44,14 @@
                             <img src="{{iconURL}}">
                         {{/iconURL}}
                         {{^iconURL}}
-                            <svg class="icon icon-leaf">
-                                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-leaf"></use>
-                            </svg>
+                            {{#countryCode}}
+                                <span class="f16 {{countryCode}}"></span>
+                            {{/countryCode}}
+                            {{^countryCode}}
+                                <svg class="icon icon-leaf">
+                                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-leaf"></use>
+                                </svg>
+                            {{/countryCode}}
                         {{/iconURL}}
                         <a href="{{labelLink}}">{{label}}</a>
                     </li>
@@ -66,9 +78,14 @@
                                 <img src="{{iconURL}}">
                             {{/iconURL}}
                             {{^iconURL}}
-                                <svg class="icon icon-leaf">
-                                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-leaf"></use>
-                                </svg>
+                                {{#countryCode}}
+                                    <span class="f16 {{countryCode}}"></span>
+                                {{/countryCode}}
+                                {{^countryCode}}
+                                    <svg class="icon icon-leaf">
+                                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-leaf"></use>
+                                    </svg>
+                                {{/countryCode}}
                             {{/iconURL}}
                             <a href="{{labelLink}}">{{label}}</a>
                         </li>
@@ -83,9 +100,14 @@
                                 <img src="{{iconURL}}">
                             {{/iconURL}}
                             {{^iconURL}}
-                                <svg class="icon icon-leaf">
-                                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-leaf"></use>
-                                </svg>
+                                {{#countryCode}}
+                                    <span class="f16 {{countryCode}}"></span>
+                                {{/countryCode}}
+                                {{^countryCode}}
+                                    <svg class="icon icon-leaf">
+                                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-leaf"></use>
+                                    </svg>
+                                {{/countryCode}}
                             {{/iconURL}}
                             <a href="{{labelLink}}">{{label}}</a>
                         </li>
