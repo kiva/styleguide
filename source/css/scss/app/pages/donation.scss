@@ -10,8 +10,17 @@
 	}
 }
 
-.donationSideBar {
-	padding-top: 20px;
+.donation-sidebar {
+	padding-top: 30px;
+
+	.kivaPromiseWrapper {
+		padding-bottom: 20px;
+
+		svg.icon {
+			padding: 10px 0;
+			width: 100%;
+		}
+	}
 }
 
 .donationFaq {
