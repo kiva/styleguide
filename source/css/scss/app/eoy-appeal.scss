@@ -68,6 +68,16 @@
 						height: $button-height-sm;
 					}
 				}
+
+				.custom-submit.inactive {
+					border-color: $kiva-text-light;
+					color: $kiva-text-light;
+
+					&:hover, &:focus {
+						border-color: $kiva-text-light;
+						color: $kiva-text-light;
+					}
+				}
 			}
 		}
 	}
