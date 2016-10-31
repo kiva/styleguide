@@ -8,77 +8,92 @@
   "totalNum": "85",
   "sectionListLentTo": [
     {
+      "iconURL": null,
+      "countryCode": "in",
       "label": "India",
       "labelLink": "http://www.google.com"
     },
     {
-      "iconURL": "https://www-dev-kiva-org-0.global.ssl.fastly.net/images/flags/rw.svg",
+      "iconURL": null,
+      "countryCode": "jp",
       "label": "Japan",
       "labelLink": "http://www.google.com"
     },
     {
-      "iconURL": "https://www-dev-kiva-org-0.global.ssl.fastly.net/images/flags/rw.svg",
+      "iconURL": null,
+      "countryCode": "pk",
       "label": "Pakistan",
       "labelLink": "http://www.google.com"
     },
     {
-      "iconURL": "https://www-dev-kiva-org-0.global.ssl.fastly.net/images/flags/rw.svg",
+      "iconURL": null,
+      "countryCode": "it",
       "label": "Italy",
       "labelLink": "http://www.google.com"
     }
   ],
   "spilloverSectionListLentTo": [
     {
-      "iconURL": "https://www-dev-kiva-org-0.global.ssl.fastly.net/images/flags/rw.svg",
+      "iconURL": null,
+      "countryCode": "jm",
       "label": "Jamaica",
       "labelLink": "http://www.google.com"
     },
     {
-      "iconURL": "https://www-dev-kiva-org-0.global.ssl.fastly.net/images/flags/rw.svg",
+      "iconURL": null,
+      "countryCode": "rw",
       "label": "Rwanda",
       "labelLink": "http://www.google.com"
     },
     {
-      "iconURL": "https://www-dev-kiva-org-0.global.ssl.fastly.net/images/flags/rw.svg",
+      "iconURL": null,
+      "countryCode": "mz",
       "label": "Mozambique",
       "labelLink": "http://www.google.com"
     },
     {
-      "iconURL": "https://www-dev-kiva-org-0.global.ssl.fastly.net/images/flags/rw.svg",
+      "iconURL": null,
+      "countryCode": "mx",
       "label": "Mexico",
       "labelLink": "http://www.google.com"
     }
   ],
   "sectionListNotLentTo": [
     {
-      "iconURL": "https://www-dev-kiva-org-0.global.ssl.fastly.net/images/flags/rw.svg",
+      "iconURL": null,
+      "countryCode": "np",
       "label": "Nepal",
       "labelLink": "http://www.google.com"
     },
     {
-      "iconURL": "https://www-dev-kiva-org-0.global.ssl.fastly.net/images/flags/rw.svg",
+      "iconURL": null,
+      "countryCode": "us",
       "label": "United States",
       "labelLink": "http://www.google.com"
     },
     {
-      "iconURL": "https://www-dev-kiva-org-0.global.ssl.fastly.net/images/flags/rw.svg",
-      "label": "Russia",
+      "iconURL": null,
+      "countryCode": "ru",
+      "label": "Russian Federation",
       "labelLink": "http://www.google.com"
     },
     {
-      "iconURL": "https://www-dev-kiva-org-0.global.ssl.fastly.net/images/flags/rw.svg",
+      "iconURL": null,
+      "countryCode": "ca",
       "label": "Canada",
       "labelLink": "http://www.google.com"
     }
   ],
   "spilloverSectionListNotLentTo": [
     {
-      "iconURL": "https://www-dev-kiva-org-0.global.ssl.fastly.net/images/flags/rw.svg",
+      "iconURL": null,
+      "countryCode": "pe",
       "label": "Peru",
       "labelLink": "http://www.google.com"
     },
     {
-      "iconURL": "https://www-dev-kiva-org-0.global.ssl.fastly.net/images/flags/rw.svg",
+      "iconURL": null,
+      "countryCode": "co",
       "label": "Colombia",
       "labelLink": "http://www.google.com"
     }

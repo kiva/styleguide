@@ -9,158 +9,188 @@
         "totalNum": "82",
         "sectionListLentTo": [
             {
-                "iconURL": "https://www-dev-kiva-org-0.global.ssl.fastly.net/images/flags/al.svg",
+                "iconURL": null,
+                "countryCode": "al",
                 "label": "Albania",
                 "labelLink": "http://www.google.com"
             },
             {
-                "iconURL": "https://www-dev-kiva-org-0.global.ssl.fastly.net/images/flags/am.svg",
+                "iconURL": null,
+                "countryCode": "am",
                 "label": "Armenia",
                 "labelLink": "http://www.google.com"
             },
             {
-                "iconURL": "https://www-dev-kiva-org-0.global.ssl.fastly.net/images/flags/az.svg",
+                "iconURL": null,
+                "countryCode": "az",
                 "label": "Azerbaijan",
                 "labelLink": "http://www.google.com"
             },
             {
-                "iconURL": "https://www-dev-kiva-org-0.global.ssl.fastly.net/images/flags/bj.svg",
+                "iconURL": null,
+                "countryCode": "bj",
                 "label": "Benin",
                 "labelLink": "http://www.google.com"
             },
             {
-                "iconURL": "https://www-dev-kiva-org-0.global.ssl.fastly.net/images/flags/bo.svg",
+                "iconURL": null,
+                "countryCode": "bo",
                 "label": "Bolivia",
                 "labelLink": "http://www.google.com"
             },
             {
-                "iconURL": "https://www-dev-kiva-org-0.global.ssl.fastly.net/images/flags/bf.svg",
+                "iconURL": null,
+                "countryCode": "bf",
                 "label": "Burkina Faso",
                 "labelLink": "http://www.google.com"
             },
             {
-                "iconURL": "https://www-dev-kiva-org-0.global.ssl.fastly.net/images/flags/bi.svg",
+                "iconURL": null,
+                "countryCode": "bi",
                 "label": "Burundi",
                 "labelLink": "http://www.google.com"
             },
             {
-                "iconURL": "https://www-dev-kiva-org-0.global.ssl.fastly.net/images/flags/kh.svg",
+                "iconURL": null,
+                "countryCode": "kh",
                 "label": "Cambodia",
                 "labelLink": "http://www.google.com"
             },
             {
-                "iconURL": "https://www-dev-kiva-org-0.global.ssl.fastly.net/images/flags/cm.svg",
+                "iconURL": null,
+                "countryCode": "cm",
                 "label": "Cameroon",
                 "labelLink": "http://www.google.com"
             },
             {
-                "iconURL": "https://www-dev-kiva-org-0.global.ssl.fastly.net/images/flags/co.svg",
+                "iconURL": null,
+                "countryCode": "co",
                 "label": "Colombia",
                 "labelLink": "http://www.google.com"
             },
             {
-                "iconURL": "https://www-dev-kiva-org-0.global.ssl.fastly.net/images/flags/cr.svg",
+                "iconURL": null,
+                "countryCode": "cr",
                 "label": "Costa Rica",
                 "labelLink": "http://www.google.com"
             },
             {
-                "iconURL": "https://www-dev-kiva-org-0.global.ssl.fastly.net/images/flags/ci.svg",
+                "iconURL": null,
+                "countryCode": "ci",
                 "label": "Cote D'Ivoire",
                 "labelLink": "http://www.google.com"
             }
         ],
         "spilloverSectionListLentTo": [
             {
-                "iconURL": "https://www-dev-kiva-org-0.global.ssl.fastly.net/images/flags/jm.svg",
+                "iconURL": null,
+                "countryCode": "jm",
                 "label": "Jamaica",
                 "labelLink": "http://www.google.com"
             },
             {
-                "iconURL": "https://www-dev-kiva-org-0.global.ssl.fastly.net/images/flags/rw.svg",
+                "iconURL": null,
+                "countryCode": "rw",
                 "label": "Rwanda",
                 "labelLink": "http://www.google.com"
             },
             {
-                "iconURL": "https://www-dev-kiva-org-0.global.ssl.fastly.net/images/flags/mz.svg",
+                "iconURL": null,
+                "countryCode": "mz",
                 "label": "Mozambique",
                 "labelLink": "http://www.google.com"
             },
             {
-                "iconURL": "https://www-dev-kiva-org-0.global.ssl.fastly.net/images/flags/mx.svg",
+                "iconURL": null,
+                "countryCode": "mx",
                 "label": "Mexico",
                 "labelLink": "http://www.google.com"
             }
         ],
         "sectionListNotLentTo": [
             {
-                "iconURL": "https://www-dev-kiva-org-0.global.ssl.fastly.net/images/flags/bz.svg",
+                "iconURL": null,
+                "countryCode": "bz",
                 "label": "Belize",
                 "labelLink": "http://www.google.com"
             },
             {
-                "iconURL": "https://www-dev-kiva-org-0.global.ssl.fastly.net/images/flags/br.svg",
+                "iconURL": null,
+                "countryCode": "br",
                 "label": "Brazil",
                 "labelLink": "http://www.google.com"
             },
             {
-                "iconURL": "https://www-dev-kiva-org-0.global.ssl.fastly.net/images/flags/cl.svg",
+                "iconURL": null,
+                "countryCode": "cl",
                 "label": "Chile",
                 "labelLink": "http://www.google.com"
             },
             {
-                "iconURL": "https://www-dev-kiva-org-0.global.ssl.fastly.net/images/flags/cn.svg",
+                "iconURL": null,
+                "countryCode": "cn",
                 "label": "China",
                 "labelLink": "http://www.google.com"
             },
             {
-                "iconURL": "https://www-dev-kiva-org-0.global.ssl.fastly.net/images/flags/cg.svg",
+                "iconURL": null,
+                "countryCode": "cg",
                 "label": "Congo (Rep.)",
                 "labelLink": "http://www.google.com"
             },
             {
-                "iconURL": "https://www-dev-kiva-org-0.global.ssl.fastly.net/images/flags/eg.svg",
+                "iconURL": null,
+                "countryCode": "eg",
                 "label": "Egypt",
                 "labelLink": "http://www.google.com"
             },
             {
-                "iconURL": "https://www-dev-kiva-org-0.global.ssl.fastly.net/images/flags/in.svg",
+                "iconURL": null,
+                "countryCode": "in",
                 "label": "India",
                 "labelLink": "http://www.google.com"
             },
             {
-                "iconURL": "https://www-dev-kiva-org-0.global.ssl.fastly.net/images/flags/ls.svg",
+                "iconURL": null,
+                "countryCode": "ls",
                 "label": "Lesotho",
                 "labelLink": "http://www.google.com"
             },
             {
-                "iconURL": "https://www-dev-kiva-org-0.global.ssl.fastly.net/images/flags/mg.svg",
+                "iconURL": null,
+                "countryCode": "mg",
                 "label": "Madagascar",
                 "labelLink": "http://www.google.com"
             },
             {
-                "iconURL": "https://www-dev-kiva-org-0.global.ssl.fastly.net/images/flags/mw.svg",
+                "iconURL": null,
+                "countryCode": "mw",
                 "label": "Malawi",
                 "labelLink": "http://www.google.com"
             },
             {
-                "iconURL": "https://www-dev-kiva-org-0.global.ssl.fastly.net/images/flags/mr.svg",
+                "iconURL": null,
+                "countryCode": "mr",
                 "label": "Mauritania",
                 "labelLink": "http://www.google.com"
             },
             {
-                "iconURL": "https://www-dev-kiva-org-0.global.ssl.fastly.net/images/flags/md.svg",
+                "iconURL": null,
+                "countryCode": "md",
                 "label": "Moldova",
                 "labelLink": "http://www.google.com"
             }
         ],
         "spilloverSectionListNotLentTo": [
             {
-                "iconURL": "https://www-dev-kiva-org-0.global.ssl.fastly.net/images/flags/pe.svg",
+                "iconURL": null,
+                "countryCode": "pe",
                 "label": "Peru",
                 "labelLink": "http://www.google.com"
             },
             {
-                "iconURL": "https://www-dev-kiva-org-0.global.ssl.fastly.net/images/flags/ni.svg",
+                "iconURL": null,
+                "countryCode": "ni",
                 "label": "Nicaragua",
                 "labelLink": "http://www.google.com"
             }
