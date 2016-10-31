@@ -1,9 +1,6 @@
-.donationIntroText {
-	padding: 20px 0;
-}
-
 .donation-intro-text {
 	text-align: center;
+	padding: 20px 0;
 
 	@media #{$large-up} {
 		text-align: left;
