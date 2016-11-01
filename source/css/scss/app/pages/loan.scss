@@ -1159,6 +1159,9 @@
 
 .fund-a-loan-bar {
 	cursor: pointer;
+	.holiday_mode & {
+		border-top: 1px solid $kiva-navdivider-green;
+	}
 }
 
 .question-icon {
