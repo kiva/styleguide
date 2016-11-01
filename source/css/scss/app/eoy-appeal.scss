@@ -66,16 +66,24 @@
 						margin: 0;
 						font-size: $button-font-sm;
 						height: $button-height-sm;
+						@media #{$medium-only} {
+							font-size: $body-font-size;
+						}
 					}
 				}
 
-				.custom-submit.inactive {
-					border-color: $kiva-text-light;
-					color: $kiva-text-light;
-
-					&:hover, &:focus {
+				.custom-submit {
+					@media #{$medium-only} {
+						font-size: $body-font-size;
+					}
+					&.inactive {
 						border-color: $kiva-text-light;
 						color: $kiva-text-light;
+
+						&:hover, &:focus {
+							border-color: $kiva-text-light;
+							color: $kiva-text-light;
+						}
 					}
 				}
 			}
