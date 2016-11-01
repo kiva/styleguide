@@ -2,11 +2,9 @@
 	//these styles apply to the  01-molecules/06-components/13-faq-question-answer.mustache file
 	.ac-container {
 		.question-wrap {
-			display: inline-block;
+			display: inline;
 			font-weight: bold;
-			width: 93%;
 		}
-
 		&.ac-title {
 			border-top: rem-calc(1) solid black;
 			padding: rem-calc(5) 0;
