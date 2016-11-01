@@ -1,0 +1,59 @@
+<div class="eoy-appeal-wrapper">
+	<div class="eoy-appeal row">
+		<div class="eoy-header"data-kv-accordion aria-controls="ac-eoy-appeal" {{#isExpanded}}aria-expanded="true"{{/isExpanded}}{{^isExpanded}}aria-expanded="false"{{/isExpanded}}>
+			<h2>
+				Help us reach more communities in 2017!
+				<span class="dropdown-icon">
+					<svg class="icon icon-large-chevron">
+						<use xlink:href="#icon-large-chevron"></use>
+					</svg>
+				</span>
+			</h2>
+		</div>
+		<div class="eoy-body" id="ac-eoy-appeal" {{#isExpanded}}aria-hidden="false"{{/isExpanded}}{{^isExpanded}}aria-hidden="true"{{/isExpanded}}>
+			<div class="circle-avatar show-for-medium-up" style="background-image:url({{photoUrl}})"></div>
+			<div class="message">
+				<div>
+					100% of money lent on Kiva goes to funding loans, so we rely on donations from lenders like you to continue this important work.
+					{{#eoyMatch}}
+						<strong>For a limited time, if you donate $35 or more, a $25 bonus will be added to your account next week! </strong>(We'll email you when it's there). </strong>
+					{{/eoyMatch}}
+					Your donation of any size makes a difference.
+				</div>
+				<div class="closing">
+					Thank you for helping create a more equitable world,<br>Premal Shah, President, Kiva
+				</div>
+			</div>
+
+			<div class="donation-buttons">
+				<ul class="small-block-grid-2 medium-block-grid-5">
+					<li>
+						<div class="item fixed-amount button smaller" role="button" value="25">$25</div>
+					</li>
+
+					<li>
+						<div class="item fixed-amount button smaller fixed-amount" role="button" value="35">$35</div>
+					</li>
+
+					<li>
+						<div class="item fixed-amount button smaller fixed-amount" role="button" value="50">$50</div>
+					</li>
+
+					<li class="show-for-medium-up">
+						<div class="item custom-amount">
+							<input id="eoy-custom-amount" name="eoy-custom-amount" type="text" placeholder="other" aria-label="custom donation amount">
+						</div>
+					</li>
+
+					<li class="show-for-medium-up">
+						<div class="item button smaller setting custom-submit inactive" role="button">Submit</div>
+					</li>
+
+					<li class="show-for-small-only">
+						<div class="item button smaller other-amount" role="button">Other</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</div>
