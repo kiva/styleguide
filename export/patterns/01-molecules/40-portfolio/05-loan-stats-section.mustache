@@ -4,16 +4,16 @@
         <span class="lent-count">{{numLentTo}}/{{totalNum}}</span>
     </h2>
     <div class="row sub-title">
-        <div class="small-6 large-6 columns">
+        <div class="small-6 columns">
             You've lent to
         </div>
-        <div class="small-6 large-6 columns">
+        <div class="small-6 columns">
             You haven't lent to
         </div>
     </div>
     <div class="row">
-        <div class="small-6 large-6 columns">
-            <ul class="small-block-grid-1 medium-block-grid-2">
+        <div class="small-6 columns">
+            <ul class="small-block-grid-1 large-block-grid-2">
                 {{#sectionListLentTo}}
                     <li>
                         <span class="collection-icon">
@@ -36,8 +36,8 @@
                 {{/sectionListLentTo}}
             </ul>
         </div>
-        <div class="small-6 large-6 columns">
-            <ul class="small-block-grid-1 medium-block-grid-2">
+        <div class="small-6 columns">
+            <ul class="small-block-grid-1 large-block-grid-2">
                 {{#sectionListNotLentTo}}
                     <li>
                         {{#iconURL}}
@@ -57,7 +57,7 @@
                     </li>
                 {{/sectionListNotLentTo}}
                 {{^sectionListNotLentTo}}
-                    <span class="icon-wrapper">
+                    <span class="all-completed-icon-wrapper">
                         <svg class="icon icon-confirmation">
                             <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-confirmation"></use>
                         </svg>
@@ -70,8 +70,8 @@
 
     <div class="ac-body" id="ac-more-{{sectionLabel}}-body" aria-hidden="true">
         <div class="row">
-            <div class="small-6 large-6 columns">
-                <ul class="small-block-grid-1 medium-block-grid-2">
+            <div class="small-6 columns">
+                <ul class="small-block-grid-1 large-block-grid-2">
                     {{#spilloverSectionListLentTo}}
                         <li>
                             {{#iconURL}}
@@ -92,8 +92,8 @@
                     {{/spilloverSectionListLentTo}}
                 </ul>
             </div>
-            <div class="small-6 large-6 columns">
-                <ul class="small-block-grid-1 medium-block-grid-2">
+            <div class="small-6 columns">
+                <ul class="small-block-grid-1 large-block-grid-2">
                     {{#spilloverSectionListNotLentTo}}
                         <li>
                             {{#iconURL}}
@@ -115,18 +115,20 @@
                 </ul>
             </div>
         </div>
-        <p class="ac-title text-center hide-more-loan-stats-{{sectionLabel}}" data-kv-accordion aria-controls="ac-more-{{sectionLabel}}-body" aria-expanded="false">
+        <p class="ac-title black-underlined text-center hide-more-loan-stats-{{sectionLabel}}" data-kv-accordion aria-controls="ac-more-{{sectionLabel}}-body" aria-expanded="false">
             Hide
         </p>
     </div>
 
     {{#showSpilloverMessageForSection}}
-        <p class="row ac-title text-center show-more-loan-stats-{{sectionLabel}}" data-kv-accordion aria-controls="ac-more-{{sectionLabel}}-body" aria-expanded="false">
+        <p class="row ac-title black-underlined text-center show-more-loan-stats-{{sectionLabel}}" data-kv-accordion aria-controls="ac-more-{{sectionLabel}}-body" aria-expanded="false">
             Show more
         </p>
     {{/showSpilloverMessageForSection}}
-
-    <div class="row bottom-rule lend-link-btn">
-        <a href="{{lendingLink}}" class="button secondary">Lend to a new {{buttonLabel}}</a>
-    </div>
+    {{#lendingLink}}
+        <div class="row lend-link-btn">
+            <a href="{{lendingLink}}" class="button secondary">Lend to a new {{buttonLabel}}</a>
+        </div>
+    {{/lendingLink}}
+    <div class="row bottom-rule section-end">&nbsp;</div>
 </div>
