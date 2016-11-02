@@ -405,8 +405,11 @@
 	}
 
 	.show-more-loan-stats-country, .show-more-loan-stats-sector, .show-more-loan-stats-activity, .show-more-loan-stats-field-partner {
-		margin-top: 0.5rem;
-		margin-bottom: 0.5rem;
+		cursor: pointer;
+	}
+
+	.hide-more-loan-stats-country, .hide-more-loan-stats-sector, .hide-more-loan-stats-activity, .hide-more-loan-stats-field-partner {
+		cursor: pointer;
 	}
 
 	.lend-link-btn {
