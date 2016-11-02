@@ -382,13 +382,13 @@
 
 		.collection-icon {
 			width: 1.5rem;
-			height: 1rem;
+			height: 0.7777rem;
 			position: absolute;
 		}
 
 		.icon-leaf {
 			width: 1.5rem;
-			height: 1rem;
+			height: 0.7777rem;
 		}
 
 		a {
@@ -397,6 +397,10 @@
 			white-space: nowrap;
 			display: block;
 			margin-left: 1.5rem;
+		}
+		
+		span, img, svg {
+			position: absolute;
 		}
 	}
 
