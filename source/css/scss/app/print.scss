@@ -59,6 +59,7 @@
 	.siteFooter,
 	.fund-a-loan-bar,
 	#ac-how-it-works,
+	.carousel-nav,
 	.loan-image-footer,
 	.lend-action,
 	.mobile-lend-action,
@@ -122,9 +123,16 @@
 		.slick-list {
 			height: auto !important;
 		}
-		.slick-track,
+		.slick-track {
+			width: 100% !important;
+			transform: none !important;
+		}
 		.loan-image-wrap {
 			width: 100% !important;
+
+			&:not([data-slick-index="0"]) {
+				display:none;
+			}
 		}
 	}
 
