@@ -111,14 +111,13 @@
 			color: $kiva-textlink;
 		}
 	}
-	.testimonials {
-		.row {
-			margin-bottom: rem-calc(25);
-		}
+
+	.testimonials{
 		.small-collapse, .medium-collapse {
 			padding: 0 rem-calc(15);
 		}
 		.name-title {
+			padding-left:.2rem;
 			@media #{$large-up}{
 				padding-left: .8rem;
 			}
@@ -129,7 +128,9 @@
 	}
 	.how-it-works {
 		.bottom-buffer {
-			margin-bottom: rem-calc(80);
+			margin-bottom:rem-calc(40);
+			@media #{$large-up}{
+				margin-bottom:rem-calc(80); }
 		}
 		.cite {
 			font-size: .8rem;
@@ -160,6 +161,9 @@
 	.col-centered {
 		text-align: center;
 	}
+	.bottompage-buffer{
+		margin-bottom: rem-calc(40);
+	}
 
 	// PARTNER-WITH-US PAGE
 	.partner-with-us-headline-wrapper {
@@ -183,7 +187,7 @@
 	//GRANTS PAGE
 	.grants-right-col-buffer {
 		@media #{$large-up}{
-			padding-left: em-calc(40);
+			padding-left:rem-calc(40);
 		}
 	}
 	.medium-statistic-bold {
@@ -225,7 +229,13 @@
 			vertical-align: middle;
 		}
 	}
-	.small-block-grid-1, .small-block-grid-2, .medium-block-grid-1, .medium-block-grid-2, .medium-block-grid-3, .medium-block-grid-4 {
+
+	.small-block-grid-1, .small-block-grid-2, .medium-block-grid-1, .medium-block-grid-2, .medium-block-grid-3, .medium-block-grid-4, .small-block-grid-3 {
+		ul {
+			padding: 0;
+		}
+	}
+	.small-block-grid-1, .small-block-grid-2, .medium-block-grid-1, .medium-block-grid-2, .medium-block-grid-3, .medium-block-grid-4, .medium-block-grid-5{
 		li {
 			padding: rem-calc(25);
 		}
