@@ -40,19 +40,21 @@
             <ul class="small-block-grid-1 large-block-grid-2">
                 {{#sectionListNotLentTo}}
                     <li>
-                        {{#iconURL}}
-                            <img src="{{iconURL}}">
-                        {{/iconURL}}
-                        {{^iconURL}}
-                            {{#countryCode}}
-                                <span class="f16 {{countryCode}}"></span>
-                            {{/countryCode}}
-                            {{^countryCode}}
-                                <svg class="icon icon-leaf">
-                                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-leaf"></use>
-                                </svg>
-                            {{/countryCode}}
-                        {{/iconURL}}
+                        <span class="collection-icon">
+                            {{#iconURL}}
+                                <img src="{{iconURL}}">
+                            {{/iconURL}}
+                            {{^iconURL}}
+                                {{#countryCode}}
+                                    <span class="f16 {{countryCode}}"></span>
+                                {{/countryCode}}
+                                {{^countryCode}}
+                                    <svg class="icon icon-leaf">
+                                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-leaf"></use>
+                                    </svg>
+                                {{/countryCode}}
+                            {{/iconURL}}
+                        </span>
                         <a href="{{labelLink}}">{{label}}</a>
                     </li>
                 {{/sectionListNotLentTo}}
@@ -74,19 +76,21 @@
                 <ul class="small-block-grid-1 large-block-grid-2">
                     {{#spilloverSectionListLentTo}}
                         <li>
-                            {{#iconURL}}
-                                <img src="{{iconURL}}">
-                            {{/iconURL}}
-                            {{^iconURL}}
-                                {{#countryCode}}
-                                    <span class="f16 {{countryCode}}"></span>
-                                {{/countryCode}}
-                                {{^countryCode}}
-                                    <svg class="icon icon-leaf">
-                                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-leaf"></use>
-                                    </svg>
-                                {{/countryCode}}
-                            {{/iconURL}}
+                            <span class="collection-icon">
+                                {{#iconURL}}
+                                    <img src="{{iconURL}}">
+                                {{/iconURL}}
+                                {{^iconURL}}
+                                    {{#countryCode}}
+                                        <span class="f16 {{countryCode}}"></span>
+                                    {{/countryCode}}
+                                    {{^countryCode}}
+                                        <svg class="icon icon-leaf">
+                                            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-leaf"></use>
+                                        </svg>
+                                    {{/countryCode}}
+                                {{/iconURL}}
+                            </span>
                             <a href="{{labelLink}}">{{label}}</a>
                         </li>
                     {{/spilloverSectionListLentTo}}
@@ -96,19 +100,21 @@
                 <ul class="small-block-grid-1 large-block-grid-2">
                     {{#spilloverSectionListNotLentTo}}
                         <li>
-                            {{#iconURL}}
-                                <img src="{{iconURL}}">
-                            {{/iconURL}}
-                            {{^iconURL}}
-                                {{#countryCode}}
-                                    <span class="f16 {{countryCode}}"></span>
-                                {{/countryCode}}
-                                {{^countryCode}}
-                                    <svg class="icon icon-leaf">
-                                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-leaf"></use>
-                                    </svg>
-                                {{/countryCode}}
-                            {{/iconURL}}
+                            <span class="collection-icon">
+                                {{#iconURL}}
+                                    <img src="{{iconURL}}">
+                                {{/iconURL}}
+                                {{^iconURL}}
+                                    {{#countryCode}}
+                                        <span class="f16 {{countryCode}}"></span>
+                                    {{/countryCode}}
+                                    {{^countryCode}}
+                                        <svg class="icon icon-leaf">
+                                            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-leaf"></use>
+                                        </svg>
+                                    {{/countryCode}}
+                                {{/iconURL}}
+                            </span>
                             <a href="{{labelLink}}">{{label}}</a>
                         </li>
                     {{/spilloverSectionListNotLentTo}}
