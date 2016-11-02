@@ -5,12 +5,7 @@
 	<ul class="lenders small-block-grid-5 medium-block-grid-5 large-block-grid-5">
 		{{#lenders}}
 			<li>
-				{{#displayTooltip}}
-					<a href="{{url}}"><span data-tooltip aria-haspopup="true" data-options="disable_for_touch:true; show_on: large" title="{{firstName}}<br>{{location}}"  class="circle-avatar" style="background-image:url({{imgUrl}})"></span></a>
-				{{/displayTooltip}}
-				{{^displayTooltip}}
-					<span class="circle-avatar" style="background-image:url({{imgUrl}})"></span>
-				{{/displayTooltip}}
+				{{> 01-molecules/03-media/02-lender-avatar }}
 			</li>
 		{{/lenders}}
 	</ul>
@@ -68,12 +63,7 @@
 <div class="spillover-lenders" style="display: none;">
 	{{#spilloverLenders}}
 		<li>
-			{{#displayTooltip}}
-				<a href="{{url}}"><span class="lazy circle-avatar" data-original="{{imgUrl}}" data-tooltip aria-haspopup="true" data-options="disable_for_touch:true; show_on: large" title="{{firstName}}<br>{{location}}"></span></a>
-			{{/displayTooltip}}
-			{{^displayTooltip}}
-				<span class="lazy circle-avatar" data-original="{{imgUrl}}"></span>
-			{{/displayTooltip}}
+			{{> 01-molecules/03-media/02-lender-avatar }}
 		</li>
 	{{/spilloverLenders}}
 </div>

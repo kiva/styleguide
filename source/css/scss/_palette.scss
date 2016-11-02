@@ -68,16 +68,46 @@ $kiva-filter-indicator: $blue;
 $kiva-filter-indicator-bg: $pale-blue;
 
 // graph and chart element colors
-$graph-green: #63a541;
-$graph-blue: #0d8ebb;
+$graph-green: $green;
+$graph-blue: $highlight-blue;
 $graph-purple: #5141a5;
-$graph-red: #9c021a;
+$graph-red: $red;
 $graph-med-gray: #666666;
 $graph-yellow: #f8e71c;
-$graph-dark-green: #236133;
+$graph-dark-green: $dark-green;
 $graph-pale-blue: #d2f0f8;
 $graph-magenta: #a54195;
 $graph-light-gray: #d8d8d8;
+
+// avatar initial colors
+$letter-colors: (
+	'A' $green,
+	'B' $highlight-blue,
+	'C' #5141A5,
+	'D' $red,
+	'E' #F8E71C,
+	'F' $dark-green,
+	'G' #6AE0FF,
+	'H' #A54195,
+	'I' #3200B2,
+	'J' #FF030E,
+	'K' #FF7E03,
+	'L' #66FE8D,
+	'M' #B2A500,
+	'N' #B25C00,
+	'O' #FFAA50,
+	'P' #F90AFF,
+	'Q' $light-green,
+	'R' #FF4F57,
+	'S' #A3A6FF,
+	'T' #FFD803,
+	'U' $blue,
+	'V' $graphic-green,
+	'W' $divider-green,
+	'X' $gray,
+	'Y' $faded-blue,
+	'Z' $charcoal
+);
 
 
 .white {
