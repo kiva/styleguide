@@ -348,11 +348,6 @@
 }
 
 .loan-stats-section {
-	.collection-icon {
-		width: 1.5rem;
-		height: 1rem;
-	}
-
 	h2 {
 		margin-bottom: 1rem;
 	}
@@ -379,7 +374,27 @@
 	}
 
 	li {
-		padding-bottom: 0.25rem;;
+		padding-bottom: 0.25rem;
+		position: relative;
+
+		.collection-icon {
+			width: 1.5rem;
+			height: 1rem;
+			position: absolute;
+		}
+
+		.icon-leaf {
+			width: 1.5rem;
+			height: 1rem;
+		}
+
+		a {
+			overflow: hidden;
+			text-overflow: ellipsis;
+			white-space: nowrap;
+			display: block;
+			margin-left: 1.5rem;
+		}
 	}
 
 	.show-more-loan-stats-country, .show-more-loan-stats-sector, .show-more-loan-stats-activity, .show-more-loan-stats-field-partner {
@@ -390,11 +405,6 @@
 	.lend-link-btn {
 		margin-top: 1rem;
 		text-align: center;
-	}
-
-	.icon-leaf {
-		width: 1.5rem;
-		height: 1rem;
 	}
 
 	.all-completed-icon-wrapper {
