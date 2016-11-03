@@ -9,6 +9,10 @@ $footer-top-bottom-padding: rem-calc(40);
 	padding: rem-calc(40);
 
 	@media #{$large-up} {
+		height: $footer-height + $footer-height-modification;
+	}
+
+	@media #{$xlarge-up} {
 		height: $footer-height;
 	}
 
@@ -134,18 +138,18 @@ $footer-top-bottom-padding: rem-calc(40);
 	}
 }
 
+@media #{$large-only} {
+	.siteFooter-nav {
+		height: $footer-height - $footer-height-modification;
+	}
+}
+
 @media #{$large-up} {
     .siteFooter {
         padding: rem-calc(40) 1rem;
     }
 
 	.siteFooter-nav {
-		@media #{$large-only} {
-			height: rem-calc(400);
-		}
-		@media #{$xlarge-up} {
-			height: $footer-height - $footer-top-bottom-padding;
-		}
 		position: relative;
 		padding-bottom: rem-calc(40);
 
@@ -186,6 +190,12 @@ $footer-top-bottom-padding: rem-calc(40);
                 }
             }
 		}
+	}
+}
+
+@media #{$xlarge-up} {
+	.siteFooter-nav {
+		height: $footer-height - $footer-top-bottom-padding;
 	}
 }
 
