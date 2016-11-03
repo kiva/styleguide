@@ -8,25 +8,21 @@
   "totalNum": "85",
   "sectionListLentTo": [
     {
-      "iconURL": null,
       "countryCode": "in",
       "label": "India",
       "labelLink": "http://www.google.com"
     },
     {
-      "iconURL": null,
       "countryCode": "jp",
       "label": "Japan",
       "labelLink": "http://www.google.com"
     },
     {
-      "iconURL": null,
       "countryCode": "pk",
       "label": "Pakistan",
       "labelLink": "http://www.google.com"
     },
     {
-      "iconURL": null,
       "countryCode": "it",
       "label": "Italy",
       "labelLink": "http://www.google.com"
@@ -34,68 +30,26 @@
   ],
   "spilloverSectionListLentTo": [
     {
-      "iconURL": null,
       "countryCode": "jm",
       "label": "Jamaica",
       "labelLink": "http://www.google.com"
     },
     {
-      "iconURL": null,
       "countryCode": "rw",
       "label": "Rwanda",
       "labelLink": "http://www.google.com"
     },
     {
-      "iconURL": null,
       "countryCode": "mz",
       "label": "Mozambique",
       "labelLink": "http://www.google.com"
     },
     {
-      "iconURL": null,
       "countryCode": "mx",
       "label": "Mexico",
       "labelLink": "http://www.google.com"
     }
   ],
-  "sectionListNotLentTo": [
-    {
-      "iconURL": null,
-      "countryCode": "np",
-      "label": "Nepal",
-      "labelLink": "http://www.google.com"
-    },
-    {
-      "iconURL": null,
-      "countryCode": "us",
-      "label": "United States",
-      "labelLink": "http://www.google.com"
-    },
-    {
-      "iconURL": null,
-      "countryCode": "ru",
-      "label": "Russian Federation",
-      "labelLink": "http://www.google.com"
-    },
-    {
-      "iconURL": null,
-      "countryCode": "ca",
-      "label": "Canada",
-      "labelLink": "http://www.google.com"
-    }
-  ],
-  "spilloverSectionListNotLentTo": [
-    {
-      "iconURL": null,
-      "countryCode": "pe",
-      "label": "Peru",
-      "labelLink": "http://www.google.com"
-    },
-    {
-      "iconURL": null,
-      "countryCode": "co",
-      "label": "Colombia",
-      "labelLink": "http://www.google.com"
-    }
-  ]
+  "sectionListNotLentTo": null,
+  "spilloverSectionListNotLentTo": null
 }

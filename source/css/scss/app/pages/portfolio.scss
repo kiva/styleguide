@@ -386,7 +386,7 @@
 			position: absolute;
 		}
 
-		.icon-leaf {
+		.icon-leaf, .icon-sector-agriculture, .icon-sector-arts, .icon-sector-clothing, .icon-sector-construction, .icon-sector-education, .icon-sector-entertainment, .icon-sector-food, .icon-sector-health, .icon-sector-housing, .icon-sector-manufacturing, .icon-sector-personal-use, .icon-sector-retail, .icon-sector-services, .icon-sector-transportation, .icon-sector-wholesale {
 			width: 1.5rem;
 			height: 0.7777rem;
 		}
@@ -451,5 +451,9 @@
 		p {
 			margin-bottom: 0;
 		}
+	}
+
+	.bottom-rule.for-explainer {
+		padding: 0;
 	}
 }
