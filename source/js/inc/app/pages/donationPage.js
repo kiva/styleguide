@@ -37,14 +37,14 @@ module.exports = function () {
 
 	//Donate button
 	$('.donate-submit').click(function() {
-		if ($('#makeDonationMonthly').is(":checked")) {
-			window.location.href = "http://www.kiva.org/about/supportus/monthly";
-			console.log("support us page direct");
+		if ($('#makeDonationMonthly').is(':checked')) {
+			window.location.href = 'http://www.kiva.org/about/supportus/monthly';
+			console.log('support us page direct');
 
 		} else {
 			/*direct user to /basket with donation amount selected or entered inside of their basket*/
-			window.location.href = "http://www.kiva.org/basket";
-			console.log("basket page direct");
+			window.location.href = 'http://www.kiva.org/basket';
+			console.log('basket page direct');
 			//need to bring the donation value with me somehow.
 		}
 
