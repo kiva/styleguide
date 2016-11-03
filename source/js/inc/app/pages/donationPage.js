@@ -63,7 +63,7 @@ module.exports = function () {
 		var regex = /(?=.)^\$?(([1-9][0-9]{0,2}(,[0-9]{3})*)|[0-9]+)?(\.[0-9]{1,2})?$/;
 		console.log('donation value reviewed.');
 		if (donationValue.match(regex)) {
-			alert('Donation amount must be numbers only.');
+			console.log('Donation amount must be numbers only.');
 			return false;
 		}
 	}
