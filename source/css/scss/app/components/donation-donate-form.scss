@@ -7,6 +7,11 @@
 		width: 100%;
 		height: rem-calc(50);
 	}
+	input[type="number"]::-webkit-outer-spin-button,
+	input[type="number"]::-webkit-inner-spin-button {
+		-webkit-appearance: none;
+		margin: 0;
+	}
 
 	.donate-monthly-checkbox {
 		padding-top: rem-calc(10);
