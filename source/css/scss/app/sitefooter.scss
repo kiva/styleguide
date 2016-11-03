@@ -140,7 +140,12 @@ $footer-top-bottom-padding: rem-calc(40);
     }
 
 	.siteFooter-nav {
-		height: $footer-height - $footer-top-bottom-padding;
+		@media #{$large-only} {
+			height: rem-calc(400);
+		}
+		@media #{$xlarge-up} {
+			height: $footer-height - $footer-top-bottom-padding;
+		}
 		position: relative;
 		padding-bottom: rem-calc(40);
 
