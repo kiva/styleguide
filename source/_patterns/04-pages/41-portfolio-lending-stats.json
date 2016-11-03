@@ -1,0 +1,642 @@
+{
+    "main-title": "Portfolio",
+    "page-title": "Portfolio",
+    "bar-links": [
+        {
+            "title": "Portfolio",
+            "active": true
+        },
+        {
+            "title": "My Teams"
+        },
+        {
+            "title": "Settings"
+        },
+        {
+            "title": "Borrow"
+        },
+        {
+            "title": "Trustee Dashboard"
+        }
+    ],
+    "has-bar-sub-links": true,
+    "bar-sub-links": [
+        {
+            "sub-title": "Portfolio",
+            "sub-active": true
+        },
+        {
+            "sub-title": "Lending stats"
+        },
+        {
+            "sub-title": "My loans"
+        },
+        {
+            "sub-title": "Estimated repayments"
+        },
+        {
+            "sub-title": "Add credit"
+        },
+        {
+            "sub-title": "Withdraw credit"
+        },
+        {
+            "sub-title": "Messages"
+        },
+        {
+            "sub-title": "Public lender profile"
+        },
+        {
+            "sub-title": "Transaction history"
+        },
+        {
+            "sub-title": "My donations"
+        },
+        {
+            "sub-title": "Purchased Kiva Cards"
+        },
+        {
+            "sub-title": "Invite friends"
+        },
+        {
+            "sub-title": "Bonus history"
+        }
+    ],
+    "countries": {
+        "sectionTitle": "Countries",
+        "sectionLabel": "country",
+        "buttonLabel": "country",
+        "lendingLink": "http://www.google.com",
+        "showSpilloverMessageForSection": true,
+        "numLentTo": "60",
+        "totalNum": "82",
+        "sectionListLentTo": [
+            {
+                "iconURL": null,
+                "countryCode": "al",
+                "label": "Albania",
+                "labelLink": "http://www.google.com"
+            },
+            {
+                "iconURL": null,
+                "countryCode": "am",
+                "label": "Armenia",
+                "labelLink": "http://www.google.com"
+            },
+            {
+                "iconURL": null,
+                "countryCode": "az",
+                "label": "Azerbaijan",
+                "labelLink": "http://www.google.com"
+            },
+            {
+                "iconURL": null,
+                "countryCode": "bj",
+                "label": "Benin",
+                "labelLink": "http://www.google.com"
+            },
+            {
+                "iconURL": null,
+                "countryCode": "bo",
+                "label": "Bolivia",
+                "labelLink": "http://www.google.com"
+            },
+            {
+                "iconURL": null,
+                "countryCode": "bf",
+                "label": "Burkina Faso",
+                "labelLink": "http://www.google.com"
+            },
+            {
+                "iconURL": null,
+                "countryCode": "bi",
+                "label": "Burundi",
+                "labelLink": "http://www.google.com"
+            },
+            {
+                "iconURL": null,
+                "countryCode": "kh",
+                "label": "Cambodia",
+                "labelLink": "http://www.google.com"
+            },
+            {
+                "iconURL": null,
+                "countryCode": "cm",
+                "label": "Cameroon",
+                "labelLink": "http://www.google.com"
+            },
+            {
+                "iconURL": null,
+                "countryCode": "co",
+                "label": "Colombia",
+                "labelLink": "http://www.google.com"
+            },
+            {
+                "iconURL": null,
+                "countryCode": "cr",
+                "label": "Costa Rica",
+                "labelLink": "http://www.google.com"
+            },
+            {
+                "iconURL": null,
+                "countryCode": "ci",
+                "label": "Cote D'Ivoire",
+                "labelLink": "http://www.google.com"
+            }
+        ],
+        "spilloverSectionListLentTo": [
+            {
+                "iconURL": null,
+                "countryCode": "jm",
+                "label": "Jamaica",
+                "labelLink": "http://www.google.com"
+            },
+            {
+                "iconURL": null,
+                "countryCode": "rw",
+                "label": "Rwanda",
+                "labelLink": "http://www.google.com"
+            },
+            {
+                "iconURL": null,
+                "countryCode": "mz",
+                "label": "Mozambique",
+                "labelLink": "http://www.google.com"
+            },
+            {
+                "iconURL": null,
+                "countryCode": "mx",
+                "label": "Mexico",
+                "labelLink": "http://www.google.com"
+            }
+        ],
+        "sectionListNotLentTo": [
+            {
+                "iconURL": null,
+                "countryCode": "bz",
+                "label": "Belize",
+                "labelLink": "http://www.google.com"
+            },
+            {
+                "iconURL": null,
+                "countryCode": "br",
+                "label": "Brazil",
+                "labelLink": "http://www.google.com"
+            },
+            {
+                "iconURL": null,
+                "countryCode": "cl",
+                "label": "Chile",
+                "labelLink": "http://www.google.com"
+            },
+            {
+                "iconURL": null,
+                "countryCode": "cn",
+                "label": "China",
+                "labelLink": "http://www.google.com"
+            },
+            {
+                "iconURL": null,
+                "countryCode": "cg",
+                "label": "Congo (Rep.)",
+                "labelLink": "http://www.google.com"
+            },
+            {
+                "iconURL": null,
+                "countryCode": "eg",
+                "label": "Egypt",
+                "labelLink": "http://www.google.com"
+            },
+            {
+                "iconURL": null,
+                "countryCode": "in",
+                "label": "India",
+                "labelLink": "http://www.google.com"
+            },
+            {
+                "iconURL": null,
+                "countryCode": "ls",
+                "label": "Lesotho",
+                "labelLink": "http://www.google.com"
+            },
+            {
+                "iconURL": null,
+                "countryCode": "mg",
+                "label": "Madagascar",
+                "labelLink": "http://www.google.com"
+            },
+            {
+                "iconURL": null,
+                "countryCode": "mw",
+                "label": "Malawi",
+                "labelLink": "http://www.google.com"
+            },
+            {
+                "iconURL": null,
+                "countryCode": "mr",
+                "label": "Mauritania",
+                "labelLink": "http://www.google.com"
+            },
+            {
+                "iconURL": null,
+                "countryCode": "md",
+                "label": "Moldova",
+                "labelLink": "http://www.google.com"
+            }
+        ],
+        "spilloverSectionListNotLentTo": [
+            {
+                "iconURL": null,
+                "countryCode": "pe",
+                "label": "Peru",
+                "labelLink": "http://www.google.com"
+            },
+            {
+                "iconURL": null,
+                "countryCode": "ni",
+                "label": "Nicaragua",
+                "labelLink": "http://www.google.com"
+            }
+        ]
+    },
+    "sectors": {
+        "sectionTitle": "Sectors",
+        "sectionLabel": "sector",
+        "buttonLabel": "sector",
+        "lendingLink": "http://www.google.com",
+        "showSpilloverMessageForSection": true,
+        "numLentTo": "15",
+        "totalNum": "15",
+        "sectionListLentTo": [
+            {
+                "sectorName": "agriculture",
+                "label": "Agriculture",
+                "labelLink": "http://www.google.com"
+            },
+            {
+                "sectorName": "arts",
+                "label": "Arts",
+                "labelLink": "http://www.google.com"
+            },
+            {
+                "sectorName": "clothing",
+                "label": "Clothing",
+                "labelLink": "http://www.google.com"
+            },
+            {
+                "sectorName": "construction",
+                "label": "Construction",
+                "labelLink": "http://www.google.com"
+            },
+            {
+                "sectorName": "education",
+                "label": "Education",
+                "labelLink": "http://www.google.com"
+            },
+            {
+                "sectorName": "entertainment",
+                "label": "Entertainment",
+                "labelLink": "http://www.google.com"
+            },
+            {
+                "sectorName": "food",
+                "label": "Food",
+                "labelLink": "http://www.google.com"
+            },
+            {
+                "sectorName": "health",
+                "label": "Health",
+                "labelLink": "http://www.google.com"
+            },
+            {
+                "sectorName": "housing",
+                "label": "Housing",
+                "labelLink": "http://www.google.com"
+            },
+            {
+                "sectorName": "manufacturing",
+                "label": "Manufacturing",
+                "labelLink": "http://www.google.com"
+            },
+            {
+                "sectorName": "personal-use",
+                "label": "Personal Use",
+                "labelLink": "http://www.google.com"
+            },
+            {
+                "sectorName": "retail",
+                "label": "Retail",
+                "labelLink": "http://www.google.com"
+            }
+        ],
+        "spilloverSectionListLentTo": [
+            {
+                "sectorName": "services",
+                "label": "Services",
+                "labelLink": "http://www.google.com"
+            },
+            {
+                "sectorName": "transportation",
+                "label": "Transportation",
+                "labelLink": "http://www.google.com"
+            },
+            {
+                "sectorName": "wholesale",
+                "label": "Wholesale",
+                "labelLink": "http://www.google.com"
+            }
+        ],
+        "sectionListNotLentTo": null,
+        "spilloverSectionListNotLentTo": null
+    },
+    "activities": {
+        "sectionTitle": "Activities",
+        "sectionLabel": "activity",
+        "buttonLabel": "activity",
+        "lendingLink": "http://www.google.com",
+        "showSpilloverMessageForSection": true,
+        "numLentTo": "62",
+        "totalNum": "149",
+        "sectionListLentTo": [
+            {
+                "label": "Agriculture",
+                "labelLink": "http://www.google.com"
+            },
+            {
+                "label": "Animal sales",
+                "labelLink": "http://www.google.com"
+            },
+            {
+                "label": "Arts",
+                "labelLink": "http://www.google.com"
+            },
+            {
+                "label": "Bakery",
+                "labelLink": "http://www.google.com"
+            },
+            {
+                "label": "Beauty salon",
+                "labelLink": "http://www.google.com"
+            },
+            {
+                "label": "Butcher shop",
+                "labelLink": "http://www.google.com"
+            },
+            {
+                "label": "Cafe",
+                "labelLink": "http://www.google.com"
+            },
+            {
+                "label": "Catering",
+                "labelLink": "http://www.google.com"
+            },
+            {
+                "label": "Cattle",
+                "labelLink": "http://www.google.com"
+            },
+            {
+                "label": "Cereals",
+                "labelLink": "http://www.google.com"
+            },
+            {
+                "label": "Charcoal sales",
+                "labelLink": "http://www.google.com"
+            },
+            {
+                "label": "Cheese making",
+                "labelLink": "http://www.google.com"
+            }
+        ],
+        "spilloverSectionListLentTo": [
+            {
+                "label": "Car fixing",
+                "labelLink": "http://www.google.com"
+            },
+            {
+                "label": "Taco making",
+                "labelLink": "http://www.google.com"
+            },
+            {
+                "label": "Carrot selling",
+                "labelLink": "http://www.google.com"
+            }
+        ],
+        "sectionListNotLentTo": [
+            {
+                "label": "Air conditioning",
+                "labelLink": "http://www.google.com"
+            },
+            {
+                "label": "Auto repair",
+                "labelLink": "http://www.google.com"
+            },
+            {
+                "label": "Balut making",
+                "labelLink": "http://www.google.com"
+            },
+            {
+                "label": "Barber shop",
+                "labelLink": "http://www.google.com"
+            },
+            {
+                "label": "Bicycle repair",
+                "labelLink": "http://www.google.com"
+            },
+            {
+                "label": "Bicycle sales",
+                "labelLink": "http://www.google.com"
+            },
+            {
+                "label": "Blacksmith",
+                "labelLink": "http://www.google.com"
+            },
+            {
+                "label": "Bookbinding",
+                "labelLink": "http://www.google.com"
+            },
+            {
+                "label": "Bookstore",
+                "labelLink": "http://www.google.com"
+            },
+            {
+                "label": "Bricks",
+                "labelLink": "http://www.google.com"
+            },
+            {
+                "label": "Call center",
+                "labelLink": "http://www.google.com"
+            },
+            {
+                "label": "Carpentry",
+                "labelLink": "http://www.google.com"
+            }
+        ],
+        "spilloverSectionListNotLentTo": [
+            {
+                "label": "Card selling",
+                "labelLink": "http://www.google.com"
+            },
+            {
+                "label": "Mechanic",
+                "labelLink": "http://www.google.com"
+            },
+            {
+                "label": "Food shop",
+                "labelLink": "http://www.google.com"
+            },
+            {
+                "label": "Fridge fixing",
+                "labelLink": "http://www.google.com"
+            },
+            {
+                "label": "Can opening",
+                "labelLink": "http://www.google.com"
+            }
+        ]
+    },
+    "fieldPartners": {
+        "sectionTitle": "Field Partner",
+        "sectionLabel": "field-partner",
+        "buttonLabel": "field partner",
+        "lendingLink": "http://www.google.com",
+        "showSpilloverMessageForSection": true,
+        "numLentTo": "91",
+        "totalNum": "261",
+        "sectionListLentTo": [
+            {
+                "label": "AFODENIC",
+                "labelLink": "http://www.google.com"
+            },
+            {
+                "label": "Advans Cote...",
+                "labelLink": "http://www.google.com"
+            },
+            {
+                "label": "Al Majmoualksdfjaslkfja;slkjasldkjdfls.",
+                "labelLink": "http://www.google.com"
+            },
+            {
+                "label": "Al-Amal Micr...",
+                "labelLink": "http://www.google.com"
+            },
+            {
+                "label": "Alide",
+                "labelLink": "http://www.google.com"
+            },
+            {
+                "label": "Apoyo Integral",
+                "labelLink": "http://www.google.com"
+            },
+            {
+                "label": "Aqroinvest...",
+                "labelLink": "http://www.google.com"
+            },
+            {
+                "label": "Asosciacion...",
+                "labelLink": "http://www.google.com"
+            },
+            {
+                "label": "Associatio...",
+                "labelLink": "http://www.google.com"
+            },
+            {
+                "label": "BRAC Liberia...",
+                "labelLink": "http://www.google.com"
+            },
+            {
+                "label": "BRAC Pakistan",
+                "labelLink": "http://www.google.com"
+            },
+            {
+                "label": "BRAC Uganda",
+                "labelLink": "http://www.google.com"
+            }
+        ],
+        "spilloverSectionListLentTo": [
+            {
+                "label": "BRAC India",
+                "labelLink": "http://www.google.com"
+            },
+            {
+                "label": "Grameen",
+                "labelLink": "http://www.google.com"
+            },
+            {
+                "label": "Mozambikes",
+                "labelLink": "http://www.google.com"
+            }
+        ],
+        "sectionListNotLentTo": [
+            {
+                "label": "ACCIONA Mi...",
+                "labelLink": "http://www.google.com"
+            },
+            {
+                "label": "ACEP Ca...",
+                "labelLink": "http://www.google.com"
+            },
+            {
+                "label": "ADICLA",
+                "labelLink": "http://www.google.com"
+            },
+            {
+                "label": "ADIM (Asoci...",
+                "labelLink": "http://www.google.com"
+            },
+            {
+                "label": "BRAC China",
+                "labelLink": "http://www.google.com"
+            },
+            {
+                "label": "ASA Initiative...",
+                "labelLink": "http://www.google.com"
+            },
+            {
+                "label": "Accion East",
+                "labelLink": "http://www.google.com"
+            },
+            {
+                "label": "Accion San D...",
+                "labelLink": "http://www.google.com"
+            },
+            {
+                "label": "Adobe Capi...",
+                "labelLink": "http://www.google.com"
+            },
+            {
+                "label": "African Clea...",
+                "labelLink": "http://www.google.com"
+            },
+            {
+                "label": "African Con...",
+                "labelLink": "http://www.google.com"
+            },
+            {
+                "label": "African Lea...",
+                "labelLink": "http://www.google.com"
+            }
+        ],
+        "spilloverSectionListNotLentTo": [
+            {
+                "label": "Hluvuku",
+                "labelLink": "http://www.google.com"
+            },
+            {
+                "label": "One Acre F...",
+                "labelLink": "http://www.google.com"
+            },
+            {
+                "label": "Sanergy Kenya",
+                "labelLink": "http://www.google.com"
+            },
+            {
+                "label": "Salud Peru",
+                "labelLink": "http://www.google.com"
+            },
+            {
+                "label": "Asasah",
+                "labelLink": "http://www.google.com"
+            }
+        ]
+    }
+}

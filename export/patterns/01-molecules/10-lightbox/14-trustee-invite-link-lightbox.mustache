@@ -1,0 +1,19 @@
+<a href="#" class="button secondary trustee-invite-link-button" data-reveal-id="trustee-invite-link-lightbox" data-clipboard-text="{{inviteUrl}}">Copy invite link</a>
+<div id="trustee-invite-link-lightbox" class="reveal-modal trustee-invite-link-lightbox" data-reveal
+	 aria-hidden="true" role="dialog">
+	<div class="row">
+		<div class="columns small-12">
+			<a class="close-reveal-modal" aria-label="Close">
+				<svg class="icon icon-x">
+					<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-x"></use>
+				</svg>
+			</a>
+			<div class="lightbox-content white trustee-invite-link-lightbox-content">
+				<p class="featured">Your invite URL</p>
+				<p>Link has been copied to your clipboard!</p>
+				<input class="invite-url" value="{{inviteUrl}}" readonly>
+				<button data-clipboard-target="input.invite-url" class="button secondary copy-again">Copy again</button>
+			</div>
+		</div>
+	</div>
+</div>

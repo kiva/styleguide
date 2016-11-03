@@ -124,6 +124,10 @@ a.header-button#search-toggle {
         }
     }
 
+    #search-box {
+        z-index: 1;
+    }
+
     input {
         $search-input-padding: 0.6rem;
         width: $search-input-width-small;

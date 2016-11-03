@@ -346,3 +346,114 @@
 		}
 	}
 }
+
+.loan-stats-section {
+	h2 {
+		margin-bottom: 1rem;
+	}
+
+	.sub-title {
+		margin-bottom: 0.5rem;
+	}
+
+	.section-header {
+		margin-top: 2rem;
+		margin-bottom: 1.5rem;
+		position: relative;
+
+		.section-title {
+			color: $kiva-green;
+			margin-left: 0.75rem;
+		}
+
+		.lent-count {
+			background-color: $dark-green;
+			color: $white;
+			margin-left: 2rem;
+			padding: 0 1rem 0 1rem;
+			font-size: 1rem;
+			position: absolute;
+		}
+	}
+
+	li {
+		padding-bottom: 0.25rem;
+		position: relative;
+
+		.collection-icon {
+			width: 1.5rem;
+			height: 0.7777rem;
+			position: absolute;
+		}
+
+		.icon-leaf, .icon-sector-agriculture, .icon-sector-arts, .icon-sector-clothing, .icon-sector-construction, .icon-sector-education, .icon-sector-entertainment, .icon-sector-food, .icon-sector-health, .icon-sector-housing, .icon-sector-manufacturing, .icon-sector-personal-use, .icon-sector-retail, .icon-sector-services, .icon-sector-transportation, .icon-sector-wholesale {
+			width: 1.5rem;
+			height: 0.7777rem;
+		}
+
+		a {
+			overflow: hidden;
+			text-overflow: ellipsis;
+			white-space: nowrap;
+			display: block;
+			margin-left: 1.5rem;
+		}
+		
+		span, img, svg {
+			position: absolute;
+		}
+	}
+
+	.show-more-loan-stats-country, .show-more-loan-stats-sector, .show-more-loan-stats-activity, .show-more-loan-stats-field-partner {
+		cursor: pointer;
+	}
+
+	.hide-more-loan-stats-country, .hide-more-loan-stats-sector, .hide-more-loan-stats-activity, .hide-more-loan-stats-field-partner {
+		cursor: pointer;
+	}
+
+	.lend-link-btn {
+		margin-top: 1rem;
+		text-align: center;
+	}
+
+	.all-completed-icon-wrapper {
+		font-size: 1rem;
+		display: inline-flex;
+		margin-left: 0.5rem;
+		color: $green;
+
+		.icon-confirmation {
+			fill: $green;
+			width: 2rem;
+			height: 2rem;
+			margin-right: 0.5rem;
+
+			@media #{$large-up} {
+				width: 3rem;
+				height: 3rem;
+			}
+		}
+
+		@media #{$large-up} {
+			font-size: 1.5rem;
+		}
+	}
+
+	.section-end {
+		margin-top: 0;
+		padding: 0;
+	}
+}
+
+.lending-stats {
+	.explainer {
+		p {
+			margin-bottom: 0;
+		}
+	}
+
+	.bottom-rule.for-explainer {
+		padding: 0;
+	}
+}

@@ -838,7 +838,7 @@
 			outline: 0 !important;
 			width: 100%;
 			font-size: 1.2rem;
-			margin-bottom: initial;
+			margin-bottom: 0;
 		}
 
 	}
@@ -1159,6 +1159,12 @@
 
 .fund-a-loan-bar {
 	cursor: pointer;
+	.holiday_mode & {
+		border-top: 1px solid $kiva-navdivider-green;
+		@media #{$xxlarge-up} {
+			border: none;
+		}
+	}
 }
 
 .question-icon {

@@ -6,7 +6,9 @@
 			{{/imageHref}}
 		</div>
 		<div class="columns large-8 medium-12 small-12">
-			<a href="{{profileUrl}}"><strong>{{borrowerName}}</strong></a><br/>
+			{{#profileUrl}}<a href="{{profileUrl}}">{{/profileUrl}}
+			<strong>{{borrowerName}}</strong>
+			{{#profileUrl}}</a>{{/profileUrl}}<br/>
 			{{#businessName}}{{businessName}}<br/>{{/businessName}}
 			{{#city}}{{#region}}{{city}}, {{region}}<br/>{{/region}}{{/city}}
 			A loan of {{loanAmountPretty}} helped {{description}}.
@@ -26,7 +28,7 @@
 			<button class="button endorsement-action-publish">Publish Endorsement</button>
 		</div>
 		<div class="columns large-4 medium-12 small-12">
-			<button class="button endorsement-action-cancel">Cancel</button>
+			<button class="button secondary endorsement-action-cancel">Cancel</button>
 		</div>
 	</div>
 {{/trustee-borrower}}

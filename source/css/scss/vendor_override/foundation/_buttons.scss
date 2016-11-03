@@ -91,7 +91,8 @@ button, a.button, .button {
 .button.smaller {
 	font-size: $button-font-sm;
 	height: $button-height-sm;
-	padding-top: rem-calc(10);
+	padding-top: 0;
+	line-height: $button-height-sm;
 }
 
 button.secondary, .button.secondary {

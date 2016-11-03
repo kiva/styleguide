@@ -158,6 +158,11 @@
 
 
 .dashboard-main, .borrower-network {
+
+	.search-borrower-bar {
+		margin-top: 1rem;
+	}
+
 	.borrower-item-row {
 		&:nth-child(even) {
 			background-color: $kiva-bg-darkgray;
@@ -178,7 +183,8 @@
 	vertical-align: center;
 	a {
 		display: block;
-		margin: 0.25rem;
+		margin-bottom: 0.6rem;
+		line-height: 90%;
 		@extend .text-center;
 	}
 	a.button {
