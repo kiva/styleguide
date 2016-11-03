@@ -269,79 +269,79 @@
         "totalNum": "15",
         "sectionListLentTo": [
             {
-                "iconURL": "https://www-kiva-org.global.ssl.fastly.net/img/icon/sector/w16h16/sector_1.gif",
+                "sectorName": "agriculture",
                 "label": "Agriculture",
                 "labelLink": "http://www.google.com"
             },
             {
-                "iconURL": "https://www-kiva-org.global.ssl.fastly.net/img/icon/sector/w16h16/sector_9.gif",
+                "sectorName": "arts",
                 "label": "Arts",
                 "labelLink": "http://www.google.com"
             },
             {
-                "iconURL": "https://www-kiva-org.global.ssl.fastly.net/img/icon/sector/w16h16/sector_5.gif",
+                "sectorName": "clothing",
                 "label": "Clothing",
                 "labelLink": "http://www.google.com"
             },
             {
-                "iconURL": "https://www-kiva-org.global.ssl.fastly.net/img/icon/sector/w16h16/sector_14.gif",
+                "sectorName": "construction",
                 "label": "Construction",
                 "labelLink": "http://www.google.com"
             },
             {
-                "iconURL": "https://www-kiva-org.global.ssl.fastly.net/img/icon/sector/w16h16/sector_15.gif",
+                "sectorName": "education",
                 "label": "Education",
                 "labelLink": "http://www.google.com"
             },
             {
-                "iconURL": "https://www-kiva-org.global.ssl.fastly.net/img/icon/sector/w16h16/sector_17.gif",
+                "sectorName": "entertainment",
                 "label": "Entertainment",
                 "labelLink": "http://www.google.com"
             },
             {
-                "iconURL": "https://www-kiva-org.global.ssl.fastly.net/img/icon/sector/w16h16/sector_12.gif",
+                "sectorName": "food",
                 "label": "Food",
                 "labelLink": "http://www.google.com"
             },
             {
-                "iconURL": "https://www-kiva-org.global.ssl.fastly.net/img/icon/sector/w16h16/sector_6.gif",
+                "sectorName": "health",
                 "label": "Health",
                 "labelLink": "http://www.google.com"
             },
             {
-                "iconURL": "https://www-kiva-org.global.ssl.fastly.net/img/icon/sector/w16h16/sector_10.gif",
+                "sectorName": "housing",
                 "label": "Housing",
                 "labelLink": "http://www.google.com"
             },
             {
-                "iconURL": "https://www-kiva-org.global.ssl.fastly.net/img/icon/sector/w16h16/sector_8.gif",
+                "sectorName": "manufacturing",
                 "label": "Manufacturing",
                 "labelLink": "http://www.google.com"
             },
             {
-                "iconURL": "https://www-kiva-org.global.ssl.fastly.net/img/icon/sector/w16h16/sector_16.gif",
+                "sectorName": "personal-use",
                 "label": "Personal Use",
                 "labelLink": "http://www.google.com"
             },
             {
-                "iconURL": "https://www-kiva-org.global.ssl.fastly.net/img/icon/sector/w16h16/sector_7.gif",
+                "sectorName": "retail",
                 "label": "Retail",
                 "labelLink": "http://www.google.com"
             }
         ],
         "spilloverSectionListLentTo": [
             {
-                "iconURL": "https://www-kiva-org.global.ssl.fastly.net/img/icon/sector/w16h16/sector_4.gif",
-                "label": "Service",
+                "sectorName": "services",
+                "label": "Services",
                 "labelLink": "http://www.google.com"
             },
             {
-                "iconURL": "https://www-kiva-org.global.ssl.fastly.net/img/icon/sector/w16h16/sector_3.gif",
+                "sectorName": "transportation",
                 "label": "Transportation",
                 "labelLink": "http://www.google.com"
             },
             {
-                "iconURL": "https://www-kiva-org.global.ssl.fastly.net/img/icon/sector/w16h16/sector_13.gif",
+                "sectorName": "wholesale",
                 "label": "Wholesale",
                 "labelLink": "http://www.google.com"
             }
