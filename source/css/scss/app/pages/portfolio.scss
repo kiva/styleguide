@@ -363,15 +363,18 @@
 
 		.section-title {
 			color: $kiva-green;
+			margin-right: 6rem;
 		}
 
 		.lent-count {
 			background-color: $dark-green;
 			color: $white;
-			margin-left: 0.75rem;
+			margin-left: -5rem;
 			padding: 0 1rem 0 1rem;
 			font-size: 1rem;
 			position: absolute;
+			top: 50%;
+			transform: translate(0, -50%);
 		}
 	}
 
