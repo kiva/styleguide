@@ -152,6 +152,84 @@
 			"fundraised-percentage": "80%"
 		}
 	},
+	"bar-links": [
+		{
+			"title": "About us",
+			"active": true
+		},
+		{
+			"title": "Get to know us"
+		},
+		{
+			"title": "How Kiva works"
+		},
+		{
+			"title": "Where Kiva works"
+		},
+		{
+			"title": "Impact"
+		},
+		{
+			"title": "Press"
+		},
+		{
+			"title": "Due diligence"
+		}
+	],
+	"has-bar-sub-links": true,
+	"bar-sub-links": [
+		{
+			"sub-title": "Labs"
+		},
+		{
+			"sub-title": "Kiva Live"
+		},
+		{
+			"sub-title": "Success Stories",
+			"sub-active": true
+		},
+		{
+			"sub-title": "Social Performance"
+		}
+	],
+	"drop-links": [
+		{
+			"title": "Impact",
+			"sub-links": [
+				{
+					"sub-title": "Labs"
+				},
+				{
+					"sub-title": "Kiva Live"
+				},
+				{
+					"sub-title": "Success Stories",
+					"sub-active": true
+				},
+				{
+					"sub-title": "Social Performance"
+				}
+			]
+		},
+		{
+			"title": "About us"
+		},
+		{
+			"title": "Get to know us"
+		},
+		{
+			"title": "How Kiva works"
+		},
+		{
+			"title": "Where Kiva works"
+		},
+		{
+			"title": "Press Center"
+		},
+		{
+			"title": "Due diligence"
+		}
+	],
 	"category": {
 		"name": "Agriculture",
 		"href": "/lend#/?&sortBy=popularity&gender=Female&partner_risk_rating_max=5&distributionModel=field_partner"
@@ -5261,7 +5339,14 @@
 	],
 
 	 "holidayModeActive": false,
-
+	 "kivaLogoUrl": "http://www.kiva.org",
+	 "sampleTable": [
+		{
+		"tableHeading": "Table header",
+		"tableValue": "Value",
+		"tableRowName": "Row name"
+		}
+	 ],
 	"faqs": [
 	  {
 		  "id": "faq-1",
