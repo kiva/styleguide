@@ -363,13 +363,12 @@
 
 		.section-title {
 			color: $kiva-green;
-			margin-left: 0.75rem;
 		}
 
 		.lent-count {
 			background-color: $dark-green;
 			color: $white;
-			margin-left: 2rem;
+			margin-left: 0.75rem;
 			padding: 0 1rem 0 1rem;
 			font-size: 1rem;
 			position: absolute;
@@ -415,6 +414,10 @@
 	.lend-link-btn {
 		margin-top: 1rem;
 		text-align: center;
+
+		a {
+			margin-bottom: 0;
+		}
 	}
 
 	.all-completed-icon-wrapper {
@@ -442,7 +445,10 @@
 
 	.section-end {
 		margin-top: 0;
-		padding: 0;
+	}
+
+	.row .columns {
+		padding-left: 0;
 	}
 }
 
