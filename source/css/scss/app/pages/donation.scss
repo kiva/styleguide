@@ -10,6 +10,7 @@
 .donation-sidebar {
 	@media #{$large-up} {
 		float: right;
+		padding-top:30px;
 	}
 
 	.kivaPromiseWrapper {
