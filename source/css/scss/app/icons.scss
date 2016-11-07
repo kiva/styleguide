@@ -20,7 +20,22 @@ $light-blue-gray: #DBE3E5;
 	&.icon-refresh,
 	&.icon-grid,
 	&.icon-map,
-    &.icon-tags-checkmark {
+    &.icon-tags-checkmark,
+	&.icon-sector-agriculture,
+	&.icon-sector-arts,
+	&.icon-sector-clothing,
+	&.icon-sector-construction,
+	&.icon-sector-education,
+	&.icon-sector-entertainment,
+	&.icon-sector-food,
+	&.icon-sector-health,
+	&.icon-sector-housing,
+	&.icon-sector-manufacturing,
+	&.icon-sector-personal-use,
+	&.icon-sector-retail,
+	&.icon-sector-services,
+	&.icon-sector-transportation,
+	&.icon-sector-wholesale {
         fill: $kiva-text-dark;
     }
 
