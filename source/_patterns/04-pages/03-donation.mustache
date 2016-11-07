@@ -1,20 +1,19 @@
 {{> templates-header}}
 
-<div class="donationPageWrapper">
+<div class="donationPageWrapper small-12 columns">
 
 	<!--Intro-text portion-->
-	<div class="small-12 large-8">
-		<div class="small-12 columns donationIntroText">
-			{{> 02-organisms/02-donation/01-donation-intro-text.mustache}}
-		</div>
-
-		<!--donation form portion-->
-		<div class="small-12 columns donationForm">
-			{{> 02-organisms/02-donation/03-donation-donate-form.mustache}}
-		</div>
+	<div class="small-12 large-8 columns">
+		{{> 02-organisms/02-donation/01-donation-intro-text.mustache}}
 	</div>
+
+	<!--donation form portion-->
+	<div class="small-12  large-8 columns">
+		{{> 02-organisms/02-donation/03-donation-donate-form.mustache}}
+	</div>
+
 	<!--Sidebar portion-->
-	<div class="small-12 columns donationSideBar">
+	<div class="small-12 large-4 columns">
 		{{> 02-organisms/02-donation/02-donation-sidebar.mustache}}
 	</div>
 
@@ -22,7 +21,6 @@
 	<div class="small-12 columns donationFaq">
 		{{> 02-organisms/13-faq/00-faq.mustache}}
 	</div>
-
 
 </div>
 <div class="donationFooter">

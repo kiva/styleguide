@@ -8,7 +8,9 @@
 }
 
 .donation-sidebar {
-	padding-top: 30px;
+	@media #{$large-up} {
+		float: right;
+	}
 
 	.kivaPromiseWrapper {
 		padding-bottom: 20px;
@@ -16,6 +18,13 @@
 		svg.icon {
 			padding: 10px 0;
 			width: 100%;
+		}
+	}
+
+	.charityNavWrapper {
+		img {
+			margin-top: -35px;
+			margin-bottom: -30px;
 		}
 	}
 }
