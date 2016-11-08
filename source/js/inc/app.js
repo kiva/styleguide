@@ -11,6 +11,7 @@ var borrowerPage = require('./app/pages/borrowerPage');
 var categories = require('./app/pages/categories');
 var lightbox = require('./app/lightbox');
 var saveSearchLightbox = require('./app/saveSearchLightbox');
+var donationPage = require('./app/pages/donationPage');
 
 var $ = require('jquery');
 var FastClick = require('fastclick');
@@ -44,4 +45,5 @@ $(document).ready(function() {
 	categories();
 	lightbox();
 	saveSearchLightbox();
+	donationPage();
 });
