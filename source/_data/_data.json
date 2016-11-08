@@ -5056,7 +5056,6 @@
 	"statisticLinkUrl": "http://www.google.com",
 	"statisticAdditionalText": "99%",
 	"statisticIconName": "icon-line-graph",
-	"lightboxTriggerLinkText": "Click here for more",
 	"dataRevealId": "some-data-reveal-id",
 	"loans-statistic": {
 		"statisticValue": "163",

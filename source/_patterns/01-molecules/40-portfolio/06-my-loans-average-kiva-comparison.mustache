@@ -14,7 +14,9 @@
             <tbody>
                 {{#compareAmounts}}
                     <tr>
-                        <td headers="comparison-label" class="text-left">{{{label}}}</td>
+                        <td headers="comparison-label" class="text-left">
+                            {{#isTabbed}}&emsp;{{/isTabbed}}<a data-reveal-id="{{lightboxRevealLabel}}-lightbox">{{label}}</a>
+                        </td>
                         <td headers="my-stats-amount" class="text-right">{{myAmount}}</td>
                         <td headers="avg-kiva-lender-amount" class="text-right">{{avgKivaLenderAmount}}</td>
                     </tr>
@@ -23,3 +25,7 @@
         </table>
     </div>
 </div>
+
+{{#comparisonHelpTexts}}
+    {{> 01-molecules/10-lightbox/04-help-text-lightbox}}
+{{/comparisonHelpTexts}}
