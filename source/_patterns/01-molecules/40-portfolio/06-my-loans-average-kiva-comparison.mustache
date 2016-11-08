@@ -1,0 +1,25 @@
+<div class="avg-kiva-compare-table">
+    <div class="row">
+        <div class="text-right small-text update-timestamp">*Updated as of {{updateTimestamp}}</div>
+    </div>
+    <div class="row">
+        <table role="grid" summary="My loan portfolio comparison with the average Kiva lender.">
+            <thead>
+                <tr>
+                    <th id="comparison-label" class="text-left"></th>
+                    <th id="my-stats-amount" class="text-right">My stats</th>
+                    <th id="avg-kiva-lender-amount" class="text-right">Avg Kiva lender</th>
+                </tr>
+            </thead>
+            <tbody>
+                {{#compareAmounts}}
+                    <tr>
+                        <td headers="comparison-label" class="text-left">{{{label}}}</td>
+                        <td headers="my-stats-amount" class="text-right">{{myAmount}}</td>
+                        <td headers="avg-kiva-lender-amount" class="text-right">{{avgKivaLenderAmount}}</td>
+                    </tr>
+                {{/compareAmounts}}
+            </tbody>
+        </table>
+    </div>
+</div>

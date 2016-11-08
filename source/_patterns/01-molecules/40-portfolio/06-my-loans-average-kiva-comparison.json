@@ -1,0 +1,70 @@
+{
+    "updateTimestamp": "Aug 31, 2015 12:08 am",
+    "compareAmounts": [
+        {
+            "label": "Amount lent",
+            "myAmount": "$6,600.00",
+            "avgKivaLenderAmount": "$33.62"
+        },
+        {
+            "label": "Amount repaid",
+            "myAmount": "$6,178.82",
+            "avgKivaLenderAmount": "$278.17"
+        },
+        {
+            "label": "Amount lost",
+            "myAmount": "$29.56",
+            "avgKivaLenderAmount": "$2.81"
+        },
+        {
+            "label": "Amount refunded and expired",
+            "myAmount": "$119.50",
+            "avgKivaLenderAmount": "$12.49"
+        },
+        {
+            "label": "Delinquency rate",
+            "myAmount": "33.93%",
+            "avgKivaLenderAmount": "11.12%"
+        },
+        {
+            "label": "&emsp;Amount in arrears",
+            "myAmount": "$72.84",
+            "avgKivaLenderAmount": "$3.62"
+        },
+        {
+            "label": "&emsp;Outstanding loans",
+            "myAmount": "$322.23",
+            "avgKivaLenderAmount": "$32.55"
+        },
+        {
+            "label": "&emsp;Delinquent loans",
+            "myAmount": "7",
+            "avgKivaLenderAmount": "0.02"
+        },
+        {
+            "label": "Default rate",
+            "myAmount": "0.00%",
+            "avgKivaLenderAmount": "1.32%"
+        },
+        {
+            "label": "&emsp;Amount defaulted",
+            "myAmount": "$33.76",
+            "avgKivaLenderAmount": "$3.72"
+        },
+        {
+            "label": "&emsp;Amount of ended",
+            "myAmount": "$6,605.00",
+            "avgKivaLenderAmount": "$284.00"
+        },
+        {
+            "label": "Currency loss rate",
+            "myAmount": "0.45%",
+            "avgKivaLenderAmount": "0.37%"
+        },
+        {
+            "label": "&emsp;Amount of currency loss",
+            "myAmount": "$35.96",
+            "avgKivaLenderAmount": "$1.31"
+        }
+    ]
+}
