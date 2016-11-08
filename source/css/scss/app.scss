@@ -46,7 +46,6 @@
 @import 'foundation/components/type';
 @import 'foundation/components/offcanvas';
 @import 'foundation/components/visibility';
-
 // Kiva customizations to Foundation defaults
 @import 'vendor_override/foundation/type';
 @import 'vendor_override/foundation/forms';
@@ -108,6 +107,7 @@
 @import 'app/pages/privacy';
 @import 'app/pages/trustee';
 @import 'app/pages/portfolio';
+@import 'app/pages/donation';
 @import 'app/pages/partner-with-us';
 
 @import 'app/components/animated-accordion';
@@ -131,6 +131,7 @@
 @import 'app/components/statistic-display';
 @import 'app/components/icon-toggle';
 @import 'app/components/faq-question-answer';
+@import 'app/components/donation-donate-form';
 @import 'app/components/trustee-endorsement-lightbox';
 @import 'app/components/holiday-banner';
 
