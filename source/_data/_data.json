@@ -5372,5 +5372,13 @@
 		  "question": "Do Kiva and/or Kiva lenders receive interest on Kiva loans?",
 		  "answer": "Kiva never collects interest on loans and individual Kiva lenders do not receive interest from loans they support on Kiva."
 	  }
-	]
+	],
+	"donation_appeal": {
+		"appeal_active":"true",
+		"target_date": "Dec 31",
+		"target_amount": "$500,000",
+		"contributor_count": "10,000",
+		"target_reached": "false",
+		"amount_raised":"250,000"
+	}
 }
