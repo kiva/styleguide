@@ -1,0 +1,42 @@
+.donation-intro-text {
+	text-align: center;
+	padding: rem-calc(20) 0;
+
+	@media #{$large-up} {
+		text-align: left;
+	}
+}
+
+.donation-sidebar {
+	padding-top: rem-calc(20);
+
+	@media #{$large-up} {
+		float: right;
+		padding-top:rem-calc(30);
+	}
+
+	.kiva-promise-wrapper {
+		padding-bottom: rem-calc(20);
+
+		svg.icon {
+			padding: rem-calc(10) 0;
+			width: 100%;
+		}
+	}
+
+	.charity-nav-wrapper {
+		img {
+			margin-top: rem-calc(-35);
+			margin-bottom: rem-calc(-30);
+		}
+	}
+}
+
+.donation-faq {
+	padding-top: rem-calc(20);
+	padding-bottom: rem-calc(20);
+}
+
+.donation-footer {
+	display: inline-block;
+}
