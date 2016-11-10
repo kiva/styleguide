@@ -40,3 +40,69 @@
 .donation-footer {
 	display: inline-block;
 }
+
+.donation-appeal {
+	margin-top: rem-calc(-30);
+	margin-bottom: rem-calc(20);
+	@media #{$large-up} {
+		margin-top: rem-calc(30);
+		margin-left: rem-calc(20);
+		margin-right: rem-calc(20);
+		margin-bottom: 0;
+	}
+	.row {
+		background-color: $kiva-stroke-gray;
+		text-align: center;
+		font-weight: bold;
+		padding: rem-calc(10);
+	}
+
+	.appeal-header {
+		color: $kiva-darkgreen;
+		font-size: $section-head-font-size;
+		line-height: $section-head-line-height;
+		margin-bottom: rem-calc(5);
+		@media #{$large-up} {
+			font-size: $body-font-size;
+			line-height: $body-line-height;
+			margin-bottom: rem-calc(2);
+		}
+	}
+
+	.outer-meter-wrapper {
+		max-width: rem-calc(225);
+		margin: 0 auto;
+		.inner-meter-wrapper {
+			position: relative;
+			overflow: hidden;
+			width: 100%;
+			padding-bottom: 50%;
+			margin-top: rem-calc(10);
+			.meter {
+				position: absolute;
+				box-sizing: border-box;
+				border-radius: 100%;
+				border: rem-calc(30) solid $white;
+				border-bottom: rem-calc(30) solid $kiva-green;
+				border-right: rem-calc(30) solid $kiva-green;
+				width: 100%;
+				height: 200%;
+				margin: 0 auto;
+				transform: rotate(45deg);
+			}
+		}
+	}
+
+	.amount-raised {
+		color: $kiva-green;
+		margin-top: rem-calc(-24);
+		font-size: $small-statistic-font-size;
+		@media #{$large-only} {
+			font-size: $body-font-size;
+			margin-top: rem-calc(-19);
+		}
+	}
+	.bottom-message {
+		margin-top: rem-calc(5);
+	}
+}
