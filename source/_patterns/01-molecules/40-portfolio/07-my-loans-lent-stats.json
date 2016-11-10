@@ -1,0 +1,40 @@
+{
+    "myLoansLentStats": [
+        {
+            "label": "Fundraising",
+            "amount": "1"
+        },
+        {
+            "label": "Funded",
+            "amount": "1"
+        },
+        {
+            "label": "Paying back",
+            "amount": "5"
+        },
+        {
+            "label": "Paying back delinquent",
+            "amount": "1"
+        },
+        {
+            "label": "Repaid",
+            "amount": "140"
+        },
+        {
+            "label": "Repaid w/ currency loss",
+            "amount": "1"
+        },
+        {
+            "label": "Ended w/ default",
+            "amount": "1"
+        },
+        {
+            "label": "Refunded",
+            "amount": "1"
+        },
+        {
+            "label": "Expired",
+            "amount": "1"
+        }
+    ]
+}
