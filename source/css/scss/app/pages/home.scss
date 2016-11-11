@@ -138,14 +138,14 @@
 					}
 
 					@media #{$large-only} {
-						font-size: rem-calc(18);
+						font-size: $body-font-size;
 						line-height: rem-calc(44);
 						height: rem-calc(41);
 						margin-top: 51%;
 					}
 
 					@media #{$xlarge-only} {
-						font-size: rem-calc(18);
+						font-size: $body-font-size;
 						height: rem-calc(41);
 						line-height: rem-calc(44);
 						margin-top: 51%;
