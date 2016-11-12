@@ -13,7 +13,6 @@
 	.amount-input {
 		width: 100%;
 		height: rem-calc(50);
-		margin-left: rem-calc(9);
 	}
 
 	.donate-monthly-checkbox {
@@ -34,6 +33,7 @@
 
 	.amount-button {
 		height: rem-calc(50);
+		margin-left: 0;
 
 		@media #{$small-only} {
 			padding-top: rem-calc(13);
