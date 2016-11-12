@@ -1,0 +1,9 @@
+{
+	"appeal_active": true,
+	"target_date": "Dec 31",
+	"target_amount": "$500,000",
+	"contributor_count": "10,000",
+	"target_reached": true,
+	"amount_raised":"$500,000",
+	"rotation": 225
+}

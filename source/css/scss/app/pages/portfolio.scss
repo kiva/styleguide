@@ -471,6 +471,16 @@
 	.update-timestamp {
 		color: $kiva-text-light;
 	}
+
+	table {
+		border: none;
+	}
+}
+
+.my-loans-lent-stats {
+	.stat-label {
+		word-wrap: break-word;
+	}
 }
 
 table.my-loans {
