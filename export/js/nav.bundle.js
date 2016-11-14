@@ -1486,7 +1486,7 @@
 
 
 	/*** EXPORTS FROM exports-loader ***/
-	module.exports = window.Modernizr;
+	module.exports = window.Modernizr
 	}.call(window));
 
 /***/ },
@@ -8077,7 +8077,7 @@
 
 
 	/*** EXPORTS FROM exports-loader ***/
-	module.exports = window.Foundation;
+	module.exports = window.Foundation
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(2)))
 
 /***/ },
@@ -8095,7 +8095,6 @@
 		var $search_form = $('#search-form');
 		var $search_box = $('#search-box');
 		var is_touch = $('html').hasClass('touch');
-		var $top_nav = $('.top-nav');
 
 		$search_toggle.click(function (e) {
 			e.preventDefault();
@@ -8121,11 +8120,10 @@
 
 		var typeahead_menu_repositioning = function() {
 			if ($search_box.length) {
-				var searchBoxOffset = $search_box.offset();
-				var topNavOffset = $top_nav.offset();
+				var offset = $search_box.offset();
 				$('.top-nav-search-menu').css({
-					top: (searchBoxOffset.top - topNavOffset.top + $search_box.outerHeight()) + 'px',
-					left: searchBoxOffset.left + 'px',
+					top: (offset.top + $search_box.outerHeight()) + 'px',
+					left: offset.left + 'px',
 					width: $search_box.outerWidth() + 'px'
 				});
 			}
