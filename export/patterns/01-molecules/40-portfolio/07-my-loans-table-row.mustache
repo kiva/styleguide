@@ -1,0 +1,66 @@
+<td>
+	<img src="{{image.url}}" data-interchange="{{#image.sizes}}[{{url}}, ({{size}})],{{/image.sizes}}">
+	{{#matchedLoan}}
+		<svg class="icon icon-match">
+			<use xlink:href="#icon-match"/>
+		</svg>
+	{{/matchedLoan}}
+	{{#dedication}}
+		<svg class="icon icon-dedicate-heart">
+			<use xlink:href="#icon-dedicate-heart"/>
+		</svg>
+	{{/dedication}}
+</td>
+<td>
+	<a href="{{url}}">{{name}} (#{{id}})</a>
+	<div class="activity">
+		{{activity.name}}
+	</div>
+	<div class="country">
+		<span class="f16 {{location.country.isoCode}}"></span>{{location.country.name}}
+	</div>
+	<div class="partner-trustee">
+		<a href="{{partnerTrusteeUrl}}">{{partnerName}}{{trusteeName}}</a>
+	</div>
+	{{#dedication}}
+		<div class="dedication">
+			<a href="{{url}}">Dedicated to {{recipient}}</a>
+			<span>Repayments for dedications are donated to Kiva</span>
+		</div>
+	{{/dedication}}
+</td>
+<td>
+	{{statusHuman}}
+</td>
+<td class="amount">
+	<div class="share-amount">
+		{{shareAmount}}
+	</div>
+	<div class="date-lent">
+		{{dateLent}}
+	</div>
+</td>
+<td class="amount">
+	<div class="progress-amount">
+		{{fundedAmount}}
+	</div>
+	<div class="progress-verb">
+		raised
+	</div>
+</td>
+<td>
+	{{lenderRepaymentTerm}} mts
+</td>
+<td class="amount">
+	{{loanAmount}}
+</td>
+<td>
+	{{#teams}}
+		<a class="team" href="{{teamUrl}}">
+			{{#teamImage}}
+				<img src="{{teamImage.url}}" data-interchange="{{#teamImage.sizes}}[{{url}}, ({{size}})],{{/teamImage.sizes}}">
+			{{/teamImage}}
+			<span>{{teamName}}</span>
+		</a>
+	{{/teams}}
+</td>

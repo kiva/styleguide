@@ -1,0 +1,21 @@
+<span class="loan-count">{{#loan_count}}{{loan_count}} loans{{/loan_count}}</span>
+<table class="my-loans">
+	<thead>
+		<tr>
+			<th colspan="2">Loan details</th>
+			<th>Status</th>
+			<th class="amount">You loaned</th>
+			<th class="amount">Paid back or raised</th>
+			<th>Length</th>
+			<th class="amount">Amount</th>
+			<th>Team</th>
+		</tr>
+	</thead>
+	<tbody>
+		{{#loans}}
+			<tr>
+				{{> 01-molecules/40-portfolio/07-my-loans-table-row }}
+			</tr>
+		{{/loans}}
+	</tbody>
+</table>
