@@ -482,3 +482,67 @@
 		word-wrap: break-word;
 	}
 }
+
+table.my-loans {
+	border: none;
+	font-weight: 100;
+
+	td {
+		vertical-align: top;
+
+		&:first-child {
+			padding-left: 0;
+			padding-right: 0;
+			width: rem-calc(50);
+			text-align: center;
+
+			svg {
+				width: 100%;
+				margin-top: 0.5rem;
+				display: block;
+			}
+
+			svg.icon-match {
+				height: rem-calc(27);
+			}
+
+			svg.icon-dedicate-heart {
+				height: rem-calc(21);
+			}
+		}
+	}
+
+	.amount {
+		text-align: right;
+	}
+
+	.country span {
+		margin-right: 0.25rem;
+    	vertical-align: top;
+	}
+
+	.date-lent {
+		white-space: nowrap;
+	}
+
+	.dedication span, .date-lent, .progress-verb {
+		color: $kiva-text-light;
+		font-size: $x-small-font-size;
+		line-height: $x-small-line-height;
+	}
+
+	.dedication span {
+		display: block;
+		line-height: 0.8rem;
+		margin-top: 0.1rem;
+	}
+
+	.team {
+		display: block;
+
+		img {
+			width: rem-calc(35);
+			display: block;
+		}
+	}
+}
