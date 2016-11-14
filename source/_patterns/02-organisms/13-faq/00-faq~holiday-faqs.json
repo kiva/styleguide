@@ -25,6 +25,11 @@
 			   "id": "faq-5",
 			   "question": "Are there other ways I can financially support Kiva?",
 			   "answer": "In addition to donating directly to Kiva, there are other ways that you can support Kiva’s operations:<br /><br /> -- Ask your company if they match donations<br /> Many companies will match charitable donations their employees make. Check with your company, and if they match , submit your donation receipts to double your contribution to Kiva.<br /><br /> If you need Kiva to fill out a matching request for your donation, send the form as an attachment to <a href='mailto:contactus@kiva.org'>matchinggifts@kiva.org</a><br /><br /> -- Dedicate your Amazon purchases to Kiva<br /> Make Kiva Microfunds your charity of choice using Amazon Smile.<br /><br /> -- Include Kiva in your will, trust or estate planning<br /> Thank you for considering such a meaningful way to contribute to Kiva.<br /><br /> Here is information you may need when including Kiva in your will, trust or estate planning:<br /> <br /> Kiva Microfunds<br /> 875 Howard Street, Suite 340<br /> San Francisco, CA 94103<br /> Phone: (415) 358-7513<br /> Tax ID: 71-0992446<br /><br /> If you need sample language, please contact Kiva at <a href='mailto:contactus@kiva.org'>contactus@kiva.org</a> and we’d be happy to provide you with it. We also encourage you to assign someone to be the manager to your Kiva account in the instance that there are any issues or problems that arise.<br /><br /> -- Volunteer your time<br /> Kiva volunteers are vital to the work we do! If you’re looking to give of your time, learn more about all of our volunteer and internship opportunities here: <a href='{kvurl page=workWithUs action=workWithUs}'>kiva.org/volunteer</a>"
+		  },
+		  {
+			   "id": "faq-6",
+			   "question": "Interested in supporting Kiva with a donation of $10,000 or more?",
+			   "answer": "Learn more about <a href='{kvurl page=partnerWithUs action=partnerWithUs}'> partnering with Kiva through grants, loan matching and employee and customer engagement programs</a>."
 		  }
 	 ]
 }
