@@ -1518,7 +1518,7 @@
 
 
 	/*** EXPORTS FROM exports-loader ***/
-	module.exports = window.Modernizr
+	module.exports = window.Modernizr;
 	}.call(window));
 
 /***/ },
@@ -8109,7 +8109,7 @@
 
 
 	/*** EXPORTS FROM exports-loader ***/
-	module.exports = window.Foundation
+	module.exports = window.Foundation;
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(2)))
 
 /***/ },
@@ -10730,7 +10730,7 @@
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;var require;var require;/* WEBPACK VAR INJECTION */(function($) {/*!
-	 * Select2 4.0.1
+	 * Select2 4.0.3
 	 * https://select2.github.io
 	 *
 	 * Released under the MIT license
@@ -11337,8 +11337,22 @@
 
 	  Observable.prototype.trigger = function (event) {
 	    var slice = Array.prototype.slice;
+	    var params = slice.call(arguments, 1);
 
 	    this.listeners = this.listeners || {};
+
+	    // Params should always come in as an array
+	    if (params == null) {
+	      params = [];
+	    }
+
+	    // If there are no arguments to the event, use a temporary object
+	    if (params.length === 0) {
+	      params.push({});
+	    }
+
+	    // Set the `_type` of the first object to the event
+	    params[0]._type = event;
 
 	    if (event in this.listeners) {
 	      this.invoke(this.listeners[event], slice.call(arguments, 1));
@@ -11573,6 +11587,25 @@
 	    return sorter(data);
 	  };
 
+	  Results.prototype.highlightFirstItem = function () {
+	    var $options = this.$results
+	      .find('.select2-results__option[aria-selected]');
+
+	    var $selected = $options.filter('[aria-selected=true]');
+
+	    // Check if there are any selected options
+	    if ($selected.length > 0) {
+	      // If there are selected options, highlight the first
+	      $selected.first().trigger('mouseenter');
+	    } else {
+	      // If there are no selected options, highlight the first option
+	      // in the dropdown
+	      $options.first().trigger('mouseenter');
+	    }
+
+	    this.ensureHighlightVisible();
+	  };
+
 	  Results.prototype.setClasses = function () {
 	    var self = this;
 
@@ -11600,17 +11633,6 @@
 	        }
 	      });
 
-	      var $selected = $options.filter('[aria-selected=true]');
-
-	      // Check if there are any selected options
-	      if ($selected.length > 0) {
-	        // If there are selected options, highlight the first
-	        $selected.first().trigger('mouseenter');
-	      } else {
-	        // If there are no selected options, highlight the first option
-	        // in the dropdown
-	        $options.first().trigger('mouseenter');
-	      }
 	    });
 	  };
 
@@ -11721,6 +11743,7 @@
 
 	      if (container.isOpen()) {
 	        self.setClasses();
+	        self.highlightFirstItem();
 	      }
 	    });
 
@@ -11743,6 +11766,7 @@
 	      }
 
 	      self.setClasses();
+	      self.highlightFirstItem();
 	    });
 
 	    container.on('unselect', function () {
@@ -11751,6 +11775,7 @@
 	      }
 
 	      self.setClasses();
+	      self.highlightFirstItem();
 	    });
 
 	    container.on('open', function () {
@@ -11873,11 +11898,7 @@
 	      this.$results.on('mousewheel', function (e) {
 	        var top = self.$results.scrollTop();
 
-	        var bottom = (
-	          self.$results.get(0).scrollHeight -
-	          self.$results.scrollTop() +
-	          e.deltaY
-	        );
+	        var bottom = self.$results.get(0).scrollHeight - top + e.deltaY;
 
 	        var isAtTop = e.deltaY > 0 && top - e.deltaY <= 0;
 	        var isAtBottom = e.deltaY < 0 && bottom <= self.$results.height();
@@ -12230,6 +12251,12 @@
 
 	    this.$selection.on('blur', function (evt) {
 	      // User exits the container
+	    });
+
+	    container.on('focus', function (evt) {
+	      if (!container.isOpen()) {
+	        self.$selection.focus();
+	      }
 	    });
 
 	    container.on('selection:update', function (params) {
@@ -14063,7 +14090,7 @@
 	        var $existingOption = $existing.filter(onlyItem(item));
 
 	        var existingData = this.item($existingOption);
-	        var newData = $.extend(true, {}, existingData, item);
+	        var newData = $.extend(true, {}, item, existingData);
 
 	        var $newOption = this.option(newData);
 
@@ -14171,13 +14198,21 @@
 
 	        callback(results);
 	      }, function () {
-	        // TODO: Handle AJAX errors
+	        // Attempt to detect if a request was aborted
+	        // Only works if the transport exposes a status property
+	        if ($request.status && $request.status === '0') {
+	          return;
+	        }
+
+	        self.trigger('results:message', {
+	          message: 'errorLoading'
+	        });
 	      });
 
 	      self._request = $request;
 	    }
 
-	    if (this.ajaxOptions.delay && params.term !== '') {
+	    if (this.ajaxOptions.delay && params.term != null) {
 	      if (this._queryTimeout) {
 	        window.clearTimeout(this._queryTimeout);
 	      }
@@ -14201,6 +14236,12 @@
 
 	    if (createTag !== undefined) {
 	      this.createTag = createTag;
+	    }
+
+	    var insertTag = options.get('insertTag');
+
+	    if (insertTag !== undefined) {
+	        this.insertTag = insertTag;
 	    }
 
 	    decorated.call(this, $element, options);
@@ -14334,6 +14375,29 @@
 	  Tokenizer.prototype.query = function (decorated, params, callback) {
 	    var self = this;
 
+	    function createAndSelect (data) {
+	      // Normalize the data object so we can use it for checks
+	      var item = self._normalizeItem(data);
+
+	      // Check if the data object already exists as a tag
+	      // Select it if it doesn't
+	      var $existingOptions = self.$element.find('option').filter(function () {
+	        return $(this).val() === item.id;
+	      });
+
+	      // If an existing option wasn't found for it, create the option
+	      if (!$existingOptions.length) {
+	        var $option = self.option(item);
+	        $option.attr('data-select2-tag', true);
+
+	        self._removeOldTags();
+	        self.addOptions([$option]);
+	      }
+
+	      // Select the item, now that we know there is an option for it
+	      select(item);
+	    }
+
 	    function select (data) {
 	      self.trigger('select', {
 	        data: data
@@ -14342,7 +14406,7 @@
 
 	    params.term = params.term || '';
 
-	    var tokenData = this.tokenizer(params, this.options, select);
+	    var tokenData = this.tokenizer(params, this.options, createAndSelect);
 
 	    if (tokenData.term !== params.term) {
 	      // Replace the search term if we have the search box
@@ -14605,6 +14669,12 @@
 	      self.$search.attr('tabindex', -1);
 
 	      self.$search.val('');
+	    });
+
+	    container.on('focus', function () {
+	      if (container.isOpen()) {
+	        self.$search.focus();
+	      }
 	    });
 
 	    container.on('results:all', function (params) {
@@ -14902,7 +14972,6 @@
 
 	    var newDirection = null;
 
-	    var position = this.$container.position();
 	    var offset = this.$container.offset();
 
 	    offset.bottom = offset.top + this.$container.outerHeight(false);
@@ -14931,13 +15000,19 @@
 	      top: container.bottom
 	    };
 
-	    // Fix positioning with static parents
-	    if (this.$dropdownParent[0].style.position !== 'static') {
-	      var parentOffset = this.$dropdownParent.offset();
+	    // Determine what the parent element is to use for calciulating the offset
+	    var $offsetParent = this.$dropdownParent;
 
-	      css.top -= parentOffset.top;
-	      css.left -= parentOffset.left;
+	    // For statically positoned elements, we need to get the element
+	    // that is determining the offset
+	    if ($offsetParent.css('position') === 'static') {
+	      $offsetParent = $offsetParent.offsetParent();
 	    }
+
+	    var parentOffset = $offsetParent.offset();
+
+	    css.top -= parentOffset.top;
+	    css.left -= parentOffset.left;
 
 	    if (!isCurrentlyAbove && !isCurrentlyBelow) {
 	      newDirection = 'below';
@@ -14951,7 +15026,7 @@
 
 	    if (newDirection == 'above' ||
 	      (isCurrentlyAbove && newDirection !== 'below')) {
-	      css.top = container.top - dropdown.height;
+	      css.top = container.top - parentOffset.top - dropdown.height;
 	    }
 
 	    if (newDirection != null) {
@@ -14973,6 +15048,7 @@
 
 	    if (this.options.get('dropdownAutoWidth')) {
 	      css.minWidth = css.width;
+	      css.position = 'relative';
 	      css.width = 'auto';
 	    }
 
@@ -15039,12 +15115,22 @@
 
 	    decorated.call(this, container, $container);
 
-	    container.on('close', function () {
-	      self._handleSelectOnClose();
+	    container.on('close', function (params) {
+	      self._handleSelectOnClose(params);
 	    });
 	  };
 
-	  SelectOnClose.prototype._handleSelectOnClose = function () {
+	  SelectOnClose.prototype._handleSelectOnClose = function (_, params) {
+	    if (params && params.originalSelect2Event != null) {
+	      var event = params.originalSelect2Event;
+
+	      // Don't select an item if the close event was triggered from a select or
+	      // unselect event
+	      if (event._type === 'select' || event._type === 'unselect') {
+	        return;
+	      }
+	    }
+
 	    var $highlightedResults = this.getHighlightedResults();
 
 	    // Only select highlighted results
@@ -15097,7 +15183,10 @@
 	      return;
 	    }
 
-	    this.trigger('close', {});
+	    this.trigger('close', {
+	      originalEvent: originalEvent,
+	      originalSelect2Event: evt
+	    });
 	  };
 
 	  return CloseOnSelect;
@@ -15205,7 +15294,7 @@
 	  }
 
 	  Defaults.prototype.apply = function (options) {
-	    options = $.extend({}, this.defaults, options);
+	    options = $.extend(true, {}, this.defaults, options);
 
 	    if (options.dataAdapter == null) {
 	      if (options.ajax != null) {
@@ -15769,6 +15858,7 @@
 	      id = Utils.generateChars(4);
 	    }
 
+	    id = id.replace(/(:|\.|\[|\]|,)/g, '');
 	    id = 'select2-' + id;
 
 	    return id;
@@ -15850,10 +15940,15 @@
 	      });
 	    });
 
-	    this._sync = Utils.bind(this._syncAttributes, this);
+	    this.$element.on('focus.select2', function (evt) {
+	      self.trigger('focus', evt);
+	    });
+
+	    this._syncA = Utils.bind(this._syncAttributes, this);
+	    this._syncS = Utils.bind(this._syncSubtree, this);
 
 	    if (this.$element[0].attachEvent) {
-	      this.$element[0].attachEvent('onpropertychange', this._sync);
+	      this.$element[0].attachEvent('onpropertychange', this._syncA);
 	    }
 
 	    var observer = window.MutationObserver ||
@@ -15863,14 +15958,30 @@
 
 	    if (observer != null) {
 	      this._observer = new observer(function (mutations) {
-	        $.each(mutations, self._sync);
+	        $.each(mutations, self._syncA);
+	        $.each(mutations, self._syncS);
 	      });
 	      this._observer.observe(this.$element[0], {
 	        attributes: true,
+	        childList: true,
 	        subtree: false
 	      });
 	    } else if (this.$element[0].addEventListener) {
-	      this.$element[0].addEventListener('DOMAttrModified', self._sync, false);
+	      this.$element[0].addEventListener(
+	        'DOMAttrModified',
+	        self._syncA,
+	        false
+	      );
+	      this.$element[0].addEventListener(
+	        'DOMNodeInserted',
+	        self._syncS,
+	        false
+	      );
+	      this.$element[0].addEventListener(
+	        'DOMNodeRemoved',
+	        self._syncS,
+	        false
+	      );
 	    }
 	  };
 
@@ -16012,6 +16123,46 @@
 	      this.trigger('disable', {});
 	    } else {
 	      this.trigger('enable', {});
+	    }
+	  };
+
+	  Select2.prototype._syncSubtree = function (evt, mutations) {
+	    var changed = false;
+	    var self = this;
+
+	    // Ignore any mutation events raised for elements that aren't options or
+	    // optgroups. This handles the case when the select element is destroyed
+	    if (
+	      evt && evt.target && (
+	        evt.target.nodeName !== 'OPTION' && evt.target.nodeName !== 'OPTGROUP'
+	      )
+	    ) {
+	      return;
+	    }
+
+	    if (!mutations) {
+	      // If mutation events aren't supported, then we can only assume that the
+	      // change affected the selections
+	      changed = true;
+	    } else if (mutations.addedNodes && mutations.addedNodes.length > 0) {
+	      for (var n = 0; n < mutations.addedNodes.length; n++) {
+	        var node = mutations.addedNodes[n];
+
+	        if (node.selected) {
+	          changed = true;
+	        }
+	      }
+	    } else if (mutations.removedNodes && mutations.removedNodes.length > 0) {
+	      changed = true;
+	    }
+
+	    // Only re-pull the data if we think there is a change
+	    if (changed) {
+	      this.dataAdapter.current(function (currentData) {
+	        self.trigger('selection:update', {
+	          data: currentData
+	        });
+	      });
 	    }
 	  };
 
@@ -16161,7 +16312,7 @@
 	    this.$container.remove();
 
 	    if (this.$element[0].detachEvent) {
-	      this.$element[0].detachEvent('onpropertychange', this._sync);
+	      this.$element[0].detachEvent('onpropertychange', this._syncA);
 	    }
 
 	    if (this._observer != null) {
@@ -16169,10 +16320,15 @@
 	      this._observer = null;
 	    } else if (this.$element[0].removeEventListener) {
 	      this.$element[0]
-	        .removeEventListener('DOMAttrModified', this._sync, false);
+	        .removeEventListener('DOMAttrModified', this._syncA, false);
+	      this.$element[0]
+	        .removeEventListener('DOMNodeInserted', this._syncS, false);
+	      this.$element[0]
+	        .removeEventListener('DOMNodeRemoved', this._syncS, false);
 	    }
 
-	    this._sync = null;
+	    this._syncA = null;
+	    this._syncS = null;
 
 	    this.$element.off('.select2');
 	    this.$element.attr('tabindex', this.$element.data('old-tabindex'));
@@ -16956,6 +17112,7 @@
 	        return this;
 	      } else if (typeof options === 'string') {
 	        var ret;
+	        var args = Array.prototype.slice.call(arguments, 1);
 
 	        this.each(function () {
 	          var instance = $(this).data('select2');
@@ -16966,8 +17123,6 @@
 	              'element that is not using Select2.'
 	            );
 	          }
-
-	          var args = Array.prototype.slice.call(arguments, 1);
 
 	          ret = instance[options].apply(instance, args);
 	        });
@@ -17025,7 +17180,7 @@
 	|___/_|_|\___|_|\_(_)/ |___/
 	                   |__/
 
-	 Version: 1.5.8
+	 Version: 1.5.9
 	  Author: Ken Wheeler
 	 Website: http://kenwheeler.github.io
 	    Docs: http://kenwheeler.github.io/slick
@@ -17100,6 +17255,7 @@
 	                touchMove: true,
 	                touchThreshold: 5,
 	                useCSS: true,
+	                useTransform: false,
 	                variableWidth: false,
 	                vertical: false,
 	                verticalSwiping: false,
@@ -17518,8 +17674,6 @@
 	                .attr('data-slick-index', index)
 	                .data('originalStyling', $(element).attr('style') || '');
 	        });
-
-	        _.$slidesCache = _.$slides;
 
 	        _.$slider.addClass('slick-slider');
 
@@ -17986,6 +18140,8 @@
 
 	        if (filter !== null) {
 
+	            _.$slidesCache = _.$slides;
+
 	            _.unload();
 
 	            _.$slideTrack.children(this.options.slide).detach();
@@ -18016,7 +18172,7 @@
 	        if (_.options.infinite === true) {
 	            while (breakPoint < _.slideCount) {
 	                ++pagerQty;
-	                breakPoint = counter + _.options.slidesToShow;
+	                breakPoint = counter + _.options.slidesToScroll;
 	                counter += _.options.slidesToScroll <= _.options.slidesToShow ? _.options.slidesToScroll : _.options.slidesToShow;
 	            }
 	        } else if (_.options.centerMode === true) {
@@ -18024,7 +18180,7 @@
 	        } else {
 	            while (breakPoint < _.slideCount) {
 	                ++pagerQty;
-	                breakPoint = counter + _.options.slidesToShow;
+	                breakPoint = counter + _.options.slidesToScroll;
 	                counter += _.options.slidesToScroll <= _.options.slidesToShow ? _.options.slidesToScroll : _.options.slidesToShow;
 	            }
 	        }
@@ -18093,15 +18249,33 @@
 	                targetSlide = _.$slideTrack.children('.slick-slide').eq(slideIndex + _.options.slidesToShow);
 	            }
 
-	            targetLeft = targetSlide[0] ? targetSlide[0].offsetLeft * -1 : 0;
+	            if (_.options.rtl === true) {
+	                if (targetSlide[0]) {
+	                    targetLeft = (_.$slideTrack.width() - targetSlide[0].offsetLeft - targetSlide.width()) * -1;
+	                } else {
+	                    targetLeft =  0;
+	                }
+	            } else {
+	                targetLeft = targetSlide[0] ? targetSlide[0].offsetLeft * -1 : 0;
+	            }
 
 	            if (_.options.centerMode === true) {
-	                if (_.options.infinite === false) {
+	                if (_.slideCount <= _.options.slidesToShow || _.options.infinite === false) {
 	                    targetSlide = _.$slideTrack.children('.slick-slide').eq(slideIndex);
 	                } else {
 	                    targetSlide = _.$slideTrack.children('.slick-slide').eq(slideIndex + _.options.slidesToShow + 1);
 	                }
-	                targetLeft = targetSlide[0] ? targetSlide[0].offsetLeft * -1 : 0;
+
+	                if (_.options.rtl === true) {
+	                    if (targetSlide[0]) {
+	                        targetLeft = (_.$slideTrack.width() - targetSlide[0].offsetLeft - targetSlide.width()) * -1;
+	                    } else {
+	                        targetLeft =  0;
+	                    }
+	                } else {
+	                    targetLeft = targetSlide[0] ? targetSlide[0].offsetLeft * -1 : 0;
+	                }
+
 	                targetLeft += (_.$list.width() - targetSlide.outerWidth()) / 2;
 	            }
 	        }
@@ -18513,6 +18687,7 @@
 
 	        if (imgCount > 0) {
 	            targetImage = $('img[data-lazy]', _.$slider).first();
+	            targetImage.attr('src', null);
 	            targetImage.attr('src', targetImage.attr('data-lazy')).removeClass('slick-loading').load(function() {
 	                    targetImage.removeAttr('data-lazy');
 	                    _.progressiveLazyLoad();
@@ -18531,8 +18706,22 @@
 
 	    Slick.prototype.refresh = function( initializing ) {
 
-	        var _ = this,
-	            currentSlide = _.currentSlide;
+	        var _ = this, currentSlide, firstVisible;
+
+	        firstVisible = _.slideCount - _.options.slidesToShow;
+
+	        // check that the new breakpoint can actually accept the
+	        // "current slide" as the current slide, otherwise we need
+	        // to set it to the closest possible value.
+	        if ( !_.options.infinite ) {
+	            if ( _.slideCount <= _.options.slidesToShow ) {
+	                _.currentSlide = 0;
+	            } else if ( _.currentSlide > firstVisible ) {
+	                _.currentSlide = firstVisible;
+	            }
+	        }
+
+	         currentSlide = _.currentSlide;
 
 	        _.destroy(true);
 
@@ -18911,8 +19100,7 @@
 	            _.transformType = 'transform';
 	            _.transitionType = 'transition';
 	        }
-	        _.transformsEnabled = (_.animType !== null && _.animType !== false);
-
+	        _.transformsEnabled = _.options.useTransform && (_.animType !== null && _.animType !== false);
 	    };
 
 
@@ -19607,18 +19795,13 @@
 	    };
 
 	    Slick.prototype.activateADA = function() {
-	        var _ = this,
-	        _isSlideOnFocus =_.$slider.find('*').is(':focus');
-	        // _isSlideOnFocus = _.$slides.is(':focus') || _.$slides.find('*').is(':focus');
+	        var _ = this;
 
 	        _.$slideTrack.find('.slick-active').attr({
-	            'aria-hidden': 'false',
-	            'tabindex': '0'
+	            'aria-hidden': 'false'
 	        }).find('a, input, button, select').attr({
 	            'tabindex': '0'
 	        });
-
-	        (_isSlideOnFocus) &&  _.$slideTrack.find('.slick-active').focus();
 
 	    };
 
@@ -19646,9 +19829,9 @@
 	            opt = arguments[0],
 	            args = Array.prototype.slice.call(arguments, 1),
 	            l = _.length,
-	            i = 0,
+	            i,
 	            ret;
-	        for (i; i < l; i++) {
+	        for (i = 0; i < l; i++) {
 	            if (typeof opt == 'object' || typeof opt == 'undefined')
 	                _[i].slick = new Slick(_[i], opt);
 	            else

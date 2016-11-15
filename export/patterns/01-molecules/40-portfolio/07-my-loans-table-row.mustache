@@ -1,5 +1,7 @@
 <td>
-	<img src="{{image.url}}" data-interchange="{{#image.sizes}}[{{url}}, ({{size}})],{{/image.sizes}}">
+	<a href="{{url}}">
+		<img src="{{image.url}}" data-interchange="{{#image.sizes}}[{{url}}, ({{size}})],{{/image.sizes}}">
+	</a>
 	{{#matchedLoan}}
 		<svg class="icon icon-match">
 			<use xlink:href="#icon-match"/>
