@@ -483,9 +483,31 @@
 	}
 }
 
-table.my-loans {
+.loans-table-wrapper {
+	position: relative;
+
+	.shadow-overlay {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		pointer-events: none;
+		box-shadow: inset rem-calc(-18) 0 rem-calc(24) rem-calc(-16) rgba(0,0,0,0.25);
+
+		@media #{$xxlarge-up} {
+			display: none;
+		}
+	}
+
+	.scroll-wrapper {
+		width: 100%;
+		overflow-x: scroll;
+	}
+}
+
+table.loans-table {
 	border: none;
 	font-weight: 100;
+	margin: 0;
 
 	td {
 		vertical-align: top;
@@ -493,7 +515,7 @@ table.my-loans {
 		&:first-child {
 			padding-left: 0;
 			padding-right: 0;
-			width: rem-calc(50);
+			min-width: rem-calc(50);
 			text-align: center;
 
 			svg {
@@ -509,6 +531,10 @@ table.my-loans {
 			svg.icon-dedicate-heart {
 				height: rem-calc(21);
 			}
+		}
+
+		&:last-child {
+			padding-right: 0;
 		}
 	}
 
