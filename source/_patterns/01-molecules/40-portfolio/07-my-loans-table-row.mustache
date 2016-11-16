@@ -57,12 +57,21 @@
 	{{loanAmount}}
 </td>
 <td>
-	{{#teams}}
-		<a class="team" href="{{teamUrl}}">
-			{{#teamImage}}
-				<img src="{{teamImage.url}}" data-interchange="{{#teamImage.sizes}}[{{url}}, ({{size}})],{{/teamImage.sizes}}">
-			{{/teamImage}}
-			<span>{{teamName}}</span>
-		</a>
-	{{/teams}}
+	{{#canChangeTeamAssignment}}
+		<select name="team-assignment">
+			{{#teams}}
+				<option value="{{value}}" {{#selected}}selected="selected"{{/selected}}>{{label}}</option>
+			{{/teams}}
+		</select>
+	{{/canChangeTeamAssignment}}
+	{{^canChangeTeamAssignment}}
+		{{#teams}}
+			<a class="team" href="{{teamUrl}}">
+				{{#teamImage}}
+					<img src="{{teamImage.url}}" data-interchange="{{#teamImage.sizes}}[{{url}}, ({{size}})],{{/teamImage.sizes}}">
+				{{/teamImage}}
+				<span>{{teamName}}</span>
+			</a>
+		{{/teams}}
+	{{/canChangeTeamAssignment}}
 </td>
