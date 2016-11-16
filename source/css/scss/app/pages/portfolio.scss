@@ -28,7 +28,7 @@
 
 	.lender-name {
 		margin-bottom: 1rem;
-		margin-top: 1.6666666rem;
+		margin-top: 0.5rem;
 	}
 
 	.findALoanButton {
@@ -59,6 +59,12 @@
 
 	.extra-stat-row {
 		margin-top: 1rem;
+	}
+
+	.row .columns {
+		@media #{$large-up} {
+			padding-left: 0;
+		}
 	}
 }
 
