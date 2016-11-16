@@ -505,9 +505,22 @@
 }
 
 .my-loans {
+	padding: 0;
+
 	.bottom-rule {
 		padding: 0;
 	}
+
+	.avg-kiva-compare-table {
+		margin-left: -0.555556rem;
+		margin-right: -0.555556rem;
+
+		@media #{$large-up} {
+			margin-left: 0;
+			margin-right: 0;
+		}
+	}
+
 }
 
 table.loans-table {
