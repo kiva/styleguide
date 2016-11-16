@@ -13,7 +13,7 @@
             </thead>
             <tbody>
                 {{#compareAmounts}}
-                    <tr>
+                    <tr class="{{#showInGray}}show-gray{{/showInGray}}{{#showInWhite}}show-white{{/showInWhite}}">
                         <td headers="comparison-label" class="text-left">
                             {{#isTabbed}}&emsp;{{/isTabbed}}<a data-reveal-id="{{lightboxRevealLabel}}-lightbox">{{label}}</a>
                         </td>

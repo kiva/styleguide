@@ -519,6 +519,14 @@
 			margin-left: 0;
 			margin-right: 0;
 		}
+
+		.show-white {
+			background-color: $white;
+		}
+
+		.show-gray {
+			background-color: $kiva-bg-lightgray;
+		}
 	}
 
 }
