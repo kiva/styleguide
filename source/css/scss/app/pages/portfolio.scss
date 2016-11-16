@@ -3,6 +3,9 @@
 @import '../../vendor_override/foundation/type';
 
 .portfolio {
+	padding-left: 0;
+	padding-right: 0;
+
 	h2 {
 		color: $kiva-green;
 	}
@@ -154,6 +157,16 @@
 				margin-top: 2rem;
 				text-align: right;
 			}
+		}
+	}
+
+	.columns {
+		padding-left: 0;
+		padding-right: 0;
+
+		@media #{$large-up} {
+			padding-left: 0.8333333333rem;
+			padding-right: 0.8333333333rem;
 		}
 	}
 }
