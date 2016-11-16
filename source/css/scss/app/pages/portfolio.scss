@@ -22,6 +22,9 @@
 		}
 	}
 
+	.bottom-rule {
+		padding-bottom: 0;
+	}
 
 	.lender-name {
 		margin-bottom: 1rem;
@@ -32,6 +35,7 @@
 		width: 90%;
 		margin-top: 1rem;
 		margin-left: 1.3333rem;
+		margin-bottom: 1rem;
 
 		@media #{$large-up} {
 			width: 50%;
@@ -44,10 +48,8 @@
 	}
 
 	.statistics-bar {
-		padding-top: 2rem;
-
 		.row {
-			padding-bottom: 2rem;
+			padding-bottom: 1rem;
 		}
 
 		svg {
@@ -107,7 +109,7 @@
 }
 
 .loan-update {
-	margin-bottom: 2.222222rem !important;
+	margin-bottom: 1rem !important;
 
 	.loan-update-image {
 		text-align: center;
@@ -154,6 +156,10 @@
 	margin-top: 1rem;
 	position: relative;
 
+	h2 {
+		margin-top: 0 !important;
+	}
+
 	h2 a {
 		font-size: $body-font-size;
 		margin-left: 0.75rem;
@@ -162,6 +168,7 @@
 
 .deposited-lent-widget {
 	margin: 2rem auto;
+	margin-top: 0;
 	width: 225px;
 	height: 225px;
 	position: relative;
@@ -170,6 +177,7 @@
 	@media #{$large-up} {
 		width: 180px;
 		height: 200px;
+		margin: 2rem auto;
 	}
 
 	.icon.icon-recycle {
@@ -273,6 +281,8 @@
 }
 
 .distribution-charts {
+	margin-bottom: 1rem;
+
 	.no-js & section.content {
 		display: none;
 	}
@@ -306,6 +316,7 @@
 
 		table {
 			border: none;
+			margin-bottom: 0;
 		}
 
 		td:last-child {
