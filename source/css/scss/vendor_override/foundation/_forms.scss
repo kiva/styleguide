@@ -1,3 +1,5 @@
+@import '../../palette';
+
 $placeholder-color: $kiva-text-light;
 $placeholder-font-style: italic;
 
@@ -39,4 +41,11 @@ input[type="submit"].hidden-submit {
 	left: -9999px;
 	width: 1px;
 	height: 1px;
+}
+
+
+select {
+	color: $kiva-text-dark;
+	border-color: $kiva-text-dark;
+	cursor: pointer;
 }

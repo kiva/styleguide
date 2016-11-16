@@ -509,17 +509,21 @@ table.loans-table {
 	font-weight: 100;
 	margin: 0;
 
+	th {
+		padding-right: 0;
+	}
+
 	td {
 		vertical-align: top;
+		padding-right: 0;
 
 		&:first-child {
 			padding-left: 0;
-			padding-right: 0;
 			min-width: rem-calc(50);
 			text-align: center;
 
 			svg {
-				width: 100%;
+				width: rem-calc(50);
 				margin-top: 0.5rem;
 				display: block;
 			}
@@ -531,10 +535,6 @@ table.loans-table {
 			svg.icon-dedicate-heart {
 				height: rem-calc(21);
 			}
-		}
-
-		&:last-child {
-			padding-right: 0;
 		}
 	}
 
@@ -570,5 +570,13 @@ table.loans-table {
 			width: rem-calc(35);
 			display: block;
 		}
+	}
+
+	select {
+		min-width: 5rem;
+		padding: 0 1.2rem 0 0.5rem;
+		margin-top: -0.5rem;
+		height: 1.5rem;
+		font-weight: normal;
 	}
 }
