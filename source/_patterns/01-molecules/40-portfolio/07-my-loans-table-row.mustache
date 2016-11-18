@@ -44,17 +44,44 @@
 </td>
 <td class="amount">
 	<div class="progress-amount">
-		{{fundedAmount}}
+		{{#isFundraising}}
+			{{fundedAmount}}
+		{{/isFundraising}}
+		{{^isFundraising}}
+			<a href="#">
+				{{#repaidAmountToYou}}
+					{{repaidAmountToYou}}
+				{{/repaidAmountToYou}}
+				{{^repaidAmountToYou}}
+					{{repaidAmountTotal}}
+				{{/repaidAmountToYou}}
+			</a>
+		{{/isFundraising}}
 	</div>
 	<div class="progress-verb">
-		raised
+		{{#isFundraising}}
+			raised
+		{{/isFundraising}}
+		{{#hasPaidSomething}}
+			repaid{{#isRefunded}}/refunded{{/isRefunded}} to {{#repaidAmountToYou}}you{{/repaidAmountToYou}}{{^repaidAmountToYou}}Kiva{{/repaidAmountToYou}}
+		{{/hasPaidSomething}}
 	</div>
+	{{#sharedArrearsAmount}}
+		<div class="arrears-amount">
+			({{sharedArrearsAmount}} in arrears)
+		</div>
+	{{/sharedArrearsAmount}}
 </td>
 <td>
 	{{lenderRepaymentTerm}} mos
 </td>
 <td class="amount">
 	{{loanAmount}}
+	{{#arrearsAmount}}
+		<div class="arrears-amount">
+			({{arrearsAmount}} in arrears)
+		</div>
+	{{/arrearsAmount}}
 </td>
 <td>
 	{{#canChangeTeamAssignment}}
