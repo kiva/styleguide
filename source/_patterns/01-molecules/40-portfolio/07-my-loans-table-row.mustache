@@ -48,6 +48,11 @@
 	<div class="date-lent">
 		{{dateLent}}
 	</div>
+	{{#promoCreditUsedAmount}}
+		<div class="promo-credit">
+			{{promoCreditUsedAmount}} {{^promoTypeType}}promotional credit{{/promoTypeType}}{{promoTypeType}}
+		</div>
+	{{/promoCreditUsedAmount}}
 </td>
 <td class="amount">
 	<div class="progress-amount">

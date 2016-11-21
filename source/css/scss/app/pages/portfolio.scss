@@ -612,7 +612,11 @@ table.loans-table {
 		white-space: nowrap;
 	}
 
-	.dedication span, .date-lent, .progress-verb, .arrears-amount {
+	.promo-credit {
+		margin-top: 1rem;
+	}
+
+	.dedication span, .date-lent, .promo-credit, .progress-verb, .arrears-amount {
 		color: $kiva-text-light;
 		font-size: $x-small-font-size;
 		line-height: $x-small-line-height;
