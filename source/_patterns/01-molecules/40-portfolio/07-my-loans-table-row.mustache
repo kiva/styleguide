@@ -8,9 +8,11 @@
 		</svg>
 	{{/matchedLoan}}
 	{{#dedication}}
-		<svg class="icon icon-dedicate-heart">
-			<use xlink:href="#icon-dedicate-heart"/>
-		</svg>
+		{{^toKiva}}
+			<svg class="icon icon-dedicate-heart">
+				<use xlink:href="#icon-dedicate-heart"/>
+			</svg>
+		{{/toKiva}}
 	{{/dedication}}
 </td>
 <td>
@@ -26,8 +28,13 @@
 	</div>
 	{{#dedication}}
 		<div class="dedication">
-			<a href="{{url}}">Dedicated to {{recipient}}</a>
-			<span>Repayments for dedications are donated to Kiva</span>
+			{{#toKiva}}
+				<span>You opted to donate repayments from this loan to Kiva (Thanks!)</span>
+			{{/toKiva}}
+			{{^toKiva}}
+				<a href="{{url}}">Dedicated to {{recipient}}</a>
+				<span>Repayments for dedications are donated to Kiva</span>
+			{{/toKiva}}
 		</div>
 	{{/dedication}}
 </td>
