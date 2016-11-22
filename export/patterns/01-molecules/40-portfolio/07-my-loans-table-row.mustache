@@ -8,9 +8,11 @@
 		</svg>
 	{{/matchedLoan}}
 	{{#dedication}}
-		<svg class="icon icon-dedicate-heart">
-			<use xlink:href="#icon-dedicate-heart"/>
-		</svg>
+		{{^toKiva}}
+			<svg class="icon icon-dedicate-heart">
+				<use xlink:href="#icon-dedicate-heart"/>
+			</svg>
+		{{/toKiva}}
 	{{/dedication}}
 </td>
 <td>
@@ -26,8 +28,13 @@
 	</div>
 	{{#dedication}}
 		<div class="dedication">
-			<a href="{{url}}">Dedicated to {{recipient}}</a>
-			<span>Repayments for dedications are donated to Kiva</span>
+			{{#toKiva}}
+				<span>You opted to donate repayments from this loan to Kiva (Thanks!)</span>
+			{{/toKiva}}
+			{{^toKiva}}
+				<a href="{{url}}">Dedicated to {{recipient}}</a>
+				<span>Repayments for dedications are donated to Kiva</span>
+			{{/toKiva}}
 		</div>
 	{{/dedication}}
 </td>
@@ -41,20 +48,52 @@
 	<div class="date-lent">
 		{{dateLent}}
 	</div>
+	{{#promoCreditUsedAmount}}
+		<div class="promo-credit">
+			{{promoCreditUsedAmount}} {{^promoTypeType}}promotional credit{{/promoTypeType}}{{promoTypeType}}
+		</div>
+	{{/promoCreditUsedAmount}}
 </td>
 <td class="amount">
 	<div class="progress-amount">
-		{{fundedAmount}}
+		{{#isFundraising}}
+			{{fundedAmount}}
+		{{/isFundraising}}
+		{{^isFundraising}}
+			<a href="#">
+				{{#repaidAmountToYou}}
+					{{repaidAmountToYou}}
+				{{/repaidAmountToYou}}
+				{{^repaidAmountToYou}}
+					{{repaidAmountTotal}}
+				{{/repaidAmountToYou}}
+			</a>
+		{{/isFundraising}}
 	</div>
 	<div class="progress-verb">
-		raised
+		{{#isFundraising}}
+			raised
+		{{/isFundraising}}
+		{{#hasPaidSomething}}
+			repaid{{#isRefunded}}/refunded{{/isRefunded}} to {{#repaidAmountToYou}}you{{/repaidAmountToYou}}{{^repaidAmountToYou}}Kiva{{/repaidAmountToYou}}
+		{{/hasPaidSomething}}
 	</div>
+	{{#sharedArrearsAmount}}
+		<div class="arrears-amount">
+			({{sharedArrearsAmount}} in arrears)
+		</div>
+	{{/sharedArrearsAmount}}
 </td>
 <td>
 	{{lenderRepaymentTerm}} mos
 </td>
 <td class="amount">
 	{{loanAmount}}
+	{{#arrearsAmount}}
+		<div class="arrears-amount">
+			({{arrearsAmount}} in arrears)
+		</div>
+	{{/arrearsAmount}}
 </td>
 <td>
 	{{#canChangeTeamAssignment}}
