@@ -1,0 +1,21 @@
+{
+    "queryString": null,
+    "loanStatusOptions": [
+        {"label":"All loans","value":"allLoans","selected":true},
+        {"label":"Fundraising","value":"fundraising"}
+    ],
+    "loanCountryOptions": [
+        {"label":"Country","value":"0","selected":true},
+        {"label":"Kenya","value":"2"},
+        {"label":"United States","value":"1"},
+        {"label":"Zimbabwe","value":"3"},
+        {"label":"Thailand","value":"4"}
+    ],
+    "partnerOptions": [
+        {"label":"Partner","value":"0","selected":true},
+        {"label":"Milaap","value":"2"},
+        {"label":"Juhudi Kilimo","value":"1"},
+        {"label":"Hluvuku","value":"3"},
+        {"label":"Saludad","value":"4"}
+    ]
+}
