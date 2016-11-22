@@ -1,0 +1,36 @@
+<div class="row loan-filters">
+    <form>
+        <div class="columns small-4">
+            <input type="text" name="queryString" {{#queryString}}value="{{queryString}}"{{/queryString}} placeholder="Search by name, ID, partner or country">
+        </div>
+        <div class="columns small-1">
+            <label for="status" class="text-right middle">Status:&nbsp;</label>
+        </div>
+        <div class="columns small-2">
+            <select name="status" id="status" class="inline">
+                {{#loanStatusOptions}}
+                    <option value="{{value}}" {{#selected}}selected="selected"{{/selected}}>{{label}}</option>
+                {{/loanStatusOptions}}
+            </select>
+        </div>
+        <div class="columns small-1">
+            <label for="location" class="text-right middle">Filter by:&nbsp;</label>
+        </div>
+        <div class="columns small-2">
+            <select name="location" id="location">
+                {{#loanCountryOptions}}
+                    <option value="{{value}}" {{#selected}}selected="selected"{{/selected}}>{{label}}</option>
+                {{/loanCountryOptions}}
+            </select>
+        </div>
+        <div class="columns small-2">
+            <select name="partner">
+                {{#partnerOptions}}
+                    <option value="{{value}}" {{#selected}}selected="selected"{{/selected}}>{{label}}</option>
+                {{/partnerOptions}}
+            </select>
+        </div>
+    </form>
+</div>
+
+
