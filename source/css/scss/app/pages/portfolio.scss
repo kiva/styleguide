@@ -645,3 +645,31 @@ table.loans-table {
 		font-weight: normal;
 	}
 }
+
+table.repayments-list {
+	width: auto;
+	background: none;
+	border: none;
+
+	tr {
+		&:nth-of-type(even) {
+			background: none;
+		}
+
+		td {
+			color: $white;
+			font-size: $body-font-size;
+			line-height: $body-line-height;
+			padding: 0 0 0 0.5rem;
+
+			&:first-child {
+				padding-left: 0;
+			}
+
+			&.amount {
+				padding-left: 1rem;
+				text-align: right;
+			}
+		}
+	}
+}
