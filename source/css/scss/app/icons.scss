@@ -73,6 +73,7 @@ $light-blue-gray: #DBE3E5;
     &.icon-facebook,
     &.icon-pinterest,
     &.icon-twitter,
+    &.icon-yelp,
     &.icon-youtube,
     &.icon-linkedIn,
 	&.icon-instagram {
@@ -146,6 +147,11 @@ $light-blue-gray: #DBE3E5;
 .icon-twitter {
 	&:hover svg, &:active svg {
 		color: $twitter-hover-color;
+	}
+}
+.icon-yelp {
+	&:hover svg, &:active svg {
+		color: $yelp-hover-color;
 	}
 }
 .icon-youtube {
