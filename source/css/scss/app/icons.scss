@@ -135,9 +135,9 @@ $light-blue-gray: #DBE3E5;
 	}
 }
 .icon-yelp {
-  &:hover svg, &:active svg {
-    color: $yelp-hover-color;
-  }
+	&:hover svg, &:active svg {
+		color: $yelp-hover-color;
+	}
 }
 .icon-youtube {
 	&:hover svg, &:active svg {
