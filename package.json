@@ -1,6 +1,6 @@
 {
   "name": "styleguide",
-  "version": "1.1.37",
+  "version": "1.1.38",
   "description": "Based on PatternLab and Foundation - [Pattern Lab Website](http://patternlab.io/) - [About Pattern Lab](http://patternlab.io/about.html) - [Documentation](http://patternlab.io/docs/index.html) - [Demo](http://demo.patternlab.io/)",
   "main": "Gruntfile.js",
   "devDependencies": {
