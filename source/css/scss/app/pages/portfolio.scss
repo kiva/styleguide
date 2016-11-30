@@ -563,6 +563,133 @@
 		}
 	}
 
+	.loans-section {
+		margin-top: 2rem;
+	}
+
+	.sort-message {
+		font-weight: 100;
+		color: $kiva-text-light;
+		display: inline-block;
+		width: 50%;
+		margin-bottom: 0.25rem;
+	}
+
+	.loan-count {
+		display: inline-block;
+		width: 50%;
+		font-weight: 100;
+		text-align: right;
+	}
+
+	.filter-title {
+		display: none;
+		margin-bottom: 0.25rem;
+		font-weight: bold;
+		color: $kiva-text-light;
+
+		@media #{$large-up} {
+			display: inline-block;
+		}
+	}
+
+	.filter-toggle {
+		display: inline-block;
+		float: left;
+		margin-top: 0.25rem;
+
+		@media #{$large-up} {
+			display: none;
+		}
+
+		a {
+			padding: 0 1rem;
+			margin-bottom: 0.75rem;
+		}
+	}
+
+	.filter-clear {
+		display: inline-block;
+		float: right;
+		line-height: rem-calc(26);
+
+		&:visited {
+			color: $kiva-textlink;
+		}
+
+		@media #{$medium-up} {
+			line-height: rem-calc(32);
+		}
+	}
+
+	select {
+		min-width: 5rem;
+		padding: 0 1.2rem 0 0.5rem;
+		margin-top: -0.5rem;
+		height: 1.5rem;
+		font-weight: normal;
+	}
+
+}
+
+.my-loans #loan-filters {
+	input {
+		height: 1.5rem;
+	}
+
+	label {
+		display: inline;
+	}
+
+	select {
+		width: 5rem;
+		display: inline;
+	}
+
+	@media #{$large-up} {
+		height: auto;
+	}
+
+	form {
+		.columns {
+			padding: 0;
+		}
+
+		@media #{$medium-up} {
+			.other-filters {
+				text-align: right;
+			}
+		}
+
+		@media only screen and (min-width: #{$med-large-breakpoint}) {
+			.search-string {
+				width: 33%;
+			}
+
+			.status-filter {
+				width: 28%;
+				padding: 0 $column-gutter/2;
+			}
+
+			.other-filters {
+				width: 39%;
+			}
+		}
+
+		@media #{$xxlarge-up} {
+			.search-string {
+				width: 38%;
+			}
+
+			.status-filter {
+				width: 25%;
+			}
+
+			.other-filters {
+				width: 37%;
+			}
+		}
+	}
 }
 
 table.loans-table {
@@ -635,14 +762,6 @@ table.loans-table {
 			width: rem-calc(35);
 			display: block;
 		}
-	}
-
-	select {
-		min-width: 5rem;
-		padding: 0 1.2rem 0 0.5rem;
-		margin-top: -0.5rem;
-		height: 1.5rem;
-		font-weight: normal;
 	}
 }
 
