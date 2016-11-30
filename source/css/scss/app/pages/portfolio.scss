@@ -508,8 +508,15 @@
 }
 
 .my-loans-lent-stats {
-	.stat-label {
-		word-wrap: break-word;
+	li {
+		display: flex;
+		justify-content: space-between;
+		flex-wrap: nowrap;
+	}
+	.stat-value {
+		margin-left: 0.5rem;
+		text-align: right;
+		font-weight: bold;
 	}
 }
 
