@@ -69,6 +69,10 @@ button, a.button, .button {
 		background-color: $white;
 	}
 
+	&:visited {
+		color: $setting-button-text-color;
+	}
+
 	@media #{$medium-up} {
 		font-size: $setting-button-font-size;
 		height: $setting-button-height;

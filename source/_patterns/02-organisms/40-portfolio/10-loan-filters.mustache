@@ -1,28 +1,30 @@
-<form class="loan-filters row">
-	<div class="columns small-12 search-string">
-		<input type="text" name="sSearch" {{#queryString}}value="{{queryString}}"{{/queryString}} placeholder="Search by name, ID, partner or country">
-	</div>
-	<div class="columns small-12 medium-5 status-filter">
-		<label for="sStatus">Status:&nbsp;</label>
-		<select name="sStatus" id="status" class="inline">
-			{{#loanStatusOptions}}
-				<option value="{{value}}" {{#selected}}selected="selected"{{/selected}}>{{label}}</option>
-			{{/loanStatusOptions}}
-		</select>
-	</div>
-	<div class="columns small-12 medium-7 other-filters">
-		<label for="sCountries">Filter by:&nbsp;</label>
-		<select name="sCountries" id="location">
-			{{#loanCountryOptions}}
-				<option value="{{value}}" {{#selected}}selected="selected"{{/selected}}>{{label}}</option>
-			{{/loanCountryOptions}}
-		</select>
-		<select name="sPartners">
-			{{#partnerOptions}}
-				<option value="{{value}}" {{#selected}}selected="selected"{{/selected}}>{{label}}</option>
-			{{/partnerOptions}}
-		</select>
-	</div>
-</form>
-
+<div id="loan-filters" class="ac-body" aria-hidden="{{#filters_expanded}}false{{/filters_expanded}}{{^filters_expanded}}true{{/filters_expanded}}">
+	<div class="row bottom-rule"></div>
+	<form class="row">
+		<div class="columns small-12 search-string">
+			<input type="text" name="sSearch" {{#sSearch}}value="{{sSearch}}"{{/sSearch}} placeholder="Search by name, ID, partner or country">
+		</div>
+		<div class="columns small-12 medium-5 status-filter">
+			<label for="sStatus">Status:&nbsp;</label>
+			<select name="sStatus" id="status" class="inline">
+				{{#loanStatusOptions}}
+					<option value="{{value}}" {{#selected}}selected="selected"{{/selected}}>{{label}}</option>
+				{{/loanStatusOptions}}
+			</select>
+		</div>
+		<div class="columns small-12 medium-7 other-filters">
+			<label for="sCountries">Filter by:&nbsp;</label>
+			<select name="sCountries" id="location">
+				{{#loanCountryOptions}}
+					<option value="{{value}}" {{#selected}}selected="selected"{{/selected}}>{{label}}</option>
+				{{/loanCountryOptions}}
+			</select>
+			<select name="sPartners">
+				{{#partnerOptions}}
+					<option value="{{value}}" {{#selected}}selected="selected"{{/selected}}>{{label}}</option>
+				{{/partnerOptions}}
+			</select>
+		</div>
+	</form>
+</div>
 
