@@ -563,6 +563,68 @@
 		}
 	}
 
+	select {
+		min-width: 5rem;
+		padding: 0 1.2rem 0 0.5rem;
+		margin-top: -0.5rem;
+		height: 1.5rem;
+		font-weight: normal;
+	}
+
+}
+
+.my-loans .loan-filters {
+	input {
+		height: 1.5rem;
+	}
+
+	label {
+		display: inline;
+	}
+
+	select {
+		width: 5rem;
+		display: inline;
+	}
+
+	.columns {
+		padding: 0;
+	}
+
+	@media #{$medium-up} {
+		.other-filters {
+			text-align: right;
+		}
+	}
+
+	@media only screen and (min-width: #{$med-large-breakpoint}) {
+		.search-string {
+			width: 33%;
+		}
+
+		.status-filter {
+			width: 28%;
+			padding: 0 $column-gutter/2;
+		}
+
+		.other-filters {
+			width: 39%;
+		}
+	}
+
+	@media #{$xxlarge-up} {
+		.search-string {
+			width: 38%;
+		}
+
+		.status-filter {
+			width: 25%;
+		}
+
+		.other-filters {
+			width: 37%;
+		}
+	}
 }
 
 table.loans-table {
@@ -635,14 +697,6 @@ table.loans-table {
 			width: rem-calc(35);
 			display: block;
 		}
-	}
-
-	select {
-		min-width: 5rem;
-		padding: 0 1.2rem 0 0.5rem;
-		margin-top: -0.5rem;
-		height: 1.5rem;
-		font-weight: normal;
 	}
 }
 

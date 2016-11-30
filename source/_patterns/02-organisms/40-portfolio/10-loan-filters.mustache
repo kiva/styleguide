@@ -1,36 +1,28 @@
-<div class="row loan-filters">
-    <form>
-        <div class="columns small-4">
-            <input type="text" name="sSearch" {{#queryString}}value="{{queryString}}"{{/queryString}} placeholder="Search by name, ID, partner or country">
-        </div>
-        <div class="columns small-1">
-            <label for="sStatus" class="text-right middle">Status:&nbsp;</label>
-        </div>
-        <div class="columns small-2">
-            <select name="sStatus" id="status" class="inline">
-                {{#loanStatusOptions}}
-                    <option value="{{value}}" {{#selected}}selected="selected"{{/selected}}>{{label}}</option>
-                {{/loanStatusOptions}}
-            </select>
-        </div>
-        <div class="columns small-1">
-            <label for="sCountries" class="text-right middle">Filter by:&nbsp;</label>
-        </div>
-        <div class="columns small-2">
-            <select name="sCountries" id="location">
-                {{#loanCountryOptions}}
-                    <option value="{{value}}" {{#selected}}selected="selected"{{/selected}}>{{label}}</option>
-                {{/loanCountryOptions}}
-            </select>
-        </div>
-        <div class="columns small-2">
-            <select name="sPartners">
-                {{#partnerOptions}}
-                    <option value="{{value}}" {{#selected}}selected="selected"{{/selected}}>{{label}}</option>
-                {{/partnerOptions}}
-            </select>
-        </div>
-    </form>
-</div>
+<form class="loan-filters row">
+	<div class="columns small-12 search-string">
+		<input type="text" name="sSearch" {{#queryString}}value="{{queryString}}"{{/queryString}} placeholder="Search by name, ID, partner or country">
+	</div>
+	<div class="columns small-12 medium-5 status-filter">
+		<label for="sStatus">Status:&nbsp;</label>
+		<select name="sStatus" id="status" class="inline">
+			{{#loanStatusOptions}}
+				<option value="{{value}}" {{#selected}}selected="selected"{{/selected}}>{{label}}</option>
+			{{/loanStatusOptions}}
+		</select>
+	</div>
+	<div class="columns small-12 medium-7 other-filters">
+		<label for="sCountries">Filter by:&nbsp;</label>
+		<select name="sCountries" id="location">
+			{{#loanCountryOptions}}
+				<option value="{{value}}" {{#selected}}selected="selected"{{/selected}}>{{label}}</option>
+			{{/loanCountryOptions}}
+		</select>
+		<select name="sPartners">
+			{{#partnerOptions}}
+				<option value="{{value}}" {{#selected}}selected="selected"{{/selected}}>{{label}}</option>
+			{{/partnerOptions}}
+		</select>
+	</div>
+</form>
 
 
