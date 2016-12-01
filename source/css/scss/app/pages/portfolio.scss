@@ -784,8 +784,6 @@ table.repayments-list {
 
 		td {
 			color: $white;
-			font-size: $body-font-size;
-			line-height: $body-line-height;
 			padding: 0 0 0 0.5rem;
 
 			&:first-child {
@@ -795,6 +793,11 @@ table.repayments-list {
 			&.amount {
 				padding-left: 1rem;
 				text-align: right;
+			}
+
+			@media #{$medium-up} {
+				font-size: $body-font-size;
+				line-height: $body-line-height;
 			}
 		}
 	}
