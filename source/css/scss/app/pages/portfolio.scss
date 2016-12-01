@@ -570,23 +570,24 @@
 		}
 	}
 
-	.loans-section {
-		margin-top: 2rem;
-	}
+	.loans-table-messages {
+		display: flex;
+		justify-content: space-between;
+		flex-wrap: nowrap;
+		align-items: flex-end;
+		margin: 2rem 0 0.25rem;
 
-	.sort-message {
-		font-weight: 100;
-		color: $kiva-text-light;
-		display: inline-block;
-		width: 50%;
-		margin-bottom: 0.25rem;
-	}
+		.sort-message {
+			font-weight: 100;
+			color: $kiva-text-light;
+		}
 
-	.loan-count {
-		display: inline-block;
-		width: 50%;
-		font-weight: 100;
-		text-align: right;
+		.loan-count {
+			font-weight: 100;
+			text-align: right;
+			white-space: nowrap;
+			margin-left: 1rem;
+		}
 	}
 
 	.filter-title {

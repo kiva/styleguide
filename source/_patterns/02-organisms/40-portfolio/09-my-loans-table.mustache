@@ -1,17 +1,21 @@
-<span class="sort-message small-text">Sorted by date posted on Kiva</span><span class="loan-count featured">
-	{{^loan_count}}
-		0 loans
-	{{/loan_count}}
-	{{#loan_count}}
-		{{#single_loan}}
-			1 loan
-		{{/single_loan}}
-		{{^single_loan}}
-			{{loan_count}} loans
-		{{/single_loan}}
-	{{/loan_count}}
-</span>
-<div style="clear:both;"></div>
+<div class="loans-table-messages">
+	<span class="sort-message small-text">
+		Sorted by date posted on Kiva
+	</span>
+	<span class="loan-count featured">
+		{{^loan_count}}
+			0 loans
+		{{/loan_count}}
+		{{#loan_count}}
+			{{#single_loan}}
+				1 loan
+			{{/single_loan}}
+			{{^single_loan}}
+				{{loan_count}} loans
+			{{/single_loan}}
+		{{/loan_count}}
+	</span>
+</div>
 <span class="filter-title small-text">Filter loans</span>
 <div class="filter-toggle">
 	<a class="button setting"
