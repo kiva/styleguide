@@ -99,6 +99,17 @@ button, a.button, .button {
 	line-height: $button-height-sm;
 }
 
+.button.mini {
+	font-size: $setting-button-font-size - $setting-button-font-size-reduction;
+	height: $setting-button-height - $setting-button-height-reduction;
+	line-height: $setting-button-height - $setting-button-height-reduction;
+	@media #{$medium-up} {
+		font-size: $setting-button-font-size;
+		height: $setting-button-height;
+		line-height: $setting-button-height;
+	}
+}
+
 button.secondary, .button.secondary {
 	border-color: $kiva-text-dark;
 	border-width: 1px;

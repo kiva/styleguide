@@ -520,6 +520,17 @@
 	}
 }
 
+.export-button {
+	padding-left: .5rem;
+	padding-right: .5rem;
+	display: inline-block;
+	float: right;
+	margin-left: rem-calc(20);
+	@media #{$medium-up} {
+		margin-bottom: rem-calc(5);
+	}
+}
+
 .loans-table-wrapper {
 	position: relative;
 
@@ -604,7 +615,6 @@
 	.filter-toggle {
 		display: inline-block;
 		float: left;
-		margin-top: 0.25rem;
 
 		@media #{$large-up} {
 			display: none;
