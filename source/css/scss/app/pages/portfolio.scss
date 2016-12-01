@@ -527,7 +527,7 @@
 	float: right;
 	margin-left: rem-calc(20);
 	@media #{$medium-up} {
-		margin-bottom: rem-calc(5);
+		margin-bottom: .5rem;
 	}
 }
 
