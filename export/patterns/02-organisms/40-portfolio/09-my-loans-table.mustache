@@ -32,7 +32,10 @@
 {{#filters_set}}<a href="#" class="filter-clear small-text">Clear filters</a>{{/filters_set}}
 <div style="clear:both;"></div>
 <div class="loans-filters-region"></div>
-<div class="loans-table-wrapper">
+<div class="loans-table-wrapper {{#loading}}loading{{/loading}}">
+	<div class="loader-overlay">
+		{{> 01-molecules/03-media/01-loading-spinner }}
+	</div>
 	<div class="shadow-overlay"></div>
 	<div class="scroll-wrapper">
 		<table class="loans-table">
