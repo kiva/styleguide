@@ -1,6 +1,6 @@
 <div id="loan-filters" class="ac-body" aria-hidden="{{#filters_expanded}}false{{/filters_expanded}}{{^filters_expanded}}true{{/filters_expanded}}">
 	<div class="row bottom-rule"></div>
-	<form class="row">
+	<form class="row" onsubmit="return false;">
 		<div class="columns small-12 search-string">
 			<input type="text" name="sSearch" {{#sSearch}}value="{{sSearch}}"{{/sSearch}} placeholder="Search by name, ID, partner or country">
 		</div>
