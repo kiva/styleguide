@@ -13,7 +13,7 @@
 		}
 
 		&.disabled {
-			cursor: pointer;
+			cursor: default;
 			color: $disabled-color;
 
 			&:hover, &:active, &:focus {
