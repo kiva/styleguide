@@ -1,0 +1,12 @@
+<nav class="pagination">
+	{{#show_pagination}}
+		<a href="#" class="prev-page {{#first_page}}disabled{{/first_page}}">Prev</a>
+		{{#pages}}
+			{{#ellipsis}}&hellip;{{/ellipsis}}
+			{{^ellipsis}}
+				<a href="#" class="page-number {{#current}}disabled{{/current}}">{{number}}</a>
+			{{/ellipsis}}
+		{{/pages}}
+		<a href="#" class="next-page {{#last_page}}disabled{{/last_page}}">Next</a>
+	{{/show_pagination}}
+</nav>
