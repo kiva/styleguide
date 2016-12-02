@@ -1,0 +1,30 @@
+@import '../../palette';
+
+.pagination {
+	$disabled-color: $kiva-stroke-gray;
+	text-align: center;
+	font-weight: bold;
+
+	a {
+		padding: 0 0.25rem;
+
+		&:visited {
+			color: $kiva-textlink;
+		}
+
+		&.disabled {
+			cursor: pointer;
+			color: $disabled-color;
+
+			&:hover, &:active, &:focus {
+				text-decoration: none;
+				color: $disabled-color;
+				outline: none;
+			}
+
+			&:visited {
+				color: $disabled-color;
+			}
+		}
+	}
+}
