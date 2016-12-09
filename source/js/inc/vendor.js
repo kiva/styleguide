@@ -6,5 +6,5 @@ require('Foundation');
 require('nouislider');
 require('select2');
 require('slick');
-require('fitvids');
-require('lazyload');
+require('./vendor/fitvids/jquery.fitvids.js');
+require('jquery-lazyload');

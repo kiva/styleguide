@@ -34,8 +34,8 @@ module.exports = function(grunt) {
                 }
             }
             , vendorCss: {
-                src: ['bower_components/nouislider/distribute/jquery.nouislider.min.css']
-                , dest: 'bower_components/_vendor.scss'
+                src: ['node_modules/nouislider/distribute/jquery.nouislider.min.css']
+                , dest: 'source/css/scss/_vendor.scss'
             }
         }
 
@@ -53,8 +53,8 @@ module.exports = function(grunt) {
 
 			, js: {
 				files: [
-					{src: 'bower_components/jquery/dist/jquery.js', dest: 'public/dep/jquery/jquery.js'}
-					, {src: 'bower_components/typeahead.js/dist/typeahead.bundle.js', dest: 'public/dep/typeahead/typeahead.js'}
+					{src: 'node_modules/jquery/dist/jquery.js', dest: 'public/dep/jquery/jquery.js'}
+					, {src: 'node_modules/typeahead.js/dist/typeahead.bundle.js', dest: 'public/dep/typeahead/typeahead.js'}
 				]
 			}
 
@@ -100,7 +100,7 @@ module.exports = function(grunt) {
             options: {
                 jshintrc: '.jshintrc'
             }
-            , all: ['source/js/inc']
+            , all: ['source/js/inc/**/*.js', '!**/vendor/**']
         }
 
 
@@ -122,9 +122,8 @@ module.exports = function(grunt) {
 		, sass: {
 			options: {
 				includePaths: [
-					'bower_components/foundation/scss'
-					, 'bower_components'
-					// @todo - should we also add bourbon?  require('node-bourbon').includePaths
+					'node_modules/foundation-sites/scss'
+					, 'node_modules'
 				]
 			}
 
@@ -265,16 +264,14 @@ module.exports = function(grunt) {
 					}
 				}
 				, resolve: {
-					root: 'bower_components'
-					, alias: {
-                        fastclick: 'fastclick/lib/fastclick.js'
-						, Foundation: 'foundation/js/foundation.js'
-						, modernizr: 'modernizr/modernizr.js'
-						, nouislider: 'nouislider/distribute/jquery.nouislider.all.js'
-						, select2: 'select2/dist/js/select2.full.js'
-                        , slick: 'slick.js/slick/slick.js'
-						, fitvids: 'fitvids/jquery.fitvids.js'
-						, lazyload: 'jquery.lazyload/jquery.lazyload.js'
+					alias: {
+						Foundation: 'foundation-sites/js/foundation'
+						, modernizr: 'npm-modernizr'
+						, nouislider: 'nouislider/distribute/jquery.nouislider.all'
+						, select2: 'select2/dist/js/select2.full'
+                        , slick: 'slick-carousel'
+						, fitvids: __dirname + 'source/js/inc/vendor/fitvids/jquery.fitvids'
+						, lazyload: 'jquery-lazyload'
 					}
 				}
 				, entry: {
@@ -297,11 +294,6 @@ module.exports = function(grunt) {
 						, 'window.jQuery': 'jquery'
 					})
 				]
-				, stats: {
-					colors: true
-					, modules: true
-					, reasons: true
-				}
 				, failOnError: true
 			}
 
@@ -333,7 +325,11 @@ module.exports = function(grunt) {
 					, chunkFilename: '[id].bundle.min.js'
 				}
 				, plugins: [
-					new webpack.optimize.UglifyJsPlugin()
+					new webpack.optimize.UglifyJsPlugin({
+						compress: {
+							warnings: false
+						}
+					})
 				]
 			}
 
