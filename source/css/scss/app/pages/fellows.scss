@@ -1,0 +1,377 @@
+.fellpadbtm {
+	padding-bottom: 1.5rem;
+}
+
+.fellpadtop {
+	padding-top: 1.5rem;
+}
+
+.fellpad {
+	padding: 1.5rem 0rem 1.5rem 0rem;
+}
+
+hr {
+	color: $platinum;
+}
+
+div.fellows-headline-wrapper {
+	height: 0;
+	position: relative;
+
+	@media #{$small-only} {
+		padding-bottom: 86.04%;
+	}
+
+	@media #{$medium-up} {
+		padding-bottom: 43.05%;
+	}
+}
+
+.row-fellows-anchors {
+	margin: 0 auto;
+	max-width: 60rem;
+	width: 100%;
+	text-align: center;
+};
+
+.featured-fellows {
+	text-align: left;
+}
+
+div.fellows-video-wrapper {
+	position: relative;
+	cursor: pointer;
+	height: 0;
+	padding-bottom: 67.2%;
+	margin-bottom: 1.25rem;
+
+	a:hover {
+		text-decoration: none;
+	}
+
+	.button-wrapper {
+		position: absolute;
+		top: 42%;
+		left: 0;
+		width: 100%;
+		height: 40%;
+	}
+
+	.play-button {
+		position: relative;
+		padding: rem-calc(8);
+		text-align: center;
+		background-color: rgba(0,0,0,0.7);
+		color: white;
+
+		&:hover {
+			background-color: rgba(0,0,0,1);
+		}
+
+		@media #{$small-only} {
+			margin: 0 auto;
+			top: -5%;
+			font-size: 1.14rem;
+			padding: 0.75rem;
+		}
+
+		@media #{$medium-only} {
+			left: 0;
+			top: 7%;
+			font-size: 1.55rem;
+			padding: 1rem;
+		}
+
+		@media #{$large-only} {
+			left: 0;
+			top: -6%;
+		}
+
+		@media #{$xlarge-only} {
+			left: 0;
+			font-size: 1.14rem;
+			padding: 0.75rem;
+			top: 2%;
+		}
+
+		@media #{$xxlarge-only} {
+			/*@include featured-text();*/
+			top: -4%;
+			left: 0;
+			font-size: 1.55rem;
+			padding: 1rem;
+		}
+
+		svg.icon-triangle {
+			width: rem-calc(16);
+			height: rem-calc(14);
+			fill: #fff;
+			-webkit-transform: rotate(90deg);
+			-moz-transform: rotate(90deg);
+			transform: rotate(90deg);
+
+			@media #{$medium-only} {
+				width: rem-calc(22);
+				height: rem-calc(20);
+			}
+
+			@media #{$xlarge-only} {
+				width: rem-calc(20);
+				height: rem-calc(18);
+			}
+
+			@media #{$xxlarge-only} {
+				width: rem-calc(24);
+				height: rem-calc(22);
+			}
+		}
+	}
+}
+
+.fellowsStatsContainer {
+	overflow: auto;
+	background-color: $kiva-darkgreen;
+
+	.topStats {
+		background: url(//www.kiva.org/cms/page/images/map-bg.min_.svg) no-repeat;
+		background-size: contain;
+		background-position: center center;
+
+			@media #{$small-only} {
+				background-size: cover;
+			}
+
+		.row {
+			display: inline-block;
+
+			@media #{$small-up} {
+				.stat {
+					line-height: rem-calc(25);
+					font-size: 3rem;
+				}
+			}
+
+			@media #{$large-up} {
+				.stat {
+					line-height: rem-calc(25);
+					font-size: 2.5rem;
+				}
+			}
+		}
+
+		.row1 {
+			padding: rem-calc(30) rem-calc(0) rem-calc(0) rem-calc(0);
+		}
+		.row2 {
+			padding: rem-calc(0) rem-calc(0) rem-calc(30) rem-calc(0);
+		}
+	}
+}
+
+.fellows-head {
+	color: $green;
+}
+
+.fellows-tesimonial{
+	$avatar-size:rem-calc(250);
+
+	.avatar-fellows{
+		text-align: center;
+		@media #{$large-up} {
+			text-align: left;
+		}
+	}
+	.avatar-fellows img{
+		border-radius: 50%;
+		width: 100%;
+		//margin-left: 50%;
+		//margin-right: 50%;
+		max-width: $avatar-size;
+		padding-bottom: rem-calc(5);
+		display: block;
+    margin-left: auto;
+    margin-right: auto;
+	}
+}
+
+.dates-title {
+	text-align: center;
+	color: $dark-green;
+	font-size: 1.66rem;
+	padding-bottom: 0.5rem;
+	@media #{$medium-only} {
+		font-size: 2rem;
+	}
+}
+
+.dates-date{
+	text-align: center;
+	color: $dark-green;
+	margin-bottom: 0;
+}
+
+.fellows-chevron {
+	transform: rotate(360deg);
+	width: 100%;
+	height: 1.5rem;
+	display: block;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+		@media #{$large-up} {
+			transform: rotate(270deg);
+			width: 185%;
+		}
+}
+
+.fellows-steps-head {
+	color: white;
+	text-align: center;
+}
+
+.fellows-steps-subhead {
+	color: white;
+	text-align: center;
+	margin: auto;
+
+	@media #{$xlarge-up} {
+		width: rem-calc(700);
+	}
+}
+
+.icon-apply, .icon-interview, .icon-matchmaking, .icon-offer, .icon-screen {
+	/*color: $white;
+	fill: $kiva-text-dark;*/
+	display: block;
+	width: rem-calc(80);
+	height: rem-calc(80);
+	margin: rem-calc(-3) auto;
+
+	@media #{$medium-up} {
+		width: rem-calc(130);
+		height: rem-calc(130);
+	}
+}
+
+.steps-white-feat {
+	margin: auto;
+	padding: rem-calc(60) rem-calc(10) rem-calc(20) rem-calc(10);
+
+	@media #{$medium-up} {
+	padding: rem-calc(85) rem-calc(10) rem-calc(5) rem-calc(10);}
+}
+
+.fellows-text-step {
+	margin: auto;
+	padding: 0.5rem 0.5rem 0rem 0.5rem;
+
+	@media #{$medium-up} {
+		padding: rem-calc(20) rem-calc(20) rem-calc(5) rem-calc(20); /*was 85,10,20,10*/
+	}
+}
+
+.steps-green-feat {
+	color: $green;
+	margin: auto;
+	padding: 1rem 0.5rem 1.5rem 0.5rem;
+
+	@media #{$medium-up} {
+	padding: rem-calc(20) rem-calc(10) rem-calc(30) rem-calc(10);}
+}
+
+.fellows-step-wrapper {
+	padding: 0 rem-calc(15);
+	cursor: pointer;
+
+	.fellows-text-frame-icon-overlay {
+		border: white rem-calc(5) solid;
+		background-color: rgba(0, 0, 0, 0.80);
+		margin: auto;
+		max-width: rem-calc(500);
+		margin-top: rem-calc(-40);
+		min-height: rem-calc(120);
+
+		@media #{$medium-up} {
+			margin-top: rem-calc(-75);
+		}
+	}
+}
+
+.fellows-apply-wrapper {
+	background: url("//cms.kiva.org.s3.amazonaws.com/page/images/fellows-steps-bkgrnd-retina3.jpg") no-repeat;
+	background-color: $black;
+	min-height: 100%;
+	min-width: 100%;
+	background-size: cover;
+	padding-bottom: rem-calc(80);
+	cursor: pointer;
+
+	.dotted-line {
+		height: rem-calc(140);
+		width: 0;
+		border-left: white rem-calc(5) dashed;
+		margin: 0 auto;
+	}
+
+	.no-select {
+		cursor: auto;
+	}
+}
+
+.mousepadtop {
+	padding-top: rem-calc(60);
+}
+
+div.fellows-cta-wrapper, div.fellows-cta-wrapper-closed {
+	height: 0;
+	position: relative;
+
+	@media #{$small-only} {
+		padding-bottom: 65%;
+	}
+
+	@media #{$medium-up} {
+		padding-bottom: 35%;
+	}
+}
+
+.sevenfour-text {
+  color: $white;
+	text-shadow: 1px 1px 3px $kiva-darkgreen;
+	h2 {
+		color: $white;
+	}
+	text-align: center;
+	margin-left: auto;
+  margin-right: auto;
+}
+
+.countries-map {
+	@media #{$large-up} {
+		background-image: url("//cms.kiva.org.s3.amazonaws.com/page/images/fellowscountries-largeup.gif");
+		height: 305px;
+		width:100%;
+	}
+	@media #{$medium-only} {
+			background-image: url("//cms.kiva.org.s3.amazonaws.com/page/images/fellowscountries-medium.gif");
+			height: 220px;
+			width:100%;
+		}
+	@media #{$small-only} {
+				background-image: url("//cms.kiva.org.s3.amazonaws.com/page/images/fellowscountries-small.gif");
+				height: 220px;
+				width:100%;
+			}
+  background-repeat: no-repeat;
+}
+
+.lifestyle-photo {
+	padding-bottom: 2rem;
+}
+
+p {
+	line-height: 1.5rem;
+}
+
+.testimony-text {
+	padding: 1rem 0 1.5rem 0;
+}

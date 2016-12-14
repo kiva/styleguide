@@ -1,0 +1,13 @@
+{
+	"headline": {
+		"medium": "Travel the world and make a difference"
+	},
+
+	"img": {
+		"full-width" : {
+			"alt" : "Photo of Kiva fellow pinning map"
+		}
+	},
+
+	"textOverImageNameSpaceClass": "fellows-headline-wrapper"
+}
