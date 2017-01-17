@@ -2,13 +2,15 @@
 	"headline": {
 		"medium": "Travel the world and make a difference"
 	},
+
 	"textOverImageNameSpaceClass": "fellows-headline-wrapper",
 	"img": {
 		"full-width" : {
 			"alt" : "Photo of Kiva fellow pinning map",
-			"src": "//cms.kiva.org.s3.amazonaws.com/page/images/fellows-top"
+			"src": "//cms.kiva.org.s3.amazonaws.com/page/images/fellows-header"
 		}
 	},
+
 "lightbox": {
 	"video": {
 		"youtube": {
@@ -19,10 +21,12 @@
 			}
 		}
 	},
+
 	"cta-banner": {
 		"headline": {
 			"medium": "Ready to make a difference?"
 		},
+
 		"textOverImageNameSpaceClass": "fellows-cta-wrapper",
 		"img": {
 			"full-width" : {
@@ -31,6 +35,7 @@
 			}
 		}
 	},
+
 	"fellows-faqs": [
 		{
 			"id": "requirement",

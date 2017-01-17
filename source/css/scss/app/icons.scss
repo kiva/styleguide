@@ -164,3 +164,15 @@ $light-blue-gray: #DBE3E5;
 		color: $instagram-hover-color;
 	}
 }
+.icon-apply, .icon-interview, .icon-matchmaking, .icon-offer, .icon-screen {
+  fill: black;
+  display: block;
+  width: rem-calc(80);
+  height: rem-calc(80);
+  margin: rem-calc(-3) auto;
+
+  @media #{$medium-up} {
+    width: rem-calc(130);
+    height: rem-calc(130);
+  }
+}

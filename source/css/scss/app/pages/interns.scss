@@ -1,0 +1,75 @@
+.interns-page, .fellows-page {
+
+	.impact_intro_header {
+		margin-top: 0;
+	}
+
+	.intern-teams ul {
+		margin-bottom: 0;
+		line-spacing: 1.5rem;
+	}
+
+	.interns-apply-wrapper {
+		@media #{$small-only} {
+			background: url("//cms.kiva.org.s3.amazonaws.com/page/images/interns-steps-bkgrnd-sm-std2.jpg") no-repeat;
+			background-color: $black;
+		}
+		@media #{$medium-only} {
+			background: url("//cms.kiva.org.s3.amazonaws.com/page/images/interns-steps-bkgrnd-med-std2.jpg") no-repeat;
+			background-color: $black;
+		}
+		@media #{$large-only} {
+			background: url("//cms.kiva.org.s3.amazonaws.com/page/images/interns-steps-bkgrnd-lg-std4.jpg") no-repeat;
+			background-color: $black;
+		}
+		@media #{$xlarge-only} {
+			background: url("//cms.kiva.org.s3.amazonaws.com/page/images/interns-steps-bkgrnd-xl-std5.jpg") no-repeat;
+			background-color: $black;
+		}
+		@media #{$xxlarge-only} {
+			background: url("//cms.kiva.org.s3.amazonaws.com/page/images/interns-steps-bkgrnd-xxl-std.jpg") no-repeat;
+			background-color: $black;
+		}
+		/*background-size: cover;*/
+		min-height: 100%;
+		min-width: 100%;
+		padding-bottom: rem-calc(80);
+		cursor: pointer;
+
+		.dotted-line {
+			height: rem-calc(140);
+			width: 0;
+			border-left: white rem-calc(5) dashed;
+			margin: 0 auto;
+		}
+
+		.no-select {
+			cursor: auto;
+		}
+	}
+
+	.intern-pad-right {
+		@media #{$large-up} {
+			padding-right: 2rem;
+		}
+	}
+
+	.intern-pad-left {
+		@media #{$large-up} {
+			padding-left: 2rem;
+		}
+	}
+
+	.intern-extra-pad {
+		padding-top: 3rem;
+		padding-bottom: 3rem;
+	}
+
+	.intern-extra-padtop {
+		padding-top: 3rem;
+	}
+
+	.intern-extra-padbtm {
+		padding-bottom: 3rem;
+	}
+}
