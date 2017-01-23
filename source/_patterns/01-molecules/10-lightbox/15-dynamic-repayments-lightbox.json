@@ -1,0 +1,13 @@
+{
+	"creditChanges": [
+		{
+			"date": "Oct 2, 2016",
+			"amount": "$23.45"
+		},
+		{
+			"date": "Nov 15, 2016",
+			"amount": "$0.12",
+			"loss": true
+		}
+	]
+}

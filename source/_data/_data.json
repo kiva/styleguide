@@ -5380,5 +5380,10 @@
 		"contributor_count": "10,000",
 		"target_reached": "false",
 		"amount_raised":"250,000"
-	}
+	},
+	 "holiday_mode": {
+		  "href": "#",
+		  "call_to_action": "Give a Kiva gift.",
+		  "message": "Make spirits bright this holiday season."
+	 }
 }

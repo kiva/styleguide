@@ -92,61 +92,70 @@
       "label": "Delinquency rate",
       "myAmount": "33.93%",
       "avgKivaLenderAmount": "11.12%",
-      "lightboxRevealLabel": "delinquency-rate"
+      "lightboxRevealLabel": "delinquency-rate",
+      "showInWhite": true
     },
     {
       "label": "Amount in arrears",
       "myAmount": "$72.84",
       "avgKivaLenderAmount": "$3.62",
       "lightboxRevealLabel": "amount-in-arrears",
-      "isTabbed": true
+      "isTabbed": true,
+      "showInWhite": true
     },
     {
       "label": "Outstanding loans",
       "myAmount": "$322.23",
       "avgKivaLenderAmount": "$32.55",
       "lightboxRevealLabel": "outstanding-loans",
-      "isTabbed": true
+      "isTabbed": true,
+      "showInWhite": true
     },
     {
       "label": "Delinquent loans",
       "myAmount": "7",
       "avgKivaLenderAmount": "0.02",
       "lightboxRevealLabel": "delinquent-loans",
-      "isTabbed": true
+      "isTabbed": true,
+      "showInWhite": true
     },
     {
       "label": "Default rate",
       "myAmount": "0.00%",
       "avgKivaLenderAmount": "1.32%",
-      "lightboxRevealLabel": "default-rate"
+      "lightboxRevealLabel": "default-rate",
+      "showInGray": true
     },
     {
       "label": "Amount defaulted",
       "myAmount": "$33.76",
       "avgKivaLenderAmount": "$3.72",
       "lightboxRevealLabel": "amount-defaulted",
-      "isTabbed": true
+      "isTabbed": true,
+      "showInGray": true
     },
     {
       "label": "Amount of ended",
       "myAmount": "$6,605.00",
       "avgKivaLenderAmount": "$284.00",
       "lightboxRevealLabel": "amount-of-ended",
-      "isTabbed": true
+      "isTabbed": true,
+      "showInGray": true
     },
     {
       "label": "Currency loss rate",
       "myAmount": "0.45%",
       "avgKivaLenderAmount": "0.37%",
-      "lightboxRevealLabel": "currency-loss-rate"
+      "lightboxRevealLabel": "currency-loss-rate",
+      "showInWhite": true
     },
     {
       "label": "Amount of currency loss",
       "myAmount": "$35.96",
       "avgKivaLenderAmount": "$1.31",
       "lightboxRevealLabel": "amount-of-currency-loss",
-      "isTabbed": true
+      "isTabbed": true,
+      "showInWhite": true
     }
   ],
   "comparisonHelpTexts": [

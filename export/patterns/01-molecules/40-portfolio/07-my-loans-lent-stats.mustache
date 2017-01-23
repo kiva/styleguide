@@ -1,17 +1,13 @@
 <div class="row my-loans-lent-stats">
-    <ul class="small-block-grid-2 large-block-grid-3">
+    <ul class="small-text small-block-grid-2 large-block-grid-3">
         {{#myLoansLentStats}}
             <li>
-                <div class="row">
-                    <span class="small-7 columns stat-label">
-                        {{label}}
-                    </span>
-                    <span class="small-1 columns"></span>
-                    <span class="text-right small-3 columns">
-                        <b>{{amount}}</b>
-                    </span>
-                    <span class="small-1 columns"></span>
-                </div>
+				<span class="stat-label">
+					{{label}}
+				</span>
+				<span class="stat-value">
+					{{amount}}
+				</span>
             </li>
         {{/myLoansLentStats}}
     </ul>

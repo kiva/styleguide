@@ -3,7 +3,6 @@
 @import 'utils';
 @import 'math';
 
-// @todo should we add bourbon?  @import '../../../node_modules/node-bourbon/node_modules/bourbon/app/assets/stylesheets/bourbon';
 @import 'normalize';
 @import 'flags16';
 
@@ -63,7 +62,7 @@
 
 // Vendor Sass
 @import 'select2/src/scss/core';
-@import 'slick.js/slick/slick.scss';
+@import 'slick-carousel/slick/slick.scss';
 
 // Custom vendor overrides
 @import 'vendor_override/nouislider/nouislider';
@@ -137,5 +136,6 @@
 @import 'app/components/trustee-endorsement-lightbox';
 @import 'app/components/holiday-banner';
 @import 'app/components/donation-donate-form';
+@import 'app/components/pagination';
 
 @import 'app/print';

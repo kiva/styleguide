@@ -3,6 +3,9 @@
 @import '../../vendor_override/foundation/type';
 
 .portfolio {
+	padding-left: 0;
+	padding-right: 0;
+
 	h2 {
 		color: $kiva-green;
 	}
@@ -22,16 +25,20 @@
 		}
 	}
 
+	.bottom-rule {
+		padding-bottom: 0;
+	}
 
 	.lender-name {
 		margin-bottom: 1rem;
-		margin-top: 1.6666666rem;
+		margin-top: 0.5rem;
 	}
 
 	.findALoanButton {
 		width: 90%;
 		margin-top: 1rem;
 		margin-left: 1.3333rem;
+		margin-bottom: 1rem;
 
 		@media #{$large-up} {
 			width: 50%;
@@ -44,10 +51,8 @@
 	}
 
 	.statistics-bar {
-		padding-top: 2rem;
-
 		.row {
-			padding-bottom: 2rem;
+			padding-bottom: 1rem;
 		}
 
 		svg {
@@ -57,6 +62,12 @@
 
 	.extra-stat-row {
 		margin-top: 1rem;
+	}
+
+	.row .columns {
+		@media #{$large-up} {
+			padding-left: 0;
+		}
 	}
 }
 
@@ -107,7 +118,7 @@
 }
 
 .loan-update {
-	margin-bottom: 2.222222rem !important;
+	margin-bottom: 1rem !important;
 
 	.loan-update-image {
 		text-align: center;
@@ -148,11 +159,25 @@
 			}
 		}
 	}
+
+	.columns {
+		padding-left: 0;
+		padding-right: 0;
+
+		@media #{$large-up} {
+			padding-left: 0.8333333333rem;
+			padding-right: 0.8333333333rem;
+		}
+	}
 }
 
 .recent-updates {
 	margin-top: 1rem;
 	position: relative;
+
+	h2 {
+		margin-top: 0 !important;
+	}
 
 	h2 a {
 		font-size: $body-font-size;
@@ -162,6 +187,7 @@
 
 .deposited-lent-widget {
 	margin: 2rem auto;
+	margin-top: 0;
 	width: 225px;
 	height: 225px;
 	position: relative;
@@ -170,6 +196,7 @@
 	@media #{$large-up} {
 		width: 180px;
 		height: 200px;
+		margin: 2rem auto;
 	}
 
 	.icon.icon-recycle {
@@ -273,6 +300,8 @@
 }
 
 .distribution-charts {
+	margin-bottom: 1rem;
+
 	.no-js & section.content {
 		display: none;
 	}
@@ -306,6 +335,7 @@
 
 		table {
 			border: none;
+			margin-bottom: 0;
 		}
 
 		td:last-child {
@@ -478,7 +508,336 @@
 }
 
 .my-loans-lent-stats {
-	.stat-label {
-		word-wrap: break-word;
+	li {
+		display: flex;
+		justify-content: space-between;
+		flex-wrap: nowrap;
+	}
+	.stat-value {
+		margin-left: 0.5rem;
+		text-align: right;
+		font-weight: bold;
+	}
+}
+
+.export-button {
+	padding-left: .5rem;
+	padding-right: .5rem;
+	display: inline-block;
+	float: right;
+	margin-left: rem-calc(20);
+	@media #{$medium-up} {
+		margin-bottom: .5rem;
+	}
+}
+
+.loans-table-wrapper {
+	position: relative;
+
+	.loader-overlay {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		background-color: rgba(255, 255, 255, 0.7);
+		pointer-events: none;
+		display: none;
+
+		.loading-spinner {
+			width: 2.5rem;
+			height: 2.5rem;
+			left: 50%;
+			top: 3.5rem;
+			transform: translate(-50%);
+		}
+	}
+
+	&.loading .loader-overlay {
+		display: block;
+	}
+
+	.shadow-overlay {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		pointer-events: none;
+		box-shadow: inset rem-calc(-18) 0 rem-calc(24) rem-calc(-16) rgba(0,0,0,0.25);
+
+		@media #{$xxlarge-up} {
+			display: none;
+		}
+	}
+
+	.scroll-wrapper {
+		width: 100%;
+		overflow-x: scroll;
+	}
+}
+
+.my-loans {
+	padding: 0;
+
+	h1 {
+		margin-bottom: 0;
+	}
+
+	.zero-loans-prompt {
+		margin-top: rem-calc(20);
+	}
+
+	.bottom-rule {
+		padding: 0;
+	}
+
+	.avg-kiva-compare-table {
+		margin-left: -0.555556rem;
+		margin-right: -0.555556rem;
+
+		@media #{$large-up} {
+			margin-left: 0;
+			margin-right: 0;
+		}
+
+		.show-white {
+			background-color: $white;
+		}
+
+		.show-gray {
+			background-color: $kiva-bg-lightgray;
+		}
+	}
+
+	.loans-table-messages {
+		display: flex;
+		justify-content: space-between;
+		flex-wrap: nowrap;
+		align-items: flex-end;
+		margin: 2rem 0 0.25rem;
+
+		.sort-message {
+			font-weight: 100;
+			color: $kiva-text-light;
+		}
+
+		.loan-count {
+			font-weight: 100;
+			text-align: right;
+			white-space: nowrap;
+			margin-left: 1rem;
+		}
+	}
+
+	.filter-title {
+		display: none;
+		margin-bottom: 0.25rem;
+		font-weight: bold;
+		color: $kiva-text-light;
+
+		@media #{$large-up} {
+			display: inline-block;
+		}
+	}
+
+	.filter-toggle {
+		display: inline-block;
+		float: left;
+
+		@media #{$large-up} {
+			display: none;
+		}
+
+		a {
+			padding: 0 1rem;
+			margin-bottom: 0.75rem;
+		}
+	}
+
+	.filter-clear {
+		display: inline-block;
+		float: right;
+		line-height: rem-calc(26);
+
+		&:visited {
+			color: $kiva-textlink;
+		}
+
+		@media #{$medium-up} {
+			line-height: rem-calc(32);
+		}
+	}
+
+	select {
+		min-width: 5rem;
+		padding: 0 1.2rem 0 0.5rem;
+		margin-top: -0.5rem;
+		height: 1.5rem;
+		font-weight: normal;
+	}
+
+	.pagination-region {
+		margin: 1rem 0 5rem;
+	}
+}
+
+.my-loans #loan-filters {
+	input {
+		height: 1.5rem;
+	}
+
+	label {
+		display: inline;
+	}
+
+	select {
+		width: 5rem;
+		display: inline;
+	}
+
+	@media #{$large-up} {
+		height: auto;
+	}
+
+	form {
+		.columns {
+			padding: 0;
+		}
+
+		@media #{$medium-up} {
+			.other-filters {
+				text-align: right;
+			}
+		}
+
+		@media only screen and (min-width: #{$med-large-breakpoint}) {
+			.search-string {
+				width: 33%;
+			}
+
+			.status-filter {
+				width: 28%;
+				padding: 0 $column-gutter/2;
+			}
+
+			.other-filters {
+				width: 39%;
+			}
+		}
+
+		@media #{$xxlarge-up} {
+			.search-string {
+				width: 38%;
+			}
+
+			.status-filter {
+				width: 25%;
+			}
+
+			.other-filters {
+				width: 37%;
+			}
+		}
+	}
+}
+
+table.loans-table {
+	border: none;
+	font-weight: 100;
+	margin: 0;
+
+	th {
+		padding-right: 0;
+	}
+
+	td {
+		vertical-align: top;
+		padding-right: 0;
+
+		&:first-child {
+			padding-left: 0;
+			min-width: rem-calc(50);
+			text-align: center;
+
+			svg {
+				width: rem-calc(50);
+				margin-top: 0.5rem;
+				display: block;
+			}
+
+			svg.icon-match {
+				height: rem-calc(27);
+			}
+
+			svg.icon-dedicate-heart {
+				height: rem-calc(21);
+			}
+		}
+	}
+
+	.amount {
+		text-align: right;
+	}
+
+	.country span {
+		margin-right: 0.25rem;
+    	vertical-align: top;
+	}
+
+	.date-lent {
+		white-space: nowrap;
+	}
+
+	.promo-credit {
+		margin-top: 1rem;
+	}
+
+	.dedication span, .date-lent, .promo-credit, .progress-verb, .arrears-amount {
+		color: $kiva-text-light;
+		font-size: $x-small-font-size;
+		line-height: $x-small-line-height;
+	}
+
+	.dedication span {
+		display: block;
+		line-height: 0.8rem;
+		margin-top: 0.1rem;
+	}
+
+	.team {
+		display: block;
+
+		img {
+			width: rem-calc(35);
+			display: block;
+		}
+	}
+}
+
+table.repayments-list {
+	width: auto;
+	background: none;
+	border: none;
+
+	tr {
+		&:nth-of-type(even) {
+			background: none;
+		}
+
+		td {
+			color: $white;
+			padding: 0 0 0 0.5rem;
+
+			&:first-child {
+				padding-left: 0;
+			}
+
+			&.amount {
+				padding-left: 1rem;
+				text-align: right;
+			}
+
+			@media #{$medium-up} {
+				font-size: $body-font-size;
+				line-height: $body-line-height;
+			}
+		}
 	}
 }

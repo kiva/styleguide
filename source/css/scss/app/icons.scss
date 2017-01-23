@@ -161,6 +161,11 @@ $light-blue-gray: #DBE3E5;
 		color: $twitter-hover-color;
 	}
 }
+.icon-yelp {
+	&:hover svg, &:active svg {
+		color: $yelp-hover-color;
+	}
+}
 .icon-youtube {
 	&:hover svg, &:active svg {
 		color: $youtube-hover-color;

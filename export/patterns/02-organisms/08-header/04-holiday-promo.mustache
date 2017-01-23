@@ -1,12 +1,12 @@
 {{! This is the holiday banner that is shown in the xlarge-up screen state}}
 <div class="show-for-xxlarge-up holiday-promo">
-	<a href="{{holiday_mode.href}}" kvtrackevent="promo|click|TopNav">
+	<a id="holiday-promo-content" href="{{holiday_mode.href}}" kvtrackevent="promo|click|TopNav">
 		<svg class="icon icon-kiva-card">
 			<use xlink:href="#icon-kiva-card"></use>
 		</svg>
 		<div class="content">
 			<div>{{holiday_mode.message}}</div>
-			<div>{{holiday_mode.call_to_action}}<br></div>
+			<div class="call-to-action-text text-left">{{holiday_mode.call_to_action}}<br></div>
 		</div>
 	</a>
 </div>
