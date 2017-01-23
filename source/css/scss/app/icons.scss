@@ -1,26 +1,26 @@
 $light-blue-gray: #DBE3E5;
 
 .icon {
-    fill: none;
-    stroke: none;
-    -webkit-backface-visibility: hidden;
+		fill: none;
+		stroke: none;
+		-webkit-backface-visibility: hidden;
 
-    &.icon-confirmation,
+		&.icon-confirmation,
 	&.icon-error,
 	&.icon-info,
 	&.icon-warning,
 	&.icon-question,
-    &.icon-magnify-glass,
-    &.icon-nearme,
-    &.icon-triangle,
-    &.icon-globe,
-    &.icon-handshake,
-    &.icon-sort,
+		&.icon-magnify-glass,
+		&.icon-nearme,
+		&.icon-triangle,
+		&.icon-globe,
+		&.icon-handshake,
+		&.icon-sort,
 	&.icon-edit,
 	&.icon-refresh,
 	&.icon-grid,
 	&.icon-map,
-    &.icon-tags-checkmark,
+		&.icon-tags-checkmark,
 	&.icon-sector-agriculture,
 	&.icon-sector-arts,
 	&.icon-sector-clothing,
@@ -36,88 +36,88 @@ $light-blue-gray: #DBE3E5;
 	&.icon-sector-services,
 	&.icon-sector-transportation,
 	&.icon-sector-wholesale {
-        fill: $kiva-text-dark;
-    }
+				fill: $kiva-text-dark;
+		}
 
-    &.icon-large-chevron,
-    &.icon-large-chevron-mobile,
-    &.icon-medium-chevron,
-    &.icon-small-chevron,
-    &.icon-small-chevron-mobile,
-    &.icon-x,
+		&.icon-large-chevron,
+		&.icon-large-chevron-mobile,
+		&.icon-medium-chevron,
+		&.icon-small-chevron,
+		&.icon-small-chevron-mobile,
+		&.icon-x,
 	&.icon-list,
-    &.icon-filter {
-        stroke: $kiva-text-dark;
-    }
+		&.icon-filter {
+				stroke: $kiva-text-dark;
+		}
 
-    &.icon-distribution {
-        color: $kiva-text-dark;
-    }
+		&.icon-distribution {
+				color: $kiva-text-dark;
+		}
 
-    &.icon-star,
-    &.icon-half-star {
-        fill: $kiva-bg-darkgray;
-        color: $kiva-text-dark;
-    }
+		&.icon-star,
+		&.icon-half-star {
+				fill: $kiva-bg-darkgray;
+				color: $kiva-text-dark;
+		}
 
-    &.icon-slideshow-dot {
-        stroke: $white;
-        fill: $white;
-        fill-opacity: 0.3;
+		&.icon-slideshow-dot {
+				stroke: $white;
+				fill: $white;
+				fill-opacity: 0.3;
 
-        &.active {
-            fill-opacity: 1;
-        }
-    }
+				&.active {
+						fill-opacity: 1;
+				}
+		}
 
-    &.icon-facebook,
-    &.icon-pinterest,
-    &.icon-twitter,
-    &.icon-youtube,
-    &.icon-linkedIn,
+		&.icon-facebook,
+		&.icon-pinterest,
+		&.icon-twitter,
+		&.icon-youtube,
+		&.icon-linkedIn,
 	&.icon-instagram {
-        color: $gray;
-    }
+				color: $gray;
+		}
 
-    &.icon-boundaries,
-    &.icon-hand-up,
-    &.icon-lifting,
-    &.icon-recycle,
-    &.icon-impact {
-        fill: $light-blue-gray;
-        color: $kiva-green;
-    }
+		&.icon-boundaries,
+		&.icon-hand-up,
+		&.icon-lifting,
+		&.icon-recycle,
+		&.icon-impact {
+				fill: $light-blue-gray;
+				color: $kiva-green;
+		}
 
-    &.icon-choose,
-    &.icon-lend,
-    &.icon-repaid,
-    &.icon-repeat
-     {
-        fill: $kiva-green;
-        color: $kiva-icon-green;
-    }
+		&.icon-choose,
+		&.icon-lend,
+		&.icon-repaid,
+		&.icon-repeat
+		 {
+				fill: $kiva-green;
+				color: $kiva-icon-green;
+		}
 
-    &.icon-leaf,
-    &.icon-leaves {
-        fill: $kiva-green;
-    }
+		&.icon-leaf,
+		&.icon-leaves {
+				fill: $kiva-green;
+		}
 
-    &.icon-match {
-        fill: $white;
-        color: $kiva-icon-green;
-    }
+		&.icon-match {
+				fill: $white;
+				color: $kiva-icon-green;
+		}
 
 	&.icon-pdf {
 		fill: #C31B00;
 	}
 
-    &.icon-checkbox-bad {
-        fill: $kiva-accent-red;
-    }
+		&.icon-checkbox-bad {
+				fill: $kiva-accent-red;
+		}
 
-    &.icon-checkbox-good {
-        fill: $kiva-green;
-    }
+		&.icon-checkbox-good {
+				fill: $kiva-green;
+		}
 
 	&.icon-curved-arrow {
 		fill: $kiva-darkgreen;
@@ -129,6 +129,14 @@ $light-blue-gray: #DBE3E5;
 
 	&.icon-kiva-card {
 		fill: $kiva-icon-green;
+	}
+
+	&.icon-apply,
+	&.icon-interview,
+	&.icon-matchmaking,
+	&.icon-offer,
+	&.icon-screen {
+		fill: black;
 	}
 }
 
@@ -167,16 +175,4 @@ $light-blue-gray: #DBE3E5;
 	&:hover svg, &:active svg {
 		color: $instagram-hover-color;
 	}
-}
-.icon-apply, .icon-interview, .icon-matchmaking, .icon-offer, .icon-screen {
-  fill: black;
-  display: block;
-  width: rem-calc(80);
-  height: rem-calc(80);
-  margin: rem-calc(-3) auto;
-
-  @media #{$medium-up} {
-    width: rem-calc(130);
-    height: rem-calc(130);
-  }
 }

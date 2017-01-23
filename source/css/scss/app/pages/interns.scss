@@ -72,4 +72,16 @@
 	.intern-extra-padbtm {
 		padding-bottom: 3rem;
 	}
+
+	.icon-apply, .icon-interview, .icon-matchmaking, .icon-offer, .icon-screen {
+		display: block;
+		width: rem-calc(80);
+		height: rem-calc(80);
+		margin: rem-calc(-3) auto;
+
+		@media #{$medium-up} {
+			width: rem-calc(130);
+			height: rem-calc(130);
+		}
+	}
 }

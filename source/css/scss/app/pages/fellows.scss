@@ -200,8 +200,8 @@
 			max-width: $avatar-size;
 			padding-bottom: rem-calc(5);
 			display: block;
-    	margin-left: auto;
-    	margin-right: auto;
+			margin-left: auto;
+			margin-right: auto;
 		}
 	}
 
@@ -227,8 +227,8 @@
 		width: 100%;
 		height: 1.5rem;
 		display: block;
-  	margin-top: 1rem;
-  	margin-bottom: 1rem;
+		margin-top: 1rem;
+		margin-bottom: 1rem;
 
 		@media #{$large-up} {
 			transform: rotate(270deg);
@@ -354,14 +354,14 @@
 	}
 
 	.sevenfour-text {
-  	color: $white;
+		color: $white;
 		text-shadow: 1px 1px 3px $kiva-darkgreen;
 		h2 {
 			color: $white;
 		}
 		text-align: center;
 		margin-left: auto;
-  	margin-right: auto;
+		margin-right: auto;
 	}
 
 	.countries-map {
@@ -378,12 +378,12 @@
 		}
 
 		@media #{$small-only} {
-				background-image: url("//cms.kiva.org.s3.amazonaws.com/page/images/fellowscountries-small.gif");
-				height: 220px;
-				width:100%;
-			}
+			background-image: url("//cms.kiva.org.s3.amazonaws.com/page/images/fellowscountries-small.gif");
+			height: 220px;
+			width:100%;
+		}
 
-  	background-repeat: no-repeat;
+		background-repeat: no-repeat;
 	}
 
 	.lifestyle-photo {
