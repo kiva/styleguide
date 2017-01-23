@@ -1,0 +1,141 @@
+{
+	"headline": {
+		"medium": "Travel the world and make a difference"
+	},
+
+	"textOverImageNameSpaceClass": "fellows-headline-wrapper",
+	"img": {
+		"full-width" : {
+			"alt" : "Photo of Kiva fellow pinning map",
+			"src": "//cms.kiva.org.s3.amazonaws.com/page/images/fellows-header"
+		}
+	},
+
+"lightbox": {
+	"video": {
+		"youtube": {
+			"src": "//player.vimeo.com/video/194753041",
+			"modal-title": "Advice from a Kiva fellow",
+			"width": "100%",
+			"frameborder": "0"
+			}
+		}
+	},
+
+	"cta-banner": {
+		"headline": {
+			"medium": "Ready to make a difference?"
+		},
+
+		"textOverImageNameSpaceClass": "fellows-cta-wrapper",
+		"img": {
+			"full-width" : {
+				"alt" : "Photo of Guatemalan mountain",
+				"src": "http://cms.kiva.org.s3.amazonaws.com/page/images/fellows-cta"
+			}
+		}
+	},
+
+	"fellows-faqs": [
+		{
+			"id": "requirement",
+			"question": "What are the minimum requirements for becoming a Kiva fellow?",
+			"answer": "Kiva fellows must be 21 years of age by the start of training week. You must be able to legally travel to the U.S. for the week-long training program, and you’ll need a laptop to use during training week and your time in the field. You must also be fluent in English."
+		},
+		{
+			"id": "commitment",
+			"question": "What is the time commitment of a Kiva fellowship?",
+			"answer": "The Kiva fellowship is a full-time, 6-month commitment. Many fellows love the experience so much they opt to extend. You can apply to be considered for a second placement once the job descriptions for the next class have been posted."
+		},
+		{
+			"id": "pay",
+			"question": "Is the fellowship a paid position?",
+			"answer": "All Kiva fellowships are unpaid, volunteer positions. However, an international travel stipend is provided to all fellows, along with a modest monthly living stipend to offset food and housing costs."
+		},
+		{
+			"id": "cost",
+			"question": "What will my costs be as a fellow?",
+			"answer": "Although Kiva provides a modest travel and living stipend, these are not likely to cover all of the costs associated with the fellowship. The total cost of the program varies depending on country/city assignment and your personal travel/lifestyle. You will need to research the cost of living and round-trip flights and visas for the destination country/city, and flight and accommodations during training week. Also include possible costs for traveling to branch offices and visiting clients."
+		},
+		{
+			"id": "insurance",
+			"question": "Will I need to get my own travel insurance?",
+			"answer": "All fellows are covered under Kiva’s travel insurance policy. This policy does not cover any preventative health care, but does cover fellows for health issues that may arise while in the field, as well as emergency evacuation in the case of severe medical emergency, political unrest or natural disaster. More details about Kiva’s insurance policy are provided upon acceptance into the program."
+		},
+		{
+			"id": "application",
+			"question": "How do I apply?",
+			"answer": "You can apply for any open fellowship position by reviewing the posted job descriptions and applying to the role (or roles) that you feel you are qualified for. We require a resume, but cover letters will not be reviewed. There are a number of application questions you will need to complete; please note that there is no option to save a draft of your application, so we recommend writing your answers to the short essay questions in a separate document, then copying and pasting them into the application."
+		},
+		{
+			"id": "citizen",
+			"question": "Can I apply for a fellowship if I’m not a U.S. citizen?",
+			"answer": "We highly value an international culture at Kiva and encourage international applicants to apply. However, fellows are responsible for obtaining the necessary visa requirements independently, both for attendance at training week in San Francisco, and/or for their host country or countries."
+		},
+		{
+			"id": "languages",
+			"question": "Can I still be a Kiva fellow if I don’t speak any languages other than English?",
+			"answer": "Language requirements and preferences are noted on all job descriptions. We do work in a number of countries where English is spoken (and/or where the Field Partner staff speak English), so there are still options for candidates who only speak English."
+		},
+		{
+			"id": "immersion",
+			"question": "Is this a good way to gain my first immersion abroad experience?",
+			"answer": "The most successful Kiva Fellows have already spent significant time abroad when they begin their fellowships. Because the fellowship is a deep immersion experience, cultural comfort and adaptability are key to a fellow's positive experience. More prior experience abroad generally means that a fellow will have an easier time adjusting to cultural differences and diving right into the work."
+		},
+		{
+			"id": "safety",
+			"question": "Is it safe to volunteer in a certain region, country or city?",
+			"answer": "Kiva follows a security policy to determine whether or not we feel comfortable sending fellows to certain locations given current events. However, we encourage you to research extensively to determine whether you feel comfortable going to a particular country, region or city. Kiva will never send you somewhere you are not comfortable. We want this to be a great experience for you, your field partner and Kiva."
+		},
+		{
+			"id": "sightsee",
+			"question": "Will there be time for me to travel and sightsee while I am abroad?",
+			"answer": "Your first priority as a Kiva fellow is to fulfill your duties as described in your workplan. Kiva and its field partners have generally been flexible regarding short breaks for travel and sightseeing, given sufficient notice and reasonable duration."
+		},
+		{
+			"id": "contacts",
+			"question": "Who are my contacts at Kiva while in the field?",
+			"answer": "You will be supported by both the Kiva Fellows Program Team and one or more direct managers who are typically based in the region in which you are working."
+		},
+		{
+			"id": "housing-opts",
+			"question": "What are my housing options?",
+			"answer": "Kiva fellows are responsible for finding their own housing for the duration of their placement. Previous Kiva fellows have lived in homestays, rented their own private apartment, shared an apartment/house with others, or stayed in a hotel close to their workplace. Some Kiva fellows arrange their lodging prior to leaving, while others find it more convenient to arrange these details once they’ve arrived on site. Please keep in mind that some fellows may be placed with more than one field partner that may require finding lodging in multiple locations."
+		},
+		{
+			"id": "visa",
+			"question": "What kind of visa should I apply for?",
+			"answer": "The Kiva Fellows Program does not have the resources to advise fellows in the pursuit of visas. You will need to do research about the type of visa appropriate for your stay in the destination country. If required, Kiva can provide a letter of support."
+		},
+		{
+			"id": "vaccinations",
+			"question": "What vaccinations will I need?",
+			"answer": "Vaccination requirements vary from country to country. In addition to completing basic research on this topic, you will need to contact your local travel clinic for more information on their recommendations for vaccinations."
+		},
+		{
+			"id": "fellow-training",
+			"question": "What training is provided for Kiva Fellows?",
+			"answer": "There is a mandatory 5-day training at Kiva HQ in San Francisco for each class of fellows prior to their departure to the field. It covers Kiva's model, tools and resources you will need, and specifics of the deliverables you will be completing in the field. It will also give you a chance to meet your Kiva fellow classmates, alumni of the program and the Kiva staff. We expect fellows to complete select training modules on their own time prior to arrival at Kiva HQ, and supplemental remote training sessions take place throughout the duration of the fellowship."
+		},
+		{
+			"id": "kiva-job",
+			"question": "Can I get a job at Kiva after my fellowship?",
+			"answer": "We wish we could hire all of our amazing fellows, but it’s just not possible. Fellowship positions do not turn into staff positions at Kiva, but if there is a position that becomes available we would consider current or former fellows as we would any other applicant applying externally."
+		},
+		{
+			"id": "job-search",
+			"question": "How does Kiva help with the job search process?",
+			"answer": "The Fellowship Program provides several professional development workshops, and access to contacts within the Kiva network and beyond. Upon successful completion of a fellowship, managers may also provide letters of recommendation."
+		},
+		{
+			"id": "alumni-network",
+			"question": "Is there a Kiva Fellow Alumni network?",
+			"answer": "Yes! All successful participants in the program will be welcomed into our community of Kiva Fellow Alumni. With 700+ members, this dynamic network of global change-makers is an incredibly rich source of friendships and professional connections. Alumni are encouraged to communicate with one another through our private LinkedIn and Facebook groups, as well as in-person at occasional events."
+		},
+		{
+			"id": "stay-involved",
+			"question": "What opportunities are there for Kiva Fellow Alumni to stay involved with Kiva?",
+			"answer": "Kiva Fellow Alumni are highly valued members of the Kiva family and have many opportunities to stay involved with Kiva and the Fellows Program. Many alumni actively participate in the program by interviewing candidates and speaking with accepted applicants. Alumni are also encouraged to share their experiences with their home communities and attend events or speak on behalf of Kiva. All alumni will also receive a quarterly newsletter and be invited to attend Kiva and Alumni Recognition events. "
+		}
+	]
+}
