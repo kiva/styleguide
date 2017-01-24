@@ -1,0 +1,43 @@
+.donation-page-form {
+	input[type="radio"] {
+		display:none;
+	}
+
+	input[type="radio"]:checked + label,
+	input[type="radio"]:hover + label {
+		background-color: $kiva-green;
+		border-color: white;
+		color: white;
+	}
+
+	.amount-input {
+		width: 100%;
+		height: rem-calc(50);
+	}
+
+	.donate-monthly-checkbox {
+		padding-top: rem-calc(10);
+
+		.donateMonthly {
+			padding-left: rem-calc(10);
+		}
+	}
+
+	label {
+		display:inline-block;
+		width: 100%;
+		height: rem-calc(45);
+		padding-top: rem-calc(10);
+		margin-bottom: rem-calc(10);
+	}
+
+	.amount-button {
+		height: rem-calc(50);
+		margin-left: 0;
+
+		@media #{$small-only} {
+			padding-top: rem-calc(13);
+			padding-left: rem-calc(26);
+		}
+	}
+}

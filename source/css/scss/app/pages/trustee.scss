@@ -34,6 +34,26 @@
 		color: $kiva-text-dark;
 	}
 
+	h3 {
+		margin-top: rem-calc(20);
+		@media #{$medium-up} {
+			margin-top: rem-calc(40);
+		}
+	}
+
+	.preview-button {
+		vertical-align: bottom;
+		margin-right: rem-calc(10);
+		margin-top: rem-calc(20);
+	}
+
+	form.review ul {
+		list-style: none;
+		li .description {
+			font-weight: bold;
+		}
+	}
+
 }
 
 

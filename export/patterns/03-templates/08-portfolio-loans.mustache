@@ -1,0 +1,18 @@
+<div class="small-12 large-9 columns portfolio my-loans">
+    <h1>My loans</h1>
+	{{^has_loans}}
+		<p class="zero-loans-prompt">You haven't made a loan yet. Make your first loan today and change a life!</p>
+		<p>Start by lending to a <a href="{{women_href}}">woman</a>, <a href="{{single_parent_href}}">single parent</a> or <a href="{{all_category_href}}">another category</a>.</p>
+	{{/has_loans}}
+	{{#has_loans}}
+		{{> 01-molecules/40-portfolio/06-my-loans-average-kiva-comparison}}
+		<div class="row bottom-rule"></div>
+		{{> 01-molecules/40-portfolio/07-my-loans-lent-stats}}
+		<div class="row bottom-rule"></div>
+		<div class="loans-section">
+			{{> 02-organisms/40-portfolio/09-my-loans-table }}
+		</div>
+	{{/has_loans}}
+</div>
+
+<div class="spacer" style="clear:both"></div>

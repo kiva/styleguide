@@ -1,0 +1,14 @@
+{
+	"headline": {
+		"medium": "Check back here on [dynamic date] to apply!"
+	},
+
+	"textOverImageNameSpaceClass": "fellows-cta-wrapper",
+	
+	"img": {
+		"full-width" : {
+			"alt" : "Photo of Golden Gate Bridge",
+			"src": "http://cms.kiva.org.s3.amazonaws.com/page/images/fellows-cta"
+		}
+	}
+}

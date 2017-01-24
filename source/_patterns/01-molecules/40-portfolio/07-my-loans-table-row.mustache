@@ -1,0 +1,116 @@
+<td>
+	<a href="{{url}}">
+		<img src="{{image.url}}" data-interchange="{{#image.sizes}}[{{url}}, ({{size}})],{{/image.sizes}}">
+	</a>
+	{{#matchedLoan}}
+		<svg class="icon icon-match">
+			<use xlink:href="#icon-match"/>
+		</svg>
+	{{/matchedLoan}}
+	{{#dedication}}
+		{{^toKiva}}
+			<svg class="icon icon-dedicate-heart">
+				<use xlink:href="#icon-dedicate-heart"/>
+			</svg>
+		{{/toKiva}}
+	{{/dedication}}
+</td>
+<td>
+	<a href="{{url}}">{{name}} (#{{id}})</a>
+	<div class="activity">
+		{{activity.name}}
+	</div>
+	<div class="country">
+		<span class="f16 {{location.country.isoCode}}"></span>{{location.country.name}}
+	</div>
+	<div class="partner-trustee">
+		<a href="{{partnerTrusteeUrl}}">{{partnerName}}{{trusteeName}}</a>
+	</div>
+	{{#dedication}}
+		<div class="dedication">
+			{{#toKiva}}
+				<span>You opted to donate repayments from this loan to Kiva (Thanks!)</span>
+			{{/toKiva}}
+			{{^toKiva}}
+				<a href="{{url}}">Dedicated to {{recipient}}</a>
+				<span>Repayments for dedications are donated to Kiva</span>
+			{{/toKiva}}
+		</div>
+	{{/dedication}}
+</td>
+<td>
+	{{statusHuman}}
+</td>
+<td class="amount">
+	<div class="share-amount">
+		{{shareAmount}}
+	</div>
+	<div class="date-lent">
+		{{dateLent}}
+	</div>
+	{{#promoCreditUsedAmount}}
+		<div class="promo-credit">
+			{{promoCreditUsedAmount}} {{^promoTypeType}}promotional credit{{/promoTypeType}}{{promoTypeType}}
+		</div>
+	{{/promoCreditUsedAmount}}
+</td>
+<td class="amount">
+	<div class="progress-amount">
+		{{#isFundraising}}
+			{{fundedAmount}}
+		{{/isFundraising}}
+		{{^isFundraising}}
+			<a href="#">
+				{{#repaidAmountToYou}}
+					{{repaidAmountToYou}}
+				{{/repaidAmountToYou}}
+				{{^repaidAmountToYou}}
+					{{repaidAmountTotal}}
+				{{/repaidAmountToYou}}
+			</a>
+		{{/isFundraising}}
+	</div>
+	<div class="progress-verb">
+		{{#isFundraising}}
+			raised
+		{{/isFundraising}}
+		{{#hasPaidSomething}}
+			repaid{{#isRefunded}}/refunded{{/isRefunded}} to {{#repaidAmountToYou}}you{{/repaidAmountToYou}}{{^repaidAmountToYou}}Kiva{{/repaidAmountToYou}}
+		{{/hasPaidSomething}}
+	</div>
+	{{#sharedArrearsAmount}}
+		<div class="arrears-amount">
+			({{sharedArrearsAmount}} in arrears)
+		</div>
+	{{/sharedArrearsAmount}}
+</td>
+<td>
+	{{lenderRepaymentTerm}} mos
+</td>
+<td class="amount">
+	{{loanAmount}}
+	{{#arrearsAmount}}
+		<div class="arrears-amount">
+			({{arrearsAmount}} in arrears)
+		</div>
+	{{/arrearsAmount}}
+</td>
+<td>
+	{{#canChangeTeamAssignment}}
+		<select name="team-assignment">
+			{{#teams}}
+				<option value="{{value}}" {{#selected}}selected="selected"{{/selected}}>{{label}}</option>
+			{{/teams}}
+		</select>
+	{{/canChangeTeamAssignment}}
+	{{^canChangeTeamAssignment}}
+		{{#teams}}
+			<a class="team" href="{{teamUrl}}">
+				{{#teamImage}}
+					<img src="{{teamImage.url}}" data-interchange="{{#teamImage.sizes}}[{{url}}, ({{size}})],{{/teamImage.sizes}}">
+				{{/teamImage}}
+				<span>{{teamName}}</span>
+			</a>
+		{{/teams}}
+	{{/canChangeTeamAssignment}}
+</td>

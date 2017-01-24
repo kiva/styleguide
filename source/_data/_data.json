@@ -152,6 +152,84 @@
 			"fundraised-percentage": "80%"
 		}
 	},
+	"bar-links": [
+		{
+			"title": "About us",
+			"active": true
+		},
+		{
+			"title": "Get to know us"
+		},
+		{
+			"title": "How Kiva works"
+		},
+		{
+			"title": "Where Kiva works"
+		},
+		{
+			"title": "Impact"
+		},
+		{
+			"title": "Press"
+		},
+		{
+			"title": "Due diligence"
+		}
+	],
+	"has-bar-sub-links": true,
+	"bar-sub-links": [
+		{
+			"sub-title": "Labs"
+		},
+		{
+			"sub-title": "Kiva Live"
+		},
+		{
+			"sub-title": "Success Stories",
+			"sub-active": true
+		},
+		{
+			"sub-title": "Social Performance"
+		}
+	],
+	"drop-links": [
+		{
+			"title": "Impact",
+			"sub-links": [
+				{
+					"sub-title": "Labs"
+				},
+				{
+					"sub-title": "Kiva Live"
+				},
+				{
+					"sub-title": "Success Stories",
+					"sub-active": true
+				},
+				{
+					"sub-title": "Social Performance"
+				}
+			]
+		},
+		{
+			"title": "About us"
+		},
+		{
+			"title": "Get to know us"
+		},
+		{
+			"title": "How Kiva works"
+		},
+		{
+			"title": "Where Kiva works"
+		},
+		{
+			"title": "Press Center"
+		},
+		{
+			"title": "Due diligence"
+		}
+	],
 	"category": {
 		"name": "Agriculture",
 		"href": "/lend#/?&sortBy=popularity&gender=Female&partner_risk_rating_max=5&distributionModel=field_partner"
@@ -4978,7 +5056,6 @@
 	"statisticLinkUrl": "http://www.google.com",
 	"statisticAdditionalText": "99%",
 	"statisticIconName": "icon-line-graph",
-	"lightboxTriggerLinkText": "Click here for more",
 	"dataRevealId": "some-data-reveal-id",
 	"loans-statistic": {
 		"statisticValue": "163",
@@ -5261,7 +5338,14 @@
 	],
 
 	 "holidayModeActive": false,
-
+	 "kivaLogoUrl": "http://www.kiva.org",
+	 "sampleTable": [
+		{
+		"tableHeading": "Table header",
+		"tableValue": "Value",
+		"tableRowName": "Row name"
+		}
+	 ],
 	"faqs": [
 	  {
 		  "id": "faq-1",
@@ -5288,5 +5372,18 @@
 		  "question": "Do Kiva and/or Kiva lenders receive interest on Kiva loans?",
 		  "answer": "Kiva never collects interest on loans and individual Kiva lenders do not receive interest from loans they support on Kiva."
 	  }
-	]
+	],
+	"donation_appeal": {
+		"appeal_active":"true",
+		"target_date": "Dec 31",
+		"target_amount": "$500,000",
+		"contributor_count": "10,000",
+		"target_reached": "false",
+		"amount_raised":"250,000"
+	},
+	 "holiday_mode": {
+		  "href": "#",
+		  "call_to_action": "Give a Kiva gift.",
+		  "message": "Make spirits bright this holiday season."
+	 }
 }

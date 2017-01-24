@@ -1,5 +1,14 @@
 <div class="loan-use">
     <h2>
-        {{loanInfo}}
+        {{#loanInfo}}
+			{{{.}}}
+		{{/loanInfo}}
+		{{#showLearnMore}}
+			<a data-reveal-id="anonymous-description-lightbox">Learn More.</a>
+		{{/showLearnMore}}
     </h2>
 </div>
+
+{{#anonymous_description_lightbox}}
+	{{> 01-molecules/10-lightbox/04-help-text-lightbox}}
+{{/anonymous_description_lightbox}}

@@ -1,0 +1,58 @@
+<div class='donation-appeal'>
+	<div class='row'>
+		<div class='appeal-header'>
+			{{#appeal_active}}
+				Help us reach more communities in {{target_year}}!
+			{{/appeal_active}}
+			{{^appeal_active}}
+				{{#target_reached}}
+					We did it!
+				{{/target_reached}}
+				{{^target_reached}}
+					Amazing effort!
+				{{/target_reached}}
+			{{/appeal_active}}
+		</div>
+		<div>
+			{{#appeal_active}}
+				We're rallying to raise {{target_amount}} by {{target_date}}
+			{{/appeal_active}}
+			{{^appeal_active}}
+				{{#target_reached}}
+					Thank you for helping us hit our goal!
+				{{/target_reached}}
+				{{^target_reached}}
+					Thank you for helping support Kiva.
+				{{/target_reached}}
+			{{/appeal_active}}
+		</div>
+
+		<div class="outer-meter-wrapper">
+			<div class='inner-meter-wrapper'>
+				<div class='meter' style="transform: rotate({{rotation}}deg)"></div>
+			</div>
+		</div>
+
+		<div class='amount-raised'>
+			{{amount_raised}}
+		</div>
+		<div class='bottom-message'>
+			<div>raised from {{contributor_count}} people.</div>
+			<div>
+				{{#appeal_active}}
+					{{#target_reached}}
+						Keep the good going!
+					{{/target_reached}}
+				{{/appeal_active}}
+				{{^appeal_active}}
+					{{#target_reached}}
+						Amazing!
+					{{/target_reached}}
+					{{^target_reached}}
+						That will go a long way!
+					{{/target_reached}}
+				{{/appeal_active}}
+			</div>
+		</div>
+	</div>
+</div>

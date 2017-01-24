@@ -1,0 +1,266 @@
+{
+  "main-title": "Portfolio - Loans",
+  "page-title": "Portfolio - Loans",
+  "bar-links": [
+    {
+      "title": "Portfolio",
+      "active": true
+    },
+    {
+      "title": "My Teams"
+    },
+    {
+      "title": "Settings"
+    },
+    {
+      "title": "Borrow"
+    },
+    {
+      "title": "Trustee Dashboard"
+    }
+  ],
+  "has-bar-sub-links": true,
+  "bar-sub-links": [
+    {
+      "sub-title": "Portfolio"
+    },
+    {
+      "sub-title": "Lending stats"
+    },
+    {
+      "sub-title": "My loans",
+      "sub-active": true
+    },
+    {
+      "sub-title": "Estimated repayments"
+    },
+    {
+      "sub-title": "Add credit"
+    },
+    {
+      "sub-title": "Withdraw credit"
+    },
+    {
+      "sub-title": "Messages"
+    },
+    {
+      "sub-title": "Public lender profile"
+    },
+    {
+      "sub-title": "Transaction history"
+    },
+    {
+      "sub-title": "My donations"
+    },
+    {
+      "sub-title": "Purchased Kiva Cards"
+    },
+    {
+      "sub-title": "Invite friends"
+    },
+    {
+      "sub-title": "Bonus history"
+    }
+  ],
+  "updateTimestamp": "Aug 31, 2015 12:08 am",
+  "compareAmounts": [
+    {
+      "label": "Amount lent",
+      "myAmount": "$6,600.00",
+      "avgKivaLenderAmount": "$33.62",
+      "lightboxRevealLabel": "amount-lent"
+    },
+    {
+      "label": "Amount repaid",
+      "myAmount": "$6,178.82",
+      "avgKivaLenderAmount": "$278.17",
+      "lightboxRevealLabel": "amount-repaid"
+    },
+    {
+      "label": "Amount lost",
+      "myAmount": "$29.56",
+      "avgKivaLenderAmount": "$2.81",
+      "lightboxRevealLabel": "amount-lost"
+    },
+    {
+      "label": "Amount refunded and expired",
+      "myAmount": "$119.50",
+      "avgKivaLenderAmount": "$12.49",
+      "lightboxRevealLabel": "amount-refunded-and-expired"
+    },
+    {
+      "label": "Delinquency rate",
+      "myAmount": "33.93%",
+      "avgKivaLenderAmount": "11.12%",
+      "lightboxRevealLabel": "delinquency-rate",
+      "showInWhite": true
+    },
+    {
+      "label": "Amount in arrears",
+      "myAmount": "$72.84",
+      "avgKivaLenderAmount": "$3.62",
+      "lightboxRevealLabel": "amount-in-arrears",
+      "isTabbed": true,
+      "showInWhite": true
+    },
+    {
+      "label": "Outstanding loans",
+      "myAmount": "$322.23",
+      "avgKivaLenderAmount": "$32.55",
+      "lightboxRevealLabel": "outstanding-loans",
+      "isTabbed": true,
+      "showInWhite": true
+    },
+    {
+      "label": "Delinquent loans",
+      "myAmount": "7",
+      "avgKivaLenderAmount": "0.02",
+      "lightboxRevealLabel": "delinquent-loans",
+      "isTabbed": true,
+      "showInWhite": true
+    },
+    {
+      "label": "Default rate",
+      "myAmount": "0.00%",
+      "avgKivaLenderAmount": "1.32%",
+      "lightboxRevealLabel": "default-rate",
+      "showInGray": true
+    },
+    {
+      "label": "Amount defaulted",
+      "myAmount": "$33.76",
+      "avgKivaLenderAmount": "$3.72",
+      "lightboxRevealLabel": "amount-defaulted",
+      "isTabbed": true,
+      "showInGray": true
+    },
+    {
+      "label": "Amount of ended",
+      "myAmount": "$6,605.00",
+      "avgKivaLenderAmount": "$284.00",
+      "lightboxRevealLabel": "amount-of-ended",
+      "isTabbed": true,
+      "showInGray": true
+    },
+    {
+      "label": "Currency loss rate",
+      "myAmount": "0.45%",
+      "avgKivaLenderAmount": "0.37%",
+      "lightboxRevealLabel": "currency-loss-rate",
+      "showInWhite": true
+    },
+    {
+      "label": "Amount of currency loss",
+      "myAmount": "$35.96",
+      "avgKivaLenderAmount": "$1.31",
+      "lightboxRevealLabel": "amount-of-currency-loss",
+      "isTabbed": true,
+      "showInWhite": true
+    }
+  ],
+  "comparisonHelpTexts": [
+    {
+      "dataRevealId": "amount-lent-lightbox",
+      "descriptionTitle": "What does \"Amount lent\" mean?",
+      "descriptionText": "Whatever you want it to mean."
+    },
+    {
+      "dataRevealId": "amount-repaid-lightbox",
+      "descriptionTitle": "What does \"amount-repaid\" mean?",
+      "descriptionText": "Whatever you want it to mean."
+    },
+    {
+      "dataRevealId": "amount-lost-lightbox",
+      "descriptionTitle": "What does \"amount-lost\" mean?",
+      "descriptionText": "Whatever you want it to mean."
+    },
+    {
+      "dataRevealId": "amount-refunded-and-expired-lightbox",
+      "descriptionTitle": "What does \"Amount lent\" mean?",
+      "descriptionText": "Whatever you want it to mean."
+    },
+    {
+      "dataRevealId": "delinquency-rate-lightbox",
+      "descriptionTitle": "What does \"Amount lent\" mean?",
+      "descriptionText": "Whatever you want it to mean."
+    },
+    {
+      "dataRevealId": "amount-in-arrears-lightbox",
+      "descriptionTitle": "What does \"Amount lent\" mean?",
+      "descriptionText": "Whatever you want it to mean."
+    },
+    {
+      "dataRevealId": "outstanding-loans-lightbox",
+      "descriptionTitle": "What does \"Amount lent\" mean?",
+      "descriptionText": "Whatever you want it to mean."
+    },
+    {
+      "dataRevealId": "delinquent-loans-lightbox",
+      "descriptionTitle": "What does \"Amount lent\" mean?",
+      "descriptionText": "Whatever you want it to mean."
+    },
+    {
+      "dataRevealId": "default-rate-lightbox",
+      "descriptionTitle": "What does \"Amount lent\" mean?",
+      "descriptionText": "Whatever you want it to mean."
+    },
+    {
+      "dataRevealId": "amount-defaulted-lightbox",
+      "descriptionTitle": "What does \"Amount lent\" mean?",
+      "descriptionText": "Whatever you want it to mean."
+    },
+    {
+      "dataRevealId": "amount-of-ended-lightbox",
+      "descriptionTitle": "What does \"Amount lent\" mean?",
+      "descriptionText": "Whatever you want it to mean."
+    },
+    {
+      "dataRevealId": "currency-loss-rate-lightbox",
+      "descriptionTitle": "What does \"Amount lent\" mean?",
+      "descriptionText": "Whatever you want it to mean."
+    },
+    {
+      "dataRevealId": "amount-of-currency-loss-lightbox",
+      "descriptionTitle": "What does \"Amount lent\" mean?",
+      "descriptionText": "Whatever you want it to mean."
+    }
+  ],
+  "myLoansLentStats": [
+    {
+      "label": "Fundraising",
+      "amount": "1"
+    },
+    {
+      "label": "Funded",
+      "amount": "1"
+    },
+    {
+      "label": "Paying back",
+      "amount": "5"
+    },
+    {
+      "label": "Paying back delinquent",
+      "amount": "1"
+    },
+    {
+      "label": "Repaid",
+      "amount": "140"
+    },
+    {
+      "label": "Repaid w/ currency loss",
+      "amount": "1"
+    },
+    {
+      "label": "Ended w/ default",
+      "amount": "1"
+    },
+    {
+      "label": "Refunded",
+      "amount": "1"
+    },
+    {
+      "label": "Expired",
+      "amount": "1"
+    }
+  ]
+}

@@ -1,0 +1,42 @@
+{{> templates-header}}
+
+<div class="donation-page-wrapper row">
+	<div class="small-12 large-8 columns">
+		<!--Intro-text portion-->
+		<div class="">
+			{{> 02-organisms/02-donation/01-donation-intro-text.mustache}}
+		</div>
+
+		<!--donation appeal on small-medium screens-->
+		{{#donation_appeal}}
+			<div class="hide-for-large-up">
+				{{> 02-organisms/02-donation/04-donation-meter.mustache}}
+			</div>
+		{{/donation_appeal}}
+
+		<!--donation form portion-->
+		<div class="">
+			{{> 02-organisms/02-donation/03-donation-donate-form.mustache}}
+		</div>
+	</div>
+
+	<!--Sidebar portion-->
+	<div class="small-12 large-4 columns">
+		<!--donation appeal on large-up screens-->
+		{{#donation_appeal}}
+			<div class="show-for-large-up">
+				{{> 02-organisms/02-donation/04-donation-meter.mustache}}
+			</div>
+		{{/donation_appeal}}
+		{{> 02-organisms/02-donation/02-donation-sidebar.mustache}}
+	</div>
+
+	<!--FAQ portion-->
+	<div class="small-12 columns donation-faq">
+		{{> 02-organisms/13-faq/00-faq.mustache}}
+	</div>
+
+</div>
+<div class="donation-footer small-12">
+	{{> organisms-footer}}
+</div>

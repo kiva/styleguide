@@ -1,0 +1,63 @@
+<div class="loans-table-messages">
+	<span class="sort-message small-text">
+		Sorted by date posted on Kiva
+	</span>
+	<span class="loan-count featured">
+		{{^loan_count}}
+			0 loans
+		{{/loan_count}}
+		{{#loan_count}}
+			{{#single_loan}}
+				1 loan
+			{{/single_loan}}
+			{{^single_loan}}
+				{{loan_count}} loans
+			{{/single_loan}}
+		{{/loan_count}}
+	</span>
+</div>
+<span class="filter-title small-text">Filter loans</span>
+<div class="filter-toggle">
+	<a class="button setting"
+		href="#"
+		data-kv-accordion
+		aria-controls="loan-filters"
+		aria-expanded="{{#filters_expanded}}true{{/filters_expanded}}{{^filters_expanded}}false{{/filters_expanded}}"
+		>
+			{{#filters_expanded}}Hide filters{{/filters_expanded}}
+			{{^filters_expanded}}Filters{{/filters_expanded}}
+	</a>
+</div>
+{{#loan_count}}<span class="export-button button mini">Export</span>{{/loan_count}}
+{{#filters_set}}<a href="#" class="filter-clear small-text">Clear filters</a>{{/filters_set}}
+<div style="clear:both;"></div>
+<div class="loans-filters-region"></div>
+<div class="loans-table-wrapper {{#loading}}loading{{/loading}}">
+	<div class="loader-overlay">
+		{{> 01-molecules/03-media/01-loading-spinner }}
+	</div>
+	<div class="shadow-overlay"></div>
+	<div class="scroll-wrapper">
+		<table class="loans-table">
+			<thead>
+				<tr>
+					<th colspan="2">Loan details</th>
+					<th>Status</th>
+					<th class="amount">You loaned</th>
+					<th class="amount">Paid back or raised</th>
+					<th>Length</th>
+					<th class="amount">Amount</th>
+					<th>Team</th>
+				</tr>
+			</thead>
+			<tbody>
+				{{#loans}}
+					<tr>
+						{{> 01-molecules/40-portfolio/07-my-loans-table-row }}
+					</tr>
+				{{/loans}}
+			</tbody>
+		</table>
+	</div>
+</div>
+<div class="pagination-region"></div>

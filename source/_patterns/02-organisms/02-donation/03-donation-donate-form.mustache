@@ -1,0 +1,31 @@
+<form id="donationForm" action="/donate/supportusprocess" class="donation-page-form" method="get">
+	<ul id="donation-buttons" class="small-block-grid-3">
+		<li>
+			<input id="10" type="radio" name="donationAmount" class="donation-amount-button" value="10.00" />
+			<label class="button setting amount-button" for="10">$10</label>
+		</li>
+		<li>
+			<input id="20" type="radio" name="donationAmount" class="donation-amount-button" value="20.00" />
+			<label class="button setting amount-button" for="20">$20</label>
+		</li>
+		<li>
+			<input id="50" type="radio" name="donationAmount" class="donation-amount-button" value="50.00" checked />
+			<label class="button setting amount-button" for="50">$50</label>
+		</li>
+		<li>
+			<input id="100" type="radio" name="donationAmount" class="donation-amount-button" value="100.00" />
+			<label class="button setting amount-button" for="100">$100</label>
+		</li>
+		<li>
+			<input id="200" type="radio" name="donationAmount" class="donation-amount-button" value="200.00" />
+			<label class="button setting amount-button" for="200">$200</label>
+		</li>
+		<li>
+			<input id="donation-amount-input" type="text" class="setting amount-input amount-6" name="donationAmountOther" placeholder="$ other" value />
+		</li>
+	</ul>
+	<label class="donate-monthly-checkbox">
+		<input class="donate-monthly" type="checkbox"/> &nbsp; Make this a monthly donation.
+	</label>
+	<button id="submit" type="submit" name="submit" class="small-12 donate-submit">Donate</button>
+</form>

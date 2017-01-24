@@ -1,0 +1,13 @@
+{
+	"headline": {
+		"medium": "Check back here on [dynamic date] to apply!"
+	},
+
+	"img": {
+		"full-width" : {
+			"alt" : "Photo of Guatemalan mountain"
+		}
+	},
+
+	"textOverImageNameSpaceClass": "fellows-cta-wrapper-closed"
+}

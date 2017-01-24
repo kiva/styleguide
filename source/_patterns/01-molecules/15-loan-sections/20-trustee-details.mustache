@@ -3,7 +3,7 @@
 	{{^skipHeader}}
     <div class="ac-title ac-container" data-kv-accordion aria-controls="ac-trustee-info-body{{#right}}-right{{/right}}" aria-expanded="false">
         <h2>
-            Trustee
+            Trustee{{^trustee.no_trustee}}: {{trustee.trusteeName}}{{/trustee.no_trustee}}
             <span class="ac-dropdown-icon">
                 <svg class="icon icon-large-chevron">
                     <use xlink:href="#icon-large-chevron"></use>

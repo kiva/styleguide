@@ -1,0 +1,35 @@
+{
+	 "holidayMode": true,
+	 "faqs": [
+		  {
+			   "id": "faq-1",
+			   "question": "Why should I donate to Kiva?",
+			   "answer": "Donations to Kiva's operating expenses are vital to the success and sustainability of Kiva. As an organization we’re committed to sending 100% of all loan contributions to borrowers. We don’t take a cut of money lent on our website, and don’t charge a fee for lending.<br /><br /> Instead, we primarily support our operations through optional donations from our lenders, who choose to donate in addition to their loans. By crowdfunding a large majority of our operational revenue through our lender community, we’re able to keep our fundraising costs low and be less reliant on larger, one-off gifts to be sustainable. We also raise some funds through grants, interest earned on our bank accounts, corporate sponsors and foundations."
+		  },
+		  {
+			   "id": "faq-2",
+			   "question": "How does Kiva use donations?",
+			   "answer": "Kiva's staff and volunteers work hard to ensure every dollar donated to Kiva is used efficiently. For every $1 donated, Kiva facilitates $8 in loans!<br /><br /> Donations support a variety of programs, including:<br /><br /> -- Sending expert staff to over 80 countries to cultivate new partnerships, expand Kiva’s reach and perform due diligence and monitoring.<br /> -- Building and maintaining the complex technical infrastructure that facilitates over $1 million in loans each week.<br /> -- Training and supporting several hundred volunteers who translate and edit every loan posted on the Kiva website.<br /> -- Supporting the needs of our valued lenders around the world, developing engagement programs and answering customer service inquiries.<br /><br /> To learn more about how we use donations, check out our <a href='https://www.charitynavigator.org/index.cfm?bay=search.summary&orgid=12978'>Charity Navigator</a> profile or most recent <a href='{kvurl page=annualreport action=showCurrent}'>Annual Report</a>."
+		  },
+		  {
+			   "id": "faq-3",
+			   "question": "Are donations tax deductible?",
+			   "answer": "Yes. Unlike loans made on Kiva’s website, donations to Kiva are considered tax-deductible charitable contributions in the United States.<br /><br />Kiva is a 501(c)(3) nonprofit organization, registered in the state of California. We, unfortunately, don't have tax-deductible status in any other countries at this time."
+		  },
+		  {
+			   "id": "faq-4",
+			   "question": "Can I donate by check?",
+			   "answer": "Absolutely. To make a donation to Kiva's operating expenses by check, please do the following:<br /><br /> Step 1: Write your check payable to 'Kiva Microfunds.'<br /><br /> Step 2: On the back of the check, write 'Donate All' and the mailing address where you'd like to receive a donation receipt (if different from the address on the check)<br /><br /> Step 3: Mail the check to:<br /> <br /> Kiva<br /> Attn: Maria Zaldivar<br /> 875 Howard Street, Suite #340<br /> San Francisco, CA 94103<br /><br /> Unfortunately donations made offline will not be reflected in your online Kiva account. Donation receipts will be provided by mail for offline donations. If you’d like your donation to be reflected in your Kiva account, please make your donation online."
+		  },
+		  {
+			   "id": "faq-5",
+			   "question": "Are there other ways I can financially support Kiva?",
+			   "answer": "In addition to donating directly to Kiva, there are other ways that you can support Kiva’s operations:<br /><br /> -- Ask your company if they match donations<br /> Many companies will match charitable donations their employees make. Check with your company, and if they match , submit your donation receipts to double your contribution to Kiva.<br /><br /> If you need Kiva to fill out a matching request for your donation, send the form as an attachment to <a href='mailto:contactus@kiva.org'>matchinggifts@kiva.org</a><br /><br /> -- Dedicate your Amazon purchases to Kiva<br /> Make Kiva Microfunds your charity of choice using Amazon Smile.<br /><br /> -- Include Kiva in your will, trust or estate planning<br /> Thank you for considering such a meaningful way to contribute to Kiva.<br /><br /> Here is information you may need when including Kiva in your will, trust or estate planning:<br /> <br /> Kiva Microfunds<br /> 875 Howard Street, Suite 340<br /> San Francisco, CA 94103<br /> Phone: (415) 358-7513<br /> Tax ID: 71-0992446<br /><br /> If you need sample language, please contact Kiva at <a href='mailto:contactus@kiva.org'>contactus@kiva.org</a> and we’d be happy to provide you with it. We also encourage you to assign someone to be the manager to your Kiva account in the instance that there are any issues or problems that arise.<br /><br /> -- Volunteer your time<br /> Kiva volunteers are vital to the work we do! If you’re looking to give of your time, learn more about all of our volunteer and internship opportunities here: <a href='{kvurl page=workWithUs action=workWithUs}'>kiva.org/volunteer</a>"
+		  },
+		  {
+			   "id": "faq-6",
+			   "question": "Interested in supporting Kiva with a donation of $10,000 or more?",
+			   "answer": "Learn more about <a href='{kvurl page=partnerWithUs action=partnerWithUs}'> partnering with Kiva through grants, loan matching and employee and customer engagement programs</a>."
+		  }
+	 ]
+}

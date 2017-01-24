@@ -8095,6 +8095,7 @@ define("Styleguide", ["jquery"], function(__WEBPACK_EXTERNAL_MODULE_2__) { retur
 		var $search_form = $('#search-form');
 		var $search_box = $('#search-box');
 		var is_touch = $('html').hasClass('touch');
+		var $top_nav = $('.top-nav');
 
 		$search_toggle.click(function (e) {
 			e.preventDefault();
@@ -8120,10 +8121,11 @@ define("Styleguide", ["jquery"], function(__WEBPACK_EXTERNAL_MODULE_2__) { retur
 
 		var typeahead_menu_repositioning = function() {
 			if ($search_box.length) {
-				var offset = $search_box.offset();
+				var searchBoxOffset = $search_box.offset();
+				var topNavOffset = $top_nav.offset();
 				$('.top-nav-search-menu').css({
-					top: (offset.top + $search_box.outerHeight()) + 'px',
-					left: offset.left + 'px',
+					top: (searchBoxOffset.top - topNavOffset.top + $search_box.outerHeight()) + 'px',
+					left: searchBoxOffset.left + 'px',
 					width: $search_box.outerWidth() + 'px'
 				});
 			}
