@@ -12,7 +12,10 @@
 
 	<div class="ac-body" id="ac-more-lenders-body" aria-hidden="true">
 		{{#beyondLenderCutoffCount}}
-			<div class="beyond-cutoff-message text-center">+ {{beyondLenderCutoffCount}} more lenders</div>
+			<!-- <div class="beyond-cutoff-message text-center">+ {{beyondLenderCutoffCount}} more lenders</div> -->
+			<p class="show-more-lenders black-underlined text-center">
+				Show more
+			</p>
 		{{/beyondLenderCutoffCount}}
 		{{^beyondLenderCutoffCount}}
 			{{#numAnonymousLenders}}
@@ -24,7 +27,7 @@
 		</p>
 	</div>
 	{{#showSpilloverMessageForLenders}}
-		<p class="ac-title black-underlined text-center show-more-lenders" data-kv-accordion aria-controls="ac-more-lenders-body" aria-expanded="false">
+		<p class="ac-title black-underlined text-center show-all-lenders" data-kv-accordion aria-controls="ac-more-lenders-body" aria-expanded="false">
 			Show all lenders
 		</p>
 	{{/showSpilloverMessageForLenders}}
