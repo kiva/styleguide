@@ -4,6 +4,7 @@
 		.question-wrap {
 			display: inline;
 			font-weight: bold;
+			padding-right: rem-calc(30);
 		}
 		&.ac-title {
 			border-top: rem-calc(1) solid black;
