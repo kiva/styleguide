@@ -2,10 +2,11 @@
 	"headline": {
 		"medium": "Ready to make a difference?"
 	},
-
 	"img": {
 		"full-width" : {
-			"alt" : "Photo of Guatemalan mountain"
+			"alt" : "Photo of Guatemalan mountain",
+			"button-text": "Apply now!",
+			"button-url": "#"
 		}
 	},
 
