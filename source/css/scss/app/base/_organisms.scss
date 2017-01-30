@@ -27,3 +27,18 @@
 	@include frame-width();
 	padding: 0 2rem;
 }
+
+// small white text for image attribution
+.overlay.image-attribution {
+	position: absolute;
+	bottom: .7rem;
+	right: .7rem;
+	font-size: .8rem;
+	line-height: .8rem;
+
+	@media #{$small-only, $medium-only} {
+		right: 0;
+		width: 100%;
+		text-align: center;
+	}
+}
