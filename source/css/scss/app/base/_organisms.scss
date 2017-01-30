@@ -33,12 +33,20 @@
 	position: absolute;
 	bottom: .7rem;
 	right: .7rem;
+	right: 0;
 	font-size: .8rem;
 	line-height: .8rem;
+	width: 100%;
+	text-align: center;
 
-	@media #{$small-only, $medium-only} {
-		right: 0;
-		width: 100%;
-		text-align: center;
+	// @media #{$small-only, $medium-only} {
+	// 	right: 0;
+	// 	width: 100%;
+	// 	text-align: center;
+	// }
+	@media #{$large-up} {
+		right: .7rem;
+		width: auto;
+		text-align: inherit;;
 	}
 }
