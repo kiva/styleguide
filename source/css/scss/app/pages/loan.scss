@@ -360,7 +360,7 @@
 		}
 		@media #{$small-only}{
 			padding-bottom: 0;
-			
+
 			.lender-count {
 				float: right;
 			}
@@ -399,10 +399,10 @@
 		margin: 0 auto;
 	}
 
-	padding-bottom: 2rem;
+	//padding-bottom: 2rem;
 
 	@media #{$large-up} {
-		padding-bottom: 4rem;
+		//padding-bottom: 4rem;
 
 		&.already-lent-visible {
 			padding-bottom: 7rem;
@@ -811,10 +811,10 @@
 .lend-action, .lend-action.row {
 	width: calc(40% - #{rem-calc(12)});
 	margin: 0;
-	position: absolute;
-	bottom: 0;
-	right: 0;
-	float: right;
+	// position: absolute;
+	// bottom: 0;
+	// right: 0;
+	// float: right;
 
 	&.notice-visible {
 		position: relative;
