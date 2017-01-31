@@ -234,7 +234,17 @@
 			transform: rotate(270deg);
 			width: 185%;
 		}
+
+		// adjust vertical position of chevrons as content width differs
+		@media #{$large-only}{
+			margin-top: 2.95rem;
+		}
+		@media #{$xlarge-only}{
+			margin-top: 1.6rem;
+		}
 	}
+
+
 
 	.fellows-steps-head {
 		color: white;
