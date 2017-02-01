@@ -495,6 +495,24 @@
 			white-space: nowrap;
 		}
 
+		.lender-controls, .team-controls {
+			text-align: center;
+
+			.loading-spinner {
+				vertical-align: top;
+				$size: 1.2rem;
+				$padding: 0.25rem;
+				width: $size;
+				height: $size;
+				margin-left: -($size + $padding);
+			}
+
+			a {
+				display: inline-block;
+				margin-bottom: 1.1111111111rem
+			}
+		}
+
 		.anonymous-lender-message, .beyond-cutoff-message {
 			margin-bottom: 1rem;
 		}
