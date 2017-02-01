@@ -458,6 +458,14 @@
 	.ac-body {
 		margin-top: 1rem;
 
+		ul {
+			@include block-grid(5, rem-calc(10));
+
+			@media #{$medium-up} {
+				@include block-grid(5, rem-calc(20));
+			}
+		}
+
 		li a {
 			position: relative;
 			width: 100%;
@@ -488,11 +496,17 @@
 
 		.lender-name, .lender-location {
 			display: block;
-			font-size: $small-font-size;
-			line-height: $small-line-height;
+			font-size: $x-small-font-size;
+			line-height: $x-small-line-height;
 			overflow: hidden;
-			text-overflow: ellipsis;
+			text-overflow: clip;
 			white-space: nowrap;
+
+			@media #{$medium-up} {
+				text-overflow: ellipsis;
+				font-size: $small-font-size;
+				line-height: $small-line-height;
+			}
 		}
 
 		.lender-controls, .team-controls {
