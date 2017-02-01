@@ -1,0 +1,95 @@
+{
+	"headline": {
+		"medium": "Internships with impact"
+	},
+
+	"textOverImageNameSpaceClass": "interns-headline-wrapper",
+	"img": {
+		"full-width" : {
+			"alt" : "Photo of intern class having lunch in a park",
+			"src": "//cms.kiva.org.s3.amazonaws.com/page/images/interns-header"
+		}
+	},
+
+	"interns-cta1-banner": {
+		"headline": {
+			"medium": "Ready to make a difference?"
+		},
+
+		"textOverImageNameSpaceClass": "interns-cta-wrapper",
+		"img": {
+			"full-width" : {
+				"alt" : "Photo of the Golden Gate Bridge",
+				"src": "http://cms.kiva.org.s3.amazonaws.com/page/images/interns-cta1",
+				"attribution": "Photo by Roman Kruglov",
+				"button-text": "Apply now!",
+				"button-url": "#"
+			}
+		}
+	},
+
+	"interns-cta2-banner": {
+		"headline": {
+			"medium": "Ready to make a difference?"
+		},
+
+		"textOverImageNameSpaceClass": "interns-cta-wrapper",
+		"img": {
+			"full-width" : {
+				"alt" : "Photo of the Dolores Park in San Francisco",
+				"src": "http://cms.kiva.org.s3.amazonaws.com/page/images/interns-cta2",
+				"attribution": "Photo by Markus Spiering",
+				"button-text": "Apply now!",
+				"button-url": "#"
+			}
+		}
+	},
+
+	"interns-faqs": [
+		{
+			"id": "intern-commitment",
+			"question": "What is the time commitment of a Kiva internship?",
+			"answer": "Most Kiva internships are part-time (average of 3 days per week), 6-month commitments. Certain positions may require or prefer a full-time (5 days per week) schedule."
+		},
+		{
+			"id": "intern-pay",
+			"question": "Is the internship a paid position?",
+			"answer": "All Kiva internships are unpaid, volunteer positions. But a modest monthly stipend is provided to help offset daily commute/travel costs."
+		},
+		{
+			"id": "intern-where-work",
+			"question": "Where do Kiva interns work?",
+			"answer": "Most internships are based at Kiva's headquarters in San Francisco, California. Several internship positions may also be available in our New York City office."
+		},
+		{
+			"id": "intern-citizen",
+			"question": "Can I apply for an internship if I'm not a U.S. citizen?",
+			"answer": "We highly value an international culture at Kiva and encourage international applicants to apply. However, Kiva does not provide financial reimbursement or sponsorship for international visas. If you are are an international applicant, we highly encourage you to obtain a visa prior to applying."
+		},
+		{
+			"id": "intern-school-credit",
+			"question": "Can I earn academic credit for the work I produce as an intern?",
+			"answer": "We can usually collaborate with your academic institution to authorize academic credit for your work."
+		},
+		{
+			"id": "intern-student",
+			"question": "Can I apply for an internship if I'm still in school?",
+			"answer": "We have had some interns who were still enrolled in college during their internships, so while it is a possibility, we encourage you to think seriously about whether or not you can commit to the 6-month, 3 days/week schedule on top of your schoolwork before applying."
+		},
+		{
+			"id": "intern-job",
+			"question": "Can I get a job at Kiva after my internship?",
+			"answer": "We wish we could keep on all our amazing interns, but it's just not possible. Internship positions don't turn into staff positions at Kiva, but if there is a position that becomes available at the time a volunteer is working at Kiva, we would consider current or former interns as we would any other applicant."
+		},
+		{
+			"id": "intern-job-search",
+			"question": "How does Kiva help with the job search process?",
+			"answer": "We provide several professional development workshops (including a resume review), and access to networking events and career panels within the Kiva network and beyond. Once you successfully complete an internship, managers may also provide letters of recommendation."
+		},
+		{
+			"id": "intern-term",
+			"question": "Can I still join the internship program if I need to start later or end earlier than the dates indicated?",
+			"answer": "Unfortunately, we are rarely able to accommodate internships shorter than the required 6 months. If you're unable to commit to the full 6 month period but are still interested in applying, please be sure to explain the limitations of your availability in your application."
+		}
+	]
+}

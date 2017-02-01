@@ -1,0 +1,28 @@
+{
+  "applications-closed": true,
+  "interns-cta1-banner": {
+    "headline": {
+      "medium": "Check back here on [dynamic date] to apply!"
+    },
+    "textOverImageNameSpaceClass": "interns-cta1-wrapper-closed",
+    "img": {
+      "full-width" : {
+        "alt" : "Photo of Guatemalan mountain",
+        "src": "http://cms.kiva.org.s3.amazonaws.com/page/images/fellows-cta"
+      }
+    }
+  },
+
+  "interns-cta2-banner": {
+    "headline": {
+      "medium": "Check back here on [dynamic date] to apply!"
+    },
+    "textOverImageNameSpaceClass": "interns-cta1-wrapper-closed",
+    "img": {
+      "full-width" : {
+        "alt" : "Photo of Guatemalan mountain",
+        "src": "http://cms.kiva.org.s3.amazonaws.com/page/images/fellows-cta"
+      }
+    }
+  }
+}

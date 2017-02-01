@@ -1,0 +1,15 @@
+{
+  "applications-closed": true,
+  "cta-banner": {
+    "headline": {
+      "medium": "Check back here on [dynamic date] to apply!"
+    },
+    "textOverImageNameSpaceClass": "fellows-cta-wrapper-closed",
+    "img": {
+      "full-width" : {
+        "alt" : "Photo of Guatemalan mountain",
+        "src": "http://cms.kiva.org.s3.amazonaws.com/page/images/fellows-cta"
+      }
+    }
+  }
+}

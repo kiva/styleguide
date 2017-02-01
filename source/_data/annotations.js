@@ -49,6 +49,11 @@ var comments = {
 			"title": "Tertiary navigation",
 			"comment": "<p>These appear a bit too far to the left so that " +
 			"they will align properly with the logo when used on a page</p>"
+		},
+		{
+			"el": ".image-attribution",
+			"title": "Full Width Image with Text Attribution",
+			"comment": "<p>This is an optional data field of 'attribution' added to the img.full-width object. When present this will add an absolutely positioned small tag that uses the overlay class for initial styles. These styles are augmented further to shrink and position the text in the center for small and medium viewports and in the bottom right corner on larger viewports.</p><p>* This element works best a parent with position relative set."
 		}
 	]
 };
