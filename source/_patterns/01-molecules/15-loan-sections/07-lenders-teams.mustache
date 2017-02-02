@@ -1,47 +1,54 @@
 <article class="ac-body" id="ac-lenders-teams-body" aria-hidden="false">
+
 	{{! ------------------------- Lenders section -------------------------------- }}
 
 	<div class="lenders-title">Contributing lenders ({{lenderCount}})</div>
-	<ul class="lenders small-block-grid-5 medium-block-grid-5 large-block-grid-5">
+	<ul class="lenders">
 		{{#lenders}}
 			<li>
-				{{#displayTooltip}}
-					<a href="{{url}}"><span data-tooltip aria-haspopup="true" data-options="disable_for_touch:true; show_on: large" title="{{firstName}}<br>{{location}}"  class="circle-avatar" style="background-image:url({{imgUrl}})"></span></a>
-				{{/displayTooltip}}
-				{{^displayTooltip}}
-					<span class="circle-avatar" style="background-image:url({{imgUrl}})"></span>
-				{{/displayTooltip}}
+				{{> 01-molecules/03-media/02-lender-avatar }}
 			</li>
 		{{/lenders}}
 	</ul>
-
-	<div class="ac-body" id="ac-more-lenders-body" aria-hidden="true">
-		{{#beyondLenderCutoffCount}}
-			<div class="beyond-cutoff-message text-center">+ {{beyondLenderCutoffCount}} more lenders</div>
-		{{/beyondLenderCutoffCount}}
-		{{^beyondLenderCutoffCount}}
-			{{#numAnonymousLenders}}
-				<div class="anonymous-lender-message text-center">+ {{numAnonymousLenders}} anonymous lenders</div>
-			{{/numAnonymousLenders}}
-		{{/beyondLenderCutoffCount}}
-		<p class="ac-title black-underlined text-center hide-more-lenders" data-kv-accordion aria-controls="ac-more-lenders-body" aria-expanded="false">
-			Hide
-		</p>
+	<div class="lender-controls">
+		{{#lendersExpanded}}
+			{{#beyondLenderCutoffCount}}
+				{{#lendersLoading}}
+					{{> 01-molecules/03-media/01-loading-spinner }}
+				{{/lendersLoading}}
+				<a href="#" class="show-more-lenders black-underlined text-center">Show more</a>
+				<div style="clear:both;"></div>
+			{{/beyondLenderCutoffCount}}
+			{{^beyondLenderCutoffCount}}
+				{{#numAnonymousLenders}}
+					<div class="anonymous-lender-message text-center">+ {{numAnonymousLenders}} anonymous lenders</div>
+				{{/numAnonymousLenders}}
+			{{/beyondLenderCutoffCount}}
+			<a href="#" class="hide-more-lenders black-underlined text-center">Hide</a>
+		{{/lendersExpanded}}
+		{{^lendersExpanded}}
+			{{#showSpilloverMessageForLenders}}
+				<a href="#" class="show-all-lenders black-underlined text-center">Show more</a>
+			{{/showSpilloverMessageForLenders}}
+		{{/lendersExpanded}}
 	</div>
-	{{#showSpilloverMessageForLenders}}
-		<p class="ac-title black-underlined text-center show-more-lenders" data-kv-accordion aria-controls="ac-more-lenders-body" aria-expanded="false">
-			Show all lenders
-		</p>
-	{{/showSpilloverMessageForLenders}}
 
 	{{! ------------------------- Teams section -------------------------------- }}
 
 	<div class="teams-title">Contributing teams ({{teamCount}})</div>
-	<ul class="teams small-block-grid-5 medium-block-grid-5 large-block-grid-5">
+	<ul class="teams">
 		{{#teams}}
 			<li>
 				{{#displayTooltip}}
-					<a href="{{url}}"><span data-tooltip aria-haspopup="true" data-options="disable_for_touch:true; show_on: large" title="{{teamName}}<br>{{teamType}}<br>{{numLenders}} of {{numTeamMembers}} members" class="circle-avatar" style="background-image:url({{imgUrl}})"></span></a>
+					<a href="{{url}}">
+						<span data-tooltip
+							  aria-haspopup="true"
+							  data-options="disable_for_touch:true; show_on:large"
+							  title="{{teamName}}<br>{{teamType}}<br>{{numLenders}} of {{numTeamMembers}} members"
+							  class="circle-avatar"
+							  style="background-image:url({{imgUrl}})">
+						</span>
+					</a>
 				{{/displayTooltip}}
 				{{^displayTooltip}}
 					<span class="circle-avatar" style="background-image:url({{imgUrl}})"></span>
@@ -49,43 +56,22 @@
 			</li>
 		{{/teams}}
 	</ul>
-
-	<div class="ac-body" id="ac-more-teams-body" aria-hidden="true">
-		{{#beyondTeamCutoffCount}}
-			<div class="beyond-cutoff-message text-center">+ {{beyondTeamCutoffCount}} more teams</div>
-		{{/beyondTeamCutoffCount}}
-		<p class="ac-title black-underlined text-center hide-more-teams" data-kv-accordion aria-controls="ac-more-teams-body" aria-expanded="false">
-			Hide
-		</p>
+	<div class="team-controls">
+		{{#teamsExpanded}}
+			{{#beyondTeamCutoffCount}}
+				{{#teamsLoading}}
+					{{> 01-molecules/03-media/01-loading-spinner }}
+				{{/teamsLoading}}
+				<a href="#" class="show-more-teams black-underlined text-center">Show more</a>
+				<div style="clear:both;"></div>
+			{{/beyondTeamCutoffCount}}
+			<a href="#" class="hide-more-teams black-underlined text-center">Hide</a>
+		{{/teamsExpanded}}
+		{{^teamsExpanded}}
+			{{#showSpilloverMessageForTeams}}
+				<a href="#" class="show-all-teams black-underlined text-center">Show more</a>
+			{{/showSpilloverMessageForTeams}}
+		{{/teamsExpanded}}
 	</div>
-	{{#showSpilloverMessageForTeams}}
-		<p class="ac-title black-underlined text-center show-more-teams" data-kv-accordion aria-controls="ac-more-teams-body" aria-expanded="false">
-			Show all teams
-		</p>
-	{{/showSpilloverMessageForTeams}}
 
 </article>
-<div class="spillover-lenders" style="display: none;">
-	{{#spilloverLenders}}
-		<li>
-			{{#displayTooltip}}
-				<a href="{{url}}"><span class="lazy circle-avatar" data-original="{{imgUrl}}" data-tooltip aria-haspopup="true" data-options="disable_for_touch:true; show_on: large" title="{{firstName}}<br>{{location}}"></span></a>
-			{{/displayTooltip}}
-			{{^displayTooltip}}
-				<span class="lazy circle-avatar" data-original="{{imgUrl}}"></span>
-			{{/displayTooltip}}
-		</li>
-	{{/spilloverLenders}}
-</div>
-<div class="spillover-teams" style="display: none;">
-	{{#spilloverTeams}}
-		<li>
-			{{#displayTooltip}}
-				<a href="{{url}}"><span class="lazy circle-avatar" data-original="{{imgUrl}}" data-tooltip aria-haspopup="true" data-options="disable_for_touch:true; show_on: large" title="{{teamName}}<br>{{teamType}}<br>{{numLenders}} of {{numTeamMembers}} members"></span></a>
-			{{/displayTooltip}}
-			{{^displayTooltip}}
-				<span class="lazy circle-avatar" data-original="{{imgUrl}}"></span>
-			{{/displayTooltip}}
-		</li>
-	{{/spilloverTeams}}
-</div>

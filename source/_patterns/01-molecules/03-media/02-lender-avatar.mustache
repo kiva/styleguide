@@ -1,0 +1,13 @@
+<a href="{{url}}" {{#initial}}class="avatar-initial initial-{{initial}}"{{/initial}}
+	{{#displayTooltip}}
+		data-tooltip
+		aria-haspopup="true"
+		data-options="disable_for_touch:true; show_on: large"
+		title="{{firstName}}<br>{{location}}"
+	{{/displayTooltip}}>
+	<span {{^initial}}class="circle-avatar" style="background-image:url({{imgUrl}})"{{/initial}}>
+		{{#initial}}{{initial}}{{/initial}}
+	</span>
+</a>
+<span class="lender-name">{{firstName}}</span>
+<span class="lender-location">{{location}}</span>
