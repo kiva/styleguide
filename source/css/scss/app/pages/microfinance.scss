@@ -1,0 +1,24 @@
+.microfinance{
+	#sidebar{
+		padding-top: rem-calc(40);
+	}
+	h3{
+		padding-bottom: rem-calc(20);
+	}
+	.stat{
+		text-align: center;
+		font-weight: bold;
+		font-size: rem-calc(18);
+		margin-bottom: rem-calc(60);
+	}
+	.data-point{
+		color: $green;
+		margin-bottom: rem-cacl(10);
+	}
+	.icon{
+		color: $green;
+	    height: 1.5rem;
+	    width: 1.5rem;
+	    fill: $white;
+	}
+}
