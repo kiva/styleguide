@@ -410,31 +410,52 @@
 	}
 
 	&.notice-visible {
-		padding-bottom: 2rem;
+		// padding-bottom: 2rem;
 	}
 
 	&.notice-visible.already-lent-visible {
-		padding-bottom: 1rem;
+		// padding-bottom: 1rem;
 	}
 
 	.country-info-wrapper {
+		// @media #{$medium-down} {
+		// 	font-size: rem-calc(14);
+		// }
+		//
+		// .country-image {
+		// 	min-width: rem-calc(50);
+		// 	padding-left: 0;
+		// 	padding-right: 0;
+		// 	top: rem-calc(3);
+		// }
+		// .country-text {
+		// 	padding-right: rem-calc(5);
+		// 	position: absolute;
+		// 	left: rem-calc(60);
+		//
+		// 	@media #{$medium-only} {
+		// 		left: rem-calc(45);
+		// 	}
+		// }
+
 		@media #{$medium-down} {
 			font-size: rem-calc(14);
 		}
 
 		.country-image {
-			min-width: rem-calc(50);
+			// min-width: rem-calc(50);
 			padding-left: 0;
 			padding-right: 0;
-			top: rem-calc(3);
+			// top: rem-calc(3);
+			margin-top: rem-calc(3);
 		}
 		.country-text {
-			padding-right: rem-calc(5);
-			position: absolute;
-			left: rem-calc(60);
+			// padding-right: rem-calc(5);
+			// position: absolute;
+			// left: rem-calc(60);
 
 			@media #{$medium-only} {
-				left: rem-calc(45);
+				// left: rem-calc(45);
 			}
 		}
 	}
@@ -808,13 +829,37 @@
 	}
 }
 
+.lend-action-holder {
+	display: none;
+
+	@media #{$large-up}{
+		position: relative;
+		display: block;
+		height: 98px;
+		width: 100%;
+		margin: 15px 0 0 0;
+		padding: 0;
+		transition: margin .4s;
+		-webkit-transition: margin .4s;
+	}
+	// styles for pinned
+	&.pinned {
+		@media #{$large-up} {
+			position: absolute;
+			bottom: 0;
+		}
+	}
+}
+
 .lend-action, .lend-action.row {
-	width: calc(40% - #{rem-calc(12)});
+	// width: calc(95% - #{rem-calc(12)});
+	width: 100%;
 	margin: 0;
-	// position: absolute;
-	// bottom: 0;
-	// right: 0;
+	position: absolute;
+	bottom: 0;
+	left: 0;
 	// float: right;
+	// padding: 1.5rem 0 0 0;
 
 	&.notice-visible {
 		position: relative;
@@ -908,6 +953,10 @@
 			font-size: 1rem;
 		}
 	}
+
+	// .proceed-to-checkout {
+	// 		padding-top: .5rem;
+	// }
 
 	.proceed-to-checkout-button {
 		outline: none;
