@@ -16,11 +16,14 @@
 			"medium": "Ready to make a difference?"
 		},
 
-		"textOverImageNameSpaceClass": "fellows-cta-wrapper",
+		"textOverImageNameSpaceClass": "interns-cta-wrapper",
 		"img": {
 			"full-width" : {
 				"alt" : "Photo of the Golden Gate Bridge",
-				"src": "http://cms.kiva.org.s3.amazonaws.com/page/images/interns-cta1"
+				"src": "http://cms.kiva.org.s3.amazonaws.com/page/images/interns-cta1",
+				"attribution": "Photo by Roman Kruglov",
+				"button-text": "Apply now!",
+				"button-url": "#"
 			}
 		}
 	},
@@ -30,11 +33,14 @@
 			"medium": "Ready to make a difference?"
 		},
 
-		"textOverImageNameSpaceClass": "fellows-cta-wrapper",
+		"textOverImageNameSpaceClass": "interns-cta-wrapper",
 		"img": {
 			"full-width" : {
 				"alt" : "Photo of the Dolores Park in San Francisco",
-				"src": "http://cms.kiva.org.s3.amazonaws.com/page/images/interns-cta2"
+				"src": "http://cms.kiva.org.s3.amazonaws.com/page/images/interns-cta2",
+				"attribution": "Photo by Markus Spiering",
+				"button-text": "Apply now!",
+				"button-url": "#"
 			}
 		}
 	},

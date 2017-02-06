@@ -1,0 +1,49 @@
+<div class="pageWrap microfinance">
+	{{> templates-header}}
+	{{> molecules-secondary-nav}}
+	
+	<div class="row">
+		<div class="small-12 large-9 columns">
+			<h1>What is microfinance</h1>
+			<p>Microfinance is a general term to describe financial services, such as loans, savings, insurance and fund transfers to entrepreneurs, small businesses and individuals who lack access to traditional banking services.</p>
+
+			<p>The pioneer of modern microfinance is often credited to <a href="https://en.wikipedia.org/wiki/Muhammad_Yunus">Dr. Mohammad Yunus</a>, who experimented with making small loans, which he funded himself, to women in Bangladesh making bamboo furniture who had previously relied on usurious loans to purchase raw materials. He discovered these very tiny loans, which traditional banks did not want to make due to the perceived risks and costs, could make a disproportionate difference to a poor person and given the chance they would pay them back creating a viable business model. He would go on to found <a href="https://en.wikipedia.org/wiki/Grameen_Bank">Grameen Bank in 1983</a> and win the <a href="https://www.nobelprize.org/nobel_prizes/peace/laureates/2006/yunus-facts.html">Nobel Peace Prize in 2006</a>.</p>
+
+			<p>Inspired by the work of Dr. Yunus, Kiva was founded in 2005 with a mission to connect people through lending to alleviate poverty. By leveraging the internet and crowdfunding, Kiva allows anyone, for as little as $25, to help a borrower start or grow a business, go to school, access clean energy or realize their potential.</p>
+
+			<p>Over the past ten years Kiva has enabled more than 1.5 million people to fund over 2 million borrowers in over 80 countries. The result has been nearly $1 billion dollars lent to borrowers and repaid at a rate greater than 97%.</p>
+
+			<p>If you’re interested in participating in microfinance we recommend <a href="/about">learning more about Kiva</a>, <a href="/about/how">how lending works</a> and then <a href="/cagegories">getting started by making a loan</a>.</p>
+			<div class="text-center">
+				<p class="start-lending-text featured">Start lending!</p>
+				<a role="button" href="https://www.kiva.org/categories" class="button">Choose a borrower</a>
+			</div>
+		</div>
+		<div class="small-12 large-3 columns" id="sidebar">
+			<h3>About Kiva</h3>
+			<div class="stat">
+				<div class="data-point medium-statistic">{{repayment_rate}}%</div>
+				<div class="description top-row">Loan repayment rate</div>
+			</div>
+			<div class="stat">
+				<div class="data-point medium-statistic">{{country_count}}</div>
+				<div class="description top-row">Countries where Kiva works</div>
+			</div>
+			<div class="stat">
+				<div class="data-point medium-statistic">{{lender_count}} million</div>
+				<div class="description top-row">People who've made a loan on Kiva</div>
+			</div>
+			<div class="stat">
+				<div class="data-point growing-statistic">
+					<svg class="icon icon-star"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-star"></use></svg>		
+					<svg class="icon icon-star"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-star"></use></svg>
+					<svg class="icon icon-star"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-star"></use></svg>
+					<svg class="icon icon-star"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-star"></use></svg>
+				</div>
+				<div class="description top-row">Charity Navigator's highest award rating</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+{{> organisms-footer}}

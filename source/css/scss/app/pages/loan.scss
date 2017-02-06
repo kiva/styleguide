@@ -1,3 +1,6 @@
+@import '../../settings';
+@import '../../vendor_override/foundation/type';
+
 .green-bolded {
 	font-size: 2.5rem;
 	font-weight: bold;
@@ -475,21 +478,73 @@
 .lenders-teams {
 	.ac-body {
 		margin-top: 1rem;
-		padding-right: 4vw;
 
-		@media #{$large-up}{
-			padding-right: 2vw;
+		ul {
+			@include block-grid(5, rem-calc(10));
+
+			@media #{$medium-up} {
+				@include block-grid(5, rem-calc(20));
+			}
+		}
+
+		li a {
+			position: relative;
+			width: 100%;
+			height: 0;
+			padding-bottom: 100%;
+			display: block;
+			margin-bottom: 0.5rem;
+		}
+
+		.avatar-initial span {
+			font-size: calc(1.2rem + (3.4 - 1.2) * ((100vw - 17.78rem) / (37.78 - 17.78)));
+
+			@media #{$large-up} {
+				font-size: calc(1.7rem + (2.75 - 1.7) * ((100vw - 37.78rem) / (55 - 37.78)));
+			}
+
+			@media #{$xxlarge-up} {
+				font-size: 2.75rem;
+			}
 		}
 
 		.circle-avatar {
-			width: 15vw;
-			height: 15vw;
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			margin: 0;
+		}
 
-			@media #{$large-up}{
-				width: 8vw;
-				height: 8vw;
-				max-width: 5rem;
-				max-height: 5rem;
+		.lender-name, .lender-location {
+			display: block;
+			font-size: $x-small-font-size;
+			line-height: $x-small-line-height;
+			overflow: hidden;
+			text-overflow: clip;
+			white-space: nowrap;
+
+			@media #{$medium-up} {
+				text-overflow: ellipsis;
+				font-size: $small-font-size;
+				line-height: $small-line-height;
+			}
+		}
+
+		.lender-controls, .team-controls {
+			text-align: center;
+
+			.loading-spinner {
+				vertical-align: top;
+				$size: 1.2rem;
+				$padding: 0.25rem;
+				width: $size;
+				height: $size;
+				margin-left: -($size + $padding);
+			}
+
+			a {
+				display: inline-block;
+				margin-bottom: 1.1111111111rem
 			}
 		}
 
