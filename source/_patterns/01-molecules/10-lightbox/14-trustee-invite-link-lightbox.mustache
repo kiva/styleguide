@@ -13,6 +13,38 @@
 				<p>Link has been copied to your clipboard!</p>
 				<input class="invite-url" value="{{inviteUrl}}" readonly>
 				<button data-clipboard-target="input.invite-url" class="button secondary copy-again">Copy again</button>
+				<a href="#" class="trustee-invite-link-edit-button"
+				   data-reveal-id="trustee-invite-link-edit-lightbox">Customize your URL</a>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div id="trustee-invite-link-edit-lightbox" class="reveal-modal trustee-invite-link-edit-lightbox" data-reveal
+	 aria-hidden="true" role="dialog">
+	<div class="row">
+		<div class="columns small-12">
+			<a class="close-reveal-modal" aria-label="Close">
+				<svg class="icon icon-x">
+					<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-x"></use>
+				</svg>
+			</a>
+			<div class="lightbox-content white trustee-invite-link-edit-lightbox-content">
+				<p class="featured">Customize Url</p>
+				<div class="row collapse">
+					<div class="small-6 large-5 columns">
+						<span class="prefix">http://borrow.kiva.org/borrower/</span>
+					</div>
+					<div class="small-6 large-7 columns">
+						<input type="text" class="borrower-invite-token"
+							   value="{{borrowerInviteToken}}"
+							   placeholder="Enter your URL...">
+					</div>
+					<div class="small-12 columns borrower-invite-message"></div>
+				</div>
+				<button class="button borrower-invite-token-save-action">Save</button>
+				<button class="button secondary borrower-invite-token-cancel-action">Cancel</button>
+				</div>
 			</div>
 		</div>
 	</div>
