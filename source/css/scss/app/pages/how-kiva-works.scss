@@ -240,6 +240,7 @@
 				margin: 0;
 				position: relative;
 				cursor: pointer;
+				color: $white;
 
 				.question-wrap {
 					margin: 0;
@@ -261,6 +262,7 @@
 			}
 
 			.ac-body p {
+				color: $white;
 
 				@media #{$large-up} {
 					font-size: rem-calc(18);
