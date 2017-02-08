@@ -1,3 +1,4 @@
 {
-  "availableKivaCredit": "$26.75"
+  "availableKivaCredit": "$26.75",
+  "saveWithdrawalUrl": "https://dev-vm-01.kiva.org/withdraw/process"
 }
