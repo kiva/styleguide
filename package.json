@@ -1,6 +1,6 @@
 {
   "name": "styleguide",
-  "version": "1.1.67",
+  "version": "1.1.71",
   "description": "Based on PatternLab and Foundation - [Pattern Lab Website](http://patternlab.io/) - [About Pattern Lab](http://patternlab.io/about.html) - [Documentation](http://patternlab.io/docs/index.html) - [Demo](http://demo.patternlab.io/)",
   "main": "source/js/inc/app.js",
   "devDependencies": {
@@ -27,8 +27,7 @@
     "webpack-dev-server": "^1.10.1"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "prepublish": "grunt init && grunt compile"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",

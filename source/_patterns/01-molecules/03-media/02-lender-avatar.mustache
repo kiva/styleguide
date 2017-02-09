@@ -5,9 +5,14 @@
 		data-options="disable_for_touch:true; show_on: large"
 		title="{{firstName}}<br>{{location}}"
 	{{/displayTooltip}}>
-	<span {{^initial}}class="circle-avatar" style="background-image:url({{imgUrl}})"{{/initial}}>
-		{{#initial}}{{initial}}{{/initial}}
-	</span>
+	{{#initial}}
+		<div>
+			<span class="letter">{{initial}}</span><span class="strut"></span>
+		</div>
+	{{/initial}}
+	{{^initial}}
+		<span class="circle-avatar" style="background-image:url({{imgUrl}})"></span>
+	{{/initial}}
 </a>
 <span class="lender-name">{{firstName}}</span>
 <span class="lender-location">{{location}}</span>

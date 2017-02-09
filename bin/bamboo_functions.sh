@@ -10,6 +10,8 @@ base_dir=$(dirname ${script_dir})
 build_patternlab () {
 	pushd ${base_dir}
 	npm install
+	grunt init
+	grunt compile
 	popd
 }
 

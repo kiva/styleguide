@@ -6,7 +6,8 @@ First, in your VM /kiva directory or a web accessible directory in your environm
 ```shell
 git clone git@github.com:kiva/styleguide.git
 cd styleguide
-npm install -d
+npm install
+grunt init && grunt compile
 ```
 Then, in your VM /etc/apache2/sites-available directory create a file called styleguide.conf and insert the following
 ```
