@@ -402,64 +402,22 @@
 		margin: 0 auto;
 	}
 
-	//padding-bottom: 2rem;
-
 	@media #{$large-up} {
-		//padding-bottom: 4rem;
 
 		&.already-lent-visible {
 			padding-bottom: 7rem;
 		}
 	}
 
-	&.notice-visible {
-		// padding-bottom: 2rem;
-	}
-
-	&.notice-visible.already-lent-visible {
-		// padding-bottom: 1rem;
-	}
-
 	.country-info-wrapper {
-		// @media #{$medium-down} {
-		// 	font-size: rem-calc(14);
-		// }
-		//
-		// .country-image {
-		// 	min-width: rem-calc(50);
-		// 	padding-left: 0;
-		// 	padding-right: 0;
-		// 	top: rem-calc(3);
-		// }
-		// .country-text {
-		// 	padding-right: rem-calc(5);
-		// 	position: absolute;
-		// 	left: rem-calc(60);
-		//
-		// 	@media #{$medium-only} {
-		// 		left: rem-calc(45);
-		// 	}
-		// }
-
 		@media #{$medium-down} {
 			font-size: rem-calc(14);
 		}
 
 		.country-image {
-			// min-width: rem-calc(50);
 			padding-left: 0;
 			padding-right: 0;
-			// top: rem-calc(3);
 			margin-top: rem-calc(3);
-		}
-		.country-text {
-			// padding-right: rem-calc(5);
-			// position: absolute;
-			// left: rem-calc(60);
-
-			@media #{$medium-only} {
-				// left: rem-calc(45);
-			}
 		}
 	}
 
@@ -907,14 +865,11 @@
 }
 
 .lend-action, .lend-action.row {
-	// width: calc(95% - #{rem-calc(12)});
 	width: 100%;
 	margin: 0;
 	position: absolute;
 	bottom: 0;
 	left: 0;
-	// float: right;
-	// padding: 1.5rem 0 0 0;
 
 	&.notice-visible {
 		position: relative;
@@ -1008,10 +963,6 @@
 			font-size: 1rem;
 		}
 	}
-
-	// .proceed-to-checkout {
-	// 		padding-top: .5rem;
-	// }
 
 	.proceed-to-checkout-button {
 		outline: none;
