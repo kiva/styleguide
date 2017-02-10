@@ -5381,9 +5381,11 @@
 		"target_reached": "false",
 		"amount_raised":"250,000"
 	},
-	 "holiday_mode": {
+	 "header_promo": {
 		  "href": "#",
 		  "call_to_action": "Give a Kiva gift.",
-		  "message": "Make spirits bright this holiday season."
+		  "message": "Make spirits bright this holiday season.",
+		  "icon": "icon-kiva-card"
+
 	 }
 }

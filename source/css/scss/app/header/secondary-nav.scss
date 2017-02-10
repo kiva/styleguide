@@ -56,7 +56,7 @@ $link-spacing: rem-calc(16);
             }
         }
     }
-    .holiday_mode & {
+    .promo_mode & {
         border-top: 1px solid $kiva-navdivider-green;
         @media #{$xxlarge-up} {
             border-top: none;
@@ -109,7 +109,7 @@ $link-spacing: rem-calc(16);
             display: none;
         }
     }
-    .holiday_mode & {
+    .promo_mode & {
         border-top: 1px solid $kiva-navdivider-green;
         @media #{$xxlarge-up} {
             border-top: none;

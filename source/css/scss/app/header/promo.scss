@@ -1,4 +1,4 @@
-.holiday-promo {
+.header-promo {
 	text-align: center;
 	a {
 		display: block;
@@ -9,7 +9,7 @@
 		margin-left: rem-calc(5);
 	}
 
-	svg {
+	svg.icon-kiva-card {
 		$origin: 50% 50%;
 		$rotation: rotate(-10deg);
 
