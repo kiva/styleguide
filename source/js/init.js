@@ -471,16 +471,6 @@
 	//var $category_menu = $('.category-search-menu').detach();
 	//$('.category-card-grid').append($category_menu);
 
-	$(document).foundation({
-		accordion: {
-			// allow multiple accordion panels to be active at the same time
-			multi_expand: true,
-			// allow accordion panels to be closed by clicking on their headers
-			// setting to false only closes accordion panels when another is opened
-			toggleable: true
-		}
-	});
-
 	var $acLoans = $('[aria-controls="faq-direct-vs-partner-loans"]');
 	var closeReveal = $('.close-reveal-modal');
 
