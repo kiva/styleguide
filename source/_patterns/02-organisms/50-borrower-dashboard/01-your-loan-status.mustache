@@ -1,0 +1,45 @@
+<div class="your-loan-status">
+
+	<h1 class="impact loan-status">Your Loan Status: {{prettyStatus}}</h1>
+
+	{{#inReview}}
+		Thank you for completing your loan application. Here's what's next:
+
+		<ol>
+			<li>make a loan to someone else</li>
+			<li>this text may come from the cms</li>
+		</ol>
+
+	{{/inReview}}
+
+	{{#inRaised}}
+		Your loan is 100% funded. Your funds will be disbursed soon.
+	{{/inRaised}}
+
+	{{#inPayingBack}}
+		{{! should probably show how much has been repaid ? }}
+		<h2>Payments Due</h2>
+		<table>
+			<tr>
+				<th></th>
+				<th>Amount</th>
+				<th>Due Date</th>
+			</tr>
+			{{#nextRepayment}}
+				<tr style="background-color: #f8e71c;">
+					<td>Next Repayment</td>
+					<td>{{amount}}</td>
+					<td>{{dueDate}}</td>
+				</tr>
+			{{/nextRepayment}}
+			{{#overdueRepayment}}
+				<tr style="background-color: #9C021A;">
+					<td>OverDue Repayment</td>
+					<td>{{amount}}</td>
+					<td>{{dueDate}}</td>
+				</tr>
+			{{/overdueRepayment}}
+		</table>
+	{{/inPayingBack}}
+
+</div>
