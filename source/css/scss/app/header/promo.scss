@@ -32,7 +32,7 @@
 		.content {
 			vertical-align: top;
 			text-align: left;
-			@media #{$medium-up} {
+			@media #{$large-up} {
 				margin-top: rem-calc(9);
 			}
 			.call-to-action-text {
@@ -45,6 +45,9 @@
 			margin-top: rem-calc(3);
 			fill: $kiva-accent-green;
 			stroke: $kiva-accent-green;
+			@media #{$medium-only} {
+				margin-top: rem-calc(4);
+			}
 		}
 		a {
 			color: $kiva-accent-green;
