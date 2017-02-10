@@ -848,7 +848,7 @@
 	@media #{$large-up}{
 		position: relative;
 		display: block;
-		height: 98px;
+		min-height: 98px;
 		width: 100%;
 		margin: 15px 0 0 0;
 		padding: 0;
@@ -866,13 +866,7 @@
 .lend-action, .lend-action.row {
 	width: 100%;
 	margin: 0;
-	position: absolute;
-	bottom: 0;
-	left: 0;
-
-	&.notice-visible {
-		position: relative;
-	}
+	position: relative;
 
 	.lend-button-wrapper {
 		display: inline;
