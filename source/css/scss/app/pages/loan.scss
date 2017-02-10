@@ -1213,7 +1213,7 @@
 
 .fund-a-loan-bar {
 	cursor: pointer;
-	.holiday_mode & {
+	.holiday_mode &, .promo_mode & {
 		border-top: 1px solid $kiva-navdivider-green;
 		@media #{$xxlarge-up} {
 			border: none;
