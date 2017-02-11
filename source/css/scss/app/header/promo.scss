@@ -71,6 +71,10 @@
 			fill: $kiva-darkgreen;
 			stroke: $kiva-darkgreen;
 			margin-bottom: rem-calc(-8);
+			&.icon-woman {
+				height: rem-calc(35);
+				margin-bottom: rem-calc(-1);
+			}
 		}
 		a {
 			color: $kiva-darkgreen;
