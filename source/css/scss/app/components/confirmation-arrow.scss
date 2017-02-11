@@ -12,4 +12,22 @@
 		margin-top: -3rem;
 		border-top: 0.5rem solid $kiva-darkgreen;
 	}
+
+	.icon-triangle {
+		-ms-transform: rotate(90deg); /* IE 9 */
+		-webkit-transform: rotate(90deg); /* Safari */
+		transform: rotate(90deg);
+		width: 2rem;
+		fill: $kiva-darkgreen;
+		margin-top: -5.5rem;
+		margin-right: -18.5rem;
+	}
+}
+
+.paypal-profile-iconography {
+	.paypal-logo {
+		.icon-new-kiva-logo {
+			width: 3rem;
+		}
+	}
 }
