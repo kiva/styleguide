@@ -4,11 +4,11 @@
 	},
 
 	"textOverImageNameSpaceClass": "interns-cta1-wrapper-closed",
-	
+
 	"img": {
 		"full-width" : {
 			"alt" : "Photo of Golden Gate Bridge",
-			"src": "http://cms.kiva.org.s3.amazonaws.com/page/images/fellows-cta"
+			"src": "//www-kiva-org.global.ssl.fastly.net/cms/page/images/fellows-cta"
 		}
 	}
 }
