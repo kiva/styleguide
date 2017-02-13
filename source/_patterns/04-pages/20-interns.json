@@ -7,7 +7,7 @@
 	"img": {
 		"full-width" : {
 			"alt" : "Photo of intern class having lunch in a park",
-			"src": "//cms.kiva.org.s3.amazonaws.com/page/images/interns-header"
+			"src": "//www-kiva-org.global.ssl.fastly.net/cms/page/images/interns-header"
 		}
 	},
 
@@ -20,7 +20,7 @@
 		"img": {
 			"full-width" : {
 				"alt" : "Photo of the Golden Gate Bridge",
-				"src": "http://cms.kiva.org.s3.amazonaws.com/page/images/interns-cta1",
+				"src": "//www-kiva-org.global.ssl.fastly.net/cms/page/images/interns-cta1",
 				"attribution": "Photo by Roman Kruglov",
 				"button-text": "Apply now!",
 				"button-url": "#"
@@ -37,7 +37,7 @@
 		"img": {
 			"full-width" : {
 				"alt" : "Photo of the Dolores Park in San Francisco",
-				"src": "http://cms.kiva.org.s3.amazonaws.com/page/images/interns-cta2",
+				"src": "//www-kiva-org.global.ssl.fastly.net/cms/page/images/interns-cta2",
 				"attribution": "Photo by Markus Spiering",
 				"button-text": "Apply now!",
 				"button-url": "#"

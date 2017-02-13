@@ -144,7 +144,7 @@
 		background-color: $kiva-darkgreen;
 
 		.topStats {
-			background: url("//www.kiva.org/cms/page/images/map-bg.min_.svg") no-repeat;
+			background: url("//www-kiva-org.global.ssl.fastly.net/cms/page/images/map-bg.min_.svg") no-repeat;
 			background-size: contain;
 			background-position: center center;
 
@@ -307,23 +307,23 @@
 
 	.fellows-apply-wrapper {
 		@media #{$small-only} {
-			background: url("//cms.kiva.org.s3.amazonaws.com/page/images/fellows-steps-bkgrnd-sm-std.jpg") no-repeat;
+			background: url("//www-kiva-org.global.ssl.fastly.net/cms/page/images/fellows-steps-bkgrnd-sm-std.jpg") no-repeat;
 			background-color: $black;
 		}
 		@media #{$medium-only} {
-			background: url("//cms.kiva.org.s3.amazonaws.com/page/images/fellows-steps-bkgrnd-med-std_0.jpg") no-repeat;
+			background: url("//www-kiva-org.global.ssl.fastly.net/cms/page/images/fellows-steps-bkgrnd-med-std_0.jpg") no-repeat;
 			background-color: $black;
 		}
 		@media #{$large-only} {
-			background: url("//cms.kiva.org.s3.amazonaws.com/page/images/fellows-steps-bkgrnd-lg-std.jpg") no-repeat;
+			background: url("//www-kiva-org.global.ssl.fastly.net/cms/page/images/fellows-steps-bkgrnd-lg-std.jpg") no-repeat;
 			background-color: $black;
 		}
 		@media #{$xlarge-only} {
-			background: url("//cms.kiva.org.s3.amazonaws.com/page/images/fellows-steps-bkgrnd-xl-std.jpg") no-repeat;
+			background: url("//www-kiva-org.global.ssl.fastly.net/cms/page/images/fellows-steps-bkgrnd-xl-std.jpg") no-repeat;
 			background-color: $black;
 		}
 		@media #{$xxlarge-only} {
-			background: url("//cms.kiva.org.s3.amazonaws.com/page/images/fellows-steps-bkgrnd-xxl-std.jpg") no-repeat;
+			background: url("//www-kiva-org.global.ssl.fastly.net/cms/page/images/fellows-steps-bkgrnd-xxl-std.jpg") no-repeat;
 			background-color: $black;
 		}
 		/*background-size: cover;*/
@@ -374,19 +374,19 @@
 
 	.countries-map {
 		@media #{$large-up} {
-			background-image: url("//cms.kiva.org.s3.amazonaws.com/page/images/fellowscountries-largeup.gif");
+			background-image: url("//www-kiva-org.global.ssl.fastly.net/cms/page/images/fellowscountries-largeup.gif");
 			height: 305px;
 			width:100%;
 		}
 
 		@media #{$medium-only} {
-			background-image: url("//cms.kiva.org.s3.amazonaws.com/page/images/fellowscountries-medium.gif");
+			background-image: url("//www-kiva-org.global.ssl.fastly.net/cms/page/images/fellowscountries-medium.gif");
 			height: 220px;
 			width:100%;
 		}
 
 		@media #{$small-only} {
-			background-image: url("//cms.kiva.org.s3.amazonaws.com/page/images/fellowscountries-small.gif");
+			background-image: url("//www-kiva-org.global.ssl.fastly.net/cms/page/images/fellowscountries-small.gif");
 			height: 220px;
 			width:100%;
 		}
