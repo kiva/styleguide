@@ -1,0 +1,13 @@
+{{! This is the promo banner that is shown in the small-large screen state in the header}}
+<div class="hide-for-xxlarge-up header-promo">
+	<a href="{{header_promo.href}}" kvtrackevent="promo|click|TopNav">
+		<svg class="icon {{header_promo.icon}}">
+			<use xlink:href="#{{header_promo.icon}}"></use>
+		</svg>
+		<div class="content">
+			{{header_promo.message}}
+			<br class="smo">
+			<span class="call-to-action-text">{{header_promo.call_to_action}}</span>
+		</div>
+	</a>
+</div>

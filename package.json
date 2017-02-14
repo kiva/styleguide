@@ -1,6 +1,6 @@
 {
   "name": "styleguide",
-  "version": "1.1.71",
+  "version": "1.1.84",
   "description": "Based on PatternLab and Foundation - [Pattern Lab Website](http://patternlab.io/) - [About Pattern Lab](http://patternlab.io/about.html) - [Documentation](http://patternlab.io/docs/index.html) - [Demo](http://demo.patternlab.io/)",
   "main": "source/js/inc/app.js",
   "devDependencies": {
@@ -47,6 +47,7 @@
     "nouislider": "~7.0.10",
     "npm-modernizr": "~2.8.3",
     "jquery-lazyload": "~1.9.7",
-    "fastclick": "~1.0.6"
+    "fastclick": "~1.0.6",
+    "numeral": "~2.0.4"
   }
 }

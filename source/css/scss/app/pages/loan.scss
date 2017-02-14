@@ -363,7 +363,7 @@
 		}
 		@media #{$small-only}{
 			padding-bottom: 0;
-			
+
 			.lender-count {
 				float: right;
 			}
@@ -402,22 +402,11 @@
 		margin: 0 auto;
 	}
 
-	padding-bottom: 2rem;
-
 	@media #{$large-up} {
-		padding-bottom: 4rem;
 
 		&.already-lent-visible {
 			padding-bottom: 7rem;
 		}
-	}
-
-	&.notice-visible {
-		padding-bottom: 2rem;
-	}
-
-	&.notice-visible.already-lent-visible {
-		padding-bottom: 1rem;
 	}
 
 	.country-info-wrapper {
@@ -426,19 +415,9 @@
 		}
 
 		.country-image {
-			min-width: rem-calc(50);
 			padding-left: 0;
 			padding-right: 0;
-			top: rem-calc(3);
-		}
-		.country-text {
-			padding-right: rem-calc(5);
-			position: absolute;
-			left: rem-calc(60);
-
-			@media #{$medium-only} {
-				left: rem-calc(45);
-			}
+			margin-top: rem-calc(3);
 		}
 	}
 
@@ -863,17 +842,31 @@
 	}
 }
 
-.lend-action, .lend-action.row {
-	width: calc(40% - #{rem-calc(12)});
-	margin: 0;
-	position: absolute;
-	bottom: 0;
-	right: 0;
-	float: right;
+.lend-action-holder {
+	display: none;
 
-	&.notice-visible {
+	@media #{$large-up}{
 		position: relative;
+		display: block;
+		min-height: 98px;
+		width: 100%;
+		margin: 15px 0 0 0;
+		padding: 0;
+		transition: margin .4s;
 	}
+	// styles for pinned
+	&.pinned {
+		@media #{$large-up} {
+			position: absolute;
+			bottom: 0;
+		}
+	}
+}
+
+.lend-action, .lend-action.row {
+	width: 100%;
+	margin: 0;
+	position: relative;
 
 	.lend-button-wrapper {
 		display: inline;
@@ -1214,7 +1207,7 @@
 
 .fund-a-loan-bar {
 	cursor: pointer;
-	.holiday_mode & {
+	.holiday_mode &, .promo_mode & {
 		border-top: 1px solid $kiva-navdivider-green;
 		@media #{$xxlarge-up} {
 			border: none;
