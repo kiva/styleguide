@@ -68,5 +68,6 @@
     "statisticLabel": null,
     "statisticLinkText": null
   },
-  "profilePhotoUrl": "../../images/borrower1.jpg"
+  "profilePhotoUrl": "../../images/borrower1.jpg",
+  "paypalEmail": "abewallin@gmail.com"
 }
