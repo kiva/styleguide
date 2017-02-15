@@ -1,0 +1,10 @@
+{
+	"transactions": {
+		"type": "Loan Repayment",
+		"loan": "Link to loan",
+		"date": "02/15/2017",
+		"price": "$666.00",
+		"balance": "$0.00",
+		"count": "1"
+	}
+}
