@@ -8,7 +8,7 @@
     "img": {
       "full-width" : {
         "alt" : "Photo of Guatemalan mountain",
-        "src": "http://cms.kiva.org.s3.amazonaws.com/page/images/fellows-cta"
+        "src": "//www-kiva-org.global.ssl.fastly.net/cms/page/images/fellows-cta"
       }
     }
   }

@@ -11,23 +11,23 @@
 
 	.interns-apply-wrapper {
 		@media #{$small-only} {
-			background: url("//cms.kiva.org.s3.amazonaws.com/page/images/interns-steps-bkgrnd-sm-std2.jpg") no-repeat;
+			background: url("//www-kiva-org.global.ssl.fastly.net/cms/page/images/interns-steps-bkgrnd-sm-std2.jpg") no-repeat;
 			background-color: $black;
 		}
 		@media #{$medium-only} {
-			background: url("//cms.kiva.org.s3.amazonaws.com/page/images/interns-steps-bkgrnd-med-std2.jpg") no-repeat;
+			background: url("//www-kiva-org.global.ssl.fastly.net/cms/page/images/interns-steps-bkgrnd-med-std2.jpg") no-repeat;
 			background-color: $black;
 		}
 		@media #{$large-only} {
-			background: url("//cms.kiva.org.s3.amazonaws.com/page/images/interns-steps-bkgrnd-lg-std4.jpg") no-repeat;
+			background: url("//www-kiva-org.global.ssl.fastly.net/cms/page/images/interns-steps-bkgrnd-lg-std4.jpg") no-repeat;
 			background-color: $black;
 		}
 		@media #{$xlarge-only} {
-			background: url("//cms.kiva.org.s3.amazonaws.com/page/images/interns-steps-bkgrnd-xl-std5.jpg") no-repeat;
+			background: url("//www-kiva-org.global.ssl.fastly.net/cms/page/images/interns-steps-bkgrnd-xl-std5.jpg") no-repeat;
 			background-color: $black;
 		}
 		@media #{$xxlarge-only} {
-			background: url("//cms.kiva.org.s3.amazonaws.com/page/images/interns-steps-bkgrnd-xxl-std.jpg") no-repeat;
+			background: url("//www-kiva-org.global.ssl.fastly.net/cms/page/images/interns-steps-bkgrnd-xxl-std.jpg") no-repeat;
 			background-color: $black;
 		}
 		/*background-size: cover;*/
