@@ -1,0 +1,20 @@
+<div class="small-12 large-9 columns borrower-dashboard-transactions">
+	<table class="borrower-transactions-table">
+		<thead>
+		<tr>
+			<th>Type</th>
+			<th>Loan</th>
+			<th>Date</th>
+			<th>Price</th>
+			<th>Balance</th>
+		</tr>
+		</thead>
+		<tbody class="borrower-transaction-rows-region">
+		{{#transactions}}
+			{{> 02-organisms/50-borrower-dashboard/02-borrower-transaction-row }}
+		{{/transactions}}
+		</tbody>
+	</table>
+</div>
+<div class="spacer" style="clear:both"></div>
+
