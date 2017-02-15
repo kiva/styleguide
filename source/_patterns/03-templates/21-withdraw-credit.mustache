@@ -11,14 +11,16 @@
                 </div>
                 <div class="statistic-label">Available Kiva credit</div>
             </div>
-            <div class="pending-withdrawals text-center hide-for-large-up">
-                <div><b>Withdrawals in review</b></div>
-                {{#pendingWithdrawalRequests}}
-                    <div><b>{{withdrawalAmount}}</b> - {{requestTimestamp}}</div>
-                {{/pendingWithdrawalRequests}}
-                <div class="row bottom-rule">&nbsp;</div>
-                <div class="row bottom-rule">&nbsp;</div>
-            </div>
+            {{#hasWithdrawalsPending}}
+                <div class="pending-withdrawals text-center hide-for-large-up">
+                    <div><b>Withdrawals in review</b></div>
+                    {{#pendingWithdrawalRequests}}
+                        <div><b>{{withdrawalAmount}}</b> - {{requestTimestamp}}</div>
+                    {{/pendingWithdrawalRequests}}
+                    <div class="row bottom-rule">&nbsp;</div>
+                    <div class="row bottom-rule">&nbsp;</div>
+                </div>
+            {{/hasWithdrawalsPending}}
             <form data-abide action="{{saveWithdrawalUrl}}" method="post">
                 <div class="amount-to-withdraw-field small-6">
                     <label>Amount to withdraw
@@ -42,14 +44,16 @@
                 <button type="submit" class="small-12">Continue</button>
             </form>
         </div>
-        <div class="pending-withdrawals-large show-for-large-up large-6 columns">
-            <div><b>Withdrawals in review</b></div>
-            {{#pendingWithdrawalRequests}}
-                <div><b>{{withdrawalAmount}}</b> - {{requestTimestamp}}</div>
-            {{/pendingWithdrawalRequests}}
-            <div class="row bottom-rule">&nbsp;</div>
-            <div class="row bottom-rule">&nbsp;</div>
-        </div>
+        {{#hasWithdrawalsPending}}
+            <div class="pending-withdrawals-large show-for-large-up large-6 columns">
+                <div><b>Withdrawals in review</b></div>
+                {{#pendingWithdrawalRequests}}
+                    <div><b>{{withdrawalAmount}}</b> - {{requestTimestamp}}</div>
+                {{/pendingWithdrawalRequests}}
+                <div class="row bottom-rule">&nbsp;</div>
+                <div class="row bottom-rule">&nbsp;</div>
+            </div>
+        {{/hasWithdrawalsPending}}
     </div>
     <div class="row bottom-rule">&nbsp;</div>
     <div class="row explainer">
