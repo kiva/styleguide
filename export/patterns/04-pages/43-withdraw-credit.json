@@ -65,6 +65,7 @@
   ],
   "availableKivaCredit": "$26.75",
   "saveWithdrawalUrl": "https://dev-vm-01.kiva.org/withdraw/process",
+  "hasWithdrawalsPending": false,
   "pendingWithdrawalRequests": [
     {
       "withdrawalAmount": "$1.00",
