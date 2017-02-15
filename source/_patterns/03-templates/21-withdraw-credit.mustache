@@ -13,7 +13,7 @@
             </div>
             <div class="row bottom-rule">&nbsp;</div>
             <div class="pending-withdrawals text-center hide-for-large-up">
-                <div><b>Pending requests</b></div>
+                <div><b>Withdrawals in review</b></div>
                 {{#pendingWithdrawalRequests}}
                     <div><b>{{withdrawalAmount}}</b> - {{requestTimestamp}}</div>
                 {{/pendingWithdrawalRequests}}
@@ -44,7 +44,7 @@
             </form>
         </div>
         <div class="pending-withdrawals-large show-for-large-up large-6 columns">
-            <div><b>Pending requests</b></div>
+            <div><b>Withdrawals in review</b></div>
             {{#pendingWithdrawalRequests}}
                 <div><b>{{withdrawalAmount}}</b> - {{requestTimestamp}}</div>
             {{/pendingWithdrawalRequests}}
