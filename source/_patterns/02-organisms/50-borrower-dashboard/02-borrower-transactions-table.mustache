@@ -1,4 +1,6 @@
 <div class="small-12 large-9 columns borrower-dashboard-transactions">
+	<h1 class="impact trustee-name">Your Borrower Transactions</h1>
+
 	<table class="borrower-transactions-table">
 		<thead>
 		<tr>
@@ -11,7 +13,9 @@
 		</thead>
 		<tbody class="borrower-transaction-rows-region">
 		{{#transactions}}
-			{{> 02-organisms/50-borrower-dashboard/02-borrower-transaction-row }}
+			<tr>
+				{{> 02-organisms/50-borrower-dashboard/02-borrower-transaction-row }}
+			</tr>
 		{{/transactions}}
 		</tbody>
 	</table>
