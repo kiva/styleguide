@@ -402,13 +402,6 @@
 		margin: 0 auto;
 	}
 
-	@media #{$large-up} {
-
-		&.already-lent-visible {
-			padding-bottom: 7rem;
-		}
-	}
-
 	.country-info-wrapper {
 		@media #{$medium-down} {
 			font-size: rem-calc(14);
