@@ -44,6 +44,25 @@ input[type="submit"].hidden-submit {
 }
 
 
+form .error {
+	input {
+		border-color: $red
+	}
+
+	svg.icon-error {
+		fill: $red;
+		width: rem-calc(12);
+		height: rem-calc(12);
+		vertical-align: middle;
+		margin-right: 0.25rem;
+	}
+}
+
+.error label, .error label.error, label.error {
+	color: $kiva-text-dark;
+}
+
+
 select {
 	color: $kiva-text-dark;
 	border-color: $kiva-text-dark;
