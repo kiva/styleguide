@@ -842,21 +842,3 @@ table.repayments-list {
 	}
 }
 
-.withdraw-credit {
-	.withdraw-request-display {
-		@media #{$large-up} {
-			padding-left: 0;
-		}
-
-		.statistic-display {
-			padding-bottom: 2.222rem;
-			padding-top: 1rem;
-		}
-	}
-
-	.explainer {
-		@media #{$large-up} {
-			margin-left: -1.75rem;
-		}
-	}
-}
