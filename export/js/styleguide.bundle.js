@@ -66,20 +66,24 @@
 	$(document).ready(function() {
 		$(document).foundation({
 			abide: {
-				timeout: 100
+				live_validate: false
+				, timeout: 0
 				, validators: {
 					currency: function(el, required) {
-						return el.value.length > 0 ? /^\$?\d{1,3}(?:,?\d{3})*(?:\.\d{1,2})?$/.test(el.value) : !required;
-					},
-					limitAmount: function(el) {
-						var amount = numeral(el.value).value(),
-							min = numeral(el.getAttribute('data-min-amount')).value(),
-							max = numeral(el.getAttribute('data-max-amount')).value();
+						if(el.value.length > 0) {
+							var validFormat = /^\$?\d{1,3}(?:,?\d{3})*(?:\.\d{1,2})?$/.test(el.value),
+								amount = numeral(el.value).value(),
+								min = numeral(el.getAttribute('data-min-amount')).value(),
+								max = numeral(el.getAttribute('data-max-amount')).value();
 
-						min = min === null ? amount : min; // in case of null, set to amount so it will pass
-						max = max === null ? amount : max; // in case of null, set to amount so it will pass
+							min = min === null ? amount : min; // in case of null, set to amount so it will pass
+							max = max === null ? amount : max; // in case of null, set to amount so it will pass
 
-						return amount >= min && amount <= max;
+							return validFormat && amount >= min && amount <= max;
+						}
+						else {
+							return !required;
+						}
 					}
 				}
 			}

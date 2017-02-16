@@ -1,7 +1,7 @@
 <div class="small-12 large-9 columns withdraw-credit">
-    <div class="explainer">
-        <h1>Withdraw credit</h1>
-        <p>To request a withdrawal of your Kiva credit balance, enter the amount in US dollars that you'd like to have withdrawn into your PayPal account. Withdrawals typically take 1-2 weeks to be processed after being requested.</p>
+    <div class="row explainer">
+        <h1 class="columns small-12">Withdraw credit</h1>
+        <p class="columns small-12">Enter the amount in U.S. dollars that you'd like to have withdrawn into your PayPal account. Withdrawals typically take 1-2 weeks to be processed after being requested.</p>
     </div>
     <div class="row">
         <div class="withdraw-request-display small-12 large-6 columns">
@@ -11,19 +11,20 @@
                 </div>
                 <div class="statistic-label">Available Kiva credit</div>
             </div>
-            <div class="row bottom-rule">&nbsp;</div>
-            <div class="pending-withdrawals text-center hide-for-large-up">
-                <div><b>Pending requests</b></div>
-                {{#pendingWithdrawalRequests}}
-                    <div><b>{{withdrawalAmount}}</b> - {{requestTimestamp}}</div>
-                {{/pendingWithdrawalRequests}}
-                <div class="row bottom-rule">&nbsp;</div>
-                <div class="row bottom-rule">&nbsp;</div>
-            </div>
+            {{#hasWithdrawalsPending}}
+                <div class="pending-withdrawals text-center hide-for-large-up">
+                    <div><b>Withdrawals in review</b></div>
+                    {{#pendingWithdrawalRequests}}
+                        <div><b>{{withdrawalAmount}}</b> - {{requestTimestamp}}</div>
+                    {{/pendingWithdrawalRequests}}
+                    <div class="row bottom-rule">&nbsp;</div>
+                    <div class="row bottom-rule">&nbsp;</div>
+                </div>
+            {{/hasWithdrawalsPending}}
             <form data-abide action="{{saveWithdrawalUrl}}" method="post">
                 <div class="amount-to-withdraw-field small-6">
                     <label>Amount to withdraw
-                        <input type="text" name="withdrawalAmount" data-abide-validator="currency limitAmount" data-min-amount="0" data-max-amount="{{availableKivaCredit}}" placeholder="$ USD">
+                        <input type="text" name="withdrawalAmount" required data-abide-validator="currency" data-min-amount="0.01" data-max-amount="{{availableKivaCredit}}" placeholder="$ USD">
                     </label>
                     <small class="error">Please enter a valid amount in USD.</small>
                 </div>
@@ -43,19 +44,21 @@
                 <button type="submit" class="small-12">Continue</button>
             </form>
         </div>
-        <div class="pending-withdrawals-large show-for-large-up large-6 columns">
-            <div><b>Pending requests</b></div>
-            {{#pendingWithdrawalRequests}}
-                <div><b>{{withdrawalAmount}}</b> - {{requestTimestamp}}</div>
-            {{/pendingWithdrawalRequests}}
-            <div class="row bottom-rule">&nbsp;</div>p
-            <div class="row bottom-rule">&nbsp;</div>
-        </div>
+        {{#hasWithdrawalsPending}}
+            <div class="pending-withdrawals-large show-for-large-up large-6 columns">
+                <div><b>Withdrawals in review</b></div>
+                {{#pendingWithdrawalRequests}}
+                    <div><b>{{withdrawalAmount}}</b> - {{requestTimestamp}}</div>
+                {{/pendingWithdrawalRequests}}
+                <div class="row bottom-rule">&nbsp;</div>
+                <div class="row bottom-rule">&nbsp;</div>
+            </div>
+        {{/hasWithdrawalsPending}}
     </div>
     <div class="row bottom-rule">&nbsp;</div>
-    <div class="explainer">
-        <p>Currently, all withdrawals from Kiva must be sent to a PayPal account, and cannot be transferred directly to a bank account. If you don't have a PayPal account, you can create one at <a href="https://www.paypal.com/">paypal.com</a>.</p>
-        <p>Have questions about your withdrawal? Email us at <a href="mailto:contactus@kiva.org">contactus@kiva.org</a>.</p>
+    <div class="row explainer">
+        <p class="columns small-12">Currently, all withdrawals from Kiva must be sent to a PayPal account, and cannot be transferred directly to a bank account. If you don't have a PayPal account, you can create one at <a href="https://www.paypal.com/">paypal.com</a>.</p>
+        <p class="columns small-12">Have questions about your withdrawal? Email us at <a href="mailto:contactus@kiva.org">contactus@kiva.org</a>.</p>
     </div>
     <div class="row bottom-rule">&nbsp;</div>
 </div>
