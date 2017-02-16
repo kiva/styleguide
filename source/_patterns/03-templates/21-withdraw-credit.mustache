@@ -24,7 +24,7 @@
             <form data-abide action="{{saveWithdrawalUrl}}" method="post">
                 <div class="amount-to-withdraw-field small-6">
                     <label>Amount to withdraw
-                        <input type="text" name="withdrawalAmount" data-abide-validator="currency limitAmount" data-min-amount="0" data-max-amount="{{availableKivaCredit}}" placeholder="$ USD">
+                        <input type="text" name="withdrawalAmount" required data-abide-validator="currency" data-min-amount="0.01" data-max-amount="{{availableKivaCredit}}" placeholder="$ USD">
                     </label>
                     <small class="error">Please enter a valid amount in USD.</small>
                 </div>
