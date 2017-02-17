@@ -7,13 +7,6 @@
 		.statistic-display {
 			padding-bottom: 2.222rem;
 			padding-top: 1rem;
-
-			.statistic {
-				font-size: 0.59rem !important;
-				@media #{$medium-up} {
-					font-size: 0.89rem !important;
-				}
-			}
 		}
 	}
 
