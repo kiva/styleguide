@@ -7,6 +7,13 @@
 		.statistic-display {
 			padding-bottom: 2.222rem;
 			padding-top: 1rem;
+
+			.statistic {
+				font-size: 0.59rem !important;
+				@media #{$medium-up} {
+					font-size: 0.89rem !important;
+				}
+			}
 		}
 	}
 
@@ -17,34 +24,91 @@
 	}
 }
 
+.withdraw-credit-confirm {
+	.withdraw-credit-graphic {
+		.columns {
+			padding-left: 1rem;
+			padding-right: 1rem;
+		}
+	}
+
+	.confirm-withdrawal-form {
+		margin-right: 0.1rem !important;
+		margin-left: 0.1rem !important;
+
+		.request-withdrawal-button {
+			@media #{$large-up} {
+				margin-right: 1rem;
+			}
+		}
+	}
+}
+
 .confirmation-arrow {
+	position: relative;
+	height: 5.5rem;
+
+	.label-in-box,
+	.label-in-box+hr,
+	.icon-triangle {
+		height: 100%;
+		position: absolute;
+	}
+
 	.label-in-box {
+		width: 70%;
+		left: 15%;
+		top: 0;
+		z-index: 10;
 		border: 0.1rem solid $kiva-darkgreen;
 		padding: 1rem;
 		margin: 0 auto;
 		background: #fff;
-		display: inline-block;
-		line-height: 1.2em;
+		font-size: 0.49rem;
+
+		@media #{$medium-up} {
+			font-size: 0.89rem;
+		}
 	}
 
 	.label-in-box+hr {
-		margin-top: -3rem;
-		border-top: 0.5rem solid $kiva-darkgreen;
+		width: 100%;
+		left: 0;
+		top: 27%;
+		border-top: 0.25rem solid $kiva-darkgreen;
+
+		@media #{$medium-up} {
+			top: 26%;
+			border-top: 0.5rem solid $kiva-darkgreen;
+		}
 	}
 
 	.icon-triangle {
 		-ms-transform: rotate(90deg); /* IE 9 */
 		-webkit-transform: rotate(90deg); /* Safari */
 		transform: rotate(90deg);
-		width: 2rem;
 		fill: $kiva-darkgreen;
-		margin-top: -5.5rem;
-		margin-right: -15rem;
+		left: 92%;
+		width: 1.3rem;
+
+		@media #{$medium-up} {
+			font-size: 0.89rem;
+			width: 2rem;
+		}
+
+		@media #{$large-up} {
+			font-size: 0.89rem;
+			width: 2.5rem;
+		}
 	}
 }
 
 .paypal-profile-iconography {
-	width: 12rem;
+	font-size: 0.49rem;
+
+	@media #{$medium-up} {
+		font-size: 0.89rem;
+	}
 
 	.paypal-logo {
 		.icon-new-kiva-logo {
@@ -55,17 +119,7 @@
 }
 
 .withdrawal-amount-requested {
-	margin-top: 1.75rem;
-	margin-right: -1rem;
-}
-
-.confirm-withdrawal-form {
-	margin-right: 0.1rem !important;
-	margin-left: 0.1rem !important;
-
-	.request-withdrawal-button {
-		@media #{$large-up} {
-			margin-right: 1rem;
-		}
-	}
+	margin-top: 2rem;
+	font-size: 1.25rem;
+	color: $kiva-green;
 }

@@ -1,8 +1,4 @@
 {
-  "withdrawalAmountRequested": {
-    "statisticValue": "$26.75",
-    "statisticLabel": null,
-    "statisticLinkText": null
-  },
+  "withdrawalAmountRequested": "$26.75",
   "paypalEmail": "abewallin@gmail.com"
 }

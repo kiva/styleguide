@@ -63,11 +63,7 @@
       "sub-title": "Bonus history"
     }
   ],
-  "withdrawalAmountRequested": {
-    "statisticValue": "$26.75",
-    "statisticLabel": null,
-    "statisticLinkText": null
-  },
+  "withdrawalAmountRequested": "$26.75",
   "profilePhotoUrl": "../../images/borrower1.jpg",
   "paypalEmail": "abewallin@gmail.com"
 }
