@@ -849,14 +849,14 @@ table.repayments-list {
 		}
 
 		.statistic-display {
-			padding-bottom: 2.222rem;
-			padding-top: 1rem;
+			padding-bottom: rem-calc(40);
+			padding-top: rem-calc(20);
 		}
 	}
 
 	.explainer {
 		@media #{$large-up} {
-			margin-left: -1.75rem;
+			margin-left: -1rem;
 		}
 	}
 }
