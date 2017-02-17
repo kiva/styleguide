@@ -30,6 +30,20 @@
 			padding-left: 1rem;
 			padding-right: 1rem;
 		}
+
+		.withdrawal-amount-requested {
+			margin-top: 2rem;
+			color: $kiva-green;
+			font-size: 1.25rem;
+
+			@media #{$medium-up} {
+				font-size: 1.75rem;
+			}
+
+			@media #{$large-up} {
+				font-size: 2rem;
+			}
+		}
 	}
 
 	.confirm-withdrawal-form {
@@ -116,10 +130,4 @@
 			height: 2rem
 		}
 	}
-}
-
-.withdrawal-amount-requested {
-	margin-top: 2rem;
-	font-size: 1.25rem;
-	color: $kiva-green;
 }
