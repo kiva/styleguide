@@ -1,0 +1,69 @@
+{
+  "main-title": "Portfolio",
+  "page-title": "Portfolio",
+  "bar-links": [
+    {
+      "title": "Portfolio",
+      "active": true
+    },
+    {
+      "title": "My Teams"
+    },
+    {
+      "title": "Settings"
+    },
+    {
+      "title": "Borrow"
+    },
+    {
+      "title": "Trustee Dashboard"
+    }
+  ],
+  "has-bar-sub-links": true,
+  "bar-sub-links": [
+    {
+      "sub-title": "Portfolio"
+    },
+    {
+      "sub-title": "Lending stats"
+    },
+    {
+      "sub-title": "My loans",
+      "sub-active": false
+    },
+    {
+      "sub-title": "Estimated repayments"
+    },
+    {
+      "sub-title": "Add credit"
+    },
+    {
+      "sub-title": "Withdraw credit",
+      "sub-active": true
+    },
+    {
+      "sub-title": "Messages"
+    },
+    {
+      "sub-title": "Public lender profile"
+    },
+    {
+      "sub-title": "Transaction history"
+    },
+    {
+      "sub-title": "My donations"
+    },
+    {
+      "sub-title": "Purchased Kiva Cards"
+    },
+    {
+      "sub-title": "Invite friends"
+    },
+    {
+      "sub-title": "Bonus history"
+    }
+  ],
+  "withdrawalAmountRequested": "$26.75",
+  "profilePhotoUrl": "../../images/borrower1.jpg",
+  "paypalEmail": "abewallin@gmail.com"
+}
