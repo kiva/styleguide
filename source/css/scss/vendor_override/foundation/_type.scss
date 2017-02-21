@@ -329,8 +329,8 @@ p {
 h1 {
 	font-size: $headline-font-size - $headline-font-size-small-reduction;
 	font-weight: $font-weight-bold;
-	margin-top: rem-calc(30);
-	margin-bottom: rem-calc(30);
+	margin-top: 1rem;
+	margin-bottom: 1rem;
 
 	.normal {
 		font-weight: $font-weight-normal;
