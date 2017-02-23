@@ -1,0 +1,43 @@
+@import '../../settings';
+@import '../../palette';
+
+.lender-message {
+	.other-lender {
+		color: $kiva-text-light;
+		line-height: 1.5;
+		margin-bottom: 1rem;
+
+		.circle-avatar {
+			width: 3rem;
+			height: 3rem;
+			margin-left: 0;
+			margin-right: 0;
+		}
+
+		.lender-avatar {
+			display: inline-block;
+			float: left;
+			margin-right: 1rem;
+		}
+	}
+
+	.message-body {
+		clear: both;
+	}
+
+	.actions {
+		a {
+			display: inline-block;
+			float: left;
+			width: calc(50% - #{rem-calc(10)});
+
+			@media #{$medium-up} {
+				width: 10rem;
+			}
+
+			&:nth-child(2) {
+				margin-left: rem-calc(20);
+			}
+		}
+	}
+}
