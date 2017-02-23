@@ -13,12 +13,10 @@
             </div>
             {{#hasWithdrawalsPending}}
                 <div class="pending-withdrawals text-center hide-for-large-up">
-                    <div><b>Withdrawals in review</b></div>
+                    <div><b><small>Withdrawals in review</small></b></div>
                     {{#pendingWithdrawalRequests}}
-                        <div><b>{{withdrawalAmount}}</b> - {{requestTimestamp}}</div>
+                        <div><small><b>{{withdrawalAmount}}</b> - {{requestTimestamp}}</small></div>
                     {{/pendingWithdrawalRequests}}
-                    <div class="row bottom-rule">&nbsp;</div>
-                    <div class="row bottom-rule">&nbsp;</div>
                 </div>
             {{/hasWithdrawalsPending}}
             <form data-abide action="{{saveWithdrawalUrl}}" method="post">
@@ -46,12 +44,10 @@
         </div>
         {{#hasWithdrawalsPending}}
             <div class="pending-withdrawals-large show-for-large-up large-6 columns">
-                <div><b>Withdrawals in review</b></div>
+                <div><b><small>Withdrawals in review</small></b></div>
                 {{#pendingWithdrawalRequests}}
-                    <div><b>{{withdrawalAmount}}</b> - {{requestTimestamp}}</div>
+                    <div><b><small>{{withdrawalAmount}}</b> - {{requestTimestamp}}</small></div>
                 {{/pendingWithdrawalRequests}}
-                <div class="row bottom-rule">&nbsp;</div>
-                <div class="row bottom-rule">&nbsp;</div>
             </div>
         {{/hasWithdrawalsPending}}
     </div>
