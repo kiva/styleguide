@@ -1,0 +1,39 @@
+@import '../../settings';
+@import '../../vendor_override/foundation/type';
+
+.messages {
+	h1 {
+		display: inline-block;
+		margin-bottom: 0;
+		margin-right: 1rem;
+
+		@media #{$large-up} {
+			font-size: $page-title-font-size;
+		}
+	}
+
+	.message-count {
+		display: inline-block;
+		white-space: nowrap;
+		margin-bottom: 0.5rem;
+	}
+
+	.guidelines {
+		color: $kiva-text-light;
+	}
+
+	.message-list {
+		list-style: none;
+		margin-left: 0;
+		border-top: 1px solid $kiva-stroke-gray;
+
+		.lender-message {
+			border-bottom: 1px solid $kiva-stroke-gray;
+			margin-top: 1.5rem;
+		}
+	}
+
+	.pagination {
+		margin: 1.5rem 0 2.5rem;
+	}
+}
