@@ -1,5 +1,5 @@
 <div class="small-12 large-9 columns messages">
-	<h1>Inbox{{#message-count}} ({{message-count}}){{/message-count}}</h1>
+	<h1>{{#sentMessages}}Sent messages{{/sentMessages}}{{^sentMessages}}Inbox{{/sentMessages}}{{#message-count}} ({{message-count}}){{/message-count}}</h1>
 	<span class="message-count">
 		{{#message-count}}
 			Showing {{first-on-page}}-{{last-on-page}} of {{message-count}} messages
@@ -8,7 +8,7 @@
 			0 messages
 		{{/message-count}}
 	</span>
-	<p class="small-text guidelines">Lender messages should always abide by <a href="{{guidelines-url}}">Kiva's community guidelines</a>.</p>
+    {{^sentMessages}}<p class="small-text guidelines">Lender messages should always abide by <a href="{{guidelines-url}}">Kiva's community guidelines</a>.</p>{{/sentMessages}}
 	<ul class="message-list">
 		{{#messages}}
 			<li>
@@ -17,12 +17,14 @@
 		{{/messages}}
 	</ul>
 	{{^message-count}}
-		<p>
-			Lender messages allow you to communicate directly with other lenders through the Kiva website, building stronger community with one another. You can send a message directly from another lender's public profile, or by replying to a message you've received.
-		</p>
-		<p>
-			You must have a public lender profile to use lender messages.
-		</p>
+        {{#sentMessages}}
+            <p>You haven't sent any lender messages.</p>
+            <p>You can send a message directly from another lender's public profile, or by replying to a message you've received. You must have a public lender profile to use lender messages.</p>
+        {{/sentMessages}}
+        {{^sentMessages}}
+            <p>Lender messages allow you to communicate directly with other lenders through the Kiva website, building stronger community with one another. You can send a message directly from another lender's public profile, or by replying to a message you've received.</p>
+            <p>You must have a public lender profile to use lender messages.</p>
+        {{/sentMessages}}
 	{{/message-count}}
 	{{> molecules-pagination}}
 </div>

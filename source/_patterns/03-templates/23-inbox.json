@@ -1,0 +1,82 @@
+{
+  "sentMessages": false,
+  "bar-links": [
+    {
+      "title": "Portfolio"
+    },
+    {
+      "title": "My Teams"
+    },
+    {
+      "title": "Messages",
+      "active": true
+    },
+    {
+      "title": "Borrow"
+    },
+    {
+      "title": "Trustee Dashboard"
+    },
+    {
+      "title": "Settings"
+    }
+  ],
+  "has-bar-sub-links": true,
+  "bar-sub-links": [
+    {
+      "sub-title": "Inbox",
+      "sub-active": true
+    },
+    {
+      "sub-title": "Sent messages"
+    }
+  ],
+  "message-count": 6,
+  "first-on-page": 1,
+  "last-on-page": 3,
+  "guidelines-url": "#",
+  "messages": [
+    {
+      "other-lender": {
+        "name": "KindlyLender",
+        "location": "Minnetonka, MN, USA",
+        "img-url": "../../images/lender.jpg",
+        "url": "#"
+      },
+      "date": "Jun 27, 2016 - 11:54 am PDT",
+      "message-body": "Hello Abraham,<br><br>Macaroon chocolate cake tootsie roll donut chocolate apple pie caramels. Candy canes cotton candy bonbon marzipan sweet roll tart tiramisu. Dragée dessert bear claw marshmallow cake marshmallow cake. Fruitcake liquorice pastry tart oat cake. Chupa chups caramels tootsie roll chocolate. Sweet roll donut apple pie ice cream lollipop sweet roll candy canes sweet. Marzipan chocolate cake candy canes bear claw brownie tart carrot cake. Sugar plum tart donut croissant danish powder."
+    },
+    {
+      "other-lender": {
+        "name": "KindlyLender",
+        "location": "Minnetonka, MN, USA",
+        "img-url": "../../images/lender.jpg",
+        "url": "#"
+      },
+      "date": "Jun 27, 2016 - 11:54 am PDT",
+      "message-body": "Hi Abe,<br><br>Jelly-o jelly-o apple pie cheesecake lollipop gummi bears jelly beans cotton candy chocolate bar. Pastry cotton candy bonbon sugar plum donut brownie sweet roll carrot cake. Sweet roll apple pie sweet roll oat cake caramels topping pudding. Tiramisu sweet carrot cake sesame snaps wafer topping cookie jelly beans gummi bears. Cupcake jelly beans caramels. Topping sweet roll donut jujubes powder chocolate bar cotton candy lemon drops halvah. Chupa chups jelly beans cotton candy fruitcake jujubes."
+    },
+    {
+      "other-lender": {
+        "name": "KindlyLender",
+        "location": "Minnetonka, MN, USA",
+        "img-url": "../../images/lender.jpg",
+        "url": "#"
+      },
+      "date": "Jun 27, 2016 - 11:54 am PDT",
+      "message-body": "Hi Abe,<br><br>Cookie macaroon gummi bears gingerbread. Marzipan danish brownie cheesecake cake danish candy canes. Lollipop croissant bear claw cheesecake cotton candy lollipop. Sesame snaps sugar plum pastry gummies biscuit. Gingerbread marzipan pastry. Cotton candy donut chocolate bar. Pudding pudding croissant wafer. Pastry carrot cake ice cream marzipan candy pie. Sweet marshmallow gingerbread."
+    }
+  ],
+  "show_pagination": true,
+  "first_page": true,
+  "last-page": false,
+  "pages": [
+    {
+      "number": 1,
+      "current": true
+    },
+    {
+      "number": 2
+    }
+  ]
+}
