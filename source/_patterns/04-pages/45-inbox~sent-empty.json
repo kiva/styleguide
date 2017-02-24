@@ -1,5 +1,5 @@
 {
-	"sentMessages": false,
+	"sentMessages": true,
 	"bar-links": [
 		{
 			"title": "Portfolio"
@@ -24,11 +24,11 @@
 	"has-bar-sub-links": true,
 	"bar-sub-links": [
 		{
-			"sub-title": "Inbox",
-			"sub-active": true
+			"sub-title": "Inbox"
 		},
 		{
-			"sub-title": "Sent messages"
+			"sub-title": "Sent messages",
+			"sub-active": true
 		}
 	],
 	"message-count": 0,
