@@ -1,0 +1,38 @@
+{
+	"sentMessages": false,
+	"bar-links": [
+		{
+			"title": "Portfolio"
+		},
+		{
+			"title": "My Teams"
+		},
+		{
+			"title": "Messages",
+			"active": true
+		},
+		{
+			"title": "Borrow"
+		},
+		{
+			"title": "Trustee Dashboard"
+		},
+		{
+			"title": "Settings"
+		}
+	],
+	"has-bar-sub-links": true,
+	"bar-sub-links": [
+		{
+			"sub-title": "Inbox",
+			"sub-active": true
+		},
+		{
+			"sub-title": "Sent messages"
+		}
+	],
+	"message-count": 0,
+	"guidelines-url": "#",
+	"messages": false,
+	"show_pagination": false
+}
