@@ -25,6 +25,9 @@
 
 .withdraw-credit-confirm {
 	.withdraw-credit-graphic {
+		margin-bottom: 2rem;
+		margin-top: 1rem;
+
 		.columns {
 			padding-left: 1rem;
 			padding-right: 1rem;
@@ -61,7 +64,6 @@
 	position: relative;
 	height: 5.5rem;
 
-	.label-in-box,
 	.label-in-box+hr,
 	.icon-triangle {
 		height: 100%;
@@ -69,18 +71,22 @@
 	}
 
 	.label-in-box {
-		width: 70%;
-		left: 15%;
-		top: 0;
-		z-index: 10;
-		border: 0.1rem solid $kiva-darkgreen;
-		padding: 1rem;
-		margin: 0 auto;
-		background: #fff;
 		font-size: 0.45rem;
+		height: 100%;
 
 		@media #{$medium-up} {
 			font-size: 0.89rem;
+		}
+
+		p {
+			background: #fff;
+			z-index: 10;
+			padding: 1rem;
+			border: 0.1rem solid $kiva-darkgreen;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
 		}
 	}
 
@@ -97,6 +103,7 @@
 	}
 
 	.icon-triangle {
+		top: 0;
 		-ms-transform: rotate(90deg); /* IE 9 */
 		-webkit-transform: rotate(90deg); /* Safari */
 		transform: rotate(90deg);
@@ -106,7 +113,7 @@
 
 		@media #{$medium-up} {
 			font-size: 0.89rem;
-			width: 2rem;
+			width: 2.25rem;
 		}
 
 		@media #{$large-up} {
