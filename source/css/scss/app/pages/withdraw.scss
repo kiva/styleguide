@@ -81,12 +81,18 @@
 		p {
 			background: #fff;
 			z-index: 10;
-			padding: 1rem;
+			padding: 0.5rem;
 			border: 0.1rem solid $kiva-darkgreen;
 			position: absolute;
 			top: 50%;
 			left: 50%;
 			transform: translate(-50%, -50%);
+			font-size: 0.45rem;
+
+			@media #{$medium-up} {
+				padding: 1rem;
+				font-size: 0.89rem;
+			}
 		}
 	}
 
@@ -124,14 +130,24 @@
 }
 
 .paypal-profile-iconography {
-	font-size: 0.49rem;
+	font-size: 0.45rem;
+	height: 100%;
 
 	@media #{$medium-up} {
 		font-size: 0.89rem;
 	}
 
-	.icon-payPal {
-		width: 4rem;
-		height: 2rem;
+	.iconography-bubble {
+		z-index: 10;
+		padding: 1rem;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-40%, -20%);
+
+		.icon-payPal {
+			width: 4rem;
+			height: 2rem;
+		}
 	}
 }
