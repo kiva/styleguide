@@ -26,7 +26,7 @@
 .withdraw-credit-confirm {
 	.withdraw-credit-graphic {
 		margin-bottom: 2rem;
-		margin-top: 1rem;
+		margin-top: 2rem;
 
 		.columns {
 			padding-left: 1rem;
@@ -36,15 +36,7 @@
 		.withdrawal-amount-requested {
 			margin-top: 2rem;
 			color: $kiva-green;
-			font-size: 1.25rem;
-
-			@media #{$medium-up} {
-				font-size: 1.75rem;
-			}
-
-			@media #{$large-up} {
-				font-size: 2rem;
-			}
+			font-size: 2rem;
 		}
 	}
 
@@ -61,7 +53,6 @@
 }
 
 .confirmation-arrow {
-	position: relative;
 	height: 5.5rem;
 
 	.label-in-box+hr,
@@ -71,41 +62,27 @@
 	}
 
 	.label-in-box {
-		font-size: 0.45rem;
 		height: 100%;
-
-		@media #{$medium-up} {
-			font-size: 0.89rem;
-		}
 
 		p {
 			background: #fff;
 			z-index: 10;
-			padding: 0.5rem;
 			border: 0.1rem solid $kiva-darkgreen;
 			position: absolute;
 			top: 50%;
 			left: 50%;
 			transform: translate(-50%, -50%);
-			font-size: 0.45rem;
-
-			@media #{$medium-up} {
-				padding: 1rem;
-				font-size: 0.89rem;
-			}
+			padding: 1rem;
+			font-size: 0.65rem;
+			min-width: 6rem;
 		}
 	}
 
 	.label-in-box+hr {
-		width: 100%;
-		left: 0;
-		top: 27%;
-		border-top: 0.25rem solid $kiva-darkgreen;
-
-		@media #{$medium-up} {
-			top: 26%;
-			border-top: 0.5rem solid $kiva-darkgreen;
-		}
+		width: 80%;
+		left: 10%;
+		top: 26%;
+		border-top: 0.5rem solid $kiva-darkgreen;
 	}
 
 	.icon-triangle {
@@ -114,28 +91,14 @@
 		-webkit-transform: rotate(90deg); /* Safari */
 		transform: rotate(90deg);
 		fill: $kiva-darkgreen;
-		left: 92%;
-		width: 1.3rem;
-
-		@media #{$medium-up} {
-			font-size: 0.89rem;
-			width: 2.25rem;
-		}
-
-		@media #{$large-up} {
-			font-size: 0.89rem;
-			width: 2.5rem;
-		}
+		left: 83%;
+		width: 2.5rem;
 	}
 }
 
 .paypal-profile-iconography {
-	font-size: 0.45rem;
 	height: 100%;
-
-	@media #{$medium-up} {
-		font-size: 0.89rem;
-	}
+	font-size: 0.65rem;
 
 	.iconography-bubble {
 		z-index: 10;
