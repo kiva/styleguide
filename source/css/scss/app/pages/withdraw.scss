@@ -25,22 +25,26 @@
 
 .withdraw-credit-confirm {
 	.withdraw-credit-graphic {
+		margin-bottom: 2rem;
+		margin-top: 2rem;
+
+		@media #{$medium-down} {
+			height: 12rem;
+		}
+
 		.columns {
 			padding-left: 1rem;
 			padding-right: 1rem;
 		}
 
 		.withdrawal-amount-requested {
-			margin-top: 2rem;
+			margin-top: 1.5rem;
 			color: $kiva-green;
-			font-size: 1.25rem;
+			font-size: 2rem;
 
-			@media #{$medium-up} {
-				font-size: 1.75rem;
-			}
-
-			@media #{$large-up} {
-				font-size: 2rem;
+			@media #{$medium-down} {
+				margin-top: -2rem;
+				margin-bottom: 1.5rem;
 			}
 		}
 	}
@@ -58,10 +62,8 @@
 }
 
 .confirmation-arrow {
-	position: relative;
 	height: 5.5rem;
 
-	.label-in-box,
 	.label-in-box+hr,
 	.icon-triangle {
 		height: 100%;
@@ -69,62 +71,87 @@
 	}
 
 	.label-in-box {
-		width: 70%;
-		left: 15%;
-		top: 0;
-		z-index: 10;
-		border: 0.1rem solid $kiva-darkgreen;
-		padding: 1rem;
-		margin: 0 auto;
-		background: #fff;
-		font-size: 0.45rem;
+		height: 100%;
 
-		@media #{$medium-up} {
-			font-size: 0.89rem;
+		@media #{$medium-down} {
+			margin-top: 2rem;
+		}
+
+		p {
+			background: #fff;
+			z-index: 10;
+			position: absolute;
+			top: 40%;
+			left: 51%;
+			transform: translate(-50%, -50%);
+			padding: 1rem;
+			font-size: 0.65rem;
+			min-width: 6rem;
+
+			@media #{$large-up} {
+				border: 0.1rem solid $kiva-darkgreen;
+			}
 		}
 	}
 
 	.label-in-box+hr {
-		width: 100%;
-		left: 0;
-		top: 27%;
-		border-top: 0.25rem solid $kiva-darkgreen;
-
-		@media #{$medium-up} {
-			top: 26%;
+		@media #{$large-up} {
 			border-top: 0.5rem solid $kiva-darkgreen;
+			width: 80%;
+			left: 10%;
+			top: 16%;
+		}
+
+		@media #{$medium-down} {
+			border-left: 0.5rem solid $kiva-darkgreen;
+			left: 49.2%;
+			margin-top: -8rem;
 		}
 	}
 
 	.icon-triangle {
-		-ms-transform: rotate(90deg); /* IE 9 */
-		-webkit-transform: rotate(90deg); /* Safari */
-		transform: rotate(90deg);
 		fill: $kiva-darkgreen;
-		left: 92%;
-		width: 1.3rem;
-
-		@media #{$medium-up} {
-			font-size: 0.89rem;
-			width: 2rem;
-		}
+		width: 2.5rem;
+		margin-top: -3.4rem;
+		top: 40%;
+		-ms-transform: rotate(180deg); /* IE 9 */
+		-webkit-transform: rotate(180deg); /* Safari */
+		transform: rotate(180deg);
+		position: relative;
 
 		@media #{$large-up} {
-			font-size: 0.89rem;
-			width: 2.5rem;
+			margin-top: 0;
+			position: absolute;
+			top: -9%;
+			left: 83%;
+			-ms-transform: rotate(90deg); /* IE 9 */
+			-webkit-transform: rotate(90deg); /* Safari */
+			transform: rotate(90deg);
 		}
 	}
 }
 
 .paypal-profile-iconography {
-	font-size: 0.49rem;
+	height: 100%;
+	font-size: 0.65rem;
 
-	@media #{$medium-up} {
-		font-size: 0.89rem;
-	}
+	.iconography-bubble {
+		z-index: 10;
+		padding: 1rem;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-40%, -20%);
 
-	.icon-payPal {
-		width: 4rem;
-		height: 2rem;
+		@media #{$medium-down} {
+			margin-left: -0.1rem;
+			margin-top: 1rem;
+			left: 47.5%;
+		}
+
+		.icon-payPal {
+			width: 4rem;
+			height: 2rem;
+		}
 	}
 }
