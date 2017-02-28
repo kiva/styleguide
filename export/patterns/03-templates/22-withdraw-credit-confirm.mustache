@@ -1,16 +1,30 @@
 <div class="small-12 large-9 columns withdraw-credit-confirm">
     <div class="row explainer">
-        <h1 class="columns small-12">Confirm withdrawal request</h1>
+        <h1 class="columns small-12">Confirm request</h1>
         <p class="columns small-12">Are you sure you want to complete this transaction?</p>
     </div>
-    <div class="row bottom-rule">&nbsp;</div>
-    <div class="row align-middle withdraw-credit-graphic">
+    <div class="row align-middle withdraw-credit-graphic show-for-large-up">
         <div class="columns small-3 text-center withdrawal-amount-requested"><b>{{withdrawalAmountRequested}}</b></div>
-        <div class="columns small-6 text-center">
+        <div class="columns small-5 text-center">
             {{> 01-molecules/60-withdrawals/01-confirmation-arrow}}
         </div>
         <div class="columns small-3 text-center end">
             {{> 01-molecules/60-withdrawals/02-paypal-profile-iconography}}
+        </div>
+    </div>
+    <div class="row align-middle withdraw-credit-graphic show-for-medium-down">
+        <div class="row">
+            <div class="columns small-12 text-center withdrawal-amount-requested"><b>{{withdrawalAmountRequested}}</b></div>
+        </div>
+        <div class="row">
+            <div class="columns small-12 text-center">
+                {{> 01-molecules/60-withdrawals/01-confirmation-arrow}}
+            </div>
+        </div>
+        <div class="row">
+            <div class="columns small-12 text-center end">
+                {{> 01-molecules/60-withdrawals/02-paypal-profile-iconography}}
+            </div>
         </div>
     </div>
     <div class="row bottom-rule">&nbsp;</div>
