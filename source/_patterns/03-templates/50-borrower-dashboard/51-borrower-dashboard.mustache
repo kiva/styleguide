@@ -1,10 +1,20 @@
 <div class="small-12 large-9 columns borrower-dashboard-main">
+	<div class="row">
+		{{! small-6 large-3 }}
+		{{> 01-molecules/51-borrower-dashboard/01-borrower-info-card}}
+		<div class="small-6 large-9 columns">
+			{{#fundraising_info}}
+				{{> 01-molecules/15-loan-sections/03-current-status-meter}}
+			{{/fundraising_info}}
+
+			<!--TODO:move this into template when it's built-->
+			{{#borrowerActionButton}}
+				<a href="{{borrowerActionButton.buttonUrl}}" class="button">{{borrowerActionButton.buttonText}}</a>
+			{{/borrowerActionButton}}
+		</div>
+	</div>
+
 	{{> 02-organisms/50-borrower-dashboard/01-your-loan-status}}
-	{{> 01-molecules/51-borrower-dashboard/01-borrower-info-card}}
-	
-	<!--TODO:move this into template when it's built-->
-	{{#borrowerActionButton}}
-		<a href="{{borrowerActionButton.buttonUrl}}" class="button">{{borrowerActionButton.buttonText}}</a>
-	{{/borrowerActionButton}}
+
 </div>
 <div class="spacer" style="clear:both"></div>
