@@ -3,6 +3,8 @@
 	{{> 01-molecules/51-borrower-dashboard/01-borrower-info-card}}
 	
 	<!--TODO:move this into template when it's built-->
-	<a href="{{borrowerActionButton.buttonUrl}}" class="button">{{borrowerActionButton.buttonText}}</a>
+	{{#borrowerActionButton}}
+		<a href="{{borrowerActionButton.buttonUrl}}" class="button">{{borrowerActionButton.buttonText}}</a>
+	{{/borrowerActionButton}}
 </div>
 <div class="spacer" style="clear:both"></div>
