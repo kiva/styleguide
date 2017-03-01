@@ -1,0 +1,14 @@
+{
+	 "fundraising_info": {
+		  "showRaisedInfo": {
+			   "meterAmountPercent": "",
+			   "raisedVerb": "",
+			   "amountLeft": ""
+		  },
+		  "meterAmountPercent": "42",
+		  "raisedVerb": "repaid",
+		  "amountLeft": "7,433",
+		  "totalLoanAmount": "10,000",
+		  "lenderCount": "54"
+	 }
+}
