@@ -1,5 +1,6 @@
 @import '../../settings';
 @import '../../palette';
+@import '../../vendor_override/foundation/buttons';
 
 .lender-message {
 	.other-lender {
@@ -30,9 +31,12 @@
 			display: inline-block;
 			float: left;
 			width: calc(50% - #{rem-calc(10)});
+			font-size: $button-font-sm;
+			line-height: $button-height-sm;
+			height: $button-height-sm;
 
 			@media #{$medium-up} {
-				width: 10rem;
+				width: 8rem;
 			}
 
 			&:nth-child(2) {

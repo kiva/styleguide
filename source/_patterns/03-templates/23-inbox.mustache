@@ -12,7 +12,7 @@
 	<ul class="message-list">
 		{{#messages}}
 			<li>
-				{{> organisms-lender-message}}
+				{{> 02-organisms/21-messages/01-lender-message }}
 			</li>
 		{{/messages}}
 	</ul>
@@ -26,6 +26,8 @@
             <p>You must have a public lender profile to use lender messages.</p>
         {{/sentMessages}}
 	{{/message-count}}
-	{{> molecules-pagination}}
+	<div class="pagination-region">
+		{{> 01-molecules/05-navigation/07-pagination }}
+	</div>
 </div>
 <div class="spacer" style="clear:both"></div>

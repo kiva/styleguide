@@ -23,13 +23,11 @@
 	<p class="message-body">
 		{{{message-body}}}
 	</p>
-    {{^sentMessages}}
+    {{^is-sent}}
         <div class="actions">
-            {{^is-sent}}
-                <a class="button reply-button">Reply</a>
-            {{/is-sent}}
+			<a class="button reply-button">Reply</a>
             <a class="button secondary delete-button">Delete</a>
         </div>
-    {{/sentMessages}}
+    {{/is-sent}}
 	<div class="spacer" style="clear:both"></div>
 </div>
