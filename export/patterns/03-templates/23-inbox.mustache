@@ -1,31 +1,48 @@
 <div class="small-12 large-9 columns messages">
-	<h1>{{#sentMessages}}Sent messages{{/sentMessages}}{{^sentMessages}}Inbox{{/sentMessages}}{{#message-count}} ({{message-count}}){{/message-count}}</h1>
+	<h1>
+		{{#sentMessages}}Sent messages{{/sentMessages}}
+		{{^sentMessages}}Inbox{{/sentMessages}}
+		{{^loading}}
+			{{#message-count}} ({{message-count}}){{/message-count}}
+		{{/loading}}
+	</h1>
 	<span class="message-count">
-		{{#message-count}}
-			Showing {{first-on-page}}-{{last-on-page}} of {{message-count}} messages
-		{{/message-count}}
-		{{^message-count}}
-			0 messages
-		{{/message-count}}
+		{{^loading}}
+			{{#message-count}}
+				Showing {{first-on-page}}-{{last-on-page}} of {{message-count}} messages
+			{{/message-count}}
+			{{^message-count}}
+				0 messages
+			{{/message-count}}
+		{{/loading}}
 	</span>
     {{^sentMessages}}<p class="small-text guidelines">Lender messages should always abide by <a href="{{guidelines-url}}">Kiva's community guidelines</a>.</p>{{/sentMessages}}
-	<ul class="message-list">
-		{{#messages}}
-			<li>
-				{{> organisms-lender-message}}
-			</li>
-		{{/messages}}
-	</ul>
-	{{^message-count}}
-        {{#sentMessages}}
-            <p>You haven't sent any lender messages.</p>
-            <p>You can send a message directly from another lender's public profile, or by replying to a message you've received. You must have a public lender profile to use lender messages.</p>
-        {{/sentMessages}}
-        {{^sentMessages}}
-            <p>Lender messages allow you to communicate directly with other lenders through the Kiva website, building stronger community with one another. You can send a message directly from another lender's public profile, or by replying to a message you've received.</p>
-            <p>You must have a public lender profile to use lender messages.</p>
-        {{/sentMessages}}
-	{{/message-count}}
-	{{> molecules-pagination}}
+	<div class="message-list-wrapper {{#loading}}loading{{/loading}}">
+		<div class="loader-overlay">
+			{{> 01-molecules/03-media/01-loading-spinner }}
+		</div>
+		<ul class="message-list">
+			{{#messages}}
+				<li>
+					{{> 02-organisms/21-messages/01-lender-message }}
+				</li>
+			{{/messages}}
+		</ul>
+	</div>
+	{{^loading}}
+		{{^message-count}}
+			{{#sentMessages}}
+				<p>You haven't sent any lender messages.</p>
+				<p>You can send a message directly from another lender's public profile, or by replying to a message you've received. You must have a public lender profile to use lender messages.</p>
+			{{/sentMessages}}
+			{{^sentMessages}}
+				<p>Lender messages allow you to communicate directly with other lenders through the Kiva website, building stronger community with one another. You can send a message directly from another lender's public profile, or by replying to a message you've received.</p>
+				<p>You must have a public lender profile to use lender messages.</p>
+			{{/sentMessages}}
+		{{/message-count}}
+	{{/loading}}
+	<div class="pagination-region">
+		{{> 01-molecules/05-navigation/07-pagination }}
+	</div>
 </div>
 <div class="spacer" style="clear:both"></div>
