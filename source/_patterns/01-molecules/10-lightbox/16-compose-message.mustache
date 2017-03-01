@@ -1,0 +1,90 @@
+{{#is-patternlab}}
+    <a href="#" data-reveal-id="compose-message-modal">Compose a lender message</a>
+{{/is-patternlab}}
+
+<div id="compose-message-modal" class="reveal-modal" data-reveal aria-hidden="true" role="dialog">
+    <div>
+        <div class="columns small-12">
+            <a class="close-reveal-modal" aria-label="Close">
+                <svg class="icon icon-x">
+                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-x"></use>
+                </svg>
+            </a>
+            <div class="lightbox-content white">
+                <div class="compose-message-content row">
+                    <div class="columns large-3 show-for-large-up">
+                        <div class="row">
+                            <div class="columns large-12 align-center">
+                                {{#other-lender}}
+                                    <a href="{{url}}" class="lender-avatar">
+                                        <span class="circle-avatar" style="background-image:url({{img-url}})"></span>
+                                    </a>
+                                {{/other-lender}}
+                                {{^other-lender}}
+                                    <span class="lender-avatar circle-avatar" style="background-image:url({{anon-img-url}})"></span>
+                                {{/other-lender}}
+                            </div>
+                        </div>
+                        <div class="row other-lender-info">
+                            <div class="columns large-12 align-center">
+                                {{#other-lender}}
+                                    <div><a href="{{url}}">{{name}}</a></div>
+                                    <div>{{location}}</div>
+                                {{/other-lender}}
+                                {{^other-lender}}
+                                    <div>Anonymous</div>
+                                {{/other-lender}}
+                            </div>
+                        </div>
+                    </div>
+                    <div class="columns small-12 large-9">
+                        <div class="hide-for-large-up">
+                            <div class="columns small-3">
+                                <div class="row align-middle">
+                                    {{#other-lender}}
+                                        <a href="{{url}}" class="lender-avatar">
+                                            <span class="circle-avatar" style="background-image:url({{img-url}})"></span>
+                                        </a>
+                                    {{/other-lender}}
+                                    {{^other-lender}}
+                                        <span class="lender-avatar circle-avatar" style="background-image:url({{anon-img-url}})"></span>
+                                    {{/other-lender}}
+                                </div>
+                            </div>
+                            <div class="columns small-1"></div>
+                            <div class="columns small-8 other-lender-info">
+                                <div class="row align-middle">
+                                    {{#other-lender}}
+                                        <div><a href="{{url}}">{{name}}</a></div>
+                                        <div>{{location}}</div>
+                                    {{/other-lender}}
+                                    {{^other-lender}}
+                                        <div>Anonymous</div>
+                                    {{/other-lender}}
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="columns small-12">
+                                <form action="{{sendMessageUrl}}" method="post">
+                                    <div class="message-content-field small-12">
+                                        <label><textarea rows="6" placeholder="Your message to {{#other-lender}}{{name}}{{/other-lender}}{{^other-lender}}Anonymous{{/other-lender}} ..."></textarea></label>
+                                    </div>
+                                    <div>
+                                        <div class="columns small-4 submit-message-btn">
+                                            <button type="submit" class="small-12">Send</button>
+                                        </div>
+                                        <div class="columns small-1"></div>
+                                        <div class="columns small-7 message-disclaimer">
+                                            <small>Lender messages shouldn't be used for self-promotion, advertising or solicitation. More information can be found in <a href="{{guidelines-url}}">Kiva's community guidelines</a>.</small>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

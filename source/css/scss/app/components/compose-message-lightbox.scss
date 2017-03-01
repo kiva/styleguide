@@ -1,0 +1,46 @@
+#compose-message-modal {
+	.compose-message-content {
+		margin-top: 1rem;
+		height: 100%;
+		padding-top: 2rem;
+		background-color: $kiva-bg-lightgray;
+
+		.lender-avatar {
+
+			.circle-avatar {
+				width: 6rem;
+				height: 6rem;
+				margin-top: -1rem;
+				margin-left: -1rem;
+
+				@media #{$large-up} {
+					margin-top: -1.75rem;
+				}
+			}
+		}
+
+		.other-lender-info {
+			vertical-align: middle;
+			color: $kiva-text-dark;
+
+			@media #{$large-up} {
+				text-align: center;
+				padding-top: 0;
+				min-width: 10rem;
+				padding-left: 0.5rem;
+			}
+		}
+
+		.submit-message-btn {
+			padding: 0;
+
+			button {
+				padding: 0;
+			}
+		}
+
+		.message-disclaimer {
+			color: $kiva-text-dark;
+		}
+	}
+}
