@@ -3,16 +3,22 @@
 		{{! small-6 large-3 }}
 		{{> 01-molecules/51-borrower-dashboard/01-borrower-info-card}}
 		<div class="small-6 large-9 columns">
-			{{! fundraising_info and prettyStatus are mutually exclusive }}
-			{{#fundraising_info}}
-				{{> 01-molecules/15-loan-sections/03-current-status-meter}}
-			{{/fundraising_info}}
+
+			{{! fundraising_info and prettyStatus are mutually exclusive (except for pfp)}}
 			{{#prettyStatus}}
 				<h2>
 					{{{prettyStatus}}}
 				</h2>
 			{{/prettyStatus}}
+			{{#fundraising_info}}
+				{{#inPfp}}
+					{{> 01-molecules/15-loan-sections/02-pfp-meter}}
+				{{/inPfp}}
+				{{^inPfp}}
+					{{> 01-molecules/15-loan-sections/03-current-status-meter}}
+				{{/inPfp}}
 
+			{{/fundraising_info}}
 			<!--TODO:move this into template when it's built-->
 			{{#borrowerActionButton}}
 				<a href="{{borrowerActionButton.buttonUrl}}" class="button">{{borrowerActionButton.buttonText}}</a>
