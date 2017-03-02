@@ -8,6 +8,11 @@
 	color: $kiva-green;
 }
 
+.warning-bolded {
+	@extend .green-bolded;
+	color: $kiva-accent-red;
+}
+
 .black-underlined {
 	text-decoration: underline;
 	color: $charcoal !important;
