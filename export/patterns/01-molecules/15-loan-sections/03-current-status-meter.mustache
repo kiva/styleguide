@@ -1,6 +1,6 @@
 <div class="current-status-meter">
 	{{#fundraising_info.status}}
-		<h2 class="green-bolded inline">
+		<h2 class="{{^fundraising_info.isWarningStatus}} green-bolded {{/fundraising_info.isWarningStatus}} {{#fundraising_info.isWarningStatus}} warning-bolded {{/fundraising_info.isWarningStatus}} inline">
 			{{fundraising_info.status}}
 		</h2>
 	{{/fundraising_info.status}}
