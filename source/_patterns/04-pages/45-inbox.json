@@ -58,7 +58,7 @@
 		{
  			"other-lender": {
  				"name": "KindlyLender",
- 				"location": "Minnetonka, MN, USA",
+ 				"location": null,
  				"img-url": "../../images/lender.jpg",
  				"url": "#"
  			},
