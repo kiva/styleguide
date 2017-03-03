@@ -13,14 +13,14 @@
             <div class="lightbox-content white">
 				{{#no-loans}}
 					<div class="message-error-content">
-						<h3>You can't send messages.</h3>
+						<h3>You need to make a loan before you can send a message.</h3>
 						<p>In order to send a message, you will need to make a loan using your own funds first. This helps us prevent spam and unwanted messages.</p>
 						<p>Please <a href="{{lend-url}}">make a loan first</a> (note that loans made with bonus credit are not eligible) and then try your message again!</p>
 					</div>
 				{{/no-loans}}
 				{{^no-loans}}{{#sender-anonymous}}
 					<div class="message-error-content">
-						<h3>You can't send messages.</h3>
+						<h3>You need a public profile to send messages.</h3>
 						<p>Your lender profile is anonymous. You must have a public lender profile to use lender messages. Update your profile settings, go to your <a href="{{settings-url}}">account settings</a>.</p>
 					</div>
 				{{/sender-anonymous}}{{/no-loans}}
