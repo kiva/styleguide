@@ -11,8 +11,6 @@
 				</h2>
 			{{/prettyStatus}}
 
-			{{> 02-organisms/50-borrower-dashboard/01-your-loan-status}}
-
 			{{#fundraising_info}}
 				{{#inPfp}}
 					{{> 01-molecules/15-loan-sections/02-pfp-meter}}
@@ -22,6 +20,9 @@
 				{{/inPfp}}
 
 			{{/fundraising_info}}
+
+			{{> 02-organisms/50-borrower-dashboard/01-your-loan-status}}
+
 			<!--TODO:move this into template when it's built-->
 			{{#borrowerActionButton}}
 				<a href="{{borrowerActionButton.buttonUrl}}" class="button">{{borrowerActionButton.buttonText}}</a>
