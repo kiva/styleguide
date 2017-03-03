@@ -1,3 +1,5 @@
+@import '../../settings';
+
 #compose-message-modal {
 	.compose-message-content {
 		margin-top: 1rem;
@@ -51,5 +53,12 @@
 				padding-left: 1rem;
 			}
 		}
+	}
+
+	.message-error-content {
+		background-color: $kiva-bg-lightgray;
+		color: $kiva-text-dark;
+		padding: 1rem;
+		margin-top: 1rem;
 	}
 }

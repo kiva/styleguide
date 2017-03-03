@@ -27,7 +27,10 @@
 
 	.message-list-wrapper {
 		position: relative;
-		min-height: 4rem;
+
+		&.has-messages, &.loading {
+			min-height: 4rem;
+		}
 
 		.loader-overlay {
 			position: absolute;
