@@ -10,22 +10,30 @@
 					{{{prettyStatus}}}
 				</h2>
 			{{/prettyStatus}}
+
 			{{#fundraising_info}}
 				{{#inPfp}}
 					{{> 01-molecules/15-loan-sections/02-pfp-meter}}
 				{{/inPfp}}
-				{{^inPfp}}
-					{{> 01-molecules/15-loan-sections/03-current-status-meter}}
-				{{/inPfp}}
 
+				{{#inRaised}}
+					{{> 01-molecules/51-borrower-dashboard/03-loan-status-raised}}
+				{{/inRaised}}
+
+				{{^inPfp}}
+					{{^inRaised}}
+						{{> 01-molecules/15-loan-sections/03-current-status-meter}}
+					{{/inRaised}}
+				{{/inPfp}}
 			{{/fundraising_info}}
+
+			{{> 02-organisms/50-borrower-dashboard/01-your-loan-status}}
+
 			<!--TODO:move this into template when it's built-->
 			{{#borrowerActionButton}}
 				<a href="{{borrowerActionButton.buttonUrl}}" class="button">{{borrowerActionButton.buttonText}}</a>
 			{{/borrowerActionButton}}
 		</div>
 	</div>
-
-	{{> 02-organisms/50-borrower-dashboard/01-your-loan-status}}
 </div>
 <div class="spacer" style="clear:both"></div>
