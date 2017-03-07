@@ -20,9 +20,15 @@
 					{{> 01-molecules/51-borrower-dashboard/03-loan-status-raised}}
 				{{/inRaised}}
 
+				{{#inReview}}
+					{{> 01-molecules/51-borrower-dashboard/04-loan-status-in-review}}
+				{{/inReview}}
+
 				{{^inPfp}}
 					{{^inRaised}}
-						{{> 01-molecules/15-loan-sections/03-current-status-meter}}
+						{{^inReview}}
+							{{> 01-molecules/15-loan-sections/03-current-status-meter}}
+						{{/inReview}}
 					{{/inRaised}}
 				{{/inPfp}}
 			{{/fundraising_info}}
