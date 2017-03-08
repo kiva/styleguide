@@ -1,8 +1,0 @@
-{
-	"prettyStatus": "Paying Back",
-	"inPayingBack": true,
-	"nextRepayment": {
-		"amount" : "$286.31",
-		"dueDate" : "Feb 20, 2017"
-	}
-}
