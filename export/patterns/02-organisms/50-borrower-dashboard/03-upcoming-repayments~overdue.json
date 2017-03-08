@@ -1,0 +1,10 @@
+{
+	"overdue": true,
+	"amount": "$260.77",
+	"nextRepayment": {
+		"amount": "$260.77",
+		"dueDate": "March 20th, 2017"
+	},
+	"payNowUrl": "#",
+	"scheduleUrl": "#"
+}
