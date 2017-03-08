@@ -1,0 +1,29 @@
+<div class="upcoming-repayments">
+	<h2>Upcoming repayments</h2>
+	<table>
+		<thead>
+			<tr>
+				<th>Amount</th>
+				<th>Due date</th>
+				<th></th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr {{#overdue}}class="overdue"{{/overdue}}>
+				<td>{{amount}}</td>
+				<td>{{#overdue}}Immediately{{/overdue}}{{^overdue}}{{dueDate}}{{/overdue}}</td>
+				<td><a href="{{payNowUrl}}" class="small button">Pay now</a></td>
+			</tr>
+			{{#nextRepayment}}
+				<tr>
+					<td>{{amount}}</td>
+					<td>{{dueDate}}</td>
+					<td></td>
+				</tr>
+			{{/nextRepayment}}
+		</tbody>
+	</table>
+	<div class="more-info">
+		<a href="{{scheduleUrl}}">View repayment schedule</a>
+	</div>
+</div>
