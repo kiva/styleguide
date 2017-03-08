@@ -33,13 +33,15 @@
 				{{/inPfp}}
 			{{/fundraising_info}}
 
-			{{> 02-organisms/50-borrower-dashboard/01-your-loan-status}}
-
 			<!--TODO:move this into template when it's built-->
 			{{#borrowerActionButton}}
 				<a href="{{borrowerActionButton.buttonUrl}}" class="button">{{borrowerActionButton.buttonText}}</a>
 			{{/borrowerActionButton}}
 		</div>
 	</div>
+
+	{{#repayments}}
+		{{> 02-organisms/50-borrower-dashboard/03-upcoming-repayments }}
+	{{/repayments}}
 </div>
 <div class="spacer" style="clear:both"></div>
