@@ -11,17 +11,21 @@
 				</h2>
 			{{/prettyStatus}}
 
-			{{#inPfp}}
-				{{> 01-molecules/15-loan-sections/02-pfp-meter}}
-			{{/inPfp}}
-
-			{{#inRaised}}
-				{{> 01-molecules/51-borrower-dashboard/03-loan-status-raised}}
-			{{/inRaised}}
-
 			{{#inReview}}
 				{{> 01-molecules/51-borrower-dashboard/04-loan-status-in-review}}
 			{{/inReview}}
+
+			{{#isFlagged}}
+				{{> 01-molecules/51-borrower-dashboard/07-loan-status-flagged}}
+			{{/isFlagged}}
+
+			{{#isRejected}}
+				{{> 01-molecules/51-borrower-dashboard/06-loan-status-rejected}}
+			{{/isRejected}}
+
+			{{#inPfp}}
+				{{> 01-molecules/15-loan-sections/02-pfp-meter}}
+			{{/inPfp}}
 
 			{{^inPfp}}
 				{{^inRaised}}
@@ -31,9 +35,20 @@
 				{{/inRaised}}
 			{{/inPfp}}
 
+			{{#isRefunded}}
+				{{> 01-molecules/51-borrower-dashboard/05-loan-status-refunded}}
+			{{/isRefunded}}
+
+			{{#isFunded}}
+				{{> 01-molecules/51-borrower-dashboard/03-loan-status-funded}}
+			{{/isFunded}}
+
 			<a href="{{actionButton.url}}" class="button {{#actionButton.secondary}}secondary{{/actionButton.secondary}}">{{actionButton.text}}</a>
 
-			<p class="text-center"><a href="{{profileLink}}">View profile link</a></p>
+			<!--Show the view Profile link, unless the loan has been rejected-->
+			{{^rejected}}
+				<p class="text-center"><a href="{{profileLink}}">View profile link</a></p>
+			{{/rejected}}
 		</div>
 	</div>
 

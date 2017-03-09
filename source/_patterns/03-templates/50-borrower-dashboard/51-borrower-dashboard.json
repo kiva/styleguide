@@ -1,4 +1,8 @@
 {
-	 "buttonUrl": "#",
-	 "buttonText": "Variable action text (source: styleguide json)"
+	 "actionButton": {
+		 "url": "#",
+		 "text": "Variable action text"
+	},
+	 "profileLink": "#",
+	 "prettyStatus": "All the status"
 }
