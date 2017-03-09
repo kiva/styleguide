@@ -1,12 +1,12 @@
-<div class="small-12 large-9 columns borrower-dashboard-main">
+<div class="small-12 columns borrower-dashboard-main">
 	<div class="row">
 		{{! small-6 large-3 }}
 		{{> 01-molecules/51-borrower-dashboard/01-borrower-info-card}}
-		<div class="small-6 large-9 columns">
+		<div class="small-12 large-9 columns">
 
 			{{! fundraising_info and prettyStatus are mutually exclusive (except for pfp)}}
 			{{#prettyStatus}}
-				<h2>
+				<h2 class="{{#isFlagged}}warning-bolded{{/isFlagged}} {{^isFlagged}}green-bolded{{/isFlagged}}">
 					{{{prettyStatus}}}
 				</h2>
 			{{/prettyStatus}}
@@ -27,13 +27,7 @@
 				{{> 01-molecules/15-loan-sections/02-pfp-meter}}
 			{{/inPfp}}
 
-			{{^inPfp}}
-				{{^inRaised}}
-					{{^inReview}}
-						{{> 01-molecules/15-loan-sections/03-current-status-meter}}
-					{{/inReview}}
-				{{/inRaised}}
-			{{/inPfp}}
+
 
 			{{#isRefunded}}
 				{{> 01-molecules/51-borrower-dashboard/05-loan-status-refunded}}
@@ -42,9 +36,9 @@
 			{{#isFunded}}
 				{{> 01-molecules/51-borrower-dashboard/03-loan-status-funded}}
 			{{/isFunded}}
-
-			<a href="{{actionButton.url}}" class="button {{#actionButton.secondary}}secondary{{/actionButton.secondary}}">{{actionButton.text}}</a>
-
+			<div style="text-align: center;">
+				<a style="margin: 10px auto;" href="{{actionButton.url}}" class="button {{#actionButton.secondary}}secondary{{/actionButton.secondary}}">{{actionButton.text}}</a>
+			</div>
 			<!--Show the view Profile link, unless the loan has been rejected-->
 			{{^rejected}}
 				<p class="text-center"><a href="{{profileLink}}">View profile link</a></p>
