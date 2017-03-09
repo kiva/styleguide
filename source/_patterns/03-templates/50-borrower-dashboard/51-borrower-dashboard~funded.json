@@ -1,8 +1,10 @@
 {
 	 "isFunded": true,
+	 "prettyStatus": "Funded",
+	 "totalLoanAmount": "10,000",
 	 "numLenders": "39",
 	 "actionButton": {
 		  "url": "#",
-		  "text": "Funded"
+		  "text": "Thank lenders"
 	 }
 }
