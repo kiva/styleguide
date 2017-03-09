@@ -1,3 +1,9 @@
 {
-	 "rejected": true
+	 "isRejected": true,
+	 "prettyStatus": "Rejected",
+	 "totalLoanAmount": "10,000",
+	 "actionButton": {
+		  "url": "#",
+		  "text": "Apply again"
+	 }
 }

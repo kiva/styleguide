@@ -27,8 +27,6 @@
 				{{> 01-molecules/15-loan-sections/02-pfp-meter}}
 			{{/inPfp}}
 
-
-
 			{{#isRefunded}}
 				{{> 01-molecules/51-borrower-dashboard/05-loan-status-refunded}}
 			{{/isRefunded}}
@@ -40,9 +38,9 @@
 				<a style="margin: 10px auto;" href="{{actionButton.url}}" class="button {{#actionButton.secondary}}secondary{{/actionButton.secondary}}">{{actionButton.text}}</a>
 			</div>
 			<!--Show the view Profile link, unless the loan has been rejected-->
-			{{^rejected}}
+			{{^isRejected}}
 				<p class="text-center"><a href="{{profileLink}}">View profile link</a></p>
-			{{/rejected}}
+			{{/isRejected}}
 		</div>
 	</div>
 
