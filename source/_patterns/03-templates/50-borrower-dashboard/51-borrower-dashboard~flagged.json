@@ -1,0 +1,8 @@
+{
+	 "isFlagged": true,
+	 "reviewerName": "Barbra",
+	 "actionButton": {
+		  "url": "#",
+		  "text": "Flagged"
+	 }
+}

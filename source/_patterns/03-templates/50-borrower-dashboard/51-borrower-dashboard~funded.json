@@ -1,0 +1,8 @@
+{
+	 "isFunded": true,
+	 "numLenders": "39",
+	 "actionButton": {
+		  "url": "#",
+		  "text": "Funded"
+	 }
+}
