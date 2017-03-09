@@ -1,7 +1,10 @@
 {
 	 "inReview": true,
+	 "prettyStatus": "In Kiva review",
+	 "totalLoanAmount": "10,000",
 	 "actionButton": {
+		  "secondary": true,
 		  "url": "#",
-		  "text": "In Kiva review"
+		  "text": "Browse loans"
 	 }
 }
