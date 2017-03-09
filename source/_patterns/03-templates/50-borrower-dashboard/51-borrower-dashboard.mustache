@@ -11,32 +11,29 @@
 				</h2>
 			{{/prettyStatus}}
 
-			{{#fundraising_info}}
-				{{#inPfp}}
-					{{> 01-molecules/15-loan-sections/02-pfp-meter}}
-				{{/inPfp}}
+			{{#inPfp}}
+				{{> 01-molecules/15-loan-sections/02-pfp-meter}}
+			{{/inPfp}}
 
-				{{#inRaised}}
-					{{> 01-molecules/51-borrower-dashboard/03-loan-status-raised}}
+			{{#inRaised}}
+				{{> 01-molecules/51-borrower-dashboard/03-loan-status-raised}}
+			{{/inRaised}}
+
+			{{#inReview}}
+				{{> 01-molecules/51-borrower-dashboard/04-loan-status-in-review}}
+			{{/inReview}}
+
+			{{^inPfp}}
+				{{^inRaised}}
+					{{^inReview}}
+						{{> 01-molecules/15-loan-sections/03-current-status-meter}}
+					{{/inReview}}
 				{{/inRaised}}
+			{{/inPfp}}
 
-				{{#inReview}}
-					{{> 01-molecules/51-borrower-dashboard/04-loan-status-in-review}}
-				{{/inReview}}
+			<a href="{{actionButton.url}}" class="button {{#actionButton.secondary}}secondary{{/actionButton.secondary}}">{{actionButton.text}}</a>
 
-				{{^inPfp}}
-					{{^inRaised}}
-						{{^inReview}}
-							{{> 01-molecules/15-loan-sections/03-current-status-meter}}
-						{{/inReview}}
-					{{/inRaised}}
-				{{/inPfp}}
-			{{/fundraising_info}}
-
-			<!--TODO:move this into template when it's built-->
-			{{#borrowerActionButton}}
-				<a href="{{borrowerActionButton.buttonUrl}}" class="button">{{borrowerActionButton.buttonText}}</a>
-			{{/borrowerActionButton}}
+			<p class="text-center"><a href="{{profileLink}}">View profile link</a></p>
 		</div>
 	</div>
 
