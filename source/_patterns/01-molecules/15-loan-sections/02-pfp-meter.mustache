@@ -1,31 +1,31 @@
 <div class="pfp-meter">
     <div class="lender-count">
         <h2 class="green-bolded">
-            {{fundraising_info.lenderCount}} of {{fundraising_info.lenderCountNeeded}}
+            {{lenderCount}} of {{lenderCountNeeded}}
         </h2>
 
-        <div>Lenders</div>
+        <div>lenders</div>
     </div>
 
     <div class="fundraising-meter progress">
-        <span class="meter" style="width: {{fundraising_info.lenderCountPercent}}%"></span>
+        <span class="meter" style="width: {{lenderCountPercent}}%"></span>
     </div>
-    <p>
-        <a class="black-underlined" data-reveal-id="in-pfp-explain-lightbox">
-            {{fundraising_info.timeLeft}} to reach {{fundraising_info.lenderCountNeeded}} lenders.
-        </a>
+    <p{{#isExpiringSoon}} class="warning"{{/isExpiringSoon}}>
+		{{#inPFPHelpText}}<a class="black-underlined" data-reveal-id="{{dataRevealId}}">{{/inPFPHelpText}}
+            {{timeLeft}} to reach {{lenderCountNeeded}} lenders.
+        {{#inPFPHelpText}}</a>{{/inPFPHelpText}}
     </p>
     <div class="amount-raised">
         <div>
-            ${{fundraising_info.amountRaised}} of ${{fundraising_info.amountNeeded}} raised so far.
+            ${{amountRaised}} of ${{totalLoanAmount}} raised so far.
         </div>
 
         <div class="fundraising-meter progress">
-            <span class="meter" style="width: {{fundraising_info.amountRaisedPercent}}%"></span>
+            <span class="meter" style="width: {{meterAmountPercent}}%"></span>
         </div>
     </div>
 
-    {{#fundraising_info.inPFPHelpText}}
+    {{#inPFPHelpText}}
         {{> 01-molecules/10-lightbox/04-help-text-lightbox}}
-    {{/fundraising_info.inPFPHelpText}}
+    {{/inPFPHelpText}}
 </div>

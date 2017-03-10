@@ -6,12 +6,14 @@
 		</div>
 
 		<div class="small-12 medium-5 print-5 columns right-content">
-			{{#in_pfp}}
-				{{> 01-molecules/15-loan-sections/02-pfp-meter.mustache}}
-			{{/in_pfp}}
-			{{^in_pfp}}
-				{{> 01-molecules/15-loan-sections/03-current-status-meter.mustache}}
-			{{/in_pfp}}
+			{{#fundraising_info}}
+				{{#in_pfp}}
+					{{> 01-molecules/15-loan-sections/02-pfp-meter.mustache}}
+				{{/in_pfp}}
+				{{^in_pfp}}
+					{{> 01-molecules/15-loan-sections/03-current-status-meter.mustache}}
+				{{/in_pfp}}
+			{{/fundraising_info}}
 
 			{{> 01-molecules/15-loan-sections/05-loan-gist.mustache}}
 

@@ -1,0 +1,14 @@
+{
+	"isPayingBack": true,
+	"prettyStatus": "Paying back",
+	"showRaisedInfo": true,
+	"meterAmountPercent": 25,
+	"raisedVerb": "repaid",
+	"amountLeft": "7,725",
+	"totalLoanAmount": "10,000",
+	"lenderCount": 39,
+	"actionButton": {
+		"url": "#",
+		"text": "Make repayment"
+	}
+}

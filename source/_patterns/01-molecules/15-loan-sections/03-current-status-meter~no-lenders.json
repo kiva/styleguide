@@ -1,11 +1,10 @@
 {
-  "amountRaised": 200,
-  "amountLeft": 75,
-  "totalLoanAmount": 275,
-  "amountRaisedPercent": 50,
-  "lenders": null,
-  "showRaisedInfo": true,
-  "raisedVerb": "funded",
-  "isExpiringSoon": true,
-  "loanLengthMessage": "1 day left"
+	"amountLeft": 275,
+	"totalLoanAmount": 275,
+	"lenderCount": 0,
+	"meterAmountPercent": 0,
+	"showRaisedInfo": true,
+	"raisedVerb": "funded",
+	"isExpiringSoon": true,
+	"loanLengthMessage": "1 day left"
 }
