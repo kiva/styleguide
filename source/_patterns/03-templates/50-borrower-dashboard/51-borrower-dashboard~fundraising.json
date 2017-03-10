@@ -1,0 +1,15 @@
+{
+	"isFundraising": true,
+	"prettyStatus": "Public fundraising",
+	"showRaisedInfo": true,
+	"meterAmountPercent": 25,
+	"raisedVerb": "funded",
+	"loanLengthMessage": "28 days left",
+	"amountLeft": "7,725",
+	"totalLoanAmount": "10,000",
+	"lenderCount": 39,
+	"actionButton": {
+		"url": "#",
+		"text": "Apply again"
+	}
+}

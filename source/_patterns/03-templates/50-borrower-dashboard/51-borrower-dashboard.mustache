@@ -1,42 +1,55 @@
-<div class="small-12 large-9 columns borrower-dashboard-main">
+<div class="small-12 columns borrower-dashboard-main">
 	<div class="row">
 		{{! small-6 large-3 }}
 		{{> 01-molecules/51-borrower-dashboard/01-borrower-info-card}}
-		<div class="small-6 large-9 columns">
+		<div class="small-12 large-9 columns">
 
 			{{! fundraising_info and prettyStatus are mutually exclusive (except for pfp)}}
 			{{#prettyStatus}}
-				<h2>
+				<h2 class="{{#isWarningStatus}}warning-bolded{{/isWarningStatus}} {{^isFlagged}}green-bolded{{/isFlagged}}">
 					{{{prettyStatus}}}
 				</h2>
 			{{/prettyStatus}}
 
-			{{#fundraising_info}}
-				{{#inPfp}}
-					{{> 01-molecules/15-loan-sections/02-pfp-meter}}
-				{{/inPfp}}
+			{{#inReview}}
+				{{> 01-molecules/51-borrower-dashboard/04-loan-status-in-review}}
+			{{/inReview}}
 
-				{{#inRaised}}
-					{{> 01-molecules/51-borrower-dashboard/03-loan-status-raised}}
-				{{/inRaised}}
+			{{#isFlagged}}
+				{{> 01-molecules/51-borrower-dashboard/07-loan-status-flagged}}
+			{{/isFlagged}}
 
-				{{#inReview}}
-					{{> 01-molecules/51-borrower-dashboard/04-loan-status-in-review}}
-				{{/inReview}}
+			{{#isRejected}}
+				{{> 01-molecules/51-borrower-dashboard/06-loan-status-rejected}}
+			{{/isRejected}}
 
-				{{^inPfp}}
-					{{^inRaised}}
-						{{^inReview}}
-							{{> 01-molecules/15-loan-sections/03-current-status-meter}}
-						{{/inReview}}
-					{{/inRaised}}
-				{{/inPfp}}
-			{{/fundraising_info}}
+			{{#inPfp}}
+				{{> 01-molecules/15-loan-sections/02-pfp-meter}}
+			{{/inPfp}}
 
-			<!--TODO:move this into template when it's built-->
-			{{#borrowerActionButton}}
-				<a href="{{borrowerActionButton.buttonUrl}}" class="button">{{borrowerActionButton.buttonText}}</a>
-			{{/borrowerActionButton}}
+			{{#isFundraising}}
+				{{> 01-molecules/15-loan-sections/03-current-status-meter}}
+			{{/isFundraising}}
+
+			{{#isRefunded}}
+				{{> 01-molecules/51-borrower-dashboard/05-loan-status-refunded}}
+			{{/isRefunded}}
+
+			{{#isFunded}}
+				{{> 01-molecules/51-borrower-dashboard/03-loan-status-funded}}
+			{{/isFunded}}
+
+			{{#isPayingBack}}
+				{{> 01-molecules/15-loan-sections/03-current-status-meter}}
+			{{/isPayingBack}}
+
+			<div style="text-align: center;">
+				<a style="margin: 10px auto;" href="{{actionButton.url}}" class="button {{#actionButton.secondary}}secondary{{/actionButton.secondary}}">{{actionButton.text}}</a>
+			</div>
+			<!--Show the view Profile link, unless the loan has been rejected-->
+			{{^isRejected}}
+				<p class="text-center"><a href="{{profileLink}}">View profile link</a></p>
+			{{/isRejected}}
 		</div>
 	</div>
 

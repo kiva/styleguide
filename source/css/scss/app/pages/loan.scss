@@ -309,7 +309,15 @@
 	}
 }
 
+.pfp-meter .warning,
+.current-status-meter .warning {
+	color: $kiva-accent-red;
+}
+
 .pfp-meter {
+	.lender-count {
+		color: $kiva-green;
+	}
 	.amount-raised {
 		.fundraising-meter {
 			height: .7rem;
@@ -349,10 +357,6 @@
 			float: left;
 		}
 
-		.urgent {
-			color: $red;
-		}
-
 		.amount-to-go-stat {
 			float: right;
 		}
@@ -382,6 +386,15 @@
 					text-align: right;
 				}
 			}
+		}
+	}
+
+	&.warning{
+		.amount-raised * {
+			color: $kiva-accent-red;
+		}
+		.fundraising-meter .meter {
+			background-color: $kiva-accent-red;
 		}
 	}
 }

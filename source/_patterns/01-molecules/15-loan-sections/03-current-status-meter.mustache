@@ -1,35 +1,35 @@
-<div class="current-status-meter">
-	{{#fundraising_info.status}}
-		<h2 class="{{^fundraising_info.isWarningStatus}} green-bolded {{/fundraising_info.isWarningStatus}} {{#fundraising_info.isWarningStatus}} warning-bolded {{/fundraising_info.isWarningStatus}} inline">
-			{{fundraising_info.status}}
+<div class="current-status-meter {{#isWarningStatus}}warning{{/isWarningStatus}}">
+	{{#status}}
+		<h2 class="green-bolded inline">
+			{{status}}
 		</h2>
-	{{/fundraising_info.status}}
+	{{/status}}
 
-	{{#fundraising_info.showRaisedInfo}}
+	{{#showRaisedInfo}}
 		<div class="amount-raised">
 			<h2 class="green-bolded inline">
-				{{fundraising_info.meterAmountPercent}}%
+				{{meterAmountPercent}}%
 			</h2>
-			<div class="inline">{{fundraising_info.raisedVerb}}</div>
+			<div class="inline">{{raisedVerb}}</div>
 		</div>
         <div class="goal-stats">
-            <div class="days-left-stat {{#fundraising_info.isExpiringSoon}}urgent{{/fundraising_info.isExpiringSoon}}">{{fundraising_info.loanLengthMessage}}</div>
-            <div class="amount-to-go-stat">${{fundraising_info.amountLeft}} to go</div>
+            <div class="days-left-stat {{#isExpiringSoon}}warning{{/isExpiringSoon}}">{{loanLengthMessage}}</div>
+            <div class="amount-to-go-stat">${{amountLeft}} to go</div>
             <div style="clear: both;"></div>
         </div>
 		<div class="fundraising-meter progress">
-			<span class="meter" style="width: {{fundraising_info.meterAmountPercent}}%"></span>
+			<span class="meter" style="width: {{meterAmountPercent}}%"></span>
 		</div>
-	{{/fundraising_info.showRaisedInfo}}
+	{{/showRaisedInfo}}
 
 	<div class="raised-info row">
 		<div class="loan-total">
-			Total loan: ${{fundraising_info.totalLoanAmount}}
+			Total loan: ${{totalLoanAmount}}
 		</div>
-		{{#fundraising_info.lenderCount}}
-			<a kvtrackevent="Borrower Profile|click-powered by" href="#lenders-teams" class="lender-count black-underlined">
-				Powered by {{fundraising_info.lenderCount}} lenders
+		{{#lenderCount}}
+			<a kvtrackevent="Borrower Profile|click-powered by" href="{{profileLink}}#lenders-teams" class="lender-count black-underlined">
+				Powered by {{lenderCount}} lenders
 			</a>
-		{{/fundraising_info.lenderCount}}
+		{{/lenderCount}}
 	</div>
 </div>
