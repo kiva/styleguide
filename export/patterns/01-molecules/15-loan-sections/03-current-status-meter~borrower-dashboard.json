@@ -1,12 +1,10 @@
 {
-	 "fundraising_info": {
-		  "status": "Paying back delinquent",
-		  "showRaisedInfo": true,
-		  "isWarningStatus": true,
-		  "meterAmountPercent": "42",
-		  "raisedVerb": "repaid",
-		  "amountLeft": "7,433",
-		  "totalLoanAmount": "10,000",
-		  "lenderCount": "54"
-	 }
+	  "status": "Paying back delinquent",
+	  "showRaisedInfo": true,
+	  "isWarningStatus": true,
+	  "meterAmountPercent": "42",
+	  "raisedVerb": "repaid",
+	  "amountLeft": "7,433",
+	  "totalLoanAmount": "10,000",
+	  "lenderCount": "54"
 }

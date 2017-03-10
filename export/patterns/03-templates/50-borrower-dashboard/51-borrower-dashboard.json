@@ -1,4 +1,12 @@
 {
-	 "buttonUrl": "#",
-	 "buttonText": "Variable action text (source: styleguide json)"
+	 "actionButton": {
+		 "url": "#",
+		 "text": "Variable action text"
+	},
+	 "borrowerInfoCard": {
+		  "name": "Jane Doe",
+		  "img_src": "https://www-kiva-org-4.global.ssl.fastly.net/img/s164/3e4d9145681f0b70b3744fe0ed9966c2.jpg",
+		  "company": "Pizza Dudes"
+	 },
+	 "profileLink": "#"
 }

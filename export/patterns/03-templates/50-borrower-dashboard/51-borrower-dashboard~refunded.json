@@ -1,0 +1,9 @@
+{
+	 "isRefunded": true,
+	 "prettyStatus": "Refunded",
+	 "actionButton": {
+		  "secondary": true,
+		  "url": "#",
+		  "text": "Browse loans"
+	 }
+}

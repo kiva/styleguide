@@ -1,0 +1,15 @@
+{
+	"inPfp": true,
+	"prettyStatus": "Private fundraising",
+	"lenderCount": 7,
+	"lenderCountNeeded": 25,
+	"lenderCountPercent": 28,
+	"timeLeft": "12 days left",
+	"amountRaised": "175",
+	"totalLoanAmount": "1,300",
+	"meterAmountPercent": 13,
+	"actionButton": {
+		"url": "#",
+		"text": "Copy loan link"
+	}
+}

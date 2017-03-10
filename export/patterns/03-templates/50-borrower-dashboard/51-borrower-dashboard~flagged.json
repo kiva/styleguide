@@ -1,0 +1,11 @@
+{
+	"isFlagged": true,
+	"isWarningStatus": true,
+	"prettyStatus": "Issue flagged",
+	"reviewerName": "Barbra",
+	"totalLoanAmount": "10,000",
+	"actionButton": {
+		"url": "#",
+		"text": "Resolve issue"
+	}
+}

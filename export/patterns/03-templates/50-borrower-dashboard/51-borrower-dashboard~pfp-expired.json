@@ -1,0 +1,16 @@
+{
+	"inPfp": true,
+	"prettyStatus": "Expired",
+	"lenderCount": 7,
+	"lenderCountNeeded": 25,
+	"lenderCountPercent": 28,
+	"isExpiringSoon": true,
+	"timeLeft": "0 days left",
+	"amountRaised": "175",
+	"totalLoanAmount": "1,300",
+	"meterAmountPercent": 13,
+	"actionButton": {
+		"url": "#",
+		"text": "Apply again"
+	}
+}
