@@ -1,0 +1,10 @@
+{
+	 "isRepaid": true,
+	 "prettyStatus": "Repaid",
+	 "totalLoanAmount": "10,000",
+	 "lenderCount": "39",
+	 "actionButton": {
+		  "url": "#",
+		  "text": "Apply again"
+	 }
+}

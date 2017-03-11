@@ -43,6 +43,10 @@
 				{{> 01-molecules/15-loan-sections/03-current-status-meter}}
 			{{/isPayingBack}}
 
+			{{#isRepaid}}
+				{{> 01-molecules/51-borrower-dashboard/08-loan-status-repaid}}
+			{{/isRepaid}}
+
 			<div style="text-align: center;">
 				<a style="margin: 10px auto;" href="{{actionButton.url}}" class="button {{#actionButton.secondary}}secondary{{/actionButton.secondary}}">{{actionButton.text}}</a>
 			</div>
