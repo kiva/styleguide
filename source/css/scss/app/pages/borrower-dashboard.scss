@@ -1,0 +1,53 @@
+@import '../../settings';
+@import '../../vendor_override/foundation/type';
+
+.borrower-dashboard-main {
+	.borrower-image {
+		text-align: center;
+	}
+
+	.loan-status {
+		color: $kiva-green;
+
+		&.warning {
+			color: $kiva-accent-red;
+		}
+	}
+
+	.current-status-meter {
+		margin-top: 0;
+
+		.amount-raised h2 {
+			@media #{$small-only} {
+				font-size: $h2-font-size;
+				line-height: $section-head-line-height;
+			}
+		}
+	}
+
+	.action-button {
+		text-align: center;
+		margin-top: 1.5rem;
+
+		a {
+			padding: 0;
+			width: 100%;
+			max-width: 16rem;
+			margin: 0.5rem 0;
+		}
+
+		@media #{$medium-up} {
+			margin-top: 1rem;
+		}
+	}
+
+	.profile-link {
+		font-size: $small-font-size;
+		line-height: $small-line-height;
+
+		@media #{$medium-up} {
+			font-size: $body-font-size;
+			line-height: $body-line-height;
+		}
+	}
+}
