@@ -1,12 +1,14 @@
-<div class="small-12 columns borrower-dashboard-main">
+<div class="small-12 large-9 columns borrower-dashboard-main">
+	<h1>{{businessName}}</h1>
 	<div class="row">
-		{{! small-6 large-3 }}
-		{{> 01-molecules/51-borrower-dashboard/01-borrower-info-card}}
-		<div class="small-12 large-9 columns">
+		<div class="borrower-image small-12 medium-5 columns">
+			<img src="{{imgUrl}}" alt="{{name}}">
+		</div>
+		<div class="small-12 medium-7 columns">
 
 			{{! fundraising_info and prettyStatus are mutually exclusive (except for pfp)}}
 			{{#prettyStatus}}
-				<h2 class="{{#isWarningStatus}}warning-bolded{{/isWarningStatus}} {{^isFlagged}}green-bolded{{/isFlagged}}">
+				<h2 class="{{#isWarningStatus}}warning{{/isWarningStatus}} loan-status">
 					{{{prettyStatus}}}
 				</h2>
 			{{/prettyStatus}}
@@ -47,12 +49,14 @@
 				{{> 01-molecules/51-borrower-dashboard/08-loan-status-repaid}}
 			{{/isRepaid}}
 
-			<div style="text-align: center;">
-				<a style="margin: 10px auto;" href="{{actionButton.url}}" class="button {{#actionButton.secondary}}secondary{{/actionButton.secondary}}">{{actionButton.text}}</a>
+			<div class="action-button">
+				{{#actionButton}}
+					<a href="{{url}}" class="button {{#secondary}}secondary{{/secondary}}">{{text}}</a>
+				{{/actionButton}}
 			</div>
 			<!--Show the view Profile link, unless the loan has been rejected-->
 			{{^isRejected}}
-				<p class="text-center"><a href="{{profileLink}}">View profile link</a></p>
+				<p class="profile-link text-center"><a href="{{profileLink}}">View loan profile</a></p>
 			{{/isRejected}}
 		</div>
 	</div>
