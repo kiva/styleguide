@@ -51,7 +51,7 @@
 
 			<div class="action-button">
 				{{#actionButton}}
-					<a href="{{url}}" class="button {{#secondary}}secondary{{/secondary}}">{{text}}</a>
+					<a href="{{url}}" class="button {{#secondary}}secondary{{/secondary}} {{#isFundraising}}copyLinkButton{{/isFundraising}}" {{#isFundraising}}data-clipboard-text="{{inviteUrl}}"{{/isFundraising}}>{{text}}</a>
 				{{/actionButton}}
 			</div>
 			<!--Show the view Profile link, unless the loan has been rejected-->
