@@ -1,0 +1,39 @@
+.whats-next-wrapper {
+	.learn-more-link {
+		padding-bottom: 25px;
+		padding-top: 10px;
+	}
+	.paging.row {
+		display: inline-block;
+
+		.previous-button {
+			@media#{$small-up} {
+				float: left;
+				max-width: 150px;
+				font-size: 18px;
+				height: 44px;
+				line-height: 44px;
+
+				.previous-arrow {
+					width: 18px;
+					height: 44px;
+					right: calc(50% + 1.6rem);
+				}
+			}
+		}
+
+		.next-button {
+			@media#{$small-up} {
+				@extend .previous-button;
+				float: right;
+
+				.next-arrow {
+					width: 18px;
+					height: 44px;
+					left: calc(50% + 0.7rem);
+				}
+			}
+		}
+
+	}
+}
