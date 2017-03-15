@@ -3,9 +3,6 @@
 @import '../../vendor_override/foundation/type';
 
 .portfolio {
-	padding-left: 0;
-	padding-right: 0;
-
 	h2 {
 		color: $kiva-green;
 	}
@@ -18,12 +15,6 @@
 }
 
 .portfolio-main {
-
-	@media #{$large-up} {
-		.row {
-			margin-right: 0;
-		}
-	}
 
 	.bottom-rule {
 		padding-bottom: 0;
@@ -62,12 +53,6 @@
 
 	.extra-stat-row {
 		margin-top: 1rem;
-	}
-
-	.row .columns {
-		@media #{$large-up} {
-			padding-left: 0;
-		}
 	}
 }
 
@@ -157,16 +142,6 @@
 				margin-top: 2rem;
 				text-align: right;
 			}
-		}
-	}
-
-	.columns {
-		padding-left: 0;
-		padding-right: 0;
-
-		@media #{$large-up} {
-			padding-left: 0.8333333333rem;
-			padding-right: 0.8333333333rem;
 		}
 	}
 }
@@ -479,10 +454,6 @@
 	.section-end {
 		margin-top: 0;
 	}
-
-	.row .columns {
-		padding-left: 0;
-	}
 }
 
 .lending-stats {
@@ -500,6 +471,7 @@
 .avg-kiva-compare-table {
 	.update-timestamp {
 		color: $kiva-text-light;
+		margin-right: rem-calc(10);
 	}
 
 	table {
@@ -574,8 +546,6 @@
 }
 
 .my-loans {
-	padding: 0;
-
 	h1 {
 		margin-bottom: 0;
 	}
@@ -589,8 +559,8 @@
 	}
 
 	.avg-kiva-compare-table {
-		margin-left: -0.555556rem;
-		margin-right: -0.555556rem;
+		margin-left: rem-calc(-15);
+		margin-right: rem-calc(-15);
 
 		@media #{$large-up} {
 			margin-left: 0;

@@ -1,3 +1,5 @@
+@import '../../settings';
+
 $link-spacing: rem-calc(16);
 
 .secondary-nav-bar {
@@ -120,7 +122,7 @@ $link-spacing: rem-calc(16);
 
 ul.tertiary-nav {
     list-style: none;
-    margin: rem-calc(16) 0 rem-calc(7) -1.1111111rem;
+    margin: rem-calc(16) 0;
 	line-height: $body-font-size * 1.2;
 
 	li {
