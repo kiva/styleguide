@@ -7,6 +7,7 @@
 		color: $kiva-text-light;
 		line-height: 1.5;
 		margin-bottom: 1rem;
+		position: relative;
 
 		.circle-avatar {
 			width: 3rem;
@@ -16,9 +17,11 @@
 		}
 
 		.lender-avatar {
-			display: inline-block;
-			float: left;
-			margin-right: 1rem;
+			position: absolute;
+		}
+
+		div {
+			margin-left: 4rem;
 		}
 	}
 

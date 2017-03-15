@@ -1,28 +1,24 @@
 <div class="lender-message">
-	<div class="other-lender row">
-		<div class="columns small-3 large-2">
-            {{#other-lender}}
-                <a href="{{url}}" class="lender-avatar">
-                    <span class="circle-avatar" style="background-image:url({{img-url}})"></span>
-                </a>
-            {{/other-lender}}
-            {{^other-lender}}
-                <span class="lender-avatar circle-avatar" style="background-image:url({{anon-img-url}})"></span>
-            {{/other-lender}}
-        </div>
-        <div class="columns small-9 large-10">
-            <div>Date: {{date}}</div>
-            <div>
-                <span>{{#is-sent}}To{{/is-sent}}{{^is-sent}}From{{/is-sent}}: </span>
-                {{#other-lender}}
-                    <a href="{{url}}">{{name}}</a>
-                    {{#location}}<span> | {{location}}</span>{{/location}}
-                {{/other-lender}}
-                {{^other-lender}}
-                    <span>Anonymous</span>
-                {{/other-lender}}
-            </div>
-        </div>
+	<div class="other-lender">
+		{{#other-lender}}
+			<a href="{{url}}" class="lender-avatar">
+				<span class="circle-avatar" style="background-image:url({{img-url}})"></span>
+			</a>
+		{{/other-lender}}
+		{{^other-lender}}
+			<span class="lender-avatar circle-avatar" style="background-image:url({{anon-img-url}})"></span>
+		{{/other-lender}}
+		<div>Date: {{date}}</div>
+		<div>
+			<span>{{#is-sent}}To{{/is-sent}}{{^is-sent}}From{{/is-sent}}: </span>
+			{{#other-lender}}
+				<a href="{{url}}">{{name}}</a>
+				{{#location}}<span> | {{location}}</span>{{/location}}
+			{{/other-lender}}
+			{{^other-lender}}
+				<span>Anonymous</span>
+			{{/other-lender}}
+		</div>
 	</div>
 	<p class="message-body">
 		{{{message-body}}}
