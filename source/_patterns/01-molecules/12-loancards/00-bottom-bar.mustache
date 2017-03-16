@@ -10,8 +10,13 @@
 {{/is_lent_to}}
 {{#is_regular}}
 	<div class="bottom-bar">
-		<a kvtrackevent="Lending|Add to basket|Loan card" class="half-width button lend-button" href="#">Lend {{#free_trial}}Free {{/free_trial}}$25</a>
-		<a kvtrackevent="Lending|click-Read more|Story" class="half-width button" href="{{borrower_url}}">Learn more</a>
+        {{#amount_left}}
+            <a kvtrackevent="Lending|Add to basket|Loan card" class="half-width button lend-button" href="#">Lend {{#free_trial}}Free {{/free_trial}}$25</a>
+            <a kvtrackevent="Lending|click-Read more|Story" class="half-width button" href="{{borrower_url}}">Learn more</a>
+        {{/amount_left}}
+        {{^amount_left}}
+            <a kvtrackevent="Lending|click-Read more|Story" class="full-width button" href="{{borrower_url}}">Learn more</a>
+        {{/amount_left}}
 	</div>
 {{/is_regular}}
 {{#is_lent_to}}
