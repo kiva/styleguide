@@ -1,8 +1,13 @@
 .whats-next-wrapper {
+	border-top: rem-calc(1) solid #999;
+	border-bottom: rem-calc(1) solid #999;
+	margin: rem-calc(35) 0;
+	padding-top: rem-calc(25);
 
 	.learn-more-link {
-		padding-bottom: rem-calc(25);
-		padding-top: rem-calc(10);
+		display: inline-block;
+		margin-bottom: rem-calc(25);
+		margin-top: rem-calc(10);
 	}
 	.paging.row {
 		display: inline-block;
@@ -19,7 +24,7 @@
 			svg.icon-slideshow-dot {
 				width: rem-calc(20);
 				position: inherit;
-				margin: 0  rem-calc(5);
+				margin: 0 rem-calc(5);
 				stroke: gray;
 				fill: gray;
 			}
@@ -30,7 +35,7 @@
 			@media#{$small-up} {
 				margin-right: 0;
 				max-width: rem-calc(150);
-				font-size: rem-calc(18);
+				font-size: $paragraph-font-size;
 				height: rem-calc(44);
 				line-height: rem-calc(44);
 
@@ -46,7 +51,5 @@
 				}
 			}
 		}
-
 	}
-
 }
