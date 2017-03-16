@@ -1,8 +1,8 @@
 .whats-next-wrapper {
 
 	.learn-more-link {
-		padding-bottom: 25px;
-		padding-top: 10px;
+		padding-bottom: rem-calc(25);
+		padding-top: rem-calc(10);
 	}
 	.paging.row {
 		display: inline-block;
@@ -17,9 +17,9 @@
 			}
 
 			svg.icon-slideshow-dot {
-				width: 20px;
+				width: rem-calc(20);
 				position: inherit;
-				margin: 0 5px;
+				margin: 0  rem-calc(5);
 				stroke: gray;
 				fill: gray;
 			}
@@ -29,14 +29,14 @@
 		.next-button {
 			@media#{$small-up} {
 				margin-right: 0;
-				max-width: 150px;
-				font-size: 18px;
-				height: 44px;
-				line-height: 44px;
+				max-width: rem-calc(150);
+				font-size: rem-calc(18);
+				height: rem-calc(44);
+				line-height: rem-calc(44);
 
 				.previous-arrow {
-					width: 18px;
-					height: 44px;
+					width: rem-calc(18);
+					height: rem-calc(44);
 					right: calc(50% + 1.6rem);
 				}
 
