@@ -32,16 +32,18 @@
 
 		.previous-button,
 		.next-button {
+			$button-height: rem-calc(44);
+
 			@media#{$small-up} {
 				margin-right: 0;
 				max-width: rem-calc(150);
 				font-size: $paragraph-font-size;
-				height: rem-calc(44);
-				line-height: rem-calc(44);
+				height: $button-height;
+				line-height: $button-height;
 
 				.previous-arrow {
 					width: rem-calc(18);
-					height: rem-calc(44);
+					height: $button-height;
 					right: calc(50% + 1.6rem);
 				}
 
