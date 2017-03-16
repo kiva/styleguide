@@ -1,14 +1,34 @@
 .whats-next-wrapper {
+
 	.learn-more-link {
 		padding-bottom: 25px;
 		padding-top: 10px;
 	}
 	.paging.row {
 		display: inline-block;
+		max-width: none;
 
-		.previous-button {
+		.radio-wrapper {
+			display: inline-block;
+
+			ul {
+				list-style-type: none;
+				margin: 0;
+			}
+
+			svg.icon-slideshow-dot {
+				width: 20px;
+				position: inherit;
+				margin: 0 5px;
+				stroke: gray;
+				fill: gray;
+			}
+		}
+
+		.previous-button,
+		.next-button {
 			@media#{$small-up} {
-				float: left;
+				margin-right: 0;
 				max-width: 150px;
 				font-size: 18px;
 				height: 44px;
@@ -19,21 +39,14 @@
 					height: 44px;
 					right: calc(50% + 1.6rem);
 				}
-			}
-		}
-
-		.next-button {
-			@media#{$small-up} {
-				@extend .previous-button;
-				float: right;
 
 				.next-arrow {
-					width: 18px;
-					height: 44px;
+					@extend .previous-arrow;
 					left: calc(50% + 0.7rem);
 				}
 			}
 		}
 
 	}
+
 }
