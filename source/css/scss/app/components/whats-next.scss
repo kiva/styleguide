@@ -22,7 +22,7 @@
 			}
 
 			svg.icon-slideshow-dot {
-				width: rem-calc(20);
+				width: rem-calc(12);
 				position: inherit;
 				margin: 0 rem-calc(5);
 				stroke: gray;
@@ -44,12 +44,25 @@
 				.previous-arrow {
 					width: rem-calc(18);
 					height: $button-height;
-					right: calc(50% + 1.6rem);
+
+					@media#{$small-only} {
+						right: calc(50% + 1.8rem);
+					}
+
+					@media#{$medium-up} {
+						right: calc(50% + 1.6rem);
+					}
 				}
 
 				.next-arrow {
 					@extend .previous-arrow;
-					left: calc(50% + 0.7rem);
+					@media#{$small-only} {
+						left: calc(50% + 0.9rem);
+					}
+
+					@media#{$medium-up} {
+						left: calc(50% + 0.7rem);
+					}
 				}
 			}
 		}
