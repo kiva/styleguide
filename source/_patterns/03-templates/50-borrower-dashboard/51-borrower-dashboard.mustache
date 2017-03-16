@@ -65,6 +65,8 @@
 		{{> 02-organisms/50-borrower-dashboard/03-upcoming-repayments}}
 	{{/repayments}}
 
-	{{> 02-organisms/50-borrower-dashboard/04-whats-next}}
+	{{^isRefunded}}
+		{{> 02-organisms/50-borrower-dashboard/04-whats-next}}
+	{{/isRefunded}}
 </div>
 <div class="spacer" style="clear:both"></div>
