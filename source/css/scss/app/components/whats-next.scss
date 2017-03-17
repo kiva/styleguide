@@ -10,8 +10,13 @@
 		margin-top: rem-calc(10);
 	}
 	.paging.row {
-		display: inline-block;
-		max-width: none;
+		max-width: 729px;
+		padding-left: 15px;
+		padding-right: 15px;
+
+		@media#{$xxlarge-up} {
+			padding-right: 0;
+		}
 
 		.radio-wrapper {
 			display: inline-block;
