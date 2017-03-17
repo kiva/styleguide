@@ -10,9 +10,9 @@
 		margin-top: rem-calc(10);
 	}
 	.paging.row {
-		max-width: 729px;
-		padding-left: 15px;
-		padding-right: 15px;
+		max-width: rem-calc(729);
+		padding-left: rem-calc(15);
+		padding-right: rem-calc(15);
 
 		@media#{$xxlarge-up} {
 			padding-right: 0;
