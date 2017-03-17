@@ -5,7 +5,7 @@
   "main": "source/js/inc/app.js",
   "devDependencies": {
     "autoprefixer": "^6.0.3",
-    "exports-loader": "^0.6.2",
+    "exports-loader": "0.6.3",
     "grunt": "~0.4.5",
     "grunt-contrib-clean": "^0.6.0",
     "grunt-contrib-concat": "^0.5.1",
