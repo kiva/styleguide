@@ -1,5 +1,6 @@
 {
 	"inPfp": true,
+	"isExpired": true,
 	"prettyStatus": "Expired",
 	"lenderCount": 7,
 	"lenderCountNeeded": 25,
