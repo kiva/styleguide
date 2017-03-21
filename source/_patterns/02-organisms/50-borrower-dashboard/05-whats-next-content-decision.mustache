@@ -1,0 +1,45 @@
+{{#inReview}}
+	{{> 02-organisms/50-borrower-dashboard/01-whats-next-slide-groupings/01-in-review-slide-group}}
+{{/inReview}}
+
+{{#isFlagged}}
+	{{> 02-organisms/50-borrower-dashboard/01-whats-next-slide-groupings/02-issue-flagged-slide-group}}
+{{/isFlagged}}
+
+{{#inPfp}}
+	{{> 02-organisms/50-borrower-dashboard/01-whats-next-slide-groupings/03-in-pfp-slide-group}}
+{{/inPfp}}
+
+{{#isFundraising}}
+	{{> 02-organisms/50-borrower-dashboard/01-whats-next-slide-groupings/04-fundraising-slide-group}}
+{{/isFundraising}}
+
+{{#isRefunded}}
+	{{> 01-molecules/51-borrower-dashboard/05-loan-status-refunded}}
+{{/isRefunded}}
+
+{{#isFunded}}
+	{{> 02-organisms/50-borrower-dashboard/01-whats-next-slide-groupings/05-funded-slide-group}}
+{{/isFunded}}
+
+{{#isPayingBack}}
+	{{#isPayingBackDelinquent}}
+		{{> 02-organisms/50-borrower-dashboard/01-whats-next-slide-groupings/07-paying-back-deliquent-slide-group}}
+	{{/isPayingBackDelinquent}}
+
+	{{^isPayingBackDelinquent}}
+		{{> 02-organisms/50-borrower-dashboard/01-whats-next-slide-groupings/06-paying-back-slide-group}}
+	{{/isPayingBackDelinquent}}
+{{/isPayingBack}}
+
+{{#endedInDefault}}
+	{{> 02-organisms/50-borrower-dashboard/01-whats-next-slide-groupings/08-ended-in-default-slide-group}}
+{{/endedInDefault}}
+
+{{#isRepaid}}
+	{{> 02-organisms/50-borrower-dashboard/01-whats-next-slide-groupings/09-repaid-slide-group}}
+{{/isRepaid}}
+
+{{#isExpired}}
+	{{> 02-organisms/50-borrower-dashboard/01-whats-next-slide-groupings/10-expired-slide-group}}
+{{/isExpired}}
