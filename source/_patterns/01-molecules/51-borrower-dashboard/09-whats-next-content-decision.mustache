@@ -1,0 +1,87 @@
+{{#inReview}}
+	{{> 01-molecules/51-borrower-dashboard/01-whats-next-content/04-review-and-approval-process}}
+
+	{{> 01-molecules/51-borrower-dashboard/01-whats-next-content/05-lend-to-another-entrepreneur}}
+
+	{{> 01-molecules/51-borrower-dashboard/01-whats-next-content/03-prepare-for-pfp}}
+{{/inReview}}
+
+{{#isFlagged}}
+	{{> 01-molecules/51-borrower-dashboard/01-whats-next-content/02-improve-your-application}}
+
+	{{> 01-molecules/51-borrower-dashboard/01-whats-next-content/04-review-and-approval-process}}
+
+	{{> 01-molecules/51-borrower-dashboard/01-whats-next-content/05-lend-to-another-entrepreneur}}
+
+	{{> 01-molecules/51-borrower-dashboard/01-whats-next-content/03-prepare-for-pfp}}
+{{/isFlagged}}
+
+{{#inPfp}}
+	{{> 01-molecules/51-borrower-dashboard/01-whats-next-content/07-get-support}}
+
+	{{> 01-molecules/51-borrower-dashboard/01-whats-next-content/08-use-social-media}}
+
+	{{> 01-molecules/51-borrower-dashboard/01-whats-next-content/06-your-photo-is-valuable}}
+{{/inPfp}}
+
+{{#isFundraising}}
+	{{> 01-molecules/51-borrower-dashboard/01-whats-next-content/07-get-support}}
+
+	{{> 01-molecules/51-borrower-dashboard/01-whats-next-content/08-use-social-media}}
+
+	{{> 01-molecules/51-borrower-dashboard/01-whats-next-content/06-your-photo-is-valuable}}
+{{/isFundraising}}
+
+{{#isRefunded}}
+	{{> 01-molecules/51-borrower-dashboard/05-loan-status-refunded}}
+{{/isRefunded}}
+
+{{#isFunded}}
+	{{> 01-molecules/51-borrower-dashboard/01-whats-next-content/09-receiving-your-loan}}
+
+	{{> 01-molecules/51-borrower-dashboard/01-whats-next-content/10-thank-lenders}}
+
+	{{> 01-molecules/51-borrower-dashboard/01-whats-next-content/14-refer-another-borrower}}
+
+	{{> 01-molecules/51-borrower-dashboard/01-whats-next-content/17-tell-us-your-story}}
+{{/isFunded}}
+
+{{#isPayingBack}}
+	{{#isPayingBackDelinquent}}
+		{{> 01-molecules/51-borrower-dashboard/01-whats-next-content/12-back-on-track}}
+
+		{{> 01-molecules/51-borrower-dashboard/01-whats-next-content/13-updating-lenders}}
+
+		{{> 01-molecules/51-borrower-dashboard/01-whats-next-content/11-payment-through-paypal}}
+	{{/isPayingBackDelinquent}}
+
+	{{^isPayingBackDelinquent}}
+		{{> 01-molecules/51-borrower-dashboard/01-whats-next-content/13-updating-lenders}}
+
+		{{> 01-molecules/51-borrower-dashboard/01-whats-next-content/11-payment-through-paypal}}
+
+		{{> 01-molecules/51-borrower-dashboard/01-whats-next-content/14-refer-another-borrower}}
+	{{/isPayingBackDelinquent}}
+{{/isPayingBack}}
+
+{{#endedInDefault}}
+	{{> 01-molecules/51-borrower-dashboard/01-whats-next-content/12-back-on-track}}
+
+	{{> 01-molecules/51-borrower-dashboard/01-whats-next-content/13-updating-lenders}}
+
+	{{> 01-molecules/51-borrower-dashboard/01-whats-next-content/11-payment-through-paypal}}
+{{/endedInDefault}}
+
+{{#isRepaid}}
+	{{> 01-molecules/51-borrower-dashboard/01-whats-next-content/16-apply-again}}
+
+	{{> 01-molecules/51-borrower-dashboard/01-whats-next-content/14-refer-another-borrower}}
+
+	{{> 01-molecules/51-borrower-dashboard/01-whats-next-content/13-updating-lenders}}
+
+	{{> 01-molecules/51-borrower-dashboard/01-whats-next-content/05-lend-to-another-entrepreneur}}
+{{/isRepaid}}
+
+{{#isExpired}}
+	{{> 01-molecules/51-borrower-dashboard/01-whats-next-content/16-apply-again}}
+{{/isExpired}}
