@@ -1,0 +1,101 @@
+@import '../../settings';
+@import '../../vendor_override/foundation/type';
+
+.endorsement-select {
+	display: flex;
+	align-items: stretch;
+
+	&.active {
+		box-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+	}
+
+	label {
+		padding: 0.75rem 1rem;
+		position: relative;
+		background-color: $kiva-bg-lightgray;
+
+		input {
+			float: left;
+		}
+
+		span {
+			position: absolute;
+			left: 0;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			border: 1px solid $kiva-stroke-gray;
+			padding: 0.75rem;
+			text-align: center;
+		}
+
+		.icon {
+			width: 0.8rem;
+			height: 0.8rem;
+			fill: $white;
+			visibility: hidden;
+		}
+
+		:checked + span {
+			border: none;
+			background-color: $kiva-green;
+
+			.icon {
+				visibility: visible;
+			}
+		}
+	}
+
+	.endorsement {
+		flex-grow: 1;
+		padding: 0.5rem;
+		border: 1px solid $kiva-stroke-gray;
+		border-left: none;
+
+		.ac-title {
+			display: flex;
+			align-items: center;
+			margin-bottom: 0.5rem;
+
+			img {
+				flex-shrink: 0;
+				margin-left: 0;
+				margin-right: 0.5rem;
+			}
+
+			h3 {
+				flex-grow: 1;
+				margin: 0 0.5rem 0 0;
+				font-weight: bold;
+				font-size: $body-font-size;
+				line-height: $body-line-height;
+			}
+
+			.icon {
+				flex-shrink: 0;
+				width: 1.5rem;
+				height: 1.5rem;
+				transition: transform 0.3s ease-in-out;
+			}
+		}
+
+		.ac-body {
+			margin-bottom: 0;
+		}
+
+		@media #{$large-up} {
+			padding: 0.5rem 0.75rem;
+			$spacing: 1rem;
+
+			.ac-title {
+				img, h3 {
+					margin-right: $spacing;
+				}
+			}
+
+			.ac-body {
+				margin-left: rem-calc(50) + $spacing;
+			}
+		}
+	}
+}
