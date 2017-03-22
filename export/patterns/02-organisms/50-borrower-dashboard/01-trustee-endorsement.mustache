@@ -1,0 +1,20 @@
+<div class="endorsement-select{{#isActive}} active{{/isActive}}">
+	<label>
+		<input type="radio" name="endorsement-select" value="{{trustee.id}}" {{#isActive}}checked="checked"{{/isActive}}>
+		<span>
+			<svg class="icon icon-confirmation">
+				<use xlink:href="#icon-confirmation"></use>
+			</svg>
+		</span>
+	</label>
+	<div class="endorsement">
+		<div class="ac-title ac-container" data-kv-accordion aria-controls="ac-{{trustee.id}}-endorse-body" aria-expanded="{{#isOpen}}true{{/isOpen}}{{^isOpen}}false{{/isOpen}}">
+			<img class="trustee-image circle-avatar" src="{{trustee.imageThumb}}">
+			<h3>{{trustee.title}}</h3>
+			<svg class="icon icon-large-chevron">
+				<use xlink:href="#icon-large-chevron"></use>
+			</svg>
+		</div>
+		<p class="ac-body small-text" id="ac-{{trustee.id}}-endorse-body" aria-hidden="{{#isOpen}}false{{/isOpen}}{{^isOpen}}true{{/isOpen}}">{{{whyEndorse}}}</p>
+	</div>
+</div>
