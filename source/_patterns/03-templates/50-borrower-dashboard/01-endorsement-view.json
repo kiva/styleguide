@@ -1,0 +1,22 @@
+{
+	"endorsements": [
+		{
+			"whyEndorse": "Gummi bears liquorice icing gingerbread sweet roll liquorice pie gummi bears marshmallow. Caramels topping bear claw. Bear claw cake cake bear claw chupa chups sesame snaps pastry sugar plum."
+		},
+		{
+			"trustee": {
+				"id": 123,
+				"title": "Cool Trustee"
+			},
+			"whyEndorse": "Caramels icing croissant croissant cookie croissant. Donut caramels sweet roll chocolate. Dessert donut ice cream tart apple pie."
+		},
+		{
+			"trustee": {
+				"id": 456,
+				"title": "Very Cool Trustee"
+			},
+			"isActive": true,
+			"whyEndorse": "Jelly sesame snaps jelly beans sugar plum sesame snaps cotton candy. Gummies marshmallow candy cotton candy wafer tart muffin liquorice. Brownie apple pie macaroon cotton candy tart pie sesame snaps."
+		}
+	]
+}
