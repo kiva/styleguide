@@ -486,3 +486,21 @@ a.filter-menu-button:visited {
 		border-bottom: none;
 	}
 }
+
+.loan-card-bottom-buffer  {
+	padding-bottom: rem-calc(20);
+	margin-left: 0;
+	margin-right: 0;
+	margin-bottom: 0;
+	border-bottom: none;
+	max-width: rem-calc(470);
+
+	@media #{$xlarge-up} {
+		margin-left: 0;
+		margin-right: 0;
+		padding-bottom: 0;
+		border-bottom: 1px solid #999;
+		max-width: rem-calc(470);
+		height: rem-calc(30);
+	}
+}
