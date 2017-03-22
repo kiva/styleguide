@@ -493,14 +493,10 @@ a.filter-menu-button:visited {
 	margin-right: 0;
 	margin-bottom: 0;
 	border-bottom: none;
-	max-width: rem-calc(470);
 
-	@media #{$xlarge-up} {
-		margin-left: 0;
-		margin-right: 0;
+	@media #{$large-up} {
 		padding-bottom: 0;
 		border-bottom: 1px solid #999;
-		max-width: rem-calc(470);
 		height: rem-calc(30);
 	}
 }
