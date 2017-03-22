@@ -1,0 +1,37 @@
+{{!This is the structure that should be used for all lightboxes.
+Steps to create a new lightbox are as follows:
+1: Create a new molecule file within the Molecule/10-lightbox folder titled appropriately for your new lightbox
+2: Copy everything in this file.
+3: Paste this structure within your new lightbox file
+4: Add your lightbox specific content within the lightbox-content div of this code structure, everything else should stay the same }}
+
+<a href="#" class="hide" data-reveal-id="add-credit-completion">{{lightboxTriggerLinkText}}</a>
+<div id="add-credit-completion" class="reveal-modal" data-reveal aria-hidden="true" role="dialog">
+		<div class="row">
+			<div class="columns small-12">
+				<a class="close-reveal-modal" aria-label="Close">
+					<svg class="icon icon-x">
+						<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-x"></use>
+					</svg>
+				</a>
+				<div class="lightbox-content white">
+					{{! Add your specific lightbox content here, you shouldn't have to touch the other lines of code wihtin this file.}}
+					<p class="featured">{{sampleTitle}}</p>
+
+					<p><a href="#">Link to Portfolio</a><p/>
+
+					<p>HEY! Should we be hiding the CLOSE BUTTON???<p/>
+
+          <p>ALSO, I've hidden the link that would normally trigger the lightbox.<br>
+            We can open it directly from the success response after we inject some data.<br>
+            <br>
+            <a href="http://foundation.zurb.com/sites/docs/v/5.5.3/components/reveal.html" target="_blank">See Advanced Section Here</a>
+          </p>
+          <code>
+            // or directly on the modal
+            $('#add-credit-completion').foundation('reveal', 'open');
+          </code>
+				</div>
+			</div>
+		</div>
+</div>
