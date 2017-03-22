@@ -1,5 +1,6 @@
 {
 	"isPayingBack": true,
+	"isPayingBackDelinquent": false,
 	"prettyStatus": "Paying back",
 	"showRaisedInfo": true,
 	"meterAmountPercent": 25,
