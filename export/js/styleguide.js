@@ -20543,7 +20543,7 @@ define("Styleguide", ["jquery"], function(__WEBPACK_EXTERNAL_MODULE_2__) { retur
 		});
 
 		//Allowing scrolling on the body of a page when a lightbox is closed
-		$(document).on('closed.fndtn.reveal', function () {
+		$(document).on('close.fndtn.reveal', function () {
 			$body.css('overflow', 'visible');
 		});
 	};
