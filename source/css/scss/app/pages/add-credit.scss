@@ -2,14 +2,25 @@
 @import '../../palette';
 
 .add-credit {
-	.monthly-deposit-field, #continue-button {
+	$lock-icon-size: 2rem;
+
+	svg.icon-secure-lock {
+		width: $lock-icon-size;
+		height: $lock-icon-size;
+		color: $kiva-text-light;
+		position: absolute;
+	}
+
+	.monthly-deposit-field, button, .explainer img {
 		margin-bottom: 1.5rem;
 	}
 
-	.explainer {
-		margin-bottom: 2rem;
-		.paypal-message {
-			color: $kiva-text-light;
+	.paypal-message {
+		color: $kiva-text-light;
+		margin-left: $lock-icon-size + 0.5rem;
+
+		@media #{$medium-up} {
+			line-height: $lock-icon-size;
 		}
 	}
 
