@@ -26,7 +26,12 @@
 				<div class="small-6 large-4 columns">
 					<a kvtrackevent="TopNav|click-About" data-dropdown="about-dropdown" data-options="is_hover:true;hover_timeout:200;" aria-controls="about-dropdown" aria-expanded="false" class="header-button" href="{{about_href}}">About <svg class="icon"><use xlink:href="#icon-triangle" /></svg></a>
 				</div>
-				<div id="top-basket-button" class="show-for-large-up large-4 columns">
+                {{#basket-loan-added}}
+                <div id="top-basket-button" class="show-for-large-up large-4 columns">
+                {{/basket-loan-added}}
+                {{^basket-loan-added}}
+                <div id="top-basket-button" class="hide large-4 columns">
+                {{/basket-loan-added}}
 					<a class="header-button {{#is_free_trial_eligible}}hidden{{/is_free_trial_eligible}}" href="{{basket_href}}"><span class="amount {{^basket.item_count}}hide{{/basket.item_count}}">{{basket.item_count}}</span> Basket</a>
 				</div>
 				<div class="small-6 large-4 columns">
@@ -36,7 +41,12 @@
 		{{/is-visitor}}
 		{{^is-visitor}}
 			<div class="small-3-8ths xxlarge-2 columns header-column right-side">
-				<div id="top-basket-button" class="show-for-large-up large-6 columns">
+                {{#basket-loan-added}}
+                <div id="top-basket-button" class="show-for-large-up large-6 columns">
+                {{/basket-loan-added}}
+                {{^basket-loan-added}}
+                <div id="top-basket-button" class="hide large-6 columns">
+                {{/basket-loan-added}}
 					<a class="header-button {{#is_free_trial_eligible}}hidden{{/is_free_trial_eligible}}" href="{{basket_href}}"><span class="amount {{^basket.item_count}}hide{{/basket.item_count}}">{{basket.item_count}}</span> Basket</a>
 				</div>
 				<div class="small-12 large-6 columns">
