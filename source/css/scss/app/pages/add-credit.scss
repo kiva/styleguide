@@ -20,3 +20,58 @@
 		}
 	}
 }
+
+
+/* Lightbox Styles */
+.add-credit-lightbox-trigger {
+	display: none;
+}
+
+#add-credit-completion {
+	.close-reveal-modal {
+		display: none;
+	}
+	
+	.lightbox-content {
+
+	}
+}
+.reciept-holder{
+	.recept-header {
+
+	}
+	.payment-summary {
+
+		padding: 5px 0;
+		width: auto;
+		font-size: 18px;
+		color: $white;
+
+		ul {
+			margin: 0;
+			padding: 0;
+			border-bottom: 1px solid $light-gray;
+
+			li {
+				border-top: 1px solid $light-gray;
+				padding: .8rem 0;
+				margin: 0;
+				list-style: none;
+
+				div.info {
+					font-size: 18px;
+
+					.loading-spinner {
+						height: 18px;
+						width: 18px;
+						margin-left: 5px;
+
+						.line {
+							background: $white;
+						}
+					}
+				}
+			}
+		}
+	}
+}

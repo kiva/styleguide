@@ -1,6 +1,6 @@
 <!-- Probably don't need this button -->
-<!-- add the 'hide' class to hide it or use dynamic text {{lightboxTriggerLinkText}} -->
-<a href="#" class="" data-reveal-id="add-credit-completion">Click ME to see the Lightbox!</a>
+<!-- add the 'hide' class to hide it -->
+<a href="#" class="add-credit-lightbox-trigger" data-reveal-id="add-credit-completion">Add Credit Completion</a>
 <div id="add-credit-completion" class="reveal-modal" data-reveal aria-hidden="true" role="dialog">
 		<div class="row">
 			<div class="columns small-12">
@@ -10,17 +10,34 @@
 					</svg>
 				</a>
 				<div class="lightbox-content white">
-					{{! Add your specific lightbox content here, you shouldn't have to touch the other lines of code wihtin this file.}}
-					<p class="featured">Transaction Complete</p>
-					<p>As an initial step to showing the transaction data, we can inject content into this div targeting it via "#add-credit-completion .lightbox-content".</p>
-					<p><a class="button" href="#">Link to Portfolio</a><p/>
-					<p>
-            We can open the lightbox directly from the success response after we inject some data.<br>
-            <br>
-            <a href="http://foundation.zurb.com/sites/docs/v/5.5.3/components/reveal.html" target="_blank">See Advanced Section Here</a>
-						<br>
-						JS to trigger the modal: $('#add-credit-completion').foundation('reveal', 'open');
-          </p>
+
+					<section id="addCreditConfirmation" class="reciept-holder">
+						<h1 class="white">Order Confirmed</h1>
+
+						<p class="featured white">We have successfully received your request for deposit. Click <a href="/portfolio/transactions">here</a> to see your transaction history.</p>
+						<!-- <div class="reciept-header">
+								<p class="add-credit-date small noMB">March 24, 2017  9:25 AM PDT</p>
+								<p class="add-credit-user small noMB">Homer Simpson</p>
+								<p class="add-credit-email small noMB">homer@elbarto.com</p>
+								<br>
+								<span class="small gray">email confirmation will be sent</span>
+						</div> -->
+
+						<div class="payment-summary">
+							<h3 class="white">Payment Information</p>
+							<ul>
+								<!-- <li>
+									<div class="info">Kiva credit added: <span class="amount-added">$1.54</span></div>
+								</li> -->
+								<li>
+									<div class="info paypal-payment">PayPal payment: <span class="amount-paid">{{> 01-molecules/03-media/01-loading-spinner}}</span></div>
+								</li>
+							</ul>
+						</div>
+					</section>
+
+					<p class="featured white"><a href="/portfolio/transactions">View Portfolio</a></p>
+
 				</div>
 			</div>
 		</div>
