@@ -1,6 +1,7 @@
 {
 	"isPayingBack": true,
 	"isWarningStatus": true,
+	"endedInDefault": true,
 	"prettyStatus": "Ended in default",
 	"showRaisedInfo": true,
 	"meterAmountPercent": 25,

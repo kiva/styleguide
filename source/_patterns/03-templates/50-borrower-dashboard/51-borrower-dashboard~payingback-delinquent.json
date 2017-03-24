@@ -1,5 +1,6 @@
 {
 	"isPayingBack": true,
+	"isPayingBackDelinquent": true,
 	"isWarningStatus": true,
 	"prettyStatus": "Paying back delinquent",
 	"showRaisedInfo": true,

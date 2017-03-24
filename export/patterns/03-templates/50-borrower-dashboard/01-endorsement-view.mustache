@@ -1,0 +1,13 @@
+<div class="small-12 large-9 columns borrower-dashboard-endorsements">
+	<h1>Trustee Endorsements</h1>
+	<p>These Trustees have endorsed your loan. You can choose to show one on your profile. Borrowers who have been endorsed by Trustees tend to fundraise much faster. By default the "No Trustee Endorsement" will be shown on your profile if you don’t have any other endorsements.</p>
+	<h2>Please select one endorsement to be displayed on your profile:</h2>
+	<ul class="borrower-endorsement-rows-region">
+		{{#endorsements}}
+			<li>
+				{{> 02-organisms/50-borrower-dashboard/01-trustee-endorsement }}
+			</li>
+		{{/endorsements}}
+	</ul>
+</div>
+<div class="spacer" style="clear:both"></div>

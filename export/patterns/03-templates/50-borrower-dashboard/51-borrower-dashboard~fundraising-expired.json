@@ -1,5 +1,6 @@
 {
 	"isFundraising": true,
+	"isExpired": true,
 	"prettyStatus": "Expired",
 	"showRaisedInfo": true,
 	"meterAmountPercent": 25,

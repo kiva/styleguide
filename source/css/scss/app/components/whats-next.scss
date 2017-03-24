@@ -1,33 +1,48 @@
 .whats-next-wrapper {
-	border-top: rem-calc(1) solid #999;
-	border-bottom: rem-calc(1) solid #999;
+	border-top: rem-calc(1) solid $kiva-text-light ;
+	border-bottom: rem-calc(1) solid $kiva-text-light ;
 	margin: rem-calc(35) 0;
 	padding-top: rem-calc(25);
 
-	.learn-more-link {
+	.whats-next-action {
 		display: inline-block;
 		margin-bottom: rem-calc(25);
 		margin-top: rem-calc(10);
 	}
 	.paging.row {
-		display: inline-block;
-		max-width: none;
+		max-width: rem-calc(729);
+		padding-left: rem-calc(15);
+		padding-right: rem-calc(15);
 
-		.radio-wrapper {
+		@media#{$xxlarge-up} {
+			padding-right: 0;
+		}
+
+		.slick-dots {
+			height: 0;
+			margin: 0;
+		}
+
+		.slick-dots li {
 			display: inline-block;
+			margin: rem-calc(7);
+			cursor: pointer;
+		}
 
-			ul {
-				list-style-type: none;
-				margin: 0;
-			}
+		.slick-dots li button {
+			line-height: 0;
+			width: 1rem;
+			height: 1rem;
+			padding: 0;
+			cursor: pointer;
+			color: transparent;
+			border: rem-calc(2) solid $kiva-text-light;
+			background-color: $white;
+			border-radius: 1rem;
+		}
 
-			svg.icon-slideshow-dot {
-				width: rem-calc(12);
-				position: inherit;
-				margin: 0 rem-calc(5);
-				stroke: gray;
-				fill: gray;
-			}
+		.slick-dots li.slick-active button {
+			background-color: $kiva-text-light;
 		}
 
 		.previous-button,
