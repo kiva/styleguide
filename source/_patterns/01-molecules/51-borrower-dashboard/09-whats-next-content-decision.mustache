@@ -1,35 +1,52 @@
 {{#inReview}}
-	{{> 01-molecules/51-borrower-dashboard/01-whats-next-content/04-review-and-approval-process}}
-
-	{{> 01-molecules/51-borrower-dashboard/01-whats-next-content/05-lend-to-another-entrepreneur}}
-
-	{{> 01-molecules/51-borrower-dashboard/01-whats-next-content/03-prepare-for-pfp}}
+	<div class="whats-next-slide">
+		{{> 01-molecules/51-borrower-dashboard/01-whats-next-content/04-review-and-approval-process}}
+	</div>
+	<div class="whats-next-slide">
+		{{> 01-molecules/51-borrower-dashboard/01-whats-next-content/05-lend-to-another-entrepreneur}}
+	</div>
+	<div class="whats-next-slide">
+		{{> 01-molecules/51-borrower-dashboard/01-whats-next-content/03-prepare-for-pfp}}
+	</div>
 {{/inReview}}
 
 {{#isFlagged}}
-	{{> 01-molecules/51-borrower-dashboard/01-whats-next-content/02-improve-your-application}}
-
-	{{> 01-molecules/51-borrower-dashboard/01-whats-next-content/04-review-and-approval-process}}
-
-	{{> 01-molecules/51-borrower-dashboard/01-whats-next-content/05-lend-to-another-entrepreneur}}
-
-	{{> 01-molecules/51-borrower-dashboard/01-whats-next-content/03-prepare-for-pfp}}
+	<div class="whats-next-slide">
+		{{> 01-molecules/51-borrower-dashboard/01-whats-next-content/02-improve-your-application}}
+	</div>
+	<div class="whats-next-slide">
+		{{> 01-molecules/51-borrower-dashboard/01-whats-next-content/04-review-and-approval-process}}
+	</div>
+	<div class="whats-next-slide">
+		{{> 01-molecules/51-borrower-dashboard/01-whats-next-content/05-lend-to-another-entrepreneur}}
+	</div>
+	<div class="whats-next-slide">
+		{{> 01-molecules/51-borrower-dashboard/01-whats-next-content/03-prepare-for-pfp}}
+	</div>
 {{/isFlagged}}
 
 {{#inPfp}}
-	{{> 01-molecules/51-borrower-dashboard/01-whats-next-content/07-get-support}}
-
-	{{> 01-molecules/51-borrower-dashboard/01-whats-next-content/08-use-social-media}}
-
-	{{> 01-molecules/51-borrower-dashboard/01-whats-next-content/06-your-photo-is-valuable}}
+	<div class="whats-next-slide">
+		{{> 01-molecules/51-borrower-dashboard/01-whats-next-content/07-get-support}}
+	</div>
+	<div class="whats-next-slide">
+		{{> 01-molecules/51-borrower-dashboard/01-whats-next-content/08-use-social-media}}
+	</div>
+	<div class="whats-next-slide">
+		{{> 01-molecules/51-borrower-dashboard/01-whats-next-content/06-your-photo-is-valuable}}
+	</div>
 {{/inPfp}}
 
 {{#isFundraising}}
-	{{> 01-molecules/51-borrower-dashboard/01-whats-next-content/07-get-support}}
-
-	{{> 01-molecules/51-borrower-dashboard/01-whats-next-content/08-use-social-media}}
-
-	{{> 01-molecules/51-borrower-dashboard/01-whats-next-content/06-your-photo-is-valuable}}
+	<div class="whats-next-slide">
+		{{> 01-molecules/51-borrower-dashboard/01-whats-next-content/07-get-support}}
+	</div>
+	<div class="whats-next-slide">
+		{{> 01-molecules/51-borrower-dashboard/01-whats-next-content/08-use-social-media}}
+	</div>
+	<div class="whats-next-slide">
+		{{> 01-molecules/51-borrower-dashboard/01-whats-next-content/06-your-photo-is-valuable}}
+	</div>
 {{/isFundraising}}
 
 {{#isRefunded}}
@@ -37,51 +54,75 @@
 {{/isRefunded}}
 
 {{#isFunded}}
-	{{> 01-molecules/51-borrower-dashboard/01-whats-next-content/09-receiving-your-loan}}
-
-	{{> 01-molecules/51-borrower-dashboard/01-whats-next-content/10-thank-lenders}}
-
-	{{> 01-molecules/51-borrower-dashboard/01-whats-next-content/14-refer-another-borrower}}
-
-	{{> 01-molecules/51-borrower-dashboard/01-whats-next-content/17-tell-us-your-story}}
+	<div class="whats-next-slide">
+		{{> 01-molecules/51-borrower-dashboard/01-whats-next-content/09-receiving-your-loan}}
+	</div>
+	<div class="whats-next-slide">
+		{{> 01-molecules/51-borrower-dashboard/01-whats-next-content/10-thank-lenders}}
+	</div>
+	<div class="whats-next-slide">
+		{{> 01-molecules/51-borrower-dashboard/01-whats-next-content/14-refer-another-borrower}}
+	</div>
+	<div class="whats-next-slide">
+		{{> 01-molecules/51-borrower-dashboard/01-whats-next-content/17-tell-us-your-story}}
+	</div>
 {{/isFunded}}
 
 {{#isPayingBack}}
 	{{#isPayingBackDelinquent}}
-		{{> 01-molecules/51-borrower-dashboard/01-whats-next-content/12-back-on-track}}
-
-		{{> 01-molecules/51-borrower-dashboard/01-whats-next-content/13-updating-lenders}}
-
-		{{> 01-molecules/51-borrower-dashboard/01-whats-next-content/11-payment-through-paypal}}
+		<div class="whats-next-slide">
+			{{> 01-molecules/51-borrower-dashboard/01-whats-next-content/12-back-on-track}}
+		</div>
+		<div class="whats-next-slide">
+			{{> 01-molecules/51-borrower-dashboard/01-whats-next-content/13-updating-lenders}}
+		</div>
+		<div class="whats-next-slide">
+			{{> 01-molecules/51-borrower-dashboard/01-whats-next-content/11-payment-through-paypal}}
+		</div>
 	{{/isPayingBackDelinquent}}
 
 	{{^isPayingBackDelinquent}}
-		{{> 01-molecules/51-borrower-dashboard/01-whats-next-content/13-updating-lenders}}
-
-		{{> 01-molecules/51-borrower-dashboard/01-whats-next-content/11-payment-through-paypal}}
-
-		{{> 01-molecules/51-borrower-dashboard/01-whats-next-content/14-refer-another-borrower}}
+		<div class="whats-next-slide">
+			{{> 01-molecules/51-borrower-dashboard/01-whats-next-content/13-updating-lenders}}
+		</div>
+		<div class="whats-next-slide">
+			{{> 01-molecules/51-borrower-dashboard/01-whats-next-content/11-payment-through-paypal}}
+		</div>
+		<div class="whats-next-slide">
+			{{> 01-molecules/51-borrower-dashboard/01-whats-next-content/14-refer-another-borrower}}
+		</div>
 	{{/isPayingBackDelinquent}}
 {{/isPayingBack}}
 
 {{#endedInDefault}}
-	{{> 01-molecules/51-borrower-dashboard/01-whats-next-content/12-back-on-track}}
-
-	{{> 01-molecules/51-borrower-dashboard/01-whats-next-content/13-updating-lenders}}
-
-	{{> 01-molecules/51-borrower-dashboard/01-whats-next-content/11-payment-through-paypal}}
+	<div class="whats-next-slide">
+		{{> 01-molecules/51-borrower-dashboard/01-whats-next-content/12-back-on-track}}
+	</div>
+	<div class="whats-next-slide">
+		{{> 01-molecules/51-borrower-dashboard/01-whats-next-content/13-updating-lenders}}
+	</div>
+	<div class="whats-next-slide">
+		{{> 01-molecules/51-borrower-dashboard/01-whats-next-content/11-payment-through-paypal}}
+	</div>
 {{/endedInDefault}}
 
 {{#isRepaid}}
-	{{> 01-molecules/51-borrower-dashboard/01-whats-next-content/16-apply-again}}
-
-	{{> 01-molecules/51-borrower-dashboard/01-whats-next-content/14-refer-another-borrower}}
-
-	{{> 01-molecules/51-borrower-dashboard/01-whats-next-content/13-updating-lenders}}
-
-	{{> 01-molecules/51-borrower-dashboard/01-whats-next-content/05-lend-to-another-entrepreneur}}
+	<div class="whats-next-slide">
+		{{> 01-molecules/51-borrower-dashboard/01-whats-next-content/16-apply-again}}
+	</div>
+	<div class="whats-next-slide">
+		{{> 01-molecules/51-borrower-dashboard/01-whats-next-content/14-refer-another-borrower}}
+	</div>
+	<div class="whats-next-slide">
+		{{> 01-molecules/51-borrower-dashboard/01-whats-next-content/13-updating-lenders}}
+	</div>
+	<div class="whats-next-slide">
+		{{> 01-molecules/51-borrower-dashboard/01-whats-next-content/05-lend-to-another-entrepreneur}}
+	</div>
 {{/isRepaid}}
 
 {{#isExpired}}
-	{{> 01-molecules/51-borrower-dashboard/01-whats-next-content/16-apply-again}}
+	<div class="whats-next-slide">
+		{{> 01-molecules/51-borrower-dashboard/01-whats-next-content/16-apply-again}}
+	</div>
 {{/isExpired}}
