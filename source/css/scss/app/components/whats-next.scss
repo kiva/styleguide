@@ -31,14 +31,14 @@
 
 		.slick-dots li button {
 			line-height: 0;
-			width: rem-calc(1);
-			height: rem-calc(1);
+			width: 1rem;
+			height: 1rem;
 			padding: 0;
 			cursor: pointer;
 			color: transparent;
 			border: rem-calc(2) solid $kiva-text-light;
 			background-color: $white;
-			border-radius: rem-calc(1);
+			border-radius: 1rem;
 		}
 
 		.slick-dots li.slick-active button {
