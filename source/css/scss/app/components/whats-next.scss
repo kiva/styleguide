@@ -25,20 +25,20 @@
 
 		.slick-dots li {
 			display: inline-block;
-			margin: 0 .3888888889rem;
+			margin: rem-calc(7);
 			cursor: pointer;
 		}
 
 		.slick-dots li button {
 			line-height: 0;
-			width: 1rem;
-			height: 1rem;
+			width: rem-calc(1);
+			height: rem-calc(1);
 			padding: 0;
 			cursor: pointer;
 			color: transparent;
-			border: .1111111111rem solid $kiva-text-light;
+			border: rem-calc(2) solid $kiva-text-light;
 			background-color: $white;
-			border-radius: 1rem;
+			border-radius: rem-calc(1);
 		}
 
 		.slick-dots li.slick-active button {
