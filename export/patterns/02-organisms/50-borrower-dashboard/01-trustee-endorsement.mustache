@@ -1,10 +1,11 @@
-<div class="endorsement-select{{#isActive}} active{{/isActive}}">
+<div class="endorsement-select{{#isActive}} active{{/isActive}}{{#isLoading}} loading{{/isLoading}}">
 	<label>
 		<input type="radio" name="endorsement-select" value="{{trustee.id}}" {{#isActive}}checked="checked"{{/isActive}}>
 		<span>
 			<svg class="icon icon-confirmation">
 				<use xlink:href="#icon-confirmation"></use>
 			</svg>
+			{{> 01-molecules/03-media/01-loading-spinner}}
 		</span>
 	</label>
 	<div class="endorsement">
