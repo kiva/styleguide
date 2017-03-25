@@ -9,6 +9,25 @@
 		box-shadow: 2px 2px 4px rgba(0,0,0,0.1);
 	}
 
+	&.loading {
+		label .icon {
+			display: none;
+		}
+		.loading-spinner {
+			display: inline-block;
+		}
+	}
+
+	.loading-spinner {
+		display: none;
+		width: 1.6rem;
+		height: 1.6rem;
+
+		.line {
+			background-color: $white;
+		}
+	}
+
 	label {
 		padding: 0.75rem 1rem;
 		position: relative;
@@ -26,7 +45,7 @@
 			right: 0;
 			bottom: 0;
 			border: 1px solid $kiva-stroke-gray;
-			padding: 0.75rem;
+			padding-top: 0.75rem;
 			text-align: center;
 		}
 
