@@ -44,7 +44,7 @@
 	
 	"invitedAndEndorsedBorrowersStat": {
 		"statisticValue": "3",
-		"statisticLabel": "Invited and endorsed borrowers",
+		"statisticLabel": "Referred and endorsed borrowers",
 		"statisticLinkText": "View all"
 	},
 	"totalFunded":"$300.23"
