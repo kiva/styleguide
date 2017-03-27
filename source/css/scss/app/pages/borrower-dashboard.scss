@@ -71,8 +71,15 @@
 	.borrower-endorsement-rows-region {
 		margin: 0 0 2rem 0;
 		list-style: none;
+		text-align: center;
+
+		.loading-spinner {
+			width: 3rem;
+			height: 3rem;
+		}
 
 		li {
+			text-align: left;
 			margin-bottom: 0.75rem;
 		}
 	}
