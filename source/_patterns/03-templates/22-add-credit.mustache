@@ -3,27 +3,83 @@
         <h1>Add credit</h1>
         <p>Add funds to your Kiva balance, making it easier to lend when you find borrowers you want to support.</p>
     </div>
-    <!-- This is where the rest of the content goes -->
+
     <form data-abide="ajax" class="small-12">
-        <div class="amount-to-deposit-field row collapse">
-            <label class="small-12 medium-3 columns">Amount to deposit
-                <input type="text" placeholder="$ USD" required data-abide-validator="currency" data-min-amount="0.01" data-max-amount="10000"/>
-            </label>
-            <small class="error small-12 medium-7 end columns">
-				<svg class="icon icon-error">
-					<use xlink:href="#icon-error"/>
-				</svg>
-				Deposits must be a valid amount in USD and are limited to $10,000. If you'd like to add more, please do so in separate deposits.
-			</small>
-        </div>
-		<div class="monthly-deposit-field small-12 medium-6">
-			<label>
-				<input type="checkbox" />
-				Make this a monthly deposit.
-			</label>
-		</div>
-        <button id="continue-button" type="submit" class="small-12 medium-6">Continue</button>
+      <div class="amount-to-deposit-field row collapse">
+        <label class="small-12 medium-3 columns">Amount to deposit
+            <input type="text" placeholder="$ USD" required data-abide-validator="currency" data-min-amount="0.01" data-max-amount="10000"/>
+        </label>
+        <small class="error small-12 medium-7 end columns">
+  				<svg class="icon icon-error">
+  					<use xlink:href="#icon-error"/>
+  				</svg>
+  				Deposits must be a valid amount in USD and are limited to $10,000. If you'd like to add more, please do so in separate deposits.
+  			</small>
+      </div>
+  		<div class="monthly-deposit-field small-12 medium-6">
+  			<label>
+  				<input type="checkbox" />
+  				Make this a monthly deposit.
+  			</label>
+  		</div>
+      <button id="continue-button" type="submit" class="small-12 medium-6">Continue</button>
     </form>
+
+    <div class="add-credit-pending add-credit-state hide">
+      <h3>Payment Pending...</h3>
+      <p class="featured">{{> 01-molecules/03-media/01-loading-spinner}}</p>
+    </div>
+
+    <div class="add-credit-thanks add-credit-state hide">
+      <h3>Thanks for adding <span class="amount-paid"></span> to your Kiva account!</h3>
+      <p>You should see your balance update on your <a href="/portfolio" title="Go to portfolio">portfolio</a> momentarily.</p>
+      <div class="payment-summary clearfix">
+        <h4>Payment Information</h4>
+
+        <div class="columns small-4 large-4">
+            <div class="statistic-display previous-balance">
+            	<div>
+            		<span class="statistic kiva-green">{{raw_balance}}</span>
+            	</div>
+            	<div class="statistic-label">Previous Balance</div>
+            </div>
+        </div>
+
+        <div class="columns small-4 large-4">
+            <div class="statistic-display paypal-payment">
+            	<div>
+            		<span class="statistic kiva-green">$0.00</span>
+            	</div>
+            	<div class="statistic-label">Paypal Payment</div>
+            </div>
+        </div>
+
+        <div class="columns small-4 large-4">
+            <div class="statistic-display new-balance">
+            	<div>
+            		<span class="statistic kiva-green">$0.00</span>
+            	</div>
+            	<div class="statistic-label">New Balance</div>
+            </div>
+        </div>
+
+        <!-- <ul>
+          <li>
+            <div class="info previous-balance">Previous Balance: <span class="amount-paid">{{> 01-molecules/03-media/01-loading-spinner}}</span></div>
+          </li>
+          <li>
+            <div class="info paypal-payment">PayPal Payment: <span class="amount-paid">{{> 01-molecules/03-media/01-loading-spinner}}</span></div>
+          </li>
+          <li>
+            <div class="info new-balance">New Balance: <span class="amount-paid">{{> 01-molecules/03-media/01-loading-spinner}}</span></div>
+          </li>
+        </ul>-->
+      </div>
+
+      <!-- <p class="featured"><a href="/portfolio">View Portfolio</a></p> -->
+      <p class="small-text">Note: In most cases your deposit will reflect in your Kiva account right away. On a rare occasion this may take a bit more time. But don't worry, your money will be available to lend soon.</p>
+    </div>
+
     <div class="explainer">
       <p class="paypal-message small-text">Thanks to PayPal, Kiva receives free payment processing.</p>
       {{^express-checkout-on-deposit}}
@@ -31,5 +87,4 @@
       {{/express-checkout-on-deposit}}
     </div>
 </div>
-{{> 01-molecules/10-lightbox/17-add-credit-completed-transaction}}
 <div class="spacer" style="clear:both"></div>

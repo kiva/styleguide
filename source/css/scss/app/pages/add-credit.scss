@@ -22,30 +22,22 @@
 }
 
 
-/* Lightbox Styles */
-.add-credit-lightbox-trigger {
-	display: none;
-}
+/* Thanks View Styles */
+.add-credit-thanks {
 
-#add-credit-completion {
-	.close-reveal-modal {
-		display: none;
-	}
-	
-	.lightbox-content {
-
-	}
-}
-.reciept-holder{
-	.recept-header {
-
-	}
 	.payment-summary {
 
-		padding: 5px 0;
+		padding: .5rem 0 1.5rem;
 		width: auto;
 		font-size: 18px;
-		color: $white;
+
+		h4 {
+			margin-bottom: 1rem;
+		}
+
+		.statistic-display {
+			text-align: center;
+		}
 
 		ul {
 			margin: 0;
@@ -67,7 +59,7 @@
 						margin-left: 5px;
 
 						.line {
-							background: $white;
+							background: $light-gray;
 						}
 					}
 				}
