@@ -2,6 +2,10 @@
 @import '../../vendor_override/foundation/type';
 
 .borrower-dashboard-main {
+	.loan-info {
+		margin-bottom: 2rem;
+	}
+
 	.borrower-image {
 		text-align: center;
 		display: block;
@@ -52,6 +56,12 @@
 			line-height: $body-line-height;
 		}
 	}
+
+	.loading-spinner {
+		margin: 2rem;
+		width: 3rem;
+		height: 3rem;
+	}
 }
 
 .borrower-dashboard-endorsements {
@@ -82,5 +92,12 @@
 			text-align: left;
 			margin-bottom: 0.75rem;
 		}
+	}
+}
+
+.borrower-dashboard-transactions {
+	.loading-spinner {
+		width: 3rem;
+		height: 3rem;
 	}
 }
