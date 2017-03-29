@@ -1,74 +1,80 @@
 <div class="small-12 large-9 columns borrower-dashboard-main">
 	<h1>{{businessName}}</h1>
-	<div class="row">
+	<div class="row loan-info">
 		<div class="borrower-image small-12 medium-5 columns">
 			<img src="{{imgUrl}}" alt="{{name}}">
 		</div>
 		<div class="small-12 medium-7 columns">
+			{{#loading}}
+				<div class="text-center">
+					{{> 01-molecules/03-media/01-loading-spinner}}
+				</div>
+			{{/loading}}
+			{{^loading}}
+				{{#prettyStatus}}
+					<h2 class="{{#isWarningStatus}}warning{{/isWarningStatus}} loan-status">
+						{{{prettyStatus}}}
+					</h2>
+				{{/prettyStatus}}
 
-			{{! fundraising_info and prettyStatus are mutually exclusive (except for pfp)}}
-			{{#prettyStatus}}
-				<h2 class="{{#isWarningStatus}}warning{{/isWarningStatus}} loan-status">
-					{{{prettyStatus}}}
-				</h2>
-			{{/prettyStatus}}
+				{{#inReview}}
+					{{> 01-molecules/51-borrower-dashboard/04-loan-status-in-review}}
+				{{/inReview}}
 
-			{{#inReview}}
-				{{> 01-molecules/51-borrower-dashboard/04-loan-status-in-review}}
-			{{/inReview}}
+				{{#isFlagged}}
+					{{> 01-molecules/51-borrower-dashboard/07-loan-status-flagged}}
+				{{/isFlagged}}
 
-			{{#isFlagged}}
-				{{> 01-molecules/51-borrower-dashboard/07-loan-status-flagged}}
-			{{/isFlagged}}
+				{{#isRejected}}
+					{{> 01-molecules/51-borrower-dashboard/06-loan-status-rejected}}
+				{{/isRejected}}
 
-			{{#isRejected}}
-				{{> 01-molecules/51-borrower-dashboard/06-loan-status-rejected}}
-			{{/isRejected}}
+				{{#inPfp}}
+					{{> 01-molecules/15-loan-sections/02-pfp-meter}}
+				{{/inPfp}}
 
-			{{#inPfp}}
-				{{> 01-molecules/15-loan-sections/02-pfp-meter}}
-			{{/inPfp}}
+				{{#isFundraising}}
+					{{> 01-molecules/15-loan-sections/03-current-status-meter}}
+				{{/isFundraising}}
 
-			{{#isFundraising}}
-				{{> 01-molecules/15-loan-sections/03-current-status-meter}}
-			{{/isFundraising}}
+				{{#isRefunded}}
+					{{> 01-molecules/51-borrower-dashboard/05-loan-status-refunded}}
+				{{/isRefunded}}
 
-			{{#isRefunded}}
-				{{> 01-molecules/51-borrower-dashboard/05-loan-status-refunded}}
-			{{/isRefunded}}
+				{{#isFunded}}
+					{{> 01-molecules/51-borrower-dashboard/03-loan-status-funded}}
+				{{/isFunded}}
 
-			{{#isFunded}}
-				{{> 01-molecules/51-borrower-dashboard/03-loan-status-funded}}
-			{{/isFunded}}
+				{{#isPayingBack}}
+					{{> 01-molecules/15-loan-sections/03-current-status-meter}}
+				{{/isPayingBack}}
 
-			{{#isPayingBack}}
-				{{> 01-molecules/15-loan-sections/03-current-status-meter}}
-			{{/isPayingBack}}
+				{{#isRepaid}}
+					{{> 01-molecules/51-borrower-dashboard/08-loan-status-repaid}}
+				{{/isRepaid}}
 
-			{{#isRepaid}}
-				{{> 01-molecules/51-borrower-dashboard/08-loan-status-repaid}}
-			{{/isRepaid}}
-
-			<div class="action-button">
-				{{#actionButton}}
-					<a href="{{url}}" class="button {{#secondary}}secondary{{/secondary}} {{#isFundraising}}copyLinkButton{{/isFundraising}}" {{#isFundraising}}data-clipboard-text="{{profileLink}}"{{/isFundraising}}>{{text}}</a>
-				{{/actionButton}}
-			</div>
-			<!--Show the view Profile link, unless the loan has been rejected-->
-			{{^isRejected}}
-				<p class="profile-link text-center"><a href="{{profileLink}}">View loan profile</a></p>
-			{{/isRejected}}
+				<div class="action-button">
+					{{#actionButton}}
+						<a href="{{url}}" class="button {{#secondary}}secondary{{/secondary}} {{#isFundraising}}copyLinkButton{{/isFundraising}}" {{#isFundraising}}data-clipboard-text="{{profileLink}}"{{/isFundraising}}>{{text}}</a>
+					{{/actionButton}}
+				</div>
+				<!--Show the view Profile link, unless the loan has been rejected-->
+				{{^isRejected}}
+					<p class="profile-link text-center"><a href="{{profileLink}}">View loan profile</a></p>
+				{{/isRejected}}
+			{{/loading}}
 		</div>
 	</div>
+	{{^loading}}
+		{{#repayments}}
+			{{> 02-organisms/50-borrower-dashboard/03-upcoming-repayments}}
+		{{/repayments}}
 
-	{{#repayments}}
-		{{> 02-organisms/50-borrower-dashboard/03-upcoming-repayments}}
-	{{/repayments}}
-
-	{{^isRefunded}}
-		{{^isRejected}}
-			{{> 02-organisms/50-borrower-dashboard/04-whats-next-wrapper}}
-		{{/isRejected}}
-	{{/isRefunded}}
+		{{^isRefunded}}
+			{{^isRejected}}
+				{{> 02-organisms/50-borrower-dashboard/04-whats-next-wrapper}}
+			{{/isRejected}}
+		{{/isRefunded}}
+	{{/loading}}
 </div>
 <div class="spacer" style="clear:both"></div>
