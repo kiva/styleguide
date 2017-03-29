@@ -19,6 +19,11 @@
 		{{/transactions}}
 		</tbody>
 	</table>
+	{{#loading}}
+		<div class="text-center">
+			{{> 01-molecules/03-media/01-loading-spinner}}
+		</div>
+	{{/loading}}
 </div>
 <div class="spacer" style="clear:both"></div>
 

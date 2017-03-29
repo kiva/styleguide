@@ -8,6 +8,9 @@
 				{{> 02-organisms/50-borrower-dashboard/01-trustee-endorsement }}
 			</li>
 		{{/endorsements}}
+		{{^endorsements}}
+			{{> 01-molecules/03-media/01-loading-spinner}}
+		{{/endorsements}}
 	</ul>
 </div>
 <div class="spacer" style="clear:both"></div>
