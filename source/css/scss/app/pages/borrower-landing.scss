@@ -1,3 +1,10 @@
 .borrower-landing-page {
-
+	.overlay {
+		@media#{$small-only} {
+			font-size: 1rem;
+		}
+	}
+	p.row a.button {
+		margin-top: rem-calc(20);
+	}
 }
