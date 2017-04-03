@@ -91,7 +91,10 @@ $light-blue-gray: #DBE3E5;
 	&.icon-choose,
 	&.icon-lend,
 	&.icon-repaid,
-	&.icon-repeat {
+	&.icon-repeat,
+	&.icon-apply-circle,
+	&.icon-fundraise,
+	&.icon-invite {
 		fill: $kiva-green;
 		color: $kiva-icon-green;
 	}
