@@ -9,5 +9,42 @@
 	 "headline": {
 		  "medium": "Fund your dream, change your life",
 		  "secondary": "0% interest loans for U.S. entrepreneurs"
-	 }
+	 },
+	 "faqs": [
+		  {
+			   "id": "faq-1",
+			   "question": "Do I qualify for a Kiva loan?",
+			   "answer": "Unlike traditional bank loans, Kiva loans don’t require a minimum credit score, years of cash flow documents or collateral. But you do need to meet the following minimum criteria in order to be considered: <ul><li>You and your business must be based out of the United States.</li> <li>You must be over 18 years old.</li> <li>You must be using the loan for business purposes.</li> <li>Your business must not be engaged in any of the following activities: multi-level marketing / direct sales; illegal activities (e.g. gambling, scams); or pure financial investing (e.g. stocks)</li> <li>You cannot currently be in foreclosure, bankruptcy, or under any liens.</li> <li>You must be willing to demonstrate your social capital by having a small number of your friends and family make a loan to you.</li>"
+		  },
+		  {
+			   "id": "faq-2",
+			   "question": "How does the loan process work?",
+			   "answer": "To apply for a Kiva U.S. loan, start an application <a href='https://borrow.kiva.org/cms-start'>here</a>.<br><br> The application is all online, and takes between 30 minutes and an hour to complete. Once you complete the application, a member of the Kiva U.S. team will reach out to you to better understand your business and ask any follow up questions. After reviewing the completed application, the Kiva U.S. team will determine what loan amount you qualify for and notify you of next steps.<br><br> If your application is approved, we’ll ask you to demonstrate your creditworthiness through our unique social underwriting."
+		  },
+		  {
+			   "id": "faq-3",
+			   "question": "What is social underwriting and why is it a requirement to get a Kiva U.S. loan?",
+			   "answer": "At Kiva, we envision a world where someone’s creditworthiness is determined by the strength of their character rather than their credit history. We’re working to re-insert human relationships into the financial system by using social underwriting to assess the creditworthiness of our borrowers.<br><br> To demonstrate social capital, we require all borrowers to gather support from their community through the Private Fundraising Period. During this 15 day period, we ask that borrowers recruit a certain number of lenders from their network to lend to them before the loan is publicly posted on Kiva.<br><br> We view this as an important measure of the borrower’s trust network and hope these lenders keep the borrower accountable for repaying their loan.<br><br> While the Private Fundraising Period is a tool we use to assess a borrower’s creditworthiness, we’ve also found that it increases a borrower’s chance of success on Kiva, as loans fundraise much more quickly when the borrower’s immediate network is engaged during fundraising.<br><br> Depending on the size of the loan and multiple factors, borrowers must invite between 5 and 35 lenders from within their network."
+		  },
+		  {
+			   "id": "faq-4",
+			   "question": "What do I need to prepare to apply for a Kiva loan?",
+			   "answer": "In the application, we’ll ask you for basic financial information about you and your business, but we will not ask you to upload any financial documents.<br><br> We will ask you to prepare your public profile, which includes a photo of you and your business. We’ll also ask you for a few paragraphs on who you are, what your business does, and what you plan to use the loan for.<br><br> You can find helpful tips and tricks on submitting a great photo and business story <a href='http://www.kivaushub.org/your-application'>here</a>."
+		  },
+		  {
+			   "id": "faq-5",
+			   "question": "What types of businesses get funded on Kiva?",
+			   "answer": "Kiva supports a variety of businesses, including farmers, barbershop owners, event planners and more. You can check out the businesses that are currently fundraising <a href='https://www.kiva.org/lend/kiva-u-s'>here</a>."
+		  },
+		  {
+			   "id": "faq-6",
+			   "question": "How do entrepreneurs use their Kiva loan?",
+			   "answer": "Entrepreneurs use their loans in many different ways. Some examples include: <ul><li>A $4,000 loan to begin commercial production of granola bars, which employs people who have been formerly incarcerated.</li> <li>A $5,000 loan for marketing material to expand a non-profit organization.</li> <li>A $10,000 loan to build a walk-in refrigerator for an organic farm.</li> <li>A $3,000 loan to help a first-generation immigrant make a website for their hazelnut spread business.</li> <li>A $1,000 loan to pay for a stall at an artisan jewelry fair.</li>"
+		  },
+		  {
+			   "id": "faq-7",
+			   "question": "How quickly can I get funded?",
+			   "answer": "On Kiva, you have some control over how quickly you receive funding. Once your application is submitted, our team will get back to you with next steps within a few business days. Submitting a great photo and business story will help your application make it through the review process more quickly.<br><br> Once your loan is approved for fundraising, you will have 15 days to raise support from your own network during the Private Fundraising Period, and then 30 days to publicly fundraise with Kiva’s wider network of lenders. But you can increase your fundraising speed and receive the funds sooner by taking advantage of some of our fundraising guidelines <a href='http://www.kivaushub.org/fundraising-disbursals/'>here</a>."
+		  }
+	 ]
 }
