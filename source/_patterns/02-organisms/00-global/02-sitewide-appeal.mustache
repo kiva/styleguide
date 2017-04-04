@@ -1,6 +1,6 @@
-<div class="eoy-appeal-wrapper">
-	<div class="eoy-appeal row">
-		<div class="eoy-header"data-kv-accordion aria-controls="ac-eoy-appeal" {{#isExpanded}}aria-expanded="true"{{/isExpanded}}{{^isExpanded}}aria-expanded="false"{{/isExpanded}}>
+<div class="sitewide-appeal-wrapper">
+	<div class="sitewide-appeal row">
+		<div class="sitewide-header"data-kv-accordion aria-controls="ac-sitewide-appeal" {{#isExpanded}}aria-expanded="true"{{/isExpanded}}{{^isExpanded}}aria-expanded="false"{{/isExpanded}}>
 			<h2>
 				Fighting for a better future? We need your help.
 				<span class="dropdown-icon">
@@ -10,19 +10,19 @@
 				</span>
 			</h2>
 		</div>
-		<div class="eoy-body" id="ac-eoy-appeal" {{#isExpanded}}aria-hidden="false"{{/isExpanded}}{{^isExpanded}}aria-hidden="true"{{/isExpanded}}>
+		<div class="sitewide-body" id="ac-sitewide-appeal" {{#isExpanded}}aria-hidden="false"{{/isExpanded}}{{^isExpanded}}aria-hidden="true"{{/isExpanded}}>
 			<div class="circle-avatar show-for-medium-up" style="background-image:url({{photoUrl}})"></div>
 			<div class="message">
 				<div>
 					Creating a more equitable world takes a lot of time and energy, but at Kiva we’re in it for the long haul. 100% of money lent on Kiva goes to funding loans. That means we rely on donations from people like you to make this work possible.
-					{{#eoyMatch}}
+					{{#match}}
 						<strong>For a limited time, if you donate $35 or more, a $25 bonus will be added to your account (you’ll get an email once it’s there).</strong>
-					{{/eoyMatch}}
+					{{/match}}
 				</div>
 				<div class="closing show-for-medium-up">
-					{{^eoyMatch}}
+					{{^match}}
 						Your donation of any size makes a difference. Thanks for investing in a better future,<br>
-					{{/eoyMatch}}
+					{{/match}}
 					Premal Shah, President & Co-Founder, Kiva
 				</div>
 			</div>
@@ -43,7 +43,7 @@
 
 					<li class="show-for-medium-up">
 						<div class="item custom-amount">
-							<input id="eoy-custom-amount" name="eoy-custom-amount" type="text" placeholder="other" aria-label="custom donation amount">
+							<input id="sitewide-custom-amount" name="sitewide-custom-amount" type="text" placeholder="other" aria-label="custom donation amount">
 						</div>
 					</li>
 
