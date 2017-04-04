@@ -1,25 +1,89 @@
+@import '../../settings';
+@import '../../vendor_override/foundation/type';
+
 .borrower-landing-page {
 	.overlay {
 		@media#{$small-only} {
 			font-size: 1rem;
 		}
 	}
+
 	p.row a.button {
 		margin-top: rem-calc(20);
 	}
 
-	.borrower-landing-slideshow-wrapper {
+	.how-it-works {
+		$breakpoint: $xlarge-up;
+		$icon-size: 5rem;
 
+		margin-top: 1rem;
+		text-align: center;
 
-		.borrower-landing-slide {
+		.row {
+			position: relative;
+			margin-bottom: 3rem;
+		}
 
+		.dotted-line {
+			position: absolute;
+			height: 80%;
+			top: 10%;
+			left: 50%;
+			transform: translate(-50%,0);
+			border-color: $kiva-text-light;
+			border-style: dashed;
+			border-width: 0 rem-calc(2);
 
-			.borrower-slide-element-wrapper {
+			@media #{$breakpoint} {
+				height: 0;
+				width: 80%;
+				top: $icon-size/2;
+				left: 10%;
+				transform: translate(0,-50%);
+				border-width: rem-calc(2) 0;
+			}
+		}
 
+		.columns {
+			margin-bottom: 6rem;
+			background-color: $white;
 
-				.borrower-slide-element {
+			&:last-of-type {
+				margin-bottom: 0;
+			}
 
-				}
+			@media #{$breakpoint} {
+				margin-bottom: 0;
+				background: none;
+			}
+		}
+
+		svg.icon {
+			width: $icon-size;
+			height: $icon-size;
+			fill: $white;
+			color: $kiva-green;
+			margin-bottom: 0.25rem;
+		}
+
+		h2 {
+			font-weight: bold;
+			margin-top: 0;
+			margin-bottom: 0.25rem;
+		}
+
+		span {
+			color: $kiva-text-light;
+			display: block;
+			margin-bottom: 0.25rem;
+		}
+
+		p {
+			margin: 0 auto 0.25rem;
+			max-width: 20rem;
+
+			@media #{$breakpoint} {
+				max-width: 11rem;
 			}
 		}
 	}
