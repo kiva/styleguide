@@ -2,7 +2,7 @@
 	<div class="eoy-appeal row">
 		<div class="eoy-header"data-kv-accordion aria-controls="ac-eoy-appeal" {{#isExpanded}}aria-expanded="true"{{/isExpanded}}{{^isExpanded}}aria-expanded="false"{{/isExpanded}}>
 			<h2>
-				Help us reach more communities in 2017!
+				Fighting for a better future? We need your help.
 				<span class="dropdown-icon">
 					<svg stroke-width="7" class="icon icon-large-chevron">
 						<use xlink:href="#icon-large-chevron"></use>
@@ -14,14 +14,16 @@
 			<div class="circle-avatar show-for-medium-up" style="background-image:url({{photoUrl}})"></div>
 			<div class="message">
 				<div>
-					100% of money lent on Kiva goes to funding loans, so we rely on donations from lenders like you to continue this important work.
+					Creating a more equitable world takes a lot of time and energy, but at Kiva we’re in it for the long haul. 100% of money lent on Kiva goes to funding loans. That means we rely on donations from people like you to make this work possible.
 					{{#eoyMatch}}
-						<strong>For a limited time, if you donate $35 or more, a $25 bonus will be added to your account next week! </strong>(We'll email you when it's there). </strong>
+						<strong>For a limited time, if you donate $35 or more, a $25 bonus will be added to your account (you’ll get an email once it’s there).</strong>
 					{{/eoyMatch}}
-					Your donation of any size makes a difference.
 				</div>
 				<div class="closing show-for-medium-up">
-					Thank you for helping create a more equitable world,<br>Premal Shah, President, Kiva
+					{{^eoyMatch}}
+						Your donation of any size makes a difference. Thanks for investing in a better future,<br>
+					{{/eoyMatch}}
+					Premal Shah, President & Co-Founder, Kiva
 				</div>
 			</div>
 
