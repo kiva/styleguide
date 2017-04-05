@@ -12,6 +12,44 @@
 		margin-top: rem-calc(20);
 	}
 
+	/*Slideshow Styles*/
+	.bl-slideshow-wrapper {
+		.paging.row {
+			.bl-arrow {
+				background-color: transparent;
+				position: absolute;
+				top: 0;
+				width: 4.4444444444rem;
+				height: 100%;
+				-ms-transform: rotate(180deg);
+				transform: rotate(180deg);
+			}
+
+			.bl-arrow .icon {
+				stroke: $platinum;
+			}
+
+			.bl-prev-arrow {
+				left: 0;
+			}
+
+			.bl-prev-arrow .icon {
+				transform: rotate(270deg);
+				margin-left: -1.55555555rem;
+			}
+
+			.bl-next-arrow {
+				right: 0;
+				overflow: hidden;
+			}
+
+			.bl-next-arrow .icon {
+				transform: rotate(90deg);
+				margin-left: -2.555556rem;
+			}
+		}
+	}
+
 	.how-it-works {
 		$breakpoint: $xlarge-up;
 		$icon-size: 5rem;
