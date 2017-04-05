@@ -136,6 +136,14 @@
 		}
 	}
 
+	.the-why-wrapper {
+		padding: rem-calc(20) 0;
+
+		.the-why-text {
+			color: $kiva-text-medium;
+		}
+	}
+
 	.do-you-qualify {
 		background-color: $kiva-green;
 		color: $white;
