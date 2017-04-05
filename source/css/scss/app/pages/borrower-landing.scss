@@ -172,13 +172,8 @@
 		}
 
 		.button {
-			width: 100%;
-			margin-bottom: 0;
-
-			@media #{$medium-up} {
-				width: auto;
-				margin-bottom: 1.5rem;
-			}
+			width: auto;
+			margin-bottom: 1.5rem;
 		}
 	}
 }
