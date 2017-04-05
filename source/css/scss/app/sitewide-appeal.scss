@@ -1,11 +1,11 @@
-.eoy-appeal-wrapper {
+.sitewide-appeal-wrapper {
 	background-color: $kiva-alert-yellow;
 
-	.eoy-appeal {
+	.sitewide-appeal {
 		padding-left: rem-calc(10);
 		padding-right: rem-calc(10);
 
-		.eoy-header {
+		.sitewide-header {
 			h2 {
 				position: relative;
 				padding-right: rem-calc(40);
@@ -32,7 +32,7 @@
 		}
 
 
-		.eoy-body {
+		.sitewide-body {
 			.circle-avatar {
 				float: left;
 				margin-left: 0;
