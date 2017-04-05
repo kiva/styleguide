@@ -12,6 +12,16 @@
 		margin-top: rem-calc(20);
 	}
 
+	.tagline {
+		text-align: center;
+		margin: 2rem auto;
+
+		svg.icon {
+			width: 4rem;
+			height: 4rem;
+		}
+	}
+
 	/*Slideshow Styles*/
 	.bl-slideshow-wrapper {
 		.paging.row {
