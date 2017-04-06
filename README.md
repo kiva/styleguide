@@ -1,41 +1,25 @@
-## Our styleguide
-- http://styleguide.kiva.org/
+# Kiva's living styleguide
+http://styleguide.kiva.org/
 
-### VM Setup
-First, in your VM /kiva directory or a web accessible directory in your environment
-```shell
-git clone git@github.com:kiva/styleguide.git
-cd styleguide
-npm install
-grunt init && grunt compile
-```
-Then, in your VM /etc/apache2/sites-available directory create a file called styleguide.conf and insert the following
-```
-## styleguide
-<VirtualHost *:80>
-	ServerName styleguide
-	ServerAlias styleguide-vm.kiva.org styleguide-vm
-	DocumentRoot /kiva/styleguide/public
-	<Directory "/kiva/styleguide/public">
-		Require all granted
-	</Directory>
-	DirectoryIndex index.html
-	Options -Indexes
-	AddType application/x-httpd-php .php
-	FileETag none
-</VirtualHost>
-```
-Finally, run:
-```shell
-sudo a2ensite styleguide
-sudo apache2ctl restart
-```
-### Mac Setup
-On your Mac, edit /private/etc/hosts and add to the existing localhost line styleguide-vm.kiva.org
-For example: 192.168.56.11 localhost dev-vm-01.kiva.org admin-vm.kiva.org styleguide-vm.kiva.org
-You can then navigate to your VM installation of the styleguide with http://styleguide-vm.kiva.org
-(instructions from [Confluence page](https://confluence.kiva.org/pages/viewpage.action?pageId=25174074))
+This is the "living styleguide" for the lending website of [Kiva.org](https:/www.kiva.org). It is built using [Pattern Lab](http://patternlab.io/) - a creation of Brad Frost and Dave Olsen. It also incorporates the [Foundation](http://http://foundation.zurb.com/) framework from Zurb, Inc. It follows the principles of "[atomic design](http://bradfrost.com/blog/post/atomic-web-design/)."
 
+This styleguide was initiated in 2016 in connection with a project to update the design of Kiva's lending website and to make it responsive.
+
+>“A style guide (pattern library) is almost the de facto deliverable of any responsive redesign.”
+> -- Ethan Marcotte
+
+## How Kiva uses this styleguide
+The styleguide is both a **design and prototyping tool** for "responsive" content and pages and a **source for reusable content exported to the lender website**.
+
+**Design and prototyping:** Before implementing HTML and (S)CSS on the lender website, pages and the elements that comprise them can be figured out, built, reviewed and fine-tuned on the styleguide site. The Pattern Lab tool allows elements and pages to be viewed and evaluated across a spectrum of screen widths.
+
+**Export to site / copy to CMS:** Once work in the styleguide has been accepted by stakeholders, it is propagated to Kiva's lender website in one of two ways:
+1. Mustache files, CSS, and some Javascript are exported into the lender site codebase via a styleguide release process for use in rendering www pages.
+a. Virtually all **CSS** used on the www site is authored in styleguide and exported. 
+b. Virtually all **Mustache templates** rendered into HTML on the website is authored in styleguide and exported in this way. 
+c. Key portions of **Javascript** (notably all Javascript used by the Foundation framework) used on www is packaged in the styleguide release process and exported for use by www.
+
+1. Rendered content and pages that will be served from Kiva's content management system (CMS) is copy-pasted to CMS pages once their design and content are accepted.
 
 ## About Pattern Lab
 - [Pattern Lab Website](http://patternlab.io/)
