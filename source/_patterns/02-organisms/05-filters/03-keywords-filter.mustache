@@ -1,3 +1,9 @@
+{{#is-standalone}}
+	<aside class="left-off-canvas-menu filter" style="transform: none;">
+		<ul class="filters-menu-list off-canvas-list">
+			<li class="filter-component ">
+{{/is-standalone}}
+
 <h3 class="filter">Keywords</h3>
 <div id="filter-keywords-search-box-container" class="button-group toggle filter-button-group-ul-alt">
 	{{#keywords_filter}}
@@ -14,3 +20,9 @@
 		</form>
 	{{/keywords_filter}}
 </div>
+
+{{#is-standalone}}
+			</li>
+		</ul>
+	</aside>
+{{/is-standalone}}
