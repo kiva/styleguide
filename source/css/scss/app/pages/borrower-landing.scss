@@ -14,11 +14,30 @@
 
 	.tagline {
 		text-align: center;
-		margin: 2rem auto;
+		margin: 2rem auto 0;
 
 		svg.icon {
 			width: 2.5rem;
 			height: 2.5rem;
+		}
+	}
+
+	.value-props {
+		text-align: center;
+		margin: 1rem auto 2rem;
+
+		svg.icon {
+			width: rem-calc(120);
+			height: rem-calc(120);
+		}
+
+		p {
+			max-width: 14rem;
+			margin: 0 auto rem-calc(20);
+		}
+
+		.columns {
+			margin-bottom: 2rem;
 		}
 	}
 
