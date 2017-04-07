@@ -155,6 +155,31 @@
 		}
 	}
 
+	.external-validation {
+		background-color: $kiva-bg-darkgray;
+		font-style: italic;
+		text-align: center;
+		margin: 2rem auto;
+		padding: 1.5rem 0 1rem;
+
+		img {
+			height: 2rem;
+			margin: 1.5rem 0;
+		}
+
+		p {
+			font-weight: normal;
+			font-size: $top-nav-font-size;
+			line-height: $slide-overlay-attribution-line-height;
+			margin: 0 auto 2rem;
+			max-width: 14rem;
+
+			@media #{$xlarge-up} {
+				max-width: 15rem;
+			}
+		}
+	}
+
 	.the-why-wrapper {
 		padding: rem-calc(20) 0;
 
