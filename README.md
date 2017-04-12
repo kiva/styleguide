@@ -15,9 +15,9 @@ The styleguide is both a **design and prototyping tool** for "responsive" conten
 
 **Export to site / copy to CMS:** Once work in the styleguide has been accepted by stakeholders, it is propagated to Kiva's lender website in one of two ways:
 1. Mustache files, CSS, and some Javascript are exported into the lender site codebase via a styleguide release process for use in rendering www pages.
-a. Virtually all **CSS** used on the www site is authored in styleguide and exported. 
-b. Virtually all **Mustache templates** rendered into HTML on the website is authored in styleguide and exported in this way. 
-c. Key portions of **Javascript** (notably all Javascript used by the Foundation framework) used on www is packaged in the styleguide release process and exported for use by www.
+    - Virtually all **CSS** used on the www site is authored in styleguide and exported. 
+    - Virtually all **Mustache templates** rendered into HTML on the website is authored in styleguide and exported in this way. 
+    - Key portions of **Javascript** (notably all Javascript used by the Foundation framework) used on www is packaged in the styleguide release process and exported for use by www.
 
 1. Rendered content and pages that will be served from Kiva's content management system (CMS) is copy-pasted to CMS pages once their design and content are accepted.
 
