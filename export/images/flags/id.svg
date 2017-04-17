@@ -1,6 +1,13 @@
-<svg xmlns="http://www.w3.org/2000/svg" height="480" width="640" version="1" viewBox="0 0 640 480">
-  <g fill-rule="evenodd" stroke-width="1pt">
-    <path fill="#e70011" d="M0 0h639.958v248.947H0z"/>
-    <path fill="#fff" d="M0 240h639.958v240H0z"/>
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="480" viewBox="0 0 640 480" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <defs>
+    <rect id="a" width="640" height="480"/>
+    <mask id="b" width="640" height="480" x="0" y="0" fill="white">
+      <use xlink:href="#a"/>
+    </mask>
+  </defs>
+  <g fill="none" fill-rule="evenodd">
+    <polygon fill="#E70011" fill-rule="nonzero" points="0 0 639.958 0 639.958 248.947 0 248.947"/>
+    <polygon fill="#FFFFFF" fill-rule="nonzero" points="0 240 639.958 240 639.958 480 0 480"/>
+    <use stroke="#999999" stroke-width="4" mask="url(#b)" xlink:href="#a"/>
   </g>
 </svg>

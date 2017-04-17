@@ -1,13 +1,23 @@
-<svg xmlns="http://www.w3.org/2000/svg" height="480" width="640" version="1" viewBox="0 0 640 480">
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="480" viewBox="0 0 640 480" xmlns:xlink="http://www.w3.org/1999/xlink">
   <defs>
-    <clipPath id="a">
-      <path fill-opacity=".67" d="M0 0h682.67v512H0z"/>
-    </clipPath>
+    <polygon id="a" points="0 0 682.67 0 682.67 512 0 512"/>
+    <rect id="c" width="640" height="480"/>
   </defs>
-  <g fill-rule="evenodd" clip-path="url(#a)" transform="scale(.9375)" fill-opacity=".996">
-    <path fill="#fdfdfd" d="M255.99 0H768v256H255.99z"/>
-    <path fill="#5651a9" d="M0 0h256v256H0z"/>
-    <path d="M167.82 191.71l-39.653-29.737-39.458 30.03 14.674-48.8-39.386-30.133 48.728-.42L127.84 64l15.437 48.537 48.728.064-39.184 30.418 15 48.69z" fill="#fdfdfd"/>
-    <path fill="#ed2800" d="M0 256h768v256H0z"/>
+  <g fill="none" fill-rule="evenodd">
+    <mask id="b" fill="white">
+      <use xlink:href="#a"/>
+    </mask>
+    <g mask="url(#b)">
+      <polygon fill="#FDFDFD" points="239.991 0 720 0 720 240 239.991 240"/>
+      <polygon fill="#5651A9" points="0 0 240 0 240 240 0 240"/>
+      <polygon fill="#FDFDFD" points="157.331 179.728 120.157 151.85 83.165 180.003 96.922 134.253 59.997 106.003 105.68 105.609 119.85 60 134.322 105.503 180.005 105.563 143.27 134.08 157.332 179.727"/>
+      <polygon fill="#ED2800" points="0 240 720 240 720 480 0 480"/>
+    </g>
+    <g>
+      <mask id="d" fill="white">
+        <use xlink:href="#c"/>
+      </mask>
+      <rect width="640" height="480" stroke="#999999" stroke-width="4" mask="url(#d)"/>
+    </g>
   </g>
 </svg>

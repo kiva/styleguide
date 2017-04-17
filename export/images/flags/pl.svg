@@ -1,16 +1,15 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!-- Created with Sodipodi ("http://www.sodipodi.com/") -->
-<svg id="svg378" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns="http://www.w3.org/2000/svg" height="480" width="640" version="1" y="0" x="0" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" viewBox="0 0 640 480">
- <metadata id="metadata3683">
-  <rdf:RDF>
-   <cc:Work rdf:about="">
-  <dc:format>image/svg+xml</dc:format>
-  <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
-   </cc:Work>
-  </rdf:RDF>
- </metadata>
- <g id="flag" fill-rule="evenodd" transform="scale(1.25 .9375)">
-  <rect id="rect149" transform="scale(-1)" height="512" width="512" y="-512" x="-512" fill="#fff"/>
-  <rect id="rect148" transform="scale(-1)" height="256" width="512" y="-512" x="-512" stroke-width="1pt" fill="#dc143c"/>
- </g>
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="480" viewBox="0 0 640 480" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <defs>
+    <rect id="a" width="640" height="480"/>
+    <mask id="b" width="640" height="480" x="0" y="0" fill="white">
+      <use xlink:href="#a"/>
+    </mask>
+  </defs>
+  <g fill="none" fill-rule="evenodd">
+    <g fill-rule="nonzero">
+      <rect width="640" height="480" fill="#FFFFFF" transform="rotate(180 320 240)"/>
+      <rect width="640" height="240" y="240" fill="#DC143C" transform="rotate(180 320 360)"/>
+    </g>
+    <use stroke="#999999" stroke-width="4" mask="url(#b)" xlink:href="#a"/>
+  </g>
 </svg>

@@ -1,25 +1,25 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!-- Created with Sodipodi ("http://www.sodipodi.com/") -->
-<svg id="svg378" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns="http://www.w3.org/2000/svg" height="480" width="640" version="1" y="0" x="0" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" viewBox="0 0 640 480">
- <metadata id="metadata3676">
-  <rdf:RDF>
-   <cc:Work rdf:about="">
-  <dc:format>image/svg+xml</dc:format>
-  <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
-   </cc:Work>
-  </rdf:RDF>
- </metadata>
- <defs id="defs380">
-  <clipPath id="clipPath8442" clipPathUnits="userSpaceOnUse">
-   <rect id="rect8444" fill-opacity="0.67" height="512" width="682.67" y="-.0000018825" x="-52.334"/>
-  </clipPath>
- </defs>
- <g id="flag" fill-rule="evenodd" clip-path="url(#clipPath8442)" transform="matrix(.93750 0 0 .93750 49.063 .0000017649)" stroke-width="1pt">
-  <rect id="rect171" height="512" width="768" y=".000016585" x="-95" fill="#0c590b"/>
-  <rect id="rect403" height="512" width="192.52" y="-7.5494e-7" x="-95" fill="#fff"/>
-  <g id="g6428" fill="#fff" transform="matrix(.78618 0 0 .78618 1.1148 55.129)">
-   <path id="path273" d="m512.08 216.58-39.641-8.3395-20.846 34.733-4.3191-40.278-39.476-9.0939 36.972-16.554-3.5504-40.353 27.169 30.047 37.281-15.846-20.18 35.124 26.591 30.56z"/>
-   <path id="path278" d="m527.03 319.21c-35.19 77.54-127.55 111.41-205.31 75.39-77.77-36.03-111.65-128.38-75.62-206.15 18.376-39.665 48.448-66.923 90.898-81.8-4.8826 4.129-9.7139 8.4119-15.008 13.875-54.836 56.591-53.411 147.03 3.179 201.86 56.591 54.836 147.03 53.412 201.86-3.179z"/>
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="480" viewBox="0 0 640 480" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <defs>
+    <rect id="a" width="682.67" height="512" x=".666"/>
+    <rect id="c" width="640" height="480"/>
+  </defs>
+  <g fill="none" fill-rule="evenodd">
+    <g transform="translate(-45)">
+      <mask id="b" fill="white">
+        <use xlink:href="#a"/>
+      </mask>
+      <g transform="translate(13)" mask="url(#b)">
+        <rect width="720" height="480" fill="#0C590B" fill-rule="nonzero"/>
+        <rect width="180.488" height="480" fill="#FFFFFF" fill-rule="nonzero"/>
+        <g transform="translate(260.365 129.81)">
+          <polygon fill="#FFFFFF" fill-rule="nonzero" points="207.168 81.502 177.951 75.356 162.587 100.955 159.403 71.269 130.308 64.566 157.558 52.365 154.941 22.623 174.966 44.769 202.443 33.09 187.57 58.978 207.169 81.502"/>
+          <path fill="#FFFFFF" fill-rule="nonzero" d="M218.187061,157.145098 C192.250492,214.29547 124.177131,239.259142 66.864609,212.710826 C9.54471656,186.15514 -15.4263257,118.08915 11.1293606,60.7692572 C24.6732766,31.5344168 46.8376562,11.4440783 78.1251634,0.479078437 C74.5264736,3.52233208 70.9655941,6.67901676 67.0636108,10.7055605 C26.6470797,52.4156033 27.6973671,119.073103 69.4066729,159.485212 C111.116716,199.901743 177.774215,198.852193 218.186324,157.14215 L218.187061,157.145098 Z"/>
+        </g>
+      </g>
+    </g>
+    <mask id="d" fill="white">
+      <use xlink:href="#c"/>
+    </mask>
+    <rect width="640" height="480" stroke="#999999" stroke-width="4" mask="url(#d)"/>
   </g>
- </g>
 </svg>
