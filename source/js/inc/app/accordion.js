@@ -91,7 +91,7 @@ module.exports = function () {
 		reflow: reflow
 	};
 
-	$(window).on('resize', Foundation.utils.throttle(function() {
+	$(window).on('resize orientationchange', Foundation.utils.throttle(function() {
 		$targets.each(function() {
 			var $this = $(this);
 			if($this.attr('aria-hidden') === 'false' && !($('html').hasClass('touch'))) {
