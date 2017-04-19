@@ -8405,7 +8405,7 @@
 		$(window).on('resize orientationchange', Foundation.utils.throttle(function() {
 			$targets.each(function() {
 				var $this = $(this);
-				if($this.attr('aria-hidden') === 'false' && !($('html').hasClass('touch'))) {
+				if($this.attr('aria-hidden') === 'false') {
 					$this.css({
 						'height': 'auto',
 						'-webkit-transition': 'none' // handle iOS safari bug that animates height:auto as height:0
