@@ -1,0 +1,52 @@
+<div class="loan-card embed row">
+	<div class="borrower-image-wrap small-12 columns">
+		<a class="borrower-image" kvtrackevent="Lending|click-Read more|Photo" href="{{borrower_url}}" data-interchange="{{#image.sizes}}[{{url}}, ({{size}})],{{/image.sizes}}">
+			{{#show_loan_length}}
+				<div class="loan-message">{{loan_length}}</div>
+			{{/show_loan_length}}
+			{{^show_loan_length}}
+				{{#is_expiring_soon}}
+					<div class="loan-message urgent">{{expiring_soon_message}}</div>
+				{{/is_expiring_soon}}
+			{{/show_loan_length}}
+		</a>
+		<div class="loan-image-footer">
+			{{> molecules-loan-image-footer}}
+		</div>
+	</div>
+
+    <div class="borrower-details-wrap small-12 columns">
+        <a kvtrackevent="Lending|click-Read more|Name" href="{{borrower_url}}">{{name}}</a>
+        <div class="country">
+			<span class="f16 {{location.country.iso_code}}"></span>{{location_label}}
+        </div>
+
+		<p class="small-text">{{use}}</p>
+		{{#is_expiring_soon}}
+			<div class="loan-message urgent">{{expiring_soon_message}}</div>
+		{{/is_expiring_soon}}
+    </div>
+
+
+    <div class="borrower-footer-wrap embed small-12 columns {{#is_ended}}vertical-centering{{/is_ended}}">
+		<div class="floater">
+			<div class="fundraising-meter progress">
+				<span class="meter" style="width:{{progress.percent}}%;"></span>
+				<span class="caption">{{progress.message}}</span>
+			</div>
+
+			<div class="bottom-bar-region">
+				{{> molecules-bottom-bar-embed }}
+			</div>
+
+			{{#is_matched}}
+				{{^is_ended}}
+					<div class="matching-message">
+						<svg class="icon icon-match"><use xlink:href="#icon-match"/></svg>
+						<span data-tooltip aria-haspopup="true" title="{{matching_text}}">{{matching_text}}</span>
+					</div>
+				{{/is_ended}}
+			{{/is_matched}}
+		</div>
+    </div>
+</div>

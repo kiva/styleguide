@@ -1,0 +1,50 @@
+{{#is_lent_to}}
+	<div class="bottom-bar show-short {{#is_ended}}lent-to-list-view{{/is_ended}}">
+		<a class="success button" href="{{borrower_url}}">
+			<svg class="icon">
+				<use xlink:href="#icon-confirmation" />
+			</svg>
+			<span>You've supported this loan</span>
+		</a>
+	</div>
+{{/is_lent_to}}
+{{#is_regular}}
+	<div class="bottom-bar embed">
+		<a kvtrackevent="Lending|click-Read more|Story" class="button" href="{{borrower_url}}">Learn more / lend</a>
+	</div>
+{{/is_regular}}
+{{#is_lent_to}}
+	{{^is_ended}}
+		<div class="bottom-bar hide-for-touch">
+			<a class="button" href="{{borrower_url}}">Lend again</a>
+		</div>
+	{{/is_ended}}
+{{/is_lent_to}}
+
+{{#is_in_basket}}
+	<div class="bottom-bar show-short">
+		<a class="success button" href="{{basket_url}}">
+			<svg class="icon">
+				<use xlink:href="#icon-confirmation" />
+			</svg>
+			<span>{{amount_in_basket}} in basket</span>
+		</a>
+	</div>
+	<div class="bottom-bar hide-for-touch">
+		<a class="success button" href="{{basket_url}}">
+			<svg class="icon">
+				<use xlink:href="#icon-confirmation" />
+			</svg>
+			<span>Proceed to checkout</span>
+		</a>
+	</div>
+{{/is_in_basket}}
+{{#is_ended}}
+	{{^is_adding}}
+		{{^is_in_basket}}
+			<div class="bottom-bar ended">
+				<a class="button" href="{{borrower_url}}">Learn more</a>
+			</div>
+		{{/is_in_basket}}
+	{{/is_adding}}
+{{/is_ended}}

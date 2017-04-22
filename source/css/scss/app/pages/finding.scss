@@ -328,7 +328,7 @@ a.filter-menu-button:visited {
 		text-align: center;
 	}
 
-	.loancards-list {
+	.loancards-list:not(.embed) {
 		@media #{$large-up} {
 			margin: 0 rem-calc(10);
 		}
@@ -336,7 +336,7 @@ a.filter-menu-button:visited {
 }
 
 .hide-filters-for-xxlarge-up:not(.list-view) {
-	.loancards-list {
+	.loancards-list:not(.embed) {
 		@media #{$xxlarge-up} {
 			@include block-grid(3);
 			margin: 0 rem-calc(10);
@@ -366,7 +366,7 @@ a.filter-menu-button:visited {
 		}
 	}
 
-	.loancards-list {
+	.loancards-list:not(.embed) {
 		@media #{$large-up} {
 			margin: 0 rem-calc(10);
 		}
@@ -374,7 +374,7 @@ a.filter-menu-button:visited {
 }
 
 .show-filters-for-xxlarge-up:not(.list-view) {
-	.loancards-list {
+	.loancards-list:not(.embed) {
 		@media #{$screen} and (min-width: 1230px) {
 			@include block-grid(3);
 			margin: 0 rem-calc(10);
@@ -475,7 +475,7 @@ a.filter-menu-button:visited {
 	}
 }
 
-.loancards-list li {
+.loancards-list:not(.embed) li {
 	padding-bottom: rem-calc(30);
 	margin-bottom: rem-calc(30);
 	border-bottom: 1px solid $gray;
