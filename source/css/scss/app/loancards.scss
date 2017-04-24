@@ -69,11 +69,10 @@ $list-loan-card-buttons-half-width: $list-loan-card-buttons-width / 2;
 .loancards-list.embed {
 	display: flex;
 	flex-wrap: wrap;
-	justify-content: center;
+	justify-content: space-around;
+	margin-left: 0;
 
 	li {
-		flex: 0 1 auto;
-		width: 280px;
 		margin: 1rem;
 		list-style: none;
 	}
