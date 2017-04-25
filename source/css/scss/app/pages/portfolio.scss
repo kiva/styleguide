@@ -542,6 +542,17 @@
 	.scroll-wrapper {
 		width: 100%;
 		overflow-x: scroll;
+
+		.no-loans {
+			display: none;
+			font-size: 14px;
+			padding-top: 15px;
+			padding-bottom: 15px;
+
+			a {
+				float: left;
+			}
+		}
 	}
 }
 
@@ -636,11 +647,15 @@
 	}
 
 	select {
-		min-width: 5rem;
+		min-width: 6rem;
 		padding: 0 1.2rem 0 0.5rem;
 		margin-top: -0.5rem;
 		height: 1.5rem;
 		font-weight: normal;
+
+		@media #{$medium-up} {
+			min-width: 5rem;
+		}
 	}
 
 	.pagination-region {
