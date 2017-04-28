@@ -221,6 +221,8 @@ $filter-menu-base-width: rem-calc(251);
 	}
 
 	.category-description {
+		margin-bottom: 5px;
+		
 		@include small-text();
 
 		@media #{$large-up} {
