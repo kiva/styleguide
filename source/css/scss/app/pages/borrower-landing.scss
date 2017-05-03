@@ -2,6 +2,14 @@
 @import '../../vendor_override/foundation/type';
 
 .borrower-landing-page {
+
+	// center hero image on extra-wide screens
+	.full-width {
+		@media (min-width: 1901px) {
+			text-align: center;
+		}
+	}
+
 	.overlay {
 		@media#{$small-only} {
 			font-size: 1rem;
