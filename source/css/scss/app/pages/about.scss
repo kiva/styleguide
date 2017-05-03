@@ -14,6 +14,11 @@ div.about-headline-wrapper {
 	@media #{$medium-up} {
 		padding-bottom: 43.05%;
 	}
+
+	// center hero image on extra-wide screens
+	@media (min-width: 1901px) {
+		text-align: center;
+	}
 }
 
 div.aboutIntro {
