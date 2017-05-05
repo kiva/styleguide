@@ -34,6 +34,18 @@ codebase via a styleguide release process for use in rendering www pages.
 1. Rendered content and pages that will be served from Kiva's content management 
 system (CMS) is copy-pasted to CMS pages once their design and content are accepted.
 
+A note about two conditional attributes found in some mustache and json files - 
+**"is-styleguide"** and **"is-standalone"**: These two attributes enable the viewing
+within styleguide of elements that are typically not visible or not correctly formatted unless
+they are contained within wrapping elements that provide their visibility and/or
+formatting. The "is-styleguide" condition wraps content that should be applied / displayed
+only when the content is viewed anywhere in styleguide. It is set true for the entire
+ styleguide in the shared _data.json file. The "is-standalone" condition
+wraps content that should be applied / displayed only when the element is viewed in
+its standalone state, but not if the element is incorporated as part of a larger,
+composed set of styleguide elements. It is set true by a companion .json file for
+each specific file where it is applied.
+
 More information about Kiva's adoption and use of this styleguide can be viewed in
 a post on Kiva's engineering blog at **** @TODO - insert URL for blog post ***
 
