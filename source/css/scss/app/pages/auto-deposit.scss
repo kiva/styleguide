@@ -1,0 +1,45 @@
+.auto-deposit {
+	&.expect-section-wrapper {
+		background-color: $kiva-bg-darkgray;
+		padding-top: 0.5rem;
+	}
+
+	.expect-section {
+		text-align: center;
+		margin: 1rem auto 2rem;
+
+		//
+
+		svg.icon {
+			width: rem-calc(100);
+			height: rem-calc(100);
+		}
+
+		.xlarge-4 {
+			padding-bottom: 2rem;
+			border-bottom: 1px solid $kiva-stroke-gray;
+
+			@media#{$xlarge-up} {
+				padding-bottom: 0;
+				border-bottom: none;
+				border-right: 1px solid $kiva-stroke-gray;
+			}
+		}
+
+		.xlarge-4:last-of-type {
+			padding-bottom: 0;
+			border-bottom: none;
+			border-right: none;
+		}
+
+
+		p {
+			max-width: 14rem;
+			margin: 0 auto;
+		}
+
+		.columns {
+			margin-bottom: 2rem;
+		}
+	}
+}
