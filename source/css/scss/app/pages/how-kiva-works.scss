@@ -213,7 +213,6 @@
 }
 
 .faq-section {
-	min-width: 100%;
 	padding: rem-calc(75) rem-calc(20) rem-calc(100) rem-calc(20);
 	background-color: black;
 	box-shadow: 0 rem-calc(-10) rem-calc(80) rem-calc(50) #000;
@@ -236,29 +235,10 @@
 
 			.ac-title {
 				border-top: rem-calc(1) solid $white;
-				padding: rem-calc(5) 0 rem-calc(5) 0;
-				margin: 0;
-				position: relative;
-				cursor: pointer;
 				color: $white;
 
-				.question-wrap {
-					margin: 0;
-					max-width: 78vw;
-					font-weight: bold;
-				}
-
-				.ac-dropdown-icon {
-					float: right;
-
-
-					.icon-small-chevron {
-						stroke: $white;
-						position: absolute;
-						top: rem-calc(5);
-						right: 0;
-					}
-				}
+				.icon-small-chevron {
+					stroke: $white;  }
 			}
 
 			.ac-body p {

@@ -1,3 +1,20 @@
+##KIVA STYLEGUIDE LICENSE
+
+###Visual designs and content:
+Copyright (c) 2007-2017 Kiva Microfunds, https://www.kiva.org
+All rights reserved
+
+No rights are granted to any use of Kiva's trademarks and trade dress,
+except that the name "Kiva" may be used in reference to this styleguide.
+
+###Kiva additions and modifications to Pattern Lab Code:
+Kiva's additions and modifications to Pattern Lab code are licensed under
+Creative Commons Attribution-NonCommercial 4.0 International 
+public license, https://creativecommons.org/licenses/by-nc/4.0/legalcode,
+which is incorporated here by reference.
+
+##PATTERN LAB LICENSE
+
 The MIT License (MIT)
 
 Copyright (c) 2013-14 Brad Frost, http://bradfrost.com & Dave Olsen, http://dmolsen.com

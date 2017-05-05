@@ -1,4 +1,16 @@
+{{#is-standalone}}
+	<aside class="left-off-canvas-menu filter" style="transform: none;">
+		<ul class="filters-menu-list off-canvas-list">
+			<li class="filter-component ">
+{{/is-standalone}}
+
 <h3 class="filter">Loan length</h3>
 {{#loan-length}}
 	{{> 01-molecules/09-filters/04-quintuple-state-buttons}}
 {{/loan-length}}
+
+{{#is-standalone}}
+			</li>
+		</ul>
+	</aside>
+{{/is-standalone}}

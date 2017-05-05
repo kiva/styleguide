@@ -1,4 +1,10 @@
-<h3 class="filter">Location</h3>
+{{#is-standalone}}
+	<aside class="left-off-canvas-menu filter" style="transform: none;">
+		<ul class="filters-menu-list off-canvas-list">
+			<li class="filter-component ">
+{{/is-standalone}}
+
+	<h3 class="filter">Location</h3>
 <div class="filter country-filter-box">
 	<form id="location-search-form" action=".">
 		<svg class="icon icon-globe">
@@ -16,3 +22,9 @@
 		{{> 02-organisms/05-filters/country-filter-components/country-filter-modal}}
 	</div>
 </div>
+
+{{#is-standalone}}
+			</li>
+		</ul>
+	</aside>
+{{/is-standalone}}
