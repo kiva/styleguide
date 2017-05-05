@@ -1,5 +1,37 @@
 .auto-deposit {
-	&.expect-section-wrapper {
+    .auto-deposit-form {
+        padding: 1.2rem 0;
+        
+        .lending-funds {
+            input {
+                display: inline-block;
+                margin: 0;
+                font-size: 1.3rem;
+                height: 2.4rem;
+                width: 4em;
+                text-align: center;
+            }
+        }
+        .donation-funds {
+            #donationCheckbox {
+                display: inline;
+            }
+            span {
+                display: inline;
+                label {
+                    display: inline;
+                }
+            }
+        }
+        .submit-controls {
+
+        }
+        .disclaimer {
+            color: $kiva-text-light;
+        }
+    }
+
+	.expect-section-wrapper {
 		background-color: $kiva-bg-darkgray;
 		padding-top: 0.5rem;
 	}
