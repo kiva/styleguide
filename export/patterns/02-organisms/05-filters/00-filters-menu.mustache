@@ -1,4 +1,4 @@
-<aside class="left-off-canvas-menu filter">
+<aside class="left-off-canvas-menu filter"{{#is-styleguide}} style="transform: none;"{{/is-styleguide}}>
 	<div class="filter-header">
 		<span><a href="#" class="filter-links filter-clear-button">Clear</a></span>
 		<span class="filter-header-title">Filters</span>
@@ -9,16 +9,6 @@
 	<hr class="filter-header"/>
 
 	<ul class="filters-menu-list off-canvas-list">
-
-		<!--
-        <li class="layover-icon show-for-medium-up medium-notouch">
-            <svg class="icon icon-distribution filters filter-distribution-icon">
-                <use xlink:href="#icon-distribution"/>
-            </svg>
-        </li>
-        <li class="clear show-for-medium-up"></li>
-        -->
-
 		<li class="filter-component extra-padding-bottom">
 			{{> 02-organisms/05-filters/02-borrowers-filter}}
 		</li>
