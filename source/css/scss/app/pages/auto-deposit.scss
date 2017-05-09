@@ -34,6 +34,7 @@
 	.expect-section-wrapper {
 		background-color: $kiva-bg-darkgray;
 		padding-top: 0.5rem;
+		margin-top: 3rem;
 	}
 
 	.expect-section {
@@ -73,5 +74,9 @@
 		.columns {
 			margin-bottom: 2rem;
 		}
+	}
+
+	.faqs {
+		padding: 2.5rem 0 4rem;
 	}
 }
