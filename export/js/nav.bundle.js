@@ -42,7 +42,7 @@
 /************************************************************************/
 /******/ ([
 /* 0 */
-/***/ function(module, exports, __webpack_require__) {
+/***/ (function(module, exports, __webpack_require__) {
 
 	__webpack_require__(1);
 
@@ -55,24 +55,24 @@
 	header();
 	accordion();
 
-/***/ },
+/***/ }),
 /* 1 */
-/***/ function(module, exports, __webpack_require__) {
+/***/ (function(module, exports, __webpack_require__) {
 
 	__webpack_require__(2);
 	__webpack_require__(3);
 
 	__webpack_require__(4);
 
-/***/ },
+/***/ }),
 /* 2 */
-/***/ function(module, exports) {
+/***/ (function(module, exports) {
 
 	module.exports = jQuery;
 
-/***/ },
+/***/ }),
 /* 3 */
-/***/ function(module, exports) {
+/***/ (function(module, exports) {
 
 	/*** IMPORTS FROM imports-loader ***/
 	(function() {
@@ -1489,9 +1489,9 @@
 	module.exports = window.Modernizr;
 	}.call(window));
 
-/***/ },
+/***/ }),
 /* 4 */
-/***/ function(module, exports, __webpack_require__) {
+/***/ (function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(jQuery) {/*
 	 * Foundation Responsive Library
@@ -8080,9 +8080,9 @@
 	module.exports = window.Foundation;
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(2)))
 
-/***/ },
+/***/ }),
 /* 5 */
-/***/ function(module, exports, __webpack_require__) {
+/***/ (function(module, exports, __webpack_require__) {
 
 	var Foundation = __webpack_require__(4);
 	var $ = __webpack_require__(2);
@@ -8243,9 +8243,9 @@
 		}
 	};
 
-/***/ },
+/***/ }),
 /* 6 */
-/***/ function(module, exports, __webpack_require__) {
+/***/ (function(module, exports, __webpack_require__) {
 
 	var Foundation = __webpack_require__(4);
 	var $ = __webpack_require__(2);
@@ -8357,5 +8357,5 @@
 	};
 
 
-/***/ }
+/***/ })
 /******/ ]);
