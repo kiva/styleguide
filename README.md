@@ -47,7 +47,7 @@ composed set of styleguide elements. It is set true by a companion .json file fo
 each specific file where it is applied.
 
 More information about Kiva's adoption and use of this styleguide can be viewed in
-a post on Kiva's engineering blog at **** @TODO - insert URL for blog post ***
+a post on Kiva's engineering blog at https://pages.kiva.org/kivablog/2017/05/11/a-styleguide-for-kiva-now-open-source
 
 ## Pattern Lab - more informaiton
 - [Pattern Lab Website](http://patternlab.io/)
