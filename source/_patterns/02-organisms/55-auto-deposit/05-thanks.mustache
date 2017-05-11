@@ -1,0 +1,29 @@
+<div class="auto-deposit-thanks">
+	<h1>
+		<svg class="icon icon-confirmation">
+			<use xlink:href="#icon-confirmation"/>
+		</svg>
+		Thanks!
+	</h1>
+
+	<p>Every month your balance will
+		<br class="so">grow by ${{deposit-amount}}!
+
+	{{#has-donation}}
+		<br class="so">
+		<br>(You’re also making a ${{donation-amount}} donation
+		<br class="so">to Kiva <br class="mo">each month – thank you!)
+	{{/has-donation}}
+	</p>
+
+	<svg class="icon icon-email">
+		<use xlink:href="#icon-email"/>
+	</svg>
+	<p>You’ll get an email after each deposit
+		<br class="smo">so you can make more loans.</p>
+
+	<p><strong>Auto lending is the fastest
+		<br class="so">way to lend your balance</strong>
+		<br><a href="{kvurl page=settings action=credit#auto-lend}">Define your criteria</a>
+	</p>
+</div>
