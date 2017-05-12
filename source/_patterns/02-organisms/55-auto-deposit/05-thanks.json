@@ -1,5 +1,6 @@
 {
 	"deposit-amount": "25.00",
 	"has-donation": true,
+	"is-donation-only": false,
 	"donation-amount": "3.75"
 }
