@@ -1,0 +1,24 @@
+{
+	"faqs": [
+		{
+			"id": "faq-1",
+			"question": "Can I cancel anytime?",
+			"answer": "Yes. Auto deposits can be canceled or edited at any time. To do, so go to your <a href='{kvurl page=settings action=credit}'>credit settings</a>."
+		},
+		{
+			"id": "faq-2",
+			"question": "Are my funds automatically lent after they’re deposited?",
+			"answer": "No. By default, when you set up an auto deposit, your funds will be added to your account and available for you to lend. If you want your funds to be automatically lent out according to your preferences, you can turn on <a href='{kvurl page=settings action=credit}'>auto lending.</a>"
+		},
+		{
+			"id": "faq-3",
+			"question": "Will I be notified when a deposit occurs?",
+			"answer": "Yes. You’ll get a receipt from PayPal notifying you every time an auto deposit is made."
+		},
+		{
+			"id": "faq-4",
+			"question": "Can I make auto deposits on a weekly, quarterly or annual basis?",
+			"answer": "At this time we only offer auto deposits on a monthly basis. If you’re interested in being alerted as to when we launch other frequencies, please email <a mailto='contactus@kiva.org'>contactus@kiva.org</a> and let us know."
+		}
+	]
+}
