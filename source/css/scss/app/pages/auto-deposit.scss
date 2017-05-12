@@ -80,3 +80,38 @@
 		padding: 2.5rem 0 4rem;
 	}
 }
+
+.auto-deposit-thanks {
+	text-align: center;
+
+	h1 {
+		padding-top: rem-calc(50);
+		line-height: rem-calc(30);
+
+		@media #{$large-up} {
+			line-height: rem-calc(56);
+		}
+
+	}
+
+	.icon-confirmation {
+		fill: $kiva-green;
+		width: rem-calc(30);
+		height: rem-calc(30);
+		margin-right: rem-calc(4);
+		vertical-align: bottom;
+
+		@media #{$large-up} {
+			width: rem-calc(56);
+			height: rem-calc(56);
+		}
+	}
+
+	.icon-email {
+		stroke: $kiva-green;
+		stroke-width: 0;
+		width: 2rem;
+		height: 2rem;
+		margin-bottom: -5px;
+	}
+}
