@@ -68,3 +68,44 @@ select {
 	border-color: $kiva-text-dark;
 	cursor: pointer;
 }
+
+
+.fancy-checkbox-div {
+	.icon-checkbox-checked
+	, .icon-checkbox-unchecked {
+		height: 22px;
+		width: 26px;
+	}
+
+	input[type="checkbox"] {
+		display: none;
+
+		& + label {
+			margin: 0;
+		}
+	}
+
+	input[type="checkbox"]:checked + label {
+		.icon-checkbox-unchecked {
+			display: none;
+		}
+		.icon-checkbox-checked {
+			display: inline-block;
+		}
+	}
+
+	input[type="checkbox"]:not(checked) + label {
+			.icon-checkbox-unchecked {
+				display: inline-block;
+			}
+			.icon-checkbox-checked {
+				display: none;
+			}
+	}
+
+	.fancy-checkbox-text {
+		padding-top: 1px;
+		display: inline-block;
+		vertical-align: top;
+	}
+}
