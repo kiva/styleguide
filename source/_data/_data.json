@@ -5314,6 +5314,15 @@
 		  "call_to_action": "Give a Kiva gift.",
 		  "message": "Make spirits bright this holiday season.",
 		  "icon": "icon-kiva-card"
-
-	 }
+	 },
+	"auto_deposit": {
+		"deposit_amount": "$25",
+		"deposit_date": "14th",
+		"donation_amount": "$3.75",
+		"has_donation": true,
+		"5_percent": "$1.25",
+		"10_percent": "$2.50",
+		"15_percent": "$3.75",
+		"20_percent": "$5.00"
+ }
 }
