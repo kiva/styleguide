@@ -1,12 +1,58 @@
+{{#is-standalone}}
+	<div class="auto-deposit">
+{{/is-standalone}}
+
 <div class="auto-deposit-form">
 	<div class="lending-funds">
-		<input type="text" placeholder="$25" />
-		<span>Each month on the <a href="#">14th</a></span>
+		<input class="deposit-amount-input" type="text" placeholder="$" value="25">
+		<span class="featured">each month on the
+			<div class="pencil-text-input">
+				<span class="text-display">{{auto_deposit.deposit_date}}</span>
+				<input type="text" class="text-input" value="{{auto_deposit.deposit_date}}">
+				<span class="pencil">
+					  <svg class="icon icon-pencil">
+						<use xlink:href="#icon-pencil"/>
+					</svg>
+				  </span>
+			</div>
+		</span>
 		<small class="hide">May be processed on the last day of the month</small>
 	</div>
-	<div class="donation-funds">
-		<input type="checkbox" id="donationCheckbox" />
-		<span><label for="donationCheckbox">Add an optional</label> <a href="#">$3.75</a> <label for="donationCheckbox">donation to support Kiva’s costs</label></span>
+
+	<div class="fancy-checkbox-div donation-div">
+		<input type='checkbox' class='fancy-checkbox' id='donationCheckbox' checked>
+		<label for="donationCheckbox">
+			<svg class="icon icon-checkbox-checked">
+				<use xlink:href="#icon-checkbox-checked"/>
+			</svg>
+			<svg class="icon icon-checkbox-unchecked">
+				<use xlink:href="#icon-checkbox-unchecked"/>
+			</svg>
+		</label>
+
+		<span class="fancy-checkbox-text">Add an optional
+			<div class="pencil-dropdown">
+				<span class="text-display">{{auto_deposit.donation_amount}}</span>
+				<input type="text" class="text-input" value="{{auto_deposit.donation_amount}}">
+				<span class="edit-controls">
+				  <span class="pencil">
+					  <svg class="icon icon-pencil">
+						<use xlink:href="#icon-pencil"/>
+					</svg>
+				  </span>
+				  <ul class="dropdown-choices">
+					<li id="val-1">{{auto_deposit.5_percent}}</li>
+					<li id="val-2">{{auto_deposit.10_percent}}</li>
+					<li id="val-3" class="selected">{{auto_deposit.15_percent}}</li>
+					<li id="val-4">{{auto_deposit.20_percent}}</li>
+					<li id="val-other">$other</li>
+				  </ul>
+				</span>
+			</div>
+			donation to support Kiva’s costs
+		</span>
+	</div>
+
 	</div>
 	<div class="submit-controls">
 		<div id="paypal-button"></div>
@@ -16,3 +62,7 @@
 	</div>
 	<small class="disclaimer">Thanks to PayPal, Kiva receives free payment processing.</small>
 </div>
+
+{{#is-standalone}}
+	</div>
+{{/is-standalone}}

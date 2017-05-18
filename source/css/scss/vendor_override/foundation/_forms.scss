@@ -4,37 +4,36 @@ $placeholder-color: $kiva-text-light;
 $placeholder-font-style: italic;
 
 ::-webkit-input-placeholder { /* Chrome, Safari, Opera */
-    color: $placeholder-color;
-    font-style: $placeholder-font-style;
+	color: $placeholder-color;
+	font-style: $placeholder-font-style;
 }
 
 :-moz-placeholder { /* Firefox 18- */
-    color: $placeholder-color;
-    font-style: $placeholder-font-style;
-    opacity: 1 !important;
+	color: $placeholder-color;
+	font-style: $placeholder-font-style;
+	opacity: 1 !important;
 }
 
 ::-moz-placeholder { /* Firefox 19+ */
-    color: $placeholder-color;
-    font-style: $placeholder-font-style;
-    opacity: 1 !important;
+	color: $placeholder-color;
+	font-style: $placeholder-font-style;
+	opacity: 1 !important;
 }
 
 :-ms-input-placeholder { /* IE10-11 */
-    color: $placeholder-color !important;
-    font-style: $placeholder-font-style !important;
+	color: $placeholder-color !important;
+	font-style: $placeholder-font-style !important;
 }
 
 ::-ms-input-placeholder { /* Edge */
-    color: $placeholder-color;
-    font-style: $placeholder-font-style;
+	color: $placeholder-color;
+	font-style: $placeholder-font-style;
 }
 
 ::placeholder { /* CSS Working Draft */
-    color: $placeholder-color;
-    font-style: $placeholder-font-style;
+	color: $placeholder-color;
+	font-style: $placeholder-font-style;
 }
-
 
 input[type="submit"].hidden-submit {
 	position: absolute;
@@ -42,7 +41,6 @@ input[type="submit"].hidden-submit {
 	width: 1px;
 	height: 1px;
 }
-
 
 form .error {
 	input {
@@ -62,9 +60,169 @@ form .error {
 	color: $kiva-text-dark;
 }
 
-
 select {
 	color: $kiva-text-dark;
 	border-color: $kiva-text-dark;
 	cursor: pointer;
+}
+
+.fancy-checkbox-div {
+	.icon-checkbox-checked, .icon-checkbox-unchecked {
+		height: 22px;
+		width: 26px;
+	}
+
+	input[type="checkbox"] {
+		display: none;
+
+		& + label {
+			margin: 0;
+		}
+	}
+
+	input[type="checkbox"]:checked + label {
+		.icon-checkbox-unchecked {
+			display: none;
+		}
+		.icon-checkbox-checked {
+			display: inline-block;
+		}
+	}
+
+	input[type="checkbox"]:not(checked) + label {
+		.icon-checkbox-unchecked {
+			display: inline-block;
+		}
+		.icon-checkbox-checked {
+			display: none;
+		}
+	}
+
+	.fancy-checkbox-text {
+		padding-top: 1px;
+		display: inline-block;
+		vertical-align: top;
+	}
+}
+
+.pencil-dropdown {
+	.text-display {
+		display: none;
+
+		@media #{$medium-up} {
+			display: inline-block;
+
+			cursor: pointer;
+			color: $kiva-textlink;
+
+			&:hover {
+				color: $kiva-textlink-hover;
+			}
+		}
+	}
+
+	.text-input {
+		display: none;
+		width: rem-calc(66);
+		height: $body-line-height;
+		line-height: $body-line-height;
+	}
+
+	.icon-pencil {
+		height: $small-font-size;
+		width: $small-font-size;
+	}
+
+	.edit-controls {
+		position: relative;
+	}
+
+	.pencil {
+		display: none;
+
+		@media #{$medium-up} {
+			display: inline-block;
+			cursor: pointer;
+		}
+	}
+
+	.dropdown-choices {
+		display: none;
+
+		@media #{$medium-up} {
+			position: absolute;
+			top: 0;
+			left: -rem-calc(40);
+			z-index: 10;
+			display: none;
+			list-style: none;
+			border: 1px solid $kiva-text-dark;
+			background-color: $white;
+			width: rem-calc(80);
+			padding: 0;
+			margin: 0;
+
+			li {
+				margin: 0;
+				padding: 12px;
+				border-bottom: 1px solid $kiva-text-dark;
+				text-align: right;
+				cursor: pointer;
+
+				&:last-of-type {
+					border-bottom: none;
+				}
+
+				&:hover {
+					background-color: $kiva-filter-indicator-bg;
+				}
+
+				&.selected {
+					color: $white;
+					background-color: $kiva-textlink;
+				}
+			}
+		}
+	}
+
+	.dropdown-choices-select {
+		width: rem-calc(80);
+		font-size: $base-font-size;
+		background-color: $white;
+		border-color: $kiva-text-dark;
+		outline: none;
+
+		@media #{$medium-up} {
+			display: none;
+		}
+	}
+}
+
+.pencil-text-input {
+	display: inline-block;
+
+	.text-display {
+		cursor: pointer;
+		color: $kiva-textlink;
+		font-size: $feature-font-size;
+
+		&:hover {
+			color: $kiva-textlink-hover;
+		}
+	}
+
+	.text-input {
+		display: none;
+		width: rem-calc(64);
+		font-size: $feature-font-size;
+		font-weight: normal;
+		height: $feature-line-height;
+		line-height: $feature-line-height;
+	}
+
+	.icon-pencil {
+		height: $feature-font-size;
+		width: $feature-font-size;
+	}
+
 }

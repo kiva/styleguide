@@ -1,0 +1,26 @@
+<div class="pencil-dropdown">
+	<span class="text-display">{{auto_deposit.donation_amount}}</span>
+	<input type="text" class="text-input" value="{{auto_deposit.donation_amount}}">
+	<select class="dropdown-choices-select">
+		<option id="donation-val-1s" value="$1.25">$1.25</option>
+		<option id="donation-val-2s" value="$2.50">$2.50</option>
+		<option id="donation-val-3s" value="$3.75" selected>$3.75</option>
+		<option id="donation-val-4s" value="$5.00">$5.00</option>
+		<option value="$other">$other</option>
+	</select>
+
+	<span class="edit-controls">
+	  <span class="pencil">
+		  <svg class="icon icon-pencil">
+			<use xlink:href="#icon-pencil"/>
+		</svg>
+	  </span>
+	  <ul class="dropdown-choices">
+		<li id="val-1">{{auto_deposit.5_percent}}</li>
+		<li id="val-2">{{auto_deposit.10_percent}}</li>
+		<li id="val-3" class="selected">{{auto_deposit.15_percent}}</li>
+		<li id="val-4">{{auto_deposit.20_percent}}</li>
+		<li id="val-other">$other</li>
+	  </ul>
+	</span>
+</div>

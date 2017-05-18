@@ -1,4 +1,8 @@
 .auto-deposit {
+	input[type="text"] {
+		color: $kiva-text-dark;
+	}
+
 	.auto-deposit-dynamic-view {
 		position: relative;
 
@@ -31,25 +35,24 @@
         padding: 1.2rem 0;
         
         .lending-funds {
-            input {
+            .deposit-amount-input {
                 display: inline-block;
                 margin: 0;
-                font-size: 1.3rem;
+                font-size: $feature-font-size;
+				font-weight: bold;
+				color: $kiva-text-dark;
                 height: 2.4rem;
-                width: 4em;
+                width: 4rem;
                 text-align: center;
             }
         }
-        .donation-funds {
-            #donationCheckbox {
-                display: inline;
-            }
-            span {
-                display: inline;
-                label {
-                    display: inline;
-                }
-            }
+        .donation-div {
+			padding-top: 1rem;
+
+			//#donationAmount {
+			//	display: none;
+			//	width: 3rem;
+			//}
         }
         .submit-controls {
 
