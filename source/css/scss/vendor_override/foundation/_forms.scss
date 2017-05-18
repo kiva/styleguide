@@ -106,14 +106,18 @@ select {
 }
 
 .pencil-dropdown {
-	display: inline-block;
-
 	.text-display {
-		cursor: pointer;
-		color: $kiva-textlink;
+		display: none;
 
-		&:hover {
-			color: $kiva-textlink-hover;
+		@media #{$medium-up} {
+			display: inline-block;
+
+			cursor: pointer;
+			color: $kiva-textlink;
+
+			&:hover {
+				color: $kiva-textlink-hover;
+			}
 		}
 	}
 
@@ -134,42 +138,62 @@ select {
 	}
 
 	.pencil {
-		display: inline-block;
-		cursor: pointer;
+		display: none;
+
+		@media #{$medium-up} {
+			display: inline-block;
+			cursor: pointer;
+		}
 	}
 
 	.dropdown-choices {
-		position: absolute;
-		top: 0;
-		left: -rem-calc(40);
-		z-index: 10;
 		display: none;
-		list-style: none;
-		border: 1px solid $kiva-text-dark;
-		background-color: $white;
-		width: rem-calc(80);
-		padding: 0;
-		margin: 0;
 
-		li {
+		@media #{$medium-up} {
+			position: absolute;
+			top: 0;
+			left: -rem-calc(40);
+			z-index: 10;
+			display: none;
+			list-style: none;
+			border: 1px solid $kiva-text-dark;
+			background-color: $white;
+			width: rem-calc(80);
+			padding: 0;
 			margin: 0;
-			padding: 12px;
-			border-bottom: 1px solid $kiva-text-dark;
-			text-align: right;
-			cursor: pointer;
 
-			&:last-of-type {
-				border-bottom: none;
-			}
+			li {
+				margin: 0;
+				padding: 12px;
+				border-bottom: 1px solid $kiva-text-dark;
+				text-align: right;
+				cursor: pointer;
 
-			&:hover {
-				background-color: $kiva-filter-indicator-bg;
-			}
+				&:last-of-type {
+					border-bottom: none;
+				}
 
-			&.selected {
-				color: $white;
-				background-color: $kiva-textlink;
+				&:hover {
+					background-color: $kiva-filter-indicator-bg;
+				}
+
+				&.selected {
+					color: $white;
+					background-color: $kiva-textlink;
+				}
 			}
+		}
+	}
+
+	.dropdown-choices-select {
+		width: rem-calc(80);
+		font-size: $base-font-size;
+		background-color: $white;
+		border-color: $kiva-text-dark;
+		outline: none;
+
+		@media #{$medium-up} {
+			display: none;
 		}
 	}
 }
