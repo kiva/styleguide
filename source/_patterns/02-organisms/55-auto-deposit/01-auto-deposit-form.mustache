@@ -3,8 +3,9 @@
 {{/is-standalone}}
 
 <div class="auto-deposit-form">
+	<form id="autoDepositForm">
 	<div class="lending-funds">
-		<input class="deposit-amount-input" type="text" placeholder="$" value="25">
+		<input class="deposit-amount-input" type="text" value="{{auto_deposit.deposit_amount}}">
 		<span class="featured">each month on the
 			<div class="pencil-text-input">
 				<span class="text-display">{{auto_deposit.deposit_date}}</span>
@@ -20,7 +21,7 @@
 	</div>
 
 	<div class="fancy-checkbox-div donation-div">
-		<input type='checkbox' class='fancy-checkbox' id='donationCheckbox' checked>
+		<input type="checkbox" class="fancy-checkbox" id="donationCheckbox" {{#auto_deposit.has_donation}}checked{{/auto_deposit.has_donation}} />
 		<label for="donationCheckbox">
 			<svg class="icon icon-checkbox-checked">
 				<use xlink:href="#icon-checkbox-checked"/>
@@ -59,6 +60,7 @@
 			<button class="button smaller">Sign in to set up</button>
 		</div>
 	</div>
+	</form>
 	<small class="disclaimer">Thanks to PayPal, Kiva receives free payment processing.</small>
 </div>
 
