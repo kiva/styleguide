@@ -1,0 +1,24 @@
+{
+	"faqs": [
+		{
+			"id": "faq-1",
+			"question": "Can I cancel anytime?",
+			"answer": "Yes. Auto repayments can be canceled or edited at any time. To do, so go to your <a href='{kvurl page=borrowerDashboard action=automaticRepayments}'>automatic repayments</a>."
+		},
+		{
+			"id": "faq-2",
+			"question": "Are my funds automatically redeemed to lenders after they are repaid?",
+			"answer": "Yes. By default, when you set up auto-repayments, your funds will be added to your account disbursed to the lenders within a couple days."
+		},
+		{
+			"id": "faq-3",
+			"question": "Will I be notified when an auto-repayment occurs?",
+			"answer": "Yes. You’ll get a receipt from PayPal notifying you every time an auto-repayment is made."
+		},
+		{
+			"id": "faq-4",
+			"question": "Can I make auto repayments on a weekly, quarterly or annual basis?",
+			"answer": "At this time we only offer auto repayments on a monthly basis. If you’re interested in being alerted as to when we launch other frequencies, please email <a mailto='contactus@kiva.org'>contactus@kiva.org</a> and let us know."
+		}
+	]
+}
