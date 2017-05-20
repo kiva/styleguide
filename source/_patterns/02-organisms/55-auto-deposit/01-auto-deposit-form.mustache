@@ -34,13 +34,15 @@
 
 		<div class="request">Add an optional donation to support Kiva’s costs</div>
 
+		
 		<div class="selector">
+			<input type="text" class="text-input" value="{{auto_deposit.donation_amount}}">
 			<select class="dropdown-choices-select">
 				<option id="donation-val-20s" value="{{auto_deposit.20_percent}}">$5.00</option>
 				<option id="donation-val-15s" value="{{auto_deposit.15_percent}}" selected>$3.75</option>
-				<option id="donation-val-8s" value="{{auto_deposit.8_percent}}">2.00</option>
+				<option id="donation-val-8s" value="{{auto_deposit.8_percent}}">$2.00</option>
 				<option id="donation-val-0s" value="$0">$0.00</option>
-				<option id="donation-val-others" value="$other">$other</option>
+				<option id="donation-val-other" value="$other">$other</option>
 			</select>
 		</div>
 	</div>

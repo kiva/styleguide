@@ -6,65 +6,6 @@
 		}
 	}
 
-	.donation-selector-small {
-		display: flex;
-		justify-content: flex-start;
-		align-items: center;
-		margin: 1rem 0;
-
-		.fancy-checkbox-div label svg {
-			height: 27px;
-			width: 32px;
-		}
-
-		.request {
-			max-width: rem-calc(160);
-			font-size: $small-font-size;
-			line-height: $small-font-size;
-		}
-
-		select {
-			margin: 0 0 0 rem-calc(6);
-			height: rem-calc(32);
-			width: 4rem;
-			background-color: white;
-		}
-
-
-		@media #{$medium-up} {
-			display: none;
-		}
-	}
-
-	.donation-selector-large {
-		display: none;
-
-		@media #{#{$screen} and (max-width:#{$sm-medium-breakpoint})} {
-			.fancy-checkbox-div .fancy-checkbox-text {
-				font-size: $small-font-size;
-			}
-		}
-
-		@media #{$medium-up} {
-			display: block;
-			margin: 2rem 0;
-		}
-
-		.pencil-dropdown {
-			display: inline-block;
-
-			.dropdown-choices {
-				top: -7px;
-				left: -60px;
-			}
-		}
-	}
-
-
-	input[type="text"] {
-		color: $kiva-text-dark;
-	}
-
 	.auto-deposit-dynamic-view {
 		position: relative;
 
@@ -92,42 +33,128 @@
 			display: block;
 			pointer-events: auto;
 		}
-	}
-    .auto-deposit-form {
-        padding: 1.2rem 0;
-        
-        .lending-funds {
-			@media #{$x-small-only} {
-				.featured {
-					font-size: $base-font-size;
+
+		.auto-deposit-form {
+			padding: 1.2rem 0;
+			
+			.lending-funds {
+				@media #{$x-small-only} {
+					.featured {
+						font-size: $base-font-size;
+					}
+				}
+
+				.deposit-amount-input {
+					display: inline-block;
+					margin: 0;
+					font-size: $body-font-size;
+					font-weight: bold;
+					color: $kiva-text-dark;
+					height: 1.4rem;
+					width: 3rem;
+					text-align: center;
+
+					@media #{$medium-up} {
+						font-size: $feature-font-size;
+						height: 2.4rem;
+						width: 4rem;
+					}
 				}
 			}
 
+			.donation-selector-small {
+				display: flex;
+				justify-content: flex-start;
+				align-items: center;
+				margin: 1rem 0;
 
-            .deposit-amount-input {
-                display: inline-block;
-                margin: 0;
-                font-size: $body-font-size;
-				font-weight: bold;
-				color: $kiva-text-dark;
-                height: 1.4rem;
-                width: 3rem;
-                text-align: center;
+				.fancy-checkbox-div label svg {
+					height: 27px;
+					width: 32px;
+				}
+
+				.request {
+					max-width: rem-calc(160);
+					font-size: $small-font-size;
+					line-height: $small-font-size;
+				}
+
+				.selector {
+					input {
+						display:none;
+					}
+					select {
+						margin: 0 0 0 rem-calc(6);
+						height: rem-calc(32);
+						width: 4rem;
+						background-color: white;
+					}			
+				}
 
 				@media #{$medium-up} {
-					font-size: $feature-font-size;
-					height: 2.4rem;
-					width: 4rem;
+					display: none;
 				}
-            }
-        }
+			}
 
-        .disclaimer {
-			font-size: $small-font-size;
-			line-height: $small-font-size;
-            color: $kiva-text-light;
-        }
-    }
+			.donation-selector-large {
+				display: none;
+
+				@media #{#{$screen} and (max-width:#{$sm-medium-breakpoint})} {
+					.fancy-checkbox-div .fancy-checkbox-text {
+						font-size: $small-font-size;
+					}
+				}
+
+				@media #{$medium-up} {
+					display: block;
+					margin: 2rem 0;
+				}
+
+				.pencil-dropdown {
+					display: inline-block;
+
+					.dropdown-choices {
+						top: -7px;
+						left: -60px;
+					}
+				}
+			}
+
+			input[type="text"] {
+				color: $kiva-text-dark;
+			}
+
+			.disclaimer {
+				font-size: $small-font-size;
+				line-height: $small-font-size;
+				color: $kiva-text-light;
+			}
+		}
+
+		/* Utility Class to Hide Donation Selectors and Show Donation Manual Inputs */
+		.custom-donation-input {
+			.donation-selector-small {
+				.selector {
+					input.text-input {
+						display: inline-block;
+					}
+					.dropdown-choices-select {
+						display: none;
+					}
+				}
+			}
+			.donation-selector-large {
+				.pencil-dropdown {
+					.text-display {
+						display:none;
+					}
+					input.text-input {
+						display: inline-block;
+					}
+				}
+			}
+		}
+	}
 
 	.expect-section-wrapper {
 		background-color: $kiva-bg-darkgray;
