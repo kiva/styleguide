@@ -1,4 +1,8 @@
-<div class="auto-deposit row">
+{{#is-standalone}}
+<div class="auto-deposit">
+{{/is-standalone}}
+
+<div class="row">
 	<div class="columns">
 		<!-- Title + Copy -->
 		<div class="auto-deposit-header">
@@ -6,6 +10,13 @@
 			<p>Automatically add money to your Kiva account every month so it'll be available for you to lend to the borrowers that inspire you the most.</p>
 		</div>
 		<!-- Form Component -->
-		{{> 02-organisms/55-auto-deposit/01-auto-deposit-form}}
+		<form class="auto-deposit-form">
+			{{> 02-organisms/55-auto-deposit/01-auto-deposit-inputs}}
+			{{> 02-organisms/55-auto-deposit/01-auto-deposit-submit}}
+		</form>
 	</div>
 </div>
+
+{{#is-standalone}}
+</div>
+{{/is-standalone}}
