@@ -1,6 +1,6 @@
 <!-- note, this example is checked by default-->
 <div class="fancy-checkbox-div">
-	<input type='checkbox' class='fancy-checkbox' id='your-id-here' checked>
+	<input type='checkbox' class='fancy-checkbox' id='your-id-here' {{#is-checked}}checked{{/is-checked}}>
 	<label for="your-id-here">
 		<svg class="icon icon-checkbox-checked">
 			<use xlink:href="#icon-checkbox-checked"/>

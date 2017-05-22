@@ -204,7 +204,11 @@ select {
 	.text-display {
 		cursor: pointer;
 		color: $kiva-textlink;
-		font-size: $feature-font-size;
+		font-size: $body-font-size;
+
+		@media #{$medium-up} {
+			font-size: $feature-font-size;
+		}
 
 		&:hover {
 			color: $kiva-textlink-hover;
@@ -221,8 +225,12 @@ select {
 	}
 
 	.icon-pencil {
-		height: $feature-font-size;
-		width: $feature-font-size;
+		height: $body-font-size;
+		width: $body-font-size;
+		@media #{$medium-up} {
+			height: $feature-font-size;
+			width: $feature-font-size;
+		}
 	}
 
 }
