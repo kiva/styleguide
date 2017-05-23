@@ -11,8 +11,16 @@
 		</div>
 		<!-- Form Component -->
 		<form class="auto-deposit-form">
-			{{> 02-organisms/55-auto-deposit/01-auto-deposit-inputs}}
-			{{> 02-organisms/55-auto-deposit/01-auto-deposit-submit}}
+			<div class="auto-deposit-form-inputs">
+			{{#is-standalone}}
+				{{> 02-organisms/55-auto-deposit/01-auto-deposit-inputs}}
+			{{/is-standalone}}
+			</div>
+			<div class="auto-deposit-form-submits">
+			{{#is-standalone}}
+				{{> 02-organisms/55-auto-deposit/01-auto-deposit-submit}}
+			{{/is-standalone}}
+			</div>
 		</form>
 	</div>
 </div>
