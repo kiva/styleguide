@@ -221,7 +221,11 @@
 		font-size: rem-calc(14);
 
 		a {
-			color: #0000FF;
+			color: $blue;
+
+			&:hover {
+				text-decoration: underline;
+			}
 		}
 	}
 
