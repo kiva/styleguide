@@ -206,7 +206,7 @@
 		width: rem-calc(205);
 	}
 
-	.country-filter-box, .return-to-top {
+	.country-filter-box {
 		margin: 0 rem-calc(12);
 
 		a {
@@ -214,6 +214,17 @@
 			color: $sky-blue;
 		}
 	}
+
+	.return-to-top {
+		@extend .country-filter-box;
+
+		font-size: rem-calc(14);
+
+		a {
+			color: #0000FF;
+		}
+	}
+
 
 	.partner_filter_text {
 		margin-left: rem-calc(5);
