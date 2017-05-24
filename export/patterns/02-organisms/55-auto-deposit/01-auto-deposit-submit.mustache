@@ -1,0 +1,12 @@
+<div class="submit-controls">
+	{{#is_logged_in}}
+	<div id="paypal-button"></div>
+	{{/is_logged_in}}
+	{{^is_logged_in}}
+	<div id="auto-deposit-signin-button">
+		<button class="button smaller">Sign in to set up</button>
+	</div>
+	{{/is_logged_in}}
+</div>
+<div class="disclaimer">Thanks to PayPal, Kiva receives
+	<br class="so">free payment processing.</div>
