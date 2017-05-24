@@ -51,13 +51,27 @@
 					font-weight: bold;
 					color: $kiva-text-dark;
 					height: 1.4rem;
-					width: 3rem;
+					width: rem-calc(64);
 					text-align: center;
 
 					@media #{$medium-up} {
 						font-size: $feature-font-size;
 						height: 2.4rem;
-						width: 4rem;
+						width: rem-calc(88);
+					}
+				}
+
+				.pencil-text-input input {
+					font-size: 1rem;
+					line-height: 1rem;
+					padding: 2px;
+					width: rem-calc(50);
+					height: rem-calc(24);
+
+					@media #{$medium-up} {
+						font-size: $feature-font-size;
+						height: 2.4rem;
+						width: rem-calc(78);
 					}
 				}
 			}
@@ -82,6 +96,9 @@
 				.selector {
 					input {
 						display:none;
+						height: rem-calc(30);
+						width: rem-calc(66);
+						margin: 0 0 0 4px;
 					}
 					select {
 						margin: 0 0 0 rem-calc(6);
@@ -99,7 +116,7 @@
 			.donation-selector-large {
 				display: none;
 
-				@media #{#{$screen} and (max-width:#{$sm-medium-breakpoint})} {
+				@media #{$screen} and (max-width: $sm-medium-breakpoint) {
 					.fancy-checkbox-div .fancy-checkbox-text {
 						font-size: $small-font-size;
 					}

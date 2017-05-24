@@ -6,23 +6,23 @@
 		Thanks!
 	</h1>
 
-	{{#is-donation-only}}
+	{{#is_donation_only}}
 		<svg class="icon icon-email">
 			<use xlink:href="#icon-email"/>
 		</svg>
 		<p>Every month you'll get an email confirming
-			<br class="so">your donation of ${{donation-amount}}!
-	{{/is-donation-only}}
+			<br class="so">your donation of ${{deposit_amount}}!
+	{{/is_donation_only}}
 
-	{{^is-donation-only}}
+	{{^is_donation_only}}
 		<p>Every month your balance will
-			<br class="so">grow by ${{deposit-amount}}!
+			<br class="so">grow by ${{deposit_amount}}!
 
-		{{#has-donation}}
+		{{#has_donation}}
 			<br class="so">
-			<br>(You’re also making a ${{donation-amount}} donation
+			<br>(You’re also making a ${{donation_amount}} donation
 			<br class="so">to Kiva <br class="mo">each month – thank you!)
-		{{/has-donation}}
+		{{/has_donation}}
 		</p>
 
 		<svg class="icon icon-email">
@@ -35,5 +35,5 @@
 			<br class="so">way to lend your balance</strong>
 			<br><a href="{kvurl page=settings action=credit#auto-lend}">Define your criteria</a>
 		</p>
-	{{/is-donation-only}}
+	{{/is_donation_only}}
 </div>
