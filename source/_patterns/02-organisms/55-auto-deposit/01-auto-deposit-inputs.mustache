@@ -10,14 +10,16 @@
 			   type="text"
 			   placeholder="$"
 			   value="{{deposit_amount}}"
+			   required
 			   data-abide-validator="currency"
-			   data-min-amount="0.01"
+			   data-min-amount="0.00"
 			   data-max-amount="10000">
 		<span class="featured">each month on the
 			<div class="pencil-text-input">
 				<span class="text-display">{{deposit_date}}</span>
 				<input type="text" class="text-input"
 					   value="{{deposit_date}}"
+					   required
 					   data-abide-validator="ordinalDayOfMonth"
 					   data-min-day="1"
 					   data-max-day="31">
@@ -52,7 +54,7 @@
 				   class="text-input"
 				   value="{{donation_amount}}"
 				   data-abide-validator="currency"
-				   data-min-amount="0.01"
+				   data-min-amount="0.00"
 				   data-max-amount="10000">
 			<select class="dropdown-choices-select">
 				<option id="donation-val-20s" value="{{20_percent}}">{{20_percent}}</option>
