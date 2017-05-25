@@ -59,6 +59,12 @@ module.exports = function() {
 		}
 	});
 
+	$('div.filter.return-to-top > a').click(function() {
+		$('html, body').animate({
+			scrollTop: 0
+		}, 1000);
+	});
+
 	$(window).on('resize', Foundation.utils.throttle(function() {
 		if(!is_touch) {
 			// expand all accordions if stepping out of mobile mode
