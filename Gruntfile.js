@@ -110,6 +110,8 @@ module.exports = function(grunt) {
 				, beforeBump: ['export']
 				, npm: false
 				, npmtag: false
+				, tag: false
+				, pushTags: false
 				, github: {
 					repo: 'kiva/styleguide'
 					, accessTokenVar: 'GITHUB_ACCESS_TOKE'
