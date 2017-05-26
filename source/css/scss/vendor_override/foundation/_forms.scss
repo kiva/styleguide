@@ -228,8 +228,8 @@ select {
 		height: $body-font-size;
 		width: $body-font-size;
 		@media #{$medium-up} {
-			height: $feature-font-size;
-			width: $feature-font-size;
+			height: rem-calc(20);
+			width: rem-calc(20);
 		}
 	}
 
