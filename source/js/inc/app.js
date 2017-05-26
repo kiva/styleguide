@@ -41,7 +41,7 @@ $(document).ready(function () {
 				},
 				ordinalDayOfMonth: function (el, required) {
 					if (el.value.length > 0) {
-						var validFormat = /[0-9][0-9]?[SsNnRrTt]?[TtDdHh]?/.test(el.value),
+						var validFormat = /[1-9][0-9]?[SsNnRrTt]?[TtDdHh]?/.test(el.value),
 							amount = numeral(el.value).value(),
 							min = numeral(el.getAttribute('data-min-day')).value(),
 							max = numeral(el.getAttribute('data-max-day')).value();
