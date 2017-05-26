@@ -36,42 +36,66 @@
 
 		.auto-deposit-form {
 			padding: 1.2rem 0;
+
+			[data-abide] .error small.error
+			, [data-abide] .error span.error
+			, [data-abide] span.error, [data-abide] small.error {
+				position: absolute;
+				margin: 0;
+				padding: 0;
+			}
 			
 			.lending-funds {
+				@media #{$medium-up} {
+					height: rem-calc(60)
+				}
+
 				@media #{$x-small-only} {
 					.featured {
 						font-size: $base-font-size;
 					}
 				}
 
-				.deposit-amount-input {
-					display: inline-block;
-					margin: 0;
-					font-size: $body-font-size;
-					font-weight: bold;
-					color: $kiva-text-dark;
-					height: 1.4rem;
-					width: rem-calc(64);
-					text-align: center;
+				.amount-input
+				, .day-input {
+					position: relative;
+				}
 
-					@media #{$medium-up} {
-						font-size: $feature-font-size;
-						height: 2.4rem;
-						width: rem-calc(88);
+				.amount-input {
+					display: inline-block;
+
+					.deposit-amount-input {
+						display: inline-block;
+						margin: 0;
+						font-size: $body-font-size;
+						font-weight: bold;
+						color: $kiva-text-dark;
+						height: 1.4rem;
+						width: rem-calc(64);
+						text-align: center;
+
+						@media #{$medium-up} {
+							font-size: $feature-font-size;
+							height: 2.4rem;
+							width: rem-calc(88);
+						}
 					}
 				}
 
-				.pencil-text-input input {
-					font-size: 1rem;
-					line-height: 1rem;
-					padding: 2px;
-					width: rem-calc(50);
-					height: rem-calc(24);
+				.day-input {
+					display: none;
+					input {
+						font-size: 1rem;
+						line-height: 1rem;
+						padding: 2px;
+						width: rem-calc(50);
+						height: rem-calc(24);
 
-					@media #{$medium-up} {
-						font-size: $feature-font-size;
-						height: 2.4rem;
-						width: rem-calc(78);
+						@media #{$medium-up} {
+							font-size: $feature-font-size;
+							height: 2.4rem;
+							width: rem-calc(66);
+						}
 					}
 				}
 			}
