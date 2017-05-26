@@ -100,6 +100,12 @@
 				}
 			}
 
+			.pencil {
+				.icon-pencil {
+					pointer-events: all;
+				}
+			}
+
 			.donation-selector-small {
 				display: flex;
 				justify-content: flex-start;
