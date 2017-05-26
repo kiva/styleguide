@@ -87,6 +87,7 @@
 					input {
 						font-size: 1rem;
 						line-height: 1rem;
+						text-align: center;
 						padding: 2px;
 						width: rem-calc(50);
 						height: rem-calc(24);
@@ -94,15 +95,18 @@
 						@media #{$medium-up} {
 							font-size: $feature-font-size;
 							height: 2.4rem;
-							width: rem-calc(66);
+							width: rem-calc(75);
 						}
 					}
 				}
 			}
 
-			.pencil {
-				.icon-pencil {
-					pointer-events: all;
+			/* turn on pointer events for touch events */
+			.touch {
+				.pencil {
+					.icon-pencil {
+						pointer-events: all;
+					}
 				}
 			}
 
@@ -178,6 +182,17 @@
 			}
 		}
 
+		/* Utility class to Flip Date Input Field */
+		.custom-date-input {
+			.lending-funds {
+				.pencil-text-input {
+					display: none;
+				}
+				.day-input{
+					display: inline-block;
+				}
+			}
+		}
 		/* Utility Class to Hide Donation Selectors and Show Donation Manual Inputs */
 		.custom-donation-input {
 			.donation-selector-small {
@@ -201,6 +216,7 @@
 				}
 			}
 		}
+
 	}
 
 	.expect-section-wrapper {
