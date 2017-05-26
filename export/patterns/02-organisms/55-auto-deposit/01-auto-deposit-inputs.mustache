@@ -2,69 +2,108 @@
 	<div class="auto-deposit">
 	<div class="auto-deposit-dynamic-view">
 	<div class="auto-deposit-form">
+	<form data-abide>
 {{/is-standalone}}
 
-<div class="form-controls">
-	<div class="lending-funds">
-		<input class="deposit-amount-input" type="text" placeholder="$" value="{{deposit_amount}}">
-		<span class="featured">each month on the
+	<div class="form-controls">
+		<div class="lending-funds">
+			<div class="amount-input">
+				<input class="deposit-amount-input"
+					   type="text"
+					   placeholder="$"
+					   value="{{deposit_amount}}"
+					   required
+					   data-abide-validator="currency"
+					   data-min-amount="0.00"
+					   data-max-amount="10000">
+				<small class="error">Required</small>
+			</div>
+
+			<span class="featured">each month on the</span>
+
+			<div class="day-input">
+				<input class="text-input"
+					type="text"
+					placeholder=""
+					value="{{deposit_date}}"
+					required
+					data-abide-validator="ordinalDayOfMonth"
+					data-min-day="1"
+					data-max-day="31">
+				<small class="error">Required</small>
+			</div>
+
 			<div class="pencil-text-input">
 				<span class="text-display">{{deposit_date}}</span>
-				<input type="text" class="text-input" value="{{deposit_date}}">
 				<span class="pencil">
 					  <svg class="icon icon-pencil">
 						<use xlink:href="#icon-pencil"/>
 					</svg>
-				  </span>
+				</span>
 			</div>
-		</span>
-		<small class="hide">May be processed on the last day of the month</small>
-	</div>
 
-	<div class="donation-selector-small">
-		<div class="fancy-checkbox-div">
-			<input type='checkbox' class='fancy-checkbox' id='donationCheckboxSmall' {{#has_donation}}checked{{/has_donation}}>
-			<label for="donationCheckboxSmall">
-				<svg class="icon icon-checkbox-checked">
-					<use xlink:href="#icon-checkbox-checked"/>
-				</svg>
-				<svg class="icon icon-checkbox-unchecked">
-					<use xlink:href="#icon-checkbox-unchecked"/>
-				</svg>
-			</label>
+
+
+			<small class="hide">May be processed on the last day of the month</small>
 		</div>
 
-		<div class="request">Add an optional donation to support Kiva’s costs</div>
+		<div class="donation-selector-small">
+			<div class="fancy-checkbox-div">
+				<input type='checkbox' class='fancy-checkbox' id='donationCheckboxSmall'
+					   {{#has_donation}}checked{{/has_donation}}>
+				<label for="donationCheckboxSmall">
+					<svg class="icon icon-checkbox-checked">
+						<use xlink:href="#icon-checkbox-checked"/>
+					</svg>
+					<svg class="icon icon-checkbox-unchecked">
+						<use xlink:href="#icon-checkbox-unchecked"/>
+					</svg>
+				</label>
+			</div>
 
-		
-		<div class="selector">
-			<input type="text" class="text-input" value="{{donation_amount}}">
-			<select class="dropdown-choices-select">
-				<option id="donation-val-20s" value="{{20_percent}}">{{20_percent}}</option>
-				<option id="donation-val-15s" value="{{15_percent}}" selected>{{15_percent}}</option>
-				<option id="donation-val-8s" value="{{8_percent}}">{{8_percent}}</option>
-				<option id="donation-val-0s" value="$0.00">$0.00</option>
-				<option id="donation-val-others" value="$other">Other</option>
-			</select>
+			<div class="request">Add an optional donation to support Kiva’s costs</div>
+
+			<div class="selector">
+				<input type="text"
+					   class="text-input"
+					   value="{{donation_amount}}"
+					   data-abide-validator="currency"
+					   data-min-amount="0.00"
+					   data-max-amount="10000">
+				<small class="error">Bad amount</small>
+				<select class="dropdown-choices-select">
+					<option id="donation-val-20s" value="{{20_percent}}">{{20_percent}}</option>
+					<option id="donation-val-15s" value="{{15_percent}}" selected>{{15_percent}}</option>
+					<option id="donation-val-8s" value="{{8_percent}}">{{8_percent}}</option>
+					<option id="donation-val-0s" value="$0.00">$0.00</option>
+					<option id="donation-val-others" value="$other">Other</option>
+				</select>
+			</div>
 		</div>
-	</div>
 
-	<div class="donation-selector-large">
-		<div class="fancy-checkbox-div">
-			<input type='checkbox' class='fancy-checkbox' id='donationCheckbox' {{#has_donation}}checked{{/has_donation}}>
-			<label for="donationCheckbox">
-				<svg class="icon icon-checkbox-checked">
-					<use xlink:href="#icon-checkbox-checked"/>
-				</svg>
-				<svg class="icon icon-checkbox-unchecked">
-					<use xlink:href="#icon-checkbox-unchecked"/>
-				</svg>
-			</label>
+		<div class="donation-selector-large">
+			<div class="fancy-checkbox-div">
+				<input type='checkbox' class='fancy-checkbox' id='donationCheckbox'
+					   {{#has_donation}}checked{{/has_donation}}>
+				<label for="donationCheckbox">
+					<svg class="icon icon-checkbox-checked">
+						<use xlink:href="#icon-checkbox-checked"/>
+					</svg>
+					<svg class="icon icon-checkbox-unchecked">
+						<use xlink:href="#icon-checkbox-unchecked"/>
+					</svg>
+				</label>
 
-			<span class="fancy-checkbox-text">Add an optional
+				<span class="fancy-checkbox-text">Add an optional
 				<div class="pencil-dropdown">
 					<span class="text-display">{{donation_amount}}</span>
-					<input type="text" class="text-input" value="{{donation_amount}}">
+					<input class="text-input"
+						type="text"
+						value="{{donation_amount}}"
+						data-abide-validator="currency"
+						data-min-amount="0.00"
+						data-max-amount="10000">
+					<small class="error">Bad amount</small>
 					<span class="edit-controls">
 					  <span class="pencil">
 						  <svg class="icon icon-pencil">
@@ -82,11 +121,12 @@
 				</div>
 				donation to support Kiva’s costs
 			</span>
+			</div>
 		</div>
 	</div>
-</div>
 
 {{#is-standalone}}
+	</form>
 	</div>
 	</div>
 	</div>

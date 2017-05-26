@@ -63,18 +63,34 @@
 	var FastClick = __webpack_require__(21);
 	var numeral = __webpack_require__(22);
 
-	$(document).ready(function() {
+	$(document).ready(function () {
 		$(document).foundation({
 			abide: {
 				live_validate: false
 				, timeout: 0
 				, validators: {
-					currency: function(el, required) {
-						if(el.value.length > 0) {
+					currency: function (el, required) {
+						if (el.value.length > 0) {
 							var validFormat = /^\$?\d{1,3}(?:,?\d{3})*(?:\.\d{1,2})?$/.test(el.value),
 								amount = numeral(el.value).value(),
 								min = numeral(el.getAttribute('data-min-amount')).value(),
 								max = numeral(el.getAttribute('data-max-amount')).value();
+
+							min = min === null ? amount : min; // in case of null, set to amount so it will pass
+							max = max === null ? amount : max; // in case of null, set to amount so it will pass
+
+							return validFormat && amount >= min && amount <= max;
+						}
+						else {
+							return !required;
+						}
+					},
+					ordinalDayOfMonth: function (el, required) {
+						if (el.value.length > 0) {
+							var validFormat = /[1-9][0-9]?[SsNnRrTt]?[TtDdHh]?/.test(el.value),
+								amount = numeral(el.value).value(),
+								min = numeral(el.getAttribute('data-min-day')).value(),
+								max = numeral(el.getAttribute('data-max-day')).value();
 
 							min = min === null ? amount : min; // in case of null, set to amount so it will pass
 							max = max === null ? amount : max; // in case of null, set to amount so it will pass
@@ -97,7 +113,7 @@
 			, equalizer: {
 				equalize_on_stack: true
 			}
-			, offcanvas : {
+			, offcanvas: {
 				open_method: 'move'
 			}
 			, reveal: {
