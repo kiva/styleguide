@@ -194,6 +194,15 @@
 				.day-input{
 					display: inline-block;
 				}
+
+				.after-28-note {
+					display: block;
+
+					@media#{$xlarge-up} {
+						display: inline;
+					}
+
+				}
 			}
 		}
 		/* Utility Class to Hide Donation Selectors and Show Donation Manual Inputs */
