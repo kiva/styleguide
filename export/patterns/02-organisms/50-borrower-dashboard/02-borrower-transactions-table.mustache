@@ -1,6 +1,10 @@
 <div class="small-12 large-9 columns borrower-dashboard-transactions">
 	<h1 class="impact trustee-name">My borrower transactions</h1>
 
+	{{^transactions}}
+		You have no transactions at this time.
+	{{/transactions}}
+	{{#transactions}}
 	<table class="borrower-transactions-table">
 		<thead>
 		<tr>
@@ -12,13 +16,12 @@
 		</tr>
 		</thead>
 		<tbody class="borrower-transaction-rows-region">
-		{{#transactions}}
 			<tr>
 				{{> 02-organisms/50-borrower-dashboard/02-borrower-transaction-row }}
 			</tr>
-		{{/transactions}}
 		</tbody>
 	</table>
+	{{/transactions}}
 	{{#loading}}
 		<div class="text-center">
 			{{> 01-molecules/03-media/01-loading-spinner}}
