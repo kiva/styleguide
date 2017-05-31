@@ -5,7 +5,12 @@
 				Update on {{borrowerOrGroupName}}
 			{{/previousLoanDetails}}
 			{{^previousLoanDetails}}
-				{{borrowerOrGroupName}}'s story
+				{{#isAnonymizationLevelFull}}
+					Story
+				{{/isAnonymizationLevelFull}}
+				{{^isAnonymizationLevelFull}}
+					{{borrowerOrGroupName}}'s story
+				{{/isAnonymizationLevelFull}}
 			{{/previousLoanDetails}}
 			<span class="ac-dropdown-icon">
 				<svg class="icon icon-large-chevron">

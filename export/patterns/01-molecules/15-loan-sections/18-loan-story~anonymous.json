@@ -1,0 +1,19 @@
+{
+	"borrowerOrGroupName": "Anonymous",
+	"isAnonymizationLevelFull": true,
+	"storyDescription": [""],
+	"borrowersList": "Anonymous",
+	"previousLoanDetails": null,
+	"showPreviousLoanLink": false,
+	"showPreviousLoanDetails": false,
+	"showAllPreviousLoanDetails": false,
+	"previousLoanDescription": null,
+	"allPreviousLoanDescriptions" : [],
+	"storyTranslation": {
+	"language": "",
+	"reviewerName": "",
+	"reviewerLink": "",
+	"reviewerImageLink": "",
+	"storyDescription": ["", ""]
+	}
+}
