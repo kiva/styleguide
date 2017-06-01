@@ -6,7 +6,17 @@
 
 	<p>
 	{{#hasBillingAgreement}}
-		You have an active billing agreement!
+
+		{{^hasAutoRepayment}}
+			<div class="button activate-auto-repayments-button">
+				Set up automatic repayments
+			</div>
+		{{/hasAutoRepayment}}
+
+		{{#hasAutoRepayment}}
+			you have an active auto-repayment.
+		{{/hasAutoRepayment}}
+
 	{{/hasBillingAgreement}}
 
 	{{^hasBillingAgreement}}
