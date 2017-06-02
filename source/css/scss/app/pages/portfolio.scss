@@ -167,6 +167,10 @@
 	position: relative;
 	text-align: center;
 
+	&.auto-deposit-version{
+		margin: 0 auto 3rem;
+	}
+
 	@media #{$large-up} {
 		width: 180px;
 		height: 200px;
@@ -222,6 +226,12 @@
 		.small-statistic-legend {
 			margin-top: rem-calc(8);
 		}
+	}
+
+	.credit-summary-link {
+		position: absolute;
+		bottom: -30px;
+		width: 100%;
 	}
 }
 

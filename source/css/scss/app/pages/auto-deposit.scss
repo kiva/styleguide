@@ -39,7 +39,8 @@
 
 			&[data-abide] .error small.error
 			, &[data-abide] .error span.error
-			, &[data-abide] span.error, &[data-abide] small.error {
+			, &[data-abide] span.error
+			, &[data-abide] small.error {
 				position: absolute;
 				margin: 0;
 				padding: 0;
