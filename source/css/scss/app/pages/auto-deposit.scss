@@ -37,9 +37,10 @@
 		.auto-deposit-form {
 			padding: 1.2rem 0;
 
-			[data-abide] .error small.error
-			, [data-abide] .error span.error
-			, [data-abide] span.error, [data-abide] small.error {
+			&[data-abide] .error small.error
+			, &[data-abide] .error span.error
+			, &[data-abide] span.error
+			, &[data-abide] small.error {
 				position: absolute;
 				margin: 0;
 				padding: 0;

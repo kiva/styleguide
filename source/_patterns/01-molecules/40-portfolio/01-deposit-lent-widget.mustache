@@ -1,4 +1,4 @@
-<div class="deposited-lent-widget">
+<div class="deposited-lent-widget{{#is_auto_deposit_active}} auto-deposit-version{{/is_auto_deposit_active}}">
 	<svg class="icon icon-recycle">
 		<use xlink:href="#icon-recycle"/>
 	</svg>
@@ -18,4 +18,13 @@
 			{{/total-lent-help-text}}
 		</div>
 	</div>
+
+	{{#is_auto_deposit_active}}
+		<div class="credit-summary-link small-statistic-legend">
+			{{#creditSummaryLink}}
+				{{> 01-molecules/10-lightbox/04-help-text-lightbox}}
+			{{/creditSummaryLink}}
+
+		</div>
+	{{/is_auto_deposit_active}}
 </div>

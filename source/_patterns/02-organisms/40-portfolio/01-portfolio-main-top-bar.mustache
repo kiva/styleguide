@@ -11,10 +11,16 @@
         {{/outstandingBalanceStat}}
 
         {{#availableKivaCreditStat}}
-            <div class="columns small-6 {{#freeCreditStat}}large-4{{/freeCreditStat}}{{^freeCreditStat}}large-6{{/freeCreditStat}}">
-                {{> 01-molecules/06-components/12-statistic-display-with-local-lightbox}}
-            </div>
-        {{/availableKivaCreditStat}}
+			<div class="columns small-6 {{#freeCreditStat}}large-4{{/freeCreditStat}}{{^freeCreditStat}}large-6{{/freeCreditStat}}">
+				{{#is_auto_deposit_active}}
+					{{> 01-molecules/06-components/10-statistic-display}}
+				{{/is_auto_deposit_active}}
+
+				{{^is_auto_deposit_active}}
+					{{> 01-molecules/06-components/12-statistic-display-with-local-lightbox}}
+				{{/is_auto_deposit_active}}
+			</div>
+		{{/availableKivaCreditStat}}
 
         {{#freeCreditStat}}
             <div class="columns small-12 large-4">
