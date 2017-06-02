@@ -1,6 +1,7 @@
 {
-	"deposit-amount": "",
-	"has-donation": true,
-	"is-donation-only": true,
-	"donation-amount": "25.00"
+	"deposit_amount": "",
+	"has_donation": true,
+	"is_donation-only": true,
+	"donation_amount": "25.00",
+	"credit_settings_url": "https://www.kiva.org/settings/credit"
 }
