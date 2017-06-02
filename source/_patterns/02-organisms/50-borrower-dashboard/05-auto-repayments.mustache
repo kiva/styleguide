@@ -8,9 +8,20 @@
 	{{#hasBillingAgreement}}
 
 		{{^hasAutoRepayment}}
-			<div class="button activate-auto-repayments-button">
+			{{^pausedAutoRepayment}}
+			<div class="button auto-repayment-activate">
 				Set up automatic repayments
 			</div>
+			{{/pausedAutoRepayment}}
+			{{#pausedAutoRepayment}}
+				Automatic repayments inactive - paused {{date}}
+				<a class="auto-repayment-reactivate">Activate</a>
+				|
+				<a class="auto-repayment-cancel">Cancel</a><br/>
+				{{#memo}}reason: {{memo}}{{/memo}}
+			{{/pausedAutoRepayment}}
+
+
 		{{/hasAutoRepayment}}
 
 		{{#hasAutoRepayment}}
