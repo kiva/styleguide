@@ -79,7 +79,7 @@ define("Styleguide", ["jquery"], function(__WEBPACK_EXTERNAL_MODULE_2__) { retur
 							min = min === null ? amount : min; // in case of null, set to amount so it will pass
 							max = max === null ? amount : max; // in case of null, set to amount so it will pass
 
-							return validFormat && amount >= min && amount <= max;
+							return validFormat && (amount >= min) && (amount <= max);
 						}
 						else {
 							return !required;
@@ -95,7 +95,7 @@ define("Styleguide", ["jquery"], function(__WEBPACK_EXTERNAL_MODULE_2__) { retur
 							min = min === null ? amount : min; // in case of null, set to amount so it will pass
 							max = max === null ? amount : max; // in case of null, set to amount so it will pass
 
-							return validFormat && amount >= min && amount <= max;
+							return validFormat && (amount >= min) && (amount <= max);
 						}
 						else {
 							return !required;
