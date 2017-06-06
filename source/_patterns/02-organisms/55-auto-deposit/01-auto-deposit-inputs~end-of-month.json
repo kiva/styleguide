@@ -1,0 +1,12 @@
+{
+	"is-standalone": true,
+	"deposit_amount": "$25",
+	"deposit_date": "31st",
+	"is_date_after_28th": true,
+	"donation_amount": "$3.75",
+	"has_donation": true,
+	"0_percent": "$0.00",
+	"8_percent": "$2.00",
+	"15_percent": "$3.75",
+	"20_percent": "$5.00"
+}
