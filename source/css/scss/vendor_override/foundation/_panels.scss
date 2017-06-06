@@ -1,0 +1,5 @@
+.panel {
+	&.callout {
+		border-color: scale-color($callout-panel-bg, $lightness: -11%);
+	}
+}
