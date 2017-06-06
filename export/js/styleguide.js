@@ -66,7 +66,7 @@ define("Styleguide", ["jquery"], function(__WEBPACK_EXTERNAL_MODULE_2__) { retur
 	$(document).ready(function () {
 		$(document).foundation({
 			abide: {
-				live_validate: false
+				live_validate: true
 				, timeout: 0
 				, validators: {
 					currency: function (el, required) {

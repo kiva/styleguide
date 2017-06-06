@@ -66,7 +66,7 @@
 	$(document).ready(function () {
 		$(document).foundation({
 			abide: {
-				live_validate: false
+				live_validate: true
 				, timeout: 0
 				, validators: {
 					currency: function (el, required) {
