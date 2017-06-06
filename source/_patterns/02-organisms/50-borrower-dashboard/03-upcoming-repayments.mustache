@@ -12,15 +12,24 @@
 			<tr {{#overdue}}class="overdue"{{/overdue}}>
 				<td>{{amount}}</td>
 				<td>{{#overdue}}Immediately{{/overdue}}{{^overdue}}{{dueDate}}{{/overdue}}</td>
-				<td><a href="{{payNowUrl}}" class="small button">Pay now</a></td>
+				{{#hasAutoRepayment}}
+					<td style="text-align: center;">
+						<i>Automatic repayments active</i><br/>
+						<a class="auto-repayment-navigate">View/Edit</a>
+					</td>
+				{{/hasAutoRepayment}}
+				{{^hasAutoRepayment}}
+					<td><a href="{{payNowUrl}}" class="small button">Pay now</a></td>
+				{{/hasAutoRepayment}}
 			</tr>
-			{{#nextRepayment}}
+			{{! i think this block only shows when there is an overdue repayment }}
+			{{#nextRepayment}}{{#overdue}}
 				<tr>
 					<td>{{amount}}</td>
 					<td>{{dueDate}}</td>
 					<td></td>
 				</tr>
-			{{/nextRepayment}}
+			{{/overdue}}{{/nextRepayment}}
 		</tbody>
 	</table>
 	<div class="more-info">

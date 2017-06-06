@@ -8,14 +8,15 @@
 	"amountLeft": "7,725",
 	"totalLoanAmount": "10,000",
 	"lenderCount": 39,
-	"actionButton": {
-		"url": "#",
-		"text": "Make repayment"
+	"hasAutoRepayment": true,
+	"nextRepayment": {
+		"amount": "260.77",
+		"date": "March 20th"
 	},
+	"actionButton": false,
 	"repayments": {
-		"amount": "$260.77",
+		"amount": "260.77",
 		"dueDate": "March 20th, 2017",
-		"payNowUrl": "#",
 		"scheduleUrl": "#"
 	}
 }

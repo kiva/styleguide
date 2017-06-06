@@ -14,19 +14,32 @@
 			</div>
 			{{/pausedAutoRepayment}}
 			{{#pausedAutoRepayment}}
-				Automatic repayments inactive - paused {{date}}
-				<a class="auto-repayment-reactivate">Activate</a>
-				|
-				<a class="auto-repayment-cancel">Cancel</a><br/>
-				{{#memo}}reason: {{memo}}{{/memo}}
+				<div class="panel callout">
+					<div style="float: right; margin-left: 1rem;">
+						<nobr><a class="auto-repayment-reactivate">Activate</a>
+						| <a class="auto-repayment-cancel">Cancel</a></nobr>
+					</div>
+					Automatic repayments inactive - paused <nobr>{{date}}</nobr><br/>
+					{{#memo}}reason: {{memo}}{{/memo}}
+				</div>
 			{{/pausedAutoRepayment}}
-
-
 		{{/hasAutoRepayment}}
 
 		{{#hasAutoRepayment}}
-			you have an active auto-repayment.
-			<a class="auto-repayment-pause">Pause</a>
+			<div class="panel">
+				<div style="float: right; margin-left: 1rem;">
+					<nobr><a class="auto-repayment-pause">Pause</a>
+						| <a class="auto-repayment-replace">Replace</a></nobr>
+				</div>
+				{{#nextRepayment}}
+					Next payment of <b>${{amount}}</b> will be automatically
+					repaid on <b><nobr>{{date}}</nobr></b>
+				{{/nextRepayment}}
+				{{#preDisbursal}}
+					Enrolled in automatic repayments. Your first repayment
+					will be scheduled once your loan funds are sent to you.
+				{{/preDisbursal}}
+			</div>
 		{{/hasAutoRepayment}}
 
 	{{/hasBillingAgreement}}
