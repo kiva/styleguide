@@ -144,4 +144,6 @@ $letter-colors: (
 }
 
 // panel stuff
-$callout-panel-bg: scale-color($vivid-yellow, $lightness: 50%);
+$callout-panel-bg: $kiva-alert-yellow;
+
+	// scale-color($kiva-alert-yellow, $lightness: 50%);
