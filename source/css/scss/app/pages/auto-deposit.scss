@@ -201,14 +201,8 @@
 				.day-input{
 					display: inline-block;
 				}
-
 				.after-28-note {
-					display: block;
-
-					@media#{$xlarge-up} {
-						display: inline;
-					}
-
+					display: none;
 				}
 			}
 		}
