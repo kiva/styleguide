@@ -1,0 +1,8 @@
+{
+	"hasBillingAgreement": true,
+	"hasAutoRepayment": false,
+	"pausedAutoRepayment": {
+		"date": "May 30th, 2017",
+		"memo": "paused by borrower"
+	}
+}

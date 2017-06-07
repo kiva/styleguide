@@ -1,0 +1,8 @@
+{
+	"hasBillingAgreement": true,
+	"hasAutoRepayment": true,
+	"nextRepayment": {
+		"amount": "260.77",
+		"date": "March 20th"
+	}
+}

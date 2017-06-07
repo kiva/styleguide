@@ -142,3 +142,8 @@ $letter-colors: (
 .kiva-darkgreen-bg {
 	background-color: $kiva-darkgreen;
 }
+
+// panel stuff
+$callout-panel-bg: $kiva-alert-yellow;
+
+	// scale-color($kiva-alert-yellow, $lightness: 50%);
