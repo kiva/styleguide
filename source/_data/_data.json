@@ -5054,31 +5054,49 @@
 	],
 	"creditSummaryDebits": [
 		{
-			"name": "Loan purchases",
-			"amount": "($200.00)"
+			"name": "Donations to Kiva",
+			"amount": "($95.27)"
 		},
 		{
-			"name": "Loan repayment currency losses",
-			"amount": "($9.12)"
+			"name": "Currency losses",
+			"amount": "($35.85)"
+		},
+		{
+			"name": "Default losses",
+			"amount": "($84.87)"
+		},
+		{
+			"name": "Kiva Card purchase",
+			"amount": "($300.00)"
+		},
+		{
+			"name": "Withdrawals",
+			"amount": "($1.74)"
 		}
 	],
 	"creditSummaryCredits": [
 		{
-			"name": "Deposits",
-			"amount": "1.73"
+			"name": "Your deposits",
+			"amount": "$956.28"
 		},
 		{
-			"name": "Direct loan repayments",
-			"amount": "27.31"
+			"name": "Deposits by Kiva",
+			"amount": "$0.01"
 		},
 		{
-			"name": "Loan repayments",
-			"amount": "475.98"
+			"name": "Kiva Card redemptions",
+			"amount": "$75.00"
+		},
+		{
+			"name": "Kiva Card cancellations",
+			"amount": "$150.00"
 		}
 	],
-	"totalCredits": "$505.02",
-	"totalDebits": "($209.12)",
-	"availableKivaCredit": "295.90",
+	"totalCredits": "$1,181.29",
+	"totalDebits": "($517.73)",
+	"outstandingBalance": "$626.91",
+	"kivaCredit": "$49.14",
+	"availableKivaCredit": "$663.56",
 	"tab-set": [
 		{
 			"id": "tab-1",
