@@ -10,21 +10,33 @@
 		overflow-x: scroll;
 		background-color: $white;
 
+		table tr:nth-of-type(even) {
+			background-color: $kiva-bg-darkgray;
+		}
+
 		.credit-summary {
 			border-style: none;
+		}
+
+		th#creditsDescriptor {
+			background-color: $kiva-stroke-gray;
 		}
 
 		.totalCredit, .totalDebit, .creditSummaryTotal {
 			font-size: $section-head-font-size - $section-head-font-size-reduction;
 			line-height: $section-head-line-height - $section-head-line-height-reduction;
 			background-color: $white;
-			padding-bottom: 1rem;
+			padding-top: 0;
+			padding-bottom: rem-calc(15);
 
 			@media #{$large-up} {
 				font-size: $section-head-font-size;
 				line-height: $section-head-line-height;
-				padding-bottom: 2rem;
 			}
+		}
+
+		.creditSummaryTotal {
+			color: $kiva-text-dark;
 		}
 
 		.totalCredit {

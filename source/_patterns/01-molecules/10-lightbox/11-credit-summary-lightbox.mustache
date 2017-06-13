@@ -14,11 +14,10 @@
                 <p>Please note, summary data may be up to one hour old.</p>
 
                 <div class="credit-summary-wrapper">
-                    <table class="credit-summary" role="grid" summary="Credit summary for the logged in lender (credits).">
+                    <table class="credit-summary" role="grid">
                         <thead>
                             <tr>
-                                <th id="creditsDescriptor" class="text-left">Credits</th>
-                                <th id="amount" class="text-right">Amount</th>
+                                <th id="creditsDescriptor" class="text-left" colspan="2">Deposits</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -29,24 +28,49 @@
                                 </tr>
                             {{/creditSummaryCredits}}
                             <tr>
-                                <td headers="creditsDescriptor" class="text-left totalCredit">Total credits</td>
+                                <td headers="creditsDescriptor" class="text-left totalCredit">Subtotal</td>
                                 <td headers="amount" class="text-right totalCredit">{{totalCredits}}</td>
                             </tr>
-                            {{#creditSummaryDebits}}
-                                <tr>
-                                    <td headers="debitsDescriptor" class="text-left">{{name}}</td>
-                                    <td headers="amount" class="text-right">{{amount}}</td>
-                                </tr>
-                            {{/creditSummaryDebits}}
+                    </table>
+                    <table class="credit-summary" role="grid">
+                        <thead>
                             <tr>
-                                <td headers="debitsDescriptor" class="text-left totalDebit">Total debits</td>
-                                <td headers="amount" class="text-right totalDebit">{{totalDebits}}</td>
+                                <th id="creditsDescriptor" class="text-left" colspan="2">Deductions</th>
                             </tr>
+                        </thead>
+                        <tbody>
+                        {{#creditSummaryDebits}}
                             <tr>
-                                <td headers="debitsDescriptor" class="text-left creditSummaryTotal">Available Kiva credit</td>
-                                <td headers="amount" class="text-right creditSummaryTotal">{{availableKivaCredit}}</td>
+                                <td headers="debitsDescriptor" class="text-left">{{name}}</td>
+                                <td headers="amount" class="text-right">{{amount}}</td>
                             </tr>
+                        {{/creditSummaryDebits}}
+                        <tr>
+                            <td headers="debitsDescriptor" class="text-left totalDebit">Subtotal</td>
+                            <td headers="amount" class="text-right totalDebit">{{totalDebits}}</td>
+                        </tr>
                         </tbody>
+                    </table>
+                    <table class="credit-summary" role="grid">
+                        <tr>
+                            <td headers="debitsDescriptor" class="text-left creditSummaryTotal">Total credit in Kiva</td>
+                            <td headers="amount" class="text-right creditSummaryTotal">{{availableKivaCredit}}</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                    <table class="credit-summary" role="grid">
+                        {{#outstandingBalance}}
+                        <tr>
+                            <td headers="debitsDescriptor" class="text-left">Outstanding balance</td>
+                            <td headers="amount" class="text-right">{{outstandingBalance}}</td>
+                        </tr>
+                        {{/outstandingBalance}}
+                        {{#kivaCredit}}
+                        <tr>
+                            <td headers="debitsDescriptor" class="text-left">Kiva credit</td>
+                            <td headers="amount" class="text-right">{{kivaCredit}}</td>
+                        </tr>
+                        {{/kivaCredit}}
                     </table>
                 </div>
             </div>
