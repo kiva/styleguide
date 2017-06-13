@@ -61,7 +61,12 @@
                     <table class="credit-summary" role="grid">
                         {{#outstandingBalance}}
                         <tr>
-                            <td headers="debitsDescriptor" class="text-left">Outstanding balance</td>
+                            <td headers="debitsDescriptor" class="text-left">
+                                Outstanding balance
+                                {{#outstandingPromoBalance}}
+                                    (minus {{outstandingPromoBalance}} promo credit balance):
+                                {{/outstandingPromoBalance}}
+                            </td>
                             <td headers="amount" class="text-right">{{outstandingBalance}}</td>
                         </tr>
                         {{/outstandingBalance}}

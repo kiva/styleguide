@@ -5095,6 +5095,7 @@
 	"totalCredits": "$1,181.29",
 	"totalDebits": "($517.73)",
 	"outstandingBalance": "$626.91",
+	"outstandingPromoBalance": "$12.50",
 	"kivaCredit": "$49.14",
 	"availableKivaCredit": "$663.56",
 	"tab-set": [
