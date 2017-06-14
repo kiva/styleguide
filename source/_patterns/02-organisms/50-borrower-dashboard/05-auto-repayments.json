@@ -2,23 +2,48 @@
 	"faqs": [
 		{
 			"id": "faq-1",
-			"question": "Can I cancel anytime?",
-			"answer": "Yes. Auto repayments can be canceled or edited at any time. To do, so go to your <a href='{kvurl page=borrowerDashboard action=automaticRepayments}'>automatic repayments</a>."
+			"question": "What are the benefits of making repayments automatically on my loan?",
+			"answer": "All you have to do is sign up once and we do the rest for you. There is a lot to remember running a business. We want to make the Kiva experience as easy as possible for you to stay current on your loan payments. Never forget a payment to your lenders, build a great business credit score, and earn the chance to apply for another Kiva loan."
 		},
 		{
 			"id": "faq-2",
-			"question": "Are my funds automatically redeemed to lenders after they are repaid?",
-			"answer": "Yes. By default, when you set up auto-repayments, your funds will be added to your account disbursed to the lenders within a couple days."
+			"question": "Can I stop automatic payments once signed up?",
+			"answer": "You are able to pause/restart automatic payments at any time once signed up from your <a href='http://kiva.org/my/borrower'>borrower dashboard</a>. Our team will always be available to help you through this process. "
 		},
 		{
 			"id": "faq-3",
-			"question": "Will I be notified when an auto-repayment occurs?",
-			"answer": "Yes. You’ll get a receipt from PayPal notifying you every time an auto-repayment is made."
+			"question": "At what point will Kiva pull the funds out of my account?",
+			"answer": "Once automatic repayments are enabled, Kiva will attempt to withdraw the funds from your account the day your payment is due.  If successful, the repayment will then be processed and reflected on your repayment schedule to lenders within 1 business day."
 		},
 		{
 			"id": "faq-4",
-			"question": "Can I make auto repayments on a weekly, quarterly or annual basis?",
-			"answer": "At this time we only offer auto repayments on a monthly basis. If you’re interested in being alerted as to when we launch other frequencies, please email <a mailto='contactus@kiva.org'>contactus@kiva.org</a> and let us know."
+			"question": "Will I be notified before funds are pulled from my account?",
+			"answer": "We will notify you 7 days in advance of the automatic payment, and on the day of payment."
+		},
+		{
+			"id": "faq-5",
+			"question": "Do I need a credit card to sign up for automatic repayments?",
+			"answer": "We are able to offer automatic repayments through PayPal. PayPal requires that you have a credit/debit card, or ACH to enable automatic repayments as a backup in case there aren’t funds in your bank account or PayPal account. That said, if we are unable to process your payment on the first attempt, we will pause auto-repayments and will not charge your backup card. This means you will have to make the missed payment manually."
+		},
+		{
+			"id": "faq-6",
+			"question": "Should I use my credit card as my primary payment method through PayPal?",
+			"answer": "No, we strongly discourage using a credit card to make your auto-payments through PayPal. Your Kiva loan has 0% interest, but credit cards have high interest rates. Instead, you should use your bank account to make payments so you don't end up owing interest on a credit card."
+		},
+		{
+			"id": "faq-7",
+			"question": "My PayPal account has recently changed. Do I need to modify my settings?",
+			"answer": "If you’ve changed the PayPal account that you use for your Kiva loan repayments, you’ll need to change your automatic repayments to be pulled from that PayPal account. You can do so if you are already signed up for automatic repayments with a previous account by clicking “Replace” in your above settings."
+		},
+		{
+			"id": "faq-8",
+			"question": "Can I still pay ahead of time?",
+			"answer": "PayPal will only attempt to bill you the amount outstanding on your current repayment due. If you pay manually ahead of time, PayPal will not bill you until there is an amount due per your repayment schedule."
+		},
+		{
+			"id": "faq-9",
+			"question": "Can I change the frequency of my automatic repayments?",
+			"answer": "At this time, auto-payments can only be made once a month. If you are interested in making payments more often, please let us know, since we may offer this feature in the future. Please let us know if you are interested <a href='https://docs.google.com/forms/d/e/1FAIpQLSc00nzFzMEG8bhAsyOB9RPZH_jkIimcH3gXrq0GR9VH_1hsPQ/viewform?c=0&w=1'>here</a>."
 		}
 	]
 }
