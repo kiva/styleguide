@@ -1,5 +1,5 @@
 {
-    "is_logged_in": false
+    "is_logged_in": true
     , "has_legacy_subscription": false
     , "has_billing_agreement": false
     , "has_auto_deposit": false
