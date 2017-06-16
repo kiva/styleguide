@@ -14,14 +14,14 @@
 		{{/has_auto_deposit}}
 
 		{{#has_auto_deposit}}
-			<div class="auto-deposit-notice existing-auto-deposit-notice">
+			<div class="large-6 medium-8 panel callout auto-deposit-notice existing-auto-deposit-notice">
 				<p>You already have an existing auto deposit. Changes can be made in your <a href="/settings/credit" title="Credit settings">Credit settings</a>.
 			</div>
 		{{/has_auto_deposit}}
 	{{/has_legacy_subscription}}
 
 	{{#has_legacy_subscription}}
-		<div class="auto-deposit-notice existing-legacy-subscription-notice">
+		<div class="large-6 medium-8 panel callout auto-deposit-notice existing-legacy-subscription-notice">
 			<p>Because you have an existing auto deposit, to make changes you’ll need to <a href="{{cancel_subscription_link}}">cancel your current auto deposit via PayPal</link> and then return to Kiva to set up a new one.</p>
 		</div>
 	{{/has_legacy_subscription}}
