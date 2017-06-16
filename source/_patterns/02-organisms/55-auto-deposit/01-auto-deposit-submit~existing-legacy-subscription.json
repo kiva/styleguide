@@ -1,6 +1,6 @@
 {
     "is_logged_in": false
-    , "has_legacy_subscription": false
+    , "has_legacy_subscription": true
     , "has_billing_agreement": false
     , "has_auto_deposit": false
     , "cancel_subscription_link": "https://sandbox.paypal.com"
