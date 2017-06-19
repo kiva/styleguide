@@ -1,0 +1,119 @@
+{{#is-standalone}}
+	<form data-abide="ajax">
+{{/is-standalone}}
+
+<h3 class="formTitle">Auto deposits</h3>
+{{^has_auto_deposit}}
+	<p>
+		<a href="{{setup_url}}">Add money to your account every month</a>
+	</p>
+{{/has_auto_deposit}}
+{{#has_auto_deposit}}
+	<div class="date-details">
+		{{#day_of_month}}
+			<span>On the </span>
+			{{#edit_date}}
+				<div class="day-input">
+					<input type="text"
+						   value="{{day_of_month}}"
+						   data-abide-validator="ordinalDayOfMonth"
+						   data-min-day="1"
+						   data-max-day="31"
+						   required>
+					<small class="error">
+						<svg class="icon icon-error">
+							<use xlink:href="#icon-error"/>
+						</svg>
+						Enter day of month - 1 to 31
+					</small>
+				</div>
+			{{/edit_date}}
+			{{^edit_date}}
+				<a href="#" class="edit-day">
+					{{day_of_month}}
+					<svg class="icon icon-pencil">
+						<use xlink:href="#icon-pencil"/>
+					</svg>
+				</a>
+			{{/edit_date}}
+			<span> of each</span>
+		{{/day_of_month}}
+		{{^day_of_month}}
+			<span>Each</span>
+		{{/day_of_month}}
+		<span> month {{total_amount}} will be transferred from PayPal.</span>
+		{{^legacy}}
+			<a class="cancel-deposit" href="#">Cancel auto deposit</a>
+		{{/legacy}}
+		{{#is_date_after_28th}}
+			{{^edit_date}}
+				<small class="after-28-note">(May be processed on the last day of the month)</small>
+			{{/edit_date}}
+		{{/is_date_after_28th}}
+	</div>
+	<div class="deposit-details">
+		<div class="deposit-amount-input">
+			{{#legacy}}
+				<span>{{deposit_amount}}</span>
+			{{/legacy}}
+			{{^legacy}}
+				<input type="text"
+					   maxlength="9"
+					   placeholder="$"
+					   value="{{deposit_amount}}"
+					   data-abide-validator="currency"
+					   data-min-amount="0.00"
+					   data-max-amount="10000"
+					   required>
+				<small class="error">
+					<svg class="icon icon-error">
+						<use xlink:href="#icon-error"/>
+					</svg>
+					$10,000 limit
+				</small>
+			{{/legacy}}
+			<label>Deposit into your account</label>
+		</div>
+		<div class="donation-amount-input">
+			{{#legacy}}
+				<span>{{donation_amount}}</span>
+			{{/legacy}}
+			{{^legacy}}
+				<input type="text"
+					   maxlength="9"
+					   placeholder="$"
+					   value="{{donation_amount}}"
+					   data-abide-validator="currency"
+					   data-min-amount="0.00"
+					   data-max-amount="10000"
+					   required>
+				<small class="error">
+					<svg class="icon icon-error">
+						<use xlink:href="#icon-error"/>
+					</svg>
+					$10,000 limit
+				</small>
+			{{/legacy}}
+			<label>Donation to Kiva</label>
+		</div>
+	</div>
+	{{^legacy}}
+		<button type="submit" class="mini secondary button" {{^changed}}disabled{{/changed}}>Save auto deposit</button>
+		{{#changed}}<a class="reset-form" href="#">Reset</a>{{/changed}}
+	{{/legacy}}
+	{{#legacy}}
+		<div class="panel callout">
+			<p>
+				Because you have an existing auto deposit, to make changes you'll need to <a href="{{cancel_url}}">cancel your current auto deposit via PayPal</a> and then return to Kiva to set up a new one.
+				{{#other_cancel_url}}
+					<br/><br/>
+					Looks like you have two. You'll also need to <a href="{{other_cancel_url}}">cancel your second auto deposit via PayPal.</a>
+				{{/other_cancel_url}}
+			</p>
+		</div>
+	{{/legacy}}
+{{/has_auto_deposit}}
+
+{{#is-standalone}}
+	</form>
+{{/is-standalone}}
