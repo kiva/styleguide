@@ -34,8 +34,12 @@
 			pointer-events: auto;
 		}
 
+		.auto-deposit-header {
+			max-width: $large-breakpoint;
+		}
+
 		.auto-deposit-form {
-			padding: 1.2rem 0;
+			padding: rem-calc(9) 0;
 
 			&[data-abide] .error small.error
 			, &[data-abide] .error span.error
@@ -50,7 +54,7 @@
 			
 			.lending-funds {
 				@media #{$medium-up} {
-					height: rem-calc(60)
+					height: rem-calc(35)
 				}
 
 				@media #{$x-small-only} {
@@ -81,7 +85,7 @@
 						@media #{$medium-up} {
 							font-size: $feature-font-size;
 							height: 2.4rem;
-							width: rem-calc(88);
+							width: rem-calc(135);
 						}
 					}
 
@@ -172,7 +176,7 @@
 
 				@media #{$medium-up} {
 					display: block;
-					margin: 2rem 0;
+					margin: rem-calc(35) 0 rem-calc(26);
 				}
 
 				.pencil-dropdown {
@@ -181,6 +185,7 @@
 					.dropdown-choices {
 						top: -7px;
 						left: -83px;
+						box-shadow: 0 2px 4px 0 rgba(0,0,0,0.50);
 					}
 				}
 			}
