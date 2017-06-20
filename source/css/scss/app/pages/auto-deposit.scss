@@ -251,7 +251,9 @@
 		text-align: center;
 		margin: 1rem auto 2rem;
 
-		//
+		h2 {
+			font-size: rem-calc(21);
+		}
 
 		svg.icon {
 			width: rem-calc(100);
