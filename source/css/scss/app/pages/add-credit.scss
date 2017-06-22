@@ -8,9 +8,12 @@
 
 	.add-credit-form {
 		.monthly-deposit-field, #continue-button {
-			margin-bottom: 1.5rem;
+			margin-bottom: 1rem;
 		}
-
+		.monthly-deposit-field a {
+			font-size: $small-font-size;
+		}
+		
 		.paypal-message {
 			color: $kiva-text-light;
 		}
