@@ -41,12 +41,13 @@
 		{{^day_of_month}}
 			<span>Each</span>
 		{{/day_of_month}}
-		<span> month {{total_amount}} will be transferred from PayPal.</span>
+		<span> month </span><span class="total-amount">{{total_amount}}</span><span> will be transferred from PayPal.</span>
 		{{^legacy}}
 			<a class="cancel-deposit" href="#">Cancel auto deposit</a>
 		{{/legacy}}
 		{{#is_date_after_28th}}
 			{{^edit_date}}
+				<br/>
 				<small class="after-28-note">(May be processed on the last day of the month)</small>
 			{{/edit_date}}
 		{{/is_date_after_28th}}
@@ -98,8 +99,16 @@
 		</div>
 	</div>
 	{{^legacy}}
-		<button type="submit" class="mini secondary button" {{^changed}}disabled{{/changed}}>Save auto deposit</button>
-		{{#changed}}<a class="reset-form" href="#">Reset</a>{{/changed}}
+		<button type="submit" class="submit-form mini secondary button" {{^submittable}}disabled="disabled"{{/submittable}}>
+			{{^loading}}
+				Save auto deposit
+			{{/loading}}
+			{{#loading}}
+				{{> molecules-loading-spinner }}
+				Saving
+			{{/loading}}
+		</button>
+		<a class="reset-form {{^loading}}{{#changed}}visible{{/changed}}{{/loading}}" href="#">Reset</a>
 	{{/legacy}}
 	{{#legacy}}
 		<div class="panel callout">
