@@ -18,10 +18,16 @@
 				</small>
 		  </div>
 			<div class="monthly-deposit-field small-12 medium-6">
-				<label>
-					<input type="checkbox" />
-					Make this a monthly deposit.
-				</label>
+				{{#is_auto_deposit_active}}
+					<p><a class="small" href="{{auto_deposit_url}}">Make this a monthly deposit</a></p>
+				{{/is_auto_deposit_active}}
+
+				{{^is_auto_deposit_active}}
+					<label>
+						<input type="checkbox" />
+						Make this a monthly deposit.
+					</label>
+				{{/is_auto_deposit_active}}
 			</div>
 		  <button id="continue-button" type="submit" class="small-12 medium-6">Continue</button>
 		</form>
