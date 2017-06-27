@@ -104,8 +104,10 @@
 				{{/is_direct_loan}}
 
 				{{#comments_info}}
-				<hr class="line-break"/>
-					{{> 01-molecules/15-loan-sections/31-comments-and-updates.mustache}}
+					{{#showCommentUpdateSection}}
+						<hr class="line-break"/>
+						{{> 01-molecules/15-loan-sections/31-comments-and-updates.mustache}}
+					{{/showCommentUpdateSection}}
 				{{/comments_info}}
 
 				{{#show_tags}}
