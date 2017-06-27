@@ -3,6 +3,7 @@
   "allowSubscribing": false,
   "showCommentUpdateSection": true,
   "commentsAndUpdatesCount": 4,
+  "showCommentUpdateSection": true,
   "conversationGuidelinesHelpText": {
     "dataRevealId": "conversation-guidelines-lightbox",
     "descriptionTitle": "What are lender comments?",

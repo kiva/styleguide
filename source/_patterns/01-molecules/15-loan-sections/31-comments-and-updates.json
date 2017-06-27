@@ -1,5 +1,6 @@
 {
-  "comments_info": {
+    "showCommentUpdateSection": true,
+    "comments_info": {
     "isLoggedInUserAdmin": false,
     "allowSubscribing": true,
     "commentsAndUpdatesCount": 19,
