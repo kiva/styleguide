@@ -100,6 +100,22 @@ define("Styleguide", ["jquery"], function(__WEBPACK_EXTERNAL_MODULE_2__) { retur
 						else {
 							return !required;
 						}
+					},
+					sum: function (el) {
+						var sum = el.getAttribute('data-sum-inputs').split(',')
+									.map(function (id) {
+										return document.getElementById(id);
+									})
+									.reduce(function (total, input) {
+										return total + (numeral(input && input.value).value() || 0);
+									}, 0),
+							min = numeral(el.getAttribute('data-min-sum')).value(),
+							max = numeral(el.getAttribute('data-max-sum')).value();
+
+						min = min === null ? sum : min; // in case of null, set to sum so it will pass
+						max = max === null ? sum : max; // in case of null, set to sum so it will pass
+
+						return sum >= min && sum <= max;
 					}
 				}
 			}
