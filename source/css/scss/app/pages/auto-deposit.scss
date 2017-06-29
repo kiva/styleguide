@@ -176,7 +176,7 @@
 
 				@media #{$medium-up} {
 					display: block;
-					margin: rem-calc(35) 0 rem-calc(26);
+					margin: rem-calc(35) 0 rem-calc(13);
 				}
 
 				.pencil-dropdown {
@@ -192,6 +192,21 @@
 
 			input[type="text"] {
 				color: $kiva-text-dark;
+			}
+
+			.total-amount-minimum, .total-amount-maximum {
+				input {
+					visibility: hidden;
+					padding: 0;
+					margin: 0 0 -1.2rem;
+					height: 1.2rem;
+				}
+
+				&.error small.error {
+					position: static;
+					width: auto;
+					margin-bottom: 1rem;
+				}
 			}
 
 			.disclaimer {

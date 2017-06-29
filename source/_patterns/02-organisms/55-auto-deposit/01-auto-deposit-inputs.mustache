@@ -8,7 +8,8 @@
 	<div class="form-controls">
 		<div class="lending-funds">
 			<div class="amount-input">
-				<input class="deposit-amount-input"
+				<input id="deposit-amount-input"
+					   class="deposit-amount-input"
 					   type="text"
 					   maxlength="9"
 					   placeholder="$"
@@ -75,7 +76,8 @@
 			<div class="request">Add an optional donation to support Kiva’s costs</div>
 
 			<div class="selector">
-				<input type="text"
+				<input id="donation-amount-input"
+					   type="text"
 					   class="text-input"
 					   value="{{donation_amount}}"
 					   data-abide-validator="currency"
@@ -146,6 +148,32 @@
 				donation to support Kiva’s costs
 			</span>
 			</div>
+		</div>
+
+		<div class="total-amount-minimum">
+			<input type="text"
+				   data-abide-validator="sum"
+				   data-min-sum="0.01"
+				   data-sum-inputs="deposit-amount-input,donation-amount-input">
+			<small class="error">
+				<svg class="icon icon-error">
+					<use xlink:href="#icon-error"/>
+				</svg>
+				To set up an auto deposit, please enter an amount greater than $0.
+			</small>
+		</div>
+
+		<div class="total-amount-maximum">
+			<input type="text"
+				   data-abide-validator="sum"
+				   data-max-sum="10000"
+				   data-sum-inputs="deposit-amount-input,donation-amount-input">
+			<small class="error">
+				<svg class="icon icon-error">
+					<use xlink:href="#icon-error"/>
+				</svg>
+				The maximum auto deposit allowed is $10,000. Please try again by entering in a smaller amount.
+			</small>
 		</div>
 	</div>
 
