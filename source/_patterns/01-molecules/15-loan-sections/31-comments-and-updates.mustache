@@ -10,6 +10,13 @@
 		</div>
 	</div>
 	<div class="ac-body" id="ac-comments-and-updates-body" aria-hidden="true">
+        {{#showMesssageMustBeALender}}
+            <ul class="updates inline-list">
+                <li>
+                    You must be a lender to comment on this loan.
+                </li>
+            </ul>
+        {{/showMesssageMustBeALender}}
         {{#comments_info.allowCommenting}}
             <form method="post" action="{{url}}" class="comment-form">
                 <fieldset>
