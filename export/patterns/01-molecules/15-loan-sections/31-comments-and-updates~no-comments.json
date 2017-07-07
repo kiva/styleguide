@@ -1,0 +1,17 @@
+{
+	"showCommentUpdateSection": true,
+	"showMesssageMustBeALender": true,
+	"comments_info": {
+		"isLoggedInUserAdmin": false,
+		"allowSubscribing": true,
+		"commentsAndUpdatesCount": 0,
+		"conversationGuidelinesHelpText": {
+			"dataRevealId": "conversation-guidelines-lightbox",
+			"descriptionTitle": "What are lender comments?",
+			"descriptionText": "Lender comments were designed to encourage conversation between Kiva lenders about specific loans and are viewable by anyone visiting Kiva. Comments on a loan can only be made by lenders who've supported that loan and should abide by Kiva's Community Guidelines: kiva.org/kiva-community-guidelines<br><br>By posting a comment you'll automatically be subscribed to email notifications of future comments on that loan, however you can always unsubscribe in your email settings. "
+		},
+		"allowCommenting": false,
+		"showSpilloverMessageForComments": false,
+		"isSubscribed": false
+	}
+}
