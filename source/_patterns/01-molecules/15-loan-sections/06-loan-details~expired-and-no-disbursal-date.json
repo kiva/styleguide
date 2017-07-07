@@ -1,0 +1,49 @@
+{
+  "repaymentTerm": 11,
+  "hasDualStatement": false,
+  "repaymentFrequency": "Monthly",
+  "disbursalDate": false,
+  "expiredAndNoDisbursalDate": true,
+  "currencyExchangeLossScenario": "N/A",
+  "fieldPartner": null,
+  "trusteeName": "Trustee Fund Kenya",
+  "borrowerPayingInterest": false,
+  "riskRatingStars": [],
+  "loanDetailsHelpText": [
+    {
+      "dataRevealId": "repayment-term-lightbox",
+      "descriptionTitle": "What does \"Repayment Term\" mean?",
+      "descriptionText": "The repayment term is the number of months it takes from the point that the loan is disbursed to the borrower to the point when the last repayment is due to be paid to Kiva lenders. "
+    },
+    {
+      "dataRevealId": "repayment-schedule-lightbox",
+      "descriptionTitle": "What is the repayment schedule?",
+      "descriptionText": "The loan's repayment schedule describes the frequency with which repayments on the loan."
+    },
+    {
+      "dataRevealId": "disbursed-date-lightbox",
+      "descriptionTitle": "What is the disbursed date?",
+      "descriptionText": "The disbursed date indicates the date that the borrower receives their loan funds from the Field Partner."
+    },
+    {
+      "dataRevealId": "currency-exchange-loss-lightbox",
+      "descriptionTitle": "What does \"Currency Exchange Loss\" mean and how could it affect my Kiva loans?",
+      "descriptionText": "When lending funds across national boundaries, the local currency in the Field Partner's country of operation may lose some of its value relative to the USD, thus requiring the Field Partner to use more of its local currency to reimburse Kiva in USD. Kiva offers Field Partners the option to protect themselves against severe currency fluctuations (a US dollar appreciation of over 10% relative to the local currency) by sharing any losses greater than 10% with Kiva lenders. By bearing these losses, lenders are able to protect the Field Partner and its borrowers from catastrophic currency devaluations."
+    },
+    {
+      "dataRevealId": "borrower-paying-interest-lightbox",
+      "descriptionTitle": "What are the interest rates Field Partners charge to borrowers?",
+      "descriptionText": "Self-sustainability is critical to creating long-term solutions to poverty alleviation, and charging interest to borrowers is necessary for microfinance institutions to achieve this. Many of Kiva's Field Partners do charge interest to borrowers, and you can find more information about these rates by looking at the Average Cost to Borrower field on each partner page (kiva.org/partners) as well as on each loan profile. These rates vary by country and partner."
+    },
+    {
+      "dataRevealId": "risk-rating-lightbox",
+      "descriptionTitle": "What is a risk rating?",
+      "descriptionText": "There are many levels of risk associated with Kiva loans, which are explained on our website here: kiva.org/about/risk"
+    },
+    {
+      "dataRevealId": "facilitated-or-endorsed-by-lightbox",
+      "descriptionTitle": "How are loans facilitated?",
+      "descriptionText": "Kiva loans are facilitated through 2 models, partner and direct, that enable us to reach the greatest number of people around the world."
+    }
+  ]
+}

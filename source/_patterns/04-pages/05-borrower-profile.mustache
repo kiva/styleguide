@@ -26,13 +26,15 @@
 
 	</div>
 
-	<hr class="line-break"/>
+	{{^expiredAndNoDisbursalDate}}
+		<hr class="line-break"/>
 
-	<div class="row">
-		<div class="small-12 columns">
-			{{> 01-molecules/15-loan-sections/21-loan-use.mustache}}
+		<div class="row">
+			<div class="small-12 columns">
+				{{> 01-molecules/15-loan-sections/21-loan-use.mustache}}
+			</div>
 		</div>
-	</div>
+	{{/expiredAndNoDisbursalDate}}
 
 	<div class="borrower-profile-pieces">
 		<div class="row">

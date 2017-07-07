@@ -1,0 +1,12 @@
+{
+	"amountLeft": 75,
+	"totalLoanAmount": 275,
+	"lenderCount": 5,
+	"meterAmountPercent": 28,
+	"status": "Expired",
+	"showRaisedInfo": false,
+	"raisedVerb": "funded",
+	"isExpiringSoon": false,
+	"loanLengthMessage": null,
+	"expiredAndNoDisbursalDate": true
+}
