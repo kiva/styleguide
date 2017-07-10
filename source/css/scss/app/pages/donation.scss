@@ -106,3 +106,17 @@
 		margin-top: rem-calc(5);
 	}
 }
+
+.donation-paypal-holder {
+	.disclaimer {
+		color: $kiva-text-light;
+	}
+}
+
+.donation-spinner {
+	.loading-spinner {
+		.line {
+			background-color: $white;
+		}
+	}
+}
