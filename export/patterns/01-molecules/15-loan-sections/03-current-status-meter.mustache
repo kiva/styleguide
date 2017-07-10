@@ -28,7 +28,12 @@
 		</div>
 		{{#lenderCount}}
 			<a kvtrackevent="Borrower Profile|click-powered by" href="{{profileLink}}#lenders-teams" class="lender-count black-underlined">
-				Powered by {{lenderCount}} lenders
+				{{#expiredAndNoDisbursalDate}}
+					Supported by {{lenderCount}} lenders
+				{{/expiredAndNoDisbursalDate}}
+				{{^expiredAndNoDisbursalDate}}
+					Powered by {{lenderCount}} lenders
+				{{/expiredAndNoDisbursalDate}}
 			</a>
 		{{/lenderCount}}
 	</div>

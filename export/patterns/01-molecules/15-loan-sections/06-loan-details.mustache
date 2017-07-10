@@ -30,7 +30,12 @@
                     <strong>{{disbursalDate}}</strong>
                 {{/disbursalDate}}
                 {{^disbursalDate}}
-                    <strong>Disbursed after fully funded on Kiva.</strong>
+                    {{#expiredAndNoDisbursalDate}}
+                        <strong>Not disbursed, expired before fully funding.</strong>
+                    {{/expiredAndNoDisbursalDate}}
+                    {{^expiredAndNoDisbursalDate}}
+                        <strong>Disbursed after fully funded on Kiva.</strong>
+                    {{/expiredAndNoDisbursalDate}}
                 {{/disbursalDate}}
             </div>
             <div id="currency-exchange-loss" class="stat">
