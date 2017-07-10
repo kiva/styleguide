@@ -1,12 +1,19 @@
 {{#is_matched}}
 	<div class="matching-message">
 		<svg class="icon icon-match"><use xlink:href="#icon-match"/></svg>
-		<span>{{matching_text}}</span>
+		<span {{^is_loan_card_view}}data-tooltip aria-haspopup="true" title="{{matching_text}}"{{/is_loan_card_view}}>{{matching_text}}</span>
 	</div>
 {{/is_matched}}
 
 {{#can_favorite}}
-	<a kvtrackevent="Lending|click-Favorite star" href="#" class="favorite-link{{#is_favorite}} is-favorite{{/is_favorite}}">
+	{{#is_loan_card_view}}
+		<a kvtrackevent="Lending|click-Favorite star" href="#" class="favorite-link{{#is_favorite}} is-favorite{{/is_favorite}}">
+	{{/is_loan_card_view}}
+
+	{{^is_loan_card_view}}
+		<a kvtrackevent="Lending|click-Favorite star" {{^is_touch}}data-tooltip aria-haspopup="true"{{/is_touch}} title="Star this loan to find it quickly later. You can view and manage your starred loans in the ‘Lend’ tab above." href="#" class="{{^is_touch}}has-tip tip-left{{/is_touch}} favorite-link{{#is_favorite}} is-favorite{{/is_favorite}}">
+	{{/is_loan_card_view}}
+
 		<svg class="icon icon-star"><use xlink:href="#icon-star"/></svg>
 	</a>
 {{/can_favorite}}
