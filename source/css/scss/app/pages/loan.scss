@@ -888,8 +888,8 @@
 			border: 1px solid $setting-button-border-color;
 
 			&:hover, &:active {
-				color: $kiva-text-light;
-				border-color: $kiva-text-light;
+				color: $kiva-textlink-hover;
+				border-color: $kiva-textlink-hover;
 			}
 		}
 
@@ -900,7 +900,6 @@
 			font-size: 1.2rem;
 			margin-bottom: 0;
 		}
-
 	}
 
 	.lend-values-button {
@@ -966,6 +965,11 @@
 		border-top: none;
 		li a {
 			font-size: 1rem;
+
+			&:hover, &:active {
+				color: $white;
+				background-color: $kiva-textlink-hover;
+			}
 		}
 	}
 
