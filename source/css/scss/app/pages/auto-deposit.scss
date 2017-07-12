@@ -9,31 +9,6 @@
 	.auto-deposit-dynamic-view {
 		position: relative;
 
-		&.loading {
-			min-height: 10rem;
-		}
-
-		.loader-overlay {
-			position: absolute;
-			width: 100%;
-			height: 100%;
-			background-color: rgba(255, 255, 255, 0.7);
-			z-index: 1;
-			pointer-events: none;
-			display: none;
-
-			.loading-spinner {
-				left: 50%;
-				top: 50%;
-				transform: translate(-50%);
-			}
-		}
-
-		&.loading .loader-overlay {
-			display: block;
-			pointer-events: auto;
-		}
-
 		.auto-deposit-header {
 			max-width: $large-breakpoint;
 		}
@@ -305,6 +280,14 @@
 
 	.faqs {
 		padding: 2.5rem 0 4rem;
+	}
+}
+
+.auto-deposit-spinner {
+	.loading-spinner {
+		.line {
+			background-color: $white;
+		}
 	}
 }
 
