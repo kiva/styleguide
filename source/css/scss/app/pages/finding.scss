@@ -114,7 +114,6 @@ $filter-menu-base-width: rem-calc(251);
 		width: 100%;
 		margin-bottom: rem-calc(20);
 		padding: rem-calc(10) 0;
-		border-bottom: 1px solid $kiva-stroke-gray;
 
 		p {
 			margin-left: rem-calc(10);
@@ -465,8 +464,8 @@ a.filter-menu-button:visited {
 	margin-right: rem-calc(6);
 	padding-right: rem-calc(4);
 	background-color: $kiva-filter-indicator-bg;
-	border: 1px solid $kiva-filter-indicator;
-	color: $kiva-filter-indicator;
+	border: 1px solid $highlight-blue;
+	color: $highlight-blue;
 
 	.close-control {
 		cursor: pointer;
@@ -474,6 +473,7 @@ a.filter-menu-button:visited {
 		margin-left: rem-calc(4);
 		padding-right: rem-calc(2);
 		pointer-events: auto;
+		font-weight: normal;
 	}
 }
 
@@ -501,4 +501,13 @@ a.filter-menu-button:visited {
 		border-bottom: 1px solid #999;
 		height: rem-calc(30);
 	}
+}
+
+.secondary-nav.filter-loan-count {
+	padding-top: 5px;
+	padding-bottom: 8px;
+	border-bottom: 1px solid $kiva-stroke-gray;
+	border-top: 1px solid $kiva-stroke-gray;
+	width: 100%;
+	margin-bottom: 20px;
 }
