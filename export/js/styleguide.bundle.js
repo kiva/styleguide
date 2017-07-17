@@ -44,6 +44,8 @@
 /* 0 */
 /***/ (function(module, exports, __webpack_require__) {
 
+	/* global Foundation */
+
 	'use strict';
 
 	__webpack_require__(7);
@@ -64,6 +66,7 @@
 	var numeral = __webpack_require__(22);
 
 	$(document).ready(function () {
+		Foundation.global.namespace = ''; // WEBBUG-2494 foundation borks sometimes if the namespace is undefined
 		$(document).foundation({
 			abide: {
 				live_validate: true

@@ -44,16 +44,23 @@
 /* 0 */
 /***/ (function(module, exports, __webpack_require__) {
 
+	/* global Foundation */
+
+	'use strict';
+
 	__webpack_require__(1);
 
 	var header = __webpack_require__(5);
 	var accordion = __webpack_require__(6);
 	var $ = __webpack_require__(2);
 
-	$(document).foundation();
+	$(document).ready(function () {
+		Foundation.global.namespace = ''; // WEBBUG-2494 foundation borks sometimes if the namespace is undefined
+		$(document).foundation();
 
-	header();
-	accordion();
+		header();
+		accordion();
+	});
 
 /***/ }),
 /* 1 */
