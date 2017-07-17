@@ -1,3 +1,5 @@
+/* global Foundation */
+
 'use strict';
 
 require('./vendor');
@@ -18,6 +20,7 @@ var FastClick = require('fastclick');
 var numeral = require('numeral');
 
 $(document).ready(function () {
+	Foundation.global.namespace = ''; // WEBBUG-2494 foundation borks sometimes if the namespace is undefined
 	$(document).foundation({
 		abide: {
 			live_validate: true
