@@ -619,3 +619,60 @@ $list-loan-card-buttons-half-width: $list-loan-card-buttons-width / 2;
         text-align: center;
     }
 }
+
+.message-card {
+	display: flex;
+	flex-direction: column;
+
+	.message {
+		flex-grow: 1;
+		border: solid $kiva-stroke-gray;
+		border-width: 1px 1px 0;
+		padding: 0.75rem;
+
+		h2 {
+			font-weight: bold;
+		}
+
+		p {
+			font-size: $top-nav-font-size;
+		}
+	}
+
+	.action {
+		width: 100%;
+		flex-shrink: 0;
+
+		.button {
+			width: 100%;
+			margin: 0;
+			padding: 0;
+			height: $loan-card-footer-height;
+			line-height: $loan-card-footer-height;
+			font-size: $top-nav-font-size;
+			font-weight: normal;
+		}
+	}
+
+	@media #{$list-break-point} {
+		.list-view & {
+			flex-direction: row;
+			align-items: center;
+
+			.message {
+				border: none;
+				padding: 0 1rem 0 0;
+			}
+
+			.action {
+				width: $list-loan-card-buttons-width;
+
+				.button {
+					height: $list-loan-card-buttons-height;
+					line-height: $list-loan-card-buttons-height;
+					font-size: $body-font-size;
+				}
+			}
+		}
+	}
+}
