@@ -271,6 +271,7 @@ module.exports = function(grunt) {
                         , slick: 'slick-carousel'
 						, fitvids: __dirname + 'source/js/inc/vendor/fitvids/jquery.fitvids'
 						, lazyload: 'jquery-lazyload'
+						, webstorage: 'webstorage/dist/amd/webstorage'
 					}
 				}
 				, entry: {

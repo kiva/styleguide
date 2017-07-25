@@ -1,7 +1,12 @@
 {
   "name": "styleguide",
-  "version": "1.1.86",
+  "version": "1.1.242",
   "dependencies": {
+    "fastclick": {
+      "version": "1.0.6",
+      "from": "https://registry.npmjs.org/fastclick/-/fastclick-1.0.6.tgz",
+      "resolved": "https://registry.npmjs.org/fastclick/-/fastclick-1.0.6.tgz"
+    },
     "foundation-sites": {
       "version": "5.5.3",
       "from": "https://registry.npmjs.org/foundation-sites/-/foundation-sites-5.5.3.tgz",
@@ -12,15 +17,25 @@
       "from": "https://registry.npmjs.org/jquery/-/jquery-2.1.4.tgz",
       "resolved": "https://registry.npmjs.org/jquery/-/jquery-2.1.4.tgz"
     },
-    "slick-carousel": {
-      "version": "1.5.9",
-      "from": "https://registry.npmjs.org/slick-carousel/-/slick-carousel-1.5.9.tgz",
-      "resolved": "https://registry.npmjs.org/slick-carousel/-/slick-carousel-1.5.9.tgz"
+    "jquery-lazyload": {
+      "version": "1.9.7",
+      "from": "https://registry.npmjs.org/jquery-lazyload/-/jquery-lazyload-1.9.7.tgz",
+      "resolved": "https://registry.npmjs.org/jquery-lazyload/-/jquery-lazyload-1.9.7.tgz"
     },
-    "typeahead.js": {
-      "version": "0.11.1",
-      "from": "https://registry.npmjs.org/typeahead.js/-/typeahead.js-0.11.1.tgz",
-      "resolved": "https://registry.npmjs.org/typeahead.js/-/typeahead.js-0.11.1.tgz"
+    "nouislider": {
+      "version": "7.0.10",
+      "from": "https://registry.npmjs.org/nouislider/-/nouislider-7.0.10.tgz",
+      "resolved": "https://registry.npmjs.org/nouislider/-/nouislider-7.0.10.tgz"
+    },
+    "npm-modernizr": {
+      "version": "2.8.3",
+      "from": "https://registry.npmjs.org/npm-modernizr/-/npm-modernizr-2.8.3.tgz",
+      "resolved": "https://registry.npmjs.org/npm-modernizr/-/npm-modernizr-2.8.3.tgz"
+    },
+    "numeral": {
+      "version": "2.0.4",
+      "from": "https://registry.npmjs.org/numeral/-/numeral-2.0.4.tgz",
+      "resolved": "https://registry.npmjs.org/numeral/-/numeral-2.0.4.tgz"
     },
     "select2": {
       "version": "4.0.3",
@@ -39,30 +54,20 @@
         }
       }
     },
-    "nouislider": {
-      "version": "7.0.10",
-      "from": "https://registry.npmjs.org/nouislider/-/nouislider-7.0.10.tgz",
-      "resolved": "https://registry.npmjs.org/nouislider/-/nouislider-7.0.10.tgz"
+    "slick-carousel": {
+      "version": "1.5.9",
+      "from": "https://registry.npmjs.org/slick-carousel/-/slick-carousel-1.5.9.tgz",
+      "resolved": "https://registry.npmjs.org/slick-carousel/-/slick-carousel-1.5.9.tgz"
     },
-    "npm-modernizr": {
-      "version": "2.8.3",
-      "from": "https://registry.npmjs.org/npm-modernizr/-/npm-modernizr-2.8.3.tgz",
-      "resolved": "https://registry.npmjs.org/npm-modernizr/-/npm-modernizr-2.8.3.tgz"
+    "typeahead.js": {
+      "version": "0.11.1",
+      "from": "https://registry.npmjs.org/typeahead.js/-/typeahead.js-0.11.1.tgz",
+      "resolved": "https://registry.npmjs.org/typeahead.js/-/typeahead.js-0.11.1.tgz"
     },
-    "jquery-lazyload": {
-      "version": "1.9.7",
-      "from": "https://registry.npmjs.org/jquery-lazyload/-/jquery-lazyload-1.9.7.tgz",
-      "resolved": "https://registry.npmjs.org/jquery-lazyload/-/jquery-lazyload-1.9.7.tgz"
-    },
-    "fastclick": {
-      "version": "1.0.6",
-      "from": "https://registry.npmjs.org/fastclick/-/fastclick-1.0.6.tgz",
-      "resolved": "https://registry.npmjs.org/fastclick/-/fastclick-1.0.6.tgz"
-    },
-    "numeral": {
-      "version": "2.0.4",
-      "from": "numeral@~2.0.4",
-      "resolved": "https://registry.npmjs.org/numeral/-/numeral-2.0.4.tgz"
+    "webstorage": {
+      "version": "0.1.6",
+      "from": "kiva/WebStorage",
+      "resolved": "git://github.com/kiva/WebStorage.git#fd0222f974a7755b30df95d003f0964f71a637b8"
     }
   }
 }
