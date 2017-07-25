@@ -56,14 +56,14 @@ define("Styleguide", ["jquery"], function(__WEBPACK_EXTERNAL_MODULE_2__) { retur
 	var accordion = __webpack_require__(6);
 	var videoResizing = __webpack_require__(15);
 	var borrowerPage = __webpack_require__(16);
-	var categories = __webpack_require__(17);
-	var lightbox = __webpack_require__(18);
-	var saveSearchLightbox = __webpack_require__(19);
-	var donationPage = __webpack_require__(20);
+	var categories = __webpack_require__(18);
+	var lightbox = __webpack_require__(19);
+	var saveSearchLightbox = __webpack_require__(20);
+	var donationPage = __webpack_require__(21);
 
 	var $ = __webpack_require__(2);
-	var FastClick = __webpack_require__(21);
-	var numeral = __webpack_require__(22);
+	var FastClick = __webpack_require__(22);
+	var numeral = __webpack_require__(23);
 
 	$(document).ready(function () {
 		Foundation.global.namespace = ''; // WEBBUG-2494 foundation borks sometimes if the namespace is undefined
@@ -20405,6 +20405,7 @@ define("Styleguide", ["jquery"], function(__WEBPACK_EXTERNAL_MODULE_2__) { retur
 /***/ (function(module, exports, __webpack_require__) {
 
 	var $ = __webpack_require__(2);
+	var WebStorage = __webpack_require__(17);
 
 	module.exports = function () {
 		'use strict';
@@ -20426,7 +20427,7 @@ define("Styleguide", ["jquery"], function(__WEBPACK_EXTERNAL_MODULE_2__) { retur
 			, 'ac-trustee-info-body': 'collapsed'  // direct only
 			, 'ac-trustee-info-body-right': 'collapsed'  // direct only
 		}
-			, isLocalStorageAvailable = Modernizr.localstorage;
+			, store = new WebStorage('localStorage');
 
 	    $('#show-advanced-toggle, #hide-advanced-toggle').click(function() {
 	        $('.show-advanced').toggle();
@@ -20500,7 +20501,7 @@ define("Styleguide", ["jquery"], function(__WEBPACK_EXTERNAL_MODULE_2__) { retur
 
 		/* handle clicks that expand or collapse content panels  */
 		$('.ac-title').click(function(event){
-			if (isLocalStorageAvailable && event.hasOwnProperty('originalEvent')) {
+			if (event.hasOwnProperty('originalEvent')) {
 				// we only want to respond to actual user clicks
 				var panel = $(this).attr('aria-controls')
 					, panelState = $(this).attr('aria-expanded') === 'true' ? 'collapsed':'expanded';
@@ -20514,20 +20515,7 @@ define("Styleguide", ["jquery"], function(__WEBPACK_EXTERNAL_MODULE_2__) { retur
 		 * then record new state in local storage to make it sticky */
 		function updatePanelStates(panel, panelState) {
 			var panelStates = {}
-				, storedPanelStates;
-
-			if (! isLocalStorageAvailable) {
-				return;
-			}
-
-			try {
-				storedPanelStates = $.parseJSON(localStorage.getItem('borrowerPanelStates'));
-				if (null === storedPanelStates) {
-					storedPanelStates = {};
-				}
-			} catch(e) {
-				storedPanelStates = {};
-			}
+				, storedPanelStates = store.get('borrowerPanelStates') || {};
 
 			if (Object.keys(storedPanelStates).length) {
 				panelStates = storedPanelStates;
@@ -20539,13 +20527,153 @@ define("Styleguide", ["jquery"], function(__WEBPACK_EXTERNAL_MODULE_2__) { retur
 				} else {
 					delete panelStates[panel];
 				}
-				localStorage.setItem('borrowerPanelStates', JSON.stringify(panelStates));
+				store.set('borrowerPanelStates', panelStates);
 			}
 		}
 	};
 
 /***/ }),
 /* 17 */
+/***/ (function(module, exports, __webpack_require__) {
+
+	var __WEBPACK_AMD_DEFINE_RESULT__;/**
+	 * webstorage - v0.1.6 
+	 * Copyright (c) 2017 Kiva Microfunds
+	 * 
+	 * Licensed under the MIT license.
+	 * http://github.com/kiva/webstorage/license.txt
+	 */
+	!(__WEBPACK_AMD_DEFINE_RESULT__ = function () {
+		'use strict';
+		
+		/**
+		 * Does the current browser support the given store?
+		 *
+		 * Based on the Modernizr localStorage test:
+		 * https://github.com/Modernizr/Modernizr/blob/cfc3a3fd5457d47d04e5cc50611ac7665c38bea8/feature-detects/storage/localstorage.js
+		 *
+		 * @param store
+		 * @returns {boolean}
+		 */
+		function storageSupported(store) {
+			var t = 'test';
+			try {
+				window[store].setItem(t, t);
+				window[store].removeItem(t);
+				return true;
+			} catch(e) {
+				return false;
+			}
+		}
+		
+		
+		/**
+		 *
+		 * @param {String} [store]
+		 * @constructor
+		 */
+		function WebStorage(store){
+			if (typeof store === 'undefined') {
+				store = 'localStorage';
+			}
+		
+			if (store !== 'localStorage' && store !== 'sessionStorage') {
+				throw new Error('Unsupported store given in webStorage');
+			}
+		
+			this.store = storageSupported(store) ? window[store] : null;
+		}
+		
+		
+		WebStorage.prototype = {
+		
+			/**
+			 * Sets a value to storage
+			 *
+			 * @param {String} key
+			 * @param {*} value
+			 */
+			set: function (key, value) {
+				if (this.store) {
+		            try {
+		                var str_value = JSON.stringify(value);
+		                str_value = btoa(str_value);
+		                this.store.setItem(key, str_value);
+					} catch(e) {}
+				}
+			}
+		
+		
+			/**
+			 * Gets a value from storage
+			 *
+			 * @param {String}
+			 * @returns {*}
+			 */
+			, get: function (key) {
+				if (this.store) {
+					try {
+						var raw_value = this.store.getItem(key);
+						if (raw_value === null) {
+							return null;
+						}
+						var enc_value = atob(raw_value);
+						return JSON.parse(enc_value);
+					} catch (e) {}
+				}
+				return null;
+			}
+		
+		
+			/**
+			 * Removes a key from storage
+			 *
+			 * @param {String} key
+			 */
+			, rm: function (key) {
+				if (this.store) {
+					try {
+						this.store.removeItem(key);
+					} catch(e) {}
+				}
+			}
+		
+		
+			/**
+			 * Empties out the store
+			 */
+			, flush: function () {
+				if (this.store) {
+					try {
+						this.store.clear();
+					} catch(e) {}
+				}
+			}
+		
+		
+			/**
+			 * Returns all values
+			 *
+			 * @returns {*}
+			 */
+			, getAll: function () {
+				if (this.store) {
+					var store_values = {};
+					for(var key in this.store){
+						store_values[key] = this.get(key);
+					}
+		
+					return store_values;
+				}
+				return null;
+			}
+		};
+
+		return WebStorage;
+	}.call(exports, __webpack_require__, exports, module), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
+
+/***/ }),
+/* 18 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	var $ = __webpack_require__(2);
@@ -20569,7 +20697,7 @@ define("Styleguide", ["jquery"], function(__WEBPACK_EXTERNAL_MODULE_2__) { retur
 	};
 
 /***/ }),
-/* 18 */
+/* 19 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	module.exports = function() {
@@ -20590,7 +20718,7 @@ define("Styleguide", ["jquery"], function(__WEBPACK_EXTERNAL_MODULE_2__) { retur
 	};
 
 /***/ }),
-/* 19 */
+/* 20 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	var $ = __webpack_require__(2);
@@ -20607,7 +20735,7 @@ define("Styleguide", ["jquery"], function(__WEBPACK_EXTERNAL_MODULE_2__) { retur
 	};
 
 /***/ }),
-/* 20 */
+/* 21 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	var $ = __webpack_require__(2);
@@ -20632,7 +20760,7 @@ define("Styleguide", ["jquery"], function(__WEBPACK_EXTERNAL_MODULE_2__) { retur
 	};
 
 /***/ }),
-/* 21 */
+/* 22 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_RESULT__;;(function () {
@@ -21479,7 +21607,7 @@ define("Styleguide", ["jquery"], function(__WEBPACK_EXTERNAL_MODULE_2__) { retur
 
 
 /***/ }),
-/* 22 */
+/* 23 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_RESULT__;/*! @preserve
