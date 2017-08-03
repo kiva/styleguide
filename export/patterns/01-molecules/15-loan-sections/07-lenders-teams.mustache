@@ -3,7 +3,12 @@
 	{{! ------------------------- Lenders section -------------------------------- }}
 
 	<div class="lenders-title">Contributing lenders ({{lenderCount}})</div>
-	<ul class="lenders">
+    {{#allLendersAnonymous}}
+        <p>
+            <i><small>Lenders supporting this loan have chosen to remain anonymous.</small></i>
+        </p>
+    {{/allLendersAnonymous}}
+    <ul class="lenders">
 		{{#lenders}}
 			<li>
 				{{> 01-molecules/03-media/02-lender-avatar }}
