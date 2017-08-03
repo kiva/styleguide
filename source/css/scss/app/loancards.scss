@@ -1,6 +1,5 @@
 @import '../settings';
-@import '../palette';
-@import '../vendor_override/foundation/type';
+@import '../font-vars';
 
 $loan-card-footer-height: 3rem;
 $loan-card-meter-height: $loan-card-footer-height/2;

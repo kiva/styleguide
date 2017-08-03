@@ -35,7 +35,7 @@ module.exports = function(grunt) {
             }
             , vendorCss: {
                 src: ['node_modules/nouislider/distribute/jquery.nouislider.min.css']
-                , dest: 'source/css/scss/_vendor.scss'
+                , dest: 'source/css/scss/vendor.scss'
             }
         }
 
