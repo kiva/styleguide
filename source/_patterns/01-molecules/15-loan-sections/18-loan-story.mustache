@@ -62,7 +62,17 @@
 		</div>
 		{{#showPreviousLoanDetails}}
 			<p class="ac-title black-underlined text-center show-previous-loan-details" data-kv-accordion aria-controls="ac-previous-loan-details-body" aria-expanded="false">
-				Show previous loan details
+                {{#previousLoanTitlePayingback}}
+                    Show currently repaying previous loan details
+                {{/previousLoanTitlePayingback}}
+
+                {{#previousLoanTitleRepaid}}
+                    Show repaid previous loan details
+                {{/previousLoanTitleRepaid}}
+
+                {{#previousLoanTitle}}
+                    Show previous loan details
+                {{/previousLoanTitle}}
 			</p>
 		{{/showPreviousLoanDetails}}
 
