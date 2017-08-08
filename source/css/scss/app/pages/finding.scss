@@ -1,7 +1,6 @@
 @import '../../settings';
-@import '../../palette';
-@import '../../vendor_override/foundation/buttons';
-@import '../../vendor_override/foundation/type';
+@import '../../button-vars';
+@import '../../font-vars';
 
 $filter-menu-base-width: rem-calc(251);
 

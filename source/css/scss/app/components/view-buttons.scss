@@ -1,6 +1,5 @@
 @import '../../settings';
-@import '../../palette';
-@import '../../vendor_override/foundation/buttons';
+@import '../../button-vars';
 
 .view-buttons {
 	$height: $setting-button-height - $setting-button-height-reduction;
