@@ -13,13 +13,29 @@
 
 	.button {
 		display: inline-block;
-		width: calc(50% - #{rem-calc(30)});
+		width: calc(30% - #{rem-calc(30)});
 		border-width: 1px;
 		padding-left: 0;
 		padding-right: 0;
 
+		&.hidden {
+			display: none;
+		}
+
+		&.first, &.last {
+			border-width: 0px;
+			color: $kiva-textlink;
+
+			&:hover {
+				text-decoration: underline;
+				color: $kiva-textlink;
+			}
+		}
+
 		@media #{$medium-up} {
-			width: 12rem;
+			width: calc(27% - #{rem-calc(30)});
+			max-width: rem-calc(120);
+			max-width: rem-calc(160);
 		}
 
 		&.previous {
@@ -31,13 +47,15 @@
 				transform: rotate(90deg);
 			}
 
-			@media #{$medium-up} {
+			@media #{$medium-only} {
+				.icon {
+					right: calc(75%);
+				}
+			}
+
+			@media #{$large-up} {
 				padding-left: $button-med*2 + 1;
 				padding-right: $button-med*2;
-
-				.icon {
-					right: calc(50% + 2.5rem);
-				}
 			}
 		}
 
@@ -45,17 +63,19 @@
 			padding-right: 0.5rem;
 
 			.icon {
-				left: calc(50% + 0.5rem);
+				left: calc(50% + 1.1rem);
 				transform: rotate(-90deg);
 			}
 
-			@media #{$medium-up} {
+			@media #{$medium-only} {
+				.icon {
+					left: calc(75%);
+				}
+			}
+
+			@media #{$large-up} {
 				padding-left: $button-med*2;
 				padding-right: $button-med*2 + 1;
-
-				.icon {
-					left: calc(50% + 1rem);
-				}
 			}
 		}
 
