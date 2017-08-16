@@ -11024,13 +11024,23 @@ svg {
     stroke: #999; }
   .paging .button {
     display: inline-block;
-    width: calc(50% - 1.6666666667rem);
+    width: calc(30% - 1.6666666667rem);
     border-width: 1px;
     padding-left: 0;
     padding-right: 0; }
+    .paging .button.hidden {
+      display: none; }
+    .paging .button.first, .paging .button.last {
+      border-width: 0px;
+      color: #22a9d8; }
+      .paging .button.first:hover, .paging .button.last:hover {
+        text-decoration: underline;
+        color: #22a9d8; }
     @media only screen and (min-width: 481px) {
       .paging .button {
-        width: 12rem; } }
+        width: calc(27% - 1.6666666667rem);
+        max-width: 6.6666666667rem;
+        max-width: 8.8888888889rem; } }
     .paging .button.previous {
       margin-right: 1.1111111111rem;
       padding-left: 0.5rem; }
@@ -11038,24 +11048,26 @@ svg {
         right: calc(50% + 1.25rem);
         -ms-transform: rotate(90deg);
             transform: rotate(90deg); }
-      @media only screen and (min-width: 481px) {
+      @media only screen and (min-width: 481px) and (max-width: 680px) {
+        .paging .button.previous .icon {
+          right: calc(75%); } }
+      @media only screen and (min-width: 681px) {
         .paging .button.previous {
           padding-left: 2.7777777778rem;
-          padding-right: 1.7777777778rem; }
-          .paging .button.previous .icon {
-            right: calc(50% + 2.5rem); } }
+          padding-right: 1.7777777778rem; } }
     .paging .button.next {
       padding-right: 0.5rem; }
       .paging .button.next .icon {
-        left: calc(50% + 0.5rem);
+        left: calc(50% + 1.1rem);
         -ms-transform: rotate(-90deg);
             transform: rotate(-90deg); }
-      @media only screen and (min-width: 481px) {
+      @media only screen and (min-width: 481px) and (max-width: 680px) {
+        .paging .button.next .icon {
+          left: calc(75%); } }
+      @media only screen and (min-width: 681px) {
         .paging .button.next {
           padding-left: 1.7777777778rem;
-          padding-right: 2.7777777778rem; }
-          .paging .button.next .icon {
-            left: calc(50% + 1rem); } }
+          padding-right: 2.7777777778rem; } }
     .paging .button.disabled .icon, .paging .button[disabled] .icon {
       stroke: #999; }
   .paging .icon {
