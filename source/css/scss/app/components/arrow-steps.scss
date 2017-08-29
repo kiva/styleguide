@@ -83,3 +83,24 @@
 		}
 	}
 }
+
+.basket-steps {
+	margin: 0;
+	ul {
+		li {
+			width: 33%;
+
+			@media #{$small-only} {
+				font-size: $small-font-size;
+				padding-left: 1rem;
+				padding-right: 0;
+			}
+		}
+		li:last-child {
+			width: 34%;
+			padding-left: 0;
+			padding-right: 0em;
+			margin-right: -4px;
+		}
+	}
+}
