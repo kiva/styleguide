@@ -39,6 +39,7 @@
     "url": "https://github.com/kiva/styleguide/issues"
   },
   "dependencies": {
+    "ajv": "^5.2.2",
     "fastclick": "~1.0.6",
     "foundation-sites": "~5.5.3",
     "jquery": "~2.1.3",
