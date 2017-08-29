@@ -4,6 +4,7 @@
   "description": "Based on PatternLab and Foundation - [Pattern Lab Website](http://patternlab.io/) - [About Pattern Lab](http://patternlab.io/about.html) - [Documentation](http://patternlab.io/docs/index.html) - [Demo](http://demo.patternlab.io/)",
   "main": "source/js/inc/app.js",
   "devDependencies": {
+    "ajv": "^5.2.2",
     "autoprefixer": "^6.0.3",
     "exports-loader": "0.6.3",
     "grunt": "~0.4.5",
@@ -21,10 +22,10 @@
     "grunt-shell": "~1.1.2",
     "grunt-svgmin": "^2.0.1",
     "grunt-svgstore": "^0.5.0",
-    "grunt-webpack": "^1.0.11",
+    "grunt-webpack": "^3.0.2",
     "imports-loader": "^0.6.4",
-    "webpack": "^1.10.5",
-    "webpack-dev-server": "^1.10.1"
+    "webpack": "^3.4.1",
+    "webpack-dev-server": "^2.6.1"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"

@@ -254,7 +254,7 @@ module.exports = function(grunt) {
 
 		, webpack: {
 			options: {
-				context: 'source/js'
+				context: __dirname + '/source/js'
 				, externals: {
 					jquery: {
 						var: 'jQuery'
@@ -262,6 +262,8 @@ module.exports = function(grunt) {
 					}
 				}
 				, resolve: {
+					modules: [__dirname + '/source/js', __dirname + '/node_modules'],
+					extensions: ['.js', '.mustache'],
 					alias: {
 						Foundation: 'foundation-sites/js/foundation'
 						, modernizr: 'npm-modernizr'
@@ -281,9 +283,9 @@ module.exports = function(grunt) {
 					, chunkFilename: '[id].bundle.js'
 				}
 				, module: {
-					loaders: [
-						{ test: /modernizr/, loader: 'imports?this=>window!exports?window.Modernizr' }
-						, { test: /foundation/, loader: 'exports?window.Foundation'}
+					rules: [
+						{ test: /modernizr/, loader: 'imports-loader?this=>window!exports-loader?window.Modernizr' }
+						, { test: /foundation/, loader: 'exports-loader?window.Foundation'}
 					]
 				}
 				, plugins: [
@@ -301,7 +303,7 @@ module.exports = function(grunt) {
 					nav: './inc/nav'
 				}
 				, output: {
-					path: 'public/js'
+					path: __dirname + '/public/js'
 				}
 			}
 
@@ -310,7 +312,7 @@ module.exports = function(grunt) {
 					nav: './inc/nav'
 				}
 				, output: {
-					path: 'export/js'
+					path: __dirname + '/export/js'
 				}
 			}
 
@@ -319,7 +321,7 @@ module.exports = function(grunt) {
 					nav: './inc/nav'
 				}
 				, output: {
-					path: 'export/js'
+					path: __dirname + '/export/js'
 					, filename: '[name].bundle.min.js'
 					, chunkFilename: '[id].bundle.min.js'
 				}
@@ -337,7 +339,7 @@ module.exports = function(grunt) {
 					nav: './inc/nav'
 				}
 				, output: {
-					path: 'export/js'
+					path: __dirname + '/export/js'
 					, filename: '[name].js'
 					, chunkFilename: '[id].js'
 					, library: 'Styleguide'
