@@ -7,7 +7,7 @@ if [ "$flag" == "--unlink" ] || [ "$flag" == "-u" ]; then
     echo "Resetting your npm modules in kiva/main"
     cd /kiva/main/sites/www_kiva
     npm unlink styleguide
-    npm install
+    npm install --no-save
     echo "Resetting your export folder"
     cd /kiva/styleguide
     git reset
