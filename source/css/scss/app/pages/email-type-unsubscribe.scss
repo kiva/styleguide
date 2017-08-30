@@ -1,0 +1,34 @@
+.email-type-unsubscribe {
+	margin-bottom: 5rem;
+
+	h1 {
+		margin: 3rem 0 2rem;
+	}
+
+	.icon-confirmation {
+		fill: $kiva-green;
+	}
+
+	.icon-error {
+		fill: $kiva-accent-red;
+	}
+
+	.icon-error,
+	.icon-confirmation {
+		height: rem-calc(24);
+		width: rem-calc(24);
+		vertical-align: bottom;
+		margin-bottom: rem-calc(3);
+
+		@media #{$medium-only} {
+			height: rem-calc(36);
+			width: rem-calc(36);
+		}
+
+		@media #{$large-up} {
+			height: rem-calc(48);
+			width: rem-calc(48);
+			margin-bottom: rem-calc(4);
+		}
+	}
+}

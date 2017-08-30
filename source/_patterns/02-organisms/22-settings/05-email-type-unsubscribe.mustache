@@ -1,0 +1,49 @@
+<div class="row">
+	<div class="columns email-type-unsubscribe">
+		<h1 class="impact text-center">
+			{{#success}}
+				<svg class="icon icon-confirmation">
+					<use xlink:href="#icon-confirmation"/>
+				</svg>
+				Unsubscribed
+			{{/success}}
+
+			{{^success}}
+				<svg class="icon icon-error">
+					<use xlink:href="#icon-error"/>
+				</svg>
+				Oops!
+			{{/success}}
+		</h1>
+
+		<p class="text-center">
+			{{#success}}
+				You will no longer receive <strong>{{message-type-name}}</strong>
+				at the address <strong>{{email}}</strong>.
+			{{/success}}
+
+			{{^success}}
+				We couldn't complete your request to unsubscribe.
+				<br>{{message}}
+			{{/success}}
+		</p>
+
+		<p class="text-center">
+			{{#success}}
+				Changed your mind?
+				<a href="{{email_settings_href}}">Adjust your preferences anytime in email settings</a>
+			{{/success}}
+
+			{{^success}}
+				Try this instead:
+				<a href="{{email_settings_href}}">Adjust your preferences in email settings</a>
+			{{/success}}
+
+		</p>
+
+	</div>
+</div>
+
+
+
+

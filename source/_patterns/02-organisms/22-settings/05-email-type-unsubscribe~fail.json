@@ -1,0 +1,7 @@
+{
+	"success" : false,
+	"message" : "blah%foo.bar is not a valid email address.",
+	"email" : "blah%foo.bar",
+	"message-type-name" : "",
+	"email_settings_href" : "http://www.kiva.org/settings/email"
+}
