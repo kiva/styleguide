@@ -4923,8 +4923,8 @@ ul,
 ol,
 dl {
   font-family: inherit;
-  font-size: inherit;
-  line-height: inherit;
+  font-size: 1rem;
+  line-height: 1.6;
   list-style-position: outside;
   margin-bottom: 1.1111111111rem; }
 
@@ -15973,6 +15973,32 @@ table.repayments-list {
       margin-bottom: 1.5rem; }
   .borrower-landing-page .faqs {
     margin: 5rem auto 4rem; }
+
+.email-type-unsubscribe {
+  margin-bottom: 5rem; }
+  .email-type-unsubscribe h1 {
+    margin: 3rem 0 2rem; }
+  .email-type-unsubscribe .icon-confirmation {
+    fill: #63a541; }
+  .email-type-unsubscribe .icon-error {
+    fill: #9C021A; }
+  .email-type-unsubscribe .icon-error,
+  .email-type-unsubscribe .icon-confirmation {
+    height: 1.3333333333rem;
+    width: 1.3333333333rem;
+    vertical-align: bottom;
+    margin-bottom: 0.1666666667rem; }
+    @media only screen and (min-width: 481px) and (max-width: 680px) {
+      .email-type-unsubscribe .icon-error,
+      .email-type-unsubscribe .icon-confirmation {
+        height: 2rem;
+        width: 2rem; } }
+    @media only screen and (min-width: 681px) {
+      .email-type-unsubscribe .icon-error,
+      .email-type-unsubscribe .icon-confirmation {
+        height: 2.6666666667rem;
+        width: 2.6666666667rem;
+        margin-bottom: 0.2222222222rem; } }
 
 .ac-container.ac-title {
   margin: 0;
