@@ -6558,6 +6558,26 @@ ul.off-canvas-list li a:hover {
 .panel.callout {
   border-color: #FEF37B; }
 
+.panel.zigzag-bottom {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 1rem 2rem 2rem 2rem;
+  position: relative;
+  background-color: #efefef;
+  border: none; }
+  .panel.zigzag-bottom:after {
+    background: linear-gradient(-45deg, #ffffff 12px, transparent 0), linear-gradient(45deg, #ffffff 12px, transparent 0);
+    background-position: left bottom;
+    background-repeat: repeat-x;
+    background-size: 24px 24px;
+    content: " ";
+    display: block;
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    width: 100%;
+    height: 24px; }
+
 div.reveal-modal-bg {
   background-color: rgba(0, 0, 0, 0.92);
   overflow-y: scroll;
@@ -15999,6 +16019,22 @@ table.repayments-list {
         height: 2.6666666667rem;
         width: 2.6666666667rem;
         margin-bottom: 0.2222222222rem; } }
+
+.monthly-good .icon-confirmation {
+  fill: #63a541;
+  height: 1.3333333333rem;
+  width: 1.3333333333rem;
+  vertical-align: bottom;
+  margin-bottom: 0.1666666667rem; }
+  @media only screen and (min-width: 481px) and (max-width: 680px) {
+    .monthly-good .icon-confirmation {
+      height: 2rem;
+      width: 2rem; } }
+  @media only screen and (min-width: 681px) {
+    .monthly-good .icon-confirmation {
+      height: 2.6666666667rem;
+      width: 2.6666666667rem;
+      margin-bottom: 0.2222222222rem; } }
 
 .ac-container.ac-title {
   margin: 0;
