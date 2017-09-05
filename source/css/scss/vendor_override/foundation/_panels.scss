@@ -2,4 +2,28 @@
 	&.callout {
 		border-color: $kiva-alert-yellow;
 	}
+
+	&.zigzag-bottom {
+		max-width: $large-breakpoint;
+		margin: 0
+		auto;
+		padding: 1rem 2rem 2rem 2rem;
+		position: relative;
+		background-color: $kiva-bg-darkgray;
+		border: none;
+
+		&:after {
+			background: linear-gradient(-45deg, #ffffff 12px, transparent 0), linear-gradient(45deg, #ffffff 12px, transparent 0);
+			background-position: left bottom;
+			background-repeat: repeat-x;
+			background-size: 24px 24px;
+			content: " ";
+			display: block;
+			position: absolute;
+			bottom: 0px;
+			left: 0px;
+			width: 100%;
+			height: 24px;
+		}
+	}
 }
