@@ -16136,6 +16136,21 @@ table.repayments-list {
         border-width: 15px 0 15px 15px;
         border-color: transparent transparent transparent #236133; }
 
+.basket-steps {
+  margin: 0; }
+  .basket-steps ul li {
+    width: 33%; }
+    @media only screen and (max-width: 480px) {
+      .basket-steps ul li {
+        font-size: 0.7777777778rem;
+        padding-left: 1rem;
+        padding-right: 0; } }
+  .basket-steps ul li:last-child {
+    width: 34%;
+    padding-left: 0;
+    padding-right: 0em;
+    margin-right: -4px; }
+
 .triple-state-buttons, .quintuple-state-buttons {
   position: relative;
   background-color: #FFFFFF; }
