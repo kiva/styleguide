@@ -1,0 +1,46 @@
+<div class="top-nav" role="navigation">
+	<div class="row header-row">
+		<div class="small-3 large-2 xxlarge-2 columns header-column logo-area">
+			<a class="header-button" href="{{logo_href}}">
+				<svg class="icon icon-new-kiva-logo">
+					<use xlink:href="#icon-new-kiva-logo"/>
+				</svg>
+			</a>
+		</div>
+		{{#is-visitor}}
+			<div class="small-6 xxlarge-3 columns header-column right-side">
+				<div class="small-12 large-12 columns">
+					<a class="header-button" href="{{login_href}}">Inicia sesión</a>
+				</div>
+			</div>
+		{{/is-visitor}}
+		{{^is-visitor}}
+			<div class="small-3-8ths xxlarge-2 columns header-column right-side">
+                {{#basket-loan-added}}
+                <div id="top-basket-button" class="show-for-large-up large-6 columns">
+                {{/basket-loan-added}}
+                {{^basket-loan-added}}
+                <div id="top-basket-button" class="hide large-6 columns">
+                {{/basket-loan-added}}
+					<a class="header-button {{#is_free_trial_eligible}}hidden{{/is_free_trial_eligible}}" href="{{basket_href}}"><span class="amount {{^basket.item_count}}hide{{/basket.item_count}}">{{basket.item_count}}</span> Cesta</a>
+				</div>
+				<div class="small-12 large-6 columns">
+					<a kvtrackevent="TopNav|click-Portfolio" data-dropdown="my-kiva-dropdown" data-options="is_hover:true;hover_timeout:200;" aria-controls="my-kiva-dropdown" aria-expanded="false" class="header-button my-kiva" href="{{my_kiva_href}}">
+						<span class="amount">{{balance}}</span>
+						<span class="circle-avatar" style="background-image:url({{profile_picture_href}})"></span>
+					</a>
+				</div>
+			</div>
+		{{/is-visitor}}
+	</div>
+
+	{{^is-visitor}}
+		<ul id="my-kiva-dropdown" class="f-dropdown dropdown-list" data-dropdown-content aria-hidden="true" tabindex="-1">
+			{{#my-kiva.links}}
+				<li><a kvtrackevent="TopNav|click-Portfolio-{{label}}" href="{{href}}" {{#end-section}}class="end-section"{{/end-section}}>{{label}}</a></li>
+			{{/my-kiva.links}}
+		</ul>
+	{{/is-visitor}}
+</div>
+
+<div id="mobile-basket-button" class="basket-bar {{#basket.item_count}}hide-for-large-up{{/basket.item_count}}{{^basket.item_count}}hide{{/basket.item_count}}"><a href="{{basket_href}}" class="button">Basket (<span class="basket-item-count">{{basket.item_count}}</span>)</a></div>

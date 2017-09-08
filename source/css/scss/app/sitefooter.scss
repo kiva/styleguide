@@ -45,7 +45,6 @@ $footer-top-bottom-padding: rem-calc(40);
 }
 
 .siteFooter-group:last-of-type {
-	position: absolute;
 	bottom: 0;
 	margin-bottom: 0;
 }
@@ -149,6 +148,10 @@ $footer-top-bottom-padding: rem-calc(40);
         padding: rem-calc(40) 1rem;
     }
 
+	.siteFooter-language-group, .siteFooter-us-group {
+		margin-bottom: rem-calc(20);
+	}
+
 	.siteFooter-nav {
 		position: relative;
 		padding-bottom: rem-calc(40);
@@ -163,7 +166,6 @@ $footer-top-bottom-padding: rem-calc(40);
             &.links-list {
                 li {
                     display: inline-block;
-                    float: left;
 
                     &:nth-child(3) {
                         clear: both;
