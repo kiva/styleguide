@@ -1,4 +1,5 @@
 {
 	"has_auto_deposit": false,
+	"is_subscriber": false,
 	"setup_url": "#"
 }
