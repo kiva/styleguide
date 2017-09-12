@@ -1,13 +1,26 @@
 {{#is-standalone}}
-	<form data-abide="ajax">
+	<form data-abide="ajax" class="settingsForm xbLegacyNav auto-deposit-form">
 {{/is-standalone}}
 
-<h3 class="formTitle">Auto deposits</h3>
-{{^has_auto_deposit}}
-	<p>
-		<a href="{{setup_url}}">Add money to your account every month</a>
-	</p>
-{{/has_auto_deposit}}
+	<h3 class="formTitle">Monthly Good subscription</h3>
+
+	{{^is_subscriber}}
+		<p>
+			<a href="{{URL_TO_MONTHLY_GOOD}}">Sign up for a Kiva Monthly Good subscription</a>
+		</p>
+	{{/is_subscriber}}
+
+{{^is_subscriber}}
+	<h3 class="formTitle">Auto deposits</h3>
+
+	{{^has_auto_deposit}}
+		<p>
+			<a href="{{setup_url}}">Add money to your account every month</a>
+		</p>
+	{{/has_auto_deposit}}
+{{/is_subscriber}}
+
+
 {{#has_auto_deposit}}
 	<div class="date-details">
 		{{#day_of_month}}
@@ -43,7 +56,12 @@
 		{{/day_of_month}}
 		<span> month </span><span class="total-amount">{{total_amount}}</span><span> will be transferred from PayPal.</span>
 		{{^legacy}}
-			<a class="cancel-deposit" href="#">Cancel auto deposit</a>
+			{{#is_subscriber}}
+				<a class="cancel-subscription" href="#">Cancel subscription</a>
+			{{/is_subscriber}}
+			{{^is_subscriber}}
+				<a class="cancel-deposit" href="#">Cancel auto deposit</a>
+			{{/is_subscriber}}
 		{{/legacy}}
 		{{#is_date_after_28th}}
 			{{^edit_date}}
@@ -127,7 +145,7 @@
 		</div>
 		<button type="submit" class="submit-form mini secondary button" {{^submittable}}disabled="disabled"{{/submittable}}>
 			{{^loading}}
-				Save auto deposit
+				Save changes
 			{{/loading}}
 			{{#loading}}
 				{{> molecules-loading-spinner }}

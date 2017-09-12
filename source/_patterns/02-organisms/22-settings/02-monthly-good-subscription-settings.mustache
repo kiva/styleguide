@@ -1,0 +1,13 @@
+<!--
+The subscriptions functionality is closely tied to the auto-deposit form.
+For that reason the subscription content can be found in:
+styleguide/source/_patterns/02-organisms/22-settings/01-auto-deposit-settings.mustache
+
+The showing/hiding of subscriptions and auto-lending messaging is controlled by the following two variables:
+("has_auto_deposit": true & "is_subscriber": true)
+which are set in:
+styleguide/source/_patterns/02-organisms/22-settings/01-auto-deposit-settings.json
+-->
+
+<p>The monthly good logic can be found in the 01-auto-deposit-settings.mustache file. Content is controlled
+	by a {{#is_subscriber}}{{/is_subscriber}} & {{^is_subscriber}}{{/is_subscriber}} tags.</p>
