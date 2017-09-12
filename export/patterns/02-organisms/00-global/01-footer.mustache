@@ -13,6 +13,13 @@
 			<a href="{{tou_href}}" class="siteFooter-tos">Terms of use</a>
 		</div>
 
+        {{#request_url_borrow}}
+        <div class="siteFooter-policy">
+            English&nbsp;
+            <a href="{{borrower_landing_spanish_href}}" class="borrower_landing_spanish_href">Español</a>
+        </div>
+        {{/request_url_borrow}}
+
 		<div class="siteFooter-legal">
 			<div class="siteFooter-disclaimer">Lending through Kiva involves risk of principal loss.  Kiva does not guarantee repayment or offer a financial return on your loan.</div>
 			<div class="siteFooter-copyright">&copy; {{current_year}} Kiva.  All rights reserved.</div>
@@ -82,7 +89,14 @@
 				</ul>
 			</div>
 
-			<div class="siteFooter-legal siteFooter-group">
+            {{#request_url_borrow}}
+            <div class="siteFooter-language-group siteFooter-group">
+                English&nbsp;
+                <a href="{{borrower_landing_spanish_href}}" class="borrower_landing_spanish_href">Español</a>
+            </div>
+            {{/request_url_borrow}}
+
+            <div class="siteFooter-legal siteFooter-group">
 				<div class="siteFooter-disclaimer">Lending through Kiva involves risk of principal loss. Kiva does not guarantee repayment or offer a financial return on your loan.</div>
 				<div class="siteFooter-copyright">&copy; {{current_year}} Kiva.  All rights reserved.</div>
 			</div>

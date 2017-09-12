@@ -9575,7 +9575,6 @@ ul.tertiary-nav {
     margin-top: 0; }
 
 .siteFooter-group:last-of-type {
-  position: absolute;
   bottom: 0;
   margin-bottom: 0; }
 
@@ -9644,6 +9643,8 @@ ul.tertiary-nav {
 @media only screen and (min-width: 681px) {
   .siteFooter {
     padding: 2.2222222222rem 1rem; }
+  .siteFooter-language-group, .siteFooter-us-group {
+    margin-bottom: 1.1111111111rem; }
   .siteFooter-nav {
     position: relative;
     padding-bottom: 2.2222222222rem; }
@@ -9652,8 +9653,7 @@ ul.tertiary-nav {
     .siteFooter-nav .siteFooter-links {
       margin-bottom: 0; }
       .siteFooter-nav .siteFooter-links.links-list li {
-        display: inline-block;
-        float: left; }
+        display: inline-block; }
         .siteFooter-nav .siteFooter-links.links-list li:nth-child(3) {
           clear: both; }
           .siteFooter-nav .siteFooter-links.links-list li:nth-child(3) a {
