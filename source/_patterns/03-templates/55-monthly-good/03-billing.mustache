@@ -1,4 +1,9 @@
-<div class="row">
+{{#is-standalone}}
+	<div class="monthly-good">
+	<div class="monthly-good-dynamic-view">
+{{/is-standalone}}
+
+	<div class="row">
 	<div class="columns monthly-good monthly-good-billing">
 		<h1 class="impact text-center kiva-green">
 				Almost done
@@ -10,8 +15,19 @@
 			<p class="text-center">each month on the {{deposit_date}}
 			we'll process the following:</p>
 
+			<div class="monthly-good-form-inputs">
+				{{#is-standalone}}
+					{{> 02-organisms/60-monthly-good/01-monthly-good-inputs}}
+				{{/is-standalone}}
+			</div>
+
 		</div>
 
 		<p class="text-center">go to <a href="{{thanks_href}}">thanks page</a></p>
 	</div>
 </div>
+
+{{#is-standalone}}
+	</div>
+	</div>
+{{/is-standalone}}

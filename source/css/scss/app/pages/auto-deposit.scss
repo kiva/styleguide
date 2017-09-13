@@ -1,4 +1,5 @@
-.auto-deposit {
+.monthly-good
+, .auto-deposit {
 
 	@media #{$x-small-only} {
 		h1 {
@@ -6,14 +7,16 @@
 		}
 	}
 
-	.auto-deposit-dynamic-view {
+	.monthly-good-dynamic-view
+	, .auto-deposit-dynamic-view {
 		position: relative;
 
 		.auto-deposit-header {
 			max-width: $large-breakpoint;
 		}
 
-		.auto-deposit-form {
+		.monthly-good-form
+		, .auto-deposit-form {
 			padding: rem-calc(9) 0;
 
 			&[data-abide] .error small.error
