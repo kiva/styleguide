@@ -4,13 +4,13 @@
 
 	<h3 class="formTitle">Monthly Good subscription</h3>
 
-	{{^is_subscriber}}
+	{{^isSubscriber}}
 		<p>
 			<a href="{{URL_TO_MONTHLY_GOOD}}">Sign up for a Kiva Monthly Good subscription</a>
 		</p>
-	{{/is_subscriber}}
+	{{/isSubscriber}}
 
-{{^is_subscriber}}
+{{^isSubscriber}}
 	<h3 class="formTitle">Auto deposits</h3>
 
 	{{^has_auto_deposit}}
@@ -18,7 +18,7 @@
 			<a href="{{setup_url}}">Add money to your account every month</a>
 		</p>
 	{{/has_auto_deposit}}
-{{/is_subscriber}}
+{{/isSubscriber}}
 
 
 {{#has_auto_deposit}}
@@ -56,12 +56,12 @@
 		{{/day_of_month}}
 		<span> month </span><span class="total-amount">{{total_amount}}</span><span> will be transferred from PayPal.</span>
 		{{^legacy}}
-			{{#is_subscriber}}
+			{{#isSubscriber}}
 				<a class="cancel-subscription" href="#">Cancel subscription</a>
-			{{/is_subscriber}}
-			{{^is_subscriber}}
+			{{/isSubscriber}}
+			{{^isSubscriber}}
 				<a class="cancel-deposit" href="#">Cancel auto deposit</a>
-			{{/is_subscriber}}
+			{{/isSubscriber}}
 		{{/legacy}}
 		{{#is_date_after_28th}}
 			{{^edit_date}}
