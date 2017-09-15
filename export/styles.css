@@ -11996,7 +11996,8 @@ a.aboutJoinLink:visited {
         .auto-deposit .auto-deposit-dynamic-view .auto-deposit-form .donation-selector-large .pencil-dropdown .dropdown-choices {
           top: -7px;
           left: -83px;
-          box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5); }
+          box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
+          z-index: 1000; }
     .auto-deposit .auto-deposit-dynamic-view .auto-deposit-form input[type="text"] {
       color: #333; }
     .auto-deposit .auto-deposit-dynamic-view .auto-deposit-form .total-amount-minimum input, .auto-deposit .auto-deposit-dynamic-view .auto-deposit-form .total-amount-maximum input {
