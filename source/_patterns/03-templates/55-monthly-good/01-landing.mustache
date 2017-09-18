@@ -2,7 +2,11 @@
 	<div class="columns monthly-good monthly-good-landing">
 		<p>Monthly Good <strong>landing</strong> page placeholder</p>
 
-		<p><a class="button" href="{{confirm_href}}">Join Monthly Good</a></p>
+		<p>
+			<div class="amount-input" style="display: inline-block;">
+				<input style="font-size: 1.5555555556rem; height: 2.4rem; width: 7.5rem; font-weight: bold; text-align: center;" class="mg-amount-input" type="text" maxlength="9" placeholder="$" value="$25" data-abide-validator="currency" data-min-amount="0.00" data-max-amount="10000" required="">
+			</div>
+		<a class="button" href="{{confirm_href}}">Join Monthly Good</a></p>
 
 		<p>go to <a href="{{billing_href}}">billing page</a></p>
 	</div>
