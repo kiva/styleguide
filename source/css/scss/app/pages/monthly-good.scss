@@ -1,4 +1,16 @@
 .monthly-good {
+	.amount-input-wrapper {
+		display: inline-block;
+	}
+
+	.mg-amount-input {
+		font-size: 1.5555555556rem;
+		height: 2.4rem;
+		width: 7.5rem;
+		font-weight: bold;
+		text-align: center;
+	}
+
 	.icon-confirmation {
 		fill: $kiva-green;
 		height: rem-calc(24);
