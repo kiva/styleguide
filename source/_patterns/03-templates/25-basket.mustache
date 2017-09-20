@@ -1,53 +1,19 @@
-
-<div id="empty_basket" style="display:none">
-	<p class="bigger">Oops — Your basket is empty!</p>
-	<p>Your basket is empty. To redeem your Kiva Card <a href="{{ lend_link }}">you'll need to select a loan</a> to support.</p>
-</div>
+{{> 02-organisms/60-checkout/02-empty-basket}}
 
 <div id="basket_contents" class="basketContents">
 	<h1>You have {{ count }} loans in your basket</h1>
 
-	<div class="loan-list"></div>
-
-	<div class="kiva-cards"></div>
-
-	<div id="donation_edit_ab" class="basketDonation">
-		<div class="donationLabels">
-			<div>
-				<label id="donation_edit_ab_label" for="donation_edit_ab_amount">
-					Help Kiva reach more borrowers around the world:
-				</label>
-			</div>
-			<a kvtrackevent="Basket|donation-how-kiva-uses-donations" href="#" class="black-underlined" data-reveal-id="donation-how-kiva-uses-donations">Why Kiva needs your donation</a>
-		</div>
-
-		<div id="donation_text" class="donationText ">
-			<div id="donation_edit_ab_amount" class="value">$3.75</div>
-			<div class="donationEdit">
-				<a kvtrackevent="Checkout|click-open nudge||3.75" href="https://www.dev.kiva.org/basket?nudgeFallback=1" id="donation_edit_link" class="value base-font" title="Adjust your donation amount">Edit </a>
-			</div>
-		</div>
+	<div id="loan_items" class="listItems">
+		{{> 02-organisms/60-checkout/03-loan-item}}
 	</div>
+
+	<div id="kiva_cards" class="listItems"></div>
+
+	<div id="donation_items" class="listItems"></div>
+
+	{{> 02-organisms/60-checkout/05-donation-edit-ui}}
 		
-	<div id="basket_totals" class="basketTotals basketTotalsReview">
-		<div>
-			<span class="label">Order total:</span>
-			<span id="order_total" class="value">$28.75</span>
-		</div>
-
-		<div id="reward_credit_div" class="rewardCreditDiv" style="display: none;">
-			<a class="apply-link" href="https://www.dev.kiva.org/basket?bonus_credit_opt_out=false" title="apply bonus credit">Apply</a>
-			<span class="label line-through">Free credit:</span>
-			<span class="value"></span>
-		</div>
-
-		<div class="basketTotal">
-			<div class="grandTotal">
-				<span class="label">Total due:</span>
-				<span id="grand_total" class="value biggest">$28.75</span>
-			</div>
-		</div>
-	</div>
+	{{> 02-organisms/60-checkout/06-checkout-totals}}
 
 </div><!--basketContents-->
 
@@ -70,8 +36,8 @@
 	</div>
 	-->
 	
-	<div class="basketButtons cB">
-		<form id="my-basket-form" action="https://www.dev.kiva.org/basket/process" method="post" class="dI">
+	<div class="basketButtons show-for-large-up">
+		<form id="my-basket-form" action="/basket/process" method="post">
 			<input type="hidden" name="donation_total" id="donation_total" value="3.75">
 			<button type="submit" id="basketContinue" class="bigger actNow" name="checkout_img" data-kv-trackevent="basket.continueBtn">Continue</button>
 		</form>

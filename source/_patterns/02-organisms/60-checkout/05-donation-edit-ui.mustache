@@ -1,0 +1,17 @@
+<div id="donation_edit_ui" class="basketDonation">
+	<div class="donationLabels">
+		<div>
+			<label id="donation_edit_label" for="donation_edit_amount">
+				Help Kiva reach more borrowers around the world:
+			</label>
+		</div>
+		<a kvtrackevent="Basket|donation-how-kiva-uses-donations" href="#" class="black-underlined" data-reveal-id="donation-how-kiva-uses-donations">Why Kiva needs your donation</a>
+	</div>
+
+	<form id="donation_edit_form" action="/basket/supportUsSaveDonation" method="post">
+		<div id="donation_edit_amount" class="value">$3.75</div>
+		<div class="donationEdit">
+			<a kvtrackevent="Checkout|click-open nudge||3.75" href="https://www.dev.kiva.org/basket?nudgeFallback=1" id="donation_edit_link" class="value base-font" title="Adjust your donation amount">Edit</a>
+		</div>
+	</form>
+</div>

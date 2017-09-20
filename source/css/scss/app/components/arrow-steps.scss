@@ -84,7 +84,7 @@
 	}
 }
 
-.basket-steps {
+.checkout-steps {
 	margin: 0;
 	ul {
 		li {
@@ -101,6 +101,16 @@
 			padding-left: 0;
 			padding-right: 0em;
 			margin-right: -4px;
+			border-right: 1px solid $kiva-text-dark;
+
+			&:after {
+				width: 0;
+				height: 0;
+				border: none;
+			}
+			&:before {
+				border: none;
+			}
 		}
 	}
 }
