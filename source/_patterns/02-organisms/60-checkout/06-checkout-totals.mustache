@@ -1,19 +1,21 @@
-<div id="basket_totals" class="basketTotals basketTotalsReview">
+<div id="basket-totals" class="basket-totals">
 	<div>
-		<span class="label">Order total:</span>
-		<span id="order_total" class="value">$28.75</span>
+		<span class="">Order total:</span>
+		<span id="order-total" class="value">${{ totals.order_total }}</span>
 	</div>
 
-	<div id="reward_credit_div" class="rewardCreditDiv" style="display: none;">
-		<a class="apply-link" href="https://www.dev.kiva.org/basket?bonus_credit_opt_out=false" title="apply bonus credit">Apply</a>
-		<span class="label line-through">Free credit:</span>
-		<span class="value"></span>
+	{{#totals.free_credit}}
+	<div id="reward-credit-div" class="reward-credit-div">
+		<a class="apply-link" href="/basket?bonus_credit_opt_out=false" title="apply bonus credit">Apply</a>
+		<span class=" line-through">Free credit:</span>
+		<span class="value">{{ totals.free_credit }}</span>
 	</div>
+	{{/totals.free_credit}}
 
-	<div class="basketTotal">
-		<div class="grandTotal">
-			<span class="label">Total due:</span>
-			<span id="grand_total" class="value biggest">$28.75</span>
+	<div class="basket-total">
+		<div class="grand-total">
+			<span class="">Total due:</span>
+			<span id="grand-total" class="value biggest">${{ totals.grand_total }}</span>
 		</div>
 	</div>
 </div>

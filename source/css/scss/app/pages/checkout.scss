@@ -1,0 +1,54 @@
+#checkoutSteps {}
+
+#checkoutWrap {
+
+    label {
+        background: transparent;
+        color: $kiva-text-medium;
+    }
+
+    ul.list-items {
+        margin:0;
+        padding:0;
+            
+        & > li {
+            list-style-type: none
+        }
+    }
+
+    ul#loan-items {
+        .loan-row {
+            display: block;
+            padding: .5rem 0;
+            border-bottom: 1px solid $kiva-stroke-gray;
+
+            .loan-image {
+                a {
+                    display: block;
+                    // padding:.5rem;
+
+                    img {
+                        display: block;
+                        width:auto;
+                    }
+                }
+            }
+
+            .loan-details {
+                padding: 0;
+                font-size: 1.1rem;
+
+                h2 {
+                    font-size:1.1rem;
+                }
+
+                p {
+                    margin: 0;
+                }
+            }
+        }
+    }
+
+    .basket-contents {}
+
+}

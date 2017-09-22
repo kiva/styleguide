@@ -1,15 +1,16 @@
-<div class="basket-loan-row columns">
-	<div class="basket-loan-image small-3 columns">
+<div class="loan-row row small-collapse large-uncollapse">
+	<div class="loan-image small-3 columns">
 		<a class="img img-s150 thumb" href="https://dev-vm-01.kiva.org/lend/1361154">
 			<img src="https://www-dev-kiva-org.global.ssl.fastly.net/img/s150/d9775c9f81c216da7ca360c78175a3be.jpg" alt="Alan" title="Alan" width="150" height="150">
 		</a>
 	</div>
 	<div class="loan-details small-6 columns">
 		<!-- needs to flip to red when reservation is close to expiring -->
-		<p class="loan-reservation small-text">Reserved for 45 more minutes.</p>
-		<h2 class="loan-title">Alan</h2>
-		<p class="loan-country">Nepal / Agriculture</p>
-		<p class="loan-partner small-text">Funded via Field Partner Patan Business and Professional Women</p>
+		<!-- <p class="loan-reservation small-text">Reserved for 45 more minutes.</p> -->
+		<h2 class="loan-title">{{ loan_item.loan.name }}</h2>
+		<p class="loan-country">Where am I ???</p>
+		<p class="loan-partner small-text">{{ loan_item.loan.partnerName }}</p>
+		<i class="small-text">loan id: {{ loan_item.loan.id }}</i>
 	</div>
 
 	<!--
@@ -23,6 +24,6 @@
 		<form lpformnum="{{ loan_index }}">
 			{{> 02-organisms/60-checkout/04-loan-amount-selector}}
 		</form>
-		<a kvtrackevent="Checkout|click-Remove item|Loan" href="#" class="small remove-loan">Remove</a>
+		<a kvtrackevent="Checkout|click-Remove item|Loan" href="#" loanid="{{ loan_item.loan.id }}" class="small remove-loan">Remove</a>
 	</div>
 </div>

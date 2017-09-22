@@ -1,9 +1,9 @@
 {{> 02-organisms/60-checkout/02-empty-basket}}
 
-<div id="basket-contents" class="basket-contents">
-	<h1>You have {{ count }} loans in your basket</h1>
+<div id="basket-contents" class="basket-contents columns">
+	<small>Loan Count: {{ loan_count }}</small>
 
-	<ul id="loan-items" class="list-tems">
+	<ul id="loan-items" class="list-items">
 		{{#pl_loans}}
 			<li>
 				{{> 02-organisms/60-checkout/03-loan-item}}
@@ -15,8 +15,12 @@
 
 	<ul id="donation-items" class="list-items"></ul>
 
-	{{> 02-organisms/60-checkout/05-donation-edit-ui}}
-		
+	{{#is_nudge}}
+		{{> 02-organisms/60-checkout/05-donation-edit-ui}}
+	{{/is_nudge}}
+
+	{{> 02-organisms/60-checkout/07-mobile-donation-ui}}
+	
 	{{> 02-organisms/60-checkout/06-checkout-totals}}
 
 </div><!--basketContents-->
