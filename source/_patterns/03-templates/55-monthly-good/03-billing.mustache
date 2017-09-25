@@ -1,15 +1,22 @@
 <div class="row">
 	<div class="columns monthly-good monthly-good-billing">
 		<h1 class="impact text-center kiva-green">
-				Almost done
+				Confirm your Monthly Good
 		</h1>
 
-		<p class="text-center featured">Review and authorize transaction with PayPal.</p>
+		<p class="text-center featured">
+			Review your contribution and checkout just once with PayPal.
+			<br>
+		</p>
 
 		<div class="panel zigzag-bottom">
-			<p class="text-center">each month on the {{deposit_date}}
-			we'll process the following:</p>
+			<div class="monthly-good-form-inputs">
+				{{#is-standalone}}
+					{{> 02-organisms/60-monthly-good/01-monthly-good-inputs}}
+				{{/is-standalone}}
+			</div>
 
+			<p class="text-center featured"><em>Rest easy, you can cancel anytime.</em></p>
 		</div>
 
 		<p class="text-center">go to <a href="{{thanks_href}}">thanks page</a></p>

@@ -1,4 +1,211 @@
 .monthly-good {
+	@media #{$x-small-only} {
+		h1 {
+			line-height: $feature-font-size;
+		}
+	}
+
+	.monthly-good-billing {
+		h1+p {
+			margin-bottom: 2rem;
+		}
+	}
+
+	.monthly-good-dynamic-view {
+		position: relative;
+
+		.monthly-good-form {
+			padding: rem-calc(9) 0;
+
+			&[data-abide] .error small.error
+			, &[data-abide] .error span.error
+			, &[data-abide] span.error
+			, &[data-abide] small.error {
+				position: absolute;
+				margin: rem-calc(4) 0;
+				padding: 0;
+				line-height: rem-calc(14);
+				width: rem-calc(180)
+			}
+
+			.day-input
+			, .amount-input{
+				display: none;
+				position: relative;
+
+				input {
+					display: inline-block;
+					font-size: 1rem;
+					line-height: 1rem;
+					text-align: center;
+					margin: 0;
+					padding: 0 rem-calc(4);
+					width: rem-calc(50);
+					height: rem-calc(24);
+
+					@media #{$medium-up} {
+						font-size: $feature-font-size;
+						height: 2.4rem;
+						width: rem-calc(75);
+					}
+				}
+			}
+
+			table.checkout-details {
+				max-width: $medium-breakpoint;
+				margin: rem-calc(45) 0;
+				background-color: transparent;
+				border: none;
+
+				tr:nth-of-type(even) {
+					background-color: transparent;
+				}
+			}
+
+			.lending-funds {
+				@media #{$medium-up} {
+					height: rem-calc(35)
+				}
+
+				@media #{$x-small-only} {
+					.featured {
+						font-size: $base-font-size;
+					}
+				}
+
+				.amount-input {
+					display: inline-block;
+					position: relative;
+
+					.deposit-amount-input {
+						display: inline-block;
+						margin: 0;
+						padding: 0 rem-calc(4);
+						font-size: $body-font-size;
+						font-weight: bold;
+						color: $kiva-text-dark;
+						height: 1.4rem;
+						width: rem-calc(64);
+						text-align: center;
+
+						@media #{$medium-up} {
+							font-size: $feature-font-size;
+							height: 2.4rem;
+							width: rem-calc(135);
+						}
+					}
+
+					&.error ~ .after-28-note {
+						margin-top: 1rem;
+					}
+				}
+
+				.after-28-note {
+					display: inline-block;
+				}
+			}
+
+			/* turn on pointer events for touch events */
+			.touch {
+				.pencil {
+					.icon-pencil {
+						pointer-events: all;
+					}
+				}
+			}
+
+			.fancy-checkbox-div {
+				text-align: right;
+			}
+
+			.donation-selector {
+				display: block;
+				margin: rem-calc(35) 0 rem-calc(13);
+
+				.pencil-dropdown {
+					// kluge needed to override _forms.scss
+					@media (min-width: 1px) {
+						.text-display{
+							display: inline-block;
+						}
+					}
+
+					.dropdown-choices {
+						top: -7px;
+						left: -83px;
+						box-shadow: 0 2px 4px 0 rgba(0,0,0,0.50);
+					}
+
+					.icon-pencil {
+						height: $body-font-size;
+						width: $body-font-size;
+						@media #{$medium-up} {
+							height: rem-calc(20);
+							width: rem-calc(20);
+						}
+					}
+				}
+			}
+
+			input[type="text"] {
+				color: $kiva-text-dark;
+			}
+
+			.total-amount {
+				padding-right: rem-calc(20);
+			}
+
+			.total-amount-minimum, .total-amount-maximum {
+				input {
+					visibility: hidden;
+					padding: 0;
+					margin: 0 0 -1.2rem;
+					height: 1.2rem;
+				}
+
+				&.error small.error {
+					position: static;
+					width: auto;
+					margin-bottom: 1rem;
+				}
+			}
+
+			.disclaimer {
+				font-size: $small-font-size;
+				line-height: $small-font-size;
+				color: $kiva-text-light;
+			}
+		}
+
+		/* Utility class to Flip Date Input Field */
+		.custom-date-input {
+			.lending-funds {
+				.pencil-text-input {
+					display: none;
+				}
+				.day-input{
+					display: inline-block;
+				}
+				.after-28-note {
+					display: none;
+				}
+			}
+		}
+		/* Utility Class to Hide Donation Selectors and Show Donation Manual Inputs */
+		.custom-donation-input {
+			.donation-selector {
+				.pencil-dropdown {
+					.text-display {
+						display:none;
+					}
+					input.text-input {
+						display: inline-block;
+					}
+				}
+			}
+		}
+	}
+
 	.icon-confirmation {
 		fill: $kiva-green;
 		height: rem-calc(24);
