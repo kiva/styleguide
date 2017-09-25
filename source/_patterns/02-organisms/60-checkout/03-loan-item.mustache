@@ -1,7 +1,8 @@
-<div class="loan-row row small-collapse large-uncollapse">
+<div class="loan-row row small-collapse">
 	<div class="loan-image small-3 columns">
 		<a class="img thumb" href="{{ loan.url }}">
-			<img src="{{ loan.image.url }}" alt="{{ loan.name }}" title="{{ loan.name }}">
+			<img data-interchange="[{{ loan.image.url }}, (default)], [{{ loan.image.url_2x }}, (large)]" alt="{{ loan.name }}" title="{{ loan.name }}">
+			<noscript><img src="{{ loan.image.url }}" alt="{{ loan.name }}" title="{{ loan.name }}"></noscript>
 		</a>
 	</div>
 	<div class="loan-details small-6 columns">

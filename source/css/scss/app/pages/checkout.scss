@@ -16,18 +16,21 @@
         }
     }
 
+    .checkout-totals {
+        padding: .5rem;
+        border-bottom: 1px solid #d8d8d8;
+    }
+
     .basket-contents {
 
         .loan-row {
             display: block;
-            padding: .5rem 0;
+            padding: 1rem .5rem;
             border-bottom: 1px solid $kiva-stroke-gray;
 
             .loan-image {
                 a {
                     display: block;
-                    // padding:.5rem;
-
                     img {
                         display: block;
                         width:auto;
@@ -61,14 +64,81 @@
             }
             @media #{$large-up} {
                 .loan-details {
-                    padding: inherit;
+                    padding: 0 .8rem;
                 }                
             }
+
+            .loan-totals {
+                .amount-select {
+                    float: right;
+                    direction: rtl;
+                    height: auto;
+                    font-size: 1rem;
+                    padding-right: 1.25rem;
+                    max-width: 120px;
+                    font-weight: lighter;
+                    border-color: $kiva-stroke-gray;
+                }
+
+                @media #{$large-up} {
+                    .amount-select {
+                        font-size: 1.4rem;
+                    }
+                }
+
+                .remove-loan {
+                    display: block;
+                    text-align: right;
+                    float: right;
+                    clear: right;
+                }
+            }
+
         }
-        .donation-ui,
-        .checkout-totals {
+        @media #{$large-up} {
+            .loan-row {
+                padding: 1rem 0;
+            }
+        }
+
+        .simple-donation-ui {
             padding: .5rem 0;
             border-bottom: 1px solid #d8d8d8;
+
+            > .columns {
+                padding: 0 .5rem;
+            }
+
+            span {
+                line-height: 1.6em;
+            }
+
+            @media #{$large-up} {
+                > .columns {
+                    padding: 0 inherit;
+                }
+                .span {
+                    text-align: right;
+                }                
+            }
+
+            .donation-edit {
+                #donation-edit-amount {
+                    font-weight: bold;
+                    max-width: 100px;
+                    width: auto;
+                    direction: rtl;
+                    font-size: 1rem;
+                    float: right;
+                    margin: 0;
+                }
+                a.donation-update-button {
+                    display: block;
+                    font-size: .9rem;
+                    text-align: right;
+                    line-height: 1.4rem;
+                }
+            }
         }
 
     }
