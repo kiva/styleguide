@@ -1,4 +1,4 @@
-{{> 02-organisms/60-checkout/02-empty-basket}}
+
 
 <div id="basket-contents" class="basket-contents columns">
 	<div id="loan-region">
@@ -7,6 +7,11 @@
 				<li>
 					{{> 02-organisms/60-checkout/03-loan-item}}
 				</li>
+				{{#loan_count}}
+					<li>
+						{{> 02-organisms/60-checkout/02-empty-basket}}
+					</li>
+				{{/loan_count}}
 			{{/pl_loans}}
 		</ul>
 	</div>
@@ -48,7 +53,7 @@
 
 </div><!--basketContents-->
 
-<div id="basket-operations" class="basket-operations">
+<div id="basket-operations" class="basket-operations columns">
 	<!--
 	<div class="kiva-card">
 		<form id="addGiftRedemptionForm" action="https://www.dev.kiva.org/basket" method="GET">
@@ -66,8 +71,8 @@
 		</form>
 	</div>
 	-->
-	
-	<div class="basket-buttons show-for-large-up">
+
+	<div class="basket-buttons">
 		<form id="my-basket-form" action="/basket/process" method="post">
 			<input type="hidden" name="donation-total" id="donation-total" value="3.75">
 			<button type="submit" id="basket-continue" class="bigger" name="checkout_img" data-kv-trackevent="basket.continueBtn">Continue</button>

@@ -1,12 +1,11 @@
-<div id="donation-edit" class="basket-donation mobile-donation">
-	<div id="donation-edit-label" class="" for="donation-edit-amount">Optional Donation to
+<div id="donation-edit" class="donation-ui mobile-donation row">
+	<div id="donation-edit-label" for="donation-edit-amount" class="small-6 columns">Optional Donation to
 		<br>Kiva's Operation Costs:
 	</div>
-	<div id="donation-text">
-		<input type="text" id="donation-edit-amount" name="donation-edit-amount" class="value" value="3.75">
-	</div>
-
-	<div class="donation-edit">
+	<div class="donation-edit small-6 columns">
+		<div class="donation-text">
+			<input type="text" id="donation-edit-amount" name="donation-edit-amount" class="value" value="{{suggested_donation}}">
+		</div>
 		<input type="hidden" id="update-flag" name="update" value="false">
 		<input type="submit" class="update-button text-button smallest" value="Update">
 	</div>
