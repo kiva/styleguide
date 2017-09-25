@@ -23,5 +23,6 @@
         "free_credit": "10.00",
         "grand_total": "27.50"
     },
-    "pl_loans": 1
+    "pl_loans": 1,
+    "pl_nudge": 0
 }

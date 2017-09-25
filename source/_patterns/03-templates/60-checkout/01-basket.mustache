@@ -1,27 +1,50 @@
 {{> 02-organisms/60-checkout/02-empty-basket}}
 
 <div id="basket-contents" class="basket-contents columns">
-	<small>Loan Count: {{ loan_count }}</small>
+	<div id="loan-region">
+		<ul id="loan-items" class="list-items">
+			{{#pl_loans}}
+				<li>
+					{{> 02-organisms/60-checkout/03-loan-item}}
+				</li>
+			{{/pl_loans}}
+		</ul>
+	</div>
 
-	<ul id="loan-items" class="list-items">
-		{{#pl_loans}}
-			<li>
-				{{> 02-organisms/60-checkout/03-loan-item}}
-			</li>
-		{{/pl_loans}}
-	</ul>
+	<div id="kiva-card-region">
+		<ul id="kiva-cards" class="list-items">
+			{{#pl_kiva_cards}}
+				<li></li>
+			{{/pl_kiva_cards}}
+		</ul>
+	</div>
 
-	<ul id="kiva-cards" class="list-items"></ul>
+	<div id="donation-items-region">
+		<ul id="donation-items" class="list-items">
+			{{#pl_donation_items}}
+				<li></li>
+			{{/pl_donation_items}}
+		</ul>
+	</div>
 
-	<ul id="donation-items" class="list-items"></ul>
+	<div id="donation-ui-region">
+		{{#is_nudge}}
+			{{#pl_nudge_donation}}
+				{{> 02-organisms/60-checkout/05-donation-edit-ui}}
+			{{/pl_nudge_donation}}
+		{{/is_nudge}}
+		{{^is_nudge}}
+			{{#pl_simple_donation}}
+				{{> 02-organisms/60-checkout/07-mobile-donation-ui}}
+			{{/pl_simple_donation}}
+		{{/is_nudge}}
+	</div>
 
-	{{#is_nudge}}
-		{{> 02-organisms/60-checkout/05-donation-edit-ui}}
-	{{/is_nudge}}
-
-	{{> 02-organisms/60-checkout/07-mobile-donation-ui}}
-	
-	{{> 02-organisms/60-checkout/06-checkout-totals}}
+	<div id="totals-region">
+		{{#pl_totals}}
+			{{> 02-organisms/60-checkout/06-checkout-totals}}
+		{{/pl_totals}}
+	</div>
 
 </div><!--basketContents-->
 
