@@ -87,6 +87,8 @@
 .checkout-steps {
 	margin: 0;
 	ul {
+		line-height: 100%;
+		
 		li {
 			width: 33%;
 
@@ -94,6 +96,27 @@
 				font-size: $small-font-size;
 				padding-left: 1rem;
 				padding-right: 0;
+				height: 26px;
+				line-height: 24px;
+			}
+			&.arrow {
+				&:after {
+					@media #{$small-only} {
+						border-width: 12px;
+						margin-top: -12px;
+					}
+				}
+				&:before {
+					@media #{$small-only} {
+						border-width: 13px;
+						margin-top: -13px;
+					}
+				}
+				&.active:after {
+					@media #{$small-only} {
+						border-width: 12px 0 12px 12px;
+					}
+				}
 			}
 		}
 		li:last-child {

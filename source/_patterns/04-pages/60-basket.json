@@ -17,6 +17,14 @@
         "url": "https://dev.kiva.org/lend/1361154",
         "image": {
             "url": "https://www-dev-kiva-org.global.ssl.fastly.net/img/s150/493fc8d1fdf717d55bd0d0460b4aab96.jpg"
+        },
+        "location": {
+            "country":  {
+                "name": "Rwanda"
+            }
+        },
+        "sector": {
+            "name": "Food"
         }
     },
     "pl_totals": 1,

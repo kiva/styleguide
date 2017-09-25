@@ -10,12 +10,20 @@
     "loan": {
         "id":1367775,
         "name":"Union Villa Ingenio Group",
-        "partnerName":"Fundación Pro Mujer",
+        "sponsor_name":"Fundación Pro Mujer",
         "use":"to buy wholesale clothing for later sale in her sales space.",
         "__typename":"LoanPartner",
         "url": "https://dev.kiva.org/lend/1361154",
         "image": {
             "url": "https://www-dev-kiva-org.global.ssl.fastly.net/img/s150/493fc8d1fdf717d55bd0d0460b4aab96.jpg"
+        },
+        "location": {
+            "country":  {
+                "name": "Rwanda"
+            }
+        },
+        "sector": {
+            "name": "Food"
         }
     },
     "pl_totals": 1,

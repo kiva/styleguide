@@ -6,11 +6,10 @@
 	</div>
 	<div class="loan-details small-6 columns">
 		<!-- needs to flip to red when reservation is close to expiring -->
-		<!-- <p class="loan-reservation small-text">Reserved for 45 more minutes.</p> -->
+		<p class="loan-reservation small-text">Reserved for 45 more minutes.</p>
 		<h2 class="loan-title">{{ loan.name }}</h2>
-		<p class="loan-country">Where am I ???</p>
-		<p class="loan-partner small-text">{{ loan.sponsor_name }}</p>
-		<i class="small-text">loan id: {{ loan.id }}</i>
+		<p class="loan-country small-text">{{ loan.location.country.name }} / {{ loan.sector.name }}</p>
+		<p class="loan-sponsor small-text">{{ loan.sponsor_name }}</p>
 	</div>
 
 	<!--
@@ -24,6 +23,6 @@
 		<form id="select-{{ loan.id }}">
 			{{> 02-organisms/60-checkout/04-loan-amount-selector}}
 		</form>
-		<a kvtrackevent="Checkout|click-Remove item|Loan" href="#" class="small remove-loan">Remove</a>
+		<a kvtrackevent="Checkout|click-Remove item|Loan" href="#" class="small-text remove-loan">Remove</a>
 	</div>
 </div>
