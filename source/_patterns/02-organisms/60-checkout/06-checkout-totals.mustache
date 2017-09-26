@@ -1,0 +1,21 @@
+<div id="basket-totals" class="checkout-totals row">
+	<div>
+		<span class="">Order total:</span>
+		<span id="order-total" class="value">${{ totals.order_total }}</span>
+	</div>
+
+	{{#totals.free_credit}}
+	<div id="reward-credit-div" class="reward-credit-div">
+		<a class="apply-link" href="/basket?bonus_credit_opt_out=false" title="apply bonus credit">Apply</a>
+		<span class=" line-through">Free credit:</span>
+		<span class="value">{{ totals.free_credit }}</span>
+	</div>
+	{{/totals.free_credit}}
+
+	<div class="basket-total">
+		<div class="grand-total">
+			<span class="">Total due:</span>
+			<span id="grand-total" class="value biggest">${{ totals.grand_total }}</span>
+		</div>
+	</div>
+</div>

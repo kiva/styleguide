@@ -1,0 +1,75 @@
+#checkoutSteps {}
+
+#checkoutWrap {
+
+    label {
+        background: transparent;
+        color: $kiva-text-medium;
+    }
+
+    ul.list-items {
+        margin:0;
+        padding:0;
+            
+        & > li {
+            list-style-type: none
+        }
+    }
+
+    .basket-contents {
+
+        .loan-row {
+            display: block;
+            padding: .5rem 0;
+            border-bottom: 1px solid $kiva-stroke-gray;
+
+            .loan-image {
+                a {
+                    display: block;
+                    // padding:.5rem;
+
+                    img {
+                        display: block;
+                        width:auto;
+                    }
+                }
+            }
+
+            .loan-details {
+                padding: 0 .5rem;
+                font-size: 1rem;
+
+                p {
+                    margin: 0;
+                }
+
+                .loan-title {
+                    font-size: 1rem;
+                    line-height: 1rem;
+                    margin: .25rem 0;
+                }
+                @media #{$large-up} {
+                    .loan-title {
+                        font-size: 1.4rem;
+                    }
+                }
+
+                .loan-reservation,
+                .loan-sponsor {
+                    color: $kiva-text-light;
+                }
+            }
+            @media #{$large-up} {
+                .loan-details {
+                    padding: inherit;
+                }                
+            }
+        }
+        .donation-ui,
+        .checkout-totals {
+            padding: .5rem 0;
+            border-bottom: 1px solid #d8d8d8;
+        }
+
+    }
+}
