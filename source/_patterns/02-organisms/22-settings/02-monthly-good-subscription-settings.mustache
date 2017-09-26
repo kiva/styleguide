@@ -5,7 +5,7 @@ styleguide/source/_patterns/02-organisms/22-settings/01-auto-deposit-settings.mu
 
 The showing/hiding of subscriptions and auto-lending messaging is controlled by the following three variables:
 is_subscriber_active: true/false
-("has_auto_deposit": true & "isSubscriber": true)
+("has_auto_deposit": true & "is_subscriber": true)
 which are set in:
 styleguide/source/_patterns/02-organisms/22-settings/01-auto-deposit-settings.json
 styleguide/source/_patterns/02-organisms/22-settings/01-auto-deposit-settings~AD-off-MG-off.json
@@ -13,4 +13,4 @@ styleguide/source/_patterns/02-organisms/22-settings/01-auto-deposit-settings~MG
 -->
 
 <p>The monthly good logic can be found in the 01-auto-deposit-settings.mustache file. Content is controlled
-	by a {{#isSubscriber}}{{/isSubscriber}} & {{^isSubscriber}}{{/isSubscriber}} tags.</p>
+	by a {{#is_subscriber}}{{/is_subscriber}} & {{^is_subscriber}}{{/is_subscriber}} tags.</p>
