@@ -7,10 +7,18 @@
 		max-width: $large-breakpoint;
 		margin: 0
 		auto;
-		padding: 1rem 2rem 2rem 2rem;
+		padding: 1rem 1rem 2rem 1rem;
 		position: relative;
 		background-color: $kiva-bg-darkgray;
 		border: none;
+
+		@media #{$x-small-only} {
+			padding: 1rem 0.5rem 2rem 0.5rem;
+		}
+
+		@media #{$large-up} {
+			padding: 1rem 2rem 2rem 2rem;
+		}
 
 		&:after {
 			background: linear-gradient(-45deg, #ffffff 12px, transparent 0), linear-gradient(45deg, #ffffff 12px, transparent 0);

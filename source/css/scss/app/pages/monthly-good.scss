@@ -5,6 +5,13 @@
 		}
 	}
 
+	input#mg-deposit-amount-input {
+		font-size: $body-font-size;
+		text-align: right;
+		width: rem-calc(110);
+		margin: 0 0 0 auto;
+	}
+
 	.monthly-good-billing {
 		h1+p {
 			margin-bottom: 2rem;
@@ -28,8 +35,34 @@
 				width: rem-calc(180)
 			}
 
-			.day-input
-			, .amount-input{
+			.day-control .pencil-text-input .text-display {
+				font-size: $body-font-size;
+				font-weight: $font-weight-bold;
+			}
+
+			.icon-pencil {
+				height: $body-font-size;
+				width: $body-font-size;
+			}
+
+			table {
+				max-width: $medium-breakpoint;
+				margin: 2rem auto 1rem;
+			}
+
+			td {
+				font-size: $body-font-size;
+			}
+
+			.left-small-pad {
+				padding-left: 2px;
+			}
+
+			.right-no-pad {
+				padding-right: 0;
+			}
+
+			.day-input{
 				display: none;
 				position: relative;
 
@@ -52,8 +85,8 @@
 			}
 
 			table.checkout-details {
-				max-width: $medium-breakpoint;
-				margin: rem-calc(45) 0;
+				max-width: $small-breakpoint;
+				margin: rem-calc(45) auto;
 				background-color: transparent;
 				border: none;
 
@@ -74,27 +107,6 @@
 				}
 
 				.amount-input {
-					display: inline-block;
-					position: relative;
-
-					.deposit-amount-input {
-						display: inline-block;
-						margin: 0;
-						padding: 0 rem-calc(4);
-						font-size: $body-font-size;
-						font-weight: bold;
-						color: $kiva-text-dark;
-						height: 1.4rem;
-						width: rem-calc(64);
-						text-align: center;
-
-						@media #{$medium-up} {
-							font-size: $feature-font-size;
-							height: 2.4rem;
-							width: rem-calc(135);
-						}
-					}
-
 					&.error ~ .after-28-note {
 						margin-top: 1rem;
 					}
@@ -118,12 +130,15 @@
 				text-align: right;
 			}
 
-			.donation-selector {
-				display: block;
-				margin: rem-calc(35) 0 rem-calc(13);
+			.donation-selector-large {
+				display: none;
+
+				@media #{$medium-up} {
+					display: block;
+				}
 
 				.pencil-dropdown {
-					// kluge needed to override _forms.scss
+					// kluge to override _forms.scss
 					@media (min-width: 1px) {
 						.text-display{
 							display: inline-block;
@@ -135,15 +150,28 @@
 						left: -83px;
 						box-shadow: 0 2px 4px 0 rgba(0,0,0,0.50);
 					}
+				}
+			}
 
-					.icon-pencil {
-						height: $body-font-size;
-						width: $body-font-size;
-						@media #{$medium-up} {
-							height: rem-calc(20);
-							width: rem-calc(20);
-						}
-					}
+			.donation-selector-small {
+				display: block;
+
+				@media #{$medium-up} {
+					display: none;
+				}
+
+				#donation-amount-input {
+					display: none;
+					width: rem-calc(110);
+					text-align-last: right;
+					font-size: $body-font-size;
+				}
+
+				.dropdown-choices-select {
+					width: rem-calc(110);
+					text-align-last: right;
+					padding-right: 1rem;
+					font-size: $body-font-size;
 				}
 			}
 
