@@ -16,6 +16,7 @@
         "url": "https://dev.kiva.org/lend/1361154",
         "image": {
             "url": "https://www-dev-kiva-org.global.ssl.fastly.net/img/s150/493fc8d1fdf717d55bd0d0460b4aab96.jpg"
+            , "url_2x": "https://www-dev-kiva-org.global.ssl.fastly.net/img/s300/493fc8d1fdf717d55bd0d0460b4aab96.jpg"
         },
         "location": {
             "country":  {

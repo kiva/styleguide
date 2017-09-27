@@ -16,18 +16,21 @@
         }
     }
 
+    .checkout-totals {
+        padding: .5rem;
+        border-bottom: 1px solid #d8d8d8;
+    }
+
     .basket-contents {
 
         .loan-row {
             display: block;
-            padding: .5rem 0;
+            padding: 1rem .5rem;
             border-bottom: 1px solid $kiva-stroke-gray;
 
             .loan-image {
                 a {
                     display: block;
-                    // padding:.5rem;
-
                     img {
                         display: block;
                         width:auto;
@@ -42,15 +45,22 @@
                 p {
                     margin: 0;
                 }
+                @media #{$small} {
+                    .small-text {
+                        font-size: .7rem;
+                        line-height: .8rem;
+                    }
+                }
 
                 .loan-title {
                     font-size: 1rem;
-                    line-height: 1rem;
+                    line-height: 1.3rem;
                     margin: .25rem 0;
                 }
                 @media #{$large-up} {
                     .loan-title {
                         font-size: 1.4rem;
+                        line-height: 1.5rem;
                     }
                 }
 
@@ -61,14 +71,85 @@
             }
             @media #{$large-up} {
                 .loan-details {
-                    padding: inherit;
+                    padding: 0 .8rem;
                 }                
             }
+
+            .loan-totals {
+                .amount-select {
+                    float: right;
+                    direction: rtl;
+                    height: auto;
+                    font-size: .9rem;
+                    padding-right: 1rem;
+                    padding-left: 0;
+                    max-width: rem-calc(80);
+                    border-color: $kiva-stroke-gray;
+                    background-color: $white;
+                }
+
+                @media #{$large-up} {
+                    .amount-select {
+                        font-size: 1.4rem;
+                        max-width: rem-calc(120);
+                        padding-right: 1rem;
+                    }
+                }
+
+                .remove-loan {
+                    display: block;
+                    text-align: right;
+                    float: right;
+                    clear: right;
+                }
+            }
+
         }
-        .donation-ui,
-        .checkout-totals {
+        @media #{$large-up} {
+            .loan-row {
+                padding: 1rem 0;
+            }
+        }
+
+        .simple-donation-ui {
             padding: .5rem 0;
             border-bottom: 1px solid #d8d8d8;
+
+            > .columns {
+                padding: 0 .5rem;
+            }
+
+            span {
+                line-height: 1.6em;
+            }
+
+            @media #{$large-up} {
+                > .columns {
+                    padding: 0 inherit;
+                }
+                .span {
+                    text-align: right;
+                }                
+            }
+
+            .donation-edit {
+                #donation-edit-amount {
+                    font-weight: bold;
+                    max-width: rem-calc(100);
+                    width: auto;
+                    text-align: right;
+                    font-size: 1rem;
+                    float: right;
+                    margin: 0;
+                    box-shadow: none;
+                }
+                a.donation-update-button {
+                    display: block;
+                    text-align: right;
+                    line-height: 1.4rem;
+                    clear: right;
+                }
+            }
         }
 
     }
