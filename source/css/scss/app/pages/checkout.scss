@@ -73,9 +73,9 @@
                     float: right;
                     direction: rtl;
                     height: auto;
-                    font-size: 1rem;
+                    font-size: .8rem;
                     padding-right: 1.25rem;
-                    max-width: 120px;
+                    max-width: 80px;
                     font-weight: lighter;
                     border-color: $kiva-stroke-gray;
                 }
@@ -83,6 +83,7 @@
                 @media #{$large-up} {
                     .amount-select {
                         font-size: 1.4rem;
+                        max-width: 120px;
                     }
                 }
 
@@ -131,12 +132,14 @@
                     font-size: 1rem;
                     float: right;
                     margin: 0;
+                    box-shadow: none;
                 }
                 a.donation-update-button {
                     display: block;
                     font-size: .9rem;
                     text-align: right;
                     line-height: 1.4rem;
+                    clear: right;
                 }
             }
         }
