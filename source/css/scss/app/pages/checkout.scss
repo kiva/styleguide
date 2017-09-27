@@ -45,6 +45,12 @@
                 p {
                     margin: 0;
                 }
+                @media #{$small} {
+                    .small-text {
+                        font-size: .7rem;
+                        line-height: .8rem;
+                    }
+                }
 
                 .loan-title {
                     font-size: 1rem;
@@ -74,17 +80,19 @@
                     float: right;
                     direction: rtl;
                     height: auto;
-                    font-size: .8rem;
-                    padding-right: 1.25rem;
-                    max-width: 80px;
-                    font-weight: lighter;
+                    font-size: .9rem;
+                    padding-right: 1rem;
+                    padding-left: 0;
+                    max-width: rem-calc(80);
                     border-color: $kiva-stroke-gray;
+                    background-color: $white;
                 }
 
                 @media #{$large-up} {
                     .amount-select {
                         font-size: 1.4rem;
-                        max-width: 120px;
+                        max-width: rem-calc(120);
+                        padding-right: 1rem;
                     }
                 }
 
@@ -127,9 +135,9 @@
             .donation-edit {
                 #donation-edit-amount {
                     font-weight: bold;
-                    max-width: 100px;
+                    max-width: rem-calc(100);
                     width: auto;
-                    direction: rtl;
+                    text-align: right;
                     font-size: 1rem;
                     float: right;
                     margin: 0;
@@ -137,7 +145,6 @@
                 }
                 a.donation-update-button {
                     display: block;
-                    font-size: .9rem;
                     text-align: right;
                     line-height: 1.4rem;
                     clear: right;
