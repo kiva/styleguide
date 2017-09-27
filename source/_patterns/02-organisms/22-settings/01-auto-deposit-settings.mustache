@@ -2,7 +2,7 @@
 	<form data-abide="ajax" class="settingsForm xbLegacyNav auto-deposit-form">
 {{/is-standalone}}
 
-{{#is_subscriber_active}}
+{{#is_mg_active}}
 	<h3 class="formTitle">Monthly Good subscription</h3>
 
 	{{^is_subscriber}}
@@ -10,7 +10,7 @@
 			<a href="{{mg_landing_url}}">Sign up for a Kiva Monthly Good subscription</a>
 		</p>
 	{{/is_subscriber}}
-{{/is_subscriber_active}}
+{{/is_mg_active}}
 
 {{^is_subscriber}}
 	<h3 class="formTitle">Auto deposits</h3>

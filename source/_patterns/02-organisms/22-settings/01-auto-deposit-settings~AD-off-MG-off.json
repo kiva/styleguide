@@ -1,7 +1,7 @@
 {
 	"has_auto_deposit": false,
 	"is_subscriber": false,
-	"is_subscriber_active": true,
+	"is_mg_active": true,
 	"setup_url": "#",
 	"mg_landing_url": "{kvurl page=monthlygood action=MGLanding}"
 }
