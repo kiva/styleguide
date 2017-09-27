@@ -1,6 +1,6 @@
 
 
-<div id="basket-contents" class="basket-contents columns">
+<div id="basket-contents" class="basket-contents">
 	<div id="loan-region">
 		<ul id="loan-items" class="list-items">
 			{{#pl_loans}}
@@ -40,7 +40,7 @@
 		{{/is_nudge}}
 		{{^is_nudge}}
 			{{#pl_simple_donation}}
-				{{> 02-organisms/60-checkout/07-mobile-donation-ui}}
+				{{> 02-organisms/60-checkout/07-simple-donation-ui}}
 			{{/pl_simple_donation}}
 		{{/is_nudge}}
 	</div>
@@ -53,7 +53,7 @@
 
 </div><!--basketContents-->
 
-<div id="basket-operations" class="basket-operations columns">
+<div id="basket-operations" class="basket-operations">
 	<!--
 	<div class="kiva-card">
 		<form id="addGiftRedemptionForm" action="https://www.dev.kiva.org/basket" method="GET">

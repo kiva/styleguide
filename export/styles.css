@@ -16046,9 +16046,13 @@ table.repayments-list {
   #checkoutWrap ul.list-items > li {
     list-style-type: none; }
 
+#checkoutWrap .checkout-totals {
+  padding: .5rem;
+  border-bottom: 1px solid #d8d8d8; }
+
 #checkoutWrap .basket-contents .loan-row {
   display: block;
-  padding: .5rem 0;
+  padding: 1rem .5rem;
   border-bottom: 1px solid #d8d8d8; }
   #checkoutWrap .basket-contents .loan-row .loan-image a {
     display: block; }
@@ -16060,24 +16064,75 @@ table.repayments-list {
     font-size: 1rem; }
     #checkoutWrap .basket-contents .loan-row .loan-details p {
       margin: 0; }
+    @media only screen {
+      #checkoutWrap .basket-contents .loan-row .loan-details .small-text, #checkoutWrap .basket-contents .loan-row .loan-details .mini-loan-card .status, .mini-loan-card #checkoutWrap .basket-contents .loan-row .loan-details .status, #checkoutWrap .basket-contents .loan-row .loan-details .mini-loan-card .name, .mini-loan-card #checkoutWrap .basket-contents .loan-row .loan-details .name, #checkoutWrap .basket-contents .loan-row .loan-details .mini-loan-card .activity, .mini-loan-card #checkoutWrap .basket-contents .loan-row .loan-details .activity, #checkoutWrap .basket-contents .loan-row .loan-details .mini-loan-card .country, .mini-loan-card #checkoutWrap .basket-contents .loan-row .loan-details .country, #checkoutWrap .basket-contents .loan-row .loan-details .statistic-display .statistic-link, .statistic-display #checkoutWrap .basket-contents .loan-row .loan-details .statistic-link, #checkoutWrap .basket-contents .loan-row .loan-details .statistic-display .statistic-additional-text, .statistic-display #checkoutWrap .basket-contents .loan-row .loan-details .statistic-additional-text {
+        font-size: .7rem;
+        line-height: .8rem; } }
     #checkoutWrap .basket-contents .loan-row .loan-details .loan-title {
       font-size: 1rem;
-      line-height: 1rem;
+      line-height: 1.3rem;
       margin: .25rem 0; }
     @media only screen and (min-width: 681px) {
       #checkoutWrap .basket-contents .loan-row .loan-details .loan-title {
-        font-size: 1.4rem; } }
+        font-size: 1.4rem;
+        line-height: 1.5rem; } }
     #checkoutWrap .basket-contents .loan-row .loan-details .loan-reservation,
     #checkoutWrap .basket-contents .loan-row .loan-details .loan-sponsor {
       color: #999; }
   @media only screen and (min-width: 681px) {
     #checkoutWrap .basket-contents .loan-row .loan-details {
-      padding: inherit; } }
+      padding: 0 .8rem; } }
+  #checkoutWrap .basket-contents .loan-row .loan-totals .amount-select {
+    float: right;
+    direction: rtl;
+    height: auto;
+    font-size: .9rem;
+    padding-right: 1rem;
+    padding-left: 0;
+    max-width: 4.4444444444rem;
+    border-color: #d8d8d8;
+    background-color: #FFFFFF; }
+  @media only screen and (min-width: 681px) {
+    #checkoutWrap .basket-contents .loan-row .loan-totals .amount-select {
+      font-size: 1.4rem;
+      max-width: 6.6666666667rem;
+      padding-right: 1rem; } }
+  #checkoutWrap .basket-contents .loan-row .loan-totals .remove-loan {
+    display: block;
+    text-align: right;
+    float: right;
+    clear: right; }
 
-#checkoutWrap .basket-contents .donation-ui,
-#checkoutWrap .basket-contents .checkout-totals {
+@media only screen and (min-width: 681px) {
+  #checkoutWrap .basket-contents .loan-row {
+    padding: 1rem 0; } }
+
+#checkoutWrap .basket-contents .simple-donation-ui {
   padding: .5rem 0;
   border-bottom: 1px solid #d8d8d8; }
+  #checkoutWrap .basket-contents .simple-donation-ui > .columns {
+    padding: 0 .5rem; }
+  #checkoutWrap .basket-contents .simple-donation-ui span {
+    line-height: 1.6em; }
+  @media only screen and (min-width: 681px) {
+    #checkoutWrap .basket-contents .simple-donation-ui > .columns {
+      padding: 0 inherit; }
+    #checkoutWrap .basket-contents .simple-donation-ui .span {
+      text-align: right; } }
+  #checkoutWrap .basket-contents .simple-donation-ui .donation-edit #donation-edit-amount {
+    font-weight: bold;
+    max-width: 5.5555555556rem;
+    width: auto;
+    text-align: right;
+    font-size: 1rem;
+    float: right;
+    margin: 0;
+    box-shadow: none; }
+  #checkoutWrap .basket-contents .simple-donation-ui .donation-edit a.donation-update-button {
+    display: block;
+    text-align: right;
+    line-height: 1.4rem;
+    clear: right; }
 
 .ac-container.ac-title {
   margin: 0;
