@@ -48,12 +48,13 @@
 
                 .loan-title {
                     font-size: 1rem;
-                    line-height: 1rem;
+                    line-height: 1.3rem;
                     margin: .25rem 0;
                 }
                 @media #{$large-up} {
                     .loan-title {
                         font-size: 1.4rem;
+                        line-height: 1.5rem;
                     }
                 }
 
