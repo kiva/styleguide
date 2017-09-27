@@ -1,0 +1,38 @@
+{
+    "is_basket": true,
+    "is_checkout": true,
+    "basket_continue_href": "#",
+    "pl_loans": 1,
+    "id":1367775,
+    "price":"25.00",
+    "team":null,
+    "__typename":"LoanReservation",
+    "loan": {
+        "id":1367775,
+        "name":"Union Villa Ingenio Group",
+        "sponsor_name":"Fundación Pro Mujer",
+        "use":"to buy wholesale clothing for later sale in her sales space.",
+        "__typename":"LoanPartner",
+        "url": "https://dev.kiva.org/lend/1361154",
+        "image": {
+            "url": "https://www-dev-kiva-org.global.ssl.fastly.net/img/s150/493fc8d1fdf717d55bd0d0460b4aab96.jpg"
+        },
+        "location": {
+            "country":  {
+                "name": "Rwanda"
+            }
+        },
+        "sector": {
+            "name": "Food"
+        }
+    },
+    "pl_totals": 1,
+    "totals": {
+        "order_total": "27.50",
+        "free_credit": "10.00",
+        "grand_total": "27.50"
+    },
+    "pl_simple_donation": 1,
+    "pl_nudge": 0,
+    "suggested_donation":"3.75"
+}

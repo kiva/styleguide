@@ -16036,6 +16036,49 @@ table.repayments-list {
       width: 2.6666666667rem;
       margin-bottom: 0.2222222222rem; } }
 
+#checkoutWrap label {
+  background: transparent;
+  color: #666; }
+
+#checkoutWrap ul.list-items {
+  margin: 0;
+  padding: 0; }
+  #checkoutWrap ul.list-items > li {
+    list-style-type: none; }
+
+#checkoutWrap .basket-contents .loan-row {
+  display: block;
+  padding: .5rem 0;
+  border-bottom: 1px solid #d8d8d8; }
+  #checkoutWrap .basket-contents .loan-row .loan-image a {
+    display: block; }
+    #checkoutWrap .basket-contents .loan-row .loan-image a img {
+      display: block;
+      width: auto; }
+  #checkoutWrap .basket-contents .loan-row .loan-details {
+    padding: 0 .5rem;
+    font-size: 1rem; }
+    #checkoutWrap .basket-contents .loan-row .loan-details p {
+      margin: 0; }
+    #checkoutWrap .basket-contents .loan-row .loan-details .loan-title {
+      font-size: 1rem;
+      line-height: 1rem;
+      margin: .25rem 0; }
+    @media only screen and (min-width: 681px) {
+      #checkoutWrap .basket-contents .loan-row .loan-details .loan-title {
+        font-size: 1.4rem; } }
+    #checkoutWrap .basket-contents .loan-row .loan-details .loan-reservation,
+    #checkoutWrap .basket-contents .loan-row .loan-details .loan-sponsor {
+      color: #999; }
+  @media only screen and (min-width: 681px) {
+    #checkoutWrap .basket-contents .loan-row .loan-details {
+      padding: inherit; } }
+
+#checkoutWrap .basket-contents .donation-ui,
+#checkoutWrap .basket-contents .checkout-totals {
+  padding: .5rem 0;
+  border-bottom: 1px solid #d8d8d8; }
+
 .ac-container.ac-title {
   margin: 0;
   display: block;
@@ -16136,20 +16179,42 @@ table.repayments-list {
         border-width: 15px 0 15px 15px;
         border-color: transparent transparent transparent #236133; }
 
-.basket-steps {
+.checkout-steps {
   margin: 0; }
-  .basket-steps ul li {
-    width: 33%; }
-    @media only screen and (max-width: 480px) {
-      .basket-steps ul li {
-        font-size: 0.7777777778rem;
-        padding-left: 1rem;
-        padding-right: 0; } }
-  .basket-steps ul li:last-child {
-    width: 34%;
-    padding-left: 0;
-    padding-right: 0em;
-    margin-right: -4px; }
+  .checkout-steps ul {
+    line-height: 100%; }
+    .checkout-steps ul li {
+      width: 33%; }
+      @media only screen and (max-width: 480px) {
+        .checkout-steps ul li {
+          font-size: 0.7777777778rem;
+          padding-left: 1rem;
+          padding-right: 0;
+          height: 26px;
+          line-height: 24px; } }
+      @media only screen and (max-width: 480px) {
+        .checkout-steps ul li.arrow:after {
+          border-width: 12px;
+          margin-top: -12px; } }
+      @media only screen and (max-width: 480px) {
+        .checkout-steps ul li.arrow:before {
+          border-width: 13px;
+          margin-top: -13px; } }
+      @media only screen and (max-width: 480px) {
+        .checkout-steps ul li.arrow.active:after {
+          border-width: 12px 0 12px 12px; } }
+    .checkout-steps ul li:last-child {
+      width: 34%;
+      padding-left: 0;
+      padding-right: 0em;
+      margin-right: -4px;
+      border-right: 1px solid #333; }
+      .checkout-steps ul li:last-child:after {
+        width: 0;
+        height: 0;
+        border: none; }
+      .checkout-steps ul li:last-child:before {
+        border: none; }
 
 .triple-state-buttons, .quintuple-state-buttons {
   position: relative;

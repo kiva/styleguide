@@ -1,9 +1,11 @@
 {
 	 "has_auto_deposit": true,
 	 "is_subscriber": true,
+	 "is_subscriber_active": true,
 	 "is-standalone": true,
 	 "total_amount": "$28.75",
 	 "deposit_amount": "$25",
 	 "donation_amount": "$3.75",
-	 "day_of_month": "14th"
+	 "day_of_month": "14th",
+	 "mg_landing_url": "{kvurl page=monthlygood action=MGLanding}"
 }
