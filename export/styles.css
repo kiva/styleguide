@@ -16020,6 +16020,16 @@ table.repayments-list {
         width: 2.6666666667rem;
         margin-bottom: 0.2222222222rem; } }
 
+.monthly-good .amount-input-wrapper {
+  display: inline-block; }
+
+.monthly-good .mg-amount-input {
+  font-size: 1.5555555556rem;
+  height: 2.4444444444rem;
+  width: 7.5555555556rem;
+  font-weight: bold;
+  text-align: center; }
+
 .monthly-good .icon-confirmation {
   fill: #63a541;
   height: 1.3333333333rem;
