@@ -1,10 +1,11 @@
-<div class="loan-row row small-collapse large-uncollapse">
-	<div class="loan-image small-3 columns">
+<div class="loan-row row small-collapse">
+	<div class="loan-image small-2 columns">
 		<a class="img thumb" href="{{ loan.url }}">
-			<img src="{{ loan.image.url }}" alt="{{ loan.name }}" title="{{ loan.name }}">
+			<img data-interchange="[{{ loan.image.url }}, (default)], [{{ loan.image.url_2x }}, (retina)]" alt="{{ loan.name }}" title="{{ loan.name }}">
+			<noscript><img src="{{ loan.image.url }}" alt="{{ loan.name }}" title="{{ loan.name }}"></noscript>
 		</a>
 	</div>
-	<div class="loan-details small-6 columns">
+	<div class="loan-details small-7 columns">
 		<!-- needs to flip to red when reservation is close to expiring -->
 		<p class="loan-reservation small-text">Reserved for 45 more minutes.</p>
 		<h2 class="loan-title">{{ loan.name }}</h2>
