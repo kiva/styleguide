@@ -16,11 +16,6 @@
         }
     }
 
-    .checkout-totals {
-        padding: .5rem;
-        border-bottom: 1px solid #d8d8d8;
-    }
-
     .basket-contents {
 
         .loan-row {
@@ -152,5 +147,67 @@
             }
         }
 
+    }
+
+    .checkout-totals {
+        padding: 0;
+        text-align: right;
+
+        .order-total,
+        .reward-credit,
+        .grand-total {
+            padding: .2rem .5rem;
+
+            label {
+                display: inline-block;
+                float: left;
+                font-size: 1rem;
+                color: $kiva-text-dark;
+                line-height: 1.4rem;
+            }
+            span {
+                display: inline-block;
+                font-weight: bold;
+                width: rem-calc(100);
+                font-size: 1rem;
+                line-height: 1.4rem;
+            }
+        }
+
+        @media #{$large-up} {
+            .order-total,
+            .reward-credit,
+            .grand-total {
+                label {
+                    float:none;
+                }
+            }
+        }
+
+        .order-total {}
+
+        .reward-credit {
+            .apply-link {
+                font-size: 1rem;
+                line-height: 1.4rem;
+            }
+        }
+
+        .grand-total {
+            border-top: 1px solid #d8d8d8;
+        }
+    }
+
+    .basket-operations {
+        padding: .5rem;
+
+        .basket-buttons {
+            display: block;
+            float: right;
+            
+            #basket-continue {
+
+            }
+        }   
     }
 }
