@@ -153,9 +153,6 @@
         padding: 0;
         text-align: right;
 
-        // .order-total,
-        // .reward-credit,
-        // .grand-total
         .totals-row {
             padding: .2rem .5rem;
 
@@ -194,12 +191,6 @@
             }
         }
 
-        .order-total {}
-
-        .reward-credit {
-
-        }
-
         .grand-total {
             border-top: 1px solid #d8d8d8;
         }
@@ -211,10 +202,6 @@
         .basket-buttons {
             display: block;
             float: right;
-
-            #basket-continue {
-
-            }
         }   
     }
 }
