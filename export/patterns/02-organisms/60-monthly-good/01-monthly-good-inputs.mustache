@@ -1,0 +1,196 @@
+{{#is-standalone}}
+	<div class="monthly-good">
+	<div class="monthly-good-dynamic-view">
+	<div class="monthly-good-form">
+	<form data-abide>
+{{/is-standalone}}
+
+	<div class="form-controls day-control text-center">
+		<strong>Each month on the</strong>
+		<div class="day-input">
+			<input class="text-input"
+				type="text"
+				placeholder=""
+				value="{{deposit_date}}"
+				data-abide-validator="ordinalDayOfMonth"
+				data-min-day="1"
+				data-max-day="31"
+				required>
+			<small class="error">
+				<svg class="icon icon-error">
+					<use xlink:href="#icon-error"/>
+				</svg>
+				Enter day of month - 1 to 31
+			</small>
+		</div>
+
+		<div class="pencil-text-input">
+			<span class="text-display">{{deposit_date}}</span>
+			<span class="pencil">
+				  <svg class="icon icon-pencil">
+					<use xlink:href="#icon-pencil"/>
+				</svg>
+			</span>
+		</div>
+		{{#is_date_after_28th}}
+			<small class="after-28-note"><br>(May be processed on the last day of the month)</small>
+		{{/is_date_after_28th}}
+		<br><strong>we'll process the following:</strong>
+	</div>
+
+	<table class="checkout-details">
+		<tr>
+			<td>&nbsp;</td>
+			<td class="left-small-pad">Deposit for lending</td>
+			<td class="amount-input text-right right-no-pad">
+				<input id="mg-deposit-amount-input"
+						   class="deposit-amount-input"
+						   type="text"
+						   maxlength="9"
+						   placeholder="$"
+						   value="{{deposit_amount}}"
+						   data-abide-validator="currency"
+						   data-min-amount="5.00"
+						   data-max-amount="10000"
+						   required>
+					<small class="error">
+						<svg class="icon icon-error">
+							<use xlink:href="#icon-error"/>
+						</svg>
+						$10,000 limit
+					</small>
+			</td>
+			<td class="hide-for-small-only">&nbsp;</td>
+		</tr>
+
+		<tr>
+			<td class="right-no-pad">
+				<div class="fancy-checkbox-div">
+					<input type='checkbox' class='fancy-checkbox' id='donationCheckbox'
+						   {{#has_donation}}checked{{/has_donation}}>
+					<label for="donationCheckbox">
+						<svg class="icon icon-checkbox-checked">
+							<use xlink:href="#icon-checkbox-checked"/>
+						</svg>
+						<svg class="icon icon-checkbox-unchecked">
+							<use xlink:href="#icon-checkbox-unchecked"/>
+						</svg>
+					</label>
+				</div>
+			</td>
+
+			<td class="left-small-pad">
+				<span class="fancy-checkbox-text">
+					Optional donation
+					<br class="smo">to support Kiva
+				</span>
+			</td>
+
+			<td class="text-right right-no-pad">
+				<div class="donation-selector-large">
+					<div class="pencil-dropdown">
+						<span class="text-display">{{donation_amount}}</span>
+						<input class="text-input"
+							type="text"
+							value="{{donation_amount}}"
+							data-abide-validator="currency"
+							data-min-amount="0.00"
+							data-max-amount="10000"
+							required>
+						<small class="error">
+							<svg class="icon icon-error">
+								<use xlink:href="#icon-error"/>
+							</svg>
+							$10,000 limit
+						</small>
+
+						<span class="edit-controls">
+						  <ul class="dropdown-choices">
+							<li id="donation-val-20" class="">{{20_percent}}</li>
+							<li id="donation-val-15" class="selected">{{15_percent}}</li>
+							<li id="donation-val-8" class="">{{8_percent}}</li>
+							<li id="donation-val-0" class="">$0.00</li>
+							<li id="donation-val-other" class="">Other</li>
+						  </ul>
+						</span>
+					</div>
+				</div>
+				<div class="donation-selector-small">
+					<div class="selector">
+						<input id="donation-amount-input"
+							   type="text"
+							   class="text-input"
+							   value="{{donation_amount}}"
+							   data-abide-validator="currency"
+							   data-min-amount="0.00"
+							   data-max-amount="10000"
+							   required>
+						<small class="error">
+							<svg class="icon icon-error">
+								<use xlink:href="#icon-error"/>
+							</svg>
+							$10,000 limit
+						</small>
+						<select class="dropdown-choices-select">
+							<option id="donation-val-20s" value="{{20_percent}}">{{20_percent}}</option>
+							<option id="donation-val-15s" value="{{15_percent}}" selected>{{15_percent}}</option>
+							<option id="donation-val-8s" value="{{8_percent}}">{{8_percent}}</option>
+							<option id="donation-val-0s" value="$0.00">$0.00</option>
+							<option id="donation-val-others" value="$other">Other</option>
+						</select>
+					</div>
+				</div>
+			</td>
+			<td class="left-small-pad hide-for-small-only">
+				<div class="pencil-dropdown">
+					<span class="pencil">
+						<svg class="icon icon-pencil">
+							<use xlink:href="#icon-pencil"/>
+						</svg>
+					</span>
+				</div>
+			</td>
+		</tr>
+
+		<tr>
+			<td>&nbsp;</td>
+			<td class="left-small-pad"><strong>Total/month</strong></td>
+			<td class="text-right total amount right-no-pad">
+				<strong>{{total_amount}}</strong>
+			</td>
+			<td class="hide-for-small-only">&nbsp;</td>
+		</tr>
+	</table>
+
+	<div class="total-amount-minimum">
+		<input type="text"
+			   data-abide-validator="sum"
+			   data-min-sum="0.01"
+			   data-sum-inputs="deposit-amount-input,donation-amount-input">
+		<small class="error">
+			<svg class="icon icon-error">
+				<use xlink:href="#icon-error"/>
+			</svg>
+			To set up an auto deposit, please enter an amount greater than $0.
+		</small>
+	</div>
+
+	<div class="total-amount-maximum">
+		<input type="text"
+			   data-abide-validator="sum"
+			   data-max-sum="10000"
+			   data-sum-inputs="deposit-amount-input,donation-amount-input">
+		<small class="error">
+			<svg class="icon icon-error">
+				<use xlink:href="#icon-error"/>
+			</svg>
+			The maximum auto deposit allowed is $10,000. Please try again by entering in a smaller amount.
+		</small>
+	</div>
+
+{{#is-standalone}}
+	</form>
+	</div>
+	</div>
+	</div>
+{{/is-standalone}}
