@@ -9,7 +9,8 @@
 		<!-- needs to flip to red when reservation is close to expiring -->
 		<p class="loan-reservation small-text">
 		{{#not_reserved}}
-			<span class="red">Loan not reserved.</span> <!--<span class="smallest"><a href="{kvurl page=ajax action=getMessageCatalogTerm type=glossary term=LoanReservation}" class="helpTip mcHelpTip">Why?</a></span>-->
+			<!-- {kvurl page=ajax action=getMessageCatalogTerm type=glossary term=LoanReservation} -->
+			<span class="red">Loan not reserved.</span> <span class="info-trigger"><a href="#">Why?</a></span>
 		{{/not_reserved}}
 		{{^not_reserved}}
 			{{#reserved_for}}
