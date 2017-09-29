@@ -153,9 +153,10 @@
         padding: 0;
         text-align: right;
 
-        .order-total,
-        .reward-credit,
-        .grand-total {
+        // .order-total,
+        // .reward-credit,
+        // .grand-total
+        .totals-row {
             padding: .2rem .5rem;
 
             label {
@@ -164,6 +165,7 @@
                 font-size: 1rem;
                 color: $kiva-text-dark;
                 line-height: 1.4rem;
+                text-decoration: inherit;
             }
             span {
                 display: inline-block;
@@ -171,13 +173,21 @@
                 width: rem-calc(100);
                 font-size: 1rem;
                 line-height: 1.4rem;
+                text-decoration: inherit;
+            }
+            .apply-link,
+            .remove-link {
+                font-size: .8rem;
+                line-height: 1.4rem;
+                margin-right: .5rem;
+            }
+            del {
+                text-decoration: line-through;
             }
         }
 
         @media #{$large-up} {
-            .order-total,
-            .reward-credit,
-            .grand-total {
+            .totals-row {
                 label {
                     float:none;
                 }
@@ -187,10 +197,7 @@
         .order-total {}
 
         .reward-credit {
-            .apply-link {
-                font-size: 1rem;
-                line-height: 1.4rem;
-            }
+
         }
 
         .grand-total {
@@ -204,7 +211,7 @@
         .basket-buttons {
             display: block;
             float: right;
-            
+
             #basket-continue {
 
             }
