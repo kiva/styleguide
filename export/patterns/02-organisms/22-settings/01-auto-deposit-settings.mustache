@@ -2,17 +2,17 @@
 	<form data-abide="ajax" class="settingsForm xbLegacyNav auto-deposit-form">
 {{/is-standalone}}
 
-{{#is_subscriber_active}}
+{{#is_mg_active}}
 	<h3 class="formTitle">Monthly Good subscription</h3>
 
-	{{^isSubscriber}}
+	{{^is_subscriber}}
 		<p>
 			<a href="{{mg_landing_url}}">Sign up for a Kiva Monthly Good subscription</a>
 		</p>
-	{{/isSubscriber}}
-{{/is_subscriber_active}}
+	{{/is_subscriber}}
+{{/is_mg_active}}
 
-{{^isSubscriber}}
+{{^is_subscriber}}
 	<h3 class="formTitle">Auto deposits</h3>
 
 	{{^has_auto_deposit}}
@@ -20,7 +20,7 @@
 			<a href="{{setup_url}}">Add money to your account every month</a>
 		</p>
 	{{/has_auto_deposit}}
-{{/isSubscriber}}
+{{/is_subscriber}}
 
 
 {{#has_auto_deposit}}
@@ -58,12 +58,12 @@
 		{{/day_of_month}}
 		<span> month </span><span class="total-amount">{{total_amount}}</span><span> will be transferred from PayPal.</span>
 		{{^legacy}}
-			{{#isSubscriber}}
-				<a class="cancel-subscription" href="#">Cancel subscription</a>
-			{{/isSubscriber}}
-			{{^isSubscriber}}
+			{{#is_subscriber}}
+				<a class="cancel-subscription" href="#">Cancel Monthly Good</a>
+			{{/is_subscriber}}
+			{{^is_subscriber}}
 				<a class="cancel-deposit" href="#">Cancel auto deposit</a>
-			{{/isSubscriber}}
+			{{/is_subscriber}}
 		{{/legacy}}
 		{{#is_date_after_28th}}
 			{{^edit_date}}

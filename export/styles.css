@@ -16020,6 +16020,16 @@ table.repayments-list {
         width: 2.6666666667rem;
         margin-bottom: 0.2222222222rem; } }
 
+.monthly-good .amount-input-wrapper {
+  display: inline-block; }
+
+.monthly-good .mg-amount-input {
+  font-size: 1.5555555556rem;
+  height: 2.4444444444rem;
+  width: 7.5555555556rem;
+  font-weight: bold;
+  text-align: center; }
+
 .monthly-good .icon-confirmation {
   fill: #63a541;
   height: 1.3333333333rem;
@@ -16035,6 +16045,140 @@ table.repayments-list {
       height: 2.6666666667rem;
       width: 2.6666666667rem;
       margin-bottom: 0.2222222222rem; } }
+
+#checkoutWrap label {
+  background: transparent;
+  color: #666; }
+
+#checkoutWrap ul.list-items {
+  margin: 0;
+  padding: 0; }
+  #checkoutWrap ul.list-items > li {
+    list-style-type: none; }
+
+#checkoutWrap .basket-contents .loan-row {
+  display: block;
+  padding: 1rem .5rem;
+  border-bottom: 1px solid #d8d8d8; }
+  #checkoutWrap .basket-contents .loan-row .loan-image a {
+    display: block; }
+    #checkoutWrap .basket-contents .loan-row .loan-image a img {
+      display: block;
+      width: auto; }
+  #checkoutWrap .basket-contents .loan-row .loan-details {
+    padding: 0 .5rem;
+    font-size: 1rem; }
+    #checkoutWrap .basket-contents .loan-row .loan-details p {
+      margin: 0; }
+    @media only screen {
+      #checkoutWrap .basket-contents .loan-row .loan-details .small-text, #checkoutWrap .basket-contents .loan-row .loan-details .mini-loan-card .status, .mini-loan-card #checkoutWrap .basket-contents .loan-row .loan-details .status, #checkoutWrap .basket-contents .loan-row .loan-details .mini-loan-card .name, .mini-loan-card #checkoutWrap .basket-contents .loan-row .loan-details .name, #checkoutWrap .basket-contents .loan-row .loan-details .mini-loan-card .activity, .mini-loan-card #checkoutWrap .basket-contents .loan-row .loan-details .activity, #checkoutWrap .basket-contents .loan-row .loan-details .mini-loan-card .country, .mini-loan-card #checkoutWrap .basket-contents .loan-row .loan-details .country, #checkoutWrap .basket-contents .loan-row .loan-details .statistic-display .statistic-link, .statistic-display #checkoutWrap .basket-contents .loan-row .loan-details .statistic-link, #checkoutWrap .basket-contents .loan-row .loan-details .statistic-display .statistic-additional-text, .statistic-display #checkoutWrap .basket-contents .loan-row .loan-details .statistic-additional-text {
+        font-size: .7rem;
+        line-height: .8rem; } }
+    #checkoutWrap .basket-contents .loan-row .loan-details .loan-title {
+      font-size: 1rem;
+      line-height: 1.3rem;
+      margin: .25rem 0; }
+    @media only screen and (min-width: 681px) {
+      #checkoutWrap .basket-contents .loan-row .loan-details .loan-title {
+        font-size: 1.4rem;
+        line-height: 1.5rem; } }
+    #checkoutWrap .basket-contents .loan-row .loan-details .loan-reservation,
+    #checkoutWrap .basket-contents .loan-row .loan-details .loan-sponsor {
+      color: #999; }
+  @media only screen and (min-width: 681px) {
+    #checkoutWrap .basket-contents .loan-row .loan-details {
+      padding: 0 .8rem; } }
+  #checkoutWrap .basket-contents .loan-row .loan-totals .amount-select {
+    float: right;
+    direction: rtl;
+    height: auto;
+    font-size: .9rem;
+    padding-right: 1rem;
+    padding-left: 0;
+    max-width: 4.4444444444rem;
+    border-color: #d8d8d8;
+    background-color: #FFFFFF; }
+  @media only screen and (min-width: 681px) {
+    #checkoutWrap .basket-contents .loan-row .loan-totals .amount-select {
+      font-size: 1.4rem;
+      max-width: 6.6666666667rem;
+      padding-right: 1rem; } }
+  #checkoutWrap .basket-contents .loan-row .loan-totals .remove-loan {
+    display: block;
+    text-align: right;
+    float: right;
+    clear: right; }
+
+@media only screen and (min-width: 681px) {
+  #checkoutWrap .basket-contents .loan-row {
+    padding: 1rem 0; } }
+
+#checkoutWrap .basket-contents .simple-donation-ui {
+  padding: .5rem 0;
+  border-bottom: 1px solid #d8d8d8; }
+  #checkoutWrap .basket-contents .simple-donation-ui > .columns {
+    padding: 0 .5rem; }
+  #checkoutWrap .basket-contents .simple-donation-ui span {
+    line-height: 1.6em; }
+  @media only screen and (min-width: 681px) {
+    #checkoutWrap .basket-contents .simple-donation-ui > .columns {
+      padding: 0 inherit; }
+    #checkoutWrap .basket-contents .simple-donation-ui .span {
+      text-align: right; } }
+  #checkoutWrap .basket-contents .simple-donation-ui .donation-edit #donation-edit-amount {
+    font-weight: bold;
+    max-width: 5.5555555556rem;
+    width: auto;
+    text-align: right;
+    font-size: 1rem;
+    float: right;
+    margin: 0;
+    box-shadow: none; }
+  #checkoutWrap .basket-contents .simple-donation-ui .donation-edit a.donation-update-button {
+    display: block;
+    text-align: right;
+    line-height: 1.4rem;
+    clear: right; }
+
+#checkoutWrap .checkout-totals {
+  padding: 0;
+  text-align: right; }
+  #checkoutWrap .checkout-totals .order-total,
+  #checkoutWrap .checkout-totals .reward-credit,
+  #checkoutWrap .checkout-totals .grand-total {
+    padding: .2rem .5rem; }
+    #checkoutWrap .checkout-totals .order-total label,
+    #checkoutWrap .checkout-totals .reward-credit label,
+    #checkoutWrap .checkout-totals .grand-total label {
+      display: inline-block;
+      float: left;
+      font-size: 1rem;
+      color: #333;
+      line-height: 1.4rem; }
+    #checkoutWrap .checkout-totals .order-total span,
+    #checkoutWrap .checkout-totals .reward-credit span,
+    #checkoutWrap .checkout-totals .grand-total span {
+      display: inline-block;
+      font-weight: bold;
+      width: 5.5555555556rem;
+      font-size: 1rem;
+      line-height: 1.4rem; }
+  @media only screen and (min-width: 681px) {
+    #checkoutWrap .checkout-totals .order-total label,
+    #checkoutWrap .checkout-totals .reward-credit label,
+    #checkoutWrap .checkout-totals .grand-total label {
+      float: none; } }
+  #checkoutWrap .checkout-totals .reward-credit .apply-link {
+    font-size: 1rem;
+    line-height: 1.4rem; }
+  #checkoutWrap .checkout-totals .grand-total {
+    border-top: 1px solid #d8d8d8; }
+
+#checkoutWrap .basket-operations {
+  padding: .5rem; }
+  #checkoutWrap .basket-operations .basket-buttons {
+    display: block;
+    float: right; }
 
 .ac-container.ac-title {
   margin: 0;
@@ -16136,20 +16280,42 @@ table.repayments-list {
         border-width: 15px 0 15px 15px;
         border-color: transparent transparent transparent #236133; }
 
-.basket-steps {
+.checkout-steps {
   margin: 0; }
-  .basket-steps ul li {
-    width: 33%; }
-    @media only screen and (max-width: 480px) {
-      .basket-steps ul li {
-        font-size: 0.7777777778rem;
-        padding-left: 1rem;
-        padding-right: 0; } }
-  .basket-steps ul li:last-child {
-    width: 34%;
-    padding-left: 0;
-    padding-right: 0em;
-    margin-right: -4px; }
+  .checkout-steps ul {
+    line-height: 100%; }
+    .checkout-steps ul li {
+      width: 33%; }
+      @media only screen and (max-width: 480px) {
+        .checkout-steps ul li {
+          font-size: 0.7777777778rem;
+          padding-left: 1rem;
+          padding-right: 0;
+          height: 26px;
+          line-height: 24px; } }
+      @media only screen and (max-width: 480px) {
+        .checkout-steps ul li.arrow:after {
+          border-width: 12px;
+          margin-top: -12px; } }
+      @media only screen and (max-width: 480px) {
+        .checkout-steps ul li.arrow:before {
+          border-width: 13px;
+          margin-top: -13px; } }
+      @media only screen and (max-width: 480px) {
+        .checkout-steps ul li.arrow.active:after {
+          border-width: 12px 0 12px 12px; } }
+    .checkout-steps ul li:last-child {
+      width: 34%;
+      padding-left: 0;
+      padding-right: 0em;
+      margin-right: -4px;
+      border-right: 1px solid #333; }
+      .checkout-steps ul li:last-child:after {
+        width: 0;
+        height: 0;
+        border: none; }
+      .checkout-steps ul li:last-child:before {
+        border: none; }
 
 .triple-state-buttons, .quintuple-state-buttons {
   position: relative;
