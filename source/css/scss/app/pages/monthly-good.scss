@@ -5,6 +5,20 @@
 		}
 	}
 
+	.monthly-good-landing {
+		.amount-input-wrapper {
+			display: inline-block;
+		}
+
+		.mg-amount-input {
+			font-size: rem-calc(28);
+			height: rem-calc(44);
+			width: rem-calc(136);
+			font-weight: bold;
+			text-align: center;
+		}
+	}
+
 	input#mg-deposit-amount-input {
 		font-size: $body-font-size;
 		text-align: right;
