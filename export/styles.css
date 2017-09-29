@@ -16283,34 +16283,32 @@ table.repayments-list {
 #checkoutWrap .checkout-totals {
   padding: 0;
   text-align: right; }
-  #checkoutWrap .checkout-totals .order-total,
-  #checkoutWrap .checkout-totals .reward-credit,
-  #checkoutWrap .checkout-totals .grand-total {
+  #checkoutWrap .checkout-totals .totals-row {
     padding: .2rem .5rem; }
-    #checkoutWrap .checkout-totals .order-total label,
-    #checkoutWrap .checkout-totals .reward-credit label,
-    #checkoutWrap .checkout-totals .grand-total label {
+    #checkoutWrap .checkout-totals .totals-row label {
       display: inline-block;
       float: left;
       font-size: 1rem;
       color: #333;
-      line-height: 1.4rem; }
-    #checkoutWrap .checkout-totals .order-total span,
-    #checkoutWrap .checkout-totals .reward-credit span,
-    #checkoutWrap .checkout-totals .grand-total span {
+      line-height: 1.4rem;
+      text-decoration: inherit; }
+    #checkoutWrap .checkout-totals .totals-row span {
       display: inline-block;
       font-weight: bold;
       width: 5.5555555556rem;
       font-size: 1rem;
-      line-height: 1.4rem; }
+      line-height: 1.4rem;
+      text-decoration: inherit; }
+    #checkoutWrap .checkout-totals .totals-row .apply-link,
+    #checkoutWrap .checkout-totals .totals-row .remove-link {
+      font-size: .8rem;
+      line-height: 1.4rem;
+      margin-right: .5rem; }
+    #checkoutWrap .checkout-totals .totals-row del {
+      text-decoration: line-through; }
   @media only screen and (min-width: 681px) {
-    #checkoutWrap .checkout-totals .order-total label,
-    #checkoutWrap .checkout-totals .reward-credit label,
-    #checkoutWrap .checkout-totals .grand-total label {
+    #checkoutWrap .checkout-totals .totals-row label {
       float: none; } }
-  #checkoutWrap .checkout-totals .reward-credit .apply-link {
-    font-size: 1rem;
-    line-height: 1.4rem; }
   #checkoutWrap .checkout-totals .grand-total {
     border-top: 1px solid #d8d8d8; }
 
