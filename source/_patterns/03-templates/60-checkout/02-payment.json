@@ -2,15 +2,13 @@
     "is_payment": true,
     "is_checkout": true,
     "is_logged_in": true,
-    "pl_loans": 0,
-    "id":1367775,
-    "price":"25.00",
-    "team":null,
-    "__typename":"LoanReservation",
-    "loan": {
+    "pl_items": 1,
+    "item": {
         "id":1367775,
+        "price":"25.00",
         "name":"Union Villa Ingenio Group",
-        "__typename":"LoanPartner"
+        "reserved_message":"Reserved for 10 minutes.",
+        "team":"Donut Empire"
     },
     "pl_totals": 0,
     "totals": {

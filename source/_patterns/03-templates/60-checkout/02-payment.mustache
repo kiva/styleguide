@@ -1,18 +1,18 @@
 <div id="payment-contents" class="payment-contents">
 	<div id="payment-item-region">
-		<table class="" role="" summary="">
+		<table class="payment-item-table" summary="The following items in your basket are ready for payment.">
 			<thead>
 				<tr>
-					<th class="">Item</th>
-					<th class="">Total</th>
+					<th class="item-info-header">Item</th>
+					<th class="item-price-header">Total</th>
 					{{#dontate_repayments}}
-						<th class=""><a href="#">Donate Repayments?</a></th>
+						<th class="donate-repayments-header"><ahref="#">Donate Repayments?</a></th>
 					{{/dontate_repayments}}
 				</tr>
 			</thead>
-			<tbody>
+			<tbody id="item-region">
 				{{#pl_items}}
-					<tr>
+					<tr class="payment-item">
 						{{> 02-organisms/60-checkout/08-payment-item}}
 					</tr>
 				{{/pl_items}}

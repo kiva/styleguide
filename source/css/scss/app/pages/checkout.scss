@@ -153,6 +153,44 @@
 
     }
 
+    .payment-contents {
+        #payment-item-region {
+            padding-bottom: 1rem;
+            border-bottom: 1px solid $kiva-stroke-gray;
+        }
+        .payment-item-table {
+            border: none;
+            th {
+                padding: .6rem .8rem;
+            } 
+            td {
+                padding: 1rem .8rem;
+            }
+            .item-price-header {
+                text-align: right;
+            }
+        }
+        .payment-item {
+            .item-info {
+                .item-title {
+                    margin:0;
+                }
+                .item-reserve-message {
+                    display: block;
+                    color: $kiva-text-light;
+                }
+            }
+            .item-price {
+                text-align: right;
+                p {
+                    font-size: 1.2rem;
+                    font-weight: normal;
+                    margin: 0;
+                }
+            }
+        }
+    }
+
     .checkout-totals {
         padding: 0;
         text-align: right;
