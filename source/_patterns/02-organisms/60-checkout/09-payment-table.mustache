@@ -1,0 +1,16 @@
+<thead>
+	<tr>
+		<th class="item-info-header">Item</th>
+		<th class="item-price-header">Total</th>
+		{{#dontate_repayments}}
+			<th class="donate-repayments-header"><ahref="#">Donate Repayments?</a></th>
+		{{/dontate_repayments}}
+	</tr>
+</thead>
+<tbody id="item-region">
+	{{#pl_items}}
+		<tr class="payment-item">
+			{{> 02-organisms/60-checkout/08-payment-item}}
+		</tr>
+	{{/pl_items}}
+</tbody>
