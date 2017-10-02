@@ -79,18 +79,17 @@
 		<!-- </form> -->
 	</div>
 
-	<!--
-	<div class="basketInfo">
-		<div class="newFindMoreLoansWrapper">
-			<a href="{{ lend_link }}" class="newFindMoreLoans bigger" name="checkout_img" data-kv-trackevent="basket.findMoreLoanBtn">Find more loans</a>
+	<div class="basket-info">
+		<div class="find-more-loans-link">
+			<a href="{{ lend_link }}" class="button smaller" name="checkout_img" data-kv-trackevent="basket.findMoreLoanBtn">Find more loans</a>
 		</div>
 
-		<div id="kiva_credit_remaining" class="kivaCreditRemainingDiv" style="display: none;">
-			<p>You still have  <span id="kiva_credit_remaining_amount">$0.00</span> Kiva credit to use.
-			<br><span kvtrackevent="Checkout|click-Donate remaining credit" id="donate_remaining_credit" style="display: none;"><a id="dontate_remaining_credit_action" href="#">Donate remaining credit to Kiva</a></span></p>
+		<div id="kiva-credit-remaining" class="kiva-credit-remaining">
+			<p>You still have  <span id="kiva-credit-remaining-amount">${{ kiva_credit_remaining }}</span> Kiva credit to use.
+			<br><span kvtrackevent="Checkout|click-Donate remaining credit" class="donate-remaining-credit"><a href="#">Donate remaining credit to Kiva</a></span></p>
 		</div>
 	</div>
-	-->
+	
 </div>
 
 
