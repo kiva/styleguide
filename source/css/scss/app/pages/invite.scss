@@ -3,15 +3,42 @@ div.invite-headline-wrapper {
 	position: relative;
 
 	@media #{$small-only} {
-		padding-bottom: 70.04%;
+		padding-bottom: 70%;
 	}
 
 	@media #{$medium-up} {
-		padding-bottom: 37.05%;
+		padding-bottom: 37%;
 	}
 
 	// center hero image on extra-wide screens
 	@media (min-width: 1901px) {
 		text-align: center;
+	}
+}
+
+div.invitedIntro {
+	padding-top: rem-calc(36);
+
+	@media #{$medium-only} {
+		padding-top: rem-calc(90);
+	}
+
+	.title {
+		font-size: 36px;
+		font-weight: bold;
+		line-height: 48px;
+	}
+
+
+	.hrDivider {
+		@media #{$small-only} {
+			display: none;
+		}
+
+		@media #{$medium-up} {
+			color: $light-gray;
+			border-color: $light-gray;
+			margin-bottom: rem-calc(35);
+		}
 	}
 }
