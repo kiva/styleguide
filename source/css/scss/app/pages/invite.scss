@@ -29,16 +29,17 @@ div.invitedIntro {
 		line-height: 48px;
 	}
 
-
 	.hrDivider {
-		@media #{$small-only} {
-			display: none;
-		}
-
 		@media #{$medium-up} {
 			color: $light-gray;
 			border-color: $light-gray;
 			margin-bottom: rem-calc(35);
 		}
+	}
+}
+
+div.invite-footer-wrapper {
+	.actNow {
+		margin-top: 25px;
 	}
 }
