@@ -39,6 +39,20 @@ div.invitedIntro {
 }
 
 div.invite-footer-wrapper {
+	.title {
+		font-size: 36px;
+		font-weight: bold;
+		line-height: 48px;
+
+		@media #{$small-only} {
+			color: $green;
+		}
+
+		@media #{$medium-up} {
+			color: $white;
+		}
+	}
+
 	.actNow {
 		margin-top: 25px;
 	}
