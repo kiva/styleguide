@@ -40,7 +40,7 @@
                 p {
                     margin: 0;
                 }
-                @media #{$small} {
+                @media #{$small-medium-only} {
                     .small-text {
                         font-size: .7rem;
                         line-height: .8rem;
@@ -63,6 +63,10 @@
                 .loan-sponsor {
                     color: $kiva-text-light;
                 }
+                .red {
+                    color: $kiva-accent-red;
+                }
+                
             }
             @media #{$large-up} {
                 .loan-details {
