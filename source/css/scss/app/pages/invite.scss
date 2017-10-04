@@ -16,7 +16,7 @@ div.invite-headline-wrapper {
 	}
 }
 
-div.invitedIntro {
+div.invite-intro {
 	padding-top: rem-calc(36);
 
 	@media #{$medium-only} {
@@ -34,6 +34,34 @@ div.invitedIntro {
 			color: $light-gray;
 			border-color: $light-gray;
 			margin-bottom: rem-calc(35);
+		}
+	}
+}
+
+div.invite-elevator-pitch {
+	@media #{$large-up} {
+		margin-bottom: rem-calc(25);
+	}
+
+	.citation {
+		text-align: center;
+
+		@media #{$large-up} {
+			text-align: right;
+		}
+
+		cite {
+			white-space: nowrap;
+			color: #666;
+			font-size: 0.7rem;
+		}
+	}
+
+	.description {
+		margin-top: rem-calc(20);
+
+		@media #{$large-up} {
+			margin-top: 0;
 		}
 	}
 }
@@ -99,6 +127,10 @@ div.invite-about {
 }
 
 div.invite-footer-wrapper {
+	@media #{$small-only} {
+		margin-top: rem-calc(20);
+	}
+
 	.title {
 		font-size: rem-calc(36);
 		font-weight: bold;
