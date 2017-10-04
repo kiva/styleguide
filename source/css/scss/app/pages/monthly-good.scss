@@ -30,10 +30,13 @@
 		h1+p {
 			margin-bottom: 2rem;
 		}
+
+		.submit-controls {
+			margin: 2rem 0;
+		}
 	}
 
 	.monthly-good-dynamic-view {
-		position: relative;
 
 		.monthly-good-form {
 			padding: rem-calc(9) 0;
@@ -221,16 +224,14 @@
 
 		/* Utility class to Flip Date Input Field */
 		.custom-date-input {
-			.lending-funds {
-				.pencil-text-input {
-					display: none;
-				}
-				.day-input{
-					display: inline-block;
-				}
-				.after-28-note {
-					display: none;
-				}
+			.pencil-text-input {
+				display: none;
+			}
+			.day-input{
+				display: inline-block;
+			}
+			.after-28-note {
+				display: none;
 			}
 		}
 		/* Utility Class to Hide Donation Selectors and Show Donation Manual Inputs */
