@@ -16320,6 +16320,12 @@ table.repayments-list {
     display: block;
     float: right; }
 
+#checkoutWrap .payment-operations {
+  padding: .5rem; }
+  #checkoutWrap .payment-operations .payment-buttons {
+    display: block;
+    float: right; }
+
 div.invite-headline-wrapper {
   height: 0;
   position: relative; }
@@ -16352,21 +16358,34 @@ div.invite-intro {
   div.invite-elevator-pitch {
     margin-bottom: 1.3888888889rem; } }
 
-div.invite-elevator-pitch .citation {
-  text-align: center; }
-  @media only screen and (min-width: 681px) {
-    div.invite-elevator-pitch .citation {
-      text-align: right; } }
-  div.invite-elevator-pitch .citation cite {
-    white-space: nowrap;
-    color: #666;
-    font-size: 0.7rem; }
-
 div.invite-elevator-pitch .description {
   margin-top: 1.1111111111rem; }
   @media only screen and (min-width: 681px) {
     div.invite-elevator-pitch .description {
       margin-top: 0; } }
+
+div.invite-how-kiva-works {
+  margin-top: 1.3888888889rem;
+  margin-bottom: 1.3888888889rem; }
+  div.invite-how-kiva-works .section-title {
+    color: #63a541;
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 1.6666666667rem; }
+  div.invite-how-kiva-works .step {
+    margin-bottom: 1.3888888889rem; }
+    div.invite-how-kiva-works .step .number {
+      color: #236133;
+      font-size: 2rem; }
+    div.invite-how-kiva-works .step .title {
+      color: #236133;
+      font-size: 1rem;
+      line-height: 1.3333333333rem;
+      font-weight: normal; }
+    div.invite-how-kiva-works .step .description {
+      color: #333333;
+      font-size: 1rem;
+      line-height: 1.3333333333rem; }
 
 div.invite-about {
   overflow: hidden;
@@ -16382,7 +16401,6 @@ div.invite-about {
     color: #236133;
     font-size: 1.5555555556rem;
     line-height: 2rem;
-    margin-top: 0.8333333333rem;
     margin-top: 0.8333333333rem; }
   div.invite-about .stats {
     margin-top: 1rem;
@@ -16426,6 +16444,12 @@ div.invite-footer-wrapper .title {
 
 div.invite-footer-wrapper .actNow {
   margin-top: 1.3888888889rem; }
+
+div.citation cite {
+  width: 100%;
+  white-space: nowrap;
+  color: #666;
+  font-size: 0.7rem; }
 
 .ac-container.ac-title {
   margin: 0;
@@ -16530,7 +16554,8 @@ div.invite-footer-wrapper .actNow {
 .checkout-steps {
   margin: 0; }
   .checkout-steps ul {
-    line-height: 100%; }
+    line-height: 100%;
+    margin: 0; }
     .checkout-steps ul li {
       width: 33%; }
       @media only screen and (max-width: 480px) {
