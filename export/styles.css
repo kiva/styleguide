@@ -16210,7 +16210,7 @@ table.repayments-list {
     font-size: 1rem; }
     #checkoutWrap .basket-contents .loan-row .loan-details p {
       margin: 0; }
-    @media only screen {
+    @media only screen and (min-width: 535px) and (max-width: 680px) {
       #checkoutWrap .basket-contents .loan-row .loan-details .small-text, #checkoutWrap .basket-contents .loan-row .loan-details .mini-loan-card .status, .mini-loan-card #checkoutWrap .basket-contents .loan-row .loan-details .status, #checkoutWrap .basket-contents .loan-row .loan-details .mini-loan-card .name, .mini-loan-card #checkoutWrap .basket-contents .loan-row .loan-details .name, #checkoutWrap .basket-contents .loan-row .loan-details .mini-loan-card .activity, .mini-loan-card #checkoutWrap .basket-contents .loan-row .loan-details .activity, #checkoutWrap .basket-contents .loan-row .loan-details .mini-loan-card .country, .mini-loan-card #checkoutWrap .basket-contents .loan-row .loan-details .country, #checkoutWrap .basket-contents .loan-row .loan-details .statistic-display .statistic-link, .statistic-display #checkoutWrap .basket-contents .loan-row .loan-details .statistic-link, #checkoutWrap .basket-contents .loan-row .loan-details .statistic-display .statistic-additional-text, .statistic-display #checkoutWrap .basket-contents .loan-row .loan-details .statistic-additional-text {
         font-size: .7rem;
         line-height: .8rem; } }
@@ -16225,6 +16225,8 @@ table.repayments-list {
     #checkoutWrap .basket-contents .loan-row .loan-details .loan-reservation,
     #checkoutWrap .basket-contents .loan-row .loan-details .loan-sponsor {
       color: #999; }
+    #checkoutWrap .basket-contents .loan-row .loan-details .red {
+      color: #9C021A; }
   @media only screen and (min-width: 681px) {
     #checkoutWrap .basket-contents .loan-row .loan-details {
       padding: 0 .8rem; } }
@@ -16340,14 +16342,25 @@ div.invitedIntro {
     font-size: 36px;
     font-weight: bold;
     line-height: 48px; }
-  @media only screen and (max-width: 480px) {
-    div.invitedIntro .hrDivider {
-      display: none; } }
   @media only screen and (min-width: 481px) {
     div.invitedIntro .hrDivider {
       color: #d8d8d8;
       border-color: #d8d8d8;
       margin-bottom: 1.9444444444rem; } }
+
+div.invite-footer-wrapper .title {
+  font-size: 36px;
+  font-weight: bold;
+  line-height: 48px; }
+  @media only screen and (max-width: 480px) {
+    div.invite-footer-wrapper .title {
+      color: #63a541; } }
+  @media only screen and (min-width: 481px) {
+    div.invite-footer-wrapper .title {
+      color: #FFFFFF; } }
+
+div.invite-footer-wrapper .actNow {
+  margin-top: 25px; }
 
 .ac-container.ac-title {
   margin: 0;

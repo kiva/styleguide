@@ -104,7 +104,7 @@ div.invite-footer-wrapper {
 		font-weight: bold;
 		line-height: rem-calc(48);
 
-		@media #{$small-only} {
+    @media #{$small-only} {
 			color: $green;
 		}
 
