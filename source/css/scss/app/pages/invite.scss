@@ -43,25 +43,46 @@ div.invite-elevator-pitch {
 		margin-bottom: rem-calc(25);
 	}
 
-	.citation {
-		text-align: center;
-
-		@media #{$large-up} {
-			text-align: right;
-		}
-
-		cite {
-			white-space: nowrap;
-			color: #666;
-			font-size: 0.7rem;
-		}
-	}
-
 	.description {
 		margin-top: rem-calc(20);
 
 		@media #{$large-up} {
 			margin-top: 0;
+		}
+	}
+}
+
+
+div.invite-how-kiva-works {
+	margin-top: rem-calc(25);
+	margin-bottom: rem-calc(25);
+
+	.section-title {
+		color: $green;
+		font-size: rem-calc(36);
+		font-weight: bold;
+		margin-bottom: rem-calc(30);
+	}
+
+	.step {
+		margin-bottom: rem-calc(25);
+
+		.number {
+			color: $dark-green;
+			font-size: rem-calc(36);
+		}
+
+		.title {
+			color: $dark-green;
+			font-size: rem-calc(18);
+			line-height: rem-calc(24);
+			font-weight: normal;
+		}
+
+		.description {
+			color: $oil;
+			font-size: rem-calc(18);
+			line-height: rem-calc(24);
 		}
 	}
 }
@@ -83,7 +104,6 @@ div.invite-about {
 		color: $dark-green;
 		font-size: rem-calc(28);
 		line-height: rem-calc(36);
-		margin-top: rem-calc(15);
 		margin-top: rem-calc(15);
 	}
 
@@ -147,5 +167,14 @@ div.invite-footer-wrapper {
 
 	.actNow {
 		margin-top: rem-calc(25);
+	}
+}
+
+div.citation {
+	cite {
+		width: 100%;
+		white-space: nowrap;
+		color: #666;
+		font-size: 0.7rem;
 	}
 }
