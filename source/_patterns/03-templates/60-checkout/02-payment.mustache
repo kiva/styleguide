@@ -1,1 +1,48 @@
-<h1>Finalize Payment for {{ count }} loans</h1>
+<div id="payment-contents" class="payment-contents">
+	<div id="payment-item-region">
+		<table class="" role="" summary="">
+			<thead>
+				<tr>
+					<th class="">Item</th>
+					<th class="">Total</th>
+					{{#dontate_repayments}}
+						<th class=""><a href="#">Donate Repayments?</a></th>
+					{{/dontate_repayments}}
+				</tr>
+			</thead>
+			<tbody>
+				{{#pl_items}}
+					<tr>
+						{{> 02-organisms/60-checkout/08-payment-item}}
+					</tr>
+				{{/pl_items}}
+			</tbody>
+		</table>
+	</div>
+	<!--
+	<div id="totals-region">
+		{{#pl_totals}}
+			{{> 02-organisms/60-checkout/06-checkout-totals}}
+		{{/pl_totals}}
+	</div>
+	-->
+</div>
+
+<div id="payment-operations" class="payment-operations">
+	<div class="payment-buttons">
+		<button type="submit" id="payment-continue" class="button smaller" data-kv-trackevent="payment.continueBtn" title="Checkout using your Kiva credit">Complete order</button>
+	</div>
+	<!--
+	<div class="checkout-info">
+		<div id="kiva-credit-remaining" class="kiva-credit-remaining">
+			<p>You still have  <span id="kiva-credit-remaining-amount">${{ kiva_credit_remaining }}</span> Kiva credit to use.
+		</div>
+	</div>
+	-->
+</div>
+
+
+
+
+
+
