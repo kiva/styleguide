@@ -10,6 +10,7 @@
         "reserved_message":"Reserved for 10 minutes.",
         "team":"Donut Empire"
     },
+    "dontate_repayments": 1,
     "pl_totals": 0,
     "totals": {
         "order_total": "27.50",

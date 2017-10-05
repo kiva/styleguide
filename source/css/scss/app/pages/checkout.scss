@@ -169,9 +169,18 @@
             .item-price-header {
                 text-align: right;
             }
+            .donate-repayments-header {
+                max-width: 4rem;
+                a {
+                    color: $kiva-textlink;
+                    cursor: default;
+                    text-decoration: none;
+                }
+            }
         }
         .payment-item {
             .item-info {
+                line-height: 1.2rem;
                 .item-title {
                     margin:0;
                 }
@@ -185,6 +194,11 @@
                 p {
                     font-size: 1.2rem;
                     font-weight: normal;
+                    margin: 0;
+                }
+            }
+            .item-repayment {
+                input {
                     margin: 0;
                 }
             }

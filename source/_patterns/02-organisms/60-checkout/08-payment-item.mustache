@@ -1,7 +1,7 @@
 <td class="item-info">
 	<h4 class="item-title">{{item.name}}</h4>
 	{{#item.team}}
-		<span class="item-team small-text">Lending Team: {{item.team}}</span>
+		<span class="item-team small-text">Lending Team: {{item.team.name}}</span>
 	{{/item.team}}
 	{{#item.reserved_message}}
 		<span class="item-reserve-message small-text {{#item.time_left_warning}}red{{/item.time_left_warning}}">{{item.reserved_message}}</span>
