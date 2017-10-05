@@ -16030,27 +16030,31 @@ table.repayments-list {
   .monthly-good h1 {
     line-height: 1.5555555556rem; } }
 
+.monthly-good .error.zig {
+  background-color: #efefef; }
+
+.monthly-good .pencil {
+  cursor: pointer; }
+
 .monthly-good .monthly-good-landing .amount-input-wrapper {
   display: inline-block; }
-
-.monthly-good .monthly-good-landing .mg-amount-input {
-  font-size: 1.5555555556rem;
-  height: 2.4444444444rem;
-  width: 7.5555555556rem;
-  font-weight: bold;
-  text-align: center; }
 
 .monthly-good input#mg-deposit-amount-input {
   font-size: 1rem;
   text-align: right;
+  height: 1.3333333333rem;
+  line-height: 1.3333333333rem;
   width: 6.1111111111rem;
-  margin: 0 0 0 auto; }
+  margin: 0 0 0 auto;
+  padding: 0.1111111111rem; }
 
 .monthly-good .monthly-good-setup h1 + p {
   margin-bottom: 2rem; }
 
+.monthly-good .monthly-good-setup .submit-controls {
+  margin: 2rem 0; }
+
 .monthly-good .monthly-good-dynamic-view {
-  position: relative;
   /* Utility class to Flip Date Input Field */
   /* Utility Class to Hide Donation Selectors and Show Donation Manual Inputs */ }
   .monthly-good .monthly-good-dynamic-view .monthly-good-form {
@@ -16089,11 +16093,6 @@ table.repayments-list {
         padding: 0 0.2222222222rem;
         width: 2.7777777778rem;
         height: 1.3333333333rem; }
-        @media only screen and (min-width: 481px) {
-          .monthly-good .monthly-good-dynamic-view .monthly-good-form .day-input input {
-            font-size: 1.5555555556rem;
-            height: 2.4rem;
-            width: 4.1666666667rem; } }
     .monthly-good .monthly-good-dynamic-view .monthly-good-form table.checkout-details {
       max-width: 480px;
       margin: 2.5rem auto;
@@ -16159,16 +16158,23 @@ table.repayments-list {
       font-size: 0.7777777778rem;
       line-height: 0.7777777778rem;
       color: #999; }
-  .monthly-good .monthly-good-dynamic-view .custom-date-input .lending-funds .pencil-text-input {
+  .monthly-good .monthly-good-dynamic-view .custom-date-input .pencil-text-input {
     display: none; }
-  .monthly-good .monthly-good-dynamic-view .custom-date-input .lending-funds .day-input {
+  .monthly-good .monthly-good-dynamic-view .custom-date-input .day-input {
     display: inline-block; }
-  .monthly-good .monthly-good-dynamic-view .custom-date-input .lending-funds .after-28-note {
+  .monthly-good .monthly-good-dynamic-view .custom-date-input .after-28-note {
     display: none; }
   .monthly-good .monthly-good-dynamic-view .custom-donation-input .donation-selector .pencil-dropdown .text-display {
     display: none; }
   .monthly-good .monthly-good-dynamic-view .custom-donation-input .donation-selector .pencil-dropdown input.text-input {
-    display: inline-block; }
+    display: inline-block;
+    font-size: 18px;
+    text-align: right;
+    width: 6.1111111111rem;
+    height: 1.3333333333rem;
+    line-height: 1.3333333333rem;
+    margin: 0 0 0 auto;
+    padding: 0 0.2222222222rem; }
 
 .monthly-good .icon-confirmation {
   fill: #63a541;

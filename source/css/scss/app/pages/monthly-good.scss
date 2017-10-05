@@ -17,21 +17,16 @@
 		.amount-input-wrapper {
 			display: inline-block;
 		}
-
-		.mg-amount-input {
-			font-size: rem-calc(28);
-			height: rem-calc(44);
-			width: rem-calc(136);
-			font-weight: bold;
-			text-align: center;
-		}
 	}
 
 	input#mg-deposit-amount-input {
 		font-size: $body-font-size;
 		text-align: right;
+		height: $body-line-height;
+		line-height: $body-line-height;
 		width: rem-calc(110);
 		margin: 0 0 0 auto;
+		padding: rem-calc(2);
 	}
 
 	.monthly-good-setup {
@@ -245,6 +240,14 @@
 					}
 					input.text-input {
 						display: inline-block;
+						font-size: $base-font-size;
+						text-align: right;
+						width: rem-calc(110);
+						height: $body-line-height;
+						line-height: $body-line-height;
+						margin: 0 0 0 auto;
+						padding: 0 rem-calc(4);
+
 					}
 				}
 			}
