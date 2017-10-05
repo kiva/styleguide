@@ -5,6 +5,14 @@
 		}
 	}
 
+	.error.zig {
+		background-color: $kiva-bg-darkgray;
+	}
+
+	.pencil {
+		cursor: pointer;
+	}
+
 	.monthly-good-landing {
 		.amount-input-wrapper {
 			display: inline-block;
@@ -92,12 +100,6 @@
 					padding: 0 rem-calc(4);
 					width: rem-calc(50);
 					height: rem-calc(24);
-
-					@media #{$medium-up} {
-						font-size: $feature-font-size;
-						height: 2.4rem;
-						width: rem-calc(75);
-					}
 				}
 			}
 
