@@ -1,38 +1,24 @@
-<div class="row monthly-good-setup">
-	<div class="columns">
+<div class="row">
+	<div class="columns monthly-good monthly-good-setup">
 		<h1 class="impact text-center kiva-green">
 				Confirm your Good
 		</h1>
 
 		<p class="text-center featured">
-			{{#has_billing_agreement}}
-				Review and set up your
-				<br class="smo">monthly <br class="lo">contribution
-				{<br class="smo">with PayPal
-			{{/has_billing_agreement}}
-			{{^has_billing_agreement}}
-				**** Subhead for people with existing
-				billing agreement TO COME (SUB-71) ****
-			{{/has_billing_agreement}}
+			Review and set up your
+			<br class="smo">monthly <br class="lo">contribution
+			<br class="smo">with PayPal
 			<br>
 		</p>
 
-		<form class="monthly-good-form" data-abide="ajax">
-			<div class="panel zigzag-bottom">
-				<div class="monthly-good-form-inputs">
-					{{#is-standalone}}
-						{{> 02-organisms/60-monthly-good/01-monthly-good-inputs}}
-					{{/is-standalone}}
-				</div>
-
-				<p class="text-center"><em>Rest easy, you can cancel anytime.</em></p>
+		<div class="panel zigzag-bottom">
+			<div class="monthly-good-form-inputs">
+				{{#is-standalone}}
+					{{> 02-organisms/60-monthly-good/01-monthly-good-inputs}}
+				{{/is-standalone}}
 			</div>
 
-			<div class="monthly-good-form-submits">
-			{{#is-standalone}}
-				{{> 02-organisms/60-monthly-good/02-monthly-good-submit}}
-			{{/is-standalone}}
-			</div>
-		</form>
+			<p class="text-center"><em>Rest easy, you can cancel anytime.</em></p>
+		</div>
 	</div>
 </div>

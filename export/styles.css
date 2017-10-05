@@ -16030,31 +16030,27 @@ table.repayments-list {
   .monthly-good h1 {
     line-height: 1.5555555556rem; } }
 
-.monthly-good .error.zig {
-  background-color: #efefef; }
-
-.monthly-good .pencil {
-  cursor: pointer; }
-
 .monthly-good .monthly-good-landing .amount-input-wrapper {
   display: inline-block; }
+
+.monthly-good .monthly-good-landing .mg-amount-input {
+  font-size: 1.5555555556rem;
+  height: 2.4444444444rem;
+  width: 7.5555555556rem;
+  font-weight: bold;
+  text-align: center; }
 
 .monthly-good input#mg-deposit-amount-input {
   font-size: 1rem;
   text-align: right;
-  height: 1.3333333333rem;
-  line-height: 1.3333333333rem;
   width: 6.1111111111rem;
-  margin: 0 0 0 auto;
-  padding: 0.1111111111rem; }
+  margin: 0 0 0 auto; }
 
 .monthly-good .monthly-good-setup h1 + p {
   margin-bottom: 2rem; }
 
-.monthly-good .monthly-good-setup .submit-controls {
-  margin: 2rem 0; }
-
 .monthly-good .monthly-good-dynamic-view {
+  position: relative;
   /* Utility class to Flip Date Input Field */
   /* Utility Class to Hide Donation Selectors and Show Donation Manual Inputs */ }
   .monthly-good .monthly-good-dynamic-view .monthly-good-form {
@@ -16093,6 +16089,11 @@ table.repayments-list {
         padding: 0 0.2222222222rem;
         width: 2.7777777778rem;
         height: 1.3333333333rem; }
+        @media only screen and (min-width: 481px) {
+          .monthly-good .monthly-good-dynamic-view .monthly-good-form .day-input input {
+            font-size: 1.5555555556rem;
+            height: 2.4rem;
+            width: 4.1666666667rem; } }
     .monthly-good .monthly-good-dynamic-view .monthly-good-form table.checkout-details {
       max-width: 480px;
       margin: 2.5rem auto;
@@ -16158,23 +16159,16 @@ table.repayments-list {
       font-size: 0.7777777778rem;
       line-height: 0.7777777778rem;
       color: #999; }
-  .monthly-good .monthly-good-dynamic-view .custom-date-input .pencil-text-input {
+  .monthly-good .monthly-good-dynamic-view .custom-date-input .lending-funds .pencil-text-input {
     display: none; }
-  .monthly-good .monthly-good-dynamic-view .custom-date-input .day-input {
+  .monthly-good .monthly-good-dynamic-view .custom-date-input .lending-funds .day-input {
     display: inline-block; }
-  .monthly-good .monthly-good-dynamic-view .custom-date-input .after-28-note {
+  .monthly-good .monthly-good-dynamic-view .custom-date-input .lending-funds .after-28-note {
     display: none; }
   .monthly-good .monthly-good-dynamic-view .custom-donation-input .donation-selector .pencil-dropdown .text-display {
     display: none; }
   .monthly-good .monthly-good-dynamic-view .custom-donation-input .donation-selector .pencil-dropdown input.text-input {
-    display: inline-block;
-    font-size: 18px;
-    text-align: right;
-    width: 6.1111111111rem;
-    height: 1.3333333333rem;
-    line-height: 1.3333333333rem;
-    margin: 0 0 0 auto;
-    padding: 0 0.2222222222rem; }
+    display: inline-block; }
 
 .monthly-good .icon-confirmation {
   fill: #63a541;
@@ -16287,6 +16281,43 @@ table.repayments-list {
     text-align: right;
     line-height: 1.4rem;
     clear: right; }
+
+#checkoutWrap .payment-contents #payment-item-region {
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #d8d8d8; }
+
+#checkoutWrap .payment-contents .payment-item-table {
+  border: none; }
+  #checkoutWrap .payment-contents .payment-item-table th {
+    padding: .6rem .8rem; }
+  #checkoutWrap .payment-contents .payment-item-table td {
+    padding: 1rem .8rem; }
+  #checkoutWrap .payment-contents .payment-item-table .item-price-header {
+    text-align: right; }
+  #checkoutWrap .payment-contents .payment-item-table .donate-repayments-header {
+    max-width: 4rem; }
+    #checkoutWrap .payment-contents .payment-item-table .donate-repayments-header a {
+      color: #22a9d8;
+      cursor: default;
+      text-decoration: none; }
+
+#checkoutWrap .payment-contents .payment-item .item-info {
+  line-height: 1.2rem; }
+  #checkoutWrap .payment-contents .payment-item .item-info .item-title {
+    margin: 0; }
+  #checkoutWrap .payment-contents .payment-item .item-info .item-reserve-message {
+    display: block;
+    color: #999; }
+
+#checkoutWrap .payment-contents .payment-item .item-price {
+  text-align: right; }
+  #checkoutWrap .payment-contents .payment-item .item-price p {
+    font-size: 1.2rem;
+    font-weight: normal;
+    margin: 0; }
+
+#checkoutWrap .payment-contents .payment-item .item-repayment input {
+  margin: 0; }
 
 #checkoutWrap .checkout-totals {
   padding: 0;

@@ -16,7 +16,7 @@
 				data-min-day="1"
 				data-max-day="31"
 				required>
-			<small class="error zig">
+			<small class="error">
 				<svg class="icon icon-error">
 					<use xlink:href="#icon-error"/>
 				</svg>
@@ -33,7 +33,7 @@
 			</span>
 		</div>
 		{{#is_date_after_28th}}
-			<small class="after-28-note"><br>(note - may be processed on the last day of the month)</small>
+			<small class="after-28-note"><br>(May be processed on the last day of the month)</small>
 		{{/is_date_after_28th}}
 		<br><strong>we'll process the following:</strong>
 	</div>
@@ -53,7 +53,7 @@
 						   data-min-amount="5.00"
 						   data-max-amount="10000"
 						   required>
-					<small class="error zig">
+					<small class="error">
 						<svg class="icon icon-error">
 							<use xlink:href="#icon-error"/>
 						</svg>
@@ -87,7 +87,7 @@
 			</td>
 
 			<td class="text-right right-no-pad">
-				<div class="donation-selector donation-selector-large">
+				<div class="donation-selector-large">
 					<div class="pencil-dropdown">
 						<span class="text-display">{{donation_amount}}</span>
 						<input class="text-input"
@@ -97,7 +97,7 @@
 							data-min-amount="0.00"
 							data-max-amount="10000"
 							required>
-						<small class="error zig">
+						<small class="error">
 							<svg class="icon icon-error">
 								<use xlink:href="#icon-error"/>
 							</svg>
@@ -115,7 +115,7 @@
 						</span>
 					</div>
 				</div>
-				<div class="donation-selector donation-selector-small">
+				<div class="donation-selector-small">
 					<div class="selector">
 						<input id="donation-amount-input"
 							   type="text"
@@ -125,7 +125,7 @@
 							   data-min-amount="0.00"
 							   data-max-amount="10000"
 							   required>
-						<small class="error zig">
+						<small class="error">
 							<svg class="icon icon-error">
 								<use xlink:href="#icon-error"/>
 							</svg>
@@ -167,11 +167,11 @@
 			   data-abide-validator="sum"
 			   data-min-sum="0.01"
 			   data-sum-inputs="deposit-amount-input,donation-amount-input">
-		<small class="error zig">
+		<small class="error">
 			<svg class="icon icon-error">
 				<use xlink:href="#icon-error"/>
 			</svg>
-			To set up Monthly Good, please enter an amount $5 or greater.
+			To set up an auto deposit, please enter an amount greater than $0.
 		</small>
 	</div>
 
@@ -180,11 +180,11 @@
 			   data-abide-validator="sum"
 			   data-max-sum="10000"
 			   data-sum-inputs="deposit-amount-input,donation-amount-input">
-		<small class="error zig">
+		<small class="error">
 			<svg class="icon icon-error">
 				<use xlink:href="#icon-error"/>
 			</svg>
-			The maximum Monthly Good total is $10,000. Please try again by entering in a smaller amount.
+			The maximum auto deposit allowed is $10,000. Please try again by entering in a smaller amount.
 		</small>
 	</div>
 
