@@ -3,9 +3,9 @@
 	{{#item.team}}
 		<span class="item-team small-text">Lending Team: {{item.team.name}}</span>
 	{{/item.team}}
-	{{#item.reserved_message}}
-		<span class="item-reserve-message small-text {{#item.time_left_warning}}red{{/item.time_left_warning}}">{{item.reserved_message}}</span>
-	{{/item.reserved_message}}
+	<span class="loan-reservation small-text">
+		{{> 02-organisms/60-checkout/10-loan-reserve-message}}
+	</span>
 </td>
 <td class="item-price">
 	<p>{{item.price}}</p>

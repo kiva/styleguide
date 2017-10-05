@@ -1,0 +1,10 @@
+{{#not_reserved}}
+	<!-- {kvurl page=ajax action=getMessageCatalogTerm type=glossary term=LoanReservation} -->
+	<span class="red">Loan not reserved.</span> <span class="info-trigger"><a href="#">Why?</a></span>
+{{/not_reserved}}
+{{^not_reserved}}
+	{{#reserved_for}}
+		<!-- Reserved for -->
+		<span class="{{#time_left_warning}}red{{/time_left_warning}}">Reserved for {{reserved_for}}.</span>
+	{{/reserved_for}}
+{{/not_reserved}}

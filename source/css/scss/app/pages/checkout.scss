@@ -15,6 +15,13 @@
             list-style-type: none
         }
     }
+    .loan-reservation {
+        display: block;
+        color: $kiva-text-light;
+    }
+    .red {
+        color: $kiva-accent-red;
+    }
 
     .basket-contents {
 
@@ -59,14 +66,9 @@
                     }
                 }
 
-                .loan-reservation,
                 .loan-sponsor {
                     color: $kiva-text-light;
                 }
-                .red {
-                    color: $kiva-accent-red;
-                }
-                
             }
             @media #{$large-up} {
                 .loan-details {
@@ -184,9 +186,8 @@
                 .item-title {
                     margin:0;
                 }
-                .item-reserve-message {
+                .loan-reservation {
                     display: block;
-                    color: $kiva-text-light;
                 }
             }
             .item-price {
@@ -252,18 +253,11 @@
         }
     }
 
-    .basket-operations {
-        padding: .5rem;
-
-        .basket-buttons {
-            display: block;
-            float: right;
-        }   
-    }
-
+    .basket-operations,
     .payment-operations {
-        padding: .5rem;
+        padding: 1rem .5rem;
 
+        .basket-buttons,
         .payment-buttons {
             display: block;
             float: right;
