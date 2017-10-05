@@ -1,0 +1,17 @@
+<td class="item-info">
+	<h4 class="item-title">{{item.name}}</h4>
+	{{#item.team}}
+		<span class="item-team small-text">Lending Team: {{item.team.name}}</span>
+	{{/item.team}}
+	{{#item.reserved_message}}
+		<span class="item-reserve-message small-text {{#item.time_left_warning}}red{{/item.time_left_warning}}">{{item.reserved_message}}</span>
+	{{/item.reserved_message}}
+</td>
+<td class="item-price">
+	<p>{{item.price}}</p>
+</td>
+{{#dontate_repayments}}
+	<td class="item-repayment">
+		<input type="checkbox" class="repayent-checkbox" id="donate-{{item.id}}" />
+	</td>
+{{/dontate_repayments}}
