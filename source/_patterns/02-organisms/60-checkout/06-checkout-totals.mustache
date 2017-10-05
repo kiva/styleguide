@@ -1,18 +1,43 @@
 <div id="checkout-totals" class="checkout-totals">
-	<div class="order-total">
+	<!-- itemTotal from backend -->
+	<div class="order-total totals-row">
 		<label for="order-total">Order total:</label>
 		<span id="order-total" class="value">${{ totals.order_total }}</span>
 	</div>
 
+	{{#is_logged_in}}
+		{{#totals.negative_kiva_credit}}
+			<div class="negative-kiva-credit totals-row">
+				<!-- {kvinlineHelp id="negative_kiva_credit" class="label small" label="What's this mean?" file="http://na3.salesforce.com/_ui/selfservice/pkb/PublicKnowledgeSolution/d?orgId=00D500000006svl&id=50150000000Som5"} -->
+				<span class="label red">Negative Kiva credit:</span>
+				<span id="unused_kiva_credit" class="value red">{{totals.negative_kiva_credit}}</span>
+			</div>
+		{{/totals.negative_kiva_credit}}
+		{{#totals.kiva_credit_available_total}}
+			<div id="kiva-credit" class="kiva-credit totals-row">
+				{{#totals.kiva_credit_applicable_total}}
+					<a href="/basket?kiva_credit_opt_out=false" title="Apply Kiva credit" class="apply-link">Apply</a>
+					<del><label for="credit-total">Kiva credit:</label></del>
+					<del><span id="kiva-credit-value" class="value">({{totals.kiva_credit_applicable_total}})</span></del>
+				{{/totals.kiva_credit_applicable_total}}
+				{{#totals.kiva_credit_applied_total}}
+					<a href="/basket?kiva_credit_opt_out=true" title="Remove Kiva credit" class="remove-link">Remove</a>
+					<label for="credit-total">Kiva credit:</label>
+					<span id="kiva-credit-value" class="value">({{totals.kiva_credit_applied_total}})</span>
+				{{/totals.kiva_credit_applied_total}}
+			</div>
+		{{/totals.kiva_credit_available_total}}
+	{{/is_logged_in}}
+
 	{{#totals.free_credit}}
-	<div class="reward-credit">
-		<a class="apply-link" href="/basket?bonus_credit_opt_out=false" title="apply bonus credit">Apply</a>
-		<label for="credit-total">Free credit:</label>
-		<span id="credit-total" class="value">{{ totals.free_credit }}</span>
-	</div>
+		<div class="reward-credit totals-row">
+			<a class="apply-link" href="/basket?bonus_credit_opt_out=false" title="apply bonus credit">Apply</a>
+			<label for="credit-total">Free credit:</label>
+			<span id="credit-total" class="value">{{ totals.free_credit }}</span>
+		</div>
 	{{/totals.free_credit}}
 
-	<div class="grand-total">
+	<div class="grand-total totals-row">
 		<label for="grand-total">Total due:</label>
 		<span id="grand-total" class="value biggest">${{ totals.grand_total }}</span>
 	</div>

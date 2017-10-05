@@ -1,0 +1,180 @@
+div.invite-headline-wrapper {
+	height: 0;
+	position: relative;
+
+	@media #{$small-only} {
+		padding-bottom: 70%;
+	}
+
+	@media #{$medium-up} {
+		padding-bottom: 37%;
+	}
+
+	// center hero image on extra-wide screens
+	@media (min-width: 1901px) {
+		text-align: center;
+	}
+}
+
+div.invite-intro {
+	padding-top: rem-calc(36);
+
+	@media #{$medium-only} {
+		padding-top: rem-calc(90);
+	}
+
+	.title {
+		font-size: rem-calc(36);
+		font-weight: bold;
+		line-height: rem-calc(48);
+	}
+
+	.hrDivider {
+		@media #{$medium-up} {
+			color: $light-gray;
+			border-color: $light-gray;
+			margin-bottom: rem-calc(35);
+		}
+	}
+}
+
+div.invite-elevator-pitch {
+	@media #{$large-up} {
+		margin-bottom: rem-calc(25);
+	}
+
+	.description {
+		margin-top: rem-calc(20);
+
+		@media #{$large-up} {
+			margin-top: 0;
+		}
+	}
+}
+
+
+div.invite-how-kiva-works {
+	margin-top: rem-calc(25);
+	margin-bottom: rem-calc(25);
+
+	.section-title {
+		color: $green;
+		font-size: rem-calc(36);
+		font-weight: bold;
+		margin-bottom: rem-calc(30);
+	}
+
+	.step {
+		margin-bottom: rem-calc(25);
+
+		.number {
+			color: $dark-green;
+			font-size: rem-calc(36);
+		}
+
+		.title {
+			color: $dark-green;
+			font-size: rem-calc(18);
+			line-height: rem-calc(24);
+			font-weight: normal;
+		}
+
+		.description {
+			color: $oil;
+			font-size: rem-calc(18);
+			line-height: rem-calc(24);
+		}
+	}
+}
+
+div.invite-about {
+	overflow: hidden;
+	background-color: $green;
+	padding-top: rem-calc(30);
+	padding-bottom: rem-calc(30);
+
+	.title {
+		color: $dark-green;
+		font-size: rem-calc(36);
+		font-weight: bold;
+		line-height: rem-calc(48);
+	}
+
+	.subtitle {
+		color: $dark-green;
+		font-size: rem-calc(28);
+		line-height: rem-calc(36);
+		margin-top: rem-calc(15);
+	}
+
+	.stats {
+		margin-top: rem-calc(18);
+		text-align: center;
+		font-weight: normal;
+
+		@media only screen and (min-width: 45em) {
+			.divider {
+				width: rem-calc(1);
+				background-color: $graphic-green;
+				height: rem-calc(40);
+				margin-top: rem-calc(40);
+			}
+		}
+
+		.value {
+			color: $white;
+			font-size: rem-calc(56);
+			line-height: rem-calc(64);
+		}
+
+
+		.stars {
+			font-size: rem-calc(28);
+
+			@media only screen and (min-width: 60em) {
+				font-size: rem-calc(56);
+			}
+		}
+
+
+		.title {
+			color: $white;
+			font-size: rem-calc(18);
+			line-height: rem-calc(24);
+			margin-top: rem-calc(10);
+		}
+	}
+}
+
+div.invite-footer-wrapper {
+	@media #{$small-only} {
+		margin-top: rem-calc(20);
+	}
+
+	.title {
+		font-size: rem-calc(36);
+		font-weight: bold;
+		line-height: rem-calc(48);
+
+		@media #{$small-only} {
+			color: $green;
+		}
+
+		@media #{$medium-up} {
+			color: $white;
+		}
+	}
+
+	.actNow {
+		margin-top: rem-calc(25);
+	}
+}
+
+div.citation {
+	cite {
+		width: 100%;
+		white-space: nowrap;
+		color: #666;
+		font-size: 0.7rem;
+	}
+}

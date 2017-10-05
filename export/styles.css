@@ -16210,7 +16210,7 @@ table.repayments-list {
     font-size: 1rem; }
     #checkoutWrap .basket-contents .loan-row .loan-details p {
       margin: 0; }
-    @media only screen {
+    @media only screen and (min-width: 535px) and (max-width: 680px) {
       #checkoutWrap .basket-contents .loan-row .loan-details .small-text, #checkoutWrap .basket-contents .loan-row .loan-details .mini-loan-card .status, .mini-loan-card #checkoutWrap .basket-contents .loan-row .loan-details .status, #checkoutWrap .basket-contents .loan-row .loan-details .mini-loan-card .name, .mini-loan-card #checkoutWrap .basket-contents .loan-row .loan-details .name, #checkoutWrap .basket-contents .loan-row .loan-details .mini-loan-card .activity, .mini-loan-card #checkoutWrap .basket-contents .loan-row .loan-details .activity, #checkoutWrap .basket-contents .loan-row .loan-details .mini-loan-card .country, .mini-loan-card #checkoutWrap .basket-contents .loan-row .loan-details .country, #checkoutWrap .basket-contents .loan-row .loan-details .statistic-display .statistic-link, .statistic-display #checkoutWrap .basket-contents .loan-row .loan-details .statistic-link, #checkoutWrap .basket-contents .loan-row .loan-details .statistic-display .statistic-additional-text, .statistic-display #checkoutWrap .basket-contents .loan-row .loan-details .statistic-additional-text {
         font-size: .7rem;
         line-height: .8rem; } }
@@ -16225,6 +16225,8 @@ table.repayments-list {
     #checkoutWrap .basket-contents .loan-row .loan-details .loan-reservation,
     #checkoutWrap .basket-contents .loan-row .loan-details .loan-sponsor {
       color: #999; }
+    #checkoutWrap .basket-contents .loan-row .loan-details .red {
+      color: #9C021A; }
   @media only screen and (min-width: 681px) {
     #checkoutWrap .basket-contents .loan-row .loan-details {
       padding: 0 .8rem; } }
@@ -16283,34 +16285,32 @@ table.repayments-list {
 #checkoutWrap .checkout-totals {
   padding: 0;
   text-align: right; }
-  #checkoutWrap .checkout-totals .order-total,
-  #checkoutWrap .checkout-totals .reward-credit,
-  #checkoutWrap .checkout-totals .grand-total {
+  #checkoutWrap .checkout-totals .totals-row {
     padding: .2rem .5rem; }
-    #checkoutWrap .checkout-totals .order-total label,
-    #checkoutWrap .checkout-totals .reward-credit label,
-    #checkoutWrap .checkout-totals .grand-total label {
+    #checkoutWrap .checkout-totals .totals-row label {
       display: inline-block;
       float: left;
       font-size: 1rem;
       color: #333;
-      line-height: 1.4rem; }
-    #checkoutWrap .checkout-totals .order-total span,
-    #checkoutWrap .checkout-totals .reward-credit span,
-    #checkoutWrap .checkout-totals .grand-total span {
+      line-height: 1.4rem;
+      text-decoration: inherit; }
+    #checkoutWrap .checkout-totals .totals-row span {
       display: inline-block;
       font-weight: bold;
       width: 5.5555555556rem;
       font-size: 1rem;
-      line-height: 1.4rem; }
+      line-height: 1.4rem;
+      text-decoration: inherit; }
+    #checkoutWrap .checkout-totals .totals-row .apply-link,
+    #checkoutWrap .checkout-totals .totals-row .remove-link {
+      font-size: .8rem;
+      line-height: 1.4rem;
+      margin-right: .5rem; }
+    #checkoutWrap .checkout-totals .totals-row del {
+      text-decoration: line-through; }
   @media only screen and (min-width: 681px) {
-    #checkoutWrap .checkout-totals .order-total label,
-    #checkoutWrap .checkout-totals .reward-credit label,
-    #checkoutWrap .checkout-totals .grand-total label {
+    #checkoutWrap .checkout-totals .totals-row label {
       float: none; } }
-  #checkoutWrap .checkout-totals .reward-credit .apply-link {
-    font-size: 1rem;
-    line-height: 1.4rem; }
   #checkoutWrap .checkout-totals .grand-total {
     border-top: 1px solid #d8d8d8; }
 
@@ -16319,6 +16319,137 @@ table.repayments-list {
   #checkoutWrap .basket-operations .basket-buttons {
     display: block;
     float: right; }
+
+#checkoutWrap .payment-operations {
+  padding: .5rem; }
+  #checkoutWrap .payment-operations .payment-buttons {
+    display: block;
+    float: right; }
+
+div.invite-headline-wrapper {
+  height: 0;
+  position: relative; }
+  @media only screen and (max-width: 480px) {
+    div.invite-headline-wrapper {
+      padding-bottom: 70%; } }
+  @media only screen and (min-width: 481px) {
+    div.invite-headline-wrapper {
+      padding-bottom: 37%; } }
+  @media (min-width: 1901px) {
+    div.invite-headline-wrapper {
+      text-align: center; } }
+
+div.invite-intro {
+  padding-top: 2rem; }
+  @media only screen and (min-width: 481px) and (max-width: 680px) {
+    div.invite-intro {
+      padding-top: 5rem; } }
+  div.invite-intro .title {
+    font-size: 2rem;
+    font-weight: bold;
+    line-height: 2.6666666667rem; }
+  @media only screen and (min-width: 481px) {
+    div.invite-intro .hrDivider {
+      color: #d8d8d8;
+      border-color: #d8d8d8;
+      margin-bottom: 1.9444444444rem; } }
+
+@media only screen and (min-width: 681px) {
+  div.invite-elevator-pitch {
+    margin-bottom: 1.3888888889rem; } }
+
+div.invite-elevator-pitch .description {
+  margin-top: 1.1111111111rem; }
+  @media only screen and (min-width: 681px) {
+    div.invite-elevator-pitch .description {
+      margin-top: 0; } }
+
+div.invite-how-kiva-works {
+  margin-top: 1.3888888889rem;
+  margin-bottom: 1.3888888889rem; }
+  div.invite-how-kiva-works .section-title {
+    color: #63a541;
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 1.6666666667rem; }
+  div.invite-how-kiva-works .step {
+    margin-bottom: 1.3888888889rem; }
+    div.invite-how-kiva-works .step .number {
+      color: #236133;
+      font-size: 2rem; }
+    div.invite-how-kiva-works .step .title {
+      color: #236133;
+      font-size: 1rem;
+      line-height: 1.3333333333rem;
+      font-weight: normal; }
+    div.invite-how-kiva-works .step .description {
+      color: #333333;
+      font-size: 1rem;
+      line-height: 1.3333333333rem; }
+
+div.invite-about {
+  overflow: hidden;
+  background-color: #63a541;
+  padding-top: 1.6666666667rem;
+  padding-bottom: 1.6666666667rem; }
+  div.invite-about .title {
+    color: #236133;
+    font-size: 2rem;
+    font-weight: bold;
+    line-height: 2.6666666667rem; }
+  div.invite-about .subtitle {
+    color: #236133;
+    font-size: 1.5555555556rem;
+    line-height: 2rem;
+    margin-top: 0.8333333333rem; }
+  div.invite-about .stats {
+    margin-top: 1rem;
+    text-align: center;
+    font-weight: normal; }
+    @media only screen and (min-width: 45em) {
+      div.invite-about .stats .divider {
+        width: 0.0555555556rem;
+        background-color: #488443;
+        height: 2.2222222222rem;
+        margin-top: 2.2222222222rem; } }
+    div.invite-about .stats .value {
+      color: #FFFFFF;
+      font-size: 3.1111111111rem;
+      line-height: 3.5555555556rem; }
+    div.invite-about .stats .stars {
+      font-size: 1.5555555556rem; }
+      @media only screen and (min-width: 60em) {
+        div.invite-about .stats .stars {
+          font-size: 3.1111111111rem; } }
+    div.invite-about .stats .title {
+      color: #FFFFFF;
+      font-size: 1rem;
+      line-height: 1.3333333333rem;
+      margin-top: 0.5555555556rem; }
+
+@media only screen and (max-width: 480px) {
+  div.invite-footer-wrapper {
+    margin-top: 1.1111111111rem; } }
+
+div.invite-footer-wrapper .title {
+  font-size: 2rem;
+  font-weight: bold;
+  line-height: 2.6666666667rem; }
+  @media only screen and (max-width: 480px) {
+    div.invite-footer-wrapper .title {
+      color: #63a541; } }
+  @media only screen and (min-width: 481px) {
+    div.invite-footer-wrapper .title {
+      color: #FFFFFF; } }
+
+div.invite-footer-wrapper .actNow {
+  margin-top: 1.3888888889rem; }
+
+div.citation cite {
+  width: 100%;
+  white-space: nowrap;
+  color: #666;
+  font-size: 0.7rem; }
 
 .ac-container.ac-title {
   margin: 0;
@@ -16423,7 +16554,8 @@ table.repayments-list {
 .checkout-steps {
   margin: 0; }
   .checkout-steps ul {
-    line-height: 100%; }
+    line-height: 100%;
+    margin: 0; }
     .checkout-steps ul li {
       width: 33%; }
       @media only screen and (max-width: 480px) {

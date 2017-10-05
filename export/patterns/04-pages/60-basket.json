@@ -1,6 +1,7 @@
 {
     "is_basket": true,
     "is_checkout": true,
+    "is_logged_in": true,
     "basket_continue_href": "#",
     "lend_link": "https://dev.kiva.org/lend",
     "pl_loans": 1,
@@ -32,9 +33,13 @@
     "totals": {
         "order_total": "27.50",
         "free_credit": "10.00",
-        "grand_total": "27.50"
+        "grand_total": "27.50", 
+        "kiva_credit_available_total": "27.50",
+        "kiva_credit_applied_total": "27.50",
+        "kiva_credit_applicable_total": "43.50"
     },
     "pl_simple_donation": 1,
     "pl_nudge": 0,
-    "suggested_donation":"3.75"
+    "suggested_donation":"3.75",
+    "kiva_credit_remaining": "13.50"
 }

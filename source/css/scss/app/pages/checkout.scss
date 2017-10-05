@@ -40,7 +40,7 @@
                 p {
                     margin: 0;
                 }
-                @media #{$small} {
+                @media #{$small-medium-only} {
                     .small-text {
                         font-size: .7rem;
                         line-height: .8rem;
@@ -63,6 +63,10 @@
                 .loan-sponsor {
                     color: $kiva-text-light;
                 }
+                .red {
+                    color: $kiva-accent-red;
+                }
+                
             }
             @media #{$large-up} {
                 .loan-details {
@@ -153,9 +157,7 @@
         padding: 0;
         text-align: right;
 
-        .order-total,
-        .reward-credit,
-        .grand-total {
+        .totals-row {
             padding: .2rem .5rem;
 
             label {
@@ -164,6 +166,7 @@
                 font-size: 1rem;
                 color: $kiva-text-dark;
                 line-height: 1.4rem;
+                text-decoration: inherit;
             }
             span {
                 display: inline-block;
@@ -171,25 +174,24 @@
                 width: rem-calc(100);
                 font-size: 1rem;
                 line-height: 1.4rem;
+                text-decoration: inherit;
+            }
+            .apply-link,
+            .remove-link {
+                font-size: .8rem;
+                line-height: 1.4rem;
+                margin-right: .5rem;
+            }
+            del {
+                text-decoration: line-through;
             }
         }
 
         @media #{$large-up} {
-            .order-total,
-            .reward-credit,
-            .grand-total {
+            .totals-row {
                 label {
                     float:none;
                 }
-            }
-        }
-
-        .order-total {}
-
-        .reward-credit {
-            .apply-link {
-                font-size: 1rem;
-                line-height: 1.4rem;
             }
         }
 
@@ -204,10 +206,15 @@
         .basket-buttons {
             display: block;
             float: right;
-            
-            #basket-continue {
+        }   
+    }
 
-            }
+    .payment-operations {
+        padding: .5rem;
+
+        .payment-buttons {
+            display: block;
+            float: right;
         }   
     }
 }
