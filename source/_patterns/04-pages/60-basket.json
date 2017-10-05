@@ -9,6 +9,7 @@
     "price":"25.00",
     "team":null,
     "__typename":"LoanReservation",
+    "reserved_for":"10 minutes",
     "loan": {
         "id":1367775,
         "name":"Union Villa Ingenio Group",

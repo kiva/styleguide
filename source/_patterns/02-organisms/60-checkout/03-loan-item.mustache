@@ -6,19 +6,9 @@
 		</a>
 	</div>
 	<div class="loan-details small-7 columns">
-		<!-- needs to flip to red when reservation is close to expiring -->
-		<p class="loan-reservation small-text">
-		{{#not_reserved}}
-			<!-- {kvurl page=ajax action=getMessageCatalogTerm type=glossary term=LoanReservation} -->
-			<span class="red">Loan not reserved.</span> <span class="info-trigger"><a href="#">Why?</a></span>
-		{{/not_reserved}}
-		{{^not_reserved}}
-			{{#reserved_for}}
-				<!-- Reserved for -->
-				<span class="{{#time_left_warning}}red{{/time_left_warning}}">Reserved for {{reserved_for}}.</span>
-			{{/reserved_for}}
-		{{/not_reserved}}
-		</p>
+		<span class="loan-reservation small-text">
+			{{> 02-organisms/60-checkout/10-loan-reserve-message}}
+		</span>
 		<h2 class="loan-title">{{ loan.name }}</h2>
 		<p class="loan-country small-text">{{ loan.location.country.name }} / {{ loan.sector.name }}</p>
 		<p class="loan-sponsor small-text">{{ loan.sponsor_name }}</p>

@@ -8,8 +8,11 @@
         "price":"25.00",
         "name":"Union Villa Ingenio Group",
         "reserved_message":"Reserved for 10 minutes.",
-        "team":"Donut Empire"
+        "team": {
+            "name":"Donut Empire"
+        }
     },
+    "reserved_for":"10 minutes",
     "dontate_repayments": 1,
     "pl_totals": 0,
     "totals": {
