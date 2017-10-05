@@ -85,6 +85,12 @@ module.exports = function(grunt) {
 					src: ['export/']
 				}
 			}
+			, shrinkwrap: {
+				files: [{
+					src: ['npm-shrinkwrap.json']
+					, expand: false
+				}]
+			}
 		}
 
 
@@ -107,6 +113,7 @@ module.exports = function(grunt) {
 			options: {
 				file: 'package.json'
 				, beforeBump: ['export']
+				, afterBump: ['shell:shrinkwrap', 'gitadd:shrinkwrap']
 				, npm: false
 				, npmtag: false
 				, github: {
@@ -159,6 +166,9 @@ module.exports = function(grunt) {
 		, shell: {
 			 compile: {
 				command: "php core/builder.php -g"
+			}
+			, shrinkwrap: {
+				command: "npm shrinkwrap"
 			}
 		}
 
