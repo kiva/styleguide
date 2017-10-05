@@ -1,0 +1,25 @@
+{
+    "is_payment": true,
+    "is_checkout": true,
+    "is_logged_in": true,
+    "pl_loans": 0,
+    "id":1367775,
+    "price":"25.00",
+    "team":null,
+    "__typename":"LoanReservation",
+    "loan": {
+        "id":1367775,
+        "name":"Union Villa Ingenio Group",
+        "__typename":"LoanPartner"
+    },
+    "pl_totals": 0,
+    "totals": {
+        "order_total": "27.50",
+        "free_credit": "10.00",
+        "grand_total": "27.50", 
+        "kiva_credit_available_total": "27.50",
+        "kiva_credit_applied_total": "27.50",
+        "kiva_credit_applicable_total": "43.50"
+    },
+    "kiva_credit_remaining": "13.50"
+}
