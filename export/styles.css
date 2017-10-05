@@ -16282,6 +16282,43 @@ table.repayments-list {
     line-height: 1.4rem;
     clear: right; }
 
+#checkoutWrap .payment-contents #payment-item-region {
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #d8d8d8; }
+
+#checkoutWrap .payment-contents .payment-item-table {
+  border: none; }
+  #checkoutWrap .payment-contents .payment-item-table th {
+    padding: .6rem .8rem; }
+  #checkoutWrap .payment-contents .payment-item-table td {
+    padding: 1rem .8rem; }
+  #checkoutWrap .payment-contents .payment-item-table .item-price-header {
+    text-align: right; }
+  #checkoutWrap .payment-contents .payment-item-table .donate-repayments-header {
+    max-width: 4rem; }
+    #checkoutWrap .payment-contents .payment-item-table .donate-repayments-header a {
+      color: #22a9d8;
+      cursor: default;
+      text-decoration: none; }
+
+#checkoutWrap .payment-contents .payment-item .item-info {
+  line-height: 1.2rem; }
+  #checkoutWrap .payment-contents .payment-item .item-info .item-title {
+    margin: 0; }
+  #checkoutWrap .payment-contents .payment-item .item-info .item-reserve-message {
+    display: block;
+    color: #999; }
+
+#checkoutWrap .payment-contents .payment-item .item-price {
+  text-align: right; }
+  #checkoutWrap .payment-contents .payment-item .item-price p {
+    font-size: 1.2rem;
+    font-weight: normal;
+    margin: 0; }
+
+#checkoutWrap .payment-contents .payment-item .item-repayment input {
+  margin: 0; }
+
 #checkoutWrap .checkout-totals {
   padding: 0;
   text-align: right; }
