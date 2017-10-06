@@ -14,19 +14,51 @@ div.invite-headline-wrapper {
 	@media (min-width: 1901px) {
 		text-align: center;
 	}
+
+	.profile-photo {
+		@media screen and (max-width: 780px) {
+			border-radius: rem-calc(100);
+			height: rem-calc(100);
+			width: rem-calc(100);
+		}
+
+		@media screen and (min-width: 780px) {
+			border-radius: rem-calc(150);
+	 		height: rem-calc(150);
+			width: rem-calc(150);
+		}
+	}
+
+	.title {
+		@media screen and (max-width: 560px) {
+			font-size: rem-calc(28) !important;
+			line-height: 1.82rem;
+		}
+	}
 }
 
 div.invite-intro {
 	padding-top: rem-calc(36);
 
-	@media #{$medium-only} {
-		padding-top: rem-calc(90);
+	@media #{$medium-up} {
+		padding-top: rem-calc(50);
 	}
 
 	.title {
 		font-size: rem-calc(36);
 		font-weight: bold;
 		line-height: rem-calc(48);
+
+		@media #{$small-only} {
+			font-size: 1.5rem;
+			line-height: 1.8rem;
+		}
+	}
+
+	button.cta {
+		font-size: 1.16666rem;
+		font-weight: normal;
+		margin-bottom: 0;
 	}
 
 	.hrDivider {
@@ -45,6 +77,16 @@ div.invite-elevator-pitch {
 
 	.description {
 		margin-top: rem-calc(20);
+
+		p {
+			font-size: 1.55555rem;
+			line-height: 2rem;
+
+			@media #{$small-only} {
+				font-size: 1rem;
+				line-height: 1.33333rem;
+			}
+		}
 
 		@media #{$large-up} {
 			margin-top: 0;
@@ -65,11 +107,12 @@ div.invite-how-kiva-works {
 	}
 
 	.step {
-		margin-bottom: rem-calc(25);
+		margin-bottom: 0;
 
 		.number {
 			color: $dark-green;
 			font-size: rem-calc(36);
+			line-height: rem-calc(24);
 		}
 
 		.title {
@@ -83,6 +126,7 @@ div.invite-how-kiva-works {
 			color: $oil;
 			font-size: rem-calc(18);
 			line-height: rem-calc(24);
+			font-weight: 300;
 		}
 	}
 }
@@ -102,9 +146,22 @@ div.invite-about {
 
 	.subtitle {
 		color: $dark-green;
-		font-size: rem-calc(28);
-		line-height: rem-calc(36);
-		margin-top: rem-calc(15);
+		font-size: 1.55555rem;
+		line-height: 2rem;
+		weight: 300;
+
+		@media #{$small-only} {
+			font-size: 1.22222rem;
+			line-height: 1.5rem;
+			weight: 300;
+		}
+	}
+
+	.divider {
+		width: rem-calc(1);
+		background-color: $graphic-green;
+		height: rem-calc(40);
+		margin-top: rem-calc(40);
 	}
 
 	.stats {
@@ -112,42 +169,44 @@ div.invite-about {
 		text-align: center;
 		font-weight: normal;
 
-		@media only screen and (min-width: 45em) {
-			.divider {
-				width: rem-calc(1);
-				background-color: $graphic-green;
-				height: rem-calc(40);
-				margin-top: rem-calc(40);
-			}
-		}
-
 		.value {
 			color: $white;
-			font-size: rem-calc(56);
-			line-height: rem-calc(64);
-		}
+			font-size: 1.66666rem;
+			line-height: 1.38888rem;
+			font-weight: bold;
 
+			@media #{$large-up} {
+				font-size: 3.11111rem;
+				line-height: 3.55555rem;
+			}
+		}
 
 		.stars {
 			font-size: rem-calc(28);
 
-			@media only screen and (min-width: 60em) {
-				font-size: rem-calc(56);
+			@media only screen and (min-width: 960px) {
+				font-size: 2rem;
 			}
 		}
 
-
 		.title {
 			color: $white;
-			font-size: rem-calc(18);
-			line-height: rem-calc(24);
 			margin-top: rem-calc(10);
+			font-size: .8rem;
+			line-height: .8rem;
+			font-weight: 300;
+
+			@media #{$large-up} {
+				font-size: 1rem;
+				line-height: 1.33333rem;
+				font-weight: 300;
+			}
 		}
 	}
 }
 
 div.invite-footer-wrapper {
-	@media #{$small-only} {
+	@media #{$medium-down} {
 		margin-top: rem-calc(20);
 	}
 
@@ -156,17 +215,22 @@ div.invite-footer-wrapper {
 		font-weight: bold;
 		line-height: rem-calc(48);
 
-		@media #{$small-only} {
+		@media #{$medium-down} {
 			color: $green;
 		}
 
-		@media #{$medium-up} {
+		@media #{$large-up} {
 			color: $white;
 		}
 	}
 
 	.actNow {
 		margin-top: rem-calc(25);
+	}
+
+	button.cta {
+		font-size: 1.16666rem;
+		font-weight: normal;
 	}
 }
 
