@@ -95,47 +95,10 @@ div.invite-elevator-pitch {
 }
 
 
-div.invite-how-kiva-works {
-	margin-top: rem-calc(25);
-	margin-bottom: rem-calc(25);
-
-	.section-title {
-		color: $green;
-		font-size: rem-calc(36);
-		font-weight: bold;
-		margin-bottom: rem-calc(30);
-	}
-
-	.step {
-		margin-bottom: 0;
-
-		.number {
-			color: $dark-green;
-			font-size: rem-calc(36);
-			line-height: rem-calc(24);
-		}
-
-		.title {
-			color: $dark-green;
-			font-size: rem-calc(18);
-			line-height: rem-calc(24);
-			font-weight: normal;
-		}
-
-		.description {
-			color: $oil;
-			font-size: rem-calc(18);
-			line-height: rem-calc(24);
-			font-weight: 300;
-		}
-	}
-}
-
 div.invite-about {
 	overflow: hidden;
 	background-color: $green;
-	padding-top: rem-calc(30);
-	padding-bottom: rem-calc(30);
+	padding-bottom: 0;
 
 	.title {
 		color: $dark-green;
@@ -205,6 +168,53 @@ div.invite-about {
 	}
 }
 
+div.invite-how-kiva-works {
+	padding-top: rem-calc(30);
+
+	.section-title {
+		color: $green;
+		font-size: rem-calc(36);
+		font-weight: bold;
+		margin-bottom: rem-calc(30);
+	}
+
+	.step {
+		margin-bottom: 0;
+
+		.number {
+			color: $dark-green;
+			font-size: rem-calc(36);
+			line-height: rem-calc(24);
+		}
+
+		.title {
+			color: $dark-green;
+			font-size: rem-calc(18);
+			line-height: rem-calc(24);
+			font-weight: normal;
+		}
+
+		.description {
+			color: $oil;
+			font-size: rem-calc(18);
+			line-height: rem-calc(24);
+			font-weight: 300;
+		}
+	}
+
+	@media #{$small-only} {
+		.photo {
+			min-width:100%;
+			max-width:100%;
+			height: auto;
+		}
+
+		.photo-column {
+			padding-right: 10px;
+		}
+	}
+}
+
 div.invite-footer-wrapper {
 	@media #{$medium-down} {
 		margin-top: rem-calc(20);
@@ -237,8 +247,11 @@ div.invite-footer-wrapper {
 div.citation {
 	cite {
 		width: 100%;
-		white-space: nowrap;
 		color: #666;
 		font-size: 0.7rem;
+
+		@media #{$medium-up} {
+			white-space: nowrap;
+		}
 	}
 }
