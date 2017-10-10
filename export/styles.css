@@ -16441,7 +16441,7 @@ div.invite-elevator-pitch .description {
 div.invite-about {
   overflow: hidden;
   background-color: #63a541;
-  padding-bottom: 0; }
+  padding: 1.6666666667rem 0 0 0; }
   div.invite-about .title {
     color: #236133;
     font-size: 2rem;
@@ -16493,7 +16493,7 @@ div.invite-about {
           font-weight: 300; } }
 
 div.invite-how-kiva-works {
-  padding-top: 1.6666666667rem; }
+  padding: 3rem 0 1.6666666667rem 0; }
   div.invite-how-kiva-works .section-title {
     color: #63a541;
     font-size: 2rem;
