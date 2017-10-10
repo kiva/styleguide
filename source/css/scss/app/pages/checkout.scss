@@ -78,9 +78,11 @@
             }
 
             .loan-totals {
-                .amount-select {
+                .amount-select,
+                .donation-item-amount {
                     float: right;
                     direction: rtl;
+                    text-align: right;
                     height: auto;
                     font-size: .9rem;
                     padding-right: 1rem;
@@ -90,15 +92,28 @@
                     background-color: $white;
                 }
 
-                @media #{$large-up} {
-                    .amount-select {
-                        font-size: 1.4rem;
-                        max-width: rem-calc(120);
-                        padding-right: 1rem;
+                .donation-item-amount {
+                    color: $kiva-text-dark;
+                    padding-right: .5rem;
+                    margin-bottom: 0;
+                }
+                .donation-item-controls {
+                    a {
+                        line-height: 1.4rem;
                     }
                 }
 
-                .remove-loan {
+                @media #{$large-up} {
+                    .amount-select,
+                    .donation-item-amount {
+                        font-size: 1.4rem;
+                        max-width: rem-calc(120);
+                    }
+                }
+                
+                .remove-loan,
+                .update-item,
+                .remove-item {
                     display: block;
                     text-align: right;
                     float: right;
