@@ -16192,6 +16192,9 @@ table.repayments-list {
       width: 2.6666666667rem;
       margin-bottom: 0.2222222222rem; } }
 
+.monthy-good-spinner .loading-spinner .line {
+  background-color: #FFFFFF; }
+
 #checkoutWrap label {
   background: transparent;
   color: #666; }
@@ -16241,9 +16244,11 @@ table.repayments-list {
   @media only screen and (min-width: 681px) {
     #checkoutWrap .basket-contents .loan-row .loan-details {
       padding: 0 .8rem; } }
-  #checkoutWrap .basket-contents .loan-row .loan-totals .amount-select {
+  #checkoutWrap .basket-contents .loan-row .loan-totals .amount-select,
+  #checkoutWrap .basket-contents .loan-row .loan-totals .donation-item-amount {
     float: right;
     direction: rtl;
+    text-align: right;
     height: auto;
     font-size: .9rem;
     padding-right: 1rem;
@@ -16251,12 +16256,20 @@ table.repayments-list {
     max-width: 4.4444444444rem;
     border-color: #d8d8d8;
     background-color: #FFFFFF; }
+  #checkoutWrap .basket-contents .loan-row .loan-totals .donation-item-amount {
+    color: #333;
+    padding-right: .5rem;
+    margin-bottom: 0; }
+  #checkoutWrap .basket-contents .loan-row .loan-totals .donation-item-controls a {
+    line-height: 1.4rem; }
   @media only screen and (min-width: 681px) {
-    #checkoutWrap .basket-contents .loan-row .loan-totals .amount-select {
+    #checkoutWrap .basket-contents .loan-row .loan-totals .amount-select,
+    #checkoutWrap .basket-contents .loan-row .loan-totals .donation-item-amount {
       font-size: 1.4rem;
-      max-width: 6.6666666667rem;
-      padding-right: 1rem; } }
-  #checkoutWrap .basket-contents .loan-row .loan-totals .remove-loan {
+      max-width: 6.6666666667rem; } }
+  #checkoutWrap .basket-contents .loan-row .loan-totals .remove-loan,
+  #checkoutWrap .basket-contents .loan-row .loan-totals .update-item,
+  #checkoutWrap .basket-contents .loan-row .loan-totals .remove-item {
     display: block;
     text-align: right;
     float: right;

@@ -1,40 +1,17 @@
 <div class="submit-controls text-center">
-{{#is_logged_in}}
-	{{^has_legacy_subscription}}
-		{{^has_auto_deposit}}
-			{{^has_billing_agreement}}
-				<div id="paypal-button"></div>
+	{{^has_billing_agreement}}
+		<div id="paypal-button"></div>
 
-				<div class="disclaimer">Thanks to PayPal, Kiva receives
-					<br class="so">free payment processing.</div>
-			{{/has_billing_agreement}}
+		<div class="disclaimer">Thanks to PayPal, Kiva receives
+			<br class="so">free payment processing.</div>
+	{{/has_billing_agreement}}
 
-			{{#has_billing_agreement}}
-				<div id="monthly-good-save-button">
-					<button class="button smaller">Confirm</button>
-				</div>
-			{{/has_billing_agreement}}
-		{{/has_auto_deposit}}
-
-		<!-- @todo - probably not needed in MG context - handled on confirm page -->
-		{{#has_auto_deposit}}
-			<div class="large-6 medium-8 panel callout monthly-good-notice existing-auto-deposit-notice">
-				<p>You already have an existing auto deposit. Changes can be made in your <a href="/settings/credit" title="Credit settings">Credit settings</a>.
+	{{#has_billing_agreement}}
+		<div id="monthly-good-save-button">
+			<button class="button smaller">Confirm</button>
+			<div class="text-center">
+				<em>We'll charge your PayPal account for your Monthly Good</em>
 			</div>
-		{{/has_auto_deposit}}
-	{{/has_legacy_subscription}}
-
-	<!-- @todo - probably not needed in MG context - handled on confirm page -->
-	{{#has_legacy_subscription}}
-		<div class="large-6 medium-8 panel callout monthly-good-notice existing-legacy-subscription-notice">
-			<p>Because you have an existing auto deposit, to make changes you’ll need to <a href="{{cancel_subscription_link}}">cancel your current auto deposit via PayPal</a> and then return to Kiva to set up a new one.</p>
 		</div>
-	{{/has_legacy_subscription}}
-{{/is_logged_in}}
-
-{{^is_logged_in}}
-	<div id="monthly-good-confirm-button">
-		<button class="button smaller">Confirm</button>
-	</div>
-{{/is_logged_in}}
+	{{/has_billing_agreement}}
 </div>
