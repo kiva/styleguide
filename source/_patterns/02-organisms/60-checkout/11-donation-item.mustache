@@ -1,0 +1,18 @@
+<div class="loan-row row small-collapse">
+	<div class="loan-image small-2 columns">
+		<img height="150" width="150" title="Donation to Kiva" src="{{imageurl}}">
+	</div>
+	<div class="loan-details small-7 columns">
+		<h2 class="loan-title">Donation to Kiva</h2>
+	</div>
+
+	<div class="loan-totals small-3 columns">
+		<form id="donation-item-edit-form">
+			<input type="text" id="donation-item-amount" name="donation-item-amount" class="donation-item-amount" value="{{price}}">
+			<div class="donation-item-controls">
+				<a id="update{{id}}" kvtrackevent="Checkout|click-Update item|DonationItem" href="#" class="small-text update-item">Update</a>
+				<a id="remove{{id}}" kvtrackevent="Checkout|click-Remove item|DonationItem" href="#" class="small-text remove-item">Remove</a>
+			</div>
+		</form>
+	</div>
+</div>
