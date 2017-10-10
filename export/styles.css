@@ -16192,6 +16192,9 @@ table.repayments-list {
       width: 2.6666666667rem;
       margin-bottom: 0.2222222222rem; } }
 
+.monthy-good-spinner .loading-spinner .line {
+  background-color: #FFFFFF; }
+
 #checkoutWrap label {
   background: transparent;
   color: #666; }
