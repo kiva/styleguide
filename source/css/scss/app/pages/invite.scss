@@ -98,7 +98,7 @@ div.invite-elevator-pitch {
 div.invite-about {
 	overflow: hidden;
 	background-color: $green;
-	padding-bottom: 0;
+	padding: rem-calc(30) 0 0 0;
 
 	.title {
 		color: $dark-green;
@@ -169,7 +169,7 @@ div.invite-about {
 }
 
 div.invite-how-kiva-works {
-	padding-top: rem-calc(30);
+	padding: rem-calc(54) 0 rem-calc(30) 0;
 
 	.section-title {
 		color: $green;
