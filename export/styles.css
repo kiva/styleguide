@@ -16566,6 +16566,40 @@ div.citation cite {
     div.citation cite {
       white-space: nowrap; } }
 
+div.gift-headline-wrapper {
+  height: 0;
+  position: relative; }
+  @media only screen and (max-width: 480px) {
+    div.gift-headline-wrapper {
+      padding-bottom: 70%; } }
+  @media only screen and (min-width: 481px) {
+    div.gift-headline-wrapper {
+      padding-bottom: 37%; } }
+  @media (min-width: 1901px) {
+    div.gift-headline-wrapper {
+      text-align: center; } }
+
+div.gift-intro {
+  padding-top: 3.3333333333rem;
+  padding-bottom: 3.3333333333rem; }
+
+div.gift-card .text-section, div.kiva-store .text-section {
+  padding-top: 1.6666666667rem;
+  padding-bottom: 1.6666666667rem; }
+  @media only screen and (max-width: 480px) {
+    div.gift-card .text-section, div.kiva-store .text-section {
+      padding-top: 2.2222222222rem; } }
+
+@media only screen and (min-width: 481px) {
+  div.gift-card button, div.kiva-store button {
+    margin-bottom: 2.7777777778rem; } }
+
+@media only screen and (max-width: 480px) {
+  div.gift-card button.card, div.kiva-store button.card {
+    margin-bottom: 4.4444444444rem; }
+  div.gift-card button.store, div.kiva-store button.store {
+    margin-bottom: 2.7777777778rem; } }
+
 .ac-container.ac-title {
   margin: 0;
   display: block;
