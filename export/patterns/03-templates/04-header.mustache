@@ -4,11 +4,7 @@
 		<div class="show-for-xxlarge-up xxlarge-4 xxlarge-centered columns promo-space">
 			{{#lending-reward-session}}
 				<div style="font-weight: normal;">
-					<span style="font-weight: bold;">
-						<a class="dark_green_bg_link" href="{{lending-reward-session.href}}">Make a Kiva loan</a>
-					</span>
-					<br>
-					and receive a $25 free credit to lend again.
+					Make a Kiva loan<br>and receive a $25 free credit to lend again.
 				</div>
 			{{/lending-reward-session}}
 			{{^lending-reward-session}}
@@ -69,11 +65,13 @@
 			</div>
 		{{/is-visitor}}
 		{{> 02-organisms/08-header/02-search-box}}
-		{{^bonus}}
-			{{#header_promo}}
-				{{> 02-organisms/08-header/04-promo}}
-			{{/header_promo}}
-		{{/bonus}}
+		{{^lending-reward-session}}
+			{{^bonus}}
+				{{#header_promo}}
+					{{> 02-organisms/08-header/04-promo}}
+				{{/header_promo}}
+			{{/bonus}}
+		{{/lending-reward-session}}
 	</div>
 
 	{{> 02-organisms/08-header/03-lend-menu}}
@@ -95,9 +93,9 @@
 	{{/is-visitor}}
 	{{#lending-reward-session}}
 		{{! This is the Lending Reward prompt that is shown in the medium screen state}}
-		<div class="hide-for-xxlarge-up hide-for-small-only pronus"><span style="font-weight: normal;"><span style="font-weight: bold;"><a class="dark_green_bg_link"  href="{{lending-reward-session.href}}">Make a Kiva loan</a></span> and receive a $25 free credit to lend again.</span></div>
+		<div class="hide-for-xxlarge-up hide-for-small-only pronus" style="font-weight: normal;">Make a Kiva loan and receive a $25 free credit to lend again.</div>
 		{{! This is the Lending Reward prompt that is shown in the small screen state}}
-		<div class="show-for-small-only small-centered columns pronus"><div style="font-weight: normal;"><span style="font-weight: bold;"><a class="dark_green_bg_link"  href="{{lending-reward-session.href}}">Make a Kiva loan</a></span><br>and receive a $25 free credit to lend again.</div></div>
+		<div class="show-for-small-only small-centered columns pronus" style="font-weight: normal;">Make a Kiva loan<br>and receive a $25 free credit to lend again.</div>
 	{{/lending-reward-session}}
 	{{^lending-reward-session}}
 		{{#bonus}}
