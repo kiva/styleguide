@@ -1,0 +1,49 @@
+div.gift-headline-wrapper {
+	height: 0;
+	position: relative;
+
+	@media #{$small-only} {
+		padding-bottom: 70%;
+	}
+
+	@media #{$medium-up} {
+		padding-bottom: 37%;
+	}
+
+	@media (min-width: 1901px) {
+		text-align: center;
+	}
+}
+
+div.gift-intro {
+	padding-top: rem-calc(60);
+	padding-bottom: rem-calc(60);
+}
+
+div.gift-card, div.kiva-store {
+
+	.text-section {
+		padding-top: rem-calc(30);
+		padding-bottom: rem-calc(30);
+
+		@media #{$small-only} {
+			padding-top: rem-calc(40);
+		}
+	}
+
+	@media #{$medium-up} {
+		button{
+			margin-bottom: rem-calc(50);
+		}
+	}
+
+	@media #{$small-only} {
+		button.card {
+			margin-bottom: rem-calc(80);
+		}
+
+		button.store {
+			margin-bottom: rem-calc(50);
+		}
+	}
+}
