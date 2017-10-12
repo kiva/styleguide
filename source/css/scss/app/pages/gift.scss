@@ -22,15 +22,11 @@ div.gift-intro {
 
 div.gift-card, div.kiva-store {
 
-	@media #{$small-only} {
+	@media #{medium-down} {
 		.photo {
 			min-width:100%;
 			max-width:100%;
 			height: auto;
-		}
-
-		.photo-column {
-			padding-right: 10px;
 		}
 	}
 
