@@ -16583,6 +16583,14 @@ div.gift-intro {
   padding-top: 3.3333333333rem;
   padding-bottom: 3.3333333333rem; }
 
+@media only screen and (max-width: 480px) {
+  div.gift-card .photo, div.kiva-store .photo {
+    min-width: 100%;
+    max-width: 100%;
+    height: auto; }
+  div.gift-card .photo-column, div.kiva-store .photo-column {
+    padding-right: 10px; } }
+
 div.gift-card .text-section, div.kiva-store .text-section {
   padding-top: 1.6666666667rem;
   padding-bottom: 1.6666666667rem; }
