@@ -16125,7 +16125,8 @@ table.repayments-list {
       .monthly-good .monthly-good-dynamic-view .monthly-good-form .donation-selector-large .pencil-dropdown .dropdown-choices {
         top: -7px;
         left: -83px;
-        box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5); }
+        box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
+        z-index: 1000; }
     .monthly-good .monthly-good-dynamic-view .monthly-good-form .donation-selector-small {
       display: block; }
       @media only screen and (min-width: 481px) {
@@ -16536,27 +16537,30 @@ div.invite-how-kiva-works {
     div.invite-how-kiva-works .photo-column {
       padding-right: 10px; } }
 
-@media only screen and (max-width: 680px) {
-  div.invite-footer-wrapper {
-    margin-top: 1.1111111111rem; } }
-
-div.invite-footer-wrapper .title {
-  font-size: 2rem;
-  font-weight: bold;
-  line-height: 2.6666666667rem; }
-  @media only screen and (max-width: 680px) {
-    div.invite-footer-wrapper .title {
-      color: #63a541; } }
-  @media only screen and (min-width: 681px) {
-    div.invite-footer-wrapper .title {
-      color: #FFFFFF; } }
-
-div.invite-footer-wrapper .actNow {
-  margin-top: 1.3888888889rem; }
-
-div.invite-footer-wrapper button.cta {
-  font-size: 1.16666rem;
-  font-weight: normal; }
+div.invite-footer-wrapper {
+  position: relative;
+  height: 0; }
+  @media only screen and (max-width: 480px) {
+    div.invite-footer-wrapper {
+      padding-bottom: 57.46%; } }
+  @media only screen and (min-width: 481px) {
+    div.invite-footer-wrapper {
+      padding-bottom: 29.05%; } }
+  div.invite-footer-wrapper .title {
+    font-size: 2rem;
+    font-weight: bold;
+    line-height: 2.6666666667rem; }
+    @media only screen and (max-width: 680px) {
+      div.invite-footer-wrapper .title {
+        color: #63a541; } }
+    @media only screen and (min-width: 681px) {
+      div.invite-footer-wrapper .title {
+        color: #FFFFFF; } }
+  div.invite-footer-wrapper .actNow {
+    margin-top: 1.3888888889rem; }
+  div.invite-footer-wrapper button.cta {
+    font-size: 1.16666rem;
+    font-weight: normal; }
 
 div.citation cite {
   width: 100%;
@@ -16583,13 +16587,11 @@ div.gift-intro {
   padding-top: 3.3333333333rem;
   padding-bottom: 3.3333333333rem; }
 
-@media only screen and (max-width: 480px) {
+@media medium-down {
   div.gift-card .photo, div.kiva-store .photo {
     min-width: 100%;
     max-width: 100%;
-    height: auto; }
-  div.gift-card .photo-column, div.kiva-store .photo-column {
-    padding-right: 10px; } }
+    height: auto; } }
 
 div.gift-card .text-section, div.kiva-store .text-section {
   padding-top: 1.6666666667rem;
