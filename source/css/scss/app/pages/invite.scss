@@ -216,8 +216,15 @@ div.invite-how-kiva-works {
 }
 
 div.invite-footer-wrapper {
-	@media #{$medium-down} {
-		margin-top: rem-calc(20);
+	position: relative;
+	height: 0;
+
+	@media #{$small-only} {
+		padding-bottom: 57.46%;
+	}
+
+	@media #{$medium-up} {
+		padding-bottom: 29.05%;
 	}
 
 	.title {
