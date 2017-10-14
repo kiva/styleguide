@@ -1,0 +1,35 @@
+.portfolio-donations {
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+    
+    .donor-name-label {
+        color: $kiva-text-light;
+    }
+    .donor-name {
+        line-height: 100%;
+        margin-top: 0;
+    }
+
+    .donation-stats {
+        .yearly-donation {
+            margin-bottom: 1rem;
+
+            .statistic-label {
+                line-height: 2rem;
+            }
+        }
+        .yearly-donation:first-child {
+            padding-bottom: 1rem;
+            border-bottom: 1px solid $kiva-stroke-gray;
+        }
+    }
+
+    .info-link {
+        .icon {
+            height: 1rem;
+            width: 1rem;
+            vertical-align: text-top;
+            margin-right: .2222222222rem;
+        }
+    }
+}
