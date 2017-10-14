@@ -57,7 +57,7 @@
 						<svg class="icon icon-error">
 							<use xlink:href="#icon-error"/>
 						</svg>
-						$10,000 limit
+						$5 minimum, $10,000 limit
 					</small>
 			</td>
 			<td class="hide-for-small-only">&nbsp;</td>
@@ -117,7 +117,7 @@
 				</div>
 				<div class="donation-selector donation-selector-small">
 					<div class="selector">
-						<input id="donation-amount-input"
+						<input id="mg-donation-amount-input"
 							   type="text"
 							   class="text-input"
 							   value="{{donation_amount}}"
@@ -162,24 +162,11 @@
 		</tr>
 	</table>
 
-	<div class="total-amount-minimum">
-		<input type="text"
-			   data-abide-validator="sum"
-			   data-min-sum="0.01"
-			   data-sum-inputs="deposit-amount-input,donation-amount-input">
-		<small class="error zig">
-			<svg class="icon icon-error">
-				<use xlink:href="#icon-error"/>
-			</svg>
-			To set up Monthly Good, please enter an amount $5 or greater.
-		</small>
-	</div>
-
 	<div class="total-amount-maximum">
 		<input type="text"
 			   data-abide-validator="sum"
 			   data-max-sum="10000"
-			   data-sum-inputs="deposit-amount-input,donation-amount-input">
+			   data-sum-inputs="mg-deposit-amount-input,mg-donation-amount-input">
 		<small class="error zig">
 			<svg class="icon icon-error">
 				<use xlink:href="#icon-error"/>
