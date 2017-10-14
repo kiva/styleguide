@@ -24,6 +24,39 @@
         }
     }
 
+    .donation-listing {
+        .dataTable th img {
+            vertical-align: middle
+        }
+
+        .dataTables_paginate a,
+        .dataTables_info {
+            font-size: .8rem;
+            color: $kiva-text-medium;
+            margin-right: 10px;
+        }
+
+        a.paginate_active {
+            color: $kiva-text-dark 
+        }
+
+        a.paginate_button_disabled {
+            color: $kiva-text-light 
+        }
+    }
+
+    .kiva-tax-info {
+        address {
+            font-size: .8rem;
+            font-style: normal;
+        }
+
+        @media #{$small-only} {
+            .print-export-info {
+                padding-top: 1rem;
+            }
+        }
+    }
     .info-link {
         .icon {
             height: 1rem;
