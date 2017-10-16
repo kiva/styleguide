@@ -275,10 +275,48 @@
 	}
 }
 
+.monthly-good-confirm {
+	li {
+		margin: 0 auto 1rem;
+		max-width: $medium-breakpoint;
+	}
+
+	.mg-button-wrap {
+		margin-top: 2rem;
+	}
+
+	.button {
+		min-width: rem-calc(200);
+
+		@media #{$large-up} {
+			margin-right: rem-calc(20);
+		}
+
+		@media #{$small-only} {
+			font-size: 1rem;
+		}
+	}
+
+	h1 {
+		margin-bottom: 2rem;
+
+		@media #{$medium-up} {
+			font-size: $impact-font-size;
+			line-height: $impact-line-height;
+		}
+	}
+}
+
 .monthy-good-spinner {
 	.loading-spinner {
 		.line {
 			background-color: $white;
 		}
+	}
+}
+
+.hide-for-x-small {
+	@media #{$x-small-only} {
+		display: none;
 	}
 }
