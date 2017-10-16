@@ -1,24 +1,54 @@
 <div class="row">
-	<div class="columns  monthly-good monthly-good-confirm">
-		<p>Monthly Good <strong>confirm</strong> page placeholder</p>
+	<div class="columns monthly-good-confirm">
+		{{#has_legacy_subscription}}
+			<h1 class="text-center">Please cancel your existing
+				<br class="lu">auto deposit first:</h1>
 
-		{{#is_new_user}}<p>is new user</p>{{/is_new_user}}
-		{{^is_new_user}}<p>is existing user</p>{{/is_new_user}}
-		{{#has_monthly_good}}<p>already has MG</p>{{/has_monthly_good}}
-		{{^has_monthly_good}}<p>does NOT have MG</p>{{/has_monthly_good}}
-		{{#is_logged_in}}<p>is logged in</p>{{/is_logged_in}}
-		{{^is_logged_in}}<p>is NOT logged in</p>{{/is_logged_in}}
-		{{#has_legacy_subscription}}<p>has legacy subscription</p>{{/has_legacy_subscription}}
-		{{^has_legacy_subscription}}<p>NO legacy subscription</p>{{/has_legacy_subscription}}
-		{{#has_auto_deposit}}<p>has auto-deposit</p>{{/has_auto_deposit}}
-		{{^has_auto_deposit}}<p>NO auto-deposit</p>{{/has_auto_deposit}}
-		{{#has_billing_agreement}}<p>has billing agreement</p>{{/has_billing_agreement}}
-		{{^has_billing_agreement}}<p>NO billing agreement</p>{{/has_billing_agreement}}
-		{{#has_auto_lending}}<p>has auto-lending</p>{{/has_auto_lending}}
-		{{^has_auto_lending}}<p>NO auto-lending</p>{{/has_auto_lending}}
+			<ul>
+				<li>Thanks for your interest in Monthly Good. Because you have an existing Kiva subscription,
+				you’ll need to cancel this via PayPal before signing up for Monthly Good.</li>
+			</ul>
 
+			<div class="text-center mg-button-wrap">
+				<a class="button manage-legacy-sub" href="{{manage_legacy_sub_href}}">Manage my auto deposit</a>
+				<a class="button secondary keep-legacy-sub" href="{{keep_legacy_sub_href}}">Keep my account as is</a>
+			</div>
 
-		<p>go to <a href="{{billing_href}}">setup page</a></p>
+		{{/has_legacy_subscription}}
 
+		{{^has_legacy_subscription}}
+			{{#has_monthly_good}}
+				<h1 class="text-center">You already have a Monthly Good subscription</h1>
+
+				<p class="text-center">You can manage your Monthly Good on the
+					<a class="credit-settings-link" href="##">credit settings page</a>.</p>
+			{{/has_monthly_good}}
+
+			{{^has_monthly_good}}
+				<h1 class="text-center">A few things will change
+					<br class="lu">when you join Monthly Good:</h1>
+
+				<ul>
+					{{#has_auto_deposit}}
+						  <li><strong>Your new Monthly Good contribution will replace your existing auto deposit.</strong></li>
+					{{/has_auto_deposit}}
+
+					<li><strong>Your funds will be lent automatically using any balance of $25+ in your account.</strong>
+						This will take effect upon sign up, and each loan will go to one of the many deserving
+						borrowers on Kiva who needs help reaching 100% funding.
+						{{#has_auto_lending}}Enrolling in Monthly Good will also disable your current auto lending settings.{{/has_auto_lending}}
+					</li>
+
+					<li>You’ll receive an inspiring email once a month telling you who your loan supported.
+					You’ll receive fewer emails overall from Kiva, including no repayment notifications.</li>
+				</ul>
+
+				<div class="text-center mg-button-wrap">
+					<a class="button agree-to-mg" href="##">I agree,
+						<span class="hide-for-x-small">let’s</span> start the Good!</a>
+					<a class="button secondary keep-as-is" href="##">No thanks</a>
+				</div>
+			{{/has_monthly_good}}
+		{{/has_legacy_subscription}}
 	</div>
 </div>

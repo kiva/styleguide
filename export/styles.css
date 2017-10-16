@@ -16193,8 +16193,35 @@ table.repayments-list {
       width: 2.6666666667rem;
       margin-bottom: 0.2222222222rem; } }
 
+.monthly-good-confirm li {
+  margin: 0 auto 1rem;
+  max-width: 680px; }
+
+.monthly-good-confirm .mg-button-wrap {
+  margin-top: 2rem; }
+
+.monthly-good-confirm .button {
+  min-width: 11.1111111111rem; }
+  @media only screen and (min-width: 681px) {
+    .monthly-good-confirm .button {
+      margin-right: 1.1111111111rem; } }
+  @media only screen and (max-width: 480px) {
+    .monthly-good-confirm .button {
+      font-size: 1rem; } }
+
+.monthly-good-confirm h1 {
+  margin-bottom: 2rem; }
+  @media only screen and (min-width: 481px) {
+    .monthly-good-confirm h1 {
+      font-size: 2.5rem;
+      line-height: 3rem; } }
+
 .monthy-good-spinner .loading-spinner .line {
   background-color: #FFFFFF; }
+
+@media only screen and (max-width: 360px) {
+  .hide-for-x-small {
+    display: none; } }
 
 #checkoutWrap label {
   background: transparent;
