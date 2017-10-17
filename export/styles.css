@@ -12533,6 +12533,52 @@ div.category-cards-header {
   .category-link-grid li > div {
     padding-bottom: 0.5rem; }
 
+.category-monthly-good-promo {
+  margin-top: 1.6666666667rem;
+  margin-bottom: 0.8333333333rem; }
+  .category-monthly-good-promo .container {
+    width: 100%; }
+  .category-monthly-good-promo .promo {
+    width: 100%;
+    max-width: 53.6666666667rem;
+    margin: 0 auto; }
+  .category-monthly-good-promo .promo img {
+    width: 100%;
+    max-width: 53.6666666667rem;
+    height: auto; }
+  .category-monthly-good-promo .imagewrapper {
+    position: relative; }
+  .category-monthly-good-promo .imagewrapper span {
+    position: absolute;
+    left: 0;
+    top: 0; }
+  .category-monthly-good-promo .imagewrapper h2 {
+    margin-bottom: 0; }
+  .category-monthly-good-promo .imagewrapper p {
+    margin-top: 0; }
+  @media screen and (min-width: 320px) {
+    .category-monthly-good-promo .imagewrapper span {
+      padding: 10% 0.5555555556rem 0.5555555556rem 4%;
+      text-align: left; } }
+  @media only screen and (min-width: 481px) {
+    .category-monthly-good-promo .imagewrapper span {
+      padding: 10% 0.5555555556rem 0.5555555556rem 4%;
+      text-align: left; } }
+  @media only screen and (min-width: 681px) {
+    .category-monthly-good-promo .imagewrapper span {
+      padding: 0.8333333333rem 0.5555555556rem 0.5555555556rem 8%;
+      text-align: center;
+      -ms-transform: scale(0.85);
+      transform: scale(0.85);
+      -ms-transform-origin: 85% 0 0;
+      transform-origin: 85% 0 0; } }
+  @media only screen and (min-width: 761px) {
+    .category-monthly-good-promo .imagewrapper span {
+      -ms-transform: scale(1);
+      transform: scale(1);
+      -ms-transform-origin: 100% 0 0;
+      transform-origin: 100% 0 0; } }
+
 .off-canvas-wrap {
   background-color: #FAFAFA; }
 
