@@ -283,14 +283,13 @@
 
 	.mg-button-wrap {
 		margin-top: 2rem;
+		margin-bottom: 2rem;
 	}
 
 	.button {
 		min-width: rem-calc(200);
-
-		@media #{$large-up} {
-			margin-right: rem-calc(20);
-		}
+		margin-left: rem-calc(10);
+		margin-right: rem-calc(10);
 
 		@media #{$small-only} {
 			font-size: 1rem;
@@ -307,7 +306,7 @@
 	}
 }
 
-.monthy-good-spinner {
+.monthly-good-spinner {
 	.loading-spinner {
 		.line {
 			background-color: $white;
