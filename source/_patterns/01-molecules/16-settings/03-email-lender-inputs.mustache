@@ -1,0 +1,36 @@
+{{#is-standalone}}
+<div class="email-settings row">
+	<form class="small-12 columns">
+		<div class="lender-region row">
+			<div class="lender-inputs small-12 columns">
+{{/is-standalone}}
+
+<h3>
+	Lending activity updates
+</h3>
+<a href="#">Select all</a>
+<div>
+	<input id="loan-updates-input" type="checkbox" {{#loanUpdates}}checked="checked"{{/loanUpdates}}>
+	<label for="loan-updates-input">
+		Loan and borrower updates
+	</label>
+</div>
+<div>
+	<input id="comments-messages-input" type="checkbox" {{#commentsMessages}}checked="checked"{{/commentsMessages}}>
+	<label for="comments-messages-input">
+		Loan comments, lender to lender messages
+	</label>
+</div>
+<div>
+	<input id="comments-messages-input" type="checkbox" {{#commentsMessages}}checked="checked"{{/commentsMessages}}>
+	<label for="comments-messages-input">
+		Team digests and per team preferences
+	</label>
+</div>
+
+{{#is-standalone}}
+			</div>
+		</div>
+	</form>
+</div>
+{{/is-standalone}}

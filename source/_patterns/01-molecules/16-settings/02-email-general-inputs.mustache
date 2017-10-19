@@ -1,0 +1,53 @@
+{{#is-standalone}}
+<div class="email-settings row">
+	<form class="small-12 columns">
+		<div class="general-region row">
+			<div class="general-inputs small-12 columns">
+{{/is-standalone}}
+
+<h3>
+	General Kiva / account updates
+</h3>
+<a href="#">Select all</a>
+<div>
+	<input id="lender-news-input" type="checkbox" {{#lenderNews}}checked="checked"{{/lenderNews}}>
+	<label for="lender-news-input">
+		News, inspiration and promotions
+	</label>
+</div>
+<div>
+	<input id="account-updates-input" type="checkbox" {{#accountUpdates}}checked="checked"{{/accountUpdates}}>
+	<label for="account-updates-input">
+		Portfolio and balance updates
+	</label>
+</div>
+<div>
+	<label for="repayment-updates-input"><strong>Repayment notifications</strong></label>
+	<select id="repayment-updates-input">
+		{{#repaymentOptions}}
+			<option value="{{value}}" {{#selected}}selected="selected"{{/selected}}>{{title}}</option>
+		{{/repaymentOptions}}
+	</select>
+	{{#showPush}}
+		<input id="push-repayment-updates-input" type="checkbox" {{#repaymentPush}}checked="checked"{{/repaymentPush}}>
+		<label for="push-repayment-updates-input">
+			Receive notifications on this device
+		</label>
+	{{/showPush}}
+</div>
+<div>
+	<label for="autolend-updates-input"><strong>Autolending notifications</strong></label>
+	<select id="autolend-updates-input">
+		{{#autolendOptions}}
+			<option value="{{value}}" {{#selected}}selected="selected"{{/selected}}>{{title}}</option>
+		{{/autolendOptions}}
+	</select>
+</div>
+<a href="{{savedSearchesUrl}}">Saved searches notifications</a>
+
+{{#is-standalone}}
+			</div>
+		</div>
+	</form>
+</div>
+{{/is-standalone}}

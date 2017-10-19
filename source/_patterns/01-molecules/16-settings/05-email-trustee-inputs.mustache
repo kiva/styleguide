@@ -1,0 +1,36 @@
+{{#is-standalone}}
+<div class="email-settings row">
+	<form class="small-12 columns">
+		<div class="trustee-region row">
+			<div class="trustee-inputs small-12 columns">
+{{/is-standalone}}
+
+<h3>
+	Trustee updates
+</h3>
+<a href="#">Select all</a>
+<div>
+	<input id="network-transactions-input" type="checkbox" {{#networkTransactions}}checked="checked"{{/networkTransactions}}>
+	<label for="network-transactions-input">
+		Borrower network transactions
+	</label>
+</div>
+<div>
+	<input id="network-digest-input" type="checkbox" {{#networkDigest}}checked="checked"{{/networkDigest}}>
+	<label for="network-digest-input">
+		Borrower network digest
+	</label>
+</div>
+<div>
+	<input id="trustee-news-input" type="checkbox" {{#trusteeNews}}checked="checked"{{/trusteeNews}}>
+	<label for="trustee-news-input">
+		Trustee news and tips
+	</label>
+</div>
+
+{{#is-standalone}}
+			</div>
+		</div>
+	</form>
+</div>
+{{/is-standalone}}

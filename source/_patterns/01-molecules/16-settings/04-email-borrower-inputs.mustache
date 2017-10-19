@@ -1,0 +1,36 @@
+{{#is-standalone}}
+<div class="email-settings row">
+	<form class="small-12 columns">
+		<div class="borrower-region row">
+			<div class="borrower-inputs small-12 columns">
+{{/is-standalone}}
+
+<h3>
+	Entrepreneur tips
+</h3>
+<a href="#">Select all</a>
+<div>
+	<input id="lead-nurturing-input" type="checkbox" {{#leadNurturing}}checked="checked"{{/leadNurturing}}>
+	<label for="lead-nurturing-input">
+		Getting started with Kiva
+	</label>
+</div>
+<div>
+	<input id="onboarding-support-input" type="checkbox" {{#onboardingSupport}}checked="checked"{{/onboardingSupport}}>
+	<label for="onboarding-support-input">
+		Loan success guide
+	</label>
+</div>
+<div>
+	<input id="borrower-news-input" type="checkbox" {{#borrowerNews}}checked="checked"{{/borrowerNews}}>
+	<label for="borrower-news-input">
+		Entrepreneur community updates
+	</label>
+</div>
+
+{{#is-standalone}}
+			</div>
+		</div>
+	</form>
+</div>
+{{/is-standalone}}
