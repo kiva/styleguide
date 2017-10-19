@@ -16683,6 +16683,44 @@ div.gift-card .text-section, div.kiva-store .text-section {
   div.gift-card button.store, div.kiva-store button.store {
     margin-bottom: 2.7777777778rem; } }
 
+.portfolio-donations {
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem; }
+  .portfolio-donations .donor-name-label {
+    color: #999; }
+  .portfolio-donations .donor-name {
+    line-height: 100%;
+    margin-top: 0; }
+  .portfolio-donations .donation-stats .yearly-donation {
+    margin-bottom: 1rem; }
+    .portfolio-donations .donation-stats .yearly-donation .statistic-label {
+      line-height: 2rem; }
+  .portfolio-donations .donation-stats .yearly-donation:first-child {
+    padding-bottom: 1rem;
+    border-bottom: 1px solid #d8d8d8; }
+  .portfolio-donations .donation-listing .dataTable th img {
+    vertical-align: middle; }
+  .portfolio-donations .donation-listing .dataTables_paginate a,
+  .portfolio-donations .donation-listing .dataTables_info {
+    font-size: .8rem;
+    color: #666;
+    margin-right: 10px; }
+  .portfolio-donations .donation-listing a.paginate_active {
+    color: #333; }
+  .portfolio-donations .donation-listing a.paginate_button_disabled {
+    color: #999; }
+  .portfolio-donations .kiva-tax-info address {
+    font-size: .8rem;
+    font-style: normal; }
+  @media only screen and (max-width: 480px) {
+    .portfolio-donations .kiva-tax-info .print-export-info {
+      padding-top: 1rem; } }
+  .portfolio-donations .info-link .icon {
+    height: 1rem;
+    width: 1rem;
+    vertical-align: text-top;
+    margin-right: .2222222222rem; }
+
 .ac-container.ac-title {
   margin: 0;
   display: block;
