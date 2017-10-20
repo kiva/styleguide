@@ -1,3 +1,70 @@
+.monthly-good-landing-page {
+	.mg-landing-header-content {
+		.mg-headline {
+			text-align: left;
+			margin: 0;
+			font-size: rem-calc(40);
+			line-height: rem-calc(22);
+			@media #{$large-up} {
+				font-size: rem-calc(26);
+				line-height: rem-calc(32);
+			}
+		}
+
+		.mg-subhead {
+			text-align: left;
+			margin: 0;
+			font-size: rem-calc(20);
+			line-height: rem-calc(22);
+			@media #{$large-up} {
+				font-size: rem-calc(26);
+				line-height: rem-calc(32);
+			}
+		}
+	}
+
+	/*.mg-landing-header-img-wrapper {
+		align-content: left;
+		transform-style: preserve-3d;
+
+			.mg-landing-header-img {
+				position: relative;
+				min-height: 360px;
+			}
+
+			.mg-landing-header-content {
+				position: absolute;
+				top: 50%;
+				-ms-transform: translateY(-50%);
+				transform: translateY(-50%);
+				margin-left: 4%;
+				margin-right: 4%;
+
+				.mg-headline {
+					text-align: left;
+					margin: 0;
+				}
+
+				.mg-subhead {
+					text-align: left;
+					margin: 0;
+				}
+
+				.mg-deposit-amount-input {
+					width: inherit;
+					display: inline-block;
+				}
+
+				.join-monthly-good {
+					display: inline-block;
+				}
+			}
+		}*/
+}
+
+
+
+
 .monthly-good {
 	@media #{$x-small-only} {
 		h1 {
@@ -11,12 +78,6 @@
 
 	.pencil {
 		cursor: pointer;
-	}
-
-	.monthly-good-landing {
-		.amount-input-wrapper {
-			display: inline-block;
-		}
 	}
 
 	input#mg-deposit-amount-input {
