@@ -18,15 +18,8 @@
 				font-size: rem-calc(38);
 				line-height: rem-calc(38);
 
-				//For screen sizes (375-481px)
-				//TODO: 374px is an issue
-				@media screen and (min-width: 23.375em) and (max-width: 30.063em) {
-					font-size: rem-calc(46);
-					line-height: rem-calc(46);
-				}
-
 				@media #{$medium-up} {
-					font-size: rem-calc(28);
+					font-size: $section-head-font-size;
 					line-height: rem-calc(28);
 				}
 
@@ -39,18 +32,18 @@
 				text-align: left;
 				margin: 0;
 				font-size: rem-calc(20);
-				line-height: rem-calc(20);
+				line-height: $small-line-height;
 				padding-top: rem-calc(10);
 
-				//For screen sizes (375-481px)
-				@media screen and (min-width: 23.375em) and (max-width: 30.063em) {
-					font-size: rem-calc(26);
+
+				@media (min-width: $x-small-breakpoint +1) and (max-width: $small-breakpoint) {
+					font-size: $headline-font-size-small-reduction;
 					line-height: rem-calc(26);
 					padding-top: rem-calc(15);
 				}
 
 				@media #{$medium-up} {
-					font-size: rem-calc(16);
+					font-size: $slide-overlay-attribution-small-size;
 					line-height: rem-calc(16);
 					max-width: rem-calc(350);
 					padding-top: rem-calc(10);
@@ -58,7 +51,7 @@
 
 				@media #{$large-up} {
 					font-size: rem-calc(24);
-					line-height: rem-calc(24);
+					line-height: $body-line-height;
 					max-width: rem-calc(510);
 					padding-top: rem-calc(10);
 				}
@@ -71,10 +64,8 @@
 			.mg-deposit-input-wrapper {
 				padding-top: rem-calc(10);
 
-				//For screen sizes (375-481px)
-				@media screen and (min-width: 23.375em) and (max-width: 30.063em) {
+				@media (min-width: $x-small-breakpoint +1) and (max-width: $small-breakpoint) {
 					padding-top: rem-calc(15);
-
 				}
 
 				@media #{$large-up} {
