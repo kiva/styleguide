@@ -1,69 +1,112 @@
 .monthly-good-landing-page {
-	.mg-landing-header-content {
-		.mg-headline {
-			text-align: left;
-			margin: 0;
-			font-size: rem-calc(40);
-			line-height: rem-calc(22);
-			@media #{$large-up} {
-				font-size: rem-calc(26);
-				line-height: rem-calc(32);
-			}
-		}
-
-		.mg-subhead {
-			text-align: left;
-			margin: 0;
-			font-size: rem-calc(20);
-			line-height: rem-calc(22);
-			@media #{$large-up} {
-				font-size: rem-calc(26);
-				line-height: rem-calc(32);
-			}
-		}
-	}
-
-	/*.mg-landing-header-img-wrapper {
+	.mg-header-wrapper {
 		align-content: left;
 		transform-style: preserve-3d;
 
-			.mg-landing-header-img {
-				position: relative;
-				min-height: 360px;
+		.mg-header-content {
+			position: absolute;
+			top: 50%;
+			-ms-transform: translateY(-50%);
+			transform: translateY(-50%);
+			margin-left: 4%;
+			margin-right: 4%;
+
+
+			.mg-headline {
+				text-align: left;
+				margin: 0;
+				font-size: rem-calc(38);
+				line-height: rem-calc(38);
+
+				//For screen sizes (375-481px)
+				//TODO: 374px is an issue
+				@media screen and (min-width: 23.375em) and (max-width: 30.063em) {
+					font-size: rem-calc(46);
+					line-height: rem-calc(46);
+				}
+
+				@media #{$medium-up} {
+					font-size: rem-calc(28);
+					line-height: rem-calc(28);
+				}
+
+				@media #{$large-up} {
+					font-size: rem-calc(46);
+					line-height: rem-calc(46);  }
 			}
 
-			.mg-landing-header-content {
-				position: absolute;
-				top: 50%;
-				-ms-transform: translateY(-50%);
-				transform: translateY(-50%);
-				margin-left: 4%;
-				margin-right: 4%;
+			.mg-subhead {
+				text-align: left;
+				margin: 0;
+				font-size: rem-calc(20);
+				line-height: rem-calc(20);
+				padding-top: rem-calc(10);
 
-				.mg-headline {
-					text-align: left;
-					margin: 0;
+				//For screen sizes (375-481px)
+				@media screen and (min-width: 23.375em) and (max-width: 30.063em) {
+					font-size: rem-calc(26);
+					line-height: rem-calc(26);
+					padding-top: rem-calc(15);
 				}
 
-				.mg-subhead {
-					text-align: left;
-					margin: 0;
+				@media #{$medium-up} {
+					font-size: rem-calc(16);
+					line-height: rem-calc(16);
+					max-width: rem-calc(350);
+					padding-top: rem-calc(10);
 				}
 
-				.mg-deposit-amount-input {
-					width: inherit;
+				@media #{$large-up} {
+					font-size: rem-calc(24);
+					line-height: rem-calc(24);
+					max-width: rem-calc(510);
+					padding-top: rem-calc(10);
+				}
+
+				@media #{$large-up} {
+					padding-top: rem-calc(20);
+				}
+			}
+
+			.mg-deposit-input-wrapper {
+				padding-top: rem-calc(10);
+
+				//For screen sizes (375-481px)
+				@media screen and (min-width: 23.375em) and (max-width: 30.063em) {
+					padding-top: rem-calc(15);
+
+				}
+
+				@media #{$large-up} {
+					padding-top: rem-calc(20);
+				}
+
+				@media #{$xxlarge-up} {
+					padding-top: rem-calc(25);
+				}
+
+				.mg-deposit-input {
+					width: rem-calc(100);
 					display: inline-block;
+					height: rem-calc(44);
+
+					@media #{$small-only} {
+						margin-right: rem-calc(70);
+					}
 				}
 
 				.join-monthly-good {
 					display: inline-block;
+					top: rem-calc(4);
+
+					@media #{$medium-up} {
+						margin-left: rem-calc(20);
+					}
 				}
 			}
-		}*/
+		}
+	}
 }
-
-
-
 
 .monthly-good {
 	@media #{$x-small-only} {
