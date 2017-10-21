@@ -5,7 +5,10 @@
 			<div class="form-submit small-12 columns">
 {{/is-standalone}}
 
-<input type="submit" class="button" value="Save email settings" />
+<input type="submit" class="button" value="Save email settings" {{^dirty}}disabled="disabled"{{/dirty}}/>
+{{#dirty}}
+	<a href="#">Reset</a>
+{{/dirty}}
 
 {{#is-standalone}}
 			</div>

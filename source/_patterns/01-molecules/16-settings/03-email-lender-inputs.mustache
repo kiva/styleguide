@@ -22,10 +22,15 @@
 	</label>
 </div>
 <div>
-	<input id="comments-messages-input" type="checkbox" {{#commentsMessages}}checked="checked"{{/commentsMessages}}>
-	<label for="comments-messages-input">
-		Team digests and per team preferences
-	</label>
+	<label for="team-digests-input"><strong>Team digests and per team preferences</strong></label>
+	<select id="team-digests-input">
+		{{#teamDigestOptions}}
+			<option value="{{value}}" {{#selected}}selected="selected"{{/selected}}>{{title}}</option>
+		{{/teamDigestOptions}}
+	</select>
+	{{#hasTeams}}
+		<a href="#">Show per-team preferences</a>
+	{{/hasTeams}}
 </div>
 
 {{#is-standalone}}
