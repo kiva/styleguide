@@ -97,6 +97,20 @@
 			}
 		}
 	}
+
+	.how-works-section-wrapper {
+		background-color: $kiva-green;
+
+		.icon {
+			@media #{$medium-up} {
+
+			}
+		}
+
+		.how-it-works-section .columns {
+
+		}
+	}
 }
 
 .monthly-good {
