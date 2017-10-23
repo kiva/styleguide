@@ -1,3 +1,104 @@
+.monthly-good-landing-page {
+	.mg-header-wrapper {
+		align-content: left;
+		transform-style: preserve-3d;
+
+		.mg-header-content {
+			position: absolute;
+			top: 50%;
+			-ms-transform: translateY(-50%);
+			transform: translateY(-50%);
+			margin-left: 4%;
+			margin-right: 4%;
+
+
+			.mg-headline {
+				text-align: left;
+				margin: 0;
+				font-size: rem-calc(38);
+				line-height: rem-calc(38);
+
+				@media #{$medium-up} {
+					font-size: $section-head-font-size;
+					line-height: rem-calc(28);
+				}
+
+				@media #{$large-up} {
+					font-size: rem-calc(46);
+					line-height: rem-calc(46);  }
+			}
+
+			.mg-subhead {
+				text-align: left;
+				margin: 0;
+				font-size: rem-calc(20);
+				line-height: $small-line-height;
+				padding-top: rem-calc(10);
+
+
+				@media (min-width: $x-small-breakpoint +1) and (max-width: $small-breakpoint) {
+					font-size: $headline-font-size-small-reduction;
+					line-height: rem-calc(26);
+					padding-top: rem-calc(15);
+				}
+
+				@media #{$medium-up} {
+					font-size: $slide-overlay-attribution-small-size;
+					line-height: rem-calc(16);
+					max-width: rem-calc(350);
+					padding-top: rem-calc(10);
+				}
+
+				@media #{$large-up} {
+					font-size: rem-calc(24);
+					line-height: $body-line-height;
+					max-width: rem-calc(510);
+					padding-top: rem-calc(10);
+				}
+
+				@media #{$large-up} {
+					padding-top: rem-calc(20);
+				}
+			}
+
+			.mg-deposit-input-wrapper {
+				padding-top: rem-calc(10);
+
+				@media (min-width: $x-small-breakpoint +1) and (max-width: $small-breakpoint) {
+					padding-top: rem-calc(15);
+				}
+
+				@media #{$large-up} {
+					padding-top: rem-calc(20);
+				}
+
+				@media #{$xxlarge-up} {
+					padding-top: rem-calc(25);
+				}
+
+				.mg-deposit-input {
+					width: rem-calc(100);
+					display: inline-block;
+					height: rem-calc(44);
+
+					@media #{$small-only} {
+						margin-right: rem-calc(70);
+					}
+				}
+
+				.join-monthly-good {
+					display: inline-block;
+					top: rem-calc(4);
+
+					@media #{$medium-up} {
+						margin-left: rem-calc(20);
+					}
+				}
+			}
+		}
+	}
+}
+
 .monthly-good {
 	@media #{$x-small-only} {
 		h1 {
@@ -11,12 +112,6 @@
 
 	.pencil {
 		cursor: pointer;
-	}
-
-	.monthly-good-landing {
-		.amount-input-wrapper {
-			display: inline-block;
-		}
 	}
 
 	input#mg-deposit-amount-input {
@@ -283,14 +378,13 @@
 
 	.mg-button-wrap {
 		margin-top: 2rem;
+		margin-bottom: 2rem;
 	}
 
 	.button {
 		min-width: rem-calc(200);
-
-		@media #{$large-up} {
-			margin-right: rem-calc(20);
-		}
+		margin-left: rem-calc(10);
+		margin-right: rem-calc(10);
 
 		@media #{$small-only} {
 			font-size: 1rem;
@@ -307,7 +401,7 @@
 	}
 }
 
-.monthy-good-spinner {
+.monthly-good-spinner {
 	.loading-spinner {
 		.line {
 			background-color: $white;

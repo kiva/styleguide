@@ -1,0 +1,68 @@
+.portfolio-donations {
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+    
+    .donor-name-label {
+        color: $kiva-text-light;
+    }
+    .donor-name {
+        line-height: 100%;
+        margin-top: 0;
+    }
+
+    .donation-stats {
+        .yearly-donation {
+            margin-bottom: 1rem;
+
+            .statistic-label {
+                line-height: 2rem;
+            }
+        }
+        .yearly-donation:first-child {
+            padding-bottom: 1rem;
+            border-bottom: 1px solid $kiva-stroke-gray;
+        }
+    }
+
+    .donation-listing {
+        .dataTable th img {
+            vertical-align: middle
+        }
+
+        .dataTables_paginate a,
+        .dataTables_info {
+            font-size: .8rem;
+            color: $kiva-text-medium;
+            margin-right: 10px;
+        }
+
+        a.paginate_active {
+            color: $kiva-text-dark 
+        }
+
+        a.paginate_button_disabled {
+            color: $kiva-text-light 
+        }
+    }
+
+    .kiva-tax-info {
+        address {
+            font-size: .8rem;
+            font-style: normal;
+        }
+
+        @media #{$small-only} {
+            .print-export-info {
+                padding-top: 1rem;
+            }
+        }
+    }
+    .info-link {
+        .icon {
+            height: 1rem;
+            width: 1rem;
+            vertical-align: text-top;
+            margin-right: .2222222222rem;
+        }
+    }
+}
