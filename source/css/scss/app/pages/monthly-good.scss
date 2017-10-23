@@ -97,6 +97,32 @@
 			}
 		}
 	}
+
+
+	.kiva-as-expert-section {
+		.kiva-as-expert-heading {
+			color: $kiva-green;
+			text-align: center;
+
+			@media #{$large-up} {
+				text-align: left;
+			}
+		}
+
+		.text-content {
+			@media #{$large-up} {
+				float: left;
+			}
+		}
+
+		.community-image {
+			padding: 10px;
+		}
+
+		.image-float {
+			float: right;
+		}
+	}
 }
 
 .monthly-good {
