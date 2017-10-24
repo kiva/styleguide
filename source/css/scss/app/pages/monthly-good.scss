@@ -97,10 +97,23 @@
 			}
 		}
 	}
-	//FAQ style needs to be added. Commented out to prevent merge conflict
-	//.faq-container {
-	//	margin-top: 25px;
-	//}
+
+	.how-works-section-wrapper {
+		background-color: $kiva-green;
+
+		.section-title {
+			padding: rem-calc(10) 0 rem-calc(30) 0;
+		}
+
+		.column-wrap {
+			margin-bottom: rem-calc(40);
+		}
+
+		.icon {
+			fill: $white;
+			color: $kiva-green;
+		}
+	}
 
 	.more-about-kiva {
 		.more-about-kiva-headline {
@@ -163,6 +176,10 @@
 				}
 			}
 		}
+	}
+
+	.faq-container {
+		margin-top: rem-calc(25);
 	}
 }
 
