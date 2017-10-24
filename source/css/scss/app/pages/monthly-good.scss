@@ -99,17 +99,83 @@
 	}
 
 	.how-works-section-wrapper {
-		background-color: $kiva-green;
+	background-color: $kiva-green;
 
 		.icon {
 			@media #{$medium-up} {
+			}
+		}
+	}
 
+	//FAQ style needs to be added. Commented out to prevent merge conflict
+	//.faq-container {
+	//	margin-top: 25px;
+	//}
+
+	.more-about-kiva {
+		.more-about-kiva-headline {
+			color: $kiva-green;
+			text-align: center;
+
+			@media #{$large-up} {
+				text-align: left;
 			}
 		}
 
-		.how-it-works-section .columns {
-
+		.more-about-kiva-text {
+			@media #{$large-up} {
+				float: left;
+			}
 		}
+
+		.img-container {
+			@media #{$large-up} {
+				float: right;
+			}
+
+			.charity-nav-wrapper {
+				float: left;
+
+				@media #{$large-up} {
+					float: none;
+				}
+
+				p:first-child {
+					margin-bottom: 0;
+				}
+
+				img {
+					width: rem-calc(100);
+
+					@media #{$large-up} {
+						width: rem-calc(100);
+					}
+				}
+			}
+
+			.kiva-promise-wrapper {
+				float: right;
+				margin-top: 12%;
+
+				//custom breakpoint up to medium
+				@media only screen and (min-width: 400px) and (max-width: 480px) {
+					margin-top: 4%;
+				}
+
+				@media #{$medium-only} {
+					margin-top: 3%;
+				}
+
+				//custom breakpoint up to large
+				@media only screen and (min-width: 580px) and (max-width: 680px) {
+					margin-top: -1%;
+				}
+
+				@media #{$large-up} {
+					float: none;
+					margin-top: 0;
+				}
+			}
 	}
 }
 
