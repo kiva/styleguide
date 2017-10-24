@@ -146,10 +146,6 @@
 
 				img {
 					width: rem-calc(100);
-
-					@media #{$large-up} {
-						width: rem-calc(100);
-					}
 				}
 			}
 
