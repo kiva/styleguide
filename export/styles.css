@@ -8339,6 +8339,9 @@ a.dark_green_bg_link {
     stroke: #488443; }
   .icon.icon-apply, .icon.icon-interview, .icon.icon-matchmaking, .icon.icon-offer, .icon.icon-screen {
     fill: black; }
+  .icon.icon-auto-deposit-alternate, .icon.icon-updates-alternate {
+    fill: #000000;
+    color: #FFFFFF; }
 
 .icon-facebook:hover svg, .icon-facebook:active svg {
   color: #3b5998; }
