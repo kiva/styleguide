@@ -1,5 +1,5 @@
 .monthly-good-landing-page {
-	.mg-header-wrapper {
+	.mg-header-section-wrapper {
 		align-content: left;
 		transform-style: preserve-3d;
 
@@ -112,6 +112,39 @@
 		.icon {
 			fill: $white;
 			color: $kiva-green;
+		}
+	}
+
+	.email-preview-section-wrapper {
+		.email-preview-image {
+			margin: 0 auto;
+
+			@media #{$large-up} {
+				float: left;
+			}
+		}
+
+		.email-preview-text {
+			@media #{$large-up} {
+				float: right;
+			}
+
+			@media #{$xlarge-up} {
+				margin-top: 5%;
+			}
+
+			//custom breakpoint up to medium
+			@media only screen and (min-width: 875px) and (max-width: 988px) {
+				margin-top: 13%;
+			}
+
+			@media #{$xxlarge-up} {
+				margin-top: 17%;
+			}
+
+			h1 {
+				color: $kiva-green;
+			}
 		}
 	}
 
