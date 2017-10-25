@@ -16075,79 +16075,79 @@ table.repayments-list {
         width: 2.6666666667rem;
         margin-bottom: 0.2222222222rem; } }
 
-.monthly-good-landing-page .mg-header-wrapper {
+.monthly-good-landing-page .mg-header-section-wrapper {
   -ms-flex-line-pack: left;
       align-content: left;
   transform-style: preserve-3d; }
-  .monthly-good-landing-page .mg-header-wrapper .mg-header-content {
+  .monthly-good-landing-page .mg-header-section-wrapper .mg-header-content {
     position: absolute;
     top: 50%;
     -ms-transform: translateY(-50%);
     transform: translateY(-50%);
     margin-left: 4%;
     margin-right: 4%; }
-    .monthly-good-landing-page .mg-header-wrapper .mg-header-content .mg-headline {
+    .monthly-good-landing-page .mg-header-section-wrapper .mg-header-content .mg-headline {
       text-align: left;
       margin: 0;
       font-size: 2.1111111111rem;
       line-height: 2.1111111111rem; }
       @media only screen and (min-width: 481px) {
-        .monthly-good-landing-page .mg-header-wrapper .mg-header-content .mg-headline {
+        .monthly-good-landing-page .mg-header-section-wrapper .mg-header-content .mg-headline {
           font-size: 1.5555555556rem;
           line-height: 1.5555555556rem; } }
       @media only screen and (min-width: 681px) {
-        .monthly-good-landing-page .mg-header-wrapper .mg-header-content .mg-headline {
+        .monthly-good-landing-page .mg-header-section-wrapper .mg-header-content .mg-headline {
           font-size: 2.5555555556rem;
           line-height: 2.5555555556rem; } }
-    .monthly-good-landing-page .mg-header-wrapper .mg-header-content .mg-subhead {
+    .monthly-good-landing-page .mg-header-section-wrapper .mg-header-content .mg-subhead {
       text-align: left;
       margin: 0;
       font-size: 1.1111111111rem;
       line-height: 1.1111111111rem;
       padding-top: 0.5555555556rem; }
       @media (min-width: 361px) and (max-width: 480px) {
-        .monthly-good-landing-page .mg-header-wrapper .mg-header-content .mg-subhead {
+        .monthly-good-landing-page .mg-header-section-wrapper .mg-header-content .mg-subhead {
           font-size: 1.4444444444rem;
           line-height: 1.4444444444rem;
           padding-top: 0.8333333333rem; } }
       @media only screen and (min-width: 481px) {
-        .monthly-good-landing-page .mg-header-wrapper .mg-header-content .mg-subhead {
+        .monthly-good-landing-page .mg-header-section-wrapper .mg-header-content .mg-subhead {
           font-size: 0.8888888889rem;
           line-height: 0.8888888889rem;
           max-width: 19.4444444444rem;
           padding-top: 0.5555555556rem; } }
       @media only screen and (min-width: 681px) {
-        .monthly-good-landing-page .mg-header-wrapper .mg-header-content .mg-subhead {
+        .monthly-good-landing-page .mg-header-section-wrapper .mg-header-content .mg-subhead {
           font-size: 1.3333333333rem;
           line-height: 1.3333333333rem;
           max-width: 28.3333333333rem;
           padding-top: 0.5555555556rem; } }
       @media only screen and (min-width: 681px) {
-        .monthly-good-landing-page .mg-header-wrapper .mg-header-content .mg-subhead {
+        .monthly-good-landing-page .mg-header-section-wrapper .mg-header-content .mg-subhead {
           padding-top: 1.1111111111rem; } }
-    .monthly-good-landing-page .mg-header-wrapper .mg-header-content .mg-deposit-input-wrapper {
+    .monthly-good-landing-page .mg-header-section-wrapper .mg-header-content .mg-deposit-input-wrapper {
       padding-top: 0.5555555556rem; }
       @media (min-width: 361px) and (max-width: 480px) {
-        .monthly-good-landing-page .mg-header-wrapper .mg-header-content .mg-deposit-input-wrapper {
+        .monthly-good-landing-page .mg-header-section-wrapper .mg-header-content .mg-deposit-input-wrapper {
           padding-top: 0.8333333333rem; } }
       @media only screen and (min-width: 681px) {
-        .monthly-good-landing-page .mg-header-wrapper .mg-header-content .mg-deposit-input-wrapper {
+        .monthly-good-landing-page .mg-header-section-wrapper .mg-header-content .mg-deposit-input-wrapper {
           padding-top: 1.1111111111rem; } }
       @media only screen and (min-width: 989px) {
-        .monthly-good-landing-page .mg-header-wrapper .mg-header-content .mg-deposit-input-wrapper {
+        .monthly-good-landing-page .mg-header-section-wrapper .mg-header-content .mg-deposit-input-wrapper {
           padding-top: 1.3888888889rem; } }
-      .monthly-good-landing-page .mg-header-wrapper .mg-header-content .mg-deposit-input-wrapper .mg-deposit-input {
+      .monthly-good-landing-page .mg-header-section-wrapper .mg-header-content .mg-deposit-input-wrapper .mg-deposit-input {
         width: 5.5555555556rem;
         display: inline-block;
         height: 2.4444444444rem; }
         @media only screen and (max-width: 480px) {
-          .monthly-good-landing-page .mg-header-wrapper .mg-header-content .mg-deposit-input-wrapper .mg-deposit-input {
+          .monthly-good-landing-page .mg-header-section-wrapper .mg-header-content .mg-deposit-input-wrapper .mg-deposit-input {
             margin-right: 3.8888888889rem; } }
-      .monthly-good-landing-page .mg-header-wrapper .mg-header-content .mg-deposit-input-wrapper .join-monthly-good {
+      .monthly-good-landing-page .mg-header-section-wrapper .mg-header-content .mg-deposit-input-wrapper .join-monthly-good {
         display: inline-block;
         top: 0.2222222222rem; }
         @media only screen and (min-width: 481px) {
-          .monthly-good-landing-page .mg-header-wrapper .mg-header-content .mg-deposit-input-wrapper .join-monthly-good {
+          .monthly-good-landing-page .mg-header-section-wrapper .mg-header-content .mg-deposit-input-wrapper .join-monthly-good {
             margin-left: 1.1111111111rem; } }
 
 .monthly-good-landing-page .how-works-section-wrapper {
@@ -16159,6 +16159,31 @@ table.repayments-list {
   .monthly-good-landing-page .how-works-section-wrapper .icon {
     fill: #FFFFFF;
     color: #63a541; }
+
+.monthly-good-landing-page .email-preview-section-wrapper .email-preview-image {
+  margin: 0 auto; }
+  @media only screen and (min-width: 681px) {
+    .monthly-good-landing-page .email-preview-section-wrapper .email-preview-image {
+      float: left; } }
+
+@media only screen and (min-width: 681px) {
+  .monthly-good-landing-page .email-preview-section-wrapper .email-preview-text {
+    float: right; } }
+
+@media only screen and (min-width: 761px) {
+  .monthly-good-landing-page .email-preview-section-wrapper .email-preview-text {
+    margin-top: 5%; } }
+
+@media only screen and (min-width: 875px) and (max-width: 988px) {
+  .monthly-good-landing-page .email-preview-section-wrapper .email-preview-text {
+    margin-top: 13%; } }
+
+@media only screen and (min-width: 989px) {
+  .monthly-good-landing-page .email-preview-section-wrapper .email-preview-text {
+    margin-top: 17%; } }
+
+.monthly-good-landing-page .email-preview-section-wrapper .email-preview-text h1 {
+  color: #63a541; }
 
 .monthly-good-landing-page .more-about-kiva .more-about-kiva-headline {
   color: #63a541;
