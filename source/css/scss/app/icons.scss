@@ -147,6 +147,12 @@ $light-blue-gray: #DBE3E5;
 	&.icon-screen {
 		fill: black;
 	}
+
+	&.icon-auto-deposit-alternate,
+	&.icon-updates-alternate {
+		fill: $black;
+		color: $white;
+	}
 }
 
 // Note: :hover and :active CSS for the social media icons

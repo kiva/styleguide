@@ -1,5 +1,5 @@
 .monthly-good-landing-page {
-	.mg-header-wrapper {
+	.mg-header-section-wrapper {
 		align-content: left;
 		transform-style: preserve-3d;
 
@@ -98,6 +98,55 @@
 		}
 	}
 
+	.how-works-section-wrapper {
+		background-color: $kiva-green;
+
+		.section-title {
+			padding: rem-calc(10) 0 rem-calc(30) 0;
+		}
+
+		.column-wrap {
+			margin-bottom: rem-calc(40);
+		}
+
+		.icon {
+			fill: $white;
+			color: $kiva-green;
+		}
+	}
+
+	.email-preview-section-wrapper {
+		.email-preview-image {
+			margin: 0 auto;
+
+			@media #{$large-up} {
+				float: left;
+			}
+		}
+
+		.email-preview-text {
+			@media #{$large-up} {
+				float: right;
+			}
+
+			@media #{$xlarge-up} {
+				margin-top: 5%;
+			}
+
+			//custom breakpoint up to medium
+			@media only screen and (min-width: 875px) and (max-width: 988px) {
+				margin-top: 13%;
+			}
+
+			@media #{$xxlarge-up} {
+				margin-top: 17%;
+			}
+
+			h1 {
+				color: $kiva-green;
+			}
+		}
+	}
 
 	.kiva-as-expert-section {
 		.kiva-as-expert-heading {
@@ -122,6 +171,74 @@
 		.image-float {
 			float: right;
 		}
+	}
+
+
+	.more-about-kiva-section-wrapper {
+		.more-about-kiva-headline {
+			color: $kiva-green;
+			text-align: center;
+
+			@media #{$large-up} {
+				text-align: left;
+		}
+
+		.more-about-kiva-text {
+			@media #{$large-up} {
+				float: left;
+			}
+		}
+
+	}
+		.img-container {
+			@media #{$large-up} {
+				float: right;
+			}
+
+			.charity-nav-wrapper {
+				float: left;
+
+				@media #{$large-up} {
+					float: none;
+				}
+
+				p:first-child {
+					margin-bottom: 0;
+				}
+
+				img {
+					width: rem-calc(100);
+				}
+			}
+
+			.kiva-promise-wrapper {
+				float: right;
+				margin-top: 12%;
+
+				//custom breakpoint up to medium
+				@media only screen and (min-width: 400px) and (max-width: 480px) {
+					margin-top: 4%;
+				}
+
+				@media #{$medium-only} {
+					margin-top: 3%;
+				}
+
+				//custom breakpoint up to large
+				@media only screen and (min-width: 580px) and (max-width: 680px) {
+					margin-top: -1%;
+				}
+
+				@media #{$large-up} {
+					float: none;
+					margin-top: 0;
+				}
+			}
+		}
+	}
+
+	.faq-section-wrapper {
+		margin-top: rem-calc(25);
 	}
 }
 
