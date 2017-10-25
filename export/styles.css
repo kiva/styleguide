@@ -16185,49 +16185,49 @@ table.repayments-list {
 .monthly-good-landing-page .email-preview-section-wrapper .email-preview-text h1 {
   color: #63a541; }
 
-.monthly-good-landing-page .more-about-kiva .more-about-kiva-headline {
+.monthly-good-landing-page .more-about-kiva-section-wrapper .more-about-kiva-headline {
   color: #63a541;
   text-align: center; }
   @media only screen and (min-width: 681px) {
-    .monthly-good-landing-page .more-about-kiva .more-about-kiva-headline {
+    .monthly-good-landing-page .more-about-kiva-section-wrapper .more-about-kiva-headline {
       text-align: left; } }
 
 @media only screen and (min-width: 681px) {
-  .monthly-good-landing-page .more-about-kiva .more-about-kiva-text {
+  .monthly-good-landing-page .more-about-kiva-section-wrapper .more-about-kiva-text {
     float: left; } }
 
 @media only screen and (min-width: 681px) {
-  .monthly-good-landing-page .more-about-kiva .img-container {
+  .monthly-good-landing-page .more-about-kiva-section-wrapper .img-container {
     float: right; } }
 
-.monthly-good-landing-page .more-about-kiva .img-container .charity-nav-wrapper {
+.monthly-good-landing-page .more-about-kiva-section-wrapper .img-container .charity-nav-wrapper {
   float: left; }
   @media only screen and (min-width: 681px) {
-    .monthly-good-landing-page .more-about-kiva .img-container .charity-nav-wrapper {
+    .monthly-good-landing-page .more-about-kiva-section-wrapper .img-container .charity-nav-wrapper {
       float: none; } }
-  .monthly-good-landing-page .more-about-kiva .img-container .charity-nav-wrapper p:first-child {
+  .monthly-good-landing-page .more-about-kiva-section-wrapper .img-container .charity-nav-wrapper p:first-child {
     margin-bottom: 0; }
-  .monthly-good-landing-page .more-about-kiva .img-container .charity-nav-wrapper img {
+  .monthly-good-landing-page .more-about-kiva-section-wrapper .img-container .charity-nav-wrapper img {
     width: 5.5555555556rem; }
 
-.monthly-good-landing-page .more-about-kiva .img-container .kiva-promise-wrapper {
+.monthly-good-landing-page .more-about-kiva-section-wrapper .img-container .kiva-promise-wrapper {
   float: right;
   margin-top: 12%; }
   @media only screen and (min-width: 400px) and (max-width: 480px) {
-    .monthly-good-landing-page .more-about-kiva .img-container .kiva-promise-wrapper {
+    .monthly-good-landing-page .more-about-kiva-section-wrapper .img-container .kiva-promise-wrapper {
       margin-top: 4%; } }
   @media only screen and (min-width: 481px) and (max-width: 680px) {
-    .monthly-good-landing-page .more-about-kiva .img-container .kiva-promise-wrapper {
+    .monthly-good-landing-page .more-about-kiva-section-wrapper .img-container .kiva-promise-wrapper {
       margin-top: 3%; } }
   @media only screen and (min-width: 580px) and (max-width: 680px) {
-    .monthly-good-landing-page .more-about-kiva .img-container .kiva-promise-wrapper {
+    .monthly-good-landing-page .more-about-kiva-section-wrapper .img-container .kiva-promise-wrapper {
       margin-top: -1%; } }
   @media only screen and (min-width: 681px) {
-    .monthly-good-landing-page .more-about-kiva .img-container .kiva-promise-wrapper {
+    .monthly-good-landing-page .more-about-kiva-section-wrapper .img-container .kiva-promise-wrapper {
       float: none;
       margin-top: 0; } }
 
-.monthly-good-landing-page .faq-container {
+.monthly-good-landing-page .faq-section-wrapper {
   margin-top: 1.3888888889rem; }
 
 @media only screen and (max-width: 360px) {
