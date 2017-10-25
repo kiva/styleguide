@@ -130,16 +130,16 @@
 			}
 
 			@media #{$xlarge-up} {
-				margin-top: 5%;
+				margin-top: 1%;
 			}
 
 			//custom breakpoint up to medium
 			@media only screen and (min-width: 875px) and (max-width: 988px) {
-				margin-top: 13%;
+				margin-top: 7%;
 			}
 
 			@media #{$xxlarge-up} {
-				margin-top: 17%;
+				margin-top: 7%;
 			}
 
 			h1 {
@@ -147,6 +147,35 @@
 			}
 		}
 	}
+
+	.kiva-as-expert-section-wrapper {
+		background-color: $kiva-bg-lightgrey;
+
+		.kiva-as-expert-heading {
+			color: $kiva-green;
+			text-align: center;
+
+			@media #{$large-up} {
+				text-align: left;
+			}
+		}
+
+		.text-content {
+			@media #{$large-up} {
+				float: left;
+			}
+		}
+
+		.community-image {
+			margin: 0 auto;
+			padding: 20px;
+		}
+
+		.image-float {
+			float: right;
+		}
+	}
+
 
 	.more-about-kiva-section-wrapper {
 		.more-about-kiva-headline {
@@ -211,7 +240,8 @@
 		}
 	}
 
-	.faq-section-wrapper {
+
+	.faq-container {
 		margin-top: rem-calc(25);
 	}
 }
