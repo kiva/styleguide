@@ -8,8 +8,8 @@
 <h3>
 	Trustee updates
 </h3>
-{{^allTrusteeSelected}}<a href="#">Select all</a>{{/allTrusteeSelected}}
-{{#allTrusteeSelected}}<a href="#">Deselect all</a>{{/allTrusteeSelected}}
+{{^allTrusteeSelected}}<a class="select-all" href="#">Select all</a>{{/allTrusteeSelected}}
+{{#allTrusteeSelected}}<a class="deselect-all" href="#">Deselect all</a>{{/allTrusteeSelected}}
 <div>
 	<input id="network-transactions-input" type="checkbox" {{#networkTransactions}}checked="checked"{{/networkTransactions}}>
 	<label for="network-transactions-input">

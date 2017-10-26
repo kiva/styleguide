@@ -8,7 +8,8 @@
 <h3>
 	Lending activity updates
 </h3>
-<a href="#">Select all</a>
+{{^allLenderSelected}}<a class="select-all" href="#">Select all</a>{{/allLenderSelected}}
+{{#allLenderSelected}}<a class="deselect-all" href="#">Deselect all</a>{{/allLenderSelected}}
 <div>
 	<input id="loan-updates-input" type="checkbox" {{#loanUpdates}}checked="checked"{{/loanUpdates}}>
 	<label for="loan-updates-input">

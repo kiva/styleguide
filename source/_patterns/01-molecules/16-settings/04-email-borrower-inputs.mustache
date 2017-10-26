@@ -8,8 +8,8 @@
 <h3>
 	Entrepreneur tips
 </h3>
-{{^allBorrowerSelected}}<a href="#">Select all</a>{{/allBorrowerSelected}}
-{{#allBorrowerSelected}}<a href="#">Deselect all</a>{{/allBorrowerSelected}}
+{{^allBorrowerSelected}}<a class="select-all" href="#">Select all</a>{{/allBorrowerSelected}}
+{{#allBorrowerSelected}}<a class="deselect-all" href="#">Deselect all</a>{{/allBorrowerSelected}}
 <div>
 	<input id="lead-nurturing-input" type="checkbox" {{#leadNurturing}}checked="checked"{{/leadNurturing}}>
 	<label for="lead-nurturing-input">

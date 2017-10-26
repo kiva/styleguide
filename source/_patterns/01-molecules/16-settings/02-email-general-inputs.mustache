@@ -8,7 +8,8 @@
 <h3>
 	General Kiva / account updates
 </h3>
-<a href="#">Select all</a>
+{{^allGeneralSelected}}<a class="select-all" href="#">Select all</a>{{/allGeneralSelected}}
+{{#allGeneralSelected}}<a class="deselect-all" href="#">Deselect all</a>{{/allGeneralSelected}}
 <div>
 	<input id="lender-news-input" type="checkbox" {{#lenderNews}}checked="checked"{{/lenderNews}}>
 	<label for="lender-news-input">
