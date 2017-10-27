@@ -79,6 +79,8 @@
 					width: rem-calc(100);
 					display: inline-block;
 					height: rem-calc(44);
+					font-weight: bold;
+					font-size: $body-font-size;
 
 					@media #{$small-only} {
 						margin-right: rem-calc(70);
@@ -87,7 +89,7 @@
 
 				.join-monthly-good {
 					display: inline-block;
-					top: rem-calc(4);
+					top: rem-calc(2);
 
 					@media #{$medium-up} {
 						margin-left: rem-calc(20);
@@ -181,6 +183,8 @@
 				width: 100%;
 				height: rem-calc(44);
 				margin-right: rem-calc(20);
+				font-weight: bold;
+				font-size: $body-font-size;
 
 				@media #{$medium-up} {
 					width: inherit;
@@ -189,7 +193,7 @@
 
 			a.join-monthly-good {
 				width: 100%;
-				top: rem-calc(4);
+				top: rem-calc(2);
 
 				@media #{$medium-up} {
 					width: inherit;
