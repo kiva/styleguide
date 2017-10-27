@@ -10,41 +10,44 @@
 </h3>
 {{^allGeneralSelected}}<a class="select-all" href="#">Select all</a>{{/allGeneralSelected}}
 {{#allGeneralSelected}}<a class="deselect-all" href="#">Deselect all</a>{{/allGeneralSelected}}
-<div>
-	<input id="lender-news-input" type="checkbox" {{#lenderNews}}checked="checked"{{/lenderNews}}>
-	<label for="lender-news-input">
-		News, inspiration and promotions
-	</label>
-</div>
-<div>
-	<input id="account-updates-input" type="checkbox" {{#accountUpdates}}checked="checked"{{/accountUpdates}}>
-	<label for="account-updates-input">
-		Portfolio and balance updates
-	</label>
-</div>
-<div>
-	<label for="repayment-updates-input"><strong>Repayment notifications</strong></label>
-	<select id="repayment-updates-input">
-		{{#repaymentOptions}}
-			<option value="{{value}}" {{#selected}}selected="selected"{{/selected}}>{{title}}</option>
-		{{/repaymentOptions}}
-	</select>
-	{{#showPush}}
-		<input id="push-repayment-updates-input" type="checkbox" {{#repaymentPush}}checked="checked"{{/repaymentPush}}>
-		<label for="push-repayment-updates-input">
-			Receive notifications on this device
+
+<div class="region-inner">
+	<div>
+		<input id="lender-news-input" type="checkbox" {{#lenderNews}}checked="checked"{{/lenderNews}}>
+		<label for="lender-news-input">
+			News, inspiration and promotions
 		</label>
-	{{/showPush}}
+	</div>
+	<div>
+		<input id="account-updates-input" type="checkbox" {{#accountUpdates}}checked="checked"{{/accountUpdates}}>
+		<label for="account-updates-input">
+			Portfolio and balance updates
+		</label>
+	</div>
+	<div>
+		<label for="repayment-updates-input"><strong>Repayment notifications</strong></label>
+		<select id="repayment-updates-input">
+			{{#repaymentOptions}}
+				<option value="{{value}}" {{#selected}}selected="selected"{{/selected}}>{{title}}</option>
+			{{/repaymentOptions}}
+		</select>
+		{{#showPush}}
+			<input id="push-repayment-updates-input" type="checkbox" {{#repaymentPush}}checked="checked"{{/repaymentPush}}>
+			<label for="push-repayment-updates-input">
+				Receive notifications on this device
+			</label>
+		{{/showPush}}
+	</div>
+	<div>
+		<label for="autolend-updates-input"><strong>Autolending notifications</strong></label>
+		<select id="autolend-updates-input">
+			{{#autolendOptions}}
+				<option value="{{value}}" {{#selected}}selected="selected"{{/selected}}>{{title}}</option>
+			{{/autolendOptions}}
+		</select>
+	</div>
+	<a href="{{savedSearchesUrl}}">Saved searches notifications</a>
 </div>
-<div>
-	<label for="autolend-updates-input"><strong>Autolending notifications</strong></label>
-	<select id="autolend-updates-input">
-		{{#autolendOptions}}
-			<option value="{{value}}" {{#selected}}selected="selected"{{/selected}}>{{title}}</option>
-		{{/autolendOptions}}
-	</select>
-</div>
-<a href="{{savedSearchesUrl}}">Saved searches notifications</a>
 
 {{#is-standalone}}
 			</div>

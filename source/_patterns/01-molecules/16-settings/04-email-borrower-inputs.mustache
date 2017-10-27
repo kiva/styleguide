@@ -10,23 +10,26 @@
 </h3>
 {{^allBorrowerSelected}}<a class="select-all" href="#">Select all</a>{{/allBorrowerSelected}}
 {{#allBorrowerSelected}}<a class="deselect-all" href="#">Deselect all</a>{{/allBorrowerSelected}}
-<div>
-	<input id="lead-nurturing-input" type="checkbox" {{#leadNurturing}}checked="checked"{{/leadNurturing}}>
-	<label for="lead-nurturing-input">
-		Getting started with Kiva
-	</label>
-</div>
-<div>
-	<input id="onboarding-support-input" type="checkbox" {{#onboardingSupport}}checked="checked"{{/onboardingSupport}}>
-	<label for="onboarding-support-input">
-		Loan success guide
-	</label>
-</div>
-<div>
-	<input id="borrower-news-input" type="checkbox" {{#borrowerNews}}checked="checked"{{/borrowerNews}}>
-	<label for="borrower-news-input">
-		Entrepreneur community updates
-	</label>
+
+<div class="region-inner">
+	<div>
+		<input id="lead-nurturing-input" type="checkbox" {{#leadNurturing}}checked="checked"{{/leadNurturing}}>
+		<label for="lead-nurturing-input">
+			Getting started with Kiva
+		</label>
+	</div>
+	<div>
+		<input id="onboarding-support-input" type="checkbox" {{#onboardingSupport}}checked="checked"{{/onboardingSupport}}>
+		<label for="onboarding-support-input">
+			Loan success guide
+		</label>
+	</div>
+	<div>
+		<input id="borrower-news-input" type="checkbox" {{#borrowerNews}}checked="checked"{{/borrowerNews}}>
+		<label for="borrower-news-input">
+			Entrepreneur community updates
+		</label>
+	</div>
 </div>
 
 {{#is-standalone}}

@@ -1,0 +1,43 @@
+.email-settings {
+	.global-region {
+		margin: 1rem 0;
+		
+		label {
+			display: inline-block;
+			font-size: 1.2rem;
+			margin-right: 1rem;
+		}
+
+		select {
+			display: inline-block;
+			max-width: 10rem;
+			margin-top: .5rem;
+		}
+	}
+
+	.region-block {
+		margin-bottom: 1rem;
+
+		h3 {
+			display: inline-block;
+		}
+
+		.select-all,
+		.deselect-all {
+			display: inline-block;
+			margin-left: 1rem;
+			margin-bottom: 1rem;
+		}
+
+		.region-inner {
+			margin-left: 1rem;
+		}
+
+		select {
+			display: block;
+			margin-bottom: 1rem;
+			max-width: 10rem;
+		}
+	}
+
+}
