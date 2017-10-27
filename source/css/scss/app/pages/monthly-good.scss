@@ -79,6 +79,8 @@
 					width: rem-calc(100);
 					display: inline-block;
 					height: rem-calc(44);
+					font-weight: bold;
+					font-size: large;
 
 					@media #{$small-only} {
 						margin-right: rem-calc(70);
