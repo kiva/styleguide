@@ -101,18 +101,25 @@
 
 	.how-works-section-wrapper {
 		background-color: $kiva-green;
+		padding: 2rem 0 2rem 0;
 
-		.section-title {
-			padding: rem-calc(10) 0 rem-calc(30) 0;
+		.impact {
+			margin-bottom: 0;
 		}
 
 		.column-wrap {
 			margin-bottom: rem-calc(40);
-		}
 
-		.icon {
-			fill: $white;
-			color: $kiva-green;
+
+			.icon {
+				fill: $white;
+				color: $kiva-green;
+				width: rem-calc(50);
+			}
+
+			.how-works-column-title {
+				font-weight: bold;
+			}
 		}
 	}
 
