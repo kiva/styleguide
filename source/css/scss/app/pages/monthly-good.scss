@@ -108,18 +108,19 @@
 		}
 
 		.column-wrap {
-			margin-bottom: rem-calc(40);
-
-
 			.icon {
 				fill: $white;
 				color: $kiva-green;
-				width: rem-calc(50);
+				width: rem-calc(75);
 			}
 
 			.how-works-column-title {
 				font-weight: bold;
 			}
+		}
+
+		.margin-top {
+			margin-top: rem-calc(25);
 		}
 	}
 
