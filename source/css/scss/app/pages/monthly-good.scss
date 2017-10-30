@@ -8,8 +8,6 @@
 			top: 50%;
 			-ms-transform: translateY(-50%);
 			transform: translateY(-50%);
-			margin-left: 4%;
-			margin-right: 4%;
 
 			.mg-headline {
 				text-align: left;
@@ -101,22 +99,32 @@
 
 	.how-works-section-wrapper {
 		background-color: $kiva-green;
+		padding: 2rem 0;
 
-		.section-title {
-			padding: rem-calc(10) 0 rem-calc(30) 0;
+		.impact {
+			margin-bottom: 0;
 		}
 
 		.column-wrap {
-			margin-bottom: rem-calc(40);
+			.icon {
+				fill: $white;
+				color: $kiva-green;
+				width: rem-calc(75);
+			}
+
+			.how-works-column-title {
+				font-weight: bold;
+			}
 		}
 
-		.icon {
-			fill: $white;
-			color: $kiva-green;
+		.margin-top {
+			margin-top: rem-calc(25);
 		}
 	}
 
 	.email-preview-section-wrapper {
+		padding: 2rem 0;
+
 		.email-preview-image {
 			margin: 0 auto;
 
@@ -126,24 +134,16 @@
 		}
 
 		.email-preview-text {
+			.impact {
+				color: $kiva-green;
+			}
+
 			@media #{$large-up} {
 				float: right;
-			}
-
-			@media #{$xlarge-up} {
-				margin-top: 1%;
-			}
-
-			//custom breakpoint up to medium
-			@media only screen and (min-width: 875px) and (max-width: 988px) {
 				margin-top: 7%;
 			}
 
-			@media #{$xxlarge-up} {
-				margin-top: 7%;
-			}
-
-			h1 {
+			.section-title {
 				color: $kiva-green;
 			}
 		}
@@ -151,6 +151,7 @@
 
 	.kiva-as-expert-section-wrapper {
 		background-color: $kiva-bg-lightgray;
+		padding: 2rem 0;
 
 		.kiva-as-expert-heading {
 			color: $kiva-green;
@@ -203,6 +204,8 @@
 	}
 
 	.more-about-kiva-section-wrapper {
+		padding: 2rem 0;
+
 		.more-about-kiva-headline {
 			color: $kiva-green;
 			text-align: center;
@@ -266,7 +269,7 @@
 	}
 
 	.faq-container {
-		margin-top: rem-calc(25);
+		padding: 2rem 0;
 	}
 }
 
