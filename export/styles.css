@@ -16139,13 +16139,15 @@ table.repayments-list {
       .monthly-good-landing-page .mg-header-section-wrapper .mg-header-content .mg-deposit-input-wrapper .mg-deposit-input {
         width: 5.5555555556rem;
         display: inline-block;
-        height: 2.4444444444rem; }
+        height: 2.4444444444rem;
+        font-weight: bold;
+        font-size: 1rem; }
         @media only screen and (max-width: 480px) {
           .monthly-good-landing-page .mg-header-section-wrapper .mg-header-content .mg-deposit-input-wrapper .mg-deposit-input {
             margin-right: 3.8888888889rem; } }
       .monthly-good-landing-page .mg-header-section-wrapper .mg-header-content .mg-deposit-input-wrapper .join-monthly-good {
         display: inline-block;
-        top: 0.2222222222rem; }
+        top: 0.1111111111rem; }
         @media only screen and (min-width: 481px) {
           .monthly-good-landing-page .mg-header-section-wrapper .mg-header-content .mg-deposit-input-wrapper .join-monthly-good {
             margin-left: 1.1111111111rem; } }
@@ -16205,13 +16207,15 @@ table.repayments-list {
     display: inline-block;
     width: 100%;
     height: 2.4444444444rem;
-    margin-right: 1.1111111111rem; }
+    margin-right: 1.1111111111rem;
+    font-weight: bold;
+    font-size: 1rem; }
     @media only screen and (min-width: 481px) {
       .monthly-good-landing-page .kiva-as-expert-section-wrapper .deposit-amount-input-2 .mg-deposit-input {
         width: inherit; } }
   .monthly-good-landing-page .kiva-as-expert-section-wrapper .deposit-amount-input-2 a.join-monthly-good {
     width: 100%;
-    top: 0.2222222222rem; }
+    top: 0.1111111111rem; }
     @media only screen and (min-width: 481px) {
       .monthly-good-landing-page .kiva-as-expert-section-wrapper .deposit-amount-input-2 a.join-monthly-good {
         width: inherit; } }
