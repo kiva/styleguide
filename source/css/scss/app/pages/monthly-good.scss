@@ -19,7 +19,9 @@
 			.mg-subhead {
 				text-align: left;
 				margin: 0;
-				padding-top: rem-calc(10);
+				padding-top: rem-calc(5);
+				font-size: rem-calc(20);
+				line-height: $small-line-height;
 
 				@media (min-width: $x-small-breakpoint +1) and (max-width: $small-breakpoint) {
 					font-size: $headline-font-size-small-reduction;
@@ -27,11 +29,17 @@
 					padding-top: rem-calc(15);
 				}
 
+				@media (min-width: 580px) and (max-width: $large-breakpoint) {
+					font-size: $headline-font-size-small-reduction;
+					line-height: rem-calc(26);
+					padding-top: rem-calc(15);
+				}
+
 				@media #{$large-up} {
-					font-size: rem-calc(24);
+					font-size: $slide-overlay-attribution-font-size;
 					line-height: $body-line-height;
 					max-width: rem-calc(510);
-					padding-top: rem-calc(10);
+					padding-top: rem-calc(15);
 				}
 			}
 
@@ -58,26 +66,6 @@
 					font-size: $body-font-size;
 				}
 
-				.error.zig {
-					display: inline-block;
-					padding: 5px;
-					height: 44px;
-					line-height: 37px;
-					margin-left: 5px;
-					opacity: .7;
-				}
-
-				 &[data-abide] .error small.error
-				, &[data-abide] .error span.error
-				, &[data-abide] span.error
-				, &[data-abide] small.error {
-					position: absolute;
-					margin: rem-calc(4) 0;
-					padding: 0;
-					line-height: rem-calc(14);
-					width: rem-calc(180);
-				}
-
 				.join-monthly-good {
 					display: inline-block;
 					top: rem-calc(2);
@@ -86,6 +74,14 @@
 						margin-left: rem-calc(20);
 					}
 				}
+			}
+
+			[data-abide] .error small.error {
+				display: inline-block;
+				opacity: .7;
+				height: rem-calc(41);
+				padding: rem-calc(5);
+				line-height: rem-calc(34);
 			}
 		}
 	}
@@ -185,14 +181,23 @@
 					width: inherit;
 				}
 			}
+		}
 
-			a.join-monthly-good {
-				width: 100%;
-				top: rem-calc(2);
+		[data-abide] .error small.error {
+			background-color: $kiva-bg-lightgray;
 
-				@media #{$medium-up} {
-					width: inherit;
-				}
+			@media #{$medium-up} {
+				width: fit-content;
+				display: inline-block;
+			}
+		}
+
+		a.join-monthly-good {
+			width: 100%;
+			top: rem-calc(2);
+
+			@media #{$medium-up} {
+				width: inherit;
 			}
 		}
 	}
