@@ -14,23 +14,11 @@
 				margin: 0;
 				font-size: rem-calc(38);
 				line-height: rem-calc(38);
-
-				@media #{$medium-up} {
-					font-size: $section-head-font-size;
-					line-height: rem-calc(28);
-				}
-
-				@media #{$large-up} {
-					font-size: rem-calc(46);
-					line-height: rem-calc(46);
-				}
 			}
 
 			.mg-subhead {
 				text-align: left;
 				margin: 0;
-				font-size: rem-calc(20);
-				line-height: $small-line-height;
 				padding-top: rem-calc(10);
 
 				@media (min-width: $x-small-breakpoint +1) and (max-width: $small-breakpoint) {
@@ -39,22 +27,11 @@
 					padding-top: rem-calc(15);
 				}
 
-				@media #{$medium-up} {
-					font-size: $slide-overlay-attribution-small-size;
-					line-height: rem-calc(16);
-					max-width: rem-calc(350);
-					padding-top: rem-calc(10);
-				}
-
 				@media #{$large-up} {
 					font-size: rem-calc(24);
 					line-height: $body-line-height;
 					max-width: rem-calc(510);
 					padding-top: rem-calc(10);
-				}
-
-				@media #{$large-up} {
-					padding-top: rem-calc(20);
 				}
 			}
 
@@ -74,15 +51,31 @@
 				}
 
 				.mg-deposit-input {
-					width: rem-calc(100);
+					width: rem-calc(90);
 					display: inline-block;
 					height: rem-calc(44);
 					font-weight: bold;
 					font-size: $body-font-size;
+				}
 
-					@media #{$small-only} {
-						margin-right: rem-calc(70);
-					}
+				.error.zig {
+					display: inline-block;
+					padding: 5px;
+					height: 44px;
+					line-height: 37px;
+					margin-left: 5px;
+					opacity: .7;
+				}
+
+				 &[data-abide] .error small.error
+				, &[data-abide] .error span.error
+				, &[data-abide] span.error
+				, &[data-abide] small.error {
+					position: absolute;
+					margin: rem-calc(4) 0;
+					padding: 0;
+					line-height: rem-calc(14);
+					width: rem-calc(180);
 				}
 
 				.join-monthly-good {
@@ -96,6 +89,7 @@
 			}
 		}
 	}
+
 
 	.how-works-section-wrapper {
 		background-color: $kiva-green;
