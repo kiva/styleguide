@@ -1,4 +1,13 @@
+
+.global-unsubscribe {
+	.region-block {
+		opacity: .5;
+		pointer-events: none;
+	}
+}
 .email-settings {
+	pointer-events: auto;
+	
 	.global-region {
 		margin: 1rem 0;
 		
@@ -37,6 +46,25 @@
 			display: block;
 			margin-bottom: 1rem;
 			max-width: 10rem;
+		}
+	}
+
+	.submit-region {
+		margin: 1rem 0;
+		
+		.region-inner {
+			margin-left: 1rem;
+		}
+
+		input.button {
+			width: auto;
+			margin: 0;
+		}
+	
+		a {
+			display: inline-block;
+			margin-left: 1rem;
+			line-height: 3rem;
 		}
 	}
 
