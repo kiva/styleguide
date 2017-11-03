@@ -6236,11 +6236,6 @@ small {
   color: #999;
   font-style: italic; }
 
-::-moz-placeholder {
-  /* CSS Working Draft */
-  color: #999;
-  font-style: italic; }
-
 :-ms-input-placeholder {
   /* CSS Working Draft */
   color: #999;
@@ -12446,9 +12441,6 @@ a.aboutJoinLink:visited {
       .category-card.search-card input::-webkit-input-placeholder {
         /* CSS Working Draft */
         text-align: center; }
-      .category-card.search-card input::-moz-placeholder {
-        /* CSS Working Draft */
-        text-align: center; }
       .category-card.search-card input:-ms-input-placeholder {
         /* CSS Working Draft */
         text-align: center; }
@@ -16384,13 +16376,11 @@ table.repayments-list {
       .monthly-good .monthly-good-dynamic-view .monthly-good-form .donation-selector-small #donation-amount-input {
         display: none;
         width: 6.1111111111rem;
-        -moz-text-align-last: right;
-             text-align-last: right;
+        text-align-last: right;
         font-size: 1rem; }
       .monthly-good .monthly-good-dynamic-view .monthly-good-form .donation-selector-small .dropdown-choices-select {
         width: 6.1111111111rem;
-        -moz-text-align-last: right;
-             text-align-last: right;
+        text-align-last: right;
         padding-right: 1rem;
         font-size: 1rem; }
     .monthly-good .monthly-good-dynamic-view .monthly-good-form input[type="text"] {
@@ -17335,16 +17325,13 @@ div.flag-comment-lightbox .lightbox-content .inner {
 
 @media only screen and (min-width: 681px) {
   .csscolumns #countrySelectModal #country-list {
-    -moz-column-count: 2;
     column-count: 2; } }
 
 @media only screen and (min-width: 989px) {
   .csscolumns #countrySelectModal #country-list {
-    -moz-column-count: 3;
     column-count: 3; } }
 
 .csscolumns #countrySelectModal #country-list .region-name {
-  page-break-inside: avoid;
   break-inside: avoid;
   padding-top: 1rem; }
 
@@ -17391,12 +17378,10 @@ div.flag-comment-lightbox .lightbox-content .inner {
   font-weight: bold; }
 
 .portfolio-countries-list {
-  -moz-column-count: 1;
   column-count: 1;
   margin-bottom: 2rem; }
   @media only screen and (min-width: 989px) {
     .portfolio-countries-list {
-      -moz-column-count: 2;
       column-count: 2; } }
 
 .inactive-account-settings #inactivity_form label {
