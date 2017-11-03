@@ -1,4 +1,27 @@
 .monthly-good-landing-page {
+	.has-mg {
+		.already-subscribed-msg-wrapper {
+			display: block;
+		}
+
+		.mg-deposit-form, .deposit-amount-input-2, .button.join-monthly-good {
+			display: none;
+		}
+	}
+
+	.already-subscribed-msg-wrapper {
+		display: none;
+		background-color: $kiva-alert-yellow;
+		padding: rem-calc(10);
+		margin-top: rem-calc(20);
+		max-width: rem-calc(375);
+
+		@media #{$x-small-only} {
+			font-size: $small-font-size;;
+			margin-top: rem-calc(10);
+		}
+	}
+
 	.mg-header-section-wrapper {
 		align-content: left;
 		transform-style: preserve-3d;
@@ -168,18 +191,13 @@
 		}
 
 		.deposit-amount-input-2 {
-
 			.mg-deposit-input {
 				display: inline-block;
-				width: 100%;
+				width: 5rem;
 				height: rem-calc(44);
 				margin-right: rem-calc(20);
 				font-weight: bold;
 				font-size: $body-font-size;
-
-				@media #{$medium-up} {
-					width: inherit;
-				}
 			}
 		}
 
