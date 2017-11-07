@@ -138,21 +138,12 @@
 	.email-preview-section-wrapper {
 		padding: 2rem 0;
 
-		.email-preview-image {
-			margin: 0 auto;
-
-			@media #{$large-up} {
-				float: left;
-			}
-		}
-
 		.email-preview-text {
 			.impact {
 				color: $kiva-green;
 			}
 
 			@media #{$large-up} {
-				float: right;
 				margin-top: 7%;
 			}
 
