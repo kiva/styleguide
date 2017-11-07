@@ -1,5 +1,28 @@
 .monthly-good-landing-page {
-	.mg-header-wrapper {
+	.has-mg {
+		.already-subscribed-msg-wrapper {
+			display: block;
+		}
+
+		.mg-deposit-form, .deposit-amount-input-2, .button.join-monthly-good {
+			display: none;
+		}
+	}
+
+	.already-subscribed-msg-wrapper {
+		display: none;
+		background-color: $kiva-alert-yellow;
+		padding: rem-calc(10);
+		margin-top: rem-calc(20);
+		max-width: rem-calc(375);
+
+		@media #{$x-small-only} {
+			font-size: $small-font-size;;
+			margin-top: rem-calc(10);
+		}
+	}
+
+	.mg-header-section-wrapper {
 		align-content: left;
 		transform-style: preserve-3d;
 
@@ -8,33 +31,20 @@
 			top: 50%;
 			-ms-transform: translateY(-50%);
 			transform: translateY(-50%);
-			margin-left: 4%;
-			margin-right: 4%;
-
 
 			.mg-headline {
 				text-align: left;
 				margin: 0;
 				font-size: rem-calc(38);
 				line-height: rem-calc(38);
-
-				@media #{$medium-up} {
-					font-size: $section-head-font-size;
-					line-height: rem-calc(28);
-				}
-
-				@media #{$large-up} {
-					font-size: rem-calc(46);
-					line-height: rem-calc(46);  }
 			}
 
 			.mg-subhead {
 				text-align: left;
 				margin: 0;
+				padding-top: rem-calc(5);
 				font-size: rem-calc(20);
 				line-height: $small-line-height;
-				padding-top: rem-calc(10);
-
 
 				@media (min-width: $x-small-breakpoint +1) and (max-width: $small-breakpoint) {
 					font-size: $headline-font-size-small-reduction;
@@ -42,22 +52,17 @@
 					padding-top: rem-calc(15);
 				}
 
-				@media #{$medium-up} {
-					font-size: $slide-overlay-attribution-small-size;
-					line-height: rem-calc(16);
-					max-width: rem-calc(350);
-					padding-top: rem-calc(10);
+				@media (min-width: 580px) and (max-width: $large-breakpoint) {
+					font-size: $headline-font-size-small-reduction;
+					line-height: rem-calc(26);
+					padding-top: rem-calc(15);
 				}
 
 				@media #{$large-up} {
-					font-size: rem-calc(24);
+					font-size: $slide-overlay-attribution-font-size;
 					line-height: $body-line-height;
 					max-width: rem-calc(510);
-					padding-top: rem-calc(10);
-				}
-
-				@media #{$large-up} {
-					padding-top: rem-calc(20);
+					padding-top: rem-calc(15);
 				}
 			}
 
@@ -77,27 +82,214 @@
 				}
 
 				.mg-deposit-input {
-					width: rem-calc(100);
+					width: rem-calc(90);
 					display: inline-block;
 					height: rem-calc(44);
-
-					@media #{$small-only} {
-						margin-right: rem-calc(70);
-					}
+					font-weight: bold;
+					font-size: $body-font-size;
 				}
 
 				.join-monthly-good {
 					display: inline-block;
-					top: rem-calc(4);
+					top: rem-calc(2);
 
 					@media #{$medium-up} {
 						margin-left: rem-calc(20);
 					}
 				}
 			}
+
+			[data-abide] .error small.error {
+				display: inline-block;
+				opacity: .7;
+				height: rem-calc(41);
+				padding: rem-calc(5);
+				line-height: rem-calc(34);
+			}
 		}
 	}
+
+
+	.how-works-section-wrapper {
+		background-color: $kiva-green;
+		padding: 2rem 0;
+
+		.impact {
+			margin-bottom: 0;
+		}
+
+		.column-wrap {
+			.icon {
+				fill: $white;
+				color: $kiva-green;
+				width: rem-calc(75);
+			}
+
+			.how-works-column-title {
+				font-weight: bold;
+			}
+		}
+
+		.margin-top {
+			margin-top: rem-calc(25);
+		}
+	}
+
+	.email-preview-section-wrapper {
+		padding: 2rem 0;
+
+		.email-preview-image {
+			margin: 0 auto;
+
+			@media #{$large-up} {
+				float: left;
+			}
+		}
+
+		.email-preview-text {
+			.impact {
+				color: $kiva-green;
+			}
+
+			@media #{$large-up} {
+				float: right;
+				margin-top: 7%;
+			}
+
+			.section-title {
+				color: $kiva-green;
+			}
+		}
+	}
+
+	.kiva-as-expert-section-wrapper {
+		background-color: $kiva-bg-lightgray;
+		padding: 2rem 0;
+
+		.kiva-as-expert-heading {
+			color: $kiva-green;
+			text-align: center;
+
+			@media #{$large-up} {
+				text-align: left;
+			}
+		}
+
+		.text-content {
+			@media #{$large-up} {
+				float: left;
+			}
+		}
+
+		.community-image {
+			margin: 0 auto;
+			padding: rem-calc(20);
+		}
+
+		.image-float {
+			float: right;
+		}
+
+		.deposit-amount-input-2 {
+			.mg-deposit-input {
+				display: inline-block;
+				width: 5rem;
+				height: rem-calc(44);
+				margin-right: rem-calc(20);
+				font-weight: bold;
+				font-size: $body-font-size;
+			}
+		}
+
+		[data-abide] .error small.error {
+			background-color: $kiva-bg-lightgray;
+
+			@media #{$medium-up} {
+				width: fit-content;
+				display: inline-block;
+			}
+		}
+
+		a.join-monthly-good {
+			width: 100%;
+			top: rem-calc(2);
+
+			@media #{$medium-up} {
+				width: inherit;
+			}
+		}
+	}
+
+	.more-about-kiva-section-wrapper {
+		padding: 2rem 0;
+
+		.more-about-kiva-headline {
+			color: $kiva-green;
+			text-align: center;
+
+			@media #{$large-up} {
+				text-align: left;
+			}
+		}
+
+		.more-about-kiva-text {
+			@media #{$large-up} {
+				float: left;
+			}
+		}
+
+		.img-container {
+			@media #{$large-up} {
+				float: right;
+			}
+
+			.charity-nav-wrapper {
+				float: left;
+
+				@media #{$large-up} {
+					float: none;
+				}
+
+				p:first-child {
+					margin-bottom: 0;
+				}
+
+				img {
+					width: rem-calc(100);
+				}
+			}
+
+			.kiva-promise-wrapper {
+				float: right;
+				margin-top: 12%;
+
+				//custom breakpoint up to medium
+				@media only screen and (min-width: 400px) and (max-width: 480px) {
+					margin-top: 4%;
+				}
+
+				@media #{$medium-only} {
+					margin-top: 3%;
+				}
+
+				//custom breakpoint up to large
+				@media only screen and (min-width: 580px) and (max-width: 680px) {
+					margin-top: -1%;
+				}
+
+				@media #{$large-up} {
+					float: none;
+					margin-top: 0;
+				}
+			}
+		}
+	}
+
+	.faq-container {
+		padding: 2rem 0;
+	}
 }
+
 
 .monthly-good {
 	@media #{$x-small-only} {

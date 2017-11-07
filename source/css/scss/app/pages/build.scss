@@ -1,0 +1,138 @@
+#build {
+	#tipMsg {
+		display: none;
+	}
+	&.appsShowView {
+		.application-container {
+			border: 2px solid $kiva-stroke-gray;
+			padding: 20px;
+			margin-top: 30px;
+			margin-bottom: 30px;
+		}
+		section {
+			margin-top: 15px;
+			margin-bottom: 15px;
+		}
+		h3 {
+			border-bottom: 2px solid $kiva-stroke-gray;
+		}
+		.sub-section {
+			margin-top: 30px;
+			.detail {
+				h4 {
+					margin-bottom: 3px;
+				}
+				margin-left: 20px;
+				margin-bottom: 30px;
+			}
+		}
+		.actions {
+			float: right;
+			.button {
+				display: block;
+				margin-bottom: 10px;
+			}
+			.publish-note {
+				font-size: $small-font-size;
+				line-height: $small-line-height;
+			}
+		}
+		.hd {
+			h2 {
+				display: inline;
+			}
+			.status {
+				@media #{$medium-up} {
+					float: right;
+				}
+
+			}
+		}
+		.essentials {
+			overflow: hidden;
+			img {
+				float: left;
+				margin: 0 10px 5px 0;
+				height: 73px;
+				width: 73px;
+			}
+		}
+		.quickstats {
+			text-align: center;
+			.stat {
+				display: inline-block;
+				margin: 5%;
+			}
+		}
+		.oauth-details {
+			#appview-consumerSecret {
+				display: none;
+			}
+		}
+		.destructive-actions {
+			a {
+				color: white;
+				&:hover {
+					text-decoration: none;
+				}
+			}
+		}
+		.button.main-option {
+			color: white;
+			background-color: $kiva-accent-red;
+		}
+	}
+	&.appsEditView {
+		a.cancel {
+			position: absolute;
+			margin-left: 10px;
+		}
+	}
+	&.dashboard {
+		.apps-container {
+
+		}
+		.app-preview {
+			position: relative;
+			min-height: 100px;
+			background-color: $kiva-bg-lightgray;
+			margin-bottom: 20px;
+			padding: 10px;
+			border: 1px solid $kiva-bg-darkgray;
+			&:hover {
+				background-color: $kiva-bg-darkgray;
+				cursor: pointer;
+			}
+			img {
+				margin-right: 10px;
+				vertical-align: top;
+			}
+			.details {
+				display: inline-block;
+				max-width: 75%;
+				margin-bottom: 25px;
+			}
+			.status {
+				position: absolute;
+				right: 5px;
+				bottom: 5px;
+			}
+		}
+	}
+	.status-marker {
+		display: inline-block;
+		width: 16px;
+		height: 16px;
+		border-radius: 8px;
+		vertical-align: middle;
+		&.Registered {
+			background-color: $kiva-alert-yellow;
+		}
+		&.Published {
+			background-color: $kiva-green;
+		}
+		&.Disabled {
+			background-color: $kiva-accent-red;
+		}
+	}
+}
