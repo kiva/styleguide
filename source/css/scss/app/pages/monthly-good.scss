@@ -222,23 +222,11 @@
 		}
 
 		.more-about-kiva-text {
-			@media #{$large-up} {
-				float: left;
-			}
+			padding: 0;
 		}
 
 		.img-container {
-			@media #{$large-up} {
-				float: right;
-			}
-
 			.charity-nav-wrapper {
-				float: left;
-
-				@media #{$large-up} {
-					float: none;
-				}
-
 				p:first-child {
 					margin-bottom: 0;
 				}
@@ -249,7 +237,7 @@
 			}
 
 			.kiva-promise-wrapper {
-				float: right;
+				max-width: rem-calc(200);
 				margin-top: 12%;
 
 				//custom breakpoint up to medium
@@ -267,7 +255,6 @@
 				}
 
 				@media #{$large-up} {
-					float: none;
 					margin-top: 0;
 				}
 			}
