@@ -254,7 +254,7 @@ module.exports = function(grunt) {
                 files: [
                     'source/css/**/*.scss'
                 ]
-                , tasks: ['compile']
+                , tasks: ['export_min']
                 //, options: {
                 //    spawn: false
                 //    , livereload: true
@@ -388,6 +388,7 @@ module.exports = function(grunt) {
 	grunt.registerTask('init', ['copy:init', 'githooks']);
 	grunt.registerTask('compile', ['concat:vendorCss', 'sass:compile', 'postcss:dist', 'shell:compile', 'svgmin', 'svgstore:compile', 'copy:js', 'webpack:compile']);
 	grunt.registerTask('export', ['clean:export', 'sass:export', 'sass:export_min', 'postcss:export', 'svgmin', 'svgstore:export', 'webpack:bundle', 'webpack:ugly_bundle', 'webpack:module', 'copy:export', 'gitadd:export']);
+	grunt.registerTask('export_min', ['sass:export', 'sass:export_min', 'copy:export']);
 	grunt.registerTask('default', 'compile');
     grunt.registerTask('test', ['jshint']);
 

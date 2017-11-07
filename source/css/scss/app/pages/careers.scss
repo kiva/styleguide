@@ -1,0 +1,242 @@
+.careers-page {
+
+	.quick-links {
+		margin: 0 auto;
+		max-width: 60rem;
+		width: 100%;
+		text-align: center;
+
+		@media #{$medium-only} {
+			font-size: rem-calc(15);
+		}
+
+		@media #{$small-only} {
+			font-size: rem-calc(9.5);
+		}
+	}
+
+	.extra-lineheight {
+		line-height: 1.5rem;
+	}
+
+	.padding-bottom {
+		padding-bottom: 1.5rem;
+	}
+
+	.padding-top {
+		padding-top: 1.5rem;
+	}
+
+	.padding {
+		padding: 1.5rem 0rem 1.5rem 0rem;
+	}
+
+	.photo {
+		min-width:100%;
+		max-width:100%;
+		height: auto;
+	}
+
+	.col5-unit {
+		@include grid-column(2.4);
+		padding-left: rem-calc(5);
+		padding-right: rem-calc(5);
+	}
+
+	.page-title {
+		color: $black;
+	}
+
+	ul li {
+		font-weight: 300;
+	}
+
+	.faq-container {
+		.faq-title {
+			border-top: 0;
+		}
+
+		p {
+			line-height: 1.45;
+		}
+	}
+
+	.our-values {
+		h1 {
+			color: $white;
+			margin: 0;
+
+			@media #{$small-only} {
+				font-size: rem-calc(15);
+				line-height: rem-calc(5);
+			}
+		}
+
+		.body-text {
+			color: $kiva-green;
+
+			@media #{$med-large-only} {
+				font-size: rem-calc(15);
+			}
+
+			@media #{$medium-down}{
+				font-size: rem-calc(11.5);
+			}
+
+			@media only screen and (max-width: 520px) {
+				font-size: rem-calc(6);
+				line-height: rem-calc(15);
+			}
+		}
+
+		.value_container {
+			background-color: #236133;
+			width: 100%;
+			padding-top: 100%;
+			position: relative;
+		}
+
+		.value_text {
+			position: absolute;
+			top: 0;
+			left: 0;
+			bottom: 0;
+			right: 0;
+			text-align: center;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		}
+	}
+
+	.what-people-saying {
+		.quote_outer_container {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		}
+
+		.quote_inner_container {
+			position: absolute;
+			background-color: $white;
+			top: rem-calc(5);
+			padding-left: rem-calc(15);
+			padding-right: rem-calc(15);
+		}
+
+		.quote_inner_container  {
+			fill: $kiva-green;
+		}
+
+		.quotes {
+			text-align: center;
+
+			.frame {
+				border: 1px solid $kiva-stroke-gray;
+				padding: rem-calc(10);
+			}
+
+			.columns {
+				@media #{$small-only} {
+					margin-bottom: rem-calc(20);
+				}
+			}
+
+			.featured {
+				font-style: italic;
+			}
+		}
+	}
+
+	.stats {
+		overflow: auto;
+		background-color: $kiva-darkgreen;
+
+		.top-stats {
+			background: url("//www-kiva-org.global.ssl.fastly.net/cms/page/images/map-bg.min_.svg") no-repeat;
+			background-size: contain;
+			background-position: center center;
+
+			@media #{$small-only} {
+				background-size: cover;
+			}
+
+			.row {
+				display: inline-block;
+
+				@media #{$small-up} {
+					.stat {
+						line-height: rem-calc(25);
+						font-size: 3rem;
+					}
+				}
+
+				@media #{$large-up} {
+					.stat {
+						line-height: rem-calc(25);
+						font-size: 2.5rem;
+					}
+				}
+			}
+
+			.row1 {
+				padding: rem-calc(30) rem-calc(0) rem-calc(0) rem-calc(0);
+			}
+			.row2 {
+				padding: rem-calc(0) rem-calc(0) rem-calc(30) rem-calc(0);
+			}
+		}
+
+		.featured {
+			color: $kiva-green;
+		}
+	}
+
+	#jobs-listing {
+		margin-bottom: rem-calc(30);
+
+		h2 {
+			font-weight: 700;
+			font-size: rem-calc(36);
+			color: $kiva-green;
+		}
+
+		.job-department {
+			font-size: rem-calc(23);
+			font-weight: 300;
+			line-height: rem-calc(28);
+			margin-top: rem-calc(30);
+		}
+
+		.job-information {
+			padding: 10px 0 10px 20px;
+			background-color: $kiva-stroke-gray;
+		}
+
+		.job-title {
+			font-size: 1rem;
+			line-height: 1.3333333333rem;
+			margin-bottom: rem-calc(10);
+
+			a {
+				font-weight: 300;
+				color: $black;
+			}
+		}
+
+		.job-location {
+			margin-bottom: rem-calc(5);
+			font-weight: 300;
+		}
+	}
+
+	.kiva-love {
+		.profile {
+			margin-bottom: rem-calc(36);
+		}
+
+		.avatar {
+			border-radius: 50%;
+		}
+	}
+}
