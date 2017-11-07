@@ -166,22 +166,19 @@
 			}
 		}
 
-		.text-content {
-			@media #{$large-up} {
-				float: left;
-			}
-		}
-
 		.community-image {
-			margin: 0 auto;
 			padding: rem-calc(20);
 		}
 
-		.image-float {
-			float: right;
+		.contribute-form {
+			@media (min-width: 875px) {
+				top: -85px;
+			}
 		}
 
 		.deposit-amount-input-2 {
+			clear: both;
+
 			.mg-deposit-input {
 				display: inline-block;
 				width: 5rem;
@@ -206,8 +203,9 @@
 			top: rem-calc(2);
 
 			@media #{$medium-up} {
-				width: inherit;
+				width: auto;
 			}
+
 		}
 	}
 
