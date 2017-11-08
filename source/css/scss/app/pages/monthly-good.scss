@@ -42,27 +42,14 @@
 			.mg-subhead {
 				text-align: left;
 				margin: 0;
-				padding-top: rem-calc(5);
-				font-size: rem-calc(20);
+				padding-top: rem-calc(15);
+				font-size: 1rem;
 				line-height: $small-line-height;
-
-				@media (min-width: $x-small-breakpoint +1) and (max-width: $small-breakpoint) {
-					font-size: $headline-font-size-small-reduction;
-					line-height: rem-calc(26);
-					padding-top: rem-calc(15);
-				}
-
-				@media (min-width: 580px) and (max-width: $large-breakpoint) {
-					font-size: $headline-font-size-small-reduction;
-					line-height: rem-calc(26);
-					padding-top: rem-calc(15);
-				}
+				max-width: 70%;
 
 				@media #{$large-up} {
 					font-size: $slide-overlay-attribution-font-size;
 					line-height: $body-line-height;
-					max-width: rem-calc(510);
-					padding-top: rem-calc(15);
 				}
 			}
 
@@ -115,14 +102,15 @@
 		padding: 2rem 0;
 
 		.impact {
-			margin-bottom: 0;
+			margin-bottom: 0.55555rem;
 		}
 
 		.column-wrap {
 			.icon {
 				fill: $white;
 				color: $kiva-green;
-				width: rem-calc(75);
+				width: rem-calc(50);
+				height: rem-calc(100);
 			}
 
 			.how-works-column-title {
@@ -130,8 +118,8 @@
 			}
 		}
 
-		.margin-top {
-			margin-top: rem-calc(25);
+		.space-top {
+			margin-top: 2rem;
 		}
 	}
 
@@ -166,11 +154,17 @@
 			}
 		}
 
+		.text-content {
+			padding-left: 0;
+		}
+
 		.community-image {
 			padding: rem-calc(20);
 		}
 
 		.contribute-form {
+			padding: 0;
+
 			@media (min-width: 875px) {
 				top: -85px;
 			}
@@ -181,11 +175,15 @@
 
 			.mg-deposit-input {
 				display: inline-block;
-				width: 5rem;
+				width: 100%;
 				height: rem-calc(44);
 				margin-right: rem-calc(20);
 				font-weight: bold;
 				font-size: $body-font-size;
+
+				@media #{$medium-up} {
+					width: 5rem;
+				}
 			}
 		}
 
