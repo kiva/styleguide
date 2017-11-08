@@ -12,25 +12,27 @@
 {{#allLenderSelected}}<a class="deselect-all" href="#">Deselect all</a>{{/allLenderSelected}}
 
 <div class="region-inner">
-	<div>
+	<div class="input-wrapper">
 		<input id="loan-updates-input" type="checkbox" {{#loanUpdates}}checked="checked"{{/loanUpdates}}>
 		<label for="loan-updates-input">
 			Loan and borrower updates
 		</label>
 	</div>
-	<div>
+	<div class="input-wrapper">
 		<input id="comments-messages-input" type="checkbox" {{#commentsMessages}}checked="checked"{{/commentsMessages}}>
 		<label for="comments-messages-input">
 			Loan comments, lender to lender messages
 		</label>
 	</div>
-	<div>
-		<label for="team-digests-input"><strong>Team digests and per team preferences</strong></label>
-		<select id="team-digests-input">
-			{{#teamDigestOptions}}
-				<option value="{{value}}" {{#selected}}selected="selected"{{/selected}}>{{title}}</option>
-			{{/teamDigestOptions}}
-		</select>
+	<div class="region-inner">
+		<div class="input-wrapper">
+			<label for="team-digests-input"><strong>Team digests</strong></label>
+			<select id="team-digests-input">
+				{{#teamDigestOptions}}
+					<option value="{{value}}" {{#selected}}selected="selected"{{/selected}}>{{title}}</option>
+				{{/teamDigestOptions}}
+			</select>
+		</div>
 		{{#hasTeams}}
 			<a href="#">Show per-team preferences</a>
 		{{/hasTeams}}

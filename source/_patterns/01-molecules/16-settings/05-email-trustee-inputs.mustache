@@ -12,19 +12,19 @@
 {{#allTrusteeSelected}}<a class="deselect-all" href="#">Deselect all</a>{{/allTrusteeSelected}}
 
 <div class="region-inner">
-	<div>
+	<div class="input-wrapper">
 		<input id="network-transactions-input" type="checkbox" {{#networkTransactions}}checked="checked"{{/networkTransactions}}>
 		<label for="network-transactions-input">
 			Borrower network transactions
 		</label>
 	</div>
-	<div>
+	<div class="input-wrapper">
 		<input id="network-digest-input" type="checkbox" {{#networkDigest}}checked="checked"{{/networkDigest}}>
 		<label for="network-digest-input">
 			Borrower network digest
 		</label>
 	</div>
-	<div>
+	<div class="input-wrapper">
 		<input id="trustee-news-input" type="checkbox" {{#trusteeNews}}checked="checked"{{/trusteeNews}}>
 		<label for="trustee-news-input">
 			Trustee news and tips

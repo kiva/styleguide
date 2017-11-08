@@ -6,9 +6,19 @@
 {{/is-standalone}}
 
 <div class="region-inner">
-	<input type="submit" class="button" value="Save email settings" {{^dirty}}disabled="disabled"{{/dirty}}/>
+	<button type="submit" class="button" value="Save email settings" {{^dirty}}disabled="disabled"{{/dirty}}>
+		{{^saving}}
+			Save email settings
+		{{/saving}}
+		{{#saving}}
+			{{> molecules-loading-spinner }}
+			Saving
+		{{/saving}}
+	</button>
 	{{#dirty}}
-		<a href="#">Reset</a>
+		{{^saving}}
+			<a href="#">Reset</a>
+		{{/saving}}
 	{{/dirty}}
 </div>
 
