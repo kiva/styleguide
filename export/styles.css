@@ -16174,16 +16174,10 @@ table.repayments-list {
 
 .monthly-good-landing-page .email-preview-section-wrapper {
   padding: 2rem 0; }
-  .monthly-good-landing-page .email-preview-section-wrapper .email-preview-image {
-    margin: 0 auto; }
-    @media only screen and (min-width: 681px) {
-      .monthly-good-landing-page .email-preview-section-wrapper .email-preview-image {
-        float: left; } }
   .monthly-good-landing-page .email-preview-section-wrapper .email-preview-text .impact {
     color: #63a541; }
   @media only screen and (min-width: 681px) {
     .monthly-good-landing-page .email-preview-section-wrapper .email-preview-text {
-      float: right;
       margin-top: 7%; } }
   .monthly-good-landing-page .email-preview-section-wrapper .email-preview-text .section-title {
     color: #63a541; }
@@ -16197,21 +16191,20 @@ table.repayments-list {
     @media only screen and (min-width: 681px) {
       .monthly-good-landing-page .kiva-as-expert-section-wrapper .kiva-as-expert-heading {
         text-align: left; } }
-  @media only screen and (min-width: 681px) {
-    .monthly-good-landing-page .kiva-as-expert-section-wrapper .text-content {
-      float: left; } }
   .monthly-good-landing-page .kiva-as-expert-section-wrapper .community-image {
-    margin: 0 auto;
     padding: 1.1111111111rem; }
-  .monthly-good-landing-page .kiva-as-expert-section-wrapper .image-float {
-    float: right; }
-  .monthly-good-landing-page .kiva-as-expert-section-wrapper .deposit-amount-input-2 .mg-deposit-input {
-    display: inline-block;
-    width: 5rem;
-    height: 2.4444444444rem;
-    margin-right: 1.1111111111rem;
-    font-weight: bold;
-    font-size: 1rem; }
+  @media (min-width: 875px) {
+    .monthly-good-landing-page .kiva-as-expert-section-wrapper .contribute-form {
+      top: -85px; } }
+  .monthly-good-landing-page .kiva-as-expert-section-wrapper .deposit-amount-input-2 {
+    clear: both; }
+    .monthly-good-landing-page .kiva-as-expert-section-wrapper .deposit-amount-input-2 .mg-deposit-input {
+      display: inline-block;
+      width: 5rem;
+      height: 2.4444444444rem;
+      margin-right: 1.1111111111rem;
+      font-weight: bold;
+      font-size: 1rem; }
   .monthly-good-landing-page .kiva-as-expert-section-wrapper [data-abide] .error small.error {
     background-color: #FAFAFA; }
     @media only screen and (min-width: 481px) {
@@ -16225,7 +16218,7 @@ table.repayments-list {
     top: 0.1111111111rem; }
     @media only screen and (min-width: 481px) {
       .monthly-good-landing-page .kiva-as-expert-section-wrapper a.join-monthly-good {
-        width: inherit; } }
+        width: auto; } }
 
 .monthly-good-landing-page .more-about-kiva-section-wrapper {
   padding: 2rem 0; }
@@ -16235,23 +16228,14 @@ table.repayments-list {
     @media only screen and (min-width: 681px) {
       .monthly-good-landing-page .more-about-kiva-section-wrapper .more-about-kiva-headline {
         text-align: left; } }
-  @media only screen and (min-width: 681px) {
-    .monthly-good-landing-page .more-about-kiva-section-wrapper .more-about-kiva-text {
-      float: left; } }
-  @media only screen and (min-width: 681px) {
-    .monthly-good-landing-page .more-about-kiva-section-wrapper .img-container {
-      float: right; } }
-  .monthly-good-landing-page .more-about-kiva-section-wrapper .img-container .charity-nav-wrapper {
-    float: left; }
-    @media only screen and (min-width: 681px) {
-      .monthly-good-landing-page .more-about-kiva-section-wrapper .img-container .charity-nav-wrapper {
-        float: none; } }
-    .monthly-good-landing-page .more-about-kiva-section-wrapper .img-container .charity-nav-wrapper p:first-child {
-      margin-bottom: 0; }
-    .monthly-good-landing-page .more-about-kiva-section-wrapper .img-container .charity-nav-wrapper img {
-      width: 5.5555555556rem; }
+  .monthly-good-landing-page .more-about-kiva-section-wrapper .more-about-kiva-text {
+    padding: 0; }
+  .monthly-good-landing-page .more-about-kiva-section-wrapper .img-container .charity-nav-wrapper p:first-child {
+    margin-bottom: 0; }
+  .monthly-good-landing-page .more-about-kiva-section-wrapper .img-container .charity-nav-wrapper img {
+    width: 5.5555555556rem; }
   .monthly-good-landing-page .more-about-kiva-section-wrapper .img-container .kiva-promise-wrapper {
-    float: right;
+    max-width: 11.1111111111rem;
     margin-top: 12%; }
     @media only screen and (min-width: 400px) and (max-width: 480px) {
       .monthly-good-landing-page .more-about-kiva-section-wrapper .img-container .kiva-promise-wrapper {
@@ -16264,7 +16248,6 @@ table.repayments-list {
         margin-top: -1%; } }
     @media only screen and (min-width: 681px) {
       .monthly-good-landing-page .more-about-kiva-section-wrapper .img-container .kiva-promise-wrapper {
-        float: none;
         margin-top: 0; } }
 
 .monthly-good-landing-page .faq-container {
