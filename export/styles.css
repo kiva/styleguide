@@ -11587,19 +11587,19 @@ svg {
 
 @media only screen and (max-width: 480px) {
   .home-page-categories-wrapper .photo-headline {
-    background: -webkit-linear-gradient(transparent, transparent), url(https://www.kiva.org/cms/page/images/start-sm-std.jpg);
+    background: -webkit-linear-gradient(transparent, transparent), url(https://www-kiva-org.global.ssl.fastly.net/cms/page/images/start-sm-std.jpg);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent; } }
 
 @media only screen and (min-width: 481px) and (max-width: 680px) {
   .home-page-categories-wrapper .photo-headline {
-    background: -webkit-linear-gradient(transparent, transparent), url(https://www.kiva.org/cms/page/images/start-med-std.jpg);
+    background: -webkit-linear-gradient(transparent, transparent), url(https://www-kiva-org.global.ssl.fastly.net/cms/page/images/start-med-std.jpg);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent; } }
 
 @media only screen and (min-width: 681px) {
   .home-page-categories-wrapper .photo-headline {
-    background: -webkit-linear-gradient(transparent, transparent), url(https://www.kiva.org/cms/page/images/start-lg-std.jpg);
+    background: -webkit-linear-gradient(transparent, transparent), url(https://www-kiva-org.global.ssl.fastly.net/cms/page/images/start-lg-std.jpg);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent; } }
 
@@ -16174,16 +16174,10 @@ table.repayments-list {
 
 .monthly-good-landing-page .email-preview-section-wrapper {
   padding: 2rem 0; }
-  .monthly-good-landing-page .email-preview-section-wrapper .email-preview-image {
-    margin: 0 auto; }
-    @media only screen and (min-width: 681px) {
-      .monthly-good-landing-page .email-preview-section-wrapper .email-preview-image {
-        float: left; } }
   .monthly-good-landing-page .email-preview-section-wrapper .email-preview-text .impact {
     color: #63a541; }
   @media only screen and (min-width: 681px) {
     .monthly-good-landing-page .email-preview-section-wrapper .email-preview-text {
-      float: right;
       margin-top: 7%; } }
   .monthly-good-landing-page .email-preview-section-wrapper .email-preview-text .section-title {
     color: #63a541; }
@@ -16197,21 +16191,20 @@ table.repayments-list {
     @media only screen and (min-width: 681px) {
       .monthly-good-landing-page .kiva-as-expert-section-wrapper .kiva-as-expert-heading {
         text-align: left; } }
-  @media only screen and (min-width: 681px) {
-    .monthly-good-landing-page .kiva-as-expert-section-wrapper .text-content {
-      float: left; } }
   .monthly-good-landing-page .kiva-as-expert-section-wrapper .community-image {
-    margin: 0 auto;
     padding: 1.1111111111rem; }
-  .monthly-good-landing-page .kiva-as-expert-section-wrapper .image-float {
-    float: right; }
-  .monthly-good-landing-page .kiva-as-expert-section-wrapper .deposit-amount-input-2 .mg-deposit-input {
-    display: inline-block;
-    width: 5rem;
-    height: 2.4444444444rem;
-    margin-right: 1.1111111111rem;
-    font-weight: bold;
-    font-size: 1rem; }
+  @media (min-width: 875px) {
+    .monthly-good-landing-page .kiva-as-expert-section-wrapper .contribute-form {
+      top: -85px; } }
+  .monthly-good-landing-page .kiva-as-expert-section-wrapper .deposit-amount-input-2 {
+    clear: both; }
+    .monthly-good-landing-page .kiva-as-expert-section-wrapper .deposit-amount-input-2 .mg-deposit-input {
+      display: inline-block;
+      width: 5rem;
+      height: 2.4444444444rem;
+      margin-right: 1.1111111111rem;
+      font-weight: bold;
+      font-size: 1rem; }
   .monthly-good-landing-page .kiva-as-expert-section-wrapper [data-abide] .error small.error {
     background-color: #FAFAFA; }
     @media only screen and (min-width: 481px) {
@@ -16225,7 +16218,7 @@ table.repayments-list {
     top: 0.1111111111rem; }
     @media only screen and (min-width: 481px) {
       .monthly-good-landing-page .kiva-as-expert-section-wrapper a.join-monthly-good {
-        width: inherit; } }
+        width: auto; } }
 
 .monthly-good-landing-page .more-about-kiva-section-wrapper {
   padding: 2rem 0; }
@@ -16235,23 +16228,14 @@ table.repayments-list {
     @media only screen and (min-width: 681px) {
       .monthly-good-landing-page .more-about-kiva-section-wrapper .more-about-kiva-headline {
         text-align: left; } }
-  @media only screen and (min-width: 681px) {
-    .monthly-good-landing-page .more-about-kiva-section-wrapper .more-about-kiva-text {
-      float: left; } }
-  @media only screen and (min-width: 681px) {
-    .monthly-good-landing-page .more-about-kiva-section-wrapper .img-container {
-      float: right; } }
-  .monthly-good-landing-page .more-about-kiva-section-wrapper .img-container .charity-nav-wrapper {
-    float: left; }
-    @media only screen and (min-width: 681px) {
-      .monthly-good-landing-page .more-about-kiva-section-wrapper .img-container .charity-nav-wrapper {
-        float: none; } }
-    .monthly-good-landing-page .more-about-kiva-section-wrapper .img-container .charity-nav-wrapper p:first-child {
-      margin-bottom: 0; }
-    .monthly-good-landing-page .more-about-kiva-section-wrapper .img-container .charity-nav-wrapper img {
-      width: 5.5555555556rem; }
+  .monthly-good-landing-page .more-about-kiva-section-wrapper .more-about-kiva-text {
+    padding: 0; }
+  .monthly-good-landing-page .more-about-kiva-section-wrapper .img-container .charity-nav-wrapper p:first-child {
+    margin-bottom: 0; }
+  .monthly-good-landing-page .more-about-kiva-section-wrapper .img-container .charity-nav-wrapper img {
+    width: 5.5555555556rem; }
   .monthly-good-landing-page .more-about-kiva-section-wrapper .img-container .kiva-promise-wrapper {
-    float: right;
+    max-width: 11.1111111111rem;
     margin-top: 12%; }
     @media only screen and (min-width: 400px) and (max-width: 480px) {
       .monthly-good-landing-page .more-about-kiva-section-wrapper .img-container .kiva-promise-wrapper {
@@ -16264,7 +16248,6 @@ table.repayments-list {
         margin-top: -1%; } }
     @media only screen and (min-width: 681px) {
       .monthly-good-landing-page .more-about-kiva-section-wrapper .img-container .kiva-promise-wrapper {
-        float: none;
         margin-top: 0; } }
 
 .monthly-good-landing-page .faq-container {
@@ -16915,6 +16898,288 @@ div.gift-card .text-section, div.kiva-store .text-section {
     width: 1rem;
     vertical-align: text-top;
     margin-right: .2222222222rem; }
+
+#build #tipMsg {
+  display: none; }
+
+#build.appsShowView .application-container {
+  border: 2px solid #d8d8d8;
+  padding: 20px;
+  margin-top: 30px;
+  margin-bottom: 30px; }
+
+#build.appsShowView section {
+  margin-top: 15px;
+  margin-bottom: 15px; }
+
+#build.appsShowView h3 {
+  border-bottom: 2px solid #d8d8d8; }
+
+#build.appsShowView .sub-section {
+  margin-top: 30px; }
+  #build.appsShowView .sub-section .detail {
+    margin-left: 20px;
+    margin-bottom: 30px; }
+    #build.appsShowView .sub-section .detail h4 {
+      margin-bottom: 3px; }
+
+#build.appsShowView .actions {
+  float: right; }
+  #build.appsShowView .actions .button {
+    display: block;
+    margin-bottom: 10px; }
+  #build.appsShowView .actions .publish-note {
+    font-size: 0.7777777778rem;
+    line-height: 1.1111111111rem; }
+
+#build.appsShowView .hd h2 {
+  display: inline; }
+
+@media only screen and (min-width: 481px) {
+  #build.appsShowView .hd .status {
+    float: right; } }
+
+#build.appsShowView .essentials {
+  overflow: hidden; }
+  #build.appsShowView .essentials img {
+    float: left;
+    margin: 0 10px 5px 0;
+    height: 73px;
+    width: 73px; }
+
+#build.appsShowView .quickstats {
+  text-align: center; }
+  #build.appsShowView .quickstats .stat {
+    display: inline-block;
+    margin: 5%; }
+
+#build.appsShowView .oauth-details #appview-consumerSecret {
+  display: none; }
+
+#build.appsShowView .destructive-actions a {
+  color: white; }
+  #build.appsShowView .destructive-actions a:hover {
+    text-decoration: none; }
+
+#build.appsShowView .button.main-option {
+  color: white;
+  background-color: #9C021A; }
+
+#build.appsEditView a.cancel {
+  position: absolute;
+  margin-left: 10px; }
+
+#build.dashboard .app-preview {
+  position: relative;
+  min-height: 100px;
+  background-color: #FAFAFA;
+  margin-bottom: 20px;
+  padding: 10px;
+  border: 1px solid #efefef; }
+  #build.dashboard .app-preview:hover {
+    background-color: #efefef;
+    cursor: pointer; }
+  #build.dashboard .app-preview img {
+    margin-right: 10px;
+    vertical-align: top; }
+  #build.dashboard .app-preview .details {
+    display: inline-block;
+    max-width: 75%;
+    margin-bottom: 25px; }
+  #build.dashboard .app-preview .status {
+    position: absolute;
+    right: 5px;
+    bottom: 5px; }
+
+#build .status-marker {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  border-radius: 8px;
+  vertical-align: middle; }
+  #build .status-marker.Registered {
+    background-color: #FEF37B; }
+  #build .status-marker.Published {
+    background-color: #63a541; }
+  #build .status-marker.Disabled {
+    background-color: #9C021A; }
+
+.careers-page .quick-links {
+  margin: 0 auto;
+  max-width: 60rem;
+  width: 100%;
+  text-align: center; }
+  @media only screen and (min-width: 481px) and (max-width: 680px) {
+    .careers-page .quick-links {
+      font-size: 0.8333333333rem; } }
+  @media only screen and (max-width: 480px) {
+    .careers-page .quick-links {
+      font-size: 0.5277777778rem; } }
+
+.careers-page .extra-lineheight {
+  line-height: 1.5rem; }
+
+.careers-page .padding-bottom {
+  padding-bottom: 1.5rem; }
+
+.careers-page .padding-top {
+  padding-top: 1.5rem; }
+
+.careers-page .padding {
+  padding: 1.5rem 0rem 1.5rem 0rem; }
+
+.careers-page .photo {
+  min-width: 100%;
+  max-width: 100%;
+  height: auto; }
+
+.careers-page .col5-unit {
+  padding-left: 0.8333333333rem;
+  padding-right: 0.8333333333rem;
+  width: 20%;
+  float: left;
+  padding-left: 0.2777777778rem;
+  padding-right: 0.2777777778rem; }
+
+.careers-page .page-title {
+  color: #000000; }
+
+.careers-page ul li {
+  font-weight: 300; }
+
+.careers-page .faq-container .faq-title {
+  border-top: 0; }
+
+.careers-page .faq-container p {
+  line-height: 1.45; }
+
+.careers-page .our-values h1 {
+  color: #FFFFFF;
+  margin: 0; }
+  @media only screen and (max-width: 480px) {
+    .careers-page .our-values h1 {
+      font-size: 0.8333333333rem;
+      line-height: 0.2777777778rem; } }
+
+.careers-page .our-values .body-text {
+  color: #63a541; }
+  @media only screen and (min-width: 681px) and (max-width: 880px) {
+    .careers-page .our-values .body-text {
+      font-size: 0.8333333333rem; } }
+  @media only screen and (max-width: 680px) {
+    .careers-page .our-values .body-text {
+      font-size: 0.6388888889rem; } }
+  @media only screen and (max-width: 520px) {
+    .careers-page .our-values .body-text {
+      font-size: 0.3333333333rem;
+      line-height: 0.8333333333rem; } }
+
+.careers-page .our-values .value_container {
+  background-color: #236133;
+  width: 100%;
+  padding-top: 100%;
+  position: relative; }
+
+.careers-page .our-values .value_text {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  text-align: center;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+      align-items: center;
+  -ms-flex-pack: center;
+      justify-content: center; }
+
+.careers-page .what-people-saying .quote_outer_container {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+      align-items: center;
+  -ms-flex-pack: center;
+      justify-content: center; }
+
+.careers-page .what-people-saying .quote_inner_container {
+  position: absolute;
+  background-color: #FFFFFF;
+  top: 0.2777777778rem;
+  padding-left: 0.8333333333rem;
+  padding-right: 0.8333333333rem; }
+
+.careers-page .what-people-saying .quote_inner_container {
+  fill: #63a541; }
+
+.careers-page .what-people-saying .quotes {
+  text-align: center; }
+  .careers-page .what-people-saying .quotes .frame {
+    border: 1px solid #d8d8d8;
+    padding: 0.5555555556rem; }
+  @media only screen and (max-width: 480px) {
+    .careers-page .what-people-saying .quotes .columns {
+      margin-bottom: 1.1111111111rem; } }
+  .careers-page .what-people-saying .quotes .featured {
+    font-style: italic; }
+
+.careers-page .stats {
+  overflow: auto;
+  background-color: #236133; }
+  .careers-page .stats .top-stats {
+    background: url("//www-kiva-org.global.ssl.fastly.net/cms/page/images/map-bg.min_.svg") no-repeat;
+    background-size: contain;
+    background-position: center center; }
+    @media only screen and (max-width: 480px) {
+      .careers-page .stats .top-stats {
+        background-size: cover; } }
+    .careers-page .stats .top-stats .row {
+      display: inline-block; }
+      @media only screen {
+        .careers-page .stats .top-stats .row .stat {
+          line-height: 1.3888888889rem;
+          font-size: 3rem; } }
+      @media only screen and (min-width: 681px) {
+        .careers-page .stats .top-stats .row .stat {
+          line-height: 1.3888888889rem;
+          font-size: 2.5rem; } }
+    .careers-page .stats .top-stats .row1 {
+      padding: 1.6666666667rem 0 0 0; }
+    .careers-page .stats .top-stats .row2 {
+      padding: 0 0 1.6666666667rem 0; }
+  .careers-page .stats .featured {
+    color: #63a541; }
+
+.careers-page #jobs-listing {
+  margin-bottom: 1.6666666667rem; }
+  .careers-page #jobs-listing h2 {
+    font-weight: 700;
+    font-size: 2rem;
+    color: #63a541; }
+  .careers-page #jobs-listing .job-department {
+    font-size: 1.2777777778rem;
+    font-weight: 300;
+    line-height: 1.5555555556rem;
+    margin-top: 1.6666666667rem; }
+  .careers-page #jobs-listing .job-information {
+    padding: 10px 0 10px 20px;
+    background-color: #d8d8d8; }
+  .careers-page #jobs-listing .job-title {
+    font-size: 1rem;
+    line-height: 1.3333333333rem;
+    margin-bottom: 0.5555555556rem; }
+    .careers-page #jobs-listing .job-title a {
+      font-weight: 300;
+      color: #000000; }
+  .careers-page #jobs-listing .job-location {
+    margin-bottom: 0.2777777778rem;
+    font-weight: 300; }
+
+.careers-page .kiva-love .profile {
+  margin-bottom: 2rem; }
+
+.careers-page .kiva-love .avatar {
+  border-radius: 50%; }
 
 .ac-container.ac-title {
   margin: 0;

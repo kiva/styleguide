@@ -138,21 +138,12 @@
 	.email-preview-section-wrapper {
 		padding: 2rem 0;
 
-		.email-preview-image {
-			margin: 0 auto;
-
-			@media #{$large-up} {
-				float: left;
-			}
-		}
-
 		.email-preview-text {
 			.impact {
 				color: $kiva-green;
 			}
 
 			@media #{$large-up} {
-				float: right;
 				margin-top: 7%;
 			}
 
@@ -175,22 +166,19 @@
 			}
 		}
 
-		.text-content {
-			@media #{$large-up} {
-				float: left;
-			}
-		}
-
 		.community-image {
-			margin: 0 auto;
 			padding: rem-calc(20);
 		}
 
-		.image-float {
-			float: right;
+		.contribute-form {
+			@media (min-width: 875px) {
+				top: -85px;
+			}
 		}
 
 		.deposit-amount-input-2 {
+			clear: both;
+
 			.mg-deposit-input {
 				display: inline-block;
 				width: 5rem;
@@ -215,8 +203,9 @@
 			top: rem-calc(2);
 
 			@media #{$medium-up} {
-				width: inherit;
+				width: auto;
 			}
+
 		}
 	}
 
@@ -233,23 +222,11 @@
 		}
 
 		.more-about-kiva-text {
-			@media #{$large-up} {
-				float: left;
-			}
+			padding: 0;
 		}
 
 		.img-container {
-			@media #{$large-up} {
-				float: right;
-			}
-
 			.charity-nav-wrapper {
-				float: left;
-
-				@media #{$large-up} {
-					float: none;
-				}
-
 				p:first-child {
 					margin-bottom: 0;
 				}
@@ -260,7 +237,7 @@
 			}
 
 			.kiva-promise-wrapper {
-				float: right;
+				max-width: rem-calc(200);
 				margin-top: 12%;
 
 				//custom breakpoint up to medium
@@ -278,7 +255,6 @@
 				}
 
 				@media #{$large-up} {
-					float: none;
 					margin-top: 0;
 				}
 			}
