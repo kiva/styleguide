@@ -16109,25 +16109,14 @@ table.repayments-list {
     .monthly-good-landing-page .mg-header-section-wrapper .mg-header-content .mg-subhead {
       text-align: left;
       margin: 0;
-      padding-top: 0.2777777778rem;
-      font-size: 1.1111111111rem;
-      line-height: 1.1111111111rem; }
-      @media (min-width: 361px) and (max-width: 480px) {
-        .monthly-good-landing-page .mg-header-section-wrapper .mg-header-content .mg-subhead {
-          font-size: 1.4444444444rem;
-          line-height: 1.4444444444rem;
-          padding-top: 0.8333333333rem; } }
-      @media (min-width: 580px) and (max-width: 760px) {
-        .monthly-good-landing-page .mg-header-section-wrapper .mg-header-content .mg-subhead {
-          font-size: 1.4444444444rem;
-          line-height: 1.4444444444rem;
-          padding-top: 0.8333333333rem; } }
+      padding-top: 0.8333333333rem;
+      font-size: 1rem;
+      line-height: 1.1111111111rem;
+      max-width: 70%; }
       @media only screen and (min-width: 681px) {
         .monthly-good-landing-page .mg-header-section-wrapper .mg-header-content .mg-subhead {
           font-size: 1.3333333333rem;
-          line-height: 1.3333333333rem;
-          max-width: 28.3333333333rem;
-          padding-top: 0.8333333333rem; } }
+          line-height: 1.3333333333rem; } }
     .monthly-good-landing-page .mg-header-section-wrapper .mg-header-content .mg-deposit-input-wrapper {
       padding-top: 0.5555555556rem; }
       @media (min-width: 361px) and (max-width: 480px) {
@@ -16162,15 +16151,16 @@ table.repayments-list {
   background-color: #63a541;
   padding: 2rem 0; }
   .monthly-good-landing-page .how-works-section-wrapper .impact {
-    margin-bottom: 0; }
+    margin-bottom: 0.55555rem; }
   .monthly-good-landing-page .how-works-section-wrapper .column-wrap .icon {
     fill: #FFFFFF;
     color: #63a541;
-    width: 4.1666666667rem; }
+    width: 2.7777777778rem;
+    height: 5.5555555556rem; }
   .monthly-good-landing-page .how-works-section-wrapper .column-wrap .how-works-column-title {
     font-weight: bold; }
-  .monthly-good-landing-page .how-works-section-wrapper .margin-top {
-    margin-top: 1.3888888889rem; }
+  .monthly-good-landing-page .how-works-section-wrapper .space-top {
+    margin-top: 2rem; }
 
 .monthly-good-landing-page .email-preview-section-wrapper {
   padding: 2rem 0; }
@@ -16191,20 +16181,27 @@ table.repayments-list {
     @media only screen and (min-width: 681px) {
       .monthly-good-landing-page .kiva-as-expert-section-wrapper .kiva-as-expert-heading {
         text-align: left; } }
+  .monthly-good-landing-page .kiva-as-expert-section-wrapper .text-content {
+    padding-left: 0; }
   .monthly-good-landing-page .kiva-as-expert-section-wrapper .community-image {
     padding: 1.1111111111rem; }
-  @media (min-width: 875px) {
-    .monthly-good-landing-page .kiva-as-expert-section-wrapper .contribute-form {
-      top: -85px; } }
+  .monthly-good-landing-page .kiva-as-expert-section-wrapper .contribute-form {
+    padding: 0; }
+    @media (min-width: 875px) {
+      .monthly-good-landing-page .kiva-as-expert-section-wrapper .contribute-form {
+        top: -85px; } }
   .monthly-good-landing-page .kiva-as-expert-section-wrapper .deposit-amount-input-2 {
     clear: both; }
     .monthly-good-landing-page .kiva-as-expert-section-wrapper .deposit-amount-input-2 .mg-deposit-input {
       display: inline-block;
-      width: 5rem;
+      width: 100%;
       height: 2.4444444444rem;
       margin-right: 1.1111111111rem;
       font-weight: bold;
       font-size: 1rem; }
+      @media only screen and (min-width: 481px) {
+        .monthly-good-landing-page .kiva-as-expert-section-wrapper .deposit-amount-input-2 .mg-deposit-input {
+          width: 5rem; } }
   .monthly-good-landing-page .kiva-as-expert-section-wrapper [data-abide] .error small.error {
     background-color: #FAFAFA; }
     @media only screen and (min-width: 481px) {
