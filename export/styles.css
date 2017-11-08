@@ -16109,14 +16109,23 @@ table.repayments-list {
     .monthly-good-landing-page .mg-header-section-wrapper .mg-header-content .mg-subhead {
       text-align: left;
       margin: 0;
-      padding-top: 0.8333333333rem;
-      font-size: 1rem;
+      padding-top: 0.7777777778rem;
+      font-size: 18px;
       line-height: 1.1111111111rem;
-      max-width: 70%; }
+      max-width: 71%; }
+      @media only screen and (min-width: 481px) and (max-width: 550px) {
+        .monthly-good-landing-page .mg-header-section-wrapper .mg-header-content .mg-subhead {
+          padding-top: unset; } }
+      @media only screen and (min-width: 681px) and (max-width: 700px) {
+        .monthly-good-landing-page .mg-header-section-wrapper .mg-header-content .mg-subhead {
+          padding-top: 0.2777777778rem; } }
       @media only screen and (min-width: 681px) {
         .monthly-good-landing-page .mg-header-section-wrapper .mg-header-content .mg-subhead {
           font-size: 1.3333333333rem;
           line-height: 1.3333333333rem; } }
+      @media only screen and (min-width: 989px) {
+        .monthly-good-landing-page .mg-header-section-wrapper .mg-header-content .mg-subhead {
+          max-width: 27.7777777778rem; } }
     .monthly-good-landing-page .mg-header-section-wrapper .mg-header-content .mg-deposit-input-wrapper {
       padding-top: 0.5555555556rem; }
       @media (min-width: 361px) and (max-width: 480px) {
@@ -16151,7 +16160,7 @@ table.repayments-list {
   background-color: #63a541;
   padding: 2rem 0; }
   .monthly-good-landing-page .how-works-section-wrapper .impact {
-    margin-bottom: 0.55555rem; }
+    margin-bottom: 0.5555555556rem; }
   .monthly-good-landing-page .how-works-section-wrapper .column-wrap .icon {
     fill: #FFFFFF;
     color: #63a541;
@@ -16228,7 +16237,9 @@ table.repayments-list {
   .monthly-good-landing-page .more-about-kiva-section-wrapper .more-about-kiva-text {
     padding: 0; }
   .monthly-good-landing-page .more-about-kiva-section-wrapper .img-container .charity-nav-wrapper p:first-child {
-    margin-bottom: 0; }
+    margin-bottom: 0.5rem; }
+  .monthly-good-landing-page .more-about-kiva-section-wrapper .img-container .charity-nav-wrapper p:nth-child(3) {
+    margin-top: 0.5rem; }
   .monthly-good-landing-page .more-about-kiva-section-wrapper .img-container .charity-nav-wrapper img {
     width: 5.5555555556rem; }
   .monthly-good-landing-page .more-about-kiva-section-wrapper .img-container .kiva-promise-wrapper {
