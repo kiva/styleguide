@@ -1,0 +1,132 @@
+@import "../../settings";
+
+.email-settings {
+	pointer-events: auto;
+
+	.loading-spinner {
+		width: 3rem;
+		height: 3rem;
+		margin-left: 50%;
+		transform: translate(-50%);
+		display: none;
+	}
+
+	&.loading {
+		.loading-spinner {
+			display: inline-block;
+		}
+
+		form {
+			display: none;
+		}
+	}
+
+	&.global-unsubscribe {
+		.region-block {
+			opacity: .5;
+			pointer-events: none;
+		}
+	}
+
+	.input-wrapper {
+		position: relative;
+
+		label {
+			margin-bottom: 0.6rem;
+		}
+
+		input[type="checkbox"] {
+			position: absolute;
+			top: 0.25rem;
+
+			& + label {
+				margin-left: 1.25rem;
+			}
+		}
+
+		select {
+			height: 1.75rem;
+			padding: 0 rem-calc(8);
+		}
+
+		&.nested {
+			margin-top: -0.5rem;
+			margin-bottom: 0.5rem;
+		}
+	}
+	
+	.global-region {
+		margin: 1rem 0;
+		
+		label {
+			display: inline-block;
+			font-size: 1.2rem;
+			margin-right: 1rem;
+		}
+
+		select {
+			display: inline-block;
+			max-width: 13.5rem;
+			margin-top: .5rem;
+		}
+	}
+
+	.region-block {
+		margin-bottom: 1rem;
+
+		h3 {
+			display: inline-block;
+		}
+
+		.select-all,
+		.deselect-all {
+			display: inline-block;
+			margin-left: 1rem;
+			margin-bottom: 1rem;
+		}
+
+		.region-inner {
+			margin-left: 1rem;
+		}
+
+		select {
+			display: block;
+			margin-bottom: 1rem;
+			max-width: 10rem;
+		}
+	}
+
+	.submit-region {
+		margin: 1rem 0;
+		
+		.region-inner {
+			margin-left: 1rem;
+		}
+
+		.button {
+			width: auto;
+			margin: 0;
+			padding: 0 1.25rem;
+		}
+
+		.loading-spinner {
+			display: inline-block;
+			height: 1.5rem;
+			width: 1.5rem;
+			margin: 0 0.25rem 0 0;
+			transform: none;
+			vertical-align: middle;
+
+			.line {
+				background-color: $white;
+			}
+		}
+	
+		a {
+			display: inline-block;
+			margin-left: 1rem;
+			line-height: 3rem;
+		}
+	}
+
+}
