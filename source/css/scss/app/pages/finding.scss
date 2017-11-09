@@ -193,12 +193,12 @@ $filter-menu-base-width: rem-calc(251);
 		font-size: 0.6666666667rem;
 		width: rem-calc(142);
 		padding: 0 0.5rem;
+		margin-top: 0.15rem;
 
 		@media #{$medium-up} {
 			font-size: 0.8888888889rem;
 			height: $setting-button-height;
 			width: rem-calc(180);
-			margin-top: 0.1rem;
 		}
 	}
 
