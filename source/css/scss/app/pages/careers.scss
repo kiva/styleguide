@@ -1,5 +1,15 @@
 .careers-page {
 
+	.hrDivider {
+		margin-top: rem-calc(60);
+		margin-bottom: rem-calc(60);
+
+		@media #{$small-only} {
+			border: 0;
+			margin-bottom: 0;
+		}
+	}
+
 	.quick-links {
 		margin: 0 auto;
 		max-width: 60rem;
@@ -20,11 +30,11 @@
 	}
 
 	.padding-bottom {
-		padding-bottom: 1.5rem;
+		padding-bottom: rem-calc(60);
 	}
 
 	.padding-top {
-		padding-top: 1.5rem;
+		padding-top: rem-calc(60);
 	}
 
 	.padding {
@@ -232,7 +242,7 @@
 
 	.kiva-love {
 		.profile {
-			margin-bottom: rem-calc(36);
+			padding-bottom: rem-calc(60);
 		}
 
 		.avatar {
