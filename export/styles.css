@@ -6632,6 +6632,8 @@ div.reveal-modal-bg {
       height: 2.2222222222rem;
       width: 2.2222222222rem;
       stroke: #63a541; }
+  .reveal-modal a.close-reveal-modal:hover .icon.icon-x {
+    stroke: #a9d14c; }
   .reveal-modal div.lightbox-content {
     padding-top: 2.5rem; }
     .reveal-modal div.lightbox-content .white-background-box {
