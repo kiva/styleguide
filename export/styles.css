@@ -17199,6 +17199,85 @@ div.gift-card .text-section, div.kiva-store .text-section {
 .careers-page .kiva-love .avatar {
   border-radius: 50%; }
 
+.email-settings {
+  pointer-events: auto; }
+  .email-settings .loading-spinner {
+    width: 3rem;
+    height: 3rem;
+    margin-left: 50%;
+    -ms-transform: translate(-50%);
+        transform: translate(-50%);
+    display: none; }
+  .email-settings.loading .loading-spinner {
+    display: inline-block; }
+  .email-settings.loading form {
+    display: none; }
+  .email-settings.global-unsubscribe .region-block {
+    opacity: .5;
+    pointer-events: none; }
+  .email-settings .input-wrapper {
+    position: relative; }
+    .email-settings .input-wrapper label {
+      margin-bottom: 0.6rem; }
+    .email-settings .input-wrapper input[type="checkbox"] {
+      position: absolute;
+      top: 0.25rem; }
+      .email-settings .input-wrapper input[type="checkbox"] + label {
+        margin-left: 1.25rem; }
+    .email-settings .input-wrapper select {
+      height: 1.75rem;
+      padding: 0 0.4444444444rem; }
+    .email-settings .input-wrapper.nested {
+      margin-top: -0.5rem;
+      margin-bottom: 0.5rem; }
+  .email-settings .global-region {
+    margin: 1rem 0; }
+    .email-settings .global-region label {
+      display: inline-block;
+      font-size: 1.2rem;
+      margin-right: 1rem; }
+    .email-settings .global-region select {
+      display: inline-block;
+      max-width: 13.5rem;
+      margin-top: .5rem; }
+  .email-settings .region-block {
+    margin-bottom: 1rem; }
+    .email-settings .region-block h3 {
+      display: inline-block; }
+    .email-settings .region-block .select-all,
+    .email-settings .region-block .deselect-all {
+      display: inline-block;
+      margin-left: 1rem;
+      margin-bottom: 1rem; }
+    .email-settings .region-block .region-inner {
+      margin-left: 1rem; }
+    .email-settings .region-block select {
+      display: block;
+      margin-bottom: 1rem;
+      max-width: 10rem; }
+  .email-settings .submit-region {
+    margin: 1rem 0; }
+    .email-settings .submit-region .region-inner {
+      margin-left: 1rem; }
+    .email-settings .submit-region .button {
+      width: auto;
+      margin: 0;
+      padding: 0 1.25rem; }
+    .email-settings .submit-region .loading-spinner {
+      display: inline-block;
+      height: 1.5rem;
+      width: 1.5rem;
+      margin: 0 0.25rem 0 0;
+      -ms-transform: none;
+          transform: none;
+      vertical-align: middle; }
+      .email-settings .submit-region .loading-spinner .line {
+        background-color: #FFFFFF; }
+    .email-settings .submit-region a {
+      display: inline-block;
+      margin-left: 1rem;
+      line-height: 3rem; }
+
 .ac-container.ac-title {
   margin: 0;
   display: block;

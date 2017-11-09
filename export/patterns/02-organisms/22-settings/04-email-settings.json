@@ -1,0 +1,19 @@
+{
+	"showPush": true,
+	"repaymentOptions": [
+		{ "title": "Do not send" },
+		{ "title": "Send a nightly digest" },
+		{ "title": "Send a monthly digest" }
+	],
+	"autolendOptions": [
+		{ "title": "Do not send" },
+		{ "title": "Send a nightly digest" },
+		{ "title": "Send a monthly digest" }
+	],
+	"teamDigestOptions": [
+		{ "title": "Do not send" },
+		{ "title": "Send as they arrive" },
+		{ "title": "Send a nightly digest" },
+		{ "title": "Send a weekly digest" }
+	]
+}

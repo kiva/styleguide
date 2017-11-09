@@ -1,0 +1,30 @@
+{{#is-standalone}}
+<div class="email-settings row">
+	<form class="small-12 columns">
+		<div class="submit-region row">
+			<div class="form-submit small-12 columns">
+{{/is-standalone}}
+
+<div class="region-inner">
+	<button type="submit" class="button" value="Save email settings" {{^dirty}}disabled="disabled"{{/dirty}}>
+		{{^saving}}
+			Save email settings
+		{{/saving}}
+		{{#saving}}
+			{{> molecules-loading-spinner }}
+			Saving
+		{{/saving}}
+	</button>
+	{{#dirty}}
+		{{^saving}}
+			<a href="#">Reset</a>
+		{{/saving}}
+	{{/dirty}}
+</div>
+
+{{#is-standalone}}
+			</div>
+		</div>
+	</form>
+</div>
+{{/is-standalone}}
