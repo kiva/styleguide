@@ -70,6 +70,12 @@ div.reveal-modal-bg {
 		}
 	}
 
+	a.close-reveal-modal:hover {
+		.icon.icon-x {
+			stroke: $kiva-accent-green;
+		}
+	}
+
 	div.lightbox-content {
 		padding-top: rem-calc(45);
 
