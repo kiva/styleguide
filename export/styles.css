@@ -12724,13 +12724,13 @@ div.category-cards-header {
   font-weight: bold;
   font-size: 0.6666666667rem;
   width: 7.8888888889rem;
-  padding: 0 0.5rem; }
+  padding: 0 0.5rem;
+  margin-top: 0.15rem; }
   @media only screen and (min-width: 481px) {
     .control-region .filter-dropdown {
       font-size: 0.8888888889rem;
       height: 1.7777777778rem;
-      width: 10rem;
-      margin-top: 0.1rem; } }
+      width: 10rem; } }
 
 .control-region .filter-loan-count {
   float: left;
@@ -17014,6 +17014,14 @@ div.gift-card .text-section, div.kiva-store .text-section {
   #build .status-marker.Disabled {
     background-color: #9C021A; }
 
+.careers-page .hrDivider {
+  margin-top: 3.3333333333rem;
+  margin-bottom: 3.3333333333rem; }
+  @media only screen and (max-width: 480px) {
+    .careers-page .hrDivider {
+      border: 0;
+      margin-bottom: 0; } }
+
 .careers-page .quick-links {
   margin: 0 auto;
   max-width: 60rem;
@@ -17030,10 +17038,10 @@ div.gift-card .text-section, div.kiva-store .text-section {
   line-height: 1.5rem; }
 
 .careers-page .padding-bottom {
-  padding-bottom: 1.5rem; }
+  padding-bottom: 3.3333333333rem; }
 
 .careers-page .padding-top {
-  padding-top: 1.5rem; }
+  padding-top: 3.3333333333rem; }
 
 .careers-page .padding {
   padding: 1.5rem 0rem 1.5rem 0rem; }
@@ -17186,7 +17194,7 @@ div.gift-card .text-section, div.kiva-store .text-section {
     font-weight: 300; }
 
 .careers-page .kiva-love .profile {
-  margin-bottom: 2rem; }
+  padding-bottom: 3.3333333333rem; }
 
 .careers-page .kiva-love .avatar {
   border-radius: 50%; }
