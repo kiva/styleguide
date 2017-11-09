@@ -15,5 +15,7 @@
 		{ "title": "Send as they arrive" },
 		{ "title": "Send a nightly digest" },
 		{ "title": "Send a weekly digest" }
-	]
+	],
+	"hasLoans": true,
+	"showLoans": true
 }

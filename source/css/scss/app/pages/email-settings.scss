@@ -37,7 +37,7 @@
 
 		input[type="checkbox"] {
 			position: absolute;
-			top: 0.25rem;
+			top: 0.1rem;
 
 			& + label {
 				margin-left: 1.25rem;
@@ -94,6 +94,11 @@
 			margin-bottom: 1rem;
 			max-width: 10rem;
 		}
+	}
+
+	.region-inner a {
+		display: inline-block;
+		margin-bottom: 0.5rem;
 	}
 
 	.submit-region {
