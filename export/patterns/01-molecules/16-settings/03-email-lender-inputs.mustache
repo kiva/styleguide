@@ -23,6 +23,23 @@
 		<label for="comments-messages-input">
 			Loan comments, lender to lender messages
 		</label>
+		{{#hasLoans}}
+			<div class="region-inner loan-prefs">
+				<a href="#">{{^showLoans}}Show{{/showLoans}}{{#showLoans}}Hide{{/showLoans}} per-loan preferences</a>
+				{{#showLoans}}
+					<div class="region-inner">
+						{{#loans}}
+							<div class="input-wrapper">
+								<input id="loan-{{id}}-pref-input" value="{{id}}" type="checkbox" {{#checked}}checked="checked"{{/checked}}>
+								<label for="loan-{{id}}-pref-input">
+									{{name}}
+								</label>
+							</div>
+						{{/loans}}
+					</div>
+				{{/showLoans}}
+			</div>
+		{{/hasLoans}}
 	</div>
 	<div class="region-inner">
 		<div class="input-wrapper">

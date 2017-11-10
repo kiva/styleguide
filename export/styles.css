@@ -17221,7 +17221,7 @@ div.gift-card .text-section, div.kiva-store .text-section {
       margin-bottom: 0.6rem; }
     .email-settings .input-wrapper input[type="checkbox"] {
       position: absolute;
-      top: 0.25rem; }
+      top: 0.1rem; }
       .email-settings .input-wrapper input[type="checkbox"] + label {
         margin-left: 1.25rem; }
     .email-settings .input-wrapper select {
@@ -17255,6 +17255,9 @@ div.gift-card .text-section, div.kiva-store .text-section {
       display: block;
       margin-bottom: 1rem;
       max-width: 10rem; }
+  .email-settings .region-inner a {
+    display: inline-block;
+    margin-bottom: 0.5rem; }
   .email-settings .submit-region {
     margin: 1rem 0; }
     .email-settings .submit-region .region-inner {
