@@ -296,7 +296,12 @@
 		cursor: pointer;
 	}
 
-	input#mg-deposit-amount-input {
+	input#mg-donation-amount-input {
+		display: none;
+	}
+
+	input#mg-deposit-amount-input
+	, input#mg-donation-amount-input{
 		font-size: $body-font-size;
 		text-align: right;
 		height: $body-line-height;
@@ -528,6 +533,10 @@
 
 					}
 				}
+			}
+
+			.dropdown-choices-select {
+				display: none;
 			}
 		}
 	}
