@@ -16415,6 +16415,8 @@ table.repayments-list {
     padding: 0 0.2222222222rem; }
   .monthly-good .monthly-good-dynamic-view .custom-donation-input .dropdown-choices-select {
     display: none; }
+  .monthly-good .monthly-good-dynamic-view .custom-donation-input #mg-donation-amount-input {
+    display: block; }
 
 .monthly-good .icon-confirmation {
   fill: #63a541;
