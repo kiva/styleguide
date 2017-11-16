@@ -17,5 +17,7 @@
 		{ "title": "Send a weekly digest" }
 	],
 	"hasLoans": true,
-	"showLoans": true
+	"showLoans": true,
+	"hasTeams": true,
+	"showTeams": true
 }

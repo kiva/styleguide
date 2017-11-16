@@ -31,9 +31,7 @@
 						{{#loans}}
 							<div class="input-wrapper">
 								<input id="loan-{{id}}-pref-input" value="{{id}}" type="checkbox" {{#checked}}checked="checked"{{/checked}}>
-								<label for="loan-{{id}}-pref-input">
-									{{name}}
-								</label>
+								<label for="loan-{{id}}-pref-input">{{name}}</label>
 							</div>
 						{{/loans}}
 					</div>
@@ -41,19 +39,33 @@
 			</div>
 		{{/hasLoans}}
 	</div>
-	<div class="region-inner">
-		<div class="input-wrapper">
-			<label for="team-digests-input"><strong>Team digests</strong></label>
-			<select id="team-digests-input">
-				{{#teamDigestOptions}}
-					<option value="{{value}}" {{#selected}}selected="selected"{{/selected}}>{{title}}</option>
-				{{/teamDigestOptions}}
-			</select>
-		</div>
-		{{#hasTeams}}
-			<a href="#">Show per-team preferences</a>
-		{{/hasTeams}}
+	<div class="input-wrapper">
+		<label for="team-digests-input"><strong>Team digests</strong></label>
+		<select id="team-digests-input">
+			{{#teamDigestOptions}}
+				<option value="{{value}}" {{#selected}}selected="selected"{{/selected}}>{{title}}</option>
+			{{/teamDigestOptions}}
+		</select>
 	</div>
+	{{#hasTeams}}
+		<div class="region-inner team-prefs">
+			<a href="#">{{^showTeams}}Show{{/showTeams}}{{#showTeams}}Hide{{/showTeams}} per-team preferences</a>
+			{{#showTeams}}
+				<div class="region-inner">
+					{{#teams}}
+						<div class="input-wrapper">
+							<label for="team-{{id}}-pref-input">{{name}}</label>
+							<select id="team-{{id}}-pref-input">
+								{{#options}}
+									<option value="{{value}}" {{#selected}}selected="selected"{{/selected}}>{{title}}</option>
+								{{/options}}
+							</select>
+						</div>
+					{{/teams}}
+				</div>
+			{{/showTeams}}
+		</div>
+	{{/hasTeams}}
 </div>
 
 {{#is-standalone}}
