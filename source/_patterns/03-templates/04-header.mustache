@@ -30,6 +30,13 @@
 		{{> 02-organisms/08-header/01-search-button}}
 		{{#is-visitor}}
 			<div class="small-6 xxlarge-3 columns header-column right-side">
+				{{#show-borrow}}
+					{{^basket-loan-added}}
+					<div class="show-for-xlarge-up large-4 columns">
+						<a kvtrackevent="TopNav|click-Borrow" class="header-button" href="{{borrow_href}}">Borrow</a>
+					</div>
+					{{/basket-loan-added}}
+				{{/show-borrow}}
 				<div class="small-6 large-4 columns">
 					<a kvtrackevent="TopNav|click-About" data-dropdown="about-dropdown" data-options="is_hover:true;hover_timeout:200;" aria-controls="about-dropdown" aria-expanded="false" class="header-button" href="{{about_href}}">About <svg class="icon"><use xlink:href="#icon-triangle" /></svg></a>
 				</div>
