@@ -81,3 +81,12 @@
 		}
 	}
 }
+
+/*This hides the holiday promo for the gifts pages*/
+#gifts .header-promo {
+	padding: 0;
+}
+
+#gifts .header-promo a {
+	display: none;
+}
