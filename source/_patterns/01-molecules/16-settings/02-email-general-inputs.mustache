@@ -24,6 +24,14 @@
 			Portfolio and balance updates
 		</label>
 	</div>
+	{{#showMonthlyGood}}
+		<div class="input-wrapper">
+			<input id="monthly-good-input" type="checkbox" {{#monthlyGood}}checked="checked"{{/monthlyGood}}>
+			<label for="monthly-good-input">
+				Monthly Good updates
+			</label>
+		</div>
+	{{/showMonthlyGood}}
 	<div class="region-inner">
 		<div class="input-wrapper">
 			<label for="repayment-updates-input"><strong>Repayment notifications</strong></label>
