@@ -9554,6 +9554,13 @@ ul.tertiary-nav {
     .header-promo.show-for-xxlarge-up a {
       color: #236133; }
 
+/*This hides the holiday promo for the gifts pages*/
+#gifts .header-promo {
+  padding: 0; }
+
+#gifts .header-promo a {
+  display: none; }
+
 .siteFooter {
   height: 15.5555555556rem;
   background-color: #236133;
