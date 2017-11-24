@@ -17031,10 +17031,6 @@ div.gift-card .text-section, div.kiva-store .text-section {
 .careers-page .hrDivider {
   margin-top: 3.3333333333rem;
   margin-bottom: 3.3333333333rem; }
-  @media only screen and (max-width: 480px) {
-    .careers-page .hrDivider {
-      border: 0;
-      margin-bottom: 0; } }
 
 .careers-page .quick-links {
   margin: 0 auto;
@@ -17090,11 +17086,12 @@ div.gift-card .text-section, div.kiva-store .text-section {
   margin: 0; }
   @media only screen and (max-width: 480px) {
     .careers-page .our-values h1 {
-      font-size: 0.8333333333rem;
-      line-height: 0.2777777778rem; } }
+      margin-top: 0.2777777778rem;
+      font-size: 1.1111111111rem;
+      line-height: 1.1111111111rem; } }
 
 .careers-page .our-values .body-text {
-  color: #63a541; }
+  color: #a9d14c; }
   @media only screen and (min-width: 681px) and (max-width: 880px) {
     .careers-page .our-values .body-text {
       font-size: 0.8333333333rem; } }
@@ -17126,20 +17123,13 @@ div.gift-card .text-section, div.kiva-store .text-section {
   -ms-flex-pack: center;
       justify-content: center; }
 
-.careers-page .what-people-saying .quote_outer_container {
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-align: center;
-      align-items: center;
-  -ms-flex-pack: center;
-      justify-content: center; }
-
-.careers-page .what-people-saying .quote_inner_container {
-  position: absolute;
+.careers-page .what-people-saying .quote_container {
   background-color: #FFFFFF;
-  top: 0.2777777778rem;
-  padding-left: 0.8333333333rem;
-  padding-right: 0.8333333333rem; }
+  width: 3.2222222222rem;
+  margin-top: -30px;
+  margin-bottom: 30px;
+  margin-left: auto;
+  margin-right: auto; }
 
 .careers-page .what-people-saying .quote_inner_container {
   fill: #63a541; }
