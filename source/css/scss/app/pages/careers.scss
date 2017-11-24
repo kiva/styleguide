@@ -3,11 +3,6 @@
 	.hrDivider {
 		margin-top: rem-calc(60);
 		margin-bottom: rem-calc(60);
-
-		@media #{$small-only} {
-			border: 0;
-			margin-bottom: 0;
-		}
 	}
 
 	.quick-links {
@@ -77,13 +72,14 @@
 			margin: 0;
 
 			@media #{$small-only} {
-				font-size: rem-calc(15);
-				line-height: rem-calc(5);
+				margin-top: rem-calc(5);
+				font-size: rem-calc(20);
+				line-height: rem-calc(20);
 			}
 		}
 
 		.body-text {
-			color: $kiva-green;
+			color: $light-green;
 
 			@media #{$med-large-only} {
 				font-size: rem-calc(15);
