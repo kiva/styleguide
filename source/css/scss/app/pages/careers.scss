@@ -116,21 +116,16 @@
 	}
 
 	.what-people-saying {
-		.quote_outer_container {
-			display: flex;
-			align-items: center;
-			justify-content: center;
+		.quote_container {
+			background-color: $white;
+			width: rem-calc(58);
+			margin-top: -30px;
+			margin-bottom: 30px;
+			margin-left: auto;
+			margin-right: auto;
 		}
 
 		.quote_inner_container {
-			position: absolute;
-			background-color: $white;
-			top: rem-calc(5);
-			padding-left: rem-calc(15);
-			padding-right: rem-calc(15);
-		}
-
-		.quote_inner_container  {
 			fill: $kiva-green;
 		}
 
