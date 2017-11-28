@@ -1,0 +1,41 @@
+<div class="home-how-stats-simple">
+	<div class="row">
+		<div class="small-12 large-4 columns">
+			<div class="how-it-works">
+				<h4>How does it work?</h4>
+				<ul>
+					<li><span class="circle-item">1</span> Make a loan</li>
+					<li><span class="circle-item">2</span> Get repaid</li>
+					<li><span class="circle-item">3</span> Repeat!</li>
+				</ul>
+				<p><a href="{kvurl page=about action=how}" class="learn-more-link">Learn more</a></p>
+			</div>
+		</div>
+
+		<div class="small-12 large-4 columns center-column">
+			<div class="stat">
+				<!-- smarty processing of value {$repayment_rate|string_format:"%.1f"} -->
+				<div class="data-point medium-statistic">97%</div>
+				<div class="description top-row">Loan repayment rate</div>
+				<div class="data-point growing-statistic">
+					<svg class="icon icon-star"><use xlink:href="#icon-star"></use></svg>
+					<svg class="icon icon-star"><use xlink:href="#icon-star"></use></svg>
+					<svg class="icon icon-star"><use xlink:href="#icon-star"></use></svg>
+					<svg class="icon icon-star"><use xlink:href="#icon-star"></use></svg>
+				</div>
+				<div class="description">Charity Navigator's<br>highest award rating</div>
+			</div>
+		</div>
+
+		<div class="small-12 large-4 columns show-for-large-up">
+			<div class="stat">
+				<!-- smarty {$num_users_with_loans/1000000|round:"1"} -->
+				<div class="data-point growing-statistic">1.6M</div>
+				<div class="description top-row">People have made<br>a loan on Kiva</div>
+				<!-- smarty {$num_countries|number_format} -->
+				<div class="data-point medium-statistic">86</div>
+				<div class="description">Different countries</div>
+			</div>
+		</div>
+	</div>
+</div>
