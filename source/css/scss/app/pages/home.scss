@@ -678,3 +678,105 @@ $hiw-half-tap-button-size-small: $hiw-tap-button-size-small / 2;
 		}
 	}
 }
+
+.home-how-stats-simple {
+	background: $kiva-bg-lightgray;
+
+	.row {
+		text-align: center;
+		font-weight: 300;
+		border-top: 4px solid white;
+		border-bottom: 4px solid white;
+
+		@media #{$large-up} {
+			display: flex;
+		}
+	}
+
+	.how-it-works,
+	.stat {
+		padding: rem-calc(40) 0;
+		margin-right: 2px;
+	}
+
+	.how-it-works {
+		display: inline-block;
+		@media #{$medium-down} {
+			padding-top: rem-calc(60);
+			padding-bottom: rem-calc(30);
+		}
+
+		h4 {
+			color: $kiva-darkgreen;
+			margin-top: 0;
+			font-size: 1.3rem;
+		}
+		ul {
+			display: inline-block;
+			margin-left: 0;
+			list-style: none;
+			text-align: left;
+
+			li {
+				color: $kiva-green;
+				line-height: 1.5rem;
+				padding: .25rem 0;
+
+				span.circle-item {
+					border-radius: 1.5rem;
+					border: 1px solid $kiva-accent-green;
+					margin-right: .4rem;
+					width: 1.5rem;
+					height: 1.5rem;
+					display: inline-block;
+					text-align: center;
+				}
+			}
+		}
+		.learn-more-link {
+			color: $kiva-text-medium;
+			margin: 0;
+		}
+	}
+
+	.stat {
+		display: block;
+		margin: 0 auto;
+		@media #{$medium-down} {
+			padding-top: rem-calc(30);
+			padding-bottom: rem-calc(60);
+		}
+
+		.data-point {
+			color: $kiva-darkgreen;
+			padding-bottom: rem-calc(10);
+			white-space: nowrap;
+			&.growing-statistic {
+				font-size: $medium-statistic-font-size;
+				line-height: $medium-statistic-line-height;
+			}
+		}
+		.icon {
+			color: $kiva-darkgreen;
+			height: 1.5rem;
+			width: 1.5rem;
+			fill: $kiva-bg-lightgray;
+		}
+		.description {
+			font-size: .9rem;
+			line-height: 110%;
+			color: $kiva-green;
+
+			&.top-row {
+				padding-bottom: rem-calc(40);
+			}
+		}
+	}
+
+	@media #{$large-up} {
+		.center-column {
+			border-left: 4px solid white;
+			border-right: 4px solid white;
+		}
+	}
+}
