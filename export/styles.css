@@ -11652,6 +11652,81 @@ svg {
         .home-stats-wrapper .home-stats .stat .description.top-row {
           padding-bottom: 1.6666666667rem; }
 
+.home-how-stats-simple {
+  background: #FAFAFA; }
+  .home-how-stats-simple .row {
+    text-align: center;
+    font-weight: 300;
+    border-top: 4px solid white;
+    border-bottom: 4px solid white; }
+    @media only screen and (min-width: 681px) {
+      .home-how-stats-simple .row {
+        display: -ms-flexbox;
+        display: flex; } }
+  .home-how-stats-simple .how-it-works,
+  .home-how-stats-simple .stat {
+    padding: 2.2222222222rem 0;
+    margin-right: 2px; }
+  .home-how-stats-simple .how-it-works {
+    display: inline-block; }
+    @media only screen and (max-width: 680px) {
+      .home-how-stats-simple .how-it-works {
+        padding-top: 3.3333333333rem;
+        padding-bottom: 1.6666666667rem; } }
+    .home-how-stats-simple .how-it-works h4 {
+      color: #236133;
+      margin-top: 0;
+      font-size: 1.3rem; }
+    .home-how-stats-simple .how-it-works ul {
+      display: inline-block;
+      margin-left: 0;
+      list-style: none;
+      text-align: left; }
+      .home-how-stats-simple .how-it-works ul li {
+        color: #63a541;
+        line-height: 1.5rem;
+        padding: .25rem 0; }
+        .home-how-stats-simple .how-it-works ul li span.circle-item {
+          border-radius: 1.5rem;
+          border: 1px solid #a9d14c;
+          margin-right: .4rem;
+          width: 1.5rem;
+          height: 1.5rem;
+          display: inline-block;
+          text-align: center; }
+    .home-how-stats-simple .how-it-works .learn-more-link {
+      color: #666;
+      margin: 0; }
+  .home-how-stats-simple .stat {
+    display: block;
+    margin: 0 auto; }
+    @media only screen and (max-width: 680px) {
+      .home-how-stats-simple .stat {
+        padding-top: 1.6666666667rem;
+        padding-bottom: 3.3333333333rem; } }
+    .home-how-stats-simple .stat .data-point {
+      color: #236133;
+      padding-bottom: 0.5555555556rem;
+      white-space: nowrap; }
+      .home-how-stats-simple .stat .data-point.growing-statistic {
+        font-size: 2rem;
+        line-height: 2rem; }
+    .home-how-stats-simple .stat .icon {
+      color: #236133;
+      height: 1.5rem;
+      width: 1.5rem;
+      fill: #FAFAFA; }
+    .home-how-stats-simple .stat .description {
+      font-size: .9rem;
+      line-height: 110%;
+      color: #63a541; }
+      .home-how-stats-simple .stat .description.top-row {
+        padding-bottom: 2.2222222222rem; }
+  @media only screen and (min-width: 681px) {
+    .home-how-stats-simple .center-column {
+      border-left: 4px solid white;
+      border-right: 4px solid white; } }
+
 a.visitLink,
 a.visitLink:visited {
   color: #63a541; }
