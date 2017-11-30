@@ -5188,7 +5188,7 @@
 		},
 		"funds-disbursed-statistic": {
 			"statisticValue": "$195,225",
-			"statisticLabel": "Funds disbursed to borrowers you endorsed",
+			"statisticLabel": "Funds currently being raised by or disbursed to borrowers you endorsed",
 			"statisticAdditionalText_hidden": "Trustee avg: $24,000",
 			"statisticAdditionalText": "",
 			"statisticIconName_hidden": "icon-line-graph",
