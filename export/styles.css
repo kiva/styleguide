@@ -17278,6 +17278,14 @@ div.gift-card .text-section, div.kiva-store .text-section {
 .careers-page .kiva-love .avatar {
   border-radius: 50%; }
 
+@media only screen and (min-width: 536px) {
+  .careers-page .kiva-love .newline {
+    display: none; } }
+
+@media only screen and (max-width: 480px) {
+  .careers-page .about-video-wrapper .button-wrapper {
+    top: 45%; } }
+
 .email-settings {
   pointer-events: auto; }
   .email-settings .loading-spinner {
