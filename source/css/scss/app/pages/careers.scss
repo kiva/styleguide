@@ -240,4 +240,12 @@
 			border-radius: 50%;
 		}
 	}
+
+	.about-video-wrapper {
+		@media #{$small-only} {
+			.button-wrapper {
+				top: 45%;
+			}
+		}
+	}
 }
