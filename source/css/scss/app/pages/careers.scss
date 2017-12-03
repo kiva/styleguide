@@ -209,8 +209,12 @@
 			margin-top: rem-calc(30);
 		}
 
+		h3:nth-child(1) > .job-department {
+			margin-top: 0
+		}
+
 		.job-information {
-			padding: 10px 0 10px 20px;
+			padding: rem-calc(15) 0 rem-calc(10) rem-calc(20);
 			background-color: $kiva-stroke-gray;
 		}
 
@@ -220,7 +224,7 @@
 			margin-bottom: rem-calc(10);
 
 			a {
-				font-weight: 300;
+				font-weight: bold;
 				color: $black;
 			}
 		}
