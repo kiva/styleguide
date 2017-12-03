@@ -50,6 +50,7 @@
 
 	.page-title {
 		color: $black;
+		margin-bottom: rem-calc(20);
 	}
 
 	ul li {
@@ -59,6 +60,7 @@
 	.faq-container {
 		.faq-title {
 			border-top: 0;
+			font-weight: bold;
 		}
 
 		p {
@@ -175,7 +177,7 @@
 				@media #{$large-up} {
 					.stat {
 						line-height: rem-calc(25);
-						font-size: 2.5rem;
+						font-size: 3.35rem;
 					}
 				}
 			}
@@ -262,6 +264,76 @@
 	.about-video-wrapper > div > div > a > span.white {
 		@media only screen and (max-width: 760px) {
 			font-size: rem-calc(18);
+		}
+	}
+
+	.benefits {
+		ul {
+			margin-top: rem-calc(15);
+		}
+	}
+
+	.social_media {
+		padding-top: rem-calc(25);
+
+		.logos {
+			padding-bottom: 170px;
+		}
+		#logos a {
+			width: 28px;
+			height: 28px;
+			border-radius: 4px;
+			display: inline-block;
+			margin-left: 19px;
+		}
+		.facebookLogo {
+			background: url(https://www-kiva-org.global.ssl.fastly.net/img/icon/social_facebook.svg) no-repeat;
+			width: 46px;
+			height: 46px;
+			display: inline-block;
+			margin-left: 19px;
+		}
+		.twitterLogo {
+			background: url(https://www-kiva-org.global.ssl.fastly.net/img/icon/social_twitter.svg) no-repeat;
+			width: 46px;
+			height: 46px;
+			display: inline-block;
+			margin-left: 19px;
+		}
+		.instagramLogo {
+			background: url(https://www-kiva-org.global.ssl.fastly.net/img/icon/social_instagram.svg) no-repeat;
+			width: 46px;
+			height: 46px;
+			display: inline-block;
+			margin-left: 19px;
+		}
+		.youtubeLogo {
+			background: url(https://www-kiva-org.global.ssl.fastly.net/img/icon/social_youtube.svg) no-repeat;
+			width: 46px;
+			height: 46px;
+			display: inline-block;
+			margin-left: 19px;
+		}
+		.pinterestLogo {
+			background: url(https://www-kiva-org.global.ssl.fastly.net/img/icon/social_pinterest.svg) no-repeat;
+			width: 46px;
+			height: 46px;
+			display: inline-block;
+			margin-left: 19px;
+		}
+		.linkedinLogo {
+			background: url(https://www-kiva-org.global.ssl.fastly.net/img/icon/social_linkedIn.svg) no-repeat;
+			width: 46px;
+			height: 46px;
+			display: inline-block;
+			margin-left: 19px;
+		}
+		.themuseLogo {
+			background: url(https://www-kiva-org.global.ssl.fastly.net/img/icon/social_themuse.svg) no-repeat;
+			width: 46px;
+			height: 46px;
+			display: inline-block;
+			margin-left: 19px;
 		}
 	}
 }
