@@ -258,4 +258,10 @@
 			}
 		}
 	}
+
+	.about-video-wrapper > div > div > a > span.white {
+		@media only screen and (max-width: 760px) {
+			font-size: rem-calc(18);
+		}
+	}
 }
