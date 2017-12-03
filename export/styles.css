@@ -17145,13 +17145,15 @@ div.gift-card .text-section, div.kiva-store .text-section {
   padding-right: 0.2777777778rem; }
 
 .careers-page .page-title {
-  color: #000000; }
+  color: #000000;
+  margin-bottom: 1.1111111111rem; }
 
 .careers-page ul li {
   font-weight: 300; }
 
 .careers-page .faq-container .faq-title {
-  border-top: 0; }
+  border-top: 0;
+  font-weight: bold; }
 
 .careers-page .faq-container p {
   line-height: 1.45; }
@@ -17239,7 +17241,7 @@ div.gift-card .text-section, div.kiva-store .text-section {
       @media only screen and (min-width: 681px) {
         .careers-page .stats .top-stats .row .stat {
           line-height: 1.3888888889rem;
-          font-size: 2.5rem; } }
+          font-size: 3.35rem; } }
     .careers-page .stats .top-stats .row1 {
       padding: 1.6666666667rem 0 0 0; }
     .careers-page .stats .top-stats .row2 {
@@ -17258,15 +17260,17 @@ div.gift-card .text-section, div.kiva-store .text-section {
     font-weight: 300;
     line-height: 1.5555555556rem;
     margin-top: 1.6666666667rem; }
+  .careers-page #jobs-listing h3:nth-child(1) > .job-department {
+    margin-top: 0; }
   .careers-page #jobs-listing .job-information {
-    padding: 10px 0 10px 20px;
+    padding: 0.8333333333rem 0 0.5555555556rem 1.1111111111rem;
     background-color: #d8d8d8; }
   .careers-page #jobs-listing .job-title {
     font-size: 1rem;
     line-height: 1.3333333333rem;
     margin-bottom: 0.5555555556rem; }
     .careers-page #jobs-listing .job-title a {
-      font-weight: 300;
+      font-weight: bold;
       color: #000000; }
   .careers-page #jobs-listing .job-location {
     margin-bottom: 0.2777777778rem;
@@ -17285,6 +17289,66 @@ div.gift-card .text-section, div.kiva-store .text-section {
 @media only screen and (max-width: 480px) {
   .careers-page .about-video-wrapper .button-wrapper {
     top: 45%; } }
+
+@media only screen and (max-width: 760px) {
+  .careers-page .about-video-wrapper > div > div > a > span.white, .careers-page .about-video-wrapper > div > div > a > span.overlay, .careers-page .about-video-wrapper > div > div > a > span.overlay-bold, .careers-page .about-video-wrapper > div > div > a > span.slide-overlay, .careers-page .about-video-wrapper > div > div > a > span.slide-overlay-long, .careers-page .about-video-wrapper > div > div > a > span.slide-overlay-short, .careers-page .about-video-wrapper > div > div > a > span.slide-overlay-very-short, .careers-page .about-video-wrapper > div > div > a > span.slide-overlay-attribution, .careers-page .about-video-wrapper > div > div > a > span.slide-overlay-attribution-detail {
+    font-size: 1rem; } }
+
+.careers-page .benefits ul {
+  margin-top: 0.8333333333rem; }
+
+.careers-page .social_media {
+  padding-top: 1.3888888889rem; }
+  .careers-page .social_media .logos {
+    padding-bottom: 170px; }
+  .careers-page .social_media #logos a {
+    width: 28px;
+    height: 28px;
+    border-radius: 4px;
+    display: inline-block;
+    margin-left: 19px; }
+  .careers-page .social_media .facebookLogo {
+    background: url(https://www-kiva-org.global.ssl.fastly.net/img/icon/social_facebook.svg) no-repeat;
+    width: 46px;
+    height: 46px;
+    display: inline-block;
+    margin-left: 19px; }
+  .careers-page .social_media .twitterLogo {
+    background: url(https://www-kiva-org.global.ssl.fastly.net/img/icon/social_twitter.svg) no-repeat;
+    width: 46px;
+    height: 46px;
+    display: inline-block;
+    margin-left: 19px; }
+  .careers-page .social_media .instagramLogo {
+    background: url(https://www-kiva-org.global.ssl.fastly.net/img/icon/social_instagram.svg) no-repeat;
+    width: 46px;
+    height: 46px;
+    display: inline-block;
+    margin-left: 19px; }
+  .careers-page .social_media .youtubeLogo {
+    background: url(https://www-kiva-org.global.ssl.fastly.net/img/icon/social_youtube.svg) no-repeat;
+    width: 46px;
+    height: 46px;
+    display: inline-block;
+    margin-left: 19px; }
+  .careers-page .social_media .pinterestLogo {
+    background: url(https://www-kiva-org.global.ssl.fastly.net/img/icon/social_pinterest.svg) no-repeat;
+    width: 46px;
+    height: 46px;
+    display: inline-block;
+    margin-left: 19px; }
+  .careers-page .social_media .linkedinLogo {
+    background: url(https://www-kiva-org.global.ssl.fastly.net/img/icon/social_linkedIn.svg) no-repeat;
+    width: 46px;
+    height: 46px;
+    display: inline-block;
+    margin-left: 19px; }
+  .careers-page .social_media .themuseLogo {
+    background: url(https://www-kiva-org.global.ssl.fastly.net/img/icon/social_themuse.svg) no-repeat;
+    width: 46px;
+    height: 46px;
+    display: inline-block;
+    margin-left: 19px; }
 
 .email-settings {
   pointer-events: auto; }
