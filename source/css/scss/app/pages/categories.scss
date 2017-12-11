@@ -189,6 +189,56 @@ div.category-cards-header {
 	}
 }
 
+.basic-category-grid {
+	padding:0;
+
+	p.impact,
+	p.featured {
+		text-align: center;
+		color: $kiva-text-medium;
+		padding: 3rem;
+		margin: 0;
+	}
+	p.impact {
+		font-weight: 500;
+	}
+	@media #{$small-only} {
+		p.impact,
+		p.featured {
+			padding: 3rem 0;
+		}	
+	}
+	.category-card {
+		img {
+			width: 100%;
+		}
+		div.category-card-title-wrap {
+			top: 65%;
+		}
+	}
+	.more-categories-card {
+		.category-card {
+			background-color: fade-out($kiva-filter-indicator, .3);
+			div.color-card-center {
+				top: 65%;
+			}
+			&:hover > .category-card-overlay {
+				background-color: $kiva-filter-indicator;
+			}
+		}
+		@media #{$small-only} {
+			width: 100%;
+			.category-card {
+				height: 4rem;
+				padding: 0;
+				div.color-card-center {
+					top: 50%;
+				}
+			}
+		}
+	}
+}
+
 .category-monthly-good-promo {
 	margin-top: rem-calc(30);
 	margin-bottom: rem-calc(15);
