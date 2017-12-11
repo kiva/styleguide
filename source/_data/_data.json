@@ -5197,7 +5197,7 @@
 		"actively-funding-count-statistic": {
 			"statisticValue": "2",
 			"statisticLabel": "Borrowers actively fundraising",
-			"statisticLinkText": "View all >>"
+			"statisticLinkText": "View all public >>"
 		},
 		"fully-funded-count-statistic": {
 			"statisticValue": "20",
