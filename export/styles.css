@@ -12620,6 +12620,39 @@ div.category-cards-header {
   .category-link-grid li > div {
     padding-bottom: 0.5rem; }
 
+.basic-category-grid {
+  padding: 0; }
+  .basic-category-grid p.impact,
+  .basic-category-grid p.featured {
+    text-align: center;
+    color: #666;
+    padding: 3rem;
+    margin: 0; }
+  .basic-category-grid p.impact {
+    font-weight: 500; }
+  @media only screen and (max-width: 480px) {
+    .basic-category-grid p.impact,
+    .basic-category-grid p.featured {
+      padding: 3rem 0; } }
+  .basic-category-grid .category-card img {
+    width: 100%; }
+  .basic-category-grid .category-card div.category-card-title-wrap {
+    top: 65%; }
+  .basic-category-grid .more-categories-card .category-card {
+    background-color: rgba(38, 182, 232, 0.7); }
+    .basic-category-grid .more-categories-card .category-card div.color-card-center {
+      top: 65%; }
+    .basic-category-grid .more-categories-card .category-card:hover > .category-card-overlay {
+      background-color: #26b6e8; }
+  @media only screen and (max-width: 480px) {
+    .basic-category-grid .more-categories-card {
+      width: 100%; }
+      .basic-category-grid .more-categories-card .category-card {
+        height: 4rem;
+        padding: 0; }
+        .basic-category-grid .more-categories-card .category-card div.color-card-center {
+          top: 50%; } }
+
 .category-monthly-good-promo {
   margin-top: 1.6666666667rem;
   margin-bottom: 0.8333333333rem; }
