@@ -35,13 +35,15 @@
 					Enrolled in automatic repayments. Your first repayment
 					will be scheduled once your loan funds are sent to you.
 				{{/preDisbursal}}
-				{{#nextScheduledAutoRepayment}}
-					Next payment of <b>${{amount}}</b> will be automatically
-					repaid on <b>{{date}}</b>
-				{{/nextScheduledAutoRepayment}}
-				{{^nextScheduledAutoRepayment}}
-					Please contact borrowers@kiva.org to get on a payment plan.
-				{{/nextScheduledAutoRepayment}}
+				{{^preDisbursal}}
+					{{#nextScheduledAutoRepayment}}
+						Next payment of <b>${{amount}}</b> will be automatically
+						repaid on <b>{{date}}</b>
+					{{/nextScheduledAutoRepayment}}
+					{{^nextScheduledAutoRepayment}}
+						Please contact borrowers@kiva.org to get on a payment plan.
+					{{/nextScheduledAutoRepayment}}
+				{{/preDisbursal}}
 			</div>
 		{{/hasAutoRepayment}}
 
