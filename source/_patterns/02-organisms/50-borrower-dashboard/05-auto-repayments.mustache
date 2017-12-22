@@ -31,14 +31,17 @@
 				<div style="float: right; margin-left: 1rem;">
 					<a class="auto-repayment-pause">Pause</a>
 				</div>
-				{{#nextRepayment}}
-					Next payment of <b>${{amount}}</b> will be automatically
-					repaid on <b>{{date}}</b>
-				{{/nextRepayment}}
 				{{#preDisbursal}}
 					Enrolled in automatic repayments. Your first repayment
 					will be scheduled once your loan funds are sent to you.
 				{{/preDisbursal}}
+				{{#nextScheduledAutoRepayment}}
+					Next payment of <b>${{amount}}</b> will be automatically
+					repaid on <b>{{date}}</b>
+				{{/nextScheduledAutoRepayment}}
+				{{^nextScheduledAutoRepayment}}
+					Please contact borrowers@kiva.org to get on a payment plan.
+				{{/nextScheduledAutoRepayment}}
 			</div>
 		{{/hasAutoRepayment}}
 
