@@ -49,11 +49,14 @@
 					{{> 01-molecules/15-loan-sections/03-current-status-meter}}
 					{{#hasAutoRepayment}}
 						<div class="panel callout">
-							{{#nextRepayment}}
+							{{#nextScheduledAutoRepayment}}
 								Next payment of <b>${{amount}}</b> will be automatically
 								repaid on <b><nobr>{{date}}</nobr></b>
 								<div style="padding-top: .5rem; text-align: right;"><a class="auto-repayment-navigate">View/Edit</a></div>
-							{{/nextRepayment}}
+							{{/nextScheduledAutoRepayment}}
+							{{^nextScheduledAutoRepayment}}
+								Please contact borrowers@kiva.org to get on a payment plan.
+							{{/nextScheduledAutoRepayment}}
 						</div>
 					{{/hasAutoRepayment}}
 
