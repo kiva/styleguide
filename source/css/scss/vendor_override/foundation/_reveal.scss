@@ -25,12 +25,8 @@ div.reveal-modal-bg {
 		top: rem-calc(0) !important;
 	}
 
-	.row {
-		padding: rem-calc(30) rem-calc(20) rem-calc(30) rem-calc(30);
-
-		@media #{$large-up} {
-			padding: rem-calc(30);
-		}
+	> .row {
+		padding: rem-calc(30);
 
 		> .columns {
 			padding-left: 0;
