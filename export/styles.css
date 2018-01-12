@@ -6603,16 +6603,13 @@ div.reveal-modal-bg {
     z-index: 1506; }
   .reveal-modal.open {
     top: 0 !important; }
-  .reveal-modal .row {
-    padding: 1.6666666667rem 1.1111111111rem 1.6666666667rem 1.6666666667rem; }
-    @media only screen and (min-width: 681px) {
-      .reveal-modal .row {
-        padding: 1.6666666667rem; } }
-    .reveal-modal .row > .columns {
+  .reveal-modal > .row {
+    padding: 1.6666666667rem; }
+    .reveal-modal > .row > .columns {
       padding-left: 0;
       padding-right: 0; }
       @media only screen and (min-width: 681px) {
-        .reveal-modal .row > .columns {
+        .reveal-modal > .row > .columns {
           padding-left: 0.8333333333rem;
           padding-right: 0.8333333333rem; } }
   .reveal-modal .flex-video {
