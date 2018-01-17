@@ -1,6 +1,6 @@
 {{#is_lent_to}}
 	<div class="bottom-bar show-short {{#is_ended}}lent-to-list-view{{/is_ended}}">
-		<a class="success button" href="{{borrower_url}}">
+		<a kvtrackevent="Lending|You've supported this loan|Loan card|{{id}}|true" class="success button" href="{{borrower_url}}">
 			<svg class="icon">
 				<use xlink:href="#icon-confirmation" />
 			</svg>
@@ -11,18 +11,18 @@
 {{#is_regular}}
 	<div class="bottom-bar">
         {{#amount_left}}
-            <a kvtrackevent="Lending|Add to basket|Loan card" class="half-width button lend-button" href="#">Lend {{#free_trial}}Free {{/free_trial}}$25</a>
-            <a kvtrackevent="Lending|click-Read more|Story" class="half-width button" href="{{borrower_url}}">Learn more</a>
+            <a kvtrackevent="Lending|Add to basket|Loan card|{{id}}|true" class="half-width button lend-button" href="#">Lend {{#free_trial}}Free {{/free_trial}}$25</a>
+            <a kvtrackevent="Lending|click-Read more|Story|{{id}}|true" class="half-width button" href="{{borrower_url}}">Learn more</a>
         {{/amount_left}}
         {{^amount_left}}
-            <a kvtrackevent="Lending|click-Read more|Story" class="full-width button" href="{{borrower_url}}">Learn more</a>
+            <a kvtrackevent="Lending|click-Read more|Story|{{id}}|true" class="full-width button" href="{{borrower_url}}">Learn more</a>
         {{/amount_left}}
 	</div>
 {{/is_regular}}
 {{#is_lent_to}}
 	{{^is_ended}}
 		<div class="bottom-bar hide-for-touch">
-			<a class="button" href="{{borrower_url}}">Lend again</a>
+			<a kvtrackevent="Lending|Lend Again|Loan card|{{id}}|true" class="button" href="{{borrower_url}}">Lend again</a>
 		</div>
 	{{/is_ended}}
 {{/is_lent_to}}
@@ -35,7 +35,7 @@
 {{/is_adding}}
 {{#is_in_basket}}
 	<div class="bottom-bar show-short">
-		<a class="success button" href="{{basket_url}}">
+		<a kvtrackevent="Lending|Amount in basket - Proceed to checkout|Loan card|{{id}}|true" class="success button" href="{{basket_url}}">
 			<svg class="icon">
 				<use xlink:href="#icon-confirmation" />
 			</svg>
@@ -43,7 +43,7 @@
 		</a>
 	</div>
 	<div class="bottom-bar hide-for-touch">
-		<a class="success button" href="{{basket_url}}">
+		<a kvtrackevent="Lending|Proceed to checkout|Loan card|{{id}}|true" class="success button" href="{{basket_url}}">
 			<svg class="icon">
 				<use xlink:href="#icon-confirmation" />
 			</svg>
@@ -55,7 +55,7 @@
 	{{^is_adding}}
 		{{^is_in_basket}}
 			<div class="bottom-bar ended">
-				<a class="button" href="{{borrower_url}}">Learn more</a>
+				<a kvtrackevent="Lending|click-Learn more|Story|{{id}}|true" class="button" href="{{borrower_url}}">Learn more</a>
 			</div>
 		{{/is_in_basket}}
 	{{/is_adding}}
