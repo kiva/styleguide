@@ -6,7 +6,7 @@
 			<a class="refresh" href="#"><svg class="icon icon-refresh"><use xlink:href="#icon-refresh"/></svg></a>
 		</div>
 	{{/is_admin}}
-		<a class="borrower-image" kvtrackevent="Lending|click-Read more|Photo" href="{{borrower_url}}" data-interchange="{{#image.sizes}}[{{url}}, ({{size}})],{{/image.sizes}}">
+		<a class="borrower-image" kvtrackevent="Lending|click-Read more|Photo|{{id}}|true" href="{{borrower_url}}" data-interchange="{{#image.sizes}}[{{url}}, ({{size}})],{{/image.sizes}}">
 			{{#show_loan_length}}
 				<div class="loan-message">{{loan_length}}</div>
 			{{/show_loan_length}}
@@ -22,7 +22,7 @@
 	</div>
 
     <div class="borrower-details-wrap small-12 columns">
-        <a kvtrackevent="Lending|click-Read more|Name" href="{{borrower_url}}">{{name}}</a>
+        <a kvtrackevent="Lending|click-Read more|Name|{{id}}|true" href="{{borrower_url}}">{{name}}</a>
         <div class="country">
 			<span class="f16 {{location.country.iso_code}}"></span>{{location_label}}
         </div>
