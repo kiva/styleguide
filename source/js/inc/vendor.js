@@ -1,4 +1,5 @@
 require('jquery');
+require('jquery-migrate');
 require('modernizr');
 
 require('Foundation');

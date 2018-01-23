@@ -296,6 +296,10 @@ module.exports = function(grunt) {
 					rules: [
 						{ test: /modernizr/, loader: 'imports-loader?this=>window!exports-loader?window.Modernizr' }
 						, { test: /foundation/, loader: 'exports-loader?window.Foundation'}
+						, {
+							test: require.resolve("jquery-migrate"),
+							use: "imports-loader?define=>false",
+						}
 					]
 				}
 				, plugins: [
