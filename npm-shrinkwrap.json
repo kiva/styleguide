@@ -3203,15 +3203,15 @@
       "integrity": "sha1-R+Y/evVa+m+S4VAOaQ64uFKcCZo=",
       "dev": true
     },
+    "jquery": {
+      "version": "2.1.4",
+      "resolved": "https://registry.npmjs.org/jquery/-/jquery-2.1.4.tgz",
+      "integrity": "sha1-IoveaYoMYUMdwmMKahVPFYkNIxc="
+    },
     "jquery-lazyload": {
       "version": "1.9.7",
       "resolved": "https://registry.npmjs.org/jquery-lazyload/-/jquery-lazyload-1.9.7.tgz",
       "integrity": "sha1-mYKziMUzwLYRIUs8WqoLn+3gcfc="
-    },
-    "jquery-migrate": {
-      "version": "3.0.1",
-      "resolved": "https://registry.npmjs.org/jquery-migrate/-/jquery-migrate-3.0.1.tgz",
-      "integrity": "sha512-NYlhcFnRh4Bv9jvadPlcAKQdVGRE0+TSgFYxQ+ZnCxUUHbwd+SjbOg+Xvu1Oea9mpQJ+2VB1eCfcBORWNQsHaA=="
     },
     "jquery-mousewheel": {
       "version": "3.1.13",
@@ -4228,11 +4228,23 @@
       "integrity": "sha1-P7z7FbiZpEEjs0ttzBi3JDNqLK4=",
       "dev": true
     },
+    "p-limit": {
+      "version": "1.2.0",
+      "resolved": "https://registry.npmjs.org/p-limit/-/p-limit-1.2.0.tgz",
+      "integrity": "sha512-Y/OtIaXtUPr4/YpMv1pCL5L5ed0rumAaAeBSj12F+bSlMdys7i8oQF/GUJmfpTS/QoaRrS/k6pma29haJpsMng==",
+      "dev": true,
+      "requires": {
+        "p-try": "1.0.0"
+      }
+    },
     "p-locate": {
       "version": "2.0.0",
       "resolved": "https://registry.npmjs.org/p-locate/-/p-locate-2.0.0.tgz",
       "integrity": "sha1-IKAQOyIqcMj9OcwuWAaA893l7EM=",
-      "dev": true
+      "dev": true,
+      "requires": {
+        "p-limit": "1.2.0"
+      }
     },
     "p-map": {
       "version": "1.2.0",
@@ -4243,7 +4255,8 @@
     "p-try": {
       "version": "1.0.0",
       "resolved": "https://registry.npmjs.org/p-try/-/p-try-1.0.0.tgz",
-      "integrity": "sha1-y8ec26+P1CKOE/Yh8rGiN8GyB7M="
+      "integrity": "sha1-y8ec26+P1CKOE/Yh8rGiN8GyB7M=",
+      "dev": true
     },
     "pako": {
       "version": "0.2.9",
@@ -5110,7 +5123,10 @@
     "slick-carousel": {
       "version": "1.5.9",
       "resolved": "https://registry.npmjs.org/slick-carousel/-/slick-carousel-1.5.9.tgz",
-      "integrity": "sha1-K9yuOOeljnJDDpcFW/rMFn8zZNM="
+      "integrity": "sha1-K9yuOOeljnJDDpcFW/rMFn8zZNM=",
+      "requires": {
+        "jquery": "2.1.4"
+      }
     },
     "sntp": {
       "version": "2.0.2",
@@ -5683,7 +5699,10 @@
     "typeahead.js": {
       "version": "0.11.1",
       "resolved": "https://registry.npmjs.org/typeahead.js/-/typeahead.js-0.11.1.tgz",
-      "integrity": "sha1-TmTmcbIjEKhgb0rsgFkkuoSwFbg="
+      "integrity": "sha1-TmTmcbIjEKhgb0rsgFkkuoSwFbg=",
+      "requires": {
+        "jquery": "2.1.4"
+      }
     },
     "uglify-js": {
       "version": "2.3.6",
