@@ -1,6 +1,6 @@
 {
   "name": "styleguide",
-  "version": "1.1.368",
+  "version": "1.1.369",
   "lockfileVersion": 1,
   "requires": true,
   "dependencies": {
@@ -4229,13 +4229,10 @@
       "dev": true
     },
     "p-limit": {
-      "version": "1.2.0",
-      "resolved": "https://registry.npmjs.org/p-limit/-/p-limit-1.2.0.tgz",
-      "integrity": "sha512-Y/OtIaXtUPr4/YpMv1pCL5L5ed0rumAaAeBSj12F+bSlMdys7i8oQF/GUJmfpTS/QoaRrS/k6pma29haJpsMng==",
-      "dev": true,
-      "requires": {
-        "p-try": "1.0.0"
-      }
+      "version": "1.1.0",
+      "resolved": "https://registry.npmjs.org/p-limit/-/p-limit-1.1.0.tgz",
+      "integrity": "sha1-sH/y2aXYi+yAYDWJWiurZqJ5iLw=",
+      "dev": true
     },
     "p-locate": {
       "version": "2.0.0",
@@ -4243,19 +4240,13 @@
       "integrity": "sha1-IKAQOyIqcMj9OcwuWAaA893l7EM=",
       "dev": true,
       "requires": {
-        "p-limit": "1.2.0"
+        "p-limit": "1.1.0"
       }
     },
     "p-map": {
       "version": "1.2.0",
       "resolved": "https://registry.npmjs.org/p-map/-/p-map-1.2.0.tgz",
       "integrity": "sha512-r6zKACMNhjPJMTl8KcFH4li//gkrXWfbD6feV8l6doRHlzljFWGJ2AP6iKaCJXyZmAUMOPtvbW7EXkbWO/pLEA==",
-      "dev": true
-    },
-    "p-try": {
-      "version": "1.0.0",
-      "resolved": "https://registry.npmjs.org/p-try/-/p-try-1.0.0.tgz",
-      "integrity": "sha1-y8ec26+P1CKOE/Yh8rGiN8GyB7M=",
       "dev": true
     },
     "pako": {
@@ -5929,15 +5920,15 @@
       "integrity": "sha1-ShRyvLuVK9Cpu0A2gB+VTfs5+qw=",
       "dev": true,
       "requires": {
-        "async": "2.6.0",
+        "async": "2.5.0",
         "chokidar": "1.7.0",
         "graceful-fs": "4.1.11"
       },
       "dependencies": {
         "async": {
-          "version": "2.6.0",
-          "resolved": "https://registry.npmjs.org/async/-/async-2.6.0.tgz",
-          "integrity": "sha512-xAfGg1/NTLBBKlHFmnd7PlmUW9KhVQIUuSrYem9xzFUZy13ScvtyGGejaae9iAVRiRq9+Cx7DPFaAAhCpyxyPw==",
+          "version": "2.5.0",
+          "resolved": "https://registry.npmjs.org/async/-/async-2.5.0.tgz",
+          "integrity": "sha512-e+lJAJeNWuPCNyxZKOBdaJGyLGHugXVQtrAwtuAe2vhxTYxFTKE73p8JuTmdH0qdQZtDvI4dhJwjZc5zsfIsYw==",
           "dev": true,
           "requires": {
             "lodash": "4.17.4"
@@ -5976,7 +5967,7 @@
         "acorn-dynamic-import": "2.0.2",
         "ajv": "5.2.3",
         "ajv-keywords": "2.1.0",
-        "async": "2.6.0",
+        "async": "2.5.0",
         "enhanced-resolve": "3.4.1",
         "escope": "3.6.0",
         "interpret": "1.0.4",
@@ -5988,7 +5979,7 @@
         "mkdirp": "0.5.1",
         "node-libs-browser": "2.0.0",
         "source-map": "0.5.7",
-        "supports-color": "4.5.0",
+        "supports-color": "4.4.0",
         "tapable": "0.2.8",
         "uglifyjs-webpack-plugin": "0.4.6",
         "watchpack": "1.4.0",
@@ -6003,9 +5994,9 @@
           "dev": true
         },
         "async": {
-          "version": "2.6.0",
-          "resolved": "https://registry.npmjs.org/async/-/async-2.6.0.tgz",
-          "integrity": "sha512-xAfGg1/NTLBBKlHFmnd7PlmUW9KhVQIUuSrYem9xzFUZy13ScvtyGGejaae9iAVRiRq9+Cx7DPFaAAhCpyxyPw==",
+          "version": "2.5.0",
+          "resolved": "https://registry.npmjs.org/async/-/async-2.5.0.tgz",
+          "integrity": "sha512-e+lJAJeNWuPCNyxZKOBdaJGyLGHugXVQtrAwtuAe2vhxTYxFTKE73p8JuTmdH0qdQZtDvI4dhJwjZc5zsfIsYw==",
           "dev": true,
           "requires": {
             "lodash": "4.17.4"
@@ -6140,9 +6131,9 @@
           "dev": true
         },
         "supports-color": {
-          "version": "4.5.0",
-          "resolved": "https://registry.npmjs.org/supports-color/-/supports-color-4.5.0.tgz",
-          "integrity": "sha1-vnoN5ITexcXN34s9WRJQRJEvY1s=",
+          "version": "4.4.0",
+          "resolved": "https://registry.npmjs.org/supports-color/-/supports-color-4.4.0.tgz",
+          "integrity": "sha512-rKC3+DyXWgK0ZLKwmRsrkyHVZAjNkfzeehuFWdGGcqGDTZFH73+RH6S/RDAAxl9GusSjZSUWYLmT9N5pzXFOXQ==",
           "dev": true,
           "requires": {
             "has-flag": "2.0.0"
@@ -6226,7 +6217,7 @@
         "sockjs-client": "1.1.4",
         "spdy": "3.4.7",
         "strip-ansi": "3.0.1",
-        "supports-color": "4.5.0",
+        "supports-color": "4.4.0",
         "webpack-dev-middleware": "1.12.0",
         "yargs": "6.6.0"
       },
@@ -6244,9 +6235,9 @@
           "dev": true
         },
         "supports-color": {
-          "version": "4.5.0",
-          "resolved": "https://registry.npmjs.org/supports-color/-/supports-color-4.5.0.tgz",
-          "integrity": "sha1-vnoN5ITexcXN34s9WRJQRJEvY1s=",
+          "version": "4.4.0",
+          "resolved": "https://registry.npmjs.org/supports-color/-/supports-color-4.4.0.tgz",
+          "integrity": "sha512-rKC3+DyXWgK0ZLKwmRsrkyHVZAjNkfzeehuFWdGGcqGDTZFH73+RH6S/RDAAxl9GusSjZSUWYLmT9N5pzXFOXQ==",
           "dev": true,
           "requires": {
             "has-flag": "2.0.0"
