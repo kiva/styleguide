@@ -244,14 +244,12 @@ a.filter-menu-button:visited {
 
 	width: calc(100% + #{$menu-width});
 	max-width: 90rem;
-	-webkit-transform: $transform;
 	transform: $transform;
 
 	@media #{$large-up} {
 		$transform: translate3d(-$menu-base-width, 0, 0);
 
 		width: calc(100% + #{$menu-base-width});
-		-webkit-transform: $transform;
 		transform: $transform;
 	}
 
@@ -323,7 +321,6 @@ a.filter-menu-button:visited {
 
 	@media #{$xxlarge-up} {
 		.inner-wrap {
-			-webkit-transform: none;
 			transform: none;
 			width: 100%;
 			display: flex;
