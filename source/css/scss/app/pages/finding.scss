@@ -341,12 +341,12 @@ a.filter-menu-button:visited {
 		}
 
 		.spacer-column {
-			flex: 1 0 auto;
+			flex: 0 0 auto;
 			min-width: calc((100vw - #{$row-width}) / 2);
 		}
 
 		.main-column {
-			flex: 0 1 auto;
+			flex: 1 1 auto;
 		}
 
 		.control-region,
