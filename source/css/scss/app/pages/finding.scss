@@ -3,6 +3,9 @@
 @import '../../font-vars';
 
 $filter-menu-base-width: rem-calc(251);
+$flexbox-gutter-up-breakpoint: "#{$screen} and (min-width: 1020px)";
+$flexbox-gutter-only-breakpoint: "#{$screen} and (min-width: 1020px) and (max-width: 1530px)";
+$filters-open-card-count-breakpoint: "#{$screen} and (min-width: 1530px)";
 
 .off-canvas-wrap {
 	background-color: $kiva-bg-lightgray;
@@ -233,11 +236,6 @@ a.filter-menu-button:visited {
 	color: #000;
 }
 
-.control-region, .results-region {
-	//padding-left: rem-calc(20);
-	max-width: rem-calc(1300);
-}
-
 .inner-wrap {
 	$menu-margin: rem-calc(20);
 	$menu-base-width: $filter-menu-base-width;
@@ -246,21 +244,18 @@ a.filter-menu-button:visited {
 
 	width: calc(100% + #{$menu-width});
 	max-width: 90rem;
-	-webkit-transform: $transform;
 	transform: $transform;
 
 	@media #{$large-up} {
 		$transform: translate3d(-$menu-base-width, 0, 0);
 
 		width: calc(100% + #{$menu-base-width});
-		-webkit-transform: $transform;
 		transform: $transform;
 	}
 
 	.left-off-canvas-menu {
 		position: relative;
 		float: left;
-		-webkit-transform: none;
 		transform: none;
 		margin-right: $menu-margin;
 
@@ -314,74 +309,99 @@ a.filter-menu-button:visited {
 }
 
 .move-right > .inner-wrap {
-	-webkit-transform: none;
 	transform: none;
 }
 
-.hide-filters-for-xxlarge-up {
-	.control-region, .results-region {
-		text-align: left;
-	}
-
-	.inner-wrap {
-		text-align: center;
-	}
-
-	.loancards-list {
-		@media #{$large-up} {
+.off-canvas-wrap {
+	@media #{$large-up} {
+		.loancards-list {
 			margin: 0 rem-calc(10);
+		}
+	}
+
+	@media #{$xxlarge-up} {
+		.inner-wrap {
+			transform: none;
+			width: 100%;
+			display: flex;
+			max-width: none;
+		}
+
+		.left-off-canvas-menu {
+			width: 0;
+			transform: translate3d(-100%, 0, 0);
+		}
+
+		.spacer-column {
+			flex: 0 0 auto;
+			min-width: calc((100vw - #{$row-width}) / 2);
+		}
+
+		.main-column {
+			flex: 1 1 auto;
+		}
+
+		.control-region,
+		.results-region {
+			width: 100%;
+		}
+
+		.exit-off-canvas {
+			flex: none;
+		}
+	}
+
+	@media #{$flexbox-gutter-up-breakpoint} {
+		.control-region {
+			padding: 0;
 		}
 	}
 }
 
-.hide-filters-for-xxlarge-up:not(.list-view) {
-	.loancards-list {
-		@media #{$xxlarge-up} {
-			@include block-grid(3);
-			margin: 0 rem-calc(10);
+.off-canvas-wrap:not(.list-view) {
+	@media #{$xxlarge-up} {
+		&:not(.show-filters-for-xxlarge-up) {
+			.loancards-list {
+				@include block-grid(3);
+				margin: 0 rem-calc(10);
+			}
 		}
+	}
 
-		@media #{$screen} and (min-width: 1300px) {
-			@include block-grid(4);
-			margin: 0 rem-calc(10);
+	@media #{$flexbox-gutter-up-breakpoint} {
+		.results-region .loancards-list {
+			margin: 0 rem-calc(-10);
+		}
+	}
+
+	@media #{$filters-open-card-count-breakpoint} {
+		.loancards-list {
+			@include block-grid(3);
 		}
 	}
 }
 
 .show-filters-for-xxlarge-up {
-	.control-region {
-		.filter-menu-button {
-			@media #{$xxlarge-up} {
-				display: none;
-			}
-		}
-	}
-
-	.inner-wrap {
-		@media #{$xxlarge-up} {
-			-webkit-transform: none;
+	@media #{$xxlarge-up} {
+		.inner-wrap .left-off-canvas-menu {
 			transform: none;
-			width: 100%;
+			width: $filter-menu-base-width;
+		}
+
+		.control-region .filter-menu-button {
+			display: none;
 		}
 	}
 
-	.loancards-list {
-		@media #{$large-up} {
-			margin: 0 rem-calc(10);
-		}
-	}
-}
-
-.show-filters-for-xxlarge-up:not(.list-view) {
-	.loancards-list {
-		@media #{$screen} and (min-width: 1230px) {
-			@include block-grid(3);
-			margin: 0 rem-calc(10);
+	@media #{$flexbox-gutter-only-breakpoint} {
+		.control-region {
+			padding-left: rem-calc(20);
 		}
 
-		@media #{$screen} and (min-width: 1550px) {
-			@include block-grid(4);
-			margin: 0 rem-calc(10);
+		&:not(.list-view) {
+			.results-region .loancards-list {
+				margin-left: rem-calc(10);
+			}
 		}
 	}
 }
