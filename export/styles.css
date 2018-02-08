@@ -13018,7 +13018,7 @@ a.filter-menu-button:visited {
   .show-filters-for-xxlarge-up .control-region .filter-menu-button {
     display: none; } }
 
-@media only screen and (min-width: 1020px) and (max-width: 1530px) {
+@media only screen and (min-width: 1020px) and (max-width: 1529px) {
   .show-filters-for-xxlarge-up .control-region {
     padding-left: 1.1111111111rem; }
   .show-filters-for-xxlarge-up:not(.list-view) .results-region .loancards-list {
