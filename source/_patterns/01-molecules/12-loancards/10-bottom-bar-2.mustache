@@ -1,0 +1,46 @@
+{{#is_lent_to}}
+	<div class="bottom-bar-2 {{#is_ended}}lent-to-list-view{{/is_ended}}">
+	</div>
+{{/is_lent_to}}
+{{#is_regular}}
+	<div class="bottom-bar-2">
+        {{#amount_left}}
+            <a kvtrackevent="Lending|Add to basket|Loan card|{{id}}|true" class="full-width button lend-button" href="#">Lend {{#free_trial}}Free {{/free_trial}}$25</a>
+        {{/amount_left}}
+        {{^amount_left}}
+            <a kvtrackevent="Lending|click-Read more|Story|{{id}}|true" class="full-width button" href="{{borrower_url}}">Learn more</a>
+        {{/amount_left}}
+	</div>
+{{/is_regular}}
+{{#is_lent_to}}
+	{{^is_ended}}
+		<div class="bottom-bar-2">
+			<a kvtrackevent="Lending|Lend Again|Loan card|{{id}}|true" class="button" href="{{borrower_url}}">Lend again</a>
+		</div>
+	{{/is_ended}}
+{{/is_lent_to}}
+{{#is_adding}}
+	<div class="bottom-bar-2">
+		<div class="message">
+			{{> molecules-loading-spinner }} Adding to basket
+		</div>
+	</div>
+{{/is_adding}}
+{{#is_in_basket}}
+	<div class="bottom-bar-2">
+	</div>
+	<div class="bottom-bar-2">
+		<a kvtrackevent="Lending|Proceed to checkout|Loan card|{{id}}|true" class="success button" href="{{basket_url}}">
+			<svg class="icon">
+				<use xlink:href="#icon-confirmation" />
+			</svg>
+			<span>Checkout</span>
+		</a>
+	</div>
+{{/is_in_basket}}
+{{#is_ended}}
+	{{^is_adding}}
+		{{^is_in_basket}}
+		{{/is_in_basket}}
+	{{/is_adding}}
+{{/is_ended}}
