@@ -1,9 +1,11 @@
 {{! This is the promo banner that is shown in the xlarge-up screen state in the header}}
 <div class="show-for-xxlarge-up header-promo">
 	<a id="header-promo-content" href="{{header_promo.href}}" kvtrackevent="promo|click|TopNav">
+		{{#header_promo.icon}}
 		<svg class="icon {{header_promo.icon}}">
 			<use xlink:href="#{{header_promo.icon}}"></use>
 		</svg>
+		{{/header_promo.icon}}
 		<div class="content">
 			<div>{{header_promo.message}}</div>
 			<div class="call-to-action-text {{#header_promo.left_align}}text-left{{/header_promo.left_align}}">{{header_promo.call_to_action}}<br></div>
