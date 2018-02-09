@@ -10,7 +10,7 @@ $loan-card-border: 1px solid $kiva-stroke-gray;
 	flex-direction: column;
 	height: 100%;
 	position: relative;
-    min-width: rem-calc(300);
+	min-width: rem-calc(300);
 	background-color: #fafafa;
 	border: $loan-card-border;
 
@@ -31,20 +31,51 @@ $loan-card-border: 1px solid $kiva-stroke-gray;
 		}
 	}
 
-	//.columns {
-	//	padding: 0;
-	//}
+	.favorite-link {
+		position: absolute;
+		top: rem-calc(8);
+		right: rem-calc(12);
 
-	.loan-card-2-image-wrap {
+		.icon-star {
+			height: 22px;
+			width: 22px;
+			fill: transparent;
+			color: #ffffff;
+			opacity: 0.7;
+		}
 
+		.is-favorite .icon-star {
+			opacity: 1;
+		}
 	}
 
 	.loan-card-2-details-wrap {
 		flex-grow: 1;
+		padding: rem-calc(16) rem-calc(20);
+		text-align: center;
+
+		a, a:visited {
+			color: $kiva-textlink;
+		}
 	}
 
-	p {
-		margin-bottom: 0.25rem;
+	.loan-card-2-borrower-name {
+		font-size: rem-calc(22);
+		line-height: rem-calc(22);
+		font-weight: 400;
+	}
+
+	.loan-card-2-country {
+		margin: 8px 0;
+		font-size: rem-calc(16);
+		line-height: rem-calc(16);
+		font-weight: 400;
+		color: $kiva-text-light;
+	}
+
+	.loan-card-2-use {
+		font-size: rem-calc(16);
+		font-weight: 300;
 	}
 
 	.loan-message {
@@ -107,66 +138,26 @@ $loan-card-border: 1px solid $kiva-stroke-gray;
 		padding-bottom: 62.5%;
         background-size: cover;
 		background-color: $kiva-bg-darkgray;
-	}
-
-	.loan-image-footer {
-        position: relative;
-        $loan-image-footer-height: 2rem;
-
-        .icon-match {
-            height: $loan-image-footer-height;
-            width: $loan-image-footer-height;
-        }
-
-        .matching-message {
-            font-size: $small-font-size;
-            height: $loan-image-footer-height;
-            padding-right: $loan-image-footer-height;
-
-			@media #{$list-break-point} {
-				.list-view & {
-					display: none;
-				}
-			}
-
-            span {
-                line-height: $loan-image-footer-height;
-            }
-        }
 
         .icon-star {
-            height: $loan-image-footer-height;
-            width: $loan-image-footer-height;
+            //height: $loan-image-footer-height;
+            //width: $loan-image-footer-height;
         }
-    }
-
-	.loan-card-2-details-wrap {
-		text-align: center;
-		padding: 0 0.5rem;
-		z-index: 1;
-
-        a, a:visited {
-            color: $kiva-textlink;
-        }
-
 	}
-
-    .country {
-
-    }
 
 	.fundraising-meter {
 		height: $loan-card-meter-height;
 		width: 100%;
-		margin: 0;
+		margin: 0 0 8px 0;
 		border-radius: $loan-card-meter-height;
+		background-color: $kiva-stroke-gray;
 
 		.meter {
 			border-radius: $loan-card-meter-height;
 		}
 	}
 
-    .loan-card-2-footer-wrap {
+	.loan-card-2-footer-wrap {
 		padding: rem-calc(20);
 		text-align: center;
 
@@ -181,8 +172,6 @@ $loan-card-border: 1px solid $kiva-stroke-gray;
 			position: relative;
 			margin-top: 1rem;
 			font-size: $small-font-size;
-			//padding-left: $loan-image-footer-height + 0.25rem;
-			display: none;
 
 			@media #{$list-break-point} {
 				.list-view & {
@@ -195,15 +184,15 @@ $loan-card-border: 1px solid $kiva-stroke-gray;
 				line-height: 1.3;
 			}
 		}
-    }
+	}
 
-    &:hover {
+	&:hover {
 		box-shadow: 2px 2px 4px rgba(0,0,0,0.1);
 
 		.image-edit-buttons {
 			display: block;
 		}
-    }
+	}
 
 	.left-and-to-go-line
 	, .matching-line {
@@ -239,23 +228,33 @@ $loan-card-border: 1px solid $kiva-stroke-gray;
 	}
 }
 
-
 .bottom-bar-2 {
     width: 100%;
 
     .button, .message {
-        //height: $loan-card-footer-height;
-        //line-height: $loan-card-footer-height;
+        height: 50px;
+        line-height: 50px;
         font-size: $top-nav-font-size;
         font-weight: normal;
+		color: $white;
         width: 100%;
         margin: 0;
         padding: 0;
         white-space: nowrap;
-        color: $white;
+		border-radius: rem-calc(2);
+		box-shadow: 1px 2px 1px #1f92ba;
+
         &:hover, &:active, &:visited, &:focus {
             color: $white;
         }
+
+
+		.lend-button {
+
+			&:hover, &:active, &:visited, &:focus {
+			   background-color: #1f92ba;
+		   }
+		}
 
         .icon {
             fill: $white;
@@ -280,17 +279,29 @@ $loan-card-border: 1px solid $kiva-stroke-gray;
         }
     }
 
+	.message {
+		background-color: #1f92ba;
+		font-style: italic;
+	}
+
+
     .button.success {
-		background-color: $kiva-navdivider-green;
+		color: $kiva-textlink;
+		background-color: $white;
+		border: 1px solid #27b6e8;
+		box-shadow: 1px 2px 1px #6badc2;
 
 		&:hover, &:active {
-            background-color: $kiva-icon-green;
+			color: $kiva-textlink-hover;
         }
-    }
 
-    .message {
-        background-color: $kiva-navdivider-green;
-        text-align: center;
+		.icon {
+			width: 2rem;
+			height: 2rem;
+			vertical-align: middle;
+			position: relative;
+			margin-top: -5px;
+		}
     }
 }
 

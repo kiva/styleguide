@@ -8,15 +8,28 @@
 		{{/is_admin}}
 		<a class="loan-card-2-image" kvtrackevent="Lending|click-Read more|Photo|{{id}}|true" href="{{borrower_url}}" data-interchange="{{#image.sizes}}[{{url}}, ({{size}})],{{/image.sizes}}">
 		</a>
+
+		<a kvtrackevent="Lending|click-Favorite star" href="#" class="favorite-link{{#is_favorite}} is-favorite{{/is_favorite}}">
+			<svg class="icon icon-star"><use xlink:href="#icon-star"/></svg>
+		</a>
+
+		{{#can_favorite}}
+			<a kvtrackevent="Lending|click-Favorite star" href="#" class="favorite-link{{#is_favorite}} is-favorite{{/is_favorite}}">
+				<svg class="icon icon-star"><use xlink:href="#icon-star"/></svg>
+			</a>
+		{{/can_favorite}}
+
+
 	</div>
 
     <div class="loan-card-2-details-wrap">
-        <a kvtrackevent="Lending|click-Read more|Name|{{id}}|true" href="{{borrower_url}}">{{name}}</a>
-        <div class="country">
+        <a class="loan-card-2-borrower-name" kvtrackevent="Lending|click-Read more|Name|{{id}}|true" href="{{borrower_url}}">{{name}}</a>
+
+		<div class="loan-card-2-country">
 			{{location_label}}
         </div>
 
-		<p class="small-text">{{use}}</p>
+		<div class="loan-card-2-use">{{use}}</div>
     </div>
 
 	<div class="loan-card-2-footer-wrap">
@@ -26,10 +39,10 @@
 
 		<div class="left-and-to-go-line">
 			{{#is_expiring_soon}}
-				<span class="loan-message urgent">{{expiring_soon_message}}</span>
+					<span class="loan-message">{{expiring_soon_message}}</span>
 			{{/is_expiring_soon}}
 
-			<span class="caption">{{progress.message}}</span>
+			{{progress.message}}
 		</div>
 
 		<div class="matching-line">
