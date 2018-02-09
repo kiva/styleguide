@@ -9560,7 +9560,7 @@ ul.tertiary-nav {
 
 .siteFooter {
   height: 15.5555555556rem;
-  background-color: #236133;
+  background-color: #63a541;
   color: #FFFFFF;
   font-size: 0.7777777778rem;
   line-height: 1.1111111111rem;
@@ -9572,11 +9572,11 @@ ul.tertiary-nav {
     .siteFooter {
       height: 23.5555555556rem; } }
   .siteFooter a {
-    color: #a9d14c;
+    color: #236133;
     font-size: 0.7777777778rem;
     line-height: 1.1111111111rem; }
     .siteFooter a:visited, .siteFooter a:active {
-      color: #a9d14c; }
+      color: #236133; }
   .siteFooter h1 {
     color: #FFFFFF;
     font-size: 0.7777777778rem;
@@ -9623,7 +9623,7 @@ ul.tertiary-nav {
   .siteFooter {
     padding: 1rem; }
   .siteFooter-nav .siteFooter-links {
-    border-bottom: white 1px solid;
+    border-bottom: #a9d14c 1px solid;
     list-style-type: none;
     margin-left: 0;
     padding-bottom: 2.2222222222rem;
@@ -9640,7 +9640,7 @@ ul.tertiary-nav {
   .siteFooter-nav .siteFooter-legal {
     text-align: center; }
   .siteFooter-nav .siteFooter-privacy {
-    border-right: #FFFFFF 1px solid;
+    border-right: #a9d14c 1px solid;
     padding-right: 1.1111111111rem;
     margin-right: 0.7222222222rem; } }
 
@@ -9681,7 +9681,7 @@ ul.tertiary-nav {
           margin-left: 0; }
       .siteFooter-nav .siteFooter-links.links-list a {
         white-space: nowrap;
-        border-left: #FFFFFF 0.0555555556rem solid;
+        border-left: #a9d14c 1px solid;
         padding-left: 0.4444444444rem;
         margin-left: 0.4444444444rem; } }
 
@@ -9695,7 +9695,7 @@ ul.tertiary-nav {
   .siteFooter-nav .siteFooter-links.links-list li:nth-child(3) {
     clear: none; }
     .siteFooter-nav .siteFooter-links.links-list li:nth-child(3) a {
-      border-left: #FFFFFF 0.0555555556rem solid;
+      border-left: #a9d14c 1px solid;
       padding-left: 0.4444444444rem;
       margin-left: 0.4444444444rem; } }
 
