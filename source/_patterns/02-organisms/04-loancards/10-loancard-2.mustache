@@ -9,17 +9,15 @@
 		<a class="loan-card-2-image" kvtrackevent="Lending|click-Read more|Photo|{{id}}|true" href="{{borrower_url}}" data-interchange="{{#image.sizes}}[{{url}}, ({{size}})],{{/image.sizes}}">
 		</a>
 
-		<a kvtrackevent="Lending|click-Favorite star" href="#" class="favorite-link{{#is_favorite}} is-favorite{{/is_favorite}}">
+		<a kvtrackevent="Lending|click-Favorite star"{{^is_touch}}data-tooltip aria-haspopup="true"{{/is_touch}} title="Star this loan to find it quickly later. You can view and manage your starred loans in the ‘Lend’ tab above." href="#" class="favorite-link{{#is_favorite}} is-favorite{{/is_favorite}}">
 			<svg class="icon icon-star"><use xlink:href="#icon-star"/></svg>
 		</a>
 
 		{{#can_favorite}}
-			<a kvtrackevent="Lending|click-Favorite star" href="#" class="favorite-link{{#is_favorite}} is-favorite{{/is_favorite}}">
+			<a kvtrackevent="Lending|click-Favorite star"{{^is_touch}}data-tooltip aria-haspopup="true"{{/is_touch}} title="Star this loan to find it quickly later. You can view and manage your starred loans in the ‘Lend’ tab above." href="#" class="favorite-link{{#is_favorite}} is-favorite{{/is_favorite}}">
 				<svg class="icon icon-star"><use xlink:href="#icon-star"/></svg>
 			</a>
 		{{/can_favorite}}
-
-
 	</div>
 
     <div class="loan-card-2-details-wrap">
