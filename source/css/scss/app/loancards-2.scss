@@ -11,7 +11,7 @@ $loan-card-border: 1px solid $kiva-stroke-gray;
 	height: 100%;
 	position: relative;
 	min-width: rem-calc(300);
-	background-color: $kiva-bg-verylightgray;
+	background-color: white;
 	border: $loan-card-border;
 
 	&.row {
@@ -66,7 +66,7 @@ $loan-card-border: 1px solid $kiva-stroke-gray;
 	}
 
 	.loan-card-2-country {
-		margin: rem-calc(8) 0;
+		margin: rem-calc(5) 0 rem-calc(9) ;
 		font-size: rem-calc(16);
 		line-height: rem-calc(16);
 		font-weight: 400;
@@ -75,17 +75,12 @@ $loan-card-border: 1px solid $kiva-stroke-gray;
 
 	.loan-card-2-use {
 		font-size: rem-calc(16);
+		line-height: rem-calc(22);
 		font-weight: 300;
 	}
 
 	.loan-message {
-		//font-size: $small-font-size;
-		//line-height: $small-line-height;
-		//color: $kiva-text-dark;
-
-		&.urgent {
-			color: $red;
-		}
+		color: $kiva-text-dark;
 	}
 
 	.image-edit-buttons {
@@ -132,17 +127,12 @@ $loan-card-border: 1px solid $kiva-stroke-gray;
 	}
 
 	.loan-card-2-image {
-        position: relative;
-        display: block;
+		position: relative;
+		display: block;
 		width: 100%;
 		padding-bottom: 62.5%;
-        background-size: cover;
+		background-size: cover;
 		background-color: $kiva-bg-darkgray;
-
-        .icon-star {
-            //height: $loan-image-footer-height;
-            //width: $loan-image-footer-height;
-        }
 	}
 
 	.fundraising-meter {
@@ -158,7 +148,7 @@ $loan-card-border: 1px solid $kiva-stroke-gray;
 	}
 
 	.loan-card-2-footer-wrap {
-		height: rem-calc(165);
+		height: rem-calc(145);
 		padding: rem-calc(10) rem-calc(20)rem-calc(20);
 		text-align: center;
 	}
@@ -182,16 +172,15 @@ $loan-card-border: 1px solid $kiva-stroke-gray;
 		line-height: $small-font-size;
 		font-style: italic;
 		color: $kiva-green;
-		margin-bottom: rem-calc(14);
+		margin-bottom: rem-calc(10);
 	}
 
 	.matching-line {
-		$matching-line-height: rem-calc(24);
+		$matching-line-height: rem-calc(22);
 		height: $matching-line-height;
 		line-height: $matching-line-height;
-		color: $kiva-text-light;
 		font-weight: 300;
-		margin-bottom: rem-calc(16);
+		margin-bottom: rem-calc(3);
 
 		.icon-match {
 			fill: $kiva-text-medium ;
@@ -206,47 +195,46 @@ $loan-card-border: 1px solid $kiva-stroke-gray;
 }
 
 .bottom-bar-2 {
-    width: 100%;
+	width: 100%;
 
     .button, .message {
-        height: rem-calc(50);
-        line-height: rem-calc(50);
-        font-size: $top-nav-font-size;
-        font-weight: normal;
+		height: rem-calc(47);
+		line-height: rem-calc(47);
+		font-size: $top-nav-font-size;
+		font-weight: normal;
 		color: $white;
-        width: 100%;
-        margin: 0;
-        padding: 0;
-        white-space: nowrap;
+		width: 100%;
+		margin: 0;
+		padding: 0;
+		white-space: nowrap;
 		border-radius: rem-calc(2);
 		box-shadow: rem-calc(1) rem-calc(2) rem-calc(1) $shadow-blue;
 
-        &:hover, &:active, &:visited, &:focus {
-            color: $white;
-        }
-
-		.lend-button {
-
-			&:hover, &:active, &:visited, &:focus {
-			   background-color: $shadow-blue;
-		   }
+		&:hover, &:active, &:visited, &:focus {
+			color: $white;
 		}
 
-        .icon {
-            fill: $white;
-            width: 1rem;
-            height: $loan-card-footer-height;
-            position: absolute;
-        }
+		.lend-button {
+			&:hover, &:active, &:visited, &:focus {
+			   background-color: $shadow-blue;
+			}
+		}
 
-        span {
-            padding-left: 1.5rem;
-        }
+		.icon {
+			fill: $white;
+			width: 1rem;
+			height: $loan-card-footer-height;
+			position: absolute;
+		}
 
-        .loading-spinner {
-            height: 1.2rem;
+		span {
+			padding-left: 1.5rem;
+		}
+
+	.loading-spinner {
+			height: 1.2rem;
 			width: 1.2rem;
-            margin-right: 0.75rem;
+			margin-right: 0.75rem;
 			vertical-align: middle;
 
 			.line {
