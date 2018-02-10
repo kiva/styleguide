@@ -1,0 +1,29 @@
+{
+	"name": "Cynthia"
+	, "use": "A loan of $575 helps Sau to buy a chainsaw, banana tubes (seedlings), taro roots (seedlings), a wheelbarrow, a water tank, gloves, a rake, a shovel, and chemicals."
+	, "location": {
+		"country" : {
+			"name": "Honduras"
+			, "iso_code": "hn"
+		}
+	}
+	, "image": {
+		"url": "http://placehold.it/150x150.jpg"
+		, "retina_url": "http://placehold.it/300x300.jpg"
+	}
+	, "progress": {
+		"percent": 42
+		, "message": "$1,800 to go"
+	}
+	, "partner": {
+		"name": "Apoyo Integral"
+		, "rating": 3
+		, "delinquency_rate": "10.31%"
+		, "default_rate": "2.17%"
+	}
+	, "is_regular": true
+	, "is_lent_to": false
+	, "is_adding": false
+	, "is_in_basket": false
+	, "list_view": true
+}
