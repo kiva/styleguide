@@ -11088,7 +11088,10 @@ svg {
     height: 1.2222222222rem;
     line-height: 1.2222222222rem;
     font-weight: 300;
-    margin-bottom: 0.1666666667rem; }
+    margin-bottom: 0.1666666667rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap; }
     .loan-card-2 .matching-line .icon-match {
       fill: #666;
       color: #d8d8d8;
@@ -13146,7 +13149,7 @@ a.filter-menu-button:visited {
 
 @media only screen and (min-width: 681px) {
   .off-canvas-wrap .loancards-list {
-    margin: 0 0.5555555556rem; } }
+    margin: 0 0rem; } }
 
 @media only screen and (min-width: 989px) {
   .off-canvas-wrap .inner-wrap {
@@ -13179,23 +13182,10 @@ a.filter-menu-button:visited {
 
 @media only screen and (min-width: 989px) {
   .off-canvas-wrap:not(.list-view):not(.show-filters-for-xxlarge-up) .loancards-list {
-    display: block;
-    padding: 0;
-    margin: 0 -0.5555555556rem;
-    margin: 0 0.5555555556rem; }
-    .off-canvas-wrap:not(.list-view):not(.show-filters-for-xxlarge-up) .loancards-list:before, .off-canvas-wrap:not(.list-view):not(.show-filters-for-xxlarge-up) .loancards-list:after {
-      content: " ";
-      display: table; }
-    .off-canvas-wrap:not(.list-view):not(.show-filters-for-xxlarge-up) .loancards-list:after {
-      clear: both; }
-    .off-canvas-wrap:not(.list-view):not(.show-filters-for-xxlarge-up) .loancards-list > li {
-      display: block;
-      float: left;
-      height: auto;
-      padding: 0 0.5555555556rem 1.1111111111rem; }
+    margin: 0 0rem; }
     .off-canvas-wrap:not(.list-view):not(.show-filters-for-xxlarge-up) .loancards-list > li {
       list-style: none;
-      padding: 0 0.5555555556rem 1.1111111111rem;
+      padding: 0 1.1111111111rem 2.2222222222rem;
       width: 33.3333333333%; }
       .off-canvas-wrap:not(.list-view):not(.show-filters-for-xxlarge-up) .loancards-list > li:nth-of-type(1n) {
         clear: none; }
@@ -13204,31 +13194,17 @@ a.filter-menu-button:visited {
 
 @media only screen and (min-width: 1020px) {
   .off-canvas-wrap:not(.list-view) .results-region .loancards-list {
-    margin: 0 -0.5555555556rem; } }
+    margin: 0 -1.1111111111rem; } }
 
 @media only screen and (min-width: 1530px) {
-  .off-canvas-wrap:not(.list-view) .loancards-list {
-    display: block;
-    padding: 0;
-    margin: 0 -0.5555555556rem; }
-    .off-canvas-wrap:not(.list-view) .loancards-list:before, .off-canvas-wrap:not(.list-view) .loancards-list:after {
-      content: " ";
-      display: table; }
-    .off-canvas-wrap:not(.list-view) .loancards-list:after {
-      clear: both; }
-    .off-canvas-wrap:not(.list-view) .loancards-list > li {
-      display: block;
-      float: left;
-      height: auto;
-      padding: 0 0.5555555556rem 1.1111111111rem; }
-    .off-canvas-wrap:not(.list-view) .loancards-list > li {
-      list-style: none;
-      padding: 0 0.5555555556rem 1.1111111111rem;
-      width: 33.3333333333%; }
-      .off-canvas-wrap:not(.list-view) .loancards-list > li:nth-of-type(1n) {
-        clear: none; }
-      .off-canvas-wrap:not(.list-view) .loancards-list > li:nth-of-type(3n+1) {
-        clear: both; } }
+  .off-canvas-wrap:not(.list-view) .loancards-list > li {
+    list-style: none;
+    padding: 0 1.1111111111rem 2.2222222222rem;
+    width: 33.3333333333%; }
+    .off-canvas-wrap:not(.list-view) .loancards-list > li:nth-of-type(1n) {
+      clear: none; }
+    .off-canvas-wrap:not(.list-view) .loancards-list > li:nth-of-type(3n+1) {
+      clear: both; } }
 
 @media only screen and (min-width: 989px) {
   .show-filters-for-xxlarge-up .inner-wrap .left-off-canvas-menu {
@@ -13242,7 +13218,7 @@ a.filter-menu-button:visited {
   .show-filters-for-xxlarge-up .control-region {
     padding-left: 1.1111111111rem; }
   .show-filters-for-xxlarge-up:not(.list-view) .results-region .loancards-list {
-    margin-left: 0.5555555556rem; } }
+    margin-left: 0rem; } }
 
 .no-results-text {
   padding: 1.1111111111rem; }
@@ -13322,7 +13298,7 @@ a.filter-menu-button:visited {
   border-bottom: 1px solid #999; }
   @media only screen and (min-width: 681px) {
     .loancards-list li {
-      padding-bottom: 1.1111111111rem;
+      padding: 0 1.1111111111rem 2.2222222222rem;
       margin-bottom: 0;
       border-bottom: none; } }
 
