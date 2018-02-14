@@ -181,6 +181,9 @@ $loan-card-border: 1px solid $kiva-stroke-gray;
 		line-height: $matching-line-height;
 		font-weight: 300;
 		margin-bottom: rem-calc(3);
+		overflow: hidden;
+		text-overflow: ellipsis;
+		white-space: nowrap;
 
 		.icon-match {
 			fill: $kiva-text-medium ;
