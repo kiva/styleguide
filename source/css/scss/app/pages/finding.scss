@@ -6,6 +6,10 @@ $filter-menu-base-width: rem-calc(251);
 $flexbox-gutter-up-breakpoint: "#{$screen} and (min-width: 1020px)";
 $flexbox-gutter-only-breakpoint: "#{$screen} and (min-width: 1020px) and (max-width: 1529px)";
 $filters-open-card-count-breakpoint: "#{$screen} and (min-width: 1530px)";
+$loan-card-spacing: rem-calc(40);
+$loan-card-list-margin: rem-calc(20);
+$loan-card-block-grid-no-margin: -($loan-card-spacing/2);
+$loan-card-block-grid-margin: $loan-card-block-grid-no-margin + $loan-card-list-margin;
 
 .off-canvas-wrap {
 	background-color: $kiva-bg-lightgray;
@@ -109,7 +113,7 @@ $filters-open-card-count-breakpoint: "#{$screen} and (min-width: 1530px)";
 
 .control-region {
 	@media #{$large-up} {
-		padding: 0 rem-calc(20);
+		padding: 0 $loan-card-list-margin;
 	}
 
 	.control-box {
@@ -315,7 +319,7 @@ a.filter-menu-button:visited {
 .off-canvas-wrap {
 	@media #{$large-up} {
 		.loancards-list {
-			margin: 0 rem-calc(10);
+			margin: 0 $loan-card-block-grid-margin;
 		}
 	}
 
@@ -362,21 +366,21 @@ a.filter-menu-button:visited {
 	@media #{$xxlarge-up} {
 		&:not(.show-filters-for-xxlarge-up) {
 			.loancards-list {
-				@include block-grid(3);
-				margin: 0 rem-calc(10);
+				@include block-grid($per-row: 3, $spacing: $loan-card-spacing, $base-style: false);
+				margin: 0 $loan-card-block-grid-margin;
 			}
 		}
 	}
 
 	@media #{$flexbox-gutter-up-breakpoint} {
 		.results-region .loancards-list {
-			margin: 0 rem-calc(-10);
+			margin: 0 $loan-card-block-grid-no-margin;
 		}
 	}
 
 	@media #{$filters-open-card-count-breakpoint} {
 		.loancards-list {
-			@include block-grid(3);
+			@include block-grid($per-row: 3, $spacing: $loan-card-spacing, $base-style: false);
 		}
 	}
 }
@@ -395,12 +399,12 @@ a.filter-menu-button:visited {
 
 	@media #{$flexbox-gutter-only-breakpoint} {
 		.control-region {
-			padding-left: rem-calc(20);
+			padding-left: $loan-card-list-margin;
 		}
 
 		&:not(.list-view) {
 			.results-region .loancards-list {
-				margin-left: rem-calc(10);
+				margin-left: $loan-card-block-grid-margin;
 			}
 		}
 	}
@@ -501,7 +505,7 @@ a.filter-menu-button:visited {
 	border-bottom: 1px solid $gray;
 
 	@media #{$large-up} {
-		padding-bottom: rem-calc(20);
+		padding: 0 $loan-card-spacing/2 $loan-card-spacing;
 		margin-bottom: 0;
 		border-bottom: none;
 	}
