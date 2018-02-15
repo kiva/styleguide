@@ -19,7 +19,7 @@
                 <mask id="mask-2" sketch:name="Mask" fill="white">
                     <use xlink:href="#path-1"></use>
                 </mask>
-                <use id="Mask" fill="#236133" sketch:type="MSShapeGroup" xlink:href="#path-1"></use>
+                <use id="Mask" fill="#247037" sketch:type="MSShapeGroup" xlink:href="#path-1"></use>
                 <g id="symbol6" mask="url(#mask-2)">
                     <g transform="translate(497.000000, 1861.000000)">
                         <g id="Group-3" stroke-width="1" fill="none" sketch:type="MSLayerGroup">
