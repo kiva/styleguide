@@ -1,3 +1,6 @@
+@import '../../settings';
+@import '../../font-vars';
+
 .hp-slideshow-wrapper {
 	position: relative;
 	margin: 0;
@@ -777,6 +780,32 @@ $hiw-half-tap-button-size-small: $hiw-tap-button-size-small / 2;
 		.center-column {
 			border-left: 4px solid white;
 			border-right: 4px solid white;
+		}
+	}
+}
+
+.home-fact-map {
+	text-align: center;
+
+	h1, h2 {
+		color: $kiva-green;
+	}
+
+	p, a, a:visited, a:focus {
+		color: $kiva-text-light;
+	}
+
+	.stars .icon {
+		width: 1.25rem;
+		height: 1.25rem;
+		margin: 0 0.15rem;
+		color: $kiva-green;
+		fill: none;
+	}
+
+	@media #{$large-up} {
+		.big-number {
+			font-size: 150%;
 		}
 	}
 }
