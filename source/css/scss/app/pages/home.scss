@@ -785,6 +785,12 @@ $hiw-half-tap-button-size-small: $hiw-tap-button-size-small / 2;
 }
 
 .home-fact-map {
+	$p-font-size: rem-calc(16);
+	$p-font-size-large-up: $body-font-size;
+	$p-line-height-large-up: 1.5;
+	$h2-font-size-medium-down: rem-calc(21);
+	$h2-line-height-medium-down: rem-calc(27);
+
 	text-align: center;
 
 	h1, h2 {
@@ -793,6 +799,12 @@ $hiw-half-tap-button-size-small: $hiw-tap-button-size-small / 2;
 
 	p, a, a:visited, a:focus {
 		color: $kiva-text-light;
+		font-weight: 300;
+	}
+
+	p {
+		font-size: $p-font-size;
+		line-height: 1.4;
 	}
 
 	.stars .icon {
@@ -803,9 +815,26 @@ $hiw-half-tap-button-size-small: $hiw-tap-button-size-small / 2;
 		fill: none;
 	}
 
+	@media #{$medium-down} {
+		h2 {
+			font-size: $h2-font-size-medium-down;
+			line-height: $h2-line-height-medium-down;
+		}
+	}
+
 	@media #{$large-up} {
+		h1 {
+			font-size: rem-calc(42);
+			font-weight: normal;
+		}
+
 		.big-number {
 			font-size: 150%;
+		}
+
+		p {
+			font-size: $p-font-size-large-up;
+			line-height: $p-line-height-large-up;
 		}
 	}
 }
