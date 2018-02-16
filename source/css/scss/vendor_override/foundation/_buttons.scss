@@ -14,7 +14,7 @@ button, a.button, .button {
 
 	&:hover, &:active {
 		text-decoration: none;
-		background-color: $kiva-textlink-hover;
+		background-color: $button-bg-hover;
 	}
 
 	@media #{$medium-up} {
@@ -39,8 +39,8 @@ button, a.button, .button {
 	border-style: solid;
 
 	&:hover, &:active {
-		border-color: $kiva-textlink-hover;
-		color: $kiva-textlink-hover;
+		border-color: $button-bg-hover;
+		color: $button-bg-hover;
 		background-color: $white;
 	}
 
@@ -95,8 +95,8 @@ button.secondary, .button.secondary {
 	}
 
 	.no-touch &:hover {
-		border-color: $kiva-textlink-hover;
-		color: $kiva-textlink-hover;
+		border-color: $button-bg-hover;
+		color: $button-bg-hover;
 	}
 
 	&.disabled, &[disabled] {
