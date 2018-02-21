@@ -795,6 +795,7 @@ $hiw-half-tap-button-size-small: $hiw-tap-button-size-small / 2;
 	$h2-line-height-large-up: rem-calc(36);
 
 	text-align: center;
+	margin-top: 2rem;
 
 	.map-row {
 		position: relative;
@@ -857,6 +858,8 @@ $hiw-half-tap-button-size-small: $hiw-tap-button-size-small / 2;
 	}
 
 	@media #{$large-up} {
+		margin-bottom: 2rem;
+
 		.map-row {
 			padding-top: 2.4rem;
 		}
