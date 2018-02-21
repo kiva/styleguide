@@ -407,6 +407,22 @@
 		// Init the slick
 		$('#hp-slideshow').slick(slickOpts);
 	}
+
+	// experimental version
+	if ($('#hp-slideshow2')) {
+		var slickOpts = {
+			slide: 'div',
+			slidesToShow: 1,
+			slidesToScroll: 1,
+			mobileFirst: true,
+			dots: false,
+			arrows: false,
+			autoplay: true,
+			autoplaySpeed: 5000
+		};
+		// Init the slick
+		$('#hp-slideshow2').slick(slickOpts);
+	}
 	// END HOME PAGE CAROUSEL
 
 	function loadSvgIcons() {
