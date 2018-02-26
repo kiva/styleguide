@@ -16,7 +16,9 @@ $filter-open-behavior-breakpoint: $xlarge-breakpoint + $loan-card-list-px-margin
 $gutter-up-query: "#{$screen} and (min-width: #{$gutter-breakpoint})";
 $filter-open-behavior-query: "#{$screen} and (min-width: #{$filter-open-behavior-breakpoint})";
 
-.off-canvas-wrap {
+.off-canvas-wrap,
+.showLendView .pageWrap,
+.showCategoryView .pageWrap {
 	background-color: $kiva-bg-lightgray;
 }
 
