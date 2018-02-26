@@ -344,6 +344,7 @@ a.filter-menu-button:visited {
 
 		.main-column {
 			flex-grow: 0;
+			min-width: calc(100% - #{$filter-menu-base-width});
 		}
 	}
 
@@ -358,6 +359,10 @@ a.filter-menu-button:visited {
 
 		.left-off-canvas-menu {
 			transform: translate3d(-100%, 0, 0);
+		}
+
+		.main-column {
+			min-width: $row-width;
 		}
 
 		&.move-right {
@@ -409,13 +414,6 @@ a.filter-menu-button:visited {
 .no-results-text {
 	padding: rem-calc(20);
 	@media #{$large-up} {
-		transform: translate(-50%);
-		&.fixed {
-			left: calc((100% - #{$filter-menu-base-width}) / 2 + #{$filter-menu-base-width});
-			position: fixed;
-			top: rem-calc(280);
-			bottom: auto;
-		}
 		&.absolute {
 			position: absolute;
 			top: auto;
