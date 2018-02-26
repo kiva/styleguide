@@ -50,12 +50,6 @@ $filter-open-behavior-query: "#{$screen} and (min-width: #{$filter-open-behavior
 		.line {
 			background-color: $black;
 		}
-
-		@media #{$xxlarge-up} {
-			.off-canvas-wrap:not(.hide-filters-for-xxlarge-up) & {
-				right: calc((100% - #{$filter-menu-base-width}) / 2);
-			}
-		}
 	}
 }
 
@@ -68,6 +62,10 @@ $filter-open-behavior-query: "#{$screen} and (min-width: #{$filter-open-behavior
 		@media #{$large-up} {
 			background-color: $black;
 		}
+	}
+
+	@media #{$filter-open-behavior-query} {
+		right: 50%;
 	}
 }
 
