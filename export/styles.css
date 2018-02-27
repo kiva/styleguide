@@ -8429,12 +8429,9 @@ ul.dropdown-list {
       .header-button[data-dropdown] .icon {
         width: 0.75rem;
         height: 0.75rem; } }
-  .header-button[aria-expanded="true"] {
-    color: #247037; }
-    .header-button[aria-expanded="true"] .icon {
-      fill: #247037;
-      -ms-transform: rotate(0deg);
-      transform: rotate(0deg); }
+  .header-button[aria-expanded="true"] .icon {
+    -ms-transform: rotate(0deg);
+    transform: rotate(0deg); }
   .header-button .icon {
     width: 1rem;
     height: 1rem; }
@@ -9453,7 +9450,7 @@ ul.tertiary-nav {
         line-height: 1.1666666667rem; } }
 
 .n-touch .top-nav .header-button:hover, .no-touch .top-nav .header-button:hover {
-  background-color: #488443; }
+  background-color: #49953f; }
 
 .basket-bar {
   position: fixed;
@@ -12223,7 +12220,7 @@ a.aboutJoinLink:visited {
   overflow: auto;
   background-color: #247037; }
   .aboutStatsContainer .topStats {
-    background: url(//www.kiva.org/cms/page/images/map-bg.min_.svg) no-repeat;
+    background: url("//www-kiva-org.global.ssl.fastly.net/cms/map-bg-2018.min__0.svg") no-repeat;
     background-size: contain;
     background-position: center center; }
     @media only screen and (max-width: 480px) {
@@ -15767,7 +15764,7 @@ table.repayments-list {
     overflow: auto;
     background-color: #247037; }
     .fellows-page .fellowsStatsContainer .topStats, .interns-page .fellowsStatsContainer .topStats {
-      background: url("//www-kiva-org.global.ssl.fastly.net/cms/page/images/map-bg.min_.svg") no-repeat;
+      background: url("//www-kiva-org.global.ssl.fastly.net/cms/map-bg-2018.min__0.svg") no-repeat;
       background-size: contain;
       background-position: center center; }
       @media only screen and (max-width: 480px) {
