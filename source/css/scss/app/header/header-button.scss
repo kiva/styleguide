@@ -41,11 +41,7 @@
 	}
 
 	&[aria-expanded="true"]{
-		color: $kiva-darkgreen;
-
 		.icon {
-			fill: $kiva-darkgreen;
-
 			$transform: rotate(0deg);
 
 			-webkit-transform: $transform;
