@@ -41,7 +41,7 @@ $footer-link-separator-color: $light-green;
 }
 
 .siteFooter-group {
-	margin-bottom: rem-calc(60);
+	margin-bottom: rem-calc(35);
 
 	h1 {
 		margin-top: 0;
@@ -55,7 +55,7 @@ $footer-link-separator-color: $light-green;
 
 .siteFooter-statement-group {
 	margin-top: rem-calc(1);
-	margin-bottom: 12%;
+	margin-bottom: 10%;
 }
 
 .siteFooter-links {
@@ -115,7 +115,7 @@ $footer-link-separator-color: $light-green;
 
 		.siteFooter-policy {
 			text-align: center;
-			margin-bottom: rem-calc(40);
+			margin-bottom: .5rem;
 		}
 
         .siteFooter-legal {
@@ -207,7 +207,7 @@ $footer-link-separator-color: $light-green;
 
 @media #{$xxlarge-up} {
     .siteFooter-statement-group {
-        margin-bottom: 14%;
+        margin-bottom: 12%;
     }
 
     .siteFooter-nav .siteFooter-links.links-list li:nth-child(3) {
