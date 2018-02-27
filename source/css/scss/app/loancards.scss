@@ -606,7 +606,7 @@ $list-loan-card-buttons-half-width: $list-loan-card-buttons-width / 2;
     }
 
     .button.success {
-		background-color: $kiva-navdivider-green;
+		background-color: $kiva-green;
 
 		&:hover, &:active {
             background-color: $kiva-icon-green;
@@ -614,7 +614,7 @@ $list-loan-card-buttons-half-width: $list-loan-card-buttons-width / 2;
     }
 
     .message {
-        background-color: $kiva-navdivider-green;
+        background-color: $kiva-green;
         text-align: center;
     }
 }

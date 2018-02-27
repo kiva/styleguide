@@ -1,5 +1,5 @@
 .noUi-connect {
-  background: #82AA4C;
+  background: $kiva-green;
   height: 10px;
 }
 
@@ -12,7 +12,7 @@
 
 .noUi-handle {
   border-radius: 50%;
-  border: 2px solid #82AA4C; }
+  border: 2px solid $kiva-green; }
 
 .noUi-handle::before, .noUi-handle::after {
   display:none;
