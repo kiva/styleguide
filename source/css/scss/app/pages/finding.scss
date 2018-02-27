@@ -2,16 +2,23 @@
 @import '../../button-vars';
 @import '../../font-vars';
 
-$filter-menu-base-width: rem-calc(251);
-$flexbox-gutter-up-breakpoint: "#{$screen} and (min-width: 1020px)";
-$flexbox-gutter-only-breakpoint: "#{$screen} and (min-width: 1020px) and (max-width: 1529px)";
-$filters-open-card-count-breakpoint: "#{$screen} and (min-width: 1530px)";
+$filter-menu-px-width: 251px;
+$filter-menu-base-width: rem-calc($filter-menu-px-width);
 $loan-card-spacing: rem-calc(40);
-$loan-card-list-margin: rem-calc(20);
+$loan-card-list-px-margin: 20px;
+$loan-card-list-margin: rem-calc($loan-card-list-px-margin);
 $loan-card-block-grid-no-margin: -($loan-card-spacing/2);
 $loan-card-block-grid-margin: $loan-card-block-grid-no-margin + $loan-card-list-margin;
 
-.off-canvas-wrap {
+$gutter-breakpoint: $xlarge-breakpoint + 64px;
+$filter-open-behavior-breakpoint: $xlarge-breakpoint + $loan-card-list-px-margin + (2 * ($filter-menu-px-width + $loan-card-list-px-margin));
+
+$gutter-up-query: "#{$screen} and (min-width: #{$gutter-breakpoint})";
+$filter-open-behavior-query: "#{$screen} and (min-width: #{$filter-open-behavior-breakpoint})";
+
+.off-canvas-wrap,
+.showLendView .pageWrap,
+.showCategoryView .pageWrap {
 	background-color: $kiva-bg-lightgray;
 }
 
@@ -45,12 +52,6 @@ $loan-card-block-grid-margin: $loan-card-block-grid-no-margin + $loan-card-list-
 		.line {
 			background-color: $black;
 		}
-
-		@media #{$xxlarge-up} {
-			.off-canvas-wrap:not(.hide-filters-for-xxlarge-up) & {
-				right: calc((100% - #{$filter-menu-base-width}) / 2);
-			}
-		}
 	}
 }
 
@@ -63,6 +64,10 @@ $loan-card-block-grid-margin: $loan-card-block-grid-no-margin + $loan-card-list-
 		@media #{$large-up} {
 			background-color: $black;
 		}
+	}
+
+	@media #{$filter-open-behavior-query} {
+		right: 50%;
 	}
 }
 
@@ -112,6 +117,8 @@ $loan-card-block-grid-margin: $loan-card-block-grid-no-margin + $loan-card-list-
 }
 
 .control-region {
+	padding: 0 $loan-card-list-margin/2;
+
 	@media #{$large-up} {
 		padding: 0 $loan-card-list-margin;
 	}
@@ -120,21 +127,11 @@ $loan-card-block-grid-margin: $loan-card-block-grid-no-margin + $loan-card-list-
 		width: 100%;
 		margin-bottom: rem-calc(20);
 		padding: rem-calc(10) 0;
-
-		p {
-			margin-left: rem-calc(10);
-			margin-right: rem-calc(10);
-
-			@media #{$large-up} {
-				margin-left: 0;
-				margin-right: 0;
-			}
-		}
 	}
 
 	.filter-menu-button {
 		width: 3.5rem;
-		margin: 0 0 0 rem-calc(10);
+		margin: 0;
 		padding-left: 0;
 		padding-right: 0;
 		color: $kiva-text-dark;
@@ -144,10 +141,6 @@ $loan-card-block-grid-margin: $loan-card-block-grid-no-margin + $loan-card-list-
 		@media #{$medium-up} {
 			width: 5rem;
 		}
-
-		@media #{$large-up} {
-			margin-left: 0;
-		}
 		
 		svg {
 			display: none;
@@ -156,11 +149,19 @@ $loan-card-block-grid-margin: $loan-card-block-grid-no-margin + $loan-card-list-
 				display: inline;
 			}
 		}
+
+		&:hover svg {
+			stroke: $kiva-textlink-hover;
+		}
 	}
 
 	.view-buttons {
 		float: right;
 		margin-right: 0.75rem;
+
+		@media #{$x-small-only} {
+			margin-right: 0.6rem;
+		}
 
 		@media #{$medium-up} {
 			margin-right: 2rem;
@@ -186,7 +187,6 @@ $loan-card-block-grid-margin: $loan-card-block-grid-no-margin + $loan-card-list-
 
 	.filter-menu-sort-dropdown {
 		float: right;
-		margin: 0 0.5555555556rem 0 0;
 
 		#filter-loan-sort-dropdown {
 			cursor: pointer;
@@ -212,12 +212,6 @@ $loan-card-block-grid-margin: $loan-card-block-grid-no-margin + $loan-card-list-
 	.filter-loan-count {
 		float: left;
 		color: #999;
-		margin: 0 rem-calc(10);
-
-		@media #{$large-up} {
-			margin-left: 0;
-			margin-right: 0;
-		}
 	}
 
 	.filter-links {
@@ -241,14 +235,14 @@ a.filter-menu-button:visited {
 }
 
 .inner-wrap {
-	$menu-margin: rem-calc(20);
+	$menu-margin: $loan-card-list-margin;
 	$menu-base-width: $filter-menu-base-width;
-	$menu-width: rem-calc(251) + $menu-margin;
-	$transform: translate3d(-$menu-width, 0, 0);
+	$menu-width: $menu-base-width + $menu-margin;
 
 	width: calc(100% + #{$menu-width});
 	max-width: 90rem;
-	transform: $transform;
+	transform: translate3d(-$menu-width, 0, 0);
+	display: flex;
 
 	@media #{$large-up} {
 		$transform: translate3d(-$menu-base-width, 0, 0);
@@ -258,27 +252,40 @@ a.filter-menu-button:visited {
 	}
 
 	.left-off-canvas-menu {
-		position: relative;
 		float: left;
 		transform: none;
 		margin-right: $menu-margin;
+		position: absolute;
+		overflow-y: hidden;
 
 		@media #{$large-up} {
 			margin-right: 0;
 		}
 	}
 
-	.control-region, .results-region {
-		display: inline-block;
-		width: calc(100% - 15.1rem); // 15.1rem = fudgy $menu-width
+	.filter-column {
+		min-width: $menu-width;
 
 		@media #{$large-up} {
-			width: calc(100% - 14rem); // 14rem = fudgy $menu-base-width
+			min-width: $menu-base-width;
+		}
+
+		@media #{$gutter-up-query} {
+			min-width: $menu-width;
 		}
 	}
 
 	.exit-off-canvas {
 		left: $menu-base-width;
+	}
+
+	.move-right > & {
+		transform: none;
+
+		.left-off-canvas-menu {
+			position: relative;
+			overflow-y: auto;
+		}
 	}
 }
 
@@ -312,100 +319,96 @@ a.filter-menu-button:visited {
 	}
 }
 
-.move-right > .inner-wrap {
-	transform: none;
-}
-
 .off-canvas-wrap {
+	$spacer-width: calc((100% - #{$row-width}) / 2);
+
+	.spacer-column {
+		flex: 0 0 auto;
+		flex-basis: 0;
+	}
+
+	.main-column {
+		flex: 1 1 auto;
+	}
+
+	.exit-off-canvas {
+		flex: none;
+	}
+
 	@media #{$large-up} {
 		.loancards-list {
 			margin: 0 $loan-card-block-grid-margin;
+		}
+
+		.spacer-column {
+			flex-grow: 1;
+		}
+
+		.main-column {
+			flex-grow: 0;
+			min-width: calc(100% - #{$filter-menu-base-width});
 		}
 	}
 
 	@media #{$xxlarge-up} {
 		.inner-wrap {
-			transform: none;
-			width: 100%;
-			display: flex;
+			$outer-offset: $filter-menu-base-width + ($row-width / 2);
+			$inner-offset: ($filter-menu-base-width * 2) + $row-width;
 			max-width: none;
+			width: calc(50% + #{$outer-offset});
+    		transform: translate3d(calc(100% - #{$inner-offset}), 0, 0);
 		}
 
 		.left-off-canvas-menu {
-			width: 0;
 			transform: translate3d(-100%, 0, 0);
 		}
 
-		.spacer-column {
-			flex: 0 0 auto;
-			min-width: calc((100vw - #{$row-width}) / 2);
-		}
-
 		.main-column {
-			flex: 1 1 auto;
+			min-width: $row-width;
 		}
 
-		.control-region,
-		.results-region {
-			width: 100%;
-		}
+		&.move-right {
+			.inner-wrap {
+				transform: none;
+			}
 
-		.exit-off-canvas {
-			flex: none;
+			.left-off-canvas-menu {
+				transform: none;
+			}
 		}
 	}
 
-	@media #{$flexbox-gutter-up-breakpoint} {
+	@media #{$gutter-up-query} {
 		.control-region {
 			padding: 0;
+		}
+
+		.inner-wrap {
+			$outer-offset: $filter-menu-base-width + $loan-card-list-margin + ($row-width / 2);
+			$inner-offset: (($filter-menu-base-width + $loan-card-list-margin) * 2) + $row-width;
+			width: calc(50% + #{$outer-offset});
+			transform: translate3d(calc(100% - #{$inner-offset}), 0, 0);
+		}
+	}
+
+	@media #{$filter-open-behavior-query} {
+		.inner-wrap {
+			width: 100%;
+			transform: none;
 		}
 	}
 }
 
 .off-canvas-wrap:not(.list-view) {
 	@media #{$xxlarge-up} {
-		&:not(.show-filters-for-xxlarge-up) {
-			.loancards-list {
-				@include block-grid($per-row: 3, $spacing: $loan-card-spacing, $base-style: false);
-				margin: 0 $loan-card-block-grid-margin;
-			}
+		.loancards-list {
+			margin: 0 $loan-card-block-grid-margin;
 		}
 	}
 
-	@media #{$flexbox-gutter-up-breakpoint} {
+	@media #{$gutter-up-query} {
 		.results-region .loancards-list {
 			margin: 0 $loan-card-block-grid-no-margin;
-		}
-	}
-
-	@media #{$filters-open-card-count-breakpoint} {
-		.loancards-list {
-			@include block-grid($per-row: 3, $spacing: $loan-card-spacing, $base-style: false);
-		}
-	}
-}
-
-.show-filters-for-xxlarge-up {
-	@media #{$xxlarge-up} {
-		.inner-wrap .left-off-canvas-menu {
-			transform: none;
-			width: $filter-menu-base-width;
-		}
-
-		.control-region .filter-menu-button {
-			display: none;
-		}
-	}
-
-	@media #{$flexbox-gutter-only-breakpoint} {
-		.control-region {
-			padding-left: $loan-card-list-margin;
-		}
-
-		&:not(.list-view) {
-			.results-region .loancards-list {
-				margin-left: $loan-card-block-grid-margin;
-			}
 		}
 	}
 }
@@ -413,13 +416,6 @@ a.filter-menu-button:visited {
 .no-results-text {
 	padding: rem-calc(20);
 	@media #{$large-up} {
-		transform: translate(-50%);
-		&.fixed {
-			left: calc((100% - #{$filter-menu-base-width}) / 2 + #{$filter-menu-base-width});
-			position: fixed;
-			top: rem-calc(280);
-			bottom: auto;
-		}
 		&.absolute {
 			position: absolute;
 			top: auto;
