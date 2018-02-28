@@ -10918,11 +10918,11 @@ svg {
       .bottom-bar .button .loading-spinner .line, .bottom-bar .message .loading-spinner .line {
         background-color: #FFFFFF; }
   .bottom-bar .button.success {
-    background-color: #4faf4e; }
+    background-color: #49953f; }
     .bottom-bar .button.success:hover, .bottom-bar .button.success:active {
       background-color: #488443; }
   .bottom-bar .message {
-    background-color: #4faf4e;
+    background-color: #49953f;
     text-align: center; }
 
 .message-card {
