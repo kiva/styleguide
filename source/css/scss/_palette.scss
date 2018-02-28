@@ -23,14 +23,14 @@ $black       : #000000;
 $green: #4faf4e; // formerly #63a541
 $dark-green: #247037; // formerly #236133
 $graphic-green: #488443; // rgb(72, 132, 67)
-$divider-green: #49953f; // rgb(73, 149, 63)
+$divider-green: #49953f; // formerly #488443
 $light-green: #aee15c; // formerly #a9d14c
 $blue: #118aec; // formerly #26b6e8
-$sky-blue: #22a9d8; // rgb(34, 169, 216)
-$faded-blue: #6698a9; // rgb(102, 152, 169)
+$sky-blue: $blue;  // formerly #22a9d8
+$faded-blue: #0066a9; // formerly #6698a9
 $pale-blue: #d2f0f8;
 $dark-blue: #006ed3;
-$highlight-blue: #0d8ebb; // rgb(13, 142, 187)
+$highlight-blue: #006ed3; // formerly #0d8ebb
 $shadow-blue: #1f92ba;
 $shadow-lightblue: #6badc2;
 $red: #d74937; // formerly #9C021A
@@ -68,7 +68,7 @@ $kiva-stroke-gray: $light-gray;
 $kiva-text-dark: $charcoal;
 $kiva-text-medium: $dark-gray;
 $kiva-text-light: $gray;
-$kiva-textlink: $sky-blue;
+$kiva-textlink: $blue;
 $kiva-textlink-visited: $faded-blue;
 $kiva-textlink-hover: $highlight-blue;
 $kiva-filter-indicator: $blue;

@@ -55,7 +55,7 @@
 	}
 
 	&.message-text-warning, &.message-text-info {
-		background-color: #FFF6A5;
+		background-color: $kiva-alert-yellow;
 
 		.icon.icon-warning, .icon.icon-info {
 			fill: $kiva-text-dark;
@@ -63,7 +63,7 @@
 	}
 
 	&.message-text-error {
-		background-color: #9A071F;
+		background-color: $kiva-accent-red;
 
 		.icon.icon-error {
 			fill: $white;
