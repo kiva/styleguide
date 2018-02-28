@@ -20,18 +20,22 @@ $jet         : #222222;
 $black       : #000000;
 
 // Kiva-added named colors
-$green: #63a541; // rgb(99, 165, 65)
-$dark-green: #236133; // rgb(35, 97, 51)
+$green: #4faf4e; // formerly #63a541
+$dark-green: #247037; // formerly #236133
 $graphic-green: #488443; // rgb(72, 132, 67)
-$divider-green: #49953f; // rgb(73, 149, 63)
-$light-green: #a9d14c; // rgb(169, 209, 76)
-$blue: #26b6e8; // rgb(38, 182, 232)
-$sky-blue: #22a9d8; // rgb(34, 169, 216)
-$faded-blue: #6698a9; // rgb(102, 152, 169)
+$divider-green: #49953f; // formerly #488443
+$light-green: #aee15c; // formerly #a9d14c
+$blue: #118aec; // formerly #26b6e8
+$sky-blue: $blue;  // formerly #22a9d8
+$faded-blue: #0066a9; // formerly #6698a9
 $pale-blue: #d2f0f8;
-$highlight-blue: #0d8ebb; // rgb(13, 142, 187)
-$red: #9C021A; // rgb(156, 2, 26)
-$vivid-yellow: #FEF37B; //rgb(254, 243, 123)
+$dark-blue: #006ed3;
+$highlight-blue: #006ed3; // formerly #0d8ebb
+$shadow-blue: #1f92ba;
+$shadow-lightblue: #6badc2;
+$red: #d74937; // formerly #9C021A
+$purple: #6859c0;
+$vivid-yellow: #fee259; //formerly #FEF37B
 $platinum: #efefef; // rgb(239, 239, 239)
 $light-gray: #d8d8d8; // rgb(216, 216, 216)
 $charcoal: #333; // rgb(51, 51, 51)
@@ -52,7 +56,9 @@ $kiva-green: $green;
 $kiva-darkgreen: $dark-green;
 $kiva-accent-green: $light-green;
 $kiva-accent-blue: $blue;
+$kiva-accent-darkblue: $dark-blue;
 $kiva-accent-red: $red;
+$kiva-accent-purple: $purple;
 $kiva-alert-yellow: $vivid-yellow;
 $kiva-icon-green: $graphic-green;
 $kiva-navdivider-green: $divider-green;
@@ -62,7 +68,7 @@ $kiva-stroke-gray: $light-gray;
 $kiva-text-dark: $charcoal;
 $kiva-text-medium: $dark-gray;
 $kiva-text-light: $gray;
-$kiva-textlink: $sky-blue;
+$kiva-textlink: $blue;
 $kiva-textlink-visited: $faded-blue;
 $kiva-textlink-hover: $highlight-blue;
 $kiva-filter-indicator: $blue;

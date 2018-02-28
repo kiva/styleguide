@@ -1,8 +1,12 @@
+@import '../settings';
+@import '../font-vars';
+
 $footer-top-bottom-padding: rem-calc(40);
+$footer-link-separator-color: $light-green;
 
 .siteFooter {
 	height: $footer-height - $footer-height-reduction;
-	background-color: $dark-green;
+	background-color: $kiva-green;
 	color: $white;
 	font-size: $small-font-size;
 	line-height: $small-line-height;
@@ -17,13 +21,13 @@ $footer-top-bottom-padding: rem-calc(40);
 	}
 
 	a {
-		color: $light-green;
+		color: $dark-green;
 		font-size: $small-font-size;
 		line-height: $small-line-height;
 
 		&:visited
 		, &:active {
-			color: $light-green;
+			color: $dark-green;
 		}
 	}
 
@@ -37,7 +41,7 @@ $footer-top-bottom-padding: rem-calc(40);
 }
 
 .siteFooter-group {
-	margin-bottom: rem-calc(60);
+	margin-bottom: rem-calc(35);
 
 	h1 {
 		margin-top: 0;
@@ -51,7 +55,7 @@ $footer-top-bottom-padding: rem-calc(40);
 
 .siteFooter-statement-group {
 	margin-top: rem-calc(1);
-	margin-bottom: 12%;
+	margin-bottom: 10%;
 }
 
 .siteFooter-links {
@@ -90,7 +94,7 @@ $footer-top-bottom-padding: rem-calc(40);
 
 	.siteFooter-nav {
 		.siteFooter-links {
-			border-bottom: white 1px solid;
+			border-bottom: $footer-link-separator-color 1px solid;
 			list-style-type: none;
 			margin-left: 0;
 			padding-bottom: rem-calc(40);
@@ -111,7 +115,7 @@ $footer-top-bottom-padding: rem-calc(40);
 
 		.siteFooter-policy {
 			text-align: center;
-			margin-bottom: rem-calc(40);
+			margin-bottom: .5rem;
 		}
 
         .siteFooter-legal {
@@ -119,7 +123,7 @@ $footer-top-bottom-padding: rem-calc(40);
         }
 
 		.siteFooter-privacy {
-			border-right: $white 1px solid;
+			border-right: $footer-link-separator-color 1px solid;
 			padding-right: rem-calc(20);
 			margin-right: rem-calc(13);
 		}
@@ -186,7 +190,7 @@ $footer-top-bottom-padding: rem-calc(40);
 
                 a {
                     white-space: nowrap;
-                    border-left: $white rem-calc(1) solid;
+                    border-left: $footer-link-separator-color 1px solid;
                     padding-left: rem-calc(8);
                     margin-left: rem-calc(8);
                 }
@@ -203,14 +207,14 @@ $footer-top-bottom-padding: rem-calc(40);
 
 @media #{$xxlarge-up} {
     .siteFooter-statement-group {
-        margin-bottom: 14%;
+        margin-bottom: 12%;
     }
 
     .siteFooter-nav .siteFooter-links.links-list li:nth-child(3) {
         clear: none;
 
         a {
-            border-left: $white rem-calc(1) solid;
+            border-left: $footer-link-separator-color 1px solid;
             padding-left: rem-calc(8);
             margin-left: rem-calc(8);
         }

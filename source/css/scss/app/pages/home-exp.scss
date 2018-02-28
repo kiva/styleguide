@@ -1,0 +1,82 @@
+.home-hero-exp {
+
+	.hp-slideshow2-wrapper {
+		position: relative;
+	}
+
+	.hp-slide2 {
+		/* to avoid FOUC on before slideshow is initialized */
+		display: none;
+	}
+
+	.hp-slide2:first-of-type,
+	.hp-slide2.slick-slide {
+		display: block;
+	}
+
+	.headline-bar {
+		position: absolute;
+		bottom: 0;
+		display: flex;
+		width: 100%;
+	}
+
+	.headline, .mask-wrapper {
+		flex: 1 auto;
+		text-align: center;
+	}
+
+	.headline {
+		min-width: rem-calc(320);
+		max-width: rem-calc(750);
+		padding: rem-calc(18) rem-calc(20) rem-calc(44);
+		font-family: $font-family-sans-serif;
+		font-size: $page-title-font-size;
+		line-height: $page-title-font-size + rem-calc(4);
+		font-weight: $paragraph-font-weight;
+		background-color: $kiva-green;
+		opacity: 0.9;
+		color: $white;
+
+		.bolder {
+			font-weight: 400;
+		}
+
+		@media #{$small-only} {
+			font-size: $page-title-font-size - rem-calc(8);
+			line-height: $page-title-font-size - rem-calc(4);
+		}
+
+		// to avoid an ugly word wrap
+		@media #{$screen} and (min-width:681px) and (max-width:700px) {
+			font-size: $page-title-font-size - rem-calc(2);
+		}
+	}
+
+	.headline p {
+		margin-top: rem-calc(8);
+		margin-bottom: rem-calc(4);
+		font-size: $section-head-font-size;
+		line-height: $section-head-font-size + rem-calc(4);
+
+		@media #{$small-only} {
+			font-size: $section-head-font-size - rem-calc(8);
+			line-height: $section-head-font-size - rem-calc(4);
+		}
+	}
+
+	.no-mask,
+	.mask {
+		height: 50%;
+	}
+
+	.mask {
+		background-color: #ffffff;
+	}
+
+	.button-holder {
+		text-align: center;
+		margin: rem-calc(-30) 0 0 0;
+		z-index: 10;
+	}
+}

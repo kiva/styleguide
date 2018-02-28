@@ -1,20 +1,26 @@
-<div class="off-canvas-wrap {{#is-category-page}}hide-filters-for-xxlarge-up{{/is-category-page}}{{^is-category-page}}show-filters-for-xxlarge-up{{/is-category-page}} {{#is-loading}}loading{{/is-loading}} {{#list_view}}list-view{{/list_view}}" data-offcanvas>
+<div class="off-canvas-wrap {{#is-loading}}loading{{/is-loading}} {{#list_view}}list-view{{/list_view}}" data-offcanvas>
     <div class="inner-wrap">
 
         <!-- filters -->
-        {{> 02-organisms/05-filters/00-filters-menu }}
+		<div class="spacer-column filter-column">
+        	{{> 02-organisms/05-filters/00-filters-menu }}
+		</div>
 
-        <!-- controls -->
-        {{> 02-organisms/10-lend/01-control-region }}
+		<div class="main-column">
+			<!-- controls -->
+			{{> 02-organisms/10-lend/01-control-region }}
 
-        <!-- results -->
-        {{> 02-organisms/10-lend/02-results-region }}
+			<!-- results -->
+			{{> 02-organisms/10-lend/02-results-region }}
+		</div>
 
-		<!-- lightbox -->
-		{{> 01-molecules/10-lightbox/08-save-search-lightbox }}
+		<div class="spacer-column"></div>
 
         <a class="exit-off-canvas hide-for-large-up" href="#"></a>
     </div>
 	<!-- loading overlay -->
 	{{> 01-molecules/13-lend/00-loading-overlay }}
+
+	<!-- lightbox -->
+	{{> 01-molecules/10-lightbox/08-save-search-lightbox }}
 </div>

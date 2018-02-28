@@ -1063,7 +1063,9 @@
 			"is_ended": false,
 			"is_lent_to": false,
 			"is_adding": true,
-			"is_in_basket": false
+			"is_in_basket": false,
+			"is_matched": true,
+			"matching_text": "with matching by Deutsche Bank"
 		},
 		{
 			"name": "Lillian",
@@ -1135,7 +1137,7 @@
 			"is_lent_to": true,
 			"is_adding": false,
 			"is_in_basket": false,
-			"is_expiring_soon": true,
+			"is_expiring_soon": false,
 			"show_loan_length": true,
 			"loan_length": "12 months"
 		},
@@ -1172,7 +1174,8 @@
 			"is_ended": true,
 			"is_lent_to": true,
 			"is_adding": false,
-			"is_in_basket": false
+			"is_in_basket": false,
+			"is_favorite": true
 		},
 		{
 			"name": "Senia Del Carmen",
