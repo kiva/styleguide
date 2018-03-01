@@ -11,7 +11,7 @@ module.exports = function () {
 	var is_touch = $('html').hasClass('touch');
 	var $top_nav = $('.top-nav');
 
-	$search_toggle.click(function (e) {
+	$search_toggle.on('click', function (e) {
 		e.preventDefault();
 
 		var expanded = $search_toggle.attr('aria-expanded') === 'false';
@@ -23,7 +23,7 @@ module.exports = function () {
 			.trigger(expanded ? 'show' : 'hide');
 	});
 
-	$close_search.click(function (e) {
+	$close_search.on('click', function (e) {
 		e.preventDefault();
 
 		$search_toggle.attr('aria-expanded', false);
@@ -74,7 +74,7 @@ module.exports = function () {
 	var $tertiary_links = $('.lend-menu-large .tertiary-link');
 	var $tertiary_lists = $('.lend-menu-large .tertiary-list');
 
-	$close_section.click(function (e) {
+	$close_section.on('click', function (e) {
 		e.preventDefault();
 
 		$tertiary_links.attr('aria-expanded', false);
@@ -84,7 +84,7 @@ module.exports = function () {
 		$close_section.attr('aria-hidden', true);
 	});
 
-	$('.lend-menu-large [data-kv-toggle]').click(function (e) {
+	$('.lend-menu-large [data-kv-toggle]').on('click',function (e) {
 		e.preventDefault();
 
 		var $this = $(this);
@@ -104,7 +104,7 @@ module.exports = function () {
 
 
 	// kv-toggle
-	$('[data-kv-toggle]').click(function (e) {
+	$('[data-kv-toggle]').on('click', function (e) {
 		e.preventDefault();
 
 		var $this = $(this);
@@ -119,13 +119,13 @@ module.exports = function () {
 
 	// when not touchscreen, close lend dropdown when lend button itself is clicked
 	if (! is_touch) {
-		$('[data-dropdown="lend-dropdown"]').click(function () {
+		$('[data-dropdown="lend-dropdown"]').on('click', function () {
 			Foundation.libs.dropdown.close($('#lend-dropdown'));
 		});
 	}
 
 	// close window when normal links clicked
-	$('#lend-dropdown a:not([data-kv-toggle],[href="#"])').click(function () {
+	$('#lend-dropdown a:not([data-kv-toggle],[href="#"])').on('click', function () {
 		Foundation.libs.dropdown.close($('#lend-dropdown'));
 	});
 
@@ -144,14 +144,14 @@ module.exports = function () {
 
 	// when not touchscreen, close about dropdown when about button itself is clicked
 	if (! is_touch) {
-		$('[data-dropdown="about-dropdown"]').click(function () {
+		$('[data-dropdown="about-dropdown"]').on('click', function () {
 			Foundation.libs.dropdown.close($('#about-dropdown'));
 		});
 	}
 
 	// when not touchscreen, close my-kiva dropdown when my-kiva button itself is clicked
 	if (! is_touch) {
-		$('[data-dropdown="my-kiva-dropdown"]').click(function () {
+		$('[data-dropdown="my-kiva-dropdown"]').on('click', function () {
 			Foundation.libs.dropdown.close($('#my-kiva-dropdown'));
 		});
 	}

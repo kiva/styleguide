@@ -46,7 +46,8 @@ module.exports = function() {
 
 
 	// Close accordions if we're on a touch interface
-	$(window).load(function() {
+	//$(window).on('load', function() {
+	$(document).ready(function() {
 		if (is_touch){
 			go_mobile();
 		}
@@ -59,7 +60,7 @@ module.exports = function() {
 		}
 	});
 
-	$('div.filter.return-to-top > a').click(function() {
+	$('div.filter.return-to-top > a').on('click', function() {
 		$('html, body').animate({
 			scrollTop: 0
 		}, 1000);

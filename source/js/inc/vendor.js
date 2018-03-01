@@ -8,4 +8,4 @@ require('nouislider');
 require('select2');
 require('slick');
 require('./vendor/fitvids/jquery.fitvids.js');
-require('jquery-lazyload');
+//require('jquery-lazyload');

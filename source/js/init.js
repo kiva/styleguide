@@ -4,14 +4,14 @@
 
 
 	//Navigation toggle
-	$('.nav-toggle-menu').click(function(e) {
+	$('.nav-toggle-menu').on('click', function(e) {
 		e.preventDefault();
 		$(this).toggleClass('active');
 		$('.nav').toggleClass('active');
 	});
 
 	//Navigation toggle
-	$('.nav-toggle-search').click(function(e) {
+	$('.nav-toggle-search').on('click', function(e) {
 		e.preventDefault();
 		$(this).toggleClass('active');
 		$('.header .search-form').toggleClass('active');
@@ -491,7 +491,7 @@
 	var closeReveal = $('.close-reveal-modal');
 
 	//How Kiva Works page inpage link from one of the steps to one of the FAQs
-	$('.accordion-anchor-and-open').click(function() {
+	$('.accordion-anchor-and-open').on('click', function() {
 		closeReveal.click();
 		if ($acLoans.attr('aria-expanded') == 'false') {
 			$acLoans.click();
@@ -502,7 +502,7 @@
 	});
 	
 	//How Kiva Works page faq link (closes one accordion and opens another and brings question to top of view)
-	$('.accordion-collapse-and-open').click(function() {
+	$('.accordion-collapse-and-open').on('click', function() {
 
 		if ($acLoans.attr('aria-expanded') == 'false') {
 			$acLoans.click();

@@ -275,7 +275,7 @@ module.exports = function(grunt) {
 					modules: [__dirname + '/source/js', __dirname + '/node_modules'],
 					extensions: ['.js', '.mustache'],
 					alias: {
-						Foundation: 'foundation-sites/js/foundation'
+						Foundation: 'foundation-sites/js/foundation/foundation.js'
 						, modernizr: 'npm-modernizr'
 						, nouislider: 'nouislider/distribute/jquery.nouislider.all'
 						, select2: 'select2/dist/js/select2.full'
@@ -309,6 +309,9 @@ module.exports = function(grunt) {
 						, 'window.jQuery': 'jquery'
 					})
 				]
+				, stats: {
+					errorDetails: true
+				}
 				, failOnError: true
 			}
 

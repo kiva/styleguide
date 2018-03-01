@@ -23,19 +23,19 @@ module.exports = function () {
 	}
 		, store = new WebStorage('localStorage');
 
-    $('#show-advanced-toggle, #hide-advanced-toggle').click(function() {
+    $('#show-advanced-toggle, #hide-advanced-toggle').on('click', function() {
         $('.show-advanced').toggle();
         $('.hide-advanced').toggle();
         $('.simple-repayment-schedule').toggle();
         $('.advanced-repayment-schedule').toggle();
     });
 
-	$('.show-more-comments').click(function() {
+	$('.show-more-comments').on('click', function() {
 		$('.comments').append($('.spillover-comments li').clone(true));
 		$('.show-more-comments').toggle();
 	});
 
-	$('.hide-more-comments').click(function() {
+	$('.hide-more-comments').on('click', function() {
 		$('.show-more-comments').toggle();
 		$('.comments li:nth-child(n+16)').remove();
 
@@ -44,24 +44,24 @@ module.exports = function () {
 		}, 1000);
 	});
 
-	$('.show-previous-loan-details').click(function() {
+	$('.show-previous-loan-details').on('click', function() {
 		$('.show-previous-loan-details').toggle();
 	});
 
-	$('.hide-previous-loan-details').click(function() {
+	$('.hide-previous-loan-details').on('click', function() {
 		$('.show-previous-loan-details').toggle();
 		$('html, body').animate({
 			scrollTop: $('.loan-story').offset().top
 		}, 1000);
 	});
 
-	$('.show-all-previous-loan-details').click(function() {
+	$('.show-all-previous-loan-details').on('click', function() {
 		$('.show-all-previous-loan-details').toggle();
 	});
 
 	// button to reveal or hide the loan tag options
 	var tagToggler = $('.tag-toggler');
-	tagToggler.click(function () {
+	tagToggler.on('click', function () {
 		$('.tag-directions').toggle();
 		var allTags = $('.all-tags');
 		if (tagToggler.text() != 'Close') {
@@ -79,14 +79,14 @@ module.exports = function () {
 		}
 	});
 
-	$('.borrower-profile-wrapper .lender-count').click(function(){
+	$('.borrower-profile-wrapper .lender-count').on('click', function(){
 		var lendersAccordion = $('[aria-controls="ac-lenders-teams-body"]');
 		if (lendersAccordion.attr('aria-expanded') === 'false'){
 			lendersAccordion.click();
 		}
 	});
 
-	$('.borrower-profile-wrapper .country-text a').click(function(){
+	$('.borrower-profile-wrapper .country-text a').on('click', function(){
 		var countryAccordion = $('[aria-controls="ac-country-info-body"]');
 		if (countryAccordion.attr('aria-expanded') === 'false'){
 			countryAccordion.click();
@@ -94,7 +94,7 @@ module.exports = function () {
 	});
 
 	/* handle clicks that expand or collapse content panels  */
-	$('.ac-title').click(function(event){
+	$('.ac-title').on('click', function(event){
 		if (event.hasOwnProperty('originalEvent')) {
 			// we only want to respond to actual user clicks
 			var panel = $(this).attr('aria-controls')
