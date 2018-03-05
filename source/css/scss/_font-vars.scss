@@ -5,12 +5,12 @@
 $x-small-font-size				: rem-calc(12);
 $x-small-line-height			: rem-calc(18);
 
-$small-font-size				: 0.875rem;
-$small-line-height				: 1.375rem;
+$small-font-size				: rem-calc(14);
+$small-line-height				: rem-calc(20);
 $small-font-color				: $kiva-text-dark;
 
-$body-font-size					: 1rem;
-$body-line-height				: 1.75rem;
+$body-font-size					: rem-calc(18);
+$body-line-height				: rem-calc(24);
 
 $paragraph-font-size			: $body-font-size;
 $paragraph-line-height			: $body-line-height;
@@ -21,8 +21,9 @@ $list-line-height				: 1.6;
 $paragraph-aside-font-size		: $small-font-size;
 $paragraph-aside-line-height	: $small-line-height;
 
-$top-nav-font-size				: 1.125rem;
-$top-nav-line-height			: 1.3125rem;
+$top-nav-font-size				: rem-calc(21);
+$top-nav-line-height			: rem-calc(21);
+$top-nav-font-reduction			: rem-calc(3);
 
 $secondary-nav-font-size		: rem-calc(16);
 $secondary-nav-line-height		: rem-calc(24);

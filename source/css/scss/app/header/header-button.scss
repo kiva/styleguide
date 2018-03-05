@@ -51,8 +51,8 @@
 	}
 
 	.icon {
-		width: $top-nav-font-size;
-		height: $top-nav-line-height;
+		width: $top-nav-font-size - $top-nav-font-reduction;
+		height: $top-nav-line-height - $top-nav-font-reduction;
 
 		@media #{$large-up} {
 			width: $top-nav-font-size;

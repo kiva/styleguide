@@ -7,7 +7,7 @@ $search-margin-small: 0.4rem;
 $search-centering-margin: 0.65rem;
 $search-centering-margin-small: 0.32rem;
 $search-button-size-small: 2.5rem;
-$search-icon-size: $top-nav-font-size;
+$search-icon-size: $top-nav-font-size - $top-nav-font-reduction;
 
 $search-input-width-small: calc(100% - #{$search-margin-small} );
 $search-input-width: calc(100% - #{$search-margin} );
@@ -155,7 +155,7 @@ a.header-button#search-toggle {
     text-align: center;
 
     .close-icon {
-        width: $top-nav-font-size;
+        width: $top-nav-font-size - $top-nav-font-reduction;
         height: $search-button-size-small;
         fill:none;
         stroke: $kiva-darkgreen;
