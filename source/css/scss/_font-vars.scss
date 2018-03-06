@@ -5,12 +5,12 @@
 $x-small-font-size				: rem-calc(12);
 $x-small-line-height			: rem-calc(18);
 
-$small-font-size				: rem-calc(14);
-$small-line-height				: rem-calc(20);
+$small-font-size				: 0.875rem;
+$small-line-height				: 1.357rem;
 $small-font-color				: $kiva-text-dark;
 
-$body-font-size					: rem-calc(18);
-$body-line-height				: rem-calc(24);
+$body-font-size					: 1rem;
+$body-line-height				: 1.75rem;
 
 $paragraph-font-size			: $body-font-size;
 $paragraph-line-height			: $body-line-height;
