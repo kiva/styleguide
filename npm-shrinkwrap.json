@@ -1,6 +1,6 @@
 {
   "name": "styleguide",
-  "version": "1.1.386",
+  "version": "1.1.387",
   "lockfileVersion": 1,
   "requires": true,
   "dependencies": {
@@ -5585,7 +5585,7 @@
     },
     "webstorage": {
       "version": "git://github.com/kiva/WebStorage.git#fd0222f974a7755b30df95d003f0964f71a637b8",
-      "integrity": "sha1-M4NszEyzP3yS9Bgb0JNp1WK/WCg="
+      "integrity": "sha1-wqQc8LU8Ki1Crkw9cGQAObuypxQ="
     },
     "whet.extend": {
       "version": "https://registry.npmjs.org/whet.extend/-/whet.extend-0.9.9.tgz",
