@@ -161,9 +161,8 @@ h1 {
 }
 
 .huge {
-	font-size: $huge-headline-font-size - $huge-headline-font-size-reduction;
-	line-height: $huge-headline-line-height - $huge-headline-line-height-reduction;
-	letter-spacing: $huge-type-kerning - $huge-type-kerning-reduction;
+	font-size: $huge-headline-font-size ;
+	line-height: $huge-headline-line-height;
 }
 
 h2 {
@@ -220,14 +219,12 @@ small {
 	.huge {
 		font-size: $huge-headline-font-size;
 		line-height: $huge-headline-line-height;
-		letter-spacing: $huge-type-kerning;
 	}
 
 	.huge-statistic {
 		font-size: $huge-statistic-font-size;
 		line-height: $huge-statistic-line-height;
 		font-weight: $font-weight-bold;
-		letter-spacing: $huge-type-kerning;
 	}
 
 	h1 {
