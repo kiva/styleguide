@@ -38,10 +38,8 @@ $section-head-line-height		: rem-calc(36);
 $section-head-font-size-reduction	: rem-calc(6);
 $section-head-line-height-reduction	: rem-calc(6);
 
-$feature-font-size				: $section-head-font-size;
-$feature-line-height			: $section-head-line-height;
-$feature-font-size-reduction 	: rem-calc(6);
-$feature-line-height-reduction	: rem-calc(9);
+$feature-font-size				: 1.5rem;
+$feature-line-height			: 2.25rem;
 
 $headline-font-size				: rem-calc(56);
 $headline-line-height			: rem-calc(64);
@@ -119,8 +117,8 @@ $paragraph-line-height: $body-line-height;
 }
 
 @mixin featured-text() {
-	font-size: $feature-font-size - $feature-font-size-reduction;
-	line-height: $feature-line-height - $feature-line-height-reduction;
+	font-size: $feature-font-size;
+	line-height: $feature-line-height;
 
 	@media #{$medium-up} {
 		font-size: $feature-font-size;
@@ -129,8 +127,8 @@ $paragraph-line-height: $body-line-height;
 }
 
 @mixin small-featured-text() {
-	font-size: $feature-font-size - $feature-font-size-reduction;
-	line-height: $feature-line-height - $feature-line-height-reduction;
+	font-size: $feature-font-size;
+	line-height: $feature-line-height;
 }
 
 @mixin large-featured-text() {
