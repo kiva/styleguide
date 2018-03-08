@@ -183,6 +183,7 @@ h2.scalable {
 .top-nav {
 	font-size: $top-nav-font-size;
 	line-height: $top-nav-line-height;
+  	font-weight: 400;
 }
 
 .secondary-nav {
@@ -200,11 +201,6 @@ small {
 }
 
 @media #{$medium-up} {
-	.top-nav {
-		font-size: $top-nav-font-size;
-		line-height: $top-nav-line-height;
-	}
-
 	.huge-statistic {
 		font-size: $huge-statistic-font-size - $huge-statistic-font-medium-reduction;
 	}

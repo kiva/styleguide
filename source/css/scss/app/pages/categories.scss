@@ -127,19 +127,7 @@
 .category-card-title {
 	color: $white;
 	font-weight: $font-weight-bold;
-	@include small-featured-text;
-
-	@media (min-width: $x-small-breakpoint +1) and (max-width: $small-breakpoint) {
-		@include large-featured-text;
-	}
-
-	@media (min-width: $sm-medium-breakpoint + 1) and (max-width: $medium-breakpoint) {
-		@include large-featured-text;
-	}
-
-	@media #{$xlarge-up}  {
-		@include large-featured-text;
-	}
+	@include featured-text;
 
 	p {
 		padding: 0 rem-calc(6);

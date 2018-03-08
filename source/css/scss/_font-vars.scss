@@ -113,23 +113,8 @@ $paragraph-line-height: $body-line-height;
 }
 
 @mixin featured-text() {
-	font-size: $feature-font-size;
-	line-height: $feature-line-height;
-
-	@media #{$medium-up} {
-		font-size: $feature-font-size;
-		line-height: $feature-line-height;
-	}
-}
-
-@mixin small-featured-text() {
-	font-size: $feature-font-size;
-	line-height: $feature-line-height;
-}
-
-@mixin large-featured-text() {
-	font-size: $feature-font-size;
-	line-height: $feature-line-height;
+  font-size: $feature-font-size;
+  line-height: $feature-line-height;
 }
 
 @mixin slide-overlay-text($adjustment: 0) {

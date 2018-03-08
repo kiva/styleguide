@@ -53,11 +53,6 @@
 	.icon {
 		width: $top-nav-font-size;
 		height: $top-nav-line-height;
-
-		@media #{$large-up} {
-			width: $top-nav-font-size;
-			height: $top-nav-line-height;
-		}
 	}
 
 	img, .circle-avatar {
