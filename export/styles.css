@@ -390,7 +390,7 @@ th {
   background-color: #49953f;
   color: #fff; }
 
-.white, .overlay, .overlay-bold, .slide-overlay, .slide-overlay-long, .slide-overlay-short, .slide-overlay-very-short, .slide-overlay-attribution, .slide-overlay-attribution-detail {
+.white, .overlay, .overlay-bold, .slide-overlay, .slide-overlay-attribution, .slide-overlay-attribution-detail {
   color: #FFFFFF; }
 
 .white-bg {
@@ -505,7 +505,7 @@ body {
 
 body {
   background: #FFFFFF;
-  color: #333;
+  color: #484848;
   cursor: auto;
   font-family: "PostGrotesk", Arial, Helvetica, sans-serif;
   font-style: normal;
@@ -3107,7 +3107,7 @@ button::-moz-focus-inner {
     .f-dropdown li a {
       display: block;
       padding: 0.5rem;
-      color: #333; }
+      color: #484848; }
   .f-dropdown.content {
     display: none;
     left: -9999px;
@@ -4833,22 +4833,22 @@ a {
 /* Default paragraph styles */
 p {
   font-family: inherit;
-  font-size: 1.125rem;
+  font-size: 1rem;
   font-weight: 300;
-  line-height: 1.5rem;
+  line-height: 1.75rem;
   margin-bottom: 1.25rem;
   text-rendering: optimizeLegibility; }
   p.lead {
-    font-size: 1.34375rem;
+    font-size: 1.21875rem;
     line-height: 1.6; }
   p aside {
     font-size: 0.875rem;
     font-style: italic;
-    line-height: 1.25rem; }
+    line-height: 1.357rem; }
 
 /* Default header styles */
 h1, h2, h3, h4, h5, h6 {
-  color: #333;
+  color: #484848;
   font-family: "PostGrotesk", Arial, Helvetica, sans-serif;
   font-style: normal;
   font-weight: normal;
@@ -4857,12 +4857,12 @@ h1, h2, h3, h4, h5, h6 {
   margin-top: 0.2rem;
   text-rendering: optimizeLegibility; }
   h1 small, h2 small, h3 small, h4 small, h5 small, h6 small {
-    color: #333;
+    color: #484848;
     font-size: 0.875rem;
     line-height: 0; }
 
 h1 {
-  font-size: 2.875rem; }
+  font-size: 2.125rem; }
 
 h2 {
   font-size: 1.125rem; }
@@ -4881,7 +4881,7 @@ h6 {
 
 .subheader {
   line-height: 1.4;
-  color: #7a7a7a;
+  color: #888888;
   font-weight: normal;
   margin-top: 0.2rem;
   margin-bottom: 0.5rem; }
@@ -4923,7 +4923,7 @@ ul,
 ol,
 dl {
   font-family: inherit;
-  font-size: 1.125rem;
+  font-size: 1rem;
   line-height: 1.6;
   list-style-position: outside;
   margin-bottom: 1.25rem; }
@@ -4982,7 +4982,7 @@ abbr,
 acronym {
   text-transform: uppercase;
   font-size: 90%;
-  color: #333;
+  color: #484848;
   cursor: help; }
 
 abbr {
@@ -4998,17 +4998,17 @@ blockquote {
   blockquote cite {
     display: block;
     font-size: 0.8125rem;
-    color: #626262; }
+    color: #727272; }
     blockquote cite:before {
       content: "\2014 \0020"; }
     blockquote cite a,
     blockquote cite a:visited {
-      color: #626262; }
+      color: #727272; }
 
 blockquote,
 blockquote p {
-  line-height: 1.5rem;
-  color: #7a7a7a; }
+  line-height: 1.75rem;
+  color: #888888; }
 
 /* Microformats */
 .vcard {
@@ -5037,7 +5037,7 @@ blockquote p {
   h1, h2, h3, h4, h5, h6 {
     line-height: 1.4; }
   h1 {
-    font-size: 3.5rem; }
+    font-size: 2.75rem; }
   h2 {
     font-size: 1.75rem; }
   h3 {
@@ -5933,112 +5933,30 @@ th.hide-for-touch {
 /* Print visibility */
 .small-text, .mini-loan-card .status, .mini-loan-card .name, .mini-loan-card .activity, .mini-loan-card .country, .statistic-display .statistic-link, .statistic-display .statistic-additional-text {
   font-size: 0.875rem;
-  line-height: 1.25rem; }
+  line-height: 1.357rem; }
 
 .featured {
-  font-size: 1.375rem;
-  line-height: 1.6875rem; }
-  @media only screen and (min-width: 481px) {
-    .featured {
-      font-size: 1.75rem;
-      line-height: 2.25rem; } }
+  font-size: 1.5rem;
+  line-height: 2.25rem; }
 
 @media only screen and (min-width: 481px) {
   .featured-medium-up {
-    font-size: 1.375rem;
-    line-height: 1.6875rem; } }
-  @media only screen and (min-width: 481px) and (min-width: 481px) {
-    .featured-medium-up {
-      font-size: 1.75rem;
-      line-height: 2.25rem; } }
+    font-size: 1.5rem;
+    line-height: 2.25rem; } }
 
 .overlay, .overlay-bold {
-  font-size: 1.375rem;
-  line-height: 1.6875rem;
+  font-size: 1.5rem;
+  line-height: 2.25rem;
   text-shadow: 1px 1px 3px #333; }
-  @media only screen and (min-width: 481px) {
-    .overlay, .overlay-bold {
-      font-size: 1.75rem;
-      line-height: 2.25rem; } }
 
 .overlay-bold {
   font-weight: bold; }
 
-.slide-overlay, .slide-overlay-long, .slide-overlay-short, .slide-overlay-very-short, .slide-overlay-attribution, .slide-overlay-attribution-detail {
+.slide-overlay, .slide-overlay-attribution, .slide-overlay-attribution-detail {
+  font-size: 2rem;
+  line-height: 2.25rem;
   text-shadow: 1px 1px 3px #333;
   font-weight: bold; }
-
-.slide-overlay-long {
-  font-size: 1.375rem;
-  line-height: 1.875rem; }
-  @media only screen and (min-width: 535px) and (max-width: 680px) {
-    .slide-overlay-long {
-      font-size: 2rem;
-      line-height: 2.25rem; } }
-  @media only screen and (min-width: 681px) {
-    .slide-overlay-long {
-      font-size: 2rem;
-      line-height: 2.25rem; } }
-  @media only screen and (max-width: 360px) {
-    .slide-overlay-long {
-      font-size: 1.125rem;
-      line-height: 1.625rem; } }
-  @media only screen and (max-width: 360px) and (min-width: 535px) and (max-width: 680px) {
-    .slide-overlay-long {
-      font-size: 1.75rem;
-      line-height: 2rem; } }
-  @media only screen and (max-width: 360px) and (min-width: 681px) {
-    .slide-overlay-long {
-      font-size: 1.75rem;
-      line-height: 2rem; } }
-  @media only screen and (min-width: 681px) and (max-width: 880px) {
-    .slide-overlay-long {
-      font-size: 0.875rem;
-      line-height: 1.375rem; } }
-  @media only screen and (min-width: 681px) and (max-width: 880px) and (min-width: 535px) and (max-width: 680px) {
-    .slide-overlay-long {
-      font-size: 1.5rem;
-      line-height: 1.75rem; } }
-  @media only screen and (min-width: 681px) and (max-width: 880px) and (min-width: 681px) {
-    .slide-overlay-long {
-      font-size: 1.5rem;
-      line-height: 1.75rem; } }
-  @media only screen and (min-width: 881px) and (max-width: 760px) {
-    .slide-overlay-long {
-      font-size: 1.125rem;
-      line-height: 1.625rem; } }
-  @media only screen and (min-width: 881px) and (max-width: 760px) and (min-width: 535px) and (max-width: 680px) {
-    .slide-overlay-long {
-      font-size: 1.75rem;
-      line-height: 2rem; } }
-  @media only screen and (min-width: 881px) and (max-width: 760px) and (min-width: 681px) {
-    .slide-overlay-long {
-      font-size: 1.75rem;
-      line-height: 2rem; } }
-
-.slide-overlay-short {
-  font-size: 1.625rem;
-  line-height: 2.125rem; }
-  @media only screen and (min-width: 535px) and (max-width: 680px) {
-    .slide-overlay-short {
-      font-size: 2.25rem;
-      line-height: 2.5rem; } }
-  @media only screen and (min-width: 681px) {
-    .slide-overlay-short {
-      font-size: 2.25rem;
-      line-height: 2.5rem; } }
-
-.slide-overlay-very-short {
-  font-size: 1.875rem;
-  line-height: 2.375rem; }
-  @media only screen and (min-width: 535px) and (max-width: 680px) {
-    .slide-overlay-very-short {
-      font-size: 2.5rem;
-      line-height: 2.75rem; } }
-  @media only screen and (min-width: 681px) {
-    .slide-overlay-very-short {
-      font-size: 2.5rem;
-      line-height: 2.75rem; } }
 
 .slide-overlay-attribution, .slide-overlay-attribution-detail {
   font-size: 1rem;
@@ -6053,37 +5971,30 @@ th.hide-for-touch {
       line-height: 1.75rem; } }
 
 .page-title {
-  font-size: 1.5rem;
-  line-height: 1.5rem;
+  font-size: 1.75rem;
+  line-height: 2.25rem;
   font-weight: bold;
-  color: #4faf4e;
+  color: #484848;
   margin-bottom: 0.5rem; }
-  @media only screen and (min-width: 681px) {
+  @media only screen and (min-width: 481px) {
     .page-title {
       font-size: 2.25rem;
-      line-height: 2.25rem; } }
+      line-height: 2.75rem; } }
 
 .impact {
-  font-size: 1.625rem;
-  line-height: 2rem;
+  font-size: 2rem;
+  line-height: 2.5rem;
   font-weight: bold; }
-  @media only screen and (min-width: 481px) and (max-width: 680px) {
+  @media only screen and (min-width: 481px) {
     .impact {
-      font-size: 2.25rem;
-      line-height: 2.5rem; } }
-  @media only screen and (min-width: 681px) {
-    .impact {
-      font-size: 2.8125rem;
-      line-height: 3.375rem; } }
+      font-size: 2.75rem;
+      line-height: 3.125rem; } }
   .impact.shadow {
     text-shadow: 1px 1px 3px #333; }
 
-.small-statistic, .small-statistic-bold {
+.small-statistic {
   font-size: 1.75rem;
-  line-height: 1.75rem; }
-
-.small-statistic-bold {
-  font-weight: bold; }
+  line-height: 2rem; }
 
 .medium-statistic, .trustee-listing-row .big-stat {
   font-size: 2.25rem;
@@ -6099,13 +6010,9 @@ th.hide-for-touch {
       line-height: 2.25rem; } }
 
 .statistic-label {
-  font-size: 0.875rem;
-  line-height: 0.875rem;
+  font-size: 1.3125rem;
+  line-height: 1.5rem;
   font-weight: bold; }
-  @media only screen and (min-width: 681px) {
-    .statistic-label {
-      font-size: 1.125rem;
-      line-height: 1.125rem; } }
 
 .huge-statistic {
   font-size: 4.5rem;
@@ -6114,27 +6021,27 @@ th.hide-for-touch {
   letter-spacing: -0.125rem; }
 
 p {
-  font-size: 1.125rem;
-  line-height: 1.5rem; }
+  font-size: 1rem;
+  line-height: 1.75rem; }
   p ul {
     margin-bottom: 0; }
     p ul li {
       padding-bottom: 1.875rem; }
 
 h1 {
-  font-size: 1.875rem;
+  font-size: 2rem;
+  line-height: 2.5rem;
   font-weight: bold;
   margin-top: 1rem;
   margin-bottom: 1rem; }
   h1 .normal {
     font-weight: normal;
-    line-height: 2rem;
-    font-size: 1.875rem; }
+    line-height: 2.5rem;
+    font-size: 2rem; }
 
 .huge {
-  font-size: 3.375rem;
-  line-height: 3.875rem;
-  letter-spacing: -0.125rem; }
+  font-size: 3.25rem;
+  line-height: 3.625rem; }
 
 h2 {
   font-size: 1.75rem;
@@ -6150,49 +6057,41 @@ h2.scalable {
 
 .top-nav {
   font-size: 1.125rem;
-  line-height: 1.125rem; }
-
-.secondary-nav {
-  font-size: 1rem;
-  line-height: 1.5rem; }
+  line-height: 1.3125rem;
+  font-weight: 400; }
 
 a:visited {
   color: #0066a9; }
 
 small {
   font-size: 0.875rem;
-  line-height: 1.25rem; }
+  line-height: 1.357rem; }
 
 @media only screen and (min-width: 481px) {
-  .top-nav {
-    font-size: 1.3125rem;
-    line-height: 1.3125rem; }
   .huge-statistic {
     font-size: 6.75rem; }
   .featured {
-    font-size: 1.75rem;
+    font-size: 1.5rem;
     line-height: 2.25rem; } }
 
-@media only screen and (min-width: 681px) {
+@media only screen and (min-width: 481px) {
   .huge {
-    font-size: 5.0625rem;
-    line-height: 5.625rem;
-    letter-spacing: -0.25rem; }
+    font-size: 4rem;
+    line-height: 4.375rem; }
   .huge-statistic {
     font-size: 9rem;
     line-height: 9.75rem;
-    font-weight: bold;
-    letter-spacing: -0.25rem; }
+    font-weight: bold; }
   h1 {
-    font-size: 3.5rem;
-    line-height: 4rem; }
+    font-size: 2.75rem;
+    line-height: 3.125rem; }
     h1 .huge {
-      font-size: 5.0625rem;
-      line-height: 5.625rem; } }
+      font-size: 4rem;
+      line-height: 4.375rem; } }
 
 @media (max-width: 360px) {
   h1.normal {
-    font-size: 1.5625rem; }
+    font-size: 1.375rem; }
   .huge-statistic {
     font-size: 4.0625rem; } }
 
@@ -6263,11 +6162,11 @@ form .error svg.icon-error {
   margin-right: 0.25rem; }
 
 .error label, .error label.error, label.error {
-  color: #333; }
+  color: #484848; }
 
 select {
-  color: #333;
-  border-color: #333;
+  color: #484848;
+  border-color: #484848;
   cursor: pointer; }
 
 .fancy-checkbox-div .icon-checkbox-checked, .fancy-checkbox-div .icon-checkbox-unchecked {
@@ -6309,8 +6208,8 @@ select {
 .pencil-dropdown .text-input {
   display: none;
   width: 4.125rem;
-  height: 1.5rem;
-  line-height: 1.5rem;
+  height: 1.75rem;
+  line-height: 1.75rem;
   padding: 0 0.25rem; }
 
 .pencil-dropdown .icon-pencil {
@@ -6337,7 +6236,7 @@ select {
       z-index: 10;
       display: none;
       list-style: none;
-      border: 1px solid #333;
+      border: 1px solid #484848;
       background-color: #FFFFFF;
       width: auto;
       padding: 0;
@@ -6345,7 +6244,7 @@ select {
       .pencil-dropdown .dropdown-choices li {
         margin: 0;
         padding: 12px;
-        border-bottom: 1px solid #333;
+        border-bottom: 1px solid #484848;
         text-align: right;
         cursor: pointer; }
         .pencil-dropdown .dropdown-choices li:last-of-type {
@@ -6360,7 +6259,7 @@ select {
   width: 5rem;
   font-size: 16px;
   background-color: #FFFFFF;
-  border-color: #333;
+  border-color: #484848;
   outline: none; }
   @media only screen and (min-width: 481px) {
     .pencil-dropdown .dropdown-choices-select {
@@ -6371,22 +6270,22 @@ select {
   .pencil-text-input .text-display {
     cursor: pointer;
     color: #118aec;
-    font-size: 1.125rem; }
+    font-size: 1rem; }
     @media only screen and (min-width: 481px) {
       .pencil-text-input .text-display {
-        font-size: 1.75rem; } }
+        font-size: 1.5rem; } }
     .pencil-text-input .text-display:hover {
       color: #006ed3; }
   .pencil-text-input .text-input {
     display: none;
     width: 4rem;
-    font-size: 1.75rem;
+    font-size: 1.5rem;
     font-weight: normal;
     height: 2.25rem;
     line-height: 2.25rem; }
   .pencil-text-input .icon-pencil {
-    height: 1.125rem;
-    width: 1.125rem; }
+    height: 1rem;
+    width: 1rem; }
     @media only screen and (min-width: 481px) {
       .pencil-text-input .icon-pencil {
         height: 1.25rem;
@@ -6415,9 +6314,9 @@ button, a.button, .button {
   font-size: 0.75rem;
   height: 1.625rem;
   line-height: 1.625rem;
-  color: #333;
+  color: #484848;
   background-color: #FFFFFF;
-  border-color: #333;
+  border-color: #484848;
   border-width: 1px;
   border-style: solid; }
   .button.setting:hover, .button.setting:active {
@@ -6425,7 +6324,7 @@ button, a.button, .button {
     color: #006ed3;
     background-color: #FFFFFF; }
   .button.setting:visited {
-    color: #333; }
+    color: #484848; }
   @media only screen and (min-width: 481px) {
     .button.setting {
       font-size: 1rem;
@@ -6458,11 +6357,11 @@ button, a.button, .button {
       line-height: 2rem; } }
 
 button.secondary, .button.secondary {
-  border-color: #333;
+  border-color: #484848;
   border-width: 1px;
   font-size: 0.875rem; }
   button.secondary:visited, .button.secondary:visited {
-    color: #333; }
+    color: #484848; }
   .no-touch button.secondary:hover, .no-touch .button.secondary:hover {
     border-color: #006ed3;
     color: #006ed3; }
@@ -6520,7 +6419,7 @@ ul.off-canvas-list li label {
   text-transform: none; }
 
 ul.off-canvas-list li a {
-  color: #333;
+  color: #484848;
   border: 0;
   padding: 0 0.6666666667rem;
   display: inline-block; }
@@ -8295,14 +8194,14 @@ a.dark_green_bg_link {
   stroke: none;
   -webkit-backface-visibility: hidden; }
   .icon.icon-confirmation, .icon.icon-error, .icon.icon-info, .icon.icon-warning, .icon.icon-question, .icon.icon-magnify-glass, .icon.icon-nearme, .icon.icon-triangle, .icon.icon-globe, .icon.icon-handshake, .icon.icon-sort, .icon.icon-edit, .icon.icon-refresh, .icon.icon-grid, .icon.icon-map, .icon.icon-tags-checkmark, .icon.icon-sector-agriculture, .icon.icon-sector-arts, .icon.icon-sector-clothing, .icon.icon-sector-construction, .icon.icon-sector-education, .icon.icon-sector-entertainment, .icon.icon-sector-food, .icon.icon-sector-health, .icon.icon-sector-housing, .icon.icon-sector-manufacturing, .icon.icon-sector-personal-use, .icon.icon-sector-retail, .icon.icon-sector-services, .icon.icon-sector-transportation, .icon.icon-sector-wholesale, .icon.icon-facebook-simple, .icon.icon-linkedIn-simple, .icon.icon-twitter-simple {
-    fill: #333; }
+    fill: #484848; }
   .icon.icon-large-chevron, .icon.icon-large-chevron-mobile, .icon.icon-medium-chevron, .icon.icon-small-chevron, .icon.icon-small-chevron-mobile, .icon.icon-x, .icon.icon-list, .icon.icon-filter {
-    stroke: #333; }
+    stroke: #484848; }
   .icon.icon-distribution {
-    color: #333; }
+    color: #484848; }
   .icon.icon-star, .icon.icon-half-star {
     fill: #efefef;
-    color: #333; }
+    color: #484848; }
   .icon.icon-slideshow-dot {
     stroke: #FFFFFF;
     fill: #FFFFFF;
@@ -8376,7 +8275,7 @@ ul.dropdown-list {
     padding: 0 1rem;
     white-space: nowrap;
     line-height: 2.8125rem;
-    font-size: 1.125rem;
+    font-size: 1rem;
     color: #118aec;
     text-decoration: none;
     border-bottom: 0.0625rem solid #d8d8d8; }
@@ -8434,11 +8333,7 @@ ul.dropdown-list {
     transform: rotate(0deg); }
   .header-button .icon {
     width: 1.125rem;
-    height: 1.125rem; }
-    @media only screen and (min-width: 681px) {
-      .header-button .icon {
-        width: 1.3125rem;
-        height: 1.3125rem; } }
+    height: 1.3125rem; }
   .header-button img, .header-button .circle-avatar {
     margin-top: -0.17578125rem; }
     @media only screen and (min-width: 681px) {
@@ -8477,16 +8372,16 @@ ul.dropdown-list {
   margin: 0;
   background-color: #FFFFFF; }
   .lend-menu-small li a {
-    font-size: 1.125rem;
+    font-size: 1rem;
     padding: 0.5rem 1rem;
     line-height: 1.8125rem;
     border-bottom: 0.0625rem solid #d8d8d8;
-    color: #333;
+    color: #484848;
     text-decoration: none; }
     .lend-menu-small li a:hover {
-      color: #333; }
+      color: #484848; }
     .lend-menu-small li a.section-title {
-      color: #333;
+      color: #484848;
       text-decoration: none; }
     .lend-menu-small li a.disabled {
       text-decoration: none;
@@ -9248,7 +9143,7 @@ a.header-button#search-toggle {
     z-index: 1; }
   #search-form input {
     width: calc(100% - 0.4rem);
-    padding: 0.4rem 0.4rem 0.4rem 1.96875rem;
+    padding: 0.4rem 0.4rem 0.4rem 1.6875rem;
     margin: 0.32rem 0;
     display: inline-block;
     height: auto; }
@@ -9256,7 +9151,7 @@ a.header-button#search-toggle {
       #search-form input {
         width: calc(100% - 0.6rem);
         margin: 0.65rem 0;
-        padding: 0.6rem 0.6rem 0.6rem 1.96875rem; } }
+        padding: 0.6rem 0.6rem 0.6rem 1.6875rem; } }
   #search-form .tt-hint {
     color: #CCCCCC; }
 
@@ -9285,7 +9180,7 @@ a.header-button#search-toggle {
     margin: 0;
     display: block; }
   .secondary-nav-bar li {
-    font-size: 0.8em;
+    font-size: 1rem;
     display: inline-block; }
     .secondary-nav-bar li a {
       position: relative;
@@ -9357,7 +9252,7 @@ a.header-button#search-toggle {
 ul.tertiary-nav {
   list-style: none;
   margin: 1.625rem 0;
-  line-height: 1.35rem; }
+  line-height: 1.2rem; }
   ul.tertiary-nav li {
     margin-bottom: 0.875rem; }
   ul.tertiary-nav li a:visited {
@@ -9560,7 +9455,7 @@ ul.tertiary-nav {
   background-color: #4faf4e;
   color: #FFFFFF;
   font-size: 0.875rem;
-  line-height: 1.25rem;
+  line-height: 1.357rem;
   padding: 2.5rem; }
   @media only screen and (min-width: 681px) {
     .siteFooter {
@@ -9571,14 +9466,14 @@ ul.tertiary-nav {
   .siteFooter a {
     color: #247037;
     font-size: 0.875rem;
-    line-height: 1.25rem; }
+    line-height: 1.357rem; }
     .siteFooter a:visited, .siteFooter a:active {
       color: #247037; }
   .siteFooter h1 {
     color: #FFFFFF;
     font-size: 0.875rem;
     font-weight: bold;
-    line-height: 1.25rem;
+    line-height: 1.357rem;
     margin-bottom: 0; }
 
 .siteFooter-group {
@@ -9645,8 +9540,8 @@ ul.tertiary-nav {
   .siteFooter {
     padding: 2.5rem; }
   .siteFooter-links a {
-    font-size: 1.125rem;
-    line-height: 1.5rem; } }
+    font-size: 1rem;
+    line-height: 1.75rem; } }
 
 @media only screen and (min-width: 681px) and (max-width: 760px) {
   .siteFooter-nav {
@@ -9750,19 +9645,19 @@ ul.tertiary-nav {
     top: 0.125rem;
     right: 0.125rem; }
     .message-text .close-tip-message .icon.icon-x {
-      stroke: #333;
+      stroke: #484848;
       height: 1.875rem;
       width: 1.875rem;
       margin-top: 0.125rem; }
   .message-text.message-text-confirmation {
     background-color: #FAFAFA;
-    border-bottom: 1px solid #333; }
+    border-bottom: 1px solid #484848; }
     .message-text.message-text-confirmation .icon.icon-confirmation {
       fill: #4faf4e; }
   .message-text.message-text-warning, .message-text.message-text-info {
     background-color: #fee259; }
     .message-text.message-text-warning .icon.icon-warning, .message-text.message-text-warning .icon.icon-info, .message-text.message-text-info .icon.icon-warning, .message-text.message-text-info .icon.icon-info {
-      fill: #333; }
+      fill: #484848; }
   .message-text.message-text-error {
     background-color: #d74937; }
     .message-text.message-text-error .icon.icon-error {
@@ -9814,9 +9709,9 @@ svg {
     top: 0;
     padding: 2px 6.75px;
     font-size: 18px;
-    line-height: 1.25rem;
+    line-height: 1.357rem;
     background-color: rgba(255, 255, 255, 0.8);
-    color: #333; }
+    color: #484848; }
     .loan-figure .loan-message.urgent {
       color: #d74937; }
   .loan-figure .loan-image-wrap {
@@ -9905,7 +9800,7 @@ svg {
   opacity: 1; }
 
 .loan-image-footer .icon-star {
-  background-color: #333;
+  background-color: #484848;
   color: #FFFFFF;
   fill: none;
   height: 2.5rem;
@@ -9983,13 +9878,13 @@ svg {
 .filter .filter-distribution-icon {
   margin-left: 12.5rem;
   margin-top: 0.625rem;
-  border: 1px solid #333;
+  border: 1px solid #484848;
   padding: 0.0625rem 0.3125rem;
   width: 1.5625rem;
   height: 1.5625rem; }
 
 .filter .filter-distribution-icon a {
-  color: #333; }
+  color: #484848; }
 
 .filter .button_box {
   padding-left: 3.75rem; }
@@ -10001,7 +9896,7 @@ svg {
   .filter .filter-header {
     margin: 0.5em;
     text-align: center;
-    color: #333; } }
+    color: #484848; } }
 
 @media only screen and (max-width: 480px) {
   .filter .filter-header-title {
@@ -10035,7 +9930,7 @@ svg {
 
 .filter .mobile-filter-sub-menu {
   font-size: 0.8em;
-  color: #333; }
+  color: #484848; }
 
 .filter .mobile-filter-title {
   font-size: 0.8em;
@@ -10069,7 +9964,7 @@ svg {
         font-size: 0.7777777778rem; } }
 
 .filter .interact {
-  color: #333;
+  color: #484848;
   font-weight: normal; }
 
 .filter .expandable-filter {
@@ -10081,7 +9976,7 @@ svg {
       display: none; } }
 
 .filter .filter-keywords-search-box {
-  color: #333;
+  color: #484848;
   width: 12.5rem;
   margin: 0 0.6666666667rem 0.3333333333rem;
   padding-right: 1.5rem; }
@@ -10143,7 +10038,7 @@ svg {
 
 .filter .borrower-filter-box {
   position: relative;
-  border: 1px solid #333;
+  border: 1px solid #484848;
   text-align: center;
   display: inline-table;
   vertical-align: middle;
@@ -10157,7 +10052,7 @@ svg {
 
 .filter .borrower-filter-box-right {
   position: relative;
-  border: 1px solid #333;
+  border: 1px solid #484848;
   text-align: center;
   border-left: 0;
   display: inline-table;
@@ -10180,7 +10075,7 @@ svg {
   vertical-align: middle; }
   @media only screen and (max-width: 480px) {
     .filter .borrower-label {
-      color: #333; } }
+      color: #484848; } }
 
 .filter .checkbox-input {
   padding-left: 2.1875rem;
@@ -10221,7 +10116,7 @@ svg {
 .filter .checkbox-input-span {
   margin-left: 0.1875rem;
   font-size: 0.8em;
-  color: #333;
+  color: #484848;
   border: 0;
   line-height: 100%;
   display: table-cell;
@@ -10312,7 +10207,7 @@ svg {
   fill: #666; }
 
 #location-search-form .search-box {
-  color: #333;
+  color: #484848;
   width: 100%;
   margin: 0;
   padding-left: 2rem; }
@@ -10376,11 +10271,11 @@ svg {
 
 #filter-loan-status-dropdown {
   box-sizing: content-box;
-  border: 1px solid #333;
+  border: 1px solid #484848;
   width: 13.125rem;
   margin: 0 0.6666666667rem 0.3333333333rem;
   height: 1.125rem;
-  color: #333; }
+  color: #484848; }
   @media only screen and (min-width: 481px) {
     #filter-loan-status-dropdown {
       margin: 0 0.6666666667rem; } }
@@ -10425,7 +10320,7 @@ svg {
 .touch .filter .filter-header {
   margin: 0.5em 0;
   text-align: center;
-  color: #333;
+  color: #484848;
   height: auto; }
 
 .touch .filter .filter-header-title {
@@ -10470,8 +10365,8 @@ svg {
   color: #999; }
 
 .touch .filter .filter-keywords-search-box {
-  color: #333;
-  border: 1px solid #333;
+  color: #484848;
+  border: 1px solid #484848;
   width: 12.5rem;
   margin: 0 0.6666666667rem 0.3333333333rem; }
   .touch .filter .filter-keywords-search-box::-ms-clear {
@@ -10651,8 +10546,8 @@ svg {
       width: calc(46% - 9.375rem); } }
   .loan-card .loan-message {
     font-size: 0.875rem;
-    line-height: 1.25rem;
-    color: #333; }
+    line-height: 1.357rem;
+    color: #484848; }
     .loan-card .loan-message.urgent {
       color: #d74937; }
   .loan-card .image-edit-buttons {
@@ -10664,7 +10559,7 @@ svg {
       float: left;
       padding: 0.25rem;
       line-height: 0;
-      background-color: #333;
+      background-color: #484848;
       opacity: 0.5; }
       .loan-card .image-edit-buttons a:hover {
         opacity: 1; }
@@ -10863,7 +10758,7 @@ svg {
       .list-view .bottom-bar:first-child {
         margin-top: 1.75rem; }
       .list-view .bottom-bar .button, .list-view .bottom-bar .message {
-        font-size: 1.125rem;
+        font-size: 1rem;
         height: 2.5rem;
         line-height: 2.5rem; }
         .list-view .bottom-bar .button .icon, .list-view .bottom-bar .message .icon {
@@ -10876,7 +10771,7 @@ svg {
           line-height: 1.75rem;
           font-size: 0.875rem;
           background: none;
-          color: #333; }
+          color: #484848; }
           .list-view .bottom-bar.show-short .button .icon, .list-view .bottom-bar.show-short .button:hover .icon {
             height: 1.75rem;
             fill: #4faf4e;
@@ -10884,7 +10779,7 @@ svg {
   .bottom-bar .button, .bottom-bar .message {
     height: 3rem;
     line-height: 3rem;
-    font-size: 1.3125rem;
+    font-size: 1.125rem;
     font-weight: normal;
     width: 100%;
     margin: 0;
@@ -10939,7 +10834,7 @@ svg {
     .message-card .message h2 {
       font-weight: bold; }
     .message-card .message p {
-      font-size: 1.3125rem; }
+      font-size: 1.125rem; }
   .message-card .action {
     width: 100%;
     -ms-flex-negative: 0;
@@ -10950,7 +10845,7 @@ svg {
       padding: 0;
       height: 3rem;
       line-height: 3rem;
-      font-size: 1.3125rem;
+      font-size: 1.125rem;
       font-weight: normal; }
   @media only screen and (min-width: 761px) {
     .list-view .message-card {
@@ -10966,7 +10861,7 @@ svg {
         .list-view .message-card .action .button {
           height: 2.5rem;
           line-height: 2.5rem;
-          font-size: 1.125rem; } }
+          font-size: 1rem; } }
 
 .loan-card-2 {
   display: -ms-flexbox;
@@ -11022,7 +10917,7 @@ svg {
     line-height: 1.375rem;
     font-weight: 300; }
   .loan-card-2 .loan-message {
-    color: #333; }
+    color: #484848; }
   .loan-card-2 .image-edit-buttons {
     z-index: 1; }
     .loan-card-2 .image-edit-buttons a {
@@ -11030,7 +10925,7 @@ svg {
       float: left;
       padding: 0.25rem;
       line-height: 0;
-      background-color: #333;
+      background-color: #484848;
       opacity: 0.5; }
       .loan-card-2 .image-edit-buttons a:hover {
         opacity: 1; }
@@ -11103,7 +10998,7 @@ svg {
   .bottom-bar-2 .button, .bottom-bar-2 .message {
     height: 2.9375rem;
     line-height: 2.9375rem;
-    font-size: 1.3125rem;
+    font-size: 1.125rem;
     font-weight: normal;
     color: #FFFFFF;
     width: 100%;
@@ -11162,7 +11057,7 @@ svg {
     .message-card .message h2 {
       font-weight: bold; }
     .message-card .message p {
-      font-size: 1.3125rem; }
+      font-size: 1.125rem; }
   .message-card .action {
     width: 100%;
     -ms-flex-negative: 0;
@@ -11173,7 +11068,7 @@ svg {
       padding: 0;
       height: 3rem;
       line-height: 3rem;
-      font-size: 1.3125rem;
+      font-size: 1.125rem;
       font-weight: normal; }
   @media only screen and (min-width: 761px) {
     .list-view .message-card {
@@ -11189,7 +11084,7 @@ svg {
         .list-view .message-card .action .button {
           height: 2.5rem;
           line-height: 2.5rem;
-          font-size: 1.125rem; } }
+          font-size: 1rem; } }
 
 .mini-loan-card .image {
   display: block;
@@ -11384,10 +11279,10 @@ svg {
         height: 2.75rem; }
         @media only screen and (min-width: 481px) and (max-width: 680px) {
           .sitewide-appeal-wrapper .sitewide-appeal .sitewide-body .donation-buttons .custom-amount input {
-            font-size: 1.125rem; } }
+            font-size: 1rem; } }
       @media only screen and (min-width: 481px) and (max-width: 680px) {
         .sitewide-appeal-wrapper .sitewide-appeal .sitewide-body .donation-buttons .custom-submit {
-          font-size: 1.125rem; } }
+          font-size: 1rem; } }
       .sitewide-appeal-wrapper .sitewide-appeal .sitewide-body .donation-buttons .custom-submit.inactive {
         border-color: #999;
         color: #999; }
@@ -11494,13 +11389,13 @@ svg {
           margin-top: 55%; } }
       @media only screen and (min-width: 681px) and (max-width: 760px) {
         .hp-slideshow-wrapper .hp-slide.holiday-slide .hp-element.text-over-image .hp-holiday-slide-button-wrapper .hp-holiday-slide-button {
-          font-size: 1.125rem;
+          font-size: 1rem;
           line-height: 2.75rem;
           height: 2.5625rem;
           margin-top: 51%; } }
       @media only screen and (min-width: 761px) and (max-width: 988px) {
         .hp-slideshow-wrapper .hp-slide.holiday-slide .hp-element.text-over-image .hp-holiday-slide-button-wrapper .hp-holiday-slide-button {
-          font-size: 1.125rem;
+          font-size: 1rem;
           height: 2.5625rem;
           line-height: 2.75rem;
           margin-top: 51%; } }
@@ -11536,12 +11431,12 @@ svg {
   .hp-element img {
     width: 100%;
     position: absolute; }
-  .hp-element .slide-overlay-short, .hp-element .slide-overlay-long, .hp-element .slide-overlay-very-short {
+  .hp-element .slide-overlay, .hp-element .slide-overlay-attribution, .hp-element .slide-overlay-attribution-detail {
     margin: 0;
     padding: 0 3.75rem;
     font-weight: bold; }
     @media only screen and (max-width: 480px) {
-      .hp-element .slide-overlay-short, .hp-element .slide-overlay-long, .hp-element .slide-overlay-very-short {
+      .hp-element .slide-overlay, .hp-element .slide-overlay-attribution, .hp-element .slide-overlay-attribution-detail {
         padding: 0 2.5rem; } }
   .hp-element .attribution {
     margin-top: 0.5625rem; }
@@ -11777,7 +11672,7 @@ svg {
         min-height: 4.5rem; } }
     .hp-how-it-works-wrapper div.small-step-1 p.featured + p, .hp-how-it-works-wrapper div.small-step-2 p.featured + p, .hp-how-it-works-wrapper div.small-step-3 p.featured + p, .hp-how-it-works-wrapper div.small-step-4 p.featured + p {
       font-size: 0.875rem;
-      line-height: 1.125rem; }
+      line-height: 1rem; }
   .hp-how-it-works-wrapper div.step-1, .hp-how-it-works-wrapper div.step-3 {
     width: 40vw;
     margin: 0 auto; }
@@ -11795,7 +11690,7 @@ svg {
     @media only screen and (max-width: 680px) {
       .hp-how-it-works-wrapper a.learn-more-link {
         font-size: 0.875rem;
-        line-height: 1.125rem; } }
+        line-height: 1rem; } }
   .hp-how-it-works-wrapper .close-icon {
     display: none; }
     #lend .hp-how-it-works-wrapper .close-icon {
@@ -11852,7 +11747,7 @@ svg {
         @media only screen and (max-width: 480px) {
           .home-stats-wrapper .home-stats .stat .data-point.growing-statistic {
             font-size: 1.75rem;
-            line-height: 1.75rem; } }
+            line-height: 2rem; } }
         @media only screen and (min-width: 481px) {
           .home-stats-wrapper .home-stats .stat .data-point.growing-statistic {
             font-size: 2.25rem;
@@ -12005,7 +11900,7 @@ svg {
       .home-fact-map .big-number {
         font-size: 150%; }
       .home-fact-map p {
-        font-size: 1.125rem;
+        font-size: 1rem;
         line-height: 1.5; }
       .home-fact-map .last-row {
         padding: 4.5% 0 9%; } }
@@ -12157,13 +12052,9 @@ div.about-video-wrapper {
         left: 40%; } }
     @media only screen and (min-width: 761px) {
       div.about-video-wrapper .play-button {
-        font-size: 1.375rem;
-        line-height: 1.6875rem;
+        font-size: 1.5rem;
+        line-height: 2.25rem;
         width: 24rem; } }
-  @media only screen and (min-width: 761px) and (min-width: 481px) {
-    div.about-video-wrapper .play-button {
-      font-size: 1.75rem;
-      line-height: 2.25rem; } }
     @media only screen and (min-width: 989px) {
       div.about-video-wrapper .play-button {
         left: 50%; } }
@@ -12332,7 +12223,7 @@ a.aboutJoinLink:visited {
 
 @media only screen and (max-width: 360px) {
   .auto-deposit h1 {
-    line-height: 1.75rem; } }
+    line-height: 1.5rem; } }
 
 .auto-deposit .auto-deposit-dynamic-view {
   position: relative;
@@ -12363,15 +12254,15 @@ a.aboutJoinLink:visited {
         display: inline-block;
         margin: 0;
         padding: 0 0.25rem;
-        font-size: 1.125rem;
+        font-size: 1rem;
         font-weight: bold;
-        color: #333;
+        color: #484848;
         height: 1.4rem;
         width: 4rem;
         text-align: center; }
         @media only screen and (min-width: 481px) {
           .auto-deposit .auto-deposit-dynamic-view .auto-deposit-form .lending-funds .amount-input .deposit-amount-input {
-            font-size: 1.75rem;
+            font-size: 1.5rem;
             height: 2.4rem;
             width: 8.4375rem; } }
       .auto-deposit .auto-deposit-dynamic-view .auto-deposit-form .lending-funds .amount-input.error ~ .after-28-note {
@@ -12389,7 +12280,7 @@ a.aboutJoinLink:visited {
         height: 1.5rem; }
         @media only screen and (min-width: 481px) {
           .auto-deposit .auto-deposit-dynamic-view .auto-deposit-form .lending-funds .day-input input {
-            font-size: 1.75rem;
+            font-size: 1.5rem;
             height: 2.4rem;
             width: 4.6875rem; } }
     .auto-deposit .auto-deposit-dynamic-view .auto-deposit-form .lending-funds .after-28-note {
@@ -12441,7 +12332,7 @@ a.aboutJoinLink:visited {
           box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
           z-index: 1000; }
     .auto-deposit .auto-deposit-dynamic-view .auto-deposit-form input[type="text"] {
-      color: #333; }
+      color: #484848; }
     .auto-deposit .auto-deposit-dynamic-view .auto-deposit-form .total-amount-minimum input, .auto-deposit .auto-deposit-dynamic-view .auto-deposit-form .total-amount-maximum input {
       visibility: hidden;
       padding: 0;
@@ -12662,7 +12553,7 @@ a.aboutJoinLink:visited {
   .loan-lifecycle-wrapper .icon-repaid,
   .loan-lifecycle-wrapper .icon-repeat {
     color: #FFFFFF;
-    fill: #333;
+    fill: #484848;
     display: block;
     width: 5rem;
     height: 5rem;
@@ -12923,20 +12814,8 @@ a.aboutJoinLink:visited {
 .category-card-title {
   color: #FFFFFF;
   font-weight: bold;
-  font-size: 1.375rem;
-  line-height: 1.6875rem; }
-  @media (min-width: 361px) and (max-width: 480px) {
-    .category-card-title {
-      font-size: 1.75rem;
-      line-height: 2.25rem; } }
-  @media (min-width: 536px) and (max-width: 680px) {
-    .category-card-title {
-      font-size: 1.75rem;
-      line-height: 2.25rem; } }
-  @media only screen and (min-width: 761px) {
-    .category-card-title {
-      font-size: 1.75rem;
-      line-height: 2.25rem; } }
+  font-size: 1.5rem;
+  line-height: 2.25rem; }
   .category-card-title p {
     padding: 0 0.375rem; }
 
@@ -13098,18 +12977,18 @@ div.category-cards-header {
     width: calc(100% - 1.5rem);
     margin-left: 0.75rem; }
     #partnersFilter + .select2-container .select2-selection {
-      border: 1px solid #333;
+      border: 1px solid #484848;
       border-radius: 0; }
     #partnersFilter + .select2-container input {
       box-shadow: none;
       padding: 0;
       margin-bottom: 0;
       font-size: 0.875rem;
-      height: 1.25rem; }
+      height: 1.357rem; }
 
 .select2-results__option, .select2-selection__choice {
   font-size: 0.875rem;
-  line-height: 1.25rem; }
+  line-height: 1.357rem; }
 
 .select2-results__option--highlighted {
   background-color: #118aec; }
@@ -13135,7 +13014,7 @@ div.category-cards-header {
     margin: 0;
     padding-left: 0;
     padding-right: 0;
-    color: #333;
+    color: #484848;
     float: left;
     background: transparent; }
     @media only screen and (min-width: 481px) {
@@ -13194,11 +13073,11 @@ div.category-cards-header {
   .control-region .category-description {
     margin-bottom: 5px;
     font-size: 0.875rem;
-    line-height: 1.25rem; }
+    line-height: 1.357rem; }
     @media only screen and (min-width: 681px) {
       .control-region .category-description {
-        font-size: 1.125rem;
-        line-height: 1.5rem; } }
+        font-size: 1rem;
+        line-height: 1.75rem; } }
 
 a.filter-menu-button:visited {
   color: #000; }
@@ -13377,7 +13256,7 @@ a.filter-menu-button:visited {
 
 .filter-indicator {
   font-size: 0.875rem;
-  line-height: 1.25rem;
+  line-height: 1.357rem;
   display: inline-block;
   margin-right: 0.375rem;
   padding-right: 0.25rem;
@@ -13512,9 +13391,9 @@ a.filter-menu-button:visited {
 
 .black-underlined {
   text-decoration: underline;
-  color: #333 !important; }
+  color: #484848 !important; }
   .black-underlined a:visited {
-    color: #333 !important; }
+    color: #484848 !important; }
 
 .black-underlined:hover {
   color: #118aec !important; }
@@ -13879,7 +13758,7 @@ a.filter-menu-button:visited {
       .lenders-teams .ac-body .lender-name, .lenders-teams .ac-body .lender-location {
         text-overflow: ellipsis;
         font-size: 0.875rem;
-        line-height: 1.25rem; } }
+        line-height: 1.357rem; } }
   .lenders-teams .ac-body .lender-controls, .lenders-teams .ac-body .team-controls {
     text-align: center; }
     .lenders-teams .ac-body .lender-controls .loading-spinner, .lenders-teams .ac-body .team-controls .loading-spinner {
@@ -14014,7 +13893,7 @@ a.filter-menu-button:visited {
   font-weight: bold; }
 
 .more-loan-info .override-styling-from-db span[style] {
-  color: #333 !important;
+  color: #484848 !important;
   font-family: PostGrotesk, Arial, Helvetica, sans-serif !important;
   font-size: 1rem !important; }
 
@@ -14154,7 +14033,7 @@ a.filter-menu-button:visited {
     display: inline;
     padding: 0; }
     .lend-action .lend-button-wrapper button#lend-button-amount-selector, .lend-action.row .lend-button-wrapper button#lend-button-amount-selector {
-      border: 1px solid #333; }
+      border: 1px solid #484848; }
       .lend-action .lend-button-wrapper button#lend-button-amount-selector:hover, .lend-action .lend-button-wrapper button#lend-button-amount-selector:active, .lend-action.row .lend-button-wrapper button#lend-button-amount-selector:hover, .lend-action.row .lend-button-wrapper button#lend-button-amount-selector:active {
         color: #006ed3;
         border-color: #006ed3; }
@@ -14180,7 +14059,7 @@ a.filter-menu-button:visited {
     .lend-action .lend-values-button .lend-action-button .icon, .lend-action.row .lend-values-button .lend-action-button .icon {
       transition: transform 0.3s ease-in-out;
       height: 0.75rem;
-      fill: #333;
+      fill: #484848;
       width: 0.75rem; }
     .lend-action .lend-values-button .lend-action-button:hover .icon, .lend-action .lend-values-button .lend-action-button:active .icon, .lend-action.row .lend-values-button .lend-action-button:hover .icon, .lend-action.row .lend-values-button .lend-action-button:active .icon {
       fill: #006ed3; }
@@ -14302,11 +14181,11 @@ a.filter-menu-button:visited {
       height: 4.125rem;
       margin: 0;
       padding-left: 7%;
-      border: 1px solid #333;
+      border: 1px solid #484848;
       background: #FFFFFF;
       outline: none;
       text-shadow: 0 0 0 #FFFFFF;
-      color: #333;
+      color: #484848;
       font-size: 1.125rem;
       font-weight: bold; }
       @media only screen and (min-width: 481px) {
@@ -14314,7 +14193,7 @@ a.filter-menu-button:visited {
           padding-left: 15%; } }
     .mobile-lend-action .lend-values-select-wrapper .lend-arrow {
       width: 1.3125rem;
-      fill: #333;
+      fill: #484848;
       right: 3%;
       top: 44%;
       height: 16%;
@@ -14609,7 +14488,7 @@ p.body-termsofuse {
 .trustee-application {
   margin-top: 1rem; }
   .trustee-application .button.setting, .trustee-application .button.setting:visited {
-    color: #333; }
+    color: #484848; }
   .trustee-application h3 {
     margin-top: 1.25rem; }
     @media only screen and (min-width: 481px) {
@@ -14650,7 +14529,7 @@ p.body-termsofuse {
         width: auto; } }
     .trustee-filters .tf-item label {
       display: inline-block;
-      color: #333;
+      color: #484848;
       line-height: 2rem; }
     .trustee-filters .tf-item input[type="text"], .trustee-filters .tf-item select {
       display: inline-block;
@@ -14787,7 +14666,7 @@ p.body-termsofuse {
   margin-top: 1rem;
   position: relative; }
   .recent-loans h2 a {
-    font-size: 1.125rem;
+    font-size: 1rem;
     margin-left: 0.75rem; }
   .recent-loans .icon-toggle {
     position: absolute;
@@ -14845,7 +14724,7 @@ p.body-termsofuse {
   .recent-updates h2 {
     margin-top: 0 !important; }
   .recent-updates h2 a {
-    font-size: 1.125rem;
+    font-size: 1rem;
     margin-left: 0.75rem; }
 
 .deposited-lent-widget {
@@ -15322,8 +15201,8 @@ table.repayments-list {
       text-align: right; }
     @media only screen and (min-width: 481px) {
       table.repayments-list tr td {
-        font-size: 1.125rem;
-        line-height: 1.5rem; } }
+        font-size: 1rem;
+        line-height: 1.75rem; } }
 
 .partner-with-us p, .partner-with-us ul {
   font-weight: 300; }
@@ -15365,7 +15244,7 @@ table.repayments-list {
 .partner-with-us .program h2, .partner-with-us #our-partners h2 {
   font-size: 1.1666666667rem;
   line-height: 1rem;
-  color: #333;
+  color: #484848;
   margin-top: 1.25rem; }
 
 .partner-with-us #partner-logos img {
@@ -15502,7 +15381,7 @@ table.repayments-list {
   font-size: 2.25rem;
   font-weight: bold; }
 
-.partner-with-us .small-statistic, .partner-with-us .small-statistic-bold {
+.partner-with-us .small-statistic {
   color: #666;
   font-size: 1.4375rem;
   line-height: 1.4375rem; }
@@ -15595,8 +15474,8 @@ table.repayments-list {
     margin-bottom: 0.3125rem; }
     @media only screen and (min-width: 681px) {
       .donation-appeal .appeal-header {
-        font-size: 1.125rem;
-        line-height: 1.5rem;
+        font-size: 1rem;
+        line-height: 1.75rem;
         margin-bottom: 0.125rem; } }
   .donation-appeal .outer-meter-wrapper {
     max-width: 14.0625rem;
@@ -15625,7 +15504,7 @@ table.repayments-list {
     font-size: 1.75rem; }
     @media only screen and (min-width: 681px) and (max-width: 760px) {
       .donation-appeal .amount-raised {
-        font-size: 1.125rem;
+        font-size: 1rem;
         margin-top: -1.1875rem; } }
   .donation-appeal .bottom-message {
     margin-top: 0.3125rem; }
@@ -16227,11 +16106,11 @@ table.repayments-list {
 
 .borrower-dashboard-main .profile-link {
   font-size: 0.875rem;
-  line-height: 1.25rem; }
+  line-height: 1.357rem; }
   @media only screen and (min-width: 481px) {
     .borrower-dashboard-main .profile-link {
-      font-size: 1.125rem;
-      line-height: 1.5rem; } }
+      font-size: 1rem;
+      line-height: 1.75rem; } }
 
 .borrower-dashboard-main .loading-spinner {
   margin: 2rem;
@@ -16239,8 +16118,8 @@ table.repayments-list {
   height: 3rem; }
 
 .borrower-dashboard-endorsements h2 {
-  font-size: 1.125rem;
-  line-height: 1.5rem;
+  font-size: 1rem;
+  line-height: 1.75rem;
   font-weight: bold;
   margin-bottom: 1rem; }
   @media only screen and (min-width: 681px) {
@@ -16380,7 +16259,7 @@ table.repayments-list {
       margin: 1.5rem 0; }
     .borrower-landing-page .external-validation p {
       font-weight: normal;
-      font-size: 1.3125rem;
+      font-size: 1.125rem;
       line-height: 1.75rem;
       margin: 0 auto 2rem;
       max-width: 14rem; }
@@ -16409,8 +16288,8 @@ table.repayments-list {
       display: -ms-flexbox;
       display: flex;
       margin-bottom: 0.5rem;
-      font-size: 1.3125rem;
-      line-height: 1.5rem; }
+      font-size: 1.125rem;
+      line-height: 1.75rem; }
     .borrower-landing-page .do-you-qualify svg.icon {
       width: 1.25rem;
       height: 1.25rem;
@@ -16494,7 +16373,7 @@ table.repayments-list {
       margin: 0;
       padding-top: 0.875rem;
       font-size: 16px;
-      line-height: 1.25rem;
+      line-height: 1.357rem;
       max-width: 71%; }
       @media only screen and (min-width: 481px) and (max-width: 550px) {
         .monthly-good-landing-page .mg-header-section-wrapper .mg-header-content .mg-subhead {
@@ -16505,7 +16384,7 @@ table.repayments-list {
       @media only screen and (min-width: 681px) {
         .monthly-good-landing-page .mg-header-section-wrapper .mg-header-content .mg-subhead {
           font-size: 1.5rem;
-          line-height: 1.5rem; } }
+          line-height: 1.75rem; } }
       @media only screen and (min-width: 989px) {
         .monthly-good-landing-page .mg-header-section-wrapper .mg-header-content .mg-subhead {
           max-width: 31.25rem; } }
@@ -16525,7 +16404,7 @@ table.repayments-list {
         display: inline-block;
         height: 2.75rem;
         font-weight: bold;
-        font-size: 1.125rem; }
+        font-size: 1rem; }
       .monthly-good-landing-page .mg-header-section-wrapper .mg-header-content .mg-deposit-input-wrapper .join-monthly-good {
         display: inline-block;
         top: 0.125rem; }
@@ -16590,7 +16469,7 @@ table.repayments-list {
       height: 2.75rem;
       margin-right: 1.25rem;
       font-weight: bold;
-      font-size: 1.125rem; }
+      font-size: 1rem; }
       @media only screen and (min-width: 481px) {
         .monthly-good-landing-page .kiva-as-expert-section-wrapper .deposit-amount-input-2 .mg-deposit-input {
           width: 5rem; } }
@@ -16646,7 +16525,7 @@ table.repayments-list {
 
 @media only screen and (max-width: 360px) {
   .monthly-good h1 {
-    line-height: 1.75rem; } }
+    line-height: 1.5rem; } }
 
 .monthly-good .error.zig {
   background-color: #efefef; }
@@ -16658,10 +16537,10 @@ table.repayments-list {
   display: none; }
 
 .monthly-good input#mg-deposit-amount-input, .monthly-good input#mg-donation-amount-input {
-  font-size: 1.125rem;
+  font-size: 1rem;
   text-align: right;
-  height: 1.5rem;
-  line-height: 1.5rem;
+  height: 1.75rem;
+  line-height: 1.75rem;
   width: 6.875rem;
   margin: 0 0 0 auto;
   padding: 0.125rem; }
@@ -16685,16 +16564,16 @@ table.repayments-list {
       line-height: 0.875rem;
       width: 11.25rem; }
     .monthly-good .monthly-good-dynamic-view .monthly-good-form .day-control .pencil-text-input .text-display {
-      font-size: 1.125rem;
+      font-size: 1rem;
       font-weight: bold; }
     .monthly-good .monthly-good-dynamic-view .monthly-good-form .icon-pencil {
-      height: 1.125rem;
-      width: 1.125rem; }
+      height: 1rem;
+      width: 1rem; }
     .monthly-good .monthly-good-dynamic-view .monthly-good-form table {
       max-width: 680px;
       margin: 2rem auto 1rem; }
     .monthly-good .monthly-good-dynamic-view .monthly-good-form td {
-      font-size: 1.125rem; }
+      font-size: 1rem; }
     .monthly-good .monthly-good-dynamic-view .monthly-good-form .left-small-pad {
       padding-left: 0.125rem; }
     .monthly-good .monthly-good-dynamic-view .monthly-good-form .right-no-pad {
@@ -16754,14 +16633,14 @@ table.repayments-list {
         display: none;
         width: 6.875rem;
         text-align-last: right;
-        font-size: 1.125rem; }
+        font-size: 1rem; }
       .monthly-good .monthly-good-dynamic-view .monthly-good-form .donation-selector-small .dropdown-choices-select {
         width: 6.875rem;
         text-align-last: right;
         padding-right: 1rem;
-        font-size: 1.125rem; }
+        font-size: 1rem; }
     .monthly-good .monthly-good-dynamic-view .monthly-good-form input[type="text"] {
-      color: #333; }
+      color: #484848; }
     .monthly-good .monthly-good-dynamic-view .monthly-good-form .total-amount {
       padding-right: 1.25rem; }
     .monthly-good .monthly-good-dynamic-view .monthly-good-form .total-amount-minimum input, .monthly-good .monthly-good-dynamic-view .monthly-good-form .total-amount-maximum input {
@@ -16790,8 +16669,8 @@ table.repayments-list {
     font-size: 16px;
     text-align: right;
     width: 6.875rem;
-    height: 1.5rem;
-    line-height: 1.5rem;
+    height: 1.75rem;
+    line-height: 1.75rem;
     margin: 0 0 0 auto;
     padding: 0 0.25rem; }
   .monthly-good .monthly-good-dynamic-view .custom-donation-input .dropdown-choices-select {
@@ -16835,8 +16714,8 @@ table.repayments-list {
   margin-bottom: 2rem; }
   @media only screen and (min-width: 481px) {
     .monthly-good-confirm h1 {
-      font-size: 2.8125rem;
-      line-height: 3.375rem; } }
+      font-size: 2.75rem;
+      line-height: 3.125rem; } }
 
 .monthly-good-spinner .loading-spinner .line {
   background-color: #FFFFFF; }
@@ -16907,7 +16786,7 @@ table.repayments-list {
     border-color: #d8d8d8;
     background-color: #FFFFFF; }
   #checkoutWrap .basket-contents .loan-row .loan-totals .donation-item-amount {
-    color: #333;
+    color: #484848;
     padding-right: .5rem;
     margin-bottom: 0; }
   #checkoutWrap .basket-contents .loan-row .loan-totals .donation-item-controls a {
@@ -17001,7 +16880,7 @@ table.repayments-list {
       display: inline-block;
       float: left;
       font-size: 1rem;
-      color: #333;
+      color: #484848;
       line-height: 1.4rem;
       text-decoration: inherit; }
     #checkoutWrap .checkout-totals .totals-row span {
@@ -17282,7 +17161,7 @@ div.gift-card .text-section, div.kiva-store .text-section {
     color: #666;
     margin-right: 10px; }
   .portfolio-donations .donation-listing a.paginate_active {
-    color: #333; }
+    color: #484848; }
   .portfolio-donations .donation-listing a.paginate_button_disabled {
     color: #999; }
   .portfolio-donations .kiva-tax-info address {
@@ -17328,7 +17207,7 @@ div.gift-card .text-section, div.kiva-store .text-section {
     margin-bottom: 10px; }
   #build.appsShowView .actions .publish-note {
     font-size: 0.875rem;
-    line-height: 1.25rem; }
+    line-height: 1.357rem; }
 
 #build.appsShowView .hd h2 {
   display: inline; }
@@ -17590,7 +17469,7 @@ div.gift-card .text-section, div.kiva-store .text-section {
     top: 45%; } }
 
 @media only screen and (max-width: 760px) {
-  .careers-page .about-video-wrapper > div > div > a > span.white, .careers-page .about-video-wrapper > div > div > a > span.overlay, .careers-page .about-video-wrapper > div > div > a > span.overlay-bold, .careers-page .about-video-wrapper > div > div > a > span.slide-overlay, .careers-page .about-video-wrapper > div > div > a > span.slide-overlay-long, .careers-page .about-video-wrapper > div > div > a > span.slide-overlay-short, .careers-page .about-video-wrapper > div > div > a > span.slide-overlay-very-short, .careers-page .about-video-wrapper > div > div > a > span.slide-overlay-attribution, .careers-page .about-video-wrapper > div > div > a > span.slide-overlay-attribution-detail {
+  .careers-page .about-video-wrapper > div > div > a > span.white, .careers-page .about-video-wrapper > div > div > a > span.overlay, .careers-page .about-video-wrapper > div > div > a > span.overlay-bold, .careers-page .about-video-wrapper > div > div > a > span.slide-overlay, .careers-page .about-video-wrapper > div > div > a > span.slide-overlay-attribution, .careers-page .about-video-wrapper > div > div > a > span.slide-overlay-attribution-detail {
     font-size: 1.125rem; } }
 
 .careers-page .benefits ul {
@@ -17747,7 +17626,7 @@ div.gift-card .text-section, div.kiva-store .text-section {
     height: 1rem;
     width: 1.5625rem;
     fill: none;
-    stroke: #333;
+    stroke: #484848;
     transition: transform 0.3s ease-in-out; }
     .ac-container .ac-dropdown-icon .icon.loan-tags-dropdown {
       right: 1rem; }
@@ -17796,15 +17675,15 @@ div.gift-card .text-section, div.kiva-store .text-section {
       text-align: center;
       color: #247037;
       position: relative;
-      border-top: 1px solid #333;
-      border-bottom: 1px solid #333;
+      border-top: 1px solid #484848;
+      border-bottom: 1px solid #484848;
       font-size: 18px; }
       .arrow-steps ul li a {
         color: #247037; }
       .arrow-steps ul li:first-of-type {
         margin-left: 0; }
       .arrow-steps ul li:last-of-type {
-        border-right: 1px solid #333; }
+        border-right: 1px solid #484848; }
       .arrow-steps ul li.active {
         background-color: #247037;
         color: #FFFFFF;
@@ -17821,7 +17700,7 @@ div.gift-card .text-section, div.kiva-store .text-section {
         margin-top: -15px; }
       .arrow-steps ul li.arrow:before {
         border-color: rgba(51, 51, 51, 0);
-        border-left-color: #333;
+        border-left-color: #484848;
         border-width: 16px;
         margin-top: -16px; }
       .arrow-steps ul li.arrow.active:after {
@@ -17861,7 +17740,7 @@ div.gift-card .text-section, div.kiva-store .text-section {
       padding-left: 0;
       padding-right: 0em;
       margin-right: -4px;
-      border-right: 1px solid #333; }
+      border-right: 1px solid #484848; }
       .checkout-steps ul li:last-child:after {
         width: 0;
         height: 0;
@@ -17881,8 +17760,8 @@ div.gift-card .text-section, div.kiva-store .text-section {
     margin: 0;
     padding: 0;
     line-height: 2.1875rem;
-    border: 0.0625rem solid #333;
-    color: #333; }
+    border: 0.0625rem solid #484848;
+    color: #484848; }
     .triple-state-buttons label.ts-label:hover, .triple-state-buttons label.qs-label:hover, .quintuple-state-buttons label.ts-label:hover, .quintuple-state-buttons label.qs-label:hover {
       color: #4faf4e;
       border-color: #4faf4e; }
@@ -17891,7 +17770,7 @@ div.gift-card .text-section, div.kiva-store .text-section {
     .triple-state-buttons label.ts-label.ts-floater, .triple-state-buttons label.ts-label.qs-floater, .triple-state-buttons label.qs-label.ts-floater, .triple-state-buttons label.qs-label.qs-floater, .quintuple-state-buttons label.ts-label.ts-floater, .quintuple-state-buttons label.ts-label.qs-floater, .quintuple-state-buttons label.qs-label.ts-floater, .quintuple-state-buttons label.qs-label.qs-floater {
       display: none;
       position: absolute;
-      border-color: #333; }
+      border-color: #484848; }
   .triple-state-buttons label.qs-label:nth-of-type(3n), .triple-state-buttons label.qs-label:nth-of-type(4n), .quintuple-state-buttons label.qs-label:nth-of-type(3n), .quintuple-state-buttons label.qs-label:nth-of-type(4n) {
     border-top: none; }
   .triple-state-buttons input, .quintuple-state-buttons input {
@@ -18000,7 +17879,7 @@ div.gift-card .text-section, div.kiva-store .text-section {
   width: 100%;
   min-width: 12rem;
   padding: 0;
-  font-size: 1.125rem; }
+  font-size: 1rem; }
   .decision-point-lightbox .button.main-option {
     margin-right: 1.25rem; }
   .decision-point-lightbox .button.alternative-option {
@@ -18056,7 +17935,7 @@ div.gift-card .text-section, div.kiva-store .text-section {
         font-size: 1.75rem;
         line-height: 2.25rem; } }
   .credit-summary-lightbox .credit-summary-wrapper .creditSummaryTotal {
-    color: #333; }
+    color: #484848; }
   .credit-summary-lightbox .credit-summary-wrapper .totalCredit {
     color: #4faf4e; }
   .credit-summary-lightbox .credit-summary-wrapper .totalDebit {
@@ -18236,7 +18115,7 @@ div.flag-comment-lightbox .lightbox-content .inner {
         margin-top: -1.75rem; } }
   #compose-message-modal .compose-message-content .other-lender-info {
     vertical-align: middle;
-    color: #333; }
+    color: #484848; }
     @media only screen and (min-width: 681px) {
       #compose-message-modal .compose-message-content .other-lender-info {
         text-align: center;
@@ -18248,7 +18127,7 @@ div.flag-comment-lightbox .lightbox-content .inner {
     #compose-message-modal .compose-message-content .submit-message-btn button {
       padding: 0; }
   #compose-message-modal .compose-message-content .message-disclaimer {
-    color: #333;
+    color: #484848;
     padding: 0; }
     @media only screen and (min-width: 481px) {
       #compose-message-modal .compose-message-content .message-disclaimer {
@@ -18256,14 +18135,14 @@ div.flag-comment-lightbox .lightbox-content .inner {
 
 #compose-message-modal .message-error-content {
   background-color: #FAFAFA;
-  color: #333;
+  color: #484848;
   padding: 1rem;
   margin-top: 1rem; }
 
 .photo-headline {
   margin-top: 2rem;
   padding: 0 2rem;
-  color: #333;
+  color: #484848;
   background: -o-linear-gradient(transparent, transparent);
   background-position: center;
   background-repeat: no-repeat;
@@ -18338,7 +18217,7 @@ div.flag-comment-lightbox .lightbox-content .inner {
   display: none; }
   .view-buttons input:checked + label {
     display: none;
-    background-color: #333; }
+    background-color: #484848; }
     @media only screen and (min-width: 481px) {
       .view-buttons input:checked + label {
         display: block; } }
@@ -18354,7 +18233,7 @@ div.flag-comment-lightbox .lightbox-content .inner {
   width: 2.03125rem;
   text-align: center;
   float: left;
-  border: 1px solid #333; }
+  border: 1px solid #484848; }
   @media only screen and (min-width: 481px) {
     .view-buttons input + label {
       height: 2rem;
@@ -18386,7 +18265,7 @@ div.flag-comment-lightbox .lightbox-content .inner {
 .icon-toggle input {
   display: none; }
   .icon-toggle input:checked + label {
-    background-color: #333; }
+    background-color: #484848; }
 
 .icon-toggle input + label {
   margin: 0;
@@ -18395,7 +18274,7 @@ div.flag-comment-lightbox .lightbox-content .inner {
   width: 2.03125rem;
   text-align: center;
   float: left;
-  border: 1px solid #333; }
+  border: 1px solid #484848; }
   @media only screen and (min-width: 481px) {
     .icon-toggle input + label {
       height: 2rem;
@@ -18713,11 +18592,11 @@ div.flag-comment-lightbox .lightbox-content .inner {
     border-color: #0066a9; }
 
 .initial-Z {
-  color: #333; }
+  color: #484848; }
   .initial-Z:hover {
-    color: #333; }
+    color: #484848; }
   .initial-Z:before {
-    border-color: #333; }
+    border-color: #484848; }
 
 .lender-message .other-lender {
   color: #999;
@@ -18809,7 +18688,7 @@ div.flag-comment-lightbox .lightbox-content .inner {
   .whats-next-wrapper .paging.row .next-button {
     margin-right: 0;
     max-width: 9.375rem;
-    font-size: 1.125rem;
+    font-size: 1rem;
     height: 2.75rem;
     line-height: 2.75rem; }
     .whats-next-wrapper .paging.row .previous-button .previous-arrow, .whats-next-wrapper .paging.row .previous-button .next-arrow,
@@ -18850,14 +18729,14 @@ div.flag-comment-lightbox .lightbox-content .inner {
           line-height: 1.8rem; } }
     @media only screen and (min-width: 481px) {
       .upcoming-repayments table th, .upcoming-repayments table td {
-        font-size: 1.125rem;
-        line-height: 1.5rem; } }
+        font-size: 1rem;
+        line-height: 1.75rem; } }
   .upcoming-repayments .more-info {
     text-align: center;
     font-size: 0.875rem; }
     @media only screen and (min-width: 481px) {
       .upcoming-repayments .more-info {
-        font-size: 1.125rem; } }
+        font-size: 1rem; } }
 
 .endorsement-select {
   display: -ms-flexbox;
@@ -18924,8 +18803,8 @@ div.flag-comment-lightbox .lightbox-content .inner {
             flex-grow: 1;
         margin: 0 0.5rem 0 0;
         font-weight: bold;
-        font-size: 1.125rem;
-        line-height: 1.5rem; }
+        font-size: 1rem;
+        line-height: 1.75rem; }
       .endorsement-select .endorsement .ac-title .icon {
         -ms-flex-negative: 0;
             flex-shrink: 0;
