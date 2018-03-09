@@ -24,8 +24,8 @@ $paragraph-aside-line-height	: $small-line-height;
 $top-nav-font-size				: 1.125rem;
 $top-nav-line-height			: 1.3125rem;
 
-$secondary-nav-font-size		: rem-calc(16);
-$secondary-nav-line-height		: rem-calc(24);
+$page-title-font-size-small		: 1.75rem;
+$page-title-line-height-small	: 2.25rem;
 
 $page-title-font-size			: 2.25rem;
 $page-title-line-height			: 2.75rem;
@@ -39,36 +39,32 @@ $section-head-line-height-reduction	: rem-calc(6);
 $feature-font-size				: 1.5rem;
 $feature-line-height			: 2.25rem;
 
-$headline-font-size				: rem-calc(56);
-$headline-line-height			: rem-calc(64);
-$headline-font-size-reduction	: rem-calc(10);
-$headline-font-size-small-reduction	: rem-calc(26);
-$headline-font-size-extra-small-reduction	: rem-calc(31);
-$headline-line-height-reduction	: rem-calc(32);
+$headline-font-size				: rem-calc(44);
+$headline-line-height			: rem-calc(50);
+$headline-font-size-reduction	: rem-calc(12);
+$headline-font-size-extra-small-reduction	: rem-calc(22);
+$headline-line-height-reduction	: rem-calc(10);
 
 $slide-overlay-font-size			: rem-calc(32);
 $slide-overlay-line-height			: rem-calc(36);
 $slide-overlay-font-size-reduction	: rem-calc(10);
 $slide-overlay-line-height-reduction: rem-calc(6);
-$slide-overlay-short-addition		: rem-calc(4);
-$slide-overlay-very-short-addition	: rem-calc(8);
-$slide-overlay-long-reduction		: rem-calc(-4);
 $slide-overlay-attribution-font-size: rem-calc(24);
 $slide-overlay-attribution-line-height: rem-calc(28);
 $slide-overlay-attribution-small-size: rem-calc(16);
 
-$impact-font-size					: rem-calc(45);
-$impact-line-height					: rem-calc(54);
-$impact-font-size-med-reduction		: rem-calc(9);
-$impact-line-height-med-reduction	: rem-calc(14);
-$impact-font-size-reduction			: rem-calc(19);
-$impact-line-height-reduction		: rem-calc(22);
+$impact-font-size					: rem-calc(44);
+$impact-line-height					: rem-calc(50);
+$impact-font-size-reduction			: rem-calc(12);
+$impact-line-height-reduction		: rem-calc(10);
 
-$huge-headline-font-size		: 4rem;
-$huge-headline-line-height		: 4.375rem;
+$huge-headline-font-size			: rem-calc(64);
+$huge-headline-line-height			: rem-calc(70);
+$huge-headline-font-size-reduction	: rem-calc(12);
+$huge-headline-line-height-reduction: rem-calc(12);
 
 $small-statistic-font-size: rem-calc(28);
-$small-statistic-line-height: rem-calc(28);
+$small-statistic-line-height: rem-calc(32);
 
 $statistic-font-size			: rem-calc(36);
 $statistic-line-height			: rem-calc(36);
@@ -133,11 +129,16 @@ $paragraph-line-height: $body-line-height;
 }
 
 @mixin page-title() {
-	font-size: $page-title-font-size;
-	line-height: $page-title-line-height;
+	font-size: $page-title-font-size-small;
+	line-height: $page-title-line-height-small;
 	font-weight: $font-weight-bold;
 	color: $kiva-text-dark;
 	margin-bottom: 0.5rem;
+
+	@media #{$medium-up} {
+		font-size: $page-title-font-size;
+		line-height: $page-title-line-height;
+	}
 }
 
 @mixin impact-text() {
@@ -145,12 +146,7 @@ $paragraph-line-height: $body-line-height;
 	line-height: $impact-line-height - $impact-line-height-reduction;
 	font-weight: $font-weight-bold;
 
-	@media #{$medium-only} {
-		font-size: $impact-font-size - $impact-font-size-med-reduction;
-		line-height: $impact-line-height - $impact-line-height-med-reduction;
-	}
-
-	@media #{$large-up} {
+	@media #{$medium-up} {
 		font-size: $impact-font-size;
 		line-height: $impact-line-height;
 	}
