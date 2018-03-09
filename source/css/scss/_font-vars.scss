@@ -5,12 +5,12 @@
 $x-small-font-size				: rem-calc(12);
 $x-small-line-height			: rem-calc(18);
 
-$small-font-size				: rem-calc(14);
-$small-line-height				: rem-calc(20);
+$small-font-size				: 0.875rem;
+$small-line-height				: 1.357rem;
 $small-font-color				: $kiva-text-dark;
 
-$body-font-size					: rem-calc(18);
-$body-line-height				: rem-calc(24);
+$body-font-size					: 1rem;
+$body-line-height				: 1.75rem;
 
 $paragraph-font-size			: $body-font-size;
 $paragraph-line-height			: $body-line-height;
@@ -21,17 +21,14 @@ $list-line-height				: 1.6;
 $paragraph-aside-font-size		: $small-font-size;
 $paragraph-aside-line-height	: $small-line-height;
 
-$top-nav-font-size				: rem-calc(21);
-$top-nav-line-height			: rem-calc(21);
-$top-nav-font-reduction			: rem-calc(3);
+$top-nav-font-size				: 1.125rem;
+$top-nav-line-height			: 1.3125rem;
 
-$secondary-nav-font-size		: rem-calc(16);
-$secondary-nav-line-height		: rem-calc(24);
+$page-title-font-size-small		: 1.75rem;
+$page-title-line-height-small	: 2.25rem;
 
-$page-title-font-size			: rem-calc(36);
-$page-title-line-height			: rem-calc(36);
-$page-title-font-size-reduction 	: rem-calc(12);
-$page-title-line-height-reduction	: rem-calc(12);
+$page-title-font-size			: 2.25rem;
+$page-title-line-height			: 2.75rem;
 
 $section-head-font-size			: rem-calc(28);
 $section-head-line-height		: rem-calc(36);
@@ -39,43 +36,35 @@ $section-head-line-height		: rem-calc(36);
 $section-head-font-size-reduction	: rem-calc(6);
 $section-head-line-height-reduction	: rem-calc(6);
 
-$feature-font-size				: $section-head-font-size;
-$feature-line-height			: $section-head-line-height;
-$feature-font-size-reduction 	: rem-calc(6);
-$feature-line-height-reduction	: rem-calc(9);
+$feature-font-size				: 1.5rem;
+$feature-line-height			: 2.25rem;
 
-$headline-font-size				: rem-calc(56);
-$headline-line-height			: rem-calc(64);
-$headline-font-size-reduction	: rem-calc(10);
-$headline-font-size-small-reduction	: rem-calc(26);
-$headline-font-size-extra-small-reduction	: rem-calc(31);
-$headline-line-height-reduction	: rem-calc(32);
+$headline-font-size				: rem-calc(44);
+$headline-line-height			: rem-calc(50);
+$headline-font-size-reduction	: rem-calc(12);
+$headline-font-size-extra-small-reduction	: rem-calc(22);
+$headline-line-height-reduction	: rem-calc(10);
 
 $slide-overlay-font-size			: rem-calc(32);
 $slide-overlay-line-height			: rem-calc(36);
 $slide-overlay-font-size-reduction	: rem-calc(10);
 $slide-overlay-line-height-reduction: rem-calc(6);
-$slide-overlay-short-addition		: rem-calc(4);
-$slide-overlay-very-short-addition	: rem-calc(8);
-$slide-overlay-long-reduction		: rem-calc(-4);
 $slide-overlay-attribution-font-size: rem-calc(24);
 $slide-overlay-attribution-line-height: rem-calc(28);
 $slide-overlay-attribution-small-size: rem-calc(16);
 
-$impact-font-size					: rem-calc(45);
-$impact-line-height					: rem-calc(54);
-$impact-font-size-med-reduction		: rem-calc(9);
-$impact-line-height-med-reduction	: rem-calc(14);
-$impact-font-size-reduction			: rem-calc(19);
-$impact-line-height-reduction		: rem-calc(22);
+$impact-font-size					: rem-calc(44);
+$impact-line-height					: rem-calc(50);
+$impact-font-size-reduction			: rem-calc(12);
+$impact-line-height-reduction		: rem-calc(10);
 
-$huge-headline-font-size		: rem-calc(81);
-$huge-headline-line-height		: rem-calc(90);
-$huge-headline-font-size-reduction		: rem-calc(27);
-$huge-headline-line-height-reduction	: rem-calc(28);
+$huge-headline-font-size			: rem-calc(64);
+$huge-headline-line-height			: rem-calc(70);
+$huge-headline-font-size-reduction	: rem-calc(12);
+$huge-headline-line-height-reduction: rem-calc(12);
 
 $small-statistic-font-size: rem-calc(28);
-$small-statistic-line-height: rem-calc(28);
+$small-statistic-line-height: rem-calc(32);
 
 $statistic-font-size			: rem-calc(36);
 $statistic-line-height			: rem-calc(36);
@@ -120,23 +109,8 @@ $paragraph-line-height: $body-line-height;
 }
 
 @mixin featured-text() {
-	font-size: $feature-font-size - $feature-font-size-reduction;
-	line-height: $feature-line-height - $feature-line-height-reduction;
-
-	@media #{$medium-up} {
-		font-size: $feature-font-size;
-		line-height: $feature-line-height;
-	}
-}
-
-@mixin small-featured-text() {
-	font-size: $feature-font-size - $feature-font-size-reduction;
-	line-height: $feature-line-height - $feature-line-height-reduction;
-}
-
-@mixin large-featured-text() {
-	font-size: $feature-font-size;
-	line-height: $feature-line-height;
+  font-size: $feature-font-size;
+  line-height: $feature-line-height;
 }
 
 @mixin slide-overlay-text($adjustment: 0) {
@@ -155,13 +129,13 @@ $paragraph-line-height: $body-line-height;
 }
 
 @mixin page-title() {
-	font-size: $page-title-font-size - $page-title-font-size-reduction;
-	line-height: $page-title-line-height - $page-title-line-height-reduction;
+	font-size: $page-title-font-size-small;
+	line-height: $page-title-line-height-small;
 	font-weight: $font-weight-bold;
-	color: $kiva-green;
+	color: $kiva-text-dark;
 	margin-bottom: 0.5rem;
 
-	@media #{$large-up} {
+	@media #{$medium-up} {
 		font-size: $page-title-font-size;
 		line-height: $page-title-line-height;
 	}
@@ -172,12 +146,7 @@ $paragraph-line-height: $body-line-height;
 	line-height: $impact-line-height - $impact-line-height-reduction;
 	font-weight: $font-weight-bold;
 
-	@media #{$medium-only} {
-		font-size: $impact-font-size - $impact-font-size-med-reduction;
-		line-height: $impact-line-height - $impact-line-height-med-reduction;
-	}
-
-	@media #{$large-up} {
+	@media #{$medium-up} {
 		font-size: $impact-font-size;
 		line-height: $impact-line-height;
 	}

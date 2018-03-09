@@ -76,9 +76,7 @@
 	},
 	"panel-content": "This is a panel",
 	"slide-overlay": {
-		"very-short": "Entrepreneur...",
-		"short": "Dreams are universal. Opportunity is not.",
-		"long": "“My Kiva loan helped to pay for eucalyptus plants, fertilizer, and farm training that allows me to support my family”",
+		"text": "Dreams are universal. Opportunity is not.",
 		"attribution": "Firstname",
 		"attribution-detail": "Some detail, Activity, Countryname",
 		"attribution-country": "Countryname"

@@ -29,36 +29,11 @@
 }
 
 .slide-overlay {
+	font-size: $slide-overlay-font-size;
+	line-height: $slide-overlay-line-height;
 	@include text-shadow();
 	@extend .white;
 	font-weight: $font-weight-bold;
-}
-
-.slide-overlay-long {
-	@extend .slide-overlay;
-	@include slide-overlay-text();
-
-	@media #{$x-small-only} {
-		@include slide-overlay-text($slide-overlay-long-reduction);
-	}
-
-	@media #{$med-large-only} {
-		@include slide-overlay-text($slide-overlay-long-reduction * 2);
-	}
-
-	@media #{$upper-large-only} {
-		@include slide-overlay-text($slide-overlay-long-reduction);
-	}
-}
-
-.slide-overlay-short {
-	@extend .slide-overlay;
-	@include slide-overlay-text($slide-overlay-short-addition)
-}
-
-.slide-overlay-very-short {
-	@extend .slide-overlay;
-	@include slide-overlay-text($slide-overlay-very-short-addition)
 }
 
 .slide-overlay-attribution
@@ -95,11 +70,6 @@
 	line-height: $small-statistic-line-height;
 }
 
-.small-statistic-bold {
-	@extend .small-statistic;
-	font-weight: bold;
-}
-
 .medium-statistic {
 	font-size: $medium-statistic-font-size;
 	line-height: $medium-statistic-line-height;
@@ -118,14 +88,10 @@
 }
 
 .statistic-label {
-	font-size: $small-font-size;
-	line-height: $small-font-size;
+	font-size: rem-calc(21);
+	line-height: rem-calc(24);
 	font-weight: bold;
 
-	@media #{$large-up} {
-		font-size: $body-font-size;
-		line-height: $body-font-size;
-	}
 }
 
 .huge-statistic {
@@ -148,7 +114,8 @@ p {
 	}
 }
 h1 {
-	font-size: $headline-font-size - $headline-font-size-small-reduction;
+	font-size: $headline-font-size - $headline-font-size-reduction;
+	line-height: $headline-line-height - $headline-line-height-reduction;
 	font-weight: $font-weight-bold;
 	margin-top: 1rem;
 	margin-bottom: 1rem;
@@ -156,14 +123,13 @@ h1 {
 	.normal {
 		font-weight: $font-weight-normal;
 		line-height: $headline-line-height - $headline-line-height-reduction;
-		font-size: $headline-font-size - $headline-font-size-small-reduction;
+		font-size: $headline-font-size - $headline-font-size-reduction;
 	}
 }
 
 .huge {
 	font-size: $huge-headline-font-size - $huge-headline-font-size-reduction;
 	line-height: $huge-headline-line-height - $huge-headline-line-height-reduction;
-	letter-spacing: $huge-type-kerning - $huge-type-kerning-reduction;
 }
 
 h2 {
@@ -182,13 +148,9 @@ h2.scalable {
 }
 
 .top-nav {
-	font-size: $top-nav-font-size - $top-nav-font-reduction;
-	line-height: $top-nav-line-height - $top-nav-font-reduction;
-}
-
-.secondary-nav {
-	font-size: $secondary-nav-font-size;
-	line-height: $secondary-nav-line-height;
+	font-size: $top-nav-font-size;
+	line-height: $top-nav-line-height;
+  	font-weight: 400;
 }
 
 a:visited {
@@ -201,11 +163,6 @@ small {
 }
 
 @media #{$medium-up} {
-	.top-nav {
-		font-size: $top-nav-font-size;
-		line-height: $top-nav-line-height;
-	}
-
 	.huge-statistic {
 		font-size: $huge-statistic-font-size - $huge-statistic-font-medium-reduction;
 	}
@@ -216,18 +173,16 @@ small {
 	}
 }
 
-@media #{$large-up} {
+@media #{$medium-up} {
 	.huge {
 		font-size: $huge-headline-font-size;
 		line-height: $huge-headline-line-height;
-		letter-spacing: $huge-type-kerning;
 	}
 
 	.huge-statistic {
 		font-size: $huge-statistic-font-size;
 		line-height: $huge-statistic-line-height;
 		font-weight: $font-weight-bold;
-		letter-spacing: $huge-type-kerning;
 	}
 
 	h1 {
