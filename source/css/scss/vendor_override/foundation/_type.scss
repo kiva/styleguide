@@ -29,11 +29,25 @@
 }
 
 .slide-overlay {
-	font-size: $slide-overlay-font-size;
-	line-height: $slide-overlay-line-height;
+	font-size: $slide-overlay-font-size - $slide-overlay-font-size-reduction;
+	line-height: $slide-overlay-line-height - $slide-overlay-line-height-reduction;
 	@include text-shadow();
 	@extend .white;
 	font-weight: $font-weight-bold;
+
+	// the following kluge is due to long text overlays not fitting
+	// in the range 761px - 841px when the slide layout changes from
+	// top/bottom to left/right, and slide halves get small again
+
+	@media #{$medium-only} {
+		font-size: $slide-overlay-font-size;
+		line-height: $slide-overlay-line-height;
+	}
+
+	@media #{$screen} and (min-width: 841px) {
+		font-size: $slide-overlay-font-size;
+		line-height: $slide-overlay-line-height;
+	}
 }
 
 .slide-overlay-attribution

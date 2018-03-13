@@ -47,8 +47,8 @@ $headline-line-height-reduction	: rem-calc(10);
 
 $slide-overlay-font-size			: rem-calc(32);
 $slide-overlay-line-height			: rem-calc(36);
-$slide-overlay-font-size-reduction	: rem-calc(10);
-$slide-overlay-line-height-reduction: rem-calc(6);
+$slide-overlay-font-size-reduction	: rem-calc(14);
+$slide-overlay-line-height-reduction: rem-calc(16);
 $slide-overlay-attribution-font-size: rem-calc(24);
 $slide-overlay-attribution-line-height: rem-calc(28);
 $slide-overlay-attribution-small-size: rem-calc(16);
@@ -111,21 +111,6 @@ $paragraph-line-height: $body-line-height;
 @mixin featured-text() {
   font-size: $feature-font-size;
   line-height: $feature-line-height;
-}
-
-@mixin slide-overlay-text($adjustment: 0) {
-	font-size: $slide-overlay-font-size - $slide-overlay-font-size-reduction + $adjustment;
-	line-height: $slide-overlay-line-height - $slide-overlay-line-height-reduction + $adjustment;
-
-	@media #{$small-medium-only} {
-		font-size: $slide-overlay-font-size + $adjustment;
-		line-height: $slide-overlay-line-height + $adjustment;
-	}
-
-	@media #{$large-up} {
-		font-size: $slide-overlay-font-size + $adjustment;
-		line-height: $slide-overlay-line-height + $adjustment;
-	}
 }
 
 @mixin page-title() {
