@@ -5953,10 +5953,18 @@ th.hide-for-touch {
   font-weight: bold; }
 
 .slide-overlay, .slide-overlay-attribution, .slide-overlay-attribution-detail {
-  font-size: 2rem;
-  line-height: 2.25rem;
+  font-size: 1.125rem;
+  line-height: 1.25rem;
   text-shadow: 1px 1px 3px #333;
   font-weight: bold; }
+  @media only screen and (min-width: 481px) and (max-width: 680px) {
+    .slide-overlay, .slide-overlay-attribution, .slide-overlay-attribution-detail {
+      font-size: 2rem;
+      line-height: 2.25rem; } }
+  @media only screen and (min-width: 841px) {
+    .slide-overlay, .slide-overlay-attribution, .slide-overlay-attribution-detail {
+      font-size: 2rem;
+      line-height: 2.25rem; } }
 
 .slide-overlay-attribution, .slide-overlay-attribution-detail {
   font-size: 1rem;
@@ -13019,7 +13027,7 @@ div.category-cards-header {
     background: transparent; }
     @media only screen and (min-width: 481px) {
       .control-region .filter-menu-button {
-        width: 5rem; } }
+        width: 5.625rem; } }
     .control-region .filter-menu-button svg {
       display: none; }
       @media only screen and (min-width: 481px) {
