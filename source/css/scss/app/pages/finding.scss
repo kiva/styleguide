@@ -139,7 +139,7 @@ $filter-open-behavior-query: "#{$screen} and (min-width: #{$filter-open-behavior
 		background: transparent;
 
 		@media #{$medium-up} {
-			width: 5rem;
+			width: 5.625rem;
 		}
 		
 		svg {
