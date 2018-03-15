@@ -522,8 +522,7 @@ a.filter-menu-button:visited {
 }
 
 .secondary-nav.filter-loan-count {
-	padding-top: 5px;
-	padding-bottom: 8px;
+	padding: rem-calc(7) 0;
 	border-bottom: 1px solid $kiva-stroke-gray;
 	border-top: 1px solid $kiva-stroke-gray;
 	width: 100%;
