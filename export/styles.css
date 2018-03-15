@@ -17173,7 +17173,7 @@ div.gift-card .text-section, div.kiva-store .text-section {
   .portfolio-donations .donation-listing a.paginate_button_disabled {
     color: #999; }
   .portfolio-donations .kiva-tax-info address {
-    font-size: .8rem;
+    font-size: 1rem;
     font-style: normal; }
   @media only screen and (max-width: 480px) {
     .portfolio-donations .kiva-tax-info .print-export-info {
