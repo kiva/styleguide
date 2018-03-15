@@ -198,14 +198,14 @@ $filter-open-behavior-query: "#{$screen} and (min-width: #{$filter-open-behavior
 		border-color: #333;
 		font-weight: bold;
 		font-size: 0.6666666667rem;
-		width: rem-calc(142);
+		width: 8rem;
 		padding: 0 0.5rem;
 		margin-top: 0.15rem;
 
 		@media #{$medium-up} {
 			font-size: 0.8888888889rem;
 			height: $setting-button-height;
-			width: rem-calc(180);
+			width: 10rem;
 		}
 	}
 
