@@ -1,5 +1,6 @@
 .paging {
 	text-align: center;
+  	white-space: nowrap;
 
 	.no-touch & .button {
 		&:hover .icon {
@@ -43,7 +44,7 @@
 			padding-left: 0.5rem;
 
 			.icon {
-				right: calc(50% + 2rem);
+				right: calc(50% + 1.1rem);
 				transform: rotate(90deg);
 			}
 
