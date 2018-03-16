@@ -11203,7 +11203,7 @@ svg {
       margin-right: 1.25rem;
       padding-left: 0.5rem; }
       .paging .button.previous .icon {
-        right: calc(50% + 1.25rem);
+        right: calc(50% + 2rem);
         -ms-transform: rotate(90deg);
             transform: rotate(90deg); }
       @media only screen and (min-width: 481px) and (max-width: 680px) {
@@ -13065,14 +13065,14 @@ div.category-cards-header {
     border-color: #333;
     font-weight: bold;
     font-size: 0.6666666667rem;
-    width: 8.875rem;
+    width: 8rem;
     padding: 0 0.5rem;
     margin-top: 0.15rem; }
     @media only screen and (min-width: 481px) {
       .control-region .filter-dropdown {
         font-size: 0.8888888889rem;
         height: 2rem;
-        width: 11.25rem; } }
+        width: 10rem; } }
   .control-region .filter-loan-count {
     float: left;
     color: #999; }
@@ -13302,8 +13302,7 @@ a.filter-menu-button:visited {
       height: 1.875rem; } }
 
 .secondary-nav.filter-loan-count {
-  padding-top: 5px;
-  padding-bottom: 8px;
+  padding: 0.4375rem 0;
   border-bottom: 1px solid #d8d8d8;
   border-top: 1px solid #d8d8d8;
   width: 100%;
@@ -13938,6 +13937,8 @@ a.filter-menu-button:visited {
   text-align: center;
   margin-left: 0.5rem;
   margin-right: -0.5rem; }
+  .country-info .country-stats [class*="block-grid-"] {
+    margin: 0; }
   .country-info .country-stats ul li {
     padding: 0; }
     .country-info .country-stats ul li .data-point {
