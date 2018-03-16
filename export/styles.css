@@ -11175,7 +11175,8 @@ svg {
   margin-right: 0.25rem; }
 
 .paging {
-  text-align: center; }
+  text-align: center;
+  white-space: nowrap; }
   .no-touch .paging .button:hover .icon {
     stroke: #006ed3; }
   .no-touch .paging .button.disabled:hover .icon, .no-touch .paging .button[disabled]:hover .icon {
@@ -11203,7 +11204,7 @@ svg {
       margin-right: 1.25rem;
       padding-left: 0.5rem; }
       .paging .button.previous .icon {
-        right: calc(50% + 2rem);
+        right: calc(50% + 1.1rem);
         -ms-transform: rotate(90deg);
             transform: rotate(90deg); }
       @media only screen and (min-width: 481px) and (max-width: 680px) {
