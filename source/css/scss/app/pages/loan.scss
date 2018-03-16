@@ -744,6 +744,10 @@
 		margin-left: 0.5rem;
 		margin-right: -0.5rem;
 
+	  	[class*="block-grid-"] {
+		  margin: 0;
+		}
+
 		ul li {
 			padding: 0;
 
