@@ -17915,6 +17915,8 @@ div.gift-card .text-section, div.kiva-store .text-section {
 .repayment-schedule-lightbox .repayment-schedule-wrapper {
   white-space: nowrap;
   overflow-x: scroll; }
+  .repayment-schedule-lightbox .repayment-schedule-wrapper td:last-of-type {
+    white-space: normal; }
   .repayment-schedule-lightbox .repayment-schedule-wrapper .simple-repayment-schedule .icon-checkbox-good, .repayment-schedule-lightbox .repayment-schedule-wrapper .simple-repayment-schedule .icon-checkbox-bad, .repayment-schedule-lightbox .repayment-schedule-wrapper .advanced-repayment-schedule .icon-checkbox-good, .repayment-schedule-lightbox .repayment-schedule-wrapper .advanced-repayment-schedule .icon-checkbox-bad {
     display: inline-block;
     vertical-align: middle;
