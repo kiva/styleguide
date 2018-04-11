@@ -10871,6 +10871,20 @@ svg {
           line-height: 2.5rem;
           font-size: 1rem; } }
 
+@media only screen and (min-width: 761px) {
+  .list-view .list-view-header.is-loan-card-2 {
+    display: table;
+    width: 100%;
+    padding: 0.5rem 1rem;
+    background-color: #efefef;
+    border-bottom: 1px solid #d8d8d8; }
+    .list-view .list-view-header.is-loan-card-2 .loan-country {
+      width: 45.5%; }
+    .list-view .list-view-header.is-loan-card-2 .partner-trustee {
+      width: calc(28.5% - 6.25rem); }
+    .list-view .list-view-header.is-loan-card-2 .loan-length {
+      width: calc(29% - 6.25rem); } }
+
 .loan-card-2 {
   display: -ms-flexbox;
   display: flex;
@@ -10959,6 +10973,9 @@ svg {
     padding-bottom: 62.5%;
     background-size: cover;
     background-color: #efefef; }
+  .loan-card-2 .borrower-partner-trustee,
+  .loan-card-2 .borrower-loan-length {
+    display: none; }
   .loan-card-2 .fundraising-meter {
     height: 0.5rem;
     width: 100%;
@@ -11001,6 +11018,72 @@ svg {
       left: auto;
       vertical-align: middle; }
 
+.list-view .loan-card-2 .borrower-partner-trustee,
+.list-view .loan-card-2 .borrower-loan-length {
+  display: block;
+  font-size: 0.875rem;
+  font-weight: 300;
+  padding: 0.5rem 1.25rem 0;
+  text-align: center; }
+  .list-view .loan-card-2 .borrower-partner-trustee span,
+  .list-view .loan-card-2 .borrower-loan-length span {
+    font-weight: bold; }
+
+.list-view .loan-card-2 .borrower-loan-length {
+  padding-bottom: 0.5rem; }
+
+@media only screen and (min-width: 761px) {
+  .list-view .is-loan-card-2 li:nth-child(2n+0) .loan-card-2 {
+    background-color: #efefef; }
+  .list-view .loan-card-bottom-buffer.show-for-touch.is-loan-card-2 {
+    background-color: pink;
+    height: 0; }
+  .list-view .loan-card-2 {
+    -ms-flex-direction: row;
+        flex-direction: row;
+    max-width: none;
+    width: 100%; }
+    .list-view .loan-card-2 .loan-card-2-use,
+    .list-view .loan-card-2 .borrower-partner-trustee,
+    .list-view .loan-card-2 .borrower-loan-length {
+      padding-left: 0;
+      text-align: left; }
+      .list-view .loan-card-2 .loan-card-2-use span,
+      .list-view .loan-card-2 .borrower-partner-trustee span,
+      .list-view .loan-card-2 .borrower-loan-length span {
+        display: none; }
+  .list-view .loan-card-2-image-wrap {
+    padding-left: 0.75rem;
+    padding-top: 0.625rem;
+    width: 6.25rem; }
+  .list-view .loan-card-2-image {
+    padding-bottom: 100%; }
+  .list-view .loan-card-2-details-wrap {
+    padding: 0.5rem 1rem 0;
+    text-align: left;
+    width: calc(38% - 6.25rem); }
+  .list-view .loan-card-2-borrower-name {
+    font-size: 1rem; }
+  .list-view .borrower-partner-trustee,
+  .list-view .borrower-loan-length {
+    padding-right: 1rem;
+    padding-top: 0.625rem; }
+  .list-view .borrower-partner-trustee {
+    width: calc(28% - 6.25rem); }
+  .list-view .borrower-loan-length {
+    width: calc(24% - 6.25rem); }
+  .list-view .loan-card-2-footer-wrap {
+    min-width: 14rem;
+    margin-top: 0.25rem;
+    width: calc(32% - 6.25rem); }
+  .list-view .matching-line {
+    height: auto;
+    line-height: 0.875rem;
+    overflow: visible;
+    text-overflow: initial;
+    white-space: normal;
+    padding-bottom: 0.125rem; } }
+
 .bottom-bar-2 {
   width: 100%; }
   .bottom-bar-2 .button, .bottom-bar-2 .message {
@@ -11014,7 +11097,7 @@ svg {
     padding: 0;
     white-space: nowrap;
     border-radius: 0.125rem;
-    box-shadow: 0.0625rem 0.125rem 0.0625rem #1f92ba; }
+    box-shadow: 0 0.125rem #006ed3; }
     .bottom-bar-2 .button:hover, .bottom-bar-2 .button:active, .bottom-bar-2 .button:visited, .bottom-bar-2 .button:focus, .bottom-bar-2 .message:hover, .bottom-bar-2 .message:active, .bottom-bar-2 .message:visited, .bottom-bar-2 .message:focus {
       color: #FFFFFF; }
     .bottom-bar-2 .button .lend-button:hover, .bottom-bar-2 .button .lend-button:active, .bottom-bar-2 .button .lend-button:visited, .bottom-bar-2 .button .lend-button:focus, .bottom-bar-2 .message .lend-button:hover, .bottom-bar-2 .message .lend-button:active, .bottom-bar-2 .message .lend-button:visited, .bottom-bar-2 .message .lend-button:focus {
@@ -11050,6 +11133,13 @@ svg {
       position: relative;
       margin-top: -0.3125rem;
       margin-right: 0.3125rem; }
+
+@media only screen and (min-width: 761px) {
+  .list-view .bottom-bar-2 .button,
+  .list-view .bottom-bar-2 .message {
+    height: 2.5rem;
+    line-height: 2.5rem;
+    font-size: 1rem; } }
 
 .message-card {
   display: -ms-flexbox;
