@@ -84,17 +84,20 @@ button, a.button, .button {
 }
 
 button.secondary, .button.secondary {
-	border-color: $kiva-text-dark;
+	border-color: $charcoal;
 	border-width: 1px;
 	font-size: $secondary-button-font-sm;
+  	padding: rem-calc(16) rem-calc(32);
+  	box-shadow: 0 1px #333;
 
 	&:visited {
 		color: $kiva-text-dark;
 	}
 
 	.no-touch &:hover {
-		border-color: $kiva-textlink-hover;
-		color: $kiva-textlink-hover;
+		border-color: $kiva-accent-blue;
+		color: $kiva-accent-blue;
+	  	box-shadow: 0 1px $kiva-accent-blue;
 	}
 
 	&.disabled, &[disabled] {
