@@ -6,21 +6,19 @@
 button, a.button, .button {
 	font-size: $button-font-sm;
 	font-weight: $font-weight-bold;
-	height: $button-height-med - $button-height-med-reduction;
-	line-height: $button-height-med - $button-height-med-reduction;
-	padding-top: 0;
-	padding-bottom: 0;
+  	padding: 12px 24px;
+  	box-shadow: 0 2px $dark-blue;
 	text-decoration: none;
+  	border-radius: $button-border-radius;
 
 	&:hover, &:active {
 		text-decoration: none;
-		background-color: $kiva-textlink-hover;
+		background-color: $dark-blue;
 	}
 
 	@media #{$medium-up} {
 		font-size: $button-font-med;
-		height: $button-height-med;
-		line-height: $button-height-med;
+	  	padding: 18px 36px;
 	}
 
 	&:visited {

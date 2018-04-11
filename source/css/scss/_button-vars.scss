@@ -1,16 +1,15 @@
 @import 'palette';
 
 $button-function-factor: 0;
-$button-bg-color: $kiva-accent-blue;
+$button-bg-color: $blue;
 $button-bg-hover: $kiva-textlink-hover;
 
-$button-font-med: rem-calc(28);
-$button-font-med-reduction: rem-calc(14);
-$button-font-sm: rem-calc(24);
-$button-font-weight: $font-weight-bold;
+$button-font-med: rem-calc(24);
+$button-font-sm: rem-calc(20);
+$button-font-weight: $font-weight-normal;
+$button-border-radius: rem-calc(2);
 
 $button-height-med: rem-calc(64);
-$button-height-med-reduction: rem-calc(20);
 $button-height-sm: rem-calc(44);
 
 $button-width-standard: rem-calc(244);
