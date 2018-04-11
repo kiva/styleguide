@@ -5,6 +5,28 @@ $loan-card-footer-height: 3rem;
 $loan-card-meter-height: rem-calc(8);
 $loan-card-border: 1px solid $kiva-stroke-gray;
 
+.list-view .list-view-header.is-loan-card-2 {
+	@media #{$xlarge-up} {
+		display: table;
+		width: 100%;
+		padding: 0.5rem 1rem;
+		background-color: $kiva-bg-darkgray;
+		border-bottom: $loan-card-border;
+
+		.loan-country {
+			width: 45.5%;
+		}
+
+		.partner-trustee {
+			width: calc(28.5% - 6.25rem);
+		}
+
+		.loan-length {
+			width: calc(29% - 6.25rem);
+		}
+	}
+}
+
 .loan-card-2 {
 	display: flex;
 	flex-direction: column;
@@ -135,6 +157,11 @@ $loan-card-border: 1px solid $kiva-stroke-gray;
 		background-color: $kiva-bg-darkgray;
 	}
 
+	.borrower-partner-trustee,
+	.borrower-loan-length {
+		display: none;
+	}
+
 	.fundraising-meter {
 		height: $loan-card-meter-height;
 		width: 100%;
@@ -193,6 +220,110 @@ $loan-card-border: 1px solid $kiva-stroke-gray;
 			position: static;
 			left: auto;
 			vertical-align: middle;
+		}
+	}
+
+	.below-button-spacer {
+		//display: none;
+	}
+}
+
+.list-view  {
+
+	.loan-card-2 {
+		.borrower-partner-trustee,
+		.borrower-loan-length {
+			display: block;
+			font-size: $small-font-size;
+			font-weight: $paragraph-font-weight;
+			padding: 0.5rem 1.25rem 0;
+			text-align: center;
+
+			span {
+				font-weight: bold;
+			}
+		}
+
+		.borrower-loan-length {
+			padding-bottom: 0.5rem;
+		}
+	}
+
+
+	@media #{$xlarge-up} {
+		.is-loan-card-2 li:nth-child(2n+0) .loan-card-2{
+			background-color: $kiva-bg-darkgray;
+		}
+
+		.loan-card-bottom-buffer.show-for-touch.is-loan-card-2 {
+			background-color: pink;
+			height: 0;
+		}
+
+		.loan-card-2 {
+			flex-direction: row;
+			max-width: none;
+			width: 100%;
+
+			.loan-card-2-use,
+			.borrower-partner-trustee,
+			.borrower-loan-length {
+				padding-left: 0;
+				text-align: left;
+
+				span {
+					display: none;
+				}
+			}
+		}
+
+		.loan-card-2-image-wrap {
+			padding-left: rem-calc(12);
+			padding-top: rem-calc(10);
+			width: 6.25rem;
+		}
+
+		.loan-card-2-image {
+			padding-bottom: 100%;
+		}
+
+		.loan-card-2-details-wrap {
+			padding: rem-calc(8) 1rem 0;
+			text-align: left;
+			width: calc(38% - 6.25rem);
+		}
+
+		.loan-card-2-borrower-name {
+			font-size: $body-font-size;
+		}
+
+		.borrower-partner-trustee,
+		.borrower-loan-length {
+			padding-right: 1rem;
+			padding-top: rem-calc(10);
+		}
+
+		.borrower-partner-trustee {
+			width: calc(28% - 6.25rem);
+		}
+
+		.borrower-loan-length {
+			width: calc(24% - 6.25rem);
+		}
+
+		.loan-card-2-footer-wrap {
+			min-width: 14rem;
+			margin-top: 0.25rem;
+			width: calc(32% - 6.25rem);
+		}
+
+		.matching-line {
+			height: auto;
+			line-height: $small-font-size;
+			overflow: visible;
+			text-overflow: initial;
+			white-space: normal;
+			padding-bottom: rem-calc(2);
 		}
 	}
 }
@@ -268,9 +399,19 @@ $loan-card-border: 1px solid $kiva-stroke-gray;
 			position: relative;
 			margin-top: rem-calc(-5);
 			margin-right: rem-calc(5);
-
 		}
     }
+}
+
+.list-view .bottom-bar-2 {
+	.button,
+	.message {
+		@media #{$xlarge-up} {
+			height: 2.5rem;
+			line-height: 2.5rem;
+			font-size: $paragraph-font-size;
+		}
+	}
 }
 
 .message-card {
