@@ -16,12 +16,13 @@ $button-width-standard: rem-calc(244);
 
 $setting-button-height: rem-calc(32);
 $setting-button-height-reduction: rem-calc(6);
-$setting-button-font-size: rem-calc(16);
+$setting-button-font-size: rem-calc(14);
 $setting-button-font-size-reduction: rem-calc(4);
 $setting-button-icon-size: rem-calc(18);
 $setting-button-icon-size-reduction: rem-calc(4);
-$setting-button-text-color: $kiva-text-dark;
+$setting-button-text-color: $charcoal;
 $setting-button-background-color: $white;
+$setting-button-border-radius: rem-calc(2);
 $setting-button-border-color: $kiva-text-dark;
 
 $secondary-button-font-sm: rem-calc(16);
