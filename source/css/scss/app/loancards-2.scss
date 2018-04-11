@@ -222,10 +222,6 @@ $loan-card-border: 1px solid $kiva-stroke-gray;
 			vertical-align: middle;
 		}
 	}
-
-	.below-button-spacer {
-		//display: none;
-	}
 }
 
 .list-view  {
@@ -342,7 +338,7 @@ $loan-card-border: 1px solid $kiva-stroke-gray;
 		padding: 0;
 		white-space: nowrap;
 		border-radius: rem-calc(2);
-		box-shadow: rem-calc(1) rem-calc(2) rem-calc(1) $shadow-blue;
+		box-shadow: 0 rem-calc(2)  $dark-blue;
 
 		&:hover, &:active, &:visited, &:focus {
 			color: $white;
