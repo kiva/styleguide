@@ -26,6 +26,19 @@
 		<div class="loan-card-2-use">{{use}}</div>
     </div>
 
+	<div class="borrower-partner-trustee">
+		{{#partnerName}}
+			<span>Field partner:&nbsp;</span>{{partnerName}}
+		{{/partnerName}}
+		{{#trusteeName}}
+			<span>Trustee:&nbsp;</span>{{trusteeName}}
+		{{/trusteeName}}
+	</div>
+
+	<div class="borrower-loan-length">
+		<span>Loan length:&nbsp;</span>{{lenderRepaymentTerm}} months
+	</div>
+
 	<div class="loan-card-2-footer-wrap">
 		<div class="fundraising-meter progress">
 			<span class="meter" style="width:{{progress.percent}}%;"></span>
@@ -48,10 +61,9 @@
 			{{/is_matched}}
 		</div>
 
-			<div class="button-line">
-				{{> molecules-bottom-bar-2 }}
-			</div>
+		<div class="button-line">
+			{{> molecules-bottom-bar-2 }}
 		</div>
 	</div>
 </div>
-<div class="loan-card-bottom-buffer show-for-touch"></div>
+<div class="loan-card-bottom-buffer show-for-touch is-loan-card-2"></div>
