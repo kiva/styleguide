@@ -7,13 +7,13 @@ button, a.button, .button {
 	font-size: $button-font-sm;
 	font-weight: $font-weight-bold;
   	padding: rem-calc(12) rem-calc(24);
-  	box-shadow: 0 rem-calc(2) $dark-blue;
+  	box-shadow: 0 rem-calc(2) $button-bg-hover;
 	text-decoration: none;
   	border-radius: $button-border-radius;
 
 	&:hover, &:active {
 		text-decoration: none;
-		background-color: $dark-blue;
+		background-color: $button-bg-hover;
 	}
 
 	@media #{$medium-up} {
@@ -31,7 +31,7 @@ button, a.button, .button {
 	color: $setting-button-text-color;
 	background-color: $setting-button-background-color;
   	border: 1px solid $setting-button-border-color;
-  	box-shadow: 0 1px #333;
+  	box-shadow: 0 1px $dark-charcoal;
   	padding: rem-calc(12) rem-calc(24);
 
 
@@ -89,7 +89,7 @@ button.secondary, .button.secondary {
 	border-width: 1px;
 	font-size: $secondary-button-font-sm;
   	padding: rem-calc(16) rem-calc(32);
-  	box-shadow: 0 1px #333;
+  	box-shadow: 0 1px $dark-charcoal;
   	border-radius: $button-border-radius;
 
 	&:visited {
