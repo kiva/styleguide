@@ -6,21 +6,19 @@
 button, a.button, .button {
 	font-size: $button-font-sm;
 	font-weight: $font-weight-bold;
-	height: $button-height-med - $button-height-med-reduction;
-	line-height: $button-height-med - $button-height-med-reduction;
-	padding-top: 0;
-	padding-bottom: 0;
+  	padding: rem-calc(12) rem-calc(24);
+  	box-shadow: 0 rem-calc(2) $button-bg-hover;
 	text-decoration: none;
+  	border-radius: $button-border-radius;
 
 	&:hover, &:active {
 		text-decoration: none;
-		background-color: $kiva-textlink-hover;
+		background-color: $button-bg-hover;
 	}
 
 	@media #{$medium-up} {
 		font-size: $button-font-med;
-		height: $button-height-med;
-		line-height: $button-height-med;
+	  	padding: rem-calc(18) rem-calc(36);
 	}
 
 	&:visited {
@@ -29,19 +27,18 @@ button, a.button, .button {
 }
 
 .button.setting {
-	font-size: $setting-button-font-size - $setting-button-font-size-reduction;
-	height: $setting-button-height - $setting-button-height-reduction;
-	line-height: $setting-button-height - $setting-button-height-reduction;
+	font-size: $setting-button-font-size;
 	color: $setting-button-text-color;
 	background-color: $setting-button-background-color;
-	border-color: $setting-button-border-color;
-	border-width: 1px;
-	border-style: solid;
+  	border: 1px solid $setting-button-border-color;
+  	box-shadow: 0 1px $dark-charcoal;
+  	padding: rem-calc(12) rem-calc(24);
+
 
 	&:hover, &:active {
-		border-color: $kiva-textlink-hover;
-		color: $kiva-textlink-hover;
-		background-color: $white;
+		border-color: $kiva-accent-blue;
+		color: $white;
+	  	box-shadow: 0 1px $kiva-accent-blue;
 	}
 
 	&:visited {
@@ -49,9 +46,8 @@ button, a.button, .button {
 	}
 
 	@media #{$medium-up} {
-		font-size: $setting-button-font-size;
-		height: $setting-button-height;
-		line-height: $setting-button-height;
+		font-size: rem-calc(16);
+	  	padding: rem-calc(12) rem-calc(26);
 	}
 
 	svg {
@@ -69,9 +65,12 @@ button, a.button, .button {
 
 .button.smaller {
 	font-size: $button-font-sm;
-	height: $button-height-sm;
 	padding-top: 0;
-	line-height: $button-height-sm;
+  	padding: rem-calc(12) rem-calc(24);
+
+	@media #{$medium-up} {
+	  padding: rem-calc(16) rem-calc(32);
+	}
 }
 
 .button.mini {
@@ -86,17 +85,21 @@ button, a.button, .button {
 }
 
 button.secondary, .button.secondary {
-	border-color: $kiva-text-dark;
+	border-color: $charcoal;
 	border-width: 1px;
 	font-size: $secondary-button-font-sm;
+  	padding: rem-calc(16) rem-calc(32);
+  	box-shadow: 0 1px $dark-charcoal;
+  	border-radius: $button-border-radius;
 
 	&:visited {
 		color: $kiva-text-dark;
 	}
 
 	.no-touch &:hover {
-		border-color: $kiva-textlink-hover;
-		color: $kiva-textlink-hover;
+		border-color: $kiva-accent-blue;
+		color: $kiva-accent-blue;
+	  	box-shadow: 0 1px $kiva-accent-blue;
 	}
 
 	&.disabled, &[disabled] {

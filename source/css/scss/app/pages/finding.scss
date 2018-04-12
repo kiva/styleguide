@@ -130,16 +130,14 @@ $filter-open-behavior-query: "#{$screen} and (min-width: #{$filter-open-behavior
 	}
 
 	.filter-menu-button {
-		width: 3.5rem;
+		width: 6rem;
 		margin: 0;
-		padding-left: 0;
-		padding-right: 0;
 		color: $kiva-text-dark;
 		float: left;
 		background: transparent;
 
 		@media #{$medium-up} {
-			width: 5.625rem;
+			width: 8rem;
 		}
 		
 		svg {
