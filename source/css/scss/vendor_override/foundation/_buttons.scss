@@ -6,8 +6,8 @@
 button, a.button, .button {
 	font-size: $button-font-sm;
 	font-weight: $font-weight-bold;
-  	padding: 12px 24px;
-  	box-shadow: 0 2px $dark-blue;
+  	padding: rem-calc(12) rem-calc(24);
+  	box-shadow: 0 rem-calc(2) $dark-blue;
 	text-decoration: none;
   	border-radius: $button-border-radius;
 
@@ -18,7 +18,7 @@ button, a.button, .button {
 
 	@media #{$medium-up} {
 		font-size: $button-font-med;
-	  	padding: 18px 36px;
+	  	padding: rem-calc(18) rem-calc(36);
 	}
 
 	&:visited {
@@ -28,15 +28,16 @@ button, a.button, .button {
 
 .button.setting {
 	font-size: $setting-button-font-size;
-	line-height: $setting-button-height;
 	color: $setting-button-text-color;
 	background-color: $setting-button-background-color;
   	border: 1px solid $setting-button-border-color;
   	box-shadow: 0 1px #333;
+  	padding: rem-calc(12) rem-calc(24);
+
 
 	&:hover, &:active {
 		border-color: $kiva-accent-blue;
-		color: $kiva-accent-blue;
+		color: $white;
 	  	box-shadow: 0 1px $kiva-accent-blue;
 	}
 
@@ -64,9 +65,12 @@ button, a.button, .button {
 
 .button.smaller {
 	font-size: $button-font-sm;
-	height: $button-height-sm;
 	padding-top: 0;
-	line-height: $button-height-sm;
+  	padding: rem-calc(12) rem-calc(24);
+
+	@media #{$medium-up} {
+	  padding: rem-calc(16) rem-calc(32);
+	}
 }
 
 .button.mini {
@@ -86,6 +90,7 @@ button.secondary, .button.secondary {
 	font-size: $secondary-button-font-sm;
   	padding: rem-calc(16) rem-calc(32);
   	box-shadow: 0 1px #333;
+  	border-radius: $button-border-radius;
 
 	&:visited {
 		color: $kiva-text-dark;
