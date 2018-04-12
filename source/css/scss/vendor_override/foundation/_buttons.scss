@@ -5,7 +5,7 @@
 
 button, a.button, .button {
 	font-size: $button-font-sm;
-	font-weight: $font-weight-bold;
+	font-weight: $font-weight-normal;
   	padding: rem-calc(12) rem-calc(24);
   	box-shadow: 0 rem-calc(2) $button-bg-hover;
 	text-decoration: none;
