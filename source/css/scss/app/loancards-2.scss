@@ -14,15 +14,15 @@ $loan-card-border: 1px solid $kiva-stroke-gray;
 		border-bottom: $loan-card-border;
 
 		.loan-country {
-			width: 45.5%;
+			width: calc(44.5% - 6.25rem);
 		}
 
 		.partner-trustee {
-			width: calc(28.5% - 6.25rem);
+			width: calc(28% - 6.25rem);;
 		}
 
 		.loan-length {
-			width: calc(29% - 6.25rem);
+			width: calc(24% - 6.25rem);
 		}
 	}
 }
@@ -253,7 +253,6 @@ $loan-card-border: 1px solid $kiva-stroke-gray;
 		}
 
 		.loan-card-bottom-buffer.show-for-touch.is-loan-card-2 {
-			background-color: pink;
 			height: 0;
 		}
 
@@ -301,7 +300,7 @@ $loan-card-border: 1px solid $kiva-stroke-gray;
 		}
 
 		.borrower-partner-trustee {
-			width: calc(28% - 6.25rem);
+			width: calc(27% - 6.25rem);
 		}
 
 		.borrower-loan-length {
@@ -309,9 +308,9 @@ $loan-card-border: 1px solid $kiva-stroke-gray;
 		}
 
 		.loan-card-2-footer-wrap {
-			min-width: 14rem;
+			min-width: 15rem;
 			margin-top: 0.25rem;
-			width: calc(32% - 6.25rem);
+			width: calc(33% - 6.25rem);
 		}
 
 		.matching-line {
