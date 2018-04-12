@@ -6301,7 +6301,7 @@ select {
 
 button, a.button, .button {
   font-size: 1.25rem;
-  font-weight: bold;
+  font-weight: normal;
   padding: 0.75rem 1.5rem;
   box-shadow: 0 0.125rem #006ed3;
   text-decoration: none;
@@ -12700,17 +12700,6 @@ a.aboutJoinLink:visited {
     .faq-section .faq-container .help-center-link {
       border-top: 0.0625rem solid #FFFFFF;
       padding: 0.625rem 0 5rem 0; }
-  .faq-section .choose-borrower:hover {
-    text-decoration: none; }
-  .faq-section .choose-borrower-frame {
-    margin: 0 auto;
-    width: 14.0625rem;
-    min-height: 4.0625rem; }
-    .faq-section .choose-borrower-frame .choose-borrower-text {
-      margin: auto auto;
-      padding: 1.25rem 0; }
-  .faq-section .choose-borrower-frame:hover .choose-borrower-text {
-    color: #FFFFFF; }
 
 .borrower-profile-wrapper .loan-image-footer {
   display: none; }
