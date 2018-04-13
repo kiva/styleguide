@@ -1284,9 +1284,9 @@
 
 		.comment-submit-block, .subscribe-block, .unsubscribe-block {
 			padding-left: 1rem;
-			padding-bottom: 2rem;
 			margin-top: 0;
 			margin-bottom: 0;
+		  	display: inline-block;
 
 			@media #{$xxlarge-up} {
 				padding-left: 0;
