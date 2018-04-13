@@ -6305,10 +6305,12 @@ button, a.button, .button {
   padding: 0.75rem 1.5rem;
   box-shadow: 0 0.125rem #006ed3;
   text-decoration: none;
-  border-radius: 0.125rem; }
+  border-radius: 0.125rem;
+  border: 1px solid #118aec; }
   button:hover, button:active, a.button:hover, a.button:active, .button:hover, .button:active {
     text-decoration: none;
-    background-color: #006ed3; }
+    background-color: #006ed3;
+    border-color: #006ed3; }
   @media only screen and (min-width: 481px) {
     button, a.button, .button {
       font-size: 1.5rem;
@@ -6362,8 +6364,7 @@ button, a.button, .button {
       line-height: 2rem; } }
 
 button.secondary, .button.secondary {
-  border-color: #484848;
-  border-width: 1px;
+  border: 1px solid #484848;
   font-size: 1rem;
   padding: 1rem 2rem;
   box-shadow: 0 1px #333;
@@ -6382,7 +6383,8 @@ button.secondary, .button.secondary {
       color: #999; }
   @media only screen and (min-width: 481px) {
     button.secondary, .button.secondary {
-      font-size: 1.25rem; } }
+      font-size: 1.25rem;
+      padding: 1.125rem 2.25rem; } }
 
 .right-off-canvas-menu ul.filters-menu-list li.has-submenu > a:before {
   content: none; }
@@ -14120,13 +14122,10 @@ a.filter-menu-button:visited {
   .lend-action .lend-button-wrapper, .lend-action.row .lend-button-wrapper {
     display: inline;
     padding: 0; }
-    .lend-action .lend-button-wrapper button#lend-button-amount-selector, .lend-action.row .lend-button-wrapper button#lend-button-amount-selector {
-      border: 1px solid #484848; }
-      .lend-action .lend-button-wrapper button#lend-button-amount-selector:hover, .lend-action .lend-button-wrapper button#lend-button-amount-selector:active, .lend-action.row .lend-button-wrapper button#lend-button-amount-selector:hover, .lend-action.row .lend-button-wrapper button#lend-button-amount-selector:active {
-        color: #006ed3;
-        border-color: #006ed3; }
+    button#lend-button-amount-selector .lend-action .lend-button-wrapper:hover, .lend-action .lend-button-wrapper:active, button#lend-button-amount-selector .lend-action.row .lend-button-wrapper:hover, .lend-action.row .lend-button-wrapper:active {
+      color: #006ed3;
+      border-color: #006ed3; }
     .lend-action .lend-button-wrapper .lend-action-button, .lend-action.row .lend-button-wrapper .lend-action-button {
-      padding: 0;
       outline: 0 !important;
       width: 100%;
       font-size: 1.2rem;
@@ -15009,7 +15008,8 @@ p.body-termsofuse {
 
 .loan-stats-section .lend-link-btn {
   margin-top: 1rem;
-  text-align: center; }
+  text-align: center;
+  overflow: visible; }
   .loan-stats-section .lend-link-btn a {
     margin-bottom: 0; }
 
