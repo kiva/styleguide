@@ -14401,9 +14401,9 @@ a.filter-menu-button:visited {
         padding-left: 0; } }
   .comments-and-updates .ac-body .comment-submit-block, .comments-and-updates .ac-body .subscribe-block, .comments-and-updates .ac-body .unsubscribe-block {
     padding-left: 1rem;
-    padding-bottom: 2rem;
     margin-top: 0;
-    margin-bottom: 0; }
+    margin-bottom: 0;
+    display: inline-block; }
     @media only screen and (min-width: 989px) {
       .comments-and-updates .ac-body .comment-submit-block, .comments-and-updates .ac-body .subscribe-block, .comments-and-updates .ac-body .unsubscribe-block {
         padding-left: 0; } }
