@@ -11076,6 +11076,7 @@ svg {
   .list-view .borrower-loan-length {
     width: calc(24% - 6.25rem); }
   .list-view .loan-card-2-footer-wrap {
+    height: auto;
     min-width: 15rem;
     margin-top: 0.25rem;
     width: calc(33% - 6.25rem); }
