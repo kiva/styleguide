@@ -38,9 +38,9 @@ button, a.button, .button {
 
 
 	&:hover, &:active {
-		border-color: $kiva-accent-blue;
+		border-color: $button-bg-hover;
 		color: $white;
-	  	box-shadow: 0 1px $kiva-accent-blue;
+	  	box-shadow: 0 1px $button-bg-hover;
 	}
 
 	&:visited {
