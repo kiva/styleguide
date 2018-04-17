@@ -308,6 +308,7 @@ $loan-card-border: 1px solid $kiva-stroke-gray;
 		}
 
 		.loan-card-2-footer-wrap {
+			height: auto;
 			min-width: 15rem;
 			margin-top: 0.25rem;
 			width: calc(33% - 6.25rem);

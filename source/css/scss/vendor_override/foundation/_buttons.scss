@@ -10,10 +10,12 @@ button, a.button, .button {
   	box-shadow: 0 rem-calc(2) $button-bg-hover;
 	text-decoration: none;
   	border-radius: $button-border-radius;
+  	border: 1px solid $blue;
 
 	&:hover, &:active {
 		text-decoration: none;
 		background-color: $button-bg-hover;
+	  	border-color: $button-bg-hover;
 	}
 
 	@media #{$medium-up} {
@@ -36,9 +38,9 @@ button, a.button, .button {
 
 
 	&:hover, &:active {
-		border-color: $kiva-accent-blue;
+		border-color: $button-bg-hover;
 		color: $white;
-	  	box-shadow: 0 1px $kiva-accent-blue;
+	  	box-shadow: 0 1px $button-bg-hover;
 	}
 
 	&:visited {
@@ -85,8 +87,7 @@ button, a.button, .button {
 }
 
 button.secondary, .button.secondary {
-	border-color: $charcoal;
-	border-width: 1px;
+	border: 1px solid $charcoal;
 	font-size: $secondary-button-font-sm;
   	padding: rem-calc(16) rem-calc(32);
   	box-shadow: 0 1px $dark-charcoal;
@@ -114,5 +115,6 @@ button.secondary, .button.secondary {
 
 	@media #{$medium-up} {
 		font-size: $secondary-button-font-med;
+	  	padding: rem-calc(18) rem-calc(36);
 	}
 }
