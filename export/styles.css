@@ -6326,9 +6326,9 @@ button, a.button, .button {
   box-shadow: 0 1px #333;
   padding: 0.75rem 1.5rem; }
   .button.setting:hover, .button.setting:active {
-    border-color: #118aec;
+    border-color: #006ed3;
     color: #FFFFFF;
-    box-shadow: 0 1px #118aec; }
+    box-shadow: 0 1px #006ed3; }
   .button.setting:visited {
     color: #484848; }
   @media only screen and (min-width: 481px) {
@@ -13116,7 +13116,7 @@ div.category-cards-header {
         .control-region .filter-menu-button svg {
           display: inline; } }
     .control-region .filter-menu-button:hover svg {
-      stroke: #006ed3; }
+      stroke: #FFFFFF; }
   .control-region .view-buttons {
     float: right;
     margin-right: 0.75rem; }
