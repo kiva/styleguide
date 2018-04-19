@@ -94,8 +94,8 @@ $font-family-sans-serif: "PostGrotesk", Arial, Helvetica, sans-serif;
 $paragraph-font-weight: 300;
 
 // We use these to define default font weights
-$font-weight-normal: normal;
-$font-weight-bold: bold;
+$font-weight-normal: normal; // normal weight = 400
+$font-weight-bold: bold; // bold weight =  700
 
 
 // Kiva custom palette is in _palette.scss
