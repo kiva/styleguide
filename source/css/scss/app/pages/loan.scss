@@ -1029,10 +1029,8 @@
 	.button {
 		margin-bottom: 0;
 		display: inline-block;
-		font-size: 1rem;
-		height: rem-calc(66);
-		line-height: rem-calc(66);
-		width: 100%;
+	  	width: 100%;
+
 		#basket-text {
 			font-size: 0.6rem;
 			position: absolute;
@@ -1046,6 +1044,32 @@
 			padding: 0 rem-calc(1) 0 0;
 		}
 	}
+
+  	.button.setting.cart-icon {
+	  	margin-top: rem-calc(10);
+	  	width: rem-calc(65);
+	  	float: right;
+
+		@media #{$medium-only} {
+			width: rem-calc(75);
+		  	height: rem-calc(75);
+		  	margin-top: rem-calc(12);
+		  	margin-left: rem-calc(-3);
+		}
+
+	  	svg {
+		  	height: rem-calc(25);
+		  	width: rem-calc(25);
+
+			@media #{$medium-only} {
+			  height: rem-calc(30);
+			  width: rem-calc(30);
+			  margin-top: rem-calc(10);
+			  margin-left: rem-calc(-5);
+			}
+		}
+	}
+
 	#already-supported-message-mobile {
 		text-align: center;
 		background-color: $kiva-stroke-gray;
@@ -1070,10 +1094,17 @@
 		padding-top: rem-calc(6);
 	}
 
+  	.footer-basket-button {
+	  	margin-right: rem-calc(10);
+	}
+
 	.lend-button-wrapper {
+	  	margin: rem-calc(10) 0 rem-calc(10) rem-calc(16);
+
 		.button {
-			padding-right: 1.4rem;
-			padding-left: 1.4rem;
+			@media #{$medium-only} {
+			  padding: rem-calc(22) 0;
+			}
 		}
 	}
 
@@ -1109,18 +1140,18 @@
 	.lend-values-select-wrapper {
 		padding: 0;
 		.lend-values-select {
-			height: rem-calc(66);
-			margin: 0;
-			padding-left: 7%;
-			border: 1px solid $kiva-text-dark;
+			height: rem-calc(50);
+			margin: rem-calc(10) 0 rem-calc(10) rem-calc(10);
+		  	border-radius: $button-border-radius;
+			border: 1px solid $gray;
 			background: $white;
 			outline: none;
-			text-shadow: 0 0 0 $white;
 			color: $kiva-text-dark;
-			font-size: rem-calc(18);
-			font-weight: bold;
-			@media #{$medium-up} {
-				padding-left: 15%;
+			font-size: rem-calc(20);
+		  	box-shadow: 0 rem-calc(2) $dark-gray;
+
+		  	@media #{$medium-up} {
+			  	height: rem-calc(73);
 			}
 		}
 		.lend-arrow {

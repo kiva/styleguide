@@ -1,8 +1,7 @@
 <div class="mobile-lend-action show-for-medium-down row">
     <div class="basket-buttons mobile-proceed-to-checkout" style="display: none;">
-        <div id="checkout-button" class="columns small-9">
-            <button kvtrackevent="Lending|Proceed to checkout|Mobile Borrower Profile|{{business_id}}|true" class="button">Checkout</button>
+        <div id="checkout-button" class="columns small-12">
+	        <div id="mobile-basket-button" class="basket-bar {{#basket.item_count}}hide-for-large-up{{/basket.item_count}}{{^basket.item_count}}hide{{/basket.item_count}}"><a href="{{basket_href}}" class="button">Check out (<span class="basket-item-count">{{basket.item_count}}</span>)</a></div>
         </div>
-		{{> 01-molecules/15-loan-sections/16-mobile-borrower-profile-basket-button}}
 	</div>
 </div>
