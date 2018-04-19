@@ -1,11 +1,8 @@
 <div id="basket-button"
 	 class="footer-basket-button columns small-3 {{^basket.item_count}}hide{{/basket.item_count}}">
-	<div kvtrackevent="Lending|Basket Count - Proceed to checkout|Mobile Borrower Profile|{{business_id}}|true" class="button">
-		<div class="row" id="basket-text">
-			Basket
-		</div>
-		<div class="row footer-basket-amount">
-			{{basket.item_count}}
-		</div>
+	<div kvtrackevent="Lending|Basket Count - Proceed to checkout|Mobile Borrower Profile|{{business_id}}|true" class="button setting cart-icon">
+		<svg class="icon icon-cart">
+			<use xlink:href="#icon-cart"/>
+		</svg>
 	</div>
 </div>
