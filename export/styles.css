@@ -10942,8 +10942,10 @@ svg {
     font-size: 1rem;
     line-height: 1.375rem;
     font-weight: 300; }
-  .loan-card-2 .loan-message {
+  .loan-card-2 .loan-message, .loan-card-2 .short-loan-message {
     color: #484848; }
+  .loan-card-2 .short-loan-message {
+    display: none; }
   .loan-card-2 .image-edit-buttons {
     z-index: 1; }
     .loan-card-2 .image-edit-buttons a {
@@ -11081,6 +11083,10 @@ svg {
     min-width: 15rem;
     margin-top: 0.25rem;
     width: calc(33% - 6.25rem); }
+  .list-view .left-and-to-go-line .loan-message {
+    display: none; }
+  .list-view .left-and-to-go-line .short-loan-message {
+    display: inline; }
   .list-view .matching-line {
     height: auto;
     line-height: 0.875rem;
@@ -11122,16 +11128,21 @@ svg {
       .bottom-bar-2 .button .loading-spinner .line, .bottom-bar-2 .message .loading-spinner .line {
         background-color: #FFFFFF; }
   .bottom-bar-2 .message {
-    background-color: #1f92ba;
+    background-color: #006ed3;
     font-style: italic; }
   .bottom-bar-2 .button.success {
-    color: #118aec;
+    color: #484848;
     background-color: #FFFFFF;
-    border: 0.0625rem solid #27b6e8;
-    box-shadow: 0.0625rem 0.125rem 0.0625rem #6badc2; }
+    border: 0.0625rem solid #484848;
+    box-shadow: 0 0.125rem #333; }
     .bottom-bar-2 .button.success:hover, .bottom-bar-2 .button.success:active {
-      color: #006ed3; }
+      border: 0.0625rem solid #118aec;
+      box-shadow: 0 0.125rem #118aec;
+      color: #118aec; }
+      .bottom-bar-2 .button.success:hover .icon, .bottom-bar-2 .button.success:active .icon {
+        color: #118aec; }
     .bottom-bar-2 .button.success .icon {
+      color: #484848;
       width: 1.875rem;
       height: 1.875rem;
       vertical-align: middle;
