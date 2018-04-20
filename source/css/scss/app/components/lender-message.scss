@@ -28,23 +28,4 @@
 		clear: both;
 		word-wrap: break-word;
 	}
-
-	.actions {
-		a {
-			display: inline-block;
-			float: left;
-			width: calc(50% - #{rem-calc(10)});
-			font-size: $button-font-sm;
-			line-height: $button-height-sm;
-			height: $button-height-sm;
-
-			@media #{$medium-up} {
-				width: 8rem;
-			}
-
-			&:nth-child(2) {
-				margin-left: rem-calc(20);
-			}
-		}
-	}
 }

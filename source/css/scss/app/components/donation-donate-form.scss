@@ -4,9 +4,11 @@
 	}
 
 	input[type="radio"]:checked + label,
-	input[type="radio"]:hover + label {
+	input[type="radio"]:hover + label,
+	input[type="radio"]:hover + label.button {
 		background-color: $kiva-green;
-		border-color: white;
+	  	border: 1px solid $charcoal;
+	  	box-shadow: 0 1px $charcoal;
 		color: white;
 	}
 

@@ -39,6 +39,8 @@
 			border: rem-calc(2) solid $kiva-text-light;
 			background-color: $white;
 			border-radius: 1rem;
+		  	box-shadow: none;
+		  	top: rem-calc(12);
 		}
 
 		.slick-dots li.slick-active button {
@@ -47,25 +49,23 @@
 
 		.previous-button,
 		.next-button {
-			$button-height: rem-calc(44);
-
 			@media#{$small-up} {
-				margin-right: 0;
-				max-width: rem-calc(150);
-				font-size: $paragraph-font-size;
-				height: $button-height;
-				line-height: $button-height;
+			  	padding: rem-calc(16) rem-calc(32);
+			  	width: 40%;
 
 				.previous-arrow {
 					width: rem-calc(18);
-					height: $button-height;
+					height: rem-calc(44);
+				  	top: rem-calc(4);
 
 					@media#{$small-only} {
+					  	top: rem-calc(6);
 						right: calc(50% + 1.8rem);
 					}
 
 					@media#{$medium-up} {
-						right: calc(50% + 1.6rem);
+					  	top: rem-calc(6);
+						right: calc(50% + 2.7rem);
 					}
 				}
 
@@ -76,7 +76,7 @@
 					}
 
 					@media#{$medium-up} {
-						left: calc(50% + 0.7rem);
+						left: calc(50% + 2.7rem);
 					}
 				}
 			}
