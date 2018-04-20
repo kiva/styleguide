@@ -6326,9 +6326,9 @@ button, a.button, .button {
   box-shadow: 0 1px #333;
   padding: 0.75rem 1.5rem; }
   .button.setting:hover, .button.setting:active {
-    border-color: #006ed3;
-    color: #FFFFFF;
-    box-shadow: 0 1px #006ed3; }
+    border-color: #118aec;
+    color: #118aec;
+    box-shadow: 0 1px #118aec; }
   .button.setting:visited {
     color: #484848; }
   @media only screen and (min-width: 481px) {
@@ -6356,12 +6356,12 @@ button, a.button, .button {
 .button.mini {
   font-size: 0.625rem;
   height: 1.625rem;
-  line-height: 1.625rem; }
+  line-height: 0.125rem; }
   @media only screen and (min-width: 481px) {
     .button.mini {
       font-size: 0.875rem;
       height: 2rem;
-      line-height: 2rem; } }
+      line-height: .2rem; } }
 
 button.secondary, .button.secondary {
   border: 1px solid #484848;
@@ -14917,7 +14917,7 @@ p.body-termsofuse {
   margin-bottom: 1rem; }
 
 .team-attributions .button {
-  color: #333 !important;
+  color: #333;
   min-width: 90%;
   margin-left: 5%; }
   @media only screen and (min-width: 681px) {
@@ -16216,9 +16216,6 @@ table.repayments-list {
   text-align: center;
   margin-top: 1.5rem; }
   .borrower-dashboard-main .action-button a {
-    padding: 0;
-    width: 100%;
-    max-width: 16rem;
     margin: 0.5rem 0; }
   @media only screen and (min-width: 481px) {
     .borrower-dashboard-main .action-button {
@@ -18454,9 +18451,11 @@ div.flag-comment-lightbox .lightbox-content .inner {
   display: none; }
 
 .donation-page-form input[type="radio"]:checked + label,
-.donation-page-form input[type="radio"]:hover + label {
+.donation-page-form input[type="radio"]:hover + label,
+.donation-page-form input[type="radio"]:hover + label.button {
   background-color: #4faf4e;
-  border-color: white;
+  border: 1px solid #484848;
+  box-shadow: 0 1px #484848;
   color: white; }
 
 .donation-page-form .amount-input {
@@ -18739,19 +18738,6 @@ div.flag-comment-lightbox .lightbox-content .inner {
   clear: both;
   word-wrap: break-word; }
 
-.lender-message .actions a {
-  display: inline-block;
-  float: left;
-  width: calc(50% - 0.625rem);
-  font-size: 1.25rem;
-  line-height: 2.75rem;
-  height: 2.75rem; }
-  @media only screen and (min-width: 481px) {
-    .lender-message .actions a {
-      width: 8rem; } }
-  .lender-message .actions a:nth-child(2) {
-    margin-left: 1.25rem; }
-
 .whats-next-wrapper {
   border-top: 0.0625rem solid #999;
   border-bottom: 0.0625rem solid #999;
@@ -18785,7 +18771,9 @@ div.flag-comment-lightbox .lightbox-content .inner {
       color: transparent;
       border: 0.125rem solid #999;
       background-color: #FFFFFF;
-      border-radius: 1rem; }
+      border-radius: 1rem;
+      box-shadow: none;
+      top: 0.75rem; }
     .whats-next-wrapper .paging.row .slick-dots li.slick-active button {
       background-color: #999; }
 
@@ -18793,11 +18781,13 @@ div.flag-comment-lightbox .lightbox-content .inner {
   @media only screen and (max-width: 480px) {
     .whats-next-wrapper .paging.row .previous-button .previous-arrow, .whats-next-wrapper .paging.row .previous-button .next-arrow,
     .whats-next-wrapper .paging.row .next-button .previous-arrow, .whats-next-wrapper .paging.row .next-button .next-arrow {
+      top: 0.375rem;
       right: calc(50% + 1.8rem); } }
   @media only screen and (min-width:481px) {
     .whats-next-wrapper .paging.row .previous-button .previous-arrow, .whats-next-wrapper .paging.row .previous-button .next-arrow,
     .whats-next-wrapper .paging.row .next-button .previous-arrow, .whats-next-wrapper .paging.row .next-button .next-arrow {
-      right: calc(50% + 1.6rem); } }
+      top: 0.375rem;
+      right: calc(50% + 2.7rem); } }
   @media only screen and (max-width: 480px) {
     .whats-next-wrapper .paging.row .previous-button .next-arrow,
     .whats-next-wrapper .paging.row .next-button .next-arrow {
@@ -18805,18 +18795,16 @@ div.flag-comment-lightbox .lightbox-content .inner {
   @media only screen and (min-width:481px) {
     .whats-next-wrapper .paging.row .previous-button .next-arrow,
     .whats-next-wrapper .paging.row .next-button .next-arrow {
-      left: calc(50% + 0.7rem); } }
+      left: calc(50% + 2.7rem); } }
   .whats-next-wrapper .paging.row .previous-button,
   .whats-next-wrapper .paging.row .next-button {
-    margin-right: 0;
-    max-width: 9.375rem;
-    font-size: 1rem;
-    height: 2.75rem;
-    line-height: 2.75rem; }
+    padding: 1rem 2rem;
+    width: 40%; }
     .whats-next-wrapper .paging.row .previous-button .previous-arrow, .whats-next-wrapper .paging.row .previous-button .next-arrow,
     .whats-next-wrapper .paging.row .next-button .previous-arrow, .whats-next-wrapper .paging.row .next-button .next-arrow {
       width: 1.125rem;
-      height: 2.75rem; } }
+      height: 2.75rem;
+      top: 0.25rem; } }
 
 .upcoming-repayments {
   border-top: 1px solid #d8d8d8;
