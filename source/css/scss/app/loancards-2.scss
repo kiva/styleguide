@@ -101,8 +101,13 @@ $loan-card-border: 1px solid $kiva-stroke-gray;
 		font-weight: 300;
 	}
 
-	.loan-message {
+	.loan-message
+	, .short-loan-message {
 		color: $kiva-text-dark;
+	}
+
+	.short-loan-message {
+		display: none;
 	}
 
 	.image-edit-buttons {
@@ -314,6 +319,16 @@ $loan-card-border: 1px solid $kiva-stroke-gray;
 			width: calc(33% - 6.25rem);
 		}
 
+		.left-and-to-go-line {
+			.loan-message {
+				display: none;
+			}
+
+			.short-loan-message {
+				display: inline;
+			}
+		}
+
 		.matching-line {
 			height: auto;
 			line-height: $small-font-size;
@@ -375,21 +390,28 @@ $loan-card-border: 1px solid $kiva-stroke-gray;
     }
 
 	.message {
-		background-color: $shadow-blue;
+		background-color: $dark-blue;
 		font-style: italic;
 	}
 
     .button.success {
-		color: $kiva-textlink;
+		color: $charcoal;
 		background-color: $white;
-		border: rem-calc(1) solid #27b6e8;
-		box-shadow: rem-calc(1) rem-calc(2) rem-calc(1) $shadow-lightblue;
+		border: rem-calc(1) solid $charcoal;
+		box-shadow: 0 rem-calc(2)  $dark-charcoal;
 
 		&:hover, &:active {
-			color: $kiva-textlink-hover;
+			border: rem-calc(1) solid $kiva-accent-blue;
+			box-shadow: 0 rem-calc(2)  $kiva-accent-blue;
+			color: $kiva-accent-blue;
+
+			.icon {
+				color: $kiva-accent-blue;
+			}
         }
 
 		.icon {
+			color: $charcoal;
 			width: rem-calc(30);
 			height: rem-calc(30);
 			vertical-align: middle;
@@ -397,7 +419,7 @@ $loan-card-border: 1px solid $kiva-stroke-gray;
 			margin-top: rem-calc(-5);
 			margin-right: rem-calc(5);
 		}
-    }
+	}
 }
 
 .list-view .bottom-bar-2 {
