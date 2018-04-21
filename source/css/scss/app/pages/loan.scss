@@ -1140,6 +1140,8 @@
 	.lend-values-select-wrapper {
 		padding: 0;
 		.lend-values-select {
+		  	direction: rtl;
+		  	padding-right: rem-calc(40);
 			height: rem-calc(50);
 			margin: rem-calc(10) 0 rem-calc(10) rem-calc(10);
 		  	border-radius: $button-border-radius;
@@ -1152,6 +1154,7 @@
 
 		  	@media #{$medium-up} {
 			  	height: rem-calc(73);
+			  	padding-right: rem-calc(55);
 			}
 		}
 		.lend-arrow {
