@@ -974,25 +974,33 @@
 
 	.proceed-to-checkout-button {
 		outline: none;
+		background-color: $white;
+		border: rem-calc(2) solid $charcoal;
+		border-radius: rem-calc(2);
+		box-shadow: 0 rem-calc(2) $dark-charcoal;
+		color: $charcoal;
+		height: 2.9375rem;
+		line-height: 2.9375rem;
 		width: 100%;
 		padding: 0;
-		font-size: 1.155556rem;
+		font-size: 1rem;
 		margin-bottom: 0;
 		white-space:nowrap;
 
 		@media #{$xxlarge-up}{
-			font-size: 1.5555555556rem;
+			font-size: 1.25rem;
 		}
 
 		.icon {
-			width: rem-calc(33);
-			height: rem-calc(33);
+			width: rem-calc(30);
+			height: rem-calc(30);
 			position: relative;
 			top: rem-calc(7);
-			fill: white;
 		}
 		&:hover{
-			background-color: #488443;
+			border-color: $kiva-accent-blue;
+			color: $kiva-accent-blue;
+			box-shadow: 0 1px $kiva-accent-blue;
 		}
 	}
 	.green-button {
@@ -1174,11 +1182,11 @@
 }
 
 .adding-to-basket {
-	background-color: $kiva-navdivider-green;
+	background-color: $dark-blue;
 	color: $white;
-	font-size: 1.556rem;
-	font-family: PostGrotesk, Arial, Helvetica, sans-serif;
-	line-height: rem-calc(65);
+	font-size: 1rem;
+	height: 2.9375rem;
+	line-height: 2.9375rem;
 	padding: 0;
 	text-align: center;
 
