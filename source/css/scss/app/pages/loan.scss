@@ -1084,10 +1084,11 @@
 		margin-bottom: 0.5rem;
 	}
 
-	.lend-action-button {
-		.button {
-			padding: 0.8rem 0;
-		}
+	.lend-action-button.button {
+	  	-webkit-padding-before: rem-calc(12);
+	  	-webkit-padding-end: rem-calc(24);
+	  	-webkit-padding-after: rem-calc(12);
+	  	-webkit-padding-start: rem-calc(24);
 	}
 	.footer-basket-amount {
 		color: $white;
