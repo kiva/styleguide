@@ -1084,10 +1084,11 @@
 		margin-bottom: 0.5rem;
 	}
 
-	.lend-action-button {
-		.button {
-			padding: 0.8rem 0;
-		}
+	.lend-action-button.button {
+	  	-webkit-padding-before: rem-calc(12);
+	  	-webkit-padding-end: rem-calc(24);
+	  	-webkit-padding-after: rem-calc(12);
+	  	-webkit-padding-start: rem-calc(24);
 	}
 	.footer-basket-amount {
 		color: $white;
@@ -1140,6 +1141,8 @@
 	.lend-values-select-wrapper {
 		padding: 0;
 		.lend-values-select {
+		  	direction: rtl;
+		  	padding-right: rem-calc(40);
 			height: rem-calc(50);
 			margin: rem-calc(10) 0 rem-calc(10) rem-calc(10);
 		  	border-radius: $button-border-radius;
@@ -1152,6 +1155,7 @@
 
 		  	@media #{$medium-up} {
 			  	height: rem-calc(73);
+			  	padding-right: rem-calc(55);
 			}
 		}
 		.lend-arrow {
