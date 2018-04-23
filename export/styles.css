@@ -14184,22 +14184,30 @@ a.filter-menu-button:visited {
         background-color: #006ed3; }
   .lend-action .proceed-to-checkout-button, .lend-action.row .proceed-to-checkout-button {
     outline: none;
+    background-color: #FFFFFF;
+    border: 0.125rem solid #484848;
+    border-radius: 0.125rem;
+    box-shadow: 0 0.125rem #333;
+    color: #484848;
+    height: 2.9375rem;
+    line-height: 2.9375rem;
     width: 100%;
     padding: 0;
-    font-size: 1.155556rem;
+    font-size: 1rem;
     margin-bottom: 0;
     white-space: nowrap; }
     @media only screen and (min-width: 989px) {
       .lend-action .proceed-to-checkout-button, .lend-action.row .proceed-to-checkout-button {
-        font-size: 1.5555555556rem; } }
+        font-size: 1.25rem; } }
     .lend-action .proceed-to-checkout-button .icon, .lend-action.row .proceed-to-checkout-button .icon {
-      width: 2.0625rem;
-      height: 2.0625rem;
+      width: 1.875rem;
+      height: 1.875rem;
       position: relative;
-      top: 0.4375rem;
-      fill: white; }
+      top: 0.4375rem; }
     .lend-action .proceed-to-checkout-button:hover, .lend-action.row .proceed-to-checkout-button:hover {
-      background-color: #488443; }
+      border-color: #118aec;
+      color: #118aec;
+      box-shadow: 0 1px #118aec; }
   .lend-action .green-button, .lend-action.row .green-button {
     background-color: #49953f; }
   .lend-action .no-padding, .lend-action.row .no-padding {
@@ -14264,11 +14272,8 @@ a.filter-menu-button:visited {
     padding-bottom: 0.5rem;
     margin-top: 0.5rem;
     margin-bottom: 0.5rem; }
-  .mobile-lend-action .lend-action-button.button {
-    -webkit-padding-before: 0.75rem;
-    -webkit-padding-end: 1.5rem;
-    -webkit-padding-after: 0.75rem;
-    -webkit-padding-start: 1.5rem; }
+  .mobile-lend-action .lend-action-button .button {
+    padding: 0.8rem 0; }
   .mobile-lend-action .footer-basket-amount {
     color: #FFFFFF;
     padding-top: 0.375rem; }
@@ -14333,11 +14338,11 @@ a.filter-menu-button:visited {
           right: 9%; } }
 
 .adding-to-basket {
-  background-color: #49953f;
+  background-color: #006ed3;
   color: #FFFFFF;
-  font-size: 1.556rem;
-  font-family: PostGrotesk, Arial, Helvetica, sans-serif;
-  line-height: 4.0625rem;
+  font-size: 1rem;
+  height: 2.9375rem;
+  line-height: 2.9375rem;
   padding: 0;
   text-align: center; }
   .adding-to-basket .loader {
