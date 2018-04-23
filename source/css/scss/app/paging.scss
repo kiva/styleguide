@@ -25,11 +25,14 @@
 
 		&.first, &.last {
 			border-width: 0px;
+		  	box-shadow: none;
+		  	background-color: $kiva-bg-lightgray;
 			color: $kiva-textlink;
 
 			&:hover {
 				text-decoration: underline;
 				color: $kiva-textlink;
+			  	box-shadow: none;
 			}
 		}
 
