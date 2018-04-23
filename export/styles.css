@@ -11297,10 +11297,13 @@ svg {
       display: none; }
     .paging .button.first, .paging .button.last {
       border-width: 0px;
+      box-shadow: none;
+      background-color: #FAFAFA;
       color: #118aec; }
       .paging .button.first:hover, .paging .button.last:hover {
         text-decoration: underline;
-        color: #118aec; }
+        color: #118aec;
+        box-shadow: none; }
     @media only screen and (min-width: 481px) {
       .paging .button {
         width: calc(27% - 1.875rem);
@@ -14261,8 +14264,11 @@ a.filter-menu-button:visited {
     padding-bottom: 0.5rem;
     margin-top: 0.5rem;
     margin-bottom: 0.5rem; }
-  .mobile-lend-action .lend-action-button .button {
-    padding: 0.8rem 0; }
+  .mobile-lend-action .lend-action-button.button {
+    -webkit-padding-before: 0.75rem;
+    -webkit-padding-end: 1.5rem;
+    -webkit-padding-after: 0.75rem;
+    -webkit-padding-start: 1.5rem; }
   .mobile-lend-action .footer-basket-amount {
     color: #FFFFFF;
     padding-top: 0.375rem; }
@@ -14298,6 +14304,8 @@ a.filter-menu-button:visited {
   .mobile-lend-action .lend-values-select-wrapper {
     padding: 0; }
     .mobile-lend-action .lend-values-select-wrapper .lend-values-select {
+      direction: rtl;
+      padding-right: 2.5rem;
       height: 3.125rem;
       margin: 0.625rem 0 0.625rem 0.625rem;
       border-radius: 0.125rem;
@@ -14309,7 +14317,8 @@ a.filter-menu-button:visited {
       box-shadow: 0 0.125rem #666; }
       @media only screen and (min-width: 481px) {
         .mobile-lend-action .lend-values-select-wrapper .lend-values-select {
-          height: 4.5625rem; } }
+          height: 4.5625rem;
+          padding-right: 3.4375rem; } }
     .mobile-lend-action .lend-values-select-wrapper .lend-arrow {
       width: 1.3125rem;
       fill: #484848;
