@@ -27,6 +27,14 @@ $loan-card-border: 1px solid $kiva-stroke-gray;
 	}
 }
 
+.list-view .loan-card-2 .favorite-link {
+	@media #{$xlarge-up} {
+		position: absolute;
+		top: .6rem;
+		left: 4.9rem;
+	}
+}
+
 .loan-card-2 {
 	display: flex;
 	flex-direction: column;
