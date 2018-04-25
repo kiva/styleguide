@@ -30,8 +30,8 @@ $loan-card-border: 1px solid $kiva-stroke-gray;
 .list-view .loan-card-2 .favorite-link {
 	@media #{$xlarge-up} {
 		position: absolute;
-		top: .6rem;
-		left: 4.9rem;
+		bottom: 0;
+		right: 0;
 	}
 }
 
@@ -61,17 +61,25 @@ $loan-card-border: 1px solid $kiva-stroke-gray;
 		}
 	}
 
-	.favorite-link {
-		position: absolute;
-		top: rem-calc(8);
-		right: rem-calc(12);
+    .favorite-star-wrapper {
+	  	position: relative;
+
+	  	.favorite-link {
+		  	position: absolute;
+		  	bottom: 0;
+		  	right: 0;
+		 	border: none;
+		}
 
 		.icon-star {
-			height: rem-calc(22);
-			width: rem-calc(22);
-			fill: transparent;
-			color: $white;
-			opacity: 0.6;
+		  	height: 2rem;
+		  	width: 2rem;
+		  	fill: transparent;
+		  	color: $white;
+		  	opacity: 0.6;
+		  	background-color: #484848;
+		  	padding: .5rem;
+		  	vertical-align: bottom;
 		}
 	}
 
