@@ -10,9 +10,11 @@
 		</a>
 
 		{{#can_favorite}}
-			<a kvtrackevent="Lending|click-Favorite star|Favorite|undefined|true" title="Star this loan to find it quickly later. You can view and manage your starred loans in the ‘Lend’ tab above." href="#" class="favorite-link{{#is_favorite}} is-favorite{{/is_favorite}}">
-				<svg class="icon icon-star"><use xlink:href="#icon-star"/></svg>
-			</a>
+			<div class="favorite-star-wrapper">
+				<a kvtrackevent="Lending|click-Favorite star|Favorite|undefined|true" title="Star this loan to find it quickly later. You can view and manage your starred loans in the ‘Lend’ tab above." href="#" class="favorite-link{{#is_favorite}} is-favorite{{/is_favorite}}">
+					<svg class="icon icon-star"><use xlink:href="#icon-star"/></svg>
+				</a>
+			</div>
 		{{/can_favorite}}
 	</div>
 
