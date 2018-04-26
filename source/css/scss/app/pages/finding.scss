@@ -136,6 +136,16 @@ $filter-open-behavior-query: "#{$screen} and (min-width: #{$filter-open-behavior
 		float: left;
 		background: transparent;
 
+		&:hover
+		, &:active {
+			background-color: $white;
+			color: $kiva-accent-blue;
+
+			svg {
+				stroke: $kiva-accent-blue;
+			}
+		}
+
 		@media #{$medium-up} {
 			width: 8rem;
 		}
@@ -146,10 +156,6 @@ $filter-open-behavior-query: "#{$screen} and (min-width: #{$filter-open-behavior
 			@media #{$medium-up} {
 				display: inline;
 			}
-		}
-
-		&:hover svg {
-			stroke: $white;
 		}
 	}
 
@@ -226,10 +232,6 @@ $filter-open-behavior-query: "#{$screen} and (min-width: #{$filter-open-behavior
 		}
 	}
 
-}
-
-a.filter-menu-button:visited {
-	color: #000;
 }
 
 .inner-wrap {
