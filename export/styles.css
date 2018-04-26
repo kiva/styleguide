@@ -13134,6 +13134,11 @@ div.category-cards-header {
     color: #484848;
     float: left;
     background: transparent; }
+    .control-region .filter-menu-button:hover, .control-region .filter-menu-button:active {
+      background-color: #FFFFFF;
+      color: #118aec; }
+      .control-region .filter-menu-button:hover svg, .control-region .filter-menu-button:active svg {
+        stroke: #118aec; }
     @media only screen and (min-width: 481px) {
       .control-region .filter-menu-button {
         width: 8rem; } }
@@ -13142,8 +13147,6 @@ div.category-cards-header {
       @media only screen and (min-width: 481px) {
         .control-region .filter-menu-button svg {
           display: inline; } }
-    .control-region .filter-menu-button:hover svg {
-      stroke: #FFFFFF; }
   .control-region .view-buttons {
     float: right;
     margin-right: 0.75rem; }
@@ -13195,9 +13198,6 @@ div.category-cards-header {
       .control-region .category-description {
         font-size: 1rem;
         line-height: 1.75rem; } }
-
-a.filter-menu-button:visited {
-  color: #000; }
 
 .inner-wrap {
   width: calc(100% + 16.9375rem);
