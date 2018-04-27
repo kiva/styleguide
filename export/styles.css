@@ -6371,7 +6371,7 @@ button.secondary, .button.secondary {
   border-radius: 0.125rem; }
   button.secondary:visited, .button.secondary:visited {
     color: #484848; }
-  .no-touch button.secondary:hover, .no-touch .button.secondary:hover {
+  button.secondary:hover, .button.secondary:hover {
     border-color: #118aec;
     color: #118aec;
     box-shadow: 0 1px #118aec; }
