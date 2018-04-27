@@ -12,7 +12,7 @@
 			{{#has_billing_agreement}}
 				<div id="auto-deposit-save-button" class="large-8 medium-10">
 					<p class="panel callout">You already have a billing agreement set up via PayPal. We'll use this pre-approved payment for your Kiva auto deposit.</p>
-					<button class="button smaller">Save auto deposit</button>
+					<button class="button smaller" kvtrackevent="Registration|click-confirm-auto-deposit|register-auto-deposit|undefined|true">Save auto deposit</button>
 					<p class="small-text">To edit the payment method for your auto deposit with Kiva, go to your PayPal settings and look for pre-approved payments.</p>
 				</div>
 			{{/has_billing_agreement}}
@@ -34,7 +34,7 @@
 
 {{^is_logged_in}}
 	<div id="auto-deposit-signin-button">
-		<button class="button smaller" kvtrackevent="Registration|click-confirm-auto-deposit|register-auto-deposit|undefined|true">Sign in to set up</button>
+		<button class="button smaller">Sign in to set up</button>
 	</div>
 {{/is_logged_in}}
 </div>
