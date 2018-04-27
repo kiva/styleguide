@@ -1,0 +1,254 @@
+.rtp-page {
+	h1 {
+		color: $kiva-green;
+		margin-top: 0;
+		margin-bottom: rem-calc(30);
+	}
+
+	h2 {
+		margin-top: rem-calc(50);
+		margin-bottom: rem-calc(30);
+	}
+
+	ul li {
+		font-weight: 300;
+	}
+
+	a {
+		font-weight: 300;
+	}
+
+	.photo {
+		min-width: 100%;
+		max-width: 100%;
+		height: auto;
+		margin-bottom: rem-calc(50);
+	}
+
+	.hr-divider {
+		margin-top: rem-calc(50);
+		margin-bottom: rem-calc(50);
+	}
+
+	.rtp-editing {
+		padding-top: rem-calc(50);
+	}
+
+	@media #{$large-up} {
+		.rtp-lead {
+			.ready-to-apply {
+				margin-bottom: rem-calc(50);
+			}
+
+			div.read-more-link {
+				margin-bottom: rem-calc(50);
+			}
+		}
+	}
+
+	@media #{$medium-down} {
+		.ready-to-apply {
+			margin-bottom: rem-calc(50);
+		}
+	}
+
+	div.hide-for-small-only {
+		img:nth-child(1) {
+			margin-bottom: 0;
+		}
+
+		img:nth-child(2) {
+			margin-top: rem-calc(50);
+		}
+	}
+
+	div.show-for-small-only.small-12.columns {
+		padding-left: 0;
+		padding-right: 0;
+		width: 100%;
+	}
+
+	/* TEAM LEADERS : START */
+	.rtp-chevron {
+		transform: rotate(360deg);
+		width: 100%;
+		height: 1.5rem;
+		display: block;
+		margin-top: 1rem;
+		margin-bottom: 1rem;
+
+		@media #{$large-up} {
+			transform: rotate(270deg);
+			width: 185%;
+		}
+
+		@media #{$large-only}{
+			margin-top: 2.95rem;
+		}
+
+		@media #{$xlarge-only}{
+			margin-top: 1.6rem;
+		}
+	}
+
+	.dates-title {
+		text-align: center;
+		color: #247037;
+		font-size: 1.66rem;
+		padding-bottom: 0.5rem;
+	}
+
+	.dates-date {
+		text-align: center;
+		color: #247037;
+		margin-bottom: 0;
+		font-size: rem-calc(14);
+	}
+	/* TEAM LEADERS : END */
+
+	/* STATS : START */
+	.rtp-stats-container {
+		overflow: auto;
+		background-color: $kiva-green;
+		color: $kiva-darkgreen;
+
+		.top-stats {
+			@media #{$small-only} {
+				background-size: cover;
+			}
+
+			.row {
+				display: inline-block;
+
+				@media #{$small-up} {
+					.stat {
+						line-height: rem-calc(25);
+						font-size: 3rem;
+					}
+				}
+
+				@media #{$large-up} {
+					.stat {
+						line-height: rem-calc(25);
+						font-size: 2.5rem;
+					}
+				}
+			}
+
+			.row1 {
+				h1 {
+					color: $kiva-darkgreen;
+					margin-top: rem-calc(50);
+					margin-bottom: rem-calc(50);
+				}
+			}
+			.row2 {
+				h1 {
+					color: $white;
+				}
+
+				.featured {
+					margin-top: rem-calc(30);
+					margin-bottom: rem-calc(50);
+				}
+			}
+		}
+	}
+	/* STATS : END */
+
+	/* STEPS : START */
+	.rtp-steps {
+		padding-top: rem-calc(50);
+
+		.header {
+			text-align: center;
+
+			@media #{$medium-down} {
+				.rtp-steps .header {
+					text-align: left;
+				}
+			}
+
+			p.featured {
+				margin-bottom: rem-calc(50);
+			}
+
+			p:last-of-type {
+				margin-bottom: 0;
+			}
+		}
+
+		.hr-divider {
+			margin-top: rem-calc(30);
+			margin-bottom: rem-calc(30);
+		}
+
+		.steps {
+			background: url("//www.kiva.org/cms/page/images/rtp-steps-bkgrnd-xxl-std.jpg") no-repeat;
+			min-height: 100%;
+			min-width: 100%;
+			background-size: cover;
+			padding-top: rem-calc(50);
+			padding-bottom: rem-calc(50);
+
+			.text-frame {
+				border: white rem-calc(5) solid;
+				margin: auto;
+				background-color: rgba(0, 0, 0, 0.5);
+				max-width: rem-calc(450);
+				padding-top: rem-calc(30);
+				padding-bottom: rem-calc(30);
+				padding-left: rem-calc(15);
+				padding-right: rem-calc(15);
+
+				p {
+					margin-bottom: 0;
+				}
+
+				h2 {
+					margin-top: 0;
+					margin-bottom: rem-calc(30);
+				}
+			}
+
+			.dotted-line {
+				height: rem-calc(40);
+				width: 0;
+				border-left: white rem-calc(5) dashed;
+				margin: 0 auto;
+			}
+
+			.footer {
+				margin-top: rem-calc(40);
+				text-align: center;
+				padding-left: 20%;
+				padding-right: 20%;
+
+				@media #{$medium-down} {
+					text-align: left;
+					padding-left: rem-calc(20);
+					padding-right: rem-calc(20);
+				}
+			}
+		}
+	}
+	/* STEPS : END */
+
+	/* LEARN MORE : START */
+	.rtp-learn-more {
+		text-align: center;
+		padding-bottom: rem-calc(40);
+
+		@media #{$medium-down} {
+			text-align: left;
+		}
+	}
+
+	/* LEARN MORE : END */
+
+	/* APPLY NOW : START */
+	.rtp-apply-now {
+		margin-bottom: rem-calc(50);
+	}
+	/* APPLY NOW : END */
+}
