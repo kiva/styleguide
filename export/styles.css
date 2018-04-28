@@ -17753,6 +17753,168 @@ div.gift-card .text-section, div.kiva-store .text-section {
       margin-left: 1rem;
       line-height: 3rem; }
 
+.rtp-page {
+  /* TEAM LEADERS : START */
+  /* TEAM LEADERS : END */
+  /* STATS : START */
+  /* STATS : END */
+  /* STEPS : START */
+  /* STEPS : END */
+  /* LEARN MORE : START */
+  /* LEARN MORE : END */
+  /* APPLY NOW : START */
+  /* APPLY NOW : END */ }
+  .rtp-page h1 {
+    color: #4faf4e;
+    margin-top: 0;
+    margin-bottom: 1.875rem; }
+  .rtp-page h2 {
+    margin-top: 3.125rem;
+    margin-bottom: 1.875rem; }
+  .rtp-page ul li {
+    font-weight: 300; }
+  .rtp-page a {
+    font-weight: 300; }
+  .rtp-page .photo {
+    min-width: 100%;
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 3.125rem; }
+  .rtp-page .hr-divider {
+    margin-top: 3.125rem;
+    margin-bottom: 3.125rem; }
+  .rtp-page .rtp-editing {
+    padding-top: 3.125rem; }
+  @media only screen and (min-width: 681px) {
+    .rtp-page .rtp-lead .ready-to-apply {
+      margin-bottom: 3.125rem; }
+    .rtp-page .rtp-lead div.read-more-link {
+      margin-bottom: 3.125rem; } }
+  @media only screen and (max-width: 680px) {
+    .rtp-page .ready-to-apply {
+      margin-bottom: 3.125rem; } }
+  .rtp-page div.hide-for-small-only img:nth-child(1) {
+    margin-bottom: 0; }
+  .rtp-page div.hide-for-small-only img:nth-child(2) {
+    margin-top: 3.125rem; }
+  .rtp-page div.show-for-small-only.small-12.columns {
+    padding-left: 0;
+    padding-right: 0;
+    width: 100%; }
+  .rtp-page .rtp-chevron {
+    -ms-transform: rotate(360deg);
+        transform: rotate(360deg);
+    width: 100%;
+    height: 1.5rem;
+    display: block;
+    margin-top: 1rem;
+    margin-bottom: 1rem; }
+    @media only screen and (min-width: 681px) {
+      .rtp-page .rtp-chevron {
+        -ms-transform: rotate(270deg);
+            transform: rotate(270deg);
+        width: 185%; } }
+    @media only screen and (min-width: 681px) and (max-width: 760px) {
+      .rtp-page .rtp-chevron {
+        margin-top: 2.95rem; } }
+    @media only screen and (min-width: 761px) and (max-width: 988px) {
+      .rtp-page .rtp-chevron {
+        margin-top: 1.6rem; } }
+  .rtp-page .dates-title {
+    text-align: center;
+    color: #247037;
+    font-size: 1.66rem;
+    padding-bottom: 0.5rem; }
+  .rtp-page .dates-date {
+    text-align: center;
+    color: #247037;
+    margin-bottom: 0;
+    font-size: 0.875rem; }
+  .rtp-page .rtp-stats-container {
+    overflow: auto;
+    background-color: #4faf4e;
+    color: #247037; }
+    @media only screen and (max-width: 480px) {
+      .rtp-page .rtp-stats-container .top-stats {
+        background-size: cover; } }
+    .rtp-page .rtp-stats-container .top-stats .row {
+      display: inline-block; }
+      @media only screen {
+        .rtp-page .rtp-stats-container .top-stats .row .stat {
+          line-height: 1.5625rem;
+          font-size: 3rem; } }
+      @media only screen and (min-width: 681px) {
+        .rtp-page .rtp-stats-container .top-stats .row .stat {
+          line-height: 1.5625rem;
+          font-size: 2.5rem; } }
+    .rtp-page .rtp-stats-container .top-stats .row1 h1 {
+      color: #247037;
+      margin-top: 3.125rem;
+      margin-bottom: 3.125rem; }
+    .rtp-page .rtp-stats-container .top-stats .row2 h1 {
+      color: #FFFFFF; }
+    .rtp-page .rtp-stats-container .top-stats .row2 .featured {
+      margin-top: 1.875rem;
+      margin-bottom: 3.125rem; }
+  .rtp-page .rtp-steps {
+    padding-top: 3.125rem; }
+    .rtp-page .rtp-steps .header {
+      text-align: center; }
+      @media only screen and (max-width: 680px) {
+        .rtp-page .rtp-steps .header .rtp-steps .header {
+          text-align: left; } }
+      .rtp-page .rtp-steps .header p.featured {
+        margin-bottom: 3.125rem; }
+      .rtp-page .rtp-steps .header p:last-of-type {
+        margin-bottom: 0; }
+    .rtp-page .rtp-steps .hr-divider {
+      margin-top: 1.875rem;
+      margin-bottom: 1.875rem; }
+    .rtp-page .rtp-steps .steps {
+      background: url("//www.kiva.org/cms/page/images/rtp-steps-bkgrnd-xxl-std.jpg") no-repeat;
+      min-height: 100%;
+      min-width: 100%;
+      background-size: cover;
+      padding-top: 3.125rem;
+      padding-bottom: 3.125rem; }
+      .rtp-page .rtp-steps .steps .text-frame {
+        border: white 0.3125rem solid;
+        margin: auto;
+        background-color: rgba(0, 0, 0, 0.5);
+        max-width: 28.125rem;
+        padding-top: 1.875rem;
+        padding-bottom: 1.875rem;
+        padding-left: 0.9375rem;
+        padding-right: 0.9375rem; }
+        .rtp-page .rtp-steps .steps .text-frame p {
+          margin-bottom: 0; }
+        .rtp-page .rtp-steps .steps .text-frame h2 {
+          margin-top: 0;
+          margin-bottom: 1.875rem; }
+      .rtp-page .rtp-steps .steps .dotted-line {
+        height: 2.5rem;
+        width: 0;
+        border-left: white 0.3125rem dashed;
+        margin: 0 auto; }
+      .rtp-page .rtp-steps .steps .footer {
+        margin-top: 2.5rem;
+        text-align: center;
+        padding-left: 20%;
+        padding-right: 20%; }
+        @media only screen and (max-width: 680px) {
+          .rtp-page .rtp-steps .steps .footer {
+            text-align: left;
+            padding-left: 1.25rem;
+            padding-right: 1.25rem; } }
+  .rtp-page .rtp-learn-more {
+    text-align: center;
+    padding-bottom: 2.5rem; }
+    @media only screen and (max-width: 680px) {
+      .rtp-page .rtp-learn-more {
+        text-align: left; } }
+  .rtp-page .rtp-apply-now {
+    margin-bottom: 3.125rem; }
+
 .ac-container.ac-title {
   margin: 0;
   display: block;
