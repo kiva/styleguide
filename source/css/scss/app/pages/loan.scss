@@ -1058,6 +1058,13 @@
 	  	width: rem-calc(65);
 	  	float: right;
 
+	  	&:hover, &:active {
+		  	.icon-cart {
+			  	stroke: $kiva-accent-blue;
+			}
+		}
+
+
 		@media #{$medium-only} {
 			width: rem-calc(75);
 		  	height: rem-calc(75);
