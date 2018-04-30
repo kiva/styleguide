@@ -17861,7 +17861,7 @@ div.gift-card .text-section, div.kiva-store .text-section {
     .rtp-page .rtp-steps .header {
       text-align: center; }
       @media only screen and (max-width: 680px) {
-        .rtp-page .rtp-steps .header .rtp-steps .header {
+        .rtp-page .rtp-steps .header {
           text-align: left; } }
       .rtp-page .rtp-steps .header p.featured {
         margin-bottom: 3.125rem; }
@@ -17886,6 +17886,9 @@ div.gift-card .text-section, div.kiva-store .text-section {
         padding-bottom: 1.875rem;
         padding-left: 0.9375rem;
         padding-right: 0.9375rem; }
+        @media only screen and (max-width: 480px) {
+          .rtp-page .rtp-steps .steps .text-frame {
+            max-width: 21.875rem; } }
         .rtp-page .rtp-steps .steps .text-frame p {
           margin-bottom: 0; }
         .rtp-page .rtp-steps .steps .text-frame h2 {
