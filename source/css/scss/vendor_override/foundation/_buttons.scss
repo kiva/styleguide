@@ -38,9 +38,14 @@ button, a.button, .button {
 
 
 	&:hover, &:active {
+	  	background-color: $setting-button-background-color;
 		border-color: $kiva-accent-blue;
 		color: $kiva-accent-blue;
 	  	box-shadow: 0 1px $kiva-accent-blue;
+
+	  	svg {
+		  stroke: $kiva-accent-blue;
+		}
 	}
 
 	&:visited {
