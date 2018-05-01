@@ -118,6 +118,10 @@ $filter-open-behavior-query: "#{$screen} and (min-width: #{$filter-open-behavior
 
 .heading-region {
   	padding: 0 $loan-card-list-margin/2;
+
+  	@media #{$large-up} {
+		padding: 0 $loan-card-list-margin;
+  	}
 }
 
 .control-region {
@@ -129,8 +133,7 @@ $filter-open-behavior-query: "#{$screen} and (min-width: #{$filter-open-behavior
 
 	.control-box {
 		width: 100%;
-		margin-bottom: rem-calc(20);
-		padding: rem-calc(10) 0;
+		padding-top: rem-calc(10);
 	}
 
 	.filter-menu-button {
@@ -437,7 +440,6 @@ $filter-open-behavior-query: "#{$screen} and (min-width: #{$filter-open-behavior
 .selected-filters-box {
 	position: relative;
 	overflow: hidden;
-	height: 1.5rem;
 	margin: 0.25rem 0;
 
 	&.hide {
@@ -531,4 +533,8 @@ $filter-open-behavior-query: "#{$screen} and (min-width: #{$filter-open-behavior
 	border-top: 1px solid $kiva-stroke-gray;
 	width: 100%;
 	margin-bottom: 20px;
+
+  	.desktop-clear-button {
+	  	float: right;
+	}
 }
