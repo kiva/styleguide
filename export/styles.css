@@ -14248,7 +14248,8 @@ div.category-cards-header {
   .mobile-lend-action .button {
     margin-bottom: 0;
     display: inline-block;
-    width: 100%; }
+    width: 100%;
+    line-height: 1.15; }
     .mobile-lend-action .button #basket-text {
       font-size: 0.6rem;
       position: absolute;
