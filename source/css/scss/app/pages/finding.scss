@@ -116,6 +116,10 @@ $filter-open-behavior-query: "#{$screen} and (min-width: #{$filter-open-behavior
 	}
 }
 
+.heading-region {
+  	padding: 0 $loan-card-list-margin/2;
+}
+
 .control-region {
 	padding: 0 $loan-card-list-margin/2;
 
