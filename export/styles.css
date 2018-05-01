@@ -8209,7 +8209,7 @@ a.dark_green_bg_link {
   -webkit-backface-visibility: hidden; }
   .icon.icon-confirmation, .icon.icon-error, .icon.icon-info, .icon.icon-warning, .icon.icon-question, .icon.icon-magnify-glass, .icon.icon-nearme, .icon.icon-triangle, .icon.icon-globe, .icon.icon-handshake, .icon.icon-sort, .icon.icon-edit, .icon.icon-refresh, .icon.icon-grid, .icon.icon-map, .icon.icon-tags-checkmark, .icon.icon-sector-agriculture, .icon.icon-sector-arts, .icon.icon-sector-clothing, .icon.icon-sector-construction, .icon.icon-sector-education, .icon.icon-sector-entertainment, .icon.icon-sector-food, .icon.icon-sector-health, .icon.icon-sector-housing, .icon.icon-sector-manufacturing, .icon.icon-sector-personal-use, .icon.icon-sector-retail, .icon.icon-sector-services, .icon.icon-sector-transportation, .icon.icon-sector-wholesale, .icon.icon-facebook-simple, .icon.icon-linkedIn-simple, .icon.icon-twitter-simple {
     fill: #484848; }
-  .icon.icon-large-chevron, .icon.icon-large-chevron-mobile, .icon.icon-medium-chevron, .icon.icon-small-chevron, .icon.icon-small-chevron-mobile, .icon.icon-x, .icon.icon-list, .icon.icon-filter {
+  .icon.icon-large-chevron, .icon.icon-large-chevron-mobile, .icon.icon-medium-chevron, .icon.icon-small-chevron, .icon.icon-small-chevron-mobile, .icon.icon-x, .icon.icon-list, .icon.icon-filter, .icon.icon-cart, .icon.icon-alt-cart {
     stroke: #484848; }
   .icon.icon-distribution {
     color: #484848; }
@@ -14263,6 +14263,8 @@ div.category-cards-header {
     margin-top: 0.625rem;
     width: 4.0625rem;
     float: right; }
+    .mobile-lend-action .button.setting.cart-icon:hover .icon-cart, .mobile-lend-action .button.setting.cart-icon:active .icon-cart {
+      stroke: #118aec; }
     @media only screen and (min-width: 481px) and (max-width: 680px) {
       .mobile-lend-action .button.setting.cart-icon {
         width: 4.6875rem;
