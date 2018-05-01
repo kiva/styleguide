@@ -1038,6 +1038,11 @@
 		margin-bottom: 0;
 		display: inline-block;
 	  	width: 100%;
+	  	line-height: 1.15;
+
+	  	@media #{$large-up} {
+			line-height: unset;
+	  	}
 
 		#basket-text {
 			font-size: 0.6rem;
