@@ -440,6 +440,7 @@ $filter-open-behavior-query: "#{$screen} and (min-width: #{$filter-open-behavior
 .selected-filters-box {
 	position: relative;
 	overflow: hidden;
+  	height: 1.55rem;
 	margin: 0.25rem 0;
 
 	&.hide {
@@ -451,7 +452,7 @@ $filter-open-behavior-query: "#{$screen} and (min-width: #{$filter-open-behavior
 	}
 
 	.control {
-		position: absolute;
+		//position: absolute;
 		line-height: 1.5rem;
 		//width: 4rem;
 		right: 0;
@@ -465,6 +466,7 @@ $filter-open-behavior-query: "#{$screen} and (min-width: #{$filter-open-behavior
 	position: relative;
 	padding-right: 4rem;
 	pointer-events: none;
+  	max-width: 78%;
 
 	&:after {
 		content: '';
@@ -534,7 +536,12 @@ $filter-open-behavior-query: "#{$screen} and (min-width: #{$filter-open-behavior
 	width: 100%;
 	margin-bottom: 20px;
 
-  	.desktop-clear-button {
+  	.filter-controls {
 	  	float: right;
+	  	font-size: 0.77777778rem;
+
+	  	.desktop-clear-button a {
+		  	margin: 0;
+		}
 	}
 }
