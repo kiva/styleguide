@@ -123,10 +123,6 @@ $filter-open-behavior-query: "#{$screen} and (min-width: #{$filter-open-behavior
   	@media #{$large-up} {
 		padding: 0 $loan-card-list-margin;
   	}
-
-  	@media (min-width:1052px) {
-  		padding: 0;
-	}
 }
 
 .control-region {
@@ -395,6 +391,10 @@ $filter-open-behavior-query: "#{$screen} and (min-width: #{$filter-open-behavior
 			padding: 0;
 		}
 
+	  	.heading-region {
+		  	padding: 0;
+		}
+
 		.inner-wrap {
 			$outer-offset: $filter-menu-base-width + $loan-card-list-margin + ($row-width / 2);
 			$inner-offset: (($filter-menu-base-width + $loan-card-list-margin) * 2) + $row-width;
@@ -471,14 +471,19 @@ $filter-open-behavior-query: "#{$screen} and (min-width: #{$filter-open-behavior
 	pointer-events: none;
 
 	&:after {
+	  	display: none;
 		content: '';
 		position: absolute;
 		bottom: 0;
-		right: 0;
+		right: rem-calc(49);
 		width: 4rem;
 		height: 1.5rem;
 		background-color: $kiva-bg-lightgray;
 		pointer-events: auto;
+
+	  	@media #{$medium-up} {
+		  	display: block;
+		}
 	}
 
 	li {
@@ -538,7 +543,7 @@ $filter-open-behavior-query: "#{$screen} and (min-width: #{$filter-open-behavior
 	width: 100%;
 	margin-bottom: rem-calc(20);
 
-  	div.filter-controls {
+  	.selected-filters-box .filter-controls {
 	  	float: right;
 	  	font-size: 0.77777778rem;
 
