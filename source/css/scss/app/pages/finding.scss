@@ -117,11 +117,16 @@ $filter-open-behavior-query: "#{$screen} and (min-width: #{$filter-open-behavior
 }
 
 .heading-region {
+  	margin-top: rem-calc(20);
   	padding: 0 $loan-card-list-margin/2;
 
   	@media #{$large-up} {
 		padding: 0 $loan-card-list-margin;
   	}
+
+  	@media (min-width:1052px) {
+  		padding: 0;
+	}
 }
 
 .control-region {
@@ -230,7 +235,7 @@ $filter-open-behavior-query: "#{$screen} and (min-width: #{$filter-open-behavior
 	}
 
 	.category-description {
-		margin-bottom: 5px;
+		margin-bottom: rem-calc(5);
 		
 		@include small-text();
 
@@ -452,9 +457,7 @@ $filter-open-behavior-query: "#{$screen} and (min-width: #{$filter-open-behavior
 	}
 
 	.control {
-		//position: absolute;
 		line-height: 1.5rem;
-		//width: 4rem;
 		right: 0;
 		text-align: right;
 	}
@@ -466,7 +469,6 @@ $filter-open-behavior-query: "#{$screen} and (min-width: #{$filter-open-behavior
 	position: relative;
 	padding-right: 4rem;
 	pointer-events: none;
-  	max-width: 78%;
 
 	&:after {
 		content: '';
@@ -534,9 +536,9 @@ $filter-open-behavior-query: "#{$screen} and (min-width: #{$filter-open-behavior
 	border-bottom: 1px solid $kiva-stroke-gray;
 	border-top: 1px solid $kiva-stroke-gray;
 	width: 100%;
-	margin-bottom: 20px;
+	margin-bottom: rem-calc(20);
 
-  	.filter-controls {
+  	div.filter-controls {
 	  	float: right;
 	  	font-size: 0.77777778rem;
 
