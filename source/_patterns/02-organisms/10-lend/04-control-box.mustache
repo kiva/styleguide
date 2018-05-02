@@ -37,12 +37,8 @@
 
 	<div class="selected-filters-box {{^show-selected}}hide{{/show-selected}} {{#selected-expanded}}expanded{{/selected-expanded}}">
 		<div class="filter-controls hide-for-small">
-			<span>
-				<a class="control" href="#">{{^selected-expanded}}View all{{/selected-expanded}}{{#selected-expanded}}View less{{/selected-expanded}}</a><span> | </span>
-			</span>
-			<span>
-				{{#show-clear}}<span class="desktop-clear-button"><a href="#" class="filter-links filter-clear-button clear-touch"> Clear all</a></span>{{/show-clear}}
-			</span>
+			<a class="control" href="#">{{^selected-expanded}}View all{{/selected-expanded}}{{#selected-expanded}}View less{{/selected-expanded}}</a><span> | </span>
+			{{#show-clear}}<span class="desktop-clear-button"><a href="#" class="filter-links filter-clear-button clear-touch"> Clear all</a></span>{{/show-clear}}
 		</div>
 			<ul class="selected-filters">
 			{{#selected-filters}}
