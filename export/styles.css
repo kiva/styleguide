@@ -13122,6 +13122,13 @@ div.category-cards-header {
     text-decoration: underline;
     color: #0d8ebb; }
 
+.heading-region {
+  margin-top: 1.25rem;
+  padding: 0 0.625rem; }
+  @media only screen and (min-width: 681px) {
+    .heading-region {
+      padding: 0 1.25rem; } }
+
 .control-region {
   padding: 0 0.625rem; }
   @media only screen and (min-width: 681px) {
@@ -13129,8 +13136,7 @@ div.category-cards-header {
       padding: 0 1.25rem; } }
   .control-region .control-box {
     width: 100%;
-    margin-bottom: 1.25rem;
-    padding: 0.625rem 0; }
+    padding-top: 0.625rem; }
   .control-region .filter-menu-button {
     width: 6rem;
     margin: 0;
@@ -13194,7 +13200,7 @@ div.category-cards-header {
   .control-region .filter-links {
     visibility: visible; }
   .control-region .category-description {
-    margin-bottom: 5px;
+    margin-bottom: 0.3125rem;
     font-size: 0.875rem;
     line-height: 1.357rem; }
     @media only screen and (min-width: 681px) {
@@ -13309,6 +13315,8 @@ div.category-cards-header {
 @media only screen and (min-width: 1052px) {
   .off-canvas-wrap .control-region {
     padding: 0; }
+  .off-canvas-wrap .heading-region {
+    padding: 0; }
   .off-canvas-wrap .inner-wrap {
     width: calc(50% + 47.875rem);
     transform: translate3d(calc(100% - 95.75rem), 0, 0); } }
@@ -13343,16 +13351,14 @@ div.category-cards-header {
 .selected-filters-box {
   position: relative;
   overflow: hidden;
-  height: 1.5rem;
+  height: 1.55rem;
   margin: 0.25rem 0; }
   .selected-filters-box.hide {
     display: none; }
   .selected-filters-box.expanded {
     height: auto; }
   .selected-filters-box .control {
-    position: absolute;
     line-height: 1.5rem;
-    width: 4rem;
     right: 0;
     text-align: right; }
 
@@ -13363,14 +13369,18 @@ div.category-cards-header {
   padding-right: 4rem;
   pointer-events: none; }
   .selected-filters:after {
+    display: none;
     content: '';
     position: absolute;
     bottom: 0;
-    right: 0;
+    right: 3.0625rem;
     width: 4rem;
     height: 1.5rem;
     background-color: #FAFAFA;
     pointer-events: auto; }
+    @media only screen and (min-width: 481px) {
+      .selected-filters:after {
+        display: block; } }
   .selected-filters li {
     display: inline-block; }
 
@@ -13418,7 +13428,12 @@ div.category-cards-header {
   border-bottom: 1px solid #d8d8d8;
   border-top: 1px solid #d8d8d8;
   width: 100%;
-  margin-bottom: 20px; }
+  margin-bottom: 1.25rem; }
+  .secondary-nav.filter-loan-count .selected-filters-box .filter-controls {
+    float: right;
+    font-size: 0.77777778rem; }
+    .secondary-nav.filter-loan-count .selected-filters-box .filter-controls .desktop-clear-button a {
+      margin: 0; }
 
 .finances .main h2 {
   color: #4faf4e;
