@@ -239,8 +239,15 @@
 		text-align: center;
 		padding-bottom: rem-calc(40);
 
-		@media #{$medium-down} {
+		@media #{$small-only} {
 			text-align: left;
+		}
+
+		@media only screen and (min-width: 880px) and (max-width: 1550px) {
+			.row {
+				padding-left: 5%;
+				padding-right: 5%;
+			}
 		}
 	}
 
