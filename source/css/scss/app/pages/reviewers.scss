@@ -251,6 +251,16 @@
 	/* APPLY NOW : START */
 	.rtp-apply-now {
 		margin-bottom: rem-calc(50);
+
+		.text-frame {
+			position: absolute;
+			top: 35%;
+			width: 100%;
+
+			@media only screen and (min-width: 475px) and (max-width: 590px) {
+				top: 20% !important;
+			}
+		}
 	}
 	/* APPLY NOW : END */
 }
