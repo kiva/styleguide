@@ -46,7 +46,7 @@
 		}
 	}
 
-	@media #{$medium-down} {
+	@media #{$small-only} {
 		.ready-to-apply {
 			margin-bottom: rem-calc(50);
 		}
