@@ -123,14 +123,12 @@
 				@media #{$small-up} {
 					.stat {
 						line-height: rem-calc(25);
-						font-size: 3rem;
 					}
 				}
 
 				@media #{$large-up} {
 					.stat {
 						line-height: rem-calc(25);
-						font-size: 2.5rem;
 					}
 				}
 			}
