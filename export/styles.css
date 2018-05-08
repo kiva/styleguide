@@ -17811,7 +17811,7 @@ div.gift-card .text-section, div.kiva-store .text-section {
       margin-bottom: 3.125rem; }
     .rtp-page .rtp-lead div.read-more-link {
       margin-bottom: 3.125rem; } }
-  @media only screen and (max-width: 680px) {
+  @media only screen and (max-width: 480px) {
     .rtp-page .ready-to-apply {
       margin-bottom: 3.125rem; } }
   .rtp-page div.hide-for-small-only img:nth-child(1) {
@@ -17862,12 +17862,10 @@ div.gift-card .text-section, div.kiva-store .text-section {
       display: inline-block; }
       @media only screen {
         .rtp-page .rtp-stats-container .top-stats .row .stat {
-          line-height: 1.5625rem;
-          font-size: 3rem; } }
+          line-height: 1.5625rem; } }
       @media only screen and (min-width: 681px) {
         .rtp-page .rtp-stats-container .top-stats .row .stat {
-          line-height: 1.5625rem;
-          font-size: 2.5rem; } }
+          line-height: 1.5625rem; } }
     .rtp-page .rtp-stats-container .top-stats .row1 h1 {
       color: #247037;
       margin-top: 3.125rem;
@@ -17938,6 +17936,13 @@ div.gift-card .text-section, div.kiva-store .text-section {
         text-align: left; } }
   .rtp-page .rtp-apply-now {
     margin-bottom: 3.125rem; }
+    .rtp-page .rtp-apply-now .text-frame {
+      position: absolute;
+      top: 35%;
+      width: 100%; }
+      @media only screen and (min-width: 475px) and (max-width: 590px) {
+        .rtp-page .rtp-apply-now .text-frame {
+          top: 20% !important; } }
 
 .ac-container.ac-title {
   margin: 0;
