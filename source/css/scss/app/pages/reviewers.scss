@@ -197,6 +197,31 @@
 		}
 
 		.steps {
+			@media #{$small-only} {
+				background: url("//www.kiva.org/cms/page/images/rtp-steps-bkgrnd-sm-std.jpg") no-repeat;
+			}
+
+			@media #{$medium-only} {
+				background: url("//www.kiva.org/cms/page/images/rtp-steps-bkgrnd-med-std.jpg") no-repeat;
+			}
+
+			@media #{$large-only} {
+				background: url("//www.kiva.org/cms/page/images/rtp-steps-bkgrnd-lg-std.jpg") no-repeat;
+			}
+
+			@media #{$xlarge-only} {
+				background: url("//www.kiva.org/cms/page/images/rtp-steps-bkgrnd-xl-std.jpg") no-repeat;
+			}
+
+			@media #{$xxlarge-up} {
+				background: url("//www.kiva.org/cms/page/images/rtp-steps-bkgrnd-xxl-std.jpg") no-repeat;
+			}
+
+			min-height: 100%;
+			min-width: 100%;
+			background-size: contain;
+			padding-top: rem-calc(50);
+			margin-bottom: rem-calc(50);
 			padding-bottom: rem-calc(50);
 
 			.text-frame {
