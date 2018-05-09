@@ -17806,11 +17806,13 @@ div.gift-card .text-section, div.kiva-store .text-section {
     margin-bottom: 3.125rem; }
   .rtp-page .rtp-editing {
     padding-top: 3.125rem; }
-  @media only screen and (min-width: 681px) {
-    .rtp-page .rtp-lead .ready-to-apply {
-      margin-bottom: 3.125rem; }
-    .rtp-page .rtp-lead div.read-more-link {
-      margin-bottom: 3.125rem; } }
+  .rtp-page .rtp-lead .ready-to-apply {
+    margin-bottom: 3.125rem; }
+  .rtp-page .rtp-lead div.read-more-link {
+    margin-bottom: 3.125rem; }
+  @media only screen and (max-width: 480px) {
+    .rtp-page .rtp-lead .show-for-small-only img {
+      margin-bottom: 0; } }
   @media only screen and (max-width: 480px) {
     .rtp-page .ready-to-apply {
       margin-bottom: 3.125rem; } }
@@ -17822,10 +17824,18 @@ div.gift-card .text-section, div.kiva-store .text-section {
     padding-left: 0;
     padding-right: 0;
     width: 100%; }
+  .rtp-page .rtp-header .text-frame {
+    position: absolute;
+    top: 40%;
+    width: 100%; }
+    @media only screen and (min-width: 480px) and (max-width: 590px) {
+      .rtp-page .rtp-header .text-frame {
+        top: 20% !important; } }
   .rtp-page .rtp-chevron {
     -ms-transform: rotate(360deg);
         transform: rotate(360deg);
     width: 100%;
+    min-width: 2.5rem;
     height: 1.5rem;
     display: block;
     margin-top: 1rem;
@@ -17835,16 +17845,11 @@ div.gift-card .text-section, div.kiva-store .text-section {
         -ms-transform: rotate(270deg);
             transform: rotate(270deg);
         width: 185%; } }
-    @media only screen and (min-width: 681px) and (max-width: 760px) {
-      .rtp-page .rtp-chevron {
-        margin-top: 2.95rem; } }
-    @media only screen and (min-width: 761px) and (max-width: 988px) {
-      .rtp-page .rtp-chevron {
-        margin-top: 1.6rem; } }
   .rtp-page .dates-title {
     text-align: center;
     color: #247037;
     font-size: 1.66rem;
+    line-height: 1.66rem;
     padding-bottom: 0.5rem; }
   .rtp-page .dates-date {
     text-align: center;
@@ -17931,16 +17936,20 @@ div.gift-card .text-section, div.kiva-store .text-section {
   .rtp-page .rtp-learn-more {
     text-align: center;
     padding-bottom: 2.5rem; }
-    @media only screen and (max-width: 680px) {
+    @media only screen and (max-width: 480px) {
       .rtp-page .rtp-learn-more {
         text-align: left; } }
+    @media only screen and (min-width: 880px) and (max-width: 1550px) {
+      .rtp-page .rtp-learn-more .row {
+        padding-left: 5%;
+        padding-right: 5%; } }
   .rtp-page .rtp-apply-now {
     margin-bottom: 3.125rem; }
     .rtp-page .rtp-apply-now .text-frame {
       position: absolute;
       top: 35%;
       width: 100%; }
-      @media only screen and (min-width: 475px) and (max-width: 590px) {
+      @media only screen and (min-width: 480px) and (max-width: 590px) {
         .rtp-page .rtp-apply-now .text-frame {
           top: 20% !important; } }
 
