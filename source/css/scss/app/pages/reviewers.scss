@@ -169,18 +169,25 @@
 		padding-top: rem-calc(50);
 
 		.header {
-			text-align: center;
-
-			@media #{$medium-down} {
-				text-align: left;
-			}
-
 			p.featured {
 				margin-bottom: rem-calc(50);
+
+				@media only screen and (min-width: $med-large-breakpoint) and (max-width: 1550px) {
+					padding-left: 5%;
+					padding-right: 5%;
+				}
 			}
 
 			p:last-of-type {
 				margin-bottom: 0;
+			}
+		}
+
+		.content {
+			text-align: center;
+
+			@media only screen and (max-width: 534px) {
+				text-align: left;
 			}
 		}
 
@@ -190,11 +197,6 @@
 		}
 
 		.steps {
-			background: url("//www.kiva.org/cms/page/images/rtp-steps-bkgrnd-xxl-std.jpg") no-repeat;
-			min-height: 100%;
-			min-width: 100%;
-			background-size: cover;
-			padding-top: rem-calc(50);
 			padding-bottom: rem-calc(50);
 
 			.text-frame {
@@ -209,6 +211,10 @@
 
 				@media #{$small-only} {
 					max-width: rem-calc(350);
+				}
+
+				@media only screen and (min-width: 300px) and (max-width: 360px) {
+					max-width: rem-calc(290);
 				}
 
 				p {
