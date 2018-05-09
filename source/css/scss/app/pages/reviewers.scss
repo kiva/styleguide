@@ -72,6 +72,18 @@
 		width: 100%;
 	}
 
+	.rtp-header {
+		.text-frame {
+			position: absolute;
+			top: 40%;
+			width: 100%;
+
+			@media only screen and (min-width: $small-breakpoint) and (max-width: 590px) {
+				top: 20% !important;
+			}
+		}
+	}
+
 	/* TEAM LEADERS : START */
 	.rtp-chevron {
 		transform: rotate(360deg);
@@ -260,7 +272,7 @@
 			top: 35%;
 			width: 100%;
 
-			@media only screen and (min-width: 475px) and (max-width: 590px) {
+			@media only screen and (min-width: $small-breakpoint) and (max-width: 590px) {
 				top: 20% !important;
 			}
 		}
