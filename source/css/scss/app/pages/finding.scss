@@ -445,7 +445,7 @@ $filter-open-behavior-query: "#{$screen} and (min-width: #{$filter-open-behavior
 .selected-filters-box {
 	position: relative;
 	overflow: hidden;
-  	height: 1.55rem;
+  	height: 1.56rem;
 	margin: 0.25rem 0;
 
 	&.hide {
@@ -476,7 +476,7 @@ $filter-open-behavior-query: "#{$screen} and (min-width: #{$filter-open-behavior
 		position: absolute;
 		bottom: 0;
 		right: rem-calc(49);
-		width: 4rem;
+		width: rem-calc(59);
 		height: 1.5rem;
 		background-color: $kiva-bg-lightgray;
 		pointer-events: auto;
@@ -547,8 +547,10 @@ $filter-open-behavior-query: "#{$screen} and (min-width: #{$filter-open-behavior
 	  	float: right;
 	  	font-size: 0.77777778rem;
 
-	  	.desktop-clear-button a {
+	  	.filter-clear-button {
 		  	margin: 0;
+		  	font-size: 0.77777778rem;
+		  	float: none;
 		}
 	}
 }

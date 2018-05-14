@@ -36,9 +36,9 @@
 			 data-reveal-id="save-search-modal">Save this search</a></span>{{/show-save-search}}
 
 	<div class="selected-filters-box {{^show-selected}}hide{{/show-selected}} {{#selected-expanded}}expanded{{/selected-expanded}}">
-		<div class="filter-controls hide-for-small">
+		<div class="filter-controls">
 			<a class="control" href="#">{{^selected-expanded}}View all{{/selected-expanded}}{{#selected-expanded}}View less{{/selected-expanded}}</a><span> | </span>
-			{{#show-clear}}<span class="desktop-clear-button"><a href="#" class="filter-links filter-clear-button clear-touch"> Clear all</a></span>{{/show-clear}}
+			{{#show-clear}}<a href="#" class="filter-links filter-clear-button"> Clear all</a>{{/show-clear}}
 		</div>
 			<ul class="selected-filters">
 			{{#selected-filters}}
