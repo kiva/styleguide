@@ -533,7 +533,6 @@
 .filter-links {
 	font-size: 0.7em;
 	visibility: hidden;
-	margin-left: rem-calc(10);
 	float: left;
 	&.save-search-button {
 		margin-left: 0;
@@ -545,7 +544,6 @@
 @media #{$medium-up}{
 	.filter-links, .filter-links.save-search-button {
 		font-size: 0.77777778rem;
-		margin-left: rem-calc(14);
 		float: none;
 	}
 }
