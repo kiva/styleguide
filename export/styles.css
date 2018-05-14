@@ -10271,7 +10271,6 @@ svg {
 .filter-links {
   font-size: 0.7em;
   visibility: hidden;
-  margin-left: 0.625rem;
   float: left; }
   .filter-links.save-search-button {
     margin-left: 0;
@@ -10281,7 +10280,6 @@ svg {
 @media only screen and (min-width: 481px) {
   .filter-links, .filter-links.save-search-button {
     font-size: 0.77777778rem;
-    margin-left: 0.875rem;
     float: none; } }
 
 #filter-loan-status-dropdown {
@@ -10427,7 +10425,6 @@ svg {
 .touch .filter .filter-links {
   font-size: 0.7em;
   visibility: hidden;
-  margin-left: 0.625rem;
   float: left; }
   .touch .filter .filter-links.save-search-button {
     margin-left: 0;
@@ -13351,7 +13348,7 @@ div.category-cards-header {
 .selected-filters-box {
   position: relative;
   overflow: hidden;
-  height: 1.55rem;
+  height: 1.56rem;
   margin: 0.25rem 0; }
   .selected-filters-box.hide {
     display: none; }
@@ -13374,7 +13371,7 @@ div.category-cards-header {
     position: absolute;
     bottom: 0;
     right: 3.0625rem;
-    width: 4rem;
+    width: 3.6875rem;
     height: 1.5rem;
     background-color: #FAFAFA;
     pointer-events: auto; }
@@ -13432,8 +13429,9 @@ div.category-cards-header {
   .secondary-nav.filter-loan-count .selected-filters-box .filter-controls {
     float: right;
     font-size: 0.77777778rem; }
-    .secondary-nav.filter-loan-count .selected-filters-box .filter-controls .desktop-clear-button a {
-      margin: 0; }
+    .secondary-nav.filter-loan-count .selected-filters-box .filter-controls .filter-clear-button {
+      font-size: 0.77777778rem;
+      float: none; }
 
 .finances .main h2 {
   color: #4faf4e;
