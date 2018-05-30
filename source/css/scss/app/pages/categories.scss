@@ -190,6 +190,11 @@ div.category-cards-header {
 	p.impact {
 		font-weight: 500;
 	}
+	p.featured {
+		@include featured-text;
+		padding-top: rem-calc(100);
+		padding-bottom: rem-calc(100);
+	}
 	@media #{$small-only} {
 		p.impact,
 		p.featured {
