@@ -126,7 +126,7 @@
 
 .category-card-title {
 	color: $white;
-	font-weight: $font-weight-bold;
+	font-weight: 400;
 	@include featured-text;
 
 	p {
@@ -180,15 +180,16 @@ div.category-cards-header {
 .basic-category-grid {
 	padding:0;
 
-	p.impact,
+	h1.impact,
 	p.featured {
 		text-align: center;
 		color: $kiva-text-medium;
 		padding: 3rem;
 		margin: 0;
 	}
-	p.impact {
-		font-weight: 500;
+	h1.impact {
+		font-weight: 300;
+		color: $charcoal;
 	}
 	p.featured {
 		@include featured-text;
@@ -206,14 +207,14 @@ div.category-cards-header {
 			width: 100%;
 		}
 		div.category-card-title-wrap {
-			top: 65%;
+			top: 80%;
 		}
 	}
 	.more-categories-card {
 		.category-card {
 			background-color: fade-out($kiva-filter-indicator, .3);
 			div.color-card-center {
-				top: 65%;
+				top: 50%;
 			}
 			&:hover > .category-card-overlay {
 				background-color: $kiva-filter-indicator;
