@@ -182,14 +182,15 @@ div.category-cards-header {
 
 	h1.impact,
 	p.featured {
-		text-align: center;
 		color: $kiva-text-medium;
-		padding: 3rem;
 		margin: 0;
+		padding: 3rem;
+		text-align: center;
 	}
 	h1.impact {
-		font-weight: 300;
 		color: $charcoal;
+		font-weight: 300;
+		padding-top: 0;
 	}
 	p.featured {
 		@include featured-text;
@@ -200,6 +201,7 @@ div.category-cards-header {
 		p.impact,
 		p.featured {
 			padding: 3rem 0;
+			@include body-text();
 		}	
 	}
 	.category-card {
