@@ -449,14 +449,16 @@ $loan-card-border: 1px solid $kiva-stroke-gray;
 	}
 }
 
-.message-card {
+.message-card-2 {
 	display: flex;
 	flex-direction: column;
 
+	.bottom-bar-2 {
+		padding: 1.25rem 1.25rem 1.375rem;
+	}
+
 	.message {
 		flex-grow: 1;
-		border: solid $kiva-stroke-gray;
-		border-width: rem-calc(1) rem-calc(1) 0;
 		padding: 0.75rem;
 
 		h2 {
@@ -468,21 +470,6 @@ $loan-card-border: 1px solid $kiva-stroke-gray;
 		}
 	}
 
-	.action {
-		width: 100%;
-		flex-shrink: 0;
-
-		.button {
-			width: 100%;
-			margin: 0;
-			padding: 0;
-			height: $loan-card-footer-height;
-			line-height: $loan-card-footer-height;
-			font-size: $top-nav-font-size;
-			font-weight: normal;
-		}
-	}
-
 	@media #{$list-break-point} {
 		.list-view & {
 			flex-direction: row;
@@ -490,16 +477,14 @@ $loan-card-border: 1px solid $kiva-stroke-gray;
 
 			.message {
 				border: none;
-				padding: 0 1rem 0 0;
 			}
 
-			.action {
-				width: $list-loan-card-buttons-width;
+			.bottom-bar-2 {
+				padding: 0 rem-calc(20) 0 0;
+				text-align: right;
 
 				.button {
-					height: $list-loan-card-buttons-height;
-					line-height: $list-loan-card-buttons-height;
-					font-size: $body-font-size;
+					width: rem-calc(200);
 				}
 			}
 		}
