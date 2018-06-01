@@ -467,7 +467,7 @@ $filter-open-behavior-query: "#{$screen} and (min-width: #{$filter-open-behavior
 	list-style: none;
 	margin: 0;
 	position: relative;
-	padding-right: 4rem;
+	padding-right: 6.75rem;
 	pointer-events: none;
 
 	&:after {
@@ -495,10 +495,16 @@ $filter-open-behavior-query: "#{$screen} and (min-width: #{$filter-open-behavior
 	@include small-text();
 	display: inline-block;
 	margin-right: rem-calc(6);
+	margin-bottom: .125rem;
 	padding-right: rem-calc(4);
 	background-color: $kiva-filter-indicator-bg;
 	border: 1px solid $highlight-blue;
 	color: $highlight-blue;
+	word-break: break-all;
+	word-wrap: break-word; /* Internet Explorer 5.5+ */
+	white-space: normal;
+	white-space: -moz-pre-wrap; /* Mozilla, since 1999 */
+	white-space: -o-pre-wrap; /* Opera 7 */
 
 	.close-control {
 		cursor: pointer;
