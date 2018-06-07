@@ -9420,11 +9420,7 @@ ul.tertiary-nav {
     padding-top: 0.1875rem;
     padding-bottom: 0.1875rem; }
     .header-promo.hide-for-xxlarge-up .content {
-      vertical-align: top;
-      text-align: left; }
-      @media only screen and (min-width: 681px) {
-        .header-promo.hide-for-xxlarge-up .content {
-          margin-top: 0.5625rem; } }
+      vertical-align: top; }
       .header-promo.hide-for-xxlarge-up .content .call-to-action-text {
         text-decoration: underline; }
     .header-promo.hide-for-xxlarge-up svg {
