@@ -31,10 +31,6 @@
 		padding-bottom: rem-calc(3);
 		.content {
 			vertical-align: top;
-			text-align: left;
-			@media #{$large-up} {
-				margin-top: rem-calc(9);
-			}
 			.call-to-action-text {
 				text-decoration: underline;
 			}
