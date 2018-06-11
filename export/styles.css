@@ -18735,7 +18735,8 @@ div.flag-comment-lightbox .lightbox-content .inner {
 
 .donation-page-form label.amount-button {
   height: 3.125rem;
-  margin-left: 0; }
+  margin-left: 0;
+  line-height: 1.625rem; }
   @media only screen and (max-width: 480px) {
     .donation-page-form label.amount-button {
       padding-top: 0.8125rem;
