@@ -36,6 +36,7 @@
 	label.amount-button {
 		height: rem-calc(50);
 		margin-left: 0;
+	  	line-height: rem-calc(26);
 
 		@media #{$small-only} {
 			padding-top: rem-calc(13);
