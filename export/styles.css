@@ -8229,7 +8229,7 @@ a.dark_green_bg_link {
     color: #4faf4e; }
   .icon.icon-choose, .icon.icon-lend, .icon.icon-repaid, .icon.icon-repeat, .icon.icon-apply-circle, .icon.icon-fundraise, .icon.icon-invite {
     fill: #4faf4e;
-    color: #488443; }
+    color: #49953f; }
   .icon.icon-leaf, .icon.icon-leaves {
     fill: #4faf4e; }
   .icon.icon-match {
@@ -8246,9 +8246,9 @@ a.dark_green_bg_link {
   .icon.icon-new-kiva-logo {
     fill: #4faf4e; }
   .icon.icon-kiva-card {
-    fill: #488443; }
+    fill: #49953f; }
   .icon.icon-woman {
-    stroke: #488443; }
+    stroke: #49953f; }
   .icon.icon-apply, .icon.icon-interview, .icon.icon-matchmaking, .icon.icon-offer, .icon.icon-screen {
     fill: black; }
   .icon.icon-auto-deposit-alternate, .icon.icon-updates-alternate {
@@ -10823,7 +10823,7 @@ svg {
   .bottom-bar .button.success {
     background-color: #49953f; }
     .bottom-bar .button.success:hover, .bottom-bar .button.success:active {
-      background-color: #488443; }
+      background-color: #49953f; }
   .bottom-bar .message {
     background-color: #49953f;
     text-align: center; }
@@ -11637,7 +11637,7 @@ svg {
         margin-left: -13vw; } }
     .hp-how-it-works-wrapper .how-it-works-illustration .icon-choose, .hp-how-it-works-wrapper .how-it-works-illustration .icon-lend, .hp-how-it-works-wrapper .how-it-works-illustration .icon-repaid, .hp-how-it-works-wrapper .how-it-works-illustration .icon-repeat {
       position: absolute;
-      fill: #488443;
+      fill: #49953f;
       color: #247037;
       opacity: 0.5;
       height: 22vw;
@@ -11695,13 +11695,13 @@ svg {
         .hp-how-it-works-wrapper .how-it-works-illustration .icon-curved-arrow.arrow-1, .hp-how-it-works-wrapper .how-it-works-illustration .icon-curved-arrow.arrow-2, .hp-how-it-works-wrapper .how-it-works-illustration .icon-curved-arrow.arrow-3, .hp-how-it-works-wrapper .how-it-works-illustration .icon-curved-arrow.arrow-4 {
           height: 11vw;
           width: 11vw;
-          fill: #488443;
+          fill: #49953f;
           opacity: 1; } }
       .hp-how-it-works-wrapper .how-it-works-illustration .icon-curved-arrow.arrow-1.active, .hp-how-it-works-wrapper .how-it-works-illustration .icon-curved-arrow.arrow-2.active, .hp-how-it-works-wrapper .how-it-works-illustration .icon-curved-arrow.arrow-3.active, .hp-how-it-works-wrapper .how-it-works-illustration .icon-curved-arrow.arrow-4.active {
         fill: #FFFFFF; }
         @media only screen and (min-width: 681px) {
           .hp-how-it-works-wrapper .how-it-works-illustration .icon-curved-arrow.arrow-1.active, .hp-how-it-works-wrapper .how-it-works-illustration .icon-curved-arrow.arrow-2.active, .hp-how-it-works-wrapper .how-it-works-illustration .icon-curved-arrow.arrow-3.active, .hp-how-it-works-wrapper .how-it-works-illustration .icon-curved-arrow.arrow-4.active {
-            fill: #488443; } }
+            fill: #49953f; } }
     .hp-how-it-works-wrapper .how-it-works-illustration .icon-curved-arrow.arrow-1 {
       top: 0;
       left: 39vw;
@@ -17176,7 +17176,7 @@ div.invite-about {
         weight: 300; } }
   div.invite-about .divider {
     width: 0.0625rem;
-    background-color: #488443;
+    background-color: #49953f;
     height: 2.5rem;
     margin-top: 2.5rem; }
   div.invite-about .stats {
@@ -18945,11 +18945,11 @@ div.flag-comment-lightbox .lightbox-content .inner {
     border-color: #118aec; }
 
 .initial-V {
-  color: #488443; }
+  color: #49953f; }
   .initial-V:hover {
-    color: #488443; }
+    color: #49953f; }
   .initial-V:before {
-    border-color: #488443; }
+    border-color: #49953f; }
 
 .initial-W {
   color: #49953f; }
