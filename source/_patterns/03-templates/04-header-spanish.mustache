@@ -17,10 +17,10 @@
 		{{^is-visitor}}
 			<div class="small-3-8ths xxlarge-2 columns header-column right-side">
                 {{#basket-loan-added}}
-                <div id="top-basket-button" class="show-for-large-up large-6 columns">
+                <div id="top-basket-button" class="show-for-large-up large-6 columns" kvtrackevent="TopNav|click-Basket|undefined|{{basket.item_count}}|true">
                 {{/basket-loan-added}}
                 {{^basket-loan-added}}
-                <div id="top-basket-button" class="hide large-6 columns">
+                <div id="top-basket-button" class="hide large-6 columns" kvtrackevent="TopNav|click-Basket|undefined|undefined|true">
                 {{/basket-loan-added}}
 					<a class="header-button {{#is_free_trial_eligible}}hidden{{/is_free_trial_eligible}}" href="{{basket_href}}"><span class="amount {{^basket.item_count}}hide{{/basket.item_count}}">{{basket.item_count}}</span> Cesta</a>
 				</div>
@@ -43,4 +43,6 @@
 	{{/is-visitor}}
 </div>
 
-<div id="mobile-basket-button" class="basket-bar {{#basket.item_count}}hide-for-large-up{{/basket.item_count}}{{^basket.item_count}}hide{{/basket.item_count}}"><a href="{{basket_href}}" class="button">Basket (<span class="basket-item-count">{{basket.item_count}}</span>)</a></div>
+<div id="mobile-basket-button" class="basket-bar {{#basket.item_count}}hide-for-large-up{{/basket.item_count}}{{^basket.item_count}}hide{{/basket.item_count}}">
+	<a href="{{basket_href}}" class="button" kvtrackevent="TopNav|click-Checkout-Mobile|undefined|{{basket.item_count}}|true">Basket (<span class="basket-item-count">{{basket.item_count}}</span>)</a>
+</div>
