@@ -56,7 +56,7 @@
 		{{^is-visitor}}
 			<div class="small-3-8ths xxlarge-2 columns header-column right-side">
                 {{#basket-loan-added}}
-                <div id="top-basket-button" class="show-for-large-up large-6 columns" kvtrackevent="TopNav|click-Basket|undefined|undefined|true">
+                <div id="top-basket-button" class="show-for-large-up large-6 columns" kvtrackevent="TopNav|click-Basket|undefined|{{basket.item_count}}|true">
                 {{/basket-loan-added}}
                 {{^basket-loan-added}}
                 <div id="top-basket-button" class="hide large-6 columns" kvtrackevent="TopNav|click-Basket|undefined|undefined|true">
