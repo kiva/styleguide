@@ -6,7 +6,7 @@ pipeline {
     stages {
         stage('Build') {
 			agent {
-				docker {
+				dockerfile {
 				  filename 'Dockerfile'
 				  args '-v ${PWD}:/styleguide_export'
 				}
