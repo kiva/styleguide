@@ -1,16 +1,20 @@
 FROM ubuntu:xenial
 
-#set up working directory
-RUN mkdir /styleguide
+RUN apt-get -q update
+RUN apt-get install --yes curl
+RUN curl --silent --location https://deb.nodesource.com/setup_8.x | bash -
+RUN apt-get install --yes nodejs
+RUN apt-get install --yes build-essential
+RUN apt-get install --yes git
+RUN apt-get install --yes php
+
 COPY . /styleguide
 WORKDIR /styleguide
 
-RUN apt-get -q update &&\
-	DEBIAN_FRONTEND="noninteractive" apt-get -q install -y -o Dpkg::Options::="--force-confnew" --no-install-recommends curl &&\
-    curl -sL https://deb.nodesource.com/setup_8.x | bash - &&\
-    DEBIAN_FRONTEND="noninteractive" apt-get -q upgrade -y -o Dpkg::Options::="--force-confnew" --no-install-recommends &&\
-    DEBIAN_FRONTEND="noninteractive" apt-get -q remove -y -o Dpkg::Options::="--force-confnew" --no-install-recommends nodejs &&\
-    DEBIAN_FRONTEND="noninteractive" apt-get -q install -y -o Dpkg::Options::="--force-confnew" --no-install-recommends nodejs &&\
-    which node &&\
-    node -v &&\
-    npm -v
+RUN bin/bamboo_build.sh
+RUN ls
+WORKDIR /
+RUN cp styleguide styleguide_export
+
+# RUN bin/bamboo_deploy.sh
+

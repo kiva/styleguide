@@ -1,15 +1,18 @@
 pipeline {
-    agent {
-        dockerfile true
-    }
+    agent none
     environment {
         CI = 'true'
     }
     stages {
         stage('Build') {
+			agent {
+				docker {
+				  filename 'Dockerfile'
+				  args '-v ${PWD}:/styleguide_export'
+				}
+			}
             steps {
                 echo 'Building..'
-                sh './bin/bamboo_build.sh'
             }
         }
 		stage('Deploy') {

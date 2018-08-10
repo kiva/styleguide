@@ -7,12 +7,17 @@
 
 base_dir=$(dirname ${script_dir})
 
+echo base_dir
+echo $base_dir
+
 build_patternlab () {
-	#pushd ${base_dir}
+	pushd ${base_dir}
+	pwd
 	npm install
+	npm install -g grunt-cli
 	grunt init
 	grunt compile
-	#popd
+	popd
 }
 
 x_rsync="rsync -e ssh -avP --delete --exclude .git "
