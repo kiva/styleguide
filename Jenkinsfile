@@ -4,10 +4,13 @@ pipeline {
         CI = 'true'
     }
     stages {
+        // What if we just skip docker for now...
         stage('Build') {
             steps {
                 echo 'Building..'
                 sh 'ls -al'
+                sh 'bin/bamboo_build.sh'
+                sh 'bin/bamboo_deploy.sh'
             }
         }
         // stage('Build') {
