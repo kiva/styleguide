@@ -12,9 +12,9 @@ COPY . /styleguide
 WORKDIR /styleguide
 
 RUN bin/bamboo_build.sh
-RUN ls
 WORKDIR /
-RUN cp styleguide styleguide_export
+RUN ls
+RUN cp -r styleguide styleguide_export
 
 # RUN bin/bamboo_deploy.sh
 
