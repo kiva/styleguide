@@ -8,7 +8,7 @@ pipeline {
 			agent {
 				dockerfile {
 				  filename 'Dockerfile'
-				  additionalBuildArgs '-v ${PWD}:/styleguide_export'
+				  additionalBuildArgs '--build-arg -v ${PWD}:/styleguide_export'
 				}
 			}
             steps {
