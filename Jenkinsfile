@@ -19,7 +19,7 @@ pipeline {
         stage('Build') {
 			agent {
 				dockerfile {
-                    name 'Dockerfile.Jenkins'
+                    filename 'Dockerfile.Jenkins'
 				}
 			}
             steps {
