@@ -2,6 +2,7 @@ pipeline {
     agent any
     environment {
         CI = 'true'
+        PATH = 'styleguide-npm-global/bin:$PATH'
     }
     stages {
         // What if we just skip docker for now...
@@ -32,7 +33,7 @@ pipeline {
             steps {
                 echo 'Building...'
                 sh 'ls -al'
-                sh 'export PATH=~/.styleguide-npm-global/bin:$PATH'
+                sh 'export PATH=styleguide-npm-global/bin:$PATH'
                 sh 'echo $PATH'
                 sh 'bin/bamboo_build.sh'
             }
