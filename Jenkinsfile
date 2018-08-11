@@ -28,7 +28,7 @@ pipeline {
                 npm_config_prefix = 'styleguide-npm-global'
                 HOME = '.'
                 // PATH = "${PWD}/styleguide-npm-global/bin:$PATH"
-                PATH+SG = "${PWD}/styleguide-npm-global/bin:$PATH"
+                // PATH = "${PWD}/styleguide-npm-global/bin:$PATH"
             }
 			// agent {
 			// 	dockerfile {
@@ -38,10 +38,17 @@ pipeline {
             steps {
                 echo 'Building...'
                 sh 'ls -al'
+                sh 'npm install -g grunt-cli'
+                sh 'npm ls -g grunt-cli'
+                sh 'npm install'
+                sh 'npm ls grunt'
+                sh 'ls ${PWD}/styleguide-npm-global/bin'
+                sh '${PWD}/styleguide-npm-global/bin/grunt init'
+                sh '${PWD}/styleguide-npm-global/bin/grunt compile'
                 // sh 'export PATH=${PWD}/styleguide-npm-global/bin:$PATH'
                 // withEnv(['PATH+SG=${PWD}/styleguide-npm-global/bin']) {
-                    sh 'echo $PATH'
-                    sh 'bin/bamboo_build.sh'
+                    // sh 'echo $PATH'
+                    // sh 'bin/bamboo_build.sh'
                 // }
             }
         }
