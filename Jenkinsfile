@@ -2,7 +2,6 @@ pipeline {
     agent any
     environment {
         CI = 'true'
-        npm_config_cache = 'npm-cache'
     }
     stages {
         // What if we just skip docker for now...
@@ -18,6 +17,10 @@ pipeline {
 
         // Let's try running commands against a container
         stage('Build') {
+            environment {
+                // custom location for npm directory
+                npm_config_cache = 'npm-cache'
+            }
 			agent {
 				dockerfile {
                     filename 'Dockerfile.Jenkins'
