@@ -22,7 +22,7 @@ pipeline {
                 npm_config_cache = 'styleguide-npm-cache'
                 npm_config_prefix = 'styleguide-npm-global'
                 HOME = '.'
-                PATH = '~/.styleguide-npm-global/bin:$PATH'
+                // PATH = '~/.styleguide-npm-global/bin:$PATH'
             }
 			agent {
 				dockerfile {
@@ -32,6 +32,8 @@ pipeline {
             steps {
                 echo 'Building...'
                 sh 'ls -al'
+                sh 'export PATH=~/.styleguide-npm-global/bin:$PATH'
+                sh 'ehco $PATH'
                 sh 'bin/bamboo_build.sh'
             }
         }
