@@ -14,7 +14,7 @@ build_patternlab () {
 	pushd ${base_dir}
 	pwd
 	npm install -g grunt-cli
-	npm ls grunt-cli
+	npm ls -g grunt-cli
 	npm install
 	npm ls grunt
 	grunt init

@@ -27,7 +27,8 @@ pipeline {
                 npm_config_cache = 'styleguide-npm-cache'
                 npm_config_prefix = 'styleguide-npm-global'
                 HOME = '.'
-                PATH = "${PWD}/styleguide-npm-global/bin:$PATH"
+                // PATH = "${PWD}/styleguide-npm-global/bin:$PATH"
+                PATH+SG = "${PWD}/styleguide-npm-global/bin:$PATH"
             }
 			// agent {
 			// 	dockerfile {
