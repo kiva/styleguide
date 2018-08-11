@@ -14,7 +14,7 @@ build_patternlab () {
 	pushd ${base_dir}
 	pwd
 	npm install
-	npm install grunt-cli
+	npm install -g grunt-cli
 	grunt init
 	grunt compile
 	popd
