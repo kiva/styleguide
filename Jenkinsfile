@@ -19,7 +19,7 @@ pipeline {
         stage('Build') {
             environment {
                 // custom location for npm directory
-                npm_config_cache = 'styleguide-npm-cache',
+                npm_config_cache = 'styleguide-npm-cache'
                 HOME = '.'
             }
 			agent {
