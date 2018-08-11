@@ -6,6 +6,7 @@ pipeline {
     }
     environment {
         CI = 'true'
+        // PATH+SG = '~/styleguide-npm-global/bin'
     }
     stages {
         // What if we just skip docker for now...
@@ -26,7 +27,7 @@ pipeline {
                 npm_config_cache = 'styleguide-npm-cache'
                 npm_config_prefix = 'styleguide-npm-global'
                 HOME = '.'
-                PATH+ = '~/styleguide-npm-global/bin'
+                // PATH+ = '~/styleguide-npm-global/bin'
             }
 			// agent {
 			// 	dockerfile {
@@ -37,8 +38,10 @@ pipeline {
                 echo 'Building...'
                 sh 'ls -al'
                 // sh 'export PATH=~/styleguide-npm-global/bin:$PATH'
-                sh 'echo $PATH'
-                sh 'bin/bamboo_build.sh'
+                withEnv(['PATH+SG=~/styleguide-npm-global/bin']) {
+                    sh 'echo $PATH'
+                    sh 'bin/bamboo_build.sh'
+                }
             }
         }
 
