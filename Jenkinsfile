@@ -1,8 +1,11 @@
 pipeline {
-    agent any
+    agent {
+        dockerfile {
+            filename 'Dockerfile.Jenkins'
+        }
+    }
     environment {
         CI = 'true'
-        PATH = 'styleguide-npm-global/bin:$PATH'
     }
     stages {
         // What if we just skip docker for now...
@@ -25,11 +28,11 @@ pipeline {
                 HOME = '.'
                 // PATH = '~/.styleguide-npm-global/bin:$PATH'
             }
-			agent {
-				dockerfile {
-                    filename 'Dockerfile.Jenkins'
-				}
-			}
+			// agent {
+			// 	dockerfile {
+            //         filename 'Dockerfile.Jenkins'
+			// 	}
+			// }
             steps {
                 echo 'Building...'
                 sh 'ls -al'
