@@ -33,7 +33,7 @@ pipeline {
                 echo 'Building...'
                 sh 'ls -al'
                 sh 'export PATH=~/.styleguide-npm-global/bin:$PATH'
-                sh 'ehco $PATH'
+                sh 'echo $PATH'
                 sh 'bin/bamboo_build.sh'
             }
         }
