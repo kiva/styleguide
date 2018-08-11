@@ -31,6 +31,12 @@ pipeline {
         }
 
 		stage('Deploy') {
+            environment {
+                // custom location for npm directory
+                npm_config_cache = 'styleguide-npm-cache'
+                npm_config_prefix = 'styleguide-npm-global'
+                HOME = '.'
+            }
 			steps {
 				echo 'Deploying..'
                 sh 'bin/bamboo_build.sh'
