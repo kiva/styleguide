@@ -8,11 +8,11 @@ pipeline {
         CI = 'true'
     }
     stages {
-        // Let's try running commands against a container
         stage('Build') {
             environment {
                 // custom location for npm directory
                 npm_config_cache = 'styleguide-npm-cache'
+                // custom location for npm global directory
                 npm_config_prefix = 'styleguide-npm-global'
                 HOME = '.'
             }
@@ -33,6 +33,7 @@ pipeline {
 		stage('Deploy') {
 			steps {
 				echo 'Deploying..'
+                input message: 'Deploy? (Click "Proceed" to continue)'
                 sh 'bin/bamboo_deploy.sh'
 			}
 		}
