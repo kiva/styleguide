@@ -38,18 +38,18 @@ pipeline {
             steps {
                 echo 'Building...'
                 sh 'ls -al'
-                sh 'npm install -g grunt-cli'
-                sh 'npm ls -g grunt-cli'
-                sh 'npm install'
-                sh 'npm ls grunt'
-                sh 'ls ${PWD}/styleguide-npm-global/bin'
-                sh '${PWD}/styleguide-npm-global/bin/grunt init'
-                sh '${PWD}/styleguide-npm-global/bin/grunt compile'
+                // sh 'npm install -g grunt-cli'
+                // sh 'npm ls -g grunt-cli'
+                // sh 'npm install'
+                // sh 'npm ls grunt'
+                // sh 'ls ${PWD}/styleguide-npm-global/bin'
+                // sh '${PWD}/styleguide-npm-global/bin/grunt init'
+                // sh '${PWD}/styleguide-npm-global/bin/grunt compile'
                 // sh 'export PATH=${PWD}/styleguide-npm-global/bin:$PATH'
-                // withEnv(['PATH+SG=${PWD}/styleguide-npm-global/bin']) {
-                    // sh 'echo $PATH'
-                    // sh 'bin/bamboo_build.sh'
-                // }
+                withEnv(['grunt=${PWD}/styleguide-npm-global/bin/grunt']) {
+                    sh 'which grunt'
+                    sh 'bin/bamboo_build.sh'
+                }
             }
         }
 
