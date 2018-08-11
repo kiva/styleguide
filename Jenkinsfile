@@ -33,8 +33,10 @@ pipeline {
 		stage('Deploy') {
 			steps {
 				echo 'Deploying..'
-                input message: 'Deploy? (Click "Proceed" to continue)'
-                sh 'bin/bamboo_deploy.sh'
+                // Add this in if you want to be able to confirm before deploying
+                // input message: 'Deploy? (Click "Proceed" to continue)'
+                // This currently fails with an error... check the previous log for the rsync error then maybe ask Jay to help
+                // sh 'bin/bamboo_deploy.sh'
 			}
 		}
     }
