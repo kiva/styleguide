@@ -13,10 +13,11 @@ echo $base_dir
 build_patternlab () {
 	pushd ${base_dir}
 	pwd
-	npm install -g grunt-cli
-	npm ls -g grunt-cli
-	npm install
-	npm ls grunt
+	# npm install -g grunt-cli
+	# npm ls -g grunt-cli
+	# npm install
+	# npm ls grunt
+	npx grunt
 	grunt init
 	grunt compile
 	popd
