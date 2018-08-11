@@ -15,11 +15,12 @@ build_patternlab () {
 	pwd
 	# npm install -g grunt-cli
 	# npm ls -g grunt-cli
-	# npm install
+	npm install
 	# npm ls grunt
-	npx grunt
-	grunt init
-	grunt compile
+	npx grunt init
+	# grunt init
+	npx grunt compile
+	# grunt compile
 	popd
 }
 
