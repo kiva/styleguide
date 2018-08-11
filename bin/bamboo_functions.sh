@@ -37,7 +37,7 @@ stage_code () {
 	fi
 
 	# rsync
-	docroot="/var/www/styleguide.kiva.org/"
+	docroot="/var/www/TEMP-styleguide.kiva.org/"
 	echo "Staging code over to ${docroot} on '${1}'"
 	pushd ${base_dir}
 	${x_rsync} public/* ${remote}${docroot}

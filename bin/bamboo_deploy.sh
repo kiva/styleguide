@@ -36,7 +36,7 @@ set -xe
 # TODO: these should be coming from the environment.  Until then, this isn't really deployable anywhere
 host="qa-web-01"
 user="devpush"
-base_domain="styleguide.kiva.org"
+base_domain="TEMP-styleguide.kiva.org"
 
 # all other prep of local working dir should be handled by Build step
 
