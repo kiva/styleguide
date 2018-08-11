@@ -47,7 +47,7 @@ pipeline {
                 // sh '${PWD}/styleguide-npm-global/bin/grunt compile'
                 // sh 'export PATH=${PWD}/styleguide-npm-global/bin:$PATH'
                 withEnv(['grunt=${PWD}/styleguide-npm-global/bin/grunt']) {
-                    sh 'which grunt'
+                    sh 'echo grunt'
                     sh 'bin/bamboo_build.sh'
                 }
             }
