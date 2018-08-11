@@ -37,8 +37,8 @@ pipeline {
             steps {
                 echo 'Building...'
                 sh 'ls -al'
-                // sh 'export PATH=~/styleguide-npm-global/bin:$PATH'
-                withEnv(['PATH+SG=~/styleguide-npm-global/bin']) {
+                sh 'export PATH=${PWD}/styleguide-npm-global/bin:$PATH'
+                withEnv(['PATH+SG=${PWD}/styleguide-npm-global/bin']) {
                     sh 'echo $PATH'
                     sh 'bin/bamboo_build.sh'
                 }
