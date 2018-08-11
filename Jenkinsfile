@@ -2,6 +2,7 @@ pipeline {
     agent any
     environment {
         CI = 'true'
+        npm_config_cache = 'npm-cache'
     }
     stages {
         // What if we just skip docker for now...
