@@ -28,6 +28,8 @@ stage_code () {
 	fi
 
 	# rsync
+	my_user=$(whoami)
+        echo "Running as $my_user"
 	docroot="/var/www/styleguide.kiva.org/"
 	echo "Staging code over to ${docroot} on '${1}'"
 	pushd ${base_dir}
