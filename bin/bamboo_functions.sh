@@ -28,6 +28,8 @@ stage_code () {
 	fi
 
 	# rsync
+        this_host=$(hostname)
+        echo "Running on host $this_host"
 	my_user=$(whoami)
         echo "Running as $my_user"
 	# docroot="/var/www/styleguide.kiva.org/"
