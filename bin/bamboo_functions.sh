@@ -7,20 +7,11 @@
 
 base_dir=$(dirname ${script_dir})
 
-echo base_dir
-echo $base_dir
-
 build_patternlab () {
 	pushd ${base_dir}
-	pwd
-	# npm install -g grunt-cli
-	# npm ls -g grunt-cli
 	npm install
-	# npm ls grunt
-	npx grunt init
-	# grunt init
-	npx grunt compile
-	# grunt compile
+	grunt init
+	grunt compile
 	popd
 }
 
@@ -37,7 +28,9 @@ stage_code () {
 	fi
 
 	# rsync
-	docroot="/var/www/TEMP-styleguide.kiva.org/"
+	my_user=$(whoami)
+        echo "Running as $my_user"
+	docroot="/var/www/styleguide.kiva.org/"
 	echo "Staging code over to ${docroot} on '${1}'"
 	pushd ${base_dir}
 	${x_rsync} public/* ${remote}${docroot}
