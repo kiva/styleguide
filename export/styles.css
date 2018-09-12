@@ -10891,6 +10891,9 @@ svg {
     bottom: 0;
     right: 0; } }
 
+.list-view .loan-card-2 .loan-card-2-loan-length {
+  display: none; }
+
 .loan-card-2 {
   display: -ms-flexbox;
   display: flex;
@@ -10928,7 +10931,8 @@ svg {
       padding: .5rem;
       vertical-align: bottom; }
   .loan-card-2 .is-favorite .icon-star {
-    opacity: 1; }
+    opacity: 1;
+    color: #fee259; }
   .loan-card-2 .loan-card-2-details-wrap {
     -ms-flex-positive: 1;
         flex-grow: 1;
@@ -10950,6 +10954,12 @@ svg {
     font-size: 1rem;
     line-height: 1.375rem;
     font-weight: 300; }
+  .loan-card-2 .loan-card-2-loan-length {
+    margin-top: 0.7rem;
+    margin-bottom: 0.7rem;
+    font-weight: 300; }
+    .loan-card-2 .loan-card-2-loan-length span {
+      font-weight: bold; }
   .loan-card-2 .loan-message, .loan-card-2 .short-loan-message {
     color: #484848; }
   .loan-card-2 .short-loan-message {
