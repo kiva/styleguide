@@ -16352,7 +16352,7 @@ table.repayments-list {
       width: 7.5rem;
       height: 7.5rem; }
     .borrower-landing-page .value-props p {
-      max-width: 14rem;
+      max-width: 90%;
       margin: 0 auto 1.25rem; }
     .borrower-landing-page .value-props .columns {
       margin-bottom: 2rem; }
