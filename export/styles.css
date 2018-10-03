@@ -17996,6 +17996,39 @@ div.gift-card .text-section, div.kiva-store .text-section {
         .rtp-page .rtp-apply-now .text-frame {
           top: 20% !important; } }
 
+.legacy-giving a {
+  color: #118aec;
+  font-weight: 300; }
+
+.legacy-giving li {
+  font-weight: 300; }
+
+.legacy-giving span {
+  font-weight: bold; }
+
+.legacy-giving .section {
+  margin-bottom: 2.5rem; }
+
+.legacy-giving .section h2 {
+  margin-bottom: 1.875rem; }
+
+.legacy-giving .padding-top {
+  padding-top: 1.5625rem; }
+
+@media only screen and (min-width: 481px) {
+  .legacy-giving .section.address {
+    text-align: center; }
+  .legacy-giving .vertical-line {
+    border-right: 1px solid #d8d8d8; }
+  .legacy-giving .leave-donation {
+    padding-right: 3.125rem; }
+  .legacy-giving .leave-funds {
+    padding-left: 3.125rem; }
+  .legacy-giving .padding-bottom {
+    padding-bottom: 1.5625rem; }
+  .legacy-giving .padding-top {
+    padding-top: 3.125rem; } }
+
 .ac-container.ac-title {
   margin: 0;
   display: block;
