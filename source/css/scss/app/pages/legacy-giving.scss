@@ -1,0 +1,52 @@
+.legacy-giving {
+	a {
+		color: $blue;
+		font-weight: 300;
+	}
+
+	li {
+		font-weight: 300;
+	}
+
+	span {
+		font-weight: bold;
+	}
+
+	.section {
+		margin-bottom: rem-calc(40);
+	}
+
+	.section h2 {
+		margin-bottom: rem-calc(30);
+	}
+
+	.padding-top {
+		padding-top: rem-calc(25);
+	}
+
+	@media #{$medium-up} {
+		.section.address {
+			text-align: center;
+		}
+
+		.vertical-line {
+			border-right: 1px solid $light-gray;
+		}
+
+		.leave-donation {
+			padding-right: rem-calc(50);
+		}
+
+		.leave-funds {
+			padding-left: rem-calc(50);
+		}
+
+		.padding-bottom {
+			padding-bottom: rem-calc(25);
+		}
+
+		.padding-top {
+			padding-top: rem-calc(50);
+		}
+	}
+}
