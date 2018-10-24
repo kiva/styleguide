@@ -118,6 +118,18 @@
 		{{/bonus}}
 	{{/lending-reward-session}}
 
+    {{#category-rows-message}}
+        <div class="message-text message-text-confirmation text-center small-12" style="top: auto; z-index: 1; position: relative;">
+            <span class="message-content">
+                <div class="icon-wrapper">
+                    <svg class="icon icon-{{ category-rows-message-type }}">
+                        <use xlink:href="#icon-{{ category-rows-message-type }}"></use>
+                    </svg>
+                </div>
+                <p class="message">{{{ category-rows-message-value }}}</p>
+            </span>
+        </div>
+    {{/category-rows-message}}
 </div>
 
 {{^is_checkout}}
