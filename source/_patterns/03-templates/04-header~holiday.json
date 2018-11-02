@@ -1,5 +1,6 @@
 {
 	"bonus": false,
+	"is_holiday_mode_active": true,
 	"header_promo": {
 		"href": "#",
 		"call_to_action": "Give a Kiva Card.",
