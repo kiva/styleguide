@@ -8247,7 +8247,7 @@ a.dark_green_bg_link {
     fill: #4faf4e; }
   .icon.icon-kiva-card {
     fill: #49953f; }
-  .icon.icon-woman {
+  .icon.icon-woman, .icon.icon-present {
     stroke: #49953f; }
   .icon.icon-apply, .icon.icon-interview, .icon.icon-matchmaking, .icon.icon-offer, .icon.icon-screen {
     fill: black; }
@@ -8275,6 +8275,63 @@ a.dark_green_bg_link {
 
 .icon-instagram:hover svg, .icon-instagram:active svg {
   color: #0a0b09; }
+
+/* Global Promo Default Styles */
+.global-promo-bar {
+  background: white;
+  font-weight: 300;
+  color: #49953f; }
+  .global-promo-bar .row {
+    margin: 0;
+    max-width: 100%;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: center;
+        justify-content: center;
+    -ms-flex-flow: row wrap;
+        flex-flow: row wrap; }
+  .global-promo-bar .banner-link {
+    color: #49953f;
+    text-decoration: none;
+    text-align: center;
+    padding: 0.625rem;
+    line-height: 1.25; }
+    .global-promo-bar .banner-link:hover, .global-promo-bar .banner-link:active {
+      color: #247037; }
+  .global-promo-bar .icon {
+    display: block;
+    height: 1.375rem;
+    width: 1.375rem;
+    margin-right: 0.625rem;
+    margin-top: -0.2rem; }
+  .global-promo-bar .content {
+    text-align: center;
+    display: block; }
+    .global-promo-bar .content .call-to-action-text {
+      text-decoration: underline; }
+    @media only screen and (min-width: 481px) {
+      .global-promo-bar .content .primary-message,
+      .global-promo-bar .content .call-to-action-text {
+        display: inline; } }
+
+/* Global Holiday-Gift Banner styles */
+.gift-banner {
+  background-image: url("../images/tipbar-bg-small.jpg");
+  background-position: bottom; }
+  .gift-banner .banner-link {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+        align-items: center; }
+    .gift-banner .banner-link .icon-present {
+      display: block;
+      height: 1.375rem;
+      width: 1.375rem;
+      margin-right: 0.625rem;
+      margin-top: -0.2rem;
+      fill-opacity: 0; }
+    .gift-banner .banner-link:hover .icon-present {
+      stroke: #247037; }
 
 ul.dropdown-list {
   background-color: #f5f5f5;
@@ -9398,68 +9455,6 @@ ul.tertiary-nav {
     width: 100% !important; }
     .top-nav .f-dropdown:before, .top-nav .f-dropdown:after {
       display: none; } }
-
-.header-promo {
-  text-align: center; }
-  .header-promo a {
-    display: block;
-    text-decoration: none; }
-  .header-promo .content {
-    display: inline-block;
-    margin-left: 0.3125rem; }
-  .header-promo svg.icon-kiva-card {
-    -ms-transform-origin: 50% 50%;
-    transform-origin: 50% 50%;
-    -ms-transform: rotate(-10deg);
-    transform: rotate(-10deg);
-    overflow: visible; }
-  .header-promo.hide-for-xxlarge-up {
-    font-size: 0.875rem;
-    font-weight: bold;
-    background-color: #247037;
-    padding-top: 0.1875rem;
-    padding-bottom: 0.1875rem; }
-    .header-promo.hide-for-xxlarge-up .content {
-      vertical-align: top; }
-      .header-promo.hide-for-xxlarge-up .content .call-to-action-text {
-        text-decoration: underline; }
-    .header-promo.hide-for-xxlarge-up svg {
-      height: 1.875rem;
-      width: 2.5rem;
-      margin-top: 0.1875rem;
-      fill: #aee15c;
-      stroke: #aee15c; }
-      @media only screen and (min-width: 481px) and (max-width: 680px) {
-        .header-promo.hide-for-xxlarge-up svg {
-          margin-top: 0.25rem; } }
-    .header-promo.hide-for-xxlarge-up a {
-      color: #aee15c; }
-  .header-promo.show-for-xxlarge-up {
-    margin-top: 0.6875rem; }
-    @media only screen and (min-width: 989px) {
-      .header-promo.show-for-xxlarge-up .content {
-        font-size: 0.875rem;
-        font-weight: bold; }
-        .header-promo.show-for-xxlarge-up .content .call-to-action-text {
-          text-decoration: underline; } }
-    .header-promo.show-for-xxlarge-up svg {
-      height: 2.8125rem;
-      width: 2.8125rem;
-      fill: #247037;
-      stroke: #247037;
-      margin-bottom: -0.5rem; }
-      .header-promo.show-for-xxlarge-up svg.icon-woman {
-        height: 2.1875rem;
-        margin-bottom: -0.0625rem; }
-    .header-promo.show-for-xxlarge-up a {
-      color: #247037; }
-
-/*This hides the holiday promo for the gifts pages*/
-#gifts .header-promo {
-  padding: 0; }
-
-#gifts .header-promo a {
-  display: none; }
 
 .siteFooter {
   height: 17.5rem;
@@ -19299,7 +19294,7 @@ div.flag-comment-lightbox .lightbox-content .inner {
     -ms-filter: "progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#F9F9F9', endColorstr='#F9F9F9')"; }
   .row {
     max-width: none; }
-  .header-promo,
+  .global-promo-bar,
   .sitewide-appeal,
   .top-nav .columns:not(.logo-area),
   .siteFooter,

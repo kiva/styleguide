@@ -1,3 +1,10 @@
+{{^lending-reward-session}}
+	{{^bonus}}
+		{{#header_promo}}
+			{{> 02-organisms/00-global/03-global-promo}}
+		{{/header_promo}}
+	{{/bonus}}
+{{/lending-reward-session}}
 <div class="top-nav" role="navigation">
 	<div class="row header-row">
 	{{! This is the Promo/Bonus banner that is shown in the XXlarge screen state}}
@@ -72,13 +79,7 @@
 			</div>
 		{{/is-visitor}}
 		{{> 02-organisms/08-header/02-search-box}}
-		{{^lending-reward-session}}
-			{{^bonus}}
-				{{#header_promo}}
-					{{> 02-organisms/08-header/04-promo}}
-				{{/header_promo}}
-			{{/bonus}}
-		{{/lending-reward-session}}
+
 	</div>
 
 	{{> 02-organisms/08-header/03-lend-menu}}
@@ -110,11 +111,6 @@
 			<div class="hide-for-xxlarge-up hide-for-small-only pronus"><span style="font-weight: normal;">Select a borrower to <span style="font-weight: bold;"><a class="dark_green_bg_link"  href="{{bonus.href}}">lend your {{bonus.amount}} {{bonus.label}}</a></span></span></div>
 			{{! This is the Promo/Bonus banner that is shown in the small screen state}}
 			<div class="show-for-small-only small-centered columns pronus"><div style="font-weight: normal;">Select a borrower to </br><span style="font-weight: bold;"><a class="dark_green_bg_link"  href="{{bonus.href}}">lend your {{bonus.amount}} {{bonus.label}}</a></span></div></div>
-		{{/bonus}}
-		{{^bonus}}
-			{{#header_promo}}
-				{{> 02-organisms/08-header/05-promo-small}}
-			{{/header_promo}}
 		{{/bonus}}
 	{{/lending-reward-session}}
 
