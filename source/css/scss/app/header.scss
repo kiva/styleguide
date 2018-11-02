@@ -8,6 +8,7 @@ $level-two-background: #f5f5f5;
 $level-three-background: #e6e6e6;
 
 // imports - alphabetical for clarity
+@import 'global-promo';
 @import 'header/dropdown-list';
 @import 'header/header-button';
 @import 'header/lend-menu';
@@ -15,4 +16,3 @@ $level-three-background: #e6e6e6;
 @import 'header/search-box';
 @import 'header/secondary-nav.scss';
 @import 'header/top-nav';
-@import 'header/promo';
