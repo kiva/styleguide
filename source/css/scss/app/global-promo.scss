@@ -1,0 +1,77 @@
+/* Global Promo Default Styles */
+.global-promo-bar {
+	background: white;
+	font-weight: 300;
+	color: $kiva-icon-green;
+
+	.row {
+		margin: 0;
+        max-width: 100%;
+        display: flex;
+        justify-content: center;
+        flex-flow: row wrap;
+	}
+
+	.banner-link {
+		color: $kiva-icon-green;
+		text-decoration: none;
+		text-align: center;
+		padding: 0.625rem;
+		line-height: 1.25;
+
+		&:hover,
+		&:active {
+			color: $kiva-darkgreen;
+		}
+    }
+    
+    .icon {
+        display: block;
+        height: rem-calc(22);
+        width: rem-calc(22);
+        margin-right: rem-calc(10);
+        margin-top: -0.2rem;
+    }
+
+	.content {
+		text-align: center;
+        display: block;
+
+        .call-to-action-text {
+            text-decoration: underline;
+        }
+
+        @media #{$medium-up} {
+            .primary-message,
+            .call-to-action-text {
+                display: inline;
+            }
+        }
+	}
+}
+
+/* Global Holiday-Gift Banner styles */
+.gift-banner {
+	background-image: url('../images/tipbar-bg-small.jpg');
+	background-position: bottom;
+
+	.banner-link {
+		display: flex;
+		align-items: center;
+
+		.icon-present {
+			display: block;
+			height: rem-calc(22);
+			width: rem-calc(22);
+			margin-right: rem-calc(10);
+            margin-top: -0.2rem;
+            fill-opacity: 0;
+		}
+
+		&:hover {
+			.icon-present {
+				stroke: $kiva-darkgreen;
+			}
+		}
+	}
+}

@@ -5332,9 +5332,9 @@
 	},
 	 "header_promo": {
 		  "href": "#",
-		  "call_to_action": "Give a Kiva gift.",
-		  "message": "Make spirits bright this holiday season.",
-		  "icon": "icon-kiva-card"
+		  "call_to_action": "Give a Kiva Card.",
+		  "message": "Give hope this holiday season.",
+		  "icon": "icon-present"
 	 },
 	"auto_deposit": {
 		"deposit_amount": "$25",
