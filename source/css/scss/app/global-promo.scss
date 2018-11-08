@@ -75,3 +75,19 @@
 		}
 	}
 }
+
+/*
+	Global Promo Bar Hidden Pages
+*/
+/*This hides the global promo for the basket page, which has it's own appeal banner*/
+#basket .global-promo-bar {
+	display:none;
+}
+/*This hides the global promo for the gifts pages*/
+#gifts .global-promo-bar {
+	display:none;
+}
+/*This hides the global promo for the gifts pages*/
+#work-with-us .global-promo-bar {
+	display:none;
+}
