@@ -80,3 +80,23 @@
 		z-index: 10;
 	}
 }
+
+.home-hero-exp.holiday-hero {
+	.headline {
+		background-color: $kiva-green;
+		opacity: 0.9;
+		color: $white;
+	}
+
+	.headline p {
+		line-height: 3rem;
+		font-size: 2.2rem;
+		margin-top: 0;
+
+		@media #{$small-only} {
+			line-height: 2.1rem;
+			font-size: 1.4rem;
+			margin-top: 0;
+		}
+	}
+}
