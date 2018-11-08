@@ -8,12 +8,48 @@ make edits instead at https://pages.kiva.org/node/598342/edit
 
 {{#is-styleguide}}
 	{{! IMPORTANT - This wrapper and class is required in the cms entry or php template }}
-	<div class="home-hero-exp">
+	<div class="home-hero-exp {{#holidayModeActive}}holiday-hero{{/holidayModeActive}}">
 {{/is-styleguide}}
 
 <div class="hp-slideshow2-wrapper">
 	<!-- slick initialized div -->
 	<div id="hp-slideshow2">
+		{{#holidayModeActive}}
+		<!--- ****** HOLIDAY UPSELL SLIDE SET ****** -->
+		<!-- Slide 1 Immediately Loaded via Interchange -->
+		<div class="hp-slide2">
+			<img alt="Hope comes from a bicycle" data-interchange="
+					[//www-kiva-org.global.ssl.fastly.net/cms/page/images/fausta_1_sm_std.jpg, (default)]
+					, [//www-kiva-org.global.ssl.fastly.net/cms/page/images/fausta_1_sm_retina.jpg, (retina)]
+					, [//www-kiva-org.global.ssl.fastly.net/cms/page/images/fausta_2_med_std.jpg, (medium)]
+					, [//www-kiva-org.global.ssl.fastly.net/cms/page/images/fausta_2_med_retina.jpg, (medium-retina)]
+					, [//www-kiva-org.global.ssl.fastly.net/cms/page/images/fausta_3_lg_std.jpg, (large)]
+					, [//www-kiva-org.global.ssl.fastly.net/cms/page/images/fausta_3_lg_retina.jpg, (large-retina)]
+					, [//www-kiva-org.global.ssl.fastly.net/cms/page/images/fausta_4_xl_std.jpg, (xlarge)]
+					, [//www-kiva-org.global.ssl.fastly.net/cms/page/images/fausta_4_xl_retina.jpg, (xlarge-retina)]
+					, [//www-kiva-org.global.ssl.fastly.net/cms/page/images/fausta_5_xxl_std.jpg, (xxlarge)]
+					, [//www-kiva-org.global.ssl.fastly.net/cms/page/images/fausta_5_xxl_retina.jpg, (xxlarge-retina)]
+					" />
+		</div>
+
+		<div class="hp-slide2">
+			<img alt="Hope comes from a thriving business" data-interchange="
+					[//www-kiva-org.global.ssl.fastly.net/cms/page/images/fadi_1_sm_std.jpg, (default)]
+					, [//www-kiva-org.global.ssl.fastly.net/cms/page/images/fadi_1_sm_retina_0.jpg, (retina)]
+					, [//www-kiva-org.global.ssl.fastly.net/cms/page/images/fadi_2_med_std.jpg, (medium)]
+					, [//www-kiva-org.global.ssl.fastly.net/cms/page/images/fadi_2_med_retina_0.jpg, (medium-retina)]
+					, [//www-kiva-org.global.ssl.fastly.net/cms/page/images/fadi_3_lg_std.jpg, (large)]
+					, [//www-kiva-org.global.ssl.fastly.net/cms/page/images/fadi_3_lg_retina_0.jpg, (large-retina)]
+					, [//www-kiva-org.global.ssl.fastly.net/cms/page/images/fadi_4_xl_std.jpg, (xlarge)]
+					, [//www-kiva-org.global.ssl.fastly.net/cms/page/images/fadi_4_xl_retina_0.jpg, (xlarge-retina)]
+					, [//www-kiva-org.global.ssl.fastly.net/cms/page/images/fadi_5_xxl_std.jpg, (xxlarge)]
+					, [//www-kiva-org.global.ssl.fastly.net/cms/page/images/fadi_5_xxl_retina_0.jpg, (xxlarge-retina)]
+					" />
+		</div>
+		{{/holidayModeActive}}
+
+		{{^holidayModeActive }}
+			{{^homePagePromoActive}}
 		<!-- Slide 1 Immediately Loaded via Interchange -->
 		<div class="hp-slide2">
 			<img alt="Alt text" data-interchange="
@@ -85,6 +121,8 @@ make edits instead at https://pages.kiva.org/node/598342/edit
 					, [//www-kiva-org.global.ssl.fastly.net/cms/page/images/hptest5-header-xxl-retina.jpg, (xxlarge-retina)]
 					"/>
 		</div>
+			{{/homePagePromoActive}}
+		{{/holidayModeActive}}
 	</div>
 
 	<div class="headline-bar">
@@ -94,13 +132,27 @@ make edits instead at https://pages.kiva.org/node/598342/edit
 		</div>
 
 		<div class="headline">
-			<span class="bolder">Dreams are universal,
-			<br class="smo">opportunity is not.</span>
+			{{#holidayModeActive}}
+			<!--- ****** HOLIDAY UPSELL COPY ****** -->
+			<p>Create hope for people<br />
+			around the world this holiday</p>
+			<!-- Giving Tuesday copy -->
+			<!-- <p>For Giving Tuesday, buy $50 in Kiva<br/>
+			Cards and earn a $25 bonus to lend</p> -->
+			{{/holidayModeActive}}
 
-			<p>Lend as little as $25
-				<br class="so">to create <br class="mo">opportunity
-				<br class="so"><br class="lu">for people
-				<br class="mo">around the world.</p>
+			
+			{{^holidayModeActive}}
+				{{^homePagePromoActive}}
+				<span class="bolder">Dreams are universal,
+				<br class="smo">opportunity is not.</span>
+
+				<p>Lend as little as $25
+					<br class="so">to create <br class="mo">opportunity
+					<br class="so"><br class="lu">for people
+					<br class="mo">around the world.</p>
+				{{/homePagePromoActive}}
+			{{/holidayModeActive}}
 		</div>
 		<div class="mask-wrapper">
 			<div class="no-mask"></div>
@@ -110,7 +162,15 @@ make edits instead at https://pages.kiva.org/node/598342/edit
 </div>
 
 <div class="button-holder">
-	<a class="button" href="{kvurl page=lend action=showLendView}" kvtrackevent="Home|EXP-HeroWhyKiva|click-Start-lending|null|true">Start lending</a>
+	{{#holidayModeActive}}
+		<a class="button" href="/gifts/kiva-cards" kvtrackevent="Home|Holiday-Hero-CTA|click-holiday-cta|null|true">Buy a Kiva Card</a>
+	{{/holidayModeActive}}
+
+	{{^holidayModeActive}}
+		{{^homePagePromoActive}}
+		<a class="button" href="{kvurl page=lend action=showLendView}" kvtrackevent="Home|EXP-HeroWhyKiva|click-Start-lending|null|true">Start lending</a>
+		{{/homePagePromoActive}}
+	{{/holidayModeActive}}
 </div>
 
 {{#is-styleguide}}

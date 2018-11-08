@@ -8333,6 +8333,21 @@ a.dark_green_bg_link {
     .gift-banner .banner-link:hover .icon-present {
       stroke: #247037; }
 
+/*
+	Global Promo Bar Hidden Pages
+*/
+/*This hides the global promo for the basket page, which has it's own appeal banner*/
+#basket .global-promo-bar {
+  display: none; }
+
+/*This hides the global promo for the gifts pages*/
+#gifts .global-promo-bar {
+  display: none; }
+
+/*This hides the global promo for the gifts pages*/
+#work-with-us .global-promo-bar {
+  display: none; }
+
 ul.dropdown-list {
   background-color: #f5f5f5;
   list-style: none; }
@@ -11971,7 +11986,8 @@ svg {
 
 .home-fact-map {
   text-align: center;
-  margin-top: 2rem; }
+  margin-top: 2rem;
+  margin-bottom: 3rem; }
   .home-fact-map .map-row {
     position: relative;
     overflow: hidden; }
@@ -12100,6 +12116,21 @@ svg {
   text-align: center;
   margin: -1.875rem 0 0 0;
   z-index: 10; }
+
+.home-hero-exp.holiday-hero .headline {
+  background-color: #4faf4e;
+  opacity: 0.9;
+  color: #FFFFFF; }
+
+.home-hero-exp.holiday-hero .headline p {
+  line-height: 3rem;
+  font-size: 2.2rem;
+  margin-top: 0; }
+  @media only screen and (max-width: 480px) {
+    .home-hero-exp.holiday-hero .headline p {
+      line-height: 2.1rem;
+      font-size: 1.4rem;
+      margin-top: 0; } }
 
 a.visitLink,
 a.visitLink:visited {
