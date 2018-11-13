@@ -39,8 +39,10 @@
 	<div class="borrower-profile-pieces">
 		<div class="row">
 			<div class="left-content columns">
-				<hr class="line-break hide-for-large-up"/>
-				{{> 01-molecules/15-loan-sections/18-loan-story.mustache}}
+				{{^hide_bp_story_exp}}
+					<hr class="line-break hide-for-large-up"/>
+					{{> 01-molecules/15-loan-sections/18-loan-story.mustache}}
+				{{/hide_bp_story_exp}}
 
 				{{#has_special_endorsement}}
 					<hr class="line-break"/>
