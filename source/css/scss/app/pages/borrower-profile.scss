@@ -10,8 +10,32 @@
 		border: 0;
 		border-top: 1px solid $gray;
 
+		&:first-child {
+			display: none;
+		}
+
+		&:nth-child(2) {
+			display: none;
+
+			@media #{$medium-down}{
+				display: block;
+			}
+		}
+
 		@media #{$large-up}{
 			margin: auto;
+		}
+	}
+
+	.hide-for-large-up {
+		.line-break {
+			display: block;
+		}
+
+		&:first-child {
+			.line-break:first-child {
+				display: none;
+			}
 		}
 	}
 
