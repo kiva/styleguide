@@ -146,8 +146,10 @@
 	}
 
 	.exp-story-hidden {
+		// Hide Line Logic
 		.line-break {
 			&:first-child {
+				// Hide line if it's the first child of container
 				display: none;
 			}
 		}
@@ -155,21 +157,26 @@
 		@media #{$medium-up}{
 			.line-break {
 				&:nth-child(2) {
+					// If line is second child of container, hide on desktop since first child MUST be div.hide-for-large-up
 					display: none;
 				}
 			}
 
 			.hide-for-large-up {
 				.line-break {
+					// Undo `Hide line if it's the first child of container for children of div.hide-for-large-up
 					display: block;
 				}
 
 				&:first-child {
 					.line-break:first-child {
+						// Re-do hide line if it's the first child of container for first div.hide-for-large-up
 						display: none;
 					}
 				}
 			}
 		}
+
+		// Padding Logic
 	}
 }
