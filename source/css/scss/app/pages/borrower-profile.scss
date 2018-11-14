@@ -51,21 +51,7 @@
 	}
 
 	@media #{$large-up} {
-		.loan-story, .loan-details, .left-content section:nth-child(2) {
-			padding-top: 1rem;
-		}
-		.left-content {
-			div.hide-for-large-up {
-				section:nth-child(2) {
-					padding-top: 0;
-				}
-
-				&:first-child section:nth-child(2) {
-					padding-top: 1rem;
-				}
-			}
-		}
-		div.hide-for-large-up:first-child section {
+		.loan-story, .loan-details {
 			padding-top: 1rem;
 		}
 	}
@@ -153,7 +139,19 @@
 				display: none;
 			}
 		}
+		.hide-for-large-up {
+			.line-break {
+				// Undo `Hide line if it's the first child of container for children of div.hide-for-large-up
+				display: block;
+			}
 
+			&:first-child {
+				.line-break:first-child {
+					// Re-do hide line if it's the first child of container for first div.hide-for-large-up
+					display: none;
+				}
+			}
+		}
 		@media #{$medium-up}{
 			.line-break {
 				&:nth-child(2) {
@@ -161,22 +159,29 @@
 					display: none;
 				}
 			}
-
-			.hide-for-large-up {
-				.line-break {
-					// Undo `Hide line if it's the first child of container for children of div.hide-for-large-up
-					display: block;
-				}
-
-				&:first-child {
-					.line-break:first-child {
-						// Re-do hide line if it's the first child of container for first div.hide-for-large-up
-						display: none;
-					}
-				}
-			}
 		}
 
 		// Padding Logic
+		section:nth-child(2) {
+			// Pad section if it's second child of container (under the hidden line)
+			padding-top: 1rem;
+		}
+		.hide-for-large-up {
+			section:nth-child(2) {
+				// Undo pad section if it's the second child of container for children of div.hide-for-large-up
+				padding-top: 0;
+			}
+
+			&:first-child section:nth-child(2) {
+				// Redo pad section if it's the second child of container for first div.hide-for-large-up
+				padding-top: 1rem;
+			}
+		}
+		@media #{$medium-up}{
+			section:nth-child(2) {
+				// Pad section if it's second child of container (under the hidden line)
+				padding-top: 1rem;
+			}
+		}
 	}
 }
