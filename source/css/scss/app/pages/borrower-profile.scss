@@ -178,8 +178,8 @@
 			}
 		}
 		@media #{$medium-up}{
-			section:nth-child(2) {
-				// Pad section if it's second child of container (under the hidden line)
+			section:nth-child(3) {
+				// Pad section if it's third child of container (under div.hide-for-large-up and the hidden line on desktop)
 				padding-top: 1rem;
 			}
 		}
