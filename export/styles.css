@@ -12861,6 +12861,32 @@ a.aboutJoinLink:visited {
     .borrower-profile-wrapper .borrower-profile-pieces .ac-title .icon-large-chevron {
       stroke-width: 0.4375rem; }
 
+.borrower-profile-wrapper .exp-story-hidden .line-break:first-child {
+  display: none; }
+
+.borrower-profile-wrapper .exp-story-hidden .hide-for-large-up .line-break {
+  display: block; }
+
+.borrower-profile-wrapper .exp-story-hidden .hide-for-large-up:first-child .line-break:first-child {
+  display: none; }
+
+@media only screen and (min-width: 481px) {
+  .borrower-profile-wrapper .exp-story-hidden .line-break:nth-child(2) {
+    display: none; } }
+
+.borrower-profile-wrapper .exp-story-hidden section:nth-child(2) {
+  padding-top: 1rem; }
+
+.borrower-profile-wrapper .exp-story-hidden .hide-for-large-up section:nth-child(2) {
+  padding-top: 0; }
+
+.borrower-profile-wrapper .exp-story-hidden .hide-for-large-up:first-child section:nth-child(2) {
+  padding-top: 1rem; }
+
+@media only screen and (min-width: 481px) {
+  .borrower-profile-wrapper .exp-story-hidden section:nth-child(3) {
+    padding-top: 1rem; } }
+
 .category-card {
   transform-style: preserve-3d;
   overflow: hidden;
