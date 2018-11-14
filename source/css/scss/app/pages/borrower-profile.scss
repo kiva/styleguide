@@ -15,18 +15,6 @@
 		}
 	}
 
-	div.hide-for-large-up {
-		.line-break:first-child {
-			display: block;
-		}
-
-		&:first-child .line-break:first-child {
-			@media #{$medium-up}{
-				dispay: none;
-			}
-		}
-	}
-
 	.loan-figure {
 		padding-left: 0;
 		padding-right: 0;
