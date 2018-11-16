@@ -10,11 +10,11 @@
 			{{/header_promo.icon}}
 			<div class="content">
 				{{#is_holiday_mode_active}}
-					<div class="primary-message">{{header_promo.message}}</div>
-					<div class="call-to-action-text">{{header_promo.call_to_action}}</div>
+					<div class="call-to-action-text">{{header_promo.call_to_action}}</div><div class="primary-message">{{header_promo.message}}</div>
 				{{/is_holiday_mode_active}}
 				{{^is_holiday_mode_active}}
-					<div class="call-to-action-text">{{header_promo.call_to_action}}</div><div class="primary-message">{{header_promo.message}}</div>
+					<div class="primary-message">{{header_promo.message}}</div>
+					<div class="call-to-action-text">{{header_promo.call_to_action}}</div>
 				{{/is_holiday_mode_active}}
 			</div>
 		</a>
