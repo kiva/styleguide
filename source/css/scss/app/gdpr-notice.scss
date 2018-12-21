@@ -1,0 +1,137 @@
+.cookie-banner-container {
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	padding: 0.5rem;
+	z-index: 9999;
+	
+	.cookie-banner {
+		$banner-padding-mobile: 1.125rem;
+		position: relative;
+		background: #f4f4f4;
+		font-size: rem-calc(14);
+		border: 0.5px solid rgba(151, 151, 151, 0.3);
+		border-radius: rem-calc(2);
+		color: $charcoal;
+		padding: $banner-padding-mobile;
+		
+		.close-button {
+			cursor: pointer;
+
+			.icon.icon-x {
+				height: 1rem;
+				width: 1rem;
+				stroke: #484848;
+				transition: stroke 0.16s linear;
+			}
+
+			&:hover {
+				.icon.icon-x {
+					stroke: $charcoal;
+				}
+			}
+		}
+
+		.cookie-banner-content {
+			text-align: center;
+			margin: 0 auto;
+			max-width: 50rem;
+
+			.notice-header {
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+
+				.left-spacer,
+				.close-button {
+					width: 100px;
+					height: 28px;
+				}
+
+				.close-button {
+					display: flex;
+					align-items: center;
+					justify-content: flex-end;
+
+					.icon.icon-x {
+						height: $banner-padding-mobile;
+						width: $banner-padding-mobile;
+					}
+				}
+			}
+		}
+	}
+
+	@media #{$medium-up} {
+		padding: 1rem;
+
+		.cookie-banner {
+			$banner-padding-tablet: 1.5rem;
+			padding: $banner-padding-tablet;
+
+			.cookie-banner-content {
+				.notice-header {
+					.close-button {
+						.icon.icon-x {
+							height: $banner-padding-tablet;
+							width: $banner-padding-tablet;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	@media #{$xlarge-up} {
+		padding: rem-calc(20);
+
+		.cookie-banner {
+			$banner-padding-desktop: 1.875rem;
+			padding: $banner-padding-desktop 0;
+
+			.cookie-banner-content {
+				padding: 0 3.8rem 0 $banner-padding-desktop;
+
+				.notice-header {
+					.left-spacer,
+					h3 {
+						display: none;
+					}
+
+					.close-button {
+						width: auto;
+						height: auto;
+						display: flex;
+						align-items: center;
+						justify-content: flex-end;
+						position: absolute;
+						right: $banner-padding-desktop;
+						top: 50%;
+						transform: translateY(-50%);
+
+						.icon.icon-x {
+							height: $banner-padding-desktop;
+							width: $banner-padding-desktop;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	@media #{$xxlarge-up} {    
+		.cookie-banner {
+			$banner-padding-desktop: 1.875rem;
+			padding: $banner-padding-desktop 0;
+
+			.cookie-banner-content {
+				padding: 0 $banner-padding-desktop ;
+			}
+		}
+	}
+}
+
+.gdpr-hidden {
+	display:none;
+}
