@@ -1,3 +1,4 @@
 {
-	"show_gdpr_banner": true
+	"show_gdpr_banner": true,
+	"legal_cookie_url": "https://kiva.org/legal/cookie"
 }
