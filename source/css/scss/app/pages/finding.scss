@@ -120,6 +120,70 @@ $filter-open-behavior-query: "#{$screen} and (min-width: #{$filter-open-behavior
   	margin-top: rem-calc(20);
   	padding: 0 $loan-card-list-margin/2;
 
+	.browse-filter-toggle-container {
+		display: flex;
+		justify-content: flex-end;
+
+		.browse-filter-toggle {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			text-align: center;
+			cursor: pointer;
+			user-select: none;
+			font-size: 11.5px;
+
+			.browse-filter-toggle-icon-wrapper {
+				.icon-toggle-filter, .icon-toggle-browse {
+					width: rem-calc(22);
+					height: rem-calc(22);
+					fill: #808080;
+				}
+			}
+
+			.browse-filter-toggle-label {
+				display: none;
+			}
+
+			&.browse-filter-toggle-browse {
+				margin-right: rem-calc(10);
+				padding-right: rem-calc(8);
+				border-right: 1px solid #DBDBDB;
+			}
+
+			&.active {
+				.icon-toggle-filter, .icon-toggle-browse {
+					fill: #69bb68;
+				}
+			}
+		}
+	}
+
+	@media #{$medium-up} {
+		.browse-filter-toggle-container {
+
+			.browse-filter-toggle {
+
+				.browse-filter-toggle-icon-wrapper {
+					.icon-toggle-filter, .icon-toggle-browse {
+						width: rem-calc(28);
+						height: rem-calc(28);
+					}
+				}
+
+				.browse-filter-toggle-label {
+					display: block;
+				}
+
+				&.browse-filter-toggle-browse {
+					margin-right: rem-calc(18);
+					padding-right: rem-calc(16);
+					border-right: 1px solid #DBDBDB;
+				}
+			}
+		}
+	}
+
   	@media #{$large-up} {
 		padding: 0 $loan-card-list-margin;
   	}
