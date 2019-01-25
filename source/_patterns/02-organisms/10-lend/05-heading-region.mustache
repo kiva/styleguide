@@ -1,11 +1,12 @@
 <div class="heading-region row">
-	<div class="small-8 large-10 columns">
+	<div class="{{#show_browse_filter_toggle}}small-8 large-10 columns{{/show_browse_filter_toggle}}">
 		<p class="page-title">Make a loan, change a life</p>
 		<p class="category-description small-12 xlarge-9">
 			Each Kiva loan helps people build a better future for themselves and their families.
 		</p>
 	</div>
-	<div class="browse-filter-toggle-container small-4 large-2 columns">
+	{{#show_browse_filter_toggle}}
+		<div class="browse-filter-toggle-container small-4 large-2 columns">
 		<a href="/lend-by-category" kvtrackevent="Lending|click-filter-toggle|Browse|undefined|true">
 			<div class="browse-filter-toggle browse-filter-toggle-browse">
 				<div class="browse-filter-toggle-icon-wrapper browse-filter-toggle-link-browse">
@@ -26,4 +27,5 @@
 			<div class="browse-filter-toggle-label">Filter</div>
 		</div>
 	</div>
+	{{/show_browse_filter_toggle}}
 </div>
