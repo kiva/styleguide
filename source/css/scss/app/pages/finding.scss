@@ -137,25 +137,37 @@ $filter-open-behavior-query: "#{$screen} and (min-width: #{$filter-open-behavior
 				.icon-toggle-filter, .icon-toggle-browse {
 					width: rem-calc(22);
 					height: rem-calc(22);
-					fill: #808080;
+					fill: $kiva-text-light;
 				}
 			}
 
 			.browse-filter-toggle-label {
+				color: $kiva-text-light;
 				display: none;
 			}
 
-			&.browse-filter-toggle-browse {
-				margin-right: rem-calc(10);
-				padding-right: rem-calc(8);
-				border-right: 1px solid #DBDBDB;
-			}
-
 			&.active {
-				.icon-toggle-filter, .icon-toggle-browse {
-					fill: #69bb68;
+				.browse-filter-toggle-label {
+					color: #69bb68;
+				}
+
+				.browse-filter-toggle-icon-wrapper {
+					.icon-toggle-filter, .icon-toggle-browse {
+						fill: #69bb68;
+					}
 				}
 			}
+		}
+
+		.browse-filter-toggle-spacer {
+			height: rem-calc(22);
+			border-right: 1px solid $kiva-stroke-gray;
+			margin: 0 rem-calc(8);
+		}
+
+		a, a:hover {
+			text-decoration: none;
+			color: inherit;
 		}
 	}
 
@@ -163,7 +175,6 @@ $filter-open-behavior-query: "#{$screen} and (min-width: #{$filter-open-behavior
 		.browse-filter-toggle-container {
 
 			.browse-filter-toggle {
-
 				.browse-filter-toggle-icon-wrapper {
 					.icon-toggle-filter, .icon-toggle-browse {
 						width: rem-calc(28);
@@ -174,12 +185,12 @@ $filter-open-behavior-query: "#{$screen} and (min-width: #{$filter-open-behavior
 				.browse-filter-toggle-label {
 					display: block;
 				}
+			}
 
-				&.browse-filter-toggle-browse {
-					margin-right: rem-calc(18);
-					padding-right: rem-calc(16);
-					border-right: 1px solid #DBDBDB;
-				}
+			.browse-filter-toggle-spacer {
+				height: rem-calc(50);
+				margin-right: rem-calc(18);
+				margin-left: rem-calc(16);
 			}
 		}
 	}
