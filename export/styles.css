@@ -13281,53 +13281,6 @@ div.category-cards-header {
 .heading-region {
   margin-top: 1.25rem;
   padding: 0 0.625rem; }
-  .heading-region .browse-filter-toggle-container {
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-pack: end;
-        justify-content: flex-end; }
-    .heading-region .browse-filter-toggle-container .browse-filter-toggle {
-      display: -ms-flexbox;
-      display: flex;
-      -ms-flex-direction: column;
-          flex-direction: column;
-      -ms-flex-align: center;
-          align-items: center;
-      text-align: center;
-      cursor: pointer;
-      -webkit-user-select: none;
-         -moz-user-select: none;
-          -ms-user-select: none;
-              user-select: none;
-      font-size: 11.5px; }
-      .heading-region .browse-filter-toggle-container .browse-filter-toggle .browse-filter-toggle-icon-wrapper .icon-toggle-filter, .heading-region .browse-filter-toggle-container .browse-filter-toggle .browse-filter-toggle-icon-wrapper .icon-toggle-browse {
-        width: 1.375rem;
-        height: 1.375rem;
-        fill: #999; }
-      .heading-region .browse-filter-toggle-container .browse-filter-toggle .browse-filter-toggle-label {
-        color: #999;
-        display: none; }
-      .heading-region .browse-filter-toggle-container .browse-filter-toggle.active .browse-filter-toggle-label {
-        color: #69bb68; }
-      .heading-region .browse-filter-toggle-container .browse-filter-toggle.active .browse-filter-toggle-icon-wrapper .icon-toggle-filter, .heading-region .browse-filter-toggle-container .browse-filter-toggle.active .browse-filter-toggle-icon-wrapper .icon-toggle-browse {
-        fill: #69bb68; }
-    .heading-region .browse-filter-toggle-container .browse-filter-toggle-spacer {
-      height: 1.375rem;
-      border-right: 1px solid #d8d8d8;
-      margin: 0 0.5rem; }
-    .heading-region .browse-filter-toggle-container a, .heading-region .browse-filter-toggle-container a:hover {
-      text-decoration: none;
-      color: inherit; }
-  @media only screen and (min-width: 481px) {
-    .heading-region .browse-filter-toggle-container .browse-filter-toggle .browse-filter-toggle-icon-wrapper .icon-toggle-filter, .heading-region .browse-filter-toggle-container .browse-filter-toggle .browse-filter-toggle-icon-wrapper .icon-toggle-browse {
-      width: 1.75rem;
-      height: 1.75rem; }
-    .heading-region .browse-filter-toggle-container .browse-filter-toggle .browse-filter-toggle-label {
-      display: block; }
-    .heading-region .browse-filter-toggle-container .browse-filter-toggle-spacer {
-      height: 3.125rem;
-      margin-right: 1.125rem;
-      margin-left: 1rem; } }
   @media only screen and (min-width: 681px) {
     .heading-region {
       padding: 0 1.25rem; } }
