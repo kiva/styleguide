@@ -147,10 +147,6 @@ $filter-open-behavior-query: "#{$screen} and (min-width: #{$filter-open-behavior
 			}
 
 			&.active {
-				.browse-filter-toggle-label {
-					color: #69bb68;
-				}
-
 				.browse-filter-toggle-icon-wrapper {
 					.icon-toggle-filter, .icon-toggle-browse {
 						fill: #69bb68;
