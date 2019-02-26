@@ -8333,6 +8333,23 @@ a.dark_green_bg_link {
     .gift-banner .banner-link:hover .icon-present {
       stroke: #247037; }
 
+/* Global IWD Banner styles */
+.iwd-banner {
+  background-image: none;
+  background-color: #edf7ed; }
+  .iwd-banner .banner-link {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+        align-items: center;
+    color: #6e1947; }
+    .iwd-banner .banner-link .icon-iwd-flower {
+      display: block;
+      height: 1.375rem;
+      width: 1.375rem;
+      margin-right: 0.625rem;
+      margin-top: -0.2rem; }
+
 /*
 	Global Promo Bar Hidden Pages
 */
