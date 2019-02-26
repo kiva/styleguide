@@ -1,8 +1,8 @@
 {
 	"header_promo": {
-		"href": "#",
-		"call_to_action": "Help refugees find hope beyond crisis.",
-        "message": "World Refugee Day is June 20",
-        "icon": null
+		"href": "/lend/international-womens-day",
+		"call_to_action": "Help us fund 10,000 loans to women",
+        "message": " this International Women’s Day",
+        "icon": "icon-iwd-flower"
 	}
 }
