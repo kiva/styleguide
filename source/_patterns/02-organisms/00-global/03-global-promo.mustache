@@ -1,5 +1,5 @@
 <div class="global-promo-bar">
-	<div class="row align-center gift-banner default-banner">
+	<div class="row align-center iwd-banner default-banner">
 		<a href="{{header_promo.href}}"
 			class="banner-link"
 			kvtrackevent="TopNav|click-Promo|{{#is_holiday_mode_active}}Holiday Banner{{/is_holiday_mode_active}}{{^is_holiday_mode_active}}Default Banner{{/is_holiday_mode_active}}">
@@ -13,8 +13,7 @@
 					<div class="call-to-action-text">{{header_promo.call_to_action}}</div><div class="primary-message">{{header_promo.message}}</div>
 				{{/is_holiday_mode_active}}
 				{{^is_holiday_mode_active}}
-					<div class="primary-message">{{header_promo.message}}</div>
-					<div class="call-to-action-text">{{header_promo.call_to_action}}</div>
+					<div class="call-to-action-text">{{header_promo.call_to_action}}</div><div class="primary-message">{{header_promo.message}}</div>
 				{{/is_holiday_mode_active}}
 			</div>
 		</a>

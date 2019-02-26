@@ -76,6 +76,26 @@
 	}
 }
 
+/* Global IWD Banner styles */
+.iwd-banner {
+	background-image: none;
+	background-color: #edf7ed;
+
+	.banner-link {
+		display: flex;
+		align-items: center;
+		color: #6e1947;
+
+		.icon-iwd-flower {
+			display: block;
+			height: rem-calc(22);
+			width: rem-calc(22);
+			margin-right: rem-calc(10);
+            margin-top: -0.2rem;
+		}
+	}
+}
+
 /*
 	Global Promo Bar Hidden Pages
 */
