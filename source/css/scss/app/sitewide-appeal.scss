@@ -49,7 +49,7 @@
 				// Tried this solution for the thermometer tick marks,
 				// ran into issues because the meter div overlaid this background
 				// image so the white ticks were never shown as desired. Rethinking
-				// this stragety. 
+				// this stragety. Created this background gradient using this tool: https://css-tricks.com/stripes-css/
 				// background-image: linear-gradient(90deg, #4faf4e 2.27%, #efefef 2.27%, #efefef 4.55%, #fff 4.55%, #fff 50%, #4faf4e 50%, #4faf4e 52.27%, #efefef 52.27%, #efefef 54.55%, #fff 54.55%, #fff 100%);
 				// background-size: 30px;
 
@@ -58,17 +58,36 @@
 					display: block;
 					height: 100%;
 					float: left;
+					border-radius: 7px;
+				}
+
+				.tick-wrapper {
+					position: absolute;
+					height: 100%;
+				
+
+					.tick-lines {
+						border-left: 1px solid #4faf4e;
+						border-right: 1px solid #efefef;
+						display: block;
+						padding-right: 10px;
+						height: 55%;
+						float: left;
+						top: 3px;
+						position: relative;
+
+					}
 				}
 			}
 
 			.thermometer-bulb {
 				background-color: #4faf4e;
-				height: 27px;
-				width: 27px;
+				height: 30px;
+				width: 30px;
 				display: inline-block;
 				border-radius: 20px;
-				left: 53px;
-				top: 98px;
+				left: 51px;
+				top: 94px;
 				position: relative;
 			}
 		}
