@@ -91,12 +91,13 @@
 				}
 			}
 
-			.donation-buttons {
-				margin-top: rem-calc(10);
-				@media #{$xlarge-up} {
-					padding-left: rem-calc(130);
-				}
-			}
+			// .donation-buttons {
+			// 	margin-top: rem-calc(10);
+				
+			// 	@media #{$xlarge-up} {
+			// 		padding-left: rem-calc(130);
+			// 	}
+			// }
 		}
 	}
 }
