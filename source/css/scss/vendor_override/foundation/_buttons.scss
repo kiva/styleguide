@@ -81,7 +81,7 @@ button, a.button, .button {
 }
 
 .button.smallest {
-	font-size: $button-font-sm; // rem-calc(14);
+	font-size: rem-calc(14);
 	padding: rem-calc(8) rem-calc(16);
 
 	@media #{$medium-up} {
@@ -94,6 +94,7 @@ button, a.button, .button {
 	font-size: $setting-button-font-size - $setting-button-font-size-reduction;
 	height: $setting-button-height - $setting-button-height-reduction;
 	line-height: rem-calc(2);
+	
 	@media #{$medium-up} {
 		font-size: $setting-button-font-size;
 		height: $setting-button-height;

@@ -9,9 +9,6 @@
 			h2 {
 				position: relative;
 				padding-right: rem-calc(40);
-				@media #{$xlarge-up} {
-					// padding-left: rem-calc(130);
-				}
 
 				.icon-large-chevron {
 					position: absolute;
@@ -33,30 +30,37 @@
 
 		.thermometer-holder {
 			@media #{$medium-up} {
-				height: 185px;
+				height: rem-calc(185);
 			}
 
 			.thermometer-wrap {
 				padding: 1rem;
 				
-				@media #{$medium-up} {
-				    margin: 0 auto;
-					display: inline-block;
-				}
-				
 				.thermometer {
 					background-color: #efefef;
 					border: none;
 					padding: 0;
-					border-radius: 15px;
-					height: 13px;
+					border-radius: rem-calc(15);
+					height: rem-calc(13);
 
 					@media #{$medium-up} {
 						transform: rotate(270deg);
 						position: relative;
-						width: 150px;
-						top: 53px;
-						left: -60px;
+						width: rem-calc(150);
+						top: rem-calc(53);
+						left: rem-calc(-47);
+					}
+
+					@media #{$large-up} {
+						left: rem-calc(-28);
+					}
+
+					@media #{$xlarge-up} {
+						left: rem-calc(-14);
+					}
+
+					@media #{$xxlarge-up} {
+						left: rem-calc(-5);
 					}
 
 					.inner-meter {
@@ -64,11 +68,7 @@
 						display: block;
 						height: 100%;
 						float: left;
-						border-radius: 7px;
-
-						@media #{$medium-up} {
-
-						}
+						border-radius: rem-calc(7);
 					}
 
 					.tick-wrapper {
@@ -82,12 +82,12 @@
 							padding-right: 7%;
 							height: 9%;
 							float: left;
-							top: 3px;
+							top: rem-calc(3);
 							position: relative;
 
 							@media #{$medium-up} {
 								height: 55%;
-								padding-right: 10px;
+								padding-right: rem-calc(10);
 							}
 						}
 					}
@@ -97,24 +97,42 @@
 					background-color: #4faf4e;
 					position: relative;
 					display: inline-block;
-					border-radius: 20px;
-					height: 30px;
-					width: 30px;
-					left: -9px;
-					top: -32px;
+					border-radius: rem-calc(20);
+					height: rem-calc(30);
+					width: rem-calc(30);
+					left: rem-calc(-10);
+					top: rem-calc(-32);
 					
 					@media #{$medium-up} {
-						left: 0;
-						top: 96px;
+						left: rem-calc(13);
+						top: rem-calc(96);
+					}
+
+					@media #{$large-up} {
+						left: rem-calc(32);
+					}
+
+					@media #{$xlarge-up} {
+						left: rem-calc(46);
+					}
+
+					@media #{$xxlarge-up} {
+						left: rem-calc(55);
 					}
 				}
 			}
 		}
 
 		.sitewide-body {
+			.message-wrapper {
+				@media (min-width: 591px) {
+					padding-bottom: rem-calc(20);
+				}
+			}
+
 			.message {
 				overflow: hidden;
-				margin-bottom: 20px;
+				margin-bottom: rem-calc(20);
 				
 				.closing {
 					margin-top: rem-calc(10);
@@ -125,7 +143,7 @@
 				display: table;
 
 				@media #{$medium-up} {
-					margin: unset;
+					margin: 0;
 				}
 
 				li {
@@ -135,16 +153,22 @@
 					@media #{$medium-up} {
 						width: unset;
 					}
+
+					// Overriding .smallest button class, not ideal, but text is too small otherwise
+					.smallest {
+						margin-bottom: 0;
+						font-size: 1.25rem;
+					}
 				}
+
 				.other-amount {
 					font-size: 1.25rem;
 					width: 100%;
 					text-align: center;
 					line-height: 2.5;
-					padding-bottom: 10px;
 
 					@media #{$medium-up} {
-						width: 150px;
+						width: rem-calc(150);
 					}
 				}
 			}
