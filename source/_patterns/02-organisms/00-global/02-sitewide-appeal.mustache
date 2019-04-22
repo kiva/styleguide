@@ -1,6 +1,6 @@
 <div class="sitewide-appeal-wrapper">
 	<div class="sitewide-appeal row">
-		<div class="sitewide-header"data-kv-accordion aria-controls="ac-sitewide-appeal" {{#isExpanded}}aria-expanded="true"{{/isExpanded}}{{^isExpanded}}aria-expanded="false"{{/isExpanded}}>
+		<div class="sitewide-header small-12 columns"data-kv-accordion aria-controls="ac-sitewide-appeal" {{#isExpanded}}aria-expanded="true"{{/isExpanded}}{{^isExpanded}}aria-expanded="false"{{/isExpanded}}>
 			<h2>
 				Donate to Kiva today and earn a free loan!
 				<span class="dropdown-icon">
@@ -11,12 +11,12 @@
 			</h2>
 		</div>
 
-		<span class="thermometer-holder small-3">
-			{{! Thermometer element }}
-			{{> 01-molecules/08-meters/appeal-meter.mustache}}
-		</span>
+		<div class="thermometer-holder show-for-medium-up medium-2 xlarge-1 columns">
+				{{! Thermometer element }}
+				{{> 01-molecules/08-meters/appeal-meter.mustache}}
+			</div>
 		
-		<div class="sitewide-body" id="ac-sitewide-appeal" {{#isExpanded}}aria-hidden="false"{{/isExpanded}}{{^isExpanded}}aria-hidden="true"{{/isExpanded}}>
+		<div class="sitewide-body small-12 medium-10 xlarge-11 columns" id="ac-sitewide-appeal" {{#isExpanded}}aria-hidden="false"{{/isExpanded}}{{^isExpanded}}aria-hidden="true"{{/isExpanded}}>
 			<div class="message">
 				<div>
 					Each loan on Kiva costs us more than $3 to facilitate (and we facilitate a lot of loans!)
@@ -28,8 +28,13 @@
 				</div>
 			</div>
 
+			<div class="thermometer-holder show-for-small-only small-12 columns">
+				{{! Thermometer element }}
+				{{> 01-molecules/08-meters/appeal-meter.mustache}}
+			</div>
+
 			<div class="donation-buttons">
-				<ul class="small-block-grid-2 medium-block-grid-5">
+				<ul class="small-block-grid-3 medium-block-grid-5">
 					<li>
 						<div class="button smallest" role="button" value="25">$25</div>
 					</li>
@@ -42,8 +47,8 @@
 						<div class="button smallest" role="button" value="50">$50</div>
 					</li>
 
-					<li>
-						<a>Other amount</a>
+					<li class="other-amount">
+						<a href="/donate">Other amount</a>
 					</li>
 				</ul>
 			</div>

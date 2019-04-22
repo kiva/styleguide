@@ -10,7 +10,7 @@
 				position: relative;
 				padding-right: rem-calc(40);
 				@media #{$xlarge-up} {
-					padding-left: rem-calc(130);
+					// padding-left: rem-calc(130);
 				}
 
 				.icon-large-chevron {
@@ -31,73 +31,123 @@
 			}
 		}
 
-		.thermometer-wrap {
-			.thermometer {
-				transform: rotate(270deg);
-				width: 16%;
-				background-color: #efefef;
-				position: relative;
-				border: none;
-				padding: 0;
-				border-radius: 15px;
-				height: 13px;
-				top: 50px;
+		.thermometer-holder {
+			@media #{$medium-up} {
+				height: 185px;
+			}
 
-				.inner-meter {
-					background-color: #4faf4e;
-					display: block;
-					height: 100%;
-					float: left;
-					border-radius: 7px;
+			.thermometer-wrap {
+				padding: 1rem;
+				
+				@media #{$medium-up} {
+				    margin: 0 auto;
+					display: inline-block;
+				}
+				
+				.thermometer {
+					background-color: #efefef;
+					border: none;
+					padding: 0;
+					border-radius: 15px;
+					height: 13px;
+
+					@media #{$medium-up} {
+						transform: rotate(270deg);
+						position: relative;
+						width: 150px;
+						top: 53px;
+						left: -60px;
+					}
+
+					.inner-meter {
+						background-color: #4faf4e;
+						display: block;
+						height: 100%;
+						float: left;
+						border-radius: 7px;
+
+						@media #{$medium-up} {
+
+						}
+					}
+
+					.tick-wrapper {
+						position: absolute;
+						height: 100%;
+						width: 100%;
+
+						.tick-lines {
+							border-left: 1px solid #4faf4e;
+							border-right: 1px solid #efefef;
+							padding-right: 7%;
+							height: 9%;
+							float: left;
+							top: 3px;
+							position: relative;
+
+							@media #{$medium-up} {
+								height: 55%;
+								padding-right: 10px;
+							}
+						}
+					}
 				}
 
-				.tick-wrapper {
-					position: absolute;
-					height: 100%;
-				
-
-					.tick-lines {
-						border-left: 1px solid #4faf4e;
-						border-right: 1px solid #efefef;
-						display: block;
-						padding-right: 10px;
-						height: 55%;
-						float: left;
-						top: 3px;
-						position: relative;
-
+				.thermometer-bulb {
+					background-color: #4faf4e;
+					position: relative;
+					display: inline-block;
+					border-radius: 20px;
+					height: 30px;
+					width: 30px;
+					left: -9px;
+					top: -32px;
+					
+					@media #{$medium-up} {
+						left: 0;
+						top: 96px;
 					}
 				}
 			}
-
-			.thermometer-bulb {
-				background-color: #4faf4e;
-				height: 30px;
-				width: 30px;
-				display: inline-block;
-				border-radius: 20px;
-				left: 63px;
-				top: 94px;
-				position: relative;
-			}
 		}
-
 
 		.sitewide-body {
 			.message {
 				overflow: hidden;
+				margin-bottom: 20px;
+				
 				.closing {
 					margin-top: rem-calc(10);
 				}
 			}
+			.donation-buttons {
+				margin: 0 auto;
+				display: table;
 
-			// .donation-buttons {
-			// 	margin-top: rem-calc(10);
-				
-			// 	@media #{$xlarge-up} {
-			// 		padding-left: rem-calc(130);
-			// 	}
-			// }
+				@media #{$medium-up} {
+					margin: unset;
+				}
+
+				li {
+					width: inherit;
+					padding-bottom: 0;
+
+					@media #{$medium-up} {
+						width: unset;
+					}
+				}
+				.other-amount {
+					font-size: 1.25rem;
+					width: 100%;
+					text-align: center;
+					line-height: 2.5;
+					padding-bottom: 10px;
+
+					@media #{$medium-up} {
+						width: 150px;
+					}
+				}
+			}
 		}
 	}
 }

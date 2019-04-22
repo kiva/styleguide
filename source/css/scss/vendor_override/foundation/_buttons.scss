@@ -81,12 +81,12 @@ button, a.button, .button {
 }
 
 .button.smallest {
-	font-size: .875rem;
-	padding: .5rem 1rem;
-	
+	font-size: $button-font-sm; // rem-calc(14);
+	padding: rem-calc(8) rem-calc(16);
+
 	@media #{$medium-up} {
-		font-size: 1.25rem;
-		padding: .75rem 1.5rem;
+		font-size: rem-calc(20);
+		padding: rem-calc(12) rem-calc(24);
 	}
 }
 
