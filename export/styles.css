@@ -11537,7 +11537,8 @@ svg {
           float: left;
           border-radius: 0.4375rem;
           transition: width 3500ms ease-in-out;
-          width: 0; }
+          width: 0;
+          max-width: 100%; }
         .sitewide-appeal-wrapper .sitewide-appeal .thermometer-holder .thermometer-wrap .thermometer .tick-wrapper {
           position: absolute;
           height: 100%;
