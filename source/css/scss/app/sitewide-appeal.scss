@@ -73,6 +73,7 @@
 						border-radius: rem-calc(7);
 						transition: width 3500ms ease-in-out;
 						width: 0;
+						max-width: 100%;
 					}
 
 					.tick-wrapper {
