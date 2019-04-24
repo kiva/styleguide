@@ -11497,7 +11497,8 @@ svg {
         top: 0.4375rem;
         right: 0;
         height: 1.5625rem;
-        width: 1.5625rem; }
+        width: 1.5625rem;
+        transition: transform .3s ease; }
     .sitewide-appeal-wrapper .sitewide-appeal .sitewide-header[aria-expanded="true"] .icon-large-chevron {
       -ms-transform: rotate(-180deg);
       transform: rotate(-180deg); }
@@ -11534,7 +11535,9 @@ svg {
           display: block;
           height: 100%;
           float: left;
-          border-radius: 0.4375rem; }
+          border-radius: 0.4375rem;
+          transition: width 3500ms ease-in-out;
+          width: 0; }
         .sitewide-appeal-wrapper .sitewide-appeal .thermometer-holder .thermometer-wrap .thermometer .tick-wrapper {
           position: absolute;
           height: 100%;
