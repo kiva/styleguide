@@ -16,6 +16,8 @@
 					right: 0;
 					height: rem-calc(25);
 					width: rem-calc(25);
+					transition: transform .3s ease,
+					-webkit-transform .3s ease;
 				}
 			}
 			&[aria-expanded="true"] {
@@ -69,6 +71,8 @@
 						height: 100%;
 						float: left;
 						border-radius: rem-calc(7);
+						transition: width 3500ms ease-in-out;
+						width: 0;
 					}
 
 					.tick-wrapper {

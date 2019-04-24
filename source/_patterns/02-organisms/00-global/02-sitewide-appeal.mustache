@@ -2,7 +2,12 @@
 	<div class="sitewide-appeal row">
 		<div class="sitewide-header small-12"data-kv-accordion aria-controls="ac-sitewide-appeal" {{#isExpanded}}aria-expanded="true"{{/isExpanded}}{{^isExpanded}}aria-expanded="false"{{/isExpanded}}>
 			<h2>
-				Donate to Kiva today and earn a free loan!
+				{{#match}}
+					Donate to Kiva today and earn a free loan!
+				{{/match}}
+				{{^match}}
+					Your donations keep Kiva growing
+				{{/match}}
 				<span class="dropdown-icon">
 					<svg stroke-width="7" class="icon icon-large-chevron">
 						<use xlink:href="#icon-large-chevron"></use>
@@ -18,14 +23,17 @@
 			</div>
 			<div class="small-12 medium-10 columns message-wrapper">
 				<div class="message">
-					<div>
+					{{#match}}
 						Each loan on Kiva costs us more than $3 to facilitate (and we facilitate a lot of loans!)
 						so when you donate to Kiva you help us cover costs and grow our impact.
-						{{#match}}
-							<b>Donate $35 or more to Kiva today and we'll send you a bonus tomorrow to make a free loan.</b>
-						{{/match}}
+						<b>Donate $35 or more to Kiva today and we'll send you a bonus tomorrow to make a free loan.</b>
 						Your donation of any amount makes a difference!
-					</div>
+					{{/match}}
+					{{^match}}
+						Each loan on Kiva costs us more than $3 to facilitate (and we facilitate a lot of loans!) so
+						when you donate to Kiva you help us cover costs, grow our impact and develop innovative new programs
+						that improve lives. Your donation of any amount makes a difference!
+					{{/match}}
 				</div>
 
 				<div class="thermometer-holder show-for-small-only small-12 columns">
