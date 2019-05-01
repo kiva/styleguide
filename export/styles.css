@@ -11490,6 +11490,7 @@ svg {
     padding-left: 0.625rem;
     padding-right: 0.625rem; }
     .sitewide-appeal-wrapper .sitewide-appeal .sitewide-header h2 {
+      margin-bottom: 0;
       font-weight: 300;
       position: relative;
       padding-right: 2.5rem; }
