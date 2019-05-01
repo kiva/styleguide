@@ -7,6 +7,7 @@
 
 		.sitewide-header {
 			h2 {
+				font-weight: 300;
 				position: relative;
 				padding-right: rem-calc(40);
 
@@ -129,6 +130,25 @@
 		}
 
 		.sitewide-body {
+			padding: 0.4rem 0;
+			
+			@media #{$medium-up} {
+				position: relative;
+				left: -0.5rem;
+			}
+
+			@media #{$large-up} {
+				left: -1.75rem;
+			}
+
+			@media #{$xlarge-up} {
+				left: -2.5rem;
+			}
+
+			@media #{$xxlarge-up} {
+				left: -3rem;
+			}
+
 			.message-wrapper {
 				@media (min-width: 591px) {
 					padding-bottom: rem-calc(20);
@@ -138,6 +158,8 @@
 			.message {
 				overflow: hidden;
 				margin-bottom: rem-calc(20);
+				line-height: rem-calc(28);
+				font-weight: 300;
 				
 				.closing {
 					margin-top: rem-calc(10);
