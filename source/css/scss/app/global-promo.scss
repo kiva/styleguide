@@ -95,6 +95,22 @@
 		}
 	}
 }
+/* Global WRD Banner styles */
+.wrd-banner {
+	background-image: none;
+	background-color: #edf7ed;
+
+	// color is #484848 and #63669D on hover
+	.banner-link {
+		display: flex;
+		align-items: center;
+		color: #484848;
+
+		&:hover {
+			color: #63669D;
+		}
+	}
+}
 
 /*
 	Global Promo Bar Hidden Pages

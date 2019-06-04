@@ -1,8 +1,8 @@
 {
 	"header_promo": {
-		"href": "/lend/international-womens-day",
-		"call_to_action": "Help us fund 10,000 loans to women",
-        "message": " this International Women’s Day",
-        "icon": "icon-iwd-flower"
+		"href": "/lend-by-catgeory/world-refugee-day",
+		"call_to_action": "Help us fund $1 million in loans to refugees",
+		"message": " for World Refugee Day.",
+		"icon": ""
 	}
 }
