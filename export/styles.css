@@ -8358,6 +8358,19 @@ a.dark_green_bg_link {
       margin-right: 0.625rem;
       margin-top: -0.2rem; }
 
+/* Global WRD Banner styles */
+.wrd-banner {
+  background-image: none;
+  background-color: #edf7ed; }
+  .wrd-banner .banner-link {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+        align-items: center;
+    color: #484848; }
+    .wrd-banner .banner-link:hover {
+      color: #63669D; }
+
 /*
 	Global Promo Bar Hidden Pages
 */
