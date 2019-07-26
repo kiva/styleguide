@@ -4,6 +4,7 @@
   "repaymentFrequency": "Monthly",
   "disbursalDate": "April 6, 2015",
   "currencyExchangeLossScenario": "N/A",
+  "hasCurrencyLossScenario": false,
   "fieldPartner": null,
   "trusteeName": "Trustee Fund Kenya",
   "borrowerPayingInterest": false,
