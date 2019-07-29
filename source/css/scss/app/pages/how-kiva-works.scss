@@ -206,9 +206,12 @@
 	}
 }
 
-.reveal-modal-bg {
-	a:visited {
-		color: $kiva-textlink;
+// Override link styles for lightbox only on this page
+.about_how {
+	.reveal-modal-bg {
+		a:visited {
+			color: $kiva-textlink;
+		}
 	}
 }
 
