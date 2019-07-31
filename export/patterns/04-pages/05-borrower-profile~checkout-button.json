@@ -102,6 +102,7 @@
 	"repaymentFrequency": "Monthly",
 	"disbursedDate": "April 6, 2015",
 	"currencyExchangeLossScenario": "Possible",
+	"fundingModel": "Fixed",
 	"fieldPartner": "VisionFund Kenya",
 	"trustee": null,
 	"borrowerPayingInterest": true,
@@ -137,6 +138,11 @@
 			"dataRevealId": "disbursed-date-lightbox",
 			"descriptionTitle": "What is the disbursed date?",
 			"descriptionText": "The disbursed date indicates the date that the borrower receives their loan funds from the Field Partner."
+		},
+		{
+			"dataRevealId": "funding-model-lightbox",
+			"descriptionTitle": "Funding model",
+			"descriptionText": "Be an 11th hour hero by supporting loans that are running out of time to fundraise on Kiva. \"Fixed\" funding model loans won't receive any funds if they don't raise the full loan amount within the fundraising period. For \"Flexible\" funding model loans, Kiva sends whatever amount lenders contribute, even if it isn't the full loan amount. These loans still only have 30 days to raise as much as possible toward the loan amount. Be the difference today."
 		},
 		{
 			"dataRevealId": "currency-exchange-loss-lightbox",
