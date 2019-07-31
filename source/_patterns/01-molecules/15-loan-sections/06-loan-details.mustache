@@ -43,7 +43,12 @@
                 <strong>{{fundingModel}}</strong>
             </div>
             <div id="currency-exchange-loss" class="stat">
-                <a kvtrackevent="Borrower Profile|click-loan details" class="black-underlined" data-reveal-id="currency-exchange-loss-lightbox">Currency exchange loss</a>:
+                {{#hasCurrencyLossScenario}}
+                    <a kvtrackevent="Borrower Profile|click-loan details" class="black-underlined" data-reveal-id="currency-exchange-loss-lightbox">Partner covers currency loss</a>?
+                {{/hasCurrencyLossScenario}}
+                {{^hasCurrencyLossScenario}}
+                    <a kvtrackevent="Borrower Profile|click-loan details" class="black-underlined" data-reveal-id="currency-exchange-loss-lightbox">Currency exchange loss</a>:
+                {{/hasCurrencyLossScenario}}
                 <strong>{{currencyExchangeLossScenario}}</strong>
             </div>
             <div id="field-partner" class="stat">
