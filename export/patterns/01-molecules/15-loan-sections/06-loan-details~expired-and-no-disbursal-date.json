@@ -5,6 +5,7 @@
   "disbursalDate": false,
   "expiredAndNoDisbursalDate": true,
   "currencyExchangeLossScenario": "N/A",
+  "hasCurrencyLossScenario": false,
   "fieldPartner": null,
   "trusteeName": "Trustee Fund Kenya",
   "borrowerPayingInterest": false,
