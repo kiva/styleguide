@@ -102,6 +102,7 @@
 	"repaymentFrequency": "Monthly",
 	"disbursedDate": "April 6, 2015",
 	"currencyExchangeLossScenario": "Possible",
+	"fundingModel": "Fixed",
 	"fieldPartner": "VisionFund Kenya",
 	"trustee": null,
 	"borrowerPayingInterest": true,
