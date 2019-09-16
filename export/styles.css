@@ -8299,6 +8299,10 @@ a.dark_green_bg_link {
     -ms-flex-flow: row wrap;
         flex-flow: row wrap; }
   .global-promo-bar .banner-link {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+        align-items: center;
     color: #49953f;
     text-decoration: none;
     text-align: center;
@@ -8322,34 +8326,29 @@ a.dark_green_bg_link {
       .global-promo-bar .content .call-to-action-text {
         display: inline; } }
 
+/* monthly good experiment */
+.default-banner .banner-link .icon-monthly-good {
+  fill: #247037; }
+
 /* Global Holiday-Gift Banner styles */
 .gift-banner {
   background-image: url("../images/tipbar-bg-small.jpg");
   background-position: bottom; }
-  .gift-banner .banner-link {
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-align: center;
-        align-items: center; }
-    .gift-banner .banner-link .icon-present {
-      display: block;
-      height: 1.375rem;
-      width: 1.375rem;
-      margin-right: 0.625rem;
-      margin-top: -0.2rem;
-      fill-opacity: 0; }
-    .gift-banner .banner-link:hover .icon-present {
-      stroke: #247037; }
+  .gift-banner .banner-link .icon-present {
+    display: block;
+    height: 1.375rem;
+    width: 1.375rem;
+    margin-right: 0.625rem;
+    margin-top: -0.2rem;
+    fill-opacity: 0; }
+  .gift-banner .banner-link:hover .icon-present {
+    stroke: #247037; }
 
 /* Global IWD Banner styles */
 .iwd-banner {
   background-image: none;
   background-color: #edf7ed; }
   .iwd-banner .banner-link {
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-align: center;
-        align-items: center;
     color: #6e1947; }
     .iwd-banner .banner-link .icon-iwd-flower {
       display: block;
@@ -8363,10 +8362,6 @@ a.dark_green_bg_link {
   background-image: none;
   background-color: #edf7ed; }
   .wrd-banner .banner-link {
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-align: center;
-        align-items: center;
     color: #484848; }
     .wrd-banner .banner-link:hover {
       color: #63669D; }

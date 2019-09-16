@@ -1,8 +1,8 @@
 <div class="global-promo-bar">
-	<div class="row align-center default-banner wrd-banner">
+	<div class="row align-center default-banner">
 		<a href="{{header_promo.href}}"
 			class="banner-link"
-			kvtrackevent="TopNav|click-Promo|{{#is_holiday_mode_active}}Holiday Banner{{/is_holiday_mode_active}}{{^is_holiday_mode_active}}WRD 2019 Banner{{/is_holiday_mode_active}}|undefined|true">
+			kvtrackevent="TopNav|click-Promo|{{#is_holiday_mode_active}}Holiday Banner{{/is_holiday_mode_active}}{{^is_holiday_mode_active}}Monthly Good Sept 2019{{/is_holiday_mode_active}}|undefined|true">
 			{{#header_promo.icon}}
 			<svg class="icon {{header_promo.icon}}">
 				<use xlink:href="#{{header_promo.icon}}"></use>
@@ -13,7 +13,7 @@
 					<div class="call-to-action-text">{{header_promo.call_to_action}}</div><div class="primary-message">{{header_promo.message}}</div>
 				{{/is_holiday_mode_active}}
 				{{^is_holiday_mode_active}}
-					<div class="call-to-action-text">{{header_promo.call_to_action}}</div><div class="primary-message">{{header_promo.message}}</div>
+					<div class="primary-message">{{header_promo.message}}</div><div class="call-to-action-text">{{header_promo.call_to_action}}</div>
 				{{/is_holiday_mode_active}}
 			</div>
 		</a>
