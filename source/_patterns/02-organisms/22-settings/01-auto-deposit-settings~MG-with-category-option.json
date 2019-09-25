@@ -10,11 +10,11 @@
 	 "mg_landing_url": "{kvurl page=monthlygood action=MGLanding}",
 	 "selected_category": "eco_friendly",
 	 "mg_category_options": [
-		{ "title": "Default (Trending Now)", "value": "default" },
-		{ "title": "Loans to Women", "value": "women" },
-		{ "title": "Loans for Agriculture", "value": "agriculture", "selected": true },
-		{ "title": "Loans for Education", "value": "education" },
-		{ "title": "Loans to Refugees", "value": "refugees" },
-		{ "title": "Eco-Friendly Loans", "value": "eco_friendly" }
+		{ "title": "Support all borrowers", "value": "default" },
+		{ "title": "Support women", "value": "women" },
+		{ "title": "Support farmers", "value": "agriculture", "selected": true },
+		{ "title": "Support students", "value": "education" },
+		{ "title": "Support efugees", "value": "refugees" },
+		{ "title": "Support eco-friendly", "value": "eco_friendly" }
 	]
 }
