@@ -67,6 +67,9 @@
 
 			.mg-deposit-input-wrapper {
 				padding-top: rem-calc(10);
+				width: 7rem;
+				display: block;
+				float: left;
 
 				@media (min-width: $x-small-breakpoint +1) and (max-width: $small-breakpoint) {
 					padding-top: rem-calc(15);
@@ -87,15 +90,6 @@
 					font-weight: bold;
 					font-size: $body-font-size;
 				}
-
-				.join-monthly-good {
-					display: inline-block;
-					top: rem-calc(2);
-
-					@media #{$medium-up} {
-						margin-left: rem-calc(20);
-					}
-				}
 			}
 
 			[data-abide] .error small.error {
@@ -104,6 +98,38 @@
 				height: rem-calc(41);
 				padding: rem-calc(5);
 				line-height: rem-calc(34);
+			}
+
+			.mg-category-select-wrapper {
+				display: block;
+				float: left;
+				width: 11rem;
+				padding-top: rem-calc(10);
+
+				@media (min-width: $x-small-breakpoint +1) and (max-width: $small-breakpoint) {
+					padding-top: rem-calc(15);
+				}
+
+				@media #{$medium-up} {
+					width: 13rem;
+				}
+
+				@media #{$large-up} {
+					padding-top: rem-calc(20);
+				}
+
+				@media #{$xxlarge-up} {
+					padding-top: rem-calc(25);
+				}
+
+				select {
+					height: 2.75rem;
+				}
+			}
+
+			.join-monthly-good {
+				clear: both;
+				display: block;
 			}
 		}
 	}
@@ -382,12 +408,44 @@
 
 			table.checkout-details {
 				max-width: $small-breakpoint;
-				margin: rem-calc(45) auto;
+				margin: rem-calc(45) auto 0;
 				background-color: transparent;
 				border: none;
 
 				tr:nth-of-type(even) {
 					background-color: transparent;
+				}
+			}
+
+			table.cateogry-select-row {
+				margin: 0 auto rem-calc(30);
+
+				.td-spacer {
+					min-width: 1.8rem;
+
+					@media #{$medium-up} {
+						min-width: 1.6rem;
+					}
+
+					@media #{$large-up} {
+						min-width: 1.4rem;
+					}
+				}
+
+				.td-select {
+					@media #{$large-up} {
+						padding-left: 0;
+					}
+				}
+
+				label {
+					margin-bottom: 0.375rem;
+					color: $jet; /* matches default table colors */
+				}
+
+				select {
+					color: $jet; /* matches default table colors */
+					max-width: 15rem;
 				}
 			}
 
