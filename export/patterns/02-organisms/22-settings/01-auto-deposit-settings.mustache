@@ -119,6 +119,20 @@
 			{{/legacy}}
 			<label>Donation to Kiva</label>
 		</div>
+		{{^legacy}}
+			{{#is_subscriber}}
+				{{#selected_category}}
+					<div class="category-selection">
+						<label for="mg-category-select">{{mgCategorySelectHeading}}</label>
+						<select id="mg-category-select">
+							{{#mg_category_options}}
+								<option value="{{value}}" {{#selected}}selected="selected"{{/selected}}>{{title}}</option>
+							{{/mg_category_options}}
+						</select>
+					</div>
+				{{/selected_category}}
+			{{/is_subscriber}}
+		{{/legacy}}
 	</div>
 	{{^legacy}}
 		<div class="total-amount-minimum">

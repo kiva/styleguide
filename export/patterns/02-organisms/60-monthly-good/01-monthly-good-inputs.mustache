@@ -38,7 +38,7 @@
 		<br><strong>we'll process the following:</strong>
 	</div>
 
-	<table class="checkout-details">
+	<table class="checkout-details mg-inputs-row">
 		<tr>
 			<td>&nbsp;</td>
 			<td class="left-small-pad">Deposit for lending</td>
@@ -160,6 +160,19 @@
 			</td>
 			<td class="hide-for-small-only">&nbsp;</td>
 		</tr>
+	</table>
+
+	<table class="checkout-details cateogry-select-row">
+		<tr>
+			<td class="td-spacer">&nbsp;</td>
+			<td class="td-select">
+				<label for="mg-setup-category-select">{{mgCategorySelectHeading}}</label>
+				<select class="mg-setup-category-select" id="mg-setup-category-select">
+					{{#mgSelectOptions}}
+						<option value="{{value}}" {{#selected}}selected="selected"{{/selected}}>{{name}}</options>
+					{{/mgSelectOptions}}
+				</select>
+			</tr>
 	</table>
 
 	<div class="total-amount-maximum">
