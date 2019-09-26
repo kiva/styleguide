@@ -123,7 +123,7 @@
 			{{#is_subscriber}}
 				{{#selected_category}}
 					<div class="category-selection">
-						<label for="mg-category-select">Select a category to focus your lending</label>
+						<label for="mg-category-select">{{mgCategorySelectHeading}}</label>
 						<select id="mg-category-select">
 							{{#mg_category_options}}
 								<option value="{{value}}" {{#selected}}selected="selected"{{/selected}}>{{title}}</option>
