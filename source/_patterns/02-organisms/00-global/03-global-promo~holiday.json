@@ -4,6 +4,7 @@
 		"href": "#",
 		"call_to_action": "Give a Kiva Card",
 		"message": " Give hope this holiday season.",
-		"icon": "icon-present"
+		"icon": "icon-present",
+		"analytics_label": "Holiday Banner"
 	}
 }
