@@ -16846,6 +16846,8 @@ table.repayments-list {
     @media (min-width: 875px) {
       .monthly-good-landing-page .kiva-as-expert-section-wrapper .contribute-form {
         top: -85px; } }
+    .monthly-good-landing-page .kiva-as-expert-section-wrapper .contribute-form .mg-landing-category-select {
+      max-width: 15rem; }
   .monthly-good-landing-page .kiva-as-expert-section-wrapper .deposit-amount-input-2 {
     clear: both; }
     .monthly-good-landing-page .kiva-as-expert-section-wrapper .deposit-amount-input-2 .mg-deposit-input {
