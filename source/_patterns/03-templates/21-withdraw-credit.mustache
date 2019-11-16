@@ -20,6 +20,7 @@
                 </div>
             {{/hasWithdrawalsPending}}
             <form data-abide action="{{saveWithdrawalUrl}}" data-options="live_validate:false" method="post">
+				<input type="hidden" id="crumb" name="crumb" value="{{crumb}}">
                 <div class="amount-to-withdraw-field small-6">
                     <label>Amount to withdraw
                         <input type="text" name="withdrawalAmount" required data-abide-validator="currency" data-min-amount="0.01" data-max-amount="{{availableKivaCredit}}" placeholder="$ USD">
