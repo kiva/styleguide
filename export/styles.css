@@ -16412,6 +16412,9 @@ table.repayments-list {
 .messages .pagination {
   margin: 1.5rem 0 2.5rem; }
 
+.borrower-dashboard-main .sitewide-appeal-wrapper {
+  display: none; }
+
 .borrower-dashboard-main .loan-info {
   margin-bottom: 2rem; }
 
