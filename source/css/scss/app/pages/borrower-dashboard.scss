@@ -1,11 +1,15 @@
 @import '../../settings';
 @import '../../font-vars';
 
-.borrower-dashboard-main {
+.borrowerDashboard_endorsements,
+.borrowerDashboard_home,
+.borrowerDashboard_transactions {
 	.sitewide-appeal-wrapper {
 		display: none;
 	}
-	
+}
+
+.borrower-dashboard-main {
 	.loan-info {
 		margin-bottom: 2rem;
 	}
