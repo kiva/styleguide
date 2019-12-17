@@ -2,6 +2,10 @@
 @import '../../font-vars';
 
 .borrower-dashboard-main {
+	.sitewide-appeal-wrapper {
+		display: none;
+	}
+	
 	.loan-info {
 		margin-bottom: 2rem;
 	}
