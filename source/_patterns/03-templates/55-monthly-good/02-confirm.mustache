@@ -23,32 +23,6 @@
 				<p class="text-center">Changes to this contribution can be made in your
 					<a class="credit-settings-link" href="{{credit_settings_link}}">credit settings</a>.</p>
 			{{/has_monthly_good}}
-
-			{{^has_monthly_good}}
-				<h1 class="text-center">A few things will change
-					<br class="lu">when you join Monthly Good:</h1>
-
-				<ul>
-					{{#has_auto_deposit}}
-						  <li><strong>Your new Monthly Good contribution will replace your existing auto deposit.</strong></li>
-					{{/has_auto_deposit}}
-
-					<li><strong>Your funds will be lent automatically using <u>any balance of $25+</u> in your account.</strong>
-						This will take effect upon sign up, and each loan will go to one of the many deserving
-						borrowers on Kiva who needs help reaching 100% funding.
-						{{#has_auto_lending}}Enrolling in Monthly Good will also disable your current auto lending settings.{{/has_auto_lending}}
-					</li>
-
-					<li>You’ll receive an inspiring email once a month telling you who your loan supported.
-					You’ll receive fewer emails overall from Kiva, including no repayment notifications.</li>
-				</ul>
-
-				<div class="text-center mg-button-wrap">
-					<a class="button agree-to-mg" href="##">I agree,
-						<span class="hide-for-x-small">let’s</span> start the Good!</a>
-					<a class="button secondary keep-as-is" href="##">No thanks</a>
-				</div>
-			{{/has_monthly_good}}
 		{{/has_legacy_subscription}}
 	</div>
 </div>
