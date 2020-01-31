@@ -1,6 +1,7 @@
 module.exports = function(grunt) {
 
 	var webpack = require("webpack");
+	var nodeSass = require('node-sass');
 
 	grunt.initConfig({
 		pkg: grunt.file.readJSON('package.json')
@@ -126,6 +127,7 @@ module.exports = function(grunt) {
 
 		, sass: {
 			options: {
+				implementation: nodeSass,
 				includePaths: [
 					'node_modules/foundation-sites/scss'
 					, 'node_modules'
