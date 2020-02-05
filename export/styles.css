@@ -499,8 +499,7 @@ html, body {
 *:after {
   box-sizing: border-box; }
 
-html,
-body {
+html, body {
   font-size: 16px; }
 
 body {
@@ -3240,7 +3239,7 @@ form .row textarea.columns {
 
 /* Label Styles */
 label {
-  color: #4d4d4d;
+  color: #4d4c4c;
   cursor: pointer;
   display: block;
   font-size: 0.875rem;
@@ -3501,7 +3500,7 @@ select {
   select.radius {
     border-radius: 3px; }
   select:focus {
-    background-color: #f3f3f3;
+    background-color: #f3f2f2;
     border-color: #999999; }
   select:disabled {
     background-color: #DDDDDD;
@@ -3956,7 +3955,7 @@ ul.pagination {
     ul.pagination li a:focus,
     ul.pagination li:hover button,
     ul.pagination li button:focus {
-      background: #e6e6e6; }
+      background: #e6e5e5; }
     ul.pagination li.unavailable a, ul.pagination li.unavailable button {
       cursor: default;
       color: #999999;
@@ -4279,7 +4278,7 @@ ul.pagination {
       height: 0;
       list-style: none;
       padding: 0;
-      border-top-color: #e6e6e6; }
+      border-top-color: #e6e5e5; }
     .side-nav li.heading {
       color: #118aec;
       font-size: 0.875rem;
@@ -4910,7 +4909,7 @@ small {
 
 code {
   background-color: white;
-  border-color: #e6e6e6;
+  border-color: #e6e5e5;
   border-style: solid;
   border-width: 1px;
   color: #333333;
@@ -5088,7 +5087,7 @@ blockquote p {
   position: absolute;
   top: 0;
   width: 2.8125rem;
-  border-right: solid 1px #1a1a1a;
+  border-right: solid 1px #1a1919;
   left: 0; }
 
 .right-small {
@@ -5096,7 +5095,7 @@ blockquote p {
   position: absolute;
   top: 0;
   width: 2.8125rem;
-  border-left: solid 1px #1a1a1a;
+  border-left: solid 1px #1a1919;
   right: 0; }
 
 .tab-bar-section {
@@ -5139,7 +5138,7 @@ blockquote p {
     box-shadow: 0 0 0 1px #FFFFFF, 0 7px 0 1px #FFFFFF, 0 14px 0 1px #FFFFFF;
     width: 1rem; }
   .tab-bar .menu-icon span:hover:after {
-    box-shadow: 0 0 0 1px #b3b3b3, 0 7px 0 1px #b3b3b3, 0 14px 0 1px #b3b3b3; }
+    box-shadow: 0 0 0 1px #b3b2b2, 0 7px 0 1px #b3b2b2, 0 14px 0 1px #b3b2b2; }
 
 .left-off-canvas-menu {
   -webkit-backface-visibility: hidden;
@@ -5258,7 +5257,7 @@ ul.off-canvas-list {
   box-shadow: 0;
   cursor: pointer;
   transition: background 300ms ease;
-  -webkit-tap-highlight-color: transparent;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   background: rgba(255, 255, 255, 0.2);
   bottom: 0;
   display: block;
@@ -5280,7 +5279,7 @@ ul.off-canvas-list {
   box-shadow: 0;
   cursor: pointer;
   transition: background 300ms ease;
-  -webkit-tap-highlight-color: transparent;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   background: rgba(255, 255, 255, 0.2);
   bottom: 0;
   display: block;
@@ -5302,7 +5301,7 @@ ul.off-canvas-list {
   box-shadow: 0;
   cursor: pointer;
   transition: background 300ms ease;
-  -webkit-tap-highlight-color: transparent;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   background: rgba(255, 255, 255, 0.2);
   bottom: 0;
   display: block;
@@ -5324,7 +5323,7 @@ ul.off-canvas-list {
   box-shadow: 0;
   cursor: pointer;
   transition: background 300ms ease;
-  -webkit-tap-highlight-color: transparent;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   background: rgba(255, 255, 255, 0.2);
   bottom: 0;
   display: block;
@@ -5348,7 +5347,7 @@ ul.off-canvas-list {
   box-shadow: 0;
   cursor: pointer;
   transition: background 300ms ease;
-  -webkit-tap-highlight-color: transparent;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   background: rgba(255, 255, 255, 0.2);
   bottom: 0;
   display: block;
@@ -5371,7 +5370,7 @@ ul.off-canvas-list {
   box-shadow: 0;
   cursor: pointer;
   transition: background 300ms ease;
-  -webkit-tap-highlight-color: transparent;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   background: rgba(255, 255, 255, 0.2);
   bottom: 0;
   display: block;
@@ -5394,7 +5393,7 @@ ul.off-canvas-list {
   box-shadow: 0;
   cursor: pointer;
   transition: background 300ms ease;
-  -webkit-tap-highlight-color: transparent;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   background: rgba(255, 255, 255, 0.2);
   bottom: 0;
   display: block;
@@ -5417,7 +5416,7 @@ ul.off-canvas-list {
   box-shadow: 0;
   cursor: pointer;
   transition: background 300ms ease;
-  -webkit-tap-highlight-color: transparent;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   background: rgba(255, 255, 255, 0.2);
   bottom: 0;
   display: block;
@@ -5440,7 +5439,7 @@ ul.off-canvas-list {
   box-shadow: 0;
   cursor: pointer;
   transition: background 300ms ease;
-  -webkit-tap-highlight-color: transparent;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   background: rgba(255, 255, 255, 0.2);
   bottom: 0;
   display: block;
@@ -11632,7 +11631,7 @@ svg {
     -ms-transform: rotate(180deg);
         transform: rotate(180deg); }
     .hp-slideshow-wrapper .hp-slideshow-arrow .icon {
-      stroke: #e6e6e6;
+      stroke: #e6e5e5;
       pointer-events: all;
       cursor: pointer; }
     .hp-slideshow-wrapper .hp-slideshow-arrow:hover {
@@ -17939,7 +17938,7 @@ div.gift-card .text-section, div.kiva-store .text-section {
         margin-left: 1.25rem; }
     .email-settings .input-wrapper select {
       height: 1.75rem;
-      padding: 0 0.5rem; }
+      padding: 0 1.5rem 0 0.5rem; }
     .email-settings .input-wrapper.nested {
       margin-top: -0.5rem;
       margin-bottom: 0.5rem; }
@@ -17967,7 +17966,7 @@ div.gift-card .text-section, div.kiva-store .text-section {
     .email-settings .region-block select {
       display: block;
       margin-bottom: 1rem;
-      max-width: 10rem; }
+      width: auto; }
   .email-settings .region-inner a {
     display: inline-block;
     margin-bottom: 0.5rem; }
@@ -19280,14 +19279,26 @@ div.flag-comment-lightbox .lightbox-content .inner {
       background-color: #999; }
 
 @media only screen {
+  .whats-next-wrapper .paging.row .previous-button,
+  .whats-next-wrapper .paging.row .next-button {
+    padding: 1rem 2rem;
+    width: 40%; }
+    .whats-next-wrapper .paging.row .previous-button .previous-arrow, .whats-next-wrapper .paging.row .previous-button .next-arrow,
+    .whats-next-wrapper .paging.row .next-button .previous-arrow,
+    .whats-next-wrapper .paging.row .next-button .next-arrow {
+      width: 1.125rem;
+      height: 2.75rem;
+      top: 0.25rem; }
   @media only screen and (max-width: 480px) {
     .whats-next-wrapper .paging.row .previous-button .previous-arrow, .whats-next-wrapper .paging.row .previous-button .next-arrow,
-    .whats-next-wrapper .paging.row .next-button .previous-arrow, .whats-next-wrapper .paging.row .next-button .next-arrow {
+    .whats-next-wrapper .paging.row .next-button .previous-arrow,
+    .whats-next-wrapper .paging.row .next-button .next-arrow {
       top: 0.375rem;
       right: calc(50% + 1.8rem); } }
   @media only screen and (min-width:481px) {
     .whats-next-wrapper .paging.row .previous-button .previous-arrow, .whats-next-wrapper .paging.row .previous-button .next-arrow,
-    .whats-next-wrapper .paging.row .next-button .previous-arrow, .whats-next-wrapper .paging.row .next-button .next-arrow {
+    .whats-next-wrapper .paging.row .next-button .previous-arrow,
+    .whats-next-wrapper .paging.row .next-button .next-arrow {
       top: 0.375rem;
       right: calc(50% + 2.7rem); } }
   @media only screen and (max-width: 480px) {
@@ -19297,16 +19308,7 @@ div.flag-comment-lightbox .lightbox-content .inner {
   @media only screen and (min-width:481px) {
     .whats-next-wrapper .paging.row .previous-button .next-arrow,
     .whats-next-wrapper .paging.row .next-button .next-arrow {
-      left: calc(50% + 2.7rem); } }
-  .whats-next-wrapper .paging.row .previous-button,
-  .whats-next-wrapper .paging.row .next-button {
-    padding: 1rem 2rem;
-    width: 40%; }
-    .whats-next-wrapper .paging.row .previous-button .previous-arrow, .whats-next-wrapper .paging.row .previous-button .next-arrow,
-    .whats-next-wrapper .paging.row .next-button .previous-arrow, .whats-next-wrapper .paging.row .next-button .next-arrow {
-      width: 1.125rem;
-      height: 2.75rem;
-      top: 0.25rem; } }
+      left: calc(50% + 2.7rem); } } }
 
 .upcoming-repayments {
   border-top: 1px solid #d8d8d8;

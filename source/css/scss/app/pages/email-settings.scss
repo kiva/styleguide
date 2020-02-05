@@ -46,7 +46,7 @@
 
 		select {
 			height: 1.75rem;
-			padding: 0 rem-calc(8);
+			padding: 0 rem-calc(24) 0 rem-calc(8);
 		}
 
 		&.nested {
@@ -92,7 +92,7 @@
 		select {
 			display: block;
 			margin-bottom: 1rem;
-			max-width: 10rem;
+			width: auto;
 		}
 	}
 
