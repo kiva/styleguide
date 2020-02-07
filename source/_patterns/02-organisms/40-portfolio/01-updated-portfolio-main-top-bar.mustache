@@ -1,0 +1,39 @@
+<div class="portfolio-main">
+	<div class="top-wrapper">
+		<div class="row">
+			<div class="small-12 columns impact lender-name">{{lenderName}}</div>
+		</div>
+
+		<div class="row">
+			<div class="columns small-12">
+			{{#availableKivaCreditStat}}
+				<h3 class="stong">
+				free credit balance: {{freeCreditBalance}}
+				{{! This {{availableKivaCredit} is not the right value, I need to find a value that
+				is KivaCredit & Free Credit (promo, bonus, free) total }}
+					You have <span class="kiva-green"></span> available to lend!
+				</h3>
+			{{/availableKivaCreditStat}}
+
+			{{#freeCreditStat}}
+				<h5 class="credit-breakdown">{{kivaCredit}} Kiva credit {{statisticValue}} free credit ({{freeCreditExp}})</h5>
+			{{/freeCreditStat}}
+
+
+			<h4>
+				Outstanding loans: <span class="kiva-green">{{outstandingBalance}}</span>
+			</h4>
+			<div>
+				You've been ready to re-lend for <span class="kiva-accent-red">{{cIdleStartTime}} days</span> - put that money to good use!
+			</div>
+		</div>
+	</div>
+
+    <div class="row bottom-rule">
+        <div class="columns small-12 large-12">
+            <a href="{{findALoanUrl}}" class="button findALoanButton">Lend now</a>
+        </div>
+    </div>
+</div>
+
+{{> 01-molecules/10-lightbox/11-credit-summary-lightbox}}

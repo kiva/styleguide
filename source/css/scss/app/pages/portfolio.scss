@@ -11,6 +11,18 @@
 		margin-bottom: 1rem;
 		padding-bottom: 1rem;
 	}
+	
+	.top-wrapper {
+		text-align: center;
+		
+		@media #{$large-up} {
+			text-align: left;
+		}
+
+		.credit-breakdown {
+			color: $kiva-text-light;
+		}
+	}
 }
 
 .portfolio-main {
