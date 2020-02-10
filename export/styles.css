@@ -8325,22 +8325,33 @@ a.dark_green_bg_link {
       .global-promo-bar .content .call-to-action-text {
         display: inline; } }
 
-/* monthly good experiment */
-.default-banner .banner-link .icon-monthly-good {
-  fill: #247037; }
-
-/* Global Holiday-Gift Banner styles */
-.gift-banner {
+/* Default banner styles FEB 2020 */
+.default-banner {
   background-image: url("../images/tipbar-bg-small.jpg");
   background-position: bottom; }
-  .gift-banner .banner-link .icon-present {
+  .default-banner .banner-link .icon-info,
+  .default-banner .banner-link .icon-kiva-card,
+  .default-banner .banner-link .icon-monthly-good,
+  .default-banner .banner-link .icon-confirmation,
+  .default-banner .banner-link .icon-question {
+    fill: #49953f; }
+  .default-banner .banner-link .icon-present {
     display: block;
     height: 1.375rem;
     width: 1.375rem;
     margin-right: 0.625rem;
     margin-top: -0.2rem;
     fill-opacity: 0; }
-  .gift-banner .banner-link:hover .icon-present {
+  .default-banner .banner-link:hover .icon-info,
+  .default-banner .banner-link:hover .icon-kiva-card,
+  .default-banner .banner-link:hover .icon-monthly-good,
+  .default-banner .banner-link:hover .icon-confirmation,
+  .default-banner .banner-link:hover .icon-question {
+    fill: #247037;
+    stroke: none; }
+  .default-banner .banner-link:hover .icon-iwd-flower {
+    stroke: none; }
+  .default-banner .banner-link:hover .icon-present {
     stroke: #247037; }
 
 /* Global IWD Banner styles */
