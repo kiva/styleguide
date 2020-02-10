@@ -52,21 +52,19 @@
 	}
 }
 
-/* monthly good experiment */ 
+/* Default banner styles FEB 2020 */
 .default-banner {
-	.banner-link {
-		.icon-monthly-good {
-			fill: $kiva-darkgreen;
-		}
-	}
-}
-
-/* Global Holiday-Gift Banner styles */
-.gift-banner {
 	background-image: url('../images/tipbar-bg-small.jpg');
 	background-position: bottom;
 
 	.banner-link {
+		.icon-info,
+		.icon-kiva-card,
+		.icon-monthly-good,
+		.icon-confirmation,
+		.icon-question {
+			fill: $kiva-icon-green;
+		}
 		.icon-present {
 			display: block;
 			height: rem-calc(22);
@@ -77,6 +75,19 @@
 		}
 
 		&:hover {
+			.icon-info,
+			.icon-kiva-card,
+			.icon-monthly-good,
+			.icon-confirmation,
+			.icon-question {
+				fill: $kiva-darkgreen;
+				stroke: none;
+			}
+		
+			.icon-iwd-flower {
+				stroke: none;
+			}
+
 			.icon-present {
 				stroke: $kiva-darkgreen;
 			}
