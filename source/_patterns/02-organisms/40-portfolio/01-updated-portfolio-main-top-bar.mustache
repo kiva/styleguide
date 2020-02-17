@@ -7,24 +7,27 @@
 		<div class="row">
 			<div class="columns small-12">
 			{{#availableKivaCreditStat}}
-				<h3 class="stong">
-				free credit balance: {{freeCreditBalance}}
-				{{! This {{availableKivaCredit} is not the right value, I need to find a value that
-				is KivaCredit & Free Credit (promo, bonus, free) total }}
-					You have <span class="kiva-green"></span> available to lend!
+				<h3 class="strong">
+					You have <span class="kiva-green">${{kivaAndFreeCredit}}</span> available to lend!
 				</h3>
 			{{/availableKivaCreditStat}}
 
 			{{#freeCreditStat}}
 				<h5 class="credit-breakdown">{{kivaCredit}} Kiva credit {{statisticValue}} free credit ({{freeCreditExp}})</h5>
 			{{/freeCreditStat}}
-
-
 			<h4>
 				Outstanding loans: <span class="kiva-green">{{outstandingBalance}}</span>
 			</h4>
 			<div>
-				You've been ready to re-lend for <span class="kiva-accent-red">{{cIdleStartTime}} days</span> - put that money to good use!
+			{{! The false case of enough to lend is not getting set and therefore not trigging correctly }}
+			Enough To Lend flag {{enoughToLend}}<br>
+				{{#enoughToLend}}
+					You've been ready to re-lend for <span class="days">{{numberOfDays}} days</span> - put that money to good use!
+				{{/enoughToLend}}
+
+				{{^enoughToLend}}
+					You can make a loan today by adding just <span class="kiva-green">${{amountNeededToLend}}</span> to your account!
+				{{/enoughToLend}}
 			</div>
 		</div>
 	</div>
