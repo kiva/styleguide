@@ -19,6 +19,21 @@
 			text-align: left;
 		}
 
+		.outstanding-balance {
+			margin-top: 2rem;
+			margin-bottom: 2rem;
+
+			@media #{$large-up} {
+				margin-top: 1.5rem;
+				margin-bottom: 1.5rem;
+			}
+		}
+
+		.lend-messaging,
+		.row.bottom-rule {
+			margin-bottom: 1.5rem;
+		}
+
 		.credit-breakdown {
 			color: $kiva-text-light;
 		}
@@ -43,11 +58,10 @@
 	.findALoanButton {
 		width: 100%;
 		margin-top: 1rem;
-		margin-bottom: 1rem;
+		margin-bottom: 2rem;
 
 		@media #{$large-up} {
 			width: 50%;
-			margin-left: 25%;
 		}
 	}
 	

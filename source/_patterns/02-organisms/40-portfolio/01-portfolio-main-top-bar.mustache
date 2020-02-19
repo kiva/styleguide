@@ -1,37 +1,44 @@
 <div class="portfolio-main">
-    <div class="row">
-        <div class="small-12 columns impact lender-name">{{lenderName}}</div>
-    </div>
+	<div class="top-wrapper">
+		<div class="row">
+			<div class="small-12 columns impact lender-name">{{lenderName}}</div>
+		</div>
 
-    <div class="row">
-        {{#outstandingBalanceStat}}
-            <div class="columns small-6 {{#freeCreditStat}}large-4{{/freeCreditStat}}{{^freeCreditStat}}large-6{{/freeCreditStat}}">
-                {{> 01-molecules/06-components/10-statistic-display}}
-            </div>
-        {{/outstandingBalanceStat}}
+		<div class="row">
+			<div class="columns small-12">
+			{{#availableKivaCreditStat}}
+				<h3 class="strong">
+					You have <span class="kiva-green">${{kivaAndFreeCredit}}</span> available to lend!
+				</h3>
+			{{/availableKivaCreditStat}}
 
-        {{#availableKivaCreditStat}}
-			<div class="columns small-6 {{#freeCreditStat}}large-4{{/freeCreditStat}}{{^freeCreditStat}}large-6{{/freeCreditStat}}">
-				{{#is_auto_deposit_active}}
-					{{> 01-molecules/06-components/10-statistic-display}}
-				{{/is_auto_deposit_active}}
+			{{#freeCreditStat}}
+				<h5 class="credit-breakdown">{{kivaCredit}} Kiva credit {{statisticValue}} free credit{{#freeCreditExp}} ({{freeCreditExp}}){{/freeCreditExp}}</h5>
+			{{/freeCreditStat}}
 
-				{{^is_auto_deposit_active}}
-					{{> 01-molecules/06-components/12-statistic-display-with-local-lightbox}}
-				{{/is_auto_deposit_active}}
+			<h4 class="outstanding-balance">
+				Outstanding loans: <span class="kiva-green">{{outstandingBalance}}</span>
+			</h4>
+
+			<div class="lend-messaging">
+				{{#enoughToLend}}
+					You've been ready to re-lend for <span class="days">{{numberOfDays}} days</span> - put that money to good use!
+				{{/enoughToLend}}
+
+				{{#notEnoughToLend}}
+					You can make a loan today by adding just <span class="kiva-green">${{amountNeededToLend}}</span> to your account!
+				{{/notEnoughToLend}}
+
+				{{#zeroBalance}}
+					Find a loan to make a difference today.
+				{{/zeroBalance}}
 			</div>
-		{{/availableKivaCreditStat}}
-
-        {{#freeCreditStat}}
-            <div class="columns small-12 large-4">
-                {{> 01-molecules/06-components/10-statistic-display}}
-            </div>
-        {{/freeCreditStat}}
-    </div>
+		</div>
+	</div>
 
     <div class="row bottom-rule">
         <div class="columns small-12 large-12">
-            <a href="{{findALoanUrl}}" class="button findALoanButton">{{findALoanText}}</a>
+            <a href="{{findALoanUrl}}" class="button findALoanButton">Lend now</a>
         </div>
     </div>
 </div>
