@@ -15067,6 +15067,26 @@ p.body-termsofuse {
   margin-bottom: 1rem;
   padding-bottom: 1rem; }
 
+.portfolio .top-wrapper {
+  text-align: center; }
+  @media only screen and (min-width: 681px) {
+    .portfolio .top-wrapper {
+      text-align: left; } }
+  .portfolio .top-wrapper .outstanding-balance {
+    margin-top: 2rem;
+    margin-bottom: 2rem; }
+    @media only screen and (min-width: 681px) {
+      .portfolio .top-wrapper .outstanding-balance {
+        margin-top: 1.5rem;
+        margin-bottom: 1.5rem; } }
+  .portfolio .top-wrapper .lend-messaging,
+  .portfolio .top-wrapper .row.bottom-rule {
+    margin-bottom: 1.5rem; }
+  .portfolio .top-wrapper .credit-breakdown {
+    color: #999; }
+  .portfolio .top-wrapper .days {
+    color: #d74937; }
+
 .portfolio-main .bottom-rule {
   padding-bottom: 0; }
 
@@ -15077,11 +15097,10 @@ p.body-termsofuse {
 .portfolio-main .findALoanButton {
   width: 100%;
   margin-top: 1rem;
-  margin-bottom: 1rem; }
+  margin-bottom: 2rem; }
   @media only screen and (min-width: 681px) {
     .portfolio-main .findALoanButton {
-      width: 50%;
-      margin-left: 25%; } }
+      width: 50%; } }
 
 .portfolio-main .statistic-display {
   text-align: center; }
