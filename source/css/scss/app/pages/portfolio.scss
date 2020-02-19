@@ -11,6 +11,37 @@
 		margin-bottom: 1rem;
 		padding-bottom: 1rem;
 	}
+	
+	.top-wrapper {
+		text-align: center;
+		
+		@media #{$large-up} {
+			text-align: left;
+		}
+
+		.outstanding-balance {
+			margin-top: 2rem;
+			margin-bottom: 2rem;
+
+			@media #{$large-up} {
+				margin-top: 1.5rem;
+				margin-bottom: 1.5rem;
+			}
+		}
+
+		.lend-messaging,
+		.row.bottom-rule {
+			margin-bottom: 1.5rem;
+		}
+
+		.credit-breakdown {
+			color: $kiva-text-light;
+		}
+
+		.days {
+			color: $kiva-accent-red;
+		}
+	}
 }
 
 .portfolio-main {
@@ -27,11 +58,10 @@
 	.findALoanButton {
 		width: 100%;
 		margin-top: 1rem;
-		margin-bottom: 1rem;
+		margin-bottom: 2rem;
 
 		@media #{$large-up} {
 			width: 50%;
-			margin-left: 25%;
 		}
 	}
 	
