@@ -13,25 +13,21 @@
 			{{/availableKivaCreditStat}}
 
 			{{#freeCreditStat}}
-				<h5 class="credit-breakdown">{{kivaCredit}} Kiva credit {{statisticValue}} free credit{{#freeCreditExp}} ({{freeCreditExp}}){{/freeCreditExp}}</h5>
+				<h5 class="credit-breakdown">{{kivaCredit}} Kiva credit {{statisticValue}} free credit ({{freeCreditExp}})</h5>
 			{{/freeCreditStat}}
-
 			<h4>
 				Outstanding loans: <span class="kiva-green">{{outstandingBalance}}</span>
 			</h4>
-
 			<div>
+			{{! The false case of enough to lend is not getting set and therefore not trigging correctly }}
+			Enough To Lend flag {{enoughToLend}}<br>
 				{{#enoughToLend}}
 					You've been ready to re-lend for <span class="days">{{numberOfDays}} days</span> - put that money to good use!
 				{{/enoughToLend}}
 
-				{{#notEnoughToLend}}
+				{{^enoughToLend}}
 					You can make a loan today by adding just <span class="kiva-green">${{amountNeededToLend}}</span> to your account!
-				{{/notEnoughToLend}}
-
-				{{#zeroBalance}}
-					Find a loan to make a difference today.
-				{{/zeroBalance}}
+				{{/enoughToLend}}
 			</div>
 		</div>
 	</div>
