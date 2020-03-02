@@ -8297,7 +8297,7 @@ a.dark_green_bg_link {
         justify-content: center;
     -ms-flex-flow: row wrap;
         flex-flow: row wrap; }
-  .global-promo-bar .banner-link {
+  .global-promo-bar .banner-link, .global-promo-bar .banner-wrapper {
     display: -ms-flexbox;
     display: flex;
     -ms-flex-align: center;
@@ -8307,14 +8307,16 @@ a.dark_green_bg_link {
     text-align: center;
     padding: 0.625rem;
     line-height: 1.25; }
-    .global-promo-bar .banner-link:hover, .global-promo-bar .banner-link:active {
-      color: #247037; }
+  .global-promo-bar .banner-link:hover, .global-promo-bar .banner-link:active {
+    color: #247037; }
   .global-promo-bar .icon {
     display: block;
     height: 1.375rem;
     width: 1.375rem;
     margin-right: 0.625rem;
-    margin-top: -0.2rem; }
+    margin-top: -0.2rem;
+    -ms-flex-negative: 0;
+        flex-shrink: 0; }
   .global-promo-bar .content {
     text-align: center;
     display: block; }
@@ -8329,13 +8331,13 @@ a.dark_green_bg_link {
 .default-banner {
   background-image: url("../images/tipbar-bg-small.jpg");
   background-position: bottom; }
-  .default-banner .banner-link .icon-info,
-  .default-banner .banner-link .icon-kiva-card,
-  .default-banner .banner-link .icon-monthly-good,
-  .default-banner .banner-link .icon-confirmation,
-  .default-banner .banner-link .icon-question {
+  .default-banner .icon-info,
+  .default-banner .icon-kiva-card,
+  .default-banner .icon-monthly-good,
+  .default-banner .icon-confirmation,
+  .default-banner .icon-question {
     fill: #49953f; }
-  .default-banner .banner-link .icon-present {
+  .default-banner .icon-present {
     display: block;
     height: 1.375rem;
     width: 1.375rem;

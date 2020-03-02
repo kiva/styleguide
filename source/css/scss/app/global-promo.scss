@@ -12,7 +12,7 @@
         flex-flow: row wrap;
 	}
 
-	.banner-link {
+	.banner-link, .banner-wrapper {
 		display: flex;
 		align-items: center;
 		color: $kiva-icon-green;
@@ -20,7 +20,9 @@
 		text-align: center;
 		padding: 0.625rem;
 		line-height: 1.25;
+	}
 
+	.banner-link {
 		&:hover,
 		&:active {
 			color: $kiva-darkgreen;
@@ -33,6 +35,7 @@
         width: rem-calc(22);
         margin-right: rem-calc(10);
         margin-top: -0.2rem;
+        flex-shrink: 0;
     }
 
 	.content {
@@ -57,40 +60,38 @@
 	background-image: url('../images/tipbar-bg-small.jpg');
 	background-position: bottom;
 
-	.banner-link {
+	.icon-info,
+	.icon-kiva-card,
+	.icon-monthly-good,
+	.icon-confirmation,
+	.icon-question {
+		fill: $kiva-icon-green;
+	}
+	.icon-present {
+		display: block;
+		height: rem-calc(22);
+		width: rem-calc(22);
+		margin-right: rem-calc(10);
+		margin-top: -0.2rem;
+		fill-opacity: 0;
+	}
+
+	.banner-link:hover {
 		.icon-info,
 		.icon-kiva-card,
 		.icon-monthly-good,
 		.icon-confirmation,
 		.icon-question {
-			fill: $kiva-icon-green;
+			fill: $kiva-darkgreen;
+			stroke: none;
 		}
+	
+		.icon-iwd-flower {
+			stroke: none;
+		}
+
 		.icon-present {
-			display: block;
-			height: rem-calc(22);
-			width: rem-calc(22);
-			margin-right: rem-calc(10);
-            margin-top: -0.2rem;
-            fill-opacity: 0;
-		}
-
-		&:hover {
-			.icon-info,
-			.icon-kiva-card,
-			.icon-monthly-good,
-			.icon-confirmation,
-			.icon-question {
-				fill: $kiva-darkgreen;
-				stroke: none;
-			}
-		
-			.icon-iwd-flower {
-				stroke: none;
-			}
-
-			.icon-present {
-				stroke: $kiva-darkgreen;
-			}
+			stroke: $kiva-darkgreen;
 		}
 	}
 }
