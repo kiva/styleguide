@@ -22,7 +22,12 @@
 
 			<div class="lend-messaging">
 				{{#enoughToLend}}
-					You've been ready to re-lend for <span class="days">{{numberOfDays}} days</span> - put that money to good use!
+					{{#idleStartTimeZero}}
+						Thanks for being active today!
+					{{/idleStartTimeZero}}
+					{{^idleStartTimeZero}}
+						You’ve been ready to lend for <span class="days">{{numberOfDays}} days</span>!
+					{{/idleStartTimeZero}}
 				{{/enoughToLend}}
 
 				{{#notEnoughToLend}}
