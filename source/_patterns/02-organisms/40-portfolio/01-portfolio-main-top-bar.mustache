@@ -23,10 +23,10 @@
 			<div class="lend-messaging">
 				{{#enoughToLend}}
 					{{#idleStartTimeZero}}
-						Thanks for being active today! You still have <span class="kiva-green">${{kivaAndFreeCredit}}</span> available to lend.
+						Thanks for being active today!
 					{{/idleStartTimeZero}}
 					{{^idleStartTimeZero}}
-						You've made a difference in someone's life <span class="days">{{numberOfDays}} days</span> - put that money to good use!
+						You’ve been ready to lend for <span class="days">{{numberOfDays}} days</span>!
 					{{/idleStartTimeZero}}
 				{{/enoughToLend}}
 
