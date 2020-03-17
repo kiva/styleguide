@@ -1,0 +1,30 @@
+<div class="row monthly-good-setup">
+	<div class="columns">
+		<h1 class="impact text-center kiva-green">
+				Confirm your Good
+		</h1>
+
+		<p class="text-center featured">
+			Review and set up your
+			<br class="smo">monthly contribution
+		</p>
+
+		<form class="monthly-good-form" data-abide="ajax">
+			<div class="panel zigzag-bottom">
+				<div class="monthly-good-form-inputs">
+					{{#is-standalone}}
+						{{> 02-organisms/60-monthly-good/01-monthly-good-inputs}}
+					{{/is-standalone}}
+				</div>
+
+				<p class="text-center"><em>Rest easy, you can cancel anytime.</em></p>
+			</div>
+
+			<div class="monthly-good-form-submits">
+			{{#is-standalone}}
+				{{> 02-organisms/60-monthly-good/02-monthly-good-submit}}
+			{{/is-standalone}}
+			</div>
+		</form>
+	</div>
+</div>
