@@ -3,5 +3,5 @@
 	"is_subscriber": false,
 	"is_mg_active": true,
 	"setup_url": "#",
-	"mg_landing_url": "{kvurl page=ui action=monthlygood}"
+	"mg_landing_url": "{kvurl page=monthlygood action=MGLanding}"
 }
