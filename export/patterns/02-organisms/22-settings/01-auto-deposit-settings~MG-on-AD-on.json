@@ -7,5 +7,5 @@
 	 "deposit_amount": "$25",
 	 "donation_amount": "$3.75",
 	 "day_of_month": "14th",
-	 "mg_landing_url": "{kvurl page=monthlygood action=MGLanding}"
+	 "mg_landing_url": "{kvurl page=ui action=monthlygood}"
 }
