@@ -13,23 +13,6 @@
 	}
 	
 	.top-wrapper {
-		text-align: center;
-		
-		@media #{$large-up} {
-			text-align: left;
-		}
-
-		.outstanding-balance {
-			margin-top: 2rem;
-			margin-bottom: 2rem;
-
-			@media #{$large-up} {
-				margin-top: 1.5rem;
-				margin-bottom: 1.5rem;
-			}
-		}
-
-		.lend-messaging,
 		.row.bottom-rule {
 			margin-bottom: 1.5rem;
 		}
@@ -51,20 +34,46 @@
 	}
 
 	.lender-name {
-		margin-bottom: 1rem;
-		margin-top: 0.5rem;
+		margin-bottom: 1.35rem;
+		margin-top: 1.25rem;
+		color: $charcoal;
 	}
 
-	.findALoanButton {
-		width: 100%;
-		margin-top: 1rem;
-		margin-bottom: 2rem;
-
-		@media #{$large-up} {
-			width: 50%;
+	.top-wrapper {
+		.button {
+			width: 100%;
+			font-size: 1.5rem;
+			// overwrite button padding
+			padding-left: .5rem;
+    		padding-right: .5rem;
+		}
+		table {
+			&.table-basic {
+				border: 0px;
+			}
+			&.balance-details {
+				margin-top: 1rem;
+				tr {
+					//overwrite the default table zebra stripes
+					background: none !important;
+					border-bottom: 1px solid $light-gray;
+					&:last-child {
+						border-bottom: 0px;
+					}
+				}
+				td {
+					padding: 0.75rem 0rem;
+				}
+				td:last-child {
+					text-align: right;
+				}
+				h5 {
+					margin-bottom: .15rem;
+					margin-top: .35rem;
+				}
+			}
 		}
 	}
-	
 	.statistic-display {
 		text-align: center;
 	}

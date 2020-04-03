@@ -1,51 +1,77 @@
 <div class="portfolio-main">
-	<div class="top-wrapper">
+	<div class="top-wrapper small-12 large-10 columns">
 		<div class="row">
-			<div class="small-12 columns impact lender-name">{{lenderName}}</div>
+			<div class="small-12 columns lender-name">
+				<h4 class="light">
+					{{lenderName}}'s Portfolio
+				</h4>
+			</div>
 		</div>
 
 		<div class="row">
 			<div class="columns small-12">
-			{{#availableKivaCreditStat}}
-				<h3 class="strong">
-					You have <span class="kiva-green">${{kivaAndFreeCredit}}</span> available to lend!
-				</h3>
-			{{/availableKivaCreditStat}}
+				{{#availableKivaCreditStat}}
+					<h3 class="strong">
+						<span class="kiva-green">${{kivaAndFreeCredit}}</span> available to lend
+					</h3>
+				{{/availableKivaCreditStat}}
 
-			{{#freeCreditStat}}
-				<h5 class="credit-breakdown">{{kivaCredit}} Kiva credit {{statisticValue}} free credit{{#freeCreditExp}} ({{freeCreditExp}}){{/freeCreditExp}}</h5>
-			{{/freeCreditStat}}
+				{{#freeCreditStat}}
+					<h5 class="credit-breakdown light">{{kivaCredit}} Kiva credit {{statisticValue}} free credit{{#freeCreditExp}} ({{freeCreditExp}}){{/freeCreditExp}}</h5>
 
-			<h4 class="outstanding-balance">
-				Outstanding loans: <span class="kiva-green">{{outstandingBalance}}</span>
-			</h4>
+				{{/freeCreditStat}}
+				
+				<table class="table-basic balance-details">
+					<tbody>
+						<tr>
+							<td>
+								<h5 class="light">Outstanding loans</h5>
+							</td>
+							<td>
+								<h5>{{outstandingBalance}}</h5>
+							</td>
+						</tr>
 
-			<div class="lend-messaging">
-				{{#enoughToLend}}
-					{{#idleStartTimeZero}}
-						Thanks for being active today!
-					{{/idleStartTimeZero}}
-					{{^idleStartTimeZero}}
-						You’ve been ready to lend for <span class="days">{{numberOfDays}} day{{#multipleDays}}s{{/multipleDays}}</span>!
-					{{/idleStartTimeZero}}
-				{{/enoughToLend}}
-
-				{{#notEnoughToLend}}
-					You can make a loan today by adding just <span class="kiva-green">${{amountNeededToLend}}</span> to your account!
-				{{/notEnoughToLend}}
-
-				{{#zeroBalance}}
-					Find a loan to make a difference today.
-				{{/zeroBalance}}
+						{{#enoughToLend}}
+							{{#autoLoanDate}}
+								<tr>
+									<td>
+										<h5 class="light">Kiva Credit will be auto-loaned</h5>
+									</td>
+									<td>
+										<h5>{{autoLoanDate}}</h5>
+									</td>
+								</tr>
+							{{/autoLoanDate}}
+							{{^idleStartTimeZero}}
+								<tr>
+									<td>
+										<h5 class="light">You’ve been ready to lend for</h5>
+									</td>
+									<td>
+										<span class="days">{{numberOfDays}} day{{#multipleDays}}s{{/multipleDays}}</span>
+									</td>
+								</tr>
+							{{/idleStartTimeZero}}
+						{{/enoughToLend}}
+					</tbody>
+				</table>				
 			</div>
 		</div>
-	</div>
 
-    <div class="row bottom-rule">
-        <div class="columns small-12 large-12">
-            <a href="{{findALoanUrl}}" class="button findALoanButton">{{findALoanText}}</a>
-        </div>
-    </div>
+		<div class="row">
+			<div class="columns small-centered small-10 large-uncentered large-6">
+				<a href="{{findALoanUrl}}" class="button">{{findALoanText}}</a>
+			</div>
+			{{#autoDepositText}}
+				<div class="columns small-centered small-10 large-uncentered large-6 end">
+					<a href="{{autoDepositUrl}}" class="button secondary">{{autoDepositText}}</a>
+				</div>
+			{{/autoDepositText}}
+		</div>
+	</div>
+	<div class="row bottom-rule">
+	</div>
 </div>
 
 {{> 01-molecules/10-lightbox/11-credit-summary-lightbox}}
