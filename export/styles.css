@@ -15069,40 +15069,46 @@ p.body-termsofuse {
   margin-bottom: 1rem;
   padding-bottom: 1rem; }
 
-.portfolio .top-wrapper {
-  text-align: center; }
-  @media only screen and (min-width: 681px) {
-    .portfolio .top-wrapper {
-      text-align: left; } }
-  .portfolio .top-wrapper .outstanding-balance {
-    margin-top: 2rem;
-    margin-bottom: 2rem; }
-    @media only screen and (min-width: 681px) {
-      .portfolio .top-wrapper .outstanding-balance {
-        margin-top: 1.5rem;
-        margin-bottom: 1.5rem; } }
-  .portfolio .top-wrapper .lend-messaging,
-  .portfolio .top-wrapper .row.bottom-rule {
-    margin-bottom: 1.5rem; }
-  .portfolio .top-wrapper .credit-breakdown {
-    color: #999; }
-  .portfolio .top-wrapper .days {
-    color: #d74937; }
+.portfolio .top-wrapper .row.bottom-rule {
+  margin-bottom: 1.5rem; }
+
+.portfolio .top-wrapper .credit-breakdown {
+  color: #999; }
+
+.portfolio .top-wrapper .days {
+  color: #d74937; }
 
 .portfolio-main .bottom-rule {
   padding-bottom: 0; }
 
 .portfolio-main .lender-name {
-  margin-bottom: 1rem;
-  margin-top: 0.5rem; }
+  margin-bottom: 1.35rem;
+  margin-top: 1.25rem;
+  color: #484848; }
 
-.portfolio-main .findALoanButton {
+.portfolio-main .top-wrapper .button {
   width: 100%;
-  margin-top: 1rem;
-  margin-bottom: 2rem; }
-  @media only screen and (min-width: 681px) {
-    .portfolio-main .findALoanButton {
-      width: 50%; } }
+  font-size: 1.5rem;
+  padding-left: .5rem;
+  padding-right: .5rem; }
+
+.portfolio-main .top-wrapper table.table-basic {
+  border: 0px; }
+
+.portfolio-main .top-wrapper table.balance-details {
+  margin-top: 1rem; }
+  .portfolio-main .top-wrapper table.balance-details tr {
+    background: none !important;
+    border-bottom: 1px solid #d8d8d8; }
+    .portfolio-main .top-wrapper table.balance-details tr:last-child {
+      border-bottom: 0px; }
+  .portfolio-main .top-wrapper table.balance-details td {
+    padding: 0.75rem 0rem; }
+  .portfolio-main .top-wrapper table.balance-details td:last-child {
+    text-align: right; }
+  .portfolio-main .top-wrapper table.balance-details h5 {
+    margin-bottom: .15rem;
+    margin-top: .35rem; }
 
 .portfolio-main .statistic-display {
   text-align: center; }
