@@ -3,7 +3,12 @@
 {{/is-standalone}}
 
 {{#is_mg_active}}
-	<h3 class="formTitle">Monthly Good</h3>
+	{{#is_one_time}}
+		<h3 class="formTitle">Global COVID-19 Response Lending</h3>
+	{{/is_one_time}}
+	{{^is_one_time}}
+		<h3 class="formTitle">Monthly Good</h3>
+	{{/is_one_time}}
 
 	{{^is_subscriber}}
 		<p>
@@ -24,54 +29,62 @@
 
 
 {{#has_auto_deposit}}
-	<div class="date-details">
-		{{#day_of_month}}
-			<span>On the </span>
-			{{#edit_date}}
-				<div class="day-input">
-					<input type="text"
-						   value="{{day_of_month}}"
-						   data-abide-validator="ordinalDayOfMonth"
-						   data-min-day="1"
-						   data-max-day="31"
-						   required>
-					<small class="error">
-						<svg class="icon icon-error">
-							<use xlink:href="#icon-error"/>
+	{{#is_one_time}}
+		<p class="one-time-message">
+			Thank you for supporting those affected by COVID-19. Your deposit will occur within one hour, after which you will be unable to cancel.
+			<a class="cancel-contribution" href="#">Cancel contribution</a>
+		</p>
+	{{/is_one_time}}
+	{{^is_one_time}}
+		<div class="date-details">
+			{{#day_of_month}}
+				<span>On the </span>
+				{{#edit_date}}
+					<div class="day-input">
+						<input type="text"
+							   value="{{day_of_month}}"
+							   data-abide-validator="ordinalDayOfMonth"
+							   data-min-day="1"
+							   data-max-day="31"
+							   required>
+						<small class="error">
+							<svg class="icon icon-error">
+								<use xlink:href="#icon-error"/>
+							</svg>
+							Enter day of month - 1 to 31
+						</small>
+					</div>
+				{{/edit_date}}
+				{{^edit_date}}
+					<a href="#" class="edit-day">
+						{{day_of_month}}
+						<svg class="icon icon-pencil">
+							<use xlink:href="#icon-pencil"/>
 						</svg>
-						Enter day of month - 1 to 31
-					</small>
-				</div>
-			{{/edit_date}}
-			{{^edit_date}}
-				<a href="#" class="edit-day">
-					{{day_of_month}}
-					<svg class="icon icon-pencil">
-						<use xlink:href="#icon-pencil"/>
-					</svg>
-				</a>
-			{{/edit_date}}
-			<span> of each</span>
-		{{/day_of_month}}
-		{{^day_of_month}}
-			<span>Each</span>
-		{{/day_of_month}}
-		<span> month </span><span class="total-amount">{{total_amount}}</span><span> will be transferred from PayPal.</span>
-		{{^legacy}}
-			{{#is_subscriber}}
-				<a class="cancel-subscription" href="#">Cancel Monthly Good</a>
-			{{/is_subscriber}}
-			{{^is_subscriber}}
-				<a class="cancel-deposit" href="#">Cancel auto deposit</a>
-			{{/is_subscriber}}
-		{{/legacy}}
-		{{#is_date_after_28th}}
-			{{^edit_date}}
-				<br/>
-				<small class="after-28-note">(May be processed on the last day of the month)</small>
-			{{/edit_date}}
-		{{/is_date_after_28th}}
-	</div>
+					</a>
+				{{/edit_date}}
+				<span> of each</span>
+			{{/day_of_month}}
+			{{^day_of_month}}
+				<span>Each</span>
+			{{/day_of_month}}
+			<span> month </span><span class="total-amount">{{total_amount}}</span><span> will be transferred from PayPal.</span>
+			{{^legacy}}
+				{{#is_subscriber}}
+					<a class="cancel-subscription" href="#">Cancel Monthly Good</a>
+				{{/is_subscriber}}
+				{{^is_subscriber}}
+					<a class="cancel-deposit" href="#">Cancel auto deposit</a>
+				{{/is_subscriber}}
+			{{/legacy}}
+			{{#is_date_after_28th}}
+				{{^edit_date}}
+					<br/>
+					<small class="after-28-note">(May be processed on the last day of the month)</small>
+				{{/edit_date}}
+			{{/is_date_after_28th}}
+		</div>
+	{{/is_one_time}}
 	<div class="deposit-details">
 		<div class="deposit-amount-input">
 			{{#legacy}}
@@ -94,7 +107,7 @@
 					$10,000 limit
 				</small>
 			{{/legacy}}
-			<label>Deposit into your account</label>
+			<label>Deposit for lending</label>
 		</div>
 		<div class="donation-amount-input">
 			{{#legacy}}
@@ -117,21 +130,23 @@
 					$10,000 limit
 				</small>
 			{{/legacy}}
-			<label>Donation to Kiva</label>
+			<label>Optional donation to support Kiva</label>
 		</div>
 	</div>
 	{{^legacy}}
 		{{#is_subscriber}}
-			{{#selected_category}}
-				<div class="category-selection">
-					<label for="mg-category-select">{{mgCategorySelectHeading}}</label>
-					<select id="mg-category-select">
-						{{#mg_category_options}}
-							<option value="{{value}}" {{#selected}}selected="selected"{{/selected}}>{{title}}</option>
-						{{/mg_category_options}}
-					</select>
-				</div>
-			{{/selected_category}}
+			{{^is_one_time}}
+				{{#selected_category}}
+					<div class="category-selection">
+						<label for="mg-category-select">{{mgCategorySelectHeading}}</label>
+						<select id="mg-category-select">
+							{{#mg_category_options}}
+								<option value="{{value}}" {{#selected}}selected="selected"{{/selected}}>{{title}}</option>
+							{{/mg_category_options}}
+						</select>
+					</div>
+				{{/selected_category}}
+			{{/is_one_time}}
 		{{/is_subscriber}}
 	{{/legacy}}	
 	{{^legacy}}
@@ -144,7 +159,12 @@
 				<svg class="icon icon-error">
 					<use xlink:href="#icon-error"/>
 				</svg>
-				To cancel your existing auto deposit, please use the link above.
+				{{#is_one_time}}
+					To cancel your contribution, please use the link above.
+				{{/is_one_time}}
+				{{^is_one_time}}
+					To cancel your existing auto deposit, please use the link above.
+				{{/is_one_time}}
 			</small>
 		</div>
 		<div class="total-amount-maximum">
@@ -156,7 +176,7 @@
 				<svg class="icon icon-error">
 					<use xlink:href="#icon-error"/>
 				</svg>
-				The maximum auto deposit allowed is $10,000. Please try again by entering in a smaller amount.
+				The maximum deposit allowed is $10,000. Please try again by entering in a smaller amount.
 			</small>
 		</div>
 		<button type="submit" class="submit-form secondary button" {{^submittable}}disabled="disabled"{{/submittable}}>
