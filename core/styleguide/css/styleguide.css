@@ -1,4 +1,5 @@
-/*------------------------------------*    $PATTERN LAB STYLES
+/*------------------------------------*\
+    $PATTERN LAB STYLES
 \*------------------------------------*/
 /**
  * NOTE: These styles are specific to Pattern Lab and should not be modified. 
@@ -6,7 +7,8 @@
  * 
  * Second note: Any important declarations are to prevent brand styles from overriding style guide 
  */
-/*------------------------------------*    $CONTENTS
+/*------------------------------------*\
+    $CONTENTS
 \*------------------------------------*/
 /**
  * STYLE GUIDE VARIABLES------------------Declarations of Sass variables 
@@ -32,7 +34,8 @@
  * -----Code View
  * -----Icon Fonts
  */
-/*------------------------------------*    $PATTERN LAB VARIABLES 
+/*------------------------------------*\
+    $PATTERN LAB VARIABLES 
 \*------------------------------------*/
 /*Fonts*/
 /* Style Guide Interface Colors */
@@ -40,9 +43,11 @@
 /* Defaults */
 /* Dimensions */
 /* Breakpoints */
-/*------------------------------------*    $PATTERN LAB MIXINS 
+/*------------------------------------*\
+    $PATTERN LAB MIXINS 
 \*------------------------------------*/
-/*------------------------------------*    $PATTERN LAB INTERFACE 
+/*------------------------------------*\
+    $PATTERN LAB INTERFACE 
 \*------------------------------------*/
 #patternlab-html, #patternlab-body {
   margin: 0;
@@ -71,7 +76,8 @@
   .sg-cf:after, .sg-pattern:after {
     clear: both; }
 
-/*------------------------------------*    $PATTERN LAB HEADER 
+/*------------------------------------*\
+    $PATTERN LAB HEADER 
 \*------------------------------------*/
 /* Header */
 .sg-header {
@@ -137,7 +143,7 @@
 .sg-header .sg-nav-toggle {
   display: inline-block;
   padding: 0.9em 1em;
-  border-bottom: 1px solid transparent;
+  border-bottom: 1px solid rgba(0, 0, 0, 0);
   position: relative;
   text-transform: uppercase;
   z-index: 2; }
@@ -369,7 +375,8 @@ span.sg-pattern-state:before {
 .complete:before {
   color: #2ECC40 !important; }
 
-/*------------------------------------*    $PATTERN LAB VIEWPORT
+/*------------------------------------*\
+    $PATTERN LAB VIEWPORT
 \*------------------------------------*/
 /* Viewport */
 #sg-vp-wrap {
@@ -467,7 +474,8 @@ span.sg-pattern-state:before {
   -o-transition: width 0.8s ease-out;
   transition: width 0.8s ease-out; }
 
-/*------------------------------------*    $PATTERN LAB CONTENT 
+/*------------------------------------*\
+    $PATTERN LAB CONTENT 
 \*------------------------------------*/
 /* Section Pattern */
 .sg-pattern {
