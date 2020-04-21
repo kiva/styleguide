@@ -7,5 +7,15 @@
 	 "deposit_amount": "$25",
 	 "donation_amount": "$3.75",
 	 "day_of_month": "14th",
-	 "mg_landing_url": "{kvurl page=ui action=monthlygood}"
+	 "mg_landing_url": "{kvurl page=ui action=monthlygood}",
+	 "selected_category": "eco_friendly",
+	 "mg_category_options": [
+		{ "title": "Support all borrowers", "value": "default" },
+		{ "title": "Support women", "value": "women" },
+		{ "title": "Support farmers", "value": "agriculture", "selected": true },
+		{ "title": "Support students", "value": "education" },
+		{ "title": "Support refugees", "value": "refugees" },
+		{ "title": "Support eco-friendly", "value": "eco_friendly" },
+		{ "title": "Support US borrowers", "value": "us_borrowers" }
+	]
 }
