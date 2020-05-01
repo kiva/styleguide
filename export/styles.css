@@ -14823,6 +14823,9 @@ div.category-cards-header {
     position: absolute;
     top: 0.333333rem !important; }
 
+.repayment-schedule .repayment-warning {
+  padding: 0.75rem 0 2.5rem; }
+
 .press .main h2 {
   color: #4faf4e;
   margin-top: 2rem; }

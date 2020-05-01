@@ -1,3 +1,8 @@
 <section class="repayment-schedule">
 	{{> 01-molecules/10-lightbox/05-repayment-schedule-lightbox}}
+	{{#show_warning_message}}
+		<div class="repayment-warning">
+			{{ repayment_warning_message }}
+		</div>
+	{{/show_warning_message}}
 </section>
