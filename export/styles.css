@@ -9687,7 +9687,7 @@ ul.tertiary-nav {
   left: 0;
   right: 0;
   padding: 0.5rem;
-  z-index: 9999; }
+  z-index: 1000; }
   .cookie-banner-container .cookie-banner {
     position: relative;
     background: #f4f4f4;
@@ -9695,52 +9695,37 @@ ul.tertiary-nav {
     border: 0.5px solid rgba(151, 151, 151, 0.3);
     border-radius: 0.125rem;
     color: #484848;
-    padding: 1.125rem; }
+    padding: 0.75rem;
+    line-height: 1.6; }
+    .cookie-banner-container .cookie-banner .close-button {
+      cursor: pointer;
+      display: block;
+      margin: 0.25rem auto 0;
+      padding: 0.55rem 1rem; }
     .cookie-banner-container .cookie-banner .cookie-banner-content {
       text-align: center;
-      margin: 0 auto;
-      max-width: 38.75rem; }
-      .cookie-banner-container .cookie-banner .cookie-banner-content .close-button {
-        cursor: pointer;
+      margin: 0 auto; }
+  @media only screen and (min-width: 681px) {
+    .cookie-banner-container .cookie-banner {
+      padding-right: 10rem; }
+      .cookie-banner-container .cookie-banner .close-button {
         display: -ms-flexbox;
         display: flex;
         -ms-flex-align: center;
             align-items: center;
         -ms-flex-pack: end;
             justify-content: flex-end;
-        margin: 15px auto 0 auto; }
-  @media only screen and (min-width: 481px) {
-    .cookie-banner-container {
-      padding: 1rem; }
-      .cookie-banner-container .cookie-banner {
-        padding: 1.5rem; } }
-  @media only screen and (min-width: 761px) {
-    .cookie-banner-container {
-      padding: 1.25rem; }
-      .cookie-banner-container .cookie-banner {
-        padding: 1.875rem 0; }
-        .cookie-banner-container .cookie-banner .cookie-banner-content {
-          padding: 0 8.8rem 0 1.875rem; }
-          .cookie-banner-container .cookie-banner .cookie-banner-content .close-button {
-            width: auto;
-            height: auto;
-            display: -ms-flexbox;
-            display: flex;
-            -ms-flex-align: center;
-                align-items: center;
-            -ms-flex-pack: end;
-                justify-content: flex-end;
-            position: absolute;
-            right: 1.875rem;
-            top: 50%;
-            -ms-transform: translateY(-50%);
-                transform: translateY(-50%);
-            margin: unset; } }
-  @media only screen and (min-width: 989px) {
+        position: absolute;
+        right: 1.5rem;
+        top: 50%;
+        -ms-transform: translateY(-50%);
+            transform: translateY(-50%);
+        margin: unset; } }
+  @media only screen and (min-width: 1025px) {
     .cookie-banner-container .cookie-banner {
-      padding: 1.875rem 0; }
+      padding-right: 10rem; }
       .cookie-banner-container .cookie-banner .cookie-banner-content {
-        padding: 0 1.875rem; } }
+        max-width: 50rem; } }
 
 .gdpr-hidden {
   display: none; }
