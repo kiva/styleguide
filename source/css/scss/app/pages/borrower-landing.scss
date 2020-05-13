@@ -3,10 +3,126 @@
 
 .borrower-landing-page {
 
-	// center hero image on extra-wide screens
-	.full-width {
-		@media (min-width: 1901px) {
-			text-align: center;
+	.hero-wrapper {
+		position: relative;
+		max-width: rem-calc(1920);
+		margin: 0 auto;
+
+		.image-wrapper {
+			position: relative;
+			padding-bottom: 480 / 480 * 100%;
+
+			@media #{$medium-up} {
+				padding-bottom: 548 / 680 * 100%;
+			}
+
+			@media #{$large-up} {
+				padding-bottom: 566 / 1024 * 100%;
+			}
+
+			@media #{$xga-up} {
+				padding-bottom: 770 / 1440 * 100%;
+			}
+
+			@media #{$wxga-up} {
+				padding-bottom: 853 / 1920 * 100%;
+			}
+		}
+
+		.full-width-image {
+			position: absolute;
+		}
+
+		.start-box-wrapper {
+			width: calc(100% - 1rem);
+			margin: -8rem 0.5rem 2rem;
+
+			@media #{$medium-up} {
+				text-align: center;
+				margin-top: -30%;
+			}
+
+			@media #{$large-up} {
+				position: absolute;
+				margin-top: 0;
+				top: 30%;
+				text-align: left;
+			}
+
+			@media #{$xga-up} {
+				top: 25%;
+			}
+		}
+
+		.start-box {
+			display: inline-block;
+			position: relative;
+			background-color: $white;
+			border-radius: 1rem;
+			box-shadow: 0 0 0.25rem rgba(0,0,0,.2);
+			padding: 0.5rem 1rem;
+			text-align: left;
+
+			@media #{$large-up} {
+				width: auto;
+			}
+
+			@media #{$xga-up} {
+				padding: 1rem 3rem;
+			}
+
+			h1 {
+				font-size: 2rem;
+				line-height: 2rem;
+
+				@media #{$xga-up} {
+					font-size: 3rem;
+					line-height: 3rem;
+				}
+			}
+
+			p {
+				font-size: 1rem;
+				line-height: 1.5rem;
+				margin-bottom: 2rem;
+
+				@media #{$xga-up} {
+					font-size: 2rem;
+					line-height: 2.5rem;
+					margin-bottom: 3rem;
+				}
+			}
+		}
+
+		.button-row {
+			display: flex;
+			flex-flow: row wrap;
+			justify-content: center;
+
+			@media #{$medium-up} {
+				justify-content: space-between;
+			}
+
+			.button {
+				padding: 0 1rem;
+				line-height: 3rem;
+
+				@media #{$xlarge-up} {
+					padding: 0 1.5rem;
+					line-height: 3.5rem;
+				}
+			}
+
+			.get-started {
+				flex-basis: 100%;
+				flex-grow: 1;
+
+				@media #{$medium-up} {
+					flex-basis: auto;
+					order: 1;
+					margin-left: 1rem;
+				}
+			}
 		}
 	}
 
