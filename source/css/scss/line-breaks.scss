@@ -5,7 +5,9 @@ br.so
 , br.xlo
 , br.xxlo
 , br.smo
-, br.lu {
+, br.mu
+, br.lu
+, br.xgau {
 	display: none;
 }
 
@@ -48,8 +50,20 @@ br.smo {
 	}
 }
 
+br.mu {
+	@media #{$medium-up} {
+		display: inline;
+	}
+}
+
 br.lu {
 	@media #{$large-up} {
+		display: inline;
+	}
+}
+
+br.xgau {
+	@media #{$xga-up} {
 		display: inline;
 	}
 }
