@@ -414,7 +414,7 @@ th {
 .kiva-darkgreen-bg {
   background-color: #247037; }
 
-br.so, br.mo, br.lo, br.xlo, br.xxlo, br.smo, br.lu {
+br.so, br.mo, br.lo, br.xlo, br.xxlo, br.smo, br.mu, br.lu, br.xgau {
   display: none; }
 
 @media only screen and (max-width: 480px) {
@@ -445,8 +445,16 @@ br.so, br.mo, br.lo, br.xlo, br.xxlo, br.smo, br.lu {
   br.smo {
     display: inline; } }
 
+@media only screen and (min-width: 481px) {
+  br.mu {
+    display: inline; } }
+
 @media only screen and (min-width: 681px) {
   br.lu {
+    display: inline; } }
+
+@media only screen and (min-width: 1025px) {
+  br.xgau {
     display: inline; } }
 
 meta.foundation-version {
@@ -16512,9 +16520,103 @@ table.repayments-list {
 
 .borrower-landing-page {
   /*Slideshow Styles*/ }
-  @media (min-width: 1901px) {
-    .borrower-landing-page .full-width {
-      text-align: center; } }
+  .borrower-landing-page .hero-wrapper {
+    position: relative;
+    max-width: 120rem;
+    margin: 0 auto; }
+    .borrower-landing-page .hero-wrapper .image-wrapper {
+      position: relative;
+      padding-bottom: 100%; }
+      @media only screen and (min-width: 481px) {
+        .borrower-landing-page .hero-wrapper .image-wrapper {
+          padding-bottom: 80.5882352941%; } }
+      @media only screen and (min-width: 681px) {
+        .borrower-landing-page .hero-wrapper .image-wrapper {
+          padding-bottom: 55.2734375%; } }
+      @media only screen and (min-width: 1025px) {
+        .borrower-landing-page .hero-wrapper .image-wrapper {
+          padding-bottom: 53.4722222222%; } }
+      @media only screen and (min-width: 1441px) {
+        .borrower-landing-page .hero-wrapper .image-wrapper {
+          padding-bottom: 44.4270833333%; } }
+    .borrower-landing-page .hero-wrapper .full-width-image {
+      position: absolute; }
+    .borrower-landing-page .hero-wrapper .start-box-wrapper {
+      width: calc(100% - 1rem);
+      margin: -8rem 0.5rem 2rem; }
+      @media only screen and (min-width: 481px) {
+        .borrower-landing-page .hero-wrapper .start-box-wrapper {
+          text-align: center;
+          margin-top: -30%; } }
+      @media only screen and (min-width: 681px) {
+        .borrower-landing-page .hero-wrapper .start-box-wrapper {
+          position: absolute;
+          margin-top: 0;
+          top: 30%;
+          text-align: left; } }
+      @media only screen and (min-width: 1025px) {
+        .borrower-landing-page .hero-wrapper .start-box-wrapper {
+          top: 25%; } }
+    .borrower-landing-page .hero-wrapper .start-box {
+      display: inline-block;
+      position: relative;
+      background-color: #FFFFFF;
+      border-radius: 1rem;
+      box-shadow: 0 0 0.25rem rgba(0, 0, 0, 0.2);
+      padding: 0.5rem 1rem;
+      text-align: left; }
+      @media only screen and (min-width: 681px) {
+        .borrower-landing-page .hero-wrapper .start-box {
+          width: auto; } }
+      @media only screen and (min-width: 1025px) {
+        .borrower-landing-page .hero-wrapper .start-box {
+          padding: 1rem 3rem; } }
+      .borrower-landing-page .hero-wrapper .start-box h1 {
+        font-size: 2rem;
+        line-height: 2rem; }
+        @media only screen and (min-width: 1025px) {
+          .borrower-landing-page .hero-wrapper .start-box h1 {
+            font-size: 3rem;
+            line-height: 3rem; } }
+      .borrower-landing-page .hero-wrapper .start-box p {
+        font-size: 1rem;
+        line-height: 1.5rem;
+        margin-bottom: 2rem; }
+        @media only screen and (min-width: 1025px) {
+          .borrower-landing-page .hero-wrapper .start-box p {
+            font-size: 2rem;
+            line-height: 2.5rem;
+            margin-bottom: 3rem; } }
+    .borrower-landing-page .hero-wrapper .button-row {
+      display: -ms-flexbox;
+      display: flex;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+      -ms-flex-pack: center;
+          justify-content: center; }
+      @media only screen and (min-width: 481px) {
+        .borrower-landing-page .hero-wrapper .button-row {
+          -ms-flex-pack: justify;
+              justify-content: space-between; } }
+      .borrower-landing-page .hero-wrapper .button-row .button {
+        padding: 0 1rem;
+        line-height: 3rem; }
+        @media only screen and (min-width: 761px) {
+          .borrower-landing-page .hero-wrapper .button-row .button {
+            padding: 0 1.5rem;
+            line-height: 3.5rem; } }
+      .borrower-landing-page .hero-wrapper .button-row .get-started {
+        -ms-flex-preferred-size: 100%;
+            flex-basis: 100%;
+        -ms-flex-positive: 1;
+            flex-grow: 1; }
+        @media only screen and (min-width: 481px) {
+          .borrower-landing-page .hero-wrapper .button-row .get-started {
+            -ms-flex-preferred-size: auto;
+                flex-basis: auto;
+            -ms-flex-order: 1;
+                order: 1;
+            margin-left: 1rem; } }
 
 @media only screen and (max-width: 480px) {
   .borrower-landing-page .overlay, .borrower-landing-page .overlay-bold {
