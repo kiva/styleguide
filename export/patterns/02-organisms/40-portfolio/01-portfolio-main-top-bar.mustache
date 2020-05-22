@@ -43,16 +43,28 @@
 									</td>
 								</tr>
 							{{/autoLoanDate}}
-							{{^idleStartTimeZero}}
-								<tr>
-									<td>
-										<h5 class="light">You’ve been ready to lend for</h5>
-									</td>
-									<td>
-										<h5 class="days">{{numberOfDays}} day{{#multipleDays}}s{{/multipleDays}}</h5>
-									</td>
-								</tr>
-							{{/idleStartTimeZero}}
+							{{^timeZero}}
+								{{#cIdleStartTime}}
+									<tr>
+										<td>
+											<h5 class="light">You’ve been ready to lend for</h5>
+										</td>
+										<td>
+											<h5 class="days">{{numberOfDays}} day{{#multipleDays}}s{{/multipleDays}}</h5>
+										</td>
+									</tr>
+								{{/cIdleStartTime}}
+								{{#lastManualLoan}}
+									<tr>
+										<td>
+											<h5 class="light">You made your last manual loan</h5>
+										</td>
+										<td>
+											<h5 class="days">{{numberOfDays}} day{{#multipleDays}}s{{/multipleDays}} ago</h5>
+										</td>
+									</tr>
+								{{/lastManualLoan}}
+							{{/timeZero}}
 						{{/enoughToLend}}
 					</tbody>
 				</table>				
