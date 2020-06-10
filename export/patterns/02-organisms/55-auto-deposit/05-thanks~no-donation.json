@@ -3,5 +3,5 @@
 	"has_donation": false,
 	"is_donation-only": false,
 	"donation_amount": "",
-	"auto_lend_url": "https://www.kiva.org/settings/credit"
+	"auto_lend_url": "https://www.kiva.org/settings/autolending"
 }
