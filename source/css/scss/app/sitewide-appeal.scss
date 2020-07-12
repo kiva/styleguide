@@ -1,7 +1,19 @@
 .sitewide-appeal-wrapper {
+	display: none;
 	background-color: $kiva-alert-yellow;
+	
+	.sitewide-appeal-loading {
+		display: block;
+		text-align: center;
 
+		.loading-spinner {
+			width: 2rem;
+			height: 2rem;
+			margin: .5rem;
+		}
+	}
 	.sitewide-appeal {
+		display: none;
 		padding-left: rem-calc(10);
 		padding-right: rem-calc(10);
 
