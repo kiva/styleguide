@@ -100,7 +100,6 @@
 
 						@media #{$medium-up} {
 							left: rem-calc(-48);
-							// left: rem-calc(-33);
 							top: rem-calc(80);
 						}
 
@@ -168,7 +167,6 @@
 						background: #FAFAFA;
 						width: rem-calc(28);
 						height: rem-calc(28);
-						/* border-radius: 27px; */
 						top: rem-calc(-21);
 						left: rem-calc(-14);
 						z-index: 5;
@@ -217,19 +215,15 @@
 					// Overriding .mini button class, not ideal, but text is too small otherwise
 					.mini {
 						margin-bottom: 0;
-						// padding-left: 1.25rem;
-						// padding-right: 1.25rem;
 						font-size: 0.875rem;
 						height: 2rem;
 						line-height: .2rem;
 						padding: 1.125rem;
-						// font-size: 1.25rem;
 					}
 				}
 
 				.other-amount {
 					cursor: pointer;
-					// font-size: 1.25rem;
 					font-size: 0.925rem;
 					width: 100%;
 					text-align: center;
