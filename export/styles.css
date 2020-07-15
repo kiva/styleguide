@@ -11469,18 +11469,27 @@ svg {
   margin-bottom: .5rem; }
 
 .sitewide-appeal-wrapper {
-  background-color: #fee259; }
+  display: none;
+  background-color: #FAFAFA; }
+  .sitewide-appeal-wrapper .sitewide-appeal-loading {
+    display: block;
+    text-align: center; }
+    .sitewide-appeal-wrapper .sitewide-appeal-loading .loading-spinner {
+      width: 2rem;
+      height: 2rem;
+      margin: .5rem; }
   .sitewide-appeal-wrapper .sitewide-appeal {
-    padding-left: 0.625rem;
-    padding-right: 0.625rem; }
+    display: none;
+    padding: 1rem 0.625rem 0.75rem; }
     .sitewide-appeal-wrapper .sitewide-appeal .sitewide-header h2 {
-      margin-bottom: 0;
-      font-weight: 300;
+      margin-bottom: 0.5rem;
+      font-weight: 700;
       position: relative;
-      padding-right: 2.5rem; }
+      padding-right: 2.5rem;
+      line-height: 1.825rem; }
       .sitewide-appeal-wrapper .sitewide-appeal .sitewide-header h2 .icon-large-chevron {
         position: absolute;
-        top: 0.4375rem;
+        top: 0.25rem;
         right: 0;
         height: 1.5625rem;
         width: 1.5625rem;
@@ -11490,130 +11499,150 @@ svg {
       transform: rotate(-180deg); }
     @media only screen and (min-width: 481px) {
       .sitewide-appeal-wrapper .sitewide-appeal .thermometer-holder {
-        height: 11.5625rem; } }
+        height: 9.6875rem; } }
     .sitewide-appeal-wrapper .sitewide-appeal .thermometer-holder .thermometer-wrap {
       padding: 1rem; }
+      @media only screen and (min-width: 481px) {
+        .sitewide-appeal-wrapper .sitewide-appeal .thermometer-holder .thermometer-wrap {
+          padding: 0;
+          position: absolute;
+          right: -5.3125rem;
+          top: 0.625rem;
+          transition: top 500ms ease-in-out, opacity 500ms ease-in-out; } }
       .sitewide-appeal-wrapper .sitewide-appeal .thermometer-holder .thermometer-wrap .thermometer {
-        background-color: #efefef;
+        position: relative;
         border: none;
         padding: 0;
-        border-radius: 0.9375rem;
-        height: 0.8125rem; }
+        margin-top: -2.6875rem;
+        height: 0.375rem;
+        margin-right: 0.625rem;
+        margin-bottom: 0;
+        z-index: 10; }
         @media only screen and (min-width: 481px) {
           .sitewide-appeal-wrapper .sitewide-appeal .thermometer-holder .thermometer-wrap .thermometer {
             -ms-transform: rotate(270deg);
                 transform: rotate(270deg);
             position: relative;
             width: 9.375rem;
-            top: 3.3125rem;
-            left: -2.9375rem; } }
-        @media only screen and (min-width: 681px) {
-          .sitewide-appeal-wrapper .sitewide-appeal .thermometer-holder .thermometer-wrap .thermometer {
-            left: -1.75rem; } }
-        @media only screen and (min-width: 761px) {
-          .sitewide-appeal-wrapper .sitewide-appeal .thermometer-holder .thermometer-wrap .thermometer {
-            left: -0.875rem; } }
-        @media only screen and (min-width: 989px) {
-          .sitewide-appeal-wrapper .sitewide-appeal .thermometer-holder .thermometer-wrap .thermometer {
-            left: -0.3125rem; } }
+            top: 5.5rem;
+            left: -3rem;
+            max-width: 7.5rem; } }
         .sitewide-appeal-wrapper .sitewide-appeal .thermometer-holder .thermometer-wrap .thermometer .inner-meter {
-          background-color: #4faf4e;
+          background-color: #D94830;
           display: block;
           height: 100%;
           float: left;
-          border-radius: 0.4375rem;
-          transition: width 3500ms ease-in-out;
+          border-radius: 0.1875rem;
+          transition: width 2500ms ease-in-out;
           width: 0;
           max-width: 100%; }
-        .sitewide-appeal-wrapper .sitewide-appeal .thermometer-holder .thermometer-wrap .thermometer .tick-wrapper {
-          position: absolute;
-          height: 100%;
-          width: 100%; }
-          .sitewide-appeal-wrapper .sitewide-appeal .thermometer-holder .thermometer-wrap .thermometer .tick-wrapper .tick-lines {
-            border-left: 1px solid #4faf4e;
-            border-right: 1px solid #efefef;
-            padding-right: 7%;
-            height: 9%;
-            float: left;
-            top: 0.1875rem;
-            position: relative; }
-            @media only screen and (min-width: 481px) {
-              .sitewide-appeal-wrapper .sitewide-appeal .thermometer-holder .thermometer-wrap .thermometer .tick-wrapper .tick-lines {
-                height: 55%;
-                padding-right: 0.625rem; } }
+        .sitewide-appeal-wrapper .sitewide-appeal .thermometer-holder .thermometer-wrap .thermometer.meter-bg {
+          margin-top: -1.25rem;
+          left: 0;
+          height: 1.375rem;
+          border-radius: 1.375rem;
+          margin-right: 0;
+          z-index: 2; }
+          @media only screen and (min-width: 481px) {
+            .sitewide-appeal-wrapper .sitewide-appeal .thermometer-holder .thermometer-wrap .thermometer.meter-bg {
+              left: -3rem;
+              top: 5rem; } }
+          .sitewide-appeal-wrapper .sitewide-appeal .thermometer-holder .thermometer-wrap .thermometer.meter-bg .inner-meter {
+            background: #484848;
+            width: 100%;
+            float: none;
+            border-radius: 1.375rem; }
+        .sitewide-appeal-wrapper .sitewide-appeal .thermometer-holder .thermometer-wrap .thermometer.meter-center {
+          margin-top: -3.6875rem;
+          margin-left: -0.3125rem;
+          margin-right: 0.25rem;
+          height: 0.875rem;
+          z-index: 6; }
+          @media only screen and (min-width: 481px) {
+            .sitewide-appeal-wrapper .sitewide-appeal .thermometer-holder .thermometer-wrap .thermometer.meter-center {
+              top: 5.25rem;
+              left: -2.6875rem; } }
+          .sitewide-appeal-wrapper .sitewide-appeal .thermometer-holder .thermometer-wrap .thermometer.meter-center .inner-meter {
+            width: 100%;
+            background: #FAFAFA;
+            float: none;
+            border-radius: 0.4375rem; }
       .sitewide-appeal-wrapper .sitewide-appeal .thermometer-holder .thermometer-wrap .thermometer-bulb {
-        background-color: #4faf4e;
+        background-color: #D94830;
         position: relative;
         display: inline-block;
         border-radius: 1.25rem;
-        height: 1.875rem;
-        width: 1.875rem;
+        height: 1.25rem;
+        width: 1.25rem;
         left: -0.625rem;
-        top: -2rem; }
+        top: -0.8125rem;
+        z-index: 9; }
         @media only screen and (min-width: 481px) {
           .sitewide-appeal-wrapper .sitewide-appeal .thermometer-holder .thermometer-wrap .thermometer-bulb {
-            left: 0.8125rem;
-            top: 6rem; } }
-        @media only screen and (min-width: 681px) {
-          .sitewide-appeal-wrapper .sitewide-appeal .thermometer-holder .thermometer-wrap .thermometer-bulb {
-            left: 2rem; } }
-        @media only screen and (min-width: 761px) {
-          .sitewide-appeal-wrapper .sitewide-appeal .thermometer-holder .thermometer-wrap .thermometer-bulb {
-            left: 2.875rem; } }
-        @media only screen and (min-width: 989px) {
-          .sitewide-appeal-wrapper .sitewide-appeal .thermometer-holder .thermometer-wrap .thermometer-bulb {
-            left: 3.4375rem; } }
-    .sitewide-appeal-wrapper .sitewide-appeal .sitewide-body {
-      padding: 0.4rem 0; }
+            left: 0.125rem;
+            top: 8.1875rem; } }
+        .sitewide-appeal-wrapper .sitewide-appeal .thermometer-holder .thermometer-wrap .thermometer-bulb.meter-bg {
+          background: #484848;
+          width: 2.25rem;
+          height: 2.25rem;
+          border-radius: 2.25rem;
+          left: -1.125rem;
+          top: -1.8125rem;
+          z-index: 1; }
+          @media only screen and (min-width: 481px) {
+            .sitewide-appeal-wrapper .sitewide-appeal .thermometer-holder .thermometer-wrap .thermometer-bulb.meter-bg {
+              left: -0.375rem;
+              top: 7.1875rem; } }
+        .sitewide-appeal-wrapper .sitewide-appeal .thermometer-holder .thermometer-wrap .thermometer-bulb.meter-center {
+          background: #FAFAFA;
+          width: 1.75rem;
+          height: 1.75rem;
+          top: -1.3125rem;
+          left: -0.875rem;
+          z-index: 5; }
+          @media only screen and (min-width: 481px) {
+            .sitewide-appeal-wrapper .sitewide-appeal .thermometer-holder .thermometer-wrap .thermometer-bulb.meter-center {
+              left: -0.125rem;
+              top: 7.6875rem; } }
+    .sitewide-appeal-wrapper .sitewide-appeal .sitewide-body .row {
+      padding-top: 0.75rem; }
+    .sitewide-appeal-wrapper .sitewide-appeal .sitewide-body .message {
+      overflow: hidden;
+      line-height: 1.325rem;
+      margin-bottom: 1.5rem;
+      font-weight: 300; }
+      .sitewide-appeal-wrapper .sitewide-appeal .sitewide-body .message .closing {
+        margin-top: 0.625rem; }
+    .sitewide-appeal-wrapper .sitewide-appeal .sitewide-body .donation-buttons {
+      margin: 0 auto;
+      display: table; }
       @media only screen and (min-width: 481px) {
-        .sitewide-appeal-wrapper .sitewide-appeal .sitewide-body {
-          position: relative;
-          left: -0.5rem; } }
-      @media only screen and (min-width: 681px) {
-        .sitewide-appeal-wrapper .sitewide-appeal .sitewide-body {
-          left: -1.75rem; } }
-      @media only screen and (min-width: 761px) {
-        .sitewide-appeal-wrapper .sitewide-appeal .sitewide-body {
-          left: -2.5rem; } }
-      @media only screen and (min-width: 989px) {
-        .sitewide-appeal-wrapper .sitewide-appeal .sitewide-body {
-          left: -3rem; } }
-      @media (min-width: 591px) {
-        .sitewide-appeal-wrapper .sitewide-appeal .sitewide-body .message-wrapper {
-          padding-bottom: 1.25rem; } }
-      .sitewide-appeal-wrapper .sitewide-appeal .sitewide-body .message {
-        overflow: hidden;
-        margin-bottom: 1.25rem;
-        line-height: 1.75rem;
-        font-weight: 300; }
-        .sitewide-appeal-wrapper .sitewide-appeal .sitewide-body .message .closing {
-          margin-top: 0.625rem; }
-      .sitewide-appeal-wrapper .sitewide-appeal .sitewide-body .donation-buttons {
-        margin: 0 auto;
-        display: table; }
+        .sitewide-appeal-wrapper .sitewide-appeal .sitewide-body .donation-buttons {
+          margin: 0; } }
+      .sitewide-appeal-wrapper .sitewide-appeal .sitewide-body .donation-buttons li {
+        width: inherit;
+        padding-bottom: 0; }
         @media only screen and (min-width: 481px) {
-          .sitewide-appeal-wrapper .sitewide-appeal .sitewide-body .donation-buttons {
-            margin: 0; } }
-        .sitewide-appeal-wrapper .sitewide-appeal .sitewide-body .donation-buttons li {
-          width: inherit;
-          padding-bottom: 0; }
-          @media only screen and (min-width: 481px) {
-            .sitewide-appeal-wrapper .sitewide-appeal .sitewide-body .donation-buttons li {
-              width: unset; } }
-          .sitewide-appeal-wrapper .sitewide-appeal .sitewide-body .donation-buttons li .smallest {
-            margin-bottom: 0;
-            font-size: 1.25rem; }
-        .sitewide-appeal-wrapper .sitewide-appeal .sitewide-body .donation-buttons .other-amount {
-          cursor: pointer;
-          font-size: 1.25rem;
-          width: 100%;
-          text-align: center;
-          line-height: 2.5; }
-          @media only screen and (min-width: 481px) {
-            .sitewide-appeal-wrapper .sitewide-appeal .sitewide-body .donation-buttons .other-amount {
-              width: 9.375rem; } }
-          .sitewide-appeal-wrapper .sitewide-appeal .sitewide-body .donation-buttons .other-amount a:visited {
-            color: #118aec; }
+          .sitewide-appeal-wrapper .sitewide-appeal .sitewide-body .donation-buttons li {
+            width: unset; } }
+        .sitewide-appeal-wrapper .sitewide-appeal .sitewide-body .donation-buttons li .mini {
+          margin-bottom: 0;
+          font-size: 0.875rem;
+          height: 2rem;
+          line-height: .2rem;
+          padding: 1.125rem; }
+      .sitewide-appeal-wrapper .sitewide-appeal .sitewide-body .donation-buttons .other-amount {
+        cursor: pointer;
+        font-size: 0.925rem;
+        width: 100%;
+        text-align: center;
+        line-height: 2.5; }
+        @media only screen and (min-width: 481px) {
+          .sitewide-appeal-wrapper .sitewide-appeal .sitewide-body .donation-buttons .other-amount {
+            width: 7rem;
+            padding: 0; } }
+        .sitewide-appeal-wrapper .sitewide-appeal .sitewide-body .donation-buttons .other-amount a:visited {
+          color: #118aec; }
 
 .hp-slideshow-wrapper {
   position: relative;

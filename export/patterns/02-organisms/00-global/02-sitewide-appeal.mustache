@@ -1,8 +1,11 @@
 <div class="sitewide-appeal-wrapper">
+	<div class="sitewide-appeal-loading">
+		{{> 01-molecules/03-media/01-loading-spinner }}
+	</div>
 	<div class="sitewide-appeal row">
-		<div class="sitewide-header small-12"data-kv-accordion aria-controls="ac-sitewide-appeal" {{#isExpanded}}aria-expanded="true"{{/isExpanded}}{{^isExpanded}}aria-expanded="false"{{/isExpanded}}>
+		<div class="sitewide-header small-12 medium-9 medium-offset-2 large-9 large-offset-2 columns" data-kv-accordion aria-controls="ac-sitewide-appeal" {{#isExpanded}}aria-expanded="true"{{/isExpanded}}{{^isExpanded}}aria-expanded="false"{{/isExpanded}}>
 			<h2>
-				Love making a difference with Kiva? Your donations keep us running.
+				<span class="title-text"></span>
 				<span class="dropdown-icon">
 					<svg stroke-width="7" class="icon icon-large-chevron">
 						<use xlink:href="#icon-large-chevron"></use>
@@ -11,45 +14,23 @@
 			</h2>
 		</div>
 		
-		<div class="sitewide-body small-12" id="ac-sitewide-appeal"{{#isExpanded}}aria-hidden="false"{{/isExpanded}}{{^isExpanded}}aria-hidden="true"{{/isExpanded}}>
-			<div class="thermometer-holder show-for-medium-up medium-1 columns">
-				{{! Thermometer element }}
-				{{> 01-molecules/08-meters/appeal-meter.mustache}}
-			</div>
-			<div class="small-12 medium-10 columns message-wrapper">
-				<div class="message">
-					Thank you for the impact you’ve made this year! Together we’ve funded more than 170,000 loans and
-					raised more than $120 million for financially excluded people around the world. It costs us more
-					than $3 to facilitate each $25 loan, and we rely on optional donations from individuals like you to
-					cover our costs.
-					{{#match}}
-						<strong>Your donations are <em>matched</em> while funds last!</strong>
-					{{/match}}
-				</div>
-
-				<div class="thermometer-holder show-for-small-only small-12 columns">
+		<div class="sitewide-body small-12 columns" id="ac-sitewide-appeal"{{#isExpanded}}aria-hidden="false"{{/isExpanded}}{{^isExpanded}}aria-hidden="true"{{/isExpanded}}>
+			<div class="row">
+				<div class="thermometer-holder show-for-medium-up medium-2 large-1 large-offset-1 columns">
 					{{! Thermometer element }}
 					{{> 01-molecules/08-meters/appeal-meter.mustache}}
 				</div>
+				<div class="small-12 medium-9 large-8 xlarge-7 columns message-wrapper end">
+					<div class="message"></div>
 
-				<div class="donation-buttons">
-					<ul class="small-block-grid-3 medium-block-grid-5">
-						<li>
-							<div class="button smallest fixed-amount" role="button" value="20">$20</div>
-						</li>
+					<div class="thermometer-holder show-for-small-only small-12 columns">
+						{{! Thermometer element }}
+						{{> 01-molecules/08-meters/appeal-meter.mustache}}
+					</div>
 
-						<li>
-							<div class="button smallest fixed-amount" role="button" value="35">$35</div>
-						</li>
-
-						<li>
-							<div class="button smallest fixed-amount" role="button" value="50">$50</div>
-						</li>
-
-						<li class="other-amount">
-							<a href="/donate">Other amount</a>
-						</li>
-					</ul>
+					<div class="donation-buttons">
+						<ul class="donation-button-list small-block-grid-3 medium-block-grid-5"></ul>
+					</div>
 				</div>
 			</div>
 		</div>
