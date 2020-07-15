@@ -1,19 +1,17 @@
 <span class="thermometer-wrap" title="{{percent}}% raised">
-	<div class="thermometer progress">
+	{{! grey meter background }}
+	<div class="thermometer meter-bg">
+		<span class="inner-meter"></span>
+	</div>
+	<span class="thermometer-bulb meter-bg"></span>
+	{{! white meter middle-ground }}
+	<div class="thermometer meter-center">
+		<span class="inner-meter"></span>
+	</div>
+	<span class="thermometer-bulb meter-center"></span>
+	{{! meter foreground }}
+	<div class="thermometer meter-fg">
 		<span class="inner-meter" style="width:{{percent}}%;"></span>
-		<div class="tick-wrapper">
-			<span class="tick-lines"></span>
-			<span class="tick-lines"></span>
-			<span class="tick-lines"></span>
-			<span class="tick-lines"></span>
-			<span class="tick-lines"></span>
-			<span class="tick-lines"></span>
-			<span class="tick-lines"></span>
-			<span class="tick-lines"></span>
-			<span class="tick-lines"></span>
-			<span class="tick-lines"></span>
-			<span class="tick-lines"></span>
-		</div>
 	</div>
 	<span class="thermometer-bulb"></span>
 </span>

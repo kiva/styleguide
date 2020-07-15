@@ -3,7 +3,7 @@
 		{{> 01-molecules/03-media/01-loading-spinner }}
 	</div>
 	<div class="sitewide-appeal row">
-		<div class="sitewide-header small-12"data-kv-accordion aria-controls="ac-sitewide-appeal" {{#isExpanded}}aria-expanded="true"{{/isExpanded}}{{^isExpanded}}aria-expanded="false"{{/isExpanded}}>
+		<div class="sitewide-header small-12 medium-9 medium-offset-2 large-9 large-offset-2 columns" data-kv-accordion aria-controls="ac-sitewide-appeal" {{#isExpanded}}aria-expanded="true"{{/isExpanded}}{{^isExpanded}}aria-expanded="false"{{/isExpanded}}>
 			<h2>
 				<span class="title-text"></span>
 				<span class="dropdown-icon">
@@ -14,21 +14,23 @@
 			</h2>
 		</div>
 		
-		<div class="sitewide-body small-12" id="ac-sitewide-appeal"{{#isExpanded}}aria-hidden="false"{{/isExpanded}}{{^isExpanded}}aria-hidden="true"{{/isExpanded}}>
-			<div class="thermometer-holder show-for-medium-up medium-1 columns">
-				{{! Thermometer element }}
-				{{> 01-molecules/08-meters/appeal-meter.mustache}}
-			</div>
-			<div class="small-12 medium-10 columns message-wrapper">
-				<div class="message"></div>
-
-				<div class="thermometer-holder show-for-small-only small-12 columns">
+		<div class="sitewide-body small-12 columns" id="ac-sitewide-appeal"{{#isExpanded}}aria-hidden="false"{{/isExpanded}}{{^isExpanded}}aria-hidden="true"{{/isExpanded}}>
+			<div class="row">
+				<div class="thermometer-holder show-for-medium-up medium-2 large-1 large-offset-1 columns">
 					{{! Thermometer element }}
 					{{> 01-molecules/08-meters/appeal-meter.mustache}}
 				</div>
+				<div class="small-12 medium-9 large-8 xlarge-7 columns message-wrapper end">
+					<div class="message"></div>
 
-				<div class="donation-buttons">
-					<ul class="donation-button-list small-block-grid-3 medium-block-grid-5"></ul>
+					<div class="thermometer-holder show-for-small-only small-12 columns">
+						{{! Thermometer element }}
+						{{> 01-molecules/08-meters/appeal-meter.mustache}}
+					</div>
+
+					<div class="donation-buttons">
+						<ul class="donation-button-list small-block-grid-3 medium-block-grid-5"></ul>
+					</div>
 				</div>
 			</div>
 		</div>

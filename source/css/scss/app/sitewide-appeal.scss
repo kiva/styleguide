@@ -1,6 +1,6 @@
 .sitewide-appeal-wrapper {
 	display: none;
-	background-color: $kiva-alert-yellow;
+	background-color: $kiva-bg-lightgray;
 	
 	.sitewide-appeal-loading {
 		display: block;
@@ -14,19 +14,19 @@
 	}
 	.sitewide-appeal {
 		display: none;
-		padding-left: rem-calc(10);
-		padding-right: rem-calc(10);
+		padding: 1rem 0.625rem 0.75rem;
 
 		.sitewide-header {
 			h2 {
-				margin-bottom: 0;
-				font-weight: 300;
+				margin-bottom: 0.5rem;
+				font-weight: 700;
 				position: relative;
-				padding-right: rem-calc(40);
+				padding-right: 2.5rem;
+				line-height: 1.825rem;
 
 				.icon-large-chevron {
 					position: absolute;
-					top: rem-calc(7);
+					top: rem-calc(4);
 					right: 0;
 					height: rem-calc(25);
 					width: rem-calc(25);
@@ -46,132 +46,152 @@
 
 		.thermometer-holder {
 			@media #{$medium-up} {
-				height: rem-calc(185);
+				height: rem-calc(155);
 			}
 
 			.thermometer-wrap {
 				padding: 1rem;
+
+				@media #{$medium-up} {
+					padding: 0;
+					position: absolute;
+					right: rem-calc(-85);
+					top: rem-calc(10); // shift to -25px
+					transition: top 500ms ease-in-out, opacity 500ms ease-in-out;
+				}
 				
 				.thermometer {
-					background-color: #efefef;
+					position: relative;
 					border: none;
 					padding: 0;
-					border-radius: rem-calc(15);
-					height: rem-calc(13);
+					margin-top: rem-calc(-43);
+					height: rem-calc(6);
+					margin-right: rem-calc(10);
+					margin-bottom: 0;
+					z-index: 10;
 
 					@media #{$medium-up} {
 						transform: rotate(270deg);
 						position: relative;
 						width: rem-calc(150);
-						top: rem-calc(53);
-						left: rem-calc(-47);
-					}
-
-					@media #{$large-up} {
-						left: rem-calc(-28);
-					}
-
-					@media #{$xlarge-up} {
-						left: rem-calc(-14);
-					}
-
-					@media #{$xxlarge-up} {
-						left: rem-calc(-5);
+						top: rem-calc(88);
+						left: rem-calc(-48);
+						max-width: rem-calc(120);
 					}
 
 					.inner-meter {
-						background-color: #4faf4e;
+						background-color: #D94830;
 						display: block;
 						height: 100%;
 						float: left;
-						border-radius: rem-calc(7);
-						transition: width 3500ms ease-in-out;
+						border-radius: rem-calc(3);
+						transition: width 2500ms ease-in-out;
 						width: 0;
 						max-width: 100%;
 					}
 
-					.tick-wrapper {
-						position: absolute;
-						height: 100%;
-						width: 100%;
+					&.meter-bg {
+						margin-top: rem-calc(-20);
+						left: 0;
+						height: rem-calc(22);
+						border-radius: rem-calc(22);
+						margin-right: 0;
+						z-index: 2;
 
-						.tick-lines {
-							border-left: 1px solid #4faf4e;
-							border-right: 1px solid #efefef;
-							padding-right: 7%;
-							height: 9%;
-							float: left;
-							top: rem-calc(3);
-							position: relative;
+						@media #{$medium-up} {
+							left: rem-calc(-48);
+							// left: rem-calc(-33);
+							top: rem-calc(80);
+						}
 
-							@media #{$medium-up} {
-								height: 55%;
-								padding-right: rem-calc(10);
-							}
+						.inner-meter {
+							background: $kiva-text-dark;
+							width: 100%;
+							float: none;
+							border-radius: rem-calc(22);
+						}
+					}
+
+					&.meter-center {
+						margin-top: rem-calc(-59);
+						margin-left: rem-calc(-5);
+						margin-right: rem-calc(4);
+						height: rem-calc(14);
+						z-index: 6;
+
+						@media #{$medium-up} {
+							top: rem-calc(84);
+							left: rem-calc(-43);
+						}
+
+						.inner-meter {
+							width: 100%;
+							background: $kiva-bg-lightgray;
+							float: none;
+							border-radius: rem-calc(7);
 						}
 					}
 				}
 
 				.thermometer-bulb {
-					background-color: #4faf4e;
+					background-color: #D94830;
 					position: relative;
 					display: inline-block;
 					border-radius: rem-calc(20);
-					height: rem-calc(30);
-					width: rem-calc(30);
+					height: rem-calc(20);
+					width: rem-calc(20);
 					left: rem-calc(-10);
-					top: rem-calc(-32);
+					top: rem-calc(-13);
+					z-index: 9;
 					
 					@media #{$medium-up} {
-						left: rem-calc(13);
-						top: rem-calc(96);
+						left: rem-calc(2);
+						top: rem-calc(131);
 					}
 
-					@media #{$large-up} {
-						left: rem-calc(32);
+					&.meter-bg {
+						background: #484848;
+						width: rem-calc(36);
+						height: rem-calc(36);
+						border-radius: rem-calc(36);
+						left: rem-calc(-18);
+						top: rem-calc(-29);
+						z-index: 1;
+
+						@media #{$medium-up} {
+							left: rem-calc(-6);
+							top: rem-calc(115);
+						}
 					}
 
-					@media #{$xlarge-up} {
-						left: rem-calc(46);
-					}
+					&.meter-center {
+						background: #FAFAFA;
+						width: rem-calc(28);
+						height: rem-calc(28);
+						/* border-radius: 27px; */
+						top: rem-calc(-21);
+						left: rem-calc(-14);
+						z-index: 5;
 
-					@media #{$xxlarge-up} {
-						left: rem-calc(55);
+						@media #{$medium-up} {
+							left: rem-calc(-2);
+							top: rem-calc(123);
+						}
 					}
 				}
 			}
 		}
 
 		.sitewide-body {
-			padding: 0.4rem 0;
-			
-			@media #{$medium-up} {
-				position: relative;
-				left: -0.5rem;
-			}
 
-			@media #{$large-up} {
-				left: -1.75rem;
-			}
-
-			@media #{$xlarge-up} {
-				left: -2.5rem;
-			}
-
-			@media #{$xxlarge-up} {
-				left: -3rem;
-			}
-
-			.message-wrapper {
-				@media (min-width: 591px) {
-					padding-bottom: rem-calc(20);
-				}
+			.row {
+				padding-top: 0.75rem;
 			}
 
 			.message {
 				overflow: hidden;
-				margin-bottom: rem-calc(20);
-				line-height: rem-calc(28);
+				line-height: 1.325rem;
+				margin-bottom: 1.5rem;
 				font-weight: 300;
 				
 				.closing {
@@ -194,22 +214,30 @@
 						width: unset;
 					}
 
-					// Overriding .smallest button class, not ideal, but text is too small otherwise
-					.smallest {
+					// Overriding .mini button class, not ideal, but text is too small otherwise
+					.mini {
 						margin-bottom: 0;
-						font-size: 1.25rem;
+						// padding-left: 1.25rem;
+						// padding-right: 1.25rem;
+						font-size: 0.875rem;
+						height: 2rem;
+						line-height: .2rem;
+						padding: 1.125rem;
+						// font-size: 1.25rem;
 					}
 				}
 
 				.other-amount {
 					cursor: pointer;
-					font-size: 1.25rem;
+					// font-size: 1.25rem;
+					font-size: 0.925rem;
 					width: 100%;
 					text-align: center;
 					line-height: 2.5;
 
 					@media #{$medium-up} {
-						width: rem-calc(150);
+						width: rem-calc(112);
+						padding: 0;
 					}
 
 					a:visited {
