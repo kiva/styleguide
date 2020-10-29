@@ -1,6 +1,6 @@
 {
   "name": "styleguide",
-  "version": "1.1.523",
+  "version": "1.1.524",
   "description": "Based on PatternLab and Foundation - [Pattern Lab Website](http://patternlab.io/) - [About Pattern Lab](http://patternlab.io/about.html) - [Documentation](http://patternlab.io/docs/index.html) - [Demo](http://demo.patternlab.io/)",
   "main": "source/js/inc/app.js",
   "devDependencies": {
@@ -41,6 +41,7 @@
     "url": "https://github.com/kiva/styleguide/issues"
   },
   "dependencies": {
+    "coffee-script": "^1.12.7",
     "fastclick": "~1.0.6",
     "foundation-sites": "~5.5.3",
     "jquery": "~2.1.3",
