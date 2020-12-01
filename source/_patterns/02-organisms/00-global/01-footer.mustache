@@ -1,16 +1,20 @@
 <footer class="siteFooter">
 	<nav class="siteFooter-nav small-footer hide-for-large-up">
 		<ul class="siteFooter-links">
-			<li class="footer-link-borrow"><a href="{{borrow_href}}">Borrow</a>
-			<li class="footer-link-about"><a href="{{about_href}}">About</a>
-			<li class="footer-link-help"><a href="{{help_href}}">Help</a>
-			<li class="footer-link-careers"><a href="{{careers_href}}" target="_blank">Careers</a>
-			<li class="footer-link-map"><a href="{{site_map_href}}">Site map</a>
+			<li class="footer-link-borrow">
+				<a href="{{borrow_href}}" kvtrackevent="Footer|click-Borrow-Apply now">Borrow</a>
+			<li class="footer-link-about">
+				<a href="{{about_href}}" kvtrackevent="Footer|click-Get to know us-About us">About</a>
+			<li class="footer-link-help">
+				<a href="{{help_href}}" kvtrackevent="Footer|click-Get to know us-Help">Help</a>
+			<li class="footer-link-careers">
+				<a href="{{careers_href}}" target="_blank" kvtrackevent="Footer|click-Work with us-Careers">Careers</a>
+			<li class="footer-link-map"><a href="{{site_map_href}}" kvtrackevent="Footer|click-Explore-Site map">Site map</a>
 		</ul>
 
 		<div class="siteFooter-policy">
-			<a href="{{privacy_policy_href}}" class="siteFooter-privacy">Privacy policy</a>
-			<a href="{{tou_href}}" class="siteFooter-tos">Terms of use</a>
+			<a href="{{privacy_policy_href}}" class="siteFooter-privacy" kvtrackevent="Footer|click-Explore-Privacy policy">Privacy policy</a>
+			<a href="{{tou_href}}" class="siteFooter-tos" kvtrackevent="Footer|click-Explore-Terms of use">Terms of use</a>
 		</div>
 
         {{#request_url_borrow}}
@@ -32,20 +36,20 @@
 				<h1>Borrow</h1>
 				<div>Loans for entrepreneurs doing amazing things.</div>
 				<ul class="siteFooter-links">
-					<li><a href="{{borrow_href}}" class="borrow_href">Apply now</a></li>
+					<li><a href="{{borrow_href}}" class="borrow_href" kvtrackevent="Footer|click-Borrow-Apply now">Apply now</a></li>
 				</ul>
 			</div>
 
 			<div class="siteFooter-explore-group siteFooter-group">
 				<h1>Explore</h1>
 				<ul class="siteFooter-links">
-					{{#protocol_href}}<li><a href="{{protocol_href}}" class="protocol_href">Protocol</a></li>{{/protocol_href}}
-					<li><a href="{{gifts_href}}" class="gifts_href">Gifts</a></li>
-					<li><a href="{{happening_href}}" class="happening_href">Happening now</a></li>
-					<li><a href="{{site_map_href}}" class="site_map_href">Site map</a></li>
-					<li><a href="{{dev_api_href}}" class="dev_api_href">Developer API</a></li>
-					<li><a href="{{privacy_policy_href}}" class="privacy_policy_href">Privacy policy</a></li>
-					<li><a href="{{tou_href}}" class="tou_href">Terms of use</a></li>
+					{{#protocol_href}}<li><a href="{{protocol_href}}" class="protocol_href" kvtrackevent="Footer|click-Explore-Protocol">Protocol</a></li>{{/protocol_href}}
+					<li><a href="{{gifts_href}}" class="gifts_href" kvtrackevent="Footer|click-Explore-Gifts">Gifts</a></li>
+					<li><a href="{{happening_href}}" class="happening_href" kvtrackevent="Footer|click-Explore-Happening now">Happening now</a></li>
+					<li><a href="{{site_map_href}}" class="site_map_href" kvtrackevent="Footer|click-Explore-Site map">Site map</a></li>
+					<li><a href="{{dev_api_href}}" class="dev_api_href" kvtrackevent="Footer|click-Explore-Developer API">Developer API</a></li>
+					<li><a href="{{privacy_policy_href}}" class="privacy_policy_href" kvtrackevent="Footer|click-Explore-Privacy policy">Privacy policy</a></li>
+					<li><a href="{{tou_href}}" class="tou_href" kvtrackevent="Footer|click-Explore-Terms of use">Terms of use</a></li>
 				</ul>
 			</div>
 		</div>
@@ -54,22 +58,22 @@
 			<div class="siteFooter-about-group siteFooter-group">
 				<h1>Get to know us</h1>
 				<ul class="siteFooter-links">
-					<li><a href="{{about_href}}" class="about_href">About us</a></li>
-					<li><a href="{{how_kiva_works_href}}" class="how_kiva_works_href">How Kiva works</a></li>
-					<li><a href="{{faq_href}}" class="faq_href">FAQs</a></li>
-					<li><a href="{{where_kiva_works_href}}" class="where_kiva_works_href">Where Kiva works</a></li>
-					<li><a href="{{blog_href}}" class="blog_href">Blog</a></li>
-					<li><a href="{{partner_with_us_href}}" class="partner_with_us_href">Partner with us</a></li>
-					<li><a href="{{contact_href}}" class="contact_href">Contact us</a></li>
-					<li><a href="{{help_href}}" class="help_href">Help</a></li>
+					<li><a href="{{about_href}}" class="about_href" kvtrackevent="Footer|click-Get to know us-About us">About us</a></li>
+					<li><a href="{{how_kiva_works_href}}" class="how_kiva_works_href" kvtrackevent="Footer|click-Get to know us-How Kiva works">How Kiva works</a></li>
+					<li><a href="{{faq_href}}" class="faq_href" kvtrackevent="Footer|click-Get to know us-FAQs">FAQs</a></li>
+					<li><a href="{{where_kiva_works_href}}" class="where_kiva_works_href" kvtrackevent="Footer|click-Get to know us-Where Kiva works">Where Kiva works</a></li>
+					<li><a href="{{blog_href}}" class="blog_href" kvtrackevent="Footer|click-Get to know us-Blog">Blog</a></li>
+					<li><a href="{{partner_with_us_href}}" class="partner_with_us_href" kvtrackevent="Footer|click-Get to know us-Partner with us">Partner with us</a></li>
+					<li><a href="{{contact_href}}" class="contact_href" kvtrackevent="Footer|click-Get to know us-Contact us">Contact us</a></li>
+					<li><a href="{{help_href}}" class="help_href" kvtrackevent="Footer|click-Get to know us-Help">Help</a></li>
 				</ul>
 			</div>
 
 			<div class="siteFooter-community-group siteFooter-group">
 				<h1>Community</h1>
 				<ul class="siteFooter-links">
-					<li><a href="{{teams_href}}" class="teams_href">Lending teams</a></li>
-					<li><a href="{{students_href}}" class="students_href">Students and educators</a></li>
+					<li><a href="{{teams_href}}" class="teams_href" kvtrackevent="Footer|click-Community-Teams">Lending teams</a></li>
+					<li><a href="{{students_href}}" class="students_href" kvtrackevent="Footer|click-Community-Students and educators">Students and educators</a></li>
 				</ul>
 			</div>
 		</div>
@@ -81,18 +85,18 @@
                     Founded in 2005, and based in San Francisco, with offices in Bangkok, Nairobi, Portland and staff around the globe.
                 </div>
                 <ul class="siteFooter-links">
-                    <li><a href="{{donate_href}}" class="donate_href">Donate to Kiva here.</a></li>
+                    <li><a href="{{donate_href}}" class="donate_href" kvtrackevent="Footer|click-Donate|Donate to Kiva here">Donate to Kiva here.</a></li>
                 </ul>
 			</div>
 
 			<div class="siteFooter-us-group siteFooter-group">
 				<h1>Work with us</h1>
 				<ul class="siteFooter-links links-list">
-					<li><a href="{{careers_href}}" class="careers_href" target="_blank">Careers</a></li>
-                    <li><a href="{{internships_href}}" class="internships_href">Volunteer internships</a></li>
-                    <li><a href="{{fellows_href}}" class="fellows_href" target="_blank">Kiva fellows</a></li>
-					<li><a href="{{rtp_href}}" class="rtp_href">Review and translation</a></li>
-					<li><a href="https://www.kivaushub.org/hubs">US Hubs</a></li>
+					<li><a href="{{careers_href}}" class="careers_href" target="_blank" kvtrackevent="Footer|click-Work with us-Careers">Careers</a></li>
+                    <li><a href="{{internships_href}}" class="internships_href" kvtrackevent="Footer|click-Work with us-Volunteer internships">Volunteer internships</a></li>
+                    <li><a href="{{fellows_href}}" class="fellows_href" target="_blank" kvtrackevent="Footer|click-Work with us-Kiva fellows">Kiva fellows</a></li>
+					<li><a href="{{rtp_href}}" class="rtp_href" kvtrackevent="Footer|click-Work with us-Review and translation">Review and translation</a></li>
+					<li><a href="https://www.kivaushub.org/hubs" kvtrackevent="Footer|click-Work with us-US Hubs">US Hubs</a></li>
 				</ul>
 			</div>
 
