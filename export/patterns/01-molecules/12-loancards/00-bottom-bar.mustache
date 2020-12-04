@@ -11,6 +11,7 @@
 {{#is_regular}}
 	<div class="bottom-bar">
         {{#amount_left}}
+            {{! 25_hard_coded }}
             <a kvtrackevent="Lending|Add to basket|Loan card|{{id}}|true" class="half-width button lend-button" href="#">Lend {{#free_trial}}Free {{/free_trial}}$25</a>
             <a kvtrackevent="Lending|click-Read more|Story|{{id}}|true" class="half-width button" href="{{borrower_url}}">Learn more</a>
         {{/amount_left}}
