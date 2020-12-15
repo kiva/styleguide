@@ -214,11 +214,11 @@
 
 					// Overriding .mini button class, not ideal, but text is too small otherwise
 					.mini {
-						margin-bottom: 0;
 						font-size: 0.875rem;
 						height: 2rem;
 						line-height: .2rem;
 						padding: 1.125rem;
+						margin: 0.5rem 0 0 0;
 					}
 				}
 
