@@ -22,6 +22,16 @@
 					</span>
 					</div>
 				{{/bonus}}
+				{{#bonus_redirect}}
+					<div style="font-weight: normal;">
+
+						<span style="font-weight: bold;">
+							<a class="dark_green_bg_link" href="{{bonus_redirect.href}}">
+								You have {{bonus_redirect.amount}}<br>from {{bonus_redirect.display_name}} to lend!
+							</a>
+						</span>
+					</div>
+				{{/bonus_redirect}}
 			{{/lending-reward-session}}
 		</div>
 		<div class="small-3 large-2 xxlarge-2 columns header-column logo-area">
@@ -112,6 +122,12 @@
 			{{! This is the Promo/Bonus banner that is shown in the small screen state}}
 			<div class="show-for-small-only small-centered columns pronus"><div style="font-weight: normal;">Select a borrower to </br><span style="font-weight: bold;"><a class="dark_green_bg_link"  href="{{bonus.href}}">lend your {{bonus.amount}} {{bonus.label}}</a></span></div></div>
 		{{/bonus}}
+		{{#bonus_redirect}}
+			{{! medium screens }}
+			<div class="hide-for-xxlarge-up hide-for-small-only pronus"><span style="font-weight: normal;"><span style="font-weight: bold;"><a class="dark_green_bg_link"  href="{{bonus_redirect.href}}">You have {{bonus_redirect.amount}} from {{bonus_redirect.display_name}} to lend!</a></span></span></div>
+			{{! small screens }}
+			<div class="show-for-small-only small-centered columns pronus"><div style="font-weight: normal;"><span style="font-weight: bold;"><a class="dark_green_bg_link"  href="{{bonus_redirect.href}}">You have {{bonus_redirect.amount}}<br>from {{bonus_redirect.display_name}} to lend!</a></span></div></div>
+		{{/bonus_redirect}}
 	{{/lending-reward-session}}
 
     {{#category-rows-message}}
