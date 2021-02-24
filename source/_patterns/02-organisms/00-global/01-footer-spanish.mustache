@@ -20,92 +20,178 @@
         </div>
         {{/request_url_borrow}}
 
+		<div class="siteFooter-group">
+			<ul class="download-app-icons">
+				<li>
+					<a
+						href="{{app-store_href}}"
+						target="_blank" rel="noopener"
+						kvtrackevent="global|click-app-badge-footer|App Store"
+					>
+						<img
+							class="download-app-ios"
+							src="//images.ctfassets.net/j0p9a6ql0rn7/3ZDltzdfhQHRwpRvnlrq6v/b97cfd1f1354e0276861a7aca110d738/app-store.svg"
+							loading="lazy"
+							alt="Check out our new app on the App Store"
+						>
+					</a>
+				</li>
+				<li>
+					<a
+						href="{{play-store_href}}"
+						target="_blank"
+						rel="noopener"
+						kvtrackevent="global|click-app-badge-footer|Google Store"
+					>
+						<img
+							class="download-app-android"
+							src="//images.ctfassets.net/j0p9a6ql0rn7/342uTXgVJovt7om3vUZZ7E/66661b11b93679ad7e294182972f88be/play-store.svg"
+							loading="lazy"
+							alt="Check out our new app on the Play Store"
+						>
+					</a>
+				</li>
+			</ul>
+		</div>
+
         <div class="siteFooter-legal">
-            <div class="siteFooter-disclaimer">Prestar a través de Kiva implica un riesgo de pérdida de capital. Kiva no garantiza repagos u ofrece un retorno financiero sobre su préstamo.</div>
-            <div class="siteFooter-copyright">&copy; {{current_year}} Kiva. Todos los derechos reservados.</div>
+            <div class="siteFooter-disclaimer">Prestar a través de Kiva implica un riesgo de pérdida de capital. Kiva no garantiza repagos u ofrece un retorno financiero sobre su préstamo.
+            <br>&copy; {{current_year}} Kiva. Todos los derechos reservados.</div>
         </div>
     </nav>
 
-    <nav class="siteFooter-nav large-footer show-for-large-up row">
-        <div class="small-3 column">
-            <div class="siteFooter-borrow-group siteFooter-group">
-                <h1>Pide un préstamo</h1>
-                <div>Préstamos para emprendedores haciendo cosas increíbles.</div>
-                <ul class="siteFooter-links">
-                    <li><a href="{{borrow_href}}" class="borrow_href">Aplica ahora</a></li>
-                </ul>
-            </div>
+    <nav class="siteFooter-nav large-footer show-for-large-up">
+		<div class="row">
+			<div class="small-3 column">
+				<div class="siteFooter-borrow-group siteFooter-group">
+					<h1>Pide un préstamo</h1>
+					<div>Préstamos para emprendedores haciendo cosas increíbles.</div>
+					<ul class="siteFooter-links">
+						<li><a href="{{borrow_href}}" class="borrow_href">Aplica ahora</a></li>
+					</ul>
+				</div>
 
-            <div class="siteFooter-explore-group siteFooter-group">
-                <h1>Explora</h1>
-                <ul class="siteFooter-links">
-					{{#protocol_href}}<li><a href="{{protocol_href}}" class="protocol_href">Protocolo</a></li>{{/protocol_href}}
-                    <li><a href="{{gifts_href}}" class="gifts_href">Regalos</a></li>
-                    <li><a href="{{happening_href}}" class="happening_href">Ocurriendo ahora</a></li>
-                    <li><a href="{{site_map_href}}" class="site_map_href">Mapa del sitio</a></li>
-                    <li><a href="{{dev_api_href}}" class="dev_api_href">Desarrollador API</a></li>
-                    <li><a href="{{privacy_policy_href}}" class="privacy_policy_href">Política de privacidad</a></li>
-                    <li><a href="{{tou_href}}" class="tou_href">Términos de uso</a></li>
-                </ul>
-            </div>
+				<div class="siteFooter-explore-group siteFooter-group">
+					<h1>Presta</h1>
+					<div>Haz un préstamo, cambia una vida.</div>
+					<ul class="siteFooter-links">
+						<li><a href="{{lend_by_category_href}}" class="lbc_href">Presta ahora</a></li>
+						<li><a href="{{monthly_good_href}}" class="mg_href">Monthly Good</a></li>
+					</ul>
+				</div>
+
+				<div class="siteFooter-explore-group siteFooter-group">
+					<h1>Explora</h1>
+					<ul class="siteFooter-links">
+						{{#protocol_href}}<li><a href="{{protocol_href}}" class="protocol_href">Protocolo</a></li>{{/protocol_href}}
+						<li><a href="{{gifts_href}}" class="gifts_href">Regalos</a></li>
+						<li><a href="{{happening_href}}" class="happening_href">Ocurriendo ahora</a></li>
+						<li><a href="{{dev_api_href}}" class="dev_api_href">Desarrollador API</a></li>
+					</ul>
+				</div>
+        	</div>
+
+			<div class="small-3 column">
+				<div class="siteFooter-about-group siteFooter-group">
+					<h1>Conózcanos</h1>
+					<ul class="siteFooter-links">
+						<li><a href="{{about_href}}" class="about_href">Acerca de Kiva</a></li>
+						<li><a href="{{how_kiva_works_href}}" class="how_kiva_works_href">Como funciona Kiva</a></li>
+						<li><a href="{{faq_href}}" class="faq_href">FAQs</a></li>
+						<li><a href="{{where_kiva_works_href}}" class="where_kiva_works_href">Donde trabaja Kiva</a></li>
+						<li><a href="{{blog_href}}" class="blog_href">Blog</a></li>
+						<li><a href="{{partner_with_us_href}}" class="partner_with_us_href">Asóciate con nosotros</a></li>
+						<li><a href="{{contact_href}}" class="contact_href">Contáctenos</a></li>
+						<li><a href="{{help_href}}" class="help_href">Ayuda</a></li>
+					</ul>
+				</div>
+
+				<div class="siteFooter-community-group siteFooter-group">
+					<h1>Comunidad</h1>
+					<ul class="siteFooter-links">
+						<li><a href="{{teams_href}}" class="teams_href">Equipos</a></li>
+						<li><a href="{{students_href}}" class="students_href">Estudiantes y educadores</a></li>
+					</ul>
+				</div>
+			</div>
+
+			<div class="small-6 column">
+				<div class="siteFooter-statement-group siteFooter-group 501c3_statement">
+					<div>
+						Kiva es una 501(c)3 U.S.sin ánimo de lucro impulsada por personas apasionadas.
+						Creada en el 2005 y basada en San Francisco con oficinas en Bangkok, Nairobi, Portland y personal ubicado a través del mundo.
+					</div>
+					<ul class="siteFooter-links">
+						<li><a href="{{donate_href}}" class="donate_href">Done a Kiva aquí.</a></li>
+					</ul>
+				</div>
+
+				<div class="siteFooter-group">
+					<ul class="download-app-icons">
+						<li>
+							<a
+								href="{{app-store_href}}"
+								target="_blank" rel="noopener"
+								kvtrackevent="global|click-app-badge-footer|App Store"
+							>
+								<img
+									class="download-app-ios"
+									src="//images.ctfassets.net/j0p9a6ql0rn7/3ZDltzdfhQHRwpRvnlrq6v/b97cfd1f1354e0276861a7aca110d738/app-store.svg"
+									loading="lazy"
+									alt="Check out our new app on the App Store"
+								>
+							</a>
+						</li>
+						<li>
+							<a
+								href="{{play-store_href}}"
+								target="_blank"
+								rel="noopener"
+								kvtrackevent="global|click-app-badge-footer|Google Store"
+							>
+								<img
+									class="download-app-android"
+									src="//images.ctfassets.net/j0p9a6ql0rn7/342uTXgVJovt7om3vUZZ7E/1fcc6cc6b3eb84219b006fc13ea2c006/play-store.svg"
+									loading="lazy"
+									alt="Check out our new app on the Play Store"
+								>
+							</a>
+						</li>
+					</ul>
+				</div>
+				
+				<div class="siteFooter-us-group siteFooter-group">
+					<h1>Trabaja con nosotros</h1>
+					<ul class="siteFooter-links links-list work-with-us">
+						<li><a href="{{careers_href}}" class="careers_href" target="_blank">Carreras</a></li>
+						<li><a href="{{internships_href}}" class="internships_href">Pasantías para voluntario/as</a></li>
+						<li><a href="{{fellows_href}}" class="fellows_href" target="_blank">Kiva fellows</a></li>
+						<li><a href="{{rtp_href}}" class="rtp_href">Revisión y traducción</a></li>
+						<li><a href="https://www.kivaushub.org/hubs">US Hubs</a></li>
+					</ul>
+				</div>
+
+				{{#request_url_borrow}}
+				<div class="siteFooter-language-group siteFooter-group">
+					Español&nbsp;
+					<a href="{{borrower_landing_english_href}}" class="borrower_landing_english_href">English</a>
+				</div>
+				{{/request_url_borrow}}
+			</div>
         </div>
-
-        <div class="small-3 column">
-            <div class="siteFooter-about-group siteFooter-group">
-                <h1>Conózcanos</h1>
-                <ul class="siteFooter-links">
-                    <li><a href="{{about_href}}" class="about_href">Acerca de Kiva</a></li>
-                    <li><a href="{{how_kiva_works_href}}" class="how_kiva_works_href">Como funciona Kiva</a></li>
-                    <li><a href="{{faq_href}}" class="faq_href">FAQs</a></li>
-                    <li><a href="{{where_kiva_works_href}}" class="where_kiva_works_href">Donde trabaja Kiva</a></li>
-                    <li><a href="{{blog_href}}" class="blog_href">Blog</a></li>
-                    <li><a href="{{partner_with_us_href}}" class="partner_with_us_href">Asóciate con nosotros</a></li>
-                    <li><a href="{{contact_href}}" class="contact_href">Contáctenos</a></li>
-                    <li><a href="{{help_href}}" class="help_href">Ayuda</a></li>
-                </ul>
+		<div class="row">
+			<div class="small-12 column">
+				<ul class="siteFooter-links links-list secondary-links">
+					<li><a href="{{site_map_href}}" class="site_map_href">Mapa del sitio</a></li>
+					<li><a href="{{privacy_policy_href}}" class="privacy_policy_href">Política de privacidad</a></li>
+					<li><a href="{{tou_href}}" class="tou_href">Términos de uso</a></li>
+				</ul>
             </div>
-
-            <div class="siteFooter-community-group siteFooter-group">
-                <h1>Comunidad</h1>
-                <ul class="siteFooter-links">
-                    <li><a href="{{teams_href}}" class="teams_href">Equipos</a></li>
-                    <li><a href="{{students_href}}" class="students_href">Estudiantes y educadores</a></li>
-                </ul>
-            </div>
-        </div>
-
-        <div class="small-6 column">
-            <div class="siteFooter-statement-group siteFooter-group 501c3_statement">
-                <div>
-                    Kiva es una 501(c)3 U.S.sin ánimo de lucro impulsada por personas apasionadas.
-                    Creada en el 2005 y basada en San Francisco con oficinas en Bangkok, Nairobi, Portland y personal ubicado a través del mundo.
-                </div>
-                <ul class="siteFooter-links">
-                    <li><a href="{{donate_href}}" class="donate_href">Done a Kiva aquí.</a></li>
-                </ul>
-            </div>
-
-            <div class="siteFooter-us-group siteFooter-group">
-                <h1>Trabaja con nosotros</h1>
-                <ul class="siteFooter-links links-list">
-                    <li><a href="{{careers_href}}" class="careers_href" target="_blank">Carreras</a></li>
-                    <li><a href="{{internships_href}}" class="internships_href">Pasantías para voluntario/as</a></li>
-                    <li><a href="{{fellows_href}}" class="fellows_href" target="_blank">Kiva fellows</a></li>
-                    <li><a href="{{rtp_href}}" class="rtp_href">Revisión y traducción</a></li>
-                    <li><a href="https://www.kivaushub.org/hubs">US Hubs</a></li>
-                </ul>
-            </div>
-
-            {{#request_url_borrow}}
-            <div class="siteFooter-language-group siteFooter-group">
-                Español&nbsp;
-                <a href="{{borrower_landing_english_href}}" class="borrower_landing_english_href">English</a>
-            </div>
-            {{/request_url_borrow}}
-
-            <div class="siteFooter-legal siteFooter-group">
-                <div class="siteFooter-disclaimer">Prestar a través de Kiva implica un riesgo de pérdida de capital. Kiva no garantiza repagos u ofrece un retorno financiero sobre su préstamo.</div>
-                <div class="siteFooter-copyright">&copy; {{current_year}} Kiva. Todos los derechos reservados.</div>
+			<div class="small-12 column">
+				<div class="siteFooter-legal siteFooter-group">
+					<div class="siteFooter-disclaimer">Prestar a través de Kiva implica un riesgo de pérdida de capital. Kiva no garantiza repagos u ofrece un retorno financiero sobre su préstamo.
+					<br>&copy; {{current_year}} Kiva. Todos los derechos reservados.</div>
+				</div>
             </div>
         </div>
     </nav>
