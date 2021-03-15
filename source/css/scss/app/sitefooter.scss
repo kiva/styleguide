@@ -182,7 +182,8 @@ $footer-link-separator-color: $magnemite;
             text-align: center;
         }
 
-		.siteFooter-privacy {
+		.siteFooter-privacy,
+		.siteFooter-cookie {
 			border-right: $footer-link-separator-color 1px solid;
 			padding-right: rem-calc(20);
 			margin-right: rem-calc(13);
