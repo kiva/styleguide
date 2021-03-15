@@ -9622,7 +9622,8 @@ ul.tertiary-nav {
     margin-bottom: .5rem; }
   .siteFooter-nav .siteFooter-legal {
     text-align: center; }
-  .siteFooter-nav .siteFooter-privacy {
+  .siteFooter-nav .siteFooter-privacy,
+  .siteFooter-nav .siteFooter-cookie {
     border-right: #757575 1px solid;
     padding-right: 1.25rem;
     margin-right: 0.8125rem; } }
