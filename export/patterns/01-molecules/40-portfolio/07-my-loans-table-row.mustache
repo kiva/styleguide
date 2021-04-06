@@ -1,5 +1,5 @@
 <td>
-	<a href="{{url}}">
+	<a href="{{url}}" class="fs-mask">
 		<img src="{{image.url}}" data-interchange="{{#image.sizes}}[{{url}}, ({{size}})],{{/image.sizes}}">
 	</a>
 	{{#matchedLoan}}
@@ -16,14 +16,14 @@
 	{{/dedication}}
 </td>
 <td>
-	<a href="{{url}}">{{name}} (#{{id}})</a>
+	<a href="{{url}}" class="fs-mask">{{name}} (#{{id}})</a>
 	<div class="activity">
 		{{activity.name}}
 	</div>
 	<div class="country">
 		<span class="f16 {{geocode.country.isoCode}}"></span>{{geocode.country.name}}
 	</div>
-	<div class="partner-trustee">
+	<div class="partner-trustee fs-mask">
 		<a href="{{partnerTrusteeUrl}}">{{partnerName}}{{trusteeName}}</a>
 	</div>
 	{{#dedication}}
@@ -32,7 +32,7 @@
 				<span>You opted to donate repayments from this loan to Kiva (Thanks!)</span>
 			{{/toKiva}}
 			{{^toKiva}}
-				<a href="{{url}}">Dedicated to {{recipient}}</a>
+				<a href="{{url}}" class="fs-exclude">Dedicated to {{recipient}}</a>
 				<span>Repayments for dedications are donated to Kiva</span>
 			{{/toKiva}}
 		</div>
@@ -97,7 +97,7 @@
 </td>
 <td>
 	{{#canChangeTeamAssignment}}
-		<select name="team-assignment">
+		<select name="team-assignment" class="fs-mask">
 			{{#teams}}
 				<option value="{{value}}" {{#selected}}selected="selected"{{/selected}}>{{label}}</option>
 			{{/teams}}
@@ -105,7 +105,7 @@
 	{{/canChangeTeamAssignment}}
 	{{^canChangeTeamAssignment}}
 		{{#teams}}
-			<a class="team" href="{{teamUrl}}">
+			<a class="team fs-mask" href="{{teamUrl}}">
 				{{#teamImage}}
 					<img src="{{teamImage.url}}" data-interchange="{{#teamImage.sizes}}[{{url}}, ({{size}})],{{/teamImage.sizes}}">
 				{{/teamImage}}
