@@ -1,5 +1,5 @@
 <section class="loan-story">
-	<div class="ac-title ac-container" data-kv-accordion aria-controls="ac-loan-story-body" aria-expanded="true">
+	<div class="ac-title ac-container" data-kv-accordion aria-controls="ac-loan-story-body" aria-expanded="true" kvtrackevent="Borrower Profile|click-accordion|Borrower story">
 		<h2>
 			{{#previousLoanDetails}}
 				Update on {{borrowerOrGroupName}}
@@ -61,7 +61,7 @@
 			</p>
 		</div>
 		{{#showPreviousLoanDetails}}
-			<p class="ac-title black-underlined text-center show-previous-loan-details" data-kv-accordion aria-controls="ac-previous-loan-details-body" aria-expanded="false">
+			<p class="ac-title black-underlined text-center show-previous-loan-details" data-kv-accordion aria-controls="ac-previous-loan-details-body" aria-expanded="false" kvtrackevent="Borrower Profile|click-previous-loan-details|Show repaid previous loan details" class="black-underlined">
                 {{#previousLoanTitlePayingback}}
                     Show currently repaying previous loan details
                 {{/previousLoanTitlePayingback}}

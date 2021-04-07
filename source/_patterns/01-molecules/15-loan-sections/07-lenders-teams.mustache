@@ -33,7 +33,7 @@
 		{{/lendersExpanded}}
 		{{^lendersExpanded}}
 			{{#showSpilloverMessageForLenders}}
-				<a href="#" class="show-all-lenders black-underlined text-center">Show more</a>
+				<a href="#" class="show-all-lenders black-underlined text-center" kvtrackevent="Borrower Profile|click-show more|Contributing lenders">Show more</a>
 			{{/showSpilloverMessageForLenders}}
 		{{/lendersExpanded}}
 	</div>
@@ -51,7 +51,9 @@
 							  data-options="disable_for_touch:true; show_on:large"
 							  title="{{teamName}}<br>{{teamType}}<br>{{numLenders}} of {{numTeamMembers}} members"
 							  class="circle-avatar tip-top"
-							  style="background-image:url({{imgUrl}})">
+							  style="background-image:url({{imgUrl}})"
+							  kvtrackevent="Borrower Profile|click-team-image|{{teamName}}"
+							  >
 						</span>
 					</a>
 				{{/displayTooltip}}
@@ -74,7 +76,7 @@
 		{{/teamsExpanded}}
 		{{^teamsExpanded}}
 			{{#showSpilloverMessageForTeams}}
-				<a href="#" class="show-all-teams black-underlined text-center">Show more</a>
+				<a href="#" class="show-all-teams black-underlined text-center" kvtrackevent="Borrower Profile|click-show more|Contributing teams">Show more</a>
 			{{/showSpilloverMessageForTeams}}
 		{{/teamsExpanded}}
 	</div>
