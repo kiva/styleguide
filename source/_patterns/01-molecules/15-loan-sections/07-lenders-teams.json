@@ -12,70 +12,80 @@
 	  "url": "https://www.kiva.org/lender/spicey",
 	  "firstName": "Kimberly",
 	  "location": "Los Angeles, CA",
-	  "displayTooltip": false
+	  "displayTooltip": false,
+		"permanentName": "spicey"
 	},
 	{
 	  "imgUrl": "/images/borrower3.jpg",
 	  "url": "https://www.kiva.org/lender/toke8071",
 	  "firstName": "Jen",
 	  "location": "San Francisco, CA",
-	  "displayTooltip": true
+	  "displayTooltip": true,
+		"permanentName": "toke8071"
 	},
 	{
 	  "imgUrl": "/images/borrower1.jpg",
 	  "url": "https://www.kiva.org/lender/spicey",
 	  "firstName": "Zahid",
 	  "location": "Los Angeles, CA",
-	  "displayTooltip": true
+	  "displayTooltip": true,
+		"permanentName": "spicey"
 	},
 	{
 	  "imgUrl": "/images/borrower3.jpg",
 	  "url": "https://www.kiva.org/lender/toke8071",
 	  "firstName": "Kevin",
 	  "location": "New York, NY",
-	  "displayTooltip": true
+	  "displayTooltip": true,
+		"permanentName": "toke8071"
 	},
 	{
 	  "imgUrl": "/images/borrower1.jpg",
 	  "url": "https://www.kiva.org/lender/spicey",
 	  "firstName": "Steve",
 	  "location": "Los Angeles, CA",
-	  "displayTooltip": true
+	  "displayTooltip": true,
+		"permanentName": "spicey"
 	},
 	{
 	  "imgUrl": "/images/borrower3.jpg",
 	  "url": "https://www.kiva.org/lender/toke8071",
 	  "firstName": "Josh",
 	  "location": "San Francisco, CA",
-	  "displayTooltip": true
+	  "displayTooltip": true,
+		"permanentName": "toke8071"
 	},
 	{
 	  "imgUrl": "/images/borrower1.jpg",
 	  "url": "https://www.kiva.org/lender/spicey",
 	  "firstName": "Kimberly",
 	  "location": "Los Angeles, CA",
-	  "displayTooltip": false
+	  "displayTooltip": false,
+		"permanentName": "spicey"
 	},
 	{
 	  "imgUrl": "/images/borrower3.jpg",
 	  "url": "https://www.kiva.org/lender/toke8071",
 	  "firstName": "Jen",
 	  "location": "San Francisco, CA",
-	  "displayTooltip": true
+	  "displayTooltip": true,
+		"permanentName": "toke8071"
 	},
 	{
 	  "imgUrl": "/images/borrower1.jpg",
 	  "url": "https://www.kiva.org/lender/spicey",
 	  "firstName": "Zahid",
 	  "location": "Los Angeles, CA",
-	  "displayTooltip": true
+	  "displayTooltip": true,
+		"permanentName": "spicey"
 	},
 	{
 	  "imgUrl": "/images/borrower3.jpg",
 	  "url": "https://www.kiva.org/lender/toke8071",
 	  "firstName": "Kevin",
 	  "location": "New York, NY",
-	  "displayTooltip": true
+	  "displayTooltip": true,
+		"permanentName": "toke8071"
 	}
   ],
   "spilloverLenders": [

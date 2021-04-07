@@ -24,7 +24,7 @@
 		{{/yearsInBusiness}}
 
 		{{#websiteUrl}}
-			Website: <a href="{{websiteUrl}}" target="_blank">{{displayUrl}}</a></p>
+			Website: <a href="{{websiteUrl}}" target="_blank" kvtrackevent="Borrower Profile|click-business-website|{{displayUrl}}">{{displayUrl}}</a></p>
 		{{/websiteUrl}}
 		</p>
 
@@ -33,7 +33,7 @@
 			<ul class="icons socialmedia inline-list">
 				{{#facebookUrl}}
 				<li class="icon">
-					<a href="{{facebookUrl}}" target="_blank" class="icon-facebook">
+					<a href="{{facebookUrl}}" target="_blank" class="icon-facebook" kvtrackevent="Borrower Profile|click-business-social|facebook">
 						<svg class="icon icon-facebook" width="30" height="30">
 							<use xlink:href="#icon-facebook"/>
 						</svg>
@@ -43,7 +43,7 @@
 
 				{{#twitterUrl}}
 				<li class="icon">
-					<a href="{{twitterUrl}}" target="_blank" class="icon-twitter">
+					<a href="{{twitterUrl}}" target="_blank" class="icon-twitter" kvtrackevent="Borrower Profile|click-business-social|twitter">
 						<svg class="icon icon-twitter" width="30" height="30">
 							<use xlink:href="#icon-twitter"/>
 						</svg>
@@ -53,7 +53,7 @@
 
 				{{#yelpUrl}}
 				<li class="icon">
-					<a href="{{yelpUrl}}" target="_blank" class="icon-yelp">
+					<a href="{{yelpUrl}}" target="_blank" class="icon-yelp" kvtrackevent="Borrower Profile|click-business-social|yelp">
 						<svg class="icon icon-yelp" width="30" height="30">
 							<use xlink:href="#icon-yelp"/>
 						</svg>
@@ -63,7 +63,7 @@
 
 				{{#linkedInUrl}}
 				<li class="icon">
-					<a href="{{linkedInUrl}}" target="_blank" class="icon-linkedIn">
+					<a href="{{linkedInUrl}}" target="_blank" class="icon-linkedIn" kvtrackevent="Borrower Profile|click-business-social|linkedIn">
 						<svg class="icon icon-linkedIn" width="30" height="30">
 							<use xlink:href="#icon-linkedIn"/>
 						</svg>
