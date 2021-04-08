@@ -1,5 +1,5 @@
 <section class="loan-tags">
-	<div class="ac-title ac-container" data-kv-accordion aria-controls="ac-loan-tags-body" aria-expanded="false">
+	<div class="ac-title ac-container" data-kv-accordion aria-controls="ac-loan-tags-body" aria-expanded="false" kvtrackevent="Borrower Profile|click-accordion|Tags">
 		<h2>
 			<div class="ac-title-text">
 				Tags
@@ -16,7 +16,7 @@
 			<div class="selected-tags">
 				{{#applied_tag_selections}}
 					<span {{#userSelected}}class="selected-tag user-selected-tag-{{id}}"{{/userSelected}}>
-						<a href={{href}}>{{name}}</a>
+						<a href={{href}} kvtrackevent="Borrower Profile|click-tags|{{name}}">{{name}}</a>
 						<span class="divider"> | </span>
 					</span>
 				{{/applied_tag_selections}}
@@ -29,7 +29,7 @@
 			{{#user_logged_in}}
 				<p>
 					<span class="tag-directions">Select the tags below to add up to 5 of your own tags for this loan.</span>
-					<span class="tag-toggler">
+					<span class="tag-toggler" kvtrackevent="Borrower Profile|click-add-more-tags|Add more tags">
 						Add {{#hasTags}}more {{/hasTags}}tags
 					</span>
 				</p>
