@@ -67,7 +67,7 @@
 				<!-- Teams and Lenders -->
 				<hr class="line-break"/>
 				<section class="lenders-teams" id="lenders-teams">
-					<div class="ac-title ac-container" data-kv-accordion aria-controls="ac-lenders-teams-body" aria-expanded="true" kvtrackevent="Borrower Profile|click-accordion|Lenders and lending teams">
+					<div class="ac-title ac-container" data-kv-accordion aria-controls="ac-lenders-teams-body" aria-expanded="{{#bp_hide_loan_details_exp}}false{{/bp_hide_loan_details_exp}}{{^bp_hide_loan_details_exp}}true{{/bp_hide_loan_details_exp}}" kvtrackevent="Borrower Profile|click-accordion|Lenders and lending teams">
 						<h2>
 							Lenders and lending teams
 							<span class="ac-dropdown-icon">
