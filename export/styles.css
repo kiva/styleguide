@@ -378,6 +378,10 @@ th {
 .book {
   font-weight: 300; }
 
+::-moz-selection {
+  background-color: #49953f;
+  color: #fff; }
+
 ::selection {
   background-color: #49953f;
   color: #fff; }
@@ -4389,6 +4393,7 @@ ul.pagination {
   padding: 0;
   position: relative;
   -webkit-user-select: none;
+  -moz-user-select: none;
   -ms-user-select: none;
   user-select: none; }
   .switch label {
@@ -6140,6 +6145,11 @@ small {
   color: #999;
   font-style: italic; }
 
+::-webkit-input-placeholder {
+  /* CSS Working Draft */
+  color: #999;
+  font-style: italic; }
+
 :-ms-input-placeholder {
   /* CSS Working Draft */
   color: #999;
@@ -7521,8 +7531,9 @@ table {
     cursor: pointer;
     display: block;
     height: 28px;
-    -ms-user-select: none;
-        user-select: none;
+    -moz-user-select: none;
+     -ms-user-select: none;
+         user-select: none;
     -webkit-user-select: none; }
     .select2-container .select2-selection--single .select2-selection__rendered {
       display: block;
@@ -7541,8 +7552,9 @@ table {
     cursor: pointer;
     display: block;
     min-height: 32px;
-    -ms-user-select: none;
-        user-select: none;
+    -moz-user-select: none;
+     -ms-user-select: none;
+         user-select: none;
     -webkit-user-select: none; }
     .select2-container .select2-selection--multiple .select2-selection__rendered {
       display: inline-block;
@@ -7582,8 +7594,9 @@ table {
 
 .select2-results__option {
   padding: 6px;
-  -ms-user-select: none;
-      user-select: none;
+  -moz-user-select: none;
+   -ms-user-select: none;
+       user-select: none;
   -webkit-user-select: none; }
   .select2-results__option[aria-selected] {
     cursor: pointer; }
@@ -7633,14 +7646,12 @@ table {
 .select2-hidden-accessible {
   border: 0 !important;
   clip: rect(0 0 0 0) !important;
-  -webkit-clip-path: inset(50%) !important;
-  clip-path: inset(50%) !important;
   height: 1px !important;
+  margin: -1px !important;
   overflow: hidden !important;
   padding: 0 !important;
   position: absolute !important;
-  width: 1px !important;
-  white-space: nowrap !important; }
+  width: 1px !important; }
 
 .select2-container--default .select2-selection--single {
   background-color: #fff;
@@ -7703,13 +7714,16 @@ table {
     width: 100%; }
     .select2-container--default .select2-selection--multiple .select2-selection__rendered li {
       list-style: none; }
+  .select2-container--default .select2-selection--multiple .select2-selection__placeholder {
+    color: #999;
+    margin-top: 5px;
+    float: left; }
   .select2-container--default .select2-selection--multiple .select2-selection__clear {
     cursor: pointer;
     float: right;
     font-weight: bold;
     margin-top: 5px;
-    margin-right: 10px;
-    padding: 1px; }
+    margin-right: 10px; }
   .select2-container--default .select2-selection--multiple .select2-selection__choice {
     background-color: #e4e4e4;
     border: 1px solid #aaa;
@@ -7728,7 +7742,7 @@ table {
     .select2-container--default .select2-selection--multiple .select2-selection__choice__remove:hover {
       color: #333; }
 
-.select2-container--default[dir="rtl"] .select2-selection--multiple .select2-selection__choice, .select2-container--default[dir="rtl"] .select2-selection--multiple .select2-search--inline {
+.select2-container--default[dir="rtl"] .select2-selection--multiple .select2-selection__choice, .select2-container--default[dir="rtl"] .select2-selection--multiple .select2-selection__placeholder, .select2-container--default[dir="rtl"] .select2-selection--multiple .select2-search--inline {
   float: right; }
 
 .select2-container--default[dir="rtl"] .select2-selection--multiple .select2-selection__choice {
@@ -7926,7 +7940,9 @@ table {
       color: #555; }
 
 .select2-container--classic[dir="rtl"] .select2-selection--multiple .select2-selection__choice {
-  float: right;
+  float: right; }
+
+.select2-container--classic[dir="rtl"] .select2-selection--multiple .select2-selection__choice {
   margin-left: 5px;
   margin-right: auto; }
 
@@ -7994,6 +8010,7 @@ table {
   box-sizing: border-box;
   -webkit-touch-callout: none;
   -webkit-user-select: none;
+  -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
   -ms-touch-action: pan-y;
@@ -12929,6 +12946,9 @@ a.aboutJoinLink:visited {
       .category-card.search-card input::-ms-input-placeholder {
         /* Edge */
         text-align: center; }
+      .category-card.search-card input::-webkit-input-placeholder {
+        /* CSS Working Draft */
+        text-align: center; }
       .category-card.search-card input:-ms-input-placeholder {
         /* CSS Working Draft */
         text-align: center; }
@@ -17404,88 +17424,6 @@ div.gift-card .text-section, div.kiva-store .text-section {
     height: 46px;
     display: inline-block;
     margin-left: 19px; }
-
-.email-settings {
-  pointer-events: auto; }
-  .email-settings .loading-spinner {
-    width: 3rem;
-    height: 3rem;
-    margin-left: 50%;
-    -ms-transform: translate(-50%);
-        transform: translate(-50%);
-    display: none; }
-  .email-settings.loading .loading-spinner {
-    display: inline-block; }
-  .email-settings.loading form {
-    display: none; }
-  .email-settings.global-unsubscribe .region-block {
-    opacity: .5;
-    pointer-events: none; }
-  .email-settings .input-wrapper {
-    position: relative; }
-    .email-settings .input-wrapper label {
-      margin-bottom: 0.6rem; }
-    .email-settings .input-wrapper input[type="checkbox"] {
-      position: absolute;
-      top: 0.1rem; }
-      .email-settings .input-wrapper input[type="checkbox"] + label {
-        margin-left: 1.25rem; }
-    .email-settings .input-wrapper select {
-      height: 1.75rem;
-      padding: 0 1.5rem 0 0.5rem; }
-    .email-settings .input-wrapper.nested {
-      margin-top: -0.5rem;
-      margin-bottom: 0.5rem; }
-  .email-settings .global-region {
-    margin: 1rem 0; }
-    .email-settings .global-region label {
-      display: inline-block;
-      font-size: 1.2rem;
-      margin-right: 1rem; }
-    .email-settings .global-region select {
-      display: inline-block;
-      max-width: 13.5rem;
-      margin-top: .5rem; }
-  .email-settings .region-block {
-    margin-bottom: 1rem; }
-    .email-settings .region-block h3 {
-      display: inline-block; }
-    .email-settings .region-block .select-all,
-    .email-settings .region-block .deselect-all {
-      display: inline-block;
-      margin-left: 1rem;
-      margin-bottom: 1rem; }
-    .email-settings .region-block .region-inner {
-      margin-left: 1rem; }
-    .email-settings .region-block select {
-      display: block;
-      margin-bottom: 1rem;
-      width: auto; }
-  .email-settings .region-inner a {
-    display: inline-block;
-    margin-bottom: 0.5rem; }
-  .email-settings .submit-region {
-    margin: 1rem 0; }
-    .email-settings .submit-region .region-inner {
-      margin-left: 1rem; }
-    .email-settings .submit-region .button {
-      width: auto;
-      margin: 0;
-      padding: 0 1.25rem; }
-    .email-settings .submit-region .loading-spinner {
-      display: inline-block;
-      height: 1.5rem;
-      width: 1.5rem;
-      margin: 0 0.25rem 0 0;
-      -ms-transform: none;
-          transform: none;
-      vertical-align: middle; }
-      .email-settings .submit-region .loading-spinner .line {
-        background-color: #FFFFFF; }
-    .email-settings .submit-region a {
-      display: inline-block;
-      margin-left: 1rem;
-      line-height: 3rem; }
 
 .rtp-page {
   /* TEAM LEADERS : START */
