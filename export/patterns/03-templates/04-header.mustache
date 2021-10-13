@@ -1,149 +1,150 @@
-{{^lending-reward-session}}
-	{{^bonus}}
-		{{#header_promo}}
-			{{> 02-organisms/00-global/03-global-promo}}
-		{{/header_promo}}
-	{{/bonus}}
-{{/lending-reward-session}}
-<div class="top-nav" role="navigation">
-	<div class="row header-row">
-	{{! This is the Promo/Bonus banner that is shown in the XXlarge screen state}}
-		<div class="show-for-xxlarge-up xxlarge-4 xxlarge-centered columns promo-space">
-			{{#lending-reward-session}}
-				<div style="font-weight: normal;">
-					Make a Kiva loan<br>and receive a $25 free credit to lend again.
-				</div>
-			{{/lending-reward-session}}
-			{{^lending-reward-session}}
-				{{#bonus}}
-					<div style="font-weight: normal;">Select a borrower to </br>
-						<span style="font-weight: bold;">
-						<a class="dark_green_bg_link" href="{{bonus.href}}">lend your {{bonus.amount}} {{bonus.label}}</a>
-					</span>
-					</div>
-				{{/bonus}}
-				{{#bonus_redirect}}
-					<div style="font-weight: normal;">
-
-						<span style="font-weight: bold;">
-							<a class="dark_green_bg_link" href="{{bonus_redirect.href}}">
-								You have {{bonus_redirect.amount}}<br>from {{bonus_redirect.display_name}} to lend!
-							</a>
-						</span>
-					</div>
-				{{/bonus_redirect}}
-			{{/lending-reward-session}}
-		</div>
-		<div class="small-3 large-2 xxlarge-2 columns header-column logo-area">
-			<a class="header-button" href="{{logo_href}}">
-				<svg class="icon icon-new-kiva-logo">
-					<use xlink:href="#icon-new-kiva-logo"/>
-				</svg>
-			</a>
-		</div>
-		<div class="small-3 large-2 xxlarge-1 columns header-column">
-			<a kvtrackevent="TopNav|click-Lend" data-dropdown="lend-dropdown" data-options="is_hover:true;hover_timeout:200;" aria-controls="lend-dropdown" aria-expanded="false" class="header-button" href="{{lend_href}}">Lend <svg class="icon"><use xlink:href="#icon-triangle" /></svg></a>
-		</div>
-		{{> 02-organisms/08-header/01-search-button}}
-		{{#is-visitor}}
-			<div class="small-6 xxlarge-3 columns header-column right-side">
-				{{#show-borrow}}
-					{{^basket-loan-added}}
-					<div class="show-for-xlarge-up large-4 columns">
-						<a kvtrackevent="TopNav|click-Borrow" class="header-button" href="{{borrow_href}}">Borrow</a>
-					</div>
-					{{/basket-loan-added}}
-				{{/show-borrow}}
-				<div class="small-6 large-4 columns">
-					<a kvtrackevent="TopNav|click-About" data-dropdown="about-dropdown" data-options="is_hover:true;hover_timeout:200;" aria-controls="about-dropdown" aria-expanded="false" class="header-button" href="{{about_href}}">About <svg class="icon"><use xlink:href="#icon-triangle" /></svg></a>
-				</div>
-                {{#basket-loan-added}}
-                <div id="top-basket-button" class="show-for-large-up large-4 columns" kvtrackevent="TopNav|click-Basket|undefined|{{basket.item_count}}|true">
-                {{/basket-loan-added}}
-                {{^basket-loan-added}}
-                <div id="top-basket-button" class="hide large-4 columns" kvtrackevent="TopNav|click-Basket|undefined|undefined|true">
-                {{/basket-loan-added}}
-					<a class="header-button {{#is_free_trial_eligible}}hidden{{/is_free_trial_eligible}}" href="{{basket_href}}"><span class="amount {{^basket.item_count}}hide{{/basket.item_count}}">{{basket.item_count}}</span> Basket</a>
-				</div>
-				<div class="small-6 large-4 columns">
-					<a class="header-button" href="{{login_href}}">Sign in</a>
-				</div>
-			</div>
-		{{/is-visitor}}
-		{{^is-visitor}}
-			<div class="small-3-8ths xxlarge-2 columns header-column right-side">
-                {{#basket-loan-added}}
-                <div id="top-basket-button" class="show-for-large-up large-6 columns" kvtrackevent="TopNav|click-Basket|undefined|{{basket.item_count}}|true">
-                {{/basket-loan-added}}
-                {{^basket-loan-added}}
-                <div id="top-basket-button" class="hide large-6 columns" kvtrackevent="TopNav|click-Basket|undefined|undefined|true">
-                {{/basket-loan-added}}
-					<a class="header-button {{#is_free_trial_eligible}}hidden{{/is_free_trial_eligible}}" href="{{basket_href}}"><span class="amount {{^basket.item_count}}hide{{/basket.item_count}}">{{basket.item_count}}</span> Basket</a>
-				</div>
-				<div class="small-12 large-6 columns">
-					<a kvtrackevent="TopNav|click-Portfolio" data-dropdown="my-kiva-dropdown" data-options="is_hover:true;hover_timeout:200;" aria-controls="my-kiva-dropdown" aria-expanded="false" class="header-button my-kiva" href="{{my_kiva_href}}">
-						<span class="amount">{{balance}}</span>
-						<span class="circle-avatar fs-exclude" style="background-image:url({{profile_picture_href}})"></span>
-					</a>
-				</div>
-			</div>
-		{{/is-visitor}}
-		{{> 02-organisms/08-header/02-search-box}}
-
-	</div>
-
-	{{> 02-organisms/08-header/03-lend-menu}}
-
-	{{#is-visitor}}
-		<ul id="about-dropdown" class="f-dropdown dropdown-list" data-dropdown-content aria-hidden="true" tabindex="-1">
-			{{#about-nav.links}}
-				<li><a kvtrackevent="TopNav|click-About-{{label}}" href="{{href}}">{{label}}</a></li>
-			{{/about-nav.links}}
-		</ul>
-	{{/is-visitor}}
-
-	{{^is-visitor}}
-		<ul id="my-kiva-dropdown" class="f-dropdown dropdown-list" data-dropdown-content aria-hidden="true" tabindex="-1">
-			{{#my-kiva.links}}
-				<li><a kvtrackevent="TopNav|click-Portfolio-{{label}}" href="{{href}}" {{#end-section}}class="end-section"{{/end-section}}>{{label}}</a></li>
-			{{/my-kiva.links}}
-		</ul>
-	{{/is-visitor}}
-	{{#lending-reward-session}}
-		{{! This is the Lending Reward prompt that is shown in the medium screen state}}
-		<div class="hide-for-xxlarge-up hide-for-small-only pronus" style="font-weight: normal;">Make a Kiva loan and receive a $25 free credit to lend again.</div>
-		{{! This is the Lending Reward prompt that is shown in the small screen state}}
-		<div class="show-for-small-only small-centered columns pronus" style="font-weight: normal;">Make a Kiva loan<br>and receive a $25 free credit to lend again.</div>
-	{{/lending-reward-session}}
+{{^kiva-app-referral}}
 	{{^lending-reward-session}}
-		{{#bonus}}
-			{{! This is the Promo/Bonus banner that is shown in the medium screen state}}
-			<div class="hide-for-xxlarge-up hide-for-small-only pronus"><span style="font-weight: normal;">Select a borrower to <span style="font-weight: bold;"><a class="dark_green_bg_link"  href="{{bonus.href}}">lend your {{bonus.amount}} {{bonus.label}}</a></span></span></div>
-			{{! This is the Promo/Bonus banner that is shown in the small screen state}}
-			<div class="show-for-small-only small-centered columns pronus"><div style="font-weight: normal;">Select a borrower to </br><span style="font-weight: bold;"><a class="dark_green_bg_link"  href="{{bonus.href}}">lend your {{bonus.amount}} {{bonus.label}}</a></span></div></div>
+		{{^bonus}}
+			{{#header_promo}}
+				{{> 02-organisms/00-global/03-global-promo}}
+			{{/header_promo}}
 		{{/bonus}}
-		{{#bonus_redirect}}
-			{{! medium screens }}
-			<div class="hide-for-xxlarge-up hide-for-small-only pronus"><span style="font-weight: normal;"><span style="font-weight: bold;"><a class="dark_green_bg_link"  href="{{bonus_redirect.href}}">You have {{bonus_redirect.amount}} from {{bonus_redirect.display_name}} to lend!</a></span></span></div>
-			{{! small screens }}
-			<div class="show-for-small-only small-centered columns pronus"><div style="font-weight: normal;"><span style="font-weight: bold;"><a class="dark_green_bg_link"  href="{{bonus_redirect.href}}">You have {{bonus_redirect.amount}}<br>from {{bonus_redirect.display_name}} to lend!</a></span></div></div>
-		{{/bonus_redirect}}
 	{{/lending-reward-session}}
+	<div class="top-nav" role="navigation">
+		<div class="row header-row">
+		{{! This is the Promo/Bonus banner that is shown in the XXlarge screen state}}
+			<div class="show-for-xxlarge-up xxlarge-4 xxlarge-centered columns promo-space">
+				{{#lending-reward-session}}
+					<div style="font-weight: normal;">
+						Make a Kiva loan<br>and receive a $25 free credit to lend again.
+					</div>
+				{{/lending-reward-session}}
+				{{^lending-reward-session}}
+					{{#bonus}}
+						<div style="font-weight: normal;">Select a borrower to </br>
+							<span style="font-weight: bold;">
+							<a class="dark_green_bg_link" href="{{bonus.href}}">lend your {{bonus.amount}} {{bonus.label}}</a>
+						</span>
+						</div>
+					{{/bonus}}
+					{{#bonus_redirect}}
+						<div style="font-weight: normal;">
 
-    {{#category-rows-message}}
-        <div class="message-text message-text-confirmation text-center small-12" style="top: auto; z-index: 1; position: relative;">
-            <span class="message-content">
-                <div class="icon-wrapper">
-                    <svg class="icon icon-{{ category-rows-message-type }}">
-                        <use xlink:href="#icon-{{ category-rows-message-type }}"></use>
-                    </svg>
-                </div>
-                <p class="message">{{{ category-rows-message-value }}}</p>
-            </span>
-        </div>
-    {{/category-rows-message}}
-</div>
+							<span style="font-weight: bold;">
+								<a class="dark_green_bg_link" href="{{bonus_redirect.href}}">
+									You have {{bonus_redirect.amount}}<br>from {{bonus_redirect.display_name}} to lend!
+								</a>
+							</span>
+						</div>
+					{{/bonus_redirect}}
+				{{/lending-reward-session}}
+			</div>
+			<div class="small-3 large-2 xxlarge-2 columns header-column logo-area">
+				<a class="header-button" href="{{logo_href}}">
+					<svg class="icon icon-new-kiva-logo">
+						<use xlink:href="#icon-new-kiva-logo"/>
+					</svg>
+				</a>
+			</div>
+			<div class="small-3 large-2 xxlarge-1 columns header-column">
+				<a kvtrackevent="TopNav|click-Lend" data-dropdown="lend-dropdown" data-options="is_hover:true;hover_timeout:200;" aria-controls="lend-dropdown" aria-expanded="false" class="header-button" href="{{lend_href}}">Lend <svg class="icon"><use xlink:href="#icon-triangle" /></svg></a>
+			</div>
+			{{> 02-organisms/08-header/01-search-button}}
+			{{#is-visitor}}
+				<div class="small-6 xxlarge-3 columns header-column right-side">
+					{{#show-borrow}}
+						{{^basket-loan-added}}
+						<div class="show-for-xlarge-up large-4 columns">
+							<a kvtrackevent="TopNav|click-Borrow" class="header-button" href="{{borrow_href}}">Borrow</a>
+						</div>
+						{{/basket-loan-added}}
+					{{/show-borrow}}
+					<div class="small-6 large-4 columns">
+						<a kvtrackevent="TopNav|click-About" data-dropdown="about-dropdown" data-options="is_hover:true;hover_timeout:200;" aria-controls="about-dropdown" aria-expanded="false" class="header-button" href="{{about_href}}">About <svg class="icon"><use xlink:href="#icon-triangle" /></svg></a>
+					</div>
+					{{#basket-loan-added}}
+					<div id="top-basket-button" class="show-for-large-up large-4 columns" kvtrackevent="TopNav|click-Basket|undefined|{{basket.item_count}}|true">
+					{{/basket-loan-added}}
+					{{^basket-loan-added}}
+					<div id="top-basket-button" class="hide large-4 columns" kvtrackevent="TopNav|click-Basket|undefined|undefined|true">
+					{{/basket-loan-added}}
+						<a class="header-button {{#is_free_trial_eligible}}hidden{{/is_free_trial_eligible}}" href="{{basket_href}}"><span class="amount {{^basket.item_count}}hide{{/basket.item_count}}">{{basket.item_count}}</span> Basket</a>
+					</div>
+					<div class="small-6 large-4 columns">
+						<a class="header-button" href="{{login_href}}">Sign in</a>
+					</div>
+				</div>
+			{{/is-visitor}}
+			{{^is-visitor}}
+				<div class="small-3-8ths xxlarge-2 columns header-column right-side">
+					{{#basket-loan-added}}
+					<div id="top-basket-button" class="show-for-large-up large-6 columns" kvtrackevent="TopNav|click-Basket|undefined|{{basket.item_count}}|true">
+					{{/basket-loan-added}}
+					{{^basket-loan-added}}
+					<div id="top-basket-button" class="hide large-6 columns" kvtrackevent="TopNav|click-Basket|undefined|undefined|true">
+					{{/basket-loan-added}}
+						<a class="header-button {{#is_free_trial_eligible}}hidden{{/is_free_trial_eligible}}" href="{{basket_href}}"><span class="amount {{^basket.item_count}}hide{{/basket.item_count}}">{{basket.item_count}}</span> Basket</a>
+					</div>
+					<div class="small-12 large-6 columns">
+						<a kvtrackevent="TopNav|click-Portfolio" data-dropdown="my-kiva-dropdown" data-options="is_hover:true;hover_timeout:200;" aria-controls="my-kiva-dropdown" aria-expanded="false" class="header-button my-kiva" href="{{my_kiva_href}}">
+							<span class="amount">{{balance}}</span>
+							<span class="circle-avatar fs-exclude" style="background-image:url({{profile_picture_href}})"></span>
+						</a>
+					</div>
+				</div>
+			{{/is-visitor}}
+			{{> 02-organisms/08-header/02-search-box}}
 
+		</div>
+
+		{{> 02-organisms/08-header/03-lend-menu}}
+
+		{{#is-visitor}}
+			<ul id="about-dropdown" class="f-dropdown dropdown-list" data-dropdown-content aria-hidden="true" tabindex="-1">
+				{{#about-nav.links}}
+					<li><a kvtrackevent="TopNav|click-About-{{label}}" href="{{href}}">{{label}}</a></li>
+				{{/about-nav.links}}
+			</ul>
+		{{/is-visitor}}
+
+		{{^is-visitor}}
+			<ul id="my-kiva-dropdown" class="f-dropdown dropdown-list" data-dropdown-content aria-hidden="true" tabindex="-1">
+				{{#my-kiva.links}}
+					<li><a kvtrackevent="TopNav|click-Portfolio-{{label}}" href="{{href}}" {{#end-section}}class="end-section"{{/end-section}}>{{label}}</a></li>
+				{{/my-kiva.links}}
+			</ul>
+		{{/is-visitor}}
+		{{#lending-reward-session}}
+			{{! This is the Lending Reward prompt that is shown in the medium screen state}}
+			<div class="hide-for-xxlarge-up hide-for-small-only pronus" style="font-weight: normal;">Make a Kiva loan and receive a $25 free credit to lend again.</div>
+			{{! This is the Lending Reward prompt that is shown in the small screen state}}
+			<div class="show-for-small-only small-centered columns pronus" style="font-weight: normal;">Make a Kiva loan<br>and receive a $25 free credit to lend again.</div>
+		{{/lending-reward-session}}
+		{{^lending-reward-session}}
+			{{#bonus}}
+				{{! This is the Promo/Bonus banner that is shown in the medium screen state}}
+				<div class="hide-for-xxlarge-up hide-for-small-only pronus"><span style="font-weight: normal;">Select a borrower to <span style="font-weight: bold;"><a class="dark_green_bg_link"  href="{{bonus.href}}">lend your {{bonus.amount}} {{bonus.label}}</a></span></span></div>
+				{{! This is the Promo/Bonus banner that is shown in the small screen state}}
+				<div class="show-for-small-only small-centered columns pronus"><div style="font-weight: normal;">Select a borrower to </br><span style="font-weight: bold;"><a class="dark_green_bg_link"  href="{{bonus.href}}">lend your {{bonus.amount}} {{bonus.label}}</a></span></div></div>
+			{{/bonus}}
+			{{#bonus_redirect}}
+				{{! medium screens }}
+				<div class="hide-for-xxlarge-up hide-for-small-only pronus"><span style="font-weight: normal;"><span style="font-weight: bold;"><a class="dark_green_bg_link"  href="{{bonus_redirect.href}}">You have {{bonus_redirect.amount}} from {{bonus_redirect.display_name}} to lend!</a></span></span></div>
+				{{! small screens }}
+				<div class="show-for-small-only small-centered columns pronus"><div style="font-weight: normal;"><span style="font-weight: bold;"><a class="dark_green_bg_link"  href="{{bonus_redirect.href}}">You have {{bonus_redirect.amount}}<br>from {{bonus_redirect.display_name}} to lend!</a></span></div></div>
+			{{/bonus_redirect}}
+		{{/lending-reward-session}}
+
+		{{#category-rows-message}}
+			<div class="message-text message-text-confirmation text-center small-12" style="top: auto; z-index: 1; position: relative;">
+				<span class="message-content">
+					<div class="icon-wrapper">
+						<svg class="icon icon-{{ category-rows-message-type }}">
+							<use xlink:href="#icon-{{ category-rows-message-type }}"></use>
+						</svg>
+					</div>
+					<p class="message">{{{ category-rows-message-value }}}</p>
+				</span>
+			</div>
+		{{/category-rows-message}}
+	</div>
+{{/kiva-app-referral}}
 {{^is_checkout}}
 	<div id="mobile-basket-button" class="basket-bar {{#basket.item_count}}hide-for-large-up{{/basket.item_count}}{{^basket.item_count}}hide{{/basket.item_count}}">
 		<a href="{{basket_href}}" class="button" kvtrackevent="Lending|Checkout - Item Count|Bottom Bar|{{basket.item_count}}|true">Checkout (<span class="basket-item-count">{{basket.item_count}}</span>)</a>
