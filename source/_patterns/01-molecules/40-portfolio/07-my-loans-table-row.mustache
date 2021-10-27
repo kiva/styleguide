@@ -3,9 +3,12 @@
 		<img src="{{image.url}}" data-interchange="{{#image.sizes}}[{{url}}, ({{size}})],{{/image.sizes}}">
 	</a>
 	{{#matchedLoan}}
-		<svg class="icon icon-match">
-			<use xlink:href="#icon-match"/>
-		</svg>
+		{{#matchRatio}}
+			<p>{{matchRatio}}x matched</p>
+		{{/matchRatio}}
+		{{^matchRatio}}
+			<p>Matched</p>
+		{{/matchRatio}}
 	{{/matchedLoan}}
 	{{#dedication}}
 		{{^toKiva}}
