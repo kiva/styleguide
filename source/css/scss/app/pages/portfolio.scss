@@ -671,6 +671,10 @@ table.loans-table {
 		vertical-align: top;
 		padding-right: 0;
 
+		p.matched-text {
+			font-size: 0.75rem;
+		}
+
 		&:first-child {
 			padding-left: 0;
 			min-width: rem-calc(50);
