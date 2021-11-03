@@ -4,10 +4,14 @@
 	</a>
 	{{#matchedLoan}}
 		{{#matchRatio}}
-			<p>{{matchRatio}}x matched</p>
+			<p class="matched-text">
+				{{matchRatio}}x matched
+			</p>
 		{{/matchRatio}}
 		{{^matchRatio}}
-			<p>Matched</p>
+			<p class="matched-text">
+				Matched
+			</p>
 		{{/matchRatio}}
 	{{/matchedLoan}}
 	{{#dedication}}

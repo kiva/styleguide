@@ -15318,6 +15318,8 @@ table.loans-table {
   table.loans-table td {
     vertical-align: top;
     padding-right: 0; }
+    table.loans-table td p.matched-text {
+      font-size: 0.75rem; }
     table.loans-table td:first-child {
       padding-left: 0;
       min-width: 3.125rem;
