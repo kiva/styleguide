@@ -165,6 +165,10 @@ h2.scalable {
 	font-size: $top-nav-font-size;
 	line-height: $top-nav-line-height;
   	font-weight: 400;
+
+	@media #{$large-up} {
+		font-size: $top-nav-large-font-size;
+	}
 }
 
 a:visited {

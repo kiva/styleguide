@@ -1,24 +1,34 @@
 .header-button {
 	display:block;
 	padding:0;
-	line-height: $header-height-small;
-	background-color: $kiva-green;
+	line-height: $header-height;
+	background-color: $white;
 	white-space: nowrap;
 	text-align: center;
 
 	@media #{$large-up} {
-		padding:0 $header-height/4;
-		line-height: $header-height;
+		padding:0 $header-height-large/4;
+		line-height: $header-height-large;
 	}
 
-	&:link, &:visited, &:hover, &:active {
-		color: $white;
+	&:link, &:visited {
+		color: $kiva-text-dark;
 		text-decoration: none;
 
 		.icon {
-			fill: $white;
+			fill: $kiva-text-dark;
 		}
 	}
+
+	&:hover, &:active {
+		color: $dark-green;
+		text-decoration: none;
+
+		.icon {
+			fill: $dark-green;
+		}
+	}
+	// $dark-green
 
 	&[data-dropdown] .icon {
 		width: 0.5rem;
@@ -56,10 +66,10 @@
 	}
 
 	img, .circle-avatar {
-		margin-top: -$header-height-small/16;
+		margin-top: -$header-height/16;
 
 		@media #{$large-up} {
-			margin-top: -$header-height/16;
+			margin-top: -$header-height-large/16;
 		}
 	}
 

@@ -1,5 +1,5 @@
-$search-form-height: $header-height;
-$search-form-height-small: $header-height-small;
+$search-form-height: $header-height-large;
+$search-form-height-small: $header-height;
 $search-form-transition: width 0.5s ease;
 
 $search-margin: 0.6rem;
@@ -19,11 +19,11 @@ a.header-button#search-toggle {
     line-height: 0;
 
     .icon {
-        height: $header-height-small;
+        height: rem-calc(18);
 
-        @media #{$large-up} {
-            height: $header-height;
-        }
+        // @media #{$large-up} {
+        //     height: $header-height-large;
+        // }
     }
 
     .close-icon {
@@ -61,7 +61,7 @@ a.header-button#search-toggle {
     display: block;
     overflow: hidden;
     width: 100%;
-    background-color: $kiva-green;
+    background-color: $white;
 
     -webkit-transition: $search-form-transition;
     transition: $search-form-transition;
@@ -88,7 +88,7 @@ a.header-button#search-toggle {
         position: relative;
         vertical-align: middle;
         height: $search-form-height-small;
-        border-right: rem-calc(1) solid $kiva-navdivider-green;
+        // border-right: rem-calc(1) solid $kiva-navdivider-green;
 
         -webkit-transition: $search-form-transition;
         transition: $search-form-transition;
@@ -116,11 +116,10 @@ a.header-button#search-toggle {
         left: 0.4rem + $search-button-size-small;
         z-index: 100;
         width: $search-icon-size;
-        height: $header-height-small;
+        height: $search-icon-size;
 
         @media #{$large-up} {
             left: 0.4rem;
-            height: $header-height;
         }
     }
 
@@ -135,6 +134,8 @@ a.header-button#search-toggle {
         margin: $search-centering-margin-small 0;
         display: inline-block;
         height: auto;
+        border-radius: rem-calc(4);
+        border: 1px solid $gray;
 
         @media #{$large-up} {
             width: $search-input-width;

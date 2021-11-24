@@ -8,33 +8,6 @@
 	{{/lending-reward-session}}
 	<div class="top-nav" role="navigation">
 		<div class="row header-row">
-		{{! This is the Promo/Bonus banner that is shown in the XXlarge screen state}}
-			<div class="show-for-xxlarge-up xxlarge-4 xxlarge-centered columns promo-space">
-				{{#lending-reward-session}}
-					<div style="font-weight: normal;">
-						Make a Kiva loan<br>and receive a $25 free credit to lend again.
-					</div>
-				{{/lending-reward-session}}
-				{{^lending-reward-session}}
-					{{#bonus}}
-						<div style="font-weight: normal;">Select a borrower to </br>
-							<span style="font-weight: bold;">
-							<a class="dark_green_bg_link" href="{{bonus.href}}">lend your {{bonus.amount}} {{bonus.label}}</a>
-						</span>
-						</div>
-					{{/bonus}}
-					{{#bonus_redirect}}
-						<div style="font-weight: normal;">
-
-							<span style="font-weight: bold;">
-								<a class="dark_green_bg_link" href="{{bonus_redirect.href}}">
-									You have {{bonus_redirect.amount}}<br>from {{bonus_redirect.display_name}} to lend!
-								</a>
-							</span>
-						</div>
-					{{/bonus_redirect}}
-				{{/lending-reward-session}}
-			</div>
 			<div class="small-3 large-2 xxlarge-2 columns header-column logo-area">
 				<a class="header-button" href="{{logo_href}}">
 					<svg class="icon icon-new-kiva-logo">
@@ -112,20 +85,20 @@
 		{{/is-visitor}}
 		{{#lending-reward-session}}
 			{{! This is the Lending Reward prompt that is shown in the medium screen state}}
-			<div class="hide-for-xxlarge-up hide-for-small-only pronus" style="font-weight: normal;">Make a Kiva loan and receive a $25 free credit to lend again.</div>
+			<div class="hide-for-small-only pronus" style="font-weight: normal;">Make a Kiva loan and receive a $25 free credit to lend again.</div>
 			{{! This is the Lending Reward prompt that is shown in the small screen state}}
 			<div class="show-for-small-only small-centered columns pronus" style="font-weight: normal;">Make a Kiva loan<br>and receive a $25 free credit to lend again.</div>
 		{{/lending-reward-session}}
 		{{^lending-reward-session}}
 			{{#bonus}}
 				{{! This is the Promo/Bonus banner that is shown in the medium screen state}}
-				<div class="hide-for-xxlarge-up hide-for-small-only pronus"><span style="font-weight: normal;">Select a borrower to <span style="font-weight: bold;"><a class="dark_green_bg_link"  href="{{bonus.href}}">lend your {{bonus.amount}} {{bonus.label}}</a></span></span></div>
+				<div class="hide-for-small-only pronus"><span style="font-weight: normal;">Select a borrower to <span style="font-weight: bold;"><a class="dark_green_bg_link"  href="{{bonus.href}}">lend your {{bonus.amount}} {{bonus.label}}</a></span></span></div>
 				{{! This is the Promo/Bonus banner that is shown in the small screen state}}
 				<div class="show-for-small-only small-centered columns pronus"><div style="font-weight: normal;">Select a borrower to </br><span style="font-weight: bold;"><a class="dark_green_bg_link"  href="{{bonus.href}}">lend your {{bonus.amount}} {{bonus.label}}</a></span></div></div>
 			{{/bonus}}
 			{{#bonus_redirect}}
 				{{! medium screens }}
-				<div class="hide-for-xxlarge-up hide-for-small-only pronus"><span style="font-weight: normal;"><span style="font-weight: bold;"><a class="dark_green_bg_link"  href="{{bonus_redirect.href}}">You have {{bonus_redirect.amount}} from {{bonus_redirect.display_name}} to lend!</a></span></span></div>
+				<div class="hide-for-small-only pronus"><span style="font-weight: normal;"><span style="font-weight: bold;"><a class="dark_green_bg_link"  href="{{bonus_redirect.href}}">You have {{bonus_redirect.amount}} from {{bonus_redirect.display_name}} to lend!</a></span></span></div>
 				{{! small screens }}
 				<div class="show-for-small-only small-centered columns pronus"><div style="font-weight: normal;"><span style="font-weight: bold;"><a class="dark_green_bg_link"  href="{{bonus_redirect.href}}">You have {{bonus_redirect.amount}}<br>from {{bonus_redirect.display_name}} to lend!</a></span></div></div>
 			{{/bonus_redirect}}

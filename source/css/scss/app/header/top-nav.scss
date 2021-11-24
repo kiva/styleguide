@@ -1,136 +1,159 @@
 .top-nav {
-    background-color: $kiva-green;
+	background-color: $white;
 	position: relative;
+	border-bottom: 1px solid $subtle-gray;
 
-    .columns {
-        padding:0;
+	.columns {
+		padding:0;
 
-        @media #{$large-up} {
-            padding:0;
-            width:auto;
-        }
+		@media #{$large-up} {
+			padding:0;
+			width:auto;
+		}
 
-        .kv-dropdown {
-            position: inherit;
-        }
-    }
+		.kv-dropdown {
+			position: inherit;
+		}
+	}
 
-    .header-row {
-        position: relative;
-    }
+	.header-row {
+		position: relative;
+	}
 
-    .header-column > a {
-        border-right: rem-calc(1) solid $kiva-navdivider-green;
-    }
+	// .header-column > a {
+	//     border-right: rem-calc(1) solid $kiva-navdivider-green;
+	// }
 
-    .header-column:last-child > a {
-        border-right:none;
-    }
+	// .header-column:last-child > a {
+	//     border-right:none;
+	// }
 
-    .logo-area .header-button {
+	.logo-area .header-button {
 		$vertical-offset: rem-calc(3);
 
 		line-height: 0;
-        padding: 0 0.3rem $vertical-offset;
+		padding: 0 0.3rem $vertical-offset;
 
 		@media #{$large-up} {
 			padding: 0 rem-calc(16) $vertical-offset;
 		}
 
-		.icon {
-			width: rem-calc(71);
-			height: $header-height-small;
-			margin-top: -$vertical-offset;
-
-			@media #{$large-up} {
-				height: $header-height;
+		&:link, &:visited {
+			color: $kiva-green;
+			text-decoration: none;
+	
+			.icon {
+				fill: $kiva-green;
 			}
 		}
-    }
+	
+		&:hover, &:active {
+			color: $dark-green;
+			text-decoration: none;
+	
+			.icon {
+				fill: $dark-green;
+			}
+		}
 
-    .amount {
-        color: inherit;
-        background: none;
-        padding: 0;
+		.icon {
+			width: rem-calc(41);
+			height: $header-height;
+			margin-top: -$vertical-offset;
 
-        @media #{$large-up} {
-            color: $kiva-green;
-            background: $white;
-            padding: rem-calc(1) rem-calc(7);
-        }
-    }
+			@media #{$medium-up} {
+				height: $header-height-medium;
+			}
 
-    .promo-space.columns {
-        position: absolute;
-        text-align: center;
-        line-height: rem-calc(20);
-        width: 100%;
+			@media #{$large-up} {
+				height: $header-height-large;
+			}
+		}
+	}
+
+	.amount {
+		color: inherit;
+		background: none;
+		padding: 0;
+
+		@media #{$large-up} {
+			color: $kiva-text-dark;
+			background: $white;
+			padding: rem-calc(1) rem-calc(7);
+		}
+	}
+
+	.promo-space.columns {
+		position: absolute;
+		text-align: center;
+		line-height: rem-calc(20);
+		width: 100%;
 		font-size: 0.8rem;
 		font-weight: bold;
 		margin-top: rem-calc(11);
 		color: $kiva-darkgreen;
 
 
-        .amount {
-            background-color: $kiva-darkgreen;
-        }
-    }
+		// .amount {
+		//     background-color: $kiva-darkgreen;
+		// }
+	}
 
-    .right-side.columns {
-        float: right;
-        border: none;
+	.right-side.columns {
+		float: right;
+		border: none;
 
-        @media #{$large-up} {
-            width: auto;
-        }
+		@media #{$large-up} {
+			width: auto;
+		}
 
-        .columns a {
-            border-left: rem-calc(1) solid $kiva-navdivider-green;
-        }
-    }
+		// .columns a {
+		//     border-left: rem-calc(1) solid $kiva-navdivider-green;
+		// }
+	}
 
-    .f-dropdown {
-        background-color: $level-one-background;
-        outline: none;
-        width: auto;
-        max-width: none;
-        margin-top: 0;
-        border-top: none;
-	    z-index: 1112;
+	.f-dropdown {
+		background-color: $level-one-background;
+		outline: none;
+		width: auto;
+		max-width: none;
+		margin-top: 0;
+		border-top: none;
+		z-index: 1112;
 
-        &:after {
-            display: none;
-        }
+		&:after {
+			display: none;
+		}
 
-        &.content {
-            padding: 0;
-        }
-    }
+		&.content {
+			padding: 0;
+		}
+	}
 
-    .pronus {
-        font-size: 0.8rem;
-        text-align: center;
-        background-color: $kiva-green;
-		border-top: rem-calc(1) solid $kiva-navdivider-green;
-		height: rem-calc(45);
-		line-height: rem-calc(45);
-		color: $dark-green;
+	.pronus {
+		font-size: 0.8rem;
+		text-align: center;
+		background-color: $kiva-green;
+		// border-top: rem-calc(1) solid $kiva-green;
+		height: rem-calc(40);
+		line-height: rem-calc(40);
+		color: $white;
 		width: 100%;
 		display: block;
 
 		@media #{$small-only} {
-			line-height: rem-calc(21);
+			line-height: rem-calc(18);
 		}
-    }
+	}
 }
 
 // cover both n-touch and no-touch due to legacy versions of medernizr
-.n-touch
-, .no-touch {
-	.top-nav .header-button:hover {
-		background-color: $kiva-navdivider-green;
-	}
-}
+// .n-touch
+// , .no-touch {
+// 	.top-nav .header-button:hover {
+// 		background-color: $kiva-navdivider-green;
+// 	}
+// }
 
 .basket-bar {
   	padding: rem-calc(10);
@@ -146,10 +169,10 @@
 	  	font-weight: normal;
 		width: 100%;
 		display: block;
-        &.button {
+		&.button {
 		  padding: rem-calc(22) 0;
 		  margin-bottom: 0;
-        }
+		}
 	}
 }
 
@@ -158,38 +181,38 @@
 }
 
 @media #{$small-only}, #{$medium-only} {
-    .top-nav {
+	.top-nav {
 
-        .small-1-8th {
-            width: grid-calc(1, 8);
-        }
+		.small-1-8th {
+			width: grid-calc(1, 8);
+		}
 
-        .small-3-8ths {
-            width: grid-calc(3, 8);
-        }
+		.small-3-8ths {
+			width: grid-calc(3, 8);
+		}
 
-        .columns {
-            padding:0;
-        }
+		.columns {
+			padding:0;
+		}
 
-        .right-side {
-            padding: 0;
+		.right-side {
+			padding: 0;
 
-            .columns:first-child a {
-                border-left:none;
-            }
-        }
+			.columns:first-child a {
+				border-left:none;
+			}
+		}
 
-        .f-dropdown {
-            border: none;
+		.f-dropdown {
+			border: none;
 
-            // !important to override foundation inline styles applied by js
-            left: 0 !important;
-            width: 100% !important;
+			// !important to override foundation inline styles applied by js
+			left: 0 !important;
+			width: 100% !important;
 
-            &:before, &:after {
-                display: none;
-            }
-        }
-    }
+			&:before, &:after {
+				display: none;
+			}
+		}
+	}
 }

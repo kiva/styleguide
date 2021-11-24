@@ -70,7 +70,7 @@ $link-spacing: rem-calc(16);
     & > a {
         display: block;
         width: 100%;
-        line-height: $header-height-small;
+        line-height: $header-height;
         padding: 0 0.5rem;
         background-color: $kiva-darkgreen;
         color: $white;
@@ -79,7 +79,7 @@ $link-spacing: rem-calc(16);
             float: right;
             fill: none;
             stroke: $white;
-            height: $header-height-small;
+            height: $header-height;
             width: rem-calc(25);
 
             $transition: 300ms ease;

@@ -3,8 +3,8 @@
 }
 
 .circle-avatar {
-	width: 0.78125 * $header-height-small;
-	height: 0.78125 * $header-height-small;
+	width: rem-calc(20);
+	height: rem-calc(20);
 	margin-left: 0.3rem;
 	margin-right: 0.3rem;
 	display: inline-block;
@@ -14,12 +14,17 @@
 	background-repeat: no-repeat;
 	background-size: cover;
 	vertical-align: middle;
+
+	@media #{$medium-up} {
+		width: rem-calc(23);
+		height: rem-calc(23);	
+	}
 }
 
 @media #{$large-up} {
 	.circle-avatar {
-		width: 0.78125 * $header-height;
-		height: 0.78125 * $header-height;
+		width: rem-calc(26);
+		height: rem-calc(26);
 		margin-left: 0.5rem;
 		margin-right: 0;
 	}
