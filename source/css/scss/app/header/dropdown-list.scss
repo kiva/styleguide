@@ -1,6 +1,7 @@
 ul.dropdown-list {
     background-color: $level-two-background;
     list-style: none;
+    border-radius: 0 0 rem-calc($radii-default) rem-calc($radii-default);
 
     @media #{$large-up} {
         background-color: $white;
@@ -15,7 +16,7 @@ ul.dropdown-list {
             display: block;
             padding: 0 1rem;
             white-space: nowrap;
-            line-height: $header-height-small;
+            line-height: rem-calc($space-5);
             font-size: $body-font-size;
             color: $kiva-textlink;
             text-decoration: none;

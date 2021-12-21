@@ -41,7 +41,7 @@
 }
 
 .lend-menu-small {
-    $row-height: $header-height-small - 1rem;
+    $row-height: $header-height - 1rem;
     list-style: none;
     margin: 0;
     background-color: $level-one-background;
@@ -145,8 +145,8 @@
     $half-list-width: $col-width;
     $list-width: 2*$half-list-width + $section-padding;
 
-
     overflow: hidden;
+    border-radius: 0 0 rem-calc($radii-sm) rem-calc($radii-sm);
 
     li a {
         white-space: nowrap;

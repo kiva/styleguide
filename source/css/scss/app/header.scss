@@ -1,11 +1,44 @@
-// shared vars
-$header-height: rem-calc(64);
-$header-height-small: rem-calc(45);
+// Import kv-tokens based variables
+@import '../tw-exported-vars.scss';
 
-$selected-color: #a9a9a9;
-$level-one-background: $white;
-$level-two-background: #f5f5f5;
-$level-three-background: #e6e6e6;
+// Color Vars
+$green: $colors-brand-default;
+$dark-green: $colors-theme-default-text-action;
+$graphic-green: $colors-theme-default-text-action-highlight;
+$divider-green: $colors-theme-default-text-action-highlight;
+$dark-charcoal: $colors-theme-default-border-primary;
+$charcoal: $colors-theme-default-border-secondary;
+$dark-gray: $colors-gray-600;
+$gray: $colors-theme-default-text-tertiary;
+$subtle-gray: $colors-theme-default-border-tertiary;
+
+$kiva-text-dark: $dark-charcoal;
+$kiva-text-medium: $charcoal;
+$kiva-text-light: $dark-gray;
+$kiva-textlink: $dark-green;
+$kiva-textlink-visited: $graphic-green;
+$kiva-textlink-hover: $graphic-green;
+$kiva-filter-indicator: $dark-green;
+$kiva-filter-indicator-bg: $graphic-green;
+
+$kiva-green: $colors-brand-default;
+
+$selected-color: $colors-gray-500;
+$level-one-background: $colors-white;
+$level-two-background: $colors-gray-100;
+$level-three-background: $colors-gray-200;
+
+// Default Font size vars and declarations
+$top-nav-font-size				: rem-calc($font-sizes-base-sm);
+$top-nav-medium-font-size		: rem-calc($font-sizes-base-md);
+$top-nav-large-font-size		: rem-calc($font-sizes-base-lg);
+
+// Shared Header Vars
+$header-height: rem-calc(64);
+$header-height-small: rem-calc($space-8);
+$header-height-medium: rem-calc($space-9);
+$header-height-large: rem-calc($space-9);
+
 
 // imports - alphabetical for clarity
 @import 'global-promo';

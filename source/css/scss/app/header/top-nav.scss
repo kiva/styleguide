@@ -1,6 +1,15 @@
 .top-nav {
-    background-color: $kiva-green;
+    background-color: $colors-white;
 	position: relative;
+    font-size: $top-nav-font-size;
+    border-bottom: 1px solid $colors-theme-default-border-tertiary;
+
+    @media #{$medium-up} {
+        font-size: $top-nav-medium-font-size;
+    }
+    @media #{$large-up} {
+        font-size: $top-nav-large-font-size;
+    }
 
     .columns {
         padding:0;
@@ -17,47 +26,66 @@
 
     .header-row {
         position: relative;
+        display: flex;
+        justify-content: start;
+        padding-right: 0.875rem;
     }
 
-    .header-column > a {
-        border-right: rem-calc(1) solid $kiva-navdivider-green;
-    }
+    .logo-area {
+        margin-right: auto;
 
-    .header-column:last-child > a {
-        border-right:none;
-    }
+        // @media #{$large-up} {
+        //     margin-right: 0;
+        // }
 
-    .logo-area .header-button {
-		$vertical-offset: rem-calc(3);
+        .header-button {
+            $vertical-offset: rem-calc(3);
 
-		line-height: 0;
-        padding: 0 0.3rem $vertical-offset;
+            line-height: 0;
+            padding: 0.025rem 0.5rem 0 rem-calc(22);
 
-		@media #{$large-up} {
-			padding: 0 rem-calc(16) $vertical-offset;
-		}
+            // @media #{$large-up} {
+            //     padding: 0 0.5rem $vertical-offset rem-calc(22);
+            // }
 
-		.icon {
-			width: rem-calc(71);
-			height: $header-height-small;
-			margin-top: -$vertical-offset;
+            &:link, &:visited {
+                color: $kiva-green;
+                text-decoration: none;
 
-			@media #{$large-up} {
-				height: $header-height;
-			}
-		}
+                .icon {
+                    fill: $kiva-green;
+                }
+            }
+
+            &:hover, &:active {
+                color: $dark-green;
+                text-decoration: none;
+
+                .icon {
+                    fill: $dark-green;
+                }
+            }
+
+            .icon {
+                width: rem-calc(41);
+                height: $header-height;
+                margin-top: -$vertical-offset;
+
+                @media #{$medium-up} {
+                    height: $header-height-medium;
+                }
+
+                @media #{$large-up} {
+                    height: $header-height-large;
+                }
+            }
+        }
     }
 
     .amount {
-        color: inherit;
-        background: none;
-        padding: 0;
-
-        @media #{$large-up} {
-            color: $kiva-green;
-            background: $white;
-            padding: rem-calc(1) rem-calc(7);
-        }
+        border-radius: rem-calc($radii-sm);
+        background: $colors-theme-default-background-secondary;
+        padding: 0.25rem 0.4375rem .125rem;
     }
 
     .promo-space.columns {
@@ -69,11 +97,6 @@
 		font-weight: bold;
 		margin-top: rem-calc(11);
 		color: $kiva-darkgreen;
-
-
-        .amount {
-            background-color: $kiva-darkgreen;
-        }
     }
 
     .right-side.columns {
@@ -82,10 +105,6 @@
 
         @media #{$large-up} {
             width: auto;
-        }
-
-        .columns a {
-            border-left: rem-calc(1) solid $kiva-navdivider-green;
         }
     }
 
@@ -111,25 +130,16 @@
         font-size: 0.8rem;
         text-align: center;
         background-color: $kiva-green;
-		border-top: rem-calc(1) solid $kiva-navdivider-green;
-		height: rem-calc(45);
-		line-height: rem-calc(45);
-		color: $dark-green;
+		height: rem-calc(40);
+		line-height: rem-calc(40);
+		color: $colors-white;
 		width: 100%;
 		display: block;
 
 		@media #{$small-only} {
-			line-height: rem-calc(21);
+			line-height: rem-calc(18);
 		}
     }
-}
-
-// cover both n-touch and no-touch due to legacy versions of medernizr
-.n-touch
-, .no-touch {
-	.top-nav .header-button:hover {
-		background-color: $kiva-navdivider-green;
-	}
 }
 
 .basket-bar {

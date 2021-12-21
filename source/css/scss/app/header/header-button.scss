@@ -1,31 +1,45 @@
 .header-button {
 	display:block;
-	padding:0;
-	line-height: $header-height-small;
-	background-color: $kiva-green;
+	padding:0 .5rem;
+	line-height: $header-height;
+	background-color: $colors-white;
 	white-space: nowrap;
 	text-align: center;
+	font-weight: 300;
 
-	@media #{$large-up} {
-		padding:0 $header-height/4;
-		line-height: $header-height;
+	@media #{$medium-up} {
+		line-height: $header-height-medium;
 	}
 
-	&:link, &:visited, &:hover, &:active {
-		color: $white;
+	@media #{$large-up} {
+		line-height: $header-height-large;
+	}
+
+	&:link, &:visited {
+		color: $kiva-text-dark;
 		text-decoration: none;
 
 		.icon {
-			fill: $white;
+			fill: $kiva-text-dark;
+		}
+	}
+
+	&:hover, &:active {
+		color: $dark-green;
+		text-decoration: none;
+
+		.icon {
+			fill: $dark-green;
 		}
 	}
 
 	&[data-dropdown] .icon {
-		width: 0.5rem;
-		height: 0.5rem;
+		width: rem-calc($space-1-5);
+		height: rem-calc($space-1-5);
+		margin-left: rem-calc(5);
 
 		$transition: 400ms ease;
-		$transform: rotate(180deg);
+		$transform: rotate(0deg);
 
 		-webkit-transition: -webkit-transform $transition;
 		transition: transform $transition;
@@ -33,16 +47,11 @@
 		-webkit-transform: $transform;
 		-ms-transform: $transform;
 		transform: $transform;
-
-		@media #{$medium-up} {
-			width: 0.75rem;
-			height: 0.75rem;
-		}
 	}
 
 	&[aria-expanded="true"]{
 		.icon {
-			$transform: rotate(0deg);
+			$transform: rotate(180deg);
 
 			-webkit-transform: $transform;
 			-ms-transform: $transform;
@@ -56,10 +65,10 @@
 	}
 
 	img, .circle-avatar {
-		margin-top: -$header-height-small/16;
+		margin-top: -$header-height/16;
 
 		@media #{$large-up} {
-			margin-top: -$header-height/16;
+			margin-top: -$header-height-large/16;
 		}
 	}
 
