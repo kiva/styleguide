@@ -1,40 +1,51 @@
+// Import kv-tokens based variables
+@import '../../tw-exported-vars.scss';
+
 .tt-menu {
-    $spacing: 0.4rem;
+    $spacing: rem-calc($space-1);
 
     background-color: $white;
-    border: rem-calc(1) solid $iron;
-    padding: $spacing;
-    font-size: rem-calc(16);
+    border: rem-calc(1) solid $colors-theme-default-border-tertiary;
+    border-top: none;
+    border-radius: 0 0 rem-calc($radii-default) rem-calc($radii-default);
+    padding: rem-calc($space-2-5);
+    font-size: rem-calc($space-2);
 	z-index: 1100 !important; // override style set by js
+    letter-spacing: -.0357143em;
+    font-weight: 300;
 
-    @media #{$large-up} {
-        font-size: rem-calc(14);
+    @media #{$medium-up} {
+        font-size: rem-calc($font-sizes-base-lg);
     }
 
     .tt-suggestion {
 		cursor: pointer;
-        padding: $spacing $spacing $spacing 1rem;
+        padding: $spacing $spacing $spacing rem-calc($space-2);
 		line-height: 1.2;
+        font-weight: 400;
 
 		&:hover {
 			color: $white;
-			background-color: $kiva-accent-blue;
+			background-color: $colors-theme-default-background-action-highlight;
+            border-radius: $radii-sm;
+            // Potential Alternate style
+            // color: $colors-theme-default-text-action;
+            // text-decoration: underline;
 		}
     }
 
     .tt-suggestion:first-of-type {
-        border-top: 1px solid #ccc;
         margin-top: 0.2rem;
         padding-top: 0.4rem;
     }
 
     .tt-cursor {
-        color: $white;
-        background-color: $kiva-accent-blue;
+        color: $colors-theme-default-text-primary;
     }
 
     .tt-highlight {
-        text-decoration: underline;
+        color: $colors-theme-default-text-primary;
+        background: $colors-theme-default-background-caution;
     }
 }
 

@@ -1,107 +1,99 @@
-$search-form-height: $header-height;
+$search-form-height: $header-height-large;
 $search-form-height-small: $header-height-small;
-$search-form-transition: width 0.5s ease;
+$search-form-transition: height 0.5s ease;
 
 $search-margin: 0.6rem;
 $search-margin-small: 0.4rem;
-$search-centering-margin: 0.65rem;
+$search-centering-margin: 1rem;
 $search-centering-margin-small: 0.32rem;
 $search-button-size-small: 2.5rem;
-$search-icon-size: $top-nav-font-size;
+$search-icon-size: $top-nav-medium-font-size;
 
-$search-input-width-small: calc(100% - #{$search-margin-small} );
-$search-input-width: calc(100% - #{$search-margin} );
 $search-input-padding: $search-margin;
 $search-input-padding-small: $search-margin-small;
 
 a.header-button#search-toggle {
     border-right: none;
     line-height: 0;
+    height: $header-height-small;
+    max-height: $header-height-small;
 
     .icon {
-        height: $header-height-small;
-
-        @media #{$large-up} {
-            height: $header-height;
-        }
-    }
-
-    .close-icon {
-        fill: none;
-        stroke: $white;
-    }
-
-    &[aria-expanded="true"] {
-        .search-icon {
-            display: none;
-        }
-
-        .close-icon {
-            stroke: $kiva-darkgreen;
-        }
-    }
-
-    &[aria-expanded="false"] .close-icon {
-        display: none;
+        transform: unset;
+        transition: unset;
+        margin-top: 1.35rem;
+        height: rem-calc(18);
     }
 }
 
 .search-container {
-    width: 100%;
-    height: 0;
-    position: absolute;
-    z-index: 1;
+    width: auto;
+    z-index: 5;
 
-    @media #{$large-up} {
-        position: static;
+    @media #{$medium-up} {
+        margin: 0 auto;
+        width: 100%;
     }
 }
 
 #search-form {
+    padding: rem-calc(11) rem-calc(20) rem-calc(13);
     display: block;
     overflow: hidden;
     width: 100%;
-    background-color: $kiva-green;
+    background-color: $colors-white;
+    height: $header-height-medium;
+    position: absolute;
+    top: rem-calc(65);
+    left: 0;
+    border-bottom: 1px solid $colors-theme-default-border-tertiary;
 
     -webkit-transition: $search-form-transition;
     transition: $search-form-transition;
 
-    @media #{$large-up} {
-        width: auto;
+    @media #{$medium-up} {
+        position: relative;
+        top: unset;
+        left: unset;
+        padding: rem-calc(12) rem-calc(20);
+        border-bottom: none;
+
+        -webkit-transition: none;
+        transition: none;
     }
 
     &[aria-hidden="true"] {
         width: 0;
+        height: 0;
+        display: none;
 
-        @media #{$large-up} {
-            width: auto;
+        @media #{$medium-up} {
+            width: 100%;
+            height: $header-height-medium;
         }
 
         div {
             width: 0;
+            height: 0;
         }
     }
 
     div {
-        width: calc(100% + #{rem-calc(1)});
+        width: 100%;
         overflow: hidden;
         position: relative;
         vertical-align: middle;
-        height: $search-form-height-small;
-        border-right: rem-calc(1) solid $kiva-navdivider-green;
+        height: auto;
 
-        -webkit-transition: $search-form-transition;
-        transition: $search-form-transition;
-
-        @media #{$large-up} {
-            height: $search-form-height;
+        @media #{$medium-up} {
+            height: $header-height-medium;
         }
     }
 
     span.twitter-typeahead {
-        width: calc(100% - #{$search-button-size-small});
+        width: 100%;
 
-        @media #{$large-up} {
+        @media #{$medium-up} {
             position: static !important;
             width: 100%;
         }
@@ -112,16 +104,12 @@ a.header-button#search-toggle {
     }
 
     .search-icon {
+        left: rem-calc($space-1-5);
+        top: rem-calc($space-2);
         position: absolute;
-        left: 0.4rem + $search-button-size-small;
         z-index: 100;
-        width: $search-icon-size;
-        height: $header-height-small;
-
-        @media #{$large-up} {
-            left: 0.4rem;
-            height: $header-height;
-        }
+        width: 1.1rem;
+        height: $search-icon-size;
     }
 
     #search-box {
@@ -130,16 +118,27 @@ a.header-button#search-toggle {
 
     input {
         $search-input-padding: 0.6rem;
-        width: $search-input-width-small;
-        padding: $search-input-padding-small $search-input-padding-small $search-input-padding-small ($top-nav-font-size * 1.5);
-        margin: $search-centering-margin-small 0;
+        width: 100%;
+        padding: $search-input-padding-small rem-calc($space-4) .3rem rem-calc($space-5);
+        margin: 0;
         display: inline-block;
-        height: auto;
+        height: rem-calc($space-6);
+        border-radius: rem-calc(4);
+        border: 1px solid $colors-theme-default-border-tertiary;
+        line-height: 1.25rem;
 
-        @media #{$large-up} {
-            width: $search-input-width;
-            margin: $search-centering-margin 0;
-            padding: $search-input-padding $search-input-padding $search-input-padding ($top-nav-font-size * 1.5);
+        @media #{$medium-up} {
+            width: 100%;
+        }
+
+        &:focus {
+            border: 2px solid $colors-theme-default-background-action-highlight;
+        }
+
+        &[type="search"]::placeholder {
+            font-style: normal !important;
+            font-weight: 300 !important;
+            opacity: 1 !important;
         }
     }
 
@@ -149,25 +148,33 @@ a.header-button#search-toggle {
 }
 
 #close-search {
-    float: left;
+    position: absolute;
     width: $search-button-size-small;
     line-height: 0;
     text-align: center;
+    right: 0;
+    top: 0;
+    z-index: 3;
 
     .close-icon {
-        width: $top-nav-font-size;
-        height: $search-button-size-small;
+        width: rem-calc(14);
+        height: rem-calc($space-6);
         fill:none;
-        stroke: $kiva-darkgreen;
     }
 }
 
 .top-nav-search-menu {
-    padding: $search-margin-small;
+    padding: rem-calc($space-2-5);
+    max-height: 68vh;
+    overflow-y: scroll;
+
+    @media #{$medium-up} {
+        max-height: 70vh;
+    }
 }
 
 
-@media #{$large-up} {
+@media #{$medium-up} {
     .search-button-container {
         width: auto;
     }
