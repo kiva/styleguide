@@ -21,55 +21,50 @@
 			{{> 02-organisms/08-header/01-search-button}}
 			{{> 02-organisms/08-header/02-search-box}}
 			{{#is-visitor}}
-				{{! <div class="header-column right-side"> }}
-					{{#show-borrow}}
-						{{^basket-loan-added}}
-						<div class="show-for-xlarge-up header-column">
-							<a kvtrackevent="TopNav|click-Borrow" class="header-button" href="{{borrow_href}}">Borrow</a>
-						</div>
-						{{/basket-loan-added}}
-					{{/show-borrow}}
-					<div class="header-column">
-						<a kvtrackevent="TopNav|click-About" data-dropdown="about-dropdown" data-options="is_hover:true;hover_timeout:200;" aria-controls="about-dropdown" aria-expanded="false" class="header-button" href="{{about_href}}">About <svg class="icon"><use xlink:href="#icon-down-chevron-sm" /></svg></a>
-					</div>
-					{{#basket-loan-added}}
-					<div id="top-basket-button" class="show-for-large-up header-column" kvtrackevent="TopNav|click-Basket|undefined|{{basket.item_count}}|true">
-					{{/basket-loan-added}}
+				{{#show-borrow}}
 					{{^basket-loan-added}}
-					<div id="top-basket-button" class="hide header-column" kvtrackevent="TopNav|click-Basket|undefined|undefined|true">
+					<div class="show-for-xlarge-up header-column">
+						<a kvtrackevent="TopNav|click-Borrow" class="header-button" href="{{borrow_href}}">Borrow</a>
+					</div>
 					{{/basket-loan-added}}
-						<a class="header-button {{#is_free_trial_eligible}}hidden{{/is_free_trial_eligible}}" href="{{basket_href}}"><span class="amount {{^basket.item_count}}hide{{/basket.item_count}}">{{basket.item_count}}</span> Basket</a>
-					</div>
-					<div class="header-column">
-						<a class="header-button" href="{{login_href}}">Log in</a>
-					</div>
-				{{! </div> }}
+				{{/show-borrow}}
+				<div class="header-column">
+					<a kvtrackevent="TopNav|click-About" data-dropdown="about-dropdown" data-options="is_hover:true;hover_timeout:200;" aria-controls="about-dropdown" aria-expanded="false" class="header-button" href="{{about_href}}">About <svg class="icon"><use xlink:href="#icon-down-chevron-sm" /></svg></a>
+				</div>
+				{{#basket-loan-added}}
+				<div id="top-basket-button" class="show-for-large-up header-column" kvtrackevent="TopNav|click-Basket|undefined|{{basket.item_count}}|true">
+				{{/basket-loan-added}}
+				{{^basket-loan-added}}
+				<div id="top-basket-button" class="hide header-column" kvtrackevent="TopNav|click-Basket|undefined|undefined|true">
+				{{/basket-loan-added}}
+					<a class="header-button {{#is_free_trial_eligible}}hidden{{/is_free_trial_eligible}}" href="{{basket_href}}"><span class="amount {{^basket.item_count}}hide{{/basket.item_count}}">{{basket.item_count}}</span> Basket</a>
+				</div>
+				<div class="header-column">
+					<a class="header-button" href="{{login_href}}">Log in</a>
+				</div>
 			{{/is-visitor}}
 			{{^is-visitor}}
-				{{! <div class="small-3-8ths xxlarge-2 columns header-column right-side"> }}
-					{{#basket-loan-added}}
-					<div id="top-basket-button" class="show-for-large-up header-column" kvtrackevent="TopNav|click-Basket|undefined|{{basket.item_count}}|true">
-					{{/basket-loan-added}}
-					{{^basket-loan-added}}
-					<div id="top-basket-button" class="hide header-column" kvtrackevent="TopNav|click-Basket|undefined|undefined|true">
-					{{/basket-loan-added}}
-						<a class="header-button {{#is_free_trial_eligible}}hidden{{/is_free_trial_eligible}}" href="{{basket_href}}"><span class="amount {{^basket.item_count}}hide{{/basket.item_count}}">{{basket.item_count}}</span> Basket</a>
-					</div>
-					<div class="header-column">
-						<a kvtrackevent="TopNav|click-Portfolio" data-dropdown="my-kiva-dropdown" data-options="is_hover:true;hover_timeout:200;" aria-controls="my-kiva-dropdown" aria-expanded="false" class="header-button my-kiva" href="{{my_kiva_href}}">
-							<span class="amount">{{balance}}</span>
-							{{#profile_picture_href}}
-							<span class="circle-avatar fs-exclude" style="background-image:url({{profile_picture_href}})"></span>
-							{{/profile_picture_href}}
-							{{^profile_picture_href}}
-							<svg class="circle-avatar icon-anon-user">
-								<use xlink:href="#icon-anon-user" />
-							</svg>
-							{{/profile_picture_href}}
-							<span style="display:none;">{{profile_picture_href}}</span>
-						</a>
-					</div>
-				{{! </div> }}
+				{{#basket-loan-added}}
+				<div id="top-basket-button" class="show-for-large-up header-column" kvtrackevent="TopNav|click-Basket|undefined|{{basket.item_count}}|true">
+				{{/basket-loan-added}}
+				{{^basket-loan-added}}
+				<div id="top-basket-button" class="hide header-column" kvtrackevent="TopNav|click-Basket|undefined|undefined|true">
+				{{/basket-loan-added}}
+					<a class="header-button {{#is_free_trial_eligible}}hidden{{/is_free_trial_eligible}}" href="{{basket_href}}"><span class="amount {{^basket.item_count}}hide{{/basket.item_count}}">{{basket.item_count}}</span> Basket</a>
+				</div>
+				<div class="header-column">
+					<a kvtrackevent="TopNav|click-Portfolio" data-dropdown="my-kiva-dropdown" data-options="is_hover:true;hover_timeout:200;" aria-controls="my-kiva-dropdown" aria-expanded="false" class="header-button my-kiva" href="{{my_kiva_href}}">
+						<span class="amount">{{balance}}</span>
+						{{#profile_picture_href}}
+						<span class="circle-avatar fs-exclude" style="background-image:url({{profile_picture_href}})"></span>
+						{{/profile_picture_href}}
+						{{^profile_picture_href}}
+						<svg class="circle-avatar icon-anon-user">
+							<use xlink:href="#icon-anon-user" />
+						</svg>
+						{{/profile_picture_href}}
+					</a>
+				</div>
 			{{/is-visitor}}
 		</div>
 

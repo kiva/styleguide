@@ -34,19 +34,19 @@
     .logo-area {
         margin-right: auto;
 
-        @media #{$large-up} {
-            margin-right: 0;
-        }
+        // @media #{$large-up} {
+        //     margin-right: 0;
+        // }
 
         .header-button {
             $vertical-offset: rem-calc(3);
 
             line-height: 0;
-            padding: 0 0.5rem $vertical-offset rem-calc(22);
+            padding: 0.025rem 0.5rem 0 rem-calc(22);
 
-            @media #{$large-up} {
-                padding: 0 0.5rem $vertical-offset rem-calc(22);
-            }
+            // @media #{$large-up} {
+            //     padding: 0 0.5rem $vertical-offset rem-calc(22);
+            // }
 
             &:link, &:visited {
                 color: $kiva-green;
