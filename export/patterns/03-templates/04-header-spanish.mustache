@@ -1,6 +1,7 @@
+{{^kiva-app-referral}}
 <div class="top-nav" role="navigation">
 	<div class="row header-row">
-		<div class="small-3 large-2 xxlarge-2 columns header-column logo-area">
+		<div class="header-column logo-area">
 			<a class="header-button" href="{{logo_href}}">
 				<svg class="icon icon-new-kiva-logo">
 					<use xlink:href="#icon-new-kiva-logo"/>
@@ -8,28 +9,31 @@
 			</a>
 		</div>
 		{{#is-visitor}}
-			<div class="small-6 xxlarge-3 columns header-column right-side">
-				<div class="small-12 large-12 columns">
-					<a class="header-button" href="{{login_href}}">Inicia sesión</a>
-				</div>
+			<div class="header-column">
+				<a class="header-button" href="{{login_href}}">Inicia sesión</a>
 			</div>
 		{{/is-visitor}}
 		{{^is-visitor}}
-			<div class="small-3-8ths xxlarge-2 columns header-column right-side">
-                {{#basket-loan-added}}
-                <div id="top-basket-button" class="show-for-large-up large-6 columns" kvtrackevent="TopNav|click-Basket|undefined|{{basket.item_count}}|true">
-                {{/basket-loan-added}}
-                {{^basket-loan-added}}
-                <div id="top-basket-button" class="hide large-6 columns" kvtrackevent="TopNav|click-Basket|undefined|undefined|true">
-                {{/basket-loan-added}}
-					<a class="header-button {{#is_free_trial_eligible}}hidden{{/is_free_trial_eligible}}" href="{{basket_href}}"><span class="amount {{^basket.item_count}}hide{{/basket.item_count}}">{{basket.item_count}}</span> Cesta</a>
-				</div>
-				<div class="small-12 large-6 columns">
-					<a kvtrackevent="TopNav|click-Portfolio" data-dropdown="my-kiva-dropdown" data-options="is_hover:true;hover_timeout:200;" aria-controls="my-kiva-dropdown" aria-expanded="false" class="header-button my-kiva" href="{{my_kiva_href}}">
-						<span class="amount">{{balance}}</span>
-						<span class="circle-avatar fs-exclude" style="background-image:url({{profile_picture_href}})"></span>
-					</a>
-				</div>
+			{{#basket-loan-added}}
+			<div id="top-basket-button" class="show-for-large-up header-column" kvtrackevent="TopNav|click-Basket|undefined|{{basket.item_count}}|true">
+			{{/basket-loan-added}}
+			{{^basket-loan-added}}
+			<div id="top-basket-button" class="hide header-column" kvtrackevent="TopNav|click-Basket|undefined|undefined|true">
+			{{/basket-loan-added}}
+				<a class="header-button {{#is_free_trial_eligible}}hidden{{/is_free_trial_eligible}}" href="{{basket_href}}"><span class="amount {{^basket.item_count}}hide{{/basket.item_count}}">{{basket.item_count}}</span> Cesta</a>
+			</div>
+			<div class="header-column">
+				<a kvtrackevent="TopNav|click-Portfolio" data-dropdown="my-kiva-dropdown" data-options="is_hover:true;hover_timeout:200;" aria-controls="my-kiva-dropdown" aria-expanded="false" class="header-button my-kiva" href="{{my_kiva_href}}">
+					<span class="amount">{{balance}}</span>
+					{{#profile_picture_href}}
+					<span class="circle-avatar fs-exclude" style="background-image:url({{profile_picture_href}})"></span>
+					{{/profile_picture_href}}
+					{{^profile_picture_href}}
+					<svg class="circle-avatar icon-anon-user">
+						<use xlink:href="#icon-anon-user" />
+					</svg>
+					{{/profile_picture_href}}
+				</a>
 			</div>
 		{{/is-visitor}}
 	</div>
@@ -43,6 +47,7 @@
 	{{/is-visitor}}
 </div>
 
+{{/kiva-app-referral}}
 <div id="mobile-basket-button" class="basket-bar {{#basket.item_count}}hide-for-large-up{{/basket.item_count}}{{^basket.item_count}}hide{{/basket.item_count}}">
 	<a href="{{basket_href}}" class="button" kvtrackevent="TopNav|click-Checkout-Mobile|undefined|{{basket.item_count}}|true">Basket (<span class="basket-item-count">{{basket.item_count}}</span>)</a>
 </div>

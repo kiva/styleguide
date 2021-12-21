@@ -8137,23 +8137,32 @@ module.exports = function () {
 	$search_toggle.click(function (e) {
 		e.preventDefault();
 
-		var expanded = $search_toggle.attr('aria-expanded') === 'false';
+		if (Foundation.utils.is_small_only()) {
+			var expanded = $search_toggle.attr('aria-expanded') === 'false';
 
-		$search_toggle.attr('aria-expanded', expanded);
-		$close_search.attr('aria-expanded', expanded);
-		$search_form
-			.attr('aria-hidden', $search_form.attr('aria-hidden') === 'false')
-			.trigger(expanded ? 'show' : 'hide');
+			$search_toggle.attr('aria-expanded', expanded);
+			$close_search.attr('aria-expanded', expanded);
+			$search_form
+				.attr('aria-hidden', $search_form.attr('aria-hidden') === 'false')
+				.trigger(expanded ? 'show' : 'hide');
+		} else {
+			$search_toggle.attr('aria-expanded', true);
+			$search_form
+				.attr('aria-hidden', false)
+				.trigger('show');
+		}
 	});
 
 	$close_search.click(function (e) {
 		e.preventDefault();
 
-		$search_toggle.attr('aria-expanded', false);
-		$close_search.attr('aria-expanded', false);
-		$search_form
-			.attr('aria-hidden', true)
-			.trigger('hide');
+		if (Foundation.utils.is_small_only()) {
+			$search_toggle.attr('aria-expanded', false);
+			$close_search.attr('aria-expanded', false);
+			$search_form
+				.attr('aria-hidden', true)
+				.trigger('hide');
+		}
 	});
 
 	var typeahead_menu_repositioning = function() {
@@ -8178,16 +8187,24 @@ module.exports = function () {
 
 
 	var close_button_visibility = function () {
-		$close_search.attr('aria-hidden', Foundation.utils.is_large_up());
+		$close_search.attr('aria-hidden', Foundation.utils.is_small_only());
 	};
 
 	// Initial call
 	close_button_visibility();
 
+	var mobile_search_visibility = function () {
+		$search_form.attr('aria-hidden', Foundation.utils.is_small_only());
+	};
+
+	// Initial call
+	mobile_search_visibility();
+
 	// Throttled resize function
 	$(window).on('resize', Foundation.utils.throttle(function () {
 		close_button_visibility();
 		typeahead_menu_repositioning();
+		mobile_search_visibility();
 	}, 200));
 
 
@@ -8279,6 +8296,7 @@ module.exports = function () {
 		});
 	}
 };
+
 
 /***/ }),
 
