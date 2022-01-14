@@ -21,13 +21,6 @@
 		padding: 0.625rem;
 		line-height: 1.25;
 	}
-
-	// .banner-link {
-	// 	&:hover,
-	// 	&:active {
-	// 		text-decoration: underline;
-	// 	}
-    // }
     
     .icon {
         display: block;
@@ -73,58 +66,7 @@
 		margin-top: -0.2rem;
 		fill-opacity: 0;
 	}
-
-	// .banner-link:hover {
-	// 	.icon-info,
-	// 	.icon-kiva-card,
-	// 	.icon-monthly-good,
-	// 	.icon-confirmation,
-	// 	.icon-question {
-	// 		fill: $kiva-darkgreen;
-	// 		stroke: none;
-	// 	}
-	
-	// 	.icon-iwd-flower {
-	// 		stroke: none;
-	// 	}
-
-	// 	.icon-present {
-	// 		stroke: $kiva-darkgreen;
-	// 	}
-	// }
 }
-
-/* Global IWD Banner styles */
-// .iwd-banner {
-// 	background-image: none;
-// 	background-color: #edf7ed;
-
-// 	.banner-link {
-// 		color: #6e1947;
-
-// 		.icon-iwd-flower {
-// 			display: block;
-// 			height: rem-calc(22);
-// 			width: rem-calc(22);
-// 			margin-right: rem-calc(10);
-// 			margin-top: -0.2rem;
-// 		}
-// 	}
-// }
-/* Global WRD Banner styles */
-// .wrd-banner {
-// 	background-image: none;
-// 	background-color: #edf7ed;
-
-// 	// color is #484848 and #63669D on hover
-// 	.banner-link {
-// 		color: #484848;
-
-// 		&:hover {
-// 			color: #63669D;
-// 		}
-// 	}
-// }
 
 /*
 	Global Promo Bar Hidden Pages
