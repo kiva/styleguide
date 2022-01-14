@@ -1,8 +1,8 @@
 /* Global Promo Default Styles */
 .global-promo-bar {
-	background: white;
+	background-color: $colors-brand-default;
 	font-weight: 300;
-	color: $kiva-icon-green;
+	color: $white;
 
 	.row {
 		margin: 0;
@@ -15,19 +15,12 @@
 	.banner-link, .banner-wrapper {
 		display: flex;
 		align-items: center;
-		color: $kiva-icon-green;
+		color: $white;
 		text-decoration: none;
 		text-align: center;
 		padding: 0.625rem;
 		line-height: 1.25;
 	}
-
-	.banner-link {
-		&:hover,
-		&:active {
-			color: $kiva-darkgreen;
-		}
-    }
     
     .icon {
         display: block;
@@ -57,15 +50,13 @@
 
 /* Default banner styles FEB 2020 */
 .default-banner {
-	background-image: url('../images/tipbar-bg-small.jpg');
-	background-position: bottom;
 
 	.icon-info,
 	.icon-kiva-card,
 	.icon-monthly-good,
 	.icon-confirmation,
 	.icon-question {
-		fill: $kiva-icon-green;
+		fill: $white;
 	}
 	.icon-present {
 		display: block;
@@ -74,57 +65,6 @@
 		margin-right: rem-calc(10);
 		margin-top: -0.2rem;
 		fill-opacity: 0;
-	}
-
-	.banner-link:hover {
-		.icon-info,
-		.icon-kiva-card,
-		.icon-monthly-good,
-		.icon-confirmation,
-		.icon-question {
-			fill: $kiva-darkgreen;
-			stroke: none;
-		}
-	
-		.icon-iwd-flower {
-			stroke: none;
-		}
-
-		.icon-present {
-			stroke: $kiva-darkgreen;
-		}
-	}
-}
-
-/* Global IWD Banner styles */
-.iwd-banner {
-	background-image: none;
-	background-color: #edf7ed;
-
-	.banner-link {
-		color: #6e1947;
-
-		.icon-iwd-flower {
-			display: block;
-			height: rem-calc(22);
-			width: rem-calc(22);
-			margin-right: rem-calc(10);
-			margin-top: -0.2rem;
-		}
-	}
-}
-/* Global WRD Banner styles */
-.wrd-banner {
-	background-image: none;
-	background-color: #edf7ed;
-
-	// color is #484848 and #63669D on hover
-	.banner-link {
-		color: #484848;
-
-		&:hover {
-			color: #63669D;
-		}
 	}
 }
 

@@ -6,7 +6,7 @@ $green: $colors-brand-default;
 $dark-green: $colors-theme-default-text-action;
 $graphic-green: $colors-theme-default-text-action-highlight;
 $divider-green: $colors-theme-default-text-action-highlight;
-$dark-charcoal: $colors-theme-default-border-primary;
+$dark-charcoal: $colors-theme-default-text-primary;
 $charcoal: $colors-theme-default-border-secondary;
 $dark-gray: $colors-gray-600;
 $gray: $colors-theme-default-text-tertiary;
@@ -15,7 +15,7 @@ $subtle-gray: $colors-theme-default-border-tertiary;
 $kiva-text-dark: $dark-charcoal;
 $kiva-text-medium: $charcoal;
 $kiva-text-light: $dark-gray;
-$kiva-textlink: $dark-green;
+$kiva-textlink: $dark-charcoal; // $dark-green is standard for copy but not this context
 $kiva-textlink-visited: $graphic-green;
 $kiva-textlink-hover: $graphic-green;
 $kiva-filter-indicator: $dark-green;
