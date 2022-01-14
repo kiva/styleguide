@@ -126,6 +126,7 @@ a.header-button#search-toggle {
         border-radius: rem-calc(4);
         border: 1px solid $colors-theme-default-border-tertiary;
         line-height: 1.25rem;
+        font-size: 1rem;
 
         @media #{$medium-up} {
             width: 100%;

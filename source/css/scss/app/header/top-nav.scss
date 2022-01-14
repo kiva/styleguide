@@ -54,6 +54,7 @@
 
                 .icon {
                     fill: $kiva-green;
+                    color: $kiva-green;
                 }
             }
 
@@ -62,12 +63,13 @@
                 text-decoration: none;
 
                 .icon {
-                    fill: $dark-green;
+                    fill: $kiva-green;
+                    color: $kiva-green;
                 }
             }
 
             .icon {
-                width: rem-calc(41);
+                width: rem-calc(48);
                 height: $header-height;
                 margin-top: -$vertical-offset;
 
@@ -85,7 +87,7 @@
     .amount {
         border-radius: rem-calc($radii-sm);
         background: $colors-theme-default-background-secondary;
-        padding: 0.25rem 0.4375rem .125rem;
+        padding: 0.4375rem 0.4375rem 0.325rem;
     }
 
     .promo-space.columns {

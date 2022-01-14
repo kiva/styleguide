@@ -11,7 +11,6 @@
     padding: rem-calc($space-2-5);
     font-size: rem-calc($space-2);
 	z-index: 1100 !important; // override style set by js
-    letter-spacing: -.0357143em;
     font-weight: 300;
 
     @media #{$medium-up} {
@@ -23,11 +22,12 @@
         padding: $spacing $spacing $spacing rem-calc($space-2);
 		line-height: 1.2;
         font-weight: 400;
+        color: $colors-theme-default-text-primary;
 
 		&:hover {
-			color: $white;
-			background-color: $colors-theme-default-background-action-highlight;
-            border-radius: $radii-sm;
+			background-color: $colors-theme-default-background-secondary;
+            border-radius: rem-calc($radii-sm);
+            text-decoration: underline;
             // Potential Alternate style
             // color: $colors-theme-default-text-action;
             // text-decoration: underline;
@@ -45,7 +45,8 @@
 
     .tt-highlight {
         color: $colors-theme-default-text-primary;
-        background: $colors-theme-default-background-caution;
+        background: $colors-theme-default-background-tertiary;
+        border-radius: rem-calc($radii-sm);
     }
 }
 
