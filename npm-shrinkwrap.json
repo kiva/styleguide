@@ -1,11 +1,11 @@
 {
   "name": "styleguide",
-  "version": "1.1.560",
+  "version": "1.1.561",
   "lockfileVersion": 2,
   "requires": true,
   "packages": {
     "": {
-      "version": "1.1.560",
+      "version": "1.1.561",
       "license": "UNLICENSED",
       "dependencies": {
         "coffee-script": "^1.12.7",

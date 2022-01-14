@@ -8125,7 +8125,6 @@ table {
   padding: 1.25rem;
   font-size: 1rem;
   z-index: 1100 !important;
-  letter-spacing: -.0357143em;
   font-weight: 300; }
   @media only screen and (min-width: 481px) {
     .tt-menu {
@@ -8134,11 +8133,12 @@ table {
     cursor: pointer;
     padding: 0.5rem 0.5rem 0.5rem 1rem;
     line-height: 1.2;
-    font-weight: 400; }
+    font-weight: 400;
+    color: #212121; }
     .tt-menu .tt-suggestion:hover {
-      color: #FFFFFF;
-      background-color: #277056;
-      border-radius: 4; }
+      background-color: #F5F5F5;
+      border-radius: 0.25rem;
+      text-decoration: underline; }
   .tt-menu .tt-suggestion:first-of-type {
     margin-top: 0.2rem;
     padding-top: 0.4rem; }
@@ -8146,7 +8146,8 @@ table {
     color: #212121; }
   .tt-menu .tt-highlight {
     color: #212121;
-    background: #FEE16E; }
+    background: #E0E0E0;
+    border-radius: 0.25rem; }
 
 .tt-hint {
   color: #CCCCCC; }
@@ -8281,9 +8282,9 @@ a.dark_green_bg_link {
 
 /* Global Promo Default Styles */
 .global-promo-bar {
-  background: white;
+  background-color: #2AA967;
   font-weight: 300;
-  color: #49953f; }
+  color: #FFFFFF; }
   .global-promo-bar .row {
     margin: 0;
     max-width: 100%;
@@ -8298,13 +8299,11 @@ a.dark_green_bg_link {
     display: flex;
     -ms-flex-align: center;
         align-items: center;
-    color: #49953f;
+    color: #FFFFFF;
     text-decoration: none;
     text-align: center;
     padding: 0.625rem;
     line-height: 1.25; }
-  .global-promo-bar .banner-link:hover, .global-promo-bar .banner-link:active {
-    color: #247037; }
   .global-promo-bar .icon {
     display: block;
     height: 1.375rem;
@@ -8324,55 +8323,20 @@ a.dark_green_bg_link {
         display: inline; } }
 
 /* Default banner styles FEB 2020 */
-.default-banner {
-  background-image: url("../images/tipbar-bg-small.jpg");
-  background-position: bottom; }
-  .default-banner .icon-info,
-  .default-banner .icon-kiva-card,
-  .default-banner .icon-monthly-good,
-  .default-banner .icon-confirmation,
-  .default-banner .icon-question {
-    fill: #49953f; }
-  .default-banner .icon-present {
-    display: block;
-    height: 1.375rem;
-    width: 1.375rem;
-    margin-right: 0.625rem;
-    margin-top: -0.2rem;
-    fill-opacity: 0; }
-  .default-banner .banner-link:hover .icon-info,
-  .default-banner .banner-link:hover .icon-kiva-card,
-  .default-banner .banner-link:hover .icon-monthly-good,
-  .default-banner .banner-link:hover .icon-confirmation,
-  .default-banner .banner-link:hover .icon-question {
-    fill: #247037;
-    stroke: none; }
-  .default-banner .banner-link:hover .icon-iwd-flower {
-    stroke: none; }
-  .default-banner .banner-link:hover .icon-present {
-    stroke: #247037; }
+.default-banner .icon-info,
+.default-banner .icon-kiva-card,
+.default-banner .icon-monthly-good,
+.default-banner .icon-confirmation,
+.default-banner .icon-question {
+  fill: #FFFFFF; }
 
-/* Global IWD Banner styles */
-.iwd-banner {
-  background-image: none;
-  background-color: #edf7ed; }
-  .iwd-banner .banner-link {
-    color: #6e1947; }
-    .iwd-banner .banner-link .icon-iwd-flower {
-      display: block;
-      height: 1.375rem;
-      width: 1.375rem;
-      margin-right: 0.625rem;
-      margin-top: -0.2rem; }
-
-/* Global WRD Banner styles */
-.wrd-banner {
-  background-image: none;
-  background-color: #edf7ed; }
-  .wrd-banner .banner-link {
-    color: #484848; }
-    .wrd-banner .banner-link:hover {
-      color: #63669D; }
+.default-banner .icon-present {
+  display: block;
+  height: 1.375rem;
+  width: 1.375rem;
+  margin-right: 0.625rem;
+  margin-top: -0.2rem;
+  fill-opacity: 0; }
 
 /*
 	Global Promo Bar Hidden Pages
@@ -8404,7 +8368,7 @@ ul.dropdown-list {
     white-space: nowrap;
     line-height: 2.5rem;
     font-size: 1rem;
-    color: #2B7C5F;
+    color: #212121;
     text-decoration: none;
     border-bottom: 0.0625rem solid #d8d8d8; }
     ul.dropdown-list li a.active {
@@ -8436,8 +8400,7 @@ ul.dropdown-list {
   line-height: 4rem;
   background-color: #FFFFFF;
   white-space: nowrap;
-  text-align: center;
-  font-weight: 300; }
+  text-align: center; }
   @media only screen and (min-width: 481px) {
     .header-button {
       line-height: 4.5rem; } }
@@ -8486,7 +8449,7 @@ ul.dropdown-list {
   background: none; }
 
 .lend-menu-small li a, .lend-menu-large li a {
-  color: #2B7C5F; }
+  color: #212121; }
   .lend-menu-small li a:focus, .lend-menu-large li a:focus {
     text-decoration: none; }
   .lend-menu-small li a:hover, .lend-menu-large li a:hover {
@@ -8512,7 +8475,7 @@ ul.dropdown-list {
     color: #212121;
     text-decoration: none; }
     .lend-menu-small li a:hover {
-      color: #212121; }
+      color: #277056; }
     .lend-menu-small li a.section-title {
       color: #212121;
       text-decoration: none; }
@@ -8532,6 +8495,7 @@ ul.dropdown-list {
       float: right;
       height: 1.5rem;
       width: 1.5625rem;
+      margin-top: .75rem;
       transition: transform 300ms ease; }
   .lend-menu-small ul {
     background-color: #F5F5F5; }
@@ -9289,7 +9253,8 @@ a.header-button#search-toggle {
     height: 3rem;
     border-radius: 0.25rem;
     border: 1px solid #C4C4C4;
-    line-height: 1.25rem; }
+    line-height: 1.25rem;
+    font-size: 1rem; }
     @media only screen and (min-width: 481px) {
       #search-form input {
         width: 100%; } }
@@ -9453,14 +9418,16 @@ ul.tertiary-nav {
         color: #4faf4e;
         text-decoration: none; }
         .top-nav .logo-area .header-button:link .icon, .top-nav .logo-area .header-button:visited .icon {
-          fill: #4faf4e; }
+          fill: #4faf4e;
+          color: #4faf4e; }
       .top-nav .logo-area .header-button:hover, .top-nav .logo-area .header-button:active {
         color: #247037;
         text-decoration: none; }
         .top-nav .logo-area .header-button:hover .icon, .top-nav .logo-area .header-button:active .icon {
-          fill: #247037; }
+          fill: #4faf4e;
+          color: #4faf4e; }
       .top-nav .logo-area .header-button .icon {
-        width: 2.5625rem;
+        width: 3rem;
         height: 4rem;
         margin-top: -0.1875rem; }
         @media only screen and (min-width: 481px) {
@@ -9472,7 +9439,7 @@ ul.tertiary-nav {
   .top-nav .amount {
     border-radius: 0.25rem;
     background: #F5F5F5;
-    padding: 0.25rem 0.4375rem .125rem; }
+    padding: 0.4375rem 0.4375rem 0.325rem; }
   .top-nav .promo-space.columns {
     position: absolute;
     text-align: center;
