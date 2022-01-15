@@ -11112,19 +11112,17 @@ svg {
       position: absolute;
       bottom: 0;
       right: 0;
-      border: none; }
-    .loan-card-2 .favorite-star-wrapper .icon-star {
+      border: none;
+      background-color: #FFFFFF;
+      border-radius: 50%;
+      margin-right: 0.25rem;
+      margin-bottom: 0.25rem; }
+    .loan-card-2 .favorite-star-wrapper .icon-bookmark,
+    .loan-card-2 .favorite-star-wrapper .icon-bookmark-filled {
       height: 2rem;
       width: 2rem;
-      fill: transparent;
-      color: #FFFFFF;
-      opacity: 0.6;
-      background-color: #484848;
-      padding: .5rem;
+      padding: 0.5rem;
       vertical-align: bottom; }
-  .loan-card-2 .is-favorite .icon-star {
-    opacity: 1;
-    color: #fee259; }
   .loan-card-2 .loan-card-2-details-wrap {
     -ms-flex-positive: 1;
         flex-grow: 1;
