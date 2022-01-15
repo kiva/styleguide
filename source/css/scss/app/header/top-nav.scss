@@ -34,22 +34,14 @@
     .logo-area {
         margin-right: auto;
 
-        // @media #{$large-up} {
-        //     margin-right: 0;
-        // }
-
         .header-button {
             $vertical-offset: rem-calc(3);
 
             line-height: 0;
             padding: 0.025rem 0.5rem 0 rem-calc(22);
 
-            // @media #{$large-up} {
-            //     padding: 0 0.5rem $vertical-offset rem-calc(22);
-            // }
-
             &:link, &:visited {
-                color: $kiva-textlink;
+                color: $colors-theme-default-text-primary;
                 text-decoration: none;
 
                 .icon {
@@ -59,7 +51,7 @@
             }
 
             &:hover, &:active {
-                color: $kiva-textlink-hover;
+                color: $colors-theme-default-text-action-highlight;
                 text-decoration: none;
 
                 .icon {
@@ -98,7 +90,7 @@
 		font-size: 0.8rem;
 		font-weight: bold;
 		margin-top: rem-calc(11);
-		color: $kiva-darkgreen;
+		color: $colors-theme-default-text-action-highlight;
     }
 
     .right-side.columns {
@@ -131,7 +123,7 @@
     .pronus {
         font-size: 0.8rem;
         text-align: center;
-        background-color: $kiva-green;
+        background-color: $colors-brand-default;
 		height: rem-calc(40);
 		line-height: rem-calc(40);
 		color: $colors-white;
@@ -140,27 +132,40 @@
 
 		@media #{$small-only} {
 			line-height: rem-calc(18);
+            padding-top: 0.125rem;
 		}
     }
 }
 
 .basket-bar {
-  	padding: rem-calc(10);
+    padding: 0.5rem 1rem;
 	position: fixed;
 	bottom: 0;
 	width: 100%;
 	z-index:1111;
-	box-shadow: 0px -1px 3px 0px rgba(51,51,51,0.3);
 	transition: bottom 500ms ease;
   	background-color: $white;
+    border-top: 0.0625rem solid $colors-theme-default-border-tertiary;
 
 	a {
 	  	font-weight: normal;
 		width: 100%;
 		display: block;
+        box-shadow: none;
         &.button {
-		  padding: rem-calc(22) 0;
-		  margin-bottom: 0;
+            box-shadow: none;
+            padding: 0.875rem 1.5rem 0.75rem;
+            margin-bottom: 0;
+            background-color: $colors-theme-default-background-action;
+            border-color: $colors-theme-default-border-action;
+            border-radius: .875rem;
+            font-size: 1rem;
+            font-weight: 400;
+
+            &:hover, &:active {
+                background-color: $colors-theme-default-background-action-highlight;
+                border-color: $colors-theme-default-border-action-highlight;
+            }
         }
 	}
 }
