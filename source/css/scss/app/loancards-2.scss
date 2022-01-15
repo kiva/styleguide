@@ -73,23 +73,19 @@ $loan-card-border: 1px solid $kiva-stroke-gray;
 		  	bottom: 0;
 		  	right: 0;
 		 	border: none;
+			background-color: #FFFFFF;
+			border-radius: 50%;
+			margin-right: 0.25rem;
+			margin-bottom: 0.25rem;
 		}
 
-		.icon-star {
+		.icon-bookmark,
+		.icon-bookmark-filled {
 		  	height: 2rem;
 		  	width: 2rem;
-		  	fill: transparent;
-		  	color: $white;
-		  	opacity: 0.6;
-		  	background-color: #484848;
-		  	padding: .5rem;
+		  	padding: 0.5rem;
 		  	vertical-align: bottom;
 		}
-	}
-
-	.is-favorite .icon-star {
-		opacity: 1;
-		color: $vivid-yellow;
 	}
 
 	.loan-card-2-details-wrap {
