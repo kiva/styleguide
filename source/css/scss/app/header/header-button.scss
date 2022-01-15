@@ -15,20 +15,20 @@
 	}
 
 	&:link, &:visited {
-		color: $kiva-text-dark;
+		color: $kiva-textlink;
 		text-decoration: none;
 
 		.icon {
-			fill: $kiva-text-dark;
+			fill: $kiva-textlink;
 		}
 	}
 
 	&:hover, &:active {
-		color: $dark-green;
+		color: $kiva-textlink-hover;
 		text-decoration: none;
 
 		.icon {
-			fill: $dark-green;
+			fill: $kiva-textlink-hover;
 		}
 	}
 

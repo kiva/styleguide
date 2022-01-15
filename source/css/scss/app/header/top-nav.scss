@@ -49,22 +49,22 @@
             // }
 
             &:link, &:visited {
-                color: $kiva-green;
+                color: $kiva-textlink;
                 text-decoration: none;
 
                 .icon {
-                    fill: $kiva-green;
-                    color: $kiva-green;
+                    fill: $colors-brand-default;
+                    color: $colors-brand-default;
                 }
             }
 
             &:hover, &:active {
-                color: $dark-green;
+                color: $kiva-textlink-hover;
                 text-decoration: none;
 
                 .icon {
-                    fill: $kiva-green;
-                    color: $kiva-green;
+                    fill: $colors-brand-default;
+                    color: $colors-brand-default;
                 }
             }
 
