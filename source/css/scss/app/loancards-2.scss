@@ -27,7 +27,8 @@ $loan-card-border: 1px solid $kiva-stroke-gray;
 	}
 }
 
-.list-view .loan-card-2 .favorite-link {
+.list-view .loan-card-2 .favorite-link,
+.list-view .loan-card-2 .unfavorite-link {
 	@media #{$xlarge-up} {
 		position: absolute;
 		bottom: 0;
@@ -68,7 +69,8 @@ $loan-card-border: 1px solid $kiva-stroke-gray;
     .favorite-star-wrapper {
 	  	position: relative;
 
-	  	.favorite-link {
+	  	.favorite-link,
+		.unfavorite-link {
 		  	position: absolute;
 		  	bottom: 0;
 		  	right: 0;
@@ -85,6 +87,14 @@ $loan-card-border: 1px solid $kiva-stroke-gray;
 		  	width: 2rem;
 		  	padding: 0.5rem;
 		  	vertical-align: bottom;
+		}
+
+		.hidden {
+			display: none;
+		}
+
+		.shown {
+			display: inline-block;
 		}
 	}
 
