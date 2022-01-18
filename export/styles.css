@@ -11078,7 +11078,8 @@ svg {
       width: calc(24% - 6.25rem); } }
 
 @media only screen and (min-width: 761px) {
-  .list-view .loan-card-2 .favorite-link {
+  .list-view .loan-card-2 .favorite-link,
+  .list-view .loan-card-2 .unfavorite-link {
     position: absolute;
     bottom: 0;
     right: 0; } }
@@ -11108,7 +11109,8 @@ svg {
         opacity: 0.2; } }
   .loan-card-2 .favorite-star-wrapper {
     position: relative; }
-    .loan-card-2 .favorite-star-wrapper .favorite-link {
+    .loan-card-2 .favorite-star-wrapper .favorite-link,
+    .loan-card-2 .favorite-star-wrapper .unfavorite-link {
       position: absolute;
       bottom: 0;
       right: 0;
@@ -11123,6 +11125,10 @@ svg {
       width: 2rem;
       padding: 0.5rem;
       vertical-align: bottom; }
+    .loan-card-2 .favorite-star-wrapper .hidden {
+      display: none; }
+    .loan-card-2 .favorite-star-wrapper .shown {
+      display: inline-block; }
   .loan-card-2 .loan-card-2-details-wrap {
     -ms-flex-positive: 1;
         flex-grow: 1;
