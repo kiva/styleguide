@@ -11,9 +11,12 @@
 
 		{{#can_favorite}}
 			<div class="favorite-star-wrapper">
-				<a kvtrackevent="Lending|click-Favorite star|Favorite|undefined|true" title="Save this loan to find it quickly later. You can view and manage your saved loans in the ‘Lend’ tab above." href="#" class="favorite-link{{#is_favorite}} is-favorite{{/is_favorite}}">
-					{{#is_favorite}}<svg class="icon icon-bookmark-filled"><use xlink:href="#icon-bookmark-filled"/></svg>{{/is_favorite}}
-					{{^is_favorite}}<svg class="icon icon-bookmark"><use xlink:href="#icon-bookmark"/></svg>{{/is_favorite}}
+				<a kvtrackevent="Lending|click-Favorite star|Favorite|undefined|true" title="Save this loan to find it quickly later. You can view and manage your saved loans in the ‘Lend’ tab above." href="#" class="unfavorite-link {{#is_favorite}}shown{{/is_favorite}} {{^is_favorite}}hidden{{/is_favorite}}">
+					<svg class="icon icon-bookmark-filled"><use xlink:href="#icon-bookmark-filled"/></svg>
+				</a>
+
+				<a kvtrackevent="Lending|click-Favorite star|Favorite|undefined|true" title="Save this loan to find it quickly later. You can view and manage your saved loans in the ‘Lend’ tab above." href="#" class="favorite-link {{#is_favorite}}hidden{{/is_favorite}} {{^is_favorite}}shown{{/is_favorite}}">
+					<svg class="icon icon-bookmark"><use xlink:href="#icon-bookmark"/></svg>
 				</a>
 			</div>
 		{{/can_favorite}}
