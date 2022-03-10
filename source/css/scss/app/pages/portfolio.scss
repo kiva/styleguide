@@ -27,6 +27,129 @@
 	}
 }
 
+.portfolio-story-exp {
+	$min-card-gap: rem-calc(8);
+	$min-content-width: rem-calc(320) - 4*$min-card-gap;
+
+	width: 100%;
+	padding: rem-calc(16) $min-card-gap;
+
+	.loading-spinner {
+		$space: rem-calc(280);
+		$size: rem-calc(48);
+		margin: ($space - $size)/2 $size;
+		width: $size;
+		height: $size;
+
+		.line {
+			background-color: #C4C4C4;
+		}
+	}
+
+	&__content {
+		max-width: rem-calc(1200);
+		margin: 0 auto;
+		padding: rem-calc(16);
+		background-color: #EAF6F0;
+		border-radius: rem-calc(14);
+		display: flex;
+		flex-flow: row wrap;
+		align-items: center;
+		justify-content: center;
+		gap: 1rem;
+	}
+
+	&__picture {
+		flex: 0 0 auto;
+		overflow: hidden;
+	}
+
+	&__img {
+		max-height: 100%;
+		max-width: 100%;
+		width: inherit;
+		height: inherit;
+		object-fit: inherit;
+	}
+
+	&__headlines {
+		flex: 1 0 $min-content-width;
+	}
+
+	&__headline {
+		font-size: rem-calc(24);
+		font-weight: 400;
+		line-height: 1.25;
+		margin: 0;
+	}
+
+	&__subhead {
+		font-size: rem-calc(20);
+		font-weight: 300;
+		line-height: 1.5;
+		margin: 0;
+	}
+
+	&__body {
+		flex: 1 0 100%;
+		display: grid;
+		gap: rem-calc(24);
+		grid-template-columns: repeat(auto-fit, minmax($min-content-width, 1fr));
+		margin-bottom: rem-calc(8);
+
+		p {
+			margin: 0;
+		}
+	}
+
+	@media #{$x-small-only} {
+		&__content {
+			padding: $min-card-gap;
+		}
+	}
+
+	@media #{$xlarge-up} {
+		&__content {
+			padding: rem-calc(24) rem-calc(42);
+			gap: rem-calc(40) rem-calc(48);
+		}
+
+		&__headline {
+			font-size: rem-calc(28);
+		}
+
+		&__subhead {
+			font-size: rem-calc(22);
+		}
+
+		&__body {
+			gap: rem-calc(40);
+		}
+	}
+
+	@media #{$xga-up} {
+		padding: rem-calc(24) $min-card-gap;
+
+		&__content {
+			padding: rem-calc(32) rem-calc(84);
+		}
+
+		&__headline {
+			font-size: rem-calc(32);
+			line-height: 1.5;
+		}
+
+		&__subhead {
+			font-size: rem-calc(24);
+		}
+
+		&__body {
+			gap: rem-calc(84);
+			grid-template-columns: repeat(auto-fit, minmax(rem-calc(180), 1fr));
+		}
+	}
+}
+
 .portfolio-main {
 
 	.bottom-rule {
