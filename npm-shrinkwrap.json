@@ -2864,12 +2864,23 @@
       }
     },
     "node_modules/follow-redirects": {
-      "version": "1.13.3",
-      "resolved": "https://registry.npmjs.org/follow-redirects/-/follow-redirects-1.13.3.tgz",
-      "integrity": "sha512-DUgl6+HDzB0iEptNQEXLx/KhTmDb8tZUHSeLqpnjpknR70H0nC2t9N73BK6fN4hOvJ84pKlIQVQ4k5FFlBedKA==",
+      "version": "1.14.9",
+      "resolved": "https://registry.npmjs.org/follow-redirects/-/follow-redirects-1.14.9.tgz",
+      "integrity": "sha512-MQDfihBQYMcyy5dhRDJUHcw7lb2Pv/TuE6xP1vyraLukNDHKbDxDNaOE3NbCAdKQApno+GPRyo1YAp89yCjK4w==",
       "dev": true,
+      "funding": [
+        {
+          "type": "individual",
+          "url": "https://github.com/sponsors/RubenVerborgh"
+        }
+      ],
       "engines": {
         "node": ">=4.0"
+      },
+      "peerDependenciesMeta": {
+        "debug": {
+          "optional": true
+        }
       }
     },
     "node_modules/for-in": {
@@ -8544,7 +8555,6 @@
       "dev": true,
       "dependencies": {
         "source-map": "~0.5.1",
-        "uglify-to-browserify": "~1.0.0",
         "yargs": "~3.10.0"
       },
       "bin": {
@@ -8827,10 +8837,8 @@
       "integrity": "sha512-9P3MWk6SrKjHsGkLT2KHXdQ/9SNkyoJbabxnKOoJepsvJjJG8uYTR3yTPxPQvNDI3w4Nz1xnE0TLHK4RIVe/MQ==",
       "dev": true,
       "dependencies": {
-        "chokidar": "^3.4.1",
         "graceful-fs": "^4.1.2",
-        "neo-async": "^2.5.0",
-        "watchpack-chokidar2": "^2.0.1"
+        "neo-async": "^2.5.0"
       },
       "optionalDependencies": {
         "chokidar": "^3.4.1",
@@ -9280,7 +9288,6 @@
         "anymatch": "^2.0.0",
         "async-each": "^1.0.1",
         "braces": "^2.3.2",
-        "fsevents": "^1.2.7",
         "glob-parent": "^3.1.0",
         "inherits": "^2.0.3",
         "is-binary-path": "^1.0.0",
@@ -12702,9 +12709,9 @@
       }
     },
     "follow-redirects": {
-      "version": "1.13.3",
-      "resolved": "https://registry.npmjs.org/follow-redirects/-/follow-redirects-1.13.3.tgz",
-      "integrity": "sha512-DUgl6+HDzB0iEptNQEXLx/KhTmDb8tZUHSeLqpnjpknR70H0nC2t9N73BK6fN4hOvJ84pKlIQVQ4k5FFlBedKA==",
+      "version": "1.14.9",
+      "resolved": "https://registry.npmjs.org/follow-redirects/-/follow-redirects-1.14.9.tgz",
+      "integrity": "sha512-MQDfihBQYMcyy5dhRDJUHcw7lb2Pv/TuE6xP1vyraLukNDHKbDxDNaOE3NbCAdKQApno+GPRyo1YAp89yCjK4w==",
       "dev": true
     },
     "for-in": {
@@ -18664,7 +18671,7 @@
     },
     "webstorage": {
       "version": "git+ssh://git@github.com/kiva/WebStorage.git#fd0222f974a7755b30df95d003f0964f71a637b8",
-      "from": "webstorage@github:kiva/WebStorage"
+      "from": "github:kiva/WebStorage"
     },
     "whet.extend": {
       "version": "0.9.9",
