@@ -150,6 +150,74 @@
 	}
 }
 
+.portfolio-cta-exp {
+	$min-card-gap: rem-calc(8);
+	$min-content-width: rem-calc(320) - 4*$min-card-gap;
+
+	width: 100%;
+	padding: rem-calc(16) $min-card-gap;
+
+	&__content {
+		max-width: rem-calc(1200);
+		margin: 0 auto;
+		padding: rem-calc(24);
+		background-color: #2AA967;
+		border-radius: rem-calc(14);
+		display: flex;
+		flex-flow: row wrap;
+		align-items: top;
+		justify-content: center;
+		gap: rem-calc(24);
+	}
+
+	&__img {
+		width: rem-calc(80);
+		height: rem-calc(80);
+		object-fit: inherit;
+	}
+
+	&__button {
+		align-self: center;
+		width: rem-calc(162);
+		background-color: #FFF;
+		border-radius: rem-calc(12);
+		text-align: center;
+		
+		color: #2AA967;
+		&:hover {
+			background-color: #e9f6ef;
+		}
+		a { 
+			color: #2AA967;
+			padding: rem-calc(12) rem-calc(20);
+			display: block;
+		 }
+	}
+
+	&__headline {
+		color: #fff;
+		font-size: rem-calc(24);
+		font-weight: 400;
+		line-height: 1.25;
+		margin: 0;
+		margin-bottom: rem-calc(6);
+	}
+
+	&__subhead {
+		color: #fff;
+		font-size: 1.15rem;
+		font-weight: 300;
+		line-height: 1.25;
+		margin: 0;
+	}
+
+	@media #{$xga-up} {
+		&__copy {
+			max-width: rem-calc(380);
+		}
+	}
+}
+
 .portfolio-main {
 
 	.bottom-rule {
