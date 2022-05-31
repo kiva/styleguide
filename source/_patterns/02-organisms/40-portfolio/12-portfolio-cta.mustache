@@ -1,0 +1,35 @@
+<aside class="portfolio-cta-exp">
+	<div class="portfolio-cta-exp__content">
+		<div class="portfolio-cta-exp__img">
+			{{! Original source svg at: /source/images/relend.svg }}
+			<svg viewBox="0 0 114 114" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="57" cy="57" r="57" fill="#EAF6F0"/><path d="M57 29c-16 0-29 12.77-29 28.5S41 86 57 86s29-12.77 29-28.5" stroke="#000" stroke-width="4" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/><path d="M79 61l7-7 7 7" stroke="#000" stroke-width="4" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/><path d="M45.15 54.16c.25 1.25.74 2.4 1.37 3.5.94 1.6 2.13 3.04 3.42 4.37 2.13 2.22 4.53 4.12 6.98 5.94a.14.14 0 0 0 .1.03l.1-.05c1.8-1.35 3.6-2.76 5.28-4.3 1.5-1.38 2.92-2.86 4.12-4.53.88-1.22 1.63-2.5 2.08-3.97.32-1 .47-2.04.37-3.1a6.96 6.96 0 0 0-1.28-3.43C66.44 46.88 64.84 46 62.9 46c-.32 0-.65.02-1 .07-1.54.2-2.84.97-3.95 2.1-.32.33-.66.63-1 .94 0 .04-.62-.63-.9-.9-1.16-1.22-2.56-1.98-4.22-2.16a7.25 7.25 0 0 0-.7-.04 5.58 5.58 0 0 0-3.24 1c-1.68 1.16-3.42 3.84-2.75 7.16z" fill="#2AA967" stroke="#212121" stroke-width="4" stroke-miterlimit="10"/></svg>
+		</div>
+		{{#isExpB}}
+			<div class="portfolio-cta-exp__copy">
+				<h2 class="portfolio-cta-exp__headline">Double your impact in 2 clicks</h2>
+				<h4 class="portfolio-cta-exp__subhead">Drive more impact by sharing Kiva with your family and friends</h4>
+			</div>
+			<div class="portfolio-cta-exp__button">
+				<a kvtrackevent="Portfolio|click-sharing-cta|Invite others" href="/portfolio/invites">Invite others &#8250;</a>
+			</div>
+		{{/isExpB}}
+		{{#isExpC}}
+			<div class="portfolio-cta-exp__copy">
+				<h2 class="portfolio-cta-exp__headline">Bond with friends and family</h2>
+				<h4 class="portfolio-cta-exp__subhead">Give them a Kiva gift card and choose a loan together</h4>
+			</div>
+			<div class="portfolio-cta-exp__button">
+				<a kvtrackevent="Portfolio|click-sharing-cta|Gift a Kiva card - bonding" href="/gifts/kiva-cards">Gift a Kiva card &#8250;</a>
+			</div>
+		{{/isExpC}}
+		{{#isExpD}}
+			<div class="portfolio-cta-exp__copy">
+				<h2 class="portfolio-cta-exp__headline">Why I stopped giving physical gifts</h2>
+				<h4 class="portfolio-cta-exp__subhead">"My friends and family don't really need more stuff, that's why we started giving donations instead"</h4>
+			</div>
+			<div class="portfolio-cta-exp__button">
+				<a kvtrackevent="Portfolio|click-sharing-cta|Gift a Kiva card - values" href="/gifts/kiva-cards">Gift a Kiva card &#8250;</a>
+			</div>
+		{{/isExpD}}
+	</div>
+</aside>
