@@ -313,18 +313,5 @@
 			"label": "Male",
 			"percent": "50%"
 		}
-	],
- 	"portfolio-story-exp": {
- 		"img": {
- 			"url": "https://images.ctfassets.net/j0p9a6ql0rn7/019FsmpholcBSwMNBdtua9/e54676b57289c28ba6022f2479fc686b/Frame_5199.png?",
- 			"alt": "a placeholder alt",
- 			"width": 120,
- 			"height": 120,
- 			"width_2x": 240,
- 			"height_2x": 240
- 		},
- 		"headline": "Make a loan, change a life.",
- 		"subhead": "Meet Susan Jeanette, a young woodworker in Costa Rica.",
- 		"body": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent interdum mattis risus, id molestie felis faucibus eget. Aliquam erat volutpat.</p>\n\t\t\t\t<p>Sed venenatis non lectus non faucibus. Quisque ultrices elit id ligula maximus gravida. Aenean egestas et eros vitae sodales.</p>\n\t\t\t\t<p>Vivamus rhoncus dapibus enim vitae semper. Duis mattis porttitor arcu id bibendum. Vestibulum eu venenatis augue, id ornare sapien.</p>"
- 	}
+	]
 }
