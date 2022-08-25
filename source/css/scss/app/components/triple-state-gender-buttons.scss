@@ -46,14 +46,12 @@
 
 		&.ts-women:checked ~ label.ts-floater,
 		&.qs-women-top:checked ~ label.qs-floater {
-			display: block;
 			left: 0;
 			top: 0;
 		}
 
 		&.ts-men:checked ~ label.ts-floater,
 		&.qs-men-top:checked ~ label.qs-floater {
-			display: block;
 			right: 0;
 			top: 0;
 			border-left: none;
@@ -61,20 +59,17 @@
 
 		&.ts-nonbinary:checked~label.ts-floater,
 		&.qs-nonbinary-top:checked~label.qs-floater {
-			display: block;
 			right: 0;
 			top: 0;
 			border-left: none;
 		}
 
 		&.qs-left-bottom:checked ~ label.qs-floater {
-			display: block;
 			left: 0;
 			bottom: 0;
 		}
 
 		&.qs-right-bottom:checked ~ label.qs-floater {
-			display: block;
 			right: 0;
 			bottom: 0;
 			border-left: none;
