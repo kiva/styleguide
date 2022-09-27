@@ -1,80 +1,134 @@
-<aside class="portfolio-cta-exp">
-	<div class="portfolio-cta-exp__content">
-		<div class="portfolio-cta-exp__img">
-			{{! Original source svg at: /source/images/relend.svg }}
-			<svg viewBox="0 0 114 114" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="57" cy="57" r="57" fill="#EAF6F0"/><path d="M57 29c-16 0-29 12.77-29 28.5S41 86 57 86s29-12.77 29-28.5" stroke="#000" stroke-width="4" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/><path d="M79 61l7-7 7 7" stroke="#000" stroke-width="4" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/><path d="M45.15 54.16c.25 1.25.74 2.4 1.37 3.5.94 1.6 2.13 3.04 3.42 4.37 2.13 2.22 4.53 4.12 6.98 5.94a.14.14 0 0 0 .1.03l.1-.05c1.8-1.35 3.6-2.76 5.28-4.3 1.5-1.38 2.92-2.86 4.12-4.53.88-1.22 1.63-2.5 2.08-3.97.32-1 .47-2.04.37-3.1a6.96 6.96 0 0 0-1.28-3.43C66.44 46.88 64.84 46 62.9 46c-.32 0-.65.02-1 .07-1.54.2-2.84.97-3.95 2.1-.32.33-.66.63-1 .94 0 .04-.62-.63-.9-.9-1.16-1.22-2.56-1.98-4.22-2.16a7.25 7.25 0 0 0-.7-.04 5.58 5.58 0 0 0-3.24 1c-1.68 1.16-3.42 3.84-2.75 7.16z" fill="#2AA967" stroke="#212121" stroke-width="4" stroke-miterlimit="10"/></svg>
+{{^isExpJ}}
+	<aside class="portfolio-cta-exp">
+		<div class="portfolio-cta-exp__content">
+			<div class="portfolio-cta-exp__img">
+				{{! Original source svg at: /source/images/relend.svg }}
+				<svg viewBox="0 0 114 114" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="57" cy="57" r="57" fill="#EAF6F0"/><path d="M57 29c-16 0-29 12.77-29 28.5S41 86 57 86s29-12.77 29-28.5" stroke="#000" stroke-width="4" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/><path d="M79 61l7-7 7 7" stroke="#000" stroke-width="4" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/><path d="M45.15 54.16c.25 1.25.74 2.4 1.37 3.5.94 1.6 2.13 3.04 3.42 4.37 2.13 2.22 4.53 4.12 6.98 5.94a.14.14 0 0 0 .1.03l.1-.05c1.8-1.35 3.6-2.76 5.28-4.3 1.5-1.38 2.92-2.86 4.12-4.53.88-1.22 1.63-2.5 2.08-3.97.32-1 .47-2.04.37-3.1a6.96 6.96 0 0 0-1.28-3.43C66.44 46.88 64.84 46 62.9 46c-.32 0-.65.02-1 .07-1.54.2-2.84.97-3.95 2.1-.32.33-.66.63-1 .94 0 .04-.62-.63-.9-.9-1.16-1.22-2.56-1.98-4.22-2.16a7.25 7.25 0 0 0-.7-.04 5.58 5.58 0 0 0-3.24 1c-1.68 1.16-3.42 3.84-2.75 7.16z" fill="#2AA967" stroke="#212121" stroke-width="4" stroke-miterlimit="10"/></svg>
+			</div>
+			{{#isExpB}}
+				<div class="portfolio-cta-exp__copy">
+					<h2 class="portfolio-cta-exp__headline">Double your impact in 2 clicks</h2>
+					<h4 class="portfolio-cta-exp__subhead">Drive more impact by sharing Kiva with your family and friends</h4>
+				</div>
+				<div class="portfolio-cta-exp__button">
+					<a kvtrackevent="Portfolio|click-sharing-cta|Invite others" href="/portfolio/invites">Invite others &#8250;</a>
+				</div>
+			{{/isExpB}}
+			{{#isExpC}}
+				<div class="portfolio-cta-exp__copy">
+					<h2 class="portfolio-cta-exp__headline">Bond with friends and family</h2>
+					<h4 class="portfolio-cta-exp__subhead">Give them a Kiva gift card and choose a loan together</h4>
+				</div>
+				<div class="portfolio-cta-exp__button">
+					<a kvtrackevent="Portfolio|click-sharing-cta|Gift a Kiva card - bonding" href="/gifts/kiva-cards">Gift a Kiva card &#8250;</a>
+				</div>
+			{{/isExpC}}
+			{{#isExpD}}
+				<div class="portfolio-cta-exp__copy">
+					<h2 class="portfolio-cta-exp__headline">Why I stopped giving physical gifts</h2>
+					<h4 class="portfolio-cta-exp__subhead">"My friends and family don't really need more stuff, that's why we started giving donations instead"</h4>
+				</div>
+				<div class="portfolio-cta-exp__button">
+					<a kvtrackevent="Portfolio|click-sharing-cta|Gift a Kiva card - values" href="/gifts/kiva-cards">Gift a Kiva card &#8250;</a>
+				</div>
+			{{/isExpD}}
+			{{#isExpE}}
+				<div class="portfolio-cta-exp__copy">
+					<h2 class="portfolio-cta-exp__headline">Do you have friends or family struggling to get funding for their business?</h2>
+					<h4 class="portfolio-cta-exp__subhead">Tell them about Kiva’s 0% interest loans</h4>
+				</div>
+				<div class="portfolio-cta-exp__button">
+					<a kvtrackevent="Portfolio|click-sharing-cta|Refer Kiva" href="/borrow">Refer Kiva &#8250;</a>
+				</div>
+			{{/isExpE}}
+			{{#isExpF}}
+				<div class="portfolio-cta-exp__copy">
+					<h2 class="portfolio-cta-exp__headline">Bond with friends and family</h2>
+					<h4 class="portfolio-cta-exp__subhead">Dedicate a loan to them to share the joy of giving</h4>
+				</div>
+				<div class="portfolio-cta-exp__button">
+					<a kvtrackevent="Portfolio|click-sharing-cta|Dedicate a loan" href="/ub/dedication">Dedicate a loan &#8250;</a>
+				</div>
+			{{/isExpF}}
+			{{#isExpG}}
+				<div class="portfolio-cta-exp__copy">
+					<h2 class="portfolio-cta-exp__headline">Join a sports lending team</h2>
+					<h4 class="portfolio-cta-exp__subhead">Lending is even more fun when you can do it with fellow fans</h4>
+				</div>
+				<div class="portfolio-cta-exp__button">
+					<a kvtrackevent="Portfolio|click-sharing-cta|Join a sports team" href="/teams?category=Sports+Groups&membershipType=all&sortBy=overallLoanedAmount">Join a team &#8250;</a>
+				</div>
+			{{/isExpG}}
+			{{#isExpH}}
+				<div class="portfolio-cta-exp__copy">
+					<h2 class="portfolio-cta-exp__headline">Join a hobby lending team</h2>
+					<h4 class="portfolio-cta-exp__subhead">Lending is even more fun when you can do it with people who share your passion</h4>
+				</div>
+				<div class="portfolio-cta-exp__button">
+					<a kvtrackevent="Portfolio|click-sharing-cta|Join a hobby team" href="/teams?queryString=Hobby&category=all&membershipType=all&sortBy=overallLoanedAmount">Join a team &#8250;</a>
+				</div>
+			{{/isExpH}}
+			{{#isExpI}}
+				<div class="portfolio-cta-exp__copy">
+					<h2 class="portfolio-cta-exp__headline">Lending is even more fun and satisfying when done with people who share a common interest</h2>
+					<h4 class="portfolio-cta-exp__subhead">There are hundreds of active lending teams created by lenders, for lenders like them.</h4>
+				</div>
+				<div class="portfolio-cta-exp__button">
+					<a kvtrackevent="Portfolio|click-sharing-cta|Join any team" href="/teams">Join a team &#8250;</a>
+				</div>
+			{{/isExpI}}
 		</div>
-		{{#isExpB}}
+	</aside>
+{{/isExpJ}}
+
+{{#isExpJ}}
+	<aside class="portfolio-cta-exp portfolio-cta-exp--inverse">
+		<div class="portfolio-cta-exp__content">
+			{{! Original source svg at: /source/images/eco_challenge_badge.svg }}
+			<svg class="badge-icon" width="95" height="109" viewBox="0 0 95 109" fill="none" xmlns="http://www.w3.org/2000/svg">
+				<path d="M85 0H10C4.47715 0 0 4.47715 0 10V67.5237C0 70.6393 1.45213 73.5769 3.92749 75.4688L41.6879 104.329C45.2906 107.083 50.2952 107.068 53.8811 104.292L91.1207 75.4696C93.5676 73.5757 95 70.6557 95 67.5615V10C95 4.47715 90.5229 0 85 0Z" fill="#2B7C5F"/>
+				<g style="mix-blend-mode:soft-light">
+				<mask id="mask0_632_10193" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="95" height="107">
+				<path d="M85 0H10C4.47715 0 0 4.47715 0 10V67.5237C0 70.6393 1.45213 73.5769 3.92749 75.4688L41.6879 104.329C45.2906 107.083 50.2952 107.068 53.8811 104.292L91.1207 75.4696C93.5676 73.5757 95 70.6557 95 67.5615V10C95 4.47715 90.5228 0 85 0Z" fill="#2B7C5F"/>
+				</mask>
+				<g mask="url(#mask0_632_10193)">
+				<path d="M-2.95636 38.133L56.133 -7.49506" stroke="#95D4B3" stroke-width="7"/>
+				<path d="M-3.91376 26.4432L45.9458 -11.9628" stroke="#95D4B3" stroke-width="3"/>
+				<path d="M33 108.172L111.521 47.6885" stroke="#95D4B3" stroke-width="3"/>
+				</g>
+				</g>
+				<g style="mix-blend-mode:multiply" opacity="0.4">
+				<path d="M82 7H13C9.68629 7 7 9.68629 7 13V66.549C7 68.4068 7.86056 70.1598 9.33035 71.296L44.0619 98.1453C46.2339 99.8243 49.2684 99.8151 51.4301 98.1228L85.6985 71.2962C87.1512 70.1589 88 68.4166 88 66.5717V13C88 9.68629 85.3137 7 82 7Z" stroke="#277056" stroke-width="3"/>
+				</g>
+				<path d="M35.5672 69.7481C35.7598 69.4153 36.2402 69.4153 36.4328 69.7481L37.5038 71.5994C37.5784 71.7283 37.7064 71.8172 37.8531 71.842L40.0852 72.2201C40.4776 72.2865 40.6388 72.7626 40.3675 73.0539L38.8047 74.7312C38.6915 74.8528 38.646 75.0226 38.6834 75.1845L39.1307 77.1221C39.2189 77.5045 38.8523 77.8349 38.4811 77.7074L36.1624 76.9114C36.0571 76.8752 35.9429 76.8752 35.8376 76.9114L33.5189 77.7074C33.1477 77.8349 32.7811 77.5045 32.8693 77.1221L33.3166 75.1845C33.354 75.0226 33.3085 74.8528 33.1952 74.7312L31.6325 73.0539C31.3612 72.7626 31.5224 72.2865 31.9148 72.2201L34.1469 71.842C34.2936 71.8172 34.4216 71.7283 34.4962 71.5994L35.5672 69.7481Z" fill="#95D4B3"/>
+				<path d="M59.5672 69.7481C59.7598 69.4153 60.2402 69.4153 60.4328 69.7481L61.5038 71.5994C61.5784 71.7283 61.7064 71.8172 61.8531 71.842L64.0852 72.2201C64.4776 72.2865 64.6388 72.7626 64.3675 73.0539L62.8047 74.7312C62.6915 74.8528 62.646 75.0226 62.6834 75.1845L63.1307 77.1221C63.2189 77.5045 62.8523 77.8349 62.4811 77.7074L60.1624 76.9114C60.0571 76.8752 59.9429 76.8752 59.8376 76.9114L57.5189 77.7074C57.1477 77.8349 56.7811 77.5045 56.8693 77.1221L57.3166 75.1845C57.354 75.0226 57.3085 74.8528 57.1952 74.7312L55.6325 73.0539C55.3612 72.7626 55.5224 72.2865 55.9148 72.2201L58.1469 71.842C58.2936 71.8172 58.4216 71.7283 58.4962 71.5994L59.5672 69.7481Z" fill="#95D4B3"/>
+				<path d="M47.5672 75.7481C47.7598 75.4153 48.2402 75.4153 48.4328 75.7481L49.5038 77.5994C49.5784 77.7283 49.7064 77.8172 49.8531 77.842L52.0852 78.2201C52.4776 78.2865 52.6388 78.7626 52.3675 79.0539L50.8047 80.7312C50.6915 80.8528 50.646 81.0226 50.6834 81.1845L51.1307 83.1221C51.2189 83.5045 50.8523 83.8349 50.4811 83.7074L48.1624 82.9114C48.0571 82.8752 47.9429 82.8752 47.8376 82.9114L45.5189 83.7074C45.1477 83.8349 44.7811 83.5045 44.8693 83.1221L45.3166 81.1845C45.354 81.0226 45.3085 80.8528 45.1952 80.7312L43.6325 79.0539C43.3612 78.7626 43.5224 78.2865 43.9148 78.2201L46.1469 77.842C46.2936 77.8172 46.4216 77.7283 46.4962 77.5994L47.5672 75.7481Z" fill="#95D4B3"/>
+				<path d="M39.0499 36.1301C39.0499 35.3128 39.0331 34.4954 39.3265 33.7242C38.9409 33.7242 38.2241 34.1559 37.9726 34.4451C37.7798 34.6673 37.4529 34.8391 37.2223 35.0361C37.0253 35.208 36.8409 35.3882 36.669 35.5852C36.3714 35.9205 36.0403 36.3271 35.6966 36.608C35.3403 36.8972 35.1265 37.2744 34.8373 37.6223C34.4726 38.0541 34.087 38.4732 33.7349 38.9175C32.7164 40.2002 31.8194 41.881 31.5469 43.5199C31.417 44.3037 31.2032 45.054 31.1068 45.8462C31.0649 46.2025 30.9391 46.672 31.0355 47.0325C31.178 47.5606 31.4086 48.0929 31.6307 48.5959C31.9577 49.342 32.1966 50.2265 32.6828 50.8845C32.9679 51.2744 33.1313 51.7522 33.4038 52.1546C33.6385 52.5067 33.8355 52.8755 34.0241 53.2528C34.3679 53.9444 34.8666 54.5522 35.1307 55.2857C35.269 55.6671 35.4325 56.0653 35.4912 56.4719C35.5373 56.7737 35.7008 57.0462 35.7217 57.348C35.7469 57.7085 35.8098 58.0857 35.8642 58.442C35.9187 58.8066 35.9313 59.1545 36.0319 59.515C36.1954 60.1018 36.6942 60.6593 37.0253 61.1581C37.2098 61.4306 37.4654 61.8036 37.763 61.9462C37.9852 62.0551 38.2283 62.1515 38.4379 62.2815C38.7062 62.445 39.1211 62.1306 39.3139 61.9336C39.6618 61.5773 39.8337 60.9737 39.9888 60.5126C40.1313 60.0977 40.3618 59.6827 40.651 59.3516C41.0618 58.8821 41.6151 58.4252 42.1181 58.0522C42.3948 57.8468 42.5792 57.4276 42.7846 57.151C43.0864 56.7444 43.3463 56.2498 43.5055 55.7677C43.7235 55.118 43.4426 55.0342 43.0319 54.6402C42.5959 54.221 42.1977 53.8731 41.8415 53.3743C41.5145 52.9133 41.1163 52.4983 40.8187 52.0205C40.5756 51.6348 40.366 51.2744 40.0433 50.9474C39.5948 50.4989 39.0247 50.1971 38.5008 49.8492C37.6415 49.2792 36.9373 48.2103 36.3379 47.3594C35.8894 46.7265 35.5247 45.9762 35.7385 45.1882C35.8768 44.6852 36.2122 44.3457 36.5014 43.9223C36.9373 43.281 37.4151 42.6984 37.8008 42.0277C38.5175 40.7912 39.3768 39.4415 39.3768 37.966C39.381 37.3038 39.0499 36.7631 39.0499 36.1301Z" fill="#95D4B3"/>
+				<path d="M49.1642 32.1062C48.854 31.7206 48.2001 31.3475 47.7181 31.2302C46.8965 31.2302 46.1253 31.0625 45.3121 31.0625C44.8175 31.0625 44.2097 31.096 43.7319 31.2302C43.1912 31.3853 42.6127 31.3769 42.072 31.5697C41.657 31.7206 41.3217 32.1146 41.1541 32.517C41.0744 32.7098 40.9822 33.0996 41.1834 33.2337C41.4516 33.4098 41.657 33.6822 41.8498 33.9421C42.16 34.3613 42.1139 34.9439 42.3612 35.3924C42.5163 35.6733 42.6043 35.9457 42.8894 36.1385C43.0738 36.2601 43.3253 36.478 43.5433 36.478C44.7379 36.478 45.8361 36.0924 46.9846 35.8158C47.9612 35.5768 49.8893 35.4008 49.8181 33.9882C49.7971 33.6068 49.7259 33.2128 49.6295 32.8439C49.5414 32.5044 49.3738 32.3661 49.1642 32.1062Z" fill="#95D4B3"/>
+				<path fill-rule="evenodd" clip-rule="evenodd" d="M46.033 56.4929C45.4001 56.4929 44.8845 57.0084 44.8845 57.6414C44.8845 58.2743 45.4001 58.7899 46.033 58.7899C46.6659 58.7899 47.1815 58.2785 47.1815 57.6414C47.1815 57.0043 46.6659 56.4929 46.033 56.4929ZM43.7737 59.2048C43.1408 59.2048 42.6252 59.7162 42.6252 60.3533C42.6252 60.9904 43.1408 61.5018 43.7737 61.5018C44.4067 61.5018 44.9222 60.9863 44.9222 60.3533C44.9222 59.7204 44.4067 59.2048 43.7737 59.2048ZM46.9342 60.106C46.3013 60.106 45.7857 60.6216 45.7857 61.2545C45.7857 61.8875 46.3013 62.403 46.9342 62.403C47.5671 62.403 48.0827 61.8916 48.0827 61.2545C48.0827 60.6174 47.5671 60.106 46.9342 60.106Z" fill="#95D4B3"/>
+				<path d="M48.1791 65.0563C57.233 65.0563 65 57.1384 65 47.9085C65 38.6786 57.233 31.1924 48.1791 31.1924C39.1253 31.1924 31.7816 38.6744 31.7816 47.9085C31.7816 57.1384 39.1211 65.0563 48.1791 65.0563Z" stroke="#95D4B3" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+				<path d="M60.1 50.7672C60.406 50.1971 60.6617 49.6229 61.0264 49.0863C61.4749 48.4283 61.8521 47.6654 62.4515 47.1247C62.6988 46.9025 62.9209 46.5756 63.1389 46.3115C63.3192 46.0977 63.4784 45.9426 63.5958 45.7037C63.6335 45.6199 63.7886 45.4606 63.8599 45.3935C63.9353 45.3223 63.9898 45.1211 64.0569 45.0834C64.2623 44.9618 64.3754 44.681 64.4425 44.4588C64.4886 44.3121 64.5012 44.1361 64.5096 43.9516C63.5539 40.1331 61.2527 36.8259 58.1761 34.5373C58 34.487 57.8282 34.4241 57.6689 34.3487C57.5851 34.311 57.43 34.2649 57.3922 34.1936C56.8976 33.8792 56.1851 34.4744 55.5982 34.4744C55.3467 34.4744 55.2 34.5834 54.9988 34.7385C54.5462 35.0864 54.1354 35.4804 53.5653 35.6104C53.1923 35.6984 52.6474 36.0295 52.3791 36.2894C51.8552 36.7966 51.1803 37.4253 50.9204 38.1379C50.8617 38.3014 50.8534 38.4313 50.8534 38.6032C50.8534 39.169 51.4528 39.3241 51.9013 39.5044C52.4671 39.7307 53.121 39.9193 53.733 39.9529C54.1647 39.9738 54.6006 39.9151 55.0282 39.957C55.7575 40.0283 56.3611 40.4349 57.0904 40.5774C57.6857 40.6948 58.2599 40.9085 58.8635 41.0133C59.2198 41.0762 59.2659 41.3948 59.3874 41.6924C59.4964 41.9606 59.5844 42.3085 59.3078 42.5055C58.9976 42.7277 58.6036 42.7696 58.2515 42.8995C58 42.9918 57.7527 43.0882 57.4845 43.1427C55.6569 43.5157 54.0557 42.4888 52.2701 42.4888C51.2767 42.4888 50.6019 42.669 49.9019 43.4025C49.4911 43.8343 49.2815 44.3708 48.9462 44.8528C48.6276 45.3055 48.4432 45.8965 48.2839 46.4289C47.9612 47.5019 48.2588 48.4702 48.8372 49.3923C49.1264 49.8534 49.6294 50.2139 50.1031 50.4654C50.3588 50.5995 50.5641 50.7965 50.8115 50.9474C51.1761 51.1696 51.5743 51.2911 51.9725 51.4252C52.2743 51.53 52.312 51.7773 52.4629 52.0288C52.7815 52.5528 53.0204 53.2025 53.2342 53.7767C53.4731 54.4055 53.7581 55.0342 53.9551 55.6755C54.0725 56.057 54.1647 56.4552 54.3408 56.8156C54.7264 57.5995 55.3761 58.3162 56.1264 58.7354C56.4533 58.9156 57.1911 58.8276 57.5473 58.7815C57.9833 58.7228 58.4904 58.0522 58.7377 57.7168C58.9976 57.3647 59.224 56.8282 59.3749 56.4174C59.5635 55.9144 59.7144 55.2941 59.7144 54.7534C59.7144 53.8648 59.5635 52.93 59.6725 52.0456C59.7186 51.639 59.9072 51.1234 60.1 50.7672Z" fill="#95D4B3"/>
+				<path d="M46.6463 24.0872C47.9227 21.904 52.4805 18.0776 59.1861 22.5612C55.4707 28.1652 49.1686 26.1072 46.6463 24.0872Z" fill="#95D4B3" stroke="#95D4B3" stroke-linecap="round"/>
+				<path d="M46.8979 24.2135C47.7566 21.8348 47.7749 15.8837 40.0364 13.6072C38.1135 20.0501 43.731 23.5708 46.8979 24.2135Z" fill="#95D4B3" stroke="#95D4B3" stroke-linecap="round"/>
+				<path d="M46.0741 30C46.0741 28.6728 45.6111 26.4511 47 23" stroke="#95D4B3" stroke-width="2" stroke-linecap="round"/>
+				<path d="M19.4246 55.0507C18.9035 55.5718 16.7184 59.3797 20.2177 62.879L20.522 63.1832C21.0431 62.6621 23.2281 58.8542 19.7289 55.355L19.4246 55.0507Z" fill="#4AB67E"/>
+				<path d="M12.3043 62.6782C16.0571 66.431 19.7142 63.991 20.2614 63.4438L19.9571 63.1395C16.2043 59.3867 12.5472 61.8267 12 62.3739L12.3043 62.6782Z" fill="#4AB67E"/>
+				<path d="M26.4118 61.001C25.8907 61.5221 23.7056 65.33 27.2049 68.8292L27.5092 69.1335C28.0303 68.6124 30.2153 64.8045 26.7161 61.3053L26.4118 61.001Z" fill="#4AB67E"/>
+				<path d="M19.2915 68.6284C23.0443 72.3812 26.7014 69.9412 27.2486 69.3941L26.9443 69.0898C23.1915 65.337 19.5344 67.777 18.9872 68.3241L19.2915 68.6284Z" fill="#4AB67E"/>
+				<path d="M75.6021 55.0507C76.1233 55.5718 78.3083 59.3797 74.809 62.879L74.5048 63.1832C73.9836 62.6621 71.7986 58.8542 75.2979 55.355L75.6021 55.0507Z" fill="#4AB67E"/>
+				<path d="M82.7224 62.6782C78.9696 66.431 75.3125 63.991 74.7653 63.4438L75.0696 63.1395C78.8224 59.3867 82.4795 61.8267 83.0267 62.3739L82.7224 62.6782Z" fill="#4AB67E"/>
+				<path d="M68.615 61.001C69.1361 61.5221 71.3211 65.33 67.8219 68.8292L67.5176 69.1335C66.9965 68.6124 64.8114 64.8045 68.3107 61.3053L68.615 61.001Z" fill="#4AB67E"/>
+				<path d="M75.7353 68.6284C71.9824 72.3812 68.3253 69.9412 67.7781 69.3941L68.0824 69.0898C71.8352 65.337 75.4924 67.777 76.0395 68.3241L75.7353 68.6284Z" fill="#4AB67E"/>
+				</svg>
+
 			<div class="portfolio-cta-exp__copy">
-				<h2 class="portfolio-cta-exp__headline">Double your impact in 2 clicks</h2>
-				<h4 class="portfolio-cta-exp__subhead">Drive more impact by sharing Kiva with your family and friends</h4>
+				<h2 class="portfolio-cta-exp__headline">Join the Climate Challenge</h2>
+				<h4 class="portfolio-cta-exp__subhead">Earn your Climate Challenge badge now by lending to one of our other eco-friendly causes!</h4>
 			</div>
 			<div class="portfolio-cta-exp__button">
-				<a kvtrackevent="Portfolio|click-sharing-cta|Invite others" href="/portfolio/invites">Invite others &#8250;</a>
+				<a kvtrackevent="Portfolio|click-sharing-cta|Eco challenge" href="/lend-by-category/eco-friendly-loans?game=on">Get started</a>
 			</div>
-		{{/isExpB}}
-		{{#isExpC}}
-			<div class="portfolio-cta-exp__copy">
-				<h2 class="portfolio-cta-exp__headline">Bond with friends and family</h2>
-				<h4 class="portfolio-cta-exp__subhead">Give them a Kiva gift card and choose a loan together</h4>
-			</div>
-			<div class="portfolio-cta-exp__button">
-				<a kvtrackevent="Portfolio|click-sharing-cta|Gift a Kiva card - bonding" href="/gifts/kiva-cards">Gift a Kiva card &#8250;</a>
-			</div>
-		{{/isExpC}}
-		{{#isExpD}}
-			<div class="portfolio-cta-exp__copy">
-				<h2 class="portfolio-cta-exp__headline">Why I stopped giving physical gifts</h2>
-				<h4 class="portfolio-cta-exp__subhead">"My friends and family don't really need more stuff, that's why we started giving donations instead"</h4>
-			</div>
-			<div class="portfolio-cta-exp__button">
-				<a kvtrackevent="Portfolio|click-sharing-cta|Gift a Kiva card - values" href="/gifts/kiva-cards">Gift a Kiva card &#8250;</a>
-			</div>
-		{{/isExpD}}
-		{{#isExpE}}
-			<div class="portfolio-cta-exp__copy">
-				<h2 class="portfolio-cta-exp__headline">Do you have friends or family struggling to get funding for their business?</h2>
-				<h4 class="portfolio-cta-exp__subhead">Tell them about Kiva’s 0% interest loans</h4>
-			</div>
-			<div class="portfolio-cta-exp__button">
-				<a kvtrackevent="Portfolio|click-sharing-cta|Refer Kiva" href="/borrow">Refer Kiva &#8250;</a>
-			</div>
-		{{/isExpE}}
-		{{#isExpF}}
-			<div class="portfolio-cta-exp__copy">
-				<h2 class="portfolio-cta-exp__headline">Bond with friends and family</h2>
-				<h4 class="portfolio-cta-exp__subhead">Dedicate a loan to them to share the joy of giving</h4>
-			</div>
-			<div class="portfolio-cta-exp__button">
-				<a kvtrackevent="Portfolio|click-sharing-cta|Dedicate a loan" href="/ub/dedication">Dedicate a loan &#8250;</a>
-			</div>
-		{{/isExpF}}
-		{{#isExpG}}
-			<div class="portfolio-cta-exp__copy">
-				<h2 class="portfolio-cta-exp__headline">Join a sports lending team</h2>
-				<h4 class="portfolio-cta-exp__subhead">Lending is even more fun when you can do it with fellow fans</h4>
-			</div>
-			<div class="portfolio-cta-exp__button">
-				<a kvtrackevent="Portfolio|click-sharing-cta|Join a sports team" href="/teams?category=Sports+Groups&membershipType=all&sortBy=overallLoanedAmount">Join a team &#8250;</a>
-			</div>
-		{{/isExpG}}
-		{{#isExpH}}
-			<div class="portfolio-cta-exp__copy">
-				<h2 class="portfolio-cta-exp__headline">Join a hobby lending team</h2>
-				<h4 class="portfolio-cta-exp__subhead">Lending is even more fun when you can do it with people who share your passion</h4>
-			</div>
-			<div class="portfolio-cta-exp__button">
-				<a kvtrackevent="Portfolio|click-sharing-cta|Join a hobby team" href="/teams?queryString=Hobby&category=all&membershipType=all&sortBy=overallLoanedAmount">Join a team &#8250;</a>
-			</div>
-		{{/isExpH}}
-		{{#isExpI}}
-			<div class="portfolio-cta-exp__copy">
-				<h2 class="portfolio-cta-exp__headline">Lending is even more fun and satisfying when done with people who share a common interest</h2>
-				<h4 class="portfolio-cta-exp__subhead">There are hundreds of active lending teams created by lenders, for lenders like them.</h4>
-			</div>
-			<div class="portfolio-cta-exp__button">
-				<a kvtrackevent="Portfolio|click-sharing-cta|Join any team" href="/teams">Join a team &#8250;</a>
-			</div>
-		{{/isExpI}}
-	</div>
-</aside>
+		</div>
+	</aside>
+{{/isExpJ}}
+
