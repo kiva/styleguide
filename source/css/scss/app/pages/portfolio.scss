@@ -93,6 +93,29 @@
 			max-width: rem-calc(380);
 		}
 	}
+
+	&--inverse {
+		.portfolio-cta-exp {
+			&__content {
+				background-color: #f5f5f5;
+			}
+			&__button {
+				background-color: #2B7C5F;
+				color: #FFF;
+			}
+			&__headline {
+				color: #000;
+			}
+			&__subhead {
+				color: #000;
+			}
+		}
+		// add drop shadow to the game badge
+		.badge-icon {
+			-webkit-filter: drop-shadow( 5px 5px 10px rgba(0, 0, 0, .4));
+			filter: drop-shadow( 5px 5px 10px rgba(0, 0, 0, .4));
+		}
+	}
 }
 
 .portfolio-main {
