@@ -15036,8 +15036,9 @@ p.body-termsofuse {
   .portfolio-cta-exp--inverse .portfolio-cta-exp__content {
     background-color: #f5f5f5; }
   .portfolio-cta-exp--inverse .portfolio-cta-exp__button {
-    background-color: #2B7C5F;
-    color: #FFF; }
+    background-color: #2B7C5F; }
+    .portfolio-cta-exp--inverse .portfolio-cta-exp__button a {
+      color: #FFF; }
   .portfolio-cta-exp--inverse .portfolio-cta-exp__headline {
     color: #000; }
   .portfolio-cta-exp--inverse .portfolio-cta-exp__subhead {
