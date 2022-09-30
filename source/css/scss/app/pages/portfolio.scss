@@ -68,7 +68,7 @@
 			color: #2AA967;
 			padding: rem-calc(12) rem-calc(20);
 			display: block;
-		 }
+		}
 	}
 
 	&__headline {
@@ -101,7 +101,9 @@
 			}
 			&__button {
 				background-color: #2B7C5F;
-				color: #FFF;
+				a { 
+					color: #FFF;
+				}
 			}
 			&__headline {
 				color: #000;
