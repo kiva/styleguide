@@ -15033,6 +15033,18 @@ p.body-termsofuse {
   @media only screen and (min-width: 1025px) {
     .portfolio-cta-exp__copy {
       max-width: 23.75rem; } }
+  .portfolio-cta-exp--inverse .portfolio-cta-exp__content {
+    background-color: #f5f5f5; }
+  .portfolio-cta-exp--inverse .portfolio-cta-exp__button {
+    background-color: #2B7C5F; }
+    .portfolio-cta-exp--inverse .portfolio-cta-exp__button a {
+      color: #FFF; }
+  .portfolio-cta-exp--inverse .portfolio-cta-exp__headline {
+    color: #000; }
+  .portfolio-cta-exp--inverse .portfolio-cta-exp__subhead {
+    color: #000; }
+  .portfolio-cta-exp--inverse .badge-icon {
+    filter: drop-shadow(5px 5px 10px rgba(0, 0, 0, 0.4)); }
 
 .portfolio-main .bottom-rule {
   padding-bottom: 0; }
