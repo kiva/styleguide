@@ -4,7 +4,7 @@
 	margin: 3px 3px;
 	padding-left: 5px;
 
-	label.ts-label, label.qs-label {
+	label.ts-label {
 		box-sizing: border-box;
 		width: 95%;
 		text-align: center;
@@ -22,7 +22,7 @@
 			border-color: $kiva-green;
 		}
 
-		&.ts-floater, &.qs-floater {
+		&.ts-floater {
 			display: none;
 			position: absolute;
 			border-color: $charcoal;
@@ -32,8 +32,7 @@
 	input {
 		display: none;
 
-		&:checked + label.ts-label,
-		&:checked + label.qs-label {
+		&:checked + label.ts-label {
 			border-color: $charcoal;
 			color: $white;
 			background-color: $kiva-green;
@@ -44,35 +43,27 @@
 			}
 		}
 
-		&.ts-women:checked ~ label.ts-floater,
-		&.qs-women-top:checked ~ label.qs-floater {
-			left: 0;
+		&.ts-women:checked ~ label.ts-floater {
+			display: block;
+			left: 5px;
 			top: 0;
+			border-left: rem-calc(1) solid $kiva-text-dark;
+			width: 93%;
 		}
 
-		&.ts-men:checked ~ label.ts-floater,
-		&.qs-men-top:checked ~ label.qs-floater {
-			right: 0;
-			top: 0;
-			border-left: none;
+		&.ts-men:checked ~ label.ts-floater {
+			display: block;
+			top: 43px;
+			border-left: rem-calc(1) solid $kiva-text-dark;
+			width: 93%;
 		}
 
-		&.ts-nonbinary:checked~label.ts-floater,
-		&.qs-nonbinary-top:checked~label.qs-floater {
-			right: 0;
-			top: 0;
-			border-left: none;
-		}
-
-		&.qs-left-bottom:checked ~ label.qs-floater {
-			left: 0;
-			bottom: 0;
-		}
-
-		&.qs-right-bottom:checked ~ label.qs-floater {
-			right: 0;
-			bottom: 0;
-			border-left: none;
+		&.ts-nonbinary:checked~label.ts-floater {
+			display: block;
+			right: 6px;
+			top: 86px;
+			border-left: rem-calc(1) solid $kiva-text-dark;
+			width: 93%;
 		}
 	}
 }
