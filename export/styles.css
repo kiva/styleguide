@@ -13513,7 +13513,7 @@ div.category-cards-header {
 .selected-filters-box {
   position: relative;
   overflow: hidden;
-  height: 1.57rem;
+  height: 1.7rem;
   margin: 0.25rem 0; }
   .selected-filters-box.hide {
     display: none; }
@@ -18016,6 +18016,56 @@ div.gift-card .text-section, div.kiva-store .text-section {
       right: 0;
       bottom: 0;
       border-left: none; }
+
+.triple-state-gender-buttons {
+  position: relative;
+  background-color: #FFFFFF;
+  margin: 3px 3px;
+  padding-left: 5px; }
+  .triple-state-gender-buttons label.ts-label {
+    box-sizing: border-box;
+    width: 95%;
+    text-align: center;
+    float: left;
+    margin: 3px;
+    cursor: pointer;
+    padding: 0;
+    line-height: 2.1875rem;
+    border: 0.0625rem solid #484848;
+    color: #484848; }
+    .triple-state-gender-buttons label.ts-label:hover {
+      color: #4faf4e;
+      border-color: #4faf4e; }
+    .triple-state-gender-buttons label.ts-label.ts-floater {
+      display: none;
+      position: absolute;
+      border-color: #484848; }
+  .triple-state-gender-buttons input {
+    display: none; }
+    .triple-state-gender-buttons input:checked + label.ts-label {
+      border-color: #484848;
+      color: #FFFFFF;
+      background-color: #4faf4e;
+      font-weight: bold; }
+      .triple-state-gender-buttons input:checked + label.ts-label:hover {
+        color: #FFFFFF; }
+    .triple-state-gender-buttons input.ts-women:checked ~ label.ts-floater {
+      display: block;
+      left: 5px;
+      top: 0;
+      border-left: 0.0625rem solid #484848;
+      width: 93%; }
+    .triple-state-gender-buttons input.ts-men:checked ~ label.ts-floater {
+      display: block;
+      top: 43px;
+      border-left: 0.0625rem solid #484848;
+      width: 93%; }
+    .triple-state-gender-buttons input.ts-nonbinary:checked ~ label.ts-floater {
+      display: block;
+      right: 6px;
+      top: 86px;
+      border-left: 0.0625rem solid #484848;
+      width: 93%; }
 
 .loading-spinner {
   position: relative;
