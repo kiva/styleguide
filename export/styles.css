@@ -9409,6 +9409,19 @@ ul.tertiary-nav {
     -ms-flex-pack: start;
         justify-content: start;
     padding-right: 0.875rem; }
+  .top-nav .login-button {
+    background-color: #FFFFFF;
+    border: 1px solid #757575;
+    padding: 12px 22px;
+    text-align: center;
+    text-decoration: none;
+    display: initial;
+    border-radius: 12px;
+    position: relative; }
+    .top-nav .login-button:hover, .top-nav .login-button:active {
+      color: #277056;
+      border: 1px solid #212121;
+      text-decoration: none; }
   .top-nav .logo-area {
     margin-right: auto; }
     .top-nav .logo-area .header-button {
