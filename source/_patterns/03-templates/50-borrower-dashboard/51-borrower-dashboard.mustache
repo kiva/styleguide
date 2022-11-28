@@ -66,11 +66,28 @@
 					{{> 01-molecules/51-borrower-dashboard/08-loan-status-repaid}}
 				{{/isRepaid}}
 
+				{{#isPayingBack}}
+					<div class="paying-back-action-wrapper action-button">
+						{{#nextRepayment}}
+							<div class="input-wrapper">
+								<span>$</span>
+								<input class="modify-amount" type="text" id="modifiedAmount" name="modifiedAmount" value="{{amount}}">
+							</div>
+						{{/nextRepayment}}
+						{{#actionButton}}
+							<a href="{{url}}" class="button" id="makeRepaymentButton">{{text}}</a>
+						{{/actionButton}}
+					</div>
+				{{/isPayingBack}}
+
+				{{^isPayingBack}}
 				<div class="action-button">
 					{{#actionButton}}
 						<a href="{{url}}" class="button {{#secondary}}secondary{{/secondary}} {{#isFundraising}}copyLinkButton{{/isFundraising}}" {{#isFundraising}}data-clipboard-text="{{profileLink}}"{{/isFundraising}}>{{text}}</a>
 					{{/actionButton}}
 				</div>
+				{{/isPayingBack}}
+
 				<!--Show the view Profile link, unless the loan has been rejected-->
 				{{^isRejected}}
 					<p class="profile-link text-center"><a href="{{profileLink}}">View loan profile</a></p>

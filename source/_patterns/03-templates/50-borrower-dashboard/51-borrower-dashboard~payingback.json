@@ -17,5 +17,9 @@
 		"dueDate": "March 20th, 2017",
 		"payNowUrl": "#",
 		"scheduleUrl": "#"
+	},
+	"nextRepayment": {
+		"amount": "$260.77",
+		"date": "March 20th, 2017"
 	}
 }
