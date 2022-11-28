@@ -16505,6 +16505,24 @@ table.repayments-list {
   width: 3rem;
   height: 3rem; }
 
+.paying-back-action-wrapper {
+  display: -ms-flexbox;
+  display: flex;
+  gap: 1rem; }
+  .paying-back-action-wrapper .input-wrapper {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+        align-items: center;
+    gap: 0.15rem; }
+  .paying-back-action-wrapper input.modify-amount {
+    margin: 0.5rem 0;
+    height: 3.5rem;
+    width: 7rem;
+    font-size: 18px; }
+  .paying-back-action-wrapper a {
+    padding: 0.75rem 1.5rem; }
+
 .borrower-landing-page {
   /*Slideshow Styles*/ }
   .borrower-landing-page .hero-wrapper {
