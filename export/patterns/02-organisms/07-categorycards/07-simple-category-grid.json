@@ -1,0 +1,46 @@
+{
+    "categories-primary" : [
+        {
+            "name": "Women",
+            "src": "../../images/category/women.jpg",
+            "retina-src": "../../images/category/women-retina.jpg",
+            "href": "##"
+        },
+        {
+            "name": "Agriculture",
+            "src": "../../images/category/agriculture.jpg",
+            "retina-src": "../../images/category/agriculture-retina.jpg",
+            "href": "##"
+        },
+        {
+            "name": "Education",
+            "src": "../../images/category/education.jpg",
+            "retina-src": "../../images/category/education-retina.jpg",
+            "href": "##"
+        },
+        {
+            "name": "Health",
+            "src": "../../images/category/health.jpg",
+            "retina-src": "../../images/category/health-retina.jpg",
+            "href": "##"
+        },
+        {
+            "name": "Single Parents",
+            "src": "../../images/category/single.jpg",
+            "retina-src": "../../images/category/single-retina.jpg",
+            "href": "##"
+        },
+        {
+            "name": "Shelter",
+            "src": "../../images/category/shelter.jpg",
+            "retina-src": "../../images/category/shelter-retina.jpg",
+            "href": "##"
+        },
+        {
+            "name": "Food",
+            "src": "../../images/category/food.jpg",
+            "retina-src": "../../images/category/food-retina.jpg",
+            "href": "##"
+        }
+    ]
+}
