@@ -1,5 +1,9 @@
 <td>
+<<<<<<< HEAD
 	<a href="{{url}}" class="fs-mask data-hj-suppress">
+=======
+	<a href="{{url}}" class="data-hj-suppress">
+>>>>>>> 3e848daedde0334cc88d4a11937f92c29dbcbf46
 		<img src="{{image.url}}" data-interchange="{{#image.sizes}}[{{url}}, ({{size}})],{{/image.sizes}}">
 	</a>
 	{{#matchedLoan}}
@@ -23,14 +27,22 @@
 	{{/dedication}}
 </td>
 <td>
+<<<<<<< HEAD
 	<a href="{{url}}" class="fs-mask data-hj-suppress">{{name}} (#{{id}})</a>
+=======
+	<a href="{{url}}" class="data-hj-suppress">{{name}} (#{{id}})</a>
+>>>>>>> 3e848daedde0334cc88d4a11937f92c29dbcbf46
 	<div class="activity">
 		{{activity.name}}
 	</div>
 	<div class="country">
 		<span class="f16 {{geocode.country.isoCode}}"></span>{{geocode.country.name}}
 	</div>
+<<<<<<< HEAD
 	<div class="partner-trustee fs-mask data-hj-suppress">
+=======
+	<div class="partner-trustee data-hj-suppress">
+>>>>>>> 3e848daedde0334cc88d4a11937f92c29dbcbf46
 		<a href="{{partnerTrusteeUrl}}">{{partnerName}}{{trusteeName}}</a>
 	</div>
 	{{#dedication}}
@@ -39,7 +51,11 @@
 				<span>You opted to donate repayments from this loan to Kiva (Thanks!)</span>
 			{{/toKiva}}
 			{{^toKiva}}
+<<<<<<< HEAD
 				<a href="{{url}}" class="fs-exclude data-hj-suppress">Dedicated to {{recipient}}</a>
+=======
+				<a href="{{url}}" class="data-hj-suppress">Dedicated to {{recipient}}</a>
+>>>>>>> 3e848daedde0334cc88d4a11937f92c29dbcbf46
 				<span>Repayments for dedications are donated to Kiva</span>
 			{{/toKiva}}
 		</div>
@@ -104,7 +120,7 @@
 </td>
 <td>
 	{{#canChangeTeamAssignment}}
-		<select name="team-assignment" class="fs-mask">
+		<select name="team-assignment" class="data-hj-suppress">
 			{{#teams}}
 				<option value="{{value}}" {{#selected}}selected="selected"{{/selected}}>{{label}}</option>
 			{{/teams}}
@@ -112,7 +128,11 @@
 	{{/canChangeTeamAssignment}}
 	{{^canChangeTeamAssignment}}
 		{{#teams}}
+<<<<<<< HEAD
 			<a class="team fs-mask data-hj-suppress" href="{{teamUrl}}">
+=======
+			<a class="team data-hj-suppress" href="{{teamUrl}}">
+>>>>>>> 3e848daedde0334cc88d4a11937f92c29dbcbf46
 				{{#teamImage}}
 					<img src="{{teamImage.url}}" data-interchange="{{#teamImage.sizes}}[{{url}}, ({{size}})],{{/teamImage.sizes}}">
 				{{/teamImage}}
