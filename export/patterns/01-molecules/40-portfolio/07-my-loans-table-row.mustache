@@ -27,9 +27,11 @@
 	<div class="activity">
 		{{activity.name}}
 	</div>
-	<div class="country">
-		<span class="f16 {{geocode.country.isoCode}}"></span>{{geocode.country.name}}
-	</div>
+	{{#hasCountry}}
+		<div class="country">
+			<span class="f16 {{geocode.country.isoCode}}"></span>{{geocode.country.name}}
+		</div>
+	{{/hasCountry}}
 	<div class="partner-trustee fs-mask data-hj-suppress">
 		<a href="{{partnerTrusteeUrl}}">{{partnerName}}{{trusteeName}}</a>
 	</div>
