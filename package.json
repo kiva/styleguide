@@ -4,7 +4,7 @@
   "description": "Based on PatternLab and Foundation - [Pattern Lab Website](http://patternlab.io/) - [About Pattern Lab](http://patternlab.io/about.html) - [Documentation](http://patternlab.io/docs/index.html) - [Demo](http://demo.patternlab.io/)",
   "main": "source/js/inc/app.js",
   "devDependencies": {
-    "ajv": "^5.2.2",
+    "ajv": "^6.12.3",
     "autoprefixer": "^6.0.3",
     "exports-loader": "0.6.3",
     "grunt": "~0.4.5",
