@@ -21,13 +21,11 @@
 			{{> 02-organisms/08-header/01-search-button}}
 			{{> 02-organisms/08-header/02-search-box}}
 			{{#is-visitor}}
-				{{#show-borrow}}
-					{{^basket-loan-added}}
-					<div class="show-for-xlarge-up header-column">
-						<a kvtrackevent="TopNav|click-Borrow" class="header-button" href="{{borrow_href}}">Borrow</a>
-					</div>
-					{{/basket-loan-added}}
-				{{/show-borrow}}
+				{{^basket-loan-added}}
+				<div class="show-for-medium-up header-column">
+					<a kvtrackevent="TopNav|click-Borrow" class="header-button" href="{{borrow_href}}">Borrow</a>
+				</div>
+				{{/basket-loan-added}}
 				<div class="header-column">
 					<a kvtrackevent="TopNav|click-About" data-dropdown="about-dropdown" data-options="is_hover:true;hover_timeout:200;" aria-controls="about-dropdown" aria-expanded="false" class="header-button" href="{{about_href}}">About <svg class="icon"><use xlink:href="#icon-down-chevron-sm" /></svg></a>
 				</div>
@@ -41,6 +39,9 @@
 				</div>
 				<div class="header-column">
 					<a class="header-button login-button" href="{{login_href}}">Log in</a>
+				</div>
+				<div class="header-column show-for-medium-up">
+					<a class="header-button support-kiva-button" href="{{login_href}}">Support Kiva</a>
 				</div>
 			{{/is-visitor}}
 			{{^is-visitor}}
@@ -75,6 +76,7 @@
 				{{#about-nav.links}}
 					<li><a kvtrackevent="TopNav|click-About-{{label}}" href="{{href}}">{{label}}</a></li>
 				{{/about-nav.links}}
+				<li class="hide-for-medium-up"><a kvtrackevent="TopNav|click-About-Support-Kiva" href="/donate/supportus">Support Kiva</a></li>
 			</ul>
 		{{/is-visitor}}
 
@@ -83,6 +85,7 @@
 				{{#my-kiva.links}}
 					<li><a kvtrackevent="TopNav|click-Portfolio-{{label}}" href="{{href}}" {{#end-section}}class="end-section"{{/end-section}}>{{label}}</a></li>
 				{{/my-kiva.links}}
+				<li class="hide-for-medium-up"><a kvtrackevent="TopNav|click-About-Support-Kiva" href="/donate/supportus">Support Kiva</a></li>
 			</ul>
 		{{/is-visitor}}
 		{{#lending-reward-session}}
