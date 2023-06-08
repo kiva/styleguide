@@ -51,6 +51,15 @@
     .login-button {
         @media #{$medium-up} {
             border: none;
+            &:hover, &:active {
+                border: none;
+            }
+        }
+    }
+
+    .support-kiva-button {
+        @media #{$small-only} {
+            display: none !important;
         }
     }
 
