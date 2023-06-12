@@ -66,7 +66,7 @@
 				</div>
 			{{/is-visitor}}
 			<div class="header-column">
-				<a class="header-button support-kiva-button" href="/donate/supportus">Support Kiva</a>
+				<a class="header-button support-kiva-button" href="{{donate_supportus_href}}">Support Kiva</a>
 			</div>
 		</div>
 
@@ -77,7 +77,7 @@
 				{{#about-nav.links}}
 					<li><a kvtrackevent="TopNav|click-About-{{label}}" href="{{href}}">{{label}}</a></li>
 				{{/about-nav.links}}
-				<li class="hide-for-medium-up"><a kvtrackevent="TopNav|click-About-Support-Kiva" href="/donate/supportus">Support Kiva</a></li>
+				<li class="hide-for-medium-up"><a kvtrackevent="TopNav|click-About-Support-Kiva" href="{{donate_supportus_href}}">Support Kiva</a></li>
 			</ul>
 		{{/is-visitor}}
 
@@ -86,7 +86,7 @@
 				{{#my-kiva.links}}
 					<li><a kvtrackevent="TopNav|click-Portfolio-{{label}}" href="{{href}}" {{#end-section}}class="end-section"{{/end-section}}>{{label}}</a></li>
 				{{/my-kiva.links}}
-				<li class="hide-for-medium-up"><a kvtrackevent="TopNav|click-About-Support-Kiva" href="/donate/supportus">Support Kiva</a></li>
+				<li class="hide-for-medium-up"><a kvtrackevent="TopNav|click-About-Support-Kiva" href="{{donate_supportus_href}}">Support Kiva</a></li>
 			</ul>
 		{{/is-visitor}}
 		{{#lending-reward-session}}
