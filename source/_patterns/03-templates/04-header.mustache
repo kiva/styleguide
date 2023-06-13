@@ -20,14 +20,10 @@
 			</div>
 			{{> 02-organisms/08-header/01-search-button}}
 			{{> 02-organisms/08-header/02-search-box}}
+			<div class="show-for-medium-up header-column">
+				<a kvtrackevent="TopNav|click-Borrow" class="header-button" href="{{borrow_href}}">Borrow</a>
+			</div>
 			{{#is-visitor}}
-				{{#show-borrow}}
-					{{^basket-loan-added}}
-					<div class="show-for-xlarge-up header-column">
-						<a kvtrackevent="TopNav|click-Borrow" class="header-button" href="{{borrow_href}}">Borrow</a>
-					</div>
-					{{/basket-loan-added}}
-				{{/show-borrow}}
 				<div class="header-column">
 					<a kvtrackevent="TopNav|click-About" data-dropdown="about-dropdown" data-options="is_hover:true;hover_timeout:200;" aria-controls="about-dropdown" aria-expanded="false" class="header-button" href="{{about_href}}">About <svg class="icon"><use xlink:href="#icon-down-chevron-sm" /></svg></a>
 				</div>
@@ -44,6 +40,9 @@
 				</div>
 			{{/is-visitor}}
 			{{^is-visitor}}
+				<div class="header-column hide-for-small-down">
+					<a kvtrackevent="TopNav|click-About" data-dropdown="about-dropdown" data-options="is_hover:true;hover_timeout:200;" aria-controls="about-dropdown" aria-expanded="false" class="header-button" href="{{about_href}}">About <svg class="icon"><use xlink:href="#icon-down-chevron-sm" /></svg></a>
+				</div>
 				{{#basket-loan-added}}
 				<div id="top-basket-button" class="show-for-large-up header-column" kvtrackevent="TopNav|click-Basket|undefined|{{basket.item_count}}|true">
 				{{/basket-loan-added}}
@@ -66,6 +65,9 @@
 					</a>
 				</div>
 			{{/is-visitor}}
+			<div class="header-column">
+				<a class="header-button support-kiva-button" href="{{donate_supportus_href}}">Support Kiva</a>
+			</div>
 		</div>
 
 		{{> 02-organisms/08-header/03-lend-menu}}
@@ -75,6 +77,7 @@
 				{{#about-nav.links}}
 					<li><a kvtrackevent="TopNav|click-About-{{label}}" href="{{href}}">{{label}}</a></li>
 				{{/about-nav.links}}
+				<li class="hide-for-medium-up"><a kvtrackevent="TopNav|click-About-Support-Kiva" href="{{donate_supportus_href}}">Support Kiva</a></li>
 			</ul>
 		{{/is-visitor}}
 
@@ -83,6 +86,7 @@
 				{{#my-kiva.links}}
 					<li><a kvtrackevent="TopNav|click-Portfolio-{{label}}" href="{{href}}" {{#end-section}}class="end-section"{{/end-section}}>{{label}}</a></li>
 				{{/my-kiva.links}}
+				<li class="hide-for-medium-up"><a kvtrackevent="TopNav|click-About-Support-Kiva" href="{{donate_supportus_href}}">Support Kiva</a></li>
 			</ul>
 		{{/is-visitor}}
 		{{#lending-reward-session}}

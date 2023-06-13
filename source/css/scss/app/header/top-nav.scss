@@ -31,7 +31,7 @@
         padding-right: 0.875rem;
     }
 
-    .login-button {
+    .login-button, .support-kiva-button {
         background-color: $colors-white;
         border: 1px solid $colors-theme-default-border-secondary;
         padding: 12px 22px;
@@ -45,6 +45,21 @@
             color: $colors-theme-default-text-action-highlight;
             border: 1px solid $colors-theme-default-border-primary;
             text-decoration: none;
+        }
+    }
+
+    .login-button {
+        @media #{$medium-up} {
+            border: none;
+            &:hover, &:active {
+                border: none;
+            }
+        }
+    }
+
+    .support-kiva-button {
+        @media #{$small-only} {
+            display: none !important;
         }
     }
 
