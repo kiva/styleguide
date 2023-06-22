@@ -9409,7 +9409,7 @@ ul.tertiary-nav {
     -ms-flex-pack: start;
         justify-content: start;
     padding-right: 0.875rem; }
-  .top-nav .login-button {
+  .top-nav .login-button, .top-nav .support-kiva-button {
     background-color: #FFFFFF;
     border: 1px solid #757575;
     padding: 12px 22px;
@@ -9418,10 +9418,18 @@ ul.tertiary-nav {
     display: initial;
     border-radius: 12px;
     position: relative; }
-    .top-nav .login-button:hover, .top-nav .login-button:active {
+    .top-nav .login-button:hover, .top-nav .login-button:active, .top-nav .support-kiva-button:hover, .top-nav .support-kiva-button:active {
       color: #277056;
       border: 1px solid #212121;
       text-decoration: none; }
+  @media only screen and (min-width: 481px) {
+    .top-nav .login-button {
+      border: none; }
+      .top-nav .login-button:hover, .top-nav .login-button:active {
+        border: none; } }
+  @media only screen and (max-width: 480px) {
+    .top-nav .support-kiva-button {
+      display: none !important; } }
   .top-nav .logo-area {
     margin-right: auto; }
     .top-nav .logo-area .header-button {
