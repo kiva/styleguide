@@ -23,6 +23,10 @@ a.header-button#search-toggle {
         transition: unset;
         margin-top: 1.35rem;
         height: rem-calc(18);
+
+        @media #{$small-up} {
+            margin-top: 1.55rem;
+        }
     }
 }
 
@@ -33,6 +37,14 @@ a.header-button#search-toggle {
     @media #{$medium-up} {
         margin: 0 auto;
         width: 100%;
+    }
+
+    @media #{$medium-only} {
+        &.is-tablet {
+            margin: 0;
+            width: auto;
+            z-index: 5;
+        }
     }
 }
 
@@ -60,6 +72,16 @@ a.header-button#search-toggle {
 
         -webkit-transition: none;
         transition: none;
+    }
+
+    @media #{$medium-only} {
+        &.is-tablet {
+            position: absolute;
+            top: 4.0625rem;
+            left: 0;
+            border-bottom: 1px solid #C4C4C4;
+            transition: height 0.5s ease;
+        }
     }
 
     &[aria-hidden="true"] {
