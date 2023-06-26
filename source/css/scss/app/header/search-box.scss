@@ -39,7 +39,7 @@ a.header-button#search-toggle {
         width: 100%;
     }
 
-    @media #{$medium-only} {
+    @media #{$med-large-only} {
         &.is-tablet {
             margin: 0;
             width: auto;
@@ -74,13 +74,20 @@ a.header-button#search-toggle {
         transition: none;
     }
 
-    @media #{$medium-only} {
+    @media #{$med-large-only} {
         &.is-tablet {
             position: absolute;
             top: 4.0625rem;
             left: 0;
             border-bottom: 1px solid #C4C4C4;
             transition: height 0.5s ease;
+        }
+        &.is-visitor {
+            position: relative;
+            top: unset;
+            left: unset;
+            padding: rem-calc(12) rem-calc(20);
+            border-bottom: none;
         }
     }
 
