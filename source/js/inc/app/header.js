@@ -10,11 +10,12 @@ module.exports = function () {
 	var $search_box = $('#search-box');
 	var is_touch = $('html').hasClass('touch');
 	var $top_nav = $('.top-nav');
+	var $has_basket = !$('#top-basket-button').hasClass('hide');
 
 	$search_toggle.click(function (e) {
 		e.preventDefault();
 
-		if (Foundation.utils.is_small_only()) {
+		if (Foundation.utils.is_small_only() || Foundation.utils.is_large_only() || ($has_basket && Foundation.utils.is_xlarge_only())) {
 			var expanded = $search_toggle.attr('aria-expanded') === 'false';
 
 			$search_toggle.attr('aria-expanded', expanded);
@@ -33,7 +34,7 @@ module.exports = function () {
 	$close_search.click(function (e) {
 		e.preventDefault();
 
-		if (Foundation.utils.is_small_only()) {
+		if (Foundation.utils.is_small_only() || Foundation.utils.is_large_only() || ($has_basket && Foundation.utils.is_xlarge_only())) {
 			$search_toggle.attr('aria-expanded', false);
 			$close_search.attr('aria-expanded', false);
 			$search_form
@@ -64,14 +65,14 @@ module.exports = function () {
 
 
 	var close_button_visibility = function () {
-		$close_search.attr('aria-hidden', Foundation.utils.is_small_only());
+		$close_search.attr('aria-hidden', Foundation.utils.is_small_only() || Foundation.utils.is_large_only() || ($has_basket && Foundation.utils.is_xlarge_only()));
 	};
 
 	// Initial call
 	close_button_visibility();
 
 	var mobile_search_visibility = function () {
-		$search_form.attr('aria-hidden', Foundation.utils.is_small_only());
+		$search_form.attr('aria-hidden', Foundation.utils.is_small_only() || Foundation.utils.is_large_only() || ($has_basket && Foundation.utils.is_xlarge_only()));
 	};
 
 	// Initial call

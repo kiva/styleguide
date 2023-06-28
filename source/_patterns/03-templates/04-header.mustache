@@ -36,7 +36,10 @@
 					<a class="header-button {{#is_free_trial_eligible}}hidden{{/is_free_trial_eligible}}" href="{{basket_href}}"><span class="amount {{^basket.item_count}}hide{{/basket.item_count}}">{{basket.item_count}}</span> Basket</a>
 				</div>
 				<div class="header-column">
-					<a class="header-button login-button" href="{{login_href}}">Log in</a>
+					<a class="header-button" href="{{login_href}}">Log in</a>
+				</div>
+				<div class="header-column">
+					<a class="header-button support-kiva-button" href="{{donate_supportus_href}}">Support Kiva</a>
 				</div>
 			{{/is-visitor}}
 			{{^is-visitor}}
@@ -52,6 +55,9 @@
 					<a class="header-button {{#is_free_trial_eligible}}hidden{{/is_free_trial_eligible}}" href="{{basket_href}}"><span class="amount {{^basket.item_count}}hide{{/basket.item_count}}">{{basket.item_count}}</span> Basket</a>
 				</div>
 				<div class="header-column">
+					<a class="header-button support-kiva-button" href="{{donate_supportus_href}}">Support Kiva</a>
+				</div>
+				<div class="header-column">
 					<a kvtrackevent="TopNav|click-Portfolio" data-dropdown="my-kiva-dropdown" data-options="is_hover:true;hover_timeout:200;" aria-controls="my-kiva-dropdown" aria-expanded="false" class="header-button my-kiva" href="{{my_kiva_href}}">
 						<span class="amount">{{balance}}</span>
 						{{#profile_picture_href}}
@@ -65,9 +71,6 @@
 					</a>
 				</div>
 			{{/is-visitor}}
-			<div class="header-column">
-				<a class="header-button support-kiva-button" href="{{donate_supportus_href}}">Support Kiva</a>
-			</div>
 		</div>
 
 		{{> 02-organisms/08-header/03-lend-menu}}
