@@ -9179,6 +9179,9 @@ a.header-button#search-toggle {
     transition: unset;
     margin-top: 1.35rem;
     height: 1.125rem; }
+    @media only screen {
+      a.header-button#search-toggle .icon {
+        margin-top: 1.55rem; } }
 
 .search-container {
   width: auto;
@@ -9187,6 +9190,11 @@ a.header-button#search-toggle {
     .search-container {
       margin: 0 auto;
       width: 100%; } }
+  @media only screen and (min-width: 681px) and (max-width: 880px) {
+    .search-container.is-tablet {
+      margin: 0;
+      width: auto;
+      z-index: 5; } }
 
 #search-form {
   padding: 0.6875rem 1.25rem 0.8125rem;
@@ -9208,6 +9216,19 @@ a.header-button#search-toggle {
       padding: 0.75rem 1.25rem;
       border-bottom: none;
       transition: none; } }
+  @media only screen and (min-width: 681px) and (max-width: 880px) {
+    #search-form.is-tablet {
+      position: absolute;
+      top: 4.0625rem;
+      left: 0;
+      border-bottom: 1px solid #C4C4C4;
+      transition: height 0.5s ease; }
+    #search-form.is-visitor {
+      position: relative;
+      top: unset;
+      left: unset;
+      padding: 0.75rem 1.25rem;
+      border-bottom: none; } }
   #search-form[aria-hidden="true"] {
     width: 0;
     height: 0;
@@ -9409,7 +9430,7 @@ ul.tertiary-nav {
     -ms-flex-pack: start;
         justify-content: start;
     padding-right: 0.875rem; }
-  .top-nav .login-button, .top-nav .support-kiva-button {
+  .top-nav .support-kiva-button {
     background-color: #FFFFFF;
     border: 1px solid #757575;
     padding: 12px 22px;
@@ -9418,15 +9439,10 @@ ul.tertiary-nav {
     display: initial;
     border-radius: 12px;
     position: relative; }
-    .top-nav .login-button:hover, .top-nav .login-button:active, .top-nav .support-kiva-button:hover, .top-nav .support-kiva-button:active {
+    .top-nav .support-kiva-button:hover, .top-nav .support-kiva-button:active {
       color: #277056;
       border: 1px solid #212121;
       text-decoration: none; }
-  @media only screen and (min-width: 481px) {
-    .top-nav .login-button {
-      border: none; }
-      .top-nav .login-button:hover, .top-nav .login-button:active {
-        border: none; } }
   @media only screen and (max-width: 480px) {
     .top-nav .support-kiva-button {
       display: none !important; } }
