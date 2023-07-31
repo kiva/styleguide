@@ -75,14 +75,12 @@
 
 		{{> 02-organisms/08-header/03-lend-menu}}
 
-		{{#is-visitor}}
-			<ul id="about-dropdown" class="f-dropdown dropdown-list" data-dropdown-content aria-hidden="true" tabindex="-1">
-				{{#about-nav.links}}
-					<li><a kvtrackevent="TopNav|click-About-{{label}}" href="{{href}}">{{label}}</a></li>
-				{{/about-nav.links}}
-				<li class="hide-for-medium-up"><a kvtrackevent="TopNav|click-About-Support-Kiva" href="{{donate_supportus_href}}">Support Kiva</a></li>
-			</ul>
-		{{/is-visitor}}
+		<ul id="about-dropdown" class="f-dropdown dropdown-list" data-dropdown-content aria-hidden="true" tabindex="-1">
+			{{#about-nav.links}}
+				<li><a kvtrackevent="TopNav|click-About-{{label}}" href="{{href}}">{{label}}</a></li>
+			{{/about-nav.links}}
+			<li class="hide-for-medium-up"><a kvtrackevent="TopNav|click-About-Support-Kiva" href="{{donate_supportus_href}}">Support Kiva</a></li>
+		</ul>
 
 		{{^is-visitor}}
 			<ul id="my-kiva-dropdown" class="f-dropdown dropdown-list" data-dropdown-content aria-hidden="true" tabindex="-1">
