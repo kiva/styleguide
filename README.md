@@ -1,3 +1,7 @@
+
+# This repository has been deprecated
+
+
 # Kiva's living styleguide
 http://styleguide.kiva.org/
 
